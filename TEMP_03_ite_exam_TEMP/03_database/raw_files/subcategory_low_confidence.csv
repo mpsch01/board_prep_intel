@@ -1,0 +1,142 @@
+QuestionID,ExamYear,Subcategory,Subcat_Source,Reference
+Q2020-007,2020,Diagnosis,low,"Larson ST, Wilbur J: Muscle weakness in adults: Evaluation and differential diagnosis. Am Fam Physician 2020;101(2):95–108."
+Q2020-020,2020,Diagnosis,low,"Smith DK, McDermott AJ, Sullivan JF: Croup: Diagnosis and management. Am Fam Physician 2018;97(9):575-580."
+Q2020-023,2020,Management,fallback,"Howard-Thompson A, Khan M, Jones M, George CM: Type 2 diabetes mellitus: Outpatient insulin management. Am Fam Physician 2018;97(1):29-37."
+Q2020-040,2020,Management,fallback,"Anderson JL, Morrow DA: Acute myocardial infarction. N Engl J Med 2017;376(21):2053-2064."
+Q2020-042,2020,Management,fallback,"Shaw K, Gennat H, O’Rourke P, Del Mar C: Exercise for overweight or obesity. Cochrane Database Syst Rev 2006;(4):CD003817. 2) Thorogood A, Mottillo S, Shimony A, et al: Isolated aerobic exercise and weight loss: A systematic review and meta-analysis of randomized controlled trials. Am J Med 2011;124(8):747-755. 3) Erlandson M, Ivey LC, Seikel K: Update on office-based strategies for the management of obesity. Am Fam Physician 2016;94(5):361-368."
+Q2020-048,2020,Management,fallback,"Lehmann SW, Fingerhood M: Substance-use disorders in later life. N Engl J Med 2018;379(24):2351-2360."
+Q2020-049,2020,Management,fallback,"Bachmann LM, Kolb E, Koller MT, et al: Accuracy of Ottawa ankle rules to exclude fractures of the ankle and mid-foot: Systematic review. BMJ 2003;326(7386):417-423. 2) Jonckheer P, Willems T, De Ridder R, et al: Evaluating fracture risk in acute ankle sprains: Any news since the Ottawa Ankle Rules? A systematic review. Eur J Gen Pract 2016;22(1):31-41. 3) McGovern RP, Martin RL: Managing ankle ligament sprains and tears: Current opinion. Open Access J Sports Med 2016;7:33-42."
+Q2020-062,2020,Management,fallback,"Caylor TL, Perkins A: Recognition and management of polymyalgia rheumatica and giant cell arteritis. Am Fam Physician 2013;88(10):676-684. 2) Rinden T, Miller E, Nasr R: Giant cell arteritis: An updated review of an old disease. Cleve Clin J Med 2019;86(7):465-472."
+Q2020-063,2020,Management,fallback,"El-Shami K, Oeffinger KC, Erb NL, et al: American Cancer Society colorectal cancer survivorship care guidelines. CA Cancer J Clin 2015;65(6):428-455. 2) Burgers K, Moore C, Bednash L: Care of the colorectal cancer survivor. Am Fam Physician 2018;97(5):331-336."
+Q2020-065,2020,Workup,low,"Chang K, Guarderas JC: Allergy testing: Common questions and answers. Am Fam Physician 2018;98(1):34-39."
+Q2020-066,2020,Counseling,low,"Fan T, Blitz J: Behavioral and pharmacotherapy interventions for tobacco smoking cessation in adults, including pregnant women. Am Fam Physician 2016;93(10):861-862."
+Q2020-070,2020,Prevention,low,"Campschroer T, Zhu X, Vernooij RW, Lock MT: -Blockers as medical expulsive therapy for ureteral stones. Cochrane Database Syst Rev 2018;(4):CD008509. 2) Krishnan K, Halajian EB, Guthmann RA, Nashelsky J: -Blockers for nephrolithiasis. Am Fam Physician 2019;100(11):710-712. 3) Fontenelle LF, Sarti TD: Kidney stones: Treatment and prevention. Am Fam Physician 2019;99(8):490-496."
+Q2020-075,2020,Management,fallback,"Pelletier AL, Rojas-Roldan L, Coffin J: Vision loss in older adults. Am Fam Physician 2016;94(3):219-226."
+Q2020-084,2020,Management,fallback,"Barstow C, Shahan B, Roberts M: Evaluating medical decision-making capacity in practice. Am Fam Physician 2018;98(1):40-46."
+Q2020-092,2020,Management,fallback,"O’Meara S, Cullum N, Nelson EA, Dumville JC: Compression for venous leg ulcers. Cochrane Database Syst Rev 2012;(11):CD000265. 2) Jones RE, Foster DS, Longaker MT: Management of chronic wounds—2018. JAMA 2018;320(14):1481-1482."
+Q2020-100,2020,Management,fallback,"The SHARE approach: Communicating numbers to your patients: A reference guide for health care providers. Agency for Healthcare Research and Quality, 2014."
+Q2020-107,2020,Management,fallback,"Bakaeen FG, Rosengart TK, Carabello BA: Aortic stenosis. Ann Intern Med 2017;166(1):ITC1-ITC16."
+Q2020-119,2020,Diagnosis,low,"Ramar K, Olsen EJ: Management of common sleep disorders. Am Fam Physician 2013;88(4):231-238. 2) Griswold KS, Del Regno PA, Berger RC: Recognition and differential diagnosis of psychosis in primary care. Am Fam Physician 2015;91(12):856-863. 3) McKeith IG, Boeve BF, Dickson DW, et al: Diagnosis and management of dementia with Lewy bodies: Fourth consensus report of the DLB Consortium. Neurology 2017;89(1):88-100."
+Q2020-126,2020,Diagnosis,low,"Larson ST, Wilbur J: Muscle weakness in adults: Evaluation and differential diagnosis. Am Fam Physician 2020;101(2):95-108."
+Q2020-129,2020,Management,fallback,"Curtis KM, Peipert JF: Long-acting reversible contraception. N Engl J Med 2017;376(5):461-468."
+Q2020-132,2020,Diagnosis,low,"Wipperman J, Goerl K: Carpal tunnel syndrome: Diagnosis and management. Am Fam Physician 2016;94(12):993-999."
+Q2020-134,2020,Management,fallback,"Gauer R, Meyers BK: Heat-related illnesses. Am Fam Physician 2019;99(8):482-489."
+Q2020-141,2020,Management,fallback,"Gillon R: Medical ethics: Four principles plus attention to scope. BMJ 1994;309(6948):184-188. 2) Beauchamp T, Childress J: Principles of Biomedical Ethics: Marking its fortieth anniversary. Am J Bioeth 2019;19(11):9-12. 3) Informed consent & shared decision making: Decisions for adult patients who lack capacity: Opinion E-2.1.2. American Medical Association Code of Medical Ethics."
+Q2020-161,2020,Diagnosis,low,"Bica D, Sprouse RA, Armen J: Diagnosis and management of common foot fractures. Am Fam Physician 2016;93(3):183-191."
+Q2020-170,2020,Management,fallback,"LoVerde D, Iweala OI, Eginli A, Krishnaswamy G: Anaphylaxis. Chest 2018;153(2):528-543."
+Q2020-187,2020,Workup,low,"Michaudet C, Malaty J: Chronic cough: Evaluation and management. Am Fam Physician 2017;96(9):575–580."
+Q2020-191,2020,Management,fallback,"Hagan JF Jr, Shaw JS, Duncan PM (eds): Bright Futures: Guidelines for Health Supervision of Infants, Children and Adolescents, ed 4. American Academy of Pediatrics, 2017."
+Q2020-195,2020,Management,fallback,"Brieler J, Breeden MA, Tucker J: Cardiomyopathy: An overview. Am Fam Physician 2017;96(10):640-646."
+Q2021-207,2021,Management,fallback,"Bettcher CM, Rockwell PG, Ravikumar R: Managing food allergy in children: An evidence-based update. J Fam Pract 2020;69(7):336-343."
+Q2021-210,2021,Diagnosis,low,"Hartman-Adams H, Banvard C, Juckett G: Impetigo: Diagnosis and treatment. Am Fam Physician 2014;90(4):229-235. 2) Dinulos JGH: Habif’s Clinical Dermatology: A Color Guide to Diagnosis and Therapy, ed 7. Elsevier, 2021, pp 331-339."
+Q2021-260,2021,Diagnosis,low,"Gottlieb DK, Punjabi NM: Diagnosis and management of obstructive sleep apnea: A review. JAMA 2020;323(14):1389-1400."
+Q2021-274,2021,Management,fallback,Costlow L: Maintenance intravenous fluids in children: AAP provides recommendation. Am Fam Physician 2019;100(4):251.
+Q2021-278,2021,Diagnosis,low,"Young J, Mendoza M: Parkinson’s disease: A treatment guide. J Fam Pract 2018;67(5):276-286. 2) McPhee SJ, Papadakis MA (eds): Current Medical Diagnosis and Treatment, ed 58. McGraw-Hill Education, 2019, pp 1024-1027."
+Q2021-290,2021,Management,fallback,"Achar S, Yamanaka J: Back pain in children and adolescents. Am Fam Physician 2020;102(1):19-28."
+Q2021-315,2021,Diagnosis,low,"Kodner C, Wetherton A: Diagnosis and management of physical abuse in children. Am Fam Physician 2013;88(10):669-675. 2) Glick JC, Lorand MA, Bilka KR: Physical abuse of children. Pediatr Rev 2016;37(4):146-156."
+Q2021-316,2021,Diagnosis,low,Wasserman A: Rheumatoid arthritis: Common questions about diagnosis and management. Am Fam Physician 2018;97(7):455-462.
+Q2021-329,2021,Diagnosis,low,"American Psychiatric Association: Practice guideline for the treatment of patients with bipolar disorder (revision). Am J Psychiatry 2002;159(4 Suppl):1-50. 2) American Psychiatric Association: Diagnostic and Statistical Manual of Mental Disorders, ed 5. American Psychiatric Association, 2013, pp 123-127. 3) Yatham LN, Kennedy SH, Parikh SV, et al: Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord 2018;20(2):97-170."
+Q2021-334,2021,Diagnosis,low,"Saguil A, Fargo MV: Acute respiratory distress syndrome: Diagnosis and management. Am Fam Physician 2020;101(12):730-738."
+Q2021-341,2021,Management,fallback,"Langan RC, Goodbred AJ: Office spirometry: Indications and interpretation. Am Fam Physician 2020;101(6):362-368."
+Q2021-345,2021,Workup,low,"Kant R, Davis A, Verma V: Thyroid nodules: Advances in evaluation and management. Am Fam Physician 2020;102(5):298-304."
+Q2021-348,2021,Management,fallback,"Labaki WW, Rosenberg SR: Chronic obstructive pulmonary disease. Ann Intern Med 2020;173(3):ITC17-ITC32."
+Q2021-364,2021,Workup,low,"Arnold MJ, Moody AL: Common running injuries: Evaluation and management. Am Fam Physician 2018;97(8):510-516."
+Q2021-366,2021,Management,fallback,"Rodríguez M, Rzechorzek W, Herzog E, Lüscher TF: Misconceptions and facts about Takotsubo syndrome. Am J Med 2019;132(1):25-31."
+Q2021-369,2021,Management,fallback,"Fawcett RS, Linford S, Stulberg DL: Nail abnormalities: Clues to systemic disease. Am Fam Physician 2004;69(6):1417-1424. 2) Danoff R, Todd J: Digital clues. Am Fam Physician 2018;97(7):465-466."
+Q2021-373,2021,Diagnosis,low,"Johnson DW: Croup. BMJ Clin Evid 2014;2014:0321. 2) Smith DK, McDermott AJ, Sullivan JF: Croup: Diagnosis and management. Am Fam Physician 2018;97(9):575-580."
+Q2021-375,2021,Management,fallback,"Curtis KM, Jatlaoui TC, Tepper NK, et al: US selected practice recommendations for contraceptive use, 2016. MMWR Recomm Rep 2016;65(4):1-66."
+Q2021-378,2021,Management,fallback,"Juckett G, Unger K: Appropriate use of medical interpreters. Am Fam Physician 2014;90(7):476-480. 2) Jacobs B, Ryan AM, Henrichs KS, Weiss BD: Medical interpreters in outpatient practice. Ann Fam Med 2018;16(1):70-76."
+Q2021-389,2021,Management,fallback,"Viera AJ, Wouk N: Potassium disorders: Hypokalemia and hyperkalemia. Am Fam Physician 2015;92(6):487-495."
+Q2021-391,2021,Management,fallback,"Raval JS: Blood product transfusion in adults: Indications, adverse reactions, and modifications. Am Fam Physician 2020;102(1):30-38."
+Q2022-416,2022,Management,fallback,"Tran AN, Lim JK: Care of the patient with abnormal liver test results. Ann Intern Med 2021;174(9):ITC129-ITC144."
+Q2022-426,2022,Diagnosis,low,"Williamson C, Geenes V: Intrahepatic cholestasis of pregnancy. Obstet Gynecol 2014;124(1):120-133. 2) Gregory DS, Wu V, Tuladhar P: The pregnant patient: Managing common acute medical problems. Am Fam Physician 2018;98(9):595-602. 3) Manzotti C, Casazza G, Stimac T, et al: Total serum bile acids or serum bile acid profile, or both, for the diagnosis of intrahepatic cholestasis of pregnancy. Cochrane Database Syst Rev 2019;7:CD012546."
+Q2022-427,2022,Workup,low,"Allison R 2nd, Assadzandi S, Adelman M: Frailty: Evaluation and management. Am Fam Physician 2021;103(4):219-226."
+Q2022-438,2022,Diagnosis,low,"Dalrymple SN, Lewis SH, Philman S: Tinnitus: Diagnosis and management. Am Fam Physician 2021;103(11):663-671."
+Q2022-444,2022,Management,fallback,"Cannarella Lorenzetti R, Jacques CHM, Donovan C, et al: Managing difficult encounters: Understanding physician, patient, and situational factors. Am Fam Physician 2013;87(6):419-425."
+Q2022-460,2022,Workup,low,"Michaudet C, Malaty J: Chronic cough: Evaluation and management. Am Fam Physician 2017:96(9):575-580."
+Q2022-483,2022,Management,fallback,"Sehgal M, Jacobs J, Biggs WS: Mobility assistive device use in older adults. Am Fam Physician 2021;103(12):737-744."
+Q2022-488,2022,Diagnosis,low,"Klein DA, Paradise SL, Reeder RM: Amenorrhea: A systematic approach to diagnosis and management. Am Fam Physician 2019;100(1):39-48."
+Q2022-519,2022,Management,fallback,"Firnhaber JM, Powell CS: Arterial atherosclerosis: Vascular surgery interventions. Am Fam Physician 2022;105(1):65-72."
+Q2022-533,2022,Management,fallback,"Bal BS: An introduction to medical malpractice in the United States. Clin Orthop Relat Res 2009;467(2):339-347. 2) Kass JS, Rose RV: Medical malpractice reform—Historical approaches, alternative models, and communication and resolution programs. AMA J Ethics 2016;18(3):299-310."
+Q2022-534,2022,Management,fallback,"Kinkade S, Long NA: Acute bronchitis. Am Fam Physician 2016;94(7):560-565."
+Q2022-553,2022,Management,fallback,"Committee on Guidance for Establishing Crisis Standards of Care for Use in Disaster Situations; Institute of Medicine: Crisis Standards of Care: A Systems Framework for Catastrophic Disaster Response. National Academies Press, 2012. 2) Crisis standards of care: Guidance from the AMA Code of Medical Ethics. American Medical Association, 2020."
+Q2022-561,2022,Management,fallback,"Chodzko-Zajko WJ, Proctor DN, et al; American College of Sports Medicine: Exercise and physical activity for older adults. Med Sci Sports Exerc 2009;41(7):1510-1530. 2) Owen N, Healy GN, Matthews CE, Dunstan DW: Too much sitting: The population health science of sedentary behavior. Exerc Sport Sci Rev 2010;38(3):105-113. 3) Lee PG, Jackson EA, Richardson CR: Exercise prescriptions in older adults. Am Fam Physician 2017;95(7):425-432."
+Q2022-563,2022,Management,fallback,"Kant R, Davis A, Verma V: Maturity-onset diabetes of the young: Rapid evidence review. Am Fam Physician 2022;105(2):162-167."
+Q2023-617,2023,Management,fallback,"de Vries F, Bruin M, Lobatto DJ, et al. Opioids and their endocrine effects: a systematic review and meta-analysis. J Clin Endocrinol Metab. 2020;105(3):1020-1029."
+Q2023-618,2023,Management,fallback,"Rathjen NA, Shahbodaghi SD, Brown JA. Hypothermia and cold weather injuries. Am Fam Physician. 2019;100(11):680-686. 7"
+Q2023-636,2023,Workup,low,"Achar S, Yamanaka J, Oberstar J. Soft tissue masses: evaluation and treatment. Am Fam Physician. 2022;105(6):602-612."
+Q2023-639,2023,Screening,low,"Goff DC Jr, Lloyd-Jones DM, Bennett G, et al. American College of Cardiology/American Heart Association Task Force on Practice Guidelines: 2013 ACC/AHA guideline on the assessment of cardiovascular risk: a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines. Circulation. 2014;129(25 Suppl 2):S49-S73. 2) US Preventive Services Task Force. Final recommendation statement: cardiovascular disease: risk assessment with nontraditional risk factors. Updated July 10, 2018."
+Q2023-653,2023,Workup,low,"Djulbegovic M, Dugdale LS, Lee AI. Evaluation of polycythemia: a teachable moment. JAMA Intern Med. 2018;178(1):128-130. 2) Fox S, Griffin L, Robinson Harris D. Polycythemia vera: rapid evidence review. Am Fam Physician. 2021;103(11):680-687. 21"
+Q2023-654,2023,Management,fallback,"Hill DA, Taylor CA. Dyspareunia in women. Am Fam Physician. 2021;103(10):597-604."
+Q2023-663,2023,Workup,low,"Chona DL, Tubb MR, Gilinsky NH. Dyspepsia: a stepwise approach to evaluation and management. J Fam Pract. 2021;70(7):320-325."
+Q2023-677,2023,Management,fallback,"Rosendorff C, Lackland DT, Allison M, et al. Treatment of hypertension in patients with coronary artery disease: a scientific statement from the American Heart Association, American College of Cardiology, and American Society of Hypertension. Circulation. 2015;131(19):e435-e470. 2) Benetos A, Petrovic M, Strandberg T. Hypertension management in older and frail older patients. Circ Res. 2019;124(7):1045-1060."
+Q2023-685,2023,Management,fallback,"Croke L. Management of atrial fibrillation: updated guidance from the AHA, ACC, and HRS. Am Fam Physician. 2020;101(2):123-124."
+Q2023-687,2023,Diagnosis,low,"Dinnes J, Deeks JJ, Berhane S, et al. Rapid, point-of-care antigen and molecular-based tests for diagnosis of SARS-CoV-2 infection. Cochrane Database Syst Rev. 2021;3(3):CD013705. 2) Nettleton WD. Interpreting SARS-CoV-2 diagnostic tests: common questions and answers. Am Fam Physician. 2021;103(8):465-472."
+Q2023-694,2023,Management,fallback,"Endsley S, Main R. Palliative care in advanced dementia. Am Fam Physician. 2019;99(7):456-458. 2) National Institute on Aging. End of life: frequently asked questions about palliative care. Updated February 8, 2021. 3) Walsh SC, Murphy E, Devane D, et al. Palliative care interventions in advanced dementia. Cochrane Database Syst Rev. 2021;9(9):CD011513."
+Q2023-700,2023,Management,fallback,"Klein D, Paradise SL, Goodwin ET. Caring for transgender and gender-diverse persons: what clinicians should know. Am Fam Physician. 2018;98(11):645-653."
+Q2023-705,2023,Diagnosis,low,"Klein DA, Sylvester JE, Schvey NA. Eating disorders in primary care: diagnosis and management. Am Fam Physician. 2021;103(1):22-32."
+Q2023-713,2023,Management,fallback,"Shahrizaila N, Lehmann HC, Kuwabara S. Guillain-Barré syndrome. Lancet. 2021;397(10280):1214-1228. 44"
+Q2023-723,2023,Diagnosis,low,"Authors/Task Force members, Elliott PM, Anastasakis A, et al. 2014 ESC guidelines on diagnosis and management of hypertrophic cardiomyopathy: the task force for the diagnosis and management of hypertrophic cardiomyopathy of the European Society of Cardiology (ESC). Eur Heart J. 2014;35(39):2733-2779. 2) Marian AJ, Braunwald E. Hypertrophic cardiomyopathy: genetics, pathogenesis, clinical manifestations, diagnosis, and therapy. Circ Res. 2017;121(7):749-770. 3) Leggit JC, Whitaker D. Diagnosis and management of hypertrophic cardiomyopathy: updated guidelines from the ACC/AHA. Am Fam Physician. 2022;105(2):207-209. 48"
+Q2023-725,2023,Management,fallback,Abbott J. The POLST paradox: opportunities and challenges in honoring patient end-of-life wishes in the emergency department. Ann Emerg Med. 2019;73(3):294-301.
+Q2023-731,2023,Workup,low,"Jiang N, Cao ZH, Ma YF, Lin Z, Yu B. Management of pediatric forearm torus fractures: a systematic review and meta-analysis. Pediatr Emerg Care. 2016;32(11):773-778. 2) National Clinical Guideline Centre (UK): fractures (non-complex): assessment and management. National Institute for Health and Care Excellence, 2016. 3) Zwillenberg M, Kwak E. Splint vs. cast for forearm buckle fracture in children. Am Fam Physician. 2022;105(4):Online. 4) Distal radius and Galeazzi fractures. Pediatric Orthopaedic Society of North America."
+Q2023-733,2023,Management,fallback,"Rerucha CM, Salinas R Jr, Shook J, Duane M. House calls. Am Fam Physician. 2020;102(4):211-220. 52"
+Q2023-737,2023,Management,fallback,"Stacey SK, McEleney M. Topical corticosteroids: choice and application. Am Fam Physician. 2021;103(6):337-343."
+Q2023-746,2023,Management,fallback,"Crawford P, Go KV. Schizophrenia. Am Fam Physician. 2022;106(4):388-396."
+Q2023-757,2023,Diagnosis,low,"Michels TC, Petersen KE. Multiple myeloma: diagnosis and treatment. Am Fam Physician. 2017;95(6):373-383. 61"
+Q2023-762,2023,Management,fallback,"Stacey SK, McEleney M. Topical corticosteroids: choice and application. Am Fam Physician. 2021;103(6):337-343. 63"
+Q2023-764,2023,Management,fallback,"Becker BA, Childress MA. Nonspecific low back pain and return to work. Am Fam Physician. 2019;100(11):697-703."
+Q2023-774,2023,Management,fallback,"Hornberger LL, Lane MA; Committee on Adolescence. Identification and management of eating disorders in children and adolescents. Pediatrics. 2021;147(1):e2020040279."
+Q2023-781,2023,Screening,low,"Whelton PK, Carey RM, Aronow WS, et al. 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA guideline for the prevention, detection, evaluation, and management of high blood pressure in adults: executive summary: a report of the American College of Cardiology/American Heart Association task force on clinical practice guidelines. Circulation. 2018;138(17):e426-e483. 70"
+Q2023-785,2023,Diagnosis,low,"Mercado MG, Smith DK, Guard EL. Acute kidney injury: diagnosis and management. Am Fam Physician. 2019;100(11):687-694."
+Q2023-792,2023,Management,fallback,"LeFevre NM, Krumm E, Cobb WJ. Labor dystocia in nulliparous women. Am Fam Physician. 2021;103(2):90-96."
+Q2024-801,2024,Management,fallback,"Levy M, Prentice M, Wass J. Diabetes insipidus. BMJ. 2019;364:l321."
+Q2024-827,2024,Management,fallback,"Eiff MP, Hatch R. Fracture Management for Primary Care. 3rd ed. Elsevier Saunders; 2018:84-90."
+Q2024-828,2024,Prevention,low,"Reproductive health: US Medical Eligibility Criteria for contraceptive use, 2016 (US MEC). Centers for Disease Control and Prevention. Last reviewed March 27, 2023."
+Q2024-830,2024,Management,fallback,
+Q2024-831,2024,Management,fallback,"Dalrymple SN, Row JH, Gazewood J. Bell palsy: rapid evidence review. Am Fam Physician. 2023;107(4):415-420."
+Q2024-833,2024,Management,fallback,Office of the Surgeon General (US). Step It Up! The Surgeon General's Call to Action to Promote Walking and Walkable Communities. Washington (DC): US Department of Health and Human Services; 2015.
+Q2024-838,2024,Workup,low,"Muncie HL, Sirmans SM, James E. Dizziness: approach to evaluation and management. Am Fam Physician. 2017;95(3):154-162."
+Q2024-841,2024,Diagnosis,low,"Adrogue HJ, Tucker BM, Madias NE. Diagnosis and management of hyponatremia: a review. JAMA. 2022;328(3):280-291."
+Q2024-858,2024,Management,fallback,
+Q2024-865,2024,Diagnosis,low,"Pepe J, Colangelo L, Biamonte F, et al. Diagnosis and management of hypocalcemia. Endocrine. 2020;69(3):485-495."
+Q2024-870,2024,Management,fallback,"Raval JS, Griggs JR, Fleg A. Blood product transfusion in adults: indications, adverse reactions, and modifications. Am Fam Physician. 2020;102(1):30-38."
+Q2024-872,2024,Diagnosis,low,"Gaddey HL, Riegel AM. Unexplained lymphadenopathy: evaluation and differential diagnosis. Am Fam Physician. 2016;94(11):896-903."
+Q2024-878,2024,Diagnosis,low,"Burgers K, Lindberg B, Bevis ZJ. Chronic diarrhea in adults: evaluation and differential diagnosis. Am Fam Physician. 2020;101(8):472-480."
+Q2024-879,2024,Management,fallback,
+Q2024-880,2024,Diagnosis,low,"Shane AL, Mody RK, Crump JA, et al. 2017 Infectious Diseases Society of America clinical practice guidelines for the diagnosis and management of infectious diarrhea. Clin Infect Dis. 2017;65(12):1963-1973."
+Q2024-881,2024,Management,fallback,
+Q2024-885,2024,Management,fallback,"Gaddey HL, Dakkak M, Jackson NM. Smoking cessation interventions. Am Fam Physician. 2022;106(5):513-522."
+Q2024-905,2024,Management,fallback,
+Q2024-921,2024,Management,fallback,"Wiley AT, Dreher JW, London JD. Mental status examination in primary care. Am Fam Physician. 2024;109(1):51-60."
+Q2024-924,2024,Management,fallback,"Frazier WT, Proddutur S, Swope K. Common dermatologic conditions in skin of color. Am Fam Physician. 2023;107(1):26-34."
+Q2024-928,2024,Management,fallback,Siddoway LA. Amiodarone: guidelines for use and monitoring. Am Fam Physician. 2003;68(11):2189-2196.
+Q2024-937,2024,Management,fallback,"Donohue JM, Cole ES, James CV, Jarlenski M, Michener JD, Roberts ET. The US Medicaid program: coverage, financing, reforms, and implications for health equity. JAMA. 2022;328(11):1085-1099."
+Q2024-942,2024,Management,fallback,
+Q2024-958,2024,Diagnosis,low,Firnhaber JM. Basal cell and cutaneous squamous cell carcinomas: diagnosis and treatment. Am Fam Physician. 2020;102(6):339-346.
+Q2024-966,2024,Management,fallback,
+Q2024-969,2024,Diagnosis,low,"Michels TC, Ivan O. Glaucoma: diagnosis and management. Am Fam Physician. 2023;107(3):253-262."
+Q2024-973,2024,Management,fallback,"Healy M, Kidia K. The power in our words: reducing bias in clinical communication. Am Fam Physician. 2023;107(5):454-455."
+Q2024-980,2024,Management,fallback,"Fox S, Griffin L, Robinson Harris D. Polycythemia vera: rapid evidence review. Am Fam Physician. 2021;103(11):680-687."
+Q2024-998,2024,Management,fallback,"Abdel Jalil AA, Katzka DA, Castell DO. Approach to the patient with dysphagia. Am J Med. 2015;128(10):1138.e17-1138.e23."
+Q2025-002,2025,Management,fallback,
+Q2025-047,2025,Management,fallback,
+Q2025-051,2025,Management,fallback,
+Q2025-057,2025,Management,fallback,
+Q2025-058,2025,Management,fallback,
+Q2025-066,2025,Management,fallback,
+Q2025-067,2025,Management,fallback,
+Q2025-092,2025,Management,fallback,
+Q2025-118,2025,Management,fallback,
+Q2025-127,2025,Management,fallback,
+Q2025-131,2025,Management,fallback,
+Q2025-132,2025,Management,fallback,
+Q2025-152,2025,Management,fallback,
+Q2025-154,2025,Management,fallback,
+Q2025-163,2025,Management,fallback,
+Q2025-167,2025,Management,fallback,
+Q2025-169,2025,Management,fallback,
+Q2025-178,2025,Management,fallback,
+Q2025-179,2025,Management,fallback,
+Q2025-192,2025,Management,fallback,
+Q2025-196,2025,Management,fallback,
+Q2025-200,2025,Management,fallback,

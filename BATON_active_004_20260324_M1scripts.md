@@ -104,7 +104,7 @@
 | ~~`validate_vector_search.py`~~ | ~~old `02_ite_intelligence/scripts/`~~ | `01_module.1_warehouse/scripts/build/` | ✅ DONE |
 | M2 core extractor files (`core/`, `engines/`) | old `01_guideline_extractor/` | `02_module.2_processor/scripts/` | MEDIUM |
 | Module F scripts (VC outline pipeline) | old `04_aafp_integration/05_scripts/` | `02_module.2_processor/scripts/` | MEDIUM |
-| `ite_questions_clean.json` | old `03_ite_exam/03_database/` | `key_data_files/` | MEDIUM |
+| ~~`ite_questions_clean.json`~~ | ~~old `03_ite_exam/03_database/`~~ | `key_data_files/` | ✅ DONE |
 | Score report PDFs (Scholl, Hopkins, Sarkar) | old `08_ite_score_analysis/raw_pdfs/` | `00_database/` or EXT | LOW |
 | M3 score analysis configs | old `08_ite_score_analysis/pipeline/` | `03_module.3_analyst/scripts/` | LOW |
 

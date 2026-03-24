@@ -1,0 +1,1201 @@
+QuestionID,UMAP_X,UMAP_Y,Cluster,ArchetypeName
+Q2020-001,7.3034635,-3.2930133,10,Acute / Emergent Presentation
+Q2020-002,7.7543755,0.9066373,8,General Adult Medicine -- Undifferentiated
+Q2020-003,8.272222,-1.1944973,6,Pharmacology & Drug Selection
+Q2020-004,4.9234467,-0.3000599,6,Pharmacology & Drug Selection
+Q2020-005,9.61521,-0.4016739,7,Screening & Prevention Guidelines
+Q2020-006,3.0703497,2.1277745,8,General Adult Medicine -- Undifferentiated
+Q2020-007,7.4127584,-2.4173322,0,Chronic Disease Management
+Q2020-008,5.516192,-0.024585249,6,Pharmacology & Drug Selection
+Q2020-009,4.570649,-3.006549,4,General Adult Medicine -- Undifferentiated
+Q2020-010,4.7433805,-3.3454518,4,General Adult Medicine -- Undifferentiated
+Q2020-011,6.324759,-3.6446571,6,Pharmacology & Drug Selection
+Q2020-012,8.255226,-1.3237903,6,Pharmacology & Drug Selection
+Q2020-013,6.4887342,-3.0494604,6,Pharmacology & Drug Selection
+Q2020-014,10.6452,-0.6825911,9,Screening & Prevention Guidelines
+Q2020-015,7.1252017,-2.4134378,6,Pharmacology & Drug Selection
+Q2020-016,6.4548154,-4.6311855,6,Pharmacology & Drug Selection
+Q2020-017,2.679224,-0.3094399,5,Acute / Emergent Presentation
+Q2020-018,3.9475129,0.2564645,5,Acute / Emergent Presentation
+Q2020-019,8.602138,-1.5330658,6,Pharmacology & Drug Selection
+Q2020-020,4.1602826,-3.4396772,4,General Adult Medicine -- Undifferentiated
+Q2020-021,4.9460745,-2.7618785,4,General Adult Medicine -- Undifferentiated
+Q2020-022,4.1096244,-0.6734443,8,General Adult Medicine -- Undifferentiated
+Q2020-023,5.9006324,-1.3882165,6,Pharmacology & Drug Selection
+Q2020-024,7.1413608,0.8895593,6,Pharmacology & Drug Selection
+Q2020-025,5.8162427,-0.5494085,6,Pharmacology & Drug Selection
+Q2020-026,3.7677166,-3.8800178,6,Pharmacology & Drug Selection
+Q2020-027,6.7021103,0.57522714,6,Pharmacology & Drug Selection
+Q2020-028,7.169889,1.0119815,6,Pharmacology & Drug Selection
+Q2020-029,3.3067896,1.1120207,5,Acute / Emergent Presentation
+Q2020-030,8.534605,1.2533857,8,General Adult Medicine -- Undifferentiated
+Q2020-031,7.896858,1.2147646,3,Pediatric Care & Development
+Q2020-032,8.976046,-0.037872493,0,Chronic Disease Management
+Q2020-033,3.8802285,1.2726821,5,Acute / Emergent Presentation
+Q2020-034,6.360699,-4.0446014,11,Pharmacology & Drug Selection
+Q2020-035,6.7510962,-1.5711306,3,Pediatric Care & Development
+Q2020-036,3.9615636,-4.5970893,10,Acute / Emergent Presentation
+Q2020-037,7.7820263,-0.65663266,6,Pharmacology & Drug Selection
+Q2020-038,10.759004,-0.53424025,9,Screening & Prevention Guidelines
+Q2020-039,9.331491,0.12744707,7,Screening & Prevention Guidelines
+Q2020-040,4.69757,-3.6845448,4,General Adult Medicine -- Undifferentiated
+Q2020-041,7.1975713,0.9456502,6,Pharmacology & Drug Selection
+Q2020-042,7.2342877,-2.219278,1,Pharmacology & Drug Selection
+Q2020-043,5.8387713,-1.3589729,8,General Adult Medicine -- Undifferentiated
+Q2020-044,4.6096964,-3.6399825,4,General Adult Medicine -- Undifferentiated
+Q2020-045,6.973419,-0.5902226,6,Pharmacology & Drug Selection
+Q2020-046,4.8642893,-0.7452639,2,Chronic Disease Management
+Q2020-047,7.959395,-0.07322738,0,Chronic Disease Management
+Q2020-048,9.448334,-3.1853971,6,Pharmacology & Drug Selection
+Q2020-049,2.216601,-0.5498599,5,Acute / Emergent Presentation
+Q2020-050,4.7429767,-3.481467,4,General Adult Medicine -- Undifferentiated
+Q2020-051,7.5755086,-3.5517972,10,Acute / Emergent Presentation
+Q2020-052,6.577583,-1.0405695,6,Pharmacology & Drug Selection
+Q2020-053,4.5484896,-2.3469644,4,General Adult Medicine -- Undifferentiated
+Q2020-054,3.7512815,-4.1218696,6,Pharmacology & Drug Selection
+Q2020-055,2.0942612,-2.519077,2,Chronic Disease Management
+Q2020-056,8.301332,-0.08337262,0,Chronic Disease Management
+Q2020-057,7.628038,0.041363303,0,Chronic Disease Management
+Q2020-058,2.372027,1.3397515,5,Acute / Emergent Presentation
+Q2020-059,6.2534575,-1.8186814,6,Pharmacology & Drug Selection
+Q2020-060,3.8952918,-4.6306543,6,Pharmacology & Drug Selection
+Q2020-061,5.3760614,0.41808948,6,Pharmacology & Drug Selection
+Q2020-062,5.7262316,1.4609009,8,General Adult Medicine -- Undifferentiated
+Q2020-063,9.579106,0.058504067,7,Screening & Prevention Guidelines
+Q2020-064,7.086645,-3.8090198,11,Pharmacology & Drug Selection
+Q2020-065,9.464147,-3.2086504,6,Pharmacology & Drug Selection
+Q2020-066,9.237446,-1.7900465,6,Pharmacology & Drug Selection
+Q2020-067,4.1335273,-3.5755525,4,General Adult Medicine -- Undifferentiated
+Q2020-068,2.4962928,0.26329762,5,Acute / Emergent Presentation
+Q2020-069,9.342179,0.3672698,3,Pediatric Care & Development
+Q2020-070,5.145032,-1.764562,5,Acute / Emergent Presentation
+Q2020-071,7.3714137,-1.7179255,1,Pharmacology & Drug Selection
+Q2020-072,4.509535,-3.641819,4,General Adult Medicine -- Undifferentiated
+Q2020-073,4.3611355,-1.403529,10,Acute / Emergent Presentation
+Q2020-074,7.2994475,-2.2263675,6,Pharmacology & Drug Selection
+Q2020-075,5.5717616,-0.6642061,6,Pharmacology & Drug Selection
+Q2020-076,5.9653807,-2.1039717,6,Pharmacology & Drug Selection
+Q2020-077,2.240724,0.34156317,5,Acute / Emergent Presentation
+Q2020-078,8.329185,1.167041,8,General Adult Medicine -- Undifferentiated
+Q2020-079,3.8954132,-4.609055,6,Pharmacology & Drug Selection
+Q2020-080,7.617691,-3.556732,10,Acute / Emergent Presentation
+Q2020-081,6.553014,-2.4600272,1,Pharmacology & Drug Selection
+Q2020-082,6.4746337,-4.523261,2,Chronic Disease Management
+Q2020-083,2.1680665,-2.4195008,2,Chronic Disease Management
+Q2020-084,5.9585443,-1.5833592,6,Pharmacology & Drug Selection
+Q2020-085,9.256928,-0.7968586,0,Chronic Disease Management
+Q2020-086,9.473293,-3.2325182,6,Pharmacology & Drug Selection
+Q2020-087,8.175092,1.5972512,1,Pharmacology & Drug Selection
+Q2020-088,7.7137423,0.28652012,6,Pharmacology & Drug Selection
+Q2020-089,6.4402947,-4.6362085,4,General Adult Medicine -- Undifferentiated
+Q2020-090,2.067299,-2.5262156,2,Chronic Disease Management
+Q2020-091,8.227552,0.48945996,8,General Adult Medicine -- Undifferentiated
+Q2020-092,3.1394796,-1.369833,1,Pharmacology & Drug Selection
+Q2020-093,6.5831456,-0.39264765,6,Pharmacology & Drug Selection
+Q2020-094,6.582233,-1.0870361,6,Pharmacology & Drug Selection
+Q2020-095,7.4501343,2.1640892,3,Pediatric Care & Development
+Q2020-096,10.318278,-0.78060895,9,Screening & Prevention Guidelines
+Q2020-097,8.389397,1.3372842,8,General Adult Medicine -- Undifferentiated
+Q2020-098,7.0245237,2.1022294,3,Pediatric Care & Development
+Q2020-099,7.5531225,-3.631304,10,Acute / Emergent Presentation
+Q2020-100,9.344919,-3.111399,6,Pharmacology & Drug Selection
+Q2020-101,7.015259,-3.5641115,11,Pharmacology & Drug Selection
+Q2020-102,6.3975244,-2.4130201,1,Pharmacology & Drug Selection
+Q2020-103,9.302889,-1.8447797,4,General Adult Medicine -- Undifferentiated
+Q2020-104,4.5674095,-3.7002919,4,General Adult Medicine -- Undifferentiated
+Q2020-105,2.9864447,0.19735545,5,Acute / Emergent Presentation
+Q2020-106,5.146098,1.6258307,8,General Adult Medicine -- Undifferentiated
+Q2020-107,6.093235,-0.52155787,6,Pharmacology & Drug Selection
+Q2020-108,5.258903,1.8381963,6,Pharmacology & Drug Selection
+Q2020-109,8.3686695,0.5116781,8,General Adult Medicine -- Undifferentiated
+Q2020-110,2.8752449,2.0782347,6,Pharmacology & Drug Selection
+Q2020-111,8.273447,-0.15983343,0,Chronic Disease Management
+Q2020-112,3.0239046,-0.5937056,5,Acute / Emergent Presentation
+Q2020-113,5.6346703,0.75034,6,Pharmacology & Drug Selection
+Q2020-114,8.563792,0.17289302,8,General Adult Medicine -- Undifferentiated
+Q2020-115,4.9285917,0.9005143,11,Pharmacology & Drug Selection
+Q2020-116,2.9180577,2.1220253,6,Pharmacology & Drug Selection
+Q2020-117,8.45527,0.26965636,0,Chronic Disease Management
+Q2020-118,7.836278,-3.5063236,10,Acute / Emergent Presentation
+Q2020-119,6.649913,-1.1867292,2,Chronic Disease Management
+Q2020-120,2.7853234,0.2225405,5,Acute / Emergent Presentation
+Q2020-121,7.727025,-2.1953785,6,Pharmacology & Drug Selection
+Q2020-122,4.870588,-0.31775331,6,Pharmacology & Drug Selection
+Q2020-123,6.194298,-1.0379059,6,Pharmacology & Drug Selection
+Q2020-124,10.607676,-0.46346036,9,Screening & Prevention Guidelines
+Q2020-125,2.0705051,-2.5538497,2,Chronic Disease Management
+Q2020-126,3.3861766,-0.09659932,6,Pharmacology & Drug Selection
+Q2020-127,4.2409134,-3.085714,4,General Adult Medicine -- Undifferentiated
+Q2020-128,5.618024,-3.6884696,10,Acute / Emergent Presentation
+Q2020-129,8.2022085,-1.347613,6,Pharmacology & Drug Selection
+Q2020-130,6.9774117,0.11922671,8,General Adult Medicine -- Undifferentiated
+Q2020-131,8.127712,-3.2269368,5,Acute / Emergent Presentation
+Q2020-132,5.4343576,-0.42840493,6,Pharmacology & Drug Selection
+Q2020-133,6.8204274,2.2671301,3,Pediatric Care & Development
+Q2020-134,3.8441634,-0.19929604,6,Pharmacology & Drug Selection
+Q2020-135,6.4290557,1.0516717,6,Pharmacology & Drug Selection
+Q2020-136,3.2963152,1.124202,5,Acute / Emergent Presentation
+Q2020-137,4.8161354,0.5026325,6,Pharmacology & Drug Selection
+Q2020-138,7.3185515,-3.1879961,10,Acute / Emergent Presentation
+Q2020-139,7.590629,-0.27140117,0,Chronic Disease Management
+Q2020-140,7.833837,-0.54340106,6,Pharmacology & Drug Selection
+Q2020-141,7.1681113,1.0135198,6,Pharmacology & Drug Selection
+Q2020-142,6.439245,1.5822463,6,Pharmacology & Drug Selection
+Q2020-143,2.5058732,1.3715346,5,Acute / Emergent Presentation
+Q2020-144,6.776258,-0.77668965,6,Pharmacology & Drug Selection
+Q2020-145,5.4063735,0.42557257,3,Pediatric Care & Development
+Q2020-146,8.009668,-3.385773,10,Acute / Emergent Presentation
+Q2020-147,6.300412,0.3017163,6,Pharmacology & Drug Selection
+Q2020-148,6.887488,2.2204046,3,Pediatric Care & Development
+Q2020-149,5.1117086,2.4876032,6,Pharmacology & Drug Selection
+Q2020-150,5.6394835,-0.38132447,6,Pharmacology & Drug Selection
+Q2020-151,6.158982,-0.5335377,6,Pharmacology & Drug Selection
+Q2020-152,6.257655,-3.985957,11,Pharmacology & Drug Selection
+Q2020-153,10.768709,-0.4990785,9,Screening & Prevention Guidelines
+Q2020-154,6.291776,-0.9134888,6,Pharmacology & Drug Selection
+Q2020-155,10.506186,-0.761903,9,Screening & Prevention Guidelines
+Q2020-156,8.392188,1.2141668,8,General Adult Medicine -- Undifferentiated
+Q2020-157,5.3749404,-2.8285637,4,General Adult Medicine -- Undifferentiated
+Q2020-158,3.8821955,-0.18098618,5,Acute / Emergent Presentation
+Q2020-159,6.568681,0.3190843,1,Pharmacology & Drug Selection
+Q2020-160,6.0941443,0.88892967,6,Pharmacology & Drug Selection
+Q2020-161,2.166075,-0.6007466,5,Acute / Emergent Presentation
+Q2020-162,7.2277117,0.5847989,6,Pharmacology & Drug Selection
+Q2020-163,4.584252,-3.1663215,4,General Adult Medicine -- Undifferentiated
+Q2020-164,6.5862093,0.59764844,6,Pharmacology & Drug Selection
+Q2020-165,7.737796,-2.2542284,6,Pharmacology & Drug Selection
+Q2020-166,4.174862,-3.1176653,4,General Adult Medicine -- Undifferentiated
+Q2020-167,5.7851357,-3.8674223,11,Pharmacology & Drug Selection
+Q2020-168,7.0525084,-3.7868009,11,Pharmacology & Drug Selection
+Q2020-169,6.473888,-2.5234945,1,Pharmacology & Drug Selection
+Q2020-170,4.21114,-2.9362323,4,General Adult Medicine -- Undifferentiated
+Q2020-171,6.7370076,-3.7503386,11,Pharmacology & Drug Selection
+Q2020-172,7.492596,2.1887372,3,Pediatric Care & Development
+Q2020-173,6.2990785,0.59875125,8,General Adult Medicine -- Undifferentiated
+Q2020-174,4.32456,-3.3596458,4,General Adult Medicine -- Undifferentiated
+Q2020-175,3.9907146,1.3104347,5,Acute / Emergent Presentation
+Q2020-176,9.344846,-1.7616011,0,Chronic Disease Management
+Q2020-177,8.029413,-3.3458161,10,Acute / Emergent Presentation
+Q2020-178,2.53048,0.40766364,5,Acute / Emergent Presentation
+Q2020-179,4.152416,-3.4206948,4,General Adult Medicine -- Undifferentiated
+Q2020-180,10.56661,-0.6278303,9,Screening & Prevention Guidelines
+Q2020-181,7.706575,-1.3137586,0,Chronic Disease Management
+Q2020-182,3.5176134,-1.2277317,5,Acute / Emergent Presentation
+Q2020-183,7.253109,-0.7351427,6,Pharmacology & Drug Selection
+Q2020-184,5.8919787,-3.86833,11,Pharmacology & Drug Selection
+Q2020-185,9.140429,0.09688973,6,Pharmacology & Drug Selection
+Q2020-186,2.313404,0.44727474,5,Acute / Emergent Presentation
+Q2020-187,4.17769,-2.7369988,6,Pharmacology & Drug Selection
+Q2020-188,5.3309674,-2.0882664,10,Acute / Emergent Presentation
+Q2020-189,3.5792608,-0.20392123,5,Acute / Emergent Presentation
+Q2020-190,4.1154995,-3.4280772,4,General Adult Medicine -- Undifferentiated
+Q2020-191,7.134554,1.9392364,3,Pediatric Care & Development
+Q2020-192,3.1132116,0.35776022,5,Acute / Emergent Presentation
+Q2020-193,2.9346504,-0.07021919,5,Acute / Emergent Presentation
+Q2020-194,7.5624843,2.129692,3,Pediatric Care & Development
+Q2020-195,6.723782,0.39906508,6,Pharmacology & Drug Selection
+Q2020-196,8.392742,-2.72533,6,Pharmacology & Drug Selection
+Q2020-197,10.32618,-0.37551427,9,Screening & Prevention Guidelines
+Q2020-198,9.136344,-0.95344573,6,Pharmacology & Drug Selection
+Q2020-199,6.018637,-3.9985354,11,Pharmacology & Drug Selection
+Q2020-200,4.3822856,-3.607074,4,General Adult Medicine -- Undifferentiated
+Q2021-201,10.137493,-0.8678092,9,Screening & Prevention Guidelines
+Q2021-202,3.9277613,-2.0206466,6,Pharmacology & Drug Selection
+Q2021-203,5.8429523,-2.913638,6,Pharmacology & Drug Selection
+Q2021-204,5.711338,0.31907687,6,Pharmacology & Drug Selection
+Q2021-205,3.0389605,0.16096297,5,Acute / Emergent Presentation
+Q2021-206,6.767083,-2.9457262,11,Pharmacology & Drug Selection
+Q2021-207,6.1966,1.7825446,8,General Adult Medicine -- Undifferentiated
+Q2021-208,6.675373,-2.1811543,6,Pharmacology & Drug Selection
+Q2021-209,4.88786,-1.8061837,7,Screening & Prevention Guidelines
+Q2021-210,5.379087,1.6397324,6,Pharmacology & Drug Selection
+Q2021-211,6.410363,-3.2287436,1,Pharmacology & Drug Selection
+Q2021-212,8.378398,1.4774675,8,General Adult Medicine -- Undifferentiated
+Q2021-213,6.912063,-3.8792894,6,Pharmacology & Drug Selection
+Q2021-214,4.292068,-2.4233,4,General Adult Medicine -- Undifferentiated
+Q2021-215,2.409227,0.5057707,5,Acute / Emergent Presentation
+Q2021-216,8.085585,-1.2617038,5,Acute / Emergent Presentation
+Q2021-217,8.779454,-0.16755182,1,Pharmacology & Drug Selection
+Q2021-218,4.711868,-1.6091661,6,Pharmacology & Drug Selection
+Q2021-219,6.233242,-1.0080394,6,Pharmacology & Drug Selection
+Q2021-220,3.3238235,1.127151,5,Acute / Emergent Presentation
+Q2021-221,6.387129,0.9555924,6,Pharmacology & Drug Selection
+Q2021-222,6.7743077,2.3193903,3,Pediatric Care & Development
+Q2021-223,4.53904,-3.6693997,4,General Adult Medicine -- Undifferentiated
+Q2021-224,7.502212,2.1748872,3,Pediatric Care & Development
+Q2021-225,4.1147,-2.7711627,6,Pharmacology & Drug Selection
+Q2021-226,6.5712285,-1.1124347,6,Pharmacology & Drug Selection
+Q2021-227,3.2664087,1.0750481,5,Acute / Emergent Presentation
+Q2021-228,6.8691845,-2.1373906,1,Pharmacology & Drug Selection
+Q2021-229,4.629556,-3.1348555,10,Acute / Emergent Presentation
+Q2021-230,6.4089403,-4.6687813,6,Pharmacology & Drug Selection
+Q2021-231,6.489353,-3.1204064,6,Pharmacology & Drug Selection
+Q2021-232,6.2441254,-3.172516,1,Pharmacology & Drug Selection
+Q2021-233,2.1264217,-2.440858,2,Chronic Disease Management
+Q2021-234,7.027148,-2.1490343,1,Pharmacology & Drug Selection
+Q2021-235,7.1979184,1.7078878,3,Pediatric Care & Development
+Q2021-236,3.4315884,1.181261,5,Acute / Emergent Presentation
+Q2021-237,7.4579597,-0.091285236,6,Pharmacology & Drug Selection
+Q2021-238,6.4730144,-3.211961,1,Pharmacology & Drug Selection
+Q2021-239,5.145941,-3.6978142,4,General Adult Medicine -- Undifferentiated
+Q2021-240,5.2651925,-0.13166402,6,Pharmacology & Drug Selection
+Q2021-241,10.222316,-0.5054051,9,Screening & Prevention Guidelines
+Q2021-242,2.19302,-0.49476558,5,Acute / Emergent Presentation
+Q2021-243,6.6932406,-2.7448542,1,Pharmacology & Drug Selection
+Q2021-244,6.639577,-2.303434,6,Pharmacology & Drug Selection
+Q2021-245,7.0774536,2.0284026,3,Pediatric Care & Development
+Q2021-246,7.6911,-0.21379806,0,Chronic Disease Management
+Q2021-247,7.143988,0.8144724,11,Pharmacology & Drug Selection
+Q2021-248,2.6481886,0.36684495,5,Acute / Emergent Presentation
+Q2021-249,4.1480803,-3.5321133,4,General Adult Medicine -- Undifferentiated
+Q2021-250,8.235229,-1.3655245,6,Pharmacology & Drug Selection
+Q2021-251,3.2235613,-0.5974406,5,Acute / Emergent Presentation
+Q2021-252,5.3043876,-2.0931084,10,Acute / Emergent Presentation
+Q2021-253,6.4421263,-1.7659063,6,Pharmacology & Drug Selection
+Q2021-254,4.8588605,-1.6413417,6,Pharmacology & Drug Selection
+Q2021-255,8.236941,-0.3936446,0,Chronic Disease Management
+Q2021-256,6.7328506,-2.7429526,1,Pharmacology & Drug Selection
+Q2021-257,5.708717,0.31562248,6,Pharmacology & Drug Selection
+Q2021-258,2.3368762,0.18972458,5,Acute / Emergent Presentation
+Q2021-259,5.9560323,-1.6466453,1,Pharmacology & Drug Selection
+Q2021-260,6.8485775,-0.85706675,6,Pharmacology & Drug Selection
+Q2021-261,6.4993887,-4.572185,6,Pharmacology & Drug Selection
+Q2021-262,2.114822,-2.505599,2,Chronic Disease Management
+Q2021-263,4.8482194,-1.7109785,1,Pharmacology & Drug Selection
+Q2021-264,10.861921,-0.4695576,9,Screening & Prevention Guidelines
+Q2021-265,6.400103,-2.3825238,1,Pharmacology & Drug Selection
+Q2021-266,4.630964,-3.2341645,4,General Adult Medicine -- Undifferentiated
+Q2021-267,2.2343585,0.4184756,5,Acute / Emergent Presentation
+Q2021-268,2.1392195,-0.6379562,5,Acute / Emergent Presentation
+Q2021-269,5.843602,-0.83087265,6,Pharmacology & Drug Selection
+Q2021-270,3.8740919,-4.643463,6,Pharmacology & Drug Selection
+Q2021-271,7.130431,-2.407593,6,Pharmacology & Drug Selection
+Q2021-272,6.67776,0.6570619,6,Pharmacology & Drug Selection
+Q2021-273,2.9303827,2.1513484,6,Pharmacology & Drug Selection
+Q2021-274,5.948598,-3.0336215,6,Pharmacology & Drug Selection
+Q2021-275,2.3768363,1.3148246,5,Acute / Emergent Presentation
+Q2021-276,5.944605,0.6379922,8,General Adult Medicine -- Undifferentiated
+Q2021-277,6.9674444,-3.5954719,1,Pharmacology & Drug Selection
+Q2021-278,5.5729547,-0.19563647,6,Pharmacology & Drug Selection
+Q2021-279,3.937794,1.2532277,6,Pharmacology & Drug Selection
+Q2021-280,7.4481926,-1.8001976,6,Pharmacology & Drug Selection
+Q2021-281,6.845074,-3.597049,11,Pharmacology & Drug Selection
+Q2021-282,6.376588,1.115301,0,Chronic Disease Management
+Q2021-283,4.5630407,-3.6692436,4,General Adult Medicine -- Undifferentiated
+Q2021-284,8.244317,-0.041089367,6,Pharmacology & Drug Selection
+Q2021-285,6.820618,-3.8798938,10,Acute / Emergent Presentation
+Q2021-286,5.0328074,-1.8988785,10,Acute / Emergent Presentation
+Q2021-287,7.438045,2.1711137,3,Pediatric Care & Development
+Q2021-288,8.190098,-1.6502302,6,Pharmacology & Drug Selection
+Q2021-289,6.3635516,-3.7965293,11,Pharmacology & Drug Selection
+Q2021-290,3.6617455,0.5185152,5,Acute / Emergent Presentation
+Q2021-291,10.809196,-0.52567786,9,Screening & Prevention Guidelines
+Q2021-292,5.724249,-3.1299062,6,Pharmacology & Drug Selection
+Q2021-293,8.090242,0.50253195,8,General Adult Medicine -- Undifferentiated
+Q2021-294,4.146887,-0.6664922,6,Pharmacology & Drug Selection
+Q2021-295,6.749747,2.2992547,3,Pediatric Care & Development
+Q2021-296,7.361364,-0.1604974,8,General Adult Medicine -- Undifferentiated
+Q2021-297,3.075312,-0.7888678,6,Pharmacology & Drug Selection
+Q2021-298,5.3240895,-1.8248532,10,Acute / Emergent Presentation
+Q2021-299,7.490556,-1.8275108,6,Pharmacology & Drug Selection
+Q2021-300,6.8449078,2.3365893,3,Pediatric Care & Development
+Q2021-301,7.9710765,-3.461027,10,Acute / Emergent Presentation
+Q2021-302,2.7337062,0.29255757,5,Acute / Emergent Presentation
+Q2021-303,8.050668,1.6767664,8,General Adult Medicine -- Undifferentiated
+Q2021-304,7.1640863,-3.792927,10,Acute / Emergent Presentation
+Q2021-305,10.815954,-0.49344385,9,Screening & Prevention Guidelines
+Q2021-306,6.3899565,0.37847742,6,Pharmacology & Drug Selection
+Q2021-307,4.8874173,-0.8191644,6,Pharmacology & Drug Selection
+Q2021-308,3.8763309,-4.4219913,6,Pharmacology & Drug Selection
+Q2021-309,2.1888478,-0.5478955,5,Acute / Emergent Presentation
+Q2021-310,4.279399,-2.761761,4,General Adult Medicine -- Undifferentiated
+Q2021-311,5.188307,2.4298368,6,Pharmacology & Drug Selection
+Q2021-312,8.12288,-2.693103,6,Pharmacology & Drug Selection
+Q2021-313,4.0302544,-0.6295699,5,Acute / Emergent Presentation
+Q2021-314,6.038976,-2.0856154,0,Chronic Disease Management
+Q2021-315,7.548757,2.1991165,3,Pediatric Care & Development
+Q2021-316,2.5082684,1.0341964,5,Acute / Emergent Presentation
+Q2021-317,4.10376,-3.7594428,4,General Adult Medicine -- Undifferentiated
+Q2021-318,7.543661,0.5310797,0,Chronic Disease Management
+Q2021-319,5.3673186,-0.95758194,6,Pharmacology & Drug Selection
+Q2021-320,7.1686206,-2.5133743,11,Pharmacology & Drug Selection
+Q2021-321,7.627648,2.103207,3,Pediatric Care & Development
+Q2021-322,2.0936828,-0.6224123,5,Acute / Emergent Presentation
+Q2021-323,4.7810397,0.18196064,6,Pharmacology & Drug Selection
+Q2021-324,3.1649814,-0.89072955,5,Acute / Emergent Presentation
+Q2021-325,4.3588634,-1.3689542,6,Pharmacology & Drug Selection
+Q2021-326,5.451003,-1.7152649,6,Pharmacology & Drug Selection
+Q2021-327,9.398676,0.24211514,7,Screening & Prevention Guidelines
+Q2021-328,8.195153,-0.17672388,0,Chronic Disease Management
+Q2021-329,5.580332,0.46370816,6,Pharmacology & Drug Selection
+Q2021-330,5.9660974,-2.2012506,6,Pharmacology & Drug Selection
+Q2021-331,2.5973518,0.60992604,5,Acute / Emergent Presentation
+Q2021-332,7.081023,-3.7296088,11,Pharmacology & Drug Selection
+Q2021-333,10.586913,-0.58228016,9,Screening & Prevention Guidelines
+Q2021-334,4.20761,-3.4790773,4,General Adult Medicine -- Undifferentiated
+Q2021-335,7.7641706,-0.48679483,0,Chronic Disease Management
+Q2021-336,7.1989365,2.2709072,3,Pediatric Care & Development
+Q2021-337,3.862476,0.77666605,6,Pharmacology & Drug Selection
+Q2021-338,7.3299174,-2.6172712,6,Pharmacology & Drug Selection
+Q2021-339,7.2619863,-1.3721925,1,Pharmacology & Drug Selection
+Q2021-340,2.3296218,0.44785243,5,Acute / Emergent Presentation
+Q2021-341,3.9615803,-4.645846,6,Pharmacology & Drug Selection
+Q2021-342,2.1617448,-0.5976686,5,Acute / Emergent Presentation
+Q2021-343,4.8739605,0.1351723,6,Pharmacology & Drug Selection
+Q2021-344,5.221607,0.7257596,6,Pharmacology & Drug Selection
+Q2021-345,5.91388,-2.0825682,6,Pharmacology & Drug Selection
+Q2021-346,7.4831333,-2.2942667,6,Pharmacology & Drug Selection
+Q2021-347,2.4051964,1.2902061,5,Acute / Emergent Presentation
+Q2021-348,5.047719,0.96430993,6,Pharmacology & Drug Selection
+Q2021-349,7.489627,2.1850314,6,Pharmacology & Drug Selection
+Q2021-350,3.9652627,-2.979008,5,Acute / Emergent Presentation
+Q2021-351,4.5895123,-2.0288954,6,Pharmacology & Drug Selection
+Q2021-352,9.553239,-0.4324925,7,Screening & Prevention Guidelines
+Q2021-353,7.017962,1.9088268,3,Pediatric Care & Development
+Q2021-354,2.3337262,-0.58133435,5,Acute / Emergent Presentation
+Q2021-355,7.3695273,-0.58771884,6,Pharmacology & Drug Selection
+Q2021-356,4.8668222,-0.72120315,6,Pharmacology & Drug Selection
+Q2021-357,7.5364294,2.1828487,3,Pediatric Care & Development
+Q2021-358,5.3847613,2.1965,6,Pharmacology & Drug Selection
+Q2021-359,5.9266224,-3.1332326,6,Pharmacology & Drug Selection
+Q2021-360,5.4003906,-3.1273994,4,General Adult Medicine -- Undifferentiated
+Q2021-361,5.327662,1.4660141,8,General Adult Medicine -- Undifferentiated
+Q2021-362,3.9790168,1.2813634,6,Pharmacology & Drug Selection
+Q2021-363,5.7133946,1.5821007,1,Pharmacology & Drug Selection
+Q2021-364,2.789616,1.9617069,5,Acute / Emergent Presentation
+Q2021-365,5.8706303,1.5737948,8,General Adult Medicine -- Undifferentiated
+Q2021-366,4.154725,-3.0208333,4,General Adult Medicine -- Undifferentiated
+Q2021-367,10.7346945,-0.48517597,9,Screening & Prevention Guidelines
+Q2021-368,6.3479977,1.0960983,6,Pharmacology & Drug Selection
+Q2021-369,9.434713,-3.1903157,6,Pharmacology & Drug Selection
+Q2021-370,7.2818894,-0.7884718,1,Pharmacology & Drug Selection
+Q2021-371,3.299488,1.141305,5,Acute / Emergent Presentation
+Q2021-372,7.311892,-3.5138562,10,Acute / Emergent Presentation
+Q2021-373,4.3165593,-2.2527375,3,Pediatric Care & Development
+Q2021-374,5.0254016,-0.2010073,6,Pharmacology & Drug Selection
+Q2021-375,8.426663,-0.7701074,0,Chronic Disease Management
+Q2021-376,7.3862085,-0.25929207,6,Pharmacology & Drug Selection
+Q2021-377,6.696853,0.61221045,6,Pharmacology & Drug Selection
+Q2021-378,7.1524663,0.49270275,6,Pharmacology & Drug Selection
+Q2021-379,7.007036,-1.5034239,0,Chronic Disease Management
+Q2021-380,4.3641477,-3.6233153,4,General Adult Medicine -- Undifferentiated
+Q2021-381,7.574396,-1.4805379,0,Chronic Disease Management
+Q2021-382,6.77727,-3.6008534,11,Pharmacology & Drug Selection
+Q2021-383,9.317923,-1.7549986,6,Pharmacology & Drug Selection
+Q2021-384,4.1023154,-0.598823,6,Pharmacology & Drug Selection
+Q2021-385,6.2647214,-2.4716182,1,Pharmacology & Drug Selection
+Q2021-386,5.185954,2.4321232,6,Pharmacology & Drug Selection
+Q2021-387,5.8250337,-1.3080058,6,Pharmacology & Drug Selection
+Q2021-388,4.8915877,-3.4542482,4,General Adult Medicine -- Undifferentiated
+Q2021-389,4.793406,-3.7844765,2,Chronic Disease Management
+Q2021-390,6.653624,-2.2773488,6,Pharmacology & Drug Selection
+Q2021-391,8.114794,-3.191905,6,Pharmacology & Drug Selection
+Q2021-392,6.0572033,-2.9165034,6,Pharmacology & Drug Selection
+Q2021-393,7.0705585,-2.391805,6,Pharmacology & Drug Selection
+Q2021-394,7.2306433,-2.3796864,6,Pharmacology & Drug Selection
+Q2021-395,4.99732,-2.6435218,6,Pharmacology & Drug Selection
+Q2021-396,5.872612,1.4650388,8,General Adult Medicine -- Undifferentiated
+Q2021-397,2.3723705,1.322032,5,Acute / Emergent Presentation
+Q2021-398,8.434653,0.4113137,8,General Adult Medicine -- Undifferentiated
+Q2021-399,4.7473516,-2.9392228,4,General Adult Medicine -- Undifferentiated
+Q2021-400,7.6704965,-2.0609775,0,Chronic Disease Management
+Q2022-401,7.332598,-3.363714,10,Acute / Emergent Presentation
+Q2022-402,5.1602497,2.463306,6,Pharmacology & Drug Selection
+Q2022-403,7.0970206,0.41028807,6,Pharmacology & Drug Selection
+Q2022-404,7.2240977,0.9554638,6,Pharmacology & Drug Selection
+Q2022-405,6.397537,1.1046169,6,Pharmacology & Drug Selection
+Q2022-406,6.7152123,-2.230461,6,Pharmacology & Drug Selection
+Q2022-407,8.419293,1.3058503,8,General Adult Medicine -- Undifferentiated
+Q2022-408,5.9622483,-0.8448032,6,Pharmacology & Drug Selection
+Q2022-409,7.491266,0.26693192,6,Pharmacology & Drug Selection
+Q2022-410,5.190396,2.4235532,6,Pharmacology & Drug Selection
+Q2022-411,9.446453,-3.2000465,6,Pharmacology & Drug Selection
+Q2022-412,7.7154384,-2.0445142,6,Pharmacology & Drug Selection
+Q2022-413,4.8067045,-0.80010176,2,Chronic Disease Management
+Q2022-414,9.484835,-3.2289615,6,Pharmacology & Drug Selection
+Q2022-415,5.7885365,1.5779136,8,General Adult Medicine -- Undifferentiated
+Q2022-416,9.485343,-3.2127082,6,Pharmacology & Drug Selection
+Q2022-417,5.6537495,-2.3338373,6,Pharmacology & Drug Selection
+Q2022-418,4.1898966,-2.6400857,6,Pharmacology & Drug Selection
+Q2022-419,7.1926765,1.9101278,3,Pediatric Care & Development
+Q2022-420,6.091516,0.12815873,6,Pharmacology & Drug Selection
+Q2022-421,6.043996,-1.1586648,6,Pharmacology & Drug Selection
+Q2022-422,7.388579,-1.9672252,6,Pharmacology & Drug Selection
+Q2022-423,6.474266,-1.8798593,6,Pharmacology & Drug Selection
+Q2022-424,3.2179995,-1.5531762,1,Pharmacology & Drug Selection
+Q2022-425,3.7823687,-4.0003614,6,Pharmacology & Drug Selection
+Q2022-426,8.38612,1.3889742,8,General Adult Medicine -- Undifferentiated
+Q2022-427,5.0597286,0.7205826,6,Pharmacology & Drug Selection
+Q2022-428,6.3318768,-1.9375273,6,Pharmacology & Drug Selection
+Q2022-429,7.5303454,-3.5459023,10,Acute / Emergent Presentation
+Q2022-430,4.974951,0.905251,6,Pharmacology & Drug Selection
+Q2022-431,4.7712946,-1.7097855,5,Acute / Emergent Presentation
+Q2022-432,3.9008203,-2.2484634,6,Pharmacology & Drug Selection
+Q2022-433,6.86652,-3.6421833,11,Pharmacology & Drug Selection
+Q2022-434,6.335514,-1.0876877,6,Pharmacology & Drug Selection
+Q2022-435,10.768154,-0.5158334,9,Screening & Prevention Guidelines
+Q2022-436,9.13838,-0.9328496,6,Pharmacology & Drug Selection
+Q2022-437,2.188216,-2.5103705,2,Chronic Disease Management
+Q2022-438,5.1277423,1.2955687,6,Pharmacology & Drug Selection
+Q2022-439,5.1983876,-0.17406106,6,Pharmacology & Drug Selection
+Q2022-440,6.510607,-0.34928036,6,Pharmacology & Drug Selection
+Q2022-441,3.7875926,-4.03852,3,Pediatric Care & Development
+Q2022-442,4.409506,-1.1154945,10,Acute / Emergent Presentation
+Q2022-443,6.5566487,-2.4037566,1,Pharmacology & Drug Selection
+Q2022-444,5.218652,1.4394387,8,General Adult Medicine -- Undifferentiated
+Q2022-445,3.2983017,0.5299136,5,Acute / Emergent Presentation
+Q2022-446,5.4544654,0.34531176,6,Pharmacology & Drug Selection
+Q2022-447,8.407079,1.4063205,8,General Adult Medicine -- Undifferentiated
+Q2022-448,6.478058,-4.124594,11,Pharmacology & Drug Selection
+Q2022-449,3.9731822,2.2388494,8,General Adult Medicine -- Undifferentiated
+Q2022-450,7.286457,-0.20404856,6,Pharmacology & Drug Selection
+Q2022-451,3.418971,0.6410649,5,Acute / Emergent Presentation
+Q2022-452,5.815021,1.5450747,8,General Adult Medicine -- Undifferentiated
+Q2022-453,4.413161,-3.467499,4,General Adult Medicine -- Undifferentiated
+Q2022-454,8.516239,-1.4938095,6,Pharmacology & Drug Selection
+Q2022-455,4.8198643,-3.5559735,4,General Adult Medicine -- Undifferentiated
+Q2022-456,6.4921484,-2.458059,1,Pharmacology & Drug Selection
+Q2022-457,7.56461,0.4823016,0,Chronic Disease Management
+Q2022-458,8.468179,-0.19391036,0,Chronic Disease Management
+Q2022-459,6.4469643,1.7197133,8,General Adult Medicine -- Undifferentiated
+Q2022-460,9.483222,-3.237802,6,Pharmacology & Drug Selection
+Q2022-461,6.3974423,-3.9820356,11,Pharmacology & Drug Selection
+Q2022-462,2.0234077,-2.4335482,2,Chronic Disease Management
+Q2022-463,6.8409085,-0.3703717,6,Pharmacology & Drug Selection
+Q2022-464,6.6553874,1.5306224,6,Pharmacology & Drug Selection
+Q2022-465,8.246746,1.572763,8,General Adult Medicine -- Undifferentiated
+Q2022-466,4.043087,-2.988715,4,General Adult Medicine -- Undifferentiated
+Q2022-467,4.3397155,0.04463182,6,Pharmacology & Drug Selection
+Q2022-468,5.591881,-0.05469076,6,Pharmacology & Drug Selection
+Q2022-469,6.307622,-4.020585,11,Pharmacology & Drug Selection
+Q2022-470,3.8980916,-4.360305,4,General Adult Medicine -- Undifferentiated
+Q2022-471,4.061171,-4.277998,6,Pharmacology & Drug Selection
+Q2022-472,5.6261263,0.09145476,6,Pharmacology & Drug Selection
+Q2022-473,3.2323291,-1.5468348,1,Pharmacology & Drug Selection
+Q2022-474,3.866449,-0.21857592,6,Pharmacology & Drug Selection
+Q2022-475,6.606121,-1.7149284,6,Pharmacology & Drug Selection
+Q2022-476,7.0976276,-2.368213,6,Pharmacology & Drug Selection
+Q2022-477,6.7351184,-3.9689984,10,Acute / Emergent Presentation
+Q2022-478,5.3866477,1.1634312,6,Pharmacology & Drug Selection
+Q2022-479,5.18911,2.4354932,6,Pharmacology & Drug Selection
+Q2022-480,8.620779,-1.4184426,8,General Adult Medicine -- Undifferentiated
+Q2022-481,6.685939,-2.6753967,1,Pharmacology & Drug Selection
+Q2022-482,6.070692,0.9765484,6,Pharmacology & Drug Selection
+Q2022-483,2.3478563,1.3871511,6,Pharmacology & Drug Selection
+Q2022-484,6.8616014,-0.9015961,6,Pharmacology & Drug Selection
+Q2022-485,7.5622725,-1.2982966,0,Chronic Disease Management
+Q2022-486,4.9427104,-1.7831988,10,Acute / Emergent Presentation
+Q2022-487,5.0055346,1.0313184,6,Pharmacology & Drug Selection
+Q2022-488,8.473975,-1.5320991,6,Pharmacology & Drug Selection
+Q2022-489,7.2936983,1.0530356,6,Pharmacology & Drug Selection
+Q2022-490,6.4429502,-1.8797101,6,Pharmacology & Drug Selection
+Q2022-491,5.8891644,1.5237129,8,General Adult Medicine -- Undifferentiated
+Q2022-492,6.2279224,-0.91646975,6,Pharmacology & Drug Selection
+Q2022-493,10.321448,-0.39611655,9,Screening & Prevention Guidelines
+Q2022-494,2.1316125,-2.4810958,2,Chronic Disease Management
+Q2022-495,3.2673037,-1.551633,1,Pharmacology & Drug Selection
+Q2022-496,7.6414065,-1.4145483,0,Chronic Disease Management
+Q2022-497,6.413564,-2.4829082,1,Pharmacology & Drug Selection
+Q2022-498,8.29866,1.3569094,8,General Adult Medicine -- Undifferentiated
+Q2022-499,6.8054023,-3.9011998,10,Acute / Emergent Presentation
+Q2022-500,9.500445,0.2686527,7,Screening & Prevention Guidelines
+Q2022-501,4.1478133,-3.30722,4,General Adult Medicine -- Undifferentiated
+Q2022-502,2.118617,-0.72196144,5,Acute / Emergent Presentation
+Q2022-503,5.7905426,-2.9628284,6,Pharmacology & Drug Selection
+Q2022-504,7.571462,0.08997481,6,Pharmacology & Drug Selection
+Q2022-505,4.4642625,-1.1622192,10,Acute / Emergent Presentation
+Q2022-506,7.845052,-0.5402779,6,Pharmacology & Drug Selection
+Q2022-507,5.3332906,1.0859345,6,Pharmacology & Drug Selection
+Q2022-508,3.9876673,-2.4129984,3,Pediatric Care & Development
+Q2022-509,2.5676522,0.3088081,5,Acute / Emergent Presentation
+Q2022-510,4.394423,-3.4738607,4,General Adult Medicine -- Undifferentiated
+Q2022-511,3.3728232,-0.11384701,5,Acute / Emergent Presentation
+Q2022-512,8.875036,0.8213095,5,Acute / Emergent Presentation
+Q2022-513,2.741809,0.16309388,5,Acute / Emergent Presentation
+Q2022-514,2.1700258,-2.4782457,2,Chronic Disease Management
+Q2022-515,8.359224,0.011737828,0,Chronic Disease Management
+Q2022-516,7.742896,-3.5046751,10,Acute / Emergent Presentation
+Q2022-517,4.333,-3.2487762,4,General Adult Medicine -- Undifferentiated
+Q2022-518,6.1215286,-0.47298375,6,Pharmacology & Drug Selection
+Q2022-519,2.9579115,-0.4582498,5,Acute / Emergent Presentation
+Q2022-520,6.862867,2.3078332,3,Pediatric Care & Development
+Q2022-521,8.002499,1.8365781,8,General Adult Medicine -- Undifferentiated
+Q2022-522,2.2053256,0.4865614,5,Acute / Emergent Presentation
+Q2022-523,5.9302397,-1.5165884,6,Pharmacology & Drug Selection
+Q2022-524,4.083635,-2.1657643,6,Pharmacology & Drug Selection
+Q2022-525,6.5241723,-3.585336,11,Pharmacology & Drug Selection
+Q2022-526,2.3691173,-2.5985365,2,Chronic Disease Management
+Q2022-527,8.258329,-1.3856628,6,Pharmacology & Drug Selection
+Q2022-528,6.99258,-1.0293816,6,Pharmacology & Drug Selection
+Q2022-529,5.9728794,0.15807422,6,Pharmacology & Drug Selection
+Q2022-530,7.2713447,-1.3806784,6,Pharmacology & Drug Selection
+Q2022-531,3.3137653,1.1532013,5,Acute / Emergent Presentation
+Q2022-532,5.3410444,-2.0426571,10,Acute / Emergent Presentation
+Q2022-533,4.0013223,-0.12311709,6,Pharmacology & Drug Selection
+Q2022-534,4.744215,0.09044702,6,Pharmacology & Drug Selection
+Q2022-535,8.144764,-0.26506415,0,Chronic Disease Management
+Q2022-536,3.5735254,-0.25077382,6,Pharmacology & Drug Selection
+Q2022-537,6.4533615,-2.5084562,1,Pharmacology & Drug Selection
+Q2022-538,7.754692,-0.60798603,6,Pharmacology & Drug Selection
+Q2022-539,6.9388747,-2.6035354,1,Pharmacology & Drug Selection
+Q2022-540,6.478276,-0.18980536,6,Pharmacology & Drug Selection
+Q2022-541,4.139062,-2.6057336,4,General Adult Medicine -- Undifferentiated
+Q2022-542,2.4811707,1.2053748,5,Acute / Emergent Presentation
+Q2022-543,3.2053668,0.14481907,5,Acute / Emergent Presentation
+Q2022-544,10.267952,-0.64546144,9,Screening & Prevention Guidelines
+Q2022-545,7.4214983,-2.4255102,10,Acute / Emergent Presentation
+Q2022-546,6.5822334,1.1272746,6,Pharmacology & Drug Selection
+Q2022-547,2.3182461,-0.40566882,5,Acute / Emergent Presentation
+Q2022-548,6.8884544,2.2708998,3,Pediatric Care & Development
+Q2022-549,3.3783948,-1.1030445,5,Acute / Emergent Presentation
+Q2022-550,5.388998,-2.0492957,6,Pharmacology & Drug Selection
+Q2022-551,7.70591,-2.2820418,6,Pharmacology & Drug Selection
+Q2022-552,8.266959,1.5122188,8,General Adult Medicine -- Undifferentiated
+Q2022-553,6.250425,-0.79827803,6,Pharmacology & Drug Selection
+Q2022-554,2.5377624,-0.03308494,5,Acute / Emergent Presentation
+Q2022-555,8.504672,0.3018782,0,Chronic Disease Management
+Q2022-556,7.707396,-1.6048355,0,Chronic Disease Management
+Q2022-557,9.362977,0.16559564,6,Pharmacology & Drug Selection
+Q2022-558,4.3691897,0.46220484,6,Pharmacology & Drug Selection
+Q2022-559,7.292641,2.1168208,3,Pediatric Care & Development
+Q2022-560,4.0815353,-3.3870296,4,General Adult Medicine -- Undifferentiated
+Q2022-561,7.40713,-0.5995429,6,Pharmacology & Drug Selection
+Q2022-562,5.209472,2.397136,6,Pharmacology & Drug Selection
+Q2022-563,6.3938007,0.84695494,1,Pharmacology & Drug Selection
+Q2022-564,5.75104,-0.09702838,6,Pharmacology & Drug Selection
+Q2022-565,7.8685846,-0.48467845,0,Chronic Disease Management
+Q2022-566,5.2964764,-3.0154002,4,General Adult Medicine -- Undifferentiated
+Q2022-567,9.833442,-0.018709403,7,Screening & Prevention Guidelines
+Q2022-568,4.305926,-2.539942,6,Pharmacology & Drug Selection
+Q2022-569,7.4843893,1.9415766,6,Pharmacology & Drug Selection
+Q2022-570,4.812103,0.76934296,6,Pharmacology & Drug Selection
+Q2022-571,7.4049897,2.160329,5,Acute / Emergent Presentation
+Q2022-572,5.188302,-0.26548755,6,Pharmacology & Drug Selection
+Q2022-573,3.8576772,-4.092037,4,General Adult Medicine -- Undifferentiated
+Q2022-574,7.6958337,-1.5146511,0,Chronic Disease Management
+Q2022-575,6.2015038,-0.523029,6,Pharmacology & Drug Selection
+Q2022-576,5.568677,2.3103046,6,Pharmacology & Drug Selection
+Q2022-577,6.0832934,-0.49279958,5,Acute / Emergent Presentation
+Q2022-578,7.2491307,0.9310204,6,Pharmacology & Drug Selection
+Q2022-579,9.563795,-0.37679416,7,Screening & Prevention Guidelines
+Q2022-580,5.2967877,-3.6848686,6,Pharmacology & Drug Selection
+Q2022-581,5.7181134,-1.024302,6,Pharmacology & Drug Selection
+Q2022-582,5.8884993,-2.0944846,6,Pharmacology & Drug Selection
+Q2022-583,8.155734,-0.24233174,0,Chronic Disease Management
+Q2022-584,2.8762307,-0.55722237,5,Acute / Emergent Presentation
+Q2022-585,7.8625574,-0.8020498,6,Pharmacology & Drug Selection
+Q2022-586,5.1678023,2.4142573,6,Pharmacology & Drug Selection
+Q2022-587,2.3922129,1.2598631,5,Acute / Emergent Presentation
+Q2022-588,3.9098628,-4.6409903,6,Pharmacology & Drug Selection
+Q2022-589,7.5187445,-3.6401882,10,Acute / Emergent Presentation
+Q2022-590,5.26021,0.94730127,6,Pharmacology & Drug Selection
+Q2022-591,7.9877377,-3.3819337,10,Acute / Emergent Presentation
+Q2022-592,6.097744,1.5132557,8,General Adult Medicine -- Undifferentiated
+Q2022-593,6.752678,-1.2512594,2,Chronic Disease Management
+Q2022-594,7.57724,-3.634047,11,Pharmacology & Drug Selection
+Q2022-595,5.0671687,-1.5398324,6,Pharmacology & Drug Selection
+Q2022-596,5.313765,0.40723053,3,Pediatric Care & Development
+Q2022-597,2.4076068,1.2972345,5,Acute / Emergent Presentation
+Q2022-598,5.715552,0.63768846,6,Pharmacology & Drug Selection
+Q2022-599,4.9173555,-0.9584885,6,Pharmacology & Drug Selection
+Q2022-600,8.503313,1.2869946,8,General Adult Medicine -- Undifferentiated
+Q2023-601,4.5227485,-3.019926,4,General Adult Medicine -- Undifferentiated
+Q2023-602,3.7646313,-4.0181103,6,Pharmacology & Drug Selection
+Q2023-603,2.925166,2.1254294,6,Pharmacology & Drug Selection
+Q2023-604,5.863968,1.4627999,8,General Adult Medicine -- Undifferentiated
+Q2023-605,5.2788954,0.12667227,6,Pharmacology & Drug Selection
+Q2023-606,5.8624325,-3.0318155,6,Pharmacology & Drug Selection
+Q2023-607,7.0949163,2.0070598,3,Pediatric Care & Development
+Q2023-608,9.508252,-0.34746668,7,Screening & Prevention Guidelines
+Q2023-609,9.551771,0.23893209,7,Screening & Prevention Guidelines
+Q2023-610,5.554005,1.4361773,8,General Adult Medicine -- Undifferentiated
+Q2023-611,2.146484,-2.547971,2,Chronic Disease Management
+Q2023-612,6.3080072,-3.177956,10,Acute / Emergent Presentation
+Q2023-613,4.677755,-3.6318178,4,General Adult Medicine -- Undifferentiated
+Q2023-614,4.298364,-3.522843,4,General Adult Medicine -- Undifferentiated
+Q2023-615,5.832595,-1.3234453,8,General Adult Medicine -- Undifferentiated
+Q2023-616,6.616111,-1.0892271,6,Pharmacology & Drug Selection
+Q2023-617,2.9144673,2.1597278,6,Pharmacology & Drug Selection
+Q2023-618,5.0353947,-2.7852027,10,Acute / Emergent Presentation
+Q2023-619,7.149921,-1.0510312,1,Pharmacology & Drug Selection
+Q2023-620,3.5268133,0.22352895,5,Acute / Emergent Presentation
+Q2023-621,8.256664,-1.9190536,6,Pharmacology & Drug Selection
+Q2023-622,5.485914,-0.38400757,6,Pharmacology & Drug Selection
+Q2023-623,6.6207805,-1.062263,2,Chronic Disease Management
+Q2023-624,7.189264,-0.23889863,6,Pharmacology & Drug Selection
+Q2023-625,3.8133862,-3.957558,4,General Adult Medicine -- Undifferentiated
+Q2023-626,3.5048184,-1.2413565,5,Acute / Emergent Presentation
+Q2023-627,6.1634765,-0.46415123,6,Pharmacology & Drug Selection
+Q2023-628,9.428336,-3.1674109,6,Pharmacology & Drug Selection
+Q2023-629,5.5506516,0.0048554013,6,Pharmacology & Drug Selection
+Q2023-630,6.3971224,-3.2478306,6,Pharmacology & Drug Selection
+Q2023-631,6.4224567,2.1237452,3,Pediatric Care & Development
+Q2023-632,6.8419065,-0.87700236,6,Pharmacology & Drug Selection
+Q2023-633,5.982946,1.4328845,8,General Adult Medicine -- Undifferentiated
+Q2023-634,5.838864,-3.9035199,11,Pharmacology & Drug Selection
+Q2023-635,7.254631,1.0124868,6,Pharmacology & Drug Selection
+Q2023-636,4.203449,0.31560838,6,Pharmacology & Drug Selection
+Q2023-637,2.1184552,-2.5033956,2,Chronic Disease Management
+Q2023-638,6.4414687,1.0610688,6,Pharmacology & Drug Selection
+Q2023-639,7.576191,-1.3871468,0,Chronic Disease Management
+Q2023-640,3.9662013,2.2558959,8,General Adult Medicine -- Undifferentiated
+Q2023-641,6.9104896,-1.0306151,6,Pharmacology & Drug Selection
+Q2023-642,5.3349814,-0.2015113,5,Acute / Emergent Presentation
+Q2023-643,5.40254,-2.029855,10,Acute / Emergent Presentation
+Q2023-644,8.244238,-0.06728163,0,Chronic Disease Management
+Q2023-645,2.6040592,0.45416853,5,Acute / Emergent Presentation
+Q2023-646,2.8987613,2.131159,6,Pharmacology & Drug Selection
+Q2023-647,7.6427503,2.046787,3,Pediatric Care & Development
+Q2023-648,6.464026,-4.670511,6,Pharmacology & Drug Selection
+Q2023-649,4.5049486,-3.349033,4,General Adult Medicine -- Undifferentiated
+Q2023-650,7.726947,-2.202627,6,Pharmacology & Drug Selection
+Q2023-651,2.5601864,-0.033197343,5,Acute / Emergent Presentation
+Q2023-652,6.969413,-0.2652531,6,Pharmacology & Drug Selection
+Q2023-653,7.2319703,-1.9213974,6,Pharmacology & Drug Selection
+Q2023-654,8.127437,-1.3485512,6,Pharmacology & Drug Selection
+Q2023-655,6.740518,-2.1968298,6,Pharmacology & Drug Selection
+Q2023-656,8.187998,-1.5563108,6,Pharmacology & Drug Selection
+Q2023-657,6.0718064,-3.9201324,11,Pharmacology & Drug Selection
+Q2023-658,5.8106284,-0.7459939,6,Pharmacology & Drug Selection
+Q2023-659,7.439667,0.6180069,6,Pharmacology & Drug Selection
+Q2023-660,4.1226335,-3.0836346,4,General Adult Medicine -- Undifferentiated
+Q2023-661,3.1041844,-1.1735861,1,Pharmacology & Drug Selection
+Q2023-662,7.510434,-3.6407216,10,Acute / Emergent Presentation
+Q2023-663,4.29995,0.35577646,6,Pharmacology & Drug Selection
+Q2023-664,9.425235,-0.3862204,7,Screening & Prevention Guidelines
+Q2023-665,7.674753,-2.140719,6,Pharmacology & Drug Selection
+Q2023-666,8.28323,0.38609013,8,General Adult Medicine -- Undifferentiated
+Q2023-667,5.345882,1.1830192,6,Pharmacology & Drug Selection
+Q2023-668,5.165435,2.1591938,8,General Adult Medicine -- Undifferentiated
+Q2023-669,10.447371,-0.5165046,6,Pharmacology & Drug Selection
+Q2023-670,5.6460457,-3.078663,4,General Adult Medicine -- Undifferentiated
+Q2023-671,8.089902,-3.375654,10,Acute / Emergent Presentation
+Q2023-672,9.128085,-0.90332323,6,Pharmacology & Drug Selection
+Q2023-673,5.296413,-0.46246943,6,Pharmacology & Drug Selection
+Q2023-674,7.954908,-1.1900883,6,Pharmacology & Drug Selection
+Q2023-675,6.411208,1.125306,6,Pharmacology & Drug Selection
+Q2023-676,3.9465916,-3.833738,4,General Adult Medicine -- Undifferentiated
+Q2023-677,6.4096913,-4.5478983,2,Chronic Disease Management
+Q2023-678,3.1018457,-0.37135518,5,Acute / Emergent Presentation
+Q2023-679,5.7784452,-0.9601881,6,Pharmacology & Drug Selection
+Q2023-680,3.8159451,-0.17611346,6,Pharmacology & Drug Selection
+Q2023-681,7.342565,-1.8406894,6,Pharmacology & Drug Selection
+Q2023-682,2.475552,-0.056715347,5,Acute / Emergent Presentation
+Q2023-683,9.675019,0.11457932,7,Screening & Prevention Guidelines
+Q2023-684,4.041445,-4.165031,4,General Adult Medicine -- Undifferentiated
+Q2023-685,4.876457,-0.7614929,2,Chronic Disease Management
+Q2023-686,7.4983306,2.1994877,3,Pediatric Care & Development
+Q2023-687,5.8398223,0.70702523,6,Pharmacology & Drug Selection
+Q2023-688,8.222647,-1.6752461,8,General Adult Medicine -- Undifferentiated
+Q2023-689,7.264866,-3.2240536,6,Pharmacology & Drug Selection
+Q2023-690,2.4241567,1.2318304,5,Acute / Emergent Presentation
+Q2023-691,6.419276,-3.930421,4,General Adult Medicine -- Undifferentiated
+Q2023-692,5.552602,0.45417643,6,Pharmacology & Drug Selection
+Q2023-693,4.9367685,0.42952904,6,Pharmacology & Drug Selection
+Q2023-694,7.332795,0.93798476,6,Pharmacology & Drug Selection
+Q2023-695,4.0305376,-0.45407245,5,Acute / Emergent Presentation
+Q2023-696,4.9860077,-1.8587326,5,Acute / Emergent Presentation
+Q2023-697,5.105453,1.7313066,6,Pharmacology & Drug Selection
+Q2023-698,5.724568,-2.3783,10,Acute / Emergent Presentation
+Q2023-699,7.488865,-3.63894,10,Acute / Emergent Presentation
+Q2023-700,7.0387836,0.1935426,6,Pharmacology & Drug Selection
+Q2023-701,4.093004,-3.601867,4,General Adult Medicine -- Undifferentiated
+Q2023-702,3.2587485,1.173849,5,Acute / Emergent Presentation
+Q2023-703,6.8168573,2.3494039,3,Pediatric Care & Development
+Q2023-704,7.9886847,-0.4392696,0,Chronic Disease Management
+Q2023-705,7.6633096,-2.2525094,6,Pharmacology & Drug Selection
+Q2023-706,4.2174945,-2.6918347,4,General Adult Medicine -- Undifferentiated
+Q2023-707,5.610935,-0.7583475,6,Pharmacology & Drug Selection
+Q2023-708,3.8725078,-4.6024594,6,Pharmacology & Drug Selection
+Q2023-709,2.9536276,-0.54338264,5,Acute / Emergent Presentation
+Q2023-710,5.182231,2.3881404,6,Pharmacology & Drug Selection
+Q2023-711,2.5570555,-0.31933612,6,Pharmacology & Drug Selection
+Q2023-712,8.498322,-1.4779764,6,Pharmacology & Drug Selection
+Q2023-713,5.320787,-0.698535,6,Pharmacology & Drug Selection
+Q2023-714,10.79786,-0.5116307,9,Screening & Prevention Guidelines
+Q2023-715,9.401492,0.3265235,7,Screening & Prevention Guidelines
+Q2023-716,5.9479747,-1.5374988,8,General Adult Medicine -- Undifferentiated
+Q2023-717,4.132832,-2.7002316,6,Pharmacology & Drug Selection
+Q2023-718,5.727824,0.34042174,6,Pharmacology & Drug Selection
+Q2023-719,3.7703147,0.10300917,10,Acute / Emergent Presentation
+Q2023-720,5.0855045,-1.9574025,10,Acute / Emergent Presentation
+Q2023-721,3.994392,2.2330592,7,Screening & Prevention Guidelines
+Q2023-722,2.1858914,-0.5341271,5,Acute / Emergent Presentation
+Q2023-723,6.755358,0.28413144,6,Pharmacology & Drug Selection
+Q2023-724,6.169286,-0.45752704,6,Pharmacology & Drug Selection
+Q2023-725,9.629369,0.1783932,7,Screening & Prevention Guidelines
+Q2023-726,5.496199,-2.2528453,10,Acute / Emergent Presentation
+Q2023-727,9.173775,-0.9186208,6,Pharmacology & Drug Selection
+Q2023-728,3.1345391,-0.5979499,5,Acute / Emergent Presentation
+Q2023-729,7.4445786,0.6172136,6,Pharmacology & Drug Selection
+Q2023-730,6.9832177,-2.6261494,1,Pharmacology & Drug Selection
+Q2023-731,2.7028317,0.41083726,5,Acute / Emergent Presentation
+Q2023-732,7.2847137,-1.6417195,6,Pharmacology & Drug Selection
+Q2023-733,5.5186067,1.1606469,6,Pharmacology & Drug Selection
+Q2023-734,3.9695094,-2.2971787,6,Pharmacology & Drug Selection
+Q2023-735,2.464037,-2.5760722,2,Chronic Disease Management
+Q2023-736,4.4235663,1.4310144,6,Pharmacology & Drug Selection
+Q2023-737,5.0054445,1.5686983,8,General Adult Medicine -- Undifferentiated
+Q2023-738,4.380648,-2.113624,6,Pharmacology & Drug Selection
+Q2023-739,7.572383,-2.1849742,6,Pharmacology & Drug Selection
+Q2023-740,7.103903,-0.40650645,6,Pharmacology & Drug Selection
+Q2023-741,7.6543927,-1.1353735,6,Pharmacology & Drug Selection
+Q2023-742,4.910517,0.79740846,5,Acute / Emergent Presentation
+Q2023-743,2.8990731,2.0795176,5,Acute / Emergent Presentation
+Q2023-744,9.737301,0.060466822,7,Screening & Prevention Guidelines
+Q2023-745,6.3690195,-2.1304886,1,Pharmacology & Drug Selection
+Q2023-746,5.1896915,0.8008541,6,Pharmacology & Drug Selection
+Q2023-747,3.3029642,1.1336716,5,Acute / Emergent Presentation
+Q2023-748,7.7700167,-0.7783589,6,Pharmacology & Drug Selection
+Q2023-749,6.6407914,0.3702293,8,General Adult Medicine -- Undifferentiated
+Q2023-750,6.4337573,-1.8326468,6,Pharmacology & Drug Selection
+Q2023-751,7.462307,-2.3040981,0,Chronic Disease Management
+Q2023-752,5.2732935,-3.0083404,4,General Adult Medicine -- Undifferentiated
+Q2023-753,7.8314056,0.3354512,6,Pharmacology & Drug Selection
+Q2023-754,2.224366,0.41863364,5,Acute / Emergent Presentation
+Q2023-755,4.3359156,-1.3774036,3,Pediatric Care & Development
+Q2023-756,6.676668,2.316536,3,Pediatric Care & Development
+Q2023-757,5.3747387,1.4823598,6,Pharmacology & Drug Selection
+Q2023-758,9.038539,-1.003465,6,Pharmacology & Drug Selection
+Q2023-759,5.7659354,0.21046212,6,Pharmacology & Drug Selection
+Q2023-760,10.219062,-0.52465916,9,Screening & Prevention Guidelines
+Q2023-761,7.5609756,-1.5439463,0,Chronic Disease Management
+Q2023-762,2.9393342,2.142715,6,Pharmacology & Drug Selection
+Q2023-763,6.2960873,-3.9696023,11,Pharmacology & Drug Selection
+Q2023-764,4.062935,0.5883598,6,Pharmacology & Drug Selection
+Q2023-765,9.347342,0.08188725,7,Screening & Prevention Guidelines
+Q2023-766,4.9378724,-0.85775656,1,Pharmacology & Drug Selection
+Q2023-767,8.437495,0.16875999,1,Pharmacology & Drug Selection
+Q2023-768,4.8820696,0.895613,6,Pharmacology & Drug Selection
+Q2023-769,4.1961555,-4.2442617,6,Pharmacology & Drug Selection
+Q2023-770,5.355451,-2.9726508,10,Acute / Emergent Presentation
+Q2023-771,2.1742773,-0.48754045,5,Acute / Emergent Presentation
+Q2023-772,10.32426,-0.6573254,9,Screening & Prevention Guidelines
+Q2023-773,4.110484,-2.564035,6,Pharmacology & Drug Selection
+Q2023-774,6.6884155,2.2088964,6,Pharmacology & Drug Selection
+Q2023-775,8.222103,-1.3322314,8,General Adult Medicine -- Undifferentiated
+Q2023-776,6.4804697,-3.0403204,8,General Adult Medicine -- Undifferentiated
+Q2023-777,3.617131,-0.17289251,5,Acute / Emergent Presentation
+Q2023-778,5.9646673,-1.5238459,6,Pharmacology & Drug Selection
+Q2023-779,3.98039,2.2461042,7,Screening & Prevention Guidelines
+Q2023-780,7.4914393,-3.7055004,10,Acute / Emergent Presentation
+Q2023-781,4.706247,-3.7034745,4,General Adult Medicine -- Undifferentiated
+Q2023-782,8.461041,-2.6929593,9,Screening & Prevention Guidelines
+Q2023-783,5.572144,0.4790555,6,Pharmacology & Drug Selection
+Q2023-784,3.9392073,-0.5039197,5,Acute / Emergent Presentation
+Q2023-785,4.6203933,0.11630624,2,Chronic Disease Management
+Q2023-786,3.9725356,1.3171096,7,Screening & Prevention Guidelines
+Q2023-787,2.3359778,1.3704034,5,Acute / Emergent Presentation
+Q2023-788,9.342913,-1.8048444,0,Chronic Disease Management
+Q2023-789,9.426231,-3.17564,6,Pharmacology & Drug Selection
+Q2023-790,7.2850113,1.4644425,6,Pharmacology & Drug Selection
+Q2023-791,8.396679,-2.6938453,6,Pharmacology & Drug Selection
+Q2023-792,8.106443,1.6819414,8,General Adult Medicine -- Undifferentiated
+Q2023-793,6.7540007,-1.3020467,8,General Adult Medicine -- Undifferentiated
+Q2023-794,5.602668,-2.5139625,6,Pharmacology & Drug Selection
+Q2023-795,5.847048,-2.0461943,6,Pharmacology & Drug Selection
+Q2023-796,5.4829245,-0.04001178,6,Pharmacology & Drug Selection
+Q2023-797,2.220147,-0.50950366,5,Acute / Emergent Presentation
+Q2023-798,7.8715043,0.016312908,0,Chronic Disease Management
+Q2023-799,9.150375,-1.5231217,0,Chronic Disease Management
+Q2023-800,8.353275,-0.003670812,0,Chronic Disease Management
+Q2024-801,6.507861,-1.8214175,6,Pharmacology & Drug Selection
+Q2024-802,4.8475943,-3.712881,2,Chronic Disease Management
+Q2024-803,9.26943,-1.8062015,6,Pharmacology & Drug Selection
+Q2024-804,8.266198,-1.8410904,10,Acute / Emergent Presentation
+Q2024-805,5.9830484,-3.612149,11,Pharmacology & Drug Selection
+Q2024-806,6.7332435,-1.3164595,2,Chronic Disease Management
+Q2024-807,10.626785,-0.6448214,9,Screening & Prevention Guidelines
+Q2024-808,6.0547857,-1.3533096,6,Pharmacology & Drug Selection
+Q2024-809,5.8282075,-2.980486,6,Pharmacology & Drug Selection
+Q2024-810,6.285602,-2.334391,1,Pharmacology & Drug Selection
+Q2024-811,7.487203,-0.5806765,6,Pharmacology & Drug Selection
+Q2024-812,6.3206325,0.12529798,6,Pharmacology & Drug Selection
+Q2024-813,4.189169,-3.4145133,4,General Adult Medicine -- Undifferentiated
+Q2024-814,6.153445,-0.5637727,6,Pharmacology & Drug Selection
+Q2024-815,9.381909,0.29661977,7,Screening & Prevention Guidelines
+Q2024-816,2.9439578,2.1466336,6,Pharmacology & Drug Selection
+Q2024-817,2.2554786,-0.48586887,5,Acute / Emergent Presentation
+Q2024-818,4.38876,-3.6081376,4,General Adult Medicine -- Undifferentiated
+Q2024-819,4.5376606,-2.8630893,4,General Adult Medicine -- Undifferentiated
+Q2024-820,6.778274,1.8163061,6,Pharmacology & Drug Selection
+Q2024-821,6.5251265,1.2041658,6,Pharmacology & Drug Selection
+Q2024-822,4.3127527,0.36272308,6,Pharmacology & Drug Selection
+Q2024-823,4.478899,-3.6207166,4,General Adult Medicine -- Undifferentiated
+Q2024-824,6.0034537,-3.4335284,10,Acute / Emergent Presentation
+Q2024-825,7.0908074,-3.8344147,10,Acute / Emergent Presentation
+Q2024-826,5.303433,-1.7133234,10,Acute / Emergent Presentation
+Q2024-827,2.64,0.45721957,5,Acute / Emergent Presentation
+Q2024-828,8.206778,-0.77236056,8,General Adult Medicine -- Undifferentiated
+Q2024-829,6.6197886,-2.282761,6,Pharmacology & Drug Selection
+Q2024-830,5.046087,-3.0143332,10,Acute / Emergent Presentation
+Q2024-831,3.7331908,0.37721106,5,Acute / Emergent Presentation
+Q2024-832,5.9490557,-2.128596,6,Pharmacology & Drug Selection
+Q2024-833,5.250165,-0.7253408,6,Pharmacology & Drug Selection
+Q2024-834,10.5410795,-0.59007007,9,Screening & Prevention Guidelines
+Q2024-835,7.307056,-3.276374,10,Acute / Emergent Presentation
+Q2024-836,5.421418,-3.2264087,6,Pharmacology & Drug Selection
+Q2024-837,7.1247497,-2.5041966,6,Pharmacology & Drug Selection
+Q2024-838,4.358711,-0.17302088,6,Pharmacology & Drug Selection
+Q2024-839,9.591188,0.22762008,9,Screening & Prevention Guidelines
+Q2024-840,3.2892277,0.3904001,5,Acute / Emergent Presentation
+Q2024-841,7.1722565,-3.2785554,10,Acute / Emergent Presentation
+Q2024-842,2.3611195,1.3577887,5,Acute / Emergent Presentation
+Q2024-843,7.5125384,1.6149443,8,General Adult Medicine -- Undifferentiated
+Q2024-844,6.380306,-1.9295652,6,Pharmacology & Drug Selection
+Q2024-845,4.010905,2.199462,0,Chronic Disease Management
+Q2024-846,8.2843275,-1.6122004,6,Pharmacology & Drug Selection
+Q2024-847,4.943712,-1.4980421,1,Pharmacology & Drug Selection
+Q2024-848,5.1920266,1.4367564,8,General Adult Medicine -- Undifferentiated
+Q2024-849,7.0232015,2.0217083,3,Pediatric Care & Development
+Q2024-850,2.9645426,2.156756,6,Pharmacology & Drug Selection
+Q2024-851,4.006412,1.2788999,5,Acute / Emergent Presentation
+Q2024-852,6.550386,-0.597297,6,Pharmacology & Drug Selection
+Q2024-853,3.2939787,-0.056919035,5,Acute / Emergent Presentation
+Q2024-854,3.354412,0.8112938,5,Acute / Emergent Presentation
+Q2024-855,6.9119596,2.330975,3,Pediatric Care & Development
+Q2024-856,4.1459455,-2.5127628,6,Pharmacology & Drug Selection
+Q2024-857,6.044915,-3.9468691,11,Pharmacology & Drug Selection
+Q2024-858,3.9237568,-0.2578121,6,Pharmacology & Drug Selection
+Q2024-859,8.616887,-0.38024157,3,Pediatric Care & Development
+Q2024-860,4.617955,0.073055364,6,Pharmacology & Drug Selection
+Q2024-861,5.1091843,0.9475139,6,Pharmacology & Drug Selection
+Q2024-862,4.3916245,-1.4675992,10,Acute / Emergent Presentation
+Q2024-863,10.184501,-0.80446965,9,Screening & Prevention Guidelines
+Q2024-864,2.2960846,-0.8116509,6,Pharmacology & Drug Selection
+Q2024-865,9.377715,-3.1635344,6,Pharmacology & Drug Selection
+Q2024-866,6.915492,0.66377956,6,Pharmacology & Drug Selection
+Q2024-867,4.238499,-2.6035447,6,Pharmacology & Drug Selection
+Q2024-868,9.728751,-0.79089993,9,Screening & Prevention Guidelines
+Q2024-869,6.02318,0.110812485,6,Pharmacology & Drug Selection
+Q2024-870,4.986249,0.88346356,6,Pharmacology & Drug Selection
+Q2024-871,7.9974093,-0.11579039,0,Chronic Disease Management
+Q2024-872,4.3156104,0.41930807,6,Pharmacology & Drug Selection
+Q2024-873,5.837302,-0.68329525,6,Pharmacology & Drug Selection
+Q2024-874,9.218945,-1.337823,0,Chronic Disease Management
+Q2024-875,2.114393,-2.5212765,2,Chronic Disease Management
+Q2024-876,6.8023067,-1.579608,10,Acute / Emergent Presentation
+Q2024-877,6.005436,1.1195064,6,Pharmacology & Drug Selection
+Q2024-878,7.0912023,-0.23003626,6,Pharmacology & Drug Selection
+Q2024-879,3.7960224,0.31268576,6,Pharmacology & Drug Selection
+Q2024-880,6.7693768,-0.33454835,6,Pharmacology & Drug Selection
+Q2024-881,8.589953,-1.4890188,6,Pharmacology & Drug Selection
+Q2024-882,5.809001,1.5004096,5,Acute / Emergent Presentation
+Q2024-883,5.706867,1.6013091,8,General Adult Medicine -- Undifferentiated
+Q2024-884,8.254102,-2.8412375,1,Pharmacology & Drug Selection
+Q2024-885,9.340232,-1.7933251,0,Chronic Disease Management
+Q2024-886,4.740842,-1.6062977,1,Pharmacology & Drug Selection
+Q2024-887,3.3205602,1.0031174,5,Acute / Emergent Presentation
+Q2024-888,8.238256,-1.6353717,6,Pharmacology & Drug Selection
+Q2024-889,2.607673,-0.058577668,5,Acute / Emergent Presentation
+Q2024-890,6.7406397,0.5058874,6,Pharmacology & Drug Selection
+Q2024-891,8.131679,-3.2976198,10,Acute / Emergent Presentation
+Q2024-892,4.678942,-3.5667775,2,Chronic Disease Management
+Q2024-893,7.3697233,-0.21662135,3,Pediatric Care & Development
+Q2024-894,8.460487,-1.5526894,6,Pharmacology & Drug Selection
+Q2024-895,8.49708,0.3917748,0,Chronic Disease Management
+Q2024-896,7.2442894,1.5628499,6,Pharmacology & Drug Selection
+Q2024-897,4.2220173,-0.51561683,6,Pharmacology & Drug Selection
+Q2024-898,2.1273324,-0.6316272,5,Acute / Emergent Presentation
+Q2024-899,5.833674,-2.9968052,6,Pharmacology & Drug Selection
+Q2024-900,10.797449,-0.52455,9,Screening & Prevention Guidelines
+Q2024-901,3.875847,-4.602715,4,General Adult Medicine -- Undifferentiated
+Q2024-902,3.997948,-0.35662532,6,Pharmacology & Drug Selection
+Q2024-903,7.501429,0.6220185,6,Pharmacology & Drug Selection
+Q2024-904,6.953993,-3.0783205,10,Acute / Emergent Presentation
+Q2024-905,3.917406,2.1857123,6,Pharmacology & Drug Selection
+Q2024-906,8.313875,0.5683276,8,General Adult Medicine -- Undifferentiated
+Q2024-907,9.528767,-0.54989976,7,Screening & Prevention Guidelines
+Q2024-908,3.083576,-0.934554,5,Acute / Emergent Presentation
+Q2024-909,9.3476305,0.4058232,5,Acute / Emergent Presentation
+Q2024-910,7.3326826,-0.8767284,0,Chronic Disease Management
+Q2024-911,4.2876544,-2.5184827,4,General Adult Medicine -- Undifferentiated
+Q2024-912,6.0735216,0.123420335,6,Pharmacology & Drug Selection
+Q2024-913,10.826712,-0.46268559,9,Screening & Prevention Guidelines
+Q2024-914,5.509044,-3.11948,4,General Adult Medicine -- Undifferentiated
+Q2024-915,4.593995,-1.618848,10,Acute / Emergent Presentation
+Q2024-916,7.7262316,-2.2158124,6,Pharmacology & Drug Selection
+Q2024-917,4.878945,0.38069344,6,Pharmacology & Drug Selection
+Q2024-918,2.7100465,-0.6605963,1,Pharmacology & Drug Selection
+Q2024-919,10.219425,-0.7584118,9,Screening & Prevention Guidelines
+Q2024-920,2.3831034,0.43464002,5,Acute / Emergent Presentation
+Q2024-921,6.976222,0.9811814,6,Pharmacology & Drug Selection
+Q2024-922,6.978311,2.4133039,3,Pediatric Care & Development
+Q2024-923,3.2813008,1.1089461,5,Acute / Emergent Presentation
+Q2024-924,5.0964465,1.6032814,8,General Adult Medicine -- Undifferentiated
+Q2024-925,6.6585603,0.5390611,6,Pharmacology & Drug Selection
+Q2024-926,5.417636,-2.3123596,10,Acute / Emergent Presentation
+Q2024-927,4.8808455,-3.7421505,10,Acute / Emergent Presentation
+Q2024-928,4.8787885,-0.8168012,2,Chronic Disease Management
+Q2024-929,8.340715,-0.93702143,6,Pharmacology & Drug Selection
+Q2024-930,4.7475004,-1.2808555,10,Acute / Emergent Presentation
+Q2024-931,6.394688,-0.10944649,6,Pharmacology & Drug Selection
+Q2024-932,4.0741124,-3.3378918,4,General Adult Medicine -- Undifferentiated
+Q2024-933,4.327552,-1.4322215,10,Acute / Emergent Presentation
+Q2024-934,9.294678,-1.6724533,0,Chronic Disease Management
+Q2024-935,8.439975,-1.3883419,8,General Adult Medicine -- Undifferentiated
+Q2024-936,2.406732,1.2809118,5,Acute / Emergent Presentation
+Q2024-937,7.730341,0.108805776,0,Chronic Disease Management
+Q2024-938,3.2431629,0.18911423,5,Acute / Emergent Presentation
+Q2024-939,3.7777677,-4.0504537,6,Pharmacology & Drug Selection
+Q2024-940,4.8568,-1.8692621,6,Pharmacology & Drug Selection
+Q2024-941,10.649304,-0.60109615,9,Screening & Prevention Guidelines
+Q2024-942,2.8118422,-0.47101137,5,Acute / Emergent Presentation
+Q2024-943,7.3351493,-0.17879686,6,Pharmacology & Drug Selection
+Q2024-944,2.1349664,-2.5053039,2,Chronic Disease Management
+Q2024-945,4.908769,-1.7486176,7,Screening & Prevention Guidelines
+Q2024-946,3.215453,-1.5857515,1,Pharmacology & Drug Selection
+Q2024-947,7.4369354,-1.8895539,6,Pharmacology & Drug Selection
+Q2024-948,6.6668725,2.1917517,3,Pediatric Care & Development
+Q2024-949,6.5527005,-0.7475158,6,Pharmacology & Drug Selection
+Q2024-950,7.7987933,-0.48466235,6,Pharmacology & Drug Selection
+Q2024-951,7.3072157,-3.291096,10,Acute / Emergent Presentation
+Q2024-952,8.378832,-1.3069539,6,Pharmacology & Drug Selection
+Q2024-953,6.730397,0.49119663,6,Pharmacology & Drug Selection
+Q2024-954,3.2206492,-1.5781226,1,Pharmacology & Drug Selection
+Q2024-955,7.5884037,-0.53788966,6,Pharmacology & Drug Selection
+Q2024-956,5.1992,-0.09156833,6,Pharmacology & Drug Selection
+Q2024-957,5.7833066,0.17921953,6,Pharmacology & Drug Selection
+Q2024-958,3.926876,1.1977792,1,Pharmacology & Drug Selection
+Q2024-959,6.287264,-4.0181174,11,Pharmacology & Drug Selection
+Q2024-960,2.7985876,0.2398971,5,Acute / Emergent Presentation
+Q2024-961,8.281879,0.4096658,8,General Adult Medicine -- Undifferentiated
+Q2024-962,3.0597517,-0.8605505,5,Acute / Emergent Presentation
+Q2024-963,5.4317794,0.37164328,6,Pharmacology & Drug Selection
+Q2024-964,5.1532035,-0.44474632,6,Pharmacology & Drug Selection
+Q2024-965,7.634003,0.099965386,6,Pharmacology & Drug Selection
+Q2024-966,7.203581,1.7765241,3,Pediatric Care & Development
+Q2024-967,2.7807794,0.64155024,5,Acute / Emergent Presentation
+Q2024-968,5.695149,-2.59972,6,Pharmacology & Drug Selection
+Q2024-969,8.163472,-0.23085487,0,Chronic Disease Management
+Q2024-970,6.925208,-0.26377076,6,Pharmacology & Drug Selection
+Q2024-971,4.320096,-2.2265854,6,Pharmacology & Drug Selection
+Q2024-972,9.69328,0.17100246,7,Screening & Prevention Guidelines
+Q2024-973,7.0546694,0.18298142,6,Pharmacology & Drug Selection
+Q2024-974,8.318003,-1.3077823,6,Pharmacology & Drug Selection
+Q2024-975,5.0732727,-1.7720374,6,Pharmacology & Drug Selection
+Q2024-976,3.9949653,2.2421627,8,General Adult Medicine -- Undifferentiated
+Q2024-977,10.7073345,-0.50204927,9,Screening & Prevention Guidelines
+Q2024-978,3.0816274,-0.42292318,5,Acute / Emergent Presentation
+Q2024-979,7.4352193,-1.9784328,6,Pharmacology & Drug Selection
+Q2024-980,4.282197,0.293073,6,Pharmacology & Drug Selection
+Q2024-981,6.9834456,-3.778001,11,Pharmacology & Drug Selection
+Q2024-982,7.594992,-1.5282062,0,Chronic Disease Management
+Q2024-983,5.374387,0.41705367,3,Pediatric Care & Development
+Q2024-984,4.328461,-1.4409144,10,Acute / Emergent Presentation
+Q2024-985,3.8700783,-4.648429,6,Pharmacology & Drug Selection
+Q2024-986,7.628281,0.91284543,8,General Adult Medicine -- Undifferentiated
+Q2024-987,9.624694,-0.40148044,7,Screening & Prevention Guidelines
+Q2024-988,4.6386743,-2.874928,0,Chronic Disease Management
+Q2024-989,2.2057412,0.3754397,5,Acute / Emergent Presentation
+Q2024-990,4.448727,-1.3959861,3,Pediatric Care & Development
+Q2024-991,5.00886,2.4888146,5,Acute / Emergent Presentation
+Q2024-992,5.23003,-3.027972,4,General Adult Medicine -- Undifferentiated
+Q2024-993,3.0970132,-0.70440733,5,Acute / Emergent Presentation
+Q2024-994,7.2091594,1.6141495,6,Pharmacology & Drug Selection
+Q2024-995,4.307343,-1.3318979,10,Acute / Emergent Presentation
+Q2024-996,6.0014777,-4.0283504,11,Pharmacology & Drug Selection
+Q2024-997,3.8475242,-2.0928328,6,Pharmacology & Drug Selection
+Q2024-998,5.352539,1.1387596,6,Pharmacology & Drug Selection
+Q2024-999,5.131306,-3.0273592,10,Acute / Emergent Presentation
+Q2024-1000,4.361695,0.23896833,6,Pharmacology & Drug Selection
+Q2025-001,9.631493,-0.4368939,7,Screening & Prevention Guidelines
+Q2025-002,6.7641726,-2.7927504,11,Pharmacology & Drug Selection
+Q2025-003,2.1780725,-0.56425583,5,Acute / Emergent Presentation
+Q2025-004,5.0655484,-2.9696612,4,General Adult Medicine -- Undifferentiated
+Q2025-005,5.7802505,-2.0633805,10,Acute / Emergent Presentation
+Q2025-006,7.166368,-0.60188705,6,Pharmacology & Drug Selection
+Q2025-007,4.958745,1.696579,1,Pharmacology & Drug Selection
+Q2025-008,7.5533,-1.8004328,6,Pharmacology & Drug Selection
+Q2025-009,8.1358385,-3.2669268,6,Pharmacology & Drug Selection
+Q2025-010,2.9663107,2.2018683,8,General Adult Medicine -- Undifferentiated
+Q2025-011,4.139594,-3.0315924,10,Acute / Emergent Presentation
+Q2025-012,7.4364743,0.545112,6,Pharmacology & Drug Selection
+Q2025-013,5.2280617,2.2556849,11,Pharmacology & Drug Selection
+Q2025-014,5.505995,-2.0398645,10,Acute / Emergent Presentation
+Q2025-015,5.08523,-2.7888663,10,Acute / Emergent Presentation
+Q2025-016,6.75489,2.2953427,3,Pediatric Care & Development
+Q2025-017,2.8968668,1.8194299,5,Acute / Emergent Presentation
+Q2025-018,3.5623772,0.22065721,6,Pharmacology & Drug Selection
+Q2025-019,7.9853563,-1.2126977,6,Pharmacology & Drug Selection
+Q2025-020,5.0638013,-2.8546555,10,Acute / Emergent Presentation
+Q2025-021,6.2344637,-3.3167517,1,Pharmacology & Drug Selection
+Q2025-022,6.407874,-4.1549163,11,Pharmacology & Drug Selection
+Q2025-023,5.947644,0.12764224,6,Pharmacology & Drug Selection
+Q2025-024,5.912995,-2.1617541,6,Pharmacology & Drug Selection
+Q2025-025,4.7246943,-3.548952,4,General Adult Medicine -- Undifferentiated
+Q2025-026,5.0467696,1.6905034,6,Pharmacology & Drug Selection
+Q2025-027,9.898715,-0.44699037,9,Screening & Prevention Guidelines
+Q2025-028,6.1806817,-0.053558867,6,Pharmacology & Drug Selection
+Q2025-029,9.498179,-0.32790947,7,Screening & Prevention Guidelines
+Q2025-030,8.324808,1.519795,8,General Adult Medicine -- Undifferentiated
+Q2025-031,2.3753014,0.087311804,5,Acute / Emergent Presentation
+Q2025-032,5.085176,-2.1583118,10,Acute / Emergent Presentation
+Q2025-033,4.7697673,-1.797724,6,Pharmacology & Drug Selection
+Q2025-034,8.383646,0.54087764,8,General Adult Medicine -- Undifferentiated
+Q2025-035,3.5326302,-0.22893953,5,Acute / Emergent Presentation
+Q2025-036,2.8014455,-2.6011305,11,Pharmacology & Drug Selection
+Q2025-037,9.000995,-0.9673079,6,Pharmacology & Drug Selection
+Q2025-038,4.6024685,-3.6470528,4,General Adult Medicine -- Undifferentiated
+Q2025-039,6.7384496,0.5631078,1,Pharmacology & Drug Selection
+Q2025-040,6.011214,-3.9967322,11,Pharmacology & Drug Selection
+Q2025-041,6.4703646,-0.9650036,6,Pharmacology & Drug Selection
+Q2025-042,5.4735065,-0.7459054,6,Pharmacology & Drug Selection
+Q2025-043,7.2490354,-3.65354,10,Acute / Emergent Presentation
+Q2025-044,5.652302,0.29368013,6,Pharmacology & Drug Selection
+Q2025-045,3.1299837,-0.33458772,1,Pharmacology & Drug Selection
+Q2025-046,2.362879,1.3233835,5,Acute / Emergent Presentation
+Q2025-047,8.499731,1.3075801,8,General Adult Medicine -- Undifferentiated
+Q2025-048,6.8343697,-1.519076,10,Acute / Emergent Presentation
+Q2025-049,5.8575845,-3.1191087,6,Pharmacology & Drug Selection
+Q2025-050,7.493062,-1.8190398,6,Pharmacology & Drug Selection
+Q2025-051,3.9562614,-0.05068024,5,Acute / Emergent Presentation
+Q2025-052,4.609798,-3.5997074,4,General Adult Medicine -- Undifferentiated
+Q2025-053,3.8270075,-4.135068,6,Pharmacology & Drug Selection
+Q2025-054,5.180695,2.4262576,6,Pharmacology & Drug Selection
+Q2025-055,7.6110406,2.1034942,6,Pharmacology & Drug Selection
+Q2025-056,7.9232736,-3.4705615,10,Acute / Emergent Presentation
+Q2025-057,2.4766119,-2.5955842,2,Chronic Disease Management
+Q2025-058,5.1325855,2.512149,6,Pharmacology & Drug Selection
+Q2025-059,10.216205,-0.2714383,9,Screening & Prevention Guidelines
+Q2025-060,6.1654983,-3.8409128,11,Pharmacology & Drug Selection
+Q2025-061,2.2384665,-2.5239973,2,Chronic Disease Management
+Q2025-062,6.4998817,0.025852678,6,Pharmacology & Drug Selection
+Q2025-063,3.9298098,-2.105869,6,Pharmacology & Drug Selection
+Q2025-064,7.593692,-1.87268,6,Pharmacology & Drug Selection
+Q2025-065,5.9871387,-3.9462793,11,Pharmacology & Drug Selection
+Q2025-066,8.471007,1.1010898,8,General Adult Medicine -- Undifferentiated
+Q2025-067,6.5794687,2.0316207,3,Pediatric Care & Development
+Q2025-068,8.714692,-1.1712081,6,Pharmacology & Drug Selection
+Q2025-069,6.011138,-3.980177,11,Pharmacology & Drug Selection
+Q2025-070,6.1589847,-0.7201779,6,Pharmacology & Drug Selection
+Q2025-071,4.320696,-1.4507185,10,Acute / Emergent Presentation
+Q2025-072,5.1192575,0.22937453,6,Pharmacology & Drug Selection
+Q2025-073,8.349222,0.5841365,8,General Adult Medicine -- Undifferentiated
+Q2025-074,7.2452445,-3.2441368,10,Acute / Emergent Presentation
+Q2025-075,4.3911514,-1.4055084,10,Acute / Emergent Presentation
+Q2025-076,6.1463737,0.1665154,6,Pharmacology & Drug Selection
+Q2025-077,7.663206,2.1178594,3,Pediatric Care & Development
+Q2025-078,8.192398,0.6693125,8,General Adult Medicine -- Undifferentiated
+Q2025-079,5.480484,0.21544018,6,Pharmacology & Drug Selection
+Q2025-080,3.0048313,-0.4641462,5,Acute / Emergent Presentation
+Q2025-081,6.5146275,0.3505015,8,General Adult Medicine -- Undifferentiated
+Q2025-082,7.025995,1.9591333,6,Pharmacology & Drug Selection
+Q2025-083,5.3704004,-1.0171483,6,Pharmacology & Drug Selection
+Q2025-084,9.450651,0.28751105,7,Screening & Prevention Guidelines
+Q2025-085,4.9698205,0.07053575,6,Pharmacology & Drug Selection
+Q2025-086,5.905377,-3.937734,11,Pharmacology & Drug Selection
+Q2025-087,7.3877068,-3.6628554,11,Pharmacology & Drug Selection
+Q2025-088,7.3210354,1.9893706,3,Pediatric Care & Development
+Q2025-089,4.58833,-1.2992265,3,Pediatric Care & Development
+Q2025-090,9.343513,-1.7860053,7,Screening & Prevention Guidelines
+Q2025-091,4.8774533,0.8014212,6,Pharmacology & Drug Selection
+Q2025-092,7.145298,-3.431184,10,Acute / Emergent Presentation
+Q2025-093,6.4573617,-4.5710926,4,General Adult Medicine -- Undifferentiated
+Q2025-094,7.191325,-3.6797402,11,Pharmacology & Drug Selection
+Q2025-095,2.7568572,0.3932693,5,Acute / Emergent Presentation
+Q2025-096,8.343752,-1.1621232,5,Acute / Emergent Presentation
+Q2025-097,6.3348956,-4.0128016,11,Pharmacology & Drug Selection
+Q2025-098,6.922115,-1.4940151,10,Acute / Emergent Presentation
+Q2025-099,7.9361005,-1.0722164,6,Pharmacology & Drug Selection
+Q2025-100,2.863161,-0.86381376,5,Acute / Emergent Presentation
+Q2025-101,2.816397,-0.8051982,5,Acute / Emergent Presentation
+Q2025-102,6.1178927,-3.9126418,11,Pharmacology & Drug Selection
+Q2025-103,3.9012752,-2.2176752,6,Pharmacology & Drug Selection
+Q2025-104,10.267348,-0.4688394,9,Screening & Prevention Guidelines
+Q2025-105,5.892766,-3.7526712,11,Pharmacology & Drug Selection
+Q2025-106,4.2069435,-0.96507895,10,Acute / Emergent Presentation
+Q2025-107,4.8466625,-1.690545,6,Pharmacology & Drug Selection
+Q2025-108,6.1146083,0.09894568,6,Pharmacology & Drug Selection
+Q2025-109,6.790043,2.192051,3,Pediatric Care & Development
+Q2025-110,5.365879,0.4502694,3,Pediatric Care & Development
+Q2025-111,2.2455816,0.44040373,8,General Adult Medicine -- Undifferentiated
+Q2025-112,9.024425,0.7721043,5,Acute / Emergent Presentation
+Q2025-113,5.8462844,1.5276191,8,General Adult Medicine -- Undifferentiated
+Q2025-114,6.742509,-0.68698776,6,Pharmacology & Drug Selection
+Q2025-115,6.467636,-3.974773,11,Pharmacology & Drug Selection
+Q2025-116,10.794931,-0.5072619,3,Pediatric Care & Development
+Q2025-117,2.0318222,-2.4881961,2,Chronic Disease Management
+Q2025-118,4.940078,-0.26252967,6,Pharmacology & Drug Selection
+Q2025-119,8.260568,-1.7749832,6,Pharmacology & Drug Selection
+Q2025-120,5.3219995,-1.7864038,6,Pharmacology & Drug Selection
+Q2025-121,7.6317945,-3.6175818,10,Acute / Emergent Presentation
+Q2025-122,3.5773938,0.2263273,5,Acute / Emergent Presentation
+Q2025-123,4.562863,-1.2277492,10,Acute / Emergent Presentation
+Q2025-124,7.405154,2.2650166,3,Pediatric Care & Development
+Q2025-125,6.054821,0.12786022,6,Pharmacology & Drug Selection
+Q2025-126,4.039119,-3.7377493,4,General Adult Medicine -- Undifferentiated
+Q2025-127,2.2486124,-0.58748084,5,Acute / Emergent Presentation
+Q2025-128,5.7999177,-2.9448988,6,Pharmacology & Drug Selection
+Q2025-129,7.0833726,-3.8142712,11,Pharmacology & Drug Selection
+Q2025-130,2.1189115,-0.6152451,5,Acute / Emergent Presentation
+Q2025-131,8.200461,-0.35562065,0,Chronic Disease Management
+Q2025-132,5.3515687,-1.9426829,6,Pharmacology & Drug Selection
+Q2025-133,5.4617286,-1.8998729,10,Acute / Emergent Presentation
+Q2025-134,8.451624,1.3965409,8,General Adult Medicine -- Undifferentiated
+Q2025-135,8.184435,0.22205292,8,General Adult Medicine -- Undifferentiated
+Q2025-136,10.429679,-0.5187888,9,Screening & Prevention Guidelines
+Q2025-137,3.9408073,0.09997228,5,Acute / Emergent Presentation
+Q2025-138,3.038787,-0.62779844,5,Acute / Emergent Presentation
+Q2025-139,4.1913404,-0.9468293,6,Pharmacology & Drug Selection
+Q2025-140,8.000137,-1.0915407,6,Pharmacology & Drug Selection
+Q2025-141,6.0765915,-3.8703232,11,Pharmacology & Drug Selection
+Q2025-142,4.3872485,-1.4308393,10,Acute / Emergent Presentation
+Q2025-143,7.2863603,0.40965706,6,Pharmacology & Drug Selection
+Q2025-144,3.9996197,1.3173803,1,Pharmacology & Drug Selection
+Q2025-145,8.368143,-2.7819624,6,Pharmacology & Drug Selection
+Q2025-146,4.3760605,-2.2028854,6,Pharmacology & Drug Selection
+Q2025-147,3.27541,1.1178081,5,Acute / Emergent Presentation
+Q2025-148,4.914221,-1.7582676,6,Pharmacology & Drug Selection
+Q2025-149,6.581819,-0.47283682,6,Pharmacology & Drug Selection
+Q2025-150,10.516766,-0.49108952,9,Screening & Prevention Guidelines
+Q2025-151,4.728543,0.031060703,10,Acute / Emergent Presentation
+Q2025-152,5.26902,-3.123587,4,General Adult Medicine -- Undifferentiated
+Q2025-153,10.703349,-0.56607884,9,Screening & Prevention Guidelines
+Q2025-154,2.2166982,0.3842755,5,Acute / Emergent Presentation
+Q2025-155,2.1353154,-0.6881302,1,Pharmacology & Drug Selection
+Q2025-156,6.2818313,-3.2110937,6,Pharmacology & Drug Selection
+Q2025-157,5.8239326,-0.9745627,6,Pharmacology & Drug Selection
+Q2025-158,6.753737,2.2860444,3,Pediatric Care & Development
+Q2025-159,6.1601615,-3.8183575,11,Pharmacology & Drug Selection
+Q2025-160,2.1435003,-0.5173034,5,Acute / Emergent Presentation
+Q2025-161,6.420558,-2.4052465,1,Pharmacology & Drug Selection
+Q2025-162,7.079962,-2.3002667,6,Pharmacology & Drug Selection
+Q2025-163,7.6608934,-2.105889,6,Pharmacology & Drug Selection
+Q2025-164,6.7973595,2.3768911,3,Pediatric Care & Development
+Q2025-165,5.775013,-3.7663388,11,Pharmacology & Drug Selection
+Q2025-166,2.788132,-2.5591908,2,Chronic Disease Management
+Q2025-167,2.7927287,0.22936948,5,Acute / Emergent Presentation
+Q2025-168,10.592255,-0.50157475,9,Screening & Prevention Guidelines
+Q2025-169,6.929363,0.052929338,6,Pharmacology & Drug Selection
+Q2025-170,7.172096,-3.6793764,10,Acute / Emergent Presentation
+Q2025-171,5.557818,0.07227784,6,Pharmacology & Drug Selection
+Q2025-172,6.800013,-0.32418993,6,Pharmacology & Drug Selection
+Q2025-173,8.212747,-1.0530262,6,Pharmacology & Drug Selection
+Q2025-174,2.1848805,0.4524497,5,Acute / Emergent Presentation
+Q2025-175,10.756469,-0.48496535,9,Screening & Prevention Guidelines
+Q2025-176,5.042816,1.6863536,8,General Adult Medicine -- Undifferentiated
+Q2025-177,2.885664,2.1954427,8,General Adult Medicine -- Undifferentiated
+Q2025-178,4.0730524,-0.20116493,6,Pharmacology & Drug Selection
+Q2025-179,5.1864877,1.3846447,0,Chronic Disease Management
+Q2025-180,7.352174,-3.4290931,10,Acute / Emergent Presentation
+Q2025-181,10.80432,-0.5189446,9,Screening & Prevention Guidelines
+Q2025-182,4.788931,-1.744131,3,Pediatric Care & Development
+Q2025-183,9.387213,-1.7748898,6,Pharmacology & Drug Selection
+Q2025-184,6.096501,-4.006988,11,Pharmacology & Drug Selection
+Q2025-185,7.2807956,-3.3759587,10,Acute / Emergent Presentation
+Q2025-186,2.9131165,-0.5792576,5,Acute / Emergent Presentation
+Q2025-187,6.3616867,0.1626423,0,Chronic Disease Management
+Q2025-188,7.433524,-2.8574462,6,Pharmacology & Drug Selection
+Q2025-189,9.570451,-0.37373385,7,Screening & Prevention Guidelines
+Q2025-190,4.8321667,-1.7622615,5,Acute / Emergent Presentation
+Q2025-191,10.353228,-0.6588122,9,Screening & Prevention Guidelines
+Q2025-192,2.106554,-2.5211933,2,Chronic Disease Management
+Q2025-193,4.405308,-0.87258166,6,Pharmacology & Drug Selection
+Q2025-194,5.9991937,-2.0568962,6,Pharmacology & Drug Selection
+Q2025-195,6.932808,1.0004996,6,Pharmacology & Drug Selection
+Q2025-196,5.9610333,-1.5848051,1,Pharmacology & Drug Selection
+Q2025-197,4.5816216,-0.53118974,6,Pharmacology & Drug Selection
+Q2025-198,9.407554,-0.25400814,7,Screening & Prevention Guidelines
+Q2025-199,4.9629126,-1.7914754,6,Pharmacology & Drug Selection
+Q2025-200,3.1635287,0.25666234,5,Acute / Emergent Presentation

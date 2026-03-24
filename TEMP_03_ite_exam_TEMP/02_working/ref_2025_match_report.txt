@@ -1,0 +1,27 @@
+=== 2025 CONTENT-BASED MATCH REPORT ===
+
+Master Q2025 rows:         200
+Critique blocks:           197
+Assigned refs:             197/200
+Answer letter confirmed:   197/200
+Low-confidence matches:    17
+Unmatched critique blocks: 0
+
+LOW CONFIDENCE QUESTIONS:
+  Q2025-037 score=0.111 m_ans=C c_ans=C
+  Q2025-089 score=0.044 m_ans=A c_ans=A
+  Q2025-100 score=0.143 m_ans=E c_ans=E
+  Q2025-123 score=0.077 m_ans=D c_ans=D
+  Q2025-125 score=0.113 m_ans=C c_ans=C
+  Q2025-149 score=0.015 m_ans=A c_ans=A
+  Q2025-159 score=0.069 m_ans=D c_ans=D
+  Q2025-164 score=0.029 m_ans=A c_ans=A
+  Q2025-178 score=0.053 m_ans=A c_ans=A
+  Q2025-181 score=0.000 m_ans=A c_ans=A
+  Q2025-182 score=0.021 m_ans=A c_ans=A
+  Q2025-189 score=0.005 m_ans=C c_ans=C
+  Q2025-190 score=0.013 m_ans=C c_ans=C
+  Q2025-197 score=0.000 m_ans=D c_ans=D
+  Q2025-198 score=0.000 m_ans= c_ans=
+  Q2025-199 score=0.000 m_ans= c_ans=
+  Q2025-200 score=0.000 m_ans= c_ans=

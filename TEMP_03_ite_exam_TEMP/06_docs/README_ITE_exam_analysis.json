@@ -1,0 +1,132 @@
+{
+  "domain": "ite_exam",
+  "last_updated": "2026-03-06_session_K",
+  "description": "ABFM In-Training Examination (ITE) question bank — 1,200 questions from 2020–2025, multi-dimensionally classified and enriched with clinical references and explanations.",
+  "status": "ACTIVE",
+
+  "definitive_master": {
+    "file": "03_database/ABFM_ITE_Master_v2.xlsx",
+    "rows": 1200,
+    "columns": 18,
+    "last_rebuilt": "2026-03-02",
+    "last_ref_backfill": "2026-03-03",
+    "rebuild_script": "05_scripts/merge_and_rebuild.py",
+    "column_schema": {
+      "QuestionID":                "Unique key. Format Q[year]-[sequential]. Global sequential across all 1200 rows.",
+      "ExamYear":                  "Exam year (2020–2025). 200 questions per year.",
+      "QuestionStem":              "Full question text including vignette, lab tables, and answer choices A–E.",
+      "CorrectAnswer":             "Correct answer letter (A–E). From ABFM.",
+      "BodySystem":                "19-category organ system classification. Gold standard 2022–2024 (PDF extraction); ML-predicted 2020–2021 and 2025.",
+      "BodySystem_Source":         "'Extracted' (gold, from PDF) or 'Predicted' (ML). 468 gold / 732 predicted.",
+      "BodySystem_Confidence":     "ML decision-function score (signed distance from boundary). Higher = more confident. Not a probability. Only meaningful for Predicted rows.",
+      "ClinicalCategory":          "ABFM 9-bucket patient-population framework. Gold standard from PDFs. 2022–2023 ONLY (393 rows). Null for all other years. Discontinued by ABFM after 2023.",
+      "BlueprintCategory":         "ABFM 5-category blueprint framework. Gold standard from PDFs. 2024–2025 ONLY (400 rows). Null for other years.",
+      "BlueprintCategory_Predicted":"Same 5-category blueprint applied to ALL 1200 rows via ML. Use for retrospective cross-year Blueprint analysis.",
+      "Blueprint_Confidence":      "ML probability score (0–1) for BlueprintCategory_Predicted. Gold rows = 1.0 by definition.",
+      "Blueprint_Source":          "'Gold Standard' (PDF-extracted, 2024–2025) or 'Predicted' (ML, 2020–2023).",
+      "Subcategory":               "11-category question-type taxonomy: Pharmacology, Management, Diagnosis, Treatment, Screening, Workup, Prevention, Prognosis/Risk, Counseling, Interpretation, Pathophysiology.",
+      "Subcat_Source":             "Confidence tier: high (52%), medium (36%), low (4%), fallback (8%). Low/fallback = candidates for manual review.",
+      "Reference":                 "Source clinical literature citation. Coverage as of 2026-03-03: 200/200 for all years (2020–2025). 2025 refs backfilled from 2025_ITE_Critique.docx via extract_2025_refs.py.",
+      "Explanation":               "ABFM-published rationale for the correct answer. Contains embedded reference in Ref:/Reference: format.",
+      "ScoringStatus":             "ABFM scoring flag: Scored, Deleted-Content, Deleted-Psychometric. 2024–2025 only (400 rows). Null for 2020–2023.",
+      "YearLastUsed":              "Null across all 1200 rows. Never populated in source data. Candidate for removal."
+    },
+    "removed_columns_history": {
+      "PrimaryCategory":    "Removed 2026-03-02. Was legacy Haiku API-predicted field. Only 60.5% agreement with gold-standard BodySystem.",
+      "Subcategory_Cluster":"Removed 2026-03-02. Legacy K-means artifact. No clinical utility.",
+      "Cluster_Keywords":   "Removed 2026-03-02. Same reason as Subcategory_Cluster."
+    }
+  },
+
+  "supporting_databases": {
+    "03_database/body_system_full.csv":   "Full body system labels for all 1200 questions.",
+    "03_database/subcategory_labels.csv": "Full subcategory labels for all 1200 questions.",
+    "03_database/raw_files/":             "CSV backups of ABFM_ITE_Master_v2 and per-year files."
+  },
+
+  "year_files": {
+    "location": "04_outputs/by_year/",
+    "files": ["ITE_2020.xlsx","ITE_2021.xlsx","ITE_2022.xlsx","ITE_2023.xlsx","ITE_2024.xlsx","ITE_2025.xlsx"],
+    "note": "Each contains 200 questions for that year. Rebuilt via merge_and_rebuild.py. Note: year files were last rebuilt 2026-03-02; Reference column improvements from 2026-03-03 are in the master only. Run merge_and_rebuild.py to propagate."
+  },
+
+  "analysis_outputs": {
+    "04_outputs/ITE_Analysis_2020_2025.xlsx": {
+      "created": "2026-03-02",
+      "description": "8-tab analytical workbook: Overview, Body System, Subcategory, Blueprint, Clinical Category, High-Yield Combos, Year Trends, Data Quality. 97 live formulas, 0 errors."
+    },
+    "04_outputs/ITE_Analysis_2020_2025.docx": {
+      "created": "2026-03-02",
+      "description": "7-section written analysis report."
+    },
+    "04_outputs/ite_qbank_20-25.docx": "Full question bank Word export (940 KB).",
+    "04_outputs/outline_yield_report.xlsx": "Legacy AAFP session-mapping analysis. Superseded by ITE_Analysis workbook.",
+    "04_outputs/HighYield_Study_Guide.xlsx": "Earlier high-yield topic ranking. Retained for reference."
+  },
+
+  "active_scripts": {
+    "05_scripts/classify_body_system.py":  "TF-IDF + LinearSVC body system classifier. Outputs body_system_full.csv.",
+    "05_scripts/generate_subcategory.py":  "Rule-based 11-category subcategory classifier. Outputs subcategory_labels.csv.",
+    "05_scripts/merge_and_rebuild.py":     "CANONICAL REBUILD SCRIPT. Run after any label update to regenerate master + year files.",
+    "05_scripts/split_by_year.py":         "Splits master into per-year files.",
+    "05_scripts/csv_to_docx.py":           "Converts question bank CSV to Word.",
+    "05_scripts/extract_2025_refs.py":     "NEW 2026-03-03. Parses 2025_ITE_Critique.docx to extract References blocks for Q2025-001 through Q2025-200. Uses 200 'References' markers as block boundaries. Year-pattern + prose-bleed filtering. Output: 02_working/refs_2025_extracted.csv (423 refs, 200/200 questions).",
+    "05_scripts/backfill_2025_refs.py":    "NEW 2026-03-03. Backfills Reference column in master for 2025 null rows using refs_2025_extracted.csv RefIndex=1. Filled 3 remaining nulls (197 were already populated). Also updates question_ref_pairs.csv.",
+    "05_scripts/update_qrp_2025.py":       "NEW 2026-03-03. Replaces partial 2025 rows in question_ref_pairs.csv with full 423-row extraction. QRP: 2025 → 2069 rows."
+  },
+
+  "reference_coverage": {
+    "as_of": "2026-03-03",
+    "2020": "200/200 (100%)",
+    "2021": "200/200 (100%)",
+    "2022": "200/200 (100%)",
+    "2023": "200/200 (100%)",
+    "2024": "196/200 (98%)",
+    "2025": "200/200 (100%) — backfilled 2026-03-03 from 2025_ITE_Critique.docx",
+    "total": "1194/1200 (99.5%)",
+    "notes": "6 remaining nulls are questions where ABFM did not provide a reference citation in source materials."
+  },
+
+  "working_files_2025_refs": {
+    "02_working/refs_2025_extracted.csv": "423 rows. Columns: QuestionID, RefIndex, RawRef. Primary ref for each question is RefIndex=1. Multi-ref questions have additional rows. Produced by extract_2025_refs.py v4.",
+    "02_working/refs_2025_summary.txt":   "Human-readable extraction log. Lists all refs per QID with first 120 chars. Zero zero-ref questions."
+  },
+
+  "key_findings_summary": {
+    "top_body_systems":       ["Cardiovascular (165)", "Respiratory (157)", "Musculoskeletal (135)"],
+    "fastest_growing":        ["Reproductive: Female (+1.7/yr)", "Neurologic (+1.1/yr)"],
+    "fastest_declining":      ["Respiratory (-2.9/yr)", "Musculoskeletal (-1.8/yr)", "Endocrine (-1.5/yr)"],
+    "top_subcategory":        "Pharmacology (353 questions, 29.4%)",
+    "top_hy_combo":           "Cardiovascular x Pharmacology (59 questions, 4.9%)",
+    "blueprint_distribution": "35% Acute Care | 25% Chronic Care | 20% Emergent | 15% Preventive | 5% Foundations"
+  },
+
+  "data_quality_flags": {
+    "missing_references_2024": "4 questions (2%) have no reference — ABFM did not provide citations for these items",
+    "missing_references_2025": "RESOLVED 2026-03-03 — was 144 null (72%), now 0 null (0%)",
+    "year_last_used":          "Null for all 1200 rows — never populated in source data. Candidate for removal.",
+    "low_confidence_subcats":  "141 questions (low + fallback) — see raw_files/subcategory_low_confidence.csv"
+  },
+
+  "archived_files": {
+    "location": "07_archive/db_previous_versions/",
+    "contents": [
+      "ABFM_ITE_Enriched.xlsx — Pre-classification base master",
+      "ABFM_ITE_Master_v3.xlsx — Intermediate version with PrimaryCategory",
+      "FINAL_ABFM_ITE_6_Year_Master.xlsx — Older combined master",
+      "ABFM_ITE_AI_Tagged_excel.xlsx — Original Haiku API-tagged bank (still used by E_v4 for AI_ClinicalFocus column)",
+      "HighYield_Cluster_Summary.xlsx/csv — Legacy cluster analysis (deprecated)"
+    ]
+  },
+
+  "new_files_session_K": {
+    "03_database/ite_questions_clean.json": "INJECTION-READY question bank. 1,200 entries. Schema per question: question_id, exam_year, body_system, subcategory, blueprint, format (newline/inline/garbled), question_text (stem only, no blank answer block), choices [{letter, text}], correct_letter, correct_text, explanation (encoding-clean), reference, needs_review. 1,152 ready, 48 flagged. Key input to supplement doc pipeline.",
+    "03_database/build_clean_question_bank.py": "Parses ABFM_ITE_Master_v2.xlsx into ite_questions_clean.json. Handles 3 stem formats: newline-separated (955), inline run-together (197), garbled (48). Fixes encoding artifacts.",
+    "03_database/patch_problem_questions_v2.py": "Manual patches for 7 edge-case questions that failed initial parse. Re-parses directly from master. Q2020-036 assigned substitute_qid=Q2025-033.",
+    "03_database/patch_problem_questions.py": "SUPERSEDED by v2 — retained for reference only."
+  },
+    "2026-03-06_session_K": "Built ite_questions_clean.json — 1,200 questions fully parsed: encoding artifacts fixed, choices separated into structured array, correct answer text matched. 1,152 questions injection-ready, 48 flagged needs_review. 7 edge-case questions manually patched via patch_problem_questions_v2.py (inline format, stray markers, encoding artifacts). 1 genuinely garbled question (Q2020-036, Respiratory) assigned substitute Q2025-033. New files: 03_database/ite_questions_clean.json, 03_database/build_clean_question_bank.py, 03_database/patch_problem_questions_v2.py."
+  },
+  "session_log_2026_03_03": {Extracted 2025 refs from 2025_ITE_Critique.docx (423 refs, 200/200 questions). Backfilled master Reference column: 2025 coverage 28% → 100%. Updated question_ref_pairs.csv: 2025 → 2069 rows. New scripts: extract_2025_refs.py (v4), backfill_2025_refs.py, update_qrp_2025.py."
+  }
+}

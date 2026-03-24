@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+import argparse, pandas as pd
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--master", required=True)
+    ap.add_argument("--incoming", required=True)
+    ap.add_argument("--priority", choices=["master","incoming"], default="incoming",
+                    help="Which dataset wins on conflicts with same id.")
+    ap.add_argument("--out", required=True)
+    a = ap.parse_args()
+
+    master = pd.read_csv(a.master, dtype=str)
+    incoming = pd.read_csv(a.incoming, dtype=str)
+
+    # Ensure consistent schema
+    cols = ["id","year","stem","A","B","C","D","E","F","correct","explanation","tags","confidence"]
+    for df in (master, incoming):
+        for c in cols:
+            if c not in df.columns: df[c] = ""
+        df[cols] = df[cols]
+
+    # Build index by id
+    by_id = {}
+    for _, r in master.iterrows():
+        by_id[str(r["id"])] = r.to_dict()
+    for _, r in incoming.iterrows():
+        rid = str(r["id"])
+        if rid in by_id:
+            if a.priority == "incoming":
+                by_id[rid] = r.to_dict()
+        else:
+            by_id[rid] = r.to_dict()
+
+    merged = pd.DataFrame(by_id.values())
+    # Prefer numeric sort where possible
+    try:
+        merged["id_num"] = merged["id"].astype(int)
+        merged = merged.sort_values("id_num").drop(columns=["id_num"])
+    except:
+        merged = merged.sort_values("id")
+
+    merged.to_csv(a.out, index=False, encoding="utf-8")
+    print(f"Merged -> {a.out} (rows: {merged.shape[0]})")
+
+if __name__ == "__main__":
+    main()

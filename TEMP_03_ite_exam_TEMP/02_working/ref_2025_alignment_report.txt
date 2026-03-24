@@ -1,0 +1,63 @@
+=== 2025 CRITIQUE ALIGNMENT REPORT ===
+
+Master Q2025 rows:   200
+Critique blocks:     197
+
+Assigned refs to: 160 questions
+Skipped critique blocks: 37 (blocks [125, 126, 127, 130, 131, 132, 135, 138, 139, 140, 142, 143, 144, 148, 149, 150, 155, 156, 162, 163, 164, 166, 167, 168, 173, 175, 176, 178, 181, 182, 183, 185, 186, 189, 190, 192, 193])
+Answer mismatches: 14
+
+MISMATCHES (master_ans vs critique_ans):
+  Q2025-125 (master=C) vs critique block 124 (critique=E)
+  Q2025-127 (master=D) vs critique block 129 (critique=A)
+  Q2025-129 (master=A) vs critique block 134 (critique=D)
+  Q2025-131 (master=A) vs critique block 137 (critique=D)
+  Q2025-134 (master=C) vs critique block 146 (critique=E)
+  Q2025-137 (master=C) vs critique block 152 (critique=D)
+  Q2025-138 (master=E) vs critique block 153 (critique=A)
+  Q2025-142 (master=D) vs critique block 159 (critique=C)
+  Q2025-147 (master=B) vs critique block 170 (critique=D)
+  Q2025-148 (master=E) vs critique block 171 (critique=A)
+  Q2025-153 (master=A) vs critique block 180 (critique=C)
+  Q2025-156 (master=A) vs critique block 188 (critique=B)
+  Q2025-159 (master=D) vs critique block 195 (critique=A)
+  Q2025-160 (master=E) vs critique block 196 (critique=C)
+
+SKIPPED CRITIQUE BLOCKS: [125, 126, 127, 130, 131, 132, 135, 138, 139, 140, 142, 143, 144, 148, 149, 150, 155, 156, 162, 163, 164, 166, 167, 168, 173, 175, 176, 178, 181, 182, 183, 185, 186, 189, 190, 192, 193]
+  Block 126: answer=D, refs=Silver S, Williams E, Plunkett ML. Common foot fractures. Am Fam Physician. 2024
+  Block 127: answer=A, refs=Mulhem E, Khondoker F, Kandiah S. Constipation in children and adolescents: eval
+  Block 128: answer=A, refs=Grundy SM, Stone NJ, Bailey AL, et al. 2018 AHA/ACC/AACVPR/AAPA/ABC/ACPM/ADA/AGS
+  Block 131: answer=C, refs=McConaghy JR, Sharma M, Patel H. Acute chest pain in adults: outpatient evaluati
+  Block 132: answer=B, refs=NASS Evidence-Based Clinical Guidelines Committee; Matz P, Meagher RJ, Lamer T, 
+  Block 133: answer=C, refs=American College of Obstetricians and Gynecologists� Committee on Practice Bulle
+  Block 136: answer=C, refs=Gelston CD, Deitz GA. Eye emergencies. Am Fam Physician. 2020;102(9):539-545. | 
+  Block 139: answer=E, refs=Fitzgibbons RJ Jr, Forse RA. Groin hernias in adults. N Engl J Med. 2015;372(8):
+  Block 140: answer=D, refs=Falk N, Cole A, Meredith TJ. Evaluation of suspected dementia. Am Fam Physician.
+  Block 141: answer=D, refs=Nielsen M, Qaseem A; High Value Care Task Force of the American College of Physi
+  Block 143: answer=E, refs=Powers AC, Stafford JM, Rickels MR. Diabetes mellitus: complications. In: Loscal
+  Block 144: answer=D, refs=Nabrdalik K, Hendel M, Irlik K, et al. Gastrointestinal adverse events of metfor
+  Block 145: answer=A, refs=Smith DK, Kuckel DP, Recidoro AM. Community-acquired pneumonia in children: rapi
+  Block 149: answer=A, refs=Balahura AM, Moroi .I, Scafa-Udriste A, et al. The management of hypertensive em
+  Block 150: answer=E, refs=Semelka M, Wilson J, Floyd R. Diagnosis and treatment of obstructive sleep apnea
+  Block 151: answer=A, refs=Final recommendation statement: anxiety in children and adolescents: screening. 
+  Block 156: answer=A, refs=Hampl SE, Hassink SG, Skinner AC, et al. Clinical practice guideline for the eva
+  Block 157: answer=D, refs=Castelli G, Desai KM, Cantone RE. Peripheral neuropathy: evaluation and differen
+  Block 163: answer=E, refs=Dean CL. An overview of heparin monitoring with the anti-Xa assay. Methods Mol B
+  Block 164: answer=B, refs=Patel DS, Statuta SM, Ahmed N. Common fractures of the radius and ulna. Am Fam P
+  Block 165: answer=E, refs=Final recommendation statement: unhealthy drug use: screening. US Preventive Ser
+  Block 167: answer=C, refs=Tsou AY, Bulova P, Capone G, et al. Medical care of adults with down syndrome: a
+  Block 168: answer=E, refs=Luks AM, Auerbach PS, Freer L, et al. Wilderness Medical Society clinical practi
+  Block 169: answer=E, refs=Lee EY, Knox C, Phillips EJ. Worldwide prevalence of antibiotic-associated Steve
+  Block 174: answer=C, refs=Bailey J, Dattani S, Jennings A. Diverticular disease: rapid evidence review. Am
+  Block 176: answer=D, refs=Majoka MA, Schimming C. Effect of social determinants of health on cognition and
+  Block 177: answer=B, refs=Raleigh MF, Stoddard J, Darrow HJ. Polymyalgia rheumatica and giant cell arterit
+  Block 179: answer=A, refs=Buel KL, Wilcox J, Mingo PT. Acute abdominal pain in children: evaluation and ma
+  Block 182: answer=C, refs=Miller NE, Rushlow D, Stacey SK. Diagnosis and management of sodium disorders: h
+  Block 183: answer=B, refs=Dvorin EL, Ebell MH. Short-term systemic corticosteroids: appropriate use in pri
+  Block 184: answer=C, refs=Holt HK, Gildengorin G, Karliner L, Fontil V, Pramanik R, Potter MB. Differences
+  Block 186: answer=C, refs=Wilkins T, McMechan D, Talukder A, Herline A. Colorectal cancer screening and su
+  Block 187: answer=C, refs=Meng WB, Li X, Li YM, Zhou WC, Zhu XL. Three initial diets for management of mil
+  Block 190: answer=B, refs=Quinn B, Halepas S. Fractured and avulsed teeth. In: Niekrash CE, Ferneini EM, G
+  Block 191: answer=B, refs=Ross DS, Burch HB, Cooper DS, et al. 2016 American Thyroid Association guideline
+  Block 193: answer=C, refs=Barstow C, Shahan B, Roberts M. Evaluating medical decision-making capacity in p
+  Block 194: answer=D, refs=Pyzocha N. Accidental hypothermia: guidelines from the Wilderness Medical Societ
