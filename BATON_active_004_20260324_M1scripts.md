@@ -120,7 +120,7 @@
 **M3 Scripts:** `03_module.3_analyst/scripts/` — 7 scripts (2 flagged as duplicates)
 **Intelligence 2.0:** Layers 1 (ICD-10), 3 (Pathways), 4a (Trends) complete. Layers 2 + 4b not started.
 **Agent toolbox:** `skills_abilities/agents/scripts/` — 6 files (aafp_vc_batch_download.py relocated to M1)
-**Git init:** UNBLOCKED — all module folders clean, no loose scripts at root
+**Git:** ✅ DONE — first commit `1166fa8` on `main` (2026-03-24). Run all future git commands from Windows (Git Bash / Terminal), not through the VM.
 
 ---
 
@@ -143,7 +143,7 @@
 2. ~~**Populate 4 keyword columns for 2018-2019 questions**~~ — **DONE** (Session 2).
 3. ~~**Create M1 scripts subfolders and migrate warehouse scripts**~~ — **DONE** (Session 3). Git init unblocked.
 
-4. **Initialize git repo** — Per Rebuild North Star principle #1. Stage all scripts, schemas, configs. First commit = current state of the rebuild. `.gitignore` should exclude: `*.db`, `*.db-shm`, `*.db-wal`, PDFs, enriched JSONs, DOCXs, `node_modules/`, `__pycache__/`.
+4. ~~**Initialize git repo**~~ — **DONE** (Session 3). First commit `1166fa8` on `main`. `.gitignore` and `.gitattributes` in place. Future git commands run from Windows.
 
 5. **Housekeeping pass** — Remove M3 duplicate scripts (`build_clinical_pathways.py`, `build_topic_trends.py`). Batch-rename archived BATONs (drop "active" from old filenames). Archive BATON 003.
 
