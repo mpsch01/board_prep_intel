@@ -11,10 +11,13 @@ v6 schema identical to v5 — no changes to callout builder needed.
 """
 
 import zipfile, re, json, os, random
+from pathlib import Path
 
-SRC_DOCX  = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\04_outputs\BoardPrep-ContentOutline_HY-ENRICHED-v3.docx'
-OUT_DOCX  = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\04_outputs\BoardPrep-ContentOutline_HY-ENRICHED-v4.docx'
-JSON_PATH = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\02_working\session_hy_inserts_v6.json'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+SRC_DOCX  = SCRIPT_DIR.parent / "source" / "00_EX_content_outline_w_q.docx"
+OUT_DOCX  = SCRIPT_DIR.parent / "outputs" / "BoardPrep-ContentOutline_HY-ENRICHED-v4.docx"
+JSON_PATH = PROJECT_ROOT / "key_data_files" / "session_hy_inserts_v7.json"
 
 MAX_ITE_QS = 5
 MAX_REFS   = 8

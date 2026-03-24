@@ -40,8 +40,10 @@ from calibration import score_document, run_calibration
 
 BASE          = os.path.dirname(__file__)
 GOLD_LIST_DIR = os.path.join(BASE, "documents", "gold_list")
-MANIFEST_PATH = r"C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_refs\04_outputs\ingested\manifest.json"
-DEST_DIR      = r"C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_refs\04_outputs\ingested\json"
+_SCRIPT       = Path(__file__).resolve().parent
+_PROJECT_ROOT = _SCRIPT.parent.parent
+MANIFEST_PATH = str(_PROJECT_ROOT / "key_data_files" / "ingested" / "manifest.json")  # TODO: not yet migrated
+DEST_DIR      = str(_PROJECT_ROOT / "key_data_files" / "ingested" / "json")            # TODO: not yet migrated
 ARCHIVE_DIR   = os.path.join(BASE, "outputs", "pre_calibration_archive")
 SUMMARY_PATH  = os.path.join(BASE, "outputs", "reextraction_summary.json")
 

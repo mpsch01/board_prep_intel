@@ -26,15 +26,17 @@ Output:
   ABFM_BoardPrep_ContentOutline_HY-Enriched_v7.docx
 """
 import sys, re, json, zipfile, shutil, os
+from pathlib import Path
 import pandas as pd
 sys.stdout.reconfigure(encoding='utf-8')
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-BASE      = r"C:\Users\mpsch\Desktop\claude_knowledge"
-SUPP_XLSX = os.path.join(BASE, "board_prep", "aafp_integration", "02_working", "supplement_questions.xlsx")
-Q_JSON    = os.path.join(BASE, "board_prep", "ite_exam", "03_database", "ite_questions_clean.json")
-SRC_DOCX  = os.path.join(BASE, "00_canonical", "01_curriculum", "ABFM_BoardPrep_ContentOutline_HY-Enriched_v5.docx")
-OUT_DOCX  = os.path.join(BASE, "00_canonical", "01_curriculum", "ABFM_BoardPrep_ContentOutline_HY-Enriched_v7.docx")
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+SUPP_XLSX = PROJECT_ROOT / "key_data_files" / "supplement_questions.xlsx"  # TODO: not yet migrated
+Q_JSON    = PROJECT_ROOT / "key_data_files" / "ite_questions_clean.json"
+SRC_DOCX  = SCRIPT_DIR.parent / "source" / "00_EX_content_outline_w_q.docx"
+OUT_DOCX  = SCRIPT_DIR.parent / "outputs" / "BoardPrep-ContentOutline_HY-Enriched_v7.docx"
 SUBSTITUTE = {"Q2020-036": "Q2025-033"}
 
 # ── Colors ────────────────────────────────────────────────────────────────────

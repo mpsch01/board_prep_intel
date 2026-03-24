@@ -6,11 +6,14 @@ If neither has choices, keep the one with the longer stem.
 """
 import pandas as pd
 import json, re, sys
+from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8')
 
-RAW_CSV  = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\03_poll_questions\poll_questions_raw.csv'
-KW_JSON  = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\keyword_library\session_keyword_library.json'
-OUT_JSON = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\03_poll_questions\poll_inserts.json'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+RAW_CSV  = PROJECT_ROOT / "key_data_files" / "poll_questions_raw.csv"      # TODO: not yet migrated — was TEMP_04/03_poll_questions/poll_questions_raw.csv
+KW_JSON  = PROJECT_ROOT / "key_data_files" / "session_keyword_library.json"
+OUT_JSON = PROJECT_ROOT / "key_data_files" / "poll_inserts.json"
 
 with open(KW_JSON, encoding='utf-8') as f:
     kw_lib = json.load(f)

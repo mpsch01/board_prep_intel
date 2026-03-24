@@ -22,11 +22,14 @@ Approach:
 """
 
 import os, re, json
+from pathlib import Path
 from collections import Counter, defaultdict
 import math
 
-TXT_DIR  = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\01_source\transcripts\txt'
-OUT_JSON = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\keyword_library\raw_files\tfidf_keywords.json'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+TXT_DIR      = SCRIPT_DIR.parent / "source" / "aafp_transcripts"
+OUT_JSON     = PROJECT_ROOT / "key_data_files" / "tfidf_keywords.json"
 
 # Sessions to include (02-49, skip 50-51 Q&A)
 SESSION_RANGE = range(2, 50)

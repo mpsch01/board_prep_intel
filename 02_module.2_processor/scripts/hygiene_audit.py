@@ -1,8 +1,15 @@
 import re, pandas as pd
+from pathlib import Path
 from difflib import SequenceMatcher
 from collections import defaultdict
 
-tiers = pd.read_csv(r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_refs\07_archive\ITE_Reference_Tiers.csv')
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+TIERS_CSV    = PROJECT_ROOT / "key_data_files" / "ITE_Reference_Tiers.csv"          # TODO: not yet migrated
+MASTER_CSV   = PROJECT_ROOT / "key_data_files" / "ABFM_ITE_6_Year_Master.csv"       # TODO: not yet migrated
+CLEAN_OUT    = PROJECT_ROOT / "key_data_files" / "ITE_Reference_Tiers_Clean.csv"
+
+tiers = pd.read_csv(TIERS_CSV)
 print(f"Starting rows: {len(tiers)}")
 
 refs_list = tiers['CleanRef'].tolist()
@@ -140,7 +147,7 @@ print(f"\nRefs with missing Categories: {len(no_cats)}")
 # Check original refs_df
 print("\n--- Cross-checking: questions that cited same ref more than once ---")
 # (done at refs_df level - load original data to check)
-df_orig = pd.read_csv(r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_exam\03_database\ABFM_ITE_6_Year_Master.csv', low_memory=False)
+df_orig = pd.read_csv(MASTER_CSV, low_memory=False)
 
 import re as re2
 def extract_refs(explanation):
@@ -156,7 +163,7 @@ multi_same = df_orig[df_orig['ParsedRefs'].apply(lambda x: len(x) != len(set(x))
 print(f"Questions citing same ref twice within one question: {len(multi_same)}")
 
 # Save cleaned file
-out_path = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_refs\02_working\ITE_Reference_Tiers_Clean.csv'
+out_path = CLEAN_OUT
 tiers_dedup.to_csv(out_path, index=False)
 print(f"\nSaved cleaned file: {out_path}")
 print(f"Final row count: {len(tiers_dedup)}")

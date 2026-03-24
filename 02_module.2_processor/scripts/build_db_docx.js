@@ -17,9 +17,12 @@ const {
 } = require("docx");
 
 // ── Config ──────────────────────────────────────────────────
-const DB_PATH = path.resolve(__dirname, "../mnt/claude_knowledge/abfm_prep/02_ite_intelligence/db/ite_intelligence.db");
-const OUTPUT_DIR = path.resolve(__dirname, "../mnt/claude_knowledge/clinical_guidelines/02_docx_guideline_library");
-const TREND_DIR = path.resolve(__dirname, "../mnt/claude_knowledge/abfm_prep/02_ite_intelligence/readable_db_files");
+// __dirname = .../02_module.2_processor/scripts
+// PROJECT_ROOT = two levels up
+const PROJECT_ROOT = path.resolve(__dirname, "../../");
+const DB_PATH    = path.join(PROJECT_ROOT, "00_database/db/ite_intelligence.db");
+const OUTPUT_DIR = path.join(PROJECT_ROOT, "02_module.2_processor/outputs/docx_guideline_library");
+const TREND_DIR  = path.join(PROJECT_ROOT, "03_module.3_analyst/outputs");
 
 // ── Colors ──────────────────────────────────────────────────
 const NAVY   = "1F3864";

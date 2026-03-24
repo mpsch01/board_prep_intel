@@ -403,9 +403,9 @@ def resolve_raw_text_path(json_path, data):
     # Fallback: try ingest path converted to local
     ingest_path = data.get("ingest", {}).get("raw_text_path", "")
     if ingest_path:
-        # Convert Windows path to local
+        # Convert Windows path to local (legacy fallback for pre-migration paths)
         local = ingest_path.replace("C:\\Users\\mpsch\\Desktop\\claude_knowledge\\",
-                                     str(Path(json_dir).parent.parent) + "/")
+                                     str(BASE_DIR) + "/")
         local = local.replace("\\", "/")
         if Path(local).exists():
             return Path(local)

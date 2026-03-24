@@ -39,13 +39,14 @@ import json
 import os
 import datetime
 import sys
+from pathlib import Path
 from collections import defaultdict
 
 # Default paths
 
-DEFAULT_SOURCE_DIR = (
-    r"C:\Users\mpsch\Desktop\claude_knowledge\board_prep"
-    r"\ite_refs\04_outputs\ingested\json"
+DEFAULT_SOURCE_DIR = str(
+    Path(__file__).resolve().parent.parent
+    / "key_data_files" / "ingested" / "json"              # TODO: not yet migrated
 )
 DEFAULT_PROMPTS_DIR = os.path.join(
     os.path.dirname(__file__), "prompts"

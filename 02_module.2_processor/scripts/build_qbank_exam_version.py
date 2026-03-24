@@ -12,10 +12,14 @@ Parses the existing docx XML directly.
 
 import zipfile, re, sys, os, shutil
 import xml.etree.ElementTree as ET
+from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8')
 
-SRC  = r'C:\Users\mpsch\Desktop\claude_knowledge\00_canonical\02_question_bank\ABFM_ITE_QuestionBank_2020-2025.docx'
-DST  = r'C:\Users\mpsch\Desktop\claude_knowledge\00_canonical\02_question_bank\ABFM_ITE_QuestionBank_2020-2025_ExamVersion.docx'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+QBANK_DIR    = PROJECT_ROOT / "key_data_files"                                     # TODO: not yet migrated — question bank docx location TBD
+SRC  = QBANK_DIR / "ABFM_ITE_QuestionBank_2020-2025.docx"                         # TODO: not yet migrated
+DST  = QBANK_DIR / "ABFM_ITE_QuestionBank_2020-2025_ExamVersion.docx"             # TODO: not yet migrated
 
 # ── Parse the source docx ────────────────────────────────────────────────────
 print('Parsing source docx...')

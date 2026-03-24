@@ -14,19 +14,22 @@ Output:
 """
 
 import zipfile, re, csv, os
+from pathlib import Path
 from lxml import etree
 from difflib import SequenceMatcher
 from collections import defaultdict
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
 # 2020-2024 combined docx (on user's machine — use the version already validated)
-SRC_20_24 = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_refs\01_source\ite_q&a_2020-2024_word.docx'
-SRC_2025  = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_exam\01_source\2025_ITE_Critique.docx'
-TIER_CSV  = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_refs\02_working\ITE_Reference_Tiers_Clean.csv'
-OUT_DIR   = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_refs\02_working'
-OUT_CSV   = os.path.join(OUT_DIR, 'question_ref_pairs.csv')
-OUT_RPT   = os.path.join(OUT_DIR, 'ref_match_report.txt')
-OUT_NEW   = os.path.join(OUT_DIR, 'new_refs_unmatched.csv')
+SRC_20_24 = PROJECT_ROOT / "key_data_files" / "ite_q&a_2020-2024_word.docx"        # TODO: not yet migrated
+SRC_2025  = PROJECT_ROOT / "key_data_files" / "2025_ITE_Critique.docx"             # TODO: not yet migrated
+TIER_CSV  = PROJECT_ROOT / "key_data_files" / "ITE_Reference_Tiers_Clean.csv"      # TODO: not yet migrated
+OUT_DIR   = SCRIPT_DIR.parent / "outputs"
+OUT_CSV   = OUT_DIR / "question_ref_pairs.csv"
+OUT_RPT   = OUT_DIR / "ref_match_report.txt"
+OUT_NEW   = OUT_DIR / "new_refs_unmatched.csv"
 
 MATCH_THRESHOLD = 0.70
 

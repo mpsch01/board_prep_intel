@@ -1,7 +1,10 @@
 import pandas as pd, sys
+from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8')
 
-STUDY_GUIDE = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_exam\02_working\high yield categories_table.xlsx'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+STUDY_GUIDE  = PROJECT_ROOT / "key_data_files" / "high yield categories_table.xlsx"  # TODO: not yet migrated
 
 VOL_FLOOR_Q     = 4
 VOL_FLOOR_SCORE = 0.65
@@ -42,7 +45,6 @@ for t in ['Tier 1','Tier 2','Standard']:
 
 print(f'\n  Volume floor applied to {mask.sum()} subcategories (>={VOL_FLOOR_Q} Qs, score <{VOL_FLOOR_SCORE})')
 
-sg.to_csv(
-    r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\07_archive\study_guide_v2_scores.csv',
-    index=False, encoding='utf-8')
-print('\nSaved: study_guide_v2_scores.csv')
+OUT_CSV = PROJECT_ROOT / "key_data_files" / "study_guide_v2_scores.csv"  # TODO: not yet migrated
+sg.to_csv(OUT_CSV, index=False, encoding='utf-8')
+print(f'\nSaved: {OUT_CSV}')

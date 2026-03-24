@@ -41,11 +41,14 @@ Output: session_keyword_library.json
 """
 
 import json, re, os
+from pathlib import Path
 
-A_JSON = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\keyword_library\raw_files\outline_terms.json'
-B_JSON = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\keyword_library\raw_files\tfidf_keywords.json'
-C_JSON = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\keyword_library\raw_files\vtt_time_weights.json'
-OUT    = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\keyword_library\session_keyword_library.json'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+A_JSON = PROJECT_ROOT / "key_data_files" / "outline_terms.json"
+B_JSON = PROJECT_ROOT / "key_data_files" / "tfidf_keywords.json"
+C_JSON = PROJECT_ROOT / "key_data_files" / "vtt_time_weights.json"
+OUT    = PROJECT_ROOT / "key_data_files" / "session_keyword_library.json"
 
 # Load all three sources
 with open(A_JSON, encoding='utf-8') as f: outline_data = json.load(f)

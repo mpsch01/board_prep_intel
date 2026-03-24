@@ -5,9 +5,12 @@ Output: session_cluster_crosswalk.csv  (human review before injection)
 """
 
 import zipfile, re, csv, os
+from pathlib import Path
 
-DOCX_PATH = r'C:/Users/mpsch/Desktop/claude_knowledge/board_prep/aafp_integration/01_source/BoardPrep-ContentOutline_SESSION-MAPPED-v2.docx'
-OUTPUT_PATH = r'C:/Users/mpsch/Desktop/claude_knowledge/board_prep/aafp_integration/02_working/session_cluster_crosswalk.csv'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+DOCX_PATH    = SCRIPT_DIR.parent / "source" / "00_EX_content_outline_w_q.docx"
+OUTPUT_PATH  = PROJECT_ROOT / "key_data_files" / "session_cluster_crosswalk.csv"
 
 # session_number, session_name, primary_categories, top_clusters (priority order), notes
 CROSSWALK = [

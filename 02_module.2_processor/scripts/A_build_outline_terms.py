@@ -7,10 +7,13 @@ Output: outline_terms.json
 """
 
 import zipfile, re, json, os
+from pathlib import Path
 from xml.etree import ElementTree as ET
 
-DOCX     = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\01_source\BoardPrep-ContentOutline_SESSION-MAPPED-v2.docx'
-OUT_JSON = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\keyword_library\raw_files\outline_terms.json'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+DOCX         = SCRIPT_DIR.parent / "source" / "00_EX_content_outline_w_q.docx"
+OUT_JSON     = PROJECT_ROOT / "key_data_files" / "outline_terms.json"
 
 NS = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
 

@@ -38,10 +38,10 @@ import json, os, sys, datetime
 from pathlib import Path
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-BASE        = Path(r"C:\Users\mpsch\Desktop\claude_knowledge")
-AFP_FOLDER  = BASE / "clinical_guidelines" / "practice" / "afp_peds_uspstf"
-OUT_DIR     = BASE / "guideline_extractor_v2" / "outputs" / "afp_test_batch"
-SCRIPT_DIR  = BASE / "guideline_extractor_v2"
+SCRIPT_DIR  = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+AFP_FOLDER  = PROJECT_ROOT / "01_module.1_warehouse" / "afp_peds_uspstf"            # TODO: not yet migrated
+OUT_DIR     = SCRIPT_DIR.parent / "outputs" / "afp_test_batch"
 
 # Gold list baseline from calibration_v1 (session 2026-03-05)
 BASELINE = {

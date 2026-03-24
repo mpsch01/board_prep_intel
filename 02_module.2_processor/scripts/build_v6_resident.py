@@ -17,12 +17,15 @@ Fixes from prior run:
 """
 
 import zipfile, re, json, os, random, sys
+from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8')
 
-SRC_DOCX  = r'C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\04_aafp_integration\04_outputs\BoardPrep-ContentOutline_HY-ENRICHED-v3.docx'
-OUT_DOCX  = r'C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\04_aafp_integration\04_outputs\BoardPrep-ContentOutline_HY-ENRICHED-v6-resident.docx'
-ITE_JSON  = r'C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\04_aafp_integration\02_working\session_hy_inserts_v7.json'
-POLL_JSON = r'C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\04_aafp_integration\03_poll_questions\poll_inserts.json'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+SRC_DOCX  = SCRIPT_DIR.parent / "source" / "00_EX_content_outline_w_q.docx"
+OUT_DOCX  = SCRIPT_DIR.parent / "outputs" / "BoardPrep-ContentOutline_HY-ENRICHED-v6-resident.docx"
+ITE_JSON  = PROJECT_ROOT / "key_data_files" / "session_hy_inserts_v7.json"
+POLL_JSON = PROJECT_ROOT / "key_data_files" / "poll_inserts.json"
 
 MAX_ITE_QS  = 5
 MAX_POLL_QS = 5

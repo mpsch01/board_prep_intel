@@ -9,8 +9,10 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-DB_PATH      = Path(r"C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\db\ite_intelligence.db")
-ENRICHED_DIR = Path(r"C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\03_enriched_JSON")
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
+ENRICHED_DIR = SCRIPT_DIR.parent / "outputs"
 
 conn = sqlite3.connect(str(DB_PATH))
 conn.row_factory = sqlite3.Row

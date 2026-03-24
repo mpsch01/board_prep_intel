@@ -14,13 +14,15 @@ Design:
 """
 
 import sys, zipfile, re, json, os
+from pathlib import Path
 import xml.etree.ElementTree as ET
 sys.stdout.reconfigure(encoding='utf-8')
-sys.stdout.reconfigure(encoding='utf-8')
 
-SRC_DOCX   = r'C:\Users\mpsch\Desktop\claude_knowledge\00_canonical\01_curriculum\ABFM_BoardPrep_ContentOutline_HY-Enriched_v5.docx'
-OUT_DOCX   = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\04_outputs\BoardPrep-ContentOutline_HY-ENRICHED-v6.docx'
-POLL_JSON  = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\03_poll_questions\poll_inserts.json'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+SRC_DOCX   = SCRIPT_DIR.parent / "source" / "00_EX_content_outline_w_q.docx"
+OUT_DOCX   = SCRIPT_DIR.parent / "outputs" / "BoardPrep-ContentOutline_HY-ENRICHED-v6.docx"
+POLL_JSON  = PROJECT_ROOT / "key_data_files" / "poll_inserts.json"
 
 # Amber/gold palette
 CLR_AMBER_DARK  = '7F4F24'   # dark amber header text bg

@@ -10,10 +10,18 @@ Actions:
   7. Save final clean file + produce change log
 """
 import pandas as pd, re
+from pathlib import Path
 from difflib import SequenceMatcher
 
-clean = pd.read_csv(r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_refs\02_working\ITE_Reference_Tiers_Clean.csv')
-master = pd.read_csv(r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_exam\03_database\ABFM_ITE_6_Year_Master.csv', low_memory=False)
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+CLEAN_CSV    = PROJECT_ROOT / "key_data_files" / "ITE_Reference_Tiers_Clean.csv"    # TODO: not yet migrated
+MASTER_CSV   = PROJECT_ROOT / "key_data_files" / "ABFM_ITE_6_Year_Master.csv"       # TODO: not yet migrated
+FINAL_OUT    = PROJECT_ROOT / "key_data_files" / "ITE_Reference_Tiers_Final.csv"
+CHGLOG_OUT   = SCRIPT_DIR.parent / "outputs" / "hygiene_change_log.csv"
+
+clean = pd.read_csv(CLEAN_CSV)
+master = pd.read_csv(MASTER_CSV, low_memory=False)
 change_log = []
 
 print(f"Starting rows: {len(clean)}")
@@ -182,11 +190,11 @@ print(f"\nSource type breakdown:")
 print(clean['SourceType'].value_counts().to_string())
 
 # ── SAVE ──────────────────────────────────────────────────────────────────────
-out = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_refs\03_database\ITE_Reference_Tiers_Final.csv'
+out = FINAL_OUT
 clean.to_csv(out, index=False)
 print(f"\nSaved: {out}")
 
 cl_df = pd.DataFrame(change_log, columns=['Action','Reference','OldValue','NewValue'])
-cl_path = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_exam\02_working\hygiene_change_log.csv'
+cl_path = CHGLOG_OUT
 cl_df.to_csv(cl_path, index=False)
 print(f"Change log ({len(cl_df)} entries): {cl_path}")

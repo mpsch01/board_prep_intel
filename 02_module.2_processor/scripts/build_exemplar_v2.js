@@ -536,7 +536,8 @@ const doc = new Document({
   }]
 });
 
-const OUTPUT = "/sessions/confident-cool-carson/mnt/claude_knowledge/ART-0370_DB_Intelligence_v2.docx";
+const path   = require("path");
+const OUTPUT = path.resolve(__dirname, "../outputs/ART-0370_DB_Intelligence_v2.docx");
 
 Packer.toBuffer(doc).then(buf => {
   fs.writeFileSync(OUTPUT, buf);

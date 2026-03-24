@@ -12,7 +12,9 @@ Usage:
 import json, subprocess, sys, argparse
 from pathlib import Path
 
-ENRICHED_DIR = Path(r"C:\Users\mpsch\Desktop\claude_knowledge\enriched JSON")
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+ENRICHED_DIR = SCRIPT_DIR.parent / "outputs"
 ENRICHER     = Path(__file__).resolve().parent / "ite_intelligence_enricher.py"
 
 def main():

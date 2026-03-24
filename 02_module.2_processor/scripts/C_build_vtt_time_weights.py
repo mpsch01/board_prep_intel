@@ -29,11 +29,14 @@ What matters is relative weight between terms within a session.
 """
 
 import os, re, json
+from pathlib import Path
 from collections import defaultdict
 
-VTT_DIR  = r'E:\AAFP Course\101-transcript files\raw_vtt_files'
-TFIDF_IN = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\keyword_library\raw_files\tfidf_keywords.json'
-OUT_JSON = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\keyword_library\raw_files\vtt_time_weights.json'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+VTT_DIR      = SCRIPT_DIR.parent / "source" / "aafp_vtt"          # TODO: VTT files not migrated — pre-computed vtt_time_weights.json in key_data_files/ is the preserved output
+TFIDF_IN     = PROJECT_ROOT / "key_data_files" / "tfidf_keywords.json"
+OUT_JSON     = PROJECT_ROOT / "key_data_files" / "vtt_time_weights.json"
 
 WINDOW_SEC = 30   # merge cues into ~30-second windows
 

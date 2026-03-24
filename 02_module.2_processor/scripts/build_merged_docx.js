@@ -26,13 +26,13 @@ const {
 } = require("docx");
 
 // ── Config ──────────────────────────────────────────────────
-// __dirname = .../abfm_prep/02_ite_intelligence/scripts/docx_build
-// CK_ROOT   = .../claude_knowledge  (4 levels up)
-const CK_ROOT = path.resolve(__dirname, "../../../../");
-const DB_PATH = path.resolve(__dirname, "../../db/ite_intelligence.db");
-const OUTPUT_DIR = path.join(CK_ROOT, "clinical_guidelines/02_docx_guideline_library");
-const TREND_DIR = path.resolve(__dirname, "../../readable_db_files");
-const JSON_DIR = path.join(CK_ROOT, "clinical_guidelines/03_enriched_JSON");
+// __dirname = .../02_module.2_processor/scripts
+// PROJECT_ROOT = two levels up
+const PROJECT_ROOT    = path.resolve(__dirname, "../../");
+const DB_PATH         = path.join(PROJECT_ROOT, "00_database/db/ite_intelligence.db");
+const OUTPUT_DIR      = path.join(PROJECT_ROOT, "02_module.2_processor/outputs/docx_guideline_library");
+const TREND_DIR       = path.join(PROJECT_ROOT, "03_module.3_analyst/outputs");
+const JSON_DIR        = path.join(PROJECT_ROOT, "key_data_files/ingested/json");   // TODO: not yet migrated
 const JSON_INDEX_PATH = path.join(__dirname, "json_artid_index.json");
 
 // ── Colors ──────────────────────────────────────────────────

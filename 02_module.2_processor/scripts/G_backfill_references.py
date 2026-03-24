@@ -10,13 +10,16 @@ Also writes a per-question ref summary for quick QA.
 """
 
 import csv, os
+from pathlib import Path
 from collections import defaultdict
 
-PAIRS_CSV  = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_refs\02_working\question_ref_pairs.csv'
-ENRICHED   = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_exam\03_database\ABFM_ITE_Enriched.csv'
-OUT_ENRICH = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_exam\03_database\ABFM_ITE_Enriched.csv'
-RAW_DIR    = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_exam\02_working\raw_files'
-QA_OUT     = os.path.join(RAW_DIR, 'ref_backfill_qa.csv')
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+PAIRS_CSV  = SCRIPT_DIR.parent / "outputs" / "question_ref_pairs.csv"              # output of F_extract_question_refs.py
+ENRICHED   = PROJECT_ROOT / "key_data_files" / "ABFM_ITE_Enriched.csv"             # TODO: not yet migrated
+OUT_ENRICH = PROJECT_ROOT / "key_data_files" / "ABFM_ITE_Enriched.csv"             # TODO: not yet migrated
+RAW_DIR    = SCRIPT_DIR.parent / "outputs" / "raw_files"
+QA_OUT     = RAW_DIR / "ref_backfill_qa.csv"
 
 os.makedirs(RAW_DIR, exist_ok=True)
 

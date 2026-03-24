@@ -22,19 +22,21 @@ Author: Pipeline auto-generated 2026-03-03
 """
 
 import json, csv, re, os
+from pathlib import Path
 from openpyxl import load_workbook
 from difflib import SequenceMatcher
 from collections import defaultdict
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
-BASE      = r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep'
-KW_JSON   = os.path.join(BASE, 'aafp_integration', 'keyword_library', 'session_keyword_library.json')
-MASTER    = os.path.join(BASE, 'ite_exam', '03_database', 'ABFM_ITE_Master_v2.xlsx')
-AI_TAGGED = os.path.join(BASE, 'ite_exam', '07_archive', 'db_previous_versions', 'ABFM_ITE_AI_Tagged_excel.xlsx')
-TIER_CSV  = os.path.join(BASE, 'ite_refs', '02_working', 'ITE_Reference_Tiers_Clean.csv')
-CW_CSV    = os.path.join(BASE, 'aafp_integration', '02_working', 'session_cluster_crosswalk.csv')
-OUT_JSON  = os.path.join(BASE, 'aafp_integration', '02_working', 'session_hy_inserts_v6.json')
-VAL_CSV   = os.path.join(BASE, 'aafp_integration', 'keyword_library', 'raw_files', 'E_v4_validation.csv')
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+KW_JSON   = PROJECT_ROOT / "key_data_files" / "session_keyword_library.json"
+MASTER    = PROJECT_ROOT / "key_data_files" / "ABFM_ITE_Master_v2.xlsx"           # TODO: not yet migrated
+AI_TAGGED = PROJECT_ROOT / "key_data_files" / "ABFM_ITE_AI_Tagged_excel.xlsx"     # TODO: not yet migrated
+TIER_CSV  = PROJECT_ROOT / "key_data_files" / "ITE_Reference_Tiers_Clean.csv"     # TODO: not yet migrated
+CW_CSV    = PROJECT_ROOT / "key_data_files" / "session_cluster_crosswalk.csv"     # output of 01_build_crosswalk.py
+OUT_JSON  = PROJECT_ROOT / "key_data_files" / "session_hy_inserts_v6.json"
+VAL_CSV   = SCRIPT_DIR.parent / "outputs" / "E_v4_validation.csv"
 
 # ── Tuning ─────────────────────────────────────────────────────────────────────
 MAX_Q_PER_SESSION = 5

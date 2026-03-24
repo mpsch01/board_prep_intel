@@ -8,13 +8,16 @@ Output: session_hy_inserts_v2.json
 """
 
 import pandas as pd, json, re
+from pathlib import Path
 
-SUBCAT_XWALK = r'C:/Users/mpsch/Desktop/claude_knowledge/board_prep/aafp_integration/02_working/session_subcat_crosswalk.csv'
-CLUST_XWALK  = r'C:/Users/mpsch/Desktop/claude_knowledge/board_prep/aafp_integration/02_working/session_cluster_crosswalk.csv'
-ITE_ENRICHED = r'C:/Users/mpsch/Desktop/claude_knowledge/board_prep/ite_exam/03_database/ABFM_ITE_Enriched.csv'
-STUDY_GUIDE  = r'C:/Users/mpsch/Desktop/claude_knowledge/board_prep/aafp_integration/07_archive/study_guide_v2_scores.csv'
-REF_TIERS    = r'C:/Users/mpsch/Desktop/claude_knowledge/board_prep/ite_refs/03_database/ITE_Reference_Tiers_Final.csv'
-OUTPUT       = r'C:/Users/mpsch/Desktop/claude_knowledge/board_prep/aafp_integration/02_working/session_hy_inserts_v2.json'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+SUBCAT_XWALK = PROJECT_ROOT / "key_data_files" / "session_subcat_crosswalk.csv"    # TODO: not yet migrated
+CLUST_XWALK  = PROJECT_ROOT / "key_data_files" / "session_cluster_crosswalk.csv"   # output of 01_build_crosswalk.py
+ITE_ENRICHED = PROJECT_ROOT / "key_data_files" / "ABFM_ITE_Enriched.csv"           # TODO: not yet migrated
+STUDY_GUIDE  = PROJECT_ROOT / "key_data_files" / "study_guide_v2_scores.csv"       # TODO: not yet migrated
+REF_TIERS    = PROJECT_ROOT / "key_data_files" / "ITE_Reference_Tiers_Final.csv"   # TODO: not yet migrated
+OUTPUT       = PROJECT_ROOT / "key_data_files" / "session_hy_inserts_v2.json"
 TOP_N        = 10
 TIER1_CUT    = 1.0
 TIER2_CUT    = 0.5

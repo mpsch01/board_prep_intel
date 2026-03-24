@@ -8,20 +8,22 @@ Uses unpack.py -> XML edit -> pack.py pipeline.
 OUTPUT: ABFM_BoardPrep_ContentOutline_HY-Enriched-v5-pearls.docx
 """
 import sys, json, os, re, zipfile, shutil, subprocess
+from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 
 # ── Paths ──────────────────────────────────────────────────────────────────
-BASE          = r"C:\Users\mpsch\Desktop\claude_knowledge"
-V5_PATH       = os.path.join(BASE, r"00_canonical\01_curriculum\ABFM_BoardPrep_ContentOutline_HY-Enriched_v5.docx")
-LINKS_JSON    = os.path.join(BASE, r"board_prep\ite_refs\05_scripts\linked_refs_full.json")
-INSERTS_JSON  = os.path.join(BASE, r"board_prep\aafp_integration\02_working\session_hy_inserts_v7.json")
-OUT_DIR       = os.path.join(BASE, r"board_prep\aafp_integration\04_outputs")
-OUT_DOCX      = os.path.join(OUT_DIR, "BoardPrep-ContentOutline_HY-Enriched-v5-pearls.docx")
-CANON_OUT     = os.path.join(BASE, r"00_canonical\01_curriculum\ABFM_BoardPrep_ContentOutline_HY-Enriched_v5-pearls.docx")
-SCRIPTS_DIR   = r"C:\Users\mpsch\Desktop\claude_knowledge\guideline_extractor_v2"
-UNPACK_PY     = os.path.join(SCRIPTS_DIR, r"scripts\unpack.py")
-PACK_PY       = os.path.join(SCRIPTS_DIR, r"scripts\pack.py")
-UNPACK_DIR    = os.path.join(OUT_DIR, "v5_pearls_unpack")
+SCRIPT_DIR    = Path(__file__).resolve().parent
+PROJECT_ROOT  = SCRIPT_DIR.parent.parent
+V5_PATH       = SCRIPT_DIR.parent / "source" / "00_EX_content_outline_w_q.docx"
+LINKS_JSON    = PROJECT_ROOT / "key_data_files" / "linked_refs_full.json"        # TODO: not yet migrated
+INSERTS_JSON  = PROJECT_ROOT / "key_data_files" / "session_hy_inserts_v7.json"
+OUT_DIR       = SCRIPT_DIR.parent / "outputs"
+OUT_DOCX      = OUT_DIR / "BoardPrep-ContentOutline_HY-Enriched-v5-pearls.docx"
+CANON_OUT     = OUT_DIR / "BoardPrep-ContentOutline_HY-Enriched-v5-pearls-canon.docx"
+SCRIPTS_DIR   = SCRIPT_DIR.parent                                                 # M2 root (was guideline_extractor_v2)
+UNPACK_PY     = SCRIPT_DIR / "unpack.py"                                          # TODO: unpack.py not yet migrated
+PACK_PY       = SCRIPT_DIR / "pack.py"                                            # TODO: pack.py not yet migrated
+UNPACK_DIR    = str(OUT_DIR / "v5_pearls_unpack")
 
 # ── Load data ──────────────────────────────────────────────────────────────
 with open(LINKS_JSON, encoding="utf-8") as f:

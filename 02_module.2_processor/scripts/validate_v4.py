@@ -1,6 +1,9 @@
 import json
+from pathlib import Path
 
-data = json.load(open(r'C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\02_working\session_hy_inserts_v4.json', encoding='utf-8'))
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+data = json.load(open(PROJECT_ROOT / "key_data_files" / "session_hy_inserts_v7.json", encoding='utf-8'))
 
 check_sessions = ['06', '13', '26', '42', '47']
 for sid in check_sessions:
