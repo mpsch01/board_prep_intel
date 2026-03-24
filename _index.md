@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-03-24 (BATON 003 → 004)
-**Status:** Current — updated post 2018-2019 integration session
+**Last Updated:** 2026-03-24 (BATON 004 → 005)
+**Status:** Current — updated post TEMP_04 migration + path hardcoding elimination
 
 > This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 00_#PROJECT_OVERHAUL/
-├── BATON_active_003_20260324_0820.md      ← active session handoff (BATON 003)
+├── BATON_active_005_20260324_pathfixes.md ← active session handoff (BATON 005)
 ├── README.json                            ← STALE (March 17) — needs rebuild
 ├── README_PROJECT.md                      ← STALE (March 17) — needs rebuild
 ├── master_map.JSON                        ← STALE — reflects old 7-module structure
@@ -143,33 +143,69 @@
 │   ├── logger.py, preprocess.py, prompt_builder.py
 │   ├── qid_filename_parser.py, validator.py
 ├── prompts/candidates/                    ← 4 extraction prompt candidates
-└── scripts/                               ← 16 standalone pipeline scripts
+├── source/                                ← pipeline source inputs (not code)
+│   ├── 00_EX_content_outline_w_q.docx    ← VC content outline (6.1MB, Mar 6) — input to A, 01, 03, 04, 07, 09
+│   └── aafp_transcripts/                 ← 50 cleaned .txt files — input to B_build_tfidf_keywords.py
+└── scripts/                               ← 41 standalone pipeline scripts (all paths dynamic)
+    │
+    │── MODULE F — VC OUTLINE PIPELINE (run order: 01→02b→03→04→07→08→09→build_v6)
+    ├── 01_build_crosswalk.py              ← outline sessions → session_cluster_crosswalk.csv
+    ├── 02b_generate_hy_inserts_v2.py      ← cluster crosswalk → session_hy_inserts_v2.json
+    ├── 03_inject_into_outline_v3.py       ← HY inserts → enriched outline DOCX (v4 out)
+    ├── 04_inject_poll_questions.py        ← poll inserts → enriched outline (v6 out)
+    ├── 07_inject_supplements_v2.py        ← supplement questions → enriched outline (v7 out)
+    ├── 08_build_supplement_doc.py         ← builds standalone supplement DOCX
+    ├── 09_build_pearl_callouts.py         ← pearl callouts into outline
+    ├── build_v6_resident.py               ← resident-facing v6 outline builder
+    ├── build_poll_inserts.py              ← poll_inserts.json generator
+    │
+    │── KEYWORD LIBRARY PIPELINE (run order: A→B→C→D→E_v4→F→G)
+    ├── A_build_outline_terms.py           ← outline DOCX → outline_terms.json
+    ├── B_build_tfidf_keywords.py          ← aafp_transcripts/ → tfidf_keywords.json
+    ├── C_build_vtt_time_weights.py        ← VTTs → vtt_time_weights.json (VTTs not migrated — pre-computed output preserved)
+    ├── D_build_keyword_library.py         ← A+B+C → session_keyword_library.json
+    ├── E_v4_question_driven.py            ← keyword library → session_hy_inserts_v6.json
+    ├── F_extract_question_refs.py         ← ITE Q docs → question_ref_pairs.csv
+    ├── G_backfill_references.py           ← pairs → backfills ABFM_ITE_Enriched.csv
+    │
+    │── REFERENCE DATA HYGIENE
+    ├── hygiene_audit.py                   ← fuzzy-dedup ITE_Reference_Tiers.csv
+    ├── hygiene_fix.py                     ← 6-pass fix on ITE_Reference_Tiers_Clean.csv
+    ├── sg_reweight_v3.py                  ← study guide yield score reweighter
+    ├── split_by_year.py                   ← splits master CSV by exam year
+    ├── validate_v4.py                     ← validates session_hy_inserts_v7.json structure
+    │
+    │── EXTRACTION + ENRICHMENT PIPELINE
+    ├── backfill_extraction_status.py      ← sets extraction_status in DB
     ├── backfill_keywords_2018_2019.py     ← keyword backfill for 2018-2019
-    ├── backfill_extraction_status.py      ← sets extraction_status in DB (⚠️ paths need update)
-    ├── backfill_keywords_2018_2019.py     ← keyword backfill for 2018-2019
-    ├── batch_db_extract.py               ← batch API DB-guided extractor (50% cheaper)
-    ├── batch_reprocess.ps1               ← batch reprocessing runner
-    ├── build_db_docx.js                  ← DOCX builder (JS)
-    ├── build_exemplar_v2.js              ← Intelligence 2.0 DOCX builder w/ ICD-10 + pathways (JS)
-    ├── build_merged_docx.js              ← merged DOCX builder (JS)
-    ├── build_summary.js                  ← summary DOCX builder (JS)
-    ├── calibration.py                    ← extraction QC + candidate prompt generator
-    ├── clear_and_reenrich.py             ← strip ite_intelligence block + re-enrich (⚠️ paths need update)
-    ├── convert_pdfs_to_json.py           ← PDF → extracted JSON (pre-enrichment step)
-    ├── db_guided_extractor.py            ← DB intelligence as extraction flashlight
-    ├── extract_guideline.bat             ← Windows one-click orchestrator
-    ├── install_context_menu.reg          ← Windows right-click setup
-    ├── ite_intelligence_enricher.py      ← primary v4 enricher (codon-first, 2-strategy)
-    ├── ite_intelligence_enricher_batch.py← batch API enricher (50% cheaper)
-    ├── pre_scan.py                       ← pre-flight PDF scanner (INGEST/SKIP/REVIEW)
-    ├── preprocess_concept_tags.py        ← Claude API concept_tags generator
-    ├── reextract_gold_list.py            ← re-extraction runner for gold list PDFs
-    ├── rematch_unmatched.py              ← fuzzy re-matcher for orphaned question_ref_pairs
-    ├── run_test_batch.py                 ← pipeline test runner (vs gold baseline 0.957)
-    ├── synthesize.js                     ← JSON → DOCX pre-processor (JS)
-    └── uninstall_context_menu.reg        ← Windows right-click removal
+    ├── batch_db_extract.py                ← batch API DB-guided extractor (50% cheaper)
+    ├── calibration.py                     ← extraction QC + candidate prompt generator
+    ├── clear_and_reenrich.py              ← strip ite_intelligence block + re-enrich
+    ├── convert_pdfs_to_json.py            ← PDF → extracted JSON (pre-enrichment step)
+    ├── db_guided_extractor.py             ← DB intelligence as extraction flashlight
+    ├── ite_intelligence_enricher.py       ← primary v4 enricher (codon-first, 2-strategy)
+    ├── ite_intelligence_enricher_batch.py ← batch API enricher (50% cheaper)
+    ├── pre_scan.py                        ← pre-flight PDF scanner (INGEST/SKIP/REVIEW)
+    ├── preprocess_concept_tags.py         ← Claude API concept_tags generator
+    ├── reextract_gold_list.py             ← re-extraction runner for gold list PDFs
+    ├── rematch_unmatched.py               ← fuzzy re-matcher for orphaned question_ref_pairs
+    ├── run_test_batch.py                  ← pipeline test runner (vs gold baseline 0.957)
+    │
+    │── DOCX BUILDERS (JS)
+    ├── build_db_docx.js                   ← DB-powered DOCX builder
+    ├── build_exemplar_v2.js               ← Intelligence 2.0 DOCX w/ ICD-10 + pathways
+    ├── build_merged_docx.js               ← merged clinical narrative + DB intelligence DOCX
+    ├── build_summary.js                   ← summary DOCX builder
+    ├── build_qbank_exam_version.py        ← exam-version question bank DOCX builder
+    ├── synthesize.js                      ← JSON → DOCX pre-processor
+    │
+    │── WINDOWS SYSTEM FILES (paths deferred — not dynamically resolvable)
+    ├── batch_reprocess.ps1                ← batch reprocessing runner
+    ├── extract_guideline.bat              ← Windows one-click orchestrator
+    ├── install_context_menu.reg           ← Windows right-click setup
+    └── uninstall_context_menu.reg         ← Windows right-click removal
 ```
-*Migration complete (BATON 004 session). 23 scripts total. ⚠️ `backfill_extraction_status.py` and `clear_and_reenrich.py` have hardcoded old paths — need update before running.*
+*41 Python + JS scripts. All Python/JS paths dynamic as of commit `ed85b06` (BATON 005). .bat/.ps1/.reg paths deferred. Files with `# TODO: not yet migrated` annotations are pointing to correct future locations — update annotation when file arrives.*
 
 ---
 
@@ -216,6 +252,10 @@ key_data_files/
 ├── ABFM_ITE_QuestionRefPairs_2020-2025.csv
 ├── clinical_synonym_map.json
 ├── session_hy_inserts_v7.json             ← VC GATE — 352 citations (production)
+├── session_keyword_library.json           ← final output of keyword pipeline (A→D)
+├── poll_inserts.json                      ← input to build_v6_resident.py
+├── vtt_time_weights.json                  ← pre-computed step C output (VTTs not migrated)
+├── README_AAFP_course_integration.json    ← AAFP course integration context doc
 └── data_exams/
     ├── ITE_2020_raw.csv  ├── ITE_2021_raw.csv  ├── ITE_2022_raw.csv
     ├── ITE_2023_raw.csv  ├── ITE_2024_raw.csv  └── ITE_2025_raw.csv
@@ -342,6 +382,7 @@ M4 Sandbox — experiment
 
 | Date | Action |
 |------|--------|
+| 2026-03-24 | `_index.md` updated to BATON 004 → 005. TEMP_04 fully migrated: Module F (9 scripts) + keyword library (7 scripts A-G) + 5 hygiene/utility scripts → M2/scripts/. M2/source/ layer created with content outline DOCX + 50 AAFP transcripts. 4 key data files added to key_data_files/. All 30 Python/JS scripts de-hardcoded (commit `ed85b06`). M2 script count: 10 → 41. |
 | 2026-03-24 | `_index.md` updated to BATON 003 → 004. M1 `scripts/build/` and `scripts/maintain/` created and populated (11 scripts total). 7 scripts relocated from M2/scripts to M1/maintain or M1/build. `aafp_vc_batch_download.py` relocated from agents/scripts to M1/maintain. M2/scripts count: 17 → 10. M3 script duplication flagged. |
 | 2026-03-24 | `_index.md` updated to BATON 002. DB counts updated: 1,936 articles, 1,629 questions (added 2018-2019 integration). New scripts documented: `backfill_keywords_2018_2019.py`, `preprocess_concept_tags.py`. `tagging_bundle/` section added. Schema coverage table added. |
 | 2026-03-24 | 2018-2019 integration complete: 440 questions, 389 new articles (ART-1549 → ART-1937), 653 question_ref_pairs, 762 article_icd10. Backup: `ite_intelligence_pre2018_backup_20260324_001256.db`. |
