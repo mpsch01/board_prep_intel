@@ -145,23 +145,31 @@
 ├── prompts/candidates/                    ← 4 extraction prompt candidates
 └── scripts/                               ← 16 standalone pipeline scripts
     ├── backfill_keywords_2018_2019.py     ← keyword backfill for 2018-2019
-    ├── batch_reprocess.ps1                ← batch reprocessing runner
-    ├── build_db_docx.js                   ← DOCX builder (grandfathered JS)
-    ├── build_merged_docx.js               ← merged DOCX builder (grandfathered JS)
-    ├── build_summary.js                   ← summary DOCX builder (grandfathered JS)
-    ├── calibration.py                     ← extraction QC + candidate prompt generator
-    ├── extract_guideline.bat              ← Windows one-click orchestrator
-    ├── install_context_menu.reg           ← Windows right-click setup
-    ├── ite_intelligence_enricher.py       ← primary v4 enricher (codon-first, 2-strategy)
-    ├── ite_intelligence_enricher_batch.py ← batch API enricher (50% cheaper)
-    ├── pre_scan.py                        ← pre-flight PDF scanner (INGEST/SKIP/REVIEW)
-    ├── preprocess_concept_tags.py         ← Claude API concept_tags generator
-    ├── reextract_gold_list.py             ← re-extraction runner for gold list PDFs
-    ├── run_test_batch.py                  ← pipeline test runner (vs gold baseline 0.957)
-    ├── synthesize.js                      ← JSON → DOCX pre-processor (grandfathered JS)
-    └── uninstall_context_menu.reg         ← Windows right-click removal
+    ├── backfill_extraction_status.py      ← sets extraction_status in DB (⚠️ paths need update)
+    ├── backfill_keywords_2018_2019.py     ← keyword backfill for 2018-2019
+    ├── batch_db_extract.py               ← batch API DB-guided extractor (50% cheaper)
+    ├── batch_reprocess.ps1               ← batch reprocessing runner
+    ├── build_db_docx.js                  ← DOCX builder (JS)
+    ├── build_exemplar_v2.js              ← Intelligence 2.0 DOCX builder w/ ICD-10 + pathways (JS)
+    ├── build_merged_docx.js              ← merged DOCX builder (JS)
+    ├── build_summary.js                  ← summary DOCX builder (JS)
+    ├── calibration.py                    ← extraction QC + candidate prompt generator
+    ├── clear_and_reenrich.py             ← strip ite_intelligence block + re-enrich (⚠️ paths need update)
+    ├── convert_pdfs_to_json.py           ← PDF → extracted JSON (pre-enrichment step)
+    ├── db_guided_extractor.py            ← DB intelligence as extraction flashlight
+    ├── extract_guideline.bat             ← Windows one-click orchestrator
+    ├── install_context_menu.reg          ← Windows right-click setup
+    ├── ite_intelligence_enricher.py      ← primary v4 enricher (codon-first, 2-strategy)
+    ├── ite_intelligence_enricher_batch.py← batch API enricher (50% cheaper)
+    ├── pre_scan.py                       ← pre-flight PDF scanner (INGEST/SKIP/REVIEW)
+    ├── preprocess_concept_tags.py        ← Claude API concept_tags generator
+    ├── reextract_gold_list.py            ← re-extraction runner for gold list PDFs
+    ├── rematch_unmatched.py              ← fuzzy re-matcher for orphaned question_ref_pairs
+    ├── run_test_batch.py                 ← pipeline test runner (vs gold baseline 0.957)
+    ├── synthesize.js                     ← JSON → DOCX pre-processor (JS)
+    └── uninstall_context_menu.reg        ← Windows right-click removal
 ```
-*Migration complete (BATON 004 session). core/, engines/, utils/, prompts/, main.py + 6 additional scripts from old 01_guideline_extractor. Module F scripts still pending.*
+*Migration complete (BATON 004 session). 23 scripts total. ⚠️ `backfill_extraction_status.py` and `clear_and_reenrich.py` have hardcoded old paths — need update before running.*
 
 ---
 

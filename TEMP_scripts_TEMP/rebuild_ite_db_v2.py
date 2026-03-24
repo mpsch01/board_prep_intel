@@ -1,0 +1,538 @@
+"""
+rebuild_ite_db_v2.py — ITE Intelligence Database v2 Builder
+=============================================================
+Preprocessing-First Design | ITE Intelligence Pipeline
+
+PURPOSE:
+  Rebuild ite_intelligence.db with a fully preprocessed schema so the
+  right-click pipeline only needs to do: match-and-grab, not compute.
+
+WHAT THIS SCRIPT DOES:
+  1. Creates new DB schema (v2) with all preprocessing columns
+  2. Migrates existing articles + pairs data
+  3. Assigns stable article_id (ART-0001 ... ART-1397)
+  4. Parses title from clean_ref
+  5. Builds qid_list + exam_years JSON arrays per article
+  6. Builds canonical_filename (Smith_Moore_2019)
+  7. Builds codon_filename (Smith_Moore_2019#@#ART-0001@#@.pdf)
+  8. Builds citation_display string
+  9. Imports full question data from ite_questions_clean.json
+     (body_system, subcategory, choices, correct_letter, correct_text)
+ 10. Denormalizes exam_year into question_ref_pairs
+ 11. Backs up old DB before overwriting
+
+SOURCES:
+  - ite_intelligence.db (existing — migrated)
+  - ite_questions_clean.json (full question content)
+
+RUN:
+  python scripts/rebuild_ite_db_v2.py
+  python scripts/rebuild_ite_db_v2.py --dry-run   # preview only, no write
+"""
+
+import sqlite3, json, re, os, shutil, argparse
+from pathlib import Path
+from datetime import datetime, timezone
+
+# ── Paths ──────────────────────────────────────────────────────────────────
+BASE_DIR    = Path(__file__).resolve().parent.parent
+DB_PATH     = BASE_DIR / "db" / "ite_intelligence.db"
+DB_BACKUP   = BASE_DIR / "db" / f"ite_intelligence_v1_backup_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.db"
+LOG_DIR     = BASE_DIR / "logs"
+LOG_PATH    = LOG_DIR / f"rebuild_v2_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json"
+
+QUESTIONS_JSON = Path(r"C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\03_ite_exam\03_database\ite_questions_clean.json")
+
+LOG = {"started": str(datetime.now(timezone.utc)), "steps": [], "counts": {}, "errors": []}
+
+def log(msg, key=None, val=None):
+    print(msg)
+    LOG["steps"].append(msg)
+    if key:
+        LOG["counts"][key] = val
+
+def err(msg):
+    print(f"  ERROR: {msg}")
+    LOG["errors"].append(msg)
+
+
+# ── Parsers ────────────────────────────────────────────────────────────────
+
+def parse_title(clean_ref: str) -> str:
+    """Extract article title from CleanRef string.
+    Format: 'Author1 AB, Author2 CD: Title text. Journal Year;...'
+    Returns everything between first ':' and first '.' after that colon.
+    """
+    colon = clean_ref.find(":")
+    if colon == -1:
+        return clean_ref[:80].strip()
+    after_colon = clean_ref[colon + 1:].strip()
+    # Title ends at first period
+    dot = after_colon.find(".")
+    if dot == -1:
+        return after_colon[:120].strip()
+    return after_colon[:dot].strip()
+
+
+def parse_authors_year(clean_ref: str) -> dict:
+    """Extract author1, author2, year from CleanRef."""
+    result = {"author1": None, "author2": None, "year": None}
+    year_m = re.search(r'\b(199\d|20[0-2]\d)\b', clean_ref)
+    if year_m:
+        result["year"] = year_m.group(1)
+    colon = clean_ref.find(":")
+    if colon == -1:
+        parts = clean_ref.split()
+        if parts:
+            result["author1"] = parts[0].rstrip(",")
+        return result
+    author_block = clean_ref[:colon].strip()
+    # Org-style: USPSTF, CDC, etc.
+    if re.match(r'^[A-Z]{2,}', author_block) and "," not in author_block:
+        result["author1"] = author_block
+        return result
+    parts = [p.strip() for p in author_block.split(",")]
+    if parts:
+        result["author1"] = parts[0].split()[0] if parts[0].split() else None
+    if len(parts) >= 2:
+        result["author2"] = parts[1].split()[0] if parts[1].split() else None
+    return result
+
+
+def build_canonical_filename(author1, author2, year) -> str:
+    """Build clean canonical filename stem: Smith_Jones_2020"""
+    def sanitize(s):
+        if not s:
+            return None
+        s = re.sub(r"['\u2019\u2018]", "", s)       # remove apostrophes
+        s = re.sub(r"[^A-Za-z0-9]", "_", s)          # non-alphanum → _
+        s = re.sub(r"_+", "_", s).strip("_")
+        return s[:30] if s else None
+
+    a1 = sanitize(author1) or "Unknown"
+    a2 = sanitize(author2)
+    yr = str(year) if year else "0000"
+    if a2:
+        return f"{a1}_{a2}_{yr}"
+    return f"{a1}_{yr}"
+
+
+def build_codon_filename(canonical: str, article_id: str) -> str:
+    """Build codon filename: Smith_Jones_2020#@#ART-0001@#@.pdf"""
+    return f"{canonical}#@#{article_id}@#@.pdf"
+
+
+def build_citation_display(clean_ref: str) -> str:
+    """Build a clean citation string for DOCX rendering.
+    Truncates very long refs to ~180 chars with ellipsis."""
+    s = clean_ref.strip()
+    if len(s) > 180:
+        return s[:177] + "..."
+    return s
+
+
+# ── Schema ─────────────────────────────────────────────────────────────────
+
+SCHEMA_V2 = """
+-- Drop old tables if rebuilding
+DROP TABLE IF EXISTS articles;
+DROP TABLE IF EXISTS questions;
+DROP TABLE IF EXISTS question_ref_pairs;
+
+-- TABLE 1: articles
+-- One row per unique reference. Fully preprocessed at build time.
+CREATE TABLE articles (
+    clean_ref           TEXT PRIMARY KEY,   -- original citation (stable PK)
+    article_id          TEXT UNIQUE,        -- stable short ID: ART-0001
+    author1             TEXT,               -- parsed surname 1
+    author2             TEXT,               -- parsed surname 2
+    year                TEXT,               -- publication year
+    title               TEXT,               -- parsed from CleanRef
+    source_type         TEXT,               -- AFP, IDSA, USPSTF, JACC, etc.
+    categories          TEXT,               -- body system categories (from tiers CSV)
+    blueprint_cats      TEXT,               -- blueprint categories
+    tier                TEXT,               -- Must-Read / Core / Supplementary
+    auto_assigned       TEXT,               -- Yes/No from tiers CSV
+    citation_count      INTEGER DEFAULT 0,  -- # questions that cited this
+    unique_years        INTEGER DEFAULT 0,  -- # exam years this appeared
+    exam_years          TEXT,               -- JSON array: [2020, 2022, 2023]
+    qid_list            TEXT,               -- JSON array: ["QID-2020-0001", ...]
+    canonical_filename  TEXT,               -- "Smith_Moore_2019"
+    codon_filename      TEXT,               -- "Smith_Moore_2019#@#ART-0001@#@.pdf"
+    citation_display    TEXT,               -- formatted for DOCX
+    extraction_status   TEXT DEFAULT 'pending'  -- pending/extracted/enriched
+);
+
+-- TABLE 2: questions
+-- One row per exam question. Full content + preprocessed fields.
+CREATE TABLE questions (
+    qid                 TEXT PRIMARY KEY,   -- QID-2020-0001
+    exam_year           INTEGER,
+    body_system         TEXT,               -- from ite_questions_clean.json
+    subcategory         TEXT,               -- from ite_questions_clean.json
+    blueprint           TEXT,
+    question_text       TEXT,               -- full stem text
+    choices             TEXT,               -- JSON array of {letter, text}
+    correct_letter      TEXT,               -- "C"
+    correct_text        TEXT,               -- full text of correct answer
+    explanation         TEXT,               -- full explanation text
+    reference           TEXT,               -- citation string from explanation
+    stem_keywords       TEXT,               -- existing keyword field (kept)
+    explanation_keywords TEXT,              -- existing keyword field (kept)
+    all_keywords        TEXT,               -- existing merged keywords (kept)
+    concept_tags        TEXT                -- NEW: Claude-preprocessed JSON
+                                            -- {drugs, diagnoses, guidelines,
+                                            --  thresholds, concept_summary}
+);
+
+-- TABLE 3: question_ref_pairs
+-- Junction table. One row per QID<->article link.
+CREATE TABLE question_ref_pairs (
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    qid                 TEXT,               -- FK -> questions.qid
+    clean_ref           TEXT,               -- FK -> articles.clean_ref
+    ref_raw             TEXT,               -- original raw citation text
+    tier                TEXT,               -- tier at time of pairing
+    match_score         REAL,               -- 0.0-1.0 match confidence
+    ref_index           INTEGER,            -- citation order within question
+    match_status        TEXT,               -- matched/unmatched/fuzzy
+    exam_year           INTEGER             -- denormalized for fast filtering
+);
+"""
+
+# ── Main Build ─────────────────────────────────────────────────────────────
+
+def build(dry_run=False):
+    log("=" * 60)
+    log("ITE Intelligence DB v2 Builder")
+    log(f"dry_run = {dry_run}")
+    log("=" * 60)
+
+    # ── Step 0: Load source data from existing DB ──────────────────────────
+    log("\n[STEP 0] Reading existing DB...")
+    old_conn = sqlite3.connect(DB_PATH)
+    old_conn.row_factory = sqlite3.Row
+    oc = old_conn.cursor()
+
+    oc.execute("SELECT * FROM articles ORDER BY clean_ref")
+    old_articles = [dict(r) for r in oc.fetchall()]
+    log(f"  Loaded {len(old_articles)} articles from existing DB")
+
+    oc.execute("SELECT * FROM questions ORDER BY qid")
+    old_questions = [dict(r) for r in oc.fetchall()]
+    log(f"  Loaded {len(old_questions)} questions from existing DB")
+
+    oc.execute("SELECT * FROM question_ref_pairs ORDER BY id")
+    old_pairs = [dict(r) for r in oc.fetchall()]
+    log(f"  Loaded {len(old_pairs)} pairs from existing DB")
+    old_conn.close()
+
+    # ── Step 1: Load ite_questions_clean.json ─────────────────────────────
+    log(f"\n[STEP 1] Loading {QUESTIONS_JSON.name}...")
+    with open(QUESTIONS_JSON, encoding="utf-8") as f:
+        questions_full = json.load(f)
+    # Build lookup dict by qid (normalized: Q2020-001 → QID-2020-0001)
+    def norm_qid(raw):
+        raw = raw.strip()
+        raw = re.sub(r'^QID-', '', raw)
+        raw = re.sub(r'^Q', '', raw)
+        m = re.match(r'^(\d{4})-(\d+)$', raw)
+        if not m:
+            return f"QID-INVALID-{raw}"
+        return f"QID-{m.group(1)}-{int(m.group(2)):04d}"
+    q_lookup = {}
+    for q in questions_full:
+        # JSON uses global sequential numbering (2021=201-400, etc.)
+        # DB uses per-year numbering (every year resets to 0001)
+        # Match on: exam_year + per-year position
+        yr = q.get("exam_year")
+        raw_id = q.get("question_id", "")
+        m = re.search(r'-(\d+)$', raw_id)
+        if not m or not yr:
+            continue
+        raw_num = int(m.group(1))
+        # Each year block starts at a global offset; compute per-year number
+        # 2020: 1-200 -> per_year 1-200
+        # 2021: 201-400 -> per_year 1-200
+        # 2022: 401-600 -> per_year 1-200
+        # 2023: 601-800 -> per_year 1-200
+        # 2024: 801-1000 -> per_year 1-200
+        # 2025: 1-200 -> per_year 1-200 (restarted)
+        year_offsets = {2020: 0, 2021: 200, 2022: 400, 2023: 600, 2024: 800, 2025: 0}
+        offset = year_offsets.get(yr, 0)
+        per_year_num = raw_num - offset
+        normalized_qid = f"QID-{yr}-{per_year_num:04d}"
+        q_lookup[normalized_qid] = q
+    log(f"  Loaded {len(q_lookup)} questions from JSON")
+
+    # ── Step 2: Build pairs lookup (clean_ref → qid list + exam years) ────
+    log("\n[STEP 2] Building article -> QID aggregations...")
+    from collections import defaultdict
+    art_qids    = defaultdict(list)   # clean_ref → [QID-2020-0001, ...]
+    art_years   = defaultdict(set)    # clean_ref → {2020, 2022}
+    qid_year    = {}                  # qid → exam_year (for denormalize)
+
+    for q in old_questions:
+        qid_year[q["qid"]] = q["exam_year"]
+
+    for pair in old_pairs:
+        ref  = pair["clean_ref"]
+        qid  = pair["qid"]
+        year = qid_year.get(qid)
+        if qid not in art_qids[ref]:
+            art_qids[ref].append(qid)
+        if year:
+            art_years[ref].add(int(year))
+
+    log(f"  Built QID lists for {len(art_qids)} articles")
+
+    # ── Step 3: Assign stable article_id ──────────────────────────────────
+    log("\n[STEP 3] Assigning stable article IDs (ART-0001 ...)...")
+    sorted_refs = sorted(old_articles, key=lambda a: a["clean_ref"])
+    art_id_map  = {}  # clean_ref → ART-NNNN
+    for i, art in enumerate(sorted_refs, start=1):
+        art_id_map[art["clean_ref"]] = f"ART-{i:04d}"
+    log(f"  Assigned {len(art_id_map)} article IDs")
+
+
+    # ── Step 4: Build enriched articles list ──────────────────────────────
+    log("\n[STEP 4] Building enriched articles rows...")
+    enriched_articles = []
+    for art in old_articles:
+        ref  = art["clean_ref"]
+        aid  = art_id_map[ref]
+        prs  = parse_authors_year(ref)
+        a1, a2, yr = prs["author1"], prs["author2"], prs["year"]
+        canon = build_canonical_filename(a1, a2, yr)
+        codon = build_codon_filename(canon, aid)
+        qids  = sorted(art_qids.get(ref, []))
+        years = sorted(art_years.get(ref, set()))
+        enriched_articles.append({
+            "clean_ref":          ref,
+            "article_id":         aid,
+            "author1":            a1,
+            "author2":            a2,
+            "year":               yr,
+            "title":              parse_title(ref),
+            "source_type":        art.get("source_type"),
+            "categories":         art.get("categories"),
+            "blueprint_cats":     art.get("blueprint_cats"),
+            "tier":               art.get("tier"),
+            "auto_assigned":      art.get("auto_assigned"),
+            "citation_count":     art.get("citation_count", len(qids)),
+            "unique_years":       art.get("unique_years", len(years)),
+            "exam_years":         json.dumps(years),
+            "qid_list":           json.dumps(qids),
+            "canonical_filename": canon,
+            "codon_filename":     codon,
+            "citation_display":   build_citation_display(ref),
+            "extraction_status":  "pending",
+        })
+    log(f"  Built {len(enriched_articles)} enriched article rows")
+
+    # ── Step 5: Build enriched questions list ─────────────────────────────
+    log("\n[STEP 5] Merging question content from JSON...")
+    enriched_questions = []
+    merged, missing = 0, 0
+    for q in old_questions:
+        qid  = q["qid"]
+        full = q_lookup.get(qid)
+        if full:
+            merged += 1
+            enriched_questions.append({
+                "qid":                  qid,
+                "exam_year":            q["exam_year"],
+                "body_system":          full.get("body_system"),
+                "subcategory":          full.get("subcategory"),
+                "blueprint":            full.get("blueprint", ""),
+                "question_text":        full.get("question_text"),
+                "choices":              json.dumps(full.get("choices", [])),
+                "correct_letter":       full.get("correct_letter"),
+                "correct_text":         full.get("correct_text"),
+                "explanation":          full.get("explanation"),
+                "reference":            full.get("reference"),
+                "stem_keywords":        q.get("stem_keywords"),
+                "explanation_keywords": q.get("explanation_keywords"),
+                "all_keywords":         q.get("all_keywords"),
+                "concept_tags":         None,  # populated by preprocess_keywords_v2.py
+            })
+        else:
+            missing += 1
+            err(f"No JSON match for {qid}")
+            enriched_questions.append({
+                "qid":                  qid,
+                "exam_year":            q["exam_year"],
+                "body_system":          None,
+                "subcategory":          None,
+                "blueprint":            None,
+                "question_text":        q.get("stem_text"),
+                "choices":              None,
+                "correct_letter":       q.get("answer_text"),
+                "correct_text":         None,
+                "explanation":          q.get("explanation_text"),
+                "reference":            None,
+                "stem_keywords":        q.get("stem_keywords"),
+                "explanation_keywords": q.get("explanation_keywords"),
+                "all_keywords":         q.get("all_keywords"),
+                "concept_tags":         None,
+            })
+    log(f"  Merged: {merged}  |  Missing JSON: {missing}")
+    log(f"  count", "questions_merged", merged)
+
+
+    # ── Step 6: Build enriched pairs list (add exam_year) ─────────────────
+    log("\n[STEP 6] Denormalizing exam_year into pairs...")
+    enriched_pairs = []
+    for pair in old_pairs:
+        yr = qid_year.get(pair["qid"])
+        enriched_pairs.append({
+            "qid":          pair["qid"],
+            "clean_ref":    pair["clean_ref"],
+            "ref_raw":      pair.get("ref_raw"),
+            "tier":         pair.get("tier"),
+            "match_score":  pair.get("match_score"),
+            "ref_index":    pair.get("ref_index"),
+            "match_status": pair.get("match_status"),
+            "exam_year":    int(yr) if yr else None,
+        })
+    log(f"  Enriched {len(enriched_pairs)} pairs with exam_year")
+
+    # ── Step 7: Dry-run preview ───────────────────────────────────────────
+    if dry_run:
+        log("\n[DRY RUN] Previewing first 3 articles:")
+        for a in enriched_articles[:3]:
+            log(f"  {a['article_id']} | {a['canonical_filename']} | qids={a['qid_list']}")
+            log(f"    title: {a['title'][:70]}")
+            log(f"    codon: {a['codon_filename']}")
+        log("\n[DRY RUN] Previewing first 3 questions:")
+        for q in enriched_questions[:3]:
+            log(f"  {q['qid']} | {q['body_system']} / {q['subcategory']}")
+            log(f"    stem[:60]: {str(q['question_text'])[:60]}")
+            log(f"    correct: ({q['correct_letter']}) {str(q['correct_text'])[:50]}")
+        log("\n[DRY RUN] No changes written to DB.")
+        return
+
+    # ── Step 8: Backup existing DB ────────────────────────────────────────
+    log(f"\n[STEP 8] Backing up existing DB to {DB_BACKUP.name}...")
+    shutil.copy2(DB_PATH, DB_BACKUP)
+    log(f"  Backup saved: {DB_BACKUP}")
+
+    # ── Step 9: Write new DB ──────────────────────────────────────────────
+    log("\n[STEP 9] Writing new DB schema + data...")
+    conn = sqlite3.connect(DB_PATH)
+    c    = conn.cursor()
+
+    # Apply schema (drops old tables, creates new)
+    for stmt in SCHEMA_V2.strip().split(";"):
+        stmt = stmt.strip()
+        if stmt:
+            c.execute(stmt)
+    conn.commit()
+    log("  Schema created")
+
+    # Insert articles
+    c.executemany("""
+        INSERT INTO articles (clean_ref, article_id, author1, author2, year, title,
+            source_type, categories, blueprint_cats, tier, auto_assigned,
+            citation_count, unique_years, exam_years, qid_list,
+            canonical_filename, codon_filename, citation_display, extraction_status)
+        VALUES (:clean_ref, :article_id, :author1, :author2, :year, :title,
+            :source_type, :categories, :blueprint_cats, :tier, :auto_assigned,
+            :citation_count, :unique_years, :exam_years, :qid_list,
+            :canonical_filename, :codon_filename, :citation_display, :extraction_status)
+    """, enriched_articles)
+    conn.commit()
+    log(f"  Inserted {len(enriched_articles)} articles")
+
+
+    # Insert questions
+    c.executemany("""
+        INSERT INTO questions (qid, exam_year, body_system, subcategory, blueprint,
+            question_text, choices, correct_letter, correct_text, explanation,
+            reference, stem_keywords, explanation_keywords, all_keywords, concept_tags)
+        VALUES (:qid, :exam_year, :body_system, :subcategory, :blueprint,
+            :question_text, :choices, :correct_letter, :correct_text, :explanation,
+            :reference, :stem_keywords, :explanation_keywords, :all_keywords, :concept_tags)
+    """, enriched_questions)
+    conn.commit()
+    log(f"  Inserted {len(enriched_questions)} questions")
+
+    # Insert pairs
+    c.executemany("""
+        INSERT INTO question_ref_pairs (qid, clean_ref, ref_raw, tier,
+            match_score, ref_index, match_status, exam_year)
+        VALUES (:qid, :clean_ref, :ref_raw, :tier,
+            :match_score, :ref_index, :match_status, :exam_year)
+    """, enriched_pairs)
+    conn.commit()
+    log(f"  Inserted {len(enriched_pairs)} pairs")
+
+    conn.close()
+
+    # ── Step 10: Spot check ───────────────────────────────────────────────
+    log("\n[STEP 10] Spot-check verification...")
+    conn2 = sqlite3.connect(DB_PATH)
+    conn2.row_factory = sqlite3.Row
+    c2 = conn2.cursor()
+
+    c2.execute("SELECT COUNT(*) FROM articles")
+    n_art = c2.fetchone()[0]
+    c2.execute("SELECT COUNT(*) FROM questions")
+    n_q = c2.fetchone()[0]
+    c2.execute("SELECT COUNT(*) FROM question_ref_pairs")
+    n_p = c2.fetchone()[0]
+    c2.execute("SELECT COUNT(*) FROM articles WHERE canonical_filename IS NULL")
+    n_null_canon = c2.fetchone()[0]
+    c2.execute("SELECT COUNT(*) FROM articles WHERE qid_list IS NULL OR qid_list = '[]'")
+    n_empty_qids = c2.fetchone()[0]
+    c2.execute("SELECT COUNT(*) FROM questions WHERE question_text IS NULL")
+    n_null_stems = c2.fetchone()[0]
+    c2.execute("SELECT COUNT(*) FROM questions WHERE choices IS NULL")
+    n_null_choices = c2.fetchone()[0]
+
+    log(f"  articles:  {n_art}")
+    log(f"  questions: {n_q}")
+    log(f"  pairs:     {n_p}")
+    log(f"  articles with NULL canonical_filename: {n_null_canon}")
+    log(f"  articles with empty qid_list:          {n_empty_qids}")
+    log(f"  questions with NULL question_text:     {n_null_stems}")
+    log(f"  questions with NULL choices:           {n_null_choices}")
+
+    log("\n  Sample articles (3):")
+    c2.execute("SELECT article_id, canonical_filename, codon_filename, qid_list, exam_years FROM articles LIMIT 3")
+    for row in c2.fetchall():
+        log(f"    {row['article_id']} | {row['canonical_filename']}")
+        log(f"      codon:     {row['codon_filename']}")
+        log(f"      qid_list:  {row['qid_list']}")
+        log(f"      exam_years:{row['exam_years']}")
+
+    log("\n  Sample questions (3):")
+    c2.execute("SELECT qid, body_system, subcategory, correct_letter FROM questions LIMIT 3")
+    for row in c2.fetchall():
+        log(f"    {row['qid']} | {row['body_system']} / {row['subcategory']} | correct={row['correct_letter']}")
+
+    log_counts = {
+        "articles": n_art, "questions": n_q, "pairs": n_p,
+        "null_canonical": n_null_canon, "empty_qid_list": n_empty_qids,
+        "null_stems": n_null_stems, "null_choices": n_null_choices
+    }
+    LOG["counts"].update(log_counts)
+    conn2.close()
+
+    # ── Step 11: Write log ────────────────────────────────────────────────
+    LOG["completed"] = str(datetime.now(timezone.utc))
+    LOG["status"]    = "success" if not LOG["errors"] else "completed_with_errors"
+    LOG_DIR.mkdir(exist_ok=True)
+    with open(LOG_PATH, "w", encoding="utf-8") as f:
+        json.dump(LOG, f, indent=2)
+    log(f"\nDone. Log: {LOG_PATH.name}")
+    if LOG["errors"]:
+        log(f"WARNING: {len(LOG['errors'])} errors -- see log for details")
+
+
+# ── Entry ──────────────────────────────────────────────────────────────────
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dry-run", action="store_true", help="Preview without writing")
+    args = parser.parse_args()
+    build(dry_run=args.dry_run)

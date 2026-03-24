@@ -179,7 +179,7 @@
 
 - **4-module architecture is the north star:** Warehouse (M1), Processor (M2), Analyst (M3), Sandbox (M4).
 - **M1 scripts pattern:** `build/` = scripts that assume the DB doesn't exist yet. `maintain/` = scripts that assume the DB exists and has data. When in doubt: does it need live data to run? → `maintain/`.
-- **Language rule: Python only for all new scripts.** Existing JS DOCX scripts (`build_summary.js`, `build_db_docx.js`, `build_merged_docx.js`, `synthesize.js`, `ite_report_builder_v2.js`) are grandfathered — they work, they're isolated, leave them. Do not add new JS to the project.
+- **Language rule: No de novo JS.** Existing JS scripts that already work and have proven useful migrate like any other script. The line is: written from scratch today? → Python only. Migrated from old structure? → fine. Current JS inventory: `build_summary.js`, `build_db_docx.js`, `build_merged_docx.js`, `build_exemplar_v2.js`, `synthesize.js`, `ite_report_builder_v2.js`.
 - **VC gate = sole criterion** for `$right_click$` vs `local_lite`. DB membership alone is not sufficient.
 - **Codon filename format:** `Author_Year#@#ART-XXXX@#@.pdf` — start codon `#@#`, stop codon `@#@`.
 - **Source data is protected, derived data is disposable.** DB + PDFs + VC gate survive everything.
