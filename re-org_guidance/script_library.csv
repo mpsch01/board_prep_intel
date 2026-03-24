@@ -1,0 +1,16 @@
+Script,Module,Type,Description,Primary Output,Lifecycle
+build_clean_question_bank.py,0,Python/Local,Parses master Excel into injection-ready JSON.,ite_questions_clean.json,Active
+rebuild_ite_db_v2.py,0,Python/Local,Builds core DB tables and assigns ART-IDs.,ite_intelligence.db,DB
+preprocess_keywords_v2.py,0,Claude API,Batch-processes questions to generate concept_tags.,concept_tags,DB
+01_build_crosswalk.py,F,Python/Local,Maps AAFP VC sessions to ITE clusters.,session_cluster_crosswalk.csv,Active
+02b_generate_hy_inserts_v2.py,F,Python/Local,Core VC generator; defines codon-eligible articles.,session_hy_inserts_v7.json,Active + Reference
+09_build_pearl_callouts.py,F,Python/Local,Terminal injection step for green Pearl blocks.,HY-Enriched-v5-pearls.docx,Deliverable
+extract_guideline.bat,C,Batch,One-click Windows context menu orchestrator.,Orchestrates full pipeline,Functional
+main.py,C,Claude API,CLI entry for single-file or small-batch extraction.,*_extracted.json,Active
+ite_intelligence_enricher.py,C,Python/Local,Adds ITE metadata (QIDs/tiers) to extracted JSON.,*_extracted.json (enriched),Active
+build_summary.js,C,Node.js/Local,Renders enriched JSON into clinical DOCX.,*_db_intel.docx,Deliverable
+build_icd10_tags.py,D,Python/Local,Maps diagnoses to ICD-10 codes; builds pathways.,4 new DB tables,DB
+compute_embeddings.py,D,OpenAI API,Computes vector embeddings for semantic search.,article_vec/question_vec,DB
+ite_analyze_v2.py,E,Python/Local,Orchestrates full score analysis pipeline.,analysis_v2.json + DOCXs,Active
+ite_parser.py,E,Python/Local,Reads RGB color values from PDFs (no OCR).,parsed items list,Active
+ite_report_builder_v2.js,E,Node.js/Local,Renders analysis JSON into Resident Reports.,Analysis.docx + Exam.docx,Deliverable

@@ -1,0 +1,2669 @@
+[
+  {
+    "pdf_filename": "AAP_management_2015#@#ART-0002@#@.pdf",
+    "article_id": "ART-0002",
+    "clean_ref": "AAP releases practice guideline on diagnosis, management, and prevention of bronchiolitis. Am Fam Physician 2015;91(8):578-580.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Achar_Yamanaka_2019#@#ART-0018@#@.pdf",
+    "article_id": "ART-0018",
+    "clean_ref": "Achar S, Yamanaka J: Apophysitis and osteochondrosis: Common causes of pain in growing bones. Am Fam Physician 2019;99(10):610-618.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Al_Fisher_2021#@#ART-0029@#@.pdf",
+    "article_id": "ART-0029",
+    "clean_ref": "Al Wattar BH, Fisher M, Bevington L, et al. Clinical practice guidelines on the diagnosis and management of polycystic ovary syndrome: a systematic review and quality assessment study. J Clin Endocrinol Metab. 2021;106(8):2436-2446.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Albert_2017#@#ART-0033@#@.pdf",
+    "article_id": "ART-0033",
+    "clean_ref": "Albert RH: End-of-life care: Managing common symptoms. Am Fam Physician 2017;95(6):356-361.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2021,
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Ali_2018#@#ART-0036@#@.pdf",
+    "article_id": "ART-0036",
+    "clean_ref": "Ali Y. Rheumatologic tests: a primer for family physicians. Am Fam Physician. 2018;98(3):164-170.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Allison_Assadzandi_2021#@#ART-0040@#@.pdf",
+    "article_id": "ART-0040",
+    "clean_ref": "Allison R 2nd, Assadzandi S, Adelman M: Frailty: Evaluation and management. Am Fam Physician 2021;103(4):219-226.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "American_2004#@#ART-0052@#@.pdf",
+    "article_id": "ART-0052",
+    "clean_ref": "American Academy of Pediatrics Subcommittee on Hyperbilirubinemia: Management of hyperbilirubinemia in the newborn infant 35 or more weeks of gestation. Pediatrics 2004;114(1):297-316.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "American_2013#@#ART-0072@#@.pdf",
+    "article_id": "ART-0072",
+    "clean_ref": "American Psychiatric Association. Diagnostic and Statistical Manual of Mental Disorders. 5th ed. American Psychiatric Association; 2013:123\u2013154.",
+    "tier": "Core",
+    "citation_count": 6,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "American_2018#@#ART-0078@#@.pdf",
+    "article_id": "ART-0078",
+    "clean_ref": "American Psychiatric Association: The American Psychiatric Association Practice Guideline for the Pharmacological Treatment of Patients with Alcohol Use Disorder: Guideline Statement Summary. American Psychiatric Association Publishing, 2018.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Armstrong_2019#@#ART-0090@#@.pdf",
+    "article_id": "ART-0090",
+    "clean_ref": "Armstrong C: Influenza vaccination: Updated recommendations from ACIP. Am Fam Physician 2019;100(8):505-507.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Arnett_Blumenthal_2019#@#ART-0092@#@.pdf",
+    "article_id": "ART-0092",
+    "clean_ref": "Arnett DK, Blumenthal RS, Albert MA, et al: 2019 ACC/AHA guideline on the primary prevention of cardiovascular disease: A report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation 2019;140(11):e596-e646.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2022,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Arnold_2018#@#ART-0095@#@.pdf",
+    "article_id": "ART-0095",
+    "clean_ref": "Arnold MJ, Moody AL: Common running injuries: Evaluation and management. Am Fam Physician 2018;97(8):510-516.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Arnold_Moody_2018#@#ART-0095@#@.pdf",
+    "article_id": "ART-0095",
+    "clean_ref": "Arnold MJ, Moody AL: Common running injuries: Evaluation and management. Am Fam Physician 2018;97(8):510-516.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Aspirin_2022#@#ART-0097@#@.pdf",
+    "article_id": "ART-0097",
+    "clean_ref": "Aspirin use to prevent preeclampsia and related morbidity and mortality. Am Fam Physician 2022;105(4):online.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Baird_2019#@#ART-0694@#@.pdf",
+    "article_id": "ART-0694",
+    "clean_ref": "Klein MD, Sokol NA, Stroud LR: Electronic cigarettes: Common questions and answers. Am Fam Physician 2019;100(4):227-235.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Banerjee_2022#@#ART-0121@#@.pdf",
+    "article_id": "ART-0121",
+    "clean_ref": "Banerjee ES, Schroeder R, Harrison TD. Metabolic surgery for adult obesity: common questions and answers. Am Fam Physician. 2022;105(6):593-601.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Barr_Smith_2014#@#ART-0124@#@.pdf",
+    "article_id": "ART-0124",
+    "clean_ref": "Barr W, Smith A: Acute diarrhea in adults. Am Fam Physician 2014;89(3):180-189.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Barstow_Shahan_2018#@#ART-0126@#@.pdf",
+    "article_id": "ART-0126",
+    "clean_ref": "Barstow C, Shahan B, Roberts M: Evaluating medical decision-making capacity in practice. Am Fam Physician 2018;98(1):40-46.",
+    "tier": "Must-Read",
+    "citation_count": 5,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Bhattacharya_Aronsohn_2023#@#ART-0150@#@.pdf",
+    "article_id": "ART-0150",
+    "clean_ref": "Bhattacharya D, Aronsohn A, Price J, Lo Re V; AASLD-IDSA HCV Guidance Panel. Hepatitis C guidance 2023 update: AASLD-IDSA recommendations for testing, managing, and treating hepatitis C virus infection. Clin Infect Dis. 2023:ciad319.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Bowlus_Arriv_2023#@#ART-0163@#@.pdf",
+    "article_id": "ART-0163",
+    "clean_ref": "Bowlus CL, Arriv\ufffd L, Bergquist A, et al. AASLD practice guidance on primary sclerosing cholangitis and cholangiocarcinoma. Hepatology. 2023;77(2):659-702.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Bradley_Byington_2011#@#ART-0166@#@.pdf",
+    "article_id": "ART-0166",
+    "clean_ref": "Bradley JS, Byington CL, Shah SS, et al. Executive summary: the management of community acquired pneumonia in infants and children older than 3 months of age: clinical practice guidelines by the Pediatric Infectious Diseases Society and the Infectious Diseases Society of America. Clin Infect Dis. 2011;53(7):617-630.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Braun_2018#@#ART-0169@#@.pdf",
+    "article_id": "ART-0169",
+    "clean_ref": "Braun MM, Stevens WA, Barstow CH: Stable coronary artery disease: Treatment. Am Fam Physician 2018;97(6):376-384.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Braun_Stevens_2018#@#ART-0169@#@.pdf",
+    "article_id": "ART-0169",
+    "clean_ref": "Braun MM, Stevens WA, Barstow CH: Stable coronary artery disease: Treatment. Am Fam Physician 2018;97(6):376-384.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Buelt_McCall_2023#@#ART-0187@#@.pdf",
+    "article_id": "ART-0187",
+    "clean_ref": "Buelt A, McCall S, Coster J. Management of low back pain: guidelines from the VA/DoD. Am Fam Physician. 2023;107(4):435-437.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Bunt_2018#@#ART-0190@#@.pdf",
+    "article_id": "ART-0190",
+    "clean_ref": "Bunt CW, Jonas CE, Chang JG: Knee pain in adults and adolescents: The initial evaluation. Am Fam Physician 2018;98(9):576-585.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Bunt_Jonas_2018#@#ART-0190@#@.pdf",
+    "article_id": "ART-0190",
+    "clean_ref": "Bunt CW, Jonas CE, Chang JG: Knee pain in adults and adolescents: The initial evaluation. Am Fam Physician 2018;98(9):576-585.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Burgers_2020#@#ART-0193@#@.pdf",
+    "article_id": "ART-0193",
+    "clean_ref": "Burgers K, Lindberg B, Bevis ZJ: Chronic diarrhea in adults: Evaluation and differential diagnosis. Am Fam Physician 2020;101(8):472-480.",
+    "tier": "Supplementary",
+    "citation_count": 4,
+    "exam_years": [
+      2021,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Carpenter_Berry_2019#@#ART-0213@#@.pdf",
+    "article_id": "ART-0213",
+    "clean_ref": "Carpenter M, Berry H, Pelletier AL: Clinically relevant drug-drug interactions in primary care. Am Fam Physician 2019;99(9):558-564.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Cary_Simpson_2024#@#ART-0216@#@.pdf",
+    "article_id": "ART-0216",
+    "clean_ref": "Cary E, Simpson P. Premenstrual disorders and PMDD -a review. Best Pract Res Clin Endocrinol Metab. 2024;38(1):101858.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Castelli_2020#@#ART-0742@#@.pdf",
+    "article_id": "ART-0742",
+    "clean_ref": "Larson ST, Wilbur J: Muscle weakness in adults: Evaluation and differential diagnosis. Am Fam Physician 2020;101(2):95-108.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Chamberlain_2021#@#ART-0223@#@.pdf",
+    "article_id": "ART-0223",
+    "clean_ref": "Chamberlain R: Hip pain in adults: Evaluation and differential diagnosis. Am Fam Physician 2021;103(2):81-89.",
+    "tier": "Core",
+    "citation_count": 5,
+    "exam_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Chang_Sultan_2022#@#ART-0228@#@.pdf",
+    "article_id": "ART-0228",
+    "clean_ref": "Chang L, Sultan S, Lembo A, Verne GN, Smalley W, Heidelbaugh JJ. AGA clinical practice guideline on the pharmacologic management of irritable bowel syndrome with constipation. Gastroenterology. 2022;163(1):118-136.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Charles_2017#@#ART-0230@#@.pdf",
+    "article_id": "ART-0230",
+    "clean_ref": "Charles L, Triscott J, Dobbs B. Secondary hypertension: discovering the underlying cause. Am Fam Physician. 2017;96(7):453-461.",
+    "tier": "Core",
+    "citation_count": 6,
+    "exam_years": [
+      2020,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Charles_Triscott_2017#@#ART-0230@#@.pdf",
+    "article_id": "ART-0230",
+    "clean_ref": "Charles L, Triscott J, Dobbs B. Secondary hypertension: discovering the underlying cause. Am Fam Physician. 2017;96(7):453-461.",
+    "tier": "Core",
+    "citation_count": 6,
+    "exam_years": [
+      2020,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Chavey_2017#@#ART-0232@#@.pdf",
+    "article_id": "ART-0232",
+    "clean_ref": "Chavey WE, Hogikyan RV, Van Harrison R, Nicklas JM: Heart failure due to reduced ejection fraction: Medical management. Am Fam Physician 2017;95(1):13-20.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Chavey_Hogikyan_2017#@#ART-0232@#@.pdf",
+    "article_id": "ART-0232",
+    "clean_ref": "Chavey WE, Hogikyan RV, Van Harrison R, Nicklas JM: Heart failure due to reduced ejection fraction: Medical management. Am Fam Physician 2017;95(1):13-20.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Chey_Leontiadis_2017#@#ART-0234@#@.pdf",
+    "article_id": "ART-0234",
+    "clean_ref": "Chey WD, Leontiadis GI, Howden CW, Moss SF. ACG clinical guideline: treatment of Helicobacter pylori infection. Am J Gastroenterol. 2017;112(2):212-239.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Chow_Benninger_2012#@#ART-0238@#@.pdf",
+    "article_id": "ART-0238",
+    "clean_ref": "Chow AW, Benninger MS, Brook I, et al: IDSA clinical practice guideline for acute bacterial rhinosinusitis in children and adults. Clin Infect Dis 2012;54(8):e72-e112.",
+    "tier": "Must-Read",
+    "citation_count": 4,
+    "exam_years": [
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Christian_American_2015#@#ART-0240@#@.pdf",
+    "article_id": "ART-0240",
+    "clean_ref": "Christian CW; Committee on Child Abuse and Neglect, American Academy of Pediatrics. The evaluation of suspected child physical abuse. Pediatrics. 2015;135(5):e1337-e1354.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Clebak_2020#@#ART-0246@#@.pdf",
+    "article_id": "ART-0246",
+    "clean_ref": "Clebak KT, Morrison A, Croad JR. Gout: rapid evidence review. Am Fam Physician. 2020;102(9):533-538.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Cloutier_Dixon_2020#@#ART-0248@#@.pdf",
+    "article_id": "ART-0248",
+    "clean_ref": "Cloutier MM, Dixon AE, Krishnan JA, Lemanske RF Jr, Pace W, Schatz M. Managing asthma in adolescents and adults: 2020 asthma guideline update from the National Asthma Education and Prevention Program. JAMA. 2020;324(22):2301-2317.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Croke_2019#@#ART-0270@#@.pdf",
+    "article_id": "ART-0270",
+    "clean_ref": "Croke L: HIV prevention and treatment with ART: International Antiviral Society updates recommendations. Am Fam Physician 2019;99(6):395-396.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Dakkak_Lanney_2021#@#ART-0279@#@.pdf",
+    "article_id": "ART-0279",
+    "clean_ref": "Dakkak M, Lanney H. Management of gout: update from the American College of Rheumatology. Am Fam Physician. 2021;104(2):209-210.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Dalrymple_2021#@#ART-0282@#@.pdf",
+    "article_id": "ART-0282",
+    "clean_ref": "Dalrymple SN, Lewis SH, Philman S: Tinnitus: Diagnosis and management. Am Fam Physician 2021;103(11):663-671.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2022,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "David_Quinlan_2022#@#ART-0287@#@.pdf",
+    "article_id": "ART-0287",
+    "clean_ref": "David A, Quinlan JD. Fever of unknown origin in adults. Am Fam Physician. 2022;105(2):137-143.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "DeGeorge_2019#@#ART-0296@#@.pdf",
+    "article_id": "ART-0296",
+    "clean_ref": "DeGeorge KC, Ring DJ, Dalrymple SN: Treatment of the common cold. Am Fam Physician 2019;100(5):281-289.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Donangelo_2017#@#ART-0322@#@.pdf",
+    "article_id": "ART-0322",
+    "clean_ref": "Donangelo I, Suh SY: Subclinical hyperthyroidism: When to consider treatment. Am Fam Physician 2017;95(11):710-716.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Donangelo_Suh_2017#@#ART-0322@#@.pdf",
+    "article_id": "ART-0322",
+    "clean_ref": "Donangelo I, Suh SY: Subclinical hyperthyroidism: When to consider treatment. Am Fam Physician 2017;95(11):710-716.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Dooling_Guo_2018#@#ART-0325@#@.pdf",
+    "article_id": "ART-0325",
+    "clean_ref": "Dooling KL, Guo A, Patel M, et al. Recommendations of the Advisory Committee on Immunization Practices for use of herpes zoster vaccines. MMWR Morb Mortal Wkly Rep. 2018;67(3):103-108.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Douketis_Spyropoulos_2019#@#ART-0326@#@.pdf",
+    "article_id": "ART-0326",
+    "clean_ref": "Douketis JD, Spyropoulos AC, Duncan J, et al. Perioperative management of patients with atrial fibrillation receiving a direct oral anticoagulant. JAMA Intern Med. 2019;179(11):1469-1478.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Douketis_Spyropoulos_2022#@#ART-0327@#@.pdf",
+    "article_id": "ART-0327",
+    "clean_ref": "Douketis JD, Spyropoulos AC, Murad MH, et al. Perioperative management of antithrombotic therapy: an American College of Chest Physicians clinical practice guideline. Chest. 2022;162(5):e207-e243.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Dvorin_2020#@#ART-0346@#@.pdf",
+    "article_id": "ART-0346",
+    "clean_ref": "Dvorin EL, Ebell MH: Short-term systemic corticosteroids: Appropriate use in primary care. Am Fam Physician 2020;101(2):89-94.",
+    "tier": "Supplementary",
+    "citation_count": 3,
+    "exam_years": [
+      2022,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Evans_Rhodes_2021#@#ART-0384@#@.pdf",
+    "article_id": "ART-0384",
+    "clean_ref": "Evans L, Rhodes A, Alhazzani W, et al: Executive Summary: Surviving Sepsis Campaign: International guidelines for the management of sepsis and septic shock 2021. Crit Care Med 2021;49(11):1974-1982.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2022,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Falk_2018#@#ART-0393@#@.pdf",
+    "article_id": "ART-0393",
+    "clean_ref": "Falk N, Cole A, Meredith TJ: Evaluation of suspected dementia. Am Fam Physician 2018;97(6):398-405.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2022,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Falk_Cole_2018#@#ART-0393@#@.pdf",
+    "article_id": "ART-0393",
+    "clean_ref": "Falk N, Cole A, Meredith TJ: Evaluation of suspected dementia. Am Fam Physician 2018;97(6):398-405.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2022,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Farraye_Melmed_2017#@#ART-0398@#@.pdf",
+    "article_id": "ART-0398",
+    "clean_ref": "Farraye FA, Melmed GY, Lichtenstein GR, Kane SV. ACG clinical guideline: preventive care in inflammatory bowel disease. Am J Gastroenterol. 2017;112(2):241-258.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Final_2016#@#ART-0412@#@.pdf",
+    "article_id": "ART-0412",
+    "clean_ref": "Final Recommendation Statement: Depression in Adults: Screening. US Preventive Services Task Force, 2016.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Final_2018#@#ART-0405@#@.pdf",
+    "article_id": "ART-0405",
+    "clean_ref": "Final Recommendation Statement: Adolescent Idiopathic Scoliosis: Screening. US Preventive Services Task Force, 2018.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Final_2020#@#ART-0415@#@.pdf",
+    "article_id": "ART-0415",
+    "clean_ref": "Final Recommendation Statement: Hepatitis C Virus Infection in Adolescents and Adults: Screening. US Preventive Services Task Force, 2020.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Final_2021#@#ART-0420@#@.pdf",
+    "article_id": "ART-0420",
+    "clean_ref": "Final Recommendation Statement: Lung Cancer: Screening. US Preventive Services Task Force, 2021.",
+    "tier": "Must-Read",
+    "citation_count": 5,
+    "exam_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Finkelstein_Fothergill_2024#@#ART-0433@#@.pdf",
+    "article_id": "ART-0433",
+    "clean_ref": "Finkelstein JL, Fothergill A, Venkatramanan S, et al. Vitamin B supplementation during 12 pregnancy for maternal and child health outcomes. Cochrane Database of Systematic Reviews. 2024;1:CD013823.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Fishbane_Block_2017#@#ART-0435@#@.pdf",
+    "article_id": "ART-0435",
+    "clean_ref": "Fishbane S, Block GA, Loram L, et al: Effects of ferric citrate in patients with nondialysis-dependent CKD and iron deficiency anemia. J Am Soc Nephrol 2017;28(6):1851-1858.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "FitzGerald_Dalbeth_2020#@#ART-0437@#@.pdf",
+    "article_id": "ART-0437",
+    "clean_ref": "FitzGerald JD, Dalbeth N, Mikuls T, et al: 2020 American College of Rheumatology guideline for the management of gout. Arthritis Care Res (Hoboken) 2020;72(6):744-760.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Flynn_Kaelber_2017#@#ART-0441@#@.pdf",
+    "article_id": "ART-0441",
+    "clean_ref": "Flynn JT, Kaelber DC, Baker-Smith CM, et al: Clinical practice guideline for screening and management of high blood pressure in children and adolescents. Pediatrics 2017;140(3):e20171904.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Fontenelle_2019#@#ART-0442@#@.pdf",
+    "article_id": "ART-0442",
+    "clean_ref": "Fontenelle LF, Sarti TD. Kidney stones: treatment and prevention. Am Fam Physician. 2019;99(8):490-496.",
+    "tier": "Core",
+    "citation_count": 5,
+    "exam_years": [
+      2020,
+      2021,
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Fontenelle_Sarti_2019#@#ART-0442@#@.pdf",
+    "article_id": "ART-0442",
+    "clean_ref": "Fontenelle LF, Sarti TD. Kidney stones: treatment and prevention. Am Fam Physician. 2019;99(8):490-496.",
+    "tier": "Core",
+    "citation_count": 5,
+    "exam_years": [
+      2020,
+      2021,
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Ford_2022#@#ART-0447@#@.pdf",
+    "article_id": "ART-0447",
+    "clean_ref": "Ford B, Lara S, Park J. Heart murmurs in children: evaluation and management. Am Fam Physician. 2022;105(3):250-261.",
+    "tier": "Supplementary",
+    "citation_count": 3,
+    "exam_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Foster_Voss_2015#@#ART-0449@#@.pdf",
+    "article_id": "ART-0449",
+    "clean_ref": "Foster ZJ, Voss TT, Hatch J, Frimodig A. Corticosteroid injections for common musculoskeletal conditions. Am Fam Physician. 2015;92(8):694-699.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Frazier_2020#@#ART-0455@#@.pdf",
+    "article_id": "ART-0455",
+    "clean_ref": "Frazier W, Bhardwaj N: Atopic dermatitis: Diagnosis and treatment. Am Fam Physician 2020;101(10):590-598.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Frazier_2021#@#ART-1132@#@.pdf",
+    "article_id": "ART-1132",
+    "clean_ref": "Sell J, Nasir M, Courchesne C: Urethritis: Rapid evidence review. Am Fam Physician 2021;103(9):553-558.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2022,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gaddey_2019#@#ART-1353@#@.pdf",
+    "article_id": "ART-1353",
+    "clean_ref": "Wipperman J, Bragg DA, Litzner B: Hidradenitis suppurativa: Rapid evidence review. Am Fam Physician 2019;100(9):562-569.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2022,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gaitonde_2019#@#ART-0470@#@.pdf",
+    "article_id": "ART-0470",
+    "clean_ref": "Gaitonde DY, Moore FC, Morgan MK: Influenza: Diagnosis and treatment. Am Fam Physician 2019;100(12):751-758.",
+    "tier": "Must-Read",
+    "citation_count": 6,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gaitonde_Moore_2019#@#ART-0470@#@.pdf",
+    "article_id": "ART-0470",
+    "clean_ref": "Gaitonde DY, Moore FC, Morgan MK: Influenza: Diagnosis and treatment. Am Fam Physician 2019;100(12):751-758.",
+    "tier": "Must-Read",
+    "citation_count": 6,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Galima_Vogel_2020#@#ART-0471@#@.pdf",
+    "article_id": "ART-0471",
+    "clean_ref": "Galima SV, Vogel SR, Kowalski AW: Seasonal affective disorder: Common questions and answers. Am Fam Physician 2020;102(11):668-672.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Garcia_Tsao_Abraldes_2016#@#ART-0474@#@.pdf",
+    "article_id": "ART-0474",
+    "clean_ref": "Garcia-Tsao G, Abraldes JG, Berzigotti A, Bosch J: Portal hypertensive bleeding in cirrhosis: Risk stratification, diagnosis, and management: 2016 Practice guidance by the American Association for the study of liver diseases. Hepatology 2017;65(1):310-335.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gauer_2013#@#ART-0483@#@.pdf",
+    "article_id": "ART-0483",
+    "clean_ref": "Gauer RL: Early recognition and management of sepsis in adults: The first six hours. Am Fam Physician 2013;88(1):44-53.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gauer_2020#@#ART-0479@#@.pdf",
+    "article_id": "ART-0479",
+    "clean_ref": "Gauer R, Forbes D, Boyer N: Sepsis: Diagnosis and management. Am Fam Physician 2020;101(7):409-418.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gauer_Forbes_2020#@#ART-0479@#@.pdf",
+    "article_id": "ART-0479",
+    "clean_ref": "Gauer R, Forbes D, Boyer N: Sepsis: Diagnosis and management. Am Fam Physician 2020;101(7):409-418.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gentry_Gentry_2017#@#ART-0487@#@.pdf",
+    "article_id": "ART-0487",
+    "clean_ref": "Gentry S, Gentry B: Chronic obstructive pulmonary disease: Diagnosis and management. Am Fam Physician 2017;95(7):433-441.",
+    "tier": "Must-Read",
+    "citation_count": 6,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gerhard_Herman_Gornik_2016#@#ART-0488@#@.pdf",
+    "article_id": "ART-0488",
+    "clean_ref": "Gerhard-Herman MD, Gornik HL, Barrett C, et al. 2016 AHA/ACC guideline on the management of patients with lower extremity peripheral artery disease: a report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2017;135(12):e726-e779.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Global_2020#@#ART-0498@#@.pdf",
+    "article_id": "ART-0498",
+    "clean_ref": "Global Strategy for Asthma Management and Prevention. Global Initiative for Asthma (GINA), updated 2020.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gmez_Aldana_Jaramillo_Santos_2019#@#ART-0501@#@.pdf",
+    "article_id": "ART-0501",
+    "clean_ref": "Gmez-Aldana A, Jaramillo-Santos M, Delgado A, Jaramillo C, Luez-Mindiola A. Eosinophilic esophagitis: current concepts in diagnosis and treatment. World J Gastroenterol. 2019;25(32):4598-4613.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Golden_Schneider_2016#@#ART-0504@#@.pdf",
+    "article_id": "ART-0504",
+    "clean_ref": "Golden NH, Schneider M, Wood C, et al; Committee on Nutrition; Committee on Adolescence; Section on Obesity: Preventing obesity and eating disorders in adolescents. Pediatrics 2016;138(3):e20161649.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Goodbred_2023#@#ART-0514@#@.pdf",
+    "article_id": "ART-0514",
+    "clean_ref": "Goodbred AJ, Langan RC. Chronic kidney disease: prevention, diagnosis, and treatment. Am Fam Physician. 2023;108(6):554-561.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Goodbred_Langan_2023#@#ART-0514@#@.pdf",
+    "article_id": "ART-0514",
+    "clean_ref": "Goodbred AJ, Langan RC. Chronic kidney disease: prevention, diagnosis, and treatment. Am Fam Physician. 2023;108(6):554-561.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gregory_Wu_2018#@#ART-0524@#@.pdf",
+    "article_id": "ART-0524",
+    "clean_ref": "Gregory DS, Wu V, Tuladhar P: The pregnant patient: Managing common acute medical problems. Am Fam Physician 2018;98(9):595-602.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Grundy_Stone_2018#@#ART-0534@#@.pdf",
+    "article_id": "ART-0534",
+    "clean_ref": "Grundy SM, Stone NJ, Bailey AL, et al: 2018 AHA/ACC/AACVPR/AAPA/ABC/ACPM/ADA/AGS/APhA/ ASPC/NLA/PCNA guideline on the management of blood cholesterol: A report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. J Am Coll Cardiol 2019;73(24):e285-e350.",
+    "tier": "Core",
+    "citation_count": 5,
+    "exam_years": [
+      2021,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Gulati_Levy_2021#@#ART-0539@#@.pdf",
+    "article_id": "ART-0539",
+    "clean_ref": "Gulati M, Levy PD, Mukherjee D, et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR guideline for the evaluation and diagnosis of chest pain: a report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Ha_2019#@#ART-0544@#@.pdf",
+    "article_id": "ART-0544",
+    "clean_ref": "Ha H, Gonzalez A: Migraine headache prophylaxis. Am Fam Physician 2019;99(1):17-24.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Hagan_Shaw_2017#@#ART-0549@#@.pdf",
+    "article_id": "ART-0549",
+    "clean_ref": "Hagan JF Jr, Shaw JS, Duncan PM (eds): Bright Futures: Guidelines for Health Supervision of Infants, Children and Adolescents, ed 4. American Academy of Pediatrics, 2017.",
+    "tier": "Must-Read",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Hampl_Hassink_2023#@#ART-0558@#@.pdf",
+    "article_id": "ART-0558",
+    "clean_ref": "Hampl SE, Hassink SG, Skinner AC, et al. Clinical practice guideline for the evaluation and treatment of children and adolescents with obesity. Pediatrics. 2023;151(2):e2022060640.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Harris_2023#@#ART-1345@#@.pdf",
+    "article_id": "ART-1345",
+    "clean_ref": "Williams T, Moore JB, Regehr J. Polycystic ovary syndrome: common questions and answers. Am Fam Physician. 2023;107(3):264-272.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Hartman_2019#@#ART-0564@#@.pdf",
+    "article_id": "ART-0564",
+    "clean_ref": "Hartman S, Brown E, Loomis E, Russell HA: Gastroenteritis in children. Am Fam Physician 2019;99(3):159-165.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Hauk_2018#@#ART-0568@#@.pdf",
+    "article_id": "ART-0568",
+    "clean_ref": "Hauk L. Treatment of low BMD and osteoporosis to prevent fractures: updated guideline from the ACP. Am Fam Physician. 2018;97(5):352-353.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Hauk_2018#@#ART-0571@#@.pdf",
+    "article_id": "ART-0571",
+    "clean_ref": "Hauk L: Treatment of seasonal allergic rhinitis: A guideline from the AAAAI/ACAAI Joint Task Force on Practice Parameters. Am Fam Physician 2018;97(11):756-757.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Hauk_2018#@#ART-0572@#@.pdf",
+    "article_id": "ART-0572",
+    "clean_ref": "Hauk L: Tuberculosis: Guidelines for diagnosis from the ATS, IDSA, and CDC. Am Fam Physician 2018;97(1):56-58.",
+    "tier": "Must-Read",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Heidelbaugh_2018#@#ART-0578@#@.pdf",
+    "article_id": "ART-0578",
+    "clean_ref": "Heidelbaugh JJ: The adult well-male examination. Am Fam Physician 2018;98(12):729-737.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Heidenreich_Bozkurt_2022#@#ART-0579@#@.pdf",
+    "article_id": "ART-0579",
+    "clean_ref": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA guideline for the management of heart failure: a report of the American College of Cardiology/American Heart Association joint committee on clinical practice guidelines. Circulation. 2022;145(18):e895-e1032.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Heimbach_Kulik_2018#@#ART-0581@#@.pdf",
+    "article_id": "ART-0581",
+    "clean_ref": "Heimbach JK, Kulik LM, Finn RS, et al. AASLD guidelines for the treatment of hepatocellular carcinoma. Hepatology. 2018;67(1):358-380.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Hennion_Siano_2013#@#ART-0586@#@.pdf",
+    "article_id": "ART-0586",
+    "clean_ref": "Hennion DR, Siano KA: Diagnosis and treatment of peripheral arterial disease. Am Fam Physician 2013;88(5):306-310.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Herman_2022#@#ART-0112@#@.pdf",
+    "article_id": "ART-0112",
+    "clean_ref": "Baird DC, Batten SH, Sparks SK. - and -thalassemia: rapid evidence review. Am Fam Physician. 2022;105(3):272-280.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Herrick_Trondle_2020#@#ART-0589@#@.pdf",
+    "article_id": "ART-0589",
+    "clean_ref": "Herrick KR, Trondle ME, Febles TT: Coccidioidomycosis (valley fever) in primary care. Am Fam Physician 2020;101(4):221-228.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Higdon_Atkinson_2018#@#ART-0590@#@.pdf",
+    "article_id": "ART-0590",
+    "clean_ref": "Higdon ML, Atkinson CJ, Lawrence KV: Oncologic emergencies: Recognition and initial management. Am Fam Physician 2018;97(11):741-748.",
+    "tier": "Must-Read",
+    "citation_count": 6,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Hitzeman_Cotton_2014#@#ART-0595@#@.pdf",
+    "article_id": "ART-0595",
+    "clean_ref": "Hitzeman N, Cotton E: Incidentalomas: Initial management. Am Fam Physician 2014;90(11):784-789.",
+    "tier": "Must-Read",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Howard-Thompson_2018#@#ART-0605@#@.pdf",
+    "article_id": "ART-0605",
+    "clean_ref": "Howard-Thompson A, Khan M, Jones M, George CM: Type 2 diabetes mellitus: Outpatient insulin management. Am Fam Physician 2018;97(1):29-37.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Howard_Thompson_Khan_2018#@#ART-0605@#@.pdf",
+    "article_id": "ART-0605",
+    "clean_ref": "Howard-Thompson A, Khan M, Jones M, George CM: Type 2 diabetes mellitus: Outpatient insulin management. Am Fam Physician 2018;97(1):29-37.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Hu_2019#@#ART-0607@#@.pdf",
+    "article_id": "ART-0607",
+    "clean_ref": "Hu JS, Pierre EF: Urinary incontinence in women: Evaluation and management. Am Fam Physician 2019;100(6):339-348.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2022,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Kale_2019#@#ART-0655@#@.pdf",
+    "article_id": "ART-0655",
+    "clean_ref": "Kale N: Urine drug tests: Ordering and interpreting results. Am Fam Physician 2019;99(1):33-39.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Kant_Davis_2020#@#ART-0662@#@.pdf",
+    "article_id": "ART-0662",
+    "clean_ref": "Kant R, Davis A, Verma V: Thyroid nodules: Advances in evaluation and management. Am Fam Physician 2020;102(5):298-304.",
+    "tier": "Must-Read",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Katz_Dunbar_2022#@#ART-0668@#@.pdf",
+    "article_id": "ART-0668",
+    "clean_ref": "Katz PO, Dunbar KB, Schnoll-Sussman FH, Greer KB, Yadlapati R, Spechler SJ. ACG clinical guideline for the diagnosis and management of gastroesophageal reflux disease. Am J Gastroenterol. 2022;117(1):27-56.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Kim_2022#@#ART-0682@#@.pdf",
+    "article_id": "ART-0682",
+    "clean_ref": "Kim MJ, Farrell J. Orthostatic hypotension: a practical approach. Am Fam Physician. 2022;105(1):39-49.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Kim_Farrell_2022#@#ART-0682@#@.pdf",
+    "article_id": "ART-0682",
+    "clean_ref": "Kim MJ, Farrell J. Orthostatic hypotension: a practical approach. Am Fam Physician. 2022;105(1):39-49.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Klein_2018#@#ART-0691@#@.pdf",
+    "article_id": "ART-0691",
+    "clean_ref": "Klein DA, Paradise SL, Goodwin ET: Caring for transgender and gender-diverse persons: What clinicians should know. Am Fam Physician 2018;98(11):645-653.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Klein_2021#@#ART-0693@#@.pdf",
+    "article_id": "ART-0693",
+    "clean_ref": "Klein DA, Sylvester JE, Schvey NA. Eating disorders in primary care: diagnosis and management. Am Fam Physician. 2021;103(1):22-32.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Klein_Paradise_2018#@#ART-0691@#@.pdf",
+    "article_id": "ART-0691",
+    "clean_ref": "Klein DA, Paradise SL, Goodwin ET: Caring for transgender and gender-diverse persons: What clinicians should know. Am Fam Physician 2018;98(11):645-653.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Klein_Paradise_2019#@#ART-0692@#@.pdf",
+    "article_id": "ART-0692",
+    "clean_ref": "Klein DA, Paradise SL, Reeder RM: Amenorrhea: A systematic approach to diagnosis and management. Am Fam Physician 2019;100(1):39-48.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Klein_Sylvester_2021#@#ART-0693@#@.pdf",
+    "article_id": "ART-0693",
+    "clean_ref": "Klein DA, Sylvester JE, Schvey NA. Eating disorders in primary care: diagnosis and management. Am Fam Physician. 2021;103(1):22-32.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Kline_Smith_2021#@#ART-0701@#@.pdf",
+    "article_id": "ART-0701",
+    "clean_ref": "Kline JM, Smith EA, Zavala A. Pertussis: common questions and answers. Am Fam Physician. 2021;104(2):186-192.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Kullo_Rooke_2016#@#ART-0718@#@.pdf",
+    "article_id": "ART-0718",
+    "clean_ref": "Kullo IJ, Rooke TW: Peripheral artery disease. N Engl J Med 2016;374(9):861-871.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Lacy_Pimentel_2021#@#ART-0726@#@.pdf",
+    "article_id": "ART-0726",
+    "clean_ref": "Lacy BE, Pimentel M, Brenner DM, et al: ACG clinical guideline: Management of irritable bowel syndrome. Am J Gastroenterol 2021;116(1):17-44.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2022,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Lam_Ghetu_2016#@#ART-0729@#@.pdf",
+    "article_id": "ART-0729",
+    "clean_ref": "Lam NC, Ghetu MV, Bieniek ML: Systemic lupus erythematosus: Primary care approach to diagnosis and management. Am Fam Physician 2016;94(4):284-294.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Langan_2017#@#ART-0735@#@.pdf",
+    "article_id": "ART-0735",
+    "clean_ref": "Langan RC, Goodbred AJ. Vitamin B 12 12 deficiency: recognition and management. Am Fam Physician. 2017;96(6):384-389.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Langan_Goodbred_2020#@#ART-0737@#@.pdf",
+    "article_id": "ART-0737",
+    "clean_ref": "Langan RC, Goodbred AJ: Office spirometry: Indications and interpretation. Am Fam Physician 2020;101(6):362-368.",
+    "tier": "Must-Read",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Lanham_2020#@#ART-0738@#@.pdf",
+    "article_id": "ART-0738",
+    "clean_ref": "Lanham JS, Nelson NK, Hendren B, Jordan TS: Outpatient burn care: Prevention and treatment. Am Fam Physician 2020;101(8):463-470.",
+    "tier": "Supplementary",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Larson_Wilbur_2020#@#ART-0742@#@.pdf",
+    "article_id": "ART-0742",
+    "clean_ref": "Larson ST, Wilbur J: Muscle weakness in adults: Evaluation and differential diagnosis. Am Fam Physician 2020;101(2):95-108.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Latimer_2023#@#ART-0743@#@.pdf",
+    "article_id": "ART-0743",
+    "clean_ref": "Latimer KM, Gunther A, Kopec M. Fatigue in adults: evaluation and management. Am Fam Physician. 2023;108(1):58-69.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Latimer_Gunther_2023#@#ART-0743@#@.pdf",
+    "article_id": "ART-0743",
+    "clean_ref": "Latimer KM, Gunther A, Kopec M. Fatigue in adults: evaluation and management. Am Fam Physician. 2023;108(1):58-69.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "LeFevre_2018#@#ART-0747@#@.pdf",
+    "article_id": "ART-0747",
+    "clean_ref": "LeFevre ML, LeFevre NM: Vitamin D screening and supplementation in community-dwelling adults: Common questions and answers. Am Fam Physician 2018;97(4):254-260.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Lesnewski_2021#@#ART-0762@#@.pdf",
+    "article_id": "ART-0762",
+    "clean_ref": "Lesnewski R: Initiating hormonal contraception. Am Fam Physician 2021;103(5):291-300.",
+    "tier": "Supplementary",
+    "citation_count": 0,
+    "exam_years": [],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Lillig_2018#@#ART-0770@#@.pdf",
+    "article_id": "ART-0770",
+    "clean_ref": "Lillig M: Conduct disorder: Recognition and management. Am Fam Physician 2018;98(10):584-592.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Lip_Banerjee_2018#@#ART-0776@#@.pdf",
+    "article_id": "ART-0776",
+    "clean_ref": "Lip GYH, Banerjee A, Boriani G, et al: Antithrombotic therapy for atrial fibrillation: CHEST guideline and expert panel report. Chest 2018;154(5):1121-1201.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Lipsky_Senneville_2019#@#ART-0779@#@.pdf",
+    "article_id": "ART-0779",
+    "clean_ref": "Lipsky BA, Senneville \ufffd, Abbas ZG, et al. Guidelines on the diagnosis and treatment of foot infection in persons with diabetes (IWGDF 2019 update). Diabetes Metab Res Rev. 2020;36(suppl 1):e3280.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Liu_Bayer_2011#@#ART-0780@#@.pdf",
+    "article_id": "ART-0780",
+    "clean_ref": "Liu C, Bayer A, Cosgrove SE, et al: Clinical practice guidelines by the Infectious Diseases Society of America for the treatment of methicillin-resistant Staphylococcus aureus infections in adults and children. Clin Infect Dis 2011;52(3):e18-e55.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Malu_2022#@#ART-0806@#@.pdf",
+    "article_id": "ART-0806",
+    "clean_ref": "Malu OO, Bailey J, Hawks MK. Cluster headache: rapid evidence review. Am Fam Physician. 2022;105(1):24-32.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Marzani_2021#@#ART-0821@#@.pdf",
+    "article_id": "ART-0821",
+    "clean_ref": "Marzani G, Price Neff A. Bipolar disorders: evaluation and treatment. Am Fam Physician. 2021;103(4):227-239.",
+    "tier": "Supplementary",
+    "citation_count": 4,
+    "exam_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Matheson_Bain_2019#@#ART-0826@#@.pdf",
+    "article_id": "ART-0826",
+    "clean_ref": "Matheson E, Bain J: Hirsutism in women. Am Fam Physician 2019;100(3):168-175.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Mayans_2018#@#ART-0834@#@.pdf",
+    "article_id": "ART-0834",
+    "clean_ref": "Mayans L, Walling A: Acute migraine headache: Treatment strategies. Am Fam Physician 2018;97(4):243-251.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "McConaghy_2020#@#ART-0839@#@.pdf",
+    "article_id": "ART-0839",
+    "clean_ref": "McConaghy JR, Sharma M, Patel H: Acute chest pain in adults: Outpatient evaluation. Am Fam Physician 2020;102(12):721-727.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "McDonald_Gerding_2017#@#ART-0841@#@.pdf",
+    "article_id": "ART-0841",
+    "clean_ref": "McDonald LC, Gerding DN, Johnson S, et al: Clinical practice guidelines for Clostridium difficile infection in adults and children: 2017 update by the Infectious Diseases Society of America (IDSA) and Society for Healthcare Epidemiology of America (SHEA). Clin Infect Dis 2018;66(7):e1-e48.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Metlay_Waterer_2019#@#ART-0865@#@.pdf",
+    "article_id": "ART-0865",
+    "clean_ref": "Metlay JP, Waterer GW, Long AC, et al: Diagnosis and treatment of adults with community-acquired pneumonia. An official clinical practice guideline of the American Thoracic Society and Infectious Diseases Society of America. Am J Respir Crit Care Med 2019;200(7):e45-e67.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2021,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Michaudet_2017#@#ART-0867@#@.pdf",
+    "article_id": "ART-0867",
+    "clean_ref": "Michaudet C, Malaty J: Chronic cough: Evaluation and management. Am Fam Physician 2017;96(9):575\u2013580.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Michaudet_Malaty_2017#@#ART-0867@#@.pdf",
+    "article_id": "ART-0867",
+    "clean_ref": "Michaudet C, Malaty J: Chronic cough: Evaluation and management. Am Fam Physician 2017;96(9):575\u2013580.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Michels_Michels_2014#@#ART-0868@#@.pdf",
+    "article_id": "ART-0868",
+    "clean_ref": "Michels A, Michels N: Addison disease: Early detection and treatment principles. Am Fam Physician 2014;89(7):563-568.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2022,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Moayyedi_Lacy_2017#@#ART-0886@#@.pdf",
+    "article_id": "ART-0886",
+    "clean_ref": "Moayyedi PM, Lacy BE, Andrews CN, Enns RA, Howden CW, Vakil N. Corrigendum: ACG and CAG clinical guideline: management of dyspepsia. Am J Gastroenterol. 2017;112(9):1484. doi:10.1038/ajg.2017.238",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Mounsey_2020#@#ART-0897@#@.pdf",
+    "article_id": "ART-0897",
+    "clean_ref": "Mounsey A, Barzin A, Rietz A: Functional dyspepsia: Evaluation and management. Am Fam Physician 2020;101(2):84-88.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "National_Viral_2020#@#ART-0911@#@.pdf",
+    "article_id": "ART-0911",
+    "clean_ref": "National Center for HIV/AIDS, Viral Hepatitis, STD, and TB Prevention: Hepatitis C information: Testing recommendations for hepatitis C virus infection. Centers for Disease Control and Prevention, reviewed 2020.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Nettleton_2021#@#ART-0919@#@.pdf",
+    "article_id": "ART-0919",
+    "clean_ref": "Nettleton WD. Interpreting SARS-CoV-2 diagnostic tests: common questions and answers. Am Fam Physician. 2021;103(8):465-472.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "OGurek_Choi_2022#@#ART-0930@#@.pdf",
+    "article_id": "ART-0930",
+    "clean_ref": "O'Gurek D, Choi HYJ: Hemoptysis: Evaluation and management. Am Fam Physician 2022;105(2):144-151.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2022,
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Og\u00e9_2019#@#ART-0934@#@.pdf",
+    "article_id": "ART-0934",
+    "clean_ref": "Og\u00e9 LK, Broussard A, Marshall MD: Acne vulgaris: Diagnosis and treatment. Am Fam Physician 2019;100(8):475-484.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Oh_2017#@#ART-0935@#@.pdf",
+    "article_id": "ART-0935",
+    "clean_ref": "Oh RC, Hustead TR, Ali SM, Pantsari MW: Mildly elevated liver transaminase levels: Causes and evaluation. Am Fam Physician 2017;96(11):709-715.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Oh_2020#@#ART-0936@#@.pdf",
+    "article_id": "ART-0936",
+    "clean_ref": "Oh RC, Trivette ET, Westerfield KL: Management of hypertriglyceridemia: Common questions and answers. Am Fam Physician 2020;102(6):347-354.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Pace_2020#@#ART-0952@#@.pdf",
+    "article_id": "ART-0952",
+    "clean_ref": "Pace EJ, O'Reilly M: Tickborne diseases: Diagnosis and management. Am Fam Physician 2020;101(9):530-540.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Paladine_2018#@#ART-0954@#@.pdf",
+    "article_id": "ART-0954",
+    "clean_ref": "Paladine HL, Desai UA: Vaginitis: Diagnosis and treatment. Am Fam Physician 2018;97(5):321-329.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Paradise_2022#@#ART-0959@#@.pdf",
+    "article_id": "ART-0959",
+    "clean_ref": "Paradise SL, Landis CA, Klein DA. Evidence-based contraception: common questions and answers. Am Fam Physician. 2022;106(3):251-259.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Patel_Statuta_2021#@#ART-0965@#@.pdf",
+    "article_id": "ART-0965",
+    "clean_ref": "Patel DS, Statuta SM, Ahmed N: Common fractures of the radius and ulna. Am Fam Physician 2021;103(6):345-354.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2021,
+      2022,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Paul_Frohna_2025#@#ART-0970@#@.pdf",
+    "article_id": "ART-0970",
+    "clean_ref": "Paul CR, Frohna JG. Acute otitis media. Pediatrics in Review. 2025;46(3):139-147.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Pelletier_Rojas_Roldan_2016#@#ART-0974@#@.pdf",
+    "article_id": "ART-0974",
+    "clean_ref": "Pelletier AL, Rojas-Roldan L, Coffin J: Vision loss in older adults. Am Fam Physician 2016;94(3):219-226.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Petering_Brooks_2017#@#ART-0983@#@.pdf",
+    "article_id": "ART-0983",
+    "clean_ref": "Petering RC, Brooks NA: Testosterone therapy: Review of clinical applications. Am Fam Physician 2017;96(7):441-449.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Qaseem_McLean_2020#@#ART-1019@#@.pdf",
+    "article_id": "ART-1019",
+    "clean_ref": "Qaseem A, McLean RM, O\u2019Gurek D, et al: Nonpharmacologic and pharmacologic management of acute pain from non\u2013low back, musculoskeletal injuries in adults: A clinical guideline from the American College of Physicians and American Academy of Family Physicians. Ann Intern Med 2020 Nov 3;173(9):739-748.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Ramirez_2019#@#ART-1033@#@.pdf",
+    "article_id": "ART-1033",
+    "clean_ref": "Ramirez J: Adhesive capsulitis: Diagnosis and management. Am Fam Physician 2019;99(5):297-300.",
+    "tier": "Must-Read",
+    "citation_count": 5,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Randall_Wilson_2022#@#ART-1034@#@.pdf",
+    "article_id": "ART-1034",
+    "clean_ref": "Randall DA, Wilson Westmark NL, Neville BW. Common oral lesions. Am Fam Physician. 2022;105(4):369-376.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Rathjen_Shahbodaghi_2019#@#ART-1039@#@.pdf",
+    "article_id": "ART-1039",
+    "clean_ref": "Rathjen NA, Shahbodaghi SD, Brown JA. Hypothermia and cold weather injuries. Am Fam Physician. 2019;100(11):680-686.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Reamy_2017#@#ART-1044@#@.pdf",
+    "article_id": "ART-1044",
+    "clean_ref": "Reamy BV, Williams PM, Odom MR: Pleuritic chest pain: Sorting through the differential diagnosis. Am Fam Physician 2017;96(5):306-312.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Rerucha_2019#@#ART-1053@#@.pdf",
+    "article_id": "ART-1053",
+    "clean_ref": "Rerucha CM, Ewing JT, Oppenlander KE, Cowan WC: Acute hand infections. Am Fam Physician 2019;99(4):228-236.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Runser_Gauer_2017#@#ART-1091@#@.pdf",
+    "article_id": "ART-1091",
+    "clean_ref": "Runser LA, Gauer RL, Houser A: Syncope: Evaluation and differential diagnosis. Am Fam Physician 2017;95(5):303-312.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2021,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Rupert_2022#@#ART-1093@#@.pdf",
+    "article_id": "ART-1093",
+    "clean_ref": "Rupert J, Honeycutt JD: Pruritus: Diagnosis and management. Am Fam Physician 2022;105(1):55-64.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Saguil_2019#@#ART-1099@#@.pdf",
+    "article_id": "ART-1099",
+    "clean_ref": "Saguil A, Kane SF, Lauters R, Mercado MG: Hand-foot-and-mouth disease: Rapid evidence review. Am Fam Physician 2019;100(7):408-414.",
+    "tier": "Must-Read",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Saguil_2019#@#ART-1100@#@.pdf",
+    "article_id": "ART-1100",
+    "clean_ref": "Saguil A: Psychological and pharmacologic treatments for adults with PTSD. Am Fam Physician 2019;99(9):577-583.",
+    "tier": "Must-Read",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Saguil_Kane_2019#@#ART-1099@#@.pdf",
+    "article_id": "ART-1099",
+    "clean_ref": "Saguil A, Kane SF, Lauters R, Mercado MG: Hand-foot-and-mouth disease: Rapid evidence review. Am Fam Physician 2019;100(7):408-414.",
+    "tier": "Must-Read",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Salisbury_Afshar_2020#@#ART-1101@#@.pdf",
+    "article_id": "ART-1101",
+    "clean_ref": "Salisbury-Afshar E: Adverse events of pharmacologic treatments of major depression in older adults. Am Fam Physician 2020;101(3):179-181.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Schroeder_Harrison_2016#@#ART-1118@#@.pdf",
+    "article_id": "ART-1118",
+    "clean_ref": "Schroeder R, Harrison TD, McGraw SL: Treatment of adult obesity with bariatric surgery. Am Fam Physician 2016;93(1):31-37.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2022,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Scorza_2019#@#ART-1122@#@.pdf",
+    "article_id": "ART-1122",
+    "clean_ref": "Scorza KA, Cole W: Current concepts in concussion: Initial evaluation and management. Am Fam Physician 2019;99(7):426-434.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Scorza_Cole_2019#@#ART-1122@#@.pdf",
+    "article_id": "ART-1122",
+    "clean_ref": "Scorza KA, Cole W: Current concepts in concussion: Initial evaluation and management. Am Fam Physician 2019;99(7):426-434.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Shehab_Mirabelli_2013#@#ART-1149@#@.pdf",
+    "article_id": "ART-1149",
+    "clean_ref": "Shehab R, Mirabelli MH: Evaluation and diagnosis of wrist pain: A case-based approach. Am Fam Physician 2013;87(8):568-573.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Shulman_Bisno_2012#@#ART-1155@#@.pdf",
+    "article_id": "ART-1155",
+    "clean_ref": "Shulman ST, Bisno AL, Clegg HW, et al: Clinical practical guideline for the diagnosis and management of group A streptococcal pharyngitis: 2012 update by the Infectious Diseases Society of America. Clin Infect Dis 2012;55(10):e86-e102.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Silver_2021#@#ART-1159@#@.pdf",
+    "article_id": "ART-1159",
+    "clean_ref": "Silver S, Ledford CC, Vogel KJ, Arnold JJ: Peripheral nerve entrapment and injury in the upper extremity. Am Fam Physician 2021;103(5):275-285.",
+    "tier": "Must-Read",
+    "citation_count": 4,
+    "exam_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Silver_Ledford_2021#@#ART-1159@#@.pdf",
+    "article_id": "ART-1159",
+    "clean_ref": "Silver S, Ledford CC, Vogel KJ, Arnold JJ: Peripheral nerve entrapment and injury in the upper extremity. Am Fam Physician 2021;103(5):275-285.",
+    "tier": "Must-Read",
+    "citation_count": 4,
+    "exam_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Smith_2020#@#ART-1170@#@.pdf",
+    "article_id": "ART-1170",
+    "clean_ref": "Smith DK, Lennon RP, Carlsgaard PB: Managing hypertension using combination therapy. Am Fam Physician 2020;101(6):341-349.",
+    "tier": "Must-Read",
+    "citation_count": 6,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Smith_Lennon_2020#@#ART-1170@#@.pdf",
+    "article_id": "ART-1170",
+    "clean_ref": "Smith DK, Lennon RP, Carlsgaard PB: Managing hypertension using combination therapy. Am Fam Physician 2020;101(6):341-349.",
+    "tier": "Must-Read",
+    "citation_count": 6,
+    "exam_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Smith_McDermott_2018#@#ART-1171@#@.pdf",
+    "article_id": "ART-1171",
+    "clean_ref": "Smith DK, McDermott AJ, Sullivan JF: Croup: Diagnosis and management. Am Fam Physician 2018;97(9):575-580.",
+    "tier": "Must-Read",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Smith_Sadler_2019#@#ART-1173@#@.pdf",
+    "article_id": "ART-1173",
+    "clean_ref": "Smith DK, Sadler KP, Benedum M: Febrile seizures: Risks, evaluation, and prognosis. Am Fam Physician 2019;99(7):445-450.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Smith_Seales_2017#@#ART-1174@#@.pdf",
+    "article_id": "ART-1174",
+    "clean_ref": "Smith DK, Seales S, Budzik C: Respiratory syncytial virus bronchiolitis in children. Am Fam Physician 2017;95(2):94-99.",
+    "tier": "Must-Read",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Snyder_2018#@#ART-1178@#@.pdf",
+    "article_id": "ART-1178",
+    "clean_ref": "Snyder MJ, Guthrie M, Cagle S: Acute appendicitis: Efficient diagnosis and management. Am Fam Physician 2018; 98(1):25-33.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Stacey_2021#@#ART-1197@#@.pdf",
+    "article_id": "ART-1197",
+    "clean_ref": "Stacey SK, McEleney M. Topical corticosteroids: choice and application. Am Fam Physician. 2021;103(6):337-343.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Steinberg_2019#@#ART-1200@#@.pdf",
+    "article_id": "ART-1200",
+    "clean_ref": "Steinberg J, Carlson L: Type 2 diabetes therapies: A STEPS approach. Am Fam Physician 2019;99(4):237-243.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Steinberg_Carlson_2019#@#ART-1200@#@.pdf",
+    "article_id": "ART-1200",
+    "clean_ref": "Steinberg J, Carlson L: Type 2 diabetes therapies: A STEPS approach. Am Fam Physician 2019;99(4):237-243.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Stephens_Wiedemer_2018#@#ART-1203@#@.pdf",
+    "article_id": "ART-1203",
+    "clean_ref": "Stephens MB, Wiedemer JP, Kushner GM: Dental problems in primary care. Am Fam Physician 2018;98(11):654-660.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Stevens_Bisno_2014#@#ART-1204@#@.pdf",
+    "article_id": "ART-1204",
+    "clean_ref": "Stevens DL, Bisno AL, Chambers HF, et al: Practice guidelines for the diagnosis and management of skin and soft tissue infections: 2014 Update by the Infectious Diseases Society of America. Clin Infect Dis 2014;59(2):e10-e52.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Stevens_Woller_2021#@#ART-1205@#@.pdf",
+    "article_id": "ART-1205",
+    "clean_ref": "Stevens SM, Woller SC, Kreuziger LB, et al. Antithrombotic therapy for VTE disease: second update of the CHEST guideline and expert panel report. Chest. 2021;160(6):e545-e608.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Sur_Plesa_2022#@#ART-1212@#@.pdf",
+    "article_id": "ART-1212",
+    "clean_ref": "Sur DKC, Plesa ML. Antibiotic use in acute upper respiratory tract infections. Am Fam Physician. 2022;106(6):628-636.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Tatum_2018#@#ART-1225@#@.pdf",
+    "article_id": "ART-1225",
+    "clean_ref": "Tatum III PE, Talebreza S, Ross JS: Geriatric assessment: An office-based approach. Am Fam Physician 2018;97(12):776-784.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2020
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Tiglao_2021#@#ART-1235@#@.pdf",
+    "article_id": "ART-1235",
+    "clean_ref": "Tiglao SM, Meisenheimer ES, Oh RC. Alcohol withdrawal syndrome: outpatient management. Am Fam Physician. 2021;104(3):253-262.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Tran_Lim_2021#@#ART-1241@#@.pdf",
+    "article_id": "ART-1241",
+    "clean_ref": "Tran AN, Lim JK: Care of the patient with abnormal liver test results. Ann Intern Med 2021;174(9):ITC129-ITC144.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Trayes_Savage_2018#@#ART-1242@#@.pdf",
+    "article_id": "ART-1242",
+    "clean_ref": "Trayes KP, Savage K, Studdiford JS: Annular lesions: Diagnosis and treatment. Am Fam Physician 2018;98(5):283-291.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Trojian_2019#@#ART-1243@#@.pdf",
+    "article_id": "ART-1243",
+    "clean_ref": "Trojian T, Tucker AK: Plantar fasciitis. Am Fam Physician 2019;99(12):744-750.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Trojian_Tucker_2019#@#ART-1243@#@.pdf",
+    "article_id": "ART-1243",
+    "clean_ref": "Trojian T, Tucker AK: Plantar fasciitis. Am Fam Physician 2019;99(12):744-750.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Tu_2018#@#ART-1171@#@.pdf",
+    "article_id": "ART-1171",
+    "clean_ref": "Smith DK, McDermott AJ, Sullivan JF: Croup: Diagnosis and management. Am Fam Physician 2018;97(9):575-580.",
+    "tier": "Must-Read",
+    "citation_count": 4,
+    "exam_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Tu_2018#@#ART-1247@#@.pdf",
+    "article_id": "ART-1247",
+    "clean_ref": "Tu P. Heel pain: diagnosis and management. Am Fam Physician. 2018;97(2):86-93.",
+    "tier": "Core",
+    "citation_count": 4,
+    "exam_years": [
+      2021,
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Turner_2018#@#ART-1248@#@.pdf",
+    "article_id": "ART-1248",
+    "clean_ref": "Turner K: Well-child visits for infants and young children. Am Fam Physician 2018;98(6):347-353.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "US_Preventive_Services_Task_Fo_2011#@#ART-1263@#@.pdf",
+    "article_id": "ART-1263",
+    "clean_ref": "US Preventive Services Task Force. Final recommendation statement: testicular cancer: screening. Updated April 15, 2011.",
+    "tier": "Core",
+    "citation_count": 12,
+    "exam_years": [
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "US_Preventive_Services_Task_Fo_2021#@#ART-1259@#@.pdf",
+    "article_id": "ART-1259",
+    "clean_ref": "US Preventive Services Task Force. Final recommendation statement: prediabetes and type 2 diabetes: screening. Updated August 24, 2021.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2023,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "US_Preventive_Services_Task_Force_2022#@#ART-1262@#@.pdf",
+    "article_id": "ART-1262",
+    "clean_ref": "US Preventive Services Task Force. Final recommendation statement: statin use for the primary prevention of cardiovascular disease in adults: preventive medication. August 23, 2022.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Uyeki_Bernstein_2018#@#ART-1275@#@.pdf",
+    "article_id": "ART-1275",
+    "clean_ref": "Uyeki TM, Bernstein HH, Bradley JS, et al. Clinical practice guidelines by the Infectious Diseases Society of America: 2018 update on diagnosis, treatment, chemoprophylaxis, and institutional outbreak management of seasonal influenza. Clin Infect Dis. 2019;68(6):e1-e47.",
+    "tier": "Core",
+    "citation_count": 1,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Veauthier_2021#@#ART-1290@#@.pdf",
+    "article_id": "ART-1290",
+    "clean_ref": "Veauthier B, Hornecker JR, Thrasher T: Recent-onset altered mental status: Evaluation and management. Am Fam Physician 2021;104(5):461-470.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Virani_Newby_2023#@#ART-1298@#@.pdf",
+    "article_id": "ART-1298",
+    "clean_ref": "Virani SS, Newby LK, Arnold SV, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA guideline for the management of patients with chronic coronary disease: a report of the American Heart Association/American College of Cardiology Joint Committee on clinical practice guidelines. J Am Coll Cardiol. 2023;82(9):833-955.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Walling_2020#@#ART-1092@#@.pdf",
+    "article_id": "ART-1092",
+    "clean_ref": "Rupert J, Honeycutt JD, Odom MR: Foreign bodies in the skin: Evaluation and management. Am Fam Physician 2020;101(12):740-747.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Wasserman_2018#@#ART-1313@#@.pdf",
+    "article_id": "ART-1313",
+    "clean_ref": "Wasserman A: Rheumatoid arthritis: Common questions about diagnosis and management. Am Fam Physician 2018;97(7):455-462.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Westfall_Jeske_2020#@#ART-1327@#@.pdf",
+    "article_id": "ART-1327",
+    "clean_ref": "Westfall E, Jeske R, Bader AR. Nonalcoholic fatty liver disease: common questions and answers on diagnosis and management. Am Fam Physician. 2020;102(10):603-612.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2021,
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Whelton_Carey_2017#@#ART-1331@#@.pdf",
+    "article_id": "ART-1331",
+    "clean_ref": "Whelton PK, Carey RM, Aronow WS, et al: 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guideline for the prevention, detection, evaluation, and management of high blood pressure in adults: A report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. J Am Coll Cardiol 2018;71(19):e127-e248.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2021
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Wilkins_Embry_2013#@#ART-1337@#@.pdf",
+    "article_id": "ART-1337",
+    "clean_ref": "Wilkins T, Embry K, George R: Diagnosis and management of acute diverticulitis. Am Fam Physician 2013;87(9):612-620.",
+    "tier": "Must-Read",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Wilkins_Wheeler_2020#@#ART-1339@#@.pdf",
+    "article_id": "ART-1339",
+    "clean_ref": "Wilkins T, Wheeler B, Carpenter M: Upper gastrointestinal bleeding in adults: Evaluation and management. Am Fam Physician 2020;101(5):294-300.",
+    "tier": "Supplementary",
+    "citation_count": 4,
+    "exam_years": [
+      2021,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Wilkinson_2019#@#ART-1341@#@.pdf",
+    "article_id": "ART-1341",
+    "clean_ref": "Wilkinson JM, Cozine EW, Loftus CG: Gas, bloating, and belching: Approach to evaluation and management. Am Fam Physician 2019;99(5):301-309.",
+    "tier": "Supplementary",
+    "citation_count": 1,
+    "exam_years": [
+      2022
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Williams_2022#@#ART-0121@#@.pdf",
+    "article_id": "ART-0121",
+    "clean_ref": "Banerjee ES, Schroeder R, Harrison TD. Metabolic surgery for adult obesity: common questions and answers. Am Fam Physician. 2022;105(6):593-601.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2023,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Wilson_2021#@#ART-1350@#@.pdf",
+    "article_id": "ART-1350",
+    "clean_ref": "Wilson SA, Stem LA, Bruehlman RD: Hypothyroidism: Diagnosis and treatment. Am Fam Physician 2021;103(10):605-613.",
+    "tier": "Supplementary",
+    "citation_count": 2,
+    "exam_years": [
+      2022,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Winslow_2023#@#ART-1352@#@.pdf",
+    "article_id": "ART-1352",
+    "clean_ref": "Winslow BT, Vandal C, Dang L. Fibromyalgia: diagnosis and management. Am Fam Physician. 2023;107(2):137-144.",
+    "tier": "Supplementary",
+    "citation_count": 4,
+    "exam_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Wipperman_Bragg_2019#@#ART-1353@#@.pdf",
+    "article_id": "ART-1353",
+    "clean_ref": "Wipperman J, Bragg DA, Litzner B: Hidradenitis suppurativa: Rapid evidence review. Am Fam Physician 2019;100(9):562-569.",
+    "tier": "Core",
+    "citation_count": 3,
+    "exam_years": [
+      2020,
+      2022,
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Wouk_2021#@#ART-1367@#@.pdf",
+    "article_id": "ART-1367",
+    "clean_ref": "Wouk N: End-stage renal disease: Medical management. Am Fam Physician 2021;104(5):493-499.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2022,
+      2023
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Yew_2023#@#ART-1378@#@.pdf",
+    "article_id": "ART-1378",
+    "clean_ref": "Yew KS, George MK, Allred HB. Acute abdominal pain in adults: evaluation and diagnosis. Am Fam Physician. 2023;107(6):585-596.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Yew_George_2023#@#ART-1378@#@.pdf",
+    "article_id": "ART-1378",
+    "clean_ref": "Yew KS, George MK, Allred HB. Acute abdominal pain in adults: evaluation and diagnosis. Am Fam Physician. 2023;107(6):585-596.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2024
+    ],
+    "match_status": "codon_matched"
+  },
+  {
+    "pdf_filename": "Zolotor_Carlough_2014#@#ART-1389@#@.pdf",
+    "article_id": "ART-1389",
+    "clean_ref": "Zolotor AJ, Carlough MC: Update on prenatal care. Am Fam Physician 2014;89(3):199-208.",
+    "tier": "Core",
+    "citation_count": 2,
+    "exam_years": [
+      2020,
+      2021
+    ],
+    "match_status": "codon_matched"
+  }
+]

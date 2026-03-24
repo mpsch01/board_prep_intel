@@ -1,0 +1,21 @@
+# Normalize line endings: LF in repo, platform-native on checkout
+* text=auto
+
+# Scripts always LF
+*.py text eol=lf
+*.js text eol=lf
+*.bat text eol=crlf
+
+# Docs always LF
+*.md text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.txt text eol=lf
+
+# Binary files — no line ending conversion
+*.db binary
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.png binary
+*.jpg binary

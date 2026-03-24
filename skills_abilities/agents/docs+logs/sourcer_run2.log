@@ -1,0 +1,22 @@
+=================================================================
+  PDF SOURCER AGENT
+  2026-03-21 01:23:25
+  Model: sonnet | Effort: low | Timeout: 180s | Budget cap: $5.00
+  Auth:  AAFP cookies loaded (1.9h old)
+=================================================================
+
+[MANIFEST] Scanning ALL articles for missing PDFs...
+
+  1189 articles missing — batch limited to 25:
+
+  25 VC-cited (high priority) | 0 non-VC
+
+Traceback (most recent call last):
+  File "C:\Users\mpsch\Desktop\claude_knowledge\agents\pdf_sourcer_agent.py", line 450, in <module>
+    main()
+  File "C:\Users\mpsch\Desktop\claude_knowledge\agents\pdf_sourcer_agent.py", line 406, in main
+    print(f"  {vc} {a['article_id']:10s}  {auth:15s} {a['year']}  {(a['title'] or '?')[:45]}")
+  File "C:\Users\mpsch\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2605' in position 2: character maps to <undefined>

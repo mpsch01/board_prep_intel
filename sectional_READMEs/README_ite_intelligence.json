@@ -1,0 +1,136 @@
+{
+  "project": "ITE Intelligence Pipeline",
+  "last_updated": "2026-03-15",
+  "session": "DB-guided extraction built and deployed. 141 migration JSONs now have full extraction+synthesis blocks populated via single-call Claude API guided by pre-computed DB intelligence. 146 DOCXs generated with all 12 sections populated.",
+  "status": "DB_GUIDED_EXTRACTION_COMPLETE. 146/146 codon files fully extracted and DOCX-generated. Pipeline v4 operational with codon-first architecture.",
+
+  "mission": "Transform a static reference library into a queryable, exam-aware knowledge base. Every clinical guideline is understood not just for what it says, but for how the ABFM has tested it.",
+
+  "architecture_v4": {
+    "name": "DB-Guided Extraction (codon-first)",
+    "principle": "Pre-computed DB intelligence acts as extraction guide. One focused Claude call per file instead of three blind ones.",
+    "flow": "Parse codon -> DB clue assembly (concept_tags, question stems, explanations, thresholds) -> raw pdfplumber text + clue package -> ONE Claude call -> structured extraction + synthesis -> merge into JSON -> DOCX generation",
+    "cost": "~$0.03-0.05/file via Batch API (50% discount) vs ~$0.15-0.30/file old pipeline",
+    "key_insight": "DB data tells Claude WHAT to look for, raw text tells Claude WHERE to find it. Claude only makes the final connections."
+  },
+
+  "current_library": {
+    "pdf_codon": "146 files (141 migration + 5 newly matched)",
+    "pdf_non_codon": "70 files (supplementary, no DB link)",
+    "enriched_jsons": "222 total (146 with full extraction + ITE intelligence, 76 with navigator_v1 scaffold only)",
+    "docx_generated": 146,
+    "extraction_quality": {
+      "avg_recommendations": 5.7,
+      "avg_medications": 4.3,
+      "avg_thresholds": 4.9,
+      "avg_practice_pearls": 5.5,
+      "zero_recommendations": 0,
+      "zero_medications": "12 (legitimately drug-free: screening/diagnostic articles)",
+      "qid_tagged_recommendations": "present where applicable"
+    }
+  },
+
+  "deferred_flags": {
+    "FLAG_1_ite_enrichment_quality_dimension": {
+      "priority": "post-pipeline",
+      "status": "OPEN",
+      "description": "The self-improving QC loop (calibrate.py) scores 5 extraction dimensions but has NO scoring for the ite_intelligence{} block.",
+      "action": "Add 6th dimension to guideline_extractor_v2/oneclick/calibrate.py. Suggested weight: 10-15%, renormalize existing weights.",
+      "trigger": "After pipeline is wired and right-click extractions are producing enriched JSONs"
+    },
+    "FLAG_13_intelligence_2_0": {
+      "priority": "next-phase",
+      "status": "OPEN — layers designed, not yet built",
+      "description": "Four intelligence layers: ICD-10 tagging, PubMed currency, clinical pathways, predictive trends",
+      "layers": {
+        "layer_1_icd10": "Ready to build — ICD-10-CM MCP available",
+        "layer_2_pubmed": "Designed — PubMed MCP for supersession detection",
+        "layer_3_pathways": "Designed — cross-guideline clinical pathway linking",
+        "layer_4a_trends": "Ready to build — SQL view for topic frequency trends"
+      }
+    },
+    "FLAG_14_low_confidence_triage": {
+      "priority": "done",
+      "status": "CLOSED 2026-03-15",
+      "description": "34 low-confidence PDFs triaged. 5 matched to DB and renamed to codon format. 29 confirmed supplementary.",
+      "resolution": "Manual verification against DB clean_ref. Matched files: Criner_2015 COPD, Stevens_Bisno_2014, Silver_Ledford_2021, Yew_George_2023, Michels_Michels_2014."
+    }
+  },
+
+  "db_guided_extraction_run_20260315": {
+    "date": "2026-03-15",
+    "method": "Anthropic Message Batches API (50% discount)",
+    "batch_id": "msgbatch_0175dTfKH5nMd1YAxdiVkGC6",
+    "model": "claude-sonnet-4-20250514",
+    "files_submitted": 140,
+    "files_succeeded": 140,
+    "files_skipped": "6 (5 right-click + 1 single-file test already extracted)",
+    "estimated_cost": "$5.71",
+    "approach": "DB clue packages (concept_tags, question stems, explanations, exam trends) + raw pdfplumber text -> one Claude call -> extraction + synthesis block",
+    "docx_generation": "146 generated, 76 skipped (non-codon), 0 failed"
+  },
+
+  "pdf_library_reorg_20260315": {
+    "date": "2026-03-15",
+    "change": "01_pdf_guideline_library reorganized into pdf_codon/ (146) and pdf_non-codon/ (70) subfolders",
+    "scripts_updated": ["convert_pdfs_to_json.py (out_dir resolution)", "build_crosswalk_index.py (PDF_DIR)"],
+    "scripts_verified_no_change": ["ite_intelligence_enricher.py", "ite_intelligence_enricher_batch.py"],
+    "crosswalk_auto_rebuild": "Added to extract_guideline.bat for both batch and single-file modes"
+  },
+
+  "completed_phases": {
+    "phase_1_goal1": "Tag at acquisition — QID codon convention built, qid_filename_parser.py with 43 tests",
+    "phase_2_goal2": "ITE database built — SQLite normalized question-reference pairs, 6 years 2020-2025",
+    "phase_2_goal3": "Enrichment complete — 195 JSONs initially enriched with ite_intelligence block (unified_v1.1)",
+    "phase_3_db_v2": "DB v2 rebuilt — preprocessing-first schema, all columns populated deterministically",
+    "phase_3_pipeline": "End-to-end pipeline wired and validated — right-click PDF -> DOCX with ITE Intelligence section",
+    "phase_3_visual_polish": "TF-IDF concept color-coding, dark column background, sorted chips, color key, citation line, whitespace fixes",
+    "phase_4_codon_migration": "Codon-first architecture v4. 141 articles renamed. PDF library reorganized. Scripts updated.",
+    "phase_5_db_guided_extraction": "DB-guided extraction v1.0. 141 migration JSONs backfilled with exam-aware extraction+synthesis. 146 DOCXs generated."
+  },
+
+  "scripts": {
+    "db_guided_extractor.py":         "NEW v1.0 — Single-file DB-guided extraction (clue assembly + 1 Claude call)",
+    "batch_db_extract.py":            "NEW v1.0 — Batch API wrapper for DB-guided extraction (submit/poll/write)",
+    "batch_reprocess.ps1":            "REWRITTEN — Now uses DB-guided approach. Modes: submit, poll, write, DocxOnly, Sequential",
+    "rebuild_ite_db_v2.py":           "COMPLETE — Full DB v2 rebuild with preprocessing schema",
+    "preprocess_keywords_v2.py":      "COMPLETE — 1189/1189 tagged",
+    "validate_db_v2.py":              "COMPLETE — QC report confirmed DB integrity",
+    "ite_intelligence_enricher.py":   "COMPLETE v4 — Codon-first lookup, TF-IDF concept coloring",
+    "ite_intelligence_enricher_batch.py": "COMPLETE v4 — Batch API enricher (50% cheaper)",
+    "convert_pdfs_to_json.py":        "COMPLETE v1.2 — Updated for pdf_codon subfolder depth",
+    "build_crosswalk_index.py":       "COMPLETE v2.0 — Points to pdf_codon/, codon-only matching",
+    "build_summary.js":               "COMPLETE — 12-section DOCX generator, all sections now populated",
+    "extract_guideline.bat":          "COMPLETE — Right-click pipeline with auto crosswalk rebuild"
+  },
+
+  "db_v2": {
+    "path": "db/ite_intelligence.db",
+    "schema_version": "v2",
+    "articles": 1397,
+    "questions": 1189,
+    "pairs": 2069,
+    "vectors": 1397,
+    "orphan_articles": 54
+  },
+
+  "codon_design": {
+    "format": "canonical_filename#@#ART-NNNN@#@.pdf",
+    "example": "Gaitonde_Moore_2019#@#ART-0470@#@.pdf",
+    "rationale": "Short stable article ID keeps filenames under 100 chars. Full QID list lives in DB. Pipeline does match-and-grab not compute-and-drop."
+  },
+
+  "file_locations": {
+    "db": "02_ite_intelligence/db/ite_intelligence.db",
+    "pdf_codon": "clinical_guidelines/01_pdf_guideline_library/pdf_codon/",
+    "pdf_non_codon": "clinical_guidelines/01_pdf_guideline_library/pdf_non-codon/",
+    "enriched_json": "clinical_guidelines/03_enriched_JSON/",
+    "raw_txt": "clinical_guidelines/03_enriched_JSON/raw_txt/",
+    "docx": "clinical_guidelines/02_docx_guideline_library/",
+    "crosswalk": "02_ite_intelligence/crosswalk_index.json",
+    "logs": "02_ite_intelligence/logs/",
+    "extractor": "02_ite_intelligence/scripts/db_guided_extractor.py",
+    "batch_extractor": "02_ite_intelligence/scripts/batch_db_extract.py",
+    "batch_reprocess": "01_guideline_extractor/oneclick/batch_reprocess.ps1"
+  }
+}

@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITE Intelligence System — Pipeline Map</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; background: #f0f3f8; color: #1a1a2e; font-size: 13px; }
+
+  /* ── MASTHEAD ── */
+  .masthead { background: #1F3864; color: white; padding: 24px 40px 20px; border-bottom: 4px solid #2E75B6; }
+  .masthead h1 { font-size: 22px; font-weight: 700; letter-spacing: 0.5px; }
+  .masthead p  { font-size: 11px; color: #a8c4e0; margin-top: 5px; }
+  .masthead-meta { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+  .meta-pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 12px; font-size: 10px; color: #cde0f5; white-space: nowrap; }
+
+  /* ── SYSTEM OVERVIEW BAR ── */
+  .overview-bar { background: white; border-bottom: 1px solid #dce6f1; padding: 14px 40px; display: flex; align-items: center; gap: 8px; overflow-x: auto; }
+  .ov-label { font-size: 10px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 4px; white-space: nowrap; }
+  .ov-chip { display: inline-flex; align-items: center; gap: 5px; padding: 5px 11px; border-radius: 20px; font-size: 10px; font-weight: 700; white-space: nowrap; }
+  .ov-arrow { color: #aab; font-size: 13px; flex-shrink: 0; }
+
+  /* ── MODULE WRAPPER ── */
+  .module { background: white; border-radius: 10px; margin: 20px 40px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); border: 1px solid #dce6f1; overflow: hidden; }
+
+  /* ── MODULE HEADER ── */
+  .mod-header { display: flex; align-items: center; gap: 14px; padding: 16px 22px 14px; border-bottom: 1px solid #edf1f8; }
+  .mod-badge { width: 38px; height: 38px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; color: white; flex-shrink: 0; }
+  .mod-title-group { flex: 1; }
+  .mod-title { font-size: 15px; font-weight: 700; color: #1F3864; line-height: 1.2; }
+  .mod-subtitle { font-size: 10px; color: #6b7a99; margin-top: 2px; line-height: 1.4; }
+  .mod-status { font-size: 9px; font-weight: 700; padding: 3px 9px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.4px; flex-shrink: 0; }
+  .status-active   { background: #c6efce; color: #375623; }
+  .status-planned  { background: #ffeb9c; color: #9c5700; }
+  .status-prod     { background: #dce6f1; color: #1F3864; }
+  .status-overhaul { background: #fce4d6; color: #843500; }
+  .status-annual   { background: #ede0f5; color: #5B1A7A; }
+
+  /* ── MODULE BODY ── */
+  .mod-body { padding: 18px 22px 22px; }
+
+  /* ── PATH CONTEXT BAR ── */
+  .path-bar { background: #f5f7fb; border: 1px solid #dce6f1; border-radius: 5px; padding: 7px 12px; margin-bottom: 14px; font-size: 10px; color: #4a5a7a; font-family: 'Courier New', monospace; }
+  .path-bar strong { color: #1F3864; font-family: 'Segoe UI', sans-serif; font-size: 9px; text-transform: uppercase; letter-spacing: 0.4px; margin-right: 6px; }
+
+  /* ── PIPELINE LANE ── */
+  .pipeline-lane { display: flex; flex-direction: row; align-items: flex-start; gap: 0; overflow-x: auto; padding-bottom: 4px; }
+
+  /* ── ARROWS ── */
+  .arrow { display: flex; align-items: center; padding: 0 5px; color: #9aaccf; font-size: 18px; flex-shrink: 0; margin-top: 26px; }
+  .plus  { display: flex; align-items: center; padding: 0 5px; color: #2E75B6; font-size: 15px; font-weight: 700; flex-shrink: 0; margin-top: 26px; }
+
+  /* ── NODE ── */
+  .node { display: flex; flex-direction: column; align-items: center; min-width: 138px; max-width: 160px; flex-shrink: 0; }
+  .node.wide { min-width: 166px; max-width: 190px; }
+  .node.slim { min-width: 116px; max-width: 136px; }
+  .node-box { border-radius: 7px; padding: 10px 11px; width: 100%; text-align: center; border: 1.5px solid transparent; transition: transform 0.1s, box-shadow 0.1s; cursor: default; }
+  .node-box:hover { transform: translateY(-2px); box-shadow: 0 5px 14px rgba(0,0,0,0.10); }
+  .node-tag  { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; opacity: 0.75; margin-bottom: 2px; }
+  .node-name { font-size: 11px; font-weight: 700; line-height: 1.35; }
+  .node-desc { font-size: 10px; margin-top: 3px; opacity: 0.85; line-height: 1.35; }
+  .node-path { font-size: 9px; font-family: 'Courier New', monospace; margin-top: 5px; text-align: center; color: #4a5a7a; line-height: 1.3; padding: 0 3px; }
+  .node-label { font-size: 9.5px; color: #7a8aa8; margin-top: 4px; text-align: center; line-height: 1.35; padding: 0 4px; }
+  .node-label.go   { color: #375623; font-weight: 600; }
+  .node-label.warn { color: #9c5700; font-weight: 600; }
+  .node-label.db   { color: #5B1A7A; font-weight: 600; }
+
+  /* Node type palettes */
+  .t-source   { background: #e8f0fe; border-color: #4a86c8; }
+  .t-py       { background: #1F3864; color: white; border-color: #1F3864; }
+  .t-js       { background: #375623; color: white; border-color: #375623; }
+  .t-bat      { background: #2d2d2d; color: #f0f0f0; border-color: #555; }
+  .t-active   { background: #e2efda; border-color: #70ad47; }
+  .t-log      { background: #fff2cc; border-color: #ffc000; }
+  .t-db       { background: #ede0f5; border-color: #7B2D8B; }
+  .t-archive  { background: #fce4d6; border-color: #e06666; }
+  .t-docx     { background: #dce6f1; border-color: #2E75B6; }
+  .t-planned  { background: #fffaed; border-color: #ffc107; border-style: dashed; color: #7d5a00; }
+  .t-excel    { background: #e2f0e8; border-color: #217346; }
+  .t-gate     { background: #fff0f5; border-color: #c0496a; border-width: 2px; border-style: dashed; color: #8b1a30; }
+  .t-ref      { background: #fef9ec; border-color: #d4a017; border-width: 2px; }
+  .t-reg      { background: #f0f0f0; border-color: #666; }
+
+  /* ── FORK STACK ── */
+  .fork-stack { display: flex; flex-direction: column; gap: 10px; }
+
+  /* ── BRANCH ELEMENTS ── */
+  .branch-divider { border-top: 1px dashed #d0dce8; margin: 18px 0 14px; }
+  .branch-label { display: inline-flex; align-items: center; gap: 7px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 3px; margin-bottom: 12px; }
+  .bl-rc  { background: #1F3864; color: white; }
+  .bl-ll  { background: #fffaed; color: #7d5a00; border: 1px dashed #ffc107; }
+  .bl-alt { background: #ede0f5; color: #5B1A7A; border: 1px solid #c49ee0; }
+
+  /* ── CALLOUTS ── */
+  .callout { background: #edf3fb; border: 1px solid #b3cde8; border-left: 4px solid #2E75B6; border-radius: 5px; padding: 10px 14px; margin-bottom: 16px; font-size: 11px; color: #1F3864; line-height: 1.55; }
+  .callout.warn  { background: #fff8e6; border-color: #ffd966; border-left-color: #d4a017; color: #6b4c00; }
+  .callout.purple{ background: #f5f0fc; border-color: #c49ee0; border-left-color: #7B2D8B; color: #3d1a5a; }
+  .callout strong { font-weight: 700; }
+
+  /* ── MASTER KEY ── */
+  .key-module { background: white; border-radius: 10px; margin: 20px 40px 30px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); border: 1px solid #dce6f1; overflow: hidden; }
+  .key-header { background: #1F3864; color: white; padding: 16px 22px; }
+  .key-header h2 { font-size: 15px; font-weight: 700; }
+  .key-header p  { font-size: 10px; color: #a8c4e0; margin-top: 3px; }
+  .key-body { padding: 22px; }
+  .key-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 26px; }
+  .key-card { border: 1px solid #dce6f1; border-radius: 7px; padding: 15px 16px; }
+  .key-card h3 { font-size: 11px; font-weight: 700; color: #1F3864; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; padding-bottom: 7px; border-bottom: 1px solid #edf1f8; }
+
+  /* Legend */
+  .legend-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 9px; font-size: 11px; line-height: 1.45; }
+  .swatch { width: 18px; height: 18px; min-width: 18px; border-radius: 3px; border: 1.5px solid rgba(0,0,0,0.12); margin-top: 1px; }
+  .sw-source  { background: #e8f0fe; }
+  .sw-py      { background: #1F3864; }
+  .sw-js      { background: #375623; }
+  .sw-bat     { background: #2d2d2d; }
+  .sw-active  { background: #e2efda; }
+  .sw-log     { background: #fff2cc; }
+  .sw-db      { background: #ede0f5; }
+  .sw-docx    { background: #dce6f1; }
+  .sw-planned { background: #fffaed; border-style: dashed !important; }
+  .sw-excel   { background: #e2f0e8; }
+  .sw-gate    { background: #fff0f5; border-style: dashed !important; border-color: #c0496a !important; }
+  .sw-ref     { background: #fef9ec; border-color: #d4a017 !important; border-width: 2px !important; }
+
+  /* Script table */
+  .script-tbl { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .script-tbl th { background: #1F3864; color: white; padding: 7px 10px; text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .script-tbl td { padding: 7px 10px; border-bottom: 1px solid #edf1f8; vertical-align: top; line-height: 1.5; }
+  .script-tbl tr:hover td { background: #f8fafd; }
+  .sn  { font-weight: 700; color: #1F3864; font-family: 'Courier New', monospace; font-size: 10px; white-space: nowrap; }
+  .sp  { font-size: 9px; color: #6b7a99; font-family: 'Courier New', monospace; display: block; margin-top: 2px; }
+  .tag-pill { display: inline-block; font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 2px; margin-right: 2px; }
+  .tp-py  { background: #dce6f1; color: #1F3864; }
+  .tp-js  { background: #c6efce; color: #375623; }
+  .tp-bat { background: #e0e0e0; color: #333; }
+  .tp-api { background: #fce4d6; color: #833C00; }
+  .tp-oai { background: #fef9ec; color: #6b4c00; }
+  .tp-loc { background: #ede0f5; color: #5B1A7A; }
+  .lc-pill { display: inline-block; font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 10px; text-transform: uppercase; }
+  .lp-active { background: #c6efce; color: #375623; }
+  .lp-log    { background: #fff2cc; color: #7d5a00; }
+  .lp-archive{ background: #fce4d6; color: #833C00; }
+  .lp-docx   { background: #dce6f1; color: #1F3864; }
+  .lp-db     { background: #ede0f5; color: #5B1A7A; }
+  .lp-func   { background: #1F3864; color: white; }
+
+  /* ── FOOTER ── */
+  .map-footer { background: #1F3864; color: #a8c4e0; padding: 14px 40px; font-size: 10px; text-align: center; margin-top: 10px; }
+
+  @media (max-width: 860px) {
+    .module, .key-module { margin: 14px 16px; }
+    .key-grid { grid-template-columns: 1fr; }
+    .pipeline-lane { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <h1>ITE Intelligence System — Master Pipeline Map</h1>
+  <p>All processing modules · verified file paths · script functions · output destinations · file lifecycle</p>
+  <div class="masthead-meta">
+    <span class="meta-pill">📅 Updated March 19, 2026</span>
+    <span class="meta-pill">7 Modules (F new)</span>
+    <span class="meta-pill">Root: C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\</span>
+    <span class="meta-pill">DB: 1,397 articles · 1,189 questions</span>
+    <span class="meta-pill">Architecture overhaul: PLANNED</span>
+  </div>
+</div>
+
+<!-- SYSTEM OVERVIEW -->
+<div class="overview-bar">
+  <span class="ov-label">System Flow →</span>
+  <span class="ov-chip" style="background:#ede0f5;color:#5B1A7A;">⓪ ITE Exam PDFs → DB</span>
+  <span class="ov-arrow">→</span>
+  <span class="ov-chip" style="background:#fef9ec;color:#6b4c00;">Ⓕ VC Outline Generation</span>
+  <span class="ov-arrow">→</span>
+  <span class="ov-chip" style="background:#dce6f1;color:#1F3864;">Ⓐ Guideline Download</span>
+  <span class="ov-arrow">→</span>
+  <span class="ov-chip" style="background:#dce6f1;color:#1F3864;">Ⓑ Match · Route · Rename</span>
+  <span class="ov-arrow">→</span>
+  <span class="ov-chip" style="background:#e2efda;color:#375623;">Ⓒ Extract · Enrich · DOCX</span>
+  <span class="ov-arrow">+</span>
+  <span class="ov-chip" style="background:#ede0f5;color:#5B1A7A;">Ⓓ DB Intelligence Layers</span>
+  <span class="ov-arrow">and</span>
+  <span class="ov-chip" style="background:#fce4d6;color:#833C00;">Ⓔ ITE Score Analysis</span>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     MODULE 0: DB FOUNDATION
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="module">
+  <div class="mod-header">
+    <div class="mod-badge" style="background:#7B2D8B;">⓪</div>
+    <div class="mod-title-group">
+      <div class="mod-title">ITE Question Bank — Foundation Build</div>
+      <div class="mod-subtitle">Raw ITE exam PDFs → master Excel → clean JSON → ite_intelligence.db · One-time build, re-run annually after new exam year</div>
+    </div>
+    <span class="mod-status status-annual">Re-run Annually</span>
+  </div>
+  <div class="mod-body">
+    <div class="path-bar"><strong>Key paths:</strong> 03_ite_exam\03_database\ &nbsp;·&nbsp; 02_ite_intelligence\scripts\ &nbsp;·&nbsp; 02_ite_intelligence\db\</div>
+    <div class="pipeline-lane">
+
+      <div class="node">
+        <div class="node-box t-source">
+          <div class="node-tag">Primary Source</div>
+          <div class="node-name">Raw ITE Exam PDFs</div>
+          <div class="node-desc">ABFM-issued annual exam files: questions, choices, explanations, reference citations</div>
+        </div>
+        <div class="node-path">03_ite_exam\01_source\<br>ite_q&amp;a_2020-2024.pdf<br>2025_ITE_Questions.pdf</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-excel">
+          <div class="node-tag">Manual Curation · Excel</div>
+          <div class="node-name">ABFM_ITE_Master_v2.xlsx</div>
+          <div class="node-desc">Human-structured: QID, body system, subcategory, stem, choices A–E, correct answer, explanation, full citation strings per question</div>
+        </div>
+        <div class="node-path">03_ite_exam\03_database\<br>ABFM_ITE_Master_v2.xlsx</div>
+        <div class="node-label go">→ Source for all DB builds</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Local</div>
+          <div class="node-name">build_clean_question_bank.py</div>
+          <div class="node-desc">Parses master Excel, fixes encoding artifacts (UTF-8/cp1252 mix), auto-detects answer choice format (inline vs newline vs garbled). Outputs injection-ready JSON.</div>
+        </div>
+        <div class="node-path">03_ite_exam\03_database\<br>build_clean_question_bank.py</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-active">
+          <div class="node-tag">JSON · Intermediate</div>
+          <div class="node-name">ite_questions_clean.json</div>
+          <div class="node-desc">1,189 structured questions: {qid, body_system, subcategory, question_text, choices[], correct_letter, correct_text, explanation, references[]}</div>
+        </div>
+        <div class="node-path">03_ite_exam\03_database\<br>ite_questions_clean.json</div>
+        <div class="node-label go">→ rebuild_ite_db_v2.py</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Local</div>
+          <div class="node-name">rebuild_ite_db_v2.py</div>
+          <div class="node-desc">Builds all core DB tables. Assigns stable ART-IDs (ART-0001–ART-1397). Builds codon_filename, canonical_filename, citation_display. Denormalizes exam_year into question_ref_pairs. Backs up old DB first.</div>
+        </div>
+        <div class="node-path">02_ite_intelligence\scripts\<br>rebuild_ite_db_v2.py</div>
+        <div class="node-label">--dry-run available. Backs up v1 before overwrite.</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-db">
+            <div class="node-tag">SQLite · Core Tables</div>
+            <div class="node-name">ite_intelligence.db (initial)</div>
+            <div class="node-desc">articles, questions, question_ref_pairs. ART-IDs assigned. concept_tags = NULL at this stage. Ready for keyword preprocessing.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\db\<br>ite_intelligence.db</div>
+          <div class="node-label go">→ preprocess_keywords_v2.py</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-log">
+            <div class="node-tag">JSON · Build Log</div>
+            <div class="node-name">rebuild_v2_TIMESTAMP.json</div>
+            <div class="node-desc">Rows migrated, ART-IDs assigned, errors, timing. Saved per run for audit trail.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\logs\</div>
+          <div class="node-label">Audit log. Not read by scripts.</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Claude API · ~$2 one-time</div>
+          <div class="node-name">preprocess_keywords_v2.py</div>
+          <div class="node-desc">Batch-processes all 1,189 questions (25/call). Generates structured concept_tags: {diagnoses, drugs, guidelines, thresholds, concept_summary}. Resume-safe — skips already-processed rows.</div>
+        </div>
+        <div class="node-path">02_ite_intelligence\scripts\<br>preprocess_keywords_v2.py</div>
+        <div class="node-label warn">~$1.50–2.50 total. One-time. Resumable if interrupted.</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Local · QC</div>
+            <div class="node-name">validate_db_v2.py</div>
+            <div class="node-desc">QC checkpoint: concept_tags coverage and structure, orphan check, top exam-engine articles by QID count. --full flag for complete output.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\<br>validate_db_v2.py</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-db">
+            <div class="node-tag">SQLite · Production-Ready</div>
+            <div class="node-name">ite_intelligence.db ✓</div>
+            <div class="node-desc">1,397 articles · 1,189 questions · 1,818 QID-article pairs. All concept_tags populated. ART-IDs stable. Ready for all downstream modules.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\db\<br>ite_intelligence.db</div>
+          <div class="node-label db">⭐ Source of truth. Never disposable.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     MODULE F: AAFP VC CONTENT GENERATION
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="module">
+  <div class="mod-header">
+    <div class="mod-badge" style="background:#8B6914;">Ⓕ</div>
+    <div class="mod-title-group">
+      <div class="mod-title">AAFP VC Outline — Content Generation Pipeline</div>
+      <div class="mod-subtitle">DB + session crosswalk → session_hy_inserts_v7.json (the VC gate) → inject ITE callouts → inject supplements → inject pearls → enriched outline DOCX · Run when VC outline is updated</div>
+    </div>
+    <span class="mod-status status-prod">Production · Run on Outline Updates</span>
+  </div>
+  <div class="mod-body">
+    <div class="path-bar"><strong>Key paths:</strong> 04_aafp_integration\05_scripts\ &nbsp;·&nbsp; 04_aafp_integration\02_working\ &nbsp;·&nbsp; 04_aafp_integration\04_outputs\ &nbsp;·&nbsp; 00_canonical\01_curriculum\</div>
+
+    <div class="callout purple">
+      <strong>Why this module matters:</strong> <code>session_hy_inserts_v7.json</code> — produced by step 2 of this pipeline — is the canonical definition of which articles are VC-cited. Every downstream decision about $right_click$ vs local_lite routing is gated on this file. It is both an output of this module AND a reference input to Module B.
+    </div>
+
+    <div class="pipeline-lane">
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-source">
+            <div class="node-tag">Source DOCX</div>
+            <div class="node-name">BoardPrep-ContentOutline_SESSION-MAPPED-v2.docx</div>
+            <div class="node-desc">AAFP Board Prep VC outline with sessions hand-mapped to ITE subcategory clusters. Starting document for all injection steps.</div>
+          </div>
+          <div class="node-path">04_aafp_integration\01_source\</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-db">
+            <div class="node-tag">SQLite · Reference</div>
+            <div class="node-name">ite_intelligence.db</div>
+            <div class="node-desc">Questions, concept_tags, yield scores, subcategory clusters, reference tiers. Provides the ITE data injected into each session block.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\db\<br>ite_intelligence.db</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Local · Step 1</div>
+          <div class="node-name">01_build_crosswalk.py</div>
+          <div class="node-desc">Maps each AAFP outline session to ITE PrimaryCategory + Subcategory_Cluster values. Hand-coded crosswalk. Outputs CSV for human review before injection.</div>
+        </div>
+        <div class="node-path">04_aafp_integration\05_scripts\<br>01_build_crosswalk.py</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">CSV · Working File</div>
+            <div class="node-name">session_cluster_crosswalk.csv</div>
+            <div class="node-desc">Session → ITE cluster mapping. Human-reviewed before proceeding to insert generation.</div>
+          </div>
+          <div class="node-path">04_aafp_integration\02_working\</div>
+          <div class="node-label go">→ 02b_generate_hy_inserts_v2.py</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">CSV · Working File</div>
+            <div class="node-name">session_subcat_crosswalk.csv</div>
+            <div class="node-desc">Session → subcategory scoring weights. Used to compute yield tiers per session based on ITE exam frequency data.</div>
+          </div>
+          <div class="node-path">04_aafp_integration\02_working\</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Local · Step 2</div>
+          <div class="node-name">02b_generate_hy_inserts_v2.py</div>
+          <div class="node-desc">Core generator. Uses session crosswalks + yield scores to select top-N ITE questions and references per session. Applies tier scoring (Must-Read / Core / Standard). Produces the canonical VC insert file.</div>
+        </div>
+        <div class="node-path">04_aafp_integration\05_scripts\<br>02b_generate_hy_inserts_v2.py</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-ref">
+          <div class="node-tag">JSON · ⭐ The VC Gate · Canonical Output</div>
+          <div class="node-name">session_hy_inserts_v7.json</div>
+          <div class="node-desc">48 sessions. Each: questions[] (VC-selected QIDs) + refs[] (VC-cited citation strings with tier, match_score, cited_by). 229 QIDs · 352 unique citations. THE definition of "codon-eligible."</div>
+        </div>
+        <div class="node-path">04_aafp_integration\02_working\<br>session_hy_inserts_v7.json</div>
+        <div class="node-label warn">⚠ Also feeds Module B as routing gate. Do not delete.</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Local · Step 3</div>
+            <div class="node-name">03_inject_into_outline_v3.py</div>
+            <div class="node-desc">Injects ITE high-yield callout blocks (navy/blue palette) into the BoardPrep content outline DOCX. Uses session_hy_inserts JSON. Reads v3, writes v4.</div>
+          </div>
+          <div class="node-path">04_aafp_integration\05_scripts\<br>03_inject_into_outline_v3.py</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Local · Step 4</div>
+            <div class="node-name">04_inject_poll_questions.py</div>
+            <div class="node-desc">Adds poll question blocks per session into the enriched outline. Sources from poll_questions_tagged.csv.</div>
+          </div>
+          <div class="node-path">04_aafp_integration\05_scripts\<br>04_inject_poll_questions.py</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Local · Step 7</div>
+            <div class="node-name">07_inject_supplements_v2.py</div>
+            <div class="node-desc">Injects supplement ITE questions from supplement_questions.xlsx into session blocks.</div>
+          </div>
+          <div class="node-path">04_aafp_integration\05_scripts\<br>07_inject_supplements_v2.py</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Local · Step 8</div>
+            <div class="node-name">08_build_supplement_doc.py</div>
+            <div class="node-desc">Builds a standalone supplement question document (navy/blue palette). Per-session: banner → 5 questions → answer key at end.</div>
+          </div>
+          <div class="node-path">04_aafp_integration\05_scripts\<br>08_build_supplement_doc.py</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Local · Step 9</div>
+            <div class="node-name">09_build_pearl_callouts.py</div>
+            <div class="node-desc">Injects green "Key Pearls" callout blocks per session using linked ingested JSONs. Terminal injection step.</div>
+          </div>
+          <div class="node-path">04_aafp_integration\05_scripts\<br>09_build_pearl_callouts.py</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-docx">
+            <div class="node-tag">DOCX · Terminal Output · Canonical</div>
+            <div class="node-name">ABFM_BoardPrep_ContentOutline_HY-Enriched_v5-pearls.docx</div>
+            <div class="node-desc">Final enriched VC outline. All ITE callouts, poll questions, supplements, and pearl blocks injected. Navy/blue palette. Delivered to AAFP VC platform.</div>
+          </div>
+          <div class="node-path">00_canonical\01_curriculum\</div>
+          <div class="node-label go">⭐ Terminal output. Canonical deliverable.</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-docx">
+            <div class="node-tag">DOCX · Companion Output</div>
+            <div class="node-name">ABFM_BoardPrep_Supplement_ITE-Questions_v1.docx</div>
+            <div class="node-desc">Standalone supplement question booklet. Per-session question blocks + answer key at end. Companion to the enriched outline.</div>
+          </div>
+          <div class="node-path">00_canonical\01_curriculum\</div>
+          <div class="node-label go">⭐ Companion deliverable.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     MODULE A: GUIDELINE DOWNLOAD
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="module">
+  <div class="mod-header">
+    <div class="mod-badge" style="background:#1F3864;">Ⓐ</div>
+    <div class="mod-title-group">
+      <div class="mod-title">Guideline PDF Acquisition</div>
+      <div class="mod-subtitle">AAFP website → authenticated download → PDF library · Idempotent, safe to re-run anytime · aafp_*.py script paths to be confirmed on-machine</div>
+    </div>
+    <span class="mod-status status-active">Active</span>
+  </div>
+  <div class="mod-body">
+    <div class="path-bar"><strong>Key paths:</strong> clinical_guidelines\01_pdf_guideline_library\pdf_codon\ &nbsp;·&nbsp; clinical_guidelines\01_pdf_guideline_library\pdf_non-codon\ &nbsp;·&nbsp; clinical_guidelines\05_scripts\_download_log.json</div>
+
+    <div class="callout warn">
+      <strong>⚠ Path note:</strong> The <code>aafp_*.py</code> download scripts were not found in the VM filesystem scan — they may live outside the mapped workspace or in a location not currently mounted. Paths below marked as <em>unconfirmed</em>. Confirm on-machine.
+    </div>
+
+    <div class="pipeline-lane">
+
+      <div class="node wide">
+        <div class="node-box t-source">
+          <div class="node-tag">Primary Source · Live Web</div>
+          <div class="node-name">AAFP Website</div>
+          <div class="node-desc">AFP Top-20 article list. Scraped at runtime. New articles appear here as AAFP publishes. No local copy.</div>
+        </div>
+        <div class="node-path">/pubs/afp/content/top-articles.html</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · API-optional · ⚠ path unconfirmed</div>
+          <div class="node-name">aafp_fill_gaps.py</div>
+          <div class="node-desc">Scrapes top-20 list, checks PDF library on disk, downloads only missing files. DB fuzzy-match at download time — assigns codon filename if ART-ID found, plain Author_Year if not.</div>
+        </div>
+        <div class="node-path">clinical_guidelines\05_scripts\ [unconfirmed]</div>
+        <div class="node-label">Idempotent. Safe to re-run anytime.</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Playwright · ⚠ path unconfirmed</div>
+          <div class="node-name">aafp_retry_playwright.py</div>
+          <div class="node-desc">Manual-login browser flow for auth-gated 2024–2025 PDFs. Browser-native download bypasses cookie auth. Requires manual AAFP login step.</div>
+        </div>
+        <div class="node-path">clinical_guidelines\05_scripts\ [unconfirmed]</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Local · One-time fix</div>
+          <div class="node-name">aafp_cleanup_filenames.py</div>
+          <div class="node-desc">Detects ALL-CAPS author names from AAFP metadata bug (2017 era). Normalizes to Title_Case for consistent downstream matching.</div>
+        </div>
+        <div class="node-path">clinical_guidelines\05_scripts\ [unconfirmed]</div>
+        <div class="node-label">Run if new ALL-CAPS filenames appear after download.</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">PDF · Codon Library</div>
+            <div class="node-name">Author_Year #@#ART-XXXX@#@.pdf</div>
+            <div class="node-desc">DB match found at download time. ART-ID embedded. Immediately eligible for Module C.</div>
+          </div>
+          <div class="node-path">clinical_guidelines\01_pdf_guideline_library\<br>pdf_codon\</div>
+          <div class="node-label go">→ Module C ($right_click$)</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">PDF · Staging Library</div>
+            <div class="node-name">Author_Year.pdf</div>
+            <div class="node-desc">No DB match at download time. Holds in staging awaiting match/rename (Module B).</div>
+          </div>
+          <div class="node-path">clinical_guidelines\01_pdf_guideline_library\<br>pdf_non-codon\</div>
+          <div class="node-label warn">→ Module B (match &amp; route)</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-log">
+            <div class="node-tag">JSON · Audit Log</div>
+            <div class="node-name">_download_log.json</div>
+            <div class="node-desc">174 entries: {filename, art_id (nullable), title}. Tracks every article ever downloaded.</div>
+          </div>
+          <div class="node-path">clinical_guidelines\05_scripts\<br>_download_log.json</div>
+          <div class="node-label">Permanent audit trail. Not processed by scripts.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     MODULE B: MATCH · ROUTE · RENAME
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="module">
+  <div class="mod-header">
+    <div class="mod-badge" style="background:#2E75B6;">Ⓑ</div>
+    <div class="mod-title-group">
+      <div class="mod-title">Match Staging · VC Routing Gate · Codon Rename</div>
+      <div class="mod-subtitle">Plain-named PDFs → propose ART-ID → cross-check VC gate → human review → rename + route to $right_click$ or local_lite · Pending architecture overhaul</div>
+    </div>
+    <span class="mod-status status-overhaul">Active · Overhaul Pending</span>
+  </div>
+  <div class="mod-body">
+    <div class="path-bar"><strong>Key paths:</strong> 02_ite_intelligence\scripts\ &nbsp;·&nbsp; 02_ite_intelligence\logs\ &nbsp;·&nbsp; 04_aafp_integration\02_working\session_hy_inserts_v7.json</div>
+
+    <div class="callout warn">
+      <strong>⚠ Architecture Overhaul Pending:</strong> True codon = VC-cited articles (352 target via session_hy_inserts_v7.json). Current 146 codon files include 87 misclassified ITE-linked articles. ART-ID naming redesign (nnn_XXXX prefix) planned before next rename run. Do not run rename_to_codon.py until overhaul is complete.
+    </div>
+
+    <div class="pipeline-lane">
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">PDF · Staging Library</div>
+            <div class="node-name">169 plain-named PDFs</div>
+            <div class="node-desc">Output of Module A where no DB match was found at download time. Awaiting match and routing decision.</div>
+          </div>
+          <div class="node-path">clinical_guidelines\...\pdf_non-codon\</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-db">
+            <div class="node-tag">SQLite · Match Reference</div>
+            <div class="node-name">ite_intelligence.db</div>
+            <div class="node-desc">1,397 articles. Match target: clean_ref strings, author/year fields, concept_tags.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\db\ite_intelligence.db</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Local · Dry-run only</div>
+          <div class="node-name">build_match_staging.py</div>
+          <div class="node-desc">Proposes ART-ID pairings using 3 tiers: (1) enriched JSON metadata, (2) crosswalk lookup, (3) filename keyword match. Dry-run only — no files moved.</div>
+        </div>
+        <div class="node-path">02_ite_intelligence\scripts\<br>build_match_staging.py</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">JSON · Machine-readable</div>
+            <div class="node-name">match_staging_report.json</div>
+            <div class="node-desc">All PDFs with proposed ART-ID, match tier, confidence score, candidate list. Execution manifest for rename script.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\logs\</div>
+          <div class="node-label go">→ Consumed by rename_to_codon.py</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-log">
+            <div class="node-tag">TXT · Human Review</div>
+            <div class="node-name">match_staging_report.txt</div>
+            <div class="node-desc">Human-readable: matches by tier, unmatched list, confidence breakdown for Mikey to review.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\logs\</div>
+          <div class="node-label warn">Review artifact. Never processed by scripts.</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <!-- VC GATE -->
+      <div class="node wide">
+        <div class="node-box t-ref">
+          <div class="node-tag">JSON · VC Routing Gate · From Module F</div>
+          <div class="node-name">session_hy_inserts_v7.json</div>
+          <div class="node-desc">48 sessions · 352 VC-cited citation strings. Cross-reference matched ART-ID against this file: if found → $right_click$. If not found → local_lite. THE routing decision point.</div>
+        </div>
+        <div class="node-path">04_aafp_integration\02_working\<br>session_hy_inserts_v7.json</div>
+        <div class="node-label warn">Produced by Module F. Consumed here as routing gate.</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-gate">
+          <div class="node-tag">Human Gate · Required</div>
+          <div class="node-name">Manual Review &amp; Approval</div>
+          <div class="node-desc">Mikey reviews staging report. Verifies VC routing decisions. Approves, rejects, or corrects each proposed pairing before any rename executes.</div>
+        </div>
+        <div class="node-label">Cannot be skipped. Required checkpoint.</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Local · Destructive</div>
+          <div class="node-name">rename_to_codon.py</div>
+          <div class="node-desc">Executes approved renames from staging JSON. Dry-run by default. --execute for live run. --rollback available. Irreversible without rollback.</div>
+        </div>
+        <div class="node-path">02_ite_intelligence\scripts\<br>rename_to_codon.py</div>
+        <div class="node-label warn">⚠ Requires explicit --execute flag. Use --rollback if needed.</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">PDF → $right_click$ path</div>
+            <div class="node-name">Author_Year #@#ART-XXXX@#@.pdf (VC-cited)</div>
+            <div class="node-desc">Renamed codon PDF confirmed as VC-cited. Routed to full API extraction path.</div>
+          </div>
+          <div class="node-path">clinical_guidelines\...\pdf_codon\</div>
+          <div class="node-label go">→ Module C $right_click$</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">PDF → local_lite path</div>
+            <div class="node-name">Author_Year #@#ART-XXXX@#@.pdf (non-VC)</div>
+            <div class="node-desc">Renamed codon PDF confirmed as ITE-linked but NOT VC-cited. Routed to DB-only synthesis path.</div>
+          </div>
+          <div class="node-path">clinical_guidelines\...\pdf_non-codon\</div>
+          <div class="node-label warn">→ Module C local_lite [PLANNED]</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     MODULE C: EXTRACTION · ENRICHMENT · DOCX
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="module">
+  <div class="mod-header">
+    <div class="mod-badge" style="background:#375623;">Ⓒ</div>
+    <div class="mod-title-group">
+      <div class="mod-title">Guideline Extraction → Enrichment → DOCX</div>
+      <div class="mod-subtitle">PDF + DB → Claude API extraction → ITE intelligence layer → clinical DOCX · Three extraction strategies · $right_click$ is a literal Windows context menu</div>
+    </div>
+    <span class="mod-status status-active">$right_click$ Active · local_lite Planned</span>
+  </div>
+  <div class="mod-body">
+    <div class="path-bar"><strong>Key paths:</strong> 01_guideline_extractor\ &nbsp;·&nbsp; 01_guideline_extractor\oneclick\ &nbsp;·&nbsp; 02_ite_intelligence\scripts\ &nbsp;·&nbsp; 02_ite_intelligence\scripts\docx_build\ &nbsp;·&nbsp; clinical_guidelines\03_enriched_JSON\ &nbsp;·&nbsp; clinical_guidelines\02_docx_guideline_library\</div>
+
+    <div class="callout">
+      <strong>The $right_click$ system is literal.</strong> <code>oneclick\install_context_menu.reg</code> installs a Windows right-click context menu entry on PDFs. Right-clicking a guideline PDF fires <code>extract_guideline.bat</code>, which orchestrates the full pipeline: main.py → synthesize.js → ite_intelligence_enricher.py → build_crosswalk_index.py → build_summary.js. All in one click, no command line required.
+    </div>
+
+    <!-- ── EXTRACTION STRATEGIES ── -->
+    <div class="branch-label bl-rc">Three Extraction Strategies — choose based on batch size and context</div>
+    <div class="pipeline-lane" style="margin-bottom:20px;">
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">PDF · VC-cited Codon Library</div>
+            <div class="node-name">Codon-named PDF</div>
+            <div class="node-desc">Author_Year#@#ART-XXXX@#@.pdf — VC-cited. ART-ID embedded. 220 current / 352 target.</div>
+          </div>
+          <div class="node-path">clinical_guidelines\...\pdf_codon\</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-db">
+            <div class="node-tag">SQLite · DB Clue Package</div>
+            <div class="node-name">ite_intelligence.db</div>
+            <div class="node-desc">concept_tags, linked question stems, exam year trends, tier, citation count — assembled per ART-ID before any API call.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\db\ite_intelligence.db</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-bat">
+            <div class="node-tag">Windows Context Menu · Orchestrator</div>
+            <div class="node-name">extract_guideline.bat</div>
+            <div class="node-desc">Fires on right-click. Orchestrates full pipeline: main.py → synthesize.js → ite_intelligence_enricher.py → build_crosswalk_index.py → build_summary.js. One click, zero command line.</div>
+          </div>
+          <div class="node-path">01_guideline_extractor\oneclick\<br>extract_guideline.bat<br>install_context_menu.reg</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Claude API · Single-file</div>
+            <div class="node-name">main.py</div>
+            <div class="node-desc">CLI entry point. Routes each PDF: ingestion → screening → routing → engine → output JSON. One API call per file. --dir for batch mode.</div>
+          </div>
+          <div class="node-path">01_guideline_extractor\main.py</div>
+          <div class="node-label">Use for single-file or small batches</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Batch API · 50% cheaper</div>
+            <div class="node-name">batch_db_extract.py</div>
+            <div class="node-desc">3-phase async: --submit (bundle all into one Batch API call) → --poll (check status) → --write (save when ready). State in batch_state.json.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\<br>batch_db_extract.py</div>
+          <div class="node-label warn">Preferred for bulk runs. ~50% API cost savings.</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Claude API · DB-guided</div>
+            <div class="node-name">db_guided_extractor.py</div>
+            <div class="node-desc">"Flashlight" approach. DB clue package assembled first (concept_tags, question stems, thresholds), then ONE focused Claude call: raw PDF text + clues → extraction + synthesis combined. Different philosophy from main.py.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\<br>db_guided_extractor.py</div>
+          <div class="node-label">For migration JSONs with empty extraction blocks. --dir, --file, --force flags.</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-active">
+          <div class="node-tag">JSON · Extracted</div>
+          <div class="node-name">*_extracted.json</div>
+          <div class="node-desc">Structured extraction: source metadata, classification, recommendations, medications, thresholds, red flags, follow-up. unified_v1.0 schema.</div>
+        </div>
+        <div class="node-path">clinical_guidelines\03_enriched_JSON\</div>
+        <div class="node-label go">→ synthesize.js</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-js">
+          <div class="node-tag">Node.js · Claude API</div>
+          <div class="node-name">synthesize.js</div>
+          <div class="node-desc">Adds clinical narrative: clinical_bottom_line, practice_pearls, medication_groups, critical_alerts. Augments JSON in-place. Non-destructive — fails cleanly.</div>
+        </div>
+        <div class="node-path">01_guideline_extractor\oneclick\<br>synthesize.js</div>
+        <div class="node-label">→ Same *_extracted.json (augmented)</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Local · v4</div>
+          <div class="node-name">ite_intelligence_enricher.py</div>
+          <div class="node-desc">Strategy 0: parse ART-ID from codon filename → DB lookup (all codon files). Strategy 1: clean_ref exact match (fallback). Adds ite_intelligence block: QIDs, tiers, exam years, concept tags.</div>
+        </div>
+        <div class="node-path">02_ite_intelligence\scripts\<br>ite_intelligence_enricher.py</div>
+        <div class="node-label">→ Same JSON (ite_intelligence block added)</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <!-- DOCX BUILDERS FORK -->
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-js">
+            <div class="node-tag">Node.js · Local · Standard</div>
+            <div class="node-name">build_summary.js</div>
+            <div class="node-desc">Renders enriched JSON → DOCX. 12-section format. ITE Intelligence block with green callouts. Aptos font, navy/blue. Part of right-click pipeline.</div>
+          </div>
+          <div class="node-path">01_guideline_extractor\oneclick\<br>build_summary.js</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-js">
+            <div class="node-tag">Node.js · Local · Merged · ⚠ FLAG 15</div>
+            <div class="node-name">build_merged_docx.js</div>
+            <div class="node-desc">For codon files with enriched JSONs: merges API-synthesized clinical content + DB intelligence into one comprehensive DOCX. Falls back to DB-only for unenriched articles. --merged-only flag available.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\docx_build\<br>build_merged_docx.js</div>
+          <div class="node-label warn">⚠ FLAG 15: --merged-only run still pending.</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-js">
+            <div class="node-tag">Node.js · Local · DB-only</div>
+            <div class="node-name">build_db_docx.js</div>
+            <div class="node-desc">DB-only DOCX builder. Used as fallback inside build_merged_docx.js for articles without enriched JSONs. No API content — pure DB output.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\docx_build\<br>build_db_docx.js</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-docx">
+          <div class="node-tag">DOCX · Terminal Output</div>
+          <div class="node-name">*_db_intel.docx</div>
+          <div class="node-desc">Rich clinical summary. 12 sections. ITE Intelligence block with linked exam questions, concept tags, tier, exam year distribution.</div>
+        </div>
+        <div class="node-path">clinical_guidelines\<br>02_docx_guideline_library\</div>
+        <div class="node-label go">⭐ Terminal output. Linked to AAFP VC sessions.</div>
+      </div>
+
+    </div><!-- /right-click lane -->
+
+    <!-- LOCAL LITE -->
+    <div class="branch-divider"></div>
+    <div class="branch-label bl-ll">local_lite — DB-only synthesis · Zero API cost · ~1,138 non-VC ITE articles [PLANNED]</div>
+    <div class="pipeline-lane">
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">PDF · Non-VC ITE Library</div>
+            <div class="node-name">Non-VC codon PDFs</div>
+            <div class="node-desc">ITE-question-linked articles NOT in session_hy_inserts_v7.json. Have ART-IDs, no VC linkage. ~1,138 articles.</div>
+          </div>
+          <div class="node-path">clinical_guidelines\...\pdf_non-codon\</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-db">
+            <div class="node-tag">SQLite · Full Context Available</div>
+            <div class="node-name">ite_intelligence.db</div>
+            <div class="node-desc">concept_tags, linked questions, ICD-10 tags, tier, citation count, exam year data. Sufficient to build useful DOCX with zero API cost.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\db\ite_intelligence.db</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-planned">
+          <div class="node-tag">Python/Node · Local · [TO BUILD]</div>
+          <div class="node-name">local_lite_builder</div>
+          <div class="node-desc">DB-only document generator. Pulls all available fields per ART-ID. No extraction, no API calls. Produces leaner but fully-linked DOCX.</div>
+        </div>
+        <div class="node-label">Zero API cost. Backbone of ~1,138 non-VC library.</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-planned">
+          <div class="node-tag">DOCX · Planned Output</div>
+          <div class="node-name">*_local_lite.docx</div>
+          <div class="node-desc">Leaner summary: ITE-linked question stems, concept tags, ICD-10 codes, tier, exam year distribution. No clinical narrative.</div>
+        </div>
+        <div class="node-label">Terminal output for non-VC tier.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     MODULE D: DB INTELLIGENCE LAYERS
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="module">
+  <div class="mod-header">
+    <div class="mod-badge" style="background:#7B2D8B;">Ⓓ</div>
+    <div class="mod-title-group">
+      <div class="mod-title">Database Intelligence Layers — Enrichment &amp; Semantic Search</div>
+      <div class="mod-subtitle">ite_intelligence.db → ICD-10 crosswalk · vector embeddings · PubMed currency · clinical pathways · topic trends · Re-run as layers are built</div>
+    </div>
+    <span class="mod-status status-active">Layers 1–2 Active · Layers 3–4 Planned</span>
+  </div>
+  <div class="mod-body">
+    <div class="path-bar"><strong>Key paths:</strong> 02_ite_intelligence\scripts\ &nbsp;·&nbsp; 02_ite_intelligence\db\ &nbsp;·&nbsp; 02_ite_intelligence\crosswalk_index.json</div>
+
+    <div class="callout">
+      <strong>Note on build_crosswalk_index.py:</strong> This script is called from within <code>extract_guideline.bat</code> as part of every right-click run. It is an indexing utility that runs after each codon rename or PDF addition — not a one-time intelligence layer. It's shown here for completeness but architecturally belongs between Module B and C.
+    </div>
+
+    <div class="pipeline-lane">
+
+      <div class="node wide">
+        <div class="node-box t-db">
+          <div class="node-tag">SQLite · Source of Truth</div>
+          <div class="node-name">ite_intelligence.db</div>
+          <div class="node-desc">Ground truth. All scripts READ from and WRITE BACK to this DB. Additional tables are additive — core tables never modified.</div>
+        </div>
+        <div class="node-path">02_ite_intelligence\db\ite_intelligence.db</div>
+        <div class="node-label db">Never disposable.</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Local · Index Utility</div>
+            <div class="node-name">build_crosswalk_index.py</div>
+            <div class="node-desc">Scans codon filenames, parses ART-ID via codon regex, looks up DB metadata. Writes crosswalk_index.json. Called by extract_guideline.bat on every right-click run.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\<br>build_crosswalk_index.py</div>
+          <div class="node-label">Re-run after any codon renames or PDF additions.</div>
+        </div>
+
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Local · Layer 1 Active</div>
+            <div class="node-name">build_icd10_tags.py</div>
+            <div class="node-desc">Extracts diagnoses from concept_tags, maps to ICD-10 via synonym map + MCP lookup cache. Builds 4 DB tables: article_icd10, icd10_code_xref, icd10_rollup, clinical_pathways. Zero API cost.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\<br>build_icd10_tags.py</div>
+          <div class="node-label">4 phases: build → crosswalk → pathways → report</div>
+        </div>
+
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · OpenAI API · Layer 2 Active · ~$0.006</div>
+            <div class="node-name">compute_embeddings.py</div>
+            <div class="node-desc">Computes vector embeddings for all 1,397 articles + 1,189 questions using OpenAI API. Creates sqlite-vec virtual tables (article_vec, question_vec) for semantic similarity search. ~30 sec runtime.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\<br>compute_embeddings.py</div>
+          <div class="node-label warn">Requires: pip install sqlite-vec openai · OPENAI_API_KEY env var</div>
+        </div>
+
+        <div class="node wide">
+          <div class="node-box t-py">
+            <div class="node-tag">Python · Local · Layer 2 Validation</div>
+            <div class="node-name">validate_vector_search.py</div>
+            <div class="node-desc">Validates semantic similarity search is working correctly. Tests article_vec and question_vec virtual tables after compute_embeddings run.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\<br>validate_vector_search.py</div>
+          <div class="node-label">Run after compute_embeddings.py to verify.</div>
+        </div>
+
+        <div class="node wide">
+          <div class="node-box t-planned">
+            <div class="node-tag">Python · PubMed API · Layer 3 [Planned]</div>
+            <div class="node-name">build_article_currency.py</div>
+            <div class="node-desc">Freshness checks via PubMed API. Detects superseded guidelines, newer versions. Writes article_currency and superseded_by fields.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\ [to build]</div>
+          <div class="node-label">Intelligence 2.0 Layer 3. Not yet built.</div>
+        </div>
+
+        <div class="node wide">
+          <div class="node-box t-planned">
+            <div class="node-tag">Python · Local · Layer 4 [Planned]</div>
+            <div class="node-name">build_clinical_pathways.py</div>
+            <div class="node-desc">"Clinical blending engine." Maps diagnosis → article set with pathway_role (first-line, monitoring, escalation). Enables diagnosis-to-study-plan queries.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\scripts\ [to build]</div>
+          <div class="node-label">Intelligence 2.0 Layer 4. Not yet built.</div>
+        </div>
+
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">JSON · Active Reference</div>
+            <div class="node-name">crosswalk_index.json</div>
+            <div class="node-desc">146 entries. Maps pdf_filename → article_id → clean_ref → tier → citation_count → exam_years. Read by enricher and all downstream scripts.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\crosswalk_index.json</div>
+          <div class="node-label go">Active. Read by: enricher, build_summary.js, analyzer.</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-db">
+            <div class="node-tag">SQLite · New Tables · Layer 1</div>
+            <div class="node-name">article_icd10, icd10_code_xref, icd10_rollup, clinical_pathways</div>
+            <div class="node-desc">ICD-10 enrichment tables written back into ite_intelligence.db. Enable ICD-10 queries. Queried by Module E Plugin P3.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\db\ite_intelligence.db</div>
+          <div class="node-label db">Active tables. Queried by Module E.</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-db">
+            <div class="node-tag">SQLite · Virtual Tables · Layer 2</div>
+            <div class="node-name">article_vec, question_vec</div>
+            <div class="node-desc">sqlite-vec virtual tables for semantic similarity search. Enables "find articles similar to this question" type queries across full corpus.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\db\ite_intelligence.db</div>
+          <div class="node-label db">Active. Requires sqlite-vec extension loaded at query time.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     MODULE E: ITE SCORE ANALYSIS
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="module">
+  <div class="mod-header">
+    <div class="mod-badge" style="background:#833C00;">Ⓔ</div>
+    <div class="mod-title-group">
+      <div class="mod-title">ITE Score Analysis — Resident Reports</div>
+      <div class="mod-subtitle">ABFM score report PDFs → color-extraction parser → 5-layer analyzer → Analysis + Exam DOCX · Independent workstream · Production-ready</div>
+    </div>
+    <span class="mod-status status-prod">Production Ready</span>
+  </div>
+  <div class="mod-body">
+    <div class="path-bar"><strong>Key paths:</strong> 08_ite_score_analysis\pipeline\ &nbsp;·&nbsp; 08_ite_score_analysis\raw_pdfs\ &nbsp;·&nbsp; 08_ite_score_analysis\reports\</div>
+
+    <div class="pipeline-lane">
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-source">
+            <div class="node-tag">PDF · Primary Source</div>
+            <div class="node-name">ABFM Score Report PDFs</div>
+            <div class="node-desc">Two PDFs per resident per year: Blueprint Performance + Body System Performance. Fixed-layout template — color constants are universal per exam year.</div>
+          </div>
+          <div class="node-path">08_ite_score_analysis\raw_pdfs\<br>210357_Item_Blueprint_Performance.pdf<br>210357_Item_BodySystem_Performance.pdf</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-active">
+            <div class="node-tag">JSON · Parser Constants</div>
+            <div class="node-name">ite_parser_config.json</div>
+            <div class="node-desc">Universal constants: RGB color signatures, x-coordinate column boundaries, score axis formula (slope/intercept), page dimensions. Validated 191/191 items × 2 residents.</div>
+          </div>
+          <div class="node-path">08_ite_score_analysis\pipeline\<br>ite_parser_config.json<br>abfm_reference_2025.json</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-db">
+            <div class="node-tag">SQLite · Practice Questions</div>
+            <div class="node-name">ite_intelligence.db</div>
+            <div class="node-desc">1,189 questions with concept_tags, ICD-10 codes, article metadata. Supplies personalized practice questions and article recommendations.</div>
+          </div>
+          <div class="node-path">02_ite_intelligence\db\ite_intelligence.db</div>
+        </div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · CLI Entry Point</div>
+          <div class="node-name">ite_analyze_v2.py</div>
+          <div class="node-desc">Single-command pipeline. --blueprint, --bodysystem, --db, --output-dir flags. Orchestrates parser → analyzer → report builder. Saves analysis_v2.json + v1 compat JSON.</div>
+        </div>
+        <div class="node-path">08_ite_score_analysis\pipeline\<br>ite_analyze_v2.py</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · PyMuPDF · Zero OCR</div>
+          <div class="node-name">ite_parser.py</div>
+          <div class="node-desc">Reads RGB color values directly from PDF text metadata. Correct=(0,128,0), Incorrect=(255,0,0). Maps x-coordinate → column → blueprint/body_system. 191/191 validated. No OCR.</div>
+        </div>
+        <div class="node-path">08_ite_score_analysis\pipeline\<br>ite_parser.py</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-py">
+          <div class="node-tag">Python · Local · 5-Layer Engine</div>
+          <div class="node-name">ite_analyzer_v2.py</div>
+          <div class="node-desc">5 layers: difficulty profiling, subcategory decomposition, spatial clustering, cross-dimensional pattern detection, yield-weighted prioritization. Plugins: P1 concept fingerprint, P3 ICD-10 map, P6 cohort comparator. 3-tier question cascade (50 Qs).</div>
+        </div>
+        <div class="node-path">08_ite_score_analysis\pipeline\<br>ite_analyzer_v2.py</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-active">
+          <div class="node-tag">JSON · Intermediate</div>
+          <div class="node-name">analysis_v2.json</div>
+          <div class="node-desc">Full analyzer output: performance by dimension, weak areas, priority stack, 50 practice questions (tier-tagged), concept fingerprint, ICD-10 weakness map.</div>
+        </div>
+        <div class="node-path">08_ite_score_analysis\reports\</div>
+        <div class="node-label go">→ ite_report_builder_v2.js</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="node wide">
+        <div class="node-box t-js">
+          <div class="node-tag">Node.js · Local · Report Renderer</div>
+          <div class="node-name">ite_report_builder_v2.js</div>
+          <div class="node-desc">Renders analysis_v2.json → 2 DOCX files. All sections fully data-driven. Aptos font, navy/blue. Requires: npm install docx in pipeline directory.</div>
+        </div>
+        <div class="node-path">08_ite_score_analysis\pipeline\<br>ite_report_builder_v2.js</div>
+      </div>
+      <div class="arrow">→</div>
+
+      <div class="fork-stack">
+        <div class="node wide">
+          <div class="node-box t-docx">
+            <div class="node-tag">DOCX · Full Analysis Report</div>
+            <div class="node-name">ITE_2025_v2_Analysis_[Name].docx</div>
+            <div class="node-desc">Executive summary, blueprint + body system tables, cross-tab analysis, difficulty profile, 50 practice questions with explanations, top articles, 6-week study plan.</div>
+          </div>
+          <div class="node-path">08_ite_score_analysis\reports\</div>
+          <div class="node-label go">⭐ Primary deliverable. Shared with resident.</div>
+        </div>
+        <div class="node wide">
+          <div class="node-box t-docx">
+            <div class="node-tag">DOCX · Self-Assessment Exam</div>
+            <div class="node-name">ITE_2025_v2_Exam_[Name].docx</div>
+            <div class="node-desc">Same 50 questions in exam format — no inline answers. Answer key at end. For self-testing without spoilers.</div>
+          </div>
+          <div class="node-path">08_ite_score_analysis\reports\</div>
+          <div class="node-label go">⭐ Companion deliverable. Shared with resident.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     MASTER KEY
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="key-module">
+  <div class="key-header">
+    <h2>Master Key — Node Types · Script Reference · File Lifecycle</h2>
+    <p>Answers: (1) what enters each module first &nbsp;·&nbsp; (2) what each script does and why &nbsp;·&nbsp; (3) outputs and destinations &nbsp;·&nbsp; (4) what happens to each file after it lands</p>
+  </div>
+  <div class="key-body">
+
+    <div class="key-grid">
+      <div class="key-card">
+        <h3>Node Color Legend</h3>
+        <div class="legend-row"><div class="swatch sw-source"></div><div><strong>Primary Source</strong> — raw input not generated by any script (exam PDFs, AAFP website, ABFM score reports).</div></div>
+        <div class="legend-row"><div class="swatch sw-py"></div><div><strong>Python Script</strong> — dark navy. Active production logic.</div></div>
+        <div class="legend-row"><div class="swatch sw-js"></div><div><strong>Node.js Script</strong> — dark green. Document rendering or synthesis.</div></div>
+        <div class="legend-row"><div class="swatch sw-bat"></div><div><strong>Batch / Shell Orchestrator</strong> — dark gray. Windows .bat files that chain multiple scripts.</div></div>
+        <div class="legend-row"><div class="swatch sw-excel"></div><div><strong>Excel / Manual Curation</strong> — foundational source for DB build. Human-curated.</div></div>
+        <div class="legend-row"><div class="swatch sw-active"></div><div><strong>Active Pipeline File</strong> — output consumed by the next script. Light green.</div></div>
+        <div class="legend-row"><div class="swatch sw-db"></div><div><strong>Database / DB Table</strong> — source of truth or enrichment tables. Light purple.</div></div>
+        <div class="legend-row"><div class="swatch sw-docx"></div><div><strong>DOCX / Terminal Deliverable</strong> — final output, not further processed. Light blue.</div></div>
+        <div class="legend-row"><div class="swatch sw-log"></div><div><strong>Log / Audit File</strong> — human-review artifact. Not processed by scripts. Light yellow.</div></div>
+        <div class="legend-row"><div class="swatch sw-ref"></div><div><strong>Canonical Reference File</strong> — gold border. Critical cross-module reference (e.g. session_hy_inserts_v7.json). Both output of one module and input to another.</div></div>
+        <div class="legend-row"><div class="swatch sw-gate"></div><div><strong>Human Gate</strong> — dashed pink border. Required manual review checkpoint. Cannot be skipped.</div></div>
+        <div class="legend-row"><div class="swatch sw-planned"></div><div><strong>Planned / Not Yet Built</strong> — dashed cream border.</div></div>
+      </div>
+
+      <div class="key-card">
+        <h3>File Lifecycle Categories</h3>
+        <div style="margin-bottom:10px;font-size:11px;color:#555;">Every file belongs to exactly one lifecycle category:</div>
+        <div class="legend-row"><span class="lc-pill lp-func">Functional Script</span><div style="font-size:11px;margin-left:4px;">.py or .js executing pipeline logic. Kept permanently in scripts/. Updated when behavior changes.</div></div>
+        <div class="legend-row"><span class="lc-pill lp-db">Database / Source of Truth</span><div style="font-size:11px;margin-left:4px;">ite_intelligence.db and its tables. Never deleted. Backed up before any rebuild.</div></div>
+        <div class="legend-row"><span class="lc-pill lp-active">Active Pipeline File</span><div style="font-size:11px;margin-left:4px;">JSON or PDF moving between stages. Consumed by the next script. Disposable with care — regenerable.</div></div>
+        <div class="legend-row"><span class="lc-pill lp-docx">Terminal Deliverable</span><div style="font-size:11px;margin-left:4px;">DOCX or HTML final output. No further script processing. Delivered to user or resident.</div></div>
+        <div class="legend-row"><span class="lc-pill lp-log">Audit Log</span><div style="font-size:11px;margin-left:4px;">JSON/TXT written for human review or traceability. Never read by scripts. Archive after review.</div></div>
+        <div class="legend-row"><span class="lc-pill lp-archive">Archive / Backup</span><div style="font-size:11px;margin-left:4px;">DB backups, v1 scripts, test folders. Preserved for rollback. Not in active pipeline.</div></div>
+      </div>
+    </div>
+
+    <!-- SCRIPT REFERENCE TABLE -->
+    <div class="key-card">
+      <h3>Complete Script Reference — Verified Paths</h3>
+      <table class="script-tbl">
+        <thead>
+          <tr>
+            <th style="width:20%;">Script</th>
+            <th style="width:6%;">Module</th>
+            <th style="width:8%;">Type</th>
+            <th>What It Does &amp; Why</th>
+            <th style="width:18%;">Primary Output</th>
+            <th style="width:9%;">Lifecycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="sn">build_clean_question_bank.py<span class="sp">03_ite_exam\03_database\</span></td><td>⓪</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Parses ABFM_ITE_Master_v2.xlsx into injection-ready JSON. Fixes encoding artifacts, auto-detects choice format (inline/newline/garbled).</td><td>ite_questions_clean.json</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr><td class="sn">rebuild_ite_db_v2.py<span class="sp">02_ite_intelligence\scripts\</span></td><td>⓪</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Builds all core DB tables from ite_questions_clean.json. Assigns stable ART-IDs, builds codon/canonical filenames, denormalizes exam_year. Backs up old DB first.</td><td>ite_intelligence.db (core)</td><td><span class="lc-pill lp-db">DB</span></td></tr>
+          <tr><td class="sn">preprocess_keywords_v2.py<span class="sp">02_ite_intelligence\scripts\</span></td><td>⓪</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-api">CLAUDE API</span></td><td>Batch-processes 1,189 questions (25/call) to generate concept_tags: {diagnoses, drugs, guidelines, thresholds, concept_summary}. Resume-safe. ~$2 one-time.</td><td>concept_tags in DB</td><td><span class="lc-pill lp-db">DB</span></td></tr>
+          <tr><td class="sn">validate_db_v2.py<span class="sp">02_ite_intelligence\scripts\</span></td><td>⓪</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>QC checkpoint. Checks concept_tag coverage, structure validity, orphan check, top exam-engine articles. --full flag for detail.</td><td>Validation report (stdout)</td><td><span class="lc-pill lp-log">Log</span></td></tr>
+          <tr style="background:#fefdf5;"><td class="sn">01_build_crosswalk.py<span class="sp">04_aafp_integration\05_scripts\</span></td><td>Ⓕ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Maps each AAFP VC session to ITE subcategory clusters. Hand-coded crosswalk. Outputs CSV for human review before insert generation.</td><td>session_cluster_crosswalk.csv</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr style="background:#fefdf5;"><td class="sn">02b_generate_hy_inserts_v2.py<span class="sp">04_aafp_integration\05_scripts\</span></td><td>Ⓕ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Core VC generator. Uses session crosswalks + yield scores to select top-N ITE questions and references per session. Applies Must-Read / Core / Standard tier scoring.</td><td>session_hy_inserts_v7.json ⭐</td><td><span class="lc-pill lp-active">Active + Reference</span></td></tr>
+          <tr style="background:#fefdf5;"><td class="sn">03_inject_into_outline_v3.py<span class="sp">04_aafp_integration\05_scripts\</span></td><td>Ⓕ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Injects ITE high-yield callout blocks into BoardPrep outline DOCX. Navy/blue palette. Reads v3 DOCX, writes v4.</td><td>HY-ENRICHED-v4.docx</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr style="background:#fefdf5;"><td class="sn">08_build_supplement_doc.py<span class="sp">04_aafp_integration\05_scripts\</span></td><td>Ⓕ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Builds standalone supplement question booklet. Per-session: banner → 5 questions (stem, choices, answer) → answer key &amp; explanations at end.</td><td>ABFM_BoardPrep_Supplement_v1.docx</td><td><span class="lc-pill lp-docx">Deliverable</span></td></tr>
+          <tr style="background:#fefdf5;"><td class="sn">09_build_pearl_callouts.py<span class="sp">04_aafp_integration\05_scripts\</span></td><td>Ⓕ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Terminal injection step. Injects green "Key Pearls" callout blocks per session using linked ingested JSONs + session_hy_inserts_v7.json.</td><td>HY-Enriched-v5-pearls.docx ⭐</td><td><span class="lc-pill lp-docx">Deliverable</span></td></tr>
+          <tr><td class="sn">extract_guideline.bat<span class="sp">01_guideline_extractor\oneclick\</span></td><td>Ⓒ</td><td><span class="tag-pill tp-bat">BAT</span></td><td>Windows context menu orchestrator. Fires when user right-clicks a guideline PDF. Chains: main.py → synthesize.js → ite_intelligence_enricher.py → build_crosswalk_index.py → build_summary.js.</td><td>Orchestrates full pipeline</td><td><span class="lc-pill lp-func">Functional</span></td></tr>
+          <tr><td class="sn">main.py<span class="sp">01_guideline_extractor\</span></td><td>Ⓒ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-api">CLAUDE API</span></td><td>CLI entry for single-file or small-batch extraction. Routes each PDF: ingestion → screening → routing → engine → JSON. One API call per file.</td><td>*_extracted.json</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr><td class="sn">batch_db_extract.py<span class="sp">02_ite_intelligence\scripts\</span></td><td>Ⓒ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-api">CLAUDE BATCH API</span></td><td>3-phase async Batch API wrapper: --submit → --poll → --write. ~50% cheaper than single calls. State in batch_state.json.</td><td>*_extracted.json (batch)</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr><td class="sn">db_guided_extractor.py<span class="sp">02_ite_intelligence\scripts\</span></td><td>Ⓒ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-api">CLAUDE API</span></td><td>"Flashlight" strategy. Assembles DB clue package first (concept_tags, question stems, thresholds), then ONE focused call: raw text + clues → extraction + synthesis combined. Different from main.py.</td><td>*_extracted.json</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr><td class="sn">synthesize.js<span class="sp">01_guideline_extractor\oneclick\</span></td><td>Ⓒ</td><td><span class="tag-pill tp-js">JS</span><span class="tag-pill tp-api">CLAUDE API</span></td><td>Adds clinical narrative to extracted JSON: clinical_bottom_line, practice_pearls, medication_groups, critical_alerts. In-place augmentation. Non-destructive.</td><td>*_extracted.json (augmented)</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr><td class="sn">ite_intelligence_enricher.py<span class="sp">02_ite_intelligence\scripts\</span></td><td>Ⓒ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>v4. Strategy 0: parse ART-ID from codon filename → DB lookup. Strategy 1: clean_ref match. Adds ite_intelligence block: QIDs, tiers, exam years, concept tags.</td><td>*_extracted.json (enriched)</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr><td class="sn">build_summary.js<span class="sp">01_guideline_extractor\oneclick\</span></td><td>Ⓒ</td><td><span class="tag-pill tp-js">JS</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Renders enriched JSON → DOCX. 12-section format with ITE Intelligence green callout block. Aptos font, navy/blue. Part of right-click pipeline.</td><td>*_db_intel.docx</td><td><span class="lc-pill lp-docx">Deliverable</span></td></tr>
+          <tr><td class="sn">build_merged_docx.js ⚠FLAG 15<span class="sp">02_ite_intelligence\scripts\docx_build\</span></td><td>Ⓒ</td><td><span class="tag-pill tp-js">JS</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Merges API-synthesized clinical content + DB intelligence into one comprehensive DOCX for codon files with enriched JSONs. Falls back to DB-only for unenriched. --merged-only flag available.</td><td>*_db_intel.docx (merged)</td><td><span class="lc-pill lp-docx">Deliverable</span></td></tr>
+          <tr><td class="sn">build_db_docx.js<span class="sp">02_ite_intelligence\scripts\docx_build\</span></td><td>Ⓒ</td><td><span class="tag-pill tp-js">JS</span><span class="tag-pill tp-loc">LOCAL</span></td><td>DB-only DOCX builder. Used as fallback inside build_merged_docx.js for articles without enriched JSONs. No API content — pure DB output.</td><td>*_db_intel.docx (DB-only)</td><td><span class="lc-pill lp-docx">Deliverable</span></td></tr>
+          <tr style="background:#f8f0fc;"><td class="sn">build_crosswalk_index.py<span class="sp">02_ite_intelligence\scripts\</span></td><td>Ⓓ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Scans codon filenames, parses ART-ID via regex, looks up DB metadata, writes crosswalk_index.json. Called by extract_guideline.bat on every right-click. Re-run after any rename.</td><td>crosswalk_index.json</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr style="background:#f8f0fc;"><td class="sn">build_icd10_tags.py<span class="sp">02_ite_intelligence\scripts\</span></td><td>Ⓓ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Layer 1. Extracts diagnoses from concept_tags, maps to ICD-10 via synonym map + MCP cache. Builds 4 DB tables. Zero API cost.</td><td>4 new DB tables</td><td><span class="lc-pill lp-db">DB</span></td></tr>
+          <tr style="background:#f8f0fc;"><td class="sn">compute_embeddings.py<span class="sp">02_ite_intelligence\scripts\</span></td><td>Ⓓ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-oai">OPENAI API</span></td><td>Layer 2. Computes vector embeddings for all articles + questions using OpenAI API. Creates sqlite-vec virtual tables (article_vec, question_vec) for semantic similarity search. ~$0.006 / ~30 sec.</td><td>article_vec, question_vec tables</td><td><span class="lc-pill lp-db">DB</span></td></tr>
+          <tr style="background:#f8f0fc;"><td class="sn">validate_vector_search.py<span class="sp">02_ite_intelligence\scripts\</span></td><td>Ⓓ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Validates semantic similarity search after compute_embeddings run. Tests article_vec and question_vec virtual tables.</td><td>Validation report (stdout)</td><td><span class="lc-pill lp-log">Log</span></td></tr>
+          <tr style="background:#fef8f4;"><td class="sn">ite_analyze_v2.py<span class="sp">08_ite_score_analysis\pipeline\</span></td><td>Ⓔ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>CLI entry point. Orchestrates parser → analyzer → report builder. Single command produces full output for one resident.</td><td>analysis_v2.json + DOCXs</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr style="background:#fef8f4;"><td class="sn">ite_parser.py<span class="sp">08_ite_score_analysis\pipeline\</span></td><td>Ⓔ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Reads RGB color directly from PDF metadata (no OCR). Correct=(0,128,0), Incorrect=(255,0,0). Maps x-coord → column. Validated 191/191 × 2 residents.</td><td>parsed items list</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr style="background:#fef8f4;"><td class="sn">ite_analyzer_v2.py<span class="sp">08_ite_score_analysis\pipeline\</span></td><td>Ⓔ</td><td><span class="tag-pill tp-py">PY</span><span class="tag-pill tp-loc">LOCAL</span></td><td>5-layer engine: difficulty profiling, subcategory decomposition, spatial clustering, cross-dimensional patterns, yield-weighted prioritization. Plugins P1/P3/P6. 3-tier question cascade.</td><td>analysis_v2.json</td><td><span class="lc-pill lp-active">Active</span></td></tr>
+          <tr style="background:#fef8f4;"><td class="sn">ite_report_builder_v2.js<span class="sp">08_ite_score_analysis\pipeline\</span></td><td>Ⓔ</td><td><span class="tag-pill tp-js">JS</span><span class="tag-pill tp-loc">LOCAL</span></td><td>Renders analysis_v2.json → 2 DOCX files (Analysis + Exam). All sections data-driven. Aptos font, navy/blue. Requires npm install docx in pipeline directory.</td><td>Analysis.docx + Exam.docx</td><td><span class="lc-pill lp-docx">Deliverable</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<div class="map-footer">
+  ITE Intelligence System — Master Pipeline Map &nbsp;·&nbsp; Updated March 19, 2026 &nbsp;·&nbsp; 7 modules (⓪ Ⓕ Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ) &nbsp;·&nbsp; Architecture overhaul (Module B + ART-ID redesign) in planning &nbsp;·&nbsp; Generated by Claude
+</div>
+
+</body>
+</html>

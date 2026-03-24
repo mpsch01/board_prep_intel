@@ -1,0 +1,1705 @@
+====================================================================================================
+HAS_EXTRACTION FOLDER — PDF METADATA + DB/VC CROSS-REFERENCE
+Generated: 2026-03-20 | PDFs: 64
+====================================================================================================
+
+--------------------------------------------------------------------------------
+
+***REVIEW***
+
+FILE: ADA_standards-of-care-2025.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 359
+  First 500 chars:
+    ISSN 0149-5992
+    Standards of Care
+    in Diabetes
+    2025
+    THE JOURNAL OF CLINICAL AND APPLIED RESEARCH AND EDUCATION
+    JANUARY 2025  | VOLUME 48  |  SUPPLEMENT 1
+    DIABETESJOURNALS.ORG/CARE
+    ©AmericanDiabetesAssociation
+    American Diabetes Association
+    Standards of Care in
+    Diabetesd
+    ©
+    by the American Diabetes Association. Readers may use this work as long as the work is properly
+    cited, the use is educational and not for proﬁt, and the work is not altered. Readers may link to the version of
+    record of this work
+  DB MATCH (content_to_ref(5 words)):
+    ART-ID: ART-0060
+    DB Title: 9
+    Author/Source: American, Year: 2022
+    Citation Count: 2
+    Codon: American_2022#@#ART-0060@#@.pdf
+    *** VC-CITED: 3 QIDs: QID-2022-0056, QID-2022-0081, QID-2022-0145 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - REVIEW***
+
+FILE: AJKD_CKD+DM2.pdf
+  PDF Title:  KDOQI Commentary on the KDIGO 2022 Update to the Clinical Practice Guideline for Diabetes Management in CKD
+  PDF Author: Amy K. Mottl
+  Pages: 11
+  First 500 chars:
+    KDOQI Commentary on the KDIGO 2022 Update to the
+    Clinical Practice Guideline for Diabetes Management in
+    CKD
+    Amy K. Mottl and Susanne B. Nicholas
+    The Kidney Disease: Improving Global Outcomes (KDIGO) guideline for diabetes management in
+    chronic kidney disease (CKD) was updated in 2022, just 2 years after the previous update. The need
+    for this rapid update is reﬂective of the recent and unprecedented positive results of numerous clinical
+    trials aimed at reducing kidney and cardiovascular morbidity
+  DB MATCH (content_to_ref(7 words)):
+    ART-ID: ART-1021
+    DB Title: Diagnosis and management of stable chronic obstructive pulmonary disease: A clinical practice guideline update from the American College of Physicians, American College of Chest Physicians, American Thoracic Society, and European Respiratory Society
+    Author/Source: Qaseem, Year: 2011
+    Citation Count: 1
+    Codon: Qaseem_Wilt_2011#@#ART-1021@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0060 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - REVIEW***
+
+FILE: AJKD_CKD+HTN.pdf
+  PDF Title:  Entering a New Era of Antihypertensive Therapy
+  PDF Author: Jordana B. Cohen
+  Pages: 21
+  First 500 chars:
+    KDOQI US Commentary on the 2021 KDIGO Clinical
+    Practice Guideline for the Management of Blood
+    Pressure in CKD
+    Paul E. Drawz, Srinivasan Beddhu, O.N. Ray Bignall II, Jordana B. Cohen, Joseph T. Flynn, Elaine Ku,
+    Mahboob Rahman, George Thomas, Matthew R. Weir, and Paul K. Whelton
+    The Kidney Disease Outcomes Quality Initiative (KDOQI) convened a work group to review the 2021
+    KDIGO (Kidney Disease: Improving Global Outcomes) guideline for the management of blood pres-
+    sure in chronic kidney disease
+  DB MATCH (content_to_ref(7 words)):
+    ART-ID: ART-0441
+    DB Title: Clinical practice guideline for screening and management of high blood pressure in children and adolescents
+    Author/Source: Flynn, Year: 2017
+    Citation Count: 4
+    Codon: Flynn_Kaelber_2017#@#ART-0441@#@.pdf
+    *** VC-CITED: 4 QIDs: QID-2020-0164, QID-2022-0019, QID-2022-0166, QID-2023-0156 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - REVIEW***
+
+FILE: AJKD_CKD+obesity.pdf
+  PDF Title:  JASN-2024-001054 1574..1588
+  PDF Author: (none)
+  Pages: 15
+  First 500 chars:
+    ASN Kidney
+    Health Guidance
+    ASN Kidney Health Guidance on the Management of
+    Obesity in Persons Living with Kidney Diseases
+    T. Alp Ikizler
+    ,1 Holly J. Kramer
+    ,2 Srinivasan Beddhu
+    ,3 Alex R. Chang
+    ,4 Allon N. Friedman,5 Meera N. Harhay
+    ,6
+    Elizabeth Yakes Jimenez
+    ,7 Brandon Kistler
+    ,8 Aleksandra Kukla,9 Kristin Larson,10 LindaMarie U. Lavenburg
+    ,11
+    Sankar Dass Navaneethan,12 John Ortiz,13 Rocio I. Pereira
+  DB MATCH (content_to_ref(3 words)):
+    ART-ID: ART-0200
+    DB Title: Interim clinical guidance for management of patients with confirmed coronavirus disease (COVID-19)
+    Author/Source: COVID-19, Year: 2021
+    Citation Count: 1
+    Codon: COVID_19_2021#@#ART-0200@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0076 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - REVIEW***
+
+FILE: AJKD_bone_mineral_d.pdf
+  PDF Title:  KDOQI US Commentary on the 2017 KDIGO Clinical Practice Guideline Update for the Diagnosis, Evaluation, Prevention, and&nbsp;Treatment of Chronic Kidney Disease-Mineral and Bone&nbsp;Disorder (CKD-MBD)
+  PDF Author: Tamara Isakova MD MMSc
+  Pages: 15
+  First 500 chars:
+    KDOQI Commentary
+    KDOQI US Commentary on the 2017 KDIGO Clinical Practice
+    Guideline Update for the Diagnosis, Evaluation, Prevention,
+    and Treatment of Chronic Kidney Disease–Mineral and
+    Bone Disorder (CKD-MBD)
+    Tamara Isakova, MD, MMSc,1 Thomas L. Nickolas, MD, MS,2
+    Michelle Denburg, MD, MSCE,3,4 Sri Yarlagadda, MD,5 Daniel E. Weiner, MD, MS,6
+    Orlando M. Gutie´rrez, MD, MMSc,7,8 Vinod Bansal, MD,9 Sylvia E. Rosas, MD,10
+    Sagar Nigwekar, MD, MMSc,11 Jerry Yee, MD,12 and Holly Kramer, MD, MPH9,*
+    Chro
+  DB MATCH (content_to_ref(9 words)):
+    ART-ID: ART-0675
+    DB Title: what's changed and why it matters
+    Author/Source: Ketteler, Year: 2017
+    Citation Count: 1
+    Codon: Ketteler_Block_2017#@#ART-0675@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2024-0144 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - REVIEW***
+
+FILE: AJKD_renal-nutrition.pdf
+  PDF Title:  KDOQI Clinical Practice Guideline for Nutrition in CKD: 2020 Update
+  PDF Author: T. Alp Ikizler
+  Pages: 109
+  First 500 chars:
+    KDOQI CLINICAL PRACTICE GUIDELINE FOR NUTRITION IN
+    CKD: 2020 UPDATE
+    T. Alp Ikizler, Jerrilynn D. Burrowes, Laura D. Byham-Gray, Katrina L. Campbell, Juan-Jesus Carrero, Winnie Chan,
+    Denis Fouque, Allon N. Friedman, Sana Ghaddar, D. Jordi Goldstein-Fuchs, George A. Kaysen, Joel D. Kopple,
+    Daniel Teta, Angela Yee-Moon Wang, and Lilian Cuppari
+    Abstract
+    The National Kidney Foundation’s Kidney Disease Outcomes Quality Initiative (KDOQI) has provided evidence-based
+    guidelines for nutrition in kidney d
+  DB MATCH (content_to_ref(4 words)):
+    ART-ID: ART-0151
+    DB Title: Clinical practice guideline: Benign paroxysmal positional vertigo (update)
+    Author/Source: Bhattacharyya, Year: 2017
+    Citation Count: 1
+    Codon: Bhattacharyya_Gubbels_2017#@#ART-0151@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0104 ***
+
+--------------------------------------------------------------------------------
+
+***MATCH***
+
+FILE: APA_PTSD.pdf
+  PDF Title:  (none)
+  PDF Author: jmolnar
+  Pages: 96
+  First 500 chars:
+    1
+    PRACTICE GUIDELINE FOR THE
+    Treatment of Patients With
+    Acute Stress Disorder and
+    Posttraumatic Stress Disorder
+    WORK GROUP ON ASD AND PTSD
+    Robert J. Ursano, M.D., Chair
+    Carl Bell, M.D.
+    Spencer Eth, M.D.
+    Matthew Friedman, M.D., Ph.D.
+    Ann Norwood, M.D.
+    Betty Pfefferbaum, M.D., J.D.
+    Robert S. Pynoos, M.D.
+    Douglas F. Zatzick, M.D.
+    David M. Benedek, M.D., Consultant
+  DB MATCH (fuzzy_filename(1/1 words)):
+    ART-ID: ART-1100
+    DB Title: Psychological and pharmacologic treatments for adults with PTSD
+    Author/Source: Saguil, Year: 2019
+    Citation Count: 3
+    Codon: Saguil_2019#@#ART-1100@#@.pdf
+    *** VC-CITED: 3 QIDs: QID-2020-0160, QID-2021-0174, QID-2022-0072 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: APA_alzheimers.pdf
+  PDF Title:  PG_ALZ_00pre(1-6).fm
+  PDF Author: (none)
+  Pages: 86
+  First 500 chars:
+    PRACTICE GUIDELINE FOR THE
+    Treatment of Patients With
+    Alzheimer’s Disease and
+    Other Dementias
+    Second Edition
+    WORK GROUP ON ALZHEIMER’S DISEASE AND OTHER DEMENTIAS
+    Peter V. Rabins, M.D., M.P.H., Chair
+    Deborah Blacker, M.D., Sc.D.
+    Barry W. Rovner, M.D.
+    Teresa Rummans, M.D.
+  DB MATCH (content_to_ref(5 words)):
+    ART-ID: ART-0077
+    DB Title: Practice guideline for the treatment of patients with bipolar disorder (revision)
+    Author/Source: American, Year: 2002
+    Citation Count: 1
+    Codon: American_2002#@#ART-0077@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0129 ***
+
+--------------------------------------------------------------------------------
+***WRONG MATCH - ADD TO DB***
+
+
+FILE: APA_depression.pdf
+  PDF Title:  PG_Depression3e.book(PG_Depression_3e00Pre.fm)
+  PDF Author: (none)
+  Pages: 152
+  First 500 chars:
+    PRACTICE GUIDELINE FOR THE
+    Treatment of Patients With
+    Major Depressive Disorder
+    Third Edition
+    WORK GROUP ON MAJOR DEPRESSIVE DISORDER
+    Alan J. Gelenberg, M.D., Chair
+    Marlene P. Freeman, M.D.
+    John C. Markowitz, M.D.
+    Jerrold F. Rosenbaum, M.D.
+    Michael E. Thase, M.D.
+    Madhukar H. Trivedi, M.D.
+    Richard S. Van Rhoads, M.D., Consultant
+    INDEPENDENT REVIEW PANEL
+    Victor I. Reus, M.D., Chair
+    J. Raymond DePaulo, Jr., M.D.
+  DB MATCH (fuzzy_filename(1/1 words)):
+    ART-ID: ART-0231
+    DB Title: Anticholinergic medication use and risk of dementia among elderly nursing home residents with depression
+    Author/Source: Chatterjee, Year: 2016
+    Citation Count: 1
+    Codon: Chatterjee_Bali_2016#@#ART-0231@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0152 ***
+
+--------------------------------------------------------------------------------
+
+***MATCH***
+
+FILE: APA_substance-use.pdf
+  PDF Title:  (none)
+  PDF Author: jmolnar
+  Pages: 276
+  First 500 chars:
+    1
+    PRACTICE GUIDELINE FOR THE
+    Treatment of Patients With
+    Substance Use Disorders
+    Second Edition
+    WORK GROUP ON SUBSTANCE USE DISORDERS
+    Herbert D. Kleber, M.D., Chair
+    Roger D. Weiss, M.D., Vice-Chair
+    Raymond F. Anton Jr., M.D.
+    Tony P. George, M.D.
+    Shelly F. Greenfield, M.D., M.P.H.
+    Thomas R. Kosten, M.D.
+    Charles P. O’Brien, M.D., Ph.D.
+    Bruce J. Rounsaville, M.D.
+    Eric C. Strain, M.D.
+  DB MATCH (fuzzy_filename(1/1 words)):
+    ART-ID: ART-0758
+    DB Title: Substance-use disorders in later life
+    Author/Source: Lehmann, Year: 2018
+    Citation Count: 1
+    Codon: Lehmann_Fingerhood_2018#@#ART-0758@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0048 ***
+
+--------------------------------------------------------------------------------
+FILE: BackPainPCP_Treatment_Algorithm.pdf
+  PDF Title:  PowerPoint Presentation
+  PDF Author: O'Neill, David
+  Pages: 2
+  First 500 chars:
+    Acute Low Back
+    Pain: Pain lasting less
+    than 4 weeks
+    Red Flag
+    Symptoms*
+    Imaging: Xray, MRI or
+    CT (if MRI contraindicated)
+    if persistent neurological
+    deficit
+    Labs: CBC and CRP
+    Symptoms
+    suggestive of a
+    benign etiology
+    Non-pharmacologic: Consider non-pharmacologic
+    treatment Superficial heat; Massage, acupuncture; Spinal
+  DB MATCH (fuzzy_filename(2/3 words)):
+    ART-ID: ART-0526
+    DB Title: a review and simplified treatment algorithm
+    Author/Source: Grewal, Year: 2020
+    Citation Count: 1
+    Codon: Grewal_Onubogu_2020#@#ART-0526@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2024-0098 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: COMPASS_2017.pdf
+  PDF Title:  Rivaroxaban with or without Aspirin in Stable Cardiovascular Disease
+  PDF Author: (none)
+  Pages: 12
+  First 500 chars:
+    The new england
+    journal of medicine
+    n engl j med 377;14  nejm.org  October 5, 2017
+    1319
+    established in 1812
+    October 5, 2017
+    vol. 377
+    no. 14
+    The authors’ full names, academic de‑
+    grees, and affiliations are listed in the
+    Appendix. Address reprint requests to
+    Dr. Eikelboom at the Population Health
+    Research Institute, McMaster University
+    and Hamilton Health Sciences, David
+    Braley Research Bldg., Hamilton General
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0030
+    DB Title: 2017 AHA/ACC/HRS guideline for management of patients with ventricular arrhythmias and the prevention of sudden cardiac death
+    Author/Source: Al-Khatib, Year: 2017
+    Citation Count: 1
+    Codon: Al_Khatib_Stevenson_2017#@#ART-0030@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0082 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - EXISTS IN DB UNDER DIFF NAME***
+
+FILE: IDSA_LTAC-fever.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 23
+  First 500 chars:
+    Guidelines for the Evaluation of Fever and Infection • CID 2009:48 (15 January) • 149
+    I D S A G U I D E L I N E S
+    Clinical Practice Guideline for the Evaluation
+    of Fever and Infection in Older Adult Residents
+    of Long-Term Care Facilities: 2008 Update
+    by the Infectious Diseases Society of America
+    Kevin P. High,1 Suzanne F. Bradley,2,3,4 Stefan Gravenstein,5,6,7,8 David R. Mehr,9 Vincent J. Quagliarello,10
+    Chesley Richards,11,12 and Thomas T. Yoshikawa13,14
+    1Section on Infectious Diseases, Wake Fo
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0150
+    DB Title: AASLD-IDSA recommendations for testing, managing, and treating hepatitis C virus infection
+    Author/Source: Bhattacharya, Year: 2023
+    Citation Count: 1
+    Codon: Bhattacharya_Aronsohn_2023#@#ART-0150@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2024-0150 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: IDSA_asymp_bactiuria.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 28
+  First 500 chars:
+    I D S A  F E AT U R E S
+    eIDSA 2019 Clinical Practice Guideline for the Management of Asymptomatic Bacteriuria  •  cid  2019:68  (15 May)  •  83
+    Clinical Infectious Diseases
+    Received 29 November 2018; editorial decision 20 December 2018; accepted 27 December
+    2018; published online March 21, 2019.
+    aThe guidelines represent the proprietary and copyrighted property of the Infectious Diseases
+    Society of America (IDSA). Copyright 2018 IDSA. All rights reserved. No part of these guide-
+    lines may be
+  DB MATCH (content_to_ref(6 words)):
+    ART-ID: ART-0253
+    DB Title: a clinical practice guideline from the AAFP
+    Author/Source: Coles, Year: 2022
+    Citation Count: 1
+    Codon: Coles_Fisher_2022#@#ART-0253@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2023-0140 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: IDSA_endocarditis.pdf
+  PDF Title:  Infective Endocarditis in Adults: Diagnosis, Antimicrobial Therapy, and Management of Complications
+  PDF Author: (none)
+  Pages: 52
+  First 500 chars:
+    AHA Scientific Statement
+    1435
+    Background—Infective endocarditis is a potentially lethal disease that has undergone major changes in both host and
+    pathogen. The epidemiology of infective endocarditis has become more complex with today’s myriad healthcare-
+    associated factors that predispose to infection. Moreover, changes in pathogen prevalence, in particular a more common
+    staphylococcal origin, have affected outcomes, which have not improved despite medical and surgical advances.
+    Methods and Re
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0150
+    DB Title: AASLD-IDSA recommendations for testing, managing, and treating hepatitis C virus infection
+    Author/Source: Bhattacharya, Year: 2023
+    Citation Count: 1
+    Codon: Bhattacharya_Aronsohn_2023#@#ART-0150@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2024-0150 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: IDSA_int-travel.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 41
+  First 500 chars:
+    IDSA Guidelines • CID 2006:43 (15 December) • 1499
+    I D S A G U I D E L I N E S
+    The Practice of Travel Medicine: Guidelines
+    by the Infectious Diseases Society of America
+    David R. Hill,1,2 Charles D. Ericsson,5 Richard D. Pearson,9,10 Jay S. Keystone,3,4 David O. Freedman,13,14
+    Phyllis E. Kozarsky,15,16 Herbert L. DuPont,6,7,8 Frank J. Bia,17,18 Philip R. Fischer,19,20 and Edward T. Ryan21,22,23
+    1National Travel Health Network and Centre and 2Department of Infectious and Tropical Diseases, London
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0150
+    DB Title: AASLD-IDSA recommendations for testing, managing, and treating hepatitis C virus infection
+    Author/Source: Bhattacharya, Year: 2023
+    Citation Count: 1
+    Codon: Bhattacharya_Aronsohn_2023#@#ART-0150@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2024-0150 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: IDSA_lab-medicine.pdf
+  PDF Title:  Guide to Utilization of the Microbiology Laboratory for Diagnosis of Infectious Diseases: 2024 Update by the Infectious Diseases Society of America (IDSA) and the American Society for Microbiology (ASM)*
+  PDF Author: J. Michael Miller
+  Pages: 123
+  First 500 chars:
+    Guide to Utilization of the Microbiology Laboratory for
+    Diagnosis of Infectious Diseases: 2024 Update by the
+    Infectious Diseases Society of America (IDSA) and the
+    American Society for Microbiology (ASM)*
+    J. Michael Miller,1 Matthew J. Binnicker,2 Sheldon Campbell,3 Karen C. Carroll,4 Kimberle C. Chapin,5 Mark D. Gonzalez,6 Amanda Harrington,7
+    Robert C. Jerris,6 Sue C. Kehl,8 Sixto M. Leal Jr,9 Robin Patel,2 Bobbi S. Pritt,2,10 Sandra S. Richter,11 Barbara Robinson-Dunn,12 James W. Snyder,13
+    S
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0150
+    DB Title: AASLD-IDSA recommendations for testing, managing, and treating hepatitis C virus infection
+    Author/Source: Bhattacharya, Year: 2023
+    Citation Count: 1
+    Codon: Bhattacharya_Aronsohn_2023#@#ART-0150@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2024-0150 ***
+
+--------------------------------------------------------------------------------
+FILE: IDSA_lyme.pdf
+  PDF Title:  (none)
+  PDF Author: HEMENWAY, Sam
+  Pages: 52
+  First 500 chars:
+    IDSA-AAN-ACR Lyme Disease Guidelines  •  cid  2020:XX  (XX XXXX)  •  1
+    Clinical  Infectious Diseases
+    I DSA FEA TUR ES
+    Clinical Practice Guidelines by the Infectious Diseases
+    Society of America (IDSA), American Academy
+    of Neurology (AAN), and American College of
+    Rheumatology (ACR): 2020 Guidelines for the Prevention,
+    Diagnosis and Treatment of Lyme Disease
+    Paul M. Lantos,1 Jeffrey Rumbaugh,2 Linda K. Bockenstedt,3 Yngve T. Falck-Ytter,4 Maria E. Aguero-Rosenfeld,5 Paul G. Au
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0150
+    DB Title: AASLD-IDSA recommendations for testing, managing, and treating hepatitis C virus infection
+    Author/Source: Bhattacharya, Year: 2023
+    Citation Count: 1
+    Codon: Bhattacharya_Aronsohn_2023#@#ART-0150@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2024-0150 ***
+
+--------------------------------------------------------------------------------
+FILE: IDSA_neutopenic_abx.pdf
+  PDF Title:  cir073 56..93
+  PDF Author: (none)
+  Pages: 38
+  First 500 chars:
+    I D S A G U I D E L I N E S
+    Clinical Practice Guideline for the Use of
+    Antimicrobial Agents in Neutropenic Patients
+    with Cancer: 2010 Update by the Infectious
+    Diseases Society of America
+    Alison G. Freifeld,1 Eric J. Bow,9 Kent A. Sepkowitz,2 Michael J. Boeckh,4 James I. Ito,5 Craig A. Mullen,3 Issam I. Raad,6
+    Kenneth V. Rolston,6 Jo-Anne H. Young,7 and John R. Wingard8
+    1Department of Medicine, University of Nebraska Medical Center, Omaha, Nebraska; 2Department of Medicine, Memorial Sloan-Ketteri
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0150
+    DB Title: AASLD-IDSA recommendations for testing, managing, and treating hepatitis C virus infection
+    Author/Source: Bhattacharya, Year: 2023
+    Citation Count: 1
+    Codon: Bhattacharya_Aronsohn_2023#@#ART-0150@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2024-0150 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: IDSA_periprosthetic_joint.pdf
+  PDF Title:  AAOS Periprosthetic Joint Infection
+  PDF Author: (none)
+  Pages: 4
+  First 500 chars:
+    Periprosthetic Joint Infections
+    Clinical Practice Guideline
+    Published March 11, 2019
+    This clinical practice guideline addresses interventions employed to mitigate the risk for
+    periprosthetic joint infection in primary hip and knee arthroplasty and explores the tools
+    available to diagnose PJI. This guideline does not address the prevention or diagnosis of
+    superficial infections nor is it intended to address the treatment of patients with confirmed PJI
+    of the hip or knee.
+    Clinical practice guideli
+  DB MATCH (content_to_ref(4 words)):
+    ART-ID: ART-0092
+    DB Title: 2019 ACC/AHA guideline on the primary prevention of cardiovascular disease: A report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines
+    Author/Source: Arnett, Year: 2019
+    Citation Count: 1
+    Codon: Arnett_Blumenthal_2019#@#ART-0092@#@.pdf
+    *** VC-CITED: 2 QIDs: QID-2022-0123, QID-2024-0110 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: VA_DOD__depression.pdf
+  PDF Title:  VA/DoD_Clinical_Practice_Guideline_for_the_Management_of_Major_Depressive_Disorder_(MDD)
+  PDF Author: VA/DoD, The Lewin Group
+  Pages: 159
+  First 500 chars:
+    VA/DoD CLINICAL PRACTICE
+    GUIDELINE FOR THE MANAGEMENT OF
+    MAJOR DEPRESSIVE DISORDER
+    Department of Veterans Affairs
+    Department of Defense
+    QUALIFYING STATEMENTS
+    The Department of Veterans Affairs and the Department of Defense guidelines are based upon the best
+    information available at the time of publication. They are designed to provide information and assist
+    decision making. They are not intended to define a standard of care and should not be construed as one.
+    Neither should they be interpr
+  DB MATCH (fuzzy_filename(1/1 words)):
+    ART-ID: ART-0231
+    DB Title: Anticholinergic medication use and risk of dementia among elderly nursing home residents with depression
+    Author/Source: Chatterjee, Year: 2016
+    Citation Count: 1
+    Codon: Chatterjee_Bali_2016#@#ART-0231@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0152 ***
+
+--------------------------------------------------------------------------------
+
+***MATCH***
+
+FILE: aafp_inpatient_hyperglycemia.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 2
+  First 500 chars:
+    September 2023 ◆ Volume 108, Number 3
+    www.aafp.org/afp
+    American Family Physician  313
+    One-fourth of hospitalized patients have diabe­
+    tes mellitus, and up to one-third of those without
+    diabetes experience glucose levels greater than
+    140 mg per dL (7.77 mmol per L) during their
+    hospital stay. Diabetes and hyperglycemia are
+    associated with prolonged hospitalizations. The
+    Endocrine Society released updated guidelines
+    for glycemic management during hospitalization
+    with noncritical illnesses
+  DB MATCH (content_to_ref(4 words)):
+    ART-ID: ART-0706
+    DB Title: Glucose management in hospitalized patients
+    Author/Source: Kodner, Year: 2017
+    Citation Count: 1
+    Codon: Kodner_Anderson_2017#@#ART-0706@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0102 ***
+
+--------------------------------------------------------------------------------
+FILE: aafp_menopause.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 12
+  First 500 chars:
+    28  American Family Physician
+    www.aafp.org/afp
+    Volume 108, Number 1 ◆ July 2023
+    This is an updated version of the article that appeared in print.
+    The menopausal transition (perimenopause) is charac­
+    terized by a persistent decline in ovarian function and hor­
+    monal fluctuations that may cause bothersome vasomotor
+    (i.e., hot flashes and night sweats) and genitourinary symp­
+    toms (e.g., vulvovaginal irritation and dryness, dyspareunia,
+    urinary problems), and affect mood, sleep, sexual functio
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0253
+    DB Title: a clinical practice guideline from the AAFP
+    Author/Source: Coles, Year: 2022
+    Citation Count: 1
+    Codon: Coles_Fisher_2022#@#ART-0253@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2023-0140 ***
+
+--------------------------------------------------------------------------------
+
+***MATCH***
+
+FILE: aafp_peds_sports_injury.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 10
+  First 500 chars:
+    544  American Family Physician
+    www.aafp.org/afp
+    Volume 108, Number 6 ◆ December 2023
+    In the United States, 40 million to 60 million
+    children are involved in organized sports annu­
+    ally.1 Sports participation has many health and
+    wellness benefits,​ but overuse injuries can occur
+    in young athletes because of increased stress on
+    the body without proper training. Organized
+    sports are a contributor to these, often prevent­
+    able, injuries.1-3 Children enter sports at a younger
+    age, and the num
+  DB MATCH (content_to_ref(4 words)):
+    ART-ID: ART-0217
+    DB Title: Childhood and adolescent sports-related overuse injuries
+    Author/Source: Cassas, Year: 2006
+    Citation Count: 1
+    Codon: Cassas_Cassettari_Wayhs_2006#@#ART-0217@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0015 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: acg_CRC_screening.pdf
+  PDF Title:  AJG-21-2489 57..69
+  PDF Author: (none)
+  Pages: 13
+  First 500 chars:
+    Updates on Age to Start and Stop Colorectal Cancer
+    Screening: Recommendations From the U.S.
+    Multi-Society Task Force on Colorectal Cancer
+    Swati G. Patel, MD, MS1,2, Folasade P. May, MD, PhD, MPhil3,4, Joseph C. Anderson, MD5,6, Carol A. Burke, MD7,
+    Jason A. Dominitz, MD, MHS8, Seth A. Gross, MD9, Brian C. Jacobson, MD, MPH10, Aasma Shaukat, MD, MPH11 and
+    Douglas J. Robertson, MD, MPH5
+    This document is a focused update to the 2017 colorectal cancer (CRC) screening recommendations from the U.S.
+    Mu
+  DB MATCH (fuzzy_filename(1/1 words)):
+    ART-ID: ART-0080
+    DB Title: Offer PSA screening for detecting prostate cancer only after engaging in shared decision making
+    Author/Source: American, Year: 2015
+    Citation Count: 1
+    Codon: American_2015#@#ART-0080@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2022-0144 ***
+
+--------------------------------------------------------------------------------
+
+***match***
+
+FILE: acg_celiac.pdf
+  PDF Title:  AJG-22-0961 59..76
+  PDF Author: (none)
+  Pages: 18
+  First 500 chars:
+    American College of Gastroenterology Guidelines
+    Update: Diagnosis and Management of Celiac Disease
+    Alberto Rubio-Tapia, MD1, Ivor D. Hill, MD2, Carol Semrad, MD3, Ciar´an P. Kelly, MD4, Katarina B. Greer, MD, MS5,
+    Berkeley N. Limketkai, MD, PhD, FACG6 and Benjamin Lebwohl, MD, MS7
+    This guideline presents an update to the 2013 American College of Gastroenterology Guideline on the Diagnosis and
+    Management of Celiac Disease with updated recommendations for the evaluation and management of patients
+  DB MATCH (fuzzy_filename(1/1 words)):
+    ART-ID: ART-0973
+    DB Title: Celiac disease: Diagnosis and management
+    Author/Source: Pelkowski, Year: 2014
+    Citation Count: 1
+    Codon: Pelkowski_Viera_2014#@#ART-0973@#@.pdf
+    *** VC-CITED: 2 QIDs: QID-2020-0094, QID-2024-0149 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: acg_fecal_CRCscreening.pdf
+  PDF Title:  Recommendations on Fecal Immunochemical Testing to Screen for Colorectal Neoplasia: A Consensus Statement by the US Multi-Society Task Force on Colorectal Cancer
+  PDF Author: Douglas J Robertson
+  Pages: 17
+  First 500 chars:
+    © 2017 by the American College of Gastroenterology
+    The American Journal of GASTROENTEROLOGY
+    37
+    PRACTICE GUIDELINES
+    Stool testing for occult blood has long been recommended for
+    colorectal cancer (CRC) screening in healthy adults ( 1 ). Th is rec-
+    ommendation is based on randomized controlled trials showing
+    short-term ( 2–4 ) and long-term ( 5,6 ) reductions in CRC inci-
+    dence and mortality. Th ese studies relied on the guaiac test as an
+    indirect mechanism to detect blood in the stool. Such
+  DB MATCH (content_to_ref(6 words)):
+    ART-ID: ART-1330
+    DB Title: executive summary: a report of the American College of Cardiology/American Heart Association task force on clinical practice guidelines
+    Author/Source: Whelton, Year: 2017
+    Citation Count: 3
+    Codon: Whelton_Carey_2017#@#ART-1330@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2023-0181 ***
+
+--------------------------------------------------------------------------------
+FILE: acg_gastroparesis.pdf
+  PDF Title:  AJG-21-2725 1197..1220
+  PDF Author: (none)
+  Pages: 24
+  First 500 chars:
+    ACG Clinical Guideline: Gastroparesis
+    Michael Camilleri, MD, DSc, MRCP (UK), MACG, AGAF1, Braden Kuo, MD, MSc, FACG2, Linda Nguyen, MD3,
+    Vida M. Vaughn, MLIS, MBA4, Jessica Petrey, MSLS4, Katarina Greer, MD, MS5, Rena Yadlapati, MD, MSHS, FACG6 and
+    Thomas L. Abell, MD4
+    Gastroparesis is characterized by symptoms suggesting retention of food in the stomach with objective evidence of delayed
+    gastric emptying in the absence of mechanical obstruction in the gastric outflow. This condition is increasi
+  DB MATCH (content_to_ref(4 words)):
+    ART-ID: ART-0668
+    DB Title: 27-56
+    Author/Source: Katz, Year: 2022
+    Citation Count: 1
+    Codon: Katz_Dunbar_2022#@#ART-0668@#@.pdf
+    *** VC-CITED: 2 QIDs: QID-2023-0046, QID-2024-0164 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+
+FILE: acg_liver_disease+pregnany.pdf
+  PDF Title:  ACG Clinical Guideline: Liver Disease and Pregnancy
+  PDF Author: Tram T Tran
+  Pages: 19
+  First 500 chars:
+    nature publishing group
+    176
+    The American Journal of GASTROENTEROLOGY
+    VOLUME 111 | FEBRUARY 2016   www.amjgastro.com
+    PRACTICE GUIDELINES
+    To determine the level of evidence, the results from the selected
+    papers with the greatest level of evidence were extrapolated and
+    utilized in the GRADE program ( http://www.gradepro.org ).
+    A summary of the recommendations are outlined in  Table 1 .
+    EVALUATION OF THE PREGNANT PATIENT WITH
+    ABNORMAL LIVER ENZYMES
+    Recommendations:
+    1. A pregnant patient pres
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0474
+    DB Title: Portal hypertensive bleeding in cirrhosis: Risk stratification, diagnosis, and management: 2016 Practice guidance by the American Association for the study of liver diseases
+    Author/Source: Garcia-Tsao, Year: 2016
+    Citation Count: 1
+    Codon: Garcia_Tsao_Abraldes_2016#@#ART-0474@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2022-0003 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG***
+
+FILE: acog_1st+2nd_stage_labor.pdf
+  PDF Title:  ONG-23-1886 144..162
+  PDF Author: (none)
+  Pages: 19
+  First 500 chars:
+    CLINICAL PRACTICE GUIDELINE
+    NUMBER 8
+    JANUARY 2024
+    (REPLACES OBSTETRIC CARE CONSENSUS 1, MARCH 2014)
+    First and Second Stage Labor Management
+    Committee on Clinical Practice Guidelines—Obstetrics. This Clinical Practice Guideline was developed by the
+    ACOG Committee on Clinical Practice Guidelines–Obstetrics in collaboration with Alison G. Cahill, MD, MSCI; Nandini Ra-
+    ghuraman, MD, MSCI; and Manisha Gandhi, MD; with consultation from Anjali J. Kaimal, MD, MAS.
+    The Society for Maternal-Fetal Medicin
+  DB MATCH (content_to_ref(6 words)):
+    ART-ID: ART-0579
+    DB Title: a report of the American College of Cardiology/American Heart Association joint committee on clinical practice guidelines
+    Author/Source: Heidenreich, Year: 2022
+    Citation Count: 1
+    Codon: Heidenreich_Bozkurt_2022#@#ART-0579@#@.pdf
+    *** VC-CITED: 4 QIDs: QID-2023-0048, QID-2024-0159, QID-2025-0093, QID-2025-0115 ***
+
+--------------------------------------------------------------------------------
+***MATCH***
+
+FILE: acog_flu_mngmt_prenatal.pdf
+  PDF Title:  ONG-23-2039 1..7
+  PDF Author: (none)
+  Pages: 7
+  First 500 chars:
+    ACOG COMMITTEE STATEMENT
+    NUMBER 7
+    NOVEMBER 2023
+    (REPLACES COMMITTEE OPINION NUMBER 732, APRIL 2018; AND
+    COMMITTEE OPINION NUMBER 753, OCTOBER 2018)
+    Influenza in Pregnancy: Prevention and Treatment
+    Immunization, Infectious Disease, and Public Health Preparedness Expert Work Group. The Society for
+    Maternal-Fetal Medicine endorses this document. This Committee Statement was developed by the American College of
+    Obstetricians and Gynecologists’ Immunization, Infectious Disease, and Public Health Prep
+  DB MATCH (content_to_ref(5 words)):
+    ART-ID: ART-0622
+    DB Title: Recommendations for obstetric health care providers related to use of antiviral medications in the treatment and prevention of influenza
+    Author/Source: Influenza, Year: 2020
+    Citation Count: 1
+    Codon: Influenza_2020#@#ART-0622@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0180 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - EXISTS IN DB UNDER DIFF NAME***
+
+FILE: afp_allergic_rhinitis.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 8
+  First 500 chars:
+    466  American Family Physician
+    www.aafp.org/afp
+    Volume 107, Number 5 ◆ May 2023
+    Allergic rhinitis is the most common chronic
+    disease of childhood and the fifth most common
+    chronic disease in the United States.1,2 It is an
+    immunoglobulin E (IgE)–mediated process, and a
+    clinical diagnosis is made based on common signs
+    and symptoms, physical examination findings,
+    and family and social history. This rapid evidence
+    review highlights current literature and research
+    on the diagnosis and treat
+  DB MATCH (fuzzy_filename(2/2 words)):
+    ART-ID: ART-0336
+    DB Title: FDA requires boxed warning about serious mental health side effects for asthma and allergy drug montelukast (Singulair); advises restricting use for allergic rhinitis
+    Author/Source: Drug, Year: 2020
+    Citation Count: 1
+    Codon: Drug_2020#@#ART-0336@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2022-0049 ***
+
+--------------------------------------------------------------------------------
+
+***MATCH***
+
+FILE: afp_celiac_disease.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 2
+  First 500 chars:
+    92  American Family Physician
+    www.aafp.org/afp
+    Volume 109, Number 1 ◆ January 2024
+    Nearly 1% of Americans are affected by celiac
+    disease, a permanent immune-mediated response
+    to gluten in wheat, barley, and rye. Celiac disease
+    has multisystemic effects characterized by spe­
+    cific antibodies and small bowel injury. There is
+    no effective medical treatment;​ therefore, celiac
+    disease requires a lifelong, strict adherence to a
+    gluten-free diet.
+    Diagnosis
+    In patients with unexplained diarrhea
+  DB MATCH (fuzzy_filename(2/2 words)):
+    ART-ID: ART-0973
+    DB Title: Celiac disease: Diagnosis and management
+    Author/Source: Pelkowski, Year: 2014
+    Citation Count: 1
+    Codon: Pelkowski_Viera_2014#@#ART-0973@#@.pdf
+    *** VC-CITED: 2 QIDs: QID-2020-0094, QID-2024-0149 ***
+
+--------------------------------------------------------------------------------
+
+***MATCH***
+
+FILE: endo_gender_dysphoric_tx.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 35
+  First 500 chars:
+    C L I N I C A L
+    P R A C T I C E
+    G U I D E L I N E
+    Endocrine Treatment of Gender-Dysphoric/
+    Gender-Incongruent Persons: An Endocrine Society*
+    Clinical Practice Guideline
+    Wylie C. Hembree,1 Peggy T. Cohen-Kettenis,2 Louis Gooren,3 Sabine E. Hannema,4
+    Walter J. Meyer,5 M. Hassan Murad,6 Stephen M. Rosenthal,7 Joshua D. Safer,8
+    Vin Tangpricha,9 and Guy G. T’Sjoen10
+    1New York Presbyterian Hospital, Columbia University Medical Center, New York, New York 10032
+    (Retired); 2VU University Medical Center,
+  DB MATCH (fuzzy_filename(3/3 words)):
+    ART-ID: ART-0583
+    DB Title: Endocrine treatment of gender-dysphoric/gender-incongruent persons: An Endocrine Society clinical practice guideline
+    Author/Source: Hembree, Year: 2017
+    Citation Count: 2
+    Codon: Hembree_Cohen_Kettenis_2017#@#ART-0583@#@.pdf
+    *** VC-CITED: 2 QIDs: QID-2020-0004, QID-2021-0128 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: jacc_a_fib.pdf
+  PDF Title:  2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation
+  PDF Author: José A. Joglar MD FACC FAHA FHRS
+  Pages: 171
+  First 500 chars:
+    CLINICAL PRACTICE GUIDELINE
+    2023 ACC/AHA/ACCP/HRS Guideline
+    for the Diagnosis and Management of
+    Atrial Fibrillation
+    A Report of the American College of Cardiology/American Heart Association
+    Joint Committee on Clinical Practice Guidelines
+    Developed in Collaboration With and Endorsed by the American College of Clinical Pharmacy
+    and the Heart Rhythm Society
+    Writing
+    Committee
+    Members*
+    José A. Joglar, MD, FACC, FAHA, FHRS, Chair
+    Mina K. Chung, MD, FACC, FAHA, FHRS, Vice Chair
+    Anastasia L. Armbruster,
+  DB MATCH (fuzzy_filename(1/1 words)):
+    ART-ID: ART-0208
+    DB Title: ACC/AHA versus ESC guidelines on dual antiplatelet therapy: JACC guideline comparison
+    Author/Source: Capodanno, Year: 2018
+    Citation Count: 1
+    Codon: Capodanno_Alfonso_2018#@#ART-0208@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0085 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+
+FILE: neuro_PFO+stroke.pdf
+  PDF Title:  (none)
+  PDF Author: Scott Wessels
+  Pages: 93
+  First 500 chars:
+    1
+    Practice advisory update: Patent foramen ovale and secondary stroke prevention
+    Report of the Guideline Subcommittee of the American Academy of Neurology
+    Steven R. Messé, MD1; Gary S. Gronseth, MD2; David M. Kent, MD, MSc3; Jorge R. Kizer,
+    MD, MSc4; Shunichi Homma, MD5; Lee Rosterman, DO2; John D. Carroll, MD6; Koto Ishida,
+    MD7; Navdeep Sangha, MD8; Scott E. Kasner, MD, MSCE1
+    1Department of Neurology, University of Pennsylvania School of Medicine, Philadelphia
+    2Department of N
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0081
+    DB Title: Nonoperative treatment for lumbar spinal stenosis with neurogenic claudication
+    Author/Source: Ammendolia, Year: 2013
+    Citation Count: 1
+    Codon: Ammendolia_Stuber_2013#@#ART-0081@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0033 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: neuro_afib+stroke.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 4
+  First 500 chars:
+    ©2014 American Academy of Neurology
+    AAN.com
+    Summary of Evidence-based Guideline for CLINICIANS
+    PREVENTION OF STROKE IN
+    NONVALVULAR ATRIAL FIBRILLATION
+    This is a summary of the American Academy of Neurology (AAN) guideline on the prevention of stroke in nonvalvular atrial fibrillation (NVAF).
+    Please refer to the full guideline at AAN.com/guidelines for more information, including definitions of the classifications
+    of evidence and recommendations.
+    SCREENING AND DIAGNOSIS
+    For patients with cryp
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0081
+    DB Title: Nonoperative treatment for lumbar spinal stenosis with neurogenic claudication
+    Author/Source: Ammendolia, Year: 2013
+    Citation Count: 1
+    Codon: Ammendolia_Stuber_2013#@#ART-0081@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0033 ***
+
+--------------------------------------------------------------------------------
+FILE: neuro_bells_palsy.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 1
+  First 500 chars:
+    AAN Summary of Evidence-based Guideline for CLINICIANS
+    This is a summary of the American Academy of Neurology (AAN) guideline regarding steroidal and antiviral treatment of Bell palsy. This
+    information updates the findings of the 2001 AAN guideline on this topic.
+    Please refer to the full guideline at www.aan.com for more information, including definitions of the classifications of evidence and recommendations.
+    STEROIDS
+    For patients with new-onset Bell palsy does treatment with steroids improve
+  DB MATCH (content_to_ref(5 words)):
+    ART-ID: ART-0047
+    DB Title: evidence-based clinical practice guideline
+    Author/Source: American, Year: 2021
+    Citation Count: 1
+    Codon: American_2021#@#ART-0047@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2023-0116 ***
+
+--------------------------------------------------------------------------------
+
+
+FILE: neuro_dementia_diagnosis.pdf
+  PDF Title:  Practice parameter: Diagnosis of dementia (an evidence-based review)
+  PDF Author: ANAKASHIMA
+  Pages: 12
+  First 500 chars:
+    PRACTICE PARAMETER: DIAGNOSIS OF DEMENTIA
+    (AN EVIDENCE-BASED REVIEW)
+    Report of the Quality Standards Subcommittee of the American Academy of Neurology
+    D.S. Knopman, MD; S.T. DeKosky, MD; J.L. Cummings, MD; H. Chui, MD; J. Corey–Bloom, MD, PhD;
+    N. Relkin, MD, PhD; G.W. Small, MD; B. Miller, MD; and J.C. Stevens, MD
+    Article abstract—Objective: To update the 1994 practice parameter for the diagnosis of dementia in the elderly.
+    Background: The AAN previously published a practice
+  DB MATCH (content_to_ref(5 words)):
+    ART-ID: ART-0047
+    DB Title: evidence-based clinical practice guideline
+    Author/Source: American, Year: 2021
+    Citation Count: 1
+    Codon: American_2021#@#ART-0047@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2023-0116 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: neuro_dementia_eval+driving.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 11
+  First 500 chars:
+    Practice Parameter update: Evaluation and
+    management of driving risk in dementia
+    Report of the Quality Standards Subcommittee of the American
+    Academy of Neurology
+    D.J. Iverson, MD
+    G.S. Gronseth, MD
+    M.A. Reger, PhD
+    S. Classen, PhD, MPH,
+    OTR/L
+    R.M. Dubinsky, MD,
+    MPH
+    M. Rizzo, MD
+    ABSTRACT
+    Objective: To review the evidence regarding the usefulness of patient demographic characteris-
+    tics, driving history, and cognitive testing in predicting driving capability among patients with
+  DB MATCH (content_to_ref(5 words)):
+    ART-ID: ART-1151
+    DB Title: 2017 ACC/AHA/HRS guideline for the evaluation and management of patients with syncope: A report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society
+    Author/Source: Shen, Year: 2017
+    Citation Count: 1
+    Codon: Shen_Sheldon_2017#@#ART-1151@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0183 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+
+FILE: neuro_migraine.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 2
+  First 500 chars:
+    AAN Summary of Evidence-based Guideline for CLINICIANS
+    Update: Pharmacologic Treatment for
+    Episodic Migraine Prevention in Adults
+    This is a summary of the American Academy of Neurology (AAN) and American Headache Society guideline update regarding use of
+    pharmacologic treatment for episodic migraine prevention.
+    Please refer to the full guideline at www.aan.com for more information, including definitions of the classifications of evidence and
+    recommendations and the complete clinical context
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0081
+    DB Title: Nonoperative treatment for lumbar spinal stenosis with neurogenic claudication
+    Author/Source: Ammendolia, Year: 2013
+    Citation Count: 1
+    Codon: Ammendolia_Stuber_2013#@#ART-0081@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0033 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG***
+
+FILE: neuro_muscle_cramps.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 1
+  First 500 chars:
+    AAN Summary of Evidence-based Guideline for CLINICIANS
+    Symptomatic Treatment for
+    Muscle Cramps
+    This is a summary of the American Academy of Neurology (AAN) guideline (Neurology ® 2010; 74:691–696) regarding symptomatic treatment for
+    muscle cramps.
+    Please refer to the full guideline at www.aan.com for more information.
+    NONPHARMACOLOGIC TREATMENTS
+    Are there effective nonpharmacologic treatments for muscle cramps?
+    Insufficient evidence
+    Data are insufficient to support or refute the efficacy of c
+  DB MATCH (content_to_ref(5 words)):
+    ART-ID: ART-0047
+    DB Title: evidence-based clinical practice guideline
+    Author/Source: American, Year: 2021
+    Citation Count: 1
+    Codon: American_2021#@#ART-0047@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2023-0116 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: neuro_ped_migraine+treatment.pdf
+  PDF Title:  (none)
+  PDF Author: Scott Wessels
+  Pages: 164
+  First 500 chars:
+    1
+    Practice guideline update: Acute treatment of migraine in children and adolescents
+    1
+    Report of the Guideline Development, Dissemination, and Implementation Subcommittee of the
+    2
+    American Academy of Neurology and the American Headache Society
+    3
+    4
+    Maryam Oskoui, MD, MSc,1 Tamara Pringsheim, MD,2 Yolanda Holler-Managan, MD,3 Sonja
+    5
+    Potrebic, MD, PhD,4 Lori Billinghurst MD, MSc,5 David Gloss, MD,6 Andrew D. Hershey, MD,
+    6
+    PhD,7 Nicole Licking, DO,8 Michael Sowell, MD,9 M. Cristina
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0081
+    DB Title: Nonoperative treatment for lumbar spinal stenosis with neurogenic claudication
+    Author/Source: Ammendolia, Year: 2013
+    Citation Count: 1
+    Codon: Ammendolia_Stuber_2013#@#ART-0081@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0033 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: neuro_peds_migraine+prevention.pdf
+  PDF Title:  (none)
+  PDF Author: Scott Wessels
+  Pages: 121
+  First 500 chars:
+    1
+    Practice guideline update:
+    1
+    Pharmacologic treatment for pediatric migraine prevention
+    2
+    Report of the Guideline Development, Dissemination, and Implementation Subcommittee of the
+    3
+    American Academy of Neurology and the American Headache Society
+    4
+    Authors
+    5
+    Maryam Oskoui, MD, MSc,1 Tamara Pringsheim, MD,2 Lori Billinghurst MD,3 Sonja Potrebic,
+    6
+    MD, PhD,4 Elaine M. Gersz,5 David Gloss, MD, MPH&TM,6 Yolanda Holler-Managan, MD,7
+    7
+  DB MATCH (content_to_ref(6 words)):
+    ART-ID: ART-1369
+    DB Title: 2019 AHA/ACC/HRS focused update of the 2014 AHA/ACC/HRS guideline for the management of patients with atrial fibrillation: A report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society
+    Author/Source: Writing, Year: 2019
+    Citation Count: 1
+    Codon: Writing_January_2019#@#ART-1369@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0046 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: neuro_stroke+prevention.pdf
+  PDF Title:  (none)
+  PDF Author: Scott Wessels
+  Pages: 191
+  First 500 chars:
+    1
+    Stroke Prevention in Symptomatic Large Artery Intracranial Atherosclerosis Practice
+    Advisory
+    Report of the Guidelines Subcommittee of the AAN
+    Tanya N. Turan, MD, MSCR1; Osama O. Zaidat, MD2; Gary S. Gronseth, MD3; Marc I.
+    Chimowitz, MBChB1; Antonio Culebras, MD4; Anthony J. Furlan, MD5; Larry B. Goldstein,
+    MD6; Nestor R. Gonzalez, MD7; Julius G. Latorre, MD, MPH4; Steven R. Messé, MD8; Thanh
+    N. Nguyen, MD9; Rajbeer S. Sangha, MD10; Michael J. Schneck, MD, MBA11; Aneesh B.
+    Singhal
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0081
+    DB Title: Nonoperative treatment for lumbar spinal stenosis with neurogenic claudication
+    Author/Source: Ammendolia, Year: 2013
+    Citation Count: 1
+    Codon: Ammendolia_Stuber_2013#@#ART-0081@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0033 ***
+
+--------------------------------------------------------------------------------
+FILE: neuro_trigeminal_neuralgia.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 2
+  First 500 chars:
+    AAN Summary of Evidence-based Guideline for CLINICIANS
+    TRIGEMINAL NEURALGIA
+    This is a summary of the American Academy of Neurology (AAN) guideline regarding recommended use and best practices for
+    diagnosis and treatment of patients with trigeminal neuralgia (TN).
+    Please refer to the full guideline for detailed findings and supporting evidence for diagnosis and treatment of trigeminal
+    neuralgia at www.aan.com.
+    DIAGNOSISTIC
+    1.  How often does routine neuroimaging (CT, MRI) identify a structural
+  DB MATCH (fuzzy_filename(2/3 words)):
+    ART-ID: ART-0274
+    DB Title: Trigeminal neuralgia
+    Author/Source: Cruccu, Year: 2020
+    Citation Count: 1
+    Codon: Cruccu_Di_2020#@#ART-0274@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2021-0113 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: peds_ADHD.pdf
+  PDF Title:  Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of Attention-Deficit/Hyperactivity Disorder in Children and Adolescents
+  PDF Author: (none)
+  Pages: 25
+  First 500 chars:
+    CLINICAL PRACTICE GUIDELINE
+    Clinical Practice Guideline for the
+    Diagnosis, Evaluation, and Treatment of
+    Attention-Deﬁcit/Hyperactivity
+    Disorder in Children and Adolescents
+    Mark L. Wolraich, MD, FAAP,a Joseph F. Hagan, Jr, MD, FAAP,b,c Carla Allan, PhD,d,e Eugenia Chan, MD, MPH, FAAP,f,g
+    Dale Davison, MSpEd, PCC,h,i Marian Earls, MD, MTS, FAAP,j,k Steven W. Evans, PhD,l,m Susan K. Flinn, MA,n
+    Tanya Froehlich, MD, MS, FAAP,o,p Jennifer Frost, MD, FAAFP,q,r Joseph R. Holbrook, PhD, MPH,s
+    Christoph
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0218
+    DB Title: Amphetamines for attention deficit hyperactivity disorder (ADHD) in adults
+    Author/Source: Castells, Year: 2018
+    Citation Count: 1
+    Codon: Castells_Blanco_Silvente_2018#@#ART-0218@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0061 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG***
+
+FILE: periop_bloodsugar_mngmt.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 19
+  First 500 chars:
+    Copyright © 2024 International Anesthesia Research Society. Unauthorized reproduction of this article is prohibited.
+    September 2024 • Volume 139 • Number 3
+    www.anesthesia-analgesia.org
+    459
+    E   NARRATIVE REVIEW ARTICLE
+    Perioperative Medicine
+    Copyright © 2024 International Anesthesia Research Society
+    DOI: 10.1213/ANE.0000000000006791
+    From the *Department of Anesthesiology and Perioperative Medicine,
+    Penn State Health, Hershey Outpatient Surgery Center, Hershey,
+    Pennsylvania;
+    †Department
+    of
+  DB MATCH: NONE FOUND
+    VC Status: No apparent match
+
+--------------------------------------------------------------------------------
+
+***WRONG***
+
+FILE: periop_medication_mngmt.pdf
+  PDF Title:  Perioperative medication management
+  PDF Author: (none)
+  Pages: 64
+  First 500 chars:
+    Perioperative medication management
+    Official reprint from UpToDate  www.uptodate.com
+    ©2024 UpToDate
+    Perioperative medication management
+    Authors: Visala Muluk, MD, Steven L Cohn, MD, MACP, SFHM, FRCP, Christopher Whinney, MD
+    Section Editors: Andrew D Auerbach, MD, MPH, Natalie F Holt, MD, MPH
+    Deputy Editor: Han Li, MD
+    Contributor Disclosures
+    All topics are updated as new evidence becomes available and our peer review process is
+    complete.
+    Literature review current through: Oct 2024. | This topic l
+  DB MATCH: NONE FOUND
+    VC POSSIBLE: "Douketis JD, Spyropoulos AC, Murad MH, et al. Perioperative management of antithrombotic therapy: an" | Tier: Core | Cited by: ['Q2024-802']
+    VC POSSIBLE: "Douketis JD, Spyropoulos AC, Murad MH, et al. Perioperative management of antithrombotic therapy: an" | Tier: Core | Cited by: ['Q2024-802']
+    VC POSSIBLE: "Douketis JD, Spyropoulos AC, Duncan J, et al. Perioperative management of patients with atrial fibri" | Tier: Core | Cited by: ['Q2023-766']
+
+--------------------------------------------------------------------------------
+FILE: pulm_COPD.pdf
+  PDF Title:  doi:10.1378/chest.14-1676
+  PDF Author: (none)
+  Pages: 49
+  First 500 chars:
+    894 Evidence-Based Medicine
+    [  1 4 7 # 4  C H E S T  A P R I L  2 0 1 5  ]
+    Prevention of Acute Exacerbations of COPD
+    American College of Chest Physicians and Canadian Th oracic Society
+    Guideline
+    Gerard J.  Criner ,  MD, FCCP ;  Jean  Bourbeau ,  MD, FCCP ;  Rebecca L.  Diekemper ,  MPH ;  Daniel R.  Ouellette ,  MD, FCCP ;
+    Donna  Goodridge ,  RN, PhD ;  Paul  Hernandez ,  MDCM ;  Kristen  Curren ,  MA ;  Meyer S.  Balter ,  MD, FCCP ;
+    Mohit  Bhutani ,  MD, FCCP ;  Pat G.  Camp ,  PhD,
+  DB MATCH (fuzzy_filename(2/2 words)):
+    ART-ID: ART-1376
+    DB Title: COPD in primary care: Key considerations for optimized management: Treatment options for stable chronic obstructive pulmonary disease: Current recommendations and unmet needs
+    Author/Source: Yawn, Year: 2018
+    Citation Count: 1
+    Codon: Yawn_Kim_2018#@#ART-1376@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0103 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG MATCH - ADD TO DB***
+
+FILE: pulm_peds-postviral-cough.pdf
+  PDF Title:  Chronic Cough Related to Acute Viral Bronchiolitis in Children
+  PDF Author: Anne B. Chang MBBS PhD MPH
+  Pages: 5
+  First 500 chars:
+    Chronic Cough Related to Acute Viral
+    Bronchiolitis in Children
+    CHEST Expert Panel Report
+    Anne B. Chang, MBBS, PhD, MPH; John J. Oppenheimer, MD; Bruce K. Rubin, MD; Miles Weinberger, MD, FCCP;
+    and Richard S. Irwin, MD, Master FCCP; on behalf of the CHEST Expert Cough Panel
+    BACKGROUND: Acute bronchiolitis is common in young children, and some children develop
+    chronic cough after their bronchiolitis. We thus undertook systematic reviews based on key
+    questions (KQs) using the PICO (Population, Inte
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0411
+    DB Title: Chronic Obstructive Pulmonary Disease: Screening
+    Author/Source: Final, Year: 2016
+    Citation Count: 1
+    Codon: Final_2016#@#ART-0411@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0060 ***
+
+--------------------------------------------------------------------------------
+FILE: rheum_RA.pdf
+  PDF Title:  2021 American College of Rheumatology Guideline for the Treatment of Rheumatoid Arthritis
+  PDF Author: (none)
+  Pages: 16
+  First 500 chars:
+    924
+    Arthritis Care & Research
+    Vol. 73, No. 7, July 2021, pp 924–939
+    DOI 10.1002/acr.24596
+    © 2021, American College of Rheumatology
+    2021 American College of Rheumatology Guideline for the
+    Treatment of Rheumatoid Arthritis
+    Liana Fraenkel,1
+    Joan M. Bathon,2 Bryant R. England,3
+    E. William St.Clair,4 Thurayya Arayssi,5
+    Kristine Carandang,6
+    Kevin D. Deane,7
+    Mark Genovese,8
+    Kent Kwas Huston,9 Gail Kerr,10 Joel Kremer,11
+  DB MATCH (fuzzy_filename(1/1 words)):
+    ART-ID: ART-0221
+    DB Title: Recognition and management of polymyalgia rheumatica and giant cell arteritis
+    Author/Source: Caylor, Year: 2013
+    Citation Count: 1
+    Codon: Caylor_Perkins_2013#@#ART-0221@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0062 ***
+
+--------------------------------------------------------------------------------
+FILE: rheum_lyme-disease.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 51
+  First 500 chars:
+    IDSA-AAN-ACR Lyme Disease Guidelines • cid 2020:XX (XX XXXX) • 1
+    Clinical Infectious Diseases
+    IDSA FE A T URE  S
+    Clinical Practice Guidelines by the Infectious Diseases
+    Society of America (IDSA), American Academy
+    of Neurology (AAN), and American College of
+    Rheumatology (ACR): 2020 Guidelines for the
+    Prevention, Diagnosis and Treatment of Lyme Disease
+    Paul M. Lantos,1 Jeffrey Rumbaugh,2 Linda K. Bockenstedt,3 Yngve T. Falck-Ytter,4 Maria E. Aguero-Rosenfeld,5 Paul G. Auwaerter,6 K
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0221
+    DB Title: Recognition and management of polymyalgia rheumatica and giant cell arteritis
+    Author/Source: Caylor, Year: 2013
+    Citation Count: 1
+    Codon: Caylor_Perkins_2013#@#ART-0221@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0062 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG***
+
+FILE: rheum_perioperative-management.pdf
+ PDF Title:  2022 American College of Rheumatology/American Association of Hip and Knee Surgeons Guideline for the Perioperative Management of Antirheumatic Medication in Patients With Rheumatic Diseases Undergoing Elective Total Hip or Total Knee Arthroplasty
+  PDF Author: (none)
+  Pages: 10
+  First 500 chars:
+    2022 American College of Rheumatology/American
+    Association of Hip and Knee Surgeons Guideline for the
+    Perioperative Management of Antirheumatic Medication in
+    Patients With Rheumatic Diseases Undergoing Elective Total
+    Hip or Total Knee Arthroplasty
+    Susan M. Goodman,1
+    Bryan D. Springer,2 Antonia F. Chen,3 Marshall Davis,4 David R. Fernandez,1 Mark Figgie,1
+    Heather Finlayson,5 Michael D. George,6
+    Jon T. Giles,7
+    Jeremy Gilliland,8 Brian Klatt,9 Ronald MacKenzie,1
+    Kaleb Michaud,10 Andy Miller,1
+    Linda
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0221
+    DB Title: Recognition and management of polymyalgia rheumatica and giant cell arteritis
+    Author/Source: Caylor, Year: 2013
+    Citation Count: 1
+    Codon: Caylor_Perkins_2013#@#ART-0221@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0062 ***
+
+--------------------------------------------------------------------------------
+FILE: rheum_steroid-osteoporosis.pdf
+  PDF Title:  2022 American College of Rheumatology Guideline for the Prevention and Treatment of Glucocorticoid‐Induced Osteoporosis
+  PDF Author: (none)
+  Pages: 15
+  First 500 chars:
+    2022 American College of Rheumatology Guideline for the
+    Prevention and Treatment of Glucocorticoid-Induced
+    Osteoporosis
+    Mary Beth Humphrey,1* Linda Russell,2* Maria I. Danila,3
+    Howard A. Fink,4 Gordon Guyatt,5 Michael Cannon,6
+    Liron Caplan,7
+    Sara Gore,8 Jennifer Grossman,9 Karen E. Hansen,10 Nancy E. Lane,11 Nina S. Ma,12
+    Marina Magrey,13
+    Tim McAlindon,14 Angela Byun Robinson,15 Sumona Saha,10 Charles Womack,8
+    Basma Abdulhadi,3 Julia F. Charles,16 Jonathan T. L. Cheah,17 Sharon Chou,16 Itivrita
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0221
+    DB Title: Recognition and management of polymyalgia rheumatica and giant cell arteritis
+    Author/Source: Caylor, Year: 2013
+    Citation Count: 1
+    Codon: Caylor_Perkins_2013#@#ART-0221@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0062 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG***
+
+FILE: rheum_timing-joint-replacement.pdf
+  PDF Title:  2023 American College of Rheumatology and American Association of Hip and Knee Surgeons Clinical Practice Guideline for the Optimal Timing of Elective Hip or Knee Arthroplasty for Patients With Symptomatic Moderate‐to‐Severe Osteoarthritis or Advanced Symptomatic Osteonecrosis With Secondary Arthritis for Whom Nonoperative Therapy Is Ineffective
+  PDF Author: (none)
+  Pages: 12
+  First 500 chars:
+    2023 American College of Rheumatology and American
+    Association of Hip and Knee Surgeons Clinical Practice
+    Guideline for the Optimal Timing of Elective Hip or
+    Knee Arthroplasty for Patients With Symptomatic
+    Moderate-to-Severe Osteoarthritis or Advanced
+    Symptomatic Osteonecrosis With Secondary Arthritis for
+    Whom Nonoperative Therapy Is Ineffective
+    Charles P. Hannon,1* Susan M. Goodman,2*
+    Matthew S. Austin,3* Adolph Yates Jr. 4* Gordon Guyatt,5
+    Vinay K. Aggarwal,6 Joshua F. Baker,7
+    Phyllis Bass,8 D
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0221
+    DB Title: Recognition and management of polymyalgia rheumatica and giant cell arteritis
+    Author/Source: Caylor, Year: 2013
+    Citation Count: 1
+    Codon: Caylor_Perkins_2013#@#ART-0221@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0062 ***
+
+--------------------------------------------------------------------------------
+
+
+***WRONG***
+
+FILE: rheum_vaccinations.pdf
+  PDF Title:  2022 American College of Rheumatology Guideline for Vaccinations in Patients With Rheumatic and Musculoskeletal Diseases
+  PDF Author: (none)
+  Pages: 16
+  First 500 chars:
+    2022 American College of Rheumatology Guideline
+    for Vaccinations in Patients With Rheumatic
+    and Musculoskeletal Diseases
+    Anne R. Bass,1
+    Eliza Chakravarty,2 Elie A. Akl,3 Clifton O. Bingham,4
+    Leonard Calabrese,5
+    Laura C. Cappelli,4
+    Sindhu R. Johnson,6
+    Lisa F. Imundo,7 Kevin L. Winthrop,8
+    Reuben J. Arasaratnam,9
+    Lindsey R. Baden,10 Roberta Berard,11
+    S. Louis Bridges Jr.,1
+    Jonathan T. L. Cheah,12 Jeffrey R. Curtis,13
+    Polly J. Ferguson,14 Ida Hakkarinen,15 Karen B. Onel,1 Grayson Schultz,16 Vidya Si
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0221
+    DB Title: Recognition and management of polymyalgia rheumatica and giant cell arteritis
+    Author/Source: Caylor, Year: 2013
+    Citation Count: 1
+    Codon: Caylor_Perkins_2013#@#ART-0221@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0062 ***
+
+--------------------------------------------------------------------------------
+
+***ADD TO DB***
+
+FILE: tox_antipsychotics.pdf
+  PDF Title:  LCLT 45(8).book(LCLT_A_266357.fm)
+  PDF Author: sanguida
+  Pages: 26
+  First 500 chars:
+    Full Terms & Conditions of access and use can be found at
+    http://www.tandfonline.com/action/journalInformation?journalCode=ictx20
+    Download by: [216.133.78.226]
+    Date: 14 July 2016, At: 06:12
+    Clinical Toxicology
+    ISSN: 1556-3650 (Print) 1556-9519 (Online) Journal homepage: http://www.tandfonline.com/loi/ictx20
+    Atypical antipsychotic medication poisoning: An
+    evidence-based consensus guideline for out-of-
+    hospital management
+    Daniel J. Cobaugh Pharm.D., Andrew R. Erdman M.D., Lisa L. Booze Pharm.D.,
+    E
+  DB MATCH: NONE FOUND
+    VC Status: No apparent match
+
+--------------------------------------------------------------------------------
+***ADD TO DB***
+
+FILE: tox_benedryl.pdf
+  PDF Title:  LCLT44(3).book(LCLT_A_158575.fm)
+  PDF Author: sanguida
+  Pages: 21
+  First 500 chars:
+    Full Terms & Conditions of access and use can be found at
+    http://www.tandfonline.com/action/journalInformation?journalCode=ictx20
+    Download by: [216.133.78.226]
+    Date: 13 July 2016, At: 13:36
+    Clinical Toxicology
+    ISSN: 1556-3650 (Print) 1556-9519 (Online) Journal homepage: http://www.tandfonline.com/loi/ictx20
+    Diphenhydramine and Dimenhydrinate Poisoning:
+    an Evidence-Based Consensus Guideline for Out-
+    of-Hospital Management
+    Elizabeth J. Scharman Pharm.D., Andrew R. Erdman M.D., Paul M. Wax M.D.,
+    Pe
+  DB MATCH: NONE FOUND
+    VC Status: No apparent match
+
+--------------------------------------------------------------------------------
+***ADD TO DB***
+
+FILE: tox_coumadin.pdf
+  PDF Title:  Z:\Pagination\TandF-LaTeX\US\LCLT\45(01)\i179494.dvi
+  PDF Author: Sriram Subramanaya 4711 2000 Nov 13 10:37:35
+  Pages: 23
+  First 500 chars:
+    Full Terms & Conditions of access and use can be found at
+    http://www.tandfonline.com/action/journalInformation?journalCode=ictx20
+    Download by: [216.133.78.226]
+    Date: 14 July 2016, At: 06:07
+    Clinical Toxicology
+    ISSN: 1556-3650 (Print) 1556-9519 (Online) Journal homepage: http://www.tandfonline.com/loi/ictx20
+    Long-acting anticoagulant rodenticide poisoning:
+    An evidence-based consensus guideline for out-of-
+    hospital management
+    E. Martin Caravati M.P.H. M.D., Andrew R. Erdman M.D., Elizabeth J.
+    Scha
+  DB MATCH: NONE FOUND
+    VC Status: No apparent match
+
+--------------------------------------------------------------------------------
+
+***ADD TO DB***
+
+FILE: tox_ssri.pdf
+  PDF Title:  LCLT_45(4).book(LCLT_A_228432.fm)
+  PDF Author: sanguida
+  Pages: 19
+  First 500 chars:
+    Full Terms & Conditions of access and use can be found at
+    http://www.tandfonline.com/action/journalInformation?journalCode=ictx20
+    Download by: [216.133.78.226]
+    Date: 14 July 2016, At: 06:08
+    Clinical Toxicology
+    ISSN: 1556-3650 (Print) 1556-9519 (Online) Journal homepage: http://www.tandfonline.com/loi/ictx20
+    Selective serotonin reuptake inhibitor poisoning:
+    An evidence-based consensus guideline for out-of-
+    hospital management
+    Lewis S. Nelson M.D., Andrew R. Erdman M.D., Lisa L. Booze Pharm.D., Da
+  DB MATCH (fuzzy_filename(1/1 words)):
+    ART-ID: ART-1249
+    DB Title: Two SSRIs, fluoxetine and escitalopram, have been approved by the FDA for the tr
+    Author/Source: Two, Year: None
+    Citation Count: 1
+    Codon: Two_0000#@#ART-1249@#@.pdf
+    VC Status: NOT VC-cited
+
+--------------------------------------------------------------------------------
+
+***ADD TO DB***
+
+FILE: tox_tylenol.pdf
+  PDF Title:  LCLT44(1).book(LCLT_A_139440.fm)
+  PDF Author: sanguida
+  Pages: 19
+  First 500 chars:
+    Full Terms & Conditions of access and use can be found at
+    http://www.tandfonline.com/action/journalInformation?journalCode=ictx20
+    Download by: [216.133.78.226]
+    Date: 13 July 2016, At: 13:38
+    Clinical Toxicology
+    ISSN: 1556-3650 (Print) 1556-9519 (Online) Journal homepage: http://www.tandfonline.com/loi/ictx20
+    Acetaminophen Poisoning: an Evidence-Based
+    Consensus Guideline for Out-of-Hospital
+    Management
+    Richard C. Dart M.D., Ph.D., Andrew R. Erdman M.D., Kent R. Olson M.D.,
+    Gwenn Christianson M.S.N.
+  DB MATCH: NONE FOUND
+    VC Status: No apparent match
+
+--------------------------------------------------------------------------------
+
+***ADD TO DB***
+
+FILE: uspstf_aspirin-cvd.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 2
+  First 500 chars:
+    September 2022 ◆ Volume 106, Number 3
+    www.aafp.org/afp
+    American Family Physician  326A
+    See related Putting Prevention Into Practice in the print version of this issue.
+    As published by the USPSTF.
+    This series is coordinated by Joanna Drowos, DO, contributing editor.
+    A collection of USPSTF recommendation statements published in AFP is available at https://​www.aafp.
+    org/afp/uspstf.
+    The full recommendation statement is available at https://​www.uspreventive​services​task​force.org/uspstf/
+    recomme
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0204
+    DB Title: 8 USPSTF recommendations FPs need to know about
+    Author/Source: Campos-Outcalt, Year: 2016
+    Citation Count: 1
+    Codon: Campos_Outcalt_2016#@#ART-0204@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2020-0124 ***
+
+--------------------------------------------------------------------------------
+
+***WRONG***
+
+FILE: who_infant_feeding.pdf
+  PDF Title:  (none)
+  PDF Author: (none)
+  Pages: 96
+  First 500 chars:
+    WHO Guideline
+    for complementary feeding
+    of infants and young children
+    6–23 months of age
+    WHO Guideline for complementary
+    feeding of infants and young
+    children 6–23 months of age
+  DB MATCH (fuzzy_filename(1/2 words)):
+    ART-ID: ART-0051
+    DB Title: Updated guidance for palivizumab prophylaxis among infants and young children at increased risk of hospitalization for respiratory syncytial virus infection
+    Author/Source: American, Year: 2014
+    Citation Count: 1
+    Codon: American_2014#@#ART-0051@#@.pdf
+    *** VC-CITED: 1 QIDs: QID-2022-0148 ***
+
+====================================================================================================
+SUMMARY
+  Total PDFs:        64
+  DB matches found:  58
+  Of those, VC-cited: 57
+  No DB match:       6
+====================================================================================================

@@ -1,0 +1,112 @@
+[
+  {
+    "article_id": "ART-0112",
+    "author1": "Baird",
+    "author2": "Batten",
+    "year": "2022",
+    "title": "rapid evidence review",
+    "codon_filename": "Baird_Batten_2022#@#ART-0112@#@.pdf",
+    "citation_count": 2,
+    "source_type": "AFP",
+    "vc_cited": true
+  },
+  {
+    "article_id": "ART-0457",
+    "author1": "Frazier",
+    "author2": "Santiago-Delgado",
+    "year": "2021",
+    "title": "rapid evidence review",
+    "codon_filename": "Frazier_Santiago_Delgado_2021#@#ART-0457@#@.pdf",
+    "citation_count": 2,
+    "source_type": "AFP",
+    "vc_cited": true
+  },
+  {
+    "article_id": "ART-0272",
+    "author1": "Croteau",
+    "author2": null,
+    "year": "2014",
+    "title": "Functional gallbladder disease: An increasingly common diagnosis",
+    "codon_filename": "Croteau_2014#@#ART-0272@#@.pdf",
+    "citation_count": 1,
+    "source_type": "AFP",
+    "vc_cited": true
+  },
+  {
+    "article_id": "ART-0569",
+    "author1": "Hauk",
+    "author2": null,
+    "year": "2017",
+    "title": "ACP releases updated recommendations for oral pharmacologic treatment",
+    "codon_filename": "Hauk_2017#@#ART-0569@#@.pdf",
+    "citation_count": 1,
+    "source_type": "AFP",
+    "vc_cited": true
+  },
+  {
+    "article_id": "ART-0713",
+    "author1": "Kravets",
+    "author2": null,
+    "year": "2016",
+    "title": "Hyperthyroidism: Diagnosis and treatment",
+    "codon_filename": "Kravets_2016#@#ART-0713@#@.pdf",
+    "citation_count": 1,
+    "source_type": "AFP",
+    "vc_cited": true
+  },
+  {
+    "article_id": "ART-0755",
+    "author1": "Leeman",
+    "author2": "Dresang",
+    "year": "2016",
+    "title": "Hypertensive disorders of pregnancy",
+    "codon_filename": "Leeman_Dresang_2016#@#ART-0755@#@.pdf",
+    "citation_count": 1,
+    "source_type": "AFP",
+    "vc_cited": true
+  },
+  {
+    "article_id": "ART-1132",
+    "author1": "Sell",
+    "author2": "Nasir",
+    "year": "2021",
+    "title": "Urethritis: Rapid evidence review",
+    "codon_filename": "Sell_Nasir_2021#@#ART-1132@#@.pdf",
+    "citation_count": 1,
+    "source_type": "AFP",
+    "vc_cited": true
+  },
+  {
+    "article_id": "ART-1175",
+    "author1": "Smith",
+    "author2": "Olivas",
+    "year": "2019",
+    "title": "Manipulative therapies: What works",
+    "codon_filename": "Smith_Olivas_2019#@#ART-1175@#@.pdf",
+    "citation_count": 1,
+    "source_type": "AFP",
+    "vc_cited": true
+  },
+  {
+    "article_id": "ART-1326",
+    "author1": "Westerfield",
+    "author2": "Koenig",
+    "year": "2018",
+    "title": "Breastfeeding: Common questions and answers",
+    "codon_filename": "Westerfield_Koenig_2018#@#ART-1326@#@.pdf",
+    "citation_count": 1,
+    "source_type": "AFP",
+    "vc_cited": true
+  },
+  {
+    "article_id": "ART-1345",
+    "author1": "Williams",
+    "author2": "Moore",
+    "year": "2023",
+    "title": "common questions and answers",
+    "codon_filename": "Williams_Moore_2023#@#ART-1345@#@.pdf",
+    "citation_count": 1,
+    "source_type": "AFP",
+    "vc_cited": true
+  }
+]

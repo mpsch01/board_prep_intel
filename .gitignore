@@ -1,0 +1,67 @@
+# ============================================================
+# ITE INTELLIGENCE — .gitignore
+# Rule: track code, config, and docs. Ignore everything else.
+# ============================================================
+
+# --- DATABASE (source of truth — backed up separately) ---
+*.db
+*.db-shm
+*.db-wal
+
+# --- PDF LIBRARY (binary, large — stored in M1 warehouse) ---
+*.pdf
+*.PDF
+
+# --- DOCX OUTPUT FILES (derived deliverables — regenerable) ---
+*.docx
+*.DOCX
+
+# --- EXCEL FILES (binary source data — not version-controlled) ---
+*.xlsx
+*.xls
+
+# --- NODE.JS ---
+node_modules/
+package-lock.json
+
+# --- PYTHON ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.env
+
+# --- PIPELINE RUN LOGS (auto-generated, high churn) ---
+00_database/logs/
+
+# --- DERIVED JSON OUTPUTS (regenerable from DB) ---
+02_module.2_processor/ite_2018_2019_enriched.json
+02_module.2_processor/ite_2018_2019_extracted.json
+00_database/readable_db_files/
+
+# --- TAGGING BUNDLE DATA FILES (large outputs, not scripts) ---
+tagging_bundle/*.csv
+tagging_bundle/*.xlsx
+tagging_bundle/*.json
+
+# --- WINDOWS ARTIFACTS ---
+desktop.ini
+Thumbs.db
+*.lnk
+
+# --- MAC ARTIFACTS (just in case) ---
+.DS_Store
+
+# ============================================================
+# WHAT IS TRACKED (for reference):
+#   All .py scripts (M1/build, M1/maintain, M2, M3, agents)
+#   All .js scripts (grandfathered DOCX builders)
+#   All .bat files
+#   All .md files (BATONs, READMEs, _index.md, architecture docs)
+#   key_data_files/session_hy_inserts_v7.json  ← VC gate
+#   00_database/schemas/*.json                 ← clinical synonyms, ICD-10 lookup
+#   00_database/crosswalk/*.json               ← crosswalk index
+#   re-org_guidance/ docs
+#   skills_abilities/ reference docs
+# ============================================================

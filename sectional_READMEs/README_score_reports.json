@@ -1,0 +1,48 @@
+{
+  "directory": "07_score_reports",
+  "purpose": "ITE Score Analysis Pipeline — raw PDFs, parsed data, analysis JSONs, and generated DOCX/HTML reports",
+  "last_updated": "2026-03-18",
+  "pipeline_version": "2.1",
+  "status": "production — both residents validated end-to-end",
+  "pipeline_entry_point": "../ite_analyze_v2.py",
+  "dependencies": {
+    "python": ["pymupdf"],
+    "node": ["docx (npm install docx)"]
+  },
+  "subdirectories": {
+    "raw_score_pdfs": {
+      "purpose": "Source ABFM score report PDFs",
+      "files": {
+        "hopkins_body-system (2).pdf": "Hopkins BLUEPRINT performance (input to parser --blueprint)",
+        "hopkins_body-system (1).pdf": "Hopkins BODY SYSTEM performance (input to parser --bodysystem)",
+        "AS_body-system (3).pdf": "Sarkar BLUEPRINT performance",
+        "AS_body-system (4).pdf": "Sarkar BODY SYSTEM performance",
+        "scholl_204999_ITE_SCORE (22-24).pdf": "Scholl PDFs — ENCRYPTED, cannot parse without password",
+        "2024ITEScoreResultHandbook.pdf": "ABFM reference — 2024 exam handbook",
+        "2025ITEScoreResultHandbook.pdf": "ABFM reference — 2025 exam handbook"
+      }
+    },
+    "hopkins_2025": {
+      "purpose": "Hopkins analysis outputs",
+      "key_files": {
+        "e2e_test/analysis_v2.json": "Final validated v2 analysis (full pipeline)",
+        "e2e_test/ITE_2025_v2_Analysis_Oceana_Hopkins.docx": "Final v2 analysis report",
+        "e2e_test/ITE_2025_v2_Exam_Oceana_Hopkins.docx": "Final v2 exam version"
+      },
+      "test_dirs": "test_v2, test_v2b, test_v2c, test_v2d — iteration artifacts, safe to delete"
+    },
+    "sarkar_2025": {
+      "purpose": "Sarkar analysis outputs",
+      "key_files": {
+        "e2e_test/analysis_v2.json": "Final validated v2 analysis (full pipeline)",
+        "e2e_test/ITE_2025_v2_Analysis_Arghyadeep_Sarkar.docx": "Final v2 analysis report",
+        "e2e_test/ITE_2025_v2_Exam_Arghyadeep_Sarkar.docx": "Final v2 exam version"
+      }
+    }
+  },
+  "usage": {
+    "full_pipeline": "python ite_analyze_v2.py --blueprint <blueprint.pdf> --bodysystem <bodysystem.pdf> --db <db_path> --output-dir <dir> --pgy-level 2 --plugins concept,icd10",
+    "report_only": "node ite_report_builder_v2.js <analysis_v2.json> <output_dir>",
+    "important_note": "PDF filenames are misleading — 'body-system (2)' is actually BLUEPRINT for Hopkins. Check text content, not filename."
+  }
+}

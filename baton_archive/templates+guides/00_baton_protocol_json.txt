@@ -1,0 +1,30 @@
+"baton_protocol": {
+    "active_document": "claude_knowledge/BATON_active_YYYYMMDD_HHMM.md",
+    "archive_location": "house_keeping_hub/baton_archive/",
+    "trigger": "Say 'BATON me' to initiate the three-step handoff lifecycle",
+    "session_start": "Read BATON fully → echo current state in 3-4 sentences → work Next Steps top-to-bottom",
+    "flags": "Carry ALL deferred flags forward unchanged until explicitly resolved. Never collapse or drop a flag.",
+    "proactive_trigger": "Claude should suggest BATON unprompted after: major task completion, sub-task pivot, long tool-heavy exchange",
+    "lifecycle": {
+        "step_1_archive": "Rename BATON_active_YYYYMMDD_HHMM.md → BATON_YYYYMMDD_HHMM.md, move from claude_knowledge/ root to house_keeping_hub/baton_archive/",
+        "step_2_sync_docs": "Update _index.md + every README (.md or .json) whose corresponding file tree changed during the session",
+        "step_3_write_new": "Create BATON_active_YYYYMMDD_HHMM.md at claude_knowledge/ root with current timestamp"
+    },
+    "naming": {
+        "active": "BATON_active_YYYYMMDD_HHMM.md (always at project root, only one exists at a time)",
+        "archived": "BATON_YYYYMMDD_HHMM.md (drop 'active', keep datetime, no topic)"
+    },
+    "baton_vs_readme": {
+        "BATON_active_*.md": "Operational state — updated every session (Step 3)",
+        "README.json / README.md": "Project/domain state — updated every session if tree changed (Step 2)",
+        "README_PROJECT.md": "Human-readable overview — updated at phase boundaries (Step 2)",
+        "_index.md": "Full directory map — updated every BATON creation (Step 2)"
+    },
+    "index_sync_step": {
+        "when": "Step 2 of lifecycle — after archiving old baton, before writing new one",
+        "check": "Did any folders get created, renamed, moved, or deleted? Did file counts change?",
+        "if_yes": "Update _index.md tree sections, file counts, and housekeeping log. Update all affected READMEs.",
+        "if_no": "Append housekeeping log entry reflecting session work",
+        "verify": "Spot-check at least 3 folder counts against disk before writing"
+    }
+}

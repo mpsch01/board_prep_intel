@@ -1,0 +1,130 @@
+{
+  "project_name": "ABFM Knowledge Base & Extraction Pipeline",
+  "description": "Comprehensive clinical knowledge management system integrating ITE exam intelligence, guideline extraction, AAFP course content, and Anthropic Claude API-based enrichment.",
+  "location": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\",
+  "last_updated": "2026-03-17",
+  "active_baton": "house_keeping_hub/baton_archive/BATON_active_20260317.md",
+  "codon_migration": {
+    "status": "COMPLETE — FLAG 12 closed. Codon migration finished, v4 pipeline operational.",
+    "completed": "2026-03-15"
+  },
+  "intelligence_2_0": {
+    "layer_1_icd10": {
+      "status": "COMPLETE",
+      "approach": "MCP-first (zero API cost, zero fabrication)",
+      "rows": 3093,
+      "distinct_codes": 1006,
+      "parent_rollups": 614,
+      "rebuilt": "2026-03-17",
+      "assets": [
+        "schemas/clinical_synonym_map.json (151 clinical term translations)",
+        "schemas/icd10_mcp_lookup.json (1,406 MCP-verified ICD-10 codes)"
+      ]
+    },
+    "layer_2_pubmed": { "status": "NOT STARTED" },
+    "layer_3_pathways": {
+      "status": "COMPLETE",
+      "rows": 3093,
+      "pathway_roles": 7,
+      "api_cost": "$0"
+    },
+    "layer_4a_trends": { "status": "COMPLETE" }
+  },
+  "pipeline_scripts": [
+    "convert_pdfs_to_json.py v1.2 (PDF → extracted JSON)",
+    "ite_intelligence_enricher.py v4 (codon-first enrichment)",
+    "ite_intelligence_enricher_batch.py v4 (Batch API enrichment)",
+    "build_crosswalk_index.py v2.0 (codon-only crosswalk)",
+    "build_icd10_tags.py v2 (MCP-first Layer 1 + crosswalk + pathways, zero API cost)",
+    "build_clinical_pathways.py (ENGINE_ROLE_MAP routing)",
+    "build_topic_trends.py (Layer 4a trend CSVs)"
+  ],
+  "project_scope": {
+    "primary_use": "ABFM board exam preparation and clinical guideline knowledge engineering",
+    "knowledge_domains": [
+      "Canonical reference data (curriculum, question bank, analysis)",
+      "ITE exam intelligence (databases, analytics, processing)",
+      "Clinical guideline extraction and enrichment",
+      "AAFP video course integration",
+      "Reference article processing"
+    ]
+  },
+  "top_level_structure": {
+    "00_canonical": {
+      "description": "Canonical reference data and curricula",
+      "files": 28,
+      "size_mb": 31,
+      "contents": [
+        "ABFM curriculum definitions",
+        "Question bank master data",
+        "Domain analysis frameworks",
+        "Reference materials"
+      ]
+    },
+    "abfm_prep": {
+      "description": "ABFM preparation ecosystem (6 integrated modules)",
+      "files": 1754,
+      "size_mb": 796,
+      "submodules": [
+        "01_guideline_extractor (v2.3 - extraction pipeline)",
+        "02_ite_intelligence (ITE intelligence DB + analysis)",
+        "03_ite_exam (ITE exam data + processing)",
+        "04_aafp_integration (AAFP video course integration)",
+        "05_ite_refs (ITE reference article processing)",
+        "06_ite_pipeline (orchestration + coordination)"
+      ]
+    },
+    "clinical_guidelines": {
+      "description": "Guideline library repository (PDFs, DOCXs, enriched JSON, alt_refs)",
+      "files": "~1,600+",
+      "size_mb": 376,
+      "structure": [
+        "01_pdf_guideline_library (216 PDFs — 146 codon-renamed, 70 original names)",
+        "02_docx_guideline_library (1,366 DOCXs — 139 merged clinical+DB, 1,227 DB-only)",
+        "03_enriched_JSON (217 extracted JSONs — 146 enriched with ite_intelligence, 71 extracted-only)",
+        "alt_refs (76 point-of-care tools: bedside, life_support, vaccine sheets)"
+      ]
+    },
+    "house_keeping_hub": {
+      "description": "Project organization, dependency maps, and planning docs",
+      "files": 30,
+      "purpose": "Documentation, architecture, proposals"
+    },
+    "scratch_scripts": {
+      "description": "Diagnostic and debugging utility scripts",
+      "files": 9
+    },
+    "node_modules": {
+      "description": "JavaScript dependencies (build tools)",
+      "files": 384,
+      "size_mb": 8
+    }
+  },
+  "key_files": {
+    "_index.md": "Project index, directory map, and navigation (ground-truth map of disk)",
+    "README.json": "Machine-readable project metadata (this file)",
+    "README_PROJECT.md": "Human-readable project overview",
+    "package.json": "Node.js dependencies",
+    "package-lock.json": "Locked dependency versions"
+  },
+  "total_project_stats": {
+    "total_files": "~2200+",
+    "total_size_mb": "~1200+",
+    "active_modules": 6,
+    "api_backend": "Anthropic Claude"
+  },
+  "workflow_integration": {
+    "guideline_extraction": "01_guideline_extractor pipeline v2.3 → 02_docx_guideline_library + 03_enriched_json",
+    "ite_processing": "03_ite_exam + 05_ite_refs → 02_ite_intelligence analytics",
+    "aafp_integration": "04_aafp_integration with canonical reference data",
+    "orchestration": "06_ite_pipeline coordinates all modules"
+  },
+  "removed_legacy_folders": {
+    "note": "The following are archived or removed (not in current working directory):",
+    "guideline_extractor_v1": "v1 prototype, superseded by v2.3",
+    "guideline_lib_linked": "duplicate of 03_enriched_json",
+    "data_plug-in": "redundant copies (installed as plugin skills)",
+    "claude_root_working": "legacy working directory (empty)"
+  },
+  "git_status": "No version control tracking at this time"
+}

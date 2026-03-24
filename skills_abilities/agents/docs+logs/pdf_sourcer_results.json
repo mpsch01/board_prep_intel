@@ -1,0 +1,585 @@
+[
+  {
+    "article_id": "ART-0713",
+    "codon_filename": "Kravets_2016#@#ART-0713@#@.pdf",
+    "agent_output": "The PDF has been successfully downloaded and verified. It starts with `%PDF-1.5` and is 644,668 bytes.\n\n```json\n{\n  \"article_id\": \"ART-0713\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2016/0301/p363.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2016/0301/p363.pdf\",\n  \"saved_to\": \"C:\\\\Users\\\\mpsch\\\\Desktop\\\\claude_knowledge\\\\clinical_guidelines\\\\01_pdf_guideline_library\\\\00_non-codon\\\\_sourced_staging\\\\Kravets_2016#@#ART-0713@#@.pdf\",\n  \"file_size_bytes\": 644668,\n  \"notes\": \"Article found on AAFP (American Family Physician, 2016 Mar 1;93(5):363-370). JSON cookies converted to Netscape format for curl. PDF downloaded successfully and verified as valid PDF (header: %PDF-1.5).\"\n}\n```",
+    "timestamp": "2026-03-20T23:34:04.758969",
+    "error": null
+  },
+  {
+    "article_id": "ART-1175",
+    "codon_filename": "Smith_Olivas_2019#@#ART-1175@#@.pdf",
+    "agent_output": "The PDF has been successfully downloaded and verified. Here is the final status report:\n\n```json\n{\n  \"article_id\": \"ART-1175\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2019/0215/p248.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2019/0215/p248.pdf\",\n  \"saved_to\": \"C:\\\\Users\\\\mpsch\\\\Desktop\\\\claude_knowledge\\\\clinical_guidelines\\\\01_pdf_guideline_library\\\\00_non-codon\\\\_sourced_staging\\\\Smith_Olivas_2019#@#ART-1175@#@.pdf\",\n  \"file_size_bytes\": 157713,\n  \"notes\": \"Article found directly via AAFP search (first strategy succeeded). PDF is 'Manipulative Therapies: What Works' by Smith, Olivas & Smith, published Am Fam Physician 2019 Feb 15;99(4):248-252. curl failed due to special characters in output path; used Python with JSON cookie parsing instead. File verified as valid PDF (%PDF-1.5 header).\"\n}\n```",
+    "timestamp": "2026-03-21T00:09:40.842601",
+    "error": null
+  },
+  {
+    "article_id": "ART-1326",
+    "codon_filename": "Westerfield_Koenig_2018#@#ART-1326@#@.pdf",
+    "agent_output": "The PDF downloaded successfully and is valid. Here is the final status:\n\n```json\n{\n  \"article_id\": \"ART-1326\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2018/0915/p368.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2018/0915/p368.pdf\",\n  \"saved_to\": \"C:\\\\Users\\\\mpsch\\\\Desktop\\\\claude_knowledge\\\\clinical_guidelines\\\\01_pdf_guideline_library\\\\00_non-codon\\\\_sourced_staging\\\\Westerfield_Koenig_2018#@#ART-1326@#@.pdf\",\n  \"file_size_bytes\": 222836,\n  \"notes\": \"PDF downloaded successfully. File verified as valid PDF (starts with %PDF-1.5). Article is 'Breastfeeding: Common Questions and Answers' by Katie L. Westerfield, Kristen Koenig, and Robert Oh, published in American Family Physician 2018;98(6):368-376. AAFP session cookies were valid and allowed direct PDF access.\"\n}\n```",
+    "timestamp": "2026-03-21T00:12:33.836162",
+    "error": null
+  },
+  {
+    "article_id": "ART-1345",
+    "codon_filename": "Williams_Moore_2023#@#ART-1345@#@.pdf",
+    "agent_output": "The file is downloaded, renamed, and verified as a valid PDF. Here is the final result:\n\n```json\n{\n  \"article_id\": \"ART-1345\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2023/0300/polycystic-ovary-syndrome.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2023/0300/polycystic-ovary-syndrome.pdf\",\n  \"saved_to\": \"C:\\\\Users\\\\mpsch\\\\Desktop\\\\claude_knowledge\\\\clinical_guidelines\\\\01_pdf_guideline_library\\\\00_non-codon\\\\_sourced_staging\\\\Williams_Moore_2023#@#ART-1345@#@.pdf\",\n  \"file_size_bytes\": 266237,\n  \"notes\": \"Article identified as 'Polycystic Ovary Syndrome: Common Questions and Answers' by Tracy Williams MD, Justin B. Moore MD, and Jared Regehr MD. Published in Am Fam Physician. 2023;107(3):264-272. Cookie file was in JSON format (not Netscape), so curl was bypassed in favor of Python requests library with parsed JSON cookies. PDF header confirmed valid (%PDF-).\"\n}\n```",
+    "timestamp": "2026-03-21T00:14:47.456427",
+    "error": null
+  },
+  {
+    "article_id": "ART-0634",
+    "codon_filename": "Jameson_Fauci_2018#@#ART-0634@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T00:31:16.875146",
+    "error": null
+  },
+  {
+    "article_id": "ART-0634",
+    "codon_filename": "Jameson_Fauci_2018#@#ART-0634@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T00:34:40.326639",
+    "error": null
+  },
+  {
+    "article_id": "ART-1264",
+    "codon_filename": "US_Preventive_Services_Task_Fo_2021#@#ART-1264@#@.pdf",
+    "agent_output": "The PDF has been successfully downloaded, verified as a valid PDF, and saved with the exact required filename.\n\n```json\n{\n  \"article_id\": \"ART-1264\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/vitamin-d-deficiency-screening\",\n  \"pdf_url\": \"https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/4BpSYQnx9MYzmKJSWQxrbC\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/US_Preventive_Services_Task_Fo_2021#@#ART-1264@#@.pdf\",\n  \"file_size_bytes\": 445001,\n  \"notes\": \"USPSTF 2021 Final Recommendation Statement on Vitamin D Deficiency in Adults: Screening (Grade I \u2013 Insufficient Evidence), published April 13, 2021. Also published in JAMA 325(14):1436-1442, PMID 33847711, DOI 10.1001/jama.2021.3069. Downloaded from the USPSTF website using Python urllib (curl failed with exit code 100 due to special characters in output path). File verified as valid PDF (%PDF- header).\"\n}\n```",
+    "timestamp": "2026-03-21T00:34:59.222384",
+    "error": null
+  },
+  {
+    "article_id": "ART-1264",
+    "codon_filename": "US_Preventive_Services_Task_Fo_2021#@#ART-1264@#@.pdf",
+    "agent_output": "The PDF was successfully downloaded, verified, and saved. Here is the final status report:\n\n```json\n{\n  \"article_id\": \"ART-1264\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.uspreventiveservicestaskforce.org/uspstf/document/RecommendationStatementFinal/vitamin-d-deficiency-screening\",\n  \"pdf_url\": \"https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/4BpSYQnx9MYzmKJSWQxrbC\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/US_Preventive_Services_Task_Fo_2021#@#ART-1264@#@.pdf\",\n  \"file_size_bytes\": 445001,\n  \"notes\": \"PDF found on the USPSTF website (publicly accessible, no AAFP cookies required). The curl -b cookie flag caused error 100 (header too large) so the file was downloaded without cookies directly from USPSTF, then renamed to the required filename. File validated as %PDF- header confirmed.\"\n}\n```",
+    "timestamp": "2026-03-21T00:36:36.366011",
+    "error": null
+  },
+  {
+    "article_id": "ART-0790",
+    "codon_filename": "Loscalzo_Fauci_2022#@#ART-0790@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T00:38:34.957432",
+    "error": null
+  },
+  {
+    "article_id": "ART-0790",
+    "codon_filename": "Loscalzo_Fauci_2022#@#ART-0790@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T00:40:02.943712",
+    "error": null
+  },
+  {
+    "article_id": "ART-0365",
+    "codon_filename": "Eiff_Hatch_2018#@#ART-0365@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T00:43:14.309960",
+    "error": null
+  },
+  {
+    "article_id": "ART-0365",
+    "codon_filename": "Eiff_Hatch_2018#@#ART-0365@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T00:44:14.873675",
+    "error": null
+  },
+  {
+    "article_id": "ART-0508",
+    "codon_filename": "Goldman_Schafer_2020#@#ART-0508@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T00:48:26.186602",
+    "error": null
+  },
+  {
+    "article_id": "ART-0508",
+    "codon_filename": "Goldman_Schafer_2020#@#ART-0508@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T00:48:47.249616",
+    "error": null
+  },
+  {
+    "article_id": "ART-0633",
+    "codon_filename": "Jameson_Fauci_2018#@#ART-0633@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T00:53:27.677431",
+    "error": null
+  },
+  {
+    "article_id": "ART-0427",
+    "codon_filename": "Final_2011#@#ART-0427@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T00:55:49.880561",
+    "error": null
+  },
+  {
+    "article_id": "ART-0864",
+    "codon_filename": "Metlay_Waterer_2019#@#ART-0864@#@.pdf",
+    "agent_output": "```json\n{\n  \"article_id\": \"ART-0864\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2020/0715/p121.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2020/0715/p121.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Metlay_Waterer_2019#@#ART-0864@#@.pdf\",\n  \"file_size_bytes\": 139985,\n  \"notes\": \"The Metlay/Waterer 2019 CAP guideline (Am J Respir Crit Care Med 2019;200(7):e45-e67) was found as an AAFP Practice Guidelines summary in American Family Physician (July 15, 2020, Vol 102 No 2, p121). This is the AAFP-published summary/reprint of the ATS/IDSA 2019 Community-Acquired Pneumonia guideline by Metlay JP, Waterer GW et al. The cookie file was in JSON format (not Netscape), so curl -b could not use it directly; Python urllib with a CookieJar was used instead. The file was downloaded successfully with HTTP 200, verified as a valid PDF (starts with %PDF-).\"\n}\n```",
+    "timestamp": "2026-03-21T00:58:06.893902",
+    "error": null
+  },
+  {
+    "article_id": "ART-0633",
+    "codon_filename": "Jameson_Fauci_2018#@#ART-0633@#@.pdf",
+    "agent_output": "```json\n{\n  \"article_id\": \"ART-0633\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://archive.org/details/harrisons-principles-of-internal-medicine-20th-edition-volume-i-ii-by-dennis-l.-\",\n  \"pdf_url\": \"https://archive.org/download/harrisons-principles-of-internal-medicine-20th-edition-volume-i-ii-by-dennis-l.-/Harrison%E2%80%99s%20Principles%20of%20Internal%20Medicine%2C%2020th%20Edition%20%28Volume%20I%20II%29%20by%20Dennis%20L.%20Kasper%20Anthony%20S.%20Fauci%20Stephen%20L.%20Hauser%20Dan%20L.%20Longo%20J.%20Larry%20Jameson%20Joseph%20Loscalzo%20%28z-lib.org%29.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Jameson_Fauci_2018#@#ART-0633@#@.pdf\",\n  \"file_size_bytes\": 234765150,\n  \"notes\": \"Harrison's Principles of Internal Medicine, 20th Edition (2018) by Jameson, Fauci et al. was not found as an AFP journal article on aafp.org (AAFP does not appear to publish book reviews of this textbook in the 2018-2019 era). The full textbook PDF (both volumes combined, ~224 MB) was sourced from the Internet Archive. File verified as valid PDF (starts with %PDF- header). AAFP cookies were converted from JSON to Netscape format for curl compatibility.\"\n}\n```",
+    "timestamp": "2026-03-21T00:58:35.208509",
+    "error": null
+  },
+  {
+    "article_id": "ART-0427",
+    "codon_filename": "Final_2011#@#ART-0427@#@.pdf",
+    "agent_output": "The PDF was successfully downloaded and verified. Here is the result:\n\n```json\n{\n  \"article_id\": \"ART-0427\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2011/0815/p444.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2011/0815/p444.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Final_2011#@#ART-0427@#@.pdf\",\n  \"file_size_bytes\": 191216,\n  \"notes\": \"Article is 'Screening for Testicular Cancer: Reaffirmation Recommendation Statement', American Family Physician, Aug 15 2011; 84(4):444-445. JSON cookies converted to Netscape format for curl compatibility. PDF verified valid (%PDF- header confirmed).\"\n}\n```",
+    "timestamp": "2026-03-21T01:00:35.109646",
+    "error": null
+  },
+  {
+    "article_id": "ART-0370",
+    "codon_filename": "ElSayed_Aleppo_2023#@#ART-0370@#@.pdf",
+    "agent_output": "```json\n{\n  \"article_id\": \"ART-0370\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://diabetesjournals.org/care/article/46/Supplement_1/S1/148057/Introduction-and-Methodology-Standards-of-Care-in\",\n  \"pdf_url\": \"https://diabetesjournals.org/care/article-pdf/46/Supplement_1/S1/708459/dc23sint.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/ElSayed_Aleppo_2023#@#ART-0370@#@.pdf\",\n  \"file_size_bytes\": 542079,\n  \"notes\": \"Article is 'Introduction and Methodology: Standards of Care in Diabetes\u20142023' by ElSayed NA, Aleppo G, et al., published in Diabetes Care 2023;46(Suppl. 1):S1-S4 (PMID 36507647, PMC9810461). Not on AAFP site \u2014 published in the ADA journal Diabetes Care. Downloaded via ADA journal (diabetesjournals.org) using AAFP session cookies which provided institutional access. PMC direct PDF download was blocked by a JavaScript proof-of-work challenge. curl failed due to special characters (#@#) in the filename; Python urllib was used instead.\"\n}\n```",
+    "timestamp": "2026-03-21T01:01:32.282451",
+    "error": null
+  },
+  {
+    "article_id": "ART-0864",
+    "codon_filename": "Metlay_Waterer_2019#@#ART-0864@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:03:38.839128",
+    "error": null
+  },
+  {
+    "article_id": "ART-0370",
+    "codon_filename": "ElSayed_Aleppo_2023#@#ART-0370@#@.pdf",
+    "agent_output": "The file already exists in the staging directory and is a valid PDF (542,079 bytes, starts with `%PDF-`). No download needed.\n\n```json\n{\n  \"article_id\": \"ART-0370\",\n  \"status\": \"downloaded\",\n  \"url\": null,\n  \"pdf_url\": null,\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/ElSayed_Aleppo_2023#@#ART-0370@#@.pdf\",\n  \"file_size_bytes\": 542079,\n  \"notes\": \"File was already present in the staging directory and verified as a valid PDF (header confirmed %PDF-). No new download was required.\"\n}\n```",
+    "timestamp": "2026-03-21T01:04:03.854727",
+    "error": null
+  },
+  {
+    "article_id": "ART-0699",
+    "codon_filename": "Kliegman_St_2020#@#ART-0699@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:06:05.369908",
+    "error": null
+  },
+  {
+    "article_id": "ART-0820",
+    "codon_filename": "Martinez_Yazbeck_2021#@#ART-0820@#@.pdf",
+    "agent_output": "The file is confirmed as a valid PDF. Here is the final status report:\n\n```json\n{\n  \"article_id\": \"ART-0820\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2021/1200/p609.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2021/1200/p609.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Martinez_Yazbeck_2021#@#ART-0820@#@.pdf\",\n  \"file_size_bytes\": 244022,\n  \"notes\": \"Article is 'Thyroiditis: Evaluation and Treatment' by Beatriz Martinez Quintero MD, Cynthia Yazbeck MD, and Lori B. Sweeney MD. Published in Am Fam Physician. 2021;104(6):609-617 (December 2021 issue). Downloaded via Python urllib with AAFP session cookies (curl returned error 100 on this system, likely due to shell special characters in output filename). PDF verified valid (%PDF- header confirmed).\"\n}\n```",
+    "timestamp": "2026-03-21T01:07:10.073505",
+    "error": null
+  },
+  {
+    "article_id": "ART-0699",
+    "codon_filename": "Kliegman_St_2020#@#ART-0699@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:08:24.130332",
+    "error": null
+  },
+  {
+    "article_id": "ART-1256",
+    "codon_filename": "US_Preventive_Services_Task_Fo_2018#@#ART-1256@#@.pdf",
+    "agent_output": "The PDF has been successfully downloaded and validated. Here is the final status report:\n\n```json\n{\n  \"article_id\": \"ART-1256\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cardiovascular-disease-screening-using-nontraditional-risk-assessment\",\n  \"pdf_url\": \"https://www.uspreventiveservicestaskforce.org/uspstf_admin/home/getfilebyid/3467\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/US_Preventive_Services_Task_Fo_2018#@#ART-1256@#@.pdf\",\n  \"file_size_bytes\": 277629,\n  \"notes\": \"PDF sourced directly from USPSTF (uspreventiveservicestaskforce.org) as a publicly accessible file \u2014 no AAFP authentication was required. The AAFP site links back to the USPSTF for this document. File validated as a genuine PDF (starts with %PDF-). AAFP cookies were not needed for this download.\"\n}\n```",
+    "timestamp": "2026-03-21T01:09:05.668614",
+    "error": null
+  },
+  {
+    "article_id": "ART-0820",
+    "codon_filename": "Martinez_Yazbeck_2021#@#ART-0820@#@.pdf",
+    "agent_output": "The PDF is confirmed valid. Here is the final status report:\n\n```json\n{\n  \"article_id\": \"ART-0820\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2021/1200/p609.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2021/1200/p609.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Martinez_Yazbeck_2021#@#ART-0820@#@.pdf\",\n  \"file_size_bytes\": 244022,\n  \"notes\": \"Article is 'Thyroiditis: Evaluation and Treatment' by Beatriz Martinez Quintero MD, Cynthia Yazbeck MD, and Lori B. Sweeney MD. Published in American Family Physician 2021;104(6):609-617 (December 2021 issue). Cookie file was in JSON format (not Netscape), so curl failed \u2014 used Python with json-parsed cookies instead. PDF validated: starts with %PDF-1.5.\"\n}\n```",
+    "timestamp": "2026-03-21T01:09:45.686690",
+    "error": null
+  },
+  {
+    "article_id": "ART-1256",
+    "codon_filename": "US_Preventive_Services_Task_Fo_2018#@#ART-1256@#@.pdf",
+    "agent_output": "The PDF has been successfully downloaded and verified. Here is the final status report:\n\n```json\n{\n  \"article_id\": \"ART-1256\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.uspreventiveservicestaskforce.org/uspstf/document/RecommendationStatementFinal/cardiovascular-disease-screening-using-nontraditional-risk-assessment\",\n  \"pdf_url\": \"https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/6cRgd5whkAvSGESSQsrQLR\",\n  \"saved_to\": \"C:\\\\Users\\\\mpsch\\\\Desktop\\\\claude_knowledge\\\\clinical_guidelines\\\\01_pdf_guideline_library\\\\00_non-codon\\\\_sourced_staging\\\\US_Preventive_Services_Task_Fo_2018#@#ART-1256@#@.pdf\",\n  \"file_size_bytes\": 503077,\n  \"notes\": \"PDF sourced directly from USPSTF website (public document, no authentication required). Article also appears in AFP (American Family Physician) Jan 15, 2019, Vol 99 Issue 2 at aafp.org/pubs/afp/issues/2019/0115/od1.html. Original JAMA publication: PMID 29998297, July 17, 2018. File verified as valid PDF (starts with %PDF-).\"\n}\n```",
+    "timestamp": "2026-03-21T01:11:53.772940",
+    "error": null
+  },
+  {
+    "article_id": "ART-1306",
+    "codon_filename": "Walls_Hockberger_2018#@#ART-1306@#@.pdf",
+    "agent_output": "```json\n{\n  \"article_id\": \"ART-1306\",\n  \"status\": \"not_found\",\n  \"url\": \"https://shop.elsevier.com/books/rosens-emergency-medicine-concepts-and-clinical-practice/walls/978-0-323-35479-0\",\n  \"pdf_url\": null,\n  \"saved_to\": null,\n  \"file_size_bytes\": 0,\n  \"notes\": \"ART-1306 is the textbook 'Rosen's Emergency Medicine: Concepts and Clinical Practice, 9th edition' (2018) by Walls and Hockberger \u2014 a commercially published Elsevier textbook (ISBN 9780323354790), not a journal article or AFP book review. Exhaustive search of all AFP 2018 article pages, all POEM pages, and all online-only pages found zero mentions of Hockberger, Walls as authors, or any book review of Rosen's Emergency Medicine on aafp.org. No freely accessible or AAFP-hosted PDF exists. The book is paywalled via Elsevier/ClinicalKey.\"\n}\n```",
+    "timestamp": "2026-03-21T01:22:30.573057",
+    "error": null
+  },
+  {
+    "article_id": "ART-0634",
+    "codon_filename": "Jameson_Fauci_2018#@#ART-0634@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:14.396998",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0790",
+    "codon_filename": "Loscalzo_Fauci_2022#@#ART-0790@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:15.002700",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0365",
+    "codon_filename": "Eiff_Hatch_2018#@#ART-0365@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:15.608097",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0508",
+    "codon_filename": "Goldman_Schafer_2020#@#ART-0508@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:16.208716",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0699",
+    "codon_filename": "Kliegman_St_2020#@#ART-0699@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:16.803233",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-1306",
+    "codon_filename": "Walls_Hockberger_2018#@#ART-1306@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:17.386664",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-1330",
+    "codon_filename": "Whelton_Carey_2017#@#ART-1330@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:17.988768",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-1366",
+    "codon_filename": "Wouk_Helton_2019#@#ART-1366@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:18.620782",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-1386",
+    "codon_filename": "Zipes_Libby_2019#@#ART-1386@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:19.223026",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-1387",
+    "codon_filename": "Zipes_Libby_2019#@#ART-1387@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:19.831452",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0013",
+    "codon_filename": "Ables_Nagubilli_2010#@#ART-0013@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:20.420565",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0014",
+    "codon_filename": "Abraham_Rivero_2014#@#ART-0014@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:21.037757",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0015",
+    "codon_filename": "Abraham_Rivero_2014#@#ART-0015@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:21.648628",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0046",
+    "codon_filename": "American_2016#@#ART-0046@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:22.271026",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0048",
+    "codon_filename": "American_2016#@#ART-0048@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:22.865647",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0060",
+    "codon_filename": "American_2022#@#ART-0060@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:23.466330",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0062",
+    "codon_filename": "American_2021#@#ART-0062@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:24.054952",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0063",
+    "codon_filename": "American_2021#@#ART-0063@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:24.666166",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0064",
+    "codon_filename": "American_2020#@#ART-0064@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:25.255248",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0104",
+    "codon_filename": "Bachmann_Haberzeth_2004#@#ART-0104@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:25.900376",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0122",
+    "codon_filename": "Barocas_Boorjian_2020#@#ART-0122@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:26.505554",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0123",
+    "codon_filename": "Barocas_Boorjian_2020#@#ART-0123@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:27.106252",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0136",
+    "codon_filename": "Becker_Childress_2019#@#ART-0136@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:27.709970",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0137",
+    "codon_filename": "Becker_Childress_2018#@#ART-0137@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:28.328817",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-0143",
+    "codon_filename": "Berkey_Wiedemer_2018#@#ART-0143@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:24:28.922981",
+    "error": "Command failed with exit code 1 (exit code: 1)\nError output: Check stderr output for details"
+  },
+  {
+    "article_id": "ART-1330",
+    "codon_filename": "Whelton_Carey_2017#@#ART-1330@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:29:15.885757",
+    "error": null
+  },
+  {
+    "article_id": "ART-1366",
+    "codon_filename": "Wouk_Helton_2019#@#ART-1366@#@.pdf",
+    "agent_output": "The PDF downloaded successfully and verified as valid. Here is the final status report:\n\n```json\n{\n  \"article_id\": \"ART-1366\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2019/0401/p435.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2019/0401/p435.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Wouk_Helton_2019#@#ART-1366@#@.pdf\",\n  \"file_size_bytes\": 239757,\n  \"notes\": \"Article found on first AAFP search. Cookie file was in JSON format (browser export), not Netscape text format \u2014 curl cannot parse JSON cookies so Python requests was used instead. PDF downloaded successfully, verified with %PDF- header. Published in American Family Physician 2019 Apr 1;99(7):435-443.\"\n}\n```",
+    "timestamp": "2026-03-21T01:31:01.287697",
+    "error": null
+  },
+  {
+    "article_id": "ART-1306",
+    "codon_filename": "Walls_Hockberger_2018#@#ART-1306@#@.pdf",
+    "agent_output": "```json\n{\n  \"article_id\": \"ART-1306\",\n  \"status\": \"paywall\",\n  \"url\": \"https://www.clinicalkey.com/dyn/cms/fragment/Rosen-Emergency-Medicine\",\n  \"pdf_url\": null,\n  \"saved_to\": null,\n  \"file_size_bytes\": 0,\n  \"notes\": \"Rosen's Emergency Medicine: Concepts and Clinical Practice, 9th edition (2018) is a full Elsevier textbook (ISBN 978-0-323-35479-0), not a journal article. It is not indexed in PubMed or available on AAFP/AFP. It is exclusively accessible via ClinicalKey or institutional Elsevier subscription. No free or AAFP-authenticated download path exists. OpenLibrary lists it as 'noview'. Not previously sourced in the staging directory.\"\n}\n```",
+    "timestamp": "2026-03-21T01:36:18.748785",
+    "error": null
+  },
+  {
+    "article_id": "ART-1330",
+    "codon_filename": "Whelton_Carey_2017#@#ART-1330@#@.pdf",
+    "agent_output": "```json\n{\n  \"article_id\": \"ART-1330\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.ahajournals.org/doi/10.1161/HYP.0000000000000066\",\n  \"pdf_url\": \"https://www.eshonline.org/esh-content/uploads/2019/08/2.-2017-ACCAHAAAPAABCACPMAGSAPhAASHASPCNMAPCNA-Guideline-for-the-Prevention-Detection-Evaluation-and-Management-of-High-Blood-Pressure-in-Adults.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Whelton_Carey_2017#@#ART-1330@#@.pdf\",\n  \"file_size_bytes\": 6542353,\n  \"notes\": \"Downloaded from European Society of Hypertension open-access mirror. The article is the 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults (Executive Summary), originally published in Hypertension and JACC. AAFP cookies were not needed as this copy was publicly accessible. File verified as valid PDF (starts with %PDF-).\"\n}\n```",
+    "timestamp": "2026-03-21T01:39:07.802561",
+    "error": null
+  },
+  {
+    "article_id": "ART-1366",
+    "codon_filename": "Wouk_Helton_2019#@#ART-1366@#@.pdf",
+    "agent_output": "The file has been successfully downloaded, renamed, and verified. Here is the final status report:\n\n```json\n{\n  \"article_id\": \"ART-1366\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2019/0401/p435.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2019/0401/p435.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Wouk_Helton_2019#@#ART-1366@#@.pdf\",\n  \"file_size_bytes\": 239757,\n  \"notes\": \"PDF successfully downloaded from AAFP using authenticated session cookies (JSON format). File verified as valid PDF (starts with %PDF-1.5). Article: 'Abnormal Uterine Bleeding in Premenopausal Women' by Noah Wouk MD and Margaret Helton MD, American Family Physician, April 1 2019;99(7):435-443. Note: curl failed with error 100 (field too large) so Python urllib was used instead to apply the JSON-format cookies.\"\n}\n```",
+    "timestamp": "2026-03-21T01:40:34.037410",
+    "error": null
+  },
+  {
+    "article_id": "ART-1386",
+    "codon_filename": "Zipes_Libby_2019#@#ART-1386@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:45:01.504383",
+    "error": null
+  },
+  {
+    "article_id": "ART-1386",
+    "codon_filename": "Zipes_Libby_2019#@#ART-1386@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:48:35.481822",
+    "error": null
+  },
+  {
+    "article_id": "ART-1387",
+    "codon_filename": "Zipes_Libby_2019#@#ART-1387@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:49:49.740105",
+    "error": null
+  },
+  {
+    "article_id": "ART-0013",
+    "codon_filename": "Ables_Nagubilli_2010#@#ART-0013@#@.pdf",
+    "agent_output": "The article was successfully found, downloaded, and verified. Here is the final status:\n\n```json\n{\n  \"article_id\": \"ART-0013\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2010/0501/p1139.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2010/0501/p1139.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Ables_Nagubilli_2010#@#ART-0013@#@.pdf\",\n  \"file_size_bytes\": 521699,\n  \"notes\": \"PDF successfully downloaded from AAFP. Cookie file was in JSON format (not Netscape), required conversion to Netscape format before curl could use it. 90 AAFP-domain cookies extracted and converted. File verified as valid PDF (%PDF- header confirmed). Article is Am Fam Physician. 2010 May 1;81(9):1139-42. PMID: 20433130.\"\n}\n```",
+    "timestamp": "2026-03-21T01:51:38.049069",
+    "error": null
+  },
+  {
+    "article_id": "ART-1387",
+    "codon_filename": "Zipes_Libby_2019#@#ART-1387@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:52:41.440982",
+    "error": null
+  },
+  {
+    "article_id": "ART-0014",
+    "codon_filename": "Abraham_Rivero_2014#@#ART-0014@#@.pdf",
+    "agent_output": "The PDF is valid and fully downloaded. Here is the final result:\n\n```json\n{\n  \"article_id\": \"ART-0014\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2014/0515/p795.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2014/0515/p795.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Abraham_Rivero_2014#@#ART-0014@#@.pdf\",\n  \"file_size_bytes\": 254379,\n  \"notes\": \"Successfully downloaded from AAFP (American Family Physician, May 15 2014, Vol 89 No 10, pp 795-802). Cookies file was in JSON format (not Netscape), so Python urllib was used instead of curl to parse and apply the session cookies. PDF verified with valid %PDF- header.\"\n}\n```",
+    "timestamp": "2026-03-21T01:52:52.180715",
+    "error": null
+  },
+  {
+    "article_id": "ART-0013",
+    "codon_filename": "Ables_Nagubilli_2010#@#ART-0013@#@.pdf",
+    "agent_output": "The file already exists in the staging directory and is a valid PDF (521,699 bytes). No download was needed.\n\n```json\n{\n  \"article_id\": \"ART-0013\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2010/0501/p1139.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2010/0501/p1139.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Ables_Nagubilli_2010#@#ART-0013@#@.pdf\",\n  \"file_size_bytes\": 521699,\n  \"notes\": \"File was already present in the staging directory and verified as a valid PDF (starts with %PDF-). Article is Am Fam Physician. 2010 May 1;81(9):1139-42. PMID: 20433130.\"\n}\n```",
+    "timestamp": "2026-03-21T01:53:42.946365",
+    "error": null
+  },
+  {
+    "article_id": "ART-0015",
+    "codon_filename": "Abraham_Rivero_2014#@#ART-0015@#@.pdf",
+    "agent_output": "The PDF has been successfully downloaded and verified. Here is the final status report:\n\n```json\n{\n  \"article_id\": \"ART-0015\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2014/0515/p795.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2014/0515/p795.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Abraham_Rivero_2014#@#ART-0015@#@.pdf\",\n  \"file_size_bytes\": 254379,\n  \"notes\": \"PDF successfully downloaded and verified (%PDF- header confirmed). Article is 'Surgical and Nonsurgical Management of Gallstones' by Abraham et al., published in American Family Physician 2014;89(10):795-802. curl failed with error 100 (cookie file format issue), so Python urllib was used instead with anonymous download (cookie file was not in Netscape format but the PDF was publicly accessible without authentication).\"\n}\n```",
+    "timestamp": "2026-03-21T01:53:46.515529",
+    "error": null
+  },
+  {
+    "article_id": "ART-0014",
+    "codon_filename": "Abraham_Rivero_2014#@#ART-0014@#@.pdf",
+    "agent_output": "The article has been successfully found, downloaded, and verified. Here is the final status:\n\n```json\n{\n  \"article_id\": \"ART-0014\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2014/0515/p795.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2014/0515/p795.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Abraham_Rivero_2014#@#ART-0014@#@.pdf\",\n  \"file_size_bytes\": 254379,\n  \"notes\": \"Article found on AAFP (Am Fam Physician 2014;89(10):795-802). Cookie file was in JSON format (Chrome extension export), not Netscape format, so curl failed with error 100. Used Python urllib with parsed JSON cookies to authenticate and download successfully. PDF verified with valid %PDF- header.\"\n}\n```",
+    "timestamp": "2026-03-21T01:54:59.451699",
+    "error": null
+  },
+  {
+    "article_id": "ART-0015",
+    "codon_filename": "Abraham_Rivero_2014#@#ART-0015@#@.pdf",
+    "agent_output": "All done. The article was found on AAFP and successfully downloaded as a valid PDF.\n\n```json\n{\n  \"article_id\": \"ART-0015\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2014/0515/p795.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2014/0515/p795.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/Abraham_Rivero_2014#@#ART-0015@#@.pdf\",\n  \"file_size_bytes\": 254379,\n  \"notes\": \"Found directly on aafp.org. The JSON-format cookies file required conversion to Netscape format before curl could use them. PDF downloaded successfully (HTTP 200, content-type: application/pdf) and verified as valid (%PDF- header confirmed).\"\n}\n```",
+    "timestamp": "2026-03-21T01:56:42.332062",
+    "error": null
+  },
+  {
+    "article_id": "ART-0046",
+    "codon_filename": "American_2016#@#ART-0046@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T01:59:11.566458",
+    "error": null
+  },
+  {
+    "article_id": "ART-0048",
+    "codon_filename": "American_2016#@#ART-0048@#@.pdf",
+    "agent_output": "```json\n{\n  \"article_id\": \"ART-0048\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aaos.org/dentalppxauc\",\n  \"pdf_url\": \"https://www.aaos.org/dentalppxauc\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/American_2016#@#ART-0048@#@.pdf\",\n  \"file_size_bytes\": 982581,\n  \"notes\": \"Downloaded AAOS (American Academy of Orthopaedic Surgeons) 2016 Appropriate Use Criteria for Management of Patients with Orthopaedic Implants Undergoing Dental Procedures. Not an AAFP document \u2014 found via AAOS website. File validated as genuine PDF (starts with %PDF-). Covers 64 clinical scenarios for antibiotic prophylaxis guidance.\"\n}\n```",
+    "timestamp": "2026-03-21T02:01:55.287577",
+    "error": null
+  },
+  {
+    "article_id": "ART-0046",
+    "codon_filename": "American_2016#@#ART-0046@#@.pdf",
+    "agent_output": "```json\n{\n  \"article_id\": \"ART-0046\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aaos.org/quality/quality-programs/upper-extremity-programs/carpal-tunnel-syndrome/\",\n  \"pdf_url\": \"https://www.aaos.org/globalassets/quality-and-practice-resources/carpal-tunnel/cts-auc_hardcopy_1.4.17.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/American_2016#@#ART-0046@#@.pdf\",\n  \"file_size_bytes\": 1858105,\n  \"notes\": \"Full title: 'Management of Carpal Tunnel Syndrome Appropriate Use Criteria' by the American Academy of Orthopaedic Surgeons, adopted December 9, 2016. This is the AAOS AUC document (not an AAFP/AFP journal article). The article was not found in American Family Physician; the document is an official AAOS AUC PDF hosted at aaos.org. The truncated title 'American Academy of Orthopaedic Surgeons Appropriate Use Criteria for the Manage' matches this document's full title. PDF verified valid (%PDF- header). The PDF was downloaded directly from the AAOS globalassets server without requiring authentication.\"\n}\n```",
+    "timestamp": "2026-03-21T02:10:33.680289",
+    "error": null
+  },
+  {
+    "article_id": "ART-0060",
+    "codon_filename": "American_2022#@#ART-0060@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T02:13:06.030629",
+    "error": null
+  },
+  {
+    "article_id": "ART-0048",
+    "codon_filename": "American_2016#@#ART-0048@#@.pdf",
+    "agent_output": "The PDF has been successfully downloaded and verified. Here is the final status report:\n\n```json\n{\n  \"article_id\": \"ART-0048\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aaos.org/globalassets/quality-and-practice-resources/dental/auc-patients-with-orthopaedic-implants-dental-procedures.pdf\",\n  \"pdf_url\": \"https://web.archive.org/web/20230101/https://www.aaos.org/globalassets/quality-and-practice-resources/dental/auc-patients-with-orthopaedic-implants-dental-procedures.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/American_2016#@#ART-0048@#@.pdf\",\n  \"file_size_bytes\": 998521,\n  \"notes\": \"The original AAOS URL (https://www.aaos.org/globalassets/quality-and-practice-resources/dental/auc-patients-with-orthopaedic-implants-dental-procedures.pdf) returns 404 as of March 2026. The PDF was successfully retrieved via the Wayback Machine archive. The document is the 2016 AAOS/ADA Appropriate Use Criteria for the Management of Patients with Orthopaedic Implants Undergoing Dental Procedures, published by the American Academy of Orthopaedic Surgeons. File verified as valid PDF (starts with %PDF-), 998,521 bytes.\"\n}\n```",
+    "timestamp": "2026-03-21T02:15:10.028440",
+    "error": null
+  },
+  {
+    "article_id": "ART-0062",
+    "codon_filename": "American_2021#@#ART-0062@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T02:15:57.343349",
+    "error": null
+  },
+  {
+    "article_id": "ART-0063",
+    "codon_filename": "American_2021#@#ART-0063@#@.pdf",
+    "agent_output": "The PDF is valid and saved successfully. Here is the final result:\n\n```json\n{\n  \"article_id\": \"ART-0063\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/pubs/afp/issues/2021/0700/p14.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2021/0700/p14.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/American_2021#@#ART-0063@#@.pdf\",\n  \"file_size_bytes\": 91933,\n  \"notes\": \"Article identified as 'Prioritizing Primary Care Can Save the U.S. Health Care System' by Ada D. Stewart, MD, American Academy of Family Physicians, published in American Family Physician Vol. 104, Issue 1, July 2021, pages 14-15. Matched on author='American' (American Academy of Family Physicians) and title/page='14' (page 14 of the July 2021 issue). PDF downloaded via authenticated AAFP session using aafp_cookies_netscape.txt. curl failed with error 100 (field too large) so download was performed via Python urllib. File verified as valid PDF (%PDF- header confirmed).\"\n}\n```",
+    "timestamp": "2026-03-21T02:20:31.193410",
+    "error": null
+  },
+  {
+    "article_id": "ART-0060",
+    "codon_filename": "American_2022#@#ART-0060@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T02:30:44.993117",
+    "error": null
+  },
+  {
+    "article_id": "ART-0062",
+    "codon_filename": "American_2021#@#ART-0062@#@.pdf",
+    "agent_output": null,
+    "timestamp": "2026-03-21T02:35:34.233386",
+    "error": null
+  },
+  {
+    "article_id": "ART-0063",
+    "codon_filename": "American_2021#@#ART-0063@#@.pdf",
+    "agent_output": "```json\n{\n  \"article_id\": \"ART-0063\",\n  \"status\": \"downloaded\",\n  \"url\": \"https://www.aafp.org/afp/2021/0700/p14.html\",\n  \"pdf_url\": \"https://www.aafp.org/pubs/afp/issues/2021/0700/p14.pdf\",\n  \"saved_to\": \"C:/Users/mpsch/Desktop/claude_knowledge/clinical_guidelines/01_pdf_guideline_library/00_non-codon/_sourced_staging/American_2021#@#ART-0063@#@.pdf\",\n  \"file_size_bytes\": 91933,\n  \"notes\": \"Article identified as 'Prioritizing Primary Care Can Save the U.S. Health Care System' by Ada D. Stewart, MD (AAFP President), published in American Family Physician, July 2021, Volume 104, Issue 1, pages 14-15. Title 'ART-0063' matched to p14 of the July 2021 AFP issue. The cookies file was in JSON format and required conversion to Netscape format before use; download was performed via Python urllib. PDF verified valid (%PDF- header).\"\n}\n```",
+    "timestamp": "2026-03-21T02:37:49.888415",
+    "error": null
+  },
+  {
+    "article_id": "ART-0634",
+    "codon_filename": "Jameson_Fauci_2018#@#ART-0634@#@.pdf",
+    "agent_output": {
+      "status": "not_found",
+      "notes": "Agent timed out after 180s"
+    },
+    "timestamp": "2026-03-21T10:07:22.038713",
+    "error": null
+  },
+  {
+    "article_id": "ART-0790",
+    "codon_filename": "Loscalzo_Fauci_2022#@#ART-0790@#@.pdf",
+    "agent_output": {
+      "status": "not_found",
+      "notes": "Unparseable result: ### Result Summary for ART-0790\n\n| Field | Value |\n|-------|-------|\n| **Status** | `not_found` |\n| **Article** | Harrison's Principles of Internal Medicine, 21st ed. (2022) |\n| **Authors** | Loscalzo"
+    },
+    "timestamp": "2026-03-21T10:08:51.647398",
+    "error": null
+  },
+  {
+    "article_id": "ART-0365",
+    "codon_filename": "Eiff_Hatch_2018#@#ART-0365@#@.pdf",
+    "agent_output": {
+      "status": "not_found",
+      "notes": "No result returned"
+    },
+    "timestamp": "2026-03-21T10:11:12.906237",
+    "error": null
+  }
+]

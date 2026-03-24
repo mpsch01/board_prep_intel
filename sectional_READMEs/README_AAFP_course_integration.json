@@ -1,0 +1,28 @@
+{
+  "folder": "board_prep/aafp_integration",
+  "last_updated": "2026-03-06_session_M",
+  "status": "ACTIVE — pearl injection pipeline added",
+  "session_M_changes": {
+    "new_scripts": [
+      "05_scripts/09_build_pearl_callouts.py — Windows-side stub (actual injection runs on Claude's machine via unpack/pack pipeline)",
+      "Note: inject_pearls.py and build_linked_refs_doc.js live on Claude's computer (not persisted between sessions)"
+    ],
+    "new_outputs": [
+      "ABFM_BoardPrep_ContentOutline_HY-Enriched_v5-pearls.docx (copied to 00_canonical/01_curriculum/)"
+    ],
+    "pearl_injection_stats": {
+      "sessions_injected": 21,
+      "sessions_total": 48,
+      "paragraphs_added": 289,
+      "validation": "PASSED — zero errors",
+      "source_doc": "v5.docx",
+      "method": "unpack.py -> inject_pearls.py -> pack.py --original"
+    }
+  },
+  "pipeline_state": {
+    "session_hy_inserts": "v7 (02_working/session_hy_inserts_v7.json)",
+    "enriched_doc": "v5-pearls.docx (pearls injected), v6-resident.docx (spacing fixed)",
+    "next_doc_version": "v5-pearls-v2 after gold list migration and re-injection"
+  },
+  "pearl_injection_notes": "Pearl blocks are green (#1A5C38 banner, #E8F5EE body). Each block contains: article title + tier, summary first sentence, top 4 recs with strength, key thresholds inline, red flags in amber, source citation footer. Injection point: after last navy (1F3864) callout block in each session."
+}

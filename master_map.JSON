@@ -1,0 +1,129 @@
+{
+  "system_metadata": {
+    "title": "ITE Intelligence System",
+    "version": "1.1",
+    "last_updated": "2026-03-19",
+    "root_path": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\abfm_prep\\",
+    "database_stats": {
+      "articles": 1397,
+      "questions": 1189,
+      "qid_article_pairs": 1818
+    },
+    "architecture_status": "Overhaul Planned (Module B + ART-ID Redesign)"
+  },
+  "system_flow": [
+    "0: ITE Exam PDFs to DB",
+    "F: VC Outline Generation",
+    "A: Guideline Download",
+    "B: Match, Route, Rename",
+    "C: Extract, Enrich, DOCX",
+    "D: DB Intelligence Layers",
+    "E: ITE Score Analysis"
+  ],
+  "modules": [
+    {
+      "id": "0",
+      "title": "ITE Question Bank — Foundation Build",
+      "subtitle": "Raw ITE exam PDFs → master Excel → clean JSON → ite_intelligence.db",
+      "status": "Annual Re-run",
+      "key_paths": [
+        "03_ite_exam\\03_database\\",
+        "02_ite_intelligence\\scripts\\",
+        "02_ite_intelligence\\db\\"
+      ],
+      "pipeline": [
+        {
+          "step": 1,
+          "name": "Raw ITE Exam PDFs",
+          "type": "source",
+          "path": "03_ite_exam\\01_source\\",
+          "description": "ABFM-issued annual exam files"
+        },
+        {
+          "step": 2,
+          "name": "ABFM_ITE_Master_v2.xlsx",
+          "type": "manual_curation",
+          "path": "03_ite_exam\\03_database\\",
+          "description": "Human-structured: QID, body system, choices, citations"
+        },
+        {
+          "step": 3,
+          "name": "build_clean_question_bank.py",
+          "type": "python_local",
+          "description": "Parses master Excel, fixes encoding, outputs JSON"
+        },
+        {
+          "step": 4,
+          "name": "ite_intelligence.db (final)",
+          "type": "database",
+          "path": "02_ite_intelligence\\db\\",
+          "description": "Source of truth for all downstream modules"
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "title": "AAFP VC Outline — Content Generation",
+      "status": "Production",
+      "callouts": [
+        "session_hy_inserts_v7.json is the canonical definition of VC-cited articles and the routing gate for Module B."
+      ],
+      "outputs": [
+        "ABFM_BoardPrep_ContentOutline_HY-Enriched_v5-pearls.docx",
+        "ABFM_BoardPrep_Supplement_ITE-Questions_v1.docx"
+      ]
+    },
+    {
+      "id": "B",
+      "title": "Match · Route · Rename",
+      "status": "Overhaul Pending",
+      "description": "Plain-named PDFs → propose ART-ID → cross-check VC gate → human review → rename",
+      "routing_logic": {
+        "if_in_vc_gate": "Route to $right_click$ (Module C full extraction)",
+        "if_not_in_vc_gate": "Route to local_lite (Module C DB-only synthesis)"
+      }
+    }
+  ],
+  "script_reference": [
+    {
+      "name": "rebuild_ite_db_v2.py",
+      "directory": "02_ite_intelligence\\scripts\\",
+      "module": "0",
+      "type": ["Python", "Local"],
+      "description": "Builds all core DB tables, assigns ART-IDs, handles backups.",
+      "output_lifecycle": "Database"
+    },
+    {
+      "name": "02b_generate_hy_inserts_v2.py",
+      "directory": "04_aafp_integration\\05_scripts\\",
+      "module": "F",
+      "type": ["Python", "Local"],
+      "description": "Core VC generator. Selects top-N questions and applies tier scoring.",
+      "output_lifecycle": "Active + Reference"
+    },
+    {
+      "name": "extract_guideline.bat",
+      "directory": "01_guideline_extractor\\oneclick\\",
+      "module": "C",
+      "type": ["Batch"],
+      "description": "Windows context menu orchestrator for one-click extraction.",
+      "output_lifecycle": "Functional"
+    },
+    {
+      "name": "compute_embeddings.py",
+      "directory": "02_ite_intelligence\\scripts\\",
+      "module": "D",
+      "type": ["Python", "OpenAI API"],
+      "description": "Computes vector embeddings for semantic similarity search.",
+      "output_lifecycle": "Database"
+    },
+    {
+      "name": "ite_analyze_v2.py",
+      "directory": "08_ite_score_analysis\\pipeline\\",
+      "module": "E",
+      "type": ["Python", "Local"],
+      "description": "CLI entry point for resident score report analysis.",
+      "output_lifecycle": "Active"
+    }
+  ]
+}
