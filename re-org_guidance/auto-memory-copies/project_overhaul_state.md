@@ -1,30 +1,34 @@
 ---
 name: project_overhaul_state
-description: PROJECT_OVERHAUL current state - Agent SDK integration, PDF Sourcer built, overnight batch running, claude_knowledge overhaul planned
+description: PROJECT_OVERHAUL current state - 4-module rebuild in progress, BATON 005, git initialized, all M2 scripts de-hardcoded
 type: project
 ---
 
-**Project:** ABFM Knowledge Base & Extraction Pipeline (claude_knowledge directory on user's Windows desktop)
+**Project:** ABFM Knowledge Base & Extraction Pipeline (`00_#PROJECT_OVERHAUL/` in claude_knowledge directory on user's Windows desktop)
 
-**Current Phase:** Major re-org / PROJECT_OVERHAUL. Two tracks:
-1. Agent SDK toolbox — building autonomous agents for pipeline tasks
-2. claude_knowledge directory overhaul — streamlining into a learning engine
+**Current Phase:** PROJECT_OVERHAUL — 4-module rebuild. Structural migration largely complete. Remaining work: TEMP folder audits, articles table gap-fill, Intelligence 2.0 Layer 2.
 
-**Latest Session (March 21, 2026):**
-- Claude Agent SDK integrated (Python: `claude-agent-sdk` package)
-- `pdf_sourcer_agent.py` built and validated — downloads missing AFP articles
-- All 10 known-missing articles successfully downloaded to `_sourced_staging/`
-- Overnight batch scheduled: 25 articles/night at 1:09 AM, targeting 100 total
-- Agent toolbox started at `claude_knowledge/agents/`
+**Active BATON:** 005 (`BATON_active_005_20260324_pathfixes.md`)
 
-**Key Numbers:**
-- DB: 1,547 articles, 1,189 questions, 1,818 QID-article pairs
-- PDFs: 216 in library (146 codon-named, 70 non-codon)
+**Sessions Summary (March 21–24, 2026):**
+- 4-module architecture established: M1 Warehouse, M2 Processor, M3 Analyst, M4 Sandbox
+- DB expanded: 2018-2019 integration added 440 questions, 389 new articles (ART-1549–ART-1937)
+- All 4 keyword columns backfilled for 2018-2019 (1,629/1,629 = 100%)
+- M1 scripts organized: `build/` (6) + `maintain/` (11)
+- M2 scripts fully migrated: 41 Python + JS scripts, all paths dynamic (commit `ed85b06`)
+- M2/source/ layer created: content outline DOCX + 50 AAFP transcripts
+- Module F (VC outline pipeline) + keyword library (A-G) migrated from TEMP_04
+- Git initialized: `main` branch, latest commit `94fdc6a`
+
+**Key Numbers (as of 2026-03-24):**
+- DB: 1,936 articles, 1,629 questions (2018–2025), 2,722 question-ref pairs
+- article_icd10: 3,855 rows | clinical_pathways: 4,528 rows | qid_art_xref: 1,818 rows
+- PDFs: 404 in library (4 tiers in M1 Warehouse)
 - Intelligence 2.0: Layers 1 (ICD-10), 3 (Pathways), 4a (Trends) complete. Layer 2 (PubMed) not started
-- 87 misclassified codon PDFs (FLAG 31), 266 VC-cited articles without PDFs (FLAG 32)
+- M2/scripts: 41 scripts (all Python/JS paths dynamic; .bat/.ps1/.reg deferred)
 
-**Critical Flags:** 31 (misclassified codons), 32 (missing VC PDFs), 33 (ART-ID rename pending), 34 (27 unmatched VC citations), 35 (QID format mismatch), 45 (DB title quality), 46 (10 staged PDFs), 47 (cookie refresh)
+**Active Flags:** 33 (ART-ID rename), 30 (encrypted PDFs), 15 (merged-only run), QID format mismatch, Layer 2 + 4b not built, 232 orphaned question_ref_pairs, M3 duplicates pending delete
 
 **Why:** The project extends beyond exam prep into clinical decision support. The DB is the source of truth. Derivatives (JSONs, DOCXs) are disposable. Pre-compute everything deterministic at ingest.
 
-**How to apply:** Always check the active BATON for current state. The MASTER_MAP.html shows the full pipeline architecture (7 modules: 0, F, A, B, C, D, E). Agent toolbox is the current growth edge.
+**How to apply:** Always read the active BATON first — it has the current DB state, deferred flags, and next steps. `_index.md` is the ground-truth directory map. BATON supersedes everything else if there's a conflict.
