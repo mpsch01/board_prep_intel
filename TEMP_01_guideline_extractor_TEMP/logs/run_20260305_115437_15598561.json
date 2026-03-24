@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260305_115437",
+  "run_id": "15598561",
+  "file_name": "aafp_pcos.pdf",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "DiagnosticEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "reproductive",
+    "endocrine"
+  ],
+  "modules_activated": [
+    "diagnostic_criteria",
+    "test_thresholds",
+    "workup_algorithm",
+    "result_interpretation",
+    "referral_indications",
+    "follow_up_imaging"
+  ],
+  "raw_text_chars": 9734,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 7,
+  "thresholds_count": 9,
+  "medications_count": 4
+}

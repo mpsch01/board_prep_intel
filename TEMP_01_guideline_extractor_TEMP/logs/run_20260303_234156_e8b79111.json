@@ -1,0 +1,27 @@
+{
+  "timestamp": "20260303_234156",
+  "run_id": "e8b79111",
+  "file_name": "IDSA_sepsis.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "infectious",
+    "cardiovascular",
+    "multisystem"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 92335,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 10,
+  "thresholds_count": 7,
+  "medications_count": 6
+}

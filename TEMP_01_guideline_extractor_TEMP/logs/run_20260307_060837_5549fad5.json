@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260307_060837",
+  "run_id": "5549fad5",
+  "file_name": "IDSA_DM2-foot.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "endocrine",
+    "musculoskeletal",
+    "integumentary"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 147636,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 46,
+  "thresholds_count": 30,
+  "medications_count": 17
+}

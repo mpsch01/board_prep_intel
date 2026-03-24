@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260307_044159",
+  "run_id": "d8ab4131",
+  "file_name": "APA_PTSD.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "neurological",
+    "psychiatric"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 395180,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 70,
+  "thresholds_count": 46,
+  "medications_count": 22
+}

@@ -1,0 +1,108 @@
+{
+  "source": {
+    "title": "Aspirin Use to Prevent Cardiovascular Disease",
+    "organization": "USPSTF",
+    "document_type": "preventive_guideline",
+    "publication_year": null,
+    "version_number": "",
+    "doi": "",
+    "file_name": "uspstf_aspirin-cvd.pdf"
+  },
+  "classification": {
+    "engine_used": "PreventiveEngine",
+    "document_type": "preventive_guideline",
+    "confidence": 0.95,
+    "signals": [
+      "USPSTF recommendation",
+      "primary prevention of CVD",
+      "Grade: C and Grade: D recommendations",
+      "adults without signs or symptoms of CVD",
+      "10% or greater 10-year CVD risk"
+    ],
+    "body_systems": [
+      "cardiovascular"
+    ]
+  },
+  "extraction": {
+    "summary": "The USPSTF recommends shared decision-making for aspirin initiation in adults aged 40-59 years with ≥10% 10-year CVD risk for primary prevention. Aspirin should not be initiated in adults ≥60 years for primary CVD prevention due to increased bleeding risk with age.",
+    "population": {
+      "age_criteria": "Adults 40 years or older",
+      "risk_criteria": "For ages 40-59: ≥10% 10-year CVD risk; For ages ≥60: not recommended regardless of CVD risk",
+      "disease_definition": "Primary prevention of cardiovascular disease (CVD) in adults without signs, symptoms, or known CVD",
+      "exclusions": "Adults with signs or symptoms of CVD, known CVD, or increased bleeding risk (history of GI ulcers, recent bleeding, medications increasing bleeding risk)",
+      "severity_staging": "Primary prevention population only - secondary prevention not addressed"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Age for consideration",
+        "value": "40-59",
+        "unit": "years",
+        "context": "Age range for shared decision-making"
+      },
+      {
+        "parameter": "CVD risk threshold",
+        "value": "10",
+        "unit": "percent 10-year risk",
+        "context": "Minimum risk level to consider aspirin in ages 40-59"
+      },
+      {
+        "parameter": "Age cutoff",
+        "value": "60",
+        "unit": "years",
+        "context": "Age at which aspirin initiation is not recommended"
+      },
+      {
+        "parameter": "Consideration to stop",
+        "value": "75",
+        "unit": "years",
+        "context": "Age around which clinicians should consider stopping aspirin"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "For adults aged 40-59 years with ≥10% 10-year CVD risk: individualized decision-making to initiate low-dose aspirin",
+        "strength": "Grade C",
+        "evidence_level": "USPSTF Grade C",
+        "notes": "Use shared decision-making considering benefits, harms, and patient values/preferences"
+      },
+      {
+        "recommendation": "For adults 60 years or older: do not initiate aspirin for primary prevention of CVD",
+        "strength": "Grade D",
+        "evidence_level": "USPSTF Grade D",
+        "notes": "Increased bleeding risk with age outweighs benefits"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "Aspirin",
+        "dose": "81 mg daily",
+        "indication": "Primary prevention of CVD in selected adults aged 40-59 with ≥10% 10-year CVD risk",
+        "class": "Antiplatelet agent for chemoprophylaxis"
+      }
+    ],
+    "red_flags": [
+      "History of gastrointestinal ulcers",
+      "Recent bleeding",
+      "Taking medications that increase bleeding risk",
+      "Signs or symptoms of existing CVD"
+    ],
+    "follow_up": "Consider stopping aspirin use around age 75 years; ongoing monitoring for bleeding complications",
+    "escalation_path": "If bleeding complications occur, discontinue aspirin and manage bleeding appropriately. Regular reassessment of CVD risk-benefit ratio, especially as patient ages."
+  },
+  "metadata": {
+    "run_id": "96c48f5d",
+    "extracted_at": "2026-03-04T01:23:19.759898Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "screening_population",
+      "screening_intervals",
+      "risk_stratification",
+      "preventive_medications",
+      "counseling_interventions",
+      "positive_screen_pathway"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 5674
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260314_071358",
+  "run_id": "6b355253",
+  "file_name": "BackPainPCP_Treatment_Algorithm.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "musculoskeletal",
+    "neurologic"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 2441,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established",
+    "source.title is empty \u2014 metadata extraction may have failed"
+  ],
+  "recommendations_count": 6,
+  "thresholds_count": 4,
+  "medications_count": 5
+}

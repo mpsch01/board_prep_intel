@@ -1,0 +1,1370 @@
+Guideline Extractor Run Log 
+Date: Wed 03/11/2026  Time:  2:04:09.52 
+Input: C:\Users\mpsch\Desktop\library expansion list\integrated 
+ 
+ BATCH MODE: C:\Users\mpsch\Desktop\library expansion list\integrated 
+ Found 50 PDF file(s) 
+ Output folder: integrated-batch 
+ [1/50] 01_Hip_Pain_Adults_Chamberlain_2021.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=4 thresh=0
+    [chunk 1/2] recs=5 thresh=15
+    Extraction OK: type=diagnostic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 01_Hip_Pain_Adults_Chamberlain_2021_extracted.json
+           -> 5 Qs | [] | author_year_exact
+             concepts: ['Labral tear diagnosis and MR arthrography imaging', 'Greater trochanteric pain syndrome and Trendelenburg gait', 'Piriformis syndrome physical examination and management']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_020546.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\01_Hip_Pain_Adults_Chamberlain_2021_summary.docx
+   [5/5] Done 
+ [2/50] 02_Knee_Pain_Adults_Bunt_2018.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=6 thresh=8
+    [chunk 1/2] recs=5 thresh=7
+    Extraction OK: type=diagnostic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 02_Knee_Pain_Adults_Bunt_2018_extracted.json
+           -> 4 Qs | [] | author_year_exact
+Traceback (most recent call last):
+  File "C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\scripts\ite_intelligence_enricher.py", line 503, in <module>
+    main()
+  File "C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\scripts\ite_intelligence_enricher.py", line 466, in main
+    print(f"             concepts: {hy}")
+  File "C:\Users\mpsch\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 90: character maps to <undefined>
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\02_Knee_Pain_Adults_Bunt_2018_summary.docx
+   [5/5] Done 
+ [3/50] 03_Chronic_Cough_Michaudet_2017.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=4 thresh=1
+    [chunk 1/2] recs=7 thresh=10
+    Extraction OK: type=diagnostic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 03_Chronic_Cough_Michaudet_2017_extracted.json
+           -> 4 Qs | [] | author_year_exact
+             concepts: ['Gabapentin for refractory chronic cough', 'ACE inhibitor-induced cough as common cause', 'Upper airway cough syndrome (UACS) as most common cause in adults']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_020831.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\03_Chronic_Cough_Michaudet_2017_summary.docx
+   [5/5] Done 
+ [4/50] 04_Secondary_Hypertension_Charles_2017.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=7 thresh=3
+    [chunk 1/2] recs=7 thresh=9
+    Extraction OK: type=diagnostic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 04_Secondary_Hypertension_Charles_2017_extracted.jso
+           -> 6 Qs | [] | author_year_exact
+             concepts: ['Renovascular hypertension diagnosis after ACE inhibitor-induced creatinine elevation', 'Primary hyperaldosteronism screening with aldosterone/renin ratio in hypokalemic hypertension', 'Resistant hypertension definition and workup']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_021003.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\04_Secondary_Hypertension_Charles_2017_summary.docx
+   [5/5] Done 
+ [5/50] 05_Kidney_Stones_Fontenelle_2019.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=5 thresh=3
+    [chunk 1/2] recs=6 thresh=7
+    Extraction OK: type=acute_protocol conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 05_Kidney_Stones_Fontenelle_2019_extracted.json
+           -> 5 Qs | [] | author_year_exact
+Traceback (most recent call last):
+  File "C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\scripts\ite_intelligence_enricher.py", line 503, in <module>
+    main()
+  File "C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\scripts\ite_intelligence_enricher.py", line 466, in main
+    print(f"             concepts: {hy}")
+  File "C:\Users\mpsch\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2264' in position 146: character maps to <undefined>
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\05_Kidney_Stones_Fontenelle_2019_summary.docx
+   [5/5] Done 
+ [6/50] 06_End_of_Life_Care_Albert_2017.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=5 thresh=3
+    [chunk 1/2] recs=6 thresh=2
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 06_End_of_Life_Care_Albert_2017_extracted.json
+           -> 4 Qs | [] | author_year_exact
+             concepts: ['Corticosteroids for malignant bowel obstruction', 'Opiates as first-line treatment for terminal dyspnea', 'Antipsychotic medications for end-of-life delirium']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_021254.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\06_End_of_Life_Care_Albert_2017_summary.docx
+   [5/5] Done 
+ [7/50] 07_NAFLD_Westfall_2020.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/3] recs=5 thresh=9
+    [chunk 2/3] recs=8 thresh=11
+    [chunk 3/3] recs=0 thresh=0
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 07_NAFLD_Westfall_2020_extracted.json
+           -> 3 Qs | [] | author_year_exact
+             concepts: ['First-line treatment is weight loss through diet and exercise', 'Obesity is the strongest risk factor for NAFLD development', 'Routine screening for NAFLD is not recommended even in high-risk patients']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_021424.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\07_NAFLD_Westfall_2020_summary.docx
+   [5/5] Done 
+ [8/50] 08_Amenorrhea_Klein_2019.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/3] recs=6 thresh=10
+    [chunk 2/3] recs=9 thresh=13
+    [chunk 3/3] recs=4 thresh=20
+    Extraction OK: type=diagnostic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 08_Amenorrhea_Klein_2019_extracted.json
+           -> 3 Qs | [] | author_year_title
+             concepts: ['Primary amenorrhea diagnostic criteria and evaluation', 'FSH/LH patterns in primary ovarian insufficiency', 'Turner syndrome presentation with short stature and delayed puberty']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_title': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_021628.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\08_Amenorrhea_Klein_2019_summary.docx
+   [5/5] Done 
+ [9/50] 09_Plantar_Fasciitis_Trojian_2019.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=6 thresh=3
+    [chunk 1/2] recs=6 thresh=3
+    Extraction OK: type=chronic_guideline conf=0.8
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 09_Plantar_Fasciitis_Trojian_2019_extracted.json
+           -> 3 Qs | [] | author_year_exact
+             concepts: ['Classic morning heel pain presentation', 'Anteromedial plantar heel tenderness', 'Differential diagnosis of heel pain conditions']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_021742.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\09_Plantar_Fasciitis_Trojian_2019_summary.docx
+   [5/5] Done 
+ [10/50] 10_Transgender_Gender_Diverse_Klein_2018.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/4] recs=4 thresh=4
+    [chunk 1/4] recs=5 thresh=4
+    [chunk 4/4] recs=2 thresh=0
+    [chunk 3/4] recs=3 thresh=3
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 10_Transgender_Gender_Diverse_Klein_2018_extracted.j
+           -> 3 Qs | [] | author_year_exact
+             concepts: ['Testosterone therapy effects and risks in transgender men', 'Hormone therapy outcomes on quality of life and mental health', 'Reversibility of masculinizing vs feminizing hormone therapy']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_021937.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\10_Transgender_Gender_Diverse_Klein_2018_summary.docx
+   [5/5] Done 
+ [11/50] 11_Systemic_Lupus_Lam_2016.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/3] recs=6 thresh=4
+    [chunk 2/3] recs=6 thresh=3
+    [chunk 3/3] recs=3 thresh=0
+    Extraction OK: type=chronic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 11_Systemic_Lupus_Lam_2016_extracted.json
+           -> 3 Qs | [] | author_year_exact
+             concepts: ['American College of Rheumatology diagnostic criteria for SLE', 'Antinuclear antibody (ANA) testing sensitivity and specificity', 'Laboratory monitoring of SLE disease activity']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_022126.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\11_Systemic_Lupus_Lam_2016_summary.docx
+   [5/5] Done 
+ [12/50] 12_Hidradenitis_Suppurativa_Wipperman_2019.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=4 thresh=0
+    [chunk 1/2] recs=4 thresh=1
+    Extraction OK: type=chronic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 12_Hidradenitis_Suppurativa_Wipperman_2019_extracted
+           -> 3 Qs | [] | author_year_exact
+             concepts: ['Clinical diagnosis of hidradenitis suppurativa based on characteristic nodules and scarring', 'Risk factors including obesity, family history, and smoking', "Associated comorbidities including diabetes mellitus and Crohn's disease"]
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_022249.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\12_Hidradenitis_Suppurativa_Wipperman_2019_summary.docx
+   [5/5] Done 
+ [13/50] 13_Hemoptysis_OGurek_2022.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/2] recs=5 thresh=6
+    [chunk 2/2] recs=4 thresh=9
+    Extraction OK: type=diagnostic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 13_Hemoptysis_OGurek_2022_extracted.json
+           -> 3 Qs | [] | author_year_exact
+             concepts: ['Hemoptysis diagnostic workup sequence', 'Chest radiograph as initial imaging', 'CT angiography as second-line imaging when chest X-ray normal']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_022409.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\13_Hemoptysis_OGurek_2022_summary.docx
+   [5/5] Done 
+ [14/50] 14_Eating_Disorders_Klein_2021.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/3] recs=4 thresh=5
+    [chunk 1/3] recs=5 thresh=4
+    [chunk 3/3] recs=5 thresh=6
+    Extraction OK: type=chronic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 14_Eating_Disorders_Klein_2021_extracted.json
+           -> 4 Qs | [] | author_year_title
+             concepts: ['DEXA scan screening for bone mineral density in eating disorders', 'Return of menses as indicator of BMD recovery in anorexia nervosa', 'Family-based therapy as first-line treatment for adolescent anorexia nervosa']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_title': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_022600.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\14_Eating_Disorders_Klein_2021_summary.docx
+   [5/5] Done 
+ [15/50] 15_Hypothermia_Cold_Injuries_Rathjen_2019.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=6 thresh=3
+    [chunk 1/2] recs=6 thresh=10
+    Extraction OK: type=acute_protocol conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 15_Hypothermia_Cold_Injuries_Rathjen_2019_extracted.
+           -> 3 Qs | [] | author_year_exact
+             concepts: ['Ibuprofen as preferred anti-inflammatory for frostbite treatment', 'Normal saline as preferred IV fluid for hypothermic patients', 'Rapid rewarming technique using 98.6-102.2°F water bath']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_022731.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\15_Hypothermia_Cold_Injuries_Rathjen_2019_summary.docx
+   [5/5] Done 
+ [16/50] 16_Running_Injuries_Arnold_2018.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=4 thresh=1
+    [chunk 1/2] recs=9 thresh=5
+    Extraction OK: type=acute_protocol conf=0.8
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 16_Running_Injuries_Arnold_2018_extracted.json
+           -> 4 Qs | [] | author_year_exact
+             concepts: ['Tibial stress fracture initial imaging with plain radiography', 'Patellar tendinopathy treatment with eccentric quadriceps exercises', 'Iliotibial band syndrome diagnosis and Noble compression test']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_022859.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\16_Running_Injuries_Arnold_2018_summary.docx
+   [5/5] Done 
+ [17/50] 17_Orthostatic_Hypotension_Kim_2022.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/3] recs=6 thresh=5
+    [chunk 2/3] recs=8 thresh=7
+    [chunk 3/3] recs=4 thresh=1
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 17_Orthostatic_Hypotension_Kim_2022_extracted.json
+           -> 4 Qs | [] | author_year_exact
+Traceback (most recent call last):
+  File "C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\scripts\ite_intelligence_enricher.py", line 503, in <module>
+    main()
+  File "C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\scripts\ite_intelligence_enricher.py", line 466, in main
+    print(f"             concepts: {hy}")
+  File "C:\Users\mpsch\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 74: character maps to <undefined>
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\17_Orthostatic_Hypotension_Kim_2022_summary.docx
+   [5/5] Done 
+ [18/50] 18_Radius_Ulna_Fractures_Patel_2021.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=5 thresh=4
+    [chunk 1/2] recs=6 thresh=13
+    Extraction OK: type=diagnostic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 18_Radius_Ulna_Fractures_Patel_2021_extracted.json
+           -> 4 Qs | [] | author_year_exact
+             concepts: ['Buckle fracture management with short arm immobilization', 'Choosing Wisely guidelines for buckle fracture follow-up imaging', 'Nondisplaced radial head fracture treatment with early mobilization']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_023203.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\18_Radius_Ulna_Fractures_Patel_2021_summary.docx
+   [5/5] Done 
+ [19/50] 19_Bariatric_Surgery_Schroeder_2016.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=2 thresh=1
+    [chunk 1/2] recs=6 thresh=5
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 19_Bariatric_Surgery_Schroeder_2016_extracted.json
+           -> 3 Qs | [] | author_year_exact
+             concepts: ['Post-bariatric surgery dietary recommendations', 'Fluid separation from meals (15-30 minutes before/after)', 'Protein-first meal consumption']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_023327.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\19_Bariatric_Surgery_Schroeder_2016_summary.docx
+   [5/5] Done 
+ [20/50] 20_Annular_Lesions_Trayes_2018.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=3 thresh=1
+    [chunk 1/2] recs=7 thresh=9
+    Extraction OK: type=diagnostic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 20_Annular_Lesions_Trayes_2018_extracted.json
+           -> 4 Qs | [] | author_year_exact
+             concepts: ['Erythema nodosum associated with coccidioidomycosis', 'Fixed drug eruption from sulfonamides', 'Erythema migrans in Lyme disease']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_exact': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_023502.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\20_Annular_Lesions_Trayes_2018_summary.docx
+   [5/5] Done 
+ [21/50] acg_GERD.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/9] recs=7 thresh=4
+    [chunk 2/9] recs=12 thresh=3
+    [chunk 4/9] recs=5 thresh=3
+    [chunk 3/9] recs=6 thresh=2
+    [chunk 6/9] recs=3 thresh=2
+    [chunk 5/9] recs=7 thresh=3
+    [chunk 8/9] recs=3 thresh=1
+    [chunk 7/9] recs=4 thresh=1
+    [chunk 9/9] recs=0 thresh=0
+    Extraction OK: type=chronic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] acg_GERD_extracted.json
+           -> 2 Qs | [] | title_year_pair
+             concepts: ['PPI as first-line therapy for GERD', 'Long-term PPI management for moderate-severe esophagitis', 'PPI superiority over H2-receptor antagonists']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_023831.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\acg_GERD_summary.docx
+   [5/5] Done 
+ [22/50] acg_IBD.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/12] recs=7 thresh=4
+    [chunk 2/12] recs=8 thresh=4
+    [chunk 3/12] recs=6 thresh=4
+    [chunk 4/12] recs=7 thresh=9
+    [chunk 5/12] recs=13 thresh=8
+    [chunk 6/12] recs=9 thresh=4
+    [chunk 7/12] recs=10 thresh=4
+    [chunk 8/12] recs=7 thresh=4
+    [chunk 9/12] recs=4 thresh=2
+    [chunk 10/12] recs=5 thresh=2
+    [chunk 11/12] recs=8 thresh=1
+    [chunk 12/12] recs=6 thresh=3
+    Extraction OK: type=chronic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 0  No match: 1  Skipped: 0  Errors: 0
+  Methods: {}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_024340.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\acg_IBD_summary.docx
+   [5/5] Done 
+ [23/50] acg_IBS.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/8] recs=6 thresh=5
+    [chunk 1/8] recs=12 thresh=4
+    [chunk 3/8] recs=6 thresh=4
+    [chunk 4/8] recs=7 thresh=4
+    [chunk 6/8] recs=3 thresh=3
+    [chunk 5/8] recs=6 thresh=6
+    [chunk 7/8] recs=7 thresh=2
+    [chunk 8/8] recs=5 thresh=1
+    Extraction OK: type=chronic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] acg_IBS_extracted.json
+           -> 2 Qs | [] | title_year_pair
+             concepts: ['First-line nonpharmacologic management of IBS with soluble fiber', 'Differentiation between soluble and insoluble fiber for IBS treatment', 'Peppermint oil as evidence-based over-the-counter treatment for IBS symptoms']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_024703.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\acg_IBS_summary.docx
+   [5/5] Done 
+ [24/50] afp_fatigue_eval.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=7 thresh=2
+    [chunk 1/2] recs=6 thresh=4
+    Extraction OK: type=diagnostic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] afp_fatigue_eval_extracted.json
+           -> 3 Qs | [] | title_year_rare
+             concepts: ['Peripheral neuropathy differential diagnosis including thiamine deficiency', 'Myalgic encephalomyelitis/chronic fatigue syndrome (ME/CFS) criteria and post-COVID sequelae', 'Obstructive sleep apnea diagnosis with polysomnography']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_024831.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\afp_fatigue_eval_summary.docx
+   [5/5] Done 
+ [25/50] Allison_2021_Frailty.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=4 thresh=0
+    [chunk 1/2] recs=6 thresh=6
+    Extraction OK: type=chronic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] Allison_2021_Frailty_extracted.json
+           -> 2 Qs | [] | title_year_rare
+             concepts: ['Prefrail vs frail classification', 'Multicomponent physical activity programs for prefrail patients', 'Progressive resistance training as most effective intervention']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_024950.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\Allison_2021_Frailty_summary.docx
+   [5/5] Done 
+ [26/50] APA_bipolar.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/12] recs=8 thresh=1
+    [chunk 2/12] recs=7 thresh=3
+    [chunk 3/12] recs=7 thresh=1
+    [chunk 4/12] recs=10 thresh=4
+    [chunk 5/12] recs=4 thresh=3
+    [chunk 6/12] recs=5 thresh=4
+    [chunk 7/12] recs=5 thresh=4
+    [chunk 8/12] recs=6 thresh=4
+    [chunk 9/12] recs=9 thresh=3
+    [chunk 10/12] recs=5 thresh=2
+    [chunk 11/12] recs=4 thresh=3
+    [chunk 12/12] recs=4 thresh=1
+    Extraction OK: type=chronic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] APA_bipolar_extracted.json
+           -> 1 Qs | [] | title_year_rare
+             concepts: ['Bipolar disorder screening in patients presenting with depression', 'Family history as risk factor for bipolar disorder', 'Hereditary risk patterns in bipolar disorder']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_025453.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\APA_bipolar_summary.docx
+   [5/5] Done 
+ [27/50] Chavey_2017_HeartFailure.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/2] recs=6 thresh=4
+    [chunk 2/2] recs=5 thresh=4
+    Extraction OK: type=chronic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] Chavey_2017_HeartFailure_extracted.json
+           -> 2 Qs | [] | title_year_pair
+             concepts: ['Heart failure with reduced ejection fraction medication management', 'NYHA class II heart failure treatment escalation', 'Spironolactone for mortality reduction in heart failure']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_025636.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\Chavey_2017_HeartFailure_summary.docx
+   [5/5] Done 
+ [28/50] drug-drug-interactions-primary-care.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=5 thresh=1
+    [chunk 1/2] recs=7 thresh=5
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] drug-drug-interactions-primary-care_extracted.json
+           -> 2 Qs | [] | title_year_pair
+             concepts: ['Warfarin-trimethoprim/sulfamethoxazole interaction and INR elevation', 'Warfarin dosage reduction (25-40%) when combined with high-risk antimicrobials', 'INR monitoring timeline (3-5 days) when starting/stopping antimicrobials']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_025818.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\drug-drug-interactions-primary-care_summary.docx
+   [5/5] Done 
+ [29/50] hep_hepC_testing+mngment.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/9] recs=6 thresh=2
+    [chunk 2/9] recs=9 thresh=6
+    [chunk 3/9] recs=5 thresh=4
+    [chunk 4/9] recs=5 thresh=4
+    [chunk 5/9] recs=6 thresh=3
+    [chunk 6/9] recs=5 thresh=1
+    [chunk 7/9] recs=3 thresh=2
+    [chunk 8/9] recs=3 thresh=0
+    [chunk 9/9] recs=3 thresh=2
+    Extraction OK: type=chronic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] hep_hepC_testing+mngment_extracted.json
+           -> 1 Qs | [] | title_year_pair
+             concepts: ['Universal hepatitis C screening for adults 18+ years', 'Positive anti-HCV antibody interpretation', 'Qualitative HCV RNA as confirmatory test']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_030205.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\hep_hepC_testing+mngment_summary.docx
+   [5/5] Done 
+ [30/50] Herrick_2020_Coccidioidomycosis.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=5 thresh=2
+    [chunk 1/2] recs=5 thresh=6
+    Extraction OK: type=diagnostic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] Herrick_2020_Coccidioidomycosis_extracted.json
+           -> 2 Qs | [] | title_year_pair
+             concepts: ['Endemic geography and travel history to Arizona for coccidioidomycosis diagnosis', 'Primary pulmonary coccidioidomycosis clinical presentation with fever, cough, and systemic symptoms', 'Laboratory findings including eosinophilia and normal initial chest radiograph']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_030328.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\Herrick_2020_Coccidioidomycosis_summary.docx
+   [5/5] Done 
+ [31/50] hirsutism-women.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=4 thresh=2
+    [chunk 1/2] recs=6 thresh=2
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] hirsutism-women_extracted.json
+           -> 2 Qs | [] | title_year_rare
+             concepts: ['Idiopathic hirsutism diagnosis and management', 'Combined oral contraceptives as first-line therapy for hirsutism', 'Clinical assessment without extensive workup in mild cases']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_030458.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\hirsutism-women_summary.docx
+   [5/5] Done 
+ [32/50] IDSA_flu.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/12] recs=6 thresh=5
+    [chunk 2/12] recs=8 thresh=6
+    [chunk 3/12] recs=5 thresh=4
+    [chunk 4/12] recs=6 thresh=5
+    [chunk 5/12] recs=8 thresh=3
+    [chunk 6/12] recs=6 thresh=2
+    [chunk 7/12] recs=7 thresh=5
+    [chunk 8/12] recs=8 thresh=6
+    [chunk 9/12] recs=9 thresh=5
+    [chunk 10/12] recs=6 thresh=5
+    [chunk 11/12] recs=2 thresh=0
+    [chunk 12/12] recs=4 thresh=0
+    Extraction OK: type=acute_protocol conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] IDSA_flu_extracted.json
+           -> 1 Qs | [] | title_year_pair
+             concepts: ['Nursing home influenza outbreak management', 'Oseltamivir chemoprophylaxis recommendations', 'Enhanced contact and droplet precautions']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_030945.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\IDSA_flu_summary.docx
+   [5/5] Done 
+ [33/50] IDSA_GA-strep.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/4] recs=5 thresh=4
+    [chunk 1/4] recs=8 thresh=2
+    [chunk 4/4] recs=5 thresh=2
+    [chunk 3/4] recs=10 thresh=4
+    Extraction OK: type=acute_protocol conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] IDSA_GA-strep_extracted.json
+           -> 1 Qs | [] | title_year_pair
+             concepts: ['Group A Streptococcus carrier state', 'Bacteriologic treatment failure vs clinical failure', 'Post-treatment viral illness in GAS carriers']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_031148.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\IDSA_GA-strep_summary.docx
+   [5/5] Done 
+ [34/50] IDSA_HCV.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/5] recs=5 thresh=5
+    [chunk 2/5] recs=5 thresh=3
+    [chunk 4/5] recs=4 thresh=3
+    [chunk 3/5] recs=7 thresh=3
+    [chunk 5/5] recs=3 thresh=0
+    Extraction OK: type=chronic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] IDSA_HCV_extracted.json
+           -> 1 Qs | [] | title_year_pair
+             concepts: ['Glecaprevir/pibrentasvir as first-line treatment for chronic HCV without cirrhosis', 'Fibrosis-4 (FIB-4) score interpretation for cirrhosis risk assessment', 'Management of treatment-naive chronic hepatitis C patients']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_031418.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\IDSA_HCV_summary.docx
+   [5/5] Done 
+ [35/50] IDSA_skin-soft-tissue.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/10] recs=5 thresh=7
+    [chunk 2/10] recs=8 thresh=7
+    [chunk 3/10] recs=10 thresh=6
+    [chunk 4/10] recs=8 thresh=6
+    [chunk 5/10] recs=9 thresh=4
+    [chunk 6/10] recs=8 thresh=6
+    [chunk 7/10] recs=6 thresh=5
+    [chunk 8/10] recs=7 thresh=4
+    [chunk 9/10] recs=4 thresh=2
+    [chunk 10/10] recs=3 thresh=1
+    Extraction OK: type=acute_protocol conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    [WARN] Synthesis failed: Could not parse synthesis response as JSON
+Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] IDSA_skin-soft-tissue_extracted.json
+           -> 1 Qs | [] | title_year_rare
+             concepts: ['Clenched-fist bite wound management', 'Human bite wound antibiotic prophylaxis', 'Superficial hand laceration treatment']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_031908.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\IDSA_skin-soft-tissue_summary.docx
+   [5/5] Done 
+ [36/50] IDSA_surviving-sepsis.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/12] recs=10 thresh=8
+    [chunk 2/12] recs=15 thresh=15
+    [chunk 3/12] recs=11 thresh=7
+    [chunk 4/12] recs=9 thresh=5
+    [chunk 5/12] recs=12 thresh=5
+    [chunk 6/12] recs=8 thresh=6
+    [chunk 7/12] recs=9 thresh=9
+    [chunk 8/12] recs=11 thresh=6
+    [chunk 10/12] recs=12 thresh=4
+    [chunk 9/12] recs=12 thresh=5
+    [chunk 11/12] recs=8 thresh=3
+    [chunk 12/12] recs=5 thresh=2
+    Extraction OK: type=acute_protocol conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] IDSA_surviving-sepsis_extracted.json
+           -> 2 Qs | [] | title_year_pair
+             concepts: ['Septic shock recognition and clinical criteria', 'Initial fluid resuscitation with 30 mL/kg isotonic crystalloid', "Preference for lactated Ringer's solution over normal saline"]
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_032429.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\IDSA_surviving-sepsis_summary.docx
+   [5/5] Done 
+ [37/50] jacc_heart_failure.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/12] recs=3 thresh=5
+    [chunk 1/12] recs=8 thresh=1
+    [chunk 3/12] recs=6 thresh=6
+    [chunk 4/12] recs=6 thresh=3
+    [chunk 6/12] recs=11 thresh=6
+    [chunk 5/12] recs=8 thresh=7
+    [chunk 7/12] recs=7 thresh=3
+    [chunk 8/12] recs=5 thresh=4
+    [chunk 9/12] recs=7 thresh=4
+    [chunk 10/12] recs=5 thresh=8
+    [chunk 12/12] recs=7 thresh=5
+    [chunk 11/12] recs=7 thresh=6
+    Extraction OK: type=chronic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 0  No match: 1  Skipped: 0  Errors: 0
+  Methods: {}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_032958.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\jacc_heart_failure_summary.docx
+   [5/5] Done 
+ [38/50] Lillig_2018_ConductDisorder.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/3] recs=4 thresh=5
+    [chunk 2/3] recs=6 thresh=2
+    [chunk 3/3] recs=4 thresh=3
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] Lillig_2018_ConductDisorder_extracted.json
+           -> 2 Qs | [] | title_year_rare
+             concepts: ['DSM-5 diagnostic criteria for conduct disorder', 'Characteristic behaviors: aggression toward people/animals, property destruction, deceitfulness, rule violations', 'Psychosocial interventions as first-line treatment']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_033139.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\Lillig_2018_ConductDisorder_summary.docx
+   [5/5] Done 
+ [39/50] Michels_2014_AddisonDisease.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=3 thresh=1
+    [chunk 1/2] recs=6 thresh=3
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] Michels_2014_AddisonDisease_extracted.json
+           -> 3 Qs | [] | title_year_rare
+             concepts: ['ACTH stimulation test for diagnosing adrenal insufficiency', 'Hydrocortisone as preferred glucocorticoid replacement therapy', 'Signs and symptoms of glucocorticoid under-replacement']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_033305.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\Michels_2014_AddisonDisease_summary.docx
+   [5/5] Done 
+ [40/50] muscle-weakness-adults.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/3] recs=4 thresh=2
+    [chunk 1/3] recs=5 thresh=3
+    [chunk 3/3] recs=6 thresh=4
+    Extraction OK: type=diagnostic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] muscle-weakness-adults_extracted.json
+           -> 3 Qs | [] | title_year_pair
+             concepts: ['Trousseau sign and hypocalcemia recognition', 'Proximal vs distal muscle weakness patterns', 'Myositis and polymyositis presentation']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_033457.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\muscle-weakness-adults_summary.docx
+   [5/5] Done 
+ [41/50] pregnant-patient-acute-medical-problems.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/2] recs=5 thresh=5
+    [chunk 2/2] recs=5 thresh=4
+    Extraction OK: type=acute_protocol conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] pregnant-patient-acute-medical-problems_extracted.js
+           -> 2 Qs | [] | title_year_pair
+             concepts: ['Vitamin B6 (pyridoxine) for pregnancy nausea and vomiting', 'First-line lifestyle modifications for pregnancy-related nausea', 'Intrahepatic cholestasis of pregnancy presentation']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_033624.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\pregnant-patient-acute-medical-problems_summary.docx
+   [5/5] Done 
+ [42/50] pulm_PE.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/10] recs=3 thresh=4
+    [chunk 1/10] recs=8 thresh=4
+    [chunk 3/10] recs=5 thresh=2
+    [chunk 4/10] recs=4 thresh=3
+    [chunk 5/10] recs=5 thresh=2
+    [chunk 6/10] recs=5 thresh=3
+    [chunk 7/10] recs=5 thresh=6
+    [chunk 8/10] recs=4 thresh=3
+    [chunk 9/10] recs=4 thresh=1
+    [chunk 10/10] recs=4 thresh=2
+    Extraction OK: type=chronic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] pulm_PE_extracted.json
+           -> 3 Qs | [] | title_year_pair
+             concepts: ['Duration of anticoagulation for unprovoked vs provoked DVT', 'Identification of transient vs chronic risk factors for VTE', '3-month treatment duration for provoked DVT/PE']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_034022.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\pulm_PE_summary.docx
+   [5/5] Done 
+ [43/50] rheum_gout-guideline-2020.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/5] recs=10 thresh=6
+    [chunk 2/5] recs=13 thresh=5
+    [chunk 4/5] recs=4 thresh=3
+    [chunk 3/5] recs=18 thresh=3
+    [chunk 5/5] recs=4 thresh=1
+    Extraction OK: type=chronic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] rheum_gout-guideline-2020_extracted.json
+           -> 3 Qs | [] | title_year_rare
+             concepts: ['Losartan as preferred antihypertensive in gout patients', 'Allopurinol as first-line urate-lowering therapy', 'Colchicine prophylaxis when initiating allopurinol']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_034302.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\rheum_gout-guideline-2020_summary.docx
+   [5/5] Done 
+ [44/50] rheum_OA.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/4] recs=17 thresh=1
+    [chunk 2/4] recs=21 thresh=2
+    [chunk 4/4] recs=0 thresh=0
+    [chunk 3/4] recs=15 thresh=1
+    Extraction OK: type=chronic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] rheum_OA_extracted.json
+           -> 3 Qs | [] | title_year_rare
+             concepts: ['Losartan as preferred antihypertensive in gout patients', 'Hydrochlorothiazide increases serum urate levels', 'Allopurinol as first-line urate-lowering therapy']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_034513.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\rheum_OA_summary.docx
+   [5/5] Done 
+ [45/50] stable-coronary-artery-disease-treatment.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/3] recs=6 thresh=3
+    [chunk 1/3] recs=6 thresh=7
+    [chunk 3/3] recs=2 thresh=0
+    Extraction OK: type=chronic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] stable-coronary-artery-disease-treatment_extracted.j
+           -> 3 Qs | [] | title_year_pair
+             concepts: ['Beta-blockers as first-line therapy for stable angina', 'Calcium channel blockers as second-line antianginal agents', 'Dual antiplatelet therapy duration after drug-eluting stent placement']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_034652.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\stable-coronary-artery-disease-treatment_summary.docx
+   [5/5] Done 
+ [46/50] subclinical-hyperthyroidism-treatment.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=3 thresh=3
+    [chunk 1/2] recs=5 thresh=2
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] subclinical-hyperthyroidism-treatment_extracted.json
+           -> 2 Qs | [] | title_year_pair
+Traceback (most recent call last):
+  File "C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\scripts\ite_intelligence_enricher.py", line 503, in <module>
+    main()
+  File "C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\scripts\ite_intelligence_enricher.py", line 466, in main
+    print(f"             concepts: {hy}")
+  File "C:\Users\mpsch\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u03bc' in position 185: character maps to <undefined>
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\subclinical-hyperthyroidism-treatment_summary.docx
+   [5/5] Done 
+ [47/50] testosterone-therapy-clinical-applications.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/3] recs=4 thresh=5
+    [chunk 2/3] recs=5 thresh=4
+    [chunk 3/3] recs=2 thresh=0
+    Extraction OK: type=chronic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] testosterone-therapy-clinical-applications_extracted
+           -> 2 Qs | [] | title_year_pair
+             concepts: ['Diagnostic workup for low testosterone including LH/FSH evaluation', 'Pre-treatment screening with PSA and digital rectal examination', 'Periodic monitoring of PSA and hematocrit during testosterone therapy']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_034932.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\testosterone-therapy-clinical-applications_summary.docx
+   [5/5] Done 
+ [48/50] urine-drug-tests.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=3 thresh=2
+    [chunk 1/2] recs=5 thresh=4
+    Extraction OK: type=diagnostic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] urine-drug-tests_extracted.json
+           -> 3 Qs | [] | title_year_pair
+             concepts: ['False-positive amphetamine screens from bupropion, labetalol, ranitidine, trazodone', 'Immunoassay benzodiazepine screens detect nordiazepam but not alprazolam metabolites', 'False-negative results for synthetic/semisynthetic opioids (oxycodone, fentanyl, methadone)']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_pair': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_035046.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\urine-drug-tests_summary.docx
+   [5/5] Done 
+ [49/50] Wasserman_2018_RheumatoidArthritis.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=6 thresh=3
+    [chunk 1/2] recs=4 thresh=4
+    Extraction OK: type=chronic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] Wasserman_2018_RheumatoidArthritis_extracted.json
+           -> 2 Qs | [] | title_year_rare
+             concepts: ['Anti-citrullinated protein antibody specificity for rheumatoid arthritis diagnosis', 'Laboratory interpretation in rheumatoid arthritis vs other conditions', 'Systemic lupus erythematosus disease activity monitoring']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_035209.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\Wasserman_2018_RheumatoidArthritis_summary.docx
+   [5/5] Done 
+ [50/50] wrist-pain-case-based-approach.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/2] recs=5 thresh=0
+    [chunk 1/2] recs=5 thresh=4
+    Extraction OK: type=diagnostic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] wrist-pain-case-based-approach_extracted.json
+           -> 2 Qs | [] | title_year_rare
+             concepts: ["De Quervain's tenosynovitis diagnosis", 'Finkelstein test technique and interpretation', 'Radial-sided wrist pain differential diagnosis']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'title_year_rare': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_035321.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\integrated\integrated-batch\wrist-pain-case-based-approach_summary.docx
+   [5/5] Done 
+ Batch complete: 50 succeeded, 0 failed 
+   [SKIP] Not a PDF: integrated 
+ Log saved to: C:\Users\mpsch\Desktop\claude_knowledge\guideline_extractor_v2\oneclick\logs\run_20260311_020409.log 

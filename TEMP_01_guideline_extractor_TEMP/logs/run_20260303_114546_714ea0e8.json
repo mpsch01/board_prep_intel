@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260303_114546",
+  "run_id": "714ea0e8",
+  "file_name": "",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "endocrine",
+    "respiratory",
+    "hepatic",
+    "renal",
+    "reproductive"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 29127,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 7,
+  "thresholds_count": 9,
+  "medications_count": 1
+}

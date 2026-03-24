@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260303_123449",
+  "run_id": "76db6fa1",
+  "file_name": "21.pdf",
+  "document_type": "preventive_guideline",
+  "engine_used": "PreventiveEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "cardiovascular"
+  ],
+  "modules_activated": [
+    "screening_population",
+    "screening_intervals",
+    "risk_stratification",
+    "preventive_medications",
+    "counseling_interventions",
+    "positive_screen_pathway"
+  ],
+  "raw_text_chars": 47139,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 13,
+  "thresholds_count": 15,
+  "medications_count": 4
+}

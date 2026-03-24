@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260311_063118",
+  "run_id": "98993c27",
+  "file_name": "18_Radius_Ulna_Fractures_Patel_2021.pdf",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "DiagnosticEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "musculoskeletal"
+  ],
+  "modules_activated": [
+    "diagnostic_criteria",
+    "test_thresholds",
+    "workup_algorithm",
+    "result_interpretation",
+    "referral_indications",
+    "follow_up_imaging"
+  ],
+  "raw_text_chars": 34934,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 11,
+  "thresholds_count": 17,
+  "medications_count": 0
+}

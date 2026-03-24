@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260304_070637",
+  "run_id": "55189f11",
+  "file_name": "11.pdf",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "DiagnosticEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "endocrine",
+    "respiratory",
+    "gastrointestinal",
+    "genitourinary",
+    "reproductive"
+  ],
+  "modules_activated": [
+    "diagnostic_criteria",
+    "test_thresholds",
+    "workup_algorithm",
+    "result_interpretation",
+    "referral_indications",
+    "follow_up_imaging"
+  ],
+  "raw_text_chars": 29127,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 13,
+  "thresholds_count": 12,
+  "medications_count": 0
+}

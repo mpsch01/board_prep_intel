@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260307_063414",
+  "run_id": "f2f1eaef",
+  "file_name": "rheum_OA.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "musculoskeletal"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 72481,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 65,
+  "thresholds_count": 5,
+  "medications_count": 13
+}

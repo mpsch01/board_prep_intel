@@ -1,0 +1,33 @@
+Guideline Extractor Run Log 
+Date: Wed 03/11/2026  Time: 21:08:38.24 
+Input: C:\Users\mpsch\Desktop\peds_20192528.pdf 
+ 
+ Found  PDF file(s) 
+ Output folder: -batch 
+ Batch complete:  succeeded,  failed 
+   [1/5] Extracting clinical content... 
+    [chunk 1/6] recs=6 thresh=4
+    [chunk 2/6] recs=9 thresh=3
+    [chunk 3/6] recs=4 thresh=2
+    [chunk 4/6] recs=3 thresh=4
+    [chunk 5/6] recs=5 thresh=2
+    [chunk 6/6] recs=4 thresh=0
+    Extraction OK: type=chronic_guideline conf=0.9
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 0  No match: 1  Skipped: 0  Errors: 0
+  Methods: {}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_intelligence\logs\enricher_live_20260311_211058.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\peds_20192528_summary.docx
+   [5/5] Done 
+ Log saved to: C:\Users\mpsch\Desktop\claude_knowledge\guideline_extractor_v2\oneclick\logs\run_20260311_210838.log 

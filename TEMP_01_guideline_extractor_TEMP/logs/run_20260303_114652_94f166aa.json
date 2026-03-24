@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260303_114652",
+  "run_id": "94f166aa",
+  "file_name": "",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "respiratory"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 31041,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 5,
+  "thresholds_count": 4,
+  "medications_count": 3
+}

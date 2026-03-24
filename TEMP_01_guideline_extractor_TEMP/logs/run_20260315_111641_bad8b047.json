@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260315_111641",
+  "run_id": "bad8b047",
+  "file_name": "Aspirin_2022#@#ART-0097@#@.pdf",
+  "document_type": "preventive_guideline",
+  "engine_used": "PreventiveEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "reproductive",
+    "cardiovascular"
+  ],
+  "modules_activated": [
+    "screening_population",
+    "screening_intervals",
+    "risk_stratification",
+    "preventive_medications",
+    "counseling_interventions",
+    "positive_screen_pathway"
+  ],
+  "raw_text_chars": 4009,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 1,
+  "thresholds_count": 4,
+  "medications_count": 1
+}

@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260307_064423",
+  "run_id": "bb2c34cd",
+  "file_name": "rheum_vaccinations.pdf",
+  "document_type": "preventive_guideline",
+  "engine_used": "PreventiveEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "musculoskeletal",
+    "immune"
+  ],
+  "modules_activated": [
+    "screening_population",
+    "screening_intervals",
+    "risk_stratification",
+    "preventive_medications",
+    "counseling_interventions",
+    "positive_screen_pathway"
+  ],
+  "raw_text_chars": 80433,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 17,
+  "thresholds_count": 20,
+  "medications_count": 11
+}

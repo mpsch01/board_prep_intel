@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260315_111848",
+  "run_id": "27687670",
+  "file_name": "Moayyedi_Lacy_2017#@#ART-0886@#@.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "gastrointestinal"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 122732,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 37,
+  "thresholds_count": 14,
+  "medications_count": 22
+}

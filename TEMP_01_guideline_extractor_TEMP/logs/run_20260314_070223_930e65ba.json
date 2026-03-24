@@ -1,0 +1,33 @@
+{
+  "timestamp": "20260314_070223",
+  "run_id": "930e65ba",
+  "file_name": "afp_incidentalomas.pdf",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "DiagnosticEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "endocrine",
+    "respiratory",
+    "hepatic",
+    "genitourinary",
+    "reproductive",
+    "neurological"
+  ],
+  "modules_activated": [
+    "diagnostic_criteria",
+    "test_thresholds",
+    "workup_algorithm",
+    "result_interpretation",
+    "referral_indications",
+    "follow_up_imaging"
+  ],
+  "raw_text_chars": 29127,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 13,
+  "thresholds_count": 12,
+  "medications_count": 1
+}

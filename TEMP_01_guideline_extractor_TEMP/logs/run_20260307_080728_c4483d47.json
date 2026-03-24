@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260307_080728",
+  "run_id": "c4483d47",
+  "file_name": "acg_liver_disease+pregnany.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.8,
+  "body_systems": [
+    "hepatic",
+    "reproductive"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 119321,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 35,
+  "thresholds_count": 17,
+  "medications_count": 22
+}

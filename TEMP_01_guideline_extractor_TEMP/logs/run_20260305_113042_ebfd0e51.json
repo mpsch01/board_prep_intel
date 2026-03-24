@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260305_113042",
+  "run_id": "ebfd0e51",
+  "file_name": "10_Transgender_Gender_Diverse_Klein_2018 (1).pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "endocrine",
+    "reproductive",
+    "psychiatric"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 68830,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 17,
+  "thresholds_count": 12,
+  "medications_count": 15
+}

@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260305_115543",
+  "run_id": "5fdd8403",
+  "file_name": "aafp_periop_anticoags.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "cardiovascular",
+    "hematologic"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 14328,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 9,
+  "thresholds_count": 6,
+  "medications_count": 3
+}

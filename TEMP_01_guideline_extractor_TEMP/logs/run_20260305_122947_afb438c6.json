@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260305_122947",
+  "run_id": "afb438c6",
+  "file_name": "peds_bronchiolitis.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "respiratory"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 145021,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 39,
+  "thresholds_count": 15,
+  "medications_count": 7
+}

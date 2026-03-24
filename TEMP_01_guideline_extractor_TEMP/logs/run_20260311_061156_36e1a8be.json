@@ -1,0 +1,31 @@
+{
+  "timestamp": "20260311_061156",
+  "run_id": "36e1a8be",
+  "file_name": "06_End_of_Life_Care_Albert_2017.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "neurologic",
+    "respiratory",
+    "gastrointestinal",
+    "pain_management"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 27852,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 11,
+  "thresholds_count": 5,
+  "medications_count": 10
+}

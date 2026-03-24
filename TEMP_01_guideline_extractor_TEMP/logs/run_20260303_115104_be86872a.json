@@ -1,0 +1,26 @@
+{
+  "timestamp": "20260303_115104",
+  "run_id": "be86872a",
+  "file_name": "",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "neurological",
+    "psychiatric"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 29428,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 3,
+  "thresholds_count": 4,
+  "medications_count": 0
+}

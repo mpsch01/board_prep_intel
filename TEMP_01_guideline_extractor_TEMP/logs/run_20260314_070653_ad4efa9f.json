@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260314_070653",
+  "run_id": "ad4efa9f",
+  "file_name": "afp_oncologic_emergencies.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "hematologic",
+    "cardiovascular",
+    "neurologic",
+    "endocrine",
+    "renal"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 37572,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 7,
+  "thresholds_count": 10,
+  "medications_count": 9
+}

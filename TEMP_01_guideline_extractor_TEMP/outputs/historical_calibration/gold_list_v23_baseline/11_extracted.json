@@ -1,0 +1,229 @@
+{
+  "source": {
+    "title": "Incidentalomas: Initial Management",
+    "organization": "American Family Physician",
+    "document_type": "diagnostic_guideline",
+    "publication_year": null,
+    "version_number": "",
+    "doi": "",
+    "file_name": "11.pdf"
+  },
+  "classification": {
+    "engine_used": "DiagnosticEngine",
+    "document_type": "diagnostic_guideline",
+    "confidence": 0.95,
+    "signals": [
+      "Guidelines are provided for the initial management of eight incidentalomas",
+      "pituitary-specific magnetic resonance imaging if the lesion is 1 cm or larger",
+      "nodules larger than 1 to 2 cm are of greater concern",
+      "pulmonary incidentalomas larger than 8 mm or those with irregular borders",
+      "The Bosniak classification is a well-accepted means of triaging renal incidentalomas"
+    ],
+    "body_systems": [
+      "endocrine",
+      "respiratory",
+      "gastrointestinal",
+      "genitourinary",
+      "reproductive"
+    ]
+  },
+  "extraction": {
+    "summary": "This guideline addresses the initial management of eight types of incidental findings (incidentalomas) discovered on imaging studies: pituitary, thyroid, pulmonary, hepatic, pancreatic, adrenal, renal, and ovarian lesions. The primary approach focuses on size-based thresholds and imaging characteristics to determine which lesions require further workup versus monitoring.",
+    "population": {
+      "age_criteria": "Variable by organ system - reproductive age women for hepatic adenomas, older adults for renal cysts (up to one-third), any age for other incidentalomas",
+      "risk_criteria": "Risk factors include smoking history, asbestos exposure, family history, history of malignancy, radiation exposure (thyroid), oral contraceptive use (hepatic adenomas)",
+      "disease_definition": "Incidental findings on radiologic studies that are of unclear clinical significance, most of which prove to be benign",
+      "exclusions": "Patients with active cancer or obvious metastatic disease require different management algorithms",
+      "severity_staging": "Size-based classification systems including Bosniak classification for renal lesions"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Pituitary lesion size",
+        "value": 1,
+        "unit": "cm",
+        "context": "Threshold for MRI with pituitary protocol"
+      },
+      {
+        "parameter": "Thyroid nodule size",
+        "value": "1-2",
+        "unit": "cm",
+        "context": "Threshold for fine-needle aspiration biopsy"
+      },
+      {
+        "parameter": "Pulmonary nodule size (low-risk)",
+        "value": 4,
+        "unit": "mm",
+        "context": "Cutoff below which no further imaging warranted"
+      },
+      {
+        "parameter": "Pulmonary nodule size (worrisome)",
+        "value": 8,
+        "unit": "mm",
+        "context": "Threshold for concern and further workup"
+      },
+      {
+        "parameter": "Hepatic lesion size",
+        "value": 5,
+        "unit": "mm",
+        "context": "Threshold for monitoring solid lesions"
+      },
+      {
+        "parameter": "Hepatic attenuation",
+        "value": 20,
+        "unit": "HU",
+        "context": "Low attenuation threshold for benign lesions"
+      },
+      {
+        "parameter": "Pancreatic cyst size",
+        "value": 3,
+        "unit": "cm",
+        "context": "Surgery recommended for cysts larger than this with suspicious features"
+      },
+      {
+        "parameter": "Adrenal lesion size",
+        "value": 4,
+        "unit": "cm",
+        "context": "Threshold for biopsy consideration"
+      },
+      {
+        "parameter": "Adrenal attenuation",
+        "value": 10,
+        "unit": "HU",
+        "context": "Threshold for lipid-rich adenoma on unenhanced CT"
+      },
+      {
+        "parameter": "Renal cyst size",
+        "value": 3,
+        "unit": "cm",
+        "context": "Complex cysts larger than this require follow-up"
+      },
+      {
+        "parameter": "Ovarian cyst size (premenopausal)",
+        "value": 3,
+        "unit": "cm",
+        "context": "Benign cysts smaller than this do not require follow-up"
+      },
+      {
+        "parameter": "Ovarian cyst size (postmenopausal)",
+        "value": 1,
+        "unit": "cm",
+        "context": "Benign cysts smaller than this do not require follow-up"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "MRI with pituitary protocol for lesions ≥1 cm or abutting optic chiasm",
+        "strength": "C",
+        "evidence_level": "Expert opinion",
+        "notes": "Preferred imaging modality"
+      },
+      {
+        "recommendation": "Follow thyroid nodules ≤1 cm with ultrasonography in 6 months",
+        "strength": "C",
+        "evidence_level": "Expert opinion",
+        "notes": "Most can be safely monitored"
+      },
+      {
+        "recommendation": "No further imaging for pulmonary nodules ≤4 mm in low-risk patients",
+        "strength": "C",
+        "evidence_level": "ACCP guidelines",
+        "notes": "Based on low malignancy risk"
+      },
+      {
+        "recommendation": "Multiphasic CT or MRI preferred for hepatic lesion characterization",
+        "strength": "C",
+        "evidence_level": "Expert opinion",
+        "notes": "Single-phase CT inadequate"
+      },
+      {
+        "recommendation": "Monitor all pancreatic cystic neoplasms due to malignant potential",
+        "strength": "C",
+        "evidence_level": "Expert opinion",
+        "notes": "Surgery for >3 cm with suspicious features"
+      },
+      {
+        "recommendation": "Use Bosniak classification for renal incidentaloma management",
+        "strength": "C",
+        "evidence_level": "Expert opinion",
+        "notes": "Well-accepted triaging method"
+      },
+      {
+        "recommendation": "Obtain previous imaging to assess lesion stability when available",
+        "strength": "C",
+        "evidence_level": "Expert opinion",
+        "notes": "May obviate need for further workup"
+      },
+      {
+        "recommendation": "Consider patient health, life expectancy, and wishes in workup decisions",
+        "strength": "C",
+        "evidence_level": "Expert opinion",
+        "notes": "Shared decision-making approach"
+      },
+      {
+        "recommendation": "Engage in shared decision making with the patient with emphasis on the patient's values while ensuring understanding of risks of further imaging and interventions",
+        "strength": "Strong",
+        "evidence_level": "Expert consensus",
+        "notes": "Fundamental principle for managing all incidentalomas"
+      },
+      {
+        "recommendation": "Follow ACR Incidental Findings Committee guidelines for managing incidental findings on abdominal CT",
+        "strength": "Strong",
+        "evidence_level": "Expert consensus",
+        "notes": "White paper provides systematic approach"
+      },
+      {
+        "recommendation": "Use evidence-based endocrinology principles for management of pituitary incidentalomas",
+        "strength": "Strong",
+        "evidence_level": "Clinical practice guideline",
+        "notes": "Follow Endocrine Society clinical practice guideline"
+      },
+      {
+        "recommendation": "Follow American Thyroid Association management guidelines for thyroid nodules",
+        "strength": "Strong",
+        "evidence_level": "Clinical practice guideline",
+        "notes": "Revised guidelines for thyroid nodules and differentiated thyroid cancer"
+      },
+      {
+        "recommendation": "Use ACCP evidence-based clinical practice guidelines for evaluation of pulmonary nodules",
+        "strength": "Strong",
+        "evidence_level": "Clinical practice guideline",
+        "notes": "Addresses when pulmonary nodule evaluation indicates lung cancer"
+      }
+    ],
+    "medications": [],
+    "red_flags": [
+      "Pituitary lesion ≥1 cm with solid component or optic nerve impingement",
+      "Vision changes or signs of hormonal hypersecretion",
+      "Elevated TSH with thyroid nodule",
+      "History of neck radiation or family history of thyroid malignancy",
+      "Pulmonary nodule with history of malignancy",
+      "Irregular borders, eccentric calcifications, or low density in pulmonary nodules",
+      "Hepatic lesion with ill-defined margins or enhancement >20 HU",
+      "Pancreatic cyst >3 cm with mural nodules or lymphadenopathy",
+      "Adrenal lesion >4 cm or high attenuation >10 HU",
+      "Bosniak category IIF or greater renal lesions",
+      "Ovarian lesions with thickened walls/septa or solid components with blood flow",
+      "Elevated CA-125 in postmenopausal women with ovarian lesions"
+    ],
+    "follow_up": "Variable by organ system: Pituitary MRI in 6-12 months depending on size, thyroid ultrasonography in 6 months, pulmonary nodules over 6-24 months (3 months for high-risk), hepatic lesions with serial imaging, pancreatic cysts with radiologic monitoring for 1-3 cm lesions, adrenal lesions monitored for stability over 6-12 months, renal category IIF lesions followed with imaging, ovarian cysts monitored 6-12 weeks to yearly depending on characteristics",
+    "escalation_path": "Refer for surgery: pancreatic cysts >3 cm with suspicious features, adrenal lesions >4 cm (usually biopsied), renal category III/IV lesions, complex ovarian lesions. Biopsy considerations: thyroid nodules >1-2 cm, adrenal lesions >4 cm, hepatic lesions when hepatocellular carcinoma cannot be excluded. Subspecialty consultation: endocrinology for pituitary hormone assessment, surgery for concerning lesions requiring resection, radiology consultation for complex imaging interpretation",
+    "_chunked_extraction": true,
+    "_chunks_merged": 2
+  },
+  "metadata": {
+    "run_id": "55189f11",
+    "extracted_at": "2026-03-04T07:06:37.806523Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "diagnostic_criteria",
+      "test_thresholds",
+      "workup_algorithm",
+      "result_interpretation",
+      "referral_indications",
+      "follow_up_imaging"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 29127
+  }
+}

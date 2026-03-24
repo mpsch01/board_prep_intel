@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260303_233507",
+  "run_id": "38eb4121",
+  "file_name": "uspstf_aspirin-cvd.pdf",
+  "document_type": "preventive_guideline",
+  "engine_used": "PreventiveEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "cardiovascular"
+  ],
+  "modules_activated": [
+    "screening_population",
+    "screening_intervals",
+    "risk_stratification",
+    "preventive_medications",
+    "counseling_interventions",
+    "positive_screen_pathway"
+  ],
+  "raw_text_chars": 5674,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 2,
+  "thresholds_count": 4,
+  "medications_count": 1
+}

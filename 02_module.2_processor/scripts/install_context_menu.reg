@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+; ── "Extract Guideline" on any .pdf file ──────────────────────
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\.pdf\shell\ExtractGuideline]
+@="Extract Guideline"
+"Icon"="C:\\Windows\\System32\\shell32.dll,1"
+
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\.pdf\shell\ExtractGuideline\command]
+@="\"C:\\Users\\mpsch\\Desktop\\claude_knowledge\\abfm_prep\\01_guideline_extractor\\oneclick\\extract_guideline.bat\" \"%1\""
+
+; ── "Extract All Guidelines" on any folder ────────────────────
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\ExtractAllGuidelines]
+@="Extract All Guidelines"
+"Icon"="C:\\Windows\\System32\\shell32.dll,1"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\ExtractAllGuidelines\command]
+@="\"C:\\Users\\mpsch\\Desktop\\claude_knowledge\\abfm_prep\\01_guideline_extractor\\oneclick\\extract_guideline.bat\" \"%1\""

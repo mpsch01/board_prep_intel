@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260307_080210",
+  "run_id": "8cf3a20d",
+  "file_name": "acg_focal_liver_lesion.pdf",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "DiagnosticEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "gastrointestinal",
+    "hepatic"
+  ],
+  "modules_activated": [
+    "diagnostic_criteria",
+    "test_thresholds",
+    "workup_algorithm",
+    "result_interpretation",
+    "referral_indications",
+    "follow_up_imaging"
+  ],
+  "raw_text_chars": 200811,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 54,
+  "thresholds_count": 52,
+  "medications_count": 16
+}

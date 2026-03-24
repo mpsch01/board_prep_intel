@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260307_074642",
+  "run_id": "d7b7b730",
+  "file_name": "acg_anticoag+GI_procedures.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "gastrointestinal",
+    "cardiovascular",
+    "hematologic"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 110796,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 28,
+  "thresholds_count": 20,
+  "medications_count": 14
+}

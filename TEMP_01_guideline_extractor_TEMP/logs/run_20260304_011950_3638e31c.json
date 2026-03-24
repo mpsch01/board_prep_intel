@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260304_011950",
+  "run_id": "3638e31c",
+  "file_name": "jacc_perioperative_eval.pdf",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "DiagnosticEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "cardiovascular"
+  ],
+  "modules_activated": [
+    "diagnostic_criteria",
+    "test_thresholds",
+    "workup_algorithm",
+    "result_interpretation",
+    "referral_indications",
+    "follow_up_imaging"
+  ],
+  "raw_text_chars": 492505,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 73,
+  "thresholds_count": 66,
+  "medications_count": 24
+}

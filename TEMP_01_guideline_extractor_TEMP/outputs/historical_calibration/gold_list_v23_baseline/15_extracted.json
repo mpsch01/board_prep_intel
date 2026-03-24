@@ -1,0 +1,192 @@
+{
+  "source": {
+    "title": "Respiratory Syncytial Virus Bronchiolitis in Children",
+    "organization": "",
+    "document_type": "acute_protocol",
+    "publication_year": null,
+    "version_number": "",
+    "doi": "",
+    "file_name": "15.pdf"
+  },
+  "classification": {
+    "engine_used": "AcuteProtocolEngine",
+    "document_type": "acute_protocol",
+    "confidence": 0.9,
+    "signals": [
+      "Treatment of RSV infection is mainly supportive",
+      "supplemental oxygen to maintain adequate oxygen saturation",
+      "intravenous or nasogastric administration of fluids",
+      "bronchodilators, epinephrine, corticosteroids...are generally not useful",
+      "clinical practice guideline for diagnosis and management"
+    ],
+    "body_systems": [
+      "respiratory"
+    ]
+  },
+  "extraction": {
+    "summary": "Respiratory syncytial virus (RSV) bronchiolitis is a common lower respiratory tract infection in infants and young children presenting with upper respiratory symptoms followed by increased cough, wheezing, and respiratory effort. Treatment is primarily supportive care with oxygen supplementation and hydration maintenance, while avoiding unnecessary interventions like bronchodilators, corticosteroids, and antibiotics.",
+    "population": {
+      "age_criteria": "Primarily affects infants and children in first two years of life, with highest hospitalization rates in first 90 days of life",
+      "risk_criteria": "Chronic lung disease, congenital anomalies, immunocompromised state, hemodynamically significant heart disease, premature birth, low birth weight (<2,300g)",
+      "disease_definition": "Lower respiratory tract infection characterized by direct viral cytotoxic injury leading to necrosis of epithelial cells and bronchiolar plugging",
+      "exclusions": "Not specified in document",
+      "severity_staging": "Mild disease: adequate oral intake, age ≥2 months, initial O2 sat ≥94%, lower respiratory rate, no/mild retractions. Severe: younger age, dehydration, increased work of breathing, tachycardia (HR >97% for age)"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Oxygen saturation",
+        "value": "90",
+        "unit": "%",
+        "context": "Minimum acceptable oxygen saturation for children with bronchiolitis"
+      },
+      {
+        "parameter": "Respiratory rate",
+        "value": "60",
+        "unit": "breaths per minute",
+        "context": "May indicate poor feeding and need for IV/NG hydration"
+      },
+      {
+        "parameter": "Heart rate",
+        "value": ">97th percentile for age",
+        "unit": "bpm",
+        "context": "Predictor of increased severity"
+      },
+      {
+        "parameter": "Initial oxygen saturation",
+        "value": "94",
+        "unit": "%",
+        "context": "Predictor of safe discharge when ≥94%"
+      },
+      {
+        "parameter": "Age",
+        "value": "24",
+        "unit": "months",
+        "context": "Primary age group for RSV bronchiolitis"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Routine viral testing and chest imaging are not recommended for patients with presumed RSV bronchiolitis",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Does not affect management decisions or improve outcomes"
+      },
+      {
+        "recommendation": "Bronchodilators, systemic or inhaled corticosteroids, and epinephrine should not be administered to infants and children with bronchiolitis",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "No effect on hospitalization, oxygen saturation, or length of stay"
+      },
+      {
+        "recommendation": "Antibiotics should not be administered to children with RSV bronchiolitis unless bacterial infection is confirmed or suspected",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Very low rate of bacteremia in bronchiolitis patients"
+      },
+      {
+        "recommendation": "Maintain oxygen saturation ≥90%",
+        "strength": "Strong",
+        "evidence_level": "Expert consensus",
+        "notes": "Higher saturations only prolong hospitalization"
+      },
+      {
+        "recommendation": "Supportive care is the mainstay of treatment",
+        "strength": "Strong",
+        "evidence_level": "High",
+        "notes": "Based on multiple systematic reviews and guidelines"
+      },
+      {
+        "recommendation": "Bronchodilators are not routinely recommended",
+        "strength": "Strong",
+        "evidence_level": "High",
+        "notes": "Cochrane review shows no benefit"
+      },
+      {
+        "recommendation": "Systemic corticosteroids are not recommended",
+        "strength": "Strong",
+        "evidence_level": "High",
+        "notes": "No long-term benefits demonstrated"
+      },
+      {
+        "recommendation": "Antibiotics are not routinely indicated",
+        "strength": "Strong",
+        "evidence_level": "High",
+        "notes": "Low risk of bacterial co-infection in typical cases"
+      },
+      {
+        "recommendation": "Consider hypertonic saline nebulization",
+        "strength": "Moderate",
+        "evidence_level": "Moderate",
+        "notes": "May reduce length of stay in hospitalized patients"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "Palivizumab (Synagis)",
+        "dose": "Five monthly doses during RSV season",
+        "indication": "Prophylaxis for high-risk infants: <29 weeks gestation, chronic lung disease of prematurity, hemodynamically significant heart disease",
+        "class": "Humanized monoclonal antibody"
+      },
+      {
+        "drug": "Supplemental oxygen",
+        "dose": "As needed to maintain O2 sat ≥90%",
+        "indication": "Hypoxemia",
+        "class": "Supportive therapy"
+      },
+      {
+        "drug": "IV or nasogastric fluids",
+        "dose": "As needed for hydration",
+        "indication": "Infants who cannot maintain oral hydration",
+        "class": "Supportive therapy"
+      },
+      {
+        "drug": "Hypertonic saline 7%",
+        "dose": "Nebulized",
+        "indication": "May reduce hospital length of stay",
+        "class": "Mucolytic agent"
+      },
+      {
+        "drug": "Palivizumab",
+        "dose": "Monthly injections",
+        "indication": "Prevention in high-risk infants",
+        "class": "Monoclonal antibody"
+      }
+    ],
+    "red_flags": [
+      "Apnea (especially in infants 2-8 weeks old)",
+      "Dehydration",
+      "Increased work of breathing with retractions",
+      "Tachycardia (heart rate >97th percentile for age)",
+      "Poor feeding or inability to maintain oral intake",
+      "Oxygen saturation <90%",
+      "Altered mental status",
+      "Respiratory rate >60 breaths per minute in infants",
+      "Severe respiratory distress",
+      "Poor feeding or dehydration",
+      "Apnea episodes",
+      "Oxygen saturation persistently below 90%",
+      "Signs of bacterial superinfection",
+      "Worsening respiratory status despite supportive care"
+    ],
+    "follow_up": "Monitor nutrition and hydration status, assess respiratory effort and oxygen saturation. Continuous pulse oximetry is optional. Educate parents on infection prevention including hand hygiene and avoiding crowds.",
+    "escalation_path": "Hospitalize for: age <2 months, dehydration, increased work of breathing, tachycardia, inability to maintain oral intake, oxygen saturation <90%. Consider ICU for respiratory failure requiring intubation and mechanical ventilation (higher risk of bacterial pneumonia).",
+    "_chunked_extraction": true,
+    "_chunks_merged": 2
+  },
+  "metadata": {
+    "run_id": "201265fe",
+    "extracted_at": "2026-03-04T07:08:30.884018Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "urgency_triage",
+      "stabilization_steps",
+      "critical_thresholds",
+      "emergency_medications",
+      "escalation_triggers",
+      "disposition"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 31041
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "source": {
+    "title": "Office Spirometry: Indications and Interpretation",
+    "organization": "American Academy of Family Physicians",
+    "document_type": "diagnostic_guideline",
+    "publication_year": 2020,
+    "version_number": "",
+    "doi": "",
+    "file_name": "6.pdf"
+  },
+  "classification": {
+    "engine_used": "DiagnosticEngine",
+    "document_type": "diagnostic_guideline",
+    "confidence": 0.95,
+    "signals": [
+      "stepwise approach to spirometry allows for ease and reliability of interpretation",
+      "FEV1/FVC ratio and FVC are used together to identify obstructive defects",
+      "A low FVC is defined as a value below the 5th percentile",
+      "Obstructive defects should be assessed for reversibility",
+      "proper use of pulmonary function tests can help differentiate many of the causes of dyspnea"
+    ],
+    "body_systems": [
+      "respiratory"
+    ]
+  },
+  "extraction": {
+    "summary": "Spirometry is used to diagnose and monitor obstructive and restrictive lung diseases including asthma and COPD. A stepwise approach evaluates FEV1/FVC ratio for obstruction, FVC for restriction, and bronchodilator response for reversibility.",
+    "population": {
+      "age_criteria": "Adults and children/adolescents 5-18 years of age",
+      "risk_criteria": "Symptomatic patients with suspected COPD or asthma; patients at risk of pulmonary disease",
+      "disease_definition": "Suspected respiratory symptoms, abnormal laboratory tests, preoperative assessment, monitoring known pulmonary disease",
+      "exclusions": "Asymptomatic adults (screening not recommended)",
+      "severity_staging": "Mild (>70% predicted), Moderate (60-69%), Moderately severe (50-59%), Severe (35-49%), Very severe (<35%)"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "FEV1/FVC ratio",
+        "value": "<0.7",
+        "unit": "ratio",
+        "context": "GOLD criteria for COPD obstruction"
+      },
+      {
+        "parameter": "FEV1/FEV6 ratio",
+        "value": "<0.73",
+        "unit": "ratio",
+        "context": "Alternative for detecting obstruction"
+      },
+      {
+        "parameter": "FVC",
+        "value": "<5th percentile",
+        "unit": "percentile",
+        "context": "Low FVC in adults (lower limit of normal)"
+      },
+      {
+        "parameter": "Bronchodilator response",
+        "value": "≥12% and 0.2L",
+        "unit": "% and volume",
+        "context": "Significant reversibility in adults (FEV1 or FVC)"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Use spirometry as part of diagnostic workup in patients with presumed COPD or asthma",
+        "strength": "Strong",
+        "evidence_level": "C",
+        "notes": "Recommended by ATS/ERS, GOLD, Global Initiative for Asthma, and AAAAI"
+      },
+      {
+        "recommendation": "Do not screen asymptomatic adults for COPD with spirometry",
+        "strength": "Against",
+        "evidence_level": "C",
+        "notes": "USPSTF, AAFP, ATS/ERS, and GOLD recommendation"
+      },
+      {
+        "recommendation": "Withhold bronchodilators before testing: SABA 4-6 hours, SAMA 12 hours, LABA 24 hours, LAMA 36-48 hours",
+        "strength": "Strong",
+        "evidence_level": "C",
+        "notes": "If diagnosing underlying disorder or assessing bronchodilator responsiveness"
+      },
+      {
+        "recommendation": "Perform full pulmonary function testing for restrictive patterns and mixed patterns if FVC doesn't improve with bronchodilator",
+        "strength": "Strong",
+        "evidence_level": "C",
+        "notes": "ATS/ERS expert opinion"
+      },
+      {
+        "recommendation": "Consider bronchoprovocation testing if spirometry normal but exercise/allergen-induced asthma suspected",
+        "strength": "Strong",
+        "evidence_level": "C",
+        "notes": "ATS/ERS expert opinion"
+      },
+      {
+        "recommendation": "For FEV1 <70% predicted, may try therapeutic bronchodilator trial instead of bronchoprovocation testing",
+        "strength": "May consider",
+        "evidence_level": "C",
+        "notes": "Alternative approach"
+      },
+      {
+        "recommendation": "Don't diagnose or manage asthma without spirometry",
+        "strength": "Strong",
+        "evidence_level": "Professional guideline recommendation",
+        "notes": "American Academy of Allergy, Asthma and Immunology Choosing Wisely recommendation"
+      },
+      {
+        "recommendation": "Use standardized spirometry for COPD and asthma diagnosis",
+        "strength": "Strong",
+        "evidence_level": "ATS/ERS technical statement",
+        "notes": "Follow 2019 updated standardization guidelines"
+      },
+      {
+        "recommendation": "Consider bronchoprovocation testing for asthma diagnosis when spirometry is normal",
+        "strength": "Moderate",
+        "evidence_level": "Technical standard",
+        "notes": "Methacholine or mannitol challenge testing per ERS standards"
+      },
+      {
+        "recommendation": "Use post-bronchodilator values for COPD diagnosis",
+        "strength": "Moderate",
+        "evidence_level": "Clinical evidence",
+        "notes": "Post-dilator FEV1/FVC ratio more accurate than pre-dilator values"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "Short-acting bronchodilator",
+        "dose": "Standard dose",
+        "indication": "Assess reversibility in obstructive defects",
+        "class": "Bronchodilator"
+      },
+      {
+        "drug": "Methacholine",
+        "dose": "Increasing concentrations up to 4 mg/mL cumulative",
+        "indication": "Bronchoprovocation testing",
+        "class": "Bronchoconstrictor"
+      },
+      {
+        "drug": "Mannitol",
+        "dose": "Increasing concentrations up to 635 mg cumulative",
+        "indication": "Bronchoprovocation testing",
+        "class": "Osmotic agent"
+      },
+      {
+        "drug": "Bronchodilator",
+        "dose": "Not specified",
+        "indication": "Pre-test administration for post-bronchodilator spirometry",
+        "class": "Beta-2 agonist or anticholinergic"
+      }
+    ],
+    "red_flags": [
+      "Poor quality spirometry results affecting interpretation",
+      "Severe obstruction (FEV1 <35% predicted)",
+      "Mixed pattern not improving with bronchodilator",
+      "Invalid spirometry test quality criteria not met",
+      "Severe airway obstruction with acute symptoms",
+      "Unable to perform adequate spirometry maneuvers"
+    ],
+    "follow_up": "FVC and FEV1 values decrease by 20-30 mL per year normally. Review previous spirometry results to assess disease progression or treatment response. Variations in test quality may affect comparisons.",
+    "escalation_path": "Refer for full pulmonary function testing: 1) Restrictive pattern on spirometry, 2) Mixed pattern if FVC does not improve significantly after bronchodilator administration. Consider bronchoprovocation testing if spirometry normal but clinical suspicion for exercise/allergen-induced asthma.",
+    "_chunked_extraction": true,
+    "_chunks_merged": 2
+  },
+  "metadata": {
+    "run_id": "ae483d6e",
+    "extracted_at": "2026-03-04T07:19:03.924395Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "diagnostic_criteria",
+      "test_thresholds",
+      "workup_algorithm",
+      "result_interpretation",
+      "referral_indications",
+      "follow_up_imaging"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 28670
+  }
+}

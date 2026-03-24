@@ -1,0 +1,251 @@
+{
+  "source": {
+    "title": "Influenza: Diagnosis and Treatment",
+    "organization": "American Family Physician",
+    "document_type": "acute_protocol",
+    "publication_year": 2019,
+    "version_number": "",
+    "doi": "",
+    "file_name": "Gaitonde_Moore_2019#@#ART-0470@#@.pdf",
+    "matched_qids": [],
+    "qid_match_method": "none"
+  },
+  "classification": {
+    "engine_used": "AcuteProtocolEngine",
+    "document_type": "acute_protocol",
+    "confidence": 0.95,
+    "signals": [
+      "Treatment with one of four approved anti-influenza drugs may be considered if the patient presents within 48 hours",
+      "benefit of treatment is greatest when antiviral therapy is started within 24 hours",
+      "These drugs decrease the duration of illness by about 24 hours",
+      "acute viral respiratory infection",
+      "may decrease the risk of serious complications"
+    ],
+    "body_systems": [
+      "respiratory",
+      "infectious"
+    ]
+  },
+  "extraction": {
+    "summary": "Influenza is an acute viral respiratory infection causing significant morbidity and mortality worldwide. The hallmark of infection is abrupt onset of fever, cough, chills or sweats, myalgias, and malaise. Treatment with antiviral drugs within 48 hours, ideally within 24 hours, can reduce symptom duration by approximately 24 hours.",
+    "population": {
+      "age_criteria": "All ages, with special attention to children younger than 5 years (particularly those younger than 2 years) and adults 65 years and older",
+      "risk_criteria": "High-risk groups include those with chronic conditions (asthma, heart disease, diabetes, immunosuppression), pregnant and postpartum women, institutionalized adults, American Indians and Alaska Natives, and those with neuromuscular diseases",
+      "disease_definition": "Acute viral respiratory infection with abrupt onset of fever, cough, chills or sweats, myalgias, and malaise",
+      "exclusions": "None specified for diagnosis; contraindications exist for specific treatments based on allergies and comorbidities",
+      "severity_staging": "Uncomplicated influenza vs. severe disease with respiratory failure, secondary bacterial pneumonia, or extrapulmonary complications"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Treatment initiation window",
+        "value": 48,
+        "unit": "hours",
+        "context": "Maximum time from symptom onset for antiviral effectiveness"
+      },
+      {
+        "parameter": "Optimal treatment window",
+        "value": 24,
+        "unit": "hours",
+        "context": "Time from symptom onset for maximum clinical benefit"
+      },
+      {
+        "parameter": "Clinical prediction rule score",
+        "value": 4,
+        "unit": "points",
+        "context": "High risk threshold for empiric treatment consideration"
+      },
+      {
+        "parameter": "Infectious period duration",
+        "value": 5,
+        "unit": "days",
+        "context": "Typical duration of viral shedding after symptom onset"
+      },
+      {
+        "parameter": "Peramivir pediatric dosing",
+        "value": "12",
+        "unit": "mg/kg",
+        "context": "Single dose for children 2-12 years (up to 600 mg maximum)"
+      },
+      {
+        "parameter": "Peramivir adult dosing",
+        "value": "600",
+        "unit": "mg",
+        "context": "Single dose for adults and children ≥13 years"
+      },
+      {
+        "parameter": "Baloxavir dosing threshold",
+        "value": "80",
+        "unit": "kg",
+        "context": "Weight cutoff for 80mg vs 40mg dose"
+      },
+      {
+        "parameter": "Outbreak definition",
+        "value": "2",
+        "unit": "cases",
+        "context": "Laboratory-confirmed cases within 72 hours in long-term care facility"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Annual influenza vaccination is recommended for all people 6 months and older",
+        "strength": "Strong",
+        "evidence_level": "Grade A (strong evidence, RCT-based)",
+        "notes": "Unless contraindications exist"
+      },
+      {
+        "recommendation": "The decision to begin antiviral treatment should be based on clinical diagnosis of influenza, not on test results",
+        "strength": "Strong",
+        "evidence_level": "Grade C (expert consensus)",
+        "notes": "Laboratory diagnosis obtained when results will change management"
+      },
+      {
+        "recommendation": "Patients with severe illness or high risk of complications should receive antiviral treatment regardless of symptom duration",
+        "strength": "Strong",
+        "evidence_level": "Grade B (moderate evidence, observational)",
+        "notes": "Early treatment is most beneficial"
+      },
+      {
+        "recommendation": "Oseltamivir, peramivir, baloxavir, or zanamivir may be considered to reduce symptom duration if administered within 48 hours of symptom onset",
+        "strength": "Conditional",
+        "evidence_level": "Grade A (RCT-supported)",
+        "notes": "Ideally within 24 hours for maximum benefit"
+      },
+      {
+        "recommendation": "Oral oseltamivir is the preferred treatment for influenza during pregnancy",
+        "strength": "Strong",
+        "evidence_level": "Grade B (moderate evidence, observational)",
+        "notes": "Good safety data in pregnancy"
+      },
+      {
+        "recommendation": "Initiate antiviral treatment within 48 hours of symptom onset for optimal efficacy",
+        "strength": "Strong",
+        "evidence_level": "Grade A (RCT-supported)",
+        "notes": "Treatment reduces symptom duration by approximately one day"
+      },
+      {
+        "recommendation": "Use oseltamivir as first-line treatment for pregnant women",
+        "strength": "Strong",
+        "evidence_level": "Grade B (moderate evidence)",
+        "notes": "Good safety data in pregnancy, no dosing adjustment needed"
+      },
+      {
+        "recommendation": "Do not use multiple antiviral agents or higher than recommended dosages",
+        "strength": "Strong",
+        "evidence_level": "Grade C (expert consensus)",
+        "notes": "No demonstrated benefit to combination therapy"
+      },
+      {
+        "recommendation": "Consider extended treatment courses in critically ill patients",
+        "strength": "Conditional",
+        "evidence_level": "Grade C (expert consensus)",
+        "notes": "Based on clinical judgment for severe cases"
+      },
+      {
+        "recommendation": "Do not routinely use corticosteroids unless other approved indication exists",
+        "strength": "Strong",
+        "evidence_level": "Grade C (expert consensus)",
+        "notes": "Not recommended for influenza treatment"
+      },
+      {
+        "recommendation": "Consider chemoprophylaxis for specific high-risk populations and outbreak settings",
+        "strength": "Conditional",
+        "evidence_level": "Grade C (expert consensus)",
+        "notes": "Most indications based on poor-quality evidence and expert opinion"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "Oseltamivir",
+        "dose": "Adults: 75mg twice daily for 5 days; Children: weight-based dosing",
+        "indication": "Treatment and prevention of influenza A and B",
+        "class": "Neuraminidase inhibitor"
+      },
+      {
+        "drug": "Zanamivir",
+        "dose": "10mg twice daily for 5 days (inhaled)",
+        "indication": "Treatment and prevention of influenza A and B",
+        "class": "Neuraminidase inhibitor"
+      },
+      {
+        "drug": "Peramivir",
+        "dose": "Adults: 600mg single dose IV; Children: 12mg/kg single dose IV",
+        "indication": "Treatment of uncomplicated influenza A and B",
+        "class": "Neuraminidase inhibitor"
+      },
+      {
+        "drug": "Baloxavir",
+        "dose": "Single dose: 40mg (40-79kg) or 80mg (≥80kg)",
+        "indication": "Treatment of uncomplicated influenza in patients ≥12 years",
+        "class": "Cap-dependent endonuclease inhibitor"
+      }
+    ],
+    "red_flags": [
+      "Acute respiratory distress syndrome",
+      "Diffuse alveolar hemorrhage",
+      "Hypoxic respiratory failure",
+      "Secondary bacterial pneumonia",
+      "Multiorgan failure",
+      "Severe bronchospasm (especially with zanamivir use)",
+      "Myocarditis or ischemic heart disease complications",
+      "Neurologic complications including encephalitis",
+      "Development of lower respiratory tract disease while on antivirals (consider treatment resistance)",
+      "Respiratory distress requiring mechanical ventilation",
+      "Severe complications in immunocompromised patients",
+      "Pregnant women with influenza symptoms"
+    ],
+    "follow_up": "Monitor for complications in high-risk patients; consider return visit if symptoms worsen or persist beyond expected duration; watch for secondary bacterial infections",
+    "escalation_path": "Hospitalization indicated for severe illness, respiratory failure, or high-risk patients with complications; consider ICU for multiorgan failure or severe pneumonia; infectious disease consultation for complicated cases or treatment failures",
+    "_chunked_extraction": true,
+    "_chunks_merged": 2
+  },
+  "metadata": {
+    "schema_version": "unified_v1.0",
+    "run_id": "ed6fe26c",
+    "extracted_at": "2026-03-16T09:57:40.463111Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "urgency_triage",
+      "stabilization_steps",
+      "critical_thresholds",
+      "emergency_medications",
+      "escalation_triggers",
+      "disposition"
+    ],
+    "validation_passed": false,
+    "validation_warnings": [
+      "source.source_id is missing — link to ite_refs manifest not established"
+    ],
+    "field_coverage_score": 1.0,
+    "raw_text_chars": 39729,
+    "migration_note": ""
+  },
+  "governance": {
+    "badge": {
+      "label": "",
+      "rationale": "",
+      "assigned_by": "",
+      "assigned_date": null
+    },
+    "cross_guideline_impact": {
+      "modifies_pathways": [],
+      "changes": {
+        "treatment_thresholds": false,
+        "new_drug_class": false,
+        "screening_age": false,
+        "monitoring_frequency": false,
+        "risk_calculation": false
+      },
+      "notes": ""
+    },
+    "change_log": [],
+    "internal_qc": {
+      "metadata_complete": false,
+      "badge_assigned": false,
+      "recommendations_reviewed": false,
+      "thresholds_verified": false,
+      "cross_pathway_links_reviewed": false,
+      "prior_version_archived": false,
+      "date_verified": null
+    }
+  }
+}

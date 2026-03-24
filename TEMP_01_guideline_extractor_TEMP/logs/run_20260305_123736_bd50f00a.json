@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260305_123736",
+  "run_id": "bd50f00a",
+  "file_name": "uspstf_anxiety-disorders-screening.pdf",
+  "document_type": "preventive_guideline",
+  "engine_used": "PreventiveEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "psychiatric",
+    "behavioral"
+  ],
+  "modules_activated": [
+    "screening_population",
+    "screening_intervals",
+    "risk_stratification",
+    "preventive_medications",
+    "counseling_interventions",
+    "positive_screen_pathway"
+  ],
+  "raw_text_chars": 6099,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 2,
+  "thresholds_count": 3,
+  "medications_count": 0
+}

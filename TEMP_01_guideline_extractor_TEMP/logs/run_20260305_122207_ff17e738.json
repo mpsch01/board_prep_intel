@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260305_122207",
+  "run_id": "ff17e738",
+  "file_name": "peds_BRUE.pdf",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "DiagnosticEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "respiratory",
+    "neurological",
+    "cardiovascular"
+  ],
+  "modules_activated": [
+    "diagnostic_criteria",
+    "test_thresholds",
+    "workup_algorithm",
+    "result_interpretation",
+    "referral_indications",
+    "follow_up_imaging"
+  ],
+  "raw_text_chars": 155148,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 38,
+  "thresholds_count": 27,
+  "medications_count": 5
+}

@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260305_124939",
+  "run_id": "eec3fad9",
+  "file_name": "uspstf_prenatal_vitamin.pdf",
+  "document_type": "preventive_guideline",
+  "engine_used": "PreventiveEngine",
+  "confidence": 1.0,
+  "body_systems": [
+    "reproductive",
+    "neurologic"
+  ],
+  "modules_activated": [
+    "screening_population",
+    "screening_intervals",
+    "risk_stratification",
+    "preventive_medications",
+    "counseling_interventions",
+    "positive_screen_pathway"
+  ],
+  "raw_text_chars": 4459,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 1,
+  "thresholds_count": 5,
+  "medications_count": 1
+}

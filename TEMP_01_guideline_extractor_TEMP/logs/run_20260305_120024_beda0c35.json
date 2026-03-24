@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260305_120024",
+  "run_id": "beda0c35",
+  "file_name": "gina_asthma_eval+treatment.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "respiratory"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 893233,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 68,
+  "thresholds_count": 37,
+  "medications_count": 26
+}

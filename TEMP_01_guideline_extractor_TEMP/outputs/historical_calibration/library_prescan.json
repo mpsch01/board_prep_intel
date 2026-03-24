@@ -1,0 +1,1712 @@
+{
+  "total": 213,
+  "ingest": 180,
+  "skip": 33,
+  "review": 0,
+  "files": [
+    {
+      "file": "afp-peds-uspstf\\Rh&Pregnancy.png",
+      "fname": "Rh&Pregnancy.png",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\Rh&Pregnancy.png",
+      "status": "SKIP",
+      "reason": "image file -- no text extractable",
+      "size_kb": 57.4
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_IBS_meds.pdf",
+      "fname": "aafp_IBS_meds.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_IBS_meds.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 114.6
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_NAFLD.pdf",
+      "fname": "aafp_NAFLD.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_NAFLD.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 118.0
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_RSV_vax.pdf",
+      "fname": "aafp_RSV_vax.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_RSV_vax.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 117.0
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_gout.pdf",
+      "fname": "aafp_gout.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_gout.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 86.6
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_inpatient_hyperglycemia.pdf",
+      "fname": "aafp_inpatient_hyperglycemia.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_inpatient_hyperglycemia.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 91.1
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_lumbar_backpain.pdf",
+      "fname": "aafp_lumbar_backpain.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_lumbar_backpain.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 113.9
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_menopause.pdf",
+      "fname": "aafp_menopause.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_menopause.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 601.5
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_office_injections.pdf",
+      "fname": "aafp_office_injections.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_office_injections.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 687.1
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_ortho_pain_mngmt.pdf",
+      "fname": "aafp_ortho_pain_mngmt.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_ortho_pain_mngmt.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 516.0
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_osteoporosis.pdf",
+      "fname": "aafp_osteoporosis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_osteoporosis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 157.7
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_pcos.pdf",
+      "fname": "aafp_pcos.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_pcos.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 108.3
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_peds_sports_injury.pdf",
+      "fname": "aafp_peds_sports_injury.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_peds_sports_injury.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 2979.2
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_periop_anticoags.pdf",
+      "fname": "aafp_periop_anticoags.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_periop_anticoags.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 131.8
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_premenstrual_disorders.pdf",
+      "fname": "aafp_premenstrual_disorders.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_premenstrual_disorders.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 1310.2
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_prenatal_care.pdf",
+      "fname": "aafp_prenatal_care.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_prenatal_care.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 591.8
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_sports_concussion.pdf",
+      "fname": "aafp_sports_concussion.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_sports_concussion.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 106.4
+    },
+    {
+      "file": "afp-peds-uspstf\\aafp_weightloss_meds.pdf",
+      "fname": "aafp_weightloss_meds.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\aafp_weightloss_meds.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'aafp_'",
+      "size_kb": 803.3
+    },
+    {
+      "file": "afp-peds-uspstf\\afp_acute_abdominal_pain.pdf",
+      "fname": "afp_acute_abdominal_pain.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\afp_acute_abdominal_pain.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'afp_'",
+      "size_kb": 1509.2
+    },
+    {
+      "file": "afp-peds-uspstf\\afp_allergic_rhinitis.pdf",
+      "fname": "afp_allergic_rhinitis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\afp_allergic_rhinitis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'afp_'",
+      "size_kb": 402.3
+    },
+    {
+      "file": "afp-peds-uspstf\\afp_allergic_rhinitis_cpg.pdf",
+      "fname": "afp_allergic_rhinitis_cpg.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\afp_allergic_rhinitis_cpg.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'afp_'",
+      "size_kb": 791.0
+    },
+    {
+      "file": "afp-peds-uspstf\\afp_asthmaQ+A.pdf",
+      "fname": "afp_asthmaQ+A.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\afp_asthmaQ+A.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'afp_'",
+      "size_kb": 493.9
+    },
+    {
+      "file": "afp-peds-uspstf\\afp_atopic_dermatitis.pdf",
+      "fname": "afp_atopic_dermatitis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\afp_atopic_dermatitis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'afp_'",
+      "size_kb": 131.4
+    },
+    {
+      "file": "afp-peds-uspstf\\afp_celiac_disease.pdf",
+      "fname": "afp_celiac_disease.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\afp_celiac_disease.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'afp_'",
+      "size_kb": 1203.8
+    },
+    {
+      "file": "afp-peds-uspstf\\afp_ckd.pdf",
+      "fname": "afp_ckd.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\afp_ckd.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'afp_'",
+      "size_kb": 252.1
+    },
+    {
+      "file": "afp-peds-uspstf\\afp_fatigue_eval.pdf",
+      "fname": "afp_fatigue_eval.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\afp_fatigue_eval.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'afp_'",
+      "size_kb": 274.8
+    },
+    {
+      "file": "afp-peds-uspstf\\gina_asthma_eval+treatment.pdf",
+      "fname": "gina_asthma_eval+treatment.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\gina_asthma_eval+treatment.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'gina_'",
+      "size_kb": 12348.9
+    },
+    {
+      "file": "afp-peds-uspstf\\ped_bacterial_arthritis.pdf",
+      "fname": "ped_bacterial_arthritis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\ped_bacterial_arthritis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ped_'",
+      "size_kb": 1431.5
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_ADHD.pdf",
+      "fname": "peds_ADHD.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_ADHD.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 1055.2
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_AOM.pdf",
+      "fname": "peds_AOM.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_AOM.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 1026.9
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_BRUE.pdf",
+      "fname": "peds_BRUE.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_BRUE.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 1177.8
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_DM2.pdf",
+      "fname": "peds_DM2.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_DM2.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 797.7
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_HTN.pdf",
+      "fname": "peds_HTN.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_HTN.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 2083.8
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_IV_fluids.pdf",
+      "fname": "peds_IV_fluids.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_IV_fluids.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 888.8
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_bronchiolitis.pdf",
+      "fname": "peds_bronchiolitis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_bronchiolitis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 1252.1
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_febrile_newborn.pdf",
+      "fname": "peds_febrile_newborn.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_febrile_newborn.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 1609.7
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_febrile_seizures.pdf",
+      "fname": "peds_febrile_seizures.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_febrile_seizures.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 970.7
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_hyperbili.pdf",
+      "fname": "peds_hyperbili.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_hyperbili.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 1419.8
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_infant_uti.pdf",
+      "fname": "peds_infant_uti.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_infant_uti.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 679.6
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_obesity.pdf",
+      "fname": "peds_obesity.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_obesity.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 2870.6
+    },
+    {
+      "file": "afp-peds-uspstf\\peds_sinusitis.pdf",
+      "fname": "peds_sinusitis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\peds_sinusitis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'peds_'",
+      "size_kb": 987.7
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_ASA_pre-eclamp.pdf",
+      "fname": "uspstf_ASA_pre-eclamp.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_ASA_pre-eclamp.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 61.5
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_anxiety-disorders-screening.pdf",
+      "fname": "uspstf_anxiety-disorders-screening.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_anxiety-disorders-screening.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 60.7
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_aspirin-cvd.pdf",
+      "fname": "uspstf_aspirin-cvd.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_aspirin-cvd.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 66.2
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_peds_DM2_screening.pdf",
+      "fname": "uspstf_peds_DM2_screening.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_peds_DM2_screening.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 64.0
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_peds_anxiety_screening.pdf",
+      "fname": "uspstf_peds_anxiety_screening.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_peds_anxiety_screening.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 79.7
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_peds_depression_screening.pdf",
+      "fname": "uspstf_peds_depression_screening.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_peds_depression_screening.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 83.0
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_peds_lipidscreening.pdf",
+      "fname": "uspstf_peds_lipidscreening.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_peds_lipidscreening.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 128.9
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_peds_obesity_interventions.pdf",
+      "fname": "uspstf_peds_obesity_interventions.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_peds_obesity_interventions.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 82.6
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_peds_obesityscreening.pdf",
+      "fname": "uspstf_peds_obesityscreening.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_peds_obesityscreening.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 132.3
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_prenatal_hbsag_testing.pdf",
+      "fname": "uspstf_prenatal_hbsag_testing.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_prenatal_hbsag_testing.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 533.6
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_prenatal_vitamin.pdf",
+      "fname": "uspstf_prenatal_vitamin.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_prenatal_vitamin.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 60.5
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_skinCA_screening.pdf",
+      "fname": "uspstf_skinCA_screening.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_skinCA_screening.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 64.7
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_statin_use.pdf",
+      "fname": "uspstf_statin_use.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_statin_use.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 74.8
+    },
+    {
+      "file": "afp-peds-uspstf\\uspstf_syphilis-screening.pdf",
+      "fname": "uspstf_syphilis-screening.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\afp-peds-uspstf\\uspstf_syphilis-screening.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'uspstf_'",
+      "size_kb": 62.6
+    },
+    {
+      "file": "ID-renal-gi-hep\\AJKD_CKD+DM2.pdf",
+      "fname": "AJKD_CKD+DM2.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\AJKD_CKD+DM2.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ajkd_'",
+      "size_kb": 1173.1
+    },
+    {
+      "file": "ID-renal-gi-hep\\AJKD_CKD+HTN.pdf",
+      "fname": "AJKD_CKD+HTN.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\AJKD_CKD+HTN.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ajkd_'",
+      "size_kb": 1114.7
+    },
+    {
+      "file": "ID-renal-gi-hep\\AJKD_CKD+Liver_disease.pdf",
+      "fname": "AJKD_CKD+Liver_disease.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\AJKD_CKD+Liver_disease.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ajkd_'",
+      "size_kb": 1789.4
+    },
+    {
+      "file": "ID-renal-gi-hep\\AJKD_CKD+obesity.pdf",
+      "fname": "AJKD_CKD+obesity.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\AJKD_CKD+obesity.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ajkd_'",
+      "size_kb": 994.4
+    },
+    {
+      "file": "ID-renal-gi-hep\\AJKD_anticoag+CKD.pdf",
+      "fname": "AJKD_anticoag+CKD.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\AJKD_anticoag+CKD.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ajkd_'",
+      "size_kb": 174.1
+    },
+    {
+      "file": "ID-renal-gi-hep\\AJKD_bone_mineral_d.pdf",
+      "fname": "AJKD_bone_mineral_d.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\AJKD_bone_mineral_d.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ajkd_'",
+      "size_kb": 316.9
+    },
+    {
+      "file": "ID-renal-gi-hep\\AJKD_palliative_care.pdf",
+      "fname": "AJKD_palliative_care.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\AJKD_palliative_care.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ajkd_'",
+      "size_kb": 510.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\AJKD_renal-nutrition.pdf",
+      "fname": "AJKD_renal-nutrition.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\AJKD_renal-nutrition.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ajkd_'",
+      "size_kb": 3753.7
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_CAP_2019.pdf",
+      "fname": "IDSA_CAP_2019.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_CAP_2019.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 718.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_CAP_2023_pathway.pdf",
+      "fname": "IDSA_CAP_2023_pathway.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_CAP_2023_pathway.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 466.1
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_CAP_peds.pdf",
+      "fname": "IDSA_CAP_peds.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_CAP_peds.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 896.1
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_DM2-foot.pdf",
+      "fname": "IDSA_DM2-foot.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_DM2-foot.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 1082.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_ESBL-MDRO.pdf",
+      "fname": "IDSA_ESBL-MDRO.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_ESBL-MDRO.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 1933.9
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_GA-strep.pdf",
+      "fname": "IDSA_GA-strep.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_GA-strep.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 274.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_HCV.pdf",
+      "fname": "IDSA_HCV.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_HCV.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 1002.7
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_ICU-fever.pdf",
+      "fname": "IDSA_ICU-fever.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_ICU-fever.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 1002.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_LTAC-fever.pdf",
+      "fname": "IDSA_LTAC-fever.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_LTAC-fever.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 366.9
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_MRSA.pdf",
+      "fname": "IDSA_MRSA.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_MRSA.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 415.8
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_VAP.pdf",
+      "fname": "IDSA_VAP.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_VAP.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 880.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_abdominal.pdf",
+      "fname": "IDSA_abdominal.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_abdominal.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 383.3
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_asymp_bactiuria.pdf",
+      "fname": "IDSA_asymp_bactiuria.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_asymp_bactiuria.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 2888.8
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_endocarditis.pdf",
+      "fname": "IDSA_endocarditis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_endocarditis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 3085.3
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_flu.pdf",
+      "fname": "IDSA_flu.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_flu.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 2043.7
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_int-travel.pdf",
+      "fname": "IDSA_int-travel.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_int-travel.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 1117.3
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_lab-medicine.pdf",
+      "fname": "IDSA_lab-medicine.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_lab-medicine.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 2947.7
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_lyme.pdf",
+      "fname": "IDSA_lyme.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_lyme.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 2299.2
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_neutopenic_abx.pdf",
+      "fname": "IDSA_neutopenic_abx.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_neutopenic_abx.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 563.1
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_outpatient_IVAbx.pdf",
+      "fname": "IDSA_outpatient_IVAbx.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_outpatient_IVAbx.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 2574.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_peds_joint.pdf",
+      "fname": "IDSA_peds_joint.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_peds_joint.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 1431.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_periprosthetic_joint.pdf",
+      "fname": "IDSA_periprosthetic_joint.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_periprosthetic_joint.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 684.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_preop-ppx.pdf",
+      "fname": "IDSA_preop-ppx.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_preop-ppx.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 1013.6
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_primarycare_HIV.pdf",
+      "fname": "IDSA_primarycare_HIV.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_primarycare_HIV.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 1729.9
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_sepsis.pdf",
+      "fname": "IDSA_sepsis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_sepsis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 555.9
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_skin-soft-tissue.pdf",
+      "fname": "IDSA_skin-soft-tissue.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_skin-soft-tissue.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 1022.9
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_surviving-sepsis.pdf",
+      "fname": "IDSA_surviving-sepsis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_surviving-sepsis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 1533.9
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_uncomp_fem_UTI.pdf",
+      "fname": "IDSA_uncomp_fem_UTI.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_uncomp_fem_UTI.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 284.8
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_vaccinations.pdf",
+      "fname": "IDSA_vaccinations.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_vaccinations.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 382.1
+    },
+    {
+      "file": "ID-renal-gi-hep\\IDSA_vax_immunocomp.pdf",
+      "fname": "IDSA_vax_immunocomp.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\IDSA_vax_immunocomp.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'idsa_'",
+      "size_kb": 752.3
+    },
+    {
+      "file": "ID-renal-gi-hep\\SLUHN_culture_guidelines.pdf",
+      "fname": "SLUHN_culture_guidelines.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\SLUHN_culture_guidelines.pdf",
+      "status": "SKIP",
+      "reason": "excluded file -- visual algorithm/table/reference sheet",
+      "size_kb": 314.2
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_CRC_screening.pdf",
+      "fname": "acg_CRC_screening.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_CRC_screening.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 383.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_DILI.pdf",
+      "fname": "acg_DILI.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_DILI.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 625.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_GERD.pdf",
+      "fname": "acg_GERD.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_GERD.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 710.4
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_IBD.pdf",
+      "fname": "acg_IBD.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_IBD.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 932.4
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_IBD_preventative.pdf",
+      "fname": "acg_IBD_preventative.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_IBD_preventative.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 275.7
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_IBS.pdf",
+      "fname": "acg_IBS.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_IBS.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 515.8
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_abnormal_LFTs.pdf",
+      "fname": "acg_abnormal_LFTs.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_abnormal_LFTs.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 416.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_acute+chronic_liverfailure.pdf",
+      "fname": "acg_acute+chronic_liverfailure.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_acute+chronic_liverfailure.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 862.1
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_acute_diarrhea.pdf",
+      "fname": "acg_acute_diarrhea.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_acute_diarrhea.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 409.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_acute_lowerGI_bleed.pdf",
+      "fname": "acg_acute_lowerGI_bleed.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_acute_lowerGI_bleed.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 1059.1
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_alcoholic_liver_dz.pdf",
+      "fname": "acg_alcoholic_liver_dz.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_alcoholic_liver_dz.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 924.8
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_anticoag+GI_procedures.pdf",
+      "fname": "acg_anticoag+GI_procedures.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_anticoag+GI_procedures.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 293.8
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_barretts.pdf",
+      "fname": "acg_barretts.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_barretts.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 880.4
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_benign-anorectal.pdf",
+      "fname": "acg_benign-anorectal.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_benign-anorectal.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 488.2
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_celiac.pdf",
+      "fname": "acg_celiac.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_celiac.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 757.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_chronic_constipation.pdf",
+      "fname": "acg_chronic_constipation.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_chronic_constipation.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 511.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_dyspepsia.pdf",
+      "fname": "acg_dyspepsia.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_dyspepsia.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 4391.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_eos_esophagitis.pdf",
+      "fname": "acg_eos_esophagitis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_eos_esophagitis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 745.4
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_fecal_CRCscreening.pdf",
+      "fname": "acg_fecal_CRCscreening.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_fecal_CRCscreening.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 281.4
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_focal_liver_lesion.pdf",
+      "fname": "acg_focal_liver_lesion.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_focal_liver_lesion.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 2307.1
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_gastroparesis.pdf",
+      "fname": "acg_gastroparesis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_gastroparesis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 679.6
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_j-pylori.pdf",
+      "fname": "acg_j-pylori.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_j-pylori.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 1111.3
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_liver_disease+pregnany.pdf",
+      "fname": "acg_liver_disease+pregnany.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_liver_disease+pregnany.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 342.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\acg_upperGI_bleed.pdf",
+      "fname": "acg_upperGI_bleed.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\acg_upperGI_bleed.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acg_'",
+      "size_kb": 619.4
+    },
+    {
+      "file": "ID-renal-gi-hep\\endemic-fungi-infections-in-the-usa-v0-pgjeofxswixc1.png",
+      "fname": "endemic-fungi-infections-in-the-usa-v0-pgjeofxswixc1.png",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\endemic-fungi-infections-in-the-usa-v0-pgjeofxswixc1.png",
+      "status": "SKIP",
+      "reason": "image file -- no text extractable",
+      "size_kb": 28.8
+    },
+    {
+      "file": "ID-renal-gi-hep\\endemic-regions-coccidioidomycosis-united-states.jpg",
+      "fname": "endemic-regions-coccidioidomycosis-united-states.jpg",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\endemic-regions-coccidioidomycosis-united-states.jpg",
+      "status": "SKIP",
+      "reason": "image file -- no text extractable",
+      "size_kb": 235.9
+    },
+    {
+      "file": "ID-renal-gi-hep\\endemic-regions-histoplasmosis-united-states.jpg",
+      "fname": "endemic-regions-histoplasmosis-united-states.jpg",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\endemic-regions-histoplasmosis-united-states.jpg",
+      "status": "SKIP",
+      "reason": "image file -- no text extractable",
+      "size_kb": 259.8
+    },
+    {
+      "file": "ID-renal-gi-hep\\endo_NAFLD.pdf",
+      "fname": "endo_NAFLD.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\endo_NAFLD.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'endo_'",
+      "size_kb": 5006.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\hep_HCC.pdf",
+      "fname": "hep_HCC.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\hep_HCC.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'hep_'",
+      "size_kb": 2799.7
+    },
+    {
+      "file": "ID-renal-gi-hep\\hep_NASH+HCC.pdf",
+      "fname": "hep_NASH+HCC.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\hep_NASH+HCC.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'hep_'",
+      "size_kb": 621.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\hep_NASH.pdf",
+      "fname": "hep_NASH.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\hep_NASH.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'hep_'",
+      "size_kb": 2247.5
+    },
+    {
+      "file": "ID-renal-gi-hep\\hep_auto-immune_hepoatitis.pdf",
+      "fname": "hep_auto-immune_hepoatitis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\hep_auto-immune_hepoatitis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'hep_'",
+      "size_kb": 1684.9
+    },
+    {
+      "file": "ID-renal-gi-hep\\hep_chronic_hepB.pdf",
+      "fname": "hep_chronic_hepB.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\hep_chronic_hepB.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'hep_'",
+      "size_kb": 512.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\hep_hepC_testing+mngment.pdf",
+      "fname": "hep_hepC_testing+mngment.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\hep_hepC_testing+mngment.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'hep_'",
+      "size_kb": 2409.0
+    },
+    {
+      "file": "ID-renal-gi-hep\\hep_non-invasive_Liver_imaging.pdf",
+      "fname": "hep_non-invasive_Liver_imaging.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\hep_non-invasive_Liver_imaging.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'hep_'",
+      "size_kb": 2427.2
+    },
+    {
+      "file": "ID-renal-gi-hep\\hep_portalHTN+bleeding.pdf",
+      "fname": "hep_portalHTN+bleeding.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\ID-renal-gi-hep\\hep_portalHTN+bleeding.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'hep_'",
+      "size_kb": 496.5
+    },
+    {
+      "file": "jacc-pulm\\GINA_asthma-guidelines_clean-copy.pdf",
+      "fname": "GINA_asthma-guidelines_clean-copy.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\GINA_asthma-guidelines_clean-copy.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'gina_'",
+      "size_kb": 1330.3
+    },
+    {
+      "file": "jacc-pulm\\jacc_HTN.pdf",
+      "fname": "jacc_HTN.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\jacc_HTN.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'jacc_'",
+      "size_kb": 7203.0
+    },
+    {
+      "file": "jacc-pulm\\jacc_PVD.pdf",
+      "fname": "jacc_PVD.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\jacc_PVD.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'jacc_'",
+      "size_kb": 4849.2
+    },
+    {
+      "file": "jacc-pulm\\jacc_a_fib.pdf",
+      "fname": "jacc_a_fib.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\jacc_a_fib.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'jacc_'",
+      "size_kb": 11470.6
+    },
+    {
+      "file": "jacc-pulm\\jacc_adults_congenital_heartdisease.pdf",
+      "fname": "jacc_adults_congenital_heartdisease.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\jacc_adults_congenital_heartdisease.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'jacc_'",
+      "size_kb": 2985.7
+    },
+    {
+      "file": "jacc-pulm\\jacc_cad.pdf",
+      "fname": "jacc_cad.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\jacc_cad.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'jacc_'",
+      "size_kb": 5769.0
+    },
+    {
+      "file": "jacc-pulm\\jacc_chest_pain.pdf",
+      "fname": "jacc_chest_pain.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\jacc_chest_pain.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'jacc_'",
+      "size_kb": 6161.4
+    },
+    {
+      "file": "jacc-pulm\\jacc_heart_failure.pdf",
+      "fname": "jacc_heart_failure.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\jacc_heart_failure.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'jacc_'",
+      "size_kb": 6504.2
+    },
+    {
+      "file": "jacc-pulm\\jacc_lipids.pdf",
+      "fname": "jacc_lipids.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\jacc_lipids.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'jacc_'",
+      "size_kb": 2702.9
+    },
+    {
+      "file": "jacc-pulm\\jacc_perioperative_eval.pdf",
+      "fname": "jacc_perioperative_eval.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\jacc_perioperative_eval.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'jacc_'",
+      "size_kb": 5115.9
+    },
+    {
+      "file": "jacc-pulm\\jacc_primary_prevention.pdf",
+      "fname": "jacc_primary_prevention.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\jacc_primary_prevention.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'jacc_'",
+      "size_kb": 2637.6
+    },
+    {
+      "file": "jacc-pulm\\pulm_COPD.pdf",
+      "fname": "pulm_COPD.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\pulm_COPD.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'pulm_'",
+      "size_kb": 841.7
+    },
+    {
+      "file": "jacc-pulm\\pulm_PE.pdf",
+      "fname": "pulm_PE.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\pulm_PE.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'pulm_'",
+      "size_kb": 1831.3
+    },
+    {
+      "file": "jacc-pulm\\pulm_a-fib.pdf",
+      "fname": "pulm_a-fib.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\pulm_a-fib.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'pulm_'",
+      "size_kb": 1722.8
+    },
+    {
+      "file": "jacc-pulm\\pulm_chronic-cough.pdf",
+      "fname": "pulm_chronic-cough.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\pulm_chronic-cough.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'pulm_'",
+      "size_kb": 540.6
+    },
+    {
+      "file": "jacc-pulm\\pulm_peds-chronic-cough.pdf",
+      "fname": "pulm_peds-chronic-cough.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\pulm_peds-chronic-cough.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'pulm_'",
+      "size_kb": 725.8
+    },
+    {
+      "file": "jacc-pulm\\pulm_peds-postviral-cough.pdf",
+      "fname": "pulm_peds-postviral-cough.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\pulm_peds-postviral-cough.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'pulm_'",
+      "size_kb": 170.7
+    },
+    {
+      "file": "jacc-pulm\\pulm_perioperative_anticoag-management.pdf",
+      "fname": "pulm_perioperative_anticoag-management.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\jacc-pulm\\pulm_perioperative_anticoag-management.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'pulm_'",
+      "size_kb": 1191.7
+    },
+    {
+      "file": "life_support_alogos\\ACLS Stroke Algorithm.pdf",
+      "fname": "ACLS Stroke Algorithm.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\ACLS Stroke Algorithm.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 74.2
+    },
+    {
+      "file": "life_support_alogos\\ACS Algorithm.pdf",
+      "fname": "ACS Algorithm.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\ACS Algorithm.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 123.0
+    },
+    {
+      "file": "life_support_alogos\\Adult Tachycardia WITH Pulse (SVT).pdf",
+      "fname": "Adult Tachycardia WITH Pulse (SVT).pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\Adult Tachycardia WITH Pulse (SVT).pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 267.9
+    },
+    {
+      "file": "life_support_alogos\\Adult_Bradycardia.pdf",
+      "fname": "Adult_Bradycardia.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\Adult_Bradycardia.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 268.4
+    },
+    {
+      "file": "life_support_alogos\\Adult_Cardiac Arrest_Circular Diagram.pdf",
+      "fname": "Adult_Cardiac Arrest_Circular Diagram.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\Adult_Cardiac Arrest_Circular Diagram.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 266.3
+    },
+    {
+      "file": "life_support_alogos\\Adult_Cardiac Arrest_VF_pVT.pdf",
+      "fname": "Adult_Cardiac Arrest_VF_pVT.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\Adult_Cardiac Arrest_VF_pVT.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 449.0
+    },
+    {
+      "file": "life_support_alogos\\Adult_Cardiac Arrest_asystole_PEA.pdf",
+      "fname": "Adult_Cardiac Arrest_asystole_PEA.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\Adult_Cardiac Arrest_asystole_PEA.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 446.5
+    },
+    {
+      "file": "life_support_alogos\\Adult_Electrocardioversion.pdf",
+      "fname": "Adult_Electrocardioversion.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\Adult_Electrocardioversion.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 219.7
+    },
+    {
+      "file": "life_support_alogos\\BLS_Adult.pdf",
+      "fname": "BLS_Adult.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\BLS_Adult.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 179.4
+    },
+    {
+      "file": "life_support_alogos\\BLS_Peds_2orMore.pdf",
+      "fname": "BLS_Peds_2orMore.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\BLS_Peds_2orMore.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 322.1
+    },
+    {
+      "file": "life_support_alogos\\BLS_Peds_Single.pdf",
+      "fname": "BLS_Peds_Single.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\BLS_Peds_Single.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 373.3
+    },
+    {
+      "file": "life_support_alogos\\Opioid Emergency.pdf",
+      "fname": "Opioid Emergency.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\Opioid Emergency.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 222.6
+    },
+    {
+      "file": "life_support_alogos\\PALS_Bradycardia WITH Pulse.pdf",
+      "fname": "PALS_Bradycardia WITH Pulse.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\PALS_Bradycardia WITH Pulse.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 417.3
+    },
+    {
+      "file": "life_support_alogos\\PALS_Cardiac Arrest - VF pVT.pdf",
+      "fname": "PALS_Cardiac Arrest - VF pVT.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\PALS_Cardiac Arrest - VF pVT.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 73.5
+    },
+    {
+      "file": "life_support_alogos\\PALS_Cardiac Arrest - asystole_PEA.pdf",
+      "fname": "PALS_Cardiac Arrest - asystole_PEA.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\PALS_Cardiac Arrest - asystole_PEA.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 47.9
+    },
+    {
+      "file": "life_support_alogos\\PALS_Peds Cardiac Arrest Algorithm.pdf",
+      "fname": "PALS_Peds Cardiac Arrest Algorithm.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\PALS_Peds Cardiac Arrest Algorithm.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 465.7
+    },
+    {
+      "file": "life_support_alogos\\PALS_Post ROSC care.pdf",
+      "fname": "PALS_Post ROSC care.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\PALS_Post ROSC care.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 397.3
+    },
+    {
+      "file": "life_support_alogos\\PALS_Systematic Approach.pdf",
+      "fname": "PALS_Systematic Approach.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\PALS_Systematic Approach.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 366.2
+    },
+    {
+      "file": "life_support_alogos\\PALS_Tachycardia WITH Pulse.pdf",
+      "fname": "PALS_Tachycardia WITH Pulse.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\PALS_Tachycardia WITH Pulse.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 476.6
+    },
+    {
+      "file": "life_support_alogos\\Post Arrest Care_Adult.pdf",
+      "fname": "Post Arrest Care_Adult.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\Post Arrest Care_Adult.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 475.7
+    },
+    {
+      "file": "life_support_alogos\\Pregnancy_InHospital_CardiacArrest.pdf",
+      "fname": "Pregnancy_InHospital_CardiacArrest.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\life_support_alogos\\Pregnancy_InHospital_CardiacArrest.pdf",
+      "status": "SKIP",
+      "reason": "excluded folder 'life_support_alogos'",
+      "size_kb": 396.3
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\APA_PTSD.pdf",
+      "fname": "APA_PTSD.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\APA_PTSD.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'apa_'",
+      "size_kb": 1891.5
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\APA_alzheimers.pdf",
+      "fname": "APA_alzheimers.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\APA_alzheimers.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'apa_'",
+      "size_kb": 691.3
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\APA_bipolar.pdf",
+      "fname": "APA_bipolar.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\APA_bipolar.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'apa_'",
+      "size_kb": 1781.9
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\APA_depression.pdf",
+      "fname": "APA_depression.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\APA_depression.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'apa_'",
+      "size_kb": 1688.2
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\APA_substance-use.pdf",
+      "fname": "APA_substance-use.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\APA_substance-use.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'apa_'",
+      "size_kb": 2929.6
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\VA_DOD__depression.pdf",
+      "fname": "VA_DOD__depression.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\VA_DOD__depression.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'va_dod_'",
+      "size_kb": 3052.6
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_PFO+stroke.pdf",
+      "fname": "neuro_PFO+stroke.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_PFO+stroke.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 794.7
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_afib+stroke.pdf",
+      "fname": "neuro_afib+stroke.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_afib+stroke.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 73.8
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_bells_palsy.pdf",
+      "fname": "neuro_bells_palsy.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_bells_palsy.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 157.3
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_dementia_diagnosis.pdf",
+      "fname": "neuro_dementia_diagnosis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_dementia_diagnosis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 343.8
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_dementia_eval+driving.pdf",
+      "fname": "neuro_dementia_eval+driving.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_dementia_eval+driving.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 440.1
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_migraine.pdf",
+      "fname": "neuro_migraine.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_migraine.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 383.9
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_muscle_cramps.pdf",
+      "fname": "neuro_muscle_cramps.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_muscle_cramps.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 206.3
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_ped_migraine+treatment.pdf",
+      "fname": "neuro_ped_migraine+treatment.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_ped_migraine+treatment.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 1080.4
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_peds_migraine+prevention.pdf",
+      "fname": "neuro_peds_migraine+prevention.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_peds_migraine+prevention.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 1084.4
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_stroke+prevention.pdf",
+      "fname": "neuro_stroke+prevention.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_stroke+prevention.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 1368.2
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\neuro_trigeminal_neuralgia.pdf",
+      "fname": "neuro_trigeminal_neuralgia.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\neuro_trigeminal_neuralgia.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'neuro_'",
+      "size_kb": 754.3
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\rheum_OA.pdf",
+      "fname": "rheum_OA.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\rheum_OA.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'rheum_'",
+      "size_kb": 672.6
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\rheum_RA.pdf",
+      "fname": "rheum_RA.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\rheum_RA.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'rheum_'",
+      "size_kb": 359.8
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\rheum_gout-guideline-2020.pdf",
+      "fname": "rheum_gout-guideline-2020.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\rheum_gout-guideline-2020.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'rheum_'",
+      "size_kb": 842.7
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\rheum_lyme-disease.pdf",
+      "fname": "rheum_lyme-disease.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\rheum_lyme-disease.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'rheum_'",
+      "size_kb": 1864.2
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\rheum_perioperative-management.pdf",
+      "fname": "rheum_perioperative-management.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\rheum_perioperative-management.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'rheum_'",
+      "size_kb": 315.7
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\rheum_steroid-osteoporosis.pdf",
+      "fname": "rheum_steroid-osteoporosis.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\rheum_steroid-osteoporosis.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'rheum_'",
+      "size_kb": 2673.1
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\rheum_timing-joint-replacement.pdf",
+      "fname": "rheum_timing-joint-replacement.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\rheum_timing-joint-replacement.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'rheum_'",
+      "size_kb": 415.4
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\rheum_vaccinations.pdf",
+      "fname": "rheum_vaccinations.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\rheum_vaccinations.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'rheum_'",
+      "size_kb": 737.1
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\tox_antipsychotics.pdf",
+      "fname": "tox_antipsychotics.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\tox_antipsychotics.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'tox_'",
+      "size_kb": 294.3
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\tox_benedryl.pdf",
+      "fname": "tox_benedryl.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\tox_benedryl.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'tox_'",
+      "size_kb": 290.6
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\tox_coumadin.pdf",
+      "fname": "tox_coumadin.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\tox_coumadin.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'tox_'",
+      "size_kb": 202.7
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\tox_ssri.pdf",
+      "fname": "tox_ssri.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\tox_ssri.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'tox_'",
+      "size_kb": 253.8
+    },
+    {
+      "file": "neuro-tox-rheum-psych\\tox_tylenol.pdf",
+      "fname": "tox_tylenol.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\neuro-tox-rheum-psych\\tox_tylenol.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'tox_'",
+      "size_kb": 251.6
+    },
+    {
+      "file": "periop-dm2-vax\\2024 ADA Injectable Intensification Algorithm.pdf",
+      "fname": "2024 ADA Injectable Intensification Algorithm.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\2024 ADA Injectable Intensification Algorithm.pdf",
+      "status": "SKIP",
+      "reason": "excluded file -- visual algorithm/table/reference sheet",
+      "size_kb": 355.8
+    },
+    {
+      "file": "periop-dm2-vax\\AACE_2019_Diabetes_Algorithm_03.2021.pdf",
+      "fname": "AACE_2019_Diabetes_Algorithm_03.2021.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\AACE_2019_Diabetes_Algorithm_03.2021.pdf",
+      "status": "SKIP",
+      "reason": "excluded file -- visual algorithm/table/reference sheet",
+      "size_kb": 4304.4
+    },
+    {
+      "file": "periop-dm2-vax\\ADA_injectible_algo.pdf",
+      "fname": "ADA_injectible_algo.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\ADA_injectible_algo.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ada_'",
+      "size_kb": 355.8
+    },
+    {
+      "file": "periop-dm2-vax\\ADA_standards-of-care-2025.pdf",
+      "fname": "ADA_standards-of-care-2025.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\ADA_standards-of-care-2025.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'ada_'",
+      "size_kb": 35362.6
+    },
+    {
+      "file": "periop-dm2-vax\\Asthma Clinicians At-a-Glance 508_02-03-21.pdf",
+      "fname": "Asthma Clinicians At-a-Glance 508_02-03-21.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\Asthma Clinicians At-a-Glance 508_02-03-21.pdf",
+      "status": "SKIP",
+      "reason": "excluded file -- visual algorithm/table/reference sheet",
+      "size_kb": 659.3
+    },
+    {
+      "file": "periop-dm2-vax\\BackPainPCP_Treatment_Algorithm.pdf",
+      "fname": "BackPainPCP_Treatment_Algorithm.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\BackPainPCP_Treatment_Algorithm.pdf",
+      "status": "SKIP",
+      "reason": "excluded file -- visual algorithm/table/reference sheet",
+      "size_kb": 145.1
+    },
+    {
+      "file": "periop-dm2-vax\\VaccineSchedule_UpToDate_24.pdf",
+      "fname": "VaccineSchedule_UpToDate_24.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\VaccineSchedule_UpToDate_24.pdf",
+      "status": "SKIP",
+      "reason": "excluded file -- visual algorithm/table/reference sheet",
+      "size_kb": 145.5
+    },
+    {
+      "file": "periop-dm2-vax\\Vaccine_Catch-up_4mo-6y_UpToDate_24.pdf",
+      "fname": "Vaccine_Catch-up_4mo-6y_UpToDate_24.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\Vaccine_Catch-up_4mo-6y_UpToDate_24.pdf",
+      "status": "SKIP",
+      "reason": "excluded file -- visual algorithm/table/reference sheet",
+      "size_kb": 178.5
+    },
+    {
+      "file": "periop-dm2-vax\\Vaccine_Catch-up_7-18yo_UpToDate_24.pdf",
+      "fname": "Vaccine_Catch-up_7-18yo_UpToDate_24.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\Vaccine_Catch-up_7-18yo_UpToDate_24.pdf",
+      "status": "SKIP",
+      "reason": "excluded file -- visual algorithm/table/reference sheet",
+      "size_kb": 146.4
+    },
+    {
+      "file": "periop-dm2-vax\\acog_1st+2nd_stage_labor.pdf",
+      "fname": "acog_1st+2nd_stage_labor.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\acog_1st+2nd_stage_labor.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acog_'",
+      "size_kb": 269.6
+    },
+    {
+      "file": "periop-dm2-vax\\acog_flu_mngmt_prenatal.pdf",
+      "fname": "acog_flu_mngmt_prenatal.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\acog_flu_mngmt_prenatal.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'acog_'",
+      "size_kb": 10909.4
+    },
+    {
+      "file": "periop-dm2-vax\\periop_bloodsugar_mngmt.pdf",
+      "fname": "periop_bloodsugar_mngmt.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\periop_bloodsugar_mngmt.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'periop_'",
+      "size_kb": 822.4
+    },
+    {
+      "file": "periop-dm2-vax\\periop_medication_mngmt.pdf",
+      "fname": "periop_medication_mngmt.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\periop_medication_mngmt.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'periop_'",
+      "size_kb": 212.8
+    },
+    {
+      "file": "periop-dm2-vax\\who_infant_feeding.pdf",
+      "fname": "who_infant_feeding.pdf",
+      "full_path": "C:\\Users\\mpsch\\Desktop\\master\\clinical_resources\\practice_guidelines\\periop-dm2-vax\\who_infant_feeding.pdf",
+      "status": "INGEST",
+      "reason": "recognized prefix 'who_'",
+      "size_kb": 6092.1
+    }
+  ]
+}

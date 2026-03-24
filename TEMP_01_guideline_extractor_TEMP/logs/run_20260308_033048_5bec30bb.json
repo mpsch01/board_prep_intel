@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260308_033048",
+  "run_id": "5bec30bb",
+  "file_name": "06_End_of_Life_Care_Albert_2017 (1).pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "neurological",
+    "respiratory",
+    "gastrointestinal"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 27852,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 11,
+  "thresholds_count": 3,
+  "medications_count": 16
+}

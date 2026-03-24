@@ -1,0 +1,109 @@
+Guideline Extractor Run Log 
+Date: Sun 03/15/2026  Time:  7:16:26.40 
+Input: C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\04_need_extraction 
+ 
+ BATCH MODE: C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\04_need_extraction 
+ Found 5 PDF file(s) 
+ Output folder: 04_need_extraction-batch 
+ [1/5] Aspirin_2022#@#ART-0097@#@.pdf 
+   [1/5] Extracting clinical content... 
+    Extraction OK: type=preventive_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v4 (codon-first)
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+  Strategies: codon_filename → clean_ref → no_match
+============================================================
+  [  1/1] [OK] Aspirin_2022#@#ART-0097@#@_extracted.json
+           -> 1 Qs | [] | codon_filename
+             concepts: ['Preeclampsia prevention with aspirin 81mg daily', 'High-risk preeclampsia patient identification', 'Aspirin prophylaxis timing after 12 weeks gestation']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'codon_filename': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\logs\enricher_live_20260315_071716.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\04_need_extraction\04_need_extraction-batch\Aspirin_2022#@#ART-0097@#@_summary.docx
+   [5/5] Done 
+ [2/5] Moayyedi_Lacy_2017#@#ART-0886@#@.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/6] recs=11 thresh=2
+    [chunk 2/6] recs=6 thresh=6
+    [chunk 3/6] recs=8 thresh=3
+    [chunk 4/6] recs=6 thresh=4
+    [chunk 6/6] recs=5 thresh=0
+    [chunk 5/6] recs=4 thresh=1
+    Extraction OK: type=acute_protocol conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v4 (codon-first)
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+  Strategies: codon_filename → clean_ref → no_match
+============================================================
+  [  1/1] [OK] Moayyedi_Lacy_2017#@#ART-0886@#@_extracted.json
+           -> 1 Qs | [] | codon_filename
+             concepts: ['Dyspepsia diagnostic criteria and symptom recognition', 'Helicobacter pylori testing recommendations in dyspepsia', 'Preferred noninvasive H. pylori testing methods']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'codon_filename': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\logs\enricher_live_20260315_071948.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\04_need_extraction\04_need_extraction-batch\Moayyedi_Lacy_2017#@#ART-0886@#@_summary.docx
+   [5/5] Done 
+ [3/5] Silver_Ledford_2021#@#ART-1159@#@.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 2/3] recs=4 thresh=6
+    [chunk 1/3] recs=6 thresh=7
+    [chunk 3/3] recs=4 thresh=0
+    Extraction OK: type=diagnostic_guideline conf=0.85
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v4 (codon-first)
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+  Strategies: codon_filename → clean_ref → no_match
+============================================================
+  [  1/1] [OK] Silver_Ledford_2021#@#ART-1159@#@_extracted.json
+           -> 4 Qs | [] | codon_filename
+             concepts: ['Ulnar nerve injury causing weakness of thumb-index finger pincer mechanism', 'Ulnar nerve entrapment at wrist from weightlifting with hypothenar weakness', 'Radial nerve injury (Saturday night palsy) causing finger and wrist extension weakness']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'codon_filename': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\logs\enricher_live_20260315_072127.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\04_need_extraction\04_need_extraction-batch\Silver_Ledford_2021#@#ART-1159@#@_summary.docx
+   [5/5] Done 
+ [4/5] Stevens_Bisno_2014#@#ART-1204@#@.pdf 
+   [1/5] Extracting clinical content... 
+    [chunk 1/10] recs=7 thresh=7
+    [chunk 2/10] recs=7 thresh=7
+    [chunk 3/10] recs=9 thresh=5
+    [chunk 4/10] recs=8 thresh=6
+    [chunk 5/10] FAILED: LLM returned non-JSON response: Expecting ',' delimiter: line 13 column 18 (char 976)
+
+Raw response:
+```json
+{
+  "summary": "This document primarily covers necrotizing fasciitis, pyomyositis, clostridial gas gangrene, and bite wound management. Necrotizing fasciitis is a life-threatening deep tissue infection requiring immediate surgical intervention and empiric broad-spectrum antibiotics. Pyomyositis involves pus formation within muscle groups, primarily caused by S. aureus.",
+  "population": {
+    "age_criteria": "Variable by condition - Fournier gangrene typically 50-60 years",
+    "risk_cri
+    [chunk 6/10] recs=7 thresh=6
+    [chunk 7/10] recs=10 thresh=6
+    [chunk 8/10] recs=5 thresh=6
+    [chunk 9/10] recs=5 thresh=0
+    [chunk 10/10] recs=5 thresh=1
+    Extraction OK: type=acute_protocol conf=0.85

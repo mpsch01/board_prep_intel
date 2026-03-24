@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260303_224359",
+  "run_id": "517c3ff6",
+  "file_name": "jacc_lipids.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "cardiovascular"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 332201,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 49,
+  "thresholds_count": 28,
+  "medications_count": 14
+}

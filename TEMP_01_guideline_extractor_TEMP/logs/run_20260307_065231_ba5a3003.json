@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260307_065231",
+  "run_id": "ba5a3003",
+  "file_name": "IDSA_outpatient_IVAbx.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "infectious_diseases"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 192838,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 31,
+  "thresholds_count": 18,
+  "medications_count": 15
+}

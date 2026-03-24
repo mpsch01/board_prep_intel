@@ -1,0 +1,1054 @@
+{
+  "source": {
+    "title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "organization": "American Heart Association/American College of Cardiology",
+    "document_type": "chronic_guideline",
+    "publication_year": 2023,
+    "version_number": "",
+    "doi": "",
+    "file_name": "jacc_cad.pdf"
+  },
+  "classification": {
+    "engine_used": "ChronicRiskEngine",
+    "document_type": "chronic_guideline",
+    "confidence": 0.95,
+    "signals": [
+      "Guideline for the Management of Patients With Chronic Coronary Disease",
+      "American Heart Association/American College of Cardiology",
+      "CLINICAL PRACTICE GUIDELINE",
+      "Management of Patients",
+      "Chronic Coronary Disease"
+    ],
+    "body_systems": [
+      "cardiovascular"
+    ]
+  },
+  "extraction": {
+    "summary": "The 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA guidelines provide a comprehensive, evidence-based approach to managing patients with chronic coronary disease (CCD). The guidelines emphasize patient-centered, team-based care incorporating shared decision-making, social determinants of health, and cost-value considerations. Key updates include new recommendations for beta-blockers, SGLT2 inhibitors, GLP-1 receptor agonists, and shorter durations of dual antiplatelet therapy.",
+    "population": {
+      "age_criteria": "Not specifically defined; includes special considerations for young adults and older adults",
+      "risk_criteria": "Patients with established chronic coronary disease including those with prior myocardial infarction, stable angina, and coronary revascularization",
+      "disease_definition": "Chronic coronary disease (CCD) - previously termed stable ischemic heart disease",
+      "exclusions": "Acute coronary syndromes in active phase",
+      "severity_staging": "Risk stratification based on clinical assessment, functional status, and anatomic considerations"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Left ventricular ejection fraction",
+        "value": "≤50%",
+        "unit": "percent",
+        "context": "Indication for beta-blocker therapy"
+      },
+      {
+        "parameter": "Cost-effectiveness ratio",
+        "value": "50,000",
+        "unit": "USD per QALY",
+        "context": "High value threshold for interventions"
+      },
+      {
+        "parameter": "Cost-effectiveness",
+        "value": "<50,000",
+        "unit": "per QALY gained",
+        "context": "High value interventions"
+      },
+      {
+        "parameter": "Annual cardiovascular risk - Low",
+        "value": "<1",
+        "unit": "%",
+        "context": "Risk stratification for cardiovascular death or nonfatal MI"
+      },
+      {
+        "parameter": "Annual cardiovascular risk - Intermediate",
+        "value": "1-3",
+        "unit": "%",
+        "context": "Risk stratification for cardiovascular death or nonfatal MI"
+      },
+      {
+        "parameter": "Annual cardiovascular risk - High",
+        "value": ">3",
+        "unit": "%",
+        "context": "Risk stratification for cardiovascular death or nonfatal MI"
+      },
+      {
+        "parameter": "Myocardial blood flow reserve",
+        "value": "<2",
+        "unit": "ratio",
+        "context": "Global reduced levels indicating disease extent and severity"
+      },
+      {
+        "parameter": "Stent size for CCTA assessment",
+        "value": "≥3",
+        "unit": "mm",
+        "context": "Minimum stent size for accurate patency assessment by coronary CTA"
+      },
+      {
+        "parameter": "saturated fat intake",
+        "value": 6,
+        "unit": "% of total calories",
+        "context": "Maximum recommended for CCD patients"
+      },
+      {
+        "parameter": "sodium intake",
+        "value": 2300,
+        "unit": "mg/day",
+        "context": "Maximum recommended, with optimal target of 1,500 mg/day"
+      },
+      {
+        "parameter": "whole grain content",
+        "value": 25,
+        "unit": "% by weight",
+        "context": "Minimum threshold for non-refined grains"
+      },
+      {
+        "parameter": "medication adherence",
+        "value": 80,
+        "unit": "%",
+        "context": "Target adherence rate"
+      },
+      {
+        "parameter": "PHQ-2 Depression Score",
+        "value": "≥3",
+        "unit": "points",
+        "context": "Warrants further assessment for depression"
+      },
+      {
+        "parameter": "Alcohol consumption limit - women",
+        "value": "≤1",
+        "unit": "drink/day",
+        "context": "Maximum recommended alcohol intake"
+      },
+      {
+        "parameter": "Alcohol consumption limit - men",
+        "value": "≤2",
+        "unit": "drinks/day",
+        "context": "Maximum recommended alcohol intake"
+      },
+      {
+        "parameter": "LDL-C reduction with high-intensity statin",
+        "value": "≥50",
+        "unit": "percent",
+        "context": "Target reduction from baseline"
+      },
+      {
+        "parameter": "LDL-C level for additional therapy consideration",
+        "value": "≥70",
+        "unit": "mg/dL",
+        "context": "Threshold for adding ezetimibe or PCSK9 inhibitor"
+      },
+      {
+        "parameter": "Sexual activity metabolic equivalent",
+        "value": "3-5",
+        "unit": "METs",
+        "context": "Exercise capacity assessment for sexual activity safety"
+      },
+      {
+        "parameter": "Standard drink alcohol content",
+        "value": "14",
+        "unit": "grams",
+        "context": "Definition of one standard alcoholic drink"
+      },
+      {
+        "parameter": "LDL-C",
+        "value": 70,
+        "unit": "mg/dL",
+        "context": "Target threshold for patients not at very high risk"
+      },
+      {
+        "parameter": "Blood pressure",
+        "value": "130/80",
+        "unit": "mmHg",
+        "context": "Target BP for hypertensive CCD patients"
+      },
+      {
+        "parameter": "Triglycerides",
+        "value": "150-499",
+        "unit": "mg/dL",
+        "context": "Range for icosapent ethyl consideration"
+      },
+      {
+        "parameter": "HbA1c",
+        "value": 7,
+        "unit": "%",
+        "context": "General diabetes target"
+      },
+      {
+        "parameter": "BMI overweight",
+        "value": "25-29.9",
+        "unit": "kg/m²",
+        "context": "Weight management classification"
+      },
+      {
+        "parameter": "BMI obesity",
+        "value": "≥30",
+        "unit": "kg/m²",
+        "context": "Weight management classification"
+      },
+      {
+        "parameter": "BMI severe obesity",
+        "value": "≥40",
+        "unit": "kg/m²",
+        "context": "Bariatric surgery consideration"
+      },
+      {
+        "parameter": "Waist circumference men",
+        "value": ">102",
+        "unit": "cm",
+        "context": "Central obesity definition"
+      },
+      {
+        "parameter": "Waist circumference women",
+        "value": ">88",
+        "unit": "cm",
+        "context": "Central obesity definition"
+      },
+      {
+        "parameter": "Weight loss goal",
+        "value": "5-7",
+        "unit": "%",
+        "context": "Target weight reduction with lifestyle measures"
+      },
+      {
+        "parameter": "Moderate-intensity aerobic activity",
+        "value": "≥150",
+        "unit": "minutes/week",
+        "context": "Physical activity recommendation"
+      },
+      {
+        "parameter": "High-intensity aerobic activity",
+        "value": "≥75",
+        "unit": "minutes/week",
+        "context": "Physical activity recommendation"
+      },
+      {
+        "parameter": "Resistance training",
+        "value": "≥2",
+        "unit": "days/week",
+        "context": "Strength training recommendation"
+      },
+      {
+        "parameter": "PM2.5 exposure threshold",
+        "value": ">10",
+        "unit": "μg/m³",
+        "context": "Air pollution cardiovascular risk"
+      },
+      {
+        "parameter": "PM2.5 exposure",
+        "value": ">10",
+        "unit": "micrograms per cubic meter (mg/m³)",
+        "context": "Associated with >10% increase in odds of CCD progression and acute MI"
+      },
+      {
+        "parameter": "Aspirin dose",
+        "value": "81",
+        "unit": "mg daily",
+        "context": "Low-dose for secondary prevention (75-100mg range acceptable)"
+      },
+      {
+        "parameter": "DAPT duration post-PCI",
+        "value": "6",
+        "unit": "months",
+        "context": "Standard duration followed by single antiplatelet therapy"
+      },
+      {
+        "parameter": "Extended DAPT duration",
+        "value": "12-36",
+        "unit": "months",
+        "context": "May be considered in low bleeding risk, high thrombotic risk patients"
+      },
+      {
+        "parameter": "LVEF",
+        "value": "40",
+        "unit": "%",
+        "context": "Threshold for beta-blocker and ACE inhibitor recommendations"
+      },
+      {
+        "parameter": "Creatinine clearance",
+        "value": "15-50",
+        "unit": "mL/min",
+        "context": "Dose adjustment for edoxaban"
+      },
+      {
+        "parameter": "eGFR",
+        "value": "30",
+        "unit": "mL/min/m2",
+        "context": "Contraindication threshold for colchicine"
+      },
+      {
+        "parameter": "Weight",
+        "value": "60",
+        "unit": "kg",
+        "context": "Threshold for prasugrel contraindication and edoxaban dosing"
+      },
+      {
+        "parameter": "Heart rate",
+        "value": "70",
+        "unit": "beats per minute",
+        "context": "Minimum heart rate for ivabradine consideration"
+      },
+      {
+        "parameter": "FFR",
+        "value": "0.8",
+        "unit": "ratio",
+        "context": "Threshold for revascularization consideration"
+      },
+      {
+        "parameter": "iFR",
+        "value": "0.89",
+        "unit": "ratio",
+        "context": "Threshold for revascularization consideration"
+      },
+      {
+        "parameter": "SYNTAX score",
+        "value": "33",
+        "unit": "points",
+        "context": "Threshold for high-complexity CAD"
+      },
+      {
+        "parameter": "Ejection fraction",
+        "value": "35",
+        "unit": "percent",
+        "context": "Threshold for moderate to severe LV dysfunction"
+      },
+      {
+        "parameter": "Coronary stenosis",
+        "value": "50",
+        "unit": "percent",
+        "context": "Threshold for significant stenosis"
+      },
+      {
+        "parameter": "IMR",
+        "value": "25",
+        "unit": "units",
+        "context": "Threshold for abnormal coronary microvascular resistance"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Nonpharmacologic therapies, including healthy dietary habits and exercise, are recommended for all patients with chronic coronary disease",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Top 10 take-home message #2"
+      },
+      {
+        "recommendation": "Long-term beta-blocker therapy is not recommended to improve outcomes in patients with CCD in the absence of myocardial infarction in the past year, left ventricular ejection fraction ≤50%, or another primary indication",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "New recommendation - Top 10 take-home message #5a"
+      },
+      {
+        "recommendation": "Either a calcium channel blocker or beta blocker is recommended as first-line antianginal therapy",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "New recommendation - Top 10 take-home message #5b"
+      },
+      {
+        "recommendation": "Use of sodium glucose cotransporter 2 inhibitors and glucagon-like peptide-1 receptor agonists are recommended for select groups of patients with CCD, including groups without diabetes",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Top 10 take-home message #4"
+      },
+      {
+        "recommendation": "The use of nonprescription or dietary supplements, including fish oil and omega-3 fatty acids or vitamins, is not recommended in patients with CCD given the lack of benefit in reducing cardiovascular events",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Top 10 take-home message #8"
+      },
+      {
+        "recommendation": "Routine periodic anatomic or ischemic testing without a change in clinical or functional status is not recommended for risk stratification or to guide therapeutic decision-making in patients with CCD",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Top 10 take-home message #9"
+      },
+      {
+        "recommendation": "In patients with CCD and change in symptoms/functional capacity despite GDMT, stress PET/SPECT MPI, CMR imaging, or stress echocardiography is recommended to detect ischemia presence/extent, estimate MACE risk, and guide therapeutic decision-making",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Modified from 2021 AHA/ACC chest pain guideline"
+      },
+      {
+        "recommendation": "PET is reasonable in preference to SPECT for nuclear MPI when available to improve diagnostic accuracy and decrease nondiagnostic test rates",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "In patients with persistent symptoms despite GDMT"
+      },
+      {
+        "recommendation": "Risk stratification incorporating all available information including noninvasive, invasive, or both cardiovascular diagnostic testing results or use validated risk scores",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "COR 1"
+      },
+      {
+        "recommendation": "Optimization of GDMT to reduce MACE",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "COR 1"
+      },
+      {
+        "recommendation": "ICA for patients with newly reduced LV systolic function, clinical heart failure, or both",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "COR 1"
+      },
+      {
+        "recommendation": "ICA for risk stratification is not routinely recommended in patients without LV systolic dysfunction, heart failure, stable chest pain refractory to GDMT, and/or noninvasive testing suggestive of significant (>50%) left main disease",
+        "strength": "No benefit",
+        "evidence_level": "A",
+        "notes": "COR 3"
+      },
+      {
+        "recommendation": "Clinical follow-up at least annually to assess for symptoms, change in functional status, adherence to and adequacy of lifestyle and medical interventions, and monitoring for complications",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "COR 1"
+      },
+      {
+        "recommendation": "Multidisciplinary team-based approach to improve health outcomes, facilitate modification of ASCVD risk factors, and improve health service utilization",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "COR 1"
+      },
+      {
+        "recommendation": "Patients with CCD should receive ongoing individualized education on symptom management, lifestyle changes, and SDOH risk factors",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "To improve knowledge and facilitate behavior change"
+      },
+      {
+        "recommendation": "Patients with CCD and their clinicians should engage in shared decision-making",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "Particularly when evidence is unclear or significant risk/benefit tradeoffs exist"
+      },
+      {
+        "recommendation": "Routine assessment by clinicians and care team for SDOH is recommended",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "To inform patient-centered treatment decisions and lifestyle change recommendations"
+      },
+      {
+        "recommendation": "Diet emphasizing vegetables, fruits, legumes, nuts, whole grains, and lean protein is recommended",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "To reduce risk of CVD events"
+      },
+      {
+        "recommendation": "Use of nonprescription dietary supplements is not beneficial",
+        "strength": "Strong - No Benefit",
+        "evidence_level": "B-NR",
+        "notes": "Including omega-3, vitamins C,D,E, beta-carotene, and calcium"
+      },
+      {
+        "recommendation": "Targeted discussions and screening for mental health conditions in patients with CCD",
+        "strength": "Reasonable",
+        "evidence_level": "B-R",
+        "notes": "COR 2a - Should assess and refer for additional mental health evaluation"
+      },
+      {
+        "recommendation": "Treatment for mental health conditions with pharmacologic or non-pharmacologic therapies",
+        "strength": "Reasonable",
+        "evidence_level": "B-R",
+        "notes": "COR 2a - To improve cardiovascular outcomes"
+      },
+      {
+        "recommendation": "Assess tobacco use at every healthcare visit",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "COR 1 - To facilitate identification of patients who may benefit from interventions"
+      },
+      {
+        "recommendation": "Advise patients who smoke tobacco to quit at every visit",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "COR 1"
+      },
+      {
+        "recommendation": "Behavioral interventions combined with pharmacotherapy for tobacco cessation",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "COR 1 - Including bupropion, varenicline, or combination NRT"
+      },
+      {
+        "recommendation": "Routine screening and counseling about substance use",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "COR 1 - To reduce ASCVD events"
+      },
+      {
+        "recommendation": "Limit alcohol intake if consuming alcohol",
+        "strength": "Reasonable",
+        "evidence_level": "B-NR",
+        "notes": "COR 2a - ≤1 drink/day for women, ≤2 drinks/day for men"
+      },
+      {
+        "recommendation": "Do not advise alcohol consumption for cardiovascular protection",
+        "strength": "No Benefit",
+        "evidence_level": "B-NR",
+        "notes": "COR 3 - Should not recommend alcohol for cardioprotection"
+      },
+      {
+        "recommendation": "High-intensity statin therapy to achieve ≥50% reduction in LDL-C levels",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "First-line therapy for all CCD patients unless contraindicated"
+      },
+      {
+        "recommendation": "Moderate-intensity statin therapy when high-intensity is contraindicated or not tolerated",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Aim for 30-49% LDL-C reduction"
+      },
+      {
+        "recommendation": "Add ezetimibe for very high-risk patients with LDL-C ≥70 mg/dL on maximally tolerated statin",
+        "strength": "Conditional",
+        "evidence_level": "B",
+        "notes": "For further MACE risk reduction"
+      },
+      {
+        "recommendation": "Screen for substance abuse using validated single-question screening tools",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Can be self-administered in primary care settings"
+      },
+      {
+        "recommendation": "Individualize sexual activity resumption based on exercise capacity and type of activity",
+        "strength": "Conditional",
+        "evidence_level": "B",
+        "notes": "Sexual activity represents 3-5 METs of exercise"
+      },
+      {
+        "recommendation": "Maximally tolerated statin plus ezetimibe for LDL-C lowering",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "May be insufficient when ≥25% LDL-C reduction needed"
+      },
+      {
+        "recommendation": "Blood pressure target <130/80 mmHg in CCD patients with hypertension",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Reduces CV events and all-cause death"
+      },
+      {
+        "recommendation": "First-line antihypertensive therapy with ACE inhibitors, ARBs, or beta-blockers",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "For compelling indications"
+      },
+      {
+        "recommendation": "SGLT2 inhibitor or GLP-1 receptor agonist in CCD patients with type 2 diabetes",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "To reduce MACE risk"
+      },
+      {
+        "recommendation": "SGLT2 inhibitor in CCD patients with heart failure and LVEF ≤40%",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Irrespective of diabetes status"
+      },
+      {
+        "recommendation": "Nonpharmacologic strategies as first-line therapy for elevated BP",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "For BP 120-129/<80 mmHg"
+      },
+      {
+        "recommendation": "Assessment of BMI with or without waist circumference during routine clinical follow-up",
+        "strength": "Strong",
+        "evidence_level": "C-EO",
+        "notes": "For weight management evaluation in CCD patients"
+      },
+      {
+        "recommendation": "Counseling on diet, lifestyle, and weight loss goals for overweight/obese CCD patients",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Multicomponent interventions more effective than single components"
+      },
+      {
+        "recommendation": "GLP-1 receptor agonist for weight reduction when pharmacologic therapy warranted",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Reasonable to choose semaglutide over liraglutide"
+      },
+      {
+        "recommendation": "Referral for bariatric procedure consideration in severe obesity",
+        "strength": "Conditional",
+        "evidence_level": "B-NR",
+        "notes": "When lifestyle and pharmacologic interventions insufficient"
+      },
+      {
+        "recommendation": "All CCD patients with appropriate indications should be referred to cardiac rehabilitation",
+        "strength": "Strong",
+        "evidence_level": "A/B-R/C-LD",
+        "notes": "After MI, PCI, CABG, or with stable angina"
+      },
+      {
+        "recommendation": "Exercise regimen including ≥150 min/wk moderate-intensity or ≥75 min/wk high-intensity aerobic activities",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Improves functional capacity, QOL, and reduces mortality"
+      },
+      {
+        "recommendation": "Resistance training exercises on ≥2 days/week",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Improves muscle strength and functional capacity"
+      },
+      {
+        "recommendation": "Minimization of ambient air pollution exposure",
+        "strength": "Conditional",
+        "evidence_level": "B-NR",
+        "notes": "To reduce cardiovascular event risk"
+      },
+      {
+        "recommendation": "Minimize exposure to ambient air pollution to reduce cardiovascular events",
+        "strength": "Reasonable",
+        "evidence_level": "B-NR",
+        "notes": "Class 2a recommendation for CCD patients"
+      },
+      {
+        "recommendation": "Low-dose aspirin 81mg (75-100mg) for patients with CCD and no indication for oral anticoagulation",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation for atherosclerotic event reduction"
+      },
+      {
+        "recommendation": "DAPT with aspirin and clopidogrel for 6 months post-PCI followed by SAPT",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation to reduce MACE and bleeding events"
+      },
+      {
+        "recommendation": "P2Y12 inhibitor monotherapy for at least 12 months after completing 1-3 months DAPT in select DES patients",
+        "strength": "Reasonable",
+        "evidence_level": "A",
+        "notes": "Class 2a recommendation to reduce bleeding risk"
+      },
+      {
+        "recommendation": "Extended DAPT beyond 12 months for up to 3 years in previous MI patients at low bleeding risk",
+        "strength": "May be reasonable",
+        "evidence_level": "A",
+        "notes": "Class 2b recommendation to reduce MACE"
+      },
+      {
+        "recommendation": "In patients with CCD and LVEF ≤40% with or without previous MI, the use of beta-blocker therapy is recommended to reduce the risk of future MACE, including cardiovascular death",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients with CCD and LVEF <50%, the use of sustained release metoprolol succinate, carvedilol, or bisoprolol with titration to target doses is recommended in preference to other beta blockers",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients with CCD who also have hypertension, diabetes, LVEF ≤40%, or CKD, the use of ACE inhibitors, or ARBs if ACE inhibitor–intolerant, is recommended to reduce cardiovascular events",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients with CCD, the addition of colchicine for secondary prevention may be considered to reduce recurrent ASCVD events",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Class 2b recommendation"
+      },
+      {
+        "recommendation": "In patients with CCD, an annual influenza vaccination is recommended to reduce cardiovascular morbidity, cardiovascular death, and all-cause death",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "Annual influenza vaccination for patients with CCD",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Reduces cardiovascular morbidity, cardiovascular death, and all-cause death"
+      },
+      {
+        "recommendation": "COVID-19 vaccination per public health guidelines",
+        "strength": "Strong",
+        "evidence_level": "C-EO",
+        "notes": "To reduce COVID-19 complications"
+      },
+      {
+        "recommendation": "Pneumococcal vaccine for patients with CCD",
+        "strength": "Conditional",
+        "evidence_level": "B-NR",
+        "notes": "Reasonable to reduce cardiovascular morbidity and mortality"
+      },
+      {
+        "recommendation": "Antianginal therapy with beta blocker, CCB, or long-acting nitrate",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "First-line therapy for angina relief"
+      },
+      {
+        "recommendation": "Addition of second antianginal agent from different class if symptomatic",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "For patients remaining symptomatic after initial treatment"
+      },
+      {
+        "recommendation": "Ranolazine for patients symptomatic despite standard therapy",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "For those remaining symptomatic despite beta blockers, CCB, or long-acting nitrates"
+      },
+      {
+        "recommendation": "Ivabradine addition to standard anti-anginal therapy in patients with normal LV function is potentially harmful",
+        "strength": "Strong against",
+        "evidence_level": "B-R",
+        "notes": "Associated with higher risk of death or MI"
+      },
+      {
+        "recommendation": "CABG for significant left main disease or multivessel disease with severe LV dysfunction",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Improves survival over medical therapy alone"
+      },
+      {
+        "recommendation": "In patients with CCD requiring revascularization for significant left main involvement associated with high-complexity CAD, CABG is recommended in preference to PCI to improve survival",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients with CCD requiring revascularization for multivessel CAD with complex and diffuse CAD (eg, SYNTAX score >33), it is reasonable to choose CABG over PCI to improve survival",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Class 2a recommendation"
+      },
+      {
+        "recommendation": "In patients with CCD, diabetes, and multivessel CAD with involvement of the left anterior descending artery who are appropriate candidates for CABG, CABG is recommended in preference to PCI to reduce mortality and repeat revascularizations",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation with LIMA to LAD"
+      },
+      {
+        "recommendation": "In patients with CCD who have experienced SCAD, counseling should be provided regarding potential triggers and risk of SCAD recurrence",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In symptomatic patients with nonobstructive CAD, a strategy of stratified medical therapy guided by invasive coronary physiologic testing can be useful for improving angina severity and QOL",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Class 2a recommendation for INOCA"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "Statins",
+        "dose": "Not specified",
+        "indication": "First-line lipid lowering therapy",
+        "class": "HMG-CoA reductase inhibitors"
+      },
+      {
+        "drug": "SGLT2 inhibitors",
+        "dose": "Not specified",
+        "indication": "Select CCD patients including those without diabetes",
+        "class": "Sodium glucose cotransporter 2 inhibitors"
+      },
+      {
+        "drug": "GLP-1 receptor agonists",
+        "dose": "Not specified",
+        "indication": "Select CCD patients including those without diabetes",
+        "class": "Glucagon-like peptide-1 receptor agonists"
+      },
+      {
+        "drug": "Ezetimibe",
+        "dose": "Not specified",
+        "indication": "Adjunctive lipid therapy",
+        "class": "Cholesterol absorption inhibitor"
+      },
+      {
+        "drug": "PCSK9 inhibitors",
+        "dose": "Not specified",
+        "indication": "Adjunctive lipid therapy in select populations",
+        "class": "Proprotein convertase subtilisin/kexin type 9 inhibitors"
+      },
+      {
+        "drug": "Goal-directed medical therapy (GDMT)",
+        "dose": "Not specified",
+        "indication": "Reduce MACE in CCD patients",
+        "class": "Multiple classes (antianginal, antithrombotic, lipid-lowering)"
+      },
+      {
+        "drug": "icosapent ethyl",
+        "dose": "Not specified in this section",
+        "indication": "Referenced for lipid management in CCD",
+        "class": "Prescription omega-3 fatty acid"
+      },
+      {
+        "drug": "Varenicline",
+        "dose": "Not specified",
+        "indication": "Tobacco cessation in CCD patients",
+        "class": "Smoking cessation aid"
+      },
+      {
+        "drug": "Bupropion",
+        "dose": "Not specified",
+        "indication": "Tobacco cessation in CCD patients",
+        "class": "Smoking cessation aid/Antidepressant"
+      },
+      {
+        "drug": "Nicotine Replacement Therapy (NRT)",
+        "dose": "Combination long- and short-acting recommended",
+        "indication": "Tobacco cessation in CCD patients",
+        "class": "Smoking cessation aid"
+      },
+      {
+        "drug": "Escitalopram",
+        "dose": "Not specified",
+        "indication": "Depression in CCD patients with recent ACS",
+        "class": "SSRI antidepressant"
+      },
+      {
+        "drug": "Atorvastatin",
+        "dose": "40-80 mg daily",
+        "indication": "High-intensity statin therapy for LDL-C reduction",
+        "class": "HMG-CoA reductase inhibitor"
+      },
+      {
+        "drug": "Rosuvastatin",
+        "dose": "20-40 mg daily",
+        "indication": "High-intensity statin therapy for LDL-C reduction",
+        "class": "HMG-CoA reductase inhibitor"
+      },
+      {
+        "drug": "PCSK9 monoclonal antibodies (evolocumab, alirocumab)",
+        "dose": "Per manufacturer guidelines",
+        "indication": "Very high-risk patients with LDL-C ≥70 mg/dL on statin plus ezetimibe",
+        "class": "PCSK9 inhibitor"
+      },
+      {
+        "drug": "Bempedoic acid",
+        "dose": "Variable",
+        "indication": "LDL-C lowering when other therapies insufficient",
+        "class": "ATP-citrate lyase inhibitor"
+      },
+      {
+        "drug": "Inclisiran",
+        "dose": "Subcutaneous every 6 months",
+        "indication": "LDL-C lowering",
+        "class": "siRNA PCSK9 inhibitor"
+      },
+      {
+        "drug": "Semaglutide",
+        "dose": "2.4 mg weekly subcutaneous",
+        "indication": "Weight loss in obesity",
+        "class": "GLP-1 receptor agonist"
+      },
+      {
+        "drug": "Liraglutide",
+        "dose": "3.0 mg daily subcutaneous",
+        "indication": "Weight loss in obesity",
+        "class": "GLP-1 receptor agonist"
+      },
+      {
+        "drug": "Tirzepatide",
+        "dose": "5-15 mg weekly subcutaneous",
+        "indication": "Weight loss in obesity",
+        "class": "GLP-1 receptor agonist"
+      },
+      {
+        "drug": "Aspirin",
+        "dose": "81mg daily (75-100mg range)",
+        "indication": "Secondary prevention in CCD without anticoagulation indication",
+        "class": "Antiplatelet agent"
+      },
+      {
+        "drug": "Clopidogrel",
+        "dose": "75mg daily",
+        "indication": "DAPT post-PCI, monotherapy after DAPT completion",
+        "class": "P2Y12 inhibitor"
+      },
+      {
+        "drug": "Vorapaxar",
+        "dose": "2.5mg daily",
+        "indication": "Previous MI without stroke/TIA/ICH history, added to aspirin",
+        "class": "PAR-1 receptor antagonist"
+      },
+      {
+        "drug": "Rivaroxaban",
+        "dose": "2.5mg twice daily",
+        "indication": "High ischemic risk, low-moderate bleeding risk, added to aspirin",
+        "class": "Direct oral anticoagulant (low-dose)"
+      },
+      {
+        "drug": "Proton pump inhibitor",
+        "dose": "Standard dosing",
+        "indication": "Reduce GI bleeding risk in patients on DAPT",
+        "class": "Gastric acid suppression"
+      },
+      {
+        "drug": "Apixaban",
+        "dose": "5 mg twice daily or 2.5 mg twice daily",
+        "indication": "Anticoagulation in AF patients undergoing PCI",
+        "class": "DOAC"
+      },
+      {
+        "drug": "Metoprolol succinate",
+        "dose": "Target 200 mg daily",
+        "indication": "Beta-blocker therapy in heart failure",
+        "class": "Beta-blocker"
+      },
+      {
+        "drug": "Carvedilol",
+        "dose": "Target 25 mg twice daily (50 mg twice daily if >84kg)",
+        "indication": "Beta-blocker therapy in heart failure",
+        "class": "Beta-blocker"
+      },
+      {
+        "drug": "Bisoprolol",
+        "dose": "Target 10 mg daily",
+        "indication": "Beta-blocker therapy in heart failure",
+        "class": "Beta-blocker"
+      },
+      {
+        "drug": "Colchicine",
+        "dose": "0.5 mg daily",
+        "indication": "Secondary prevention in CCD",
+        "class": "Anti-inflammatory"
+      },
+      {
+        "drug": "Beta blockers",
+        "dose": "Not specified",
+        "indication": "Antianginal therapy",
+        "class": "Beta-adrenergic blockers"
+      },
+      {
+        "drug": "Calcium channel blockers (CCB)",
+        "dose": "Not specified",
+        "indication": "Antianginal therapy",
+        "class": "Calcium channel blockers"
+      },
+      {
+        "drug": "Long-acting nitrates",
+        "dose": "Not specified",
+        "indication": "Antianginal therapy",
+        "class": "Nitrates"
+      },
+      {
+        "drug": "Ranolazine",
+        "dose": "Not specified",
+        "indication": "Refractory angina despite standard therapy",
+        "class": "Late sodium channel inhibitor"
+      },
+      {
+        "drug": "Sublingual nitroglycerin",
+        "dose": "Not specified",
+        "indication": "Immediate short-term angina relief",
+        "class": "Short-acting nitrates"
+      },
+      {
+        "drug": "Amlodipine",
+        "dose": "Maximally tolerated dose",
+        "indication": "Background therapy with ranolazine",
+        "class": "Dihydropyridine CCB"
+      },
+      {
+        "drug": "Calcium channel blockers",
+        "dose": "Not specified",
+        "indication": "Suppress vasospastic angina episodes",
+        "class": "Calcium channel antagonists"
+      },
+      {
+        "drug": "DAPT",
+        "dose": "Not specified",
+        "indication": "Patients with stents post-SCAD",
+        "class": "Antiplatelet therapy"
+      }
+    ],
+    "red_flags": [
+      "Change in clinical or functional status requiring reassessment",
+      "New onset or worsening angina symptoms",
+      "Signs of acute coronary syndrome",
+      "Heart failure symptoms",
+      "Significant bleeding on antiplatelet therapy",
+      "Change in symptoms or functional capacity that persists despite guideline-directed medical therapy",
+      "New-onset or worsening chest pain symptoms",
+      "Frequent angina despite medical therapy",
+      "Severe stress-induced ischemia",
+      "Newly reduced left ventricular systolic function",
+      "Clinical heart failure",
+      "New-onset or persistent stable chest pain",
+      "Frequent angina or severe stress-induced ischemia",
+      "Medication non-adherence patterns",
+      "Social determinants barriers affecting care access",
+      "Uncontrolled mental health conditions",
+      "Food insecurity affecting nutritional management",
+      "Positive depression screening (PHQ-2 ≥3)",
+      "Active tobacco use",
+      "Heavy or binge alcohol consumption",
+      "Substance abuse (cocaine, amphetamines, opioids)",
+      "Untreated mental health conditions",
+      "Secondhand smoke exposure",
+      "Concomitant use of phosphodiesterase type 5 inhibitors with nitrate medications",
+      "Heavy alcohol use or binge drinking patterns",
+      "Cocaine, methamphetamine, or opioid use",
+      "Unstable or decompensated CCD symptoms during sexual activity",
+      "Signs of statin-induced myopathy or rhabdomyolysis",
+      "Tendon rupture with bempedoic acid use",
+      "Incident atrial fibrillation with omega-3 fatty acids",
+      "Muscle-related adverse effects with statins",
+      "Elevation in uric acid levels with bempedoic acid",
+      "Unstable angina",
+      "High-grade arrhythmias",
+      "Decompensated heart failure",
+      "Active thromboembolic disease",
+      "Unstable or life-threatening noncardiovascular conditions",
+      "Active infection",
+      "Uncontrolled diabetes",
+      "End-stage cancer",
+      "Unstable psychological issues",
+      "History of stroke, TIA, or intracranial hemorrhage (contraindication for vorapaxar and prasugrel)",
+      "Active pathological bleeding",
+      "Significant increase in bleeding events on antiplatelet therapy",
+      "Exposure to extreme temperatures with medication-related risk (loop diuretics)",
+      "PM2.5 levels >10 mg/m³ with cardiovascular symptoms",
+      "Stent thrombosis symptoms",
+      "Signs of intracranial bleeding",
+      "History of TIA or stroke (contraindication for prasugrel)",
+      "Signs of intracranial hemorrhage",
+      "Major bleeding events",
+      "Stent thrombosis",
+      "Advanced renal disease (eGFR <30 mL/min/m2) when considering colchicine",
+      "Refractory angina with lifestyle limitations",
+      "Canadian Cardiovascular Society Class III/IV symptoms",
+      "Severe LV dysfunction (LVEF ≤35%)",
+      "Significant left main disease",
+      "Complex 3-vessel disease",
+      "Bradycardia with combination therapy",
+      "Drug-drug interactions with multiple antianginal agents",
+      "Recurrent SCAD with extension of initial dissection",
+      "Procedural type 4a or type 5 MIs during revascularization",
+      "Signs of underlying vasculopathy or connective tissue disorders",
+      "Early-onset hypertension in SCAD patients",
+      "Pregnancy-associated SCAD with worse prognosis",
+      "Complex coronary anatomy requiring heart team evaluation"
+    ],
+    "follow_up": "Patient follow-up and monitoring should be individualized based on clinical status. Routine periodic anatomic or ischemic testing without clinical change is not recommended. Regular assessment of symptoms, functional capacity, medication adherence, and risk factor control.",
+    "escalation_path": "Escalate care for changes in clinical or functional status, worsening symptoms, suspected acute events, medication intolerance or contraindications, or failure to achieve treatment goals. Consider cardiology consultation for complex cases or revascularization decisions.",
+    "_chunked_extraction": true,
+    "_chunks_merged": 12
+  },
+  "metadata": {
+    "run_id": "4f6e9b42",
+    "extracted_at": "2026-03-04T01:03:42.939495Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "disease_definition",
+      "diagnostic_thresholds",
+      "risk_stratification",
+      "escalation_ladder",
+      "medication_management",
+      "monitoring_schedule"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 633392
+  }
+}

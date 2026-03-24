@@ -1,0 +1,209 @@
+{
+  "source": {
+    "title": "Diagnosis and Management of Acute Diverticulitis",
+    "organization": "",
+    "document_type": "acute_protocol",
+    "publication_year": null,
+    "version_number": "",
+    "doi": "",
+    "file_name": "16.pdf"
+  },
+  "classification": {
+    "engine_used": "AcuteProtocolEngine",
+    "document_type": "acute_protocol",
+    "confidence": 0.9,
+    "signals": [
+      "Diagnosis and Management of Acute Diverticulitis",
+      "Hospitalization should be considered if patients have signs of peritonitis",
+      "Inpatient management includes intravenous fluid resuscitation and intravenous antibiotics",
+      "Fifteen to 30 percent of patients admitted with acute diverticulitis require surgical intervention",
+      "computed tomography–guided percutaneous drainage"
+    ],
+    "body_systems": [
+      "gastrointestinal"
+    ]
+  },
+  "extraction": {
+    "summary": "Acute diverticulitis is inflammation of the colonic diverticulum that may involve perforation or microperforation. It can be uncomplicated (localized inflammation) or complicated (associated with abscess, phlegmon, fistula, obstruction, bleeding, or perforation). Most patients can be managed outpatient with supportive care, while complications may require hospitalization, antibiotics, drainage procedures, or surgery.",
+    "population": {
+      "age_criteria": "Predominantly affects patients >45 years (5-10% prevalence), increasing to 80% in those >85 years",
+      "risk_criteria": "Risk factors include increasing age, obesity, sedentary lifestyle, NSAIDs, aspirin use, smoking, genetic susceptibility",
+      "disease_definition": "Acute inflammation of colonic diverticulum with or without complications (abscess, perforation, fistula, obstruction, bleeding)",
+      "exclusions": "Children and pregnant women excluded from this protocol",
+      "severity_staging": "Uncomplicated (localized inflammation) vs Complicated (with abscess, phlegmon, fistula, obstruction, bleeding, or perforation)"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Fever",
+        "value": "102",
+        "unit": "°F",
+        "context": "Typical fever usually below this threshold"
+      },
+      {
+        "parameter": "C-reactive protein",
+        "value": "50",
+        "unit": "mg/L",
+        "context": "Diagnostic threshold with LLQ tenderness and absence of vomiting"
+      },
+      {
+        "parameter": "Leukocytosis",
+        "value": "55",
+        "unit": "percent",
+        "context": "Present in 55% of acute diverticulitis patients"
+      },
+      {
+        "parameter": "Peritonitis Severity Score",
+        "value": "0-5",
+        "unit": "points",
+        "context": "0% mortality rate"
+      },
+      {
+        "parameter": "Age",
+        "value": "50",
+        "unit": "years",
+        "context": "Lower recurrence risk if ≥50 years (12.2% vs 16.2%)"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Antibiotics not recommended for mild uncomplicated diverticulitis",
+        "strength": "Strong",
+        "evidence_level": "RCT evidence",
+        "notes": "Recent trials show no acceleration of recovery, prevention of complications, or recurrences"
+      },
+      {
+        "recommendation": "CT is the test of choice for suspected diverticulitis",
+        "strength": "Strong",
+        "evidence_level": "Meta-analysis",
+        "notes": "Excellent diagnostic accuracy in 8 studies with 684 patients"
+      },
+      {
+        "recommendation": "Colonoscopy 4-6 weeks after resolution for complicated disease",
+        "strength": "Moderate",
+        "evidence_level": "Observational studies",
+        "notes": "Not needed for uncomplicated diverticulitis"
+      },
+      {
+        "recommendation": "Laparoscopic surgery preferred over open colectomy",
+        "strength": "Strong",
+        "evidence_level": "Comparative studies",
+        "notes": "Shorter stay, fewer complications, lower mortality"
+      },
+      {
+        "recommendation": "Abdominal CT is the test of choice for suspected diverticulitis",
+        "strength": "C",
+        "evidence_level": "Consensus/expert opinion",
+        "notes": "Preferred imaging modality"
+      },
+      {
+        "recommendation": "Outpatient management with rest and fluids for mild diverticulitis",
+        "strength": "C",
+        "evidence_level": "Consensus/expert opinion",
+        "notes": "Effective for uncomplicated cases"
+      },
+      {
+        "recommendation": "Inpatient management for moderate to severe diverticulitis",
+        "strength": "C",
+        "evidence_level": "Consensus/expert opinion",
+        "notes": "Required for complicated disease"
+      },
+      {
+        "recommendation": "Broad-spectrum antibiotics for complicated diverticulitis",
+        "strength": "C",
+        "evidence_level": "Consensus/expert opinion",
+        "notes": "Must cover gram-negative rods and anaerobes"
+      },
+      {
+        "recommendation": "Antibiotics may not be necessary for uncomplicated outpatient diverticulitis",
+        "strength": "B",
+        "evidence_level": "Limited quality evidence",
+        "notes": "For selected uncomplicated cases"
+      },
+      {
+        "recommendation": "Laparoscopic surgery preferred over open colectomy when surgery needed",
+        "strength": "C",
+        "evidence_level": "Consensus/expert opinion",
+        "notes": "Shorter stay, fewer complications, lower mortality"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "Trimethoprim/sulfamethoxazole DS",
+        "dose": "160/800 mg orally every 12 hours",
+        "indication": "Outpatient persistent/worsening symptoms",
+        "class": "Antibiotic combination"
+      },
+      {
+        "drug": "Ciprofloxacin + Metronidazole",
+        "dose": "Cipro 750 mg q12h + Flagyl 500 mg q6h orally",
+        "indication": "Outpatient persistent/worsening symptoms",
+        "class": "Fluoroquinolone + Antianaerobic"
+      },
+      {
+        "drug": "Piperacillin/tazobactam",
+        "dose": "3.375 g IV q6h or 4.5 g IV q8h",
+        "indication": "Inpatient mild to moderate diverticulitis",
+        "class": "Beta-lactam/beta-lactamase inhibitor"
+      },
+      {
+        "drug": "Imipenem/cilastatin",
+        "dose": "500 mg IV q6h",
+        "indication": "Severe life-threatening diverticulitis",
+        "class": "Carbapenem"
+      },
+      {
+        "drug": "Amoxicillin plus clavulanic acid",
+        "dose": "Short course IV followed by oral",
+        "indication": "Uncomplicated acute diverticulitis",
+        "class": "Beta-lactam antibiotic"
+      },
+      {
+        "drug": "Rifaximin plus fiber",
+        "dose": "Not specified",
+        "indication": "Prevention of recurrence",
+        "class": "Non-absorbable antibiotic"
+      },
+      {
+        "drug": "Mesalamine",
+        "dose": "Not specified",
+        "indication": "Prevention of recurrence",
+        "class": "Anti-inflammatory"
+      }
+    ],
+    "red_flags": [
+      "Signs of peritonitis (rebound tenderness, rigidity, absent bowel sounds)",
+      "Tachycardia and hypotension",
+      "Inability to tolerate oral intake",
+      "Free air on imaging suggesting perforation",
+      "Large abscess formation",
+      "Bowel obstruction",
+      "Immunocompromised status with complications",
+      "Signs of perforation or peritonitis",
+      "Hemodynamic instability",
+      "Severe abdominal pain with rebound tenderness",
+      "Evidence of obstruction",
+      "Abscess formation",
+      "Fistula development"
+    ],
+    "follow_up": "Outpatient follow-up in 2-3 days for mild cases. Clinical improvement expected within 2-4 days for hospitalized patients with decreasing fever, leukocytosis, and pain. Colonoscopy 4-6 weeks after resolution for complicated disease.",
+    "escalation_path": "Hospitalize if signs of peritonitis or suspected complicated diverticulitis. Surgical consultation for: persistent symptoms despite conservative management, large abscess requiring drainage, perforation, bowel obstruction, or fistula formation. 15-30% of admitted patients require surgical intervention during admission.",
+    "_chunked_extraction": true,
+    "_chunks_merged": 2
+  },
+  "metadata": {
+    "run_id": "ee2d986d",
+    "extracted_at": "2026-03-04T07:08:58.243999Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "urgency_triage",
+      "stabilization_steps",
+      "critical_thresholds",
+      "emergency_medications",
+      "escalation_triggers",
+      "disposition"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 37298
+  }
+}

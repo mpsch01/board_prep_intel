@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260307_072629",
+  "run_id": "03ec3e46",
+  "file_name": "acg_GERD.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "gastrointestinal"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 189592,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 50,
+  "thresholds_count": 21,
+  "medications_count": 14
+}

@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260305_115411",
+  "run_id": "b53db364",
+  "file_name": "aafp_osteoporosis.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "musculoskeletal",
+    "endocrine"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 19824,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 5,
+  "thresholds_count": 2,
+  "medications_count": 5
+}

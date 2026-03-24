@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260304_071836",
+  "run_id": "55365ef2",
+  "file_name": "5.pdf",
+  "document_type": "preventive_guideline",
+  "engine_used": "PreventiveEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "respiratory"
+  ],
+  "modules_activated": [
+    "screening_population",
+    "screening_intervals",
+    "risk_stratification",
+    "preventive_medications",
+    "counseling_interventions",
+    "positive_screen_pathway"
+  ],
+  "raw_text_chars": 55355,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 3,
+  "thresholds_count": 8,
+  "medications_count": 0
+}

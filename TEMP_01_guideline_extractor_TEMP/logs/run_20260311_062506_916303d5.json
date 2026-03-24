@@ -1,0 +1,31 @@
+{
+  "timestamp": "20260311_062506",
+  "run_id": "916303d5",
+  "file_name": "14_Eating_Disorders_Klein_2021.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "psychiatric",
+    "gastrointestinal",
+    "cardiovascular",
+    "endocrine"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 58925,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 14,
+  "thresholds_count": 12,
+  "medications_count": 5
+}

@@ -1,0 +1,136 @@
+{
+  "source": {
+    "title": "Screening for Lung Cancer: US Preventive Services Task Force Recommendation Statement",
+    "organization": "US Preventive Services Task Force",
+    "document_type": "preventive_guideline",
+    "publication_year": null,
+    "version_number": "",
+    "doi": "",
+    "file_name": "5.pdf"
+  },
+  "classification": {
+    "engine_used": "PreventiveEngine",
+    "document_type": "preventive_guideline",
+    "confidence": 0.95,
+    "signals": [
+      "US Preventive Services Task Force Recommendation Statement",
+      "annual screening for lung cancer",
+      "B recommendation",
+      "adults aged 50 to 80 years",
+      "20 pack-year smoking history"
+    ],
+    "body_systems": [
+      "respiratory"
+    ]
+  },
+  "extraction": {
+    "summary": "The USPSTF recommends annual lung cancer screening with low-dose computed tomography (LDCT) for adults aged 50-80 years with a 20 pack-year smoking history who currently smoke or quit within the past 15 years. This updates the 2013 recommendation by lowering the starting age from 55 to 50 years and reducing the pack-year requirement from 30 to 20 pack-years.",
+    "population": {
+      "age_criteria": "50-80 years",
+      "risk_criteria": "20 pack-year smoking history and currently smoke or have quit within the past 15 years",
+      "disease_definition": "Lung cancer - second most common cancer and leading cause of cancer death in the US with overall 5-year survival rate of 20.5%",
+      "exclusions": "Persons who have not smoked for 15 years or have health problems that substantially limit life expectancy or ability/willingness to have curative lung surgery",
+      "severity_staging": "Early-stage lung cancer has better prognosis and is more amenable to treatment"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Age range",
+        "value": "50-80",
+        "unit": "years",
+        "context": "Screening eligibility"
+      },
+      {
+        "parameter": "Smoking history",
+        "value": "20",
+        "unit": "pack-years",
+        "context": "Minimum cumulative smoking exposure"
+      },
+      {
+        "parameter": "Years since quitting",
+        "value": "15",
+        "unit": "years",
+        "context": "Maximum time since quitting smoking for continued eligibility"
+      },
+      {
+        "parameter": "Years since quitting to discontinue screening",
+        "value": "15",
+        "unit": "years",
+        "context": "Stop screening threshold"
+      },
+      {
+        "parameter": "Starting age",
+        "value": 50,
+        "unit": "years",
+        "context": "Beginning of screening eligibility"
+      },
+      {
+        "parameter": "Ending age",
+        "value": 80,
+        "unit": "years",
+        "context": "End of screening eligibility"
+      },
+      {
+        "parameter": "Pack-years smoking",
+        "value": 20,
+        "unit": "pack-years",
+        "context": "Minimum smoking history requirement"
+      },
+      {
+        "parameter": "Time since quitting",
+        "value": "15",
+        "unit": "years",
+        "context": "Maximum time since smoking cessation for eligibility"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Annual screening for lung cancer with LDCT in adults aged 50-80 years who have a 20 pack-year smoking history and currently smoke or have quit within the past 15 years",
+        "strength": "B recommendation",
+        "evidence_level": "Moderate certainty",
+        "notes": "Moderate net benefit based on adequate evidence"
+      },
+      {
+        "recommendation": "Annual screening with low-dose computed tomography (LDCT) for adults aged 50-80 years with ≥20 pack-year smoking history who currently smoke or quit within past 15 years",
+        "strength": "B recommendation",
+        "evidence_level": "RCT evidence from NLST and NELSON trials",
+        "notes": "NLST showed 20% relative risk reduction in lung cancer mortality; NELSON showed 25% reduction"
+      },
+      {
+        "recommendation": "Annual screening with low-dose computed tomography for eligible adults",
+        "strength": "B recommendation",
+        "evidence_level": "High quality evidence",
+        "notes": "Based on National Lung Screening Trial and other randomized controlled trials showing mortality benefit"
+      }
+    ],
+    "medications": [],
+    "red_flags": [
+      "Health problem that substantially limits life expectancy",
+      "Health problem that substantially limits ability or willingness to have curative lung surgery",
+      "Symptoms suggesting lung cancer in screening-eligible individuals",
+      "Positive screen results requiring immediate diagnostic evaluation",
+      "Complications from invasive procedures (occurred in 0.1% of screened patients in NLST)",
+      "Suspicious lung nodules on LDCT requiring immediate follow-up",
+      "Extrapulmonary findings suggesting malignancy"
+    ],
+    "follow_up": "Annual screening with LDCT until person has not smoked for 15 years or develops limiting health problems",
+    "escalation_path": "Positive screens should be managed using standardized approaches like Lung-RADS classification system, ideally at centers with experience and expertise in lung cancer screening and management of lung lesions detected on LDCT",
+    "_chunked_extraction": true,
+    "_chunks_merged": 3
+  },
+  "metadata": {
+    "run_id": "55365ef2",
+    "extracted_at": "2026-03-04T07:18:36.577804Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "screening_population",
+      "screening_intervals",
+      "risk_stratification",
+      "preventive_medications",
+      "counseling_interventions",
+      "positive_screen_pathway"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 55355
+  }
+}

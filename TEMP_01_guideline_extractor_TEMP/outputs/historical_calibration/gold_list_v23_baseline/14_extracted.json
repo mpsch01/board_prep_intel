@@ -1,0 +1,206 @@
+{
+  "source": {
+    "title": "Peripheral Nerve Entrapment and Injury in the Upper Extremity",
+    "organization": "American Family Physician",
+    "document_type": "diagnostic_guideline",
+    "publication_year": 2021,
+    "version_number": "",
+    "doi": "",
+    "file_name": "14.pdf"
+  },
+  "classification": {
+    "engine_used": "DiagnosticEngine",
+    "document_type": "diagnostic_guideline",
+    "confidence": 0.9,
+    "signals": [
+      "detailed history and physical examination alone are often enough to identify the injury",
+      "advanced diagnostic testing with magnetic resonance imaging, ultrasonography, or electrodiagnostic studies can help confirm the clinical diagnosis",
+      "nerve injury is divided into three grades of increasing severity: neurapraxia, axonotmesis, and neurotmesis",
+      "epidemiology data on entrapment neuropathies",
+      "patients with nerve injury typically present with pain, weakness, and paresthesia"
+    ],
+    "body_systems": [
+      "neurologic",
+      "musculoskeletal"
+    ]
+  },
+  "extraction": {
+    "summary": "This guideline covers peripheral nerve entrapment and injury in the upper extremity, focusing on diagnosis through detailed history and physical examination. The primary diagnostic approach involves recognizing patterns of pain, weakness, and paresthesia based on anatomical nerve distributions and specific physical examination findings.",
+    "population": {
+      "age_criteria": "No specific age criteria mentioned",
+      "risk_criteria": "Contact sports participation, overhead activities, repetitive use, anatomic abnormalities, trauma history",
+      "disease_definition": "Peripheral nerve injury classified into three grades: neurapraxia (mild ischemia from compression), axonotmesis (axon damage with preserved connective tissue), and neurotmesis (full-thickness nerve damage)",
+      "exclusions": "Systemic disease, muscle injury as primary cause of weakness/paresthesia",
+      "severity_staging": "Neurapraxia (complete recovery in days to weeks), Axonotmesis (recovery takes years, often incomplete), Neurotmesis (full clinical recovery usually not achieved)"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Carpal tunnel syndrome prevalence",
+        "value": "3",
+        "unit": "percent",
+        "context": "General population prevalence"
+      },
+      {
+        "parameter": "Cubital tunnel syndrome prevalence",
+        "value": "1.8-5.9",
+        "unit": "percent",
+        "context": "U.S. metropolitan area prevalence"
+      },
+      {
+        "parameter": "Conservative treatment duration",
+        "value": "3-4",
+        "unit": "months",
+        "context": "Before considering surgery for most nerve injuries"
+      },
+      {
+        "parameter": "Conservative treatment duration for nerve transection",
+        "value": "18-24",
+        "unit": "months",
+        "context": "Long thoracic and spinal accessory nerve injuries"
+      },
+      {
+        "parameter": "Median nerve cross-sectional area at carpal tunnel",
+        "value": 9,
+        "unit": "mm²",
+        "context": "Threshold for carpal tunnel syndrome diagnosis on ultrasonography (87.3% sensitivity, 83.3% specificity)"
+      },
+      {
+        "parameter": "Conservative treatment duration before imaging",
+        "value": "6-8",
+        "unit": "weeks",
+        "context": "Imaging can be initiated after this period unless severe weakness or multiple nerve involvement"
+      },
+      {
+        "parameter": "Conservative treatment duration before surgery consideration",
+        "value": "3-4",
+        "unit": "months",
+        "context": "No improvement after this period indicates surgical consideration"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "History and physical examination alone are often enough to identify nerve injury or entrapment",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Focus on trauma history, time course, aggravating activities, symptom distribution"
+      },
+      {
+        "recommendation": "Advanced diagnostic testing with MRI, ultrasonography, or electrodiagnostic studies should be used if conservative management is ineffective",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Helps confirm clinical diagnosis"
+      },
+      {
+        "recommendation": "Initial treatment should be conservative",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Surgical options available for refractory injuries or anatomic abnormality"
+      },
+      {
+        "recommendation": "Return to play acceptable after first stinger episode when complete symptom resolution and cervical spine injury excluded",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Persistent or recurrent stingers require additional evaluation"
+      },
+      {
+        "recommendation": "Nocturnal splinting more effective than placebo for carpal tunnel syndrome",
+        "strength": "Cochrane review",
+        "evidence_level": "High",
+        "notes": "Maximal benefit typically achieved around 3 months"
+      },
+      {
+        "recommendation": "Use physical examination findings in combination with electrodiagnostic studies to increase diagnostic accuracy before surgical intervention",
+        "strength": "C",
+        "evidence_level": "Expert opinion and clinical practice guideline",
+        "notes": "Especially important for carpal tunnel syndrome"
+      },
+      {
+        "recommendation": "Electrodiagnostic testing should be used as adjunct to physical exam and imaging",
+        "strength": "C",
+        "evidence_level": "Expert opinion",
+        "notes": "Helps confirm diagnosis, establish severity, and monitor progression"
+      },
+      {
+        "recommendation": "Initial treatment should be conservative in absence of traumatic injury",
+        "strength": "B",
+        "evidence_level": "Patient-oriented evidence in systematic review",
+        "notes": "Include patient education, physical therapy, and activity modification"
+      },
+      {
+        "recommendation": "Use ultrasonography and MRI for diagnosing anatomic causes of nerve entrapment",
+        "strength": "C",
+        "evidence_level": "Disease-oriented evidence, expert opinion",
+        "notes": "Particularly useful for identifying space-occupying lesions"
+      },
+      {
+        "recommendation": "Use Phalen test and Hoffmann-Tinel sign for carpal tunnel syndrome diagnosis",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Physical examination maneuvers for clinical diagnosis"
+      },
+      {
+        "recommendation": "Perform electrodiagnostic testing for carpal tunnel syndrome confirmation",
+        "strength": "Evidence-based",
+        "evidence_level": "Practice parameter",
+        "notes": "Based on American Association of Electrodiagnostic Medicine guidelines"
+      },
+      {
+        "recommendation": "Consider ultrasonography for diagnosing carpal tunnel syndrome",
+        "strength": "Not specified",
+        "evidence_level": "Meta-analysis",
+        "notes": "Meta-analysis supports diagnostic test accuracy"
+      },
+      {
+        "recommendation": "Use proximal radial motor conduction testing for acute compressive radial neuropathy",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Useful diagnostic tool for radial nerve compression"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "NSAIDs",
+        "dose": "Not specified",
+        "indication": "Pain management for various nerve entrapments",
+        "class": "Anti-inflammatory"
+      },
+      {
+        "drug": "Steroid injection",
+        "dose": "Not specified",
+        "indication": "Therapeutic and diagnostic for multiple nerve entrapments",
+        "class": "Corticosteroid"
+      }
+    ],
+    "red_flags": [
+      "Evidence of moderate to severe median nerve damage on electromyography",
+      "Significant weakness of grip strength with thenar eminence atrophy",
+      "Fracture of the humerus resulting in nerve compromise",
+      "Penetrating trauma resulting in nerve transection",
+      "Space-occupying lesion causing compression",
+      "Severe weakness at presentation",
+      "Multiple nerve involvement",
+      "Evidence of traumatic injury",
+      "Evidence of anatomic abnormalities predisposing to repeat injury"
+    ],
+    "follow_up": "Serial examination with electromyography and nerve conduction studies for monitoring recovery. Physical therapy recovery monitoring at 6 months for radial neuropathy.",
+    "escalation_path": "Refer for surgery if: no electrophysiologic improvement after 3-4 months of conservative treatment for most nerve injuries, evidence of anatomic abnormalities predisposing to repeat injury, space-occupying lesions, or no improvement after 18-24 months for long thoracic/spinal accessory nerve injuries. Early surgery indicated for moderate to severe median nerve damage on electromyography.",
+    "_chunked_extraction": true,
+    "_chunks_merged": 3
+  },
+  "metadata": {
+    "run_id": "2b5552ab",
+    "extracted_at": "2026-03-04T07:08:03.226924Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "diagnostic_criteria",
+      "test_thresholds",
+      "workup_algorithm",
+      "result_interpretation",
+      "referral_indications",
+      "follow_up_imaging"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 52550
+  }
+}

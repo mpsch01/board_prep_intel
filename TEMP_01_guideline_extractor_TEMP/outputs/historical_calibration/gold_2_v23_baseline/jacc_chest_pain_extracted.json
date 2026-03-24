@@ -1,0 +1,981 @@
+{
+  "source": {
+    "title": "2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain",
+    "organization": "American College of Cardiology",
+    "document_type": "diagnostic_guideline",
+    "publication_year": 2021,
+    "version_number": "",
+    "doi": "",
+    "file_name": "jacc_chest_pain.pdf"
+  },
+  "classification": {
+    "engine_used": "DiagnosticEngine",
+    "document_type": "diagnostic_guideline",
+    "confidence": 0.95,
+    "signals": [
+      "Guideline for the Evaluation and Diagnosis of Chest Pain",
+      "evaluation and diagnosis",
+      "chest pain evaluation",
+      "diagnostic workup focus",
+      "clinical practice guideline format"
+    ],
+    "body_systems": [
+      "cardiovascular"
+    ]
+  },
+  "extraction": {
+    "summary": "This guideline provides evidence-based recommendations for evaluating and diagnosing chest pain in adult patients, both acute and stable presentations. The primary diagnostic approach emphasizes early risk stratification, appropriate use of biomarkers (particularly high-sensitivity troponins), and structured decision pathways to identify life-threatening causes while avoiding unnecessary testing in low-risk patients.",
+    "population": {
+      "age_criteria": "Adult patients (specific age range not defined)",
+      "risk_criteria": "Patients presenting with chest pain or anginal equivalents including pain, pressure, tightness, or discomfort in chest, shoulders, arms, neck, back, upper abdomen, or jaw, as well as shortness of breath and fatigue",
+      "disease_definition": "Chest pain evaluation focused on identifying ischemic causes, acute coronary syndromes, and other life-threatening conditions",
+      "exclusions": "STEMI patients (covered in separate guidelines), specific exclusions not detailed in this excerpt",
+      "severity_staging": "Low-risk, intermediate-risk, and high-risk stratification based on clinical presentation and pretest probability"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "High-sensitivity troponin",
+        "value": "Not specified in this excerpt",
+        "unit": "ng/L or pg/mL",
+        "context": "Preferred biomarker for establishing diagnosis of acute myocardial infarction"
+      },
+      {
+        "parameter": "ED chest pain prevalence with ACS",
+        "value": "5.1",
+        "unit": "percent",
+        "context": "Of all ED patients with chest pain, only 5.1% will have acute coronary syndrome"
+      },
+      {
+        "parameter": "ECG acquisition time",
+        "value": "10",
+        "unit": "minutes",
+        "context": "Time from arrival to ECG completion for all chest pain patients"
+      },
+      {
+        "parameter": "cTn 99th percentile upper reference limit",
+        "value": "varies by assay",
+        "unit": "assay-dependent",
+        "context": "Threshold defining myocardial injury, coefficient of variation should be ≤10%"
+      },
+      {
+        "parameter": "Pulse differential sensitivity",
+        "value": "30",
+        "unit": "percent",
+        "context": "Sensitivity for aortic dissection detection"
+      },
+      {
+        "parameter": "Cardiac arrest risk",
+        "value": "1 in 300",
+        "unit": "patients",
+        "context": "Risk for patients transported by private vehicle vs EMS"
+      },
+      {
+        "parameter": "CCTA radiation dose",
+        "value": "3-5",
+        "unit": "mSv",
+        "context": "Effective radiation dose for most patients"
+      },
+      {
+        "parameter": "ICA radiation exposure",
+        "value": "4-10",
+        "unit": "mSv",
+        "context": "Average radiation exposure during interventional procedures"
+      },
+      {
+        "parameter": "Coronary stenosis (obstructive CAD)",
+        "value": "≥50",
+        "unit": "percent",
+        "context": "Defines obstructive coronary artery disease requiring intervention consideration"
+      },
+      {
+        "parameter": "High-risk CAD - left main stenosis",
+        "value": "≥50",
+        "unit": "percent",
+        "context": "Defines high-risk anatomy requiring urgent revascularization"
+      },
+      {
+        "parameter": "High-risk CAD - 3-vessel disease",
+        "value": "≥70",
+        "unit": "percent",
+        "context": "Defines anatomically significant 3-vessel disease"
+      },
+      {
+        "parameter": "Exercise capacity threshold",
+        "value": "≥5",
+        "unit": "METs",
+        "context": "Minimum exercise capacity required for exercise ECG testing"
+      },
+      {
+        "parameter": "High-sensitivity troponin repeat interval",
+        "value": "1-3",
+        "unit": "hours",
+        "context": "Recommended time interval for repeat hs-cTn sampling after initial measurement"
+      },
+      {
+        "parameter": "Conventional troponin repeat interval",
+        "value": "3-6",
+        "unit": "hours",
+        "context": "Recommended time interval for repeat conventional troponin sampling"
+      },
+      {
+        "parameter": "Single hs-cTn rule-out threshold",
+        "value": "≥3",
+        "unit": "hours",
+        "context": "Minimum time from symptom onset to ED arrival for single hs-cTn rule-out"
+      },
+      {
+        "parameter": "Radiation exposure - ICA",
+        "value": "4-10",
+        "unit": "mSv",
+        "context": "Average radiation exposure during invasive coronary angiography"
+      },
+      {
+        "parameter": "Radiation exposure - PET",
+        "value": "~3",
+        "unit": "mSv",
+        "context": "Average effective dose for rest/stress PET with Rb-82"
+      },
+      {
+        "parameter": "Radiation exposure - SPECT",
+        "value": "~10",
+        "unit": "mSv",
+        "context": "Average effective dose for Tc-99m SPECT"
+      },
+      {
+        "parameter": "hs-cTn T-0",
+        "value": "Below assay limit of detection or 'very low' threshold",
+        "unit": "Assay-specific",
+        "context": "Low-risk classification if symptoms present for at least 3 hours"
+      },
+      {
+        "parameter": "HEART score",
+        "value": "≤3",
+        "unit": "Points",
+        "context": "Low-risk pathway with initial and serial cTn <99th percentile"
+      },
+      {
+        "parameter": "EDACS score",
+        "value": "≤16",
+        "unit": "Points",
+        "context": "Low-risk pathway with initial and serial cTn <99th percentile"
+      },
+      {
+        "parameter": "TIMI score",
+        "value": "0 (ADAPT) or 0-1 (mADAPT)",
+        "unit": "Points",
+        "context": "Low-risk pathway with initial and serial cTn <99th percentile"
+      },
+      {
+        "parameter": "Coronary stenosis for FFR-CT",
+        "value": "40-90%",
+        "unit": "Percent stenosis",
+        "context": "Proximal or middle coronary artery segment"
+      },
+      {
+        "parameter": "30-day MACE risk threshold",
+        "value": "1%",
+        "unit": "Percent",
+        "context": "Cutoff for low-risk designation"
+      },
+      {
+        "parameter": "Coronary stenosis for nonobstructive CAD",
+        "value": "1-49",
+        "unit": "%",
+        "context": "Luminal stenosis on CCTA or ICA"
+      },
+      {
+        "parameter": "Coronary stenosis for obstructive CAD",
+        "value": "≥50",
+        "unit": "%",
+        "context": "Significant stenosis threshold"
+      },
+      {
+        "parameter": "Coronary stenosis for FFR-CT consideration",
+        "value": "40-90",
+        "unit": "%",
+        "context": "Proximal or mid-segment stenosis on CCTA"
+      },
+      {
+        "parameter": "Left ventricular ejection fraction for high-risk",
+        "value": "<40",
+        "unit": "%",
+        "context": "New-onset left ventricular systolic dysfunction"
+      },
+      {
+        "parameter": "Left ventricular ejection fraction for stress testing indication",
+        "value": "<35",
+        "unit": "%",
+        "context": "New resting dysfunction not explained by noncoronary causes"
+      },
+      {
+        "parameter": "Stress perfusion abnormalities threshold",
+        "value": "≥10",
+        "unit": "%",
+        "context": "Myocardium involvement for high-risk features"
+      },
+      {
+        "parameter": "High-risk CAD left main stenosis",
+        "value": "≥50",
+        "unit": "%",
+        "context": "Left main stenosis threshold"
+      },
+      {
+        "parameter": "3-vessel disease stenosis",
+        "value": "≥70",
+        "unit": "%",
+        "context": "Anatomically significant 3-vessel disease"
+      },
+      {
+        "parameter": "Pretest probability for obstructive CAD",
+        "value": "15",
+        "unit": "%",
+        "context": "Threshold above which noninvasive testing is most beneficial"
+      },
+      {
+        "parameter": "Age for low-risk stable chest pain",
+        "value": "40",
+        "unit": "years",
+        "context": "Patients <40 years may be considered low-risk"
+      },
+      {
+        "parameter": "CMR sensitivity for pericardial inflammation",
+        "value": "94-100",
+        "unit": "%",
+        "context": "Detection of pericardial inflammation"
+      },
+      {
+        "parameter": "Cardiac CT sensitivity for pericarditis",
+        "value": "54-59",
+        "unit": "%",
+        "context": "Pericardial thickening or enhancement"
+      },
+      {
+        "parameter": "Cardiac CT specificity for pericarditis",
+        "value": "91-96",
+        "unit": "%",
+        "context": "Pericardial thickening or enhancement"
+      },
+      {
+        "parameter": "Pretest probability of obstructive CAD",
+        "value": "15",
+        "unit": "%",
+        "context": "Threshold for considering noninvasive testing vs deferring testing"
+      },
+      {
+        "parameter": "Coronary artery calcium (CAC) score",
+        "value": "0",
+        "unit": "score",
+        "context": "Zero score identifies low-risk patients who may not require additional testing"
+      },
+      {
+        "parameter": "Stenosis severity for FFR-CT",
+        "value": "40-90",
+        "unit": "%",
+        "context": "Range where FFR-CT is most useful for vessel-specific ischemia diagnosis"
+      },
+      {
+        "parameter": "Left main stenosis",
+        "value": "50",
+        "unit": "%",
+        "context": "Threshold defining high-risk CAD requiring ICA"
+      },
+      {
+        "parameter": "Major vessel stenosis",
+        "value": "70",
+        "unit": "%",
+        "context": "Threshold defining obstructive CAD"
+      },
+      {
+        "parameter": "Exercise capacity",
+        "value": "5",
+        "unit": "METs",
+        "context": "Minimum capacity for exercise ECG; failure to achieve increases CAD risk"
+      },
+      {
+        "parameter": "FFR-CT",
+        "value": "0.80",
+        "unit": "ratio",
+        "context": "≤0.80 indicates vessel-specific ischemia"
+      },
+      {
+        "parameter": "ST depression on exercise ECG",
+        "value": "1.0",
+        "unit": "mm",
+        "context": "≥1.0 mm indicates ischemic response"
+      },
+      {
+        "parameter": "Stent diameter for CCTA evaluation",
+        "value": "3",
+        "unit": "mm",
+        "context": "≥3 mm stents can be reliably evaluated by CCTA"
+      },
+      {
+        "parameter": "PET ischemic myocardium",
+        "value": "≥10",
+        "unit": "percent",
+        "context": "Defines moderate-severe ischemia warranting revascularization consideration"
+      },
+      {
+        "parameter": "FFR",
+        "value": "≤0.80",
+        "unit": "ratio",
+        "context": "Defines hemodynamically significant stenosis"
+      },
+      {
+        "parameter": "iFR (instantaneous wave-free ratio)",
+        "value": "≤0.89",
+        "unit": "ratio",
+        "context": "Alternative to FFR for defining significant stenosis"
+      },
+      {
+        "parameter": "Coronary flow reserve",
+        "value": "<2.32",
+        "unit": "ratio",
+        "context": "Impaired coronary flow reserve in microvascular dysfunction"
+      },
+      {
+        "parameter": "Coronary flow velocity reserve",
+        "value": "≤2",
+        "unit": "ratio",
+        "context": "Abnormal threshold for microvascular dysfunction"
+      },
+      {
+        "parameter": "CCTA graft patency sensitivity",
+        "value": "99",
+        "unit": "percent",
+        "context": "Diagnostic accuracy for complete graft occlusion"
+      },
+      {
+        "parameter": "Initial test costs",
+        "value": "174",
+        "unit": "dollars",
+        "context": "Exercise ECG - >50% lower than other imaging procedures"
+      },
+      {
+        "parameter": "Mean cost difference at 3 years",
+        "value": "1731",
+        "unit": "dollars",
+        "context": "CCTA higher than exercise ECG (95% CI: $2 to $3,519)"
+      },
+      {
+        "parameter": "Cost savings with CAC tiered testing",
+        "value": "16",
+        "unit": "percent",
+        "context": "1-year cost reduction compared to exercise ECG (p<0.0001)"
+      },
+      {
+        "parameter": "MACE-free survival with CAC-guided testing",
+        "value": "97",
+        "unit": "percent",
+        "context": "Compared to 90% with exercise ECG at 1 year"
+      },
+      {
+        "parameter": "Cost-effectiveness threshold",
+        "value": "50000",
+        "unit": "dollars per QALY",
+        "context": "CMR perfusion and scar imaging favorable incremental cost-effectiveness ratio"
+      },
+      {
+        "parameter": "High-sensitivity troponin T",
+        "value": "undetectable levels",
+        "unit": "ng/L",
+        "context": "Rule-out threshold for excluding acute myocardial infarction"
+      },
+      {
+        "parameter": "High-sensitivity troponin I",
+        "value": "limit of detection",
+        "unit": "ng/L",
+        "context": "Below detection limit excludes acute MI"
+      },
+      {
+        "parameter": "ST-segment elevation",
+        "value": "elevation criteria",
+        "unit": "mm",
+        "context": "Diagnostic criterion for STEMI on ECG"
+      },
+      {
+        "parameter": "Coronary artery calcium score",
+        "value": "Prognostic value established",
+        "unit": "Agatston units",
+        "context": "Risk stratification in PROMISE study"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Use high-sensitivity cardiac troponins as preferred standard for establishing biomarker diagnosis of acute myocardial infarction",
+        "strength": "Strong preference indicated",
+        "evidence_level": "Not specified in excerpt",
+        "notes": "Allows for more accurate detection and exclusion of myocardial injury"
+      },
+      {
+        "recommendation": "Urgent diagnostic testing for suspected coronary artery disease is not needed for low-risk patients with acute or stable chest pain",
+        "strength": "Class recommendation not specified in excerpt",
+        "evidence_level": "Not specified in excerpt",
+        "notes": "Routine testing not needed for low-risk patients"
+      },
+      {
+        "recommendation": "Use clinical decision pathways for chest pain in emergency department and outpatient settings routinely",
+        "strength": "Class recommendation not specified in excerpt",
+        "evidence_level": "Not specified in excerpt",
+        "notes": "Structured approach recommended for consistent evaluation"
+      },
+      {
+        "recommendation": "Include clinically stable patients presenting with chest pain in shared decision-making about risk, radiation exposure, costs, and alternatives",
+        "strength": "Class recommendation not specified in excerpt",
+        "evidence_level": "Not specified in excerpt",
+        "notes": "Patient-centered approach emphasized"
+      },
+      {
+        "recommendation": "Patients with acute chest pain should seek immediate medical care by calling 9-1-1",
+        "strength": "Class recommendation not specified in excerpt",
+        "evidence_level": "Not specified in excerpt",
+        "notes": "Early identification or exclusion of life-threatening causes is priority"
+      },
+      {
+        "recommendation": "Initial assessment of chest pain to triage patients effectively based on likelihood that symptoms may be attributable to myocardial ischemia",
+        "strength": "Class I",
+        "evidence_level": "B-NR",
+        "notes": "Essential for diagnostic process"
+      },
+      {
+        "recommendation": "Chest pain should not be described as atypical, but rather as cardiac, possibly cardiac, or noncardiac",
+        "strength": "Class I",
+        "evidence_level": "C-LD",
+        "notes": "More specific to potential underlying diagnosis"
+      },
+      {
+        "recommendation": "Obtain focused history including characteristics and duration of symptoms, associated features, and cardiovascular risk factor assessment",
+        "strength": "Class I",
+        "evidence_level": "C-LD",
+        "notes": "Should capture nature, onset/duration, location/radiation, precipitating factors, relieving factors, and associated symptoms"
+      },
+      {
+        "recommendation": "Women who present with chest pain are at risk for underdiagnosis, and potential cardiac causes should always be considered",
+        "strength": "Class I",
+        "evidence_level": "B-NR",
+        "notes": "Traditional risk scores often underestimate risk in women"
+      },
+      {
+        "recommendation": "In women presenting with chest pain, obtain history emphasizing accompanying symptoms more common in women with ACS",
+        "strength": "Class I",
+        "evidence_level": "B-NR",
+        "notes": "Women more likely to report ≥3 associated symptoms including epigastric symptoms, palpitations, jaw/neck/arm pain"
+      },
+      {
+        "recommendation": "In patients >75 years with chest pain, consider ACS when accompanying symptoms such as shortness of breath, syncope, acute delirium are present, or when unexplained fall has occurred",
+        "strength": "Class I",
+        "evidence_level": "C-LD",
+        "notes": "Older patients may have atypical presentations"
+      },
+      {
+        "recommendation": "Cultural competency training recommended to achieve best outcomes in patients of diverse racial and ethnic backgrounds",
+        "strength": "Class I",
+        "evidence_level": "C-LD",
+        "notes": "Marked racial and ethnic disparities exist in chest pain evaluation"
+      },
+      {
+        "recommendation": "Address language barriers with formal translation services for diverse patients where English may not be primary language",
+        "strength": "Class I",
+        "evidence_level": "C-LD",
+        "notes": "Vital to obtain accurate and complete history"
+      },
+      {
+        "recommendation": "ECG should be performed within 10 minutes of arrival for all patients with acute chest pain",
+        "strength": "Class 1",
+        "evidence_level": "C-LD",
+        "notes": "Regardless of setting - office or ED"
+      },
+      {
+        "recommendation": "Serial cardiac troponin I or T levels should be obtained in patients with acute chest pain",
+        "strength": "Class 1",
+        "evidence_level": "B-NR",
+        "notes": "To identify abnormal values and rising/falling patterns"
+      },
+      {
+        "recommendation": "High-sensitivity troponin is preferred over conventional troponin",
+        "strength": "Class 1",
+        "evidence_level": "B-NR",
+        "notes": "Enables more rapid detection/exclusion and increases diagnostic accuracy"
+      },
+      {
+        "recommendation": "Patients with clinical evidence of ACS should be transported urgently to ED by EMS",
+        "strength": "Class 1",
+        "evidence_level": "C-LD",
+        "notes": "From office setting"
+      },
+      {
+        "recommendation": "CK-MB and myoglobin are not useful when troponin is available",
+        "strength": "Class 3: No benefit",
+        "evidence_level": "B-NR",
+        "notes": "For diagnosis of acute myocardial injury"
+      },
+      {
+        "recommendation": "Focused cardiovascular examination should be performed initially",
+        "strength": "Class 1",
+        "evidence_level": "C-EO",
+        "notes": "To aid in diagnosis and identify complications"
+      },
+      {
+        "recommendation": "Chest radiography is useful to evaluate for other potential causes",
+        "strength": "Class 1",
+        "evidence_level": "C-EO",
+        "notes": "Cardiac, pulmonary, and thoracic causes of symptoms"
+      },
+      {
+        "recommendation": "Serial ECGs should be performed if initial ECG is nondiagnostic",
+        "strength": "Class 1",
+        "evidence_level": "C-EO",
+        "notes": "Especially when clinical suspicion is high or symptoms persist"
+      },
+      {
+        "recommendation": "Clinical decision pathways should categorize patients into low-, intermediate-, and high-risk strata to facilitate disposition and subsequent diagnostic evaluation",
+        "strength": "Class 1",
+        "evidence_level": "B-NR",
+        "notes": "For patients presenting with acute chest pain and suspected ACS"
+      },
+      {
+        "recommendation": "Use recommended time intervals for repeat troponin measurements: 1-3 hours for high-sensitivity troponin and 3-6 hours for conventional troponin assays",
+        "strength": "Class 1",
+        "evidence_level": "B-NR",
+        "notes": "After initial troponin sample collection (time zero)"
+      },
+      {
+        "recommendation": "Institutions should implement a CDP that includes a protocol for troponin sampling based on their particular assay",
+        "strength": "Class 1",
+        "evidence_level": "C-LD",
+        "notes": "To standardize detection and differentiation of myocardial injury"
+      },
+      {
+        "recommendation": "Previous testing when available should be considered and incorporated into CDPs",
+        "strength": "Class 1",
+        "evidence_level": "C-LD",
+        "notes": "For patients with acute chest pain and suspected ACS"
+      },
+      {
+        "recommendation": "Single hs-cTn concentration below limit of detection is reasonable to exclude myocardial injury",
+        "strength": "Class 2a",
+        "evidence_level": "B-NR",
+        "notes": "For patients with acute chest pain, normal ECG, symptoms suggestive of ACS that began at least 3 hours before ED arrival"
+      },
+      {
+        "recommendation": "Patients with acute chest pain and <1% 30-day risk of death or MACE should be designated as low risk",
+        "strength": "Class I",
+        "evidence_level": "B-NR",
+        "notes": "Can discharge home without admission or urgent cardiac testing"
+      },
+      {
+        "recommendation": "For low-risk patients, discharge home without admission or urgent cardiac testing is reasonable",
+        "strength": "Class IIa",
+        "evidence_level": "B-R",
+        "notes": "No evidence that stress testing or cardiac imaging within 30 days improves outcomes"
+      },
+      {
+        "recommendation": "For intermediate-risk patients, TTE is recommended as rapid bedside test",
+        "strength": "Class I",
+        "evidence_level": "C-EO",
+        "notes": "To establish ventricular/valvular function, evaluate wall motion abnormalities, assess for pericardial effusion"
+      },
+      {
+        "recommendation": "CCTA is useful for exclusion of atherosclerotic plaque and obstructive CAD in intermediate-risk patients with no known CAD",
+        "strength": "Class I",
+        "evidence_level": "A",
+        "notes": "After negative or inconclusive evaluation for ACS"
+      },
+      {
+        "recommendation": "Exercise ECG, stress echo, stress PET/SPECT MPI, or stress CMR is useful for diagnosis of myocardial ischemia",
+        "strength": "Class I",
+        "evidence_level": "B-NR",
+        "notes": "For intermediate-risk patients with no known CAD eligible for cardiac testing"
+      },
+      {
+        "recommendation": "For intermediate-risk patients with acute chest pain and known nonobstructive CAD, CCTA can be useful to determine progression of atherosclerotic plaque and obstructive CAD",
+        "strength": "2a",
+        "evidence_level": "B-NR",
+        "notes": "Applies to patients with luminal stenosis 1-49% on prior testing"
+      },
+      {
+        "recommendation": "For intermediate-risk patients with acute chest pain and coronary artery stenosis of 40% to 90% in a proximal or middle segment on CCTA, FFR-CT is reasonable for diagnosis of vessel-specific ischemia",
+        "strength": "2a",
+        "evidence_level": "B-NR",
+        "notes": "Guides decision-making regarding coronary revascularization"
+      },
+      {
+        "recommendation": "For patients with acute chest pain and suspected ACS who are designated as high risk, ICA is recommended",
+        "strength": "1",
+        "evidence_level": "C-EO",
+        "notes": "High risk includes new ischemic ECG changes, troponin-positive, LVEF <40%, moderate-severe ischemia on stress testing"
+      },
+      {
+        "recommendation": "In patients with prior CABG surgery presenting with acute chest pain who do not have ACS, performing stress imaging is effective to evaluate for myocardial ischemia or CCTA for graft stenosis or occlusion",
+        "strength": "1",
+        "evidence_level": "C-LD",
+        "notes": "CCTA has 99% sensitivity and specificity for complete graft occlusions"
+      },
+      {
+        "recommendation": "In patients with acute chest pain where there is clinical concern for aortic dissection, CTA of the chest, abdomen, and pelvis is recommended for diagnosis and treatment planning",
+        "strength": "Class 1",
+        "evidence_level": "C-EO",
+        "notes": "CTA is both highly sensitive and specific"
+      },
+      {
+        "recommendation": "In stable patients with acute chest pain with high clinical suspicion for PE, CTA using a PE protocol is recommended",
+        "strength": "Class 1",
+        "evidence_level": "B-NR",
+        "notes": "CTA using PE protocol is the diagnostic modality of choice"
+      },
+      {
+        "recommendation": "In patients with acute chest pain and myocardial injury who have nonobstructive coronary arteries on anatomic testing, CMR with gadolinium contrast is effective to distinguish myopericarditis from other causes",
+        "strength": "Class 1",
+        "evidence_level": "B-NR",
+        "notes": "Most effective if performed early, within 2 weeks of presentation"
+      },
+      {
+        "recommendation": "In patients presenting with acute chest pain with suspected or known history of VHD, TTE is useful in determining the presence, severity, and cause of VHD",
+        "strength": "Class 1",
+        "evidence_level": "C-EO",
+        "notes": "TTE is widely available and good first-line test"
+      },
+      {
+        "recommendation": "For patients with recurrent, similar presentations for acute chest pain with no evidence of a physiological cause on prior diagnostic evaluation, referral to a cognitive-behavioral therapist is reasonable",
+        "strength": "Class 2a",
+        "evidence_level": "B-R",
+        "notes": "32% reduction in chest pain frequency with cognitive-behavioral methods"
+      },
+      {
+        "recommendation": "Use contemporary pretest probability models to identify low-risk patients for whom testing can be deferred",
+        "strength": "Class 1",
+        "evidence_level": "B-NR",
+        "notes": "Prefer models from past 10 years over historical scores that overestimate CAD prevalence"
+      },
+      {
+        "recommendation": "CAC testing as first-line test for low-risk patients to exclude calcified plaque",
+        "strength": "Class 2a",
+        "evidence_level": "B-R",
+        "notes": "CAC score of zero identifies very low-risk cohort"
+      },
+      {
+        "recommendation": "CCTA is effective for intermediate-high risk patients for CAD diagnosis and risk stratification",
+        "strength": "Class 1",
+        "evidence_level": "A",
+        "notes": "Preferred in patients <65 years not on optimal preventive therapy"
+      },
+      {
+        "recommendation": "Stress imaging (echo, PET/SPECT MPI, CMR) for intermediate-high risk patients",
+        "strength": "Class 1",
+        "evidence_level": "B-R",
+        "notes": "Effective for ischemia diagnosis and MACE risk estimation"
+      },
+      {
+        "recommendation": "PET preferred over SPECT when nuclear MPI selected",
+        "strength": "Class 2a",
+        "evidence_level": "B-R",
+        "notes": "Improves diagnostic accuracy and decreases nondiagnostic results"
+      },
+      {
+        "recommendation": "Exercise ECG reasonable for intermediate-high risk with interpretable ECG and ≥5 METs capacity",
+        "strength": "Class 2a",
+        "evidence_level": "B-R",
+        "notes": "Lower diagnostic accuracy than stress imaging but useful for prognosis"
+      },
+      {
+        "recommendation": "FFR-CT useful for coronary stenosis 40-90% in proximal/middle segments on CCTA",
+        "strength": "Class 2a",
+        "evidence_level": "B-NR",
+        "notes": "Guides decision-making regarding coronary revascularization"
+      },
+      {
+        "recommendation": "Optimize GDMT in patients with known obstructive CAD before testing",
+        "strength": "Class 1",
+        "evidence_level": "A",
+        "notes": "Should intensify medical therapy first when opportunity exists"
+      },
+      {
+        "recommendation": "ICA recommended for obstructive CAD patients with stable chest pain despite GDMT and moderate-severe ischemia",
+        "strength": "Class 1",
+        "evidence_level": "A",
+        "notes": "For guiding therapeutic decision-making"
+      },
+      {
+        "recommendation": "For patients with obstructive CAD and stable chest pain despite optimal GDMT, stress PET/SPECT MPI, CMR, or echocardiography is recommended for diagnosis of myocardial ischemia",
+        "strength": "Class I",
+        "evidence_level": "B-NR",
+        "notes": "Primary recommendation for ischemia detection"
+      },
+      {
+        "recommendation": "PET is reasonable in preference to SPECT when available to improve diagnostic accuracy and decrease nondiagnostic test results",
+        "strength": "Class IIa",
+        "evidence_level": "B-R",
+        "notes": "When both modalities available"
+      },
+      {
+        "recommendation": "Exercise treadmill testing can be useful to determine if symptoms are consistent with angina pectoris and assess functional capacity",
+        "strength": "Class IIa",
+        "evidence_level": "B-NR",
+        "notes": "For symptom assessment and functional evaluation"
+      },
+      {
+        "recommendation": "Addition of MBFR to stress PET MPI or stress CMR is useful to improve diagnosis accuracy and enhance risk stratification",
+        "strength": "Class IIa",
+        "evidence_level": "B-NR",
+        "notes": "Adds prognostic value"
+      },
+      {
+        "recommendation": "For patients with prior CABG and moderate-to-severe ischemia on stress testing, ICA is recommended",
+        "strength": "Class I",
+        "evidence_level": "C-LD",
+        "notes": "Guides therapeutic decision-making"
+      },
+      {
+        "recommendation": "For known nonobstructive CAD with stable chest pain, CCTA is reasonable for determining plaque burden and progression",
+        "strength": "Class IIa",
+        "evidence_level": "B-NR",
+        "notes": "Assesses disease progression"
+      },
+      {
+        "recommendation": "For suspected INOCA, invasive coronary function testing is reasonable to diagnose coronary microvascular dysfunction",
+        "strength": "Class IIa",
+        "evidence_level": "B-NR",
+        "notes": "When persistent symptoms with nonobstructive CAD"
+      },
+      {
+        "recommendation": "Select tests most likely to answer the particular clinical question to minimize downstream testing needs",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "General concept to avoid layered testing which leads to higher costs"
+      },
+      {
+        "recommendation": "Consider tiered testing strategy starting with CAC scan followed by CCTA only in patients with detectable CAC or high pretest risk",
+        "strength": "Not specified",
+        "evidence_level": "CRESCENT I trial data",
+        "notes": "Nearly 40% of patients avoided CCTA, reducing diagnostic costs with no events in this subgroup"
+      },
+      {
+        "recommendation": "Exercise ECG followed by selective stress imaging may be cost-effective for intermediate-risk patients",
+        "strength": "Not specified",
+        "evidence_level": "Decision model analysis",
+        "notes": "Tiered approach resulted in improved diagnostic accuracy and favorable cost-effectiveness ratios"
+      },
+      {
+        "recommendation": "Stress echocardiography or stress MPI are cost-effective for intermediate pretest risk patients",
+        "strength": "Not specified",
+        "evidence_level": "Systematic review evidence",
+        "notes": "Improved CAD detection led to fewer office and ED visits"
+      },
+      {
+        "recommendation": "Use 12-lead ECG as initial diagnostic test for all chest pain patients",
+        "strength": "Class I",
+        "evidence_level": "Not specified",
+        "notes": "Should be performed promptly in emergency department setting"
+      },
+      {
+        "recommendation": "Consider 15-lead or 18-lead ECG for suspected posterior or right ventricular infarction",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Important for detecting posterior wall and right ventricular involvement"
+      },
+      {
+        "recommendation": "Use high-sensitivity troponin assays for biomarker testing",
+        "strength": "Recommended",
+        "evidence_level": "Strong",
+        "notes": "More sensitive than conventional troponin assays for early detection"
+      },
+      {
+        "recommendation": "Implement 0-hour/1-hour or 0-hour/3-hour algorithms for rapid rule-out",
+        "strength": "Recommended",
+        "evidence_level": "Good",
+        "notes": "Allows for faster disposition decisions in emergency department"
+      },
+      {
+        "recommendation": "Consider sex differences in symptom presentation",
+        "strength": "Important consideration",
+        "evidence_level": "Good",
+        "notes": "Women may present with atypical symptoms more frequently than men"
+      },
+      {
+        "recommendation": "Use chest radiography selectively based on clinical decision rules",
+        "strength": "Conditional",
+        "evidence_level": "Moderate",
+        "notes": "Not routinely indicated for all chest pain patients"
+      },
+      {
+        "recommendation": "Use 1-hour algorithm for rule-out and rule-in of acute MI using high-sensitivity troponin",
+        "strength": "Recommended",
+        "evidence_level": "Validated in prospective studies",
+        "notes": "Multiple validation studies support 1-hour protocols"
+      },
+      {
+        "recommendation": "Consider 2-hour accelerated diagnostic protocol (ADAPT) for chest pain assessment",
+        "strength": "Recommended",
+        "evidence_level": "Randomized trial evidence",
+        "notes": "ADAPT trial showed efficacy for early discharge"
+      },
+      {
+        "recommendation": "Implement HEART pathway for emergency department risk stratification",
+        "strength": "Recommended",
+        "evidence_level": "Randomized trial",
+        "notes": "Identifies patients suitable for early discharge"
+      },
+      {
+        "recommendation": "Use coronary CT angiography for intermediate-risk patients",
+        "strength": "Appropriate use",
+        "evidence_level": "Multimodality criteria",
+        "notes": "Based on ACCF/AHA/ASE appropriate use criteria"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "Ultrasound-enhancing agents",
+        "dose": "Not specified",
+        "indication": "Left ventricular opacification when ≥2 contiguous segments or coronary territory is poorly visualized",
+        "class": "Contrast agent for echocardiography"
+      },
+      {
+        "drug": "Iodinated contrast",
+        "dose": "Not specified",
+        "indication": "CCTA imaging",
+        "class": "Contrast agent with contraindication for allergy to iodinated contrast"
+      },
+      {
+        "drug": "Gadolinium contrast",
+        "dose": "Not specified",
+        "indication": "CMR imaging (discouraged in pregnancy)",
+        "class": "MRI contrast agent"
+      },
+      {
+        "drug": "Contrast agents",
+        "dose": "Not specified",
+        "indication": "For CCTA, CTA, and other contrast-enhanced imaging studies",
+        "class": "Diagnostic agent"
+      },
+      {
+        "drug": "Guideline-directed medical therapy (GDMT)",
+        "dose": "As per 2014 SIHD guidelines",
+        "indication": "Patients with obstructive CAD",
+        "class": "Anti-ischemic and preventive therapy"
+      },
+      {
+        "drug": "Preventive therapies",
+        "dose": "Per ACC/AHA guidelines",
+        "indication": "Patients with nonobstructive CAD",
+        "class": "Atherosclerotic CV prevention"
+      },
+      {
+        "drug": "Contrast enhancement",
+        "dose": "Not specified",
+        "indication": "Obese patients to improve imaging quality",
+        "class": "Imaging contrast agent"
+      },
+      {
+        "drug": "Beta-blockers",
+        "dose": "Not specified",
+        "indication": "Anti-ischemic therapy for INOCA",
+        "class": "Beta-adrenergic blocker"
+      },
+      {
+        "drug": "ACE inhibitors",
+        "dose": "Not specified",
+        "indication": "Anti-ischemic therapy for INOCA",
+        "class": "ACE inhibitor"
+      },
+      {
+        "drug": "Statins",
+        "dose": "Not specified",
+        "indication": "Preventive care for INOCA and CAD progression",
+        "class": "HMG-CoA reductase inhibitor"
+      },
+      {
+        "drug": "Sublingual nitroglycerin",
+        "dose": "Not specified",
+        "indication": "Chest pain evaluation (but response does not predict cardiac etiology)",
+        "class": "Nitrate vasodilator"
+      }
+    ],
+    "red_flags": [
+      "Life-threatening causes of chest pain requiring immediate evaluation",
+      "Acute coronary syndrome presentations",
+      "Symptoms requiring immediate medical attention via 9-1-1",
+      "Sudden onset of ripping chest pain with radiation to upper or lower back suspicious of acute aortic syndrome",
+      "Ripping chest pain described as 'worst chest pain of my life', especially sudden onset in hypertensive patient or with known bicuspid aortic valve",
+      "Shortness of breath, syncope, acute delirium, or unexplained fall in patients >75 years of age",
+      "ST-elevation on ECG requiring immediate STEMI protocol",
+      "New ST depression or T-wave changes suggesting NSTE-ACS",
+      "Severe chest/back pain with pulse differential suggesting aortic dissection",
+      "Signs of esophageal rupture (emesis, subcutaneous emphysema, pneumothorax)",
+      "Hemodynamic instability (hypotension, tachycardia with diaphoresis)",
+      "Clinical deterioration or persistent symptoms with nondiagnostic initial testing",
+      "ST-segment elevation myocardial infarction (STEMI)",
+      "Acute aortic syndromes",
+      "Pulmonary embolism",
+      "Fulminant myocarditis",
+      "Esophageal rupture",
+      "Tension pneumothorax",
+      "Sickle cell chest crisis",
+      "High-risk unstable angina",
+      "Complicated ACS or AMI (<2 days)",
+      "Severe systemic arterial hypertension (≥200/110 mmHg)",
+      "Severe symptomatic aortic stenosis",
+      "Hemodynamically significant ventricular tachycardia or complete atrioventricular block",
+      "Moderate-severe ischemia on current or prior (≤1 year) stress testing",
+      "Significant left main, proximal LAD stenosis, or multivessel CAD on prior anatomic testing",
+      "History of prior coronary revascularization with worsening symptoms",
+      "New ischemic changes on electrocardiography",
+      "Troponin-confirmed acute myocardial injury",
+      "New-onset left ventricular systolic dysfunction (ejection fraction <40%)",
+      "Newly diagnosed moderate-severe ischemia on stress testing",
+      "Hemodynamic instability",
+      "High clinical decision pathway risk scores",
+      "Acute unremitting chest pain during dialysis",
+      "Clinical concern for aortic dissection",
+      "High clinical suspicion for pulmonary embolism",
+      "Acute aortic dissection with severe chest or back pain described as ripping or tearing",
+      "High clinical suspicion for pulmonary embolism in unstable patients",
+      "Acute severe valvular regurgitation with ruptured papillary muscle",
+      "Acute chest syndrome in sickle cell disease patients",
+      "Dysphagia, odynophagia, GI bleeding, unexplained iron deficiency anemia, weight loss, recurrent vomiting",
+      "Left main stenosis ≥50%",
+      "Anatomically significant 3-vessel disease (≥70% stenosis)",
+      "Severe stenosis (≥70%) in all 3 main vessels",
+      "Marked ischemia (≥2.0 mm ST depression at reduced workloads)",
+      "High Duke or Lauer exercise scores",
+      "Pathological Q waves with heart failure symptoms",
+      "Complex ventricular arrhythmias",
+      "Patients with sickle cell disease experiencing chest pain (associated with significant morbidity and mortality)",
+      "Exercise-induced VT/VF",
+      "≥2 mm ST-segment depression at low workload or persisting into recovery",
+      "Exercise-induced ST-segment elevation",
+      "Severe stress-induced left ventricular systolic dysfunction",
+      "Stress-induced perfusion abnormalities involving ≥10% myocardium",
+      "Stress-induced left ventricular dilation",
+      "STEMI requiring urgent door-to-balloon time reduction",
+      "Symptom onset to presentation delays in ACS patients",
+      "ST-segment elevation on ECG indicating STEMI",
+      "Acute aortic dissection findings on imaging or clinical assessment",
+      "Spontaneous esophageal rupture as underlying cause of chest pain",
+      "Cardiac arrest during self-transport for chest pain",
+      "High-risk clinical features for acute cardiac dissection",
+      "Persistent ST-segment elevation requiring immediate catheterization",
+      "High-risk troponin elevation with clinical instability",
+      "Hemodynamic compromise in setting of chest pain"
+    ],
+    "follow_up": "Not specified in this excerpt - full guideline contains detailed follow-up recommendations",
+    "escalation_path": "Intermediate-risk and intermediate to high pretest risk patients benefit most from cardiac imaging and testing. High-risk patients require urgent evaluation. Specific escalation criteria detailed in full guideline sections not included in this excerpt.",
+    "_chunked_extraction": true,
+    "_chunks_merged": 12
+  },
+  "metadata": {
+    "run_id": "69aa1711",
+    "extracted_at": "2026-03-04T01:07:52.625706Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "diagnostic_criteria",
+      "test_thresholds",
+      "workup_algorithm",
+      "result_interpretation",
+      "referral_indications",
+      "follow_up_imaging"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 440800
+  }
+}

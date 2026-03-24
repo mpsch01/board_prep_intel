@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260309_052909",
+  "run_id": "be45aa4b",
+  "file_name": "AJKD_CKD+HTN.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "cardiovascular",
+    "renal"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 105362,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 20,
+  "thresholds_count": 14,
+  "medications_count": 15
+}

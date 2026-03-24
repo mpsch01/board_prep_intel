@@ -1,0 +1,27 @@
+{
+  "timestamp": "20260303_234403",
+  "run_id": "f304757b",
+  "file_name": "IDSA_surviving-sepsis.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "cardiovascular",
+    "immune",
+    "multi-organ"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 398479,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 20,
+  "thresholds_count": 11,
+  "medications_count": 7
+}

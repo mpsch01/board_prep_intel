@@ -1,0 +1,33 @@
+Guideline Extractor Run Log 
+Date: Thu 03/12/2026  Time: 22:55:26.40 
+Input: C:\Users\mpsch\Desktop\library expansion list\pdf_guideline_files\08_Amenorrhea_Klein_2019.pdf 
+ 
+ Found  PDF file(s) 
+ Output folder: -batch 
+ Batch complete:  succeeded,  failed 
+   [1/5] Extracting clinical content... 
+    [chunk 1/3] recs=7 thresh=13
+    [chunk 2/3] recs=6 thresh=10
+    [chunk 3/3] recs=3 thresh=21
+    Extraction OK: type=diagnostic_guideline conf=0.95
+   [2/5] Synthesizing clinical narrative... 
+    Synthesis OK
+   [3/5] ITE enrichment... 
+============================================================
+ITE Intelligence Enricher  v3
+  Files: 1  |  Mode: LIVE
+  Model: claude-sonnet-4-20250514  |  Delay: 0.5s
+============================================================
+  [  1/1] [OK] 08_Amenorrhea_Klein_2019_extracted.json
+           -> 3 Qs | [] | author_year_title
+             concepts: ['Primary amenorrhea diagnostic criteria (age 15 or 3 years after breast development)', 'FSH/LH patterns in primary ovarian insufficiency versus hypothalamic causes', 'Turner syndrome as cause of primary amenorrhea with short stature']
+
+------------------------------------------------------------
+ENRICHMENT COMPLETE
+  Enriched: 1  No match: 0  Skipped: 0  Errors: 0
+  Methods: {'author_year_title': 1}
+  Log: C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\logs\enricher_live_20260312_225732.json
+   [4/5] Generating summary DOCX... 
+  Summary DOCX written: C:\Users\mpsch\Desktop\library expansion list\pdf_guideline_files\08_Amenorrhea_Klein_2019_summary.docx
+   [5/5] Done 
+ Log saved to: C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\01_guideline_extractor\oneclick\logs\run_20260312_225526.log 

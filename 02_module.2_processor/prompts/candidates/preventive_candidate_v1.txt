@@ -1,0 +1,19 @@
+# Prompt candidate for: PreventiveEngine
+# Generated: 2026-03-05T04:11:40.005450Z
+# Gaps addressed: ['key_thresholds']
+
+PASTE THIS BLOCK INTO THE SYSTEM PROMPT AFTER THE EXISTING INSTRUCTIONS:
+
+
+
+--- QUALITY IMPROVEMENTS (added by calibration) ---
+IMPORTANT: For EVERY threshold entry, you MUST populate the 'unit' field.
+Units should follow standard clinical notation:
+  - Blood pressure: mmHg
+  - Lab values: mg/dL, mmol/L, mEq/L, g/dL, IU/L, etc.
+  - Weight: kg, lbs
+  - Time: days, weeks, months, years
+  - Scores/indices: "points", "score", or leave blank only if truly dimensionless
+  - Percentages: "%"
+Never leave unit blank if a numeric threshold is given.
+--- END IMPROVEMENTS ---

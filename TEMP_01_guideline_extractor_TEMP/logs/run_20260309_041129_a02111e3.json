@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260309_041129",
+  "run_id": "a02111e3",
+  "file_name": "heart-failure-reduced-ejection-fraction.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "cardiovascular"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 71998,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 20,
+  "thresholds_count": 16,
+  "medications_count": 19
+}

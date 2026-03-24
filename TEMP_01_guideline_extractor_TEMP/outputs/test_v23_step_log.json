@@ -1,0 +1,70 @@
+{
+  "file": "Gaitonde_Moore_2019#@#ART-0470@#@.pdf",
+  "file_path": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\clinical_guidelines\\01_pdf_guideline_library\\pdf_codon\\Gaitonde_Moore_2019#@#ART-0470@#@.pdf",
+  "steps": {
+    "1_preprocess": {
+      "total_chars": 39729,
+      "total_lines": 523,
+      "elapsed_sec": 0.84,
+      "first_500": "Influenza: Diagnosis and Treatment\nDavid Y. Gaitonde, MD; Cpt. Faith C. Moore, USA, MC; and Maj. Mackenzie K. Morgan, USA, MC\nDwight D. Eisenhower Army Medical Center, Fort Gordon, Georgia\nInfluenza is an acute viral respiratory infection that causes significant morbidity and mortality worldwide. Three types of influ-\nenza cause disease in humans. Influenza A is the type most responsible for causing pandemics because of its high susceptibility\nto antigenic variation. Influenza is highly contagio"
+    },
+    "2_metadata": {
+      "result": {
+        "title": "Influenza: Diagnosis and Treatment",
+        "organization": "American Family Physician",
+        "publication_year": 2019,
+        "version_number": "",
+        "doi": ""
+      },
+      "elapsed_sec": 2.12
+    },
+    "3_screening": {
+      "rct_prescreen_triggered": false,
+      "result": {
+        "document_type": "acute_protocol",
+        "confidence": 0.95,
+        "signals": [
+          "Treatment with one of four approved anti-influenza drugs may be considered if the patient presents within 48 hours",
+          "benefit of treatment is greatest when antiviral therapy is started within 24 hours",
+          "These drugs decrease the duration of illness by about 24 hours",
+          "acute viral respiratory infection",
+          "may decrease the risk of serious complications"
+        ],
+        "body_systems": [
+          "respiratory",
+          "infectious"
+        ],
+        "numeric_threshold_present": true
+      },
+      "elapsed_sec": 2.47
+    },
+    "4_routing": {
+      "engine_class": "AcuteProtocolEngine",
+      "document_type": "acute_protocol",
+      "modules_activated": [
+        "urgency_triage",
+        "stabilization_steps",
+        "critical_thresholds",
+        "emergency_medications",
+        "escalation_triggers",
+        "disposition"
+      ]
+    },
+    "5_extraction": {
+      "elapsed_sec": 24.3,
+      "summary_length": 332,
+      "recommendations_count": 11,
+      "thresholds_count": 8,
+      "medications_count": 4,
+      "red_flags_count": 12,
+      "chunked": true
+    },
+    "6_validation": {
+      "passed": false,
+      "field_coverage_score": 1.0,
+      "warnings": [
+        "source.source_id is missing — link to ite_refs manifest not established"
+      ]
+    }
+  }
+}

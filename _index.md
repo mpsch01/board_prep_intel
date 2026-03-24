@@ -124,25 +124,44 @@
 
 ---
 
-### `02_module.2_processor/` — Pipeline Scripts (10 scripts)
+### `02_module.2_processor/` — Extraction + Enrichment Pipeline
 ```
 02_module.2_processor/
+├── main.py                                ← CLI entry point for extraction pipeline
+├── requirements.txt                       ← anthropic>=0.25.0, pdfplumber>=0.10.0
+├── guideline_extractor.json               ← pipeline config/manifest (v2.3)
+├── PIPELINE_README.md                     ← pipeline documentation
+├── INTEGRATION_PROMPT.md                  ← prompt reference doc
 ├── ite_2018_2019_enriched.json            ← 440 enriched 2018-2019 questions (integrated)
 ├── ite_2018_2019_extracted.json           ← pre-enrichment upstream artifact
-└── scripts/
-    ├── backfill_keywords_2018_2019.py     ← keyword backfill for 2018-2019 (2026-03-24)
-    ├── build_db_docx.js
-    ├── build_merged_docx.js
-    ├── build_summary.js
-    ├── extract_guideline.bat
+├── core/                                  ← pipeline orchestration package
+│   ├── ingestion.py, routing.py, screening.py
+├── engines/                               ← 6 clinical extraction engines
+│   ├── base_engine.py, acute_engine.py, chronic_engine.py
+│   ├── diagnostic_engine.py, preventive_engine.py, rct_engine.py
+├── utils/                                 ← pipeline utilities package
+│   ├── logger.py, preprocess.py, prompt_builder.py
+│   ├── qid_filename_parser.py, validator.py
+├── prompts/candidates/                    ← 4 extraction prompt candidates
+└── scripts/                               ← 16 standalone pipeline scripts
+    ├── backfill_keywords_2018_2019.py     ← keyword backfill for 2018-2019
+    ├── batch_reprocess.ps1                ← batch reprocessing runner
+    ├── build_db_docx.js                   ← DOCX builder (grandfathered JS)
+    ├── build_merged_docx.js               ← merged DOCX builder (grandfathered JS)
+    ├── build_summary.js                   ← summary DOCX builder (grandfathered JS)
+    ├── calibration.py                     ← extraction QC + candidate prompt generator
+    ├── extract_guideline.bat              ← Windows one-click orchestrator
+    ├── install_context_menu.reg           ← Windows right-click setup
     ├── ite_intelligence_enricher.py       ← primary v4 enricher (codon-first, 2-strategy)
     ├── ite_intelligence_enricher_batch.py ← batch API enricher (50% cheaper)
-    ├── main.py
-    ├── preprocess_concept_tags.py         ← Claude API concept_tags generator (2026-03-24)
-    └── synthesize.js
+    ├── pre_scan.py                        ← pre-flight PDF scanner (INGEST/SKIP/REVIEW)
+    ├── preprocess_concept_tags.py         ← Claude API concept_tags generator
+    ├── reextract_gold_list.py             ← re-extraction runner for gold list PDFs
+    ├── run_test_batch.py                  ← pipeline test runner (vs gold baseline 0.957)
+    ├── synthesize.js                      ← JSON → DOCX pre-processor (grandfathered JS)
+    └── uninstall_context_menu.reg         ← Windows right-click removal
 ```
-*7 scripts relocated to M1/scripts (aafp downloaders, crosswalk builder, integrate_2018_2019) — BATON 004 session.*
-*Still needed: core/ + engines/ extractor stack, Module F pipeline scripts — see BATON Next Step #4.*
+*Migration complete (BATON 004 session). core/, engines/, utils/, prompts/, main.py + 6 additional scripts from old 01_guideline_extractor. Module F scripts still pending.*
 
 ---
 

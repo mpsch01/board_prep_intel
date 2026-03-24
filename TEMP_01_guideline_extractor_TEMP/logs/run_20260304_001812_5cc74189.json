@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260304_001812",
+  "run_id": "5cc74189",
+  "file_name": "APA_depression.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "neuropsychiatric"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 824986,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 40,
+  "thresholds_count": 22,
+  "medications_count": 31
+}

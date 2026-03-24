@@ -1,0 +1,35 @@
+{
+  "timestamp": "20260305_113127",
+  "run_id": "1bd498f8",
+  "file_name": "11_Systemic_Lupus_Lam_2016 (1).pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "musculoskeletal",
+    "renal",
+    "neuropsychiatric",
+    "hematologic",
+    "cardiovascular",
+    "pulmonary",
+    "reproductive",
+    "dermatologic"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 48716,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 11,
+  "thresholds_count": 10,
+  "medications_count": 12
+}

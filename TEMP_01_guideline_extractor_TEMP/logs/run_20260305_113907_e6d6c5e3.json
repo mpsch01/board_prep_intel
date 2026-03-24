@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260305_113907",
+  "run_id": "e6d6c5e3",
+  "file_name": "09_Plantar_Fasciitis_Trojian_2019 (1).pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.8,
+  "body_systems": [
+    "musculoskeletal"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 31599,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 12,
+  "thresholds_count": 7,
+  "medications_count": 4
+}

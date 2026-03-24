@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260311_065712",
+  "run_id": "3c04a678",
+  "file_name": "drug-drug-interactions-primary-care.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "cardiovascular",
+    "endocrine",
+    "central_nervous_system"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 37324,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 11,
+  "thresholds_count": 6,
+  "medications_count": 8
+}

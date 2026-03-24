@@ -1,0 +1,113 @@
+{
+  "source": {
+    "title": "Statin Use for the Primary Prevention of Cardiovascular Disease in Adults: Clinical Summary of the USPSTF Recommendation",
+    "organization": "USPSTF",
+    "document_type": "preventive_guideline",
+    "publication_year": null,
+    "version_number": "",
+    "doi": "",
+    "file_name": "uspstf_statin_use.pdf"
+  },
+  "classification": {
+    "engine_used": "PreventiveEngine",
+    "document_type": "preventive_guideline",
+    "confidence": 0.95,
+    "signals": [
+      "Primary Prevention of Cardiovascular Disease",
+      "USPSTF Recommendation",
+      "Grade: B and Grade: C recommendations",
+      "10-year CVD risk of 10% or greater",
+      "adults 40 years or older who do not already have CVD"
+    ],
+    "body_systems": [
+      "cardiovascular"
+    ]
+  },
+  "extraction": {
+    "summary": "The USPSTF recommends statin therapy for primary prevention of cardiovascular disease in adults aged 40-75 years with cardiovascular risk factors. For those with 10-year CVD risk ≥10%, statins should be initiated (Grade B). For those with 7.5-9.9% risk, statins should be selectively offered (Grade C).",
+    "population": {
+      "age_criteria": "40-75 years (insufficient evidence for ≥76 years)",
+      "risk_criteria": "One or more cardiovascular risk factors: dyslipidemia, diabetes, hypertension, or smoking",
+      "disease_definition": "Primary prevention of cardiovascular disease in adults without existing CVD",
+      "exclusions": "Adults with existing CVD or signs/symptoms of CVD; LDL cholesterol >190 mg/dL; known familial hypercholesterolemia",
+      "severity_staging": "10-year CVD risk stratification: ≥10% (high risk), 7.5-9.9% (intermediate risk), <7.5% (lower risk)"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Age",
+        "value": "40-75",
+        "unit": "years",
+        "context": "Primary target population for statin consideration"
+      },
+      {
+        "parameter": "10-year CVD risk",
+        "value": "10",
+        "unit": "percent",
+        "context": "Threshold for initiating statin therapy"
+      },
+      {
+        "parameter": "10-year CVD risk",
+        "value": "7.5-9.9",
+        "unit": "percent",
+        "context": "Threshold for selective statin offering"
+      },
+      {
+        "parameter": "LDL cholesterol",
+        "value": "190",
+        "unit": "mg/dL",
+        "context": "Exclusion threshold - requires specialized management"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Initiate a statin for adults aged 40-75 years with cardiovascular risk factors and 10-year CVD risk ≥10%",
+        "strength": "Grade B",
+        "evidence_level": "Moderate certainty of moderate net benefit",
+        "notes": "Should discuss rationale with patient and obtain agreement"
+      },
+      {
+        "recommendation": "Selectively offer a statin for adults aged 40-75 years with cardiovascular risk factors and 10-year CVD risk 7.5-9.9%",
+        "strength": "Grade C",
+        "evidence_level": "Moderate certainty of small net benefit",
+        "notes": "Consider patient values and preferences; benefit is smaller"
+      },
+      {
+        "recommendation": "Insufficient evidence to recommend for or against starting a statin in adults ≥76 years",
+        "strength": "I statement",
+        "evidence_level": "Insufficient evidence",
+        "notes": "Evidence is insufficient to assess balance of benefits and harms"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "Statin",
+        "dose": "Moderate-intensity",
+        "indication": "Primary prevention of cardiovascular disease",
+        "class": "HMG-CoA reductase inhibitor"
+      }
+    ],
+    "red_flags": [
+      "LDL cholesterol >190 mg/dL",
+      "Known familial hypercholesterolemia",
+      "Existing cardiovascular disease or signs/symptoms of CVD"
+    ],
+    "follow_up": "Not specified - refer to standard lipid monitoring guidelines",
+    "escalation_path": "Patients with LDL >190 mg/dL or familial hypercholesterolemia should be referred to specialized hypercholesterolemia management guidelines from other organizations"
+  },
+  "metadata": {
+    "run_id": "b4000c6b",
+    "extracted_at": "2026-03-04T01:23:36.783077Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "screening_population",
+      "screening_intervals",
+      "risk_stratification",
+      "preventive_medications",
+      "counseling_interventions",
+      "positive_screen_pathway"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 5711
+  }
+}

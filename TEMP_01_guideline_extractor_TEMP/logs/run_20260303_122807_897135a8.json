@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260303_122807",
+  "run_id": "897135a8",
+  "file_name": "16.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "gastrointestinal"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 37298,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 17,
+  "thresholds_count": 6,
+  "medications_count": 11
+}

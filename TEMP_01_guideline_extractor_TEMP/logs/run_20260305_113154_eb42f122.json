@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260305_113154",
+  "run_id": "eb42f122",
+  "file_name": "12_Hidradenitis_Suppurativa_Wipperman_2019 (1).pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.85,
+  "body_systems": [
+    "integumentary"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 29514,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 10,
+  "thresholds_count": 2,
+  "medications_count": 10
+}

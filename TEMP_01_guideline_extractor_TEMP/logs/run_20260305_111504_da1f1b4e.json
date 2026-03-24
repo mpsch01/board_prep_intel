@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260305_111504",
+  "run_id": "da1f1b4e",
+  "file_name": "04_Secondary_Hypertension_Charles_2017 (1).pdf",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "DiagnosticEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "cardiovascular",
+    "renal",
+    "endocrine"
+  ],
+  "modules_activated": [
+    "diagnostic_criteria",
+    "test_thresholds",
+    "workup_algorithm",
+    "result_interpretation",
+    "referral_indications",
+    "follow_up_imaging"
+  ],
+  "raw_text_chars": 42971,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 14,
+  "thresholds_count": 12,
+  "medications_count": 6
+}

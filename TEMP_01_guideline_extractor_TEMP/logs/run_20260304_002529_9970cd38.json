@@ -1,0 +1,27 @@
+{
+  "timestamp": "20260304_002529",
+  "run_id": "9970cd38",
+  "file_name": "IDSA_lyme.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "infectious",
+    "neurologic",
+    "rheumatologic"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 290108,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 38,
+  "thresholds_count": 18,
+  "medications_count": 10
+}

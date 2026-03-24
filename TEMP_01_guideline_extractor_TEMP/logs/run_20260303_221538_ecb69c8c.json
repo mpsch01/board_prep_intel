@@ -1,0 +1,26 @@
+{
+  "timestamp": "20260303_221538",
+  "run_id": "ecb69c8c",
+  "file_name": "jacc_PVD.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "cardiovascular",
+    "vascular"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 514116,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 58,
+  "thresholds_count": 36,
+  "medications_count": 14
+}

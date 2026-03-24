@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260314_082411",
+  "run_id": "c8f4b4e8",
+  "file_name": "acog_1st+2nd_stage_labor.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "reproductive"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 97940,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 26,
+  "thresholds_count": 27,
+  "medications_count": 4
+}

@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260307_060635",
+  "run_id": "001f00b8",
+  "file_name": "IDSA_CAP_peds.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "respiratory",
+    "infectious"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 280652,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 78,
+  "thresholds_count": 54,
+  "medications_count": 28
+}

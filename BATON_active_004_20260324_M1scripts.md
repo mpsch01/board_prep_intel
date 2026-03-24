@@ -116,7 +116,7 @@
 **Keyword coverage:** 1,629/1,629 (100%) — all four columns across all years
 **PDF Library:** 404 PDFs across 4 tiers in `01_module.1_warehouse/`
 **M1 Scripts:** `build/` (6 scripts), `maintain/` (11 scripts) — COMPLETE
-**M2 Scripts:** `02_module.2_processor/scripts/` — 10 scripts (clean, pure processor-tier)
+**M2:** core/ (3), engines/ (6), utils/ (5), prompts/candidates/ (4), scripts/ (16), main.py at root — extractor stack migration complete. Module F scripts still pending.
 **M3 Scripts:** `03_module.3_analyst/scripts/` — 7 scripts (2 flagged as duplicates)
 **Intelligence 2.0:** Layers 1 (ICD-10), 3 (Pathways), 4a (Trends) complete. Layers 2 + 4b not started.
 **Agent toolbox:** `skills_abilities/agents/scripts/` — 6 files (aafp_vc_batch_download.py relocated to M1)
@@ -145,9 +145,9 @@
 
 4. ~~**Initialize git repo**~~ — **DONE** (Session 3). First commit `1166fa8` on `main`. `.gitignore` and `.gitattributes` in place. Future git commands run from Windows.
 
-5. **Housekeeping pass** — Remove M3 duplicate scripts (`build_clinical_pathways.py`, `build_topic_trends.py`). Batch-rename archived BATONs (drop "active" from old filenames). Archive BATON 003.
+5. ~~**Housekeeping pass**~~ — **DONE** (Session 3). M3 duplicates deleted. BATON archive renamed (commit `a610baa`). BATON 003 archived.
 
-6. **Complete migration of remaining scripts** — Move `core/` + `engines/` extractor stack and Module F pipeline scripts into M2. Move `build_clean_question_bank.py` into M1/build.
+6. ~~**Complete migration of remaining scripts (extractor stack)**~~ — **DONE** (Session 3). core/, engines/, utils/, prompts/, main.py, + 6 scripts migrated from old 01_guideline_extractor. **Module F scripts (VC outline pipeline) still pending** — old `04_aafp_integration/05_scripts/` → M2/scripts/.
 
 7. **Address deferred flags** — nnn_XXXX ART-ID (FLAG 33), QID format normalization — both as part of the M1 rebuild rather than separate passes.
 
@@ -191,8 +191,8 @@
 
 ## KNOWN ISSUES
 
-- `build_clinical_pathways.py` and `build_topic_trends.py` M3 duplicates — **PENDING manual delete by Mikey** (VM cannot rm mounted files). M1/maintain is canonical.
-- Multiple archived BATONs still have "active" in filename — batch rename pending.
+- ~~`build_clinical_pathways.py` and `build_topic_trends.py` M3 duplicates~~ — DELETED.
+- ~~Multiple archived BATONs had "active" in filename~~ — RENAMED (commit `a610baa`).
 - `README_PROJECT.md` and `README.json` at project root are stale (March 17, reflect old 7-module structure).
 - `_index.md` BATON 003 → 004 update written this session.
 - `master_map.JSON` stale — shows 1,397 articles, old paths, partial modules.

@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260303_234551",
+  "run_id": "bd19d159",
+  "file_name": "uspstf_statin_use.pdf",
+  "document_type": "preventive_guideline",
+  "engine_used": "PreventiveEngine",
+  "confidence": 1.0,
+  "body_systems": [
+    "cardiovascular"
+  ],
+  "modules_activated": [
+    "screening_population",
+    "screening_intervals",
+    "risk_stratification",
+    "preventive_medications",
+    "counseling_interventions",
+    "positive_screen_pathway"
+  ],
+  "raw_text_chars": 5711,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 3,
+  "thresholds_count": 4,
+  "medications_count": 1
+}

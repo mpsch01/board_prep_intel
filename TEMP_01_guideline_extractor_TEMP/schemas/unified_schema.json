@@ -1,0 +1,264 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UnifiedGuidelineDocument",
+  "description": "Unified schema combining v2.3 extraction engine output with navigator_v1 governance fields. Extraction fields are LLM-populated; governance fields are human-curated.",
+  "version": "unified_v1.1",
+  "type": "object",
+  "required": ["source", "classification", "extraction", "governance", "metadata"],
+
+  "properties": {
+
+    "source": {
+      "description": "Bibliographic identity of the document. LLM-extracted on ingest.",
+      "type": "object",
+      "required": ["title", "document_type"],
+      "properties": {
+        "title":            { "type": "string" },
+        "organization":     { "type": "string", "description": "Publishing org or journal (e.g. IDSA, USPSTF, JACC)" },
+        "document_type":    { "type": "string", "enum": ["chronic_guideline", "acute_protocol", "preventive_guideline", "diagnostic_guideline", "rct", "unknown"] },
+        "publication_year": { "type": ["integer", "null"] },
+        "version_number":   { "type": "string" },
+        "doi":              { "type": "string" },
+        "canonical_url":    { "type": "string" },
+        "file_name":        { "type": "string" },
+        "source_id":        { "type": "string", "description": "ITE manifest source_id e.g. ITE-ffe7d9004e. Links to ite_refs system." },
+        "status":           { "type": "string", "enum": ["active", "retired", "superseded", "pending_review"], "default": "active" },
+        "supersedes":       { "type": "string", "description": "source_id of prior version this document replaces" },
+        "last_verified":    { "type": ["string", "null"], "description": "ISO date of last human review" },
+        "matched_qids": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^QID-\\d{4}-\\d{4}$" },
+          "description": "QIDs parsed from PDF filename codon (#@#...@#@). Populated automatically by ingestion.py via qid_filename_parser.",
+          "default": []
+        },
+        "qid_match_method": {
+          "type": "string",
+          "enum": ["filename_codon", "none"],
+          "description": "How matched_qids were obtained. 'filename_codon' = parsed from #@#...@#@ tag in filename; 'none' = no QIDs found.",
+          "default": "none"
+        }
+      }
+    },
+
+    "classification": {
+      "description": "LLM screening classifier output. Populated automatically on ingest.",
+      "type": "object",
+      "required": ["engine_used", "document_type", "confidence"],
+      "properties": {
+        "engine_used":   { "type": "string", "description": "Engine class used for extraction e.g. ChronicRiskEngine" },
+        "document_type": { "type": "string" },
+        "confidence":    { "type": "number", "minimum": 0, "maximum": 1 },
+        "signals":       { "type": "array", "items": { "type": "string" }, "description": "Text phrases that drove classification" },
+        "body_systems":  { "type": "array", "items": { "type": "string" }, "description": "e.g. cardiovascular, respiratory, endocrine" }
+      }
+    },
+
+    "extraction": {
+      "description": "LLM-extracted clinical content. Populated automatically on ingest.",
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "2-3 sentence clinical summary"
+        },
+        "population": {
+          "type": "object",
+          "description": "Patient population this guideline applies to",
+          "properties": {
+            "age_criteria":       { "type": "string" },
+            "risk_criteria":      { "type": "string" },
+            "disease_definition": { "type": "string" },
+            "exclusions":         { "type": "string" },
+            "severity_staging":   { "type": "string" }
+          }
+        },
+        "key_thresholds": {
+          "type": "array",
+          "description": "Specific numeric values, cutoffs, targets",
+          "items": {
+            "type": "object",
+            "properties": {
+              "parameter": { "type": "string" },
+              "value":     { "type": ["string", "number"] },
+              "unit":      { "type": "string" },
+              "context":   { "type": "string" }
+            }
+          }
+        },
+        "recommendations": {
+          "type": "array",
+          "description": "Clinical recommendations with strength and evidence grading",
+          "items": {
+            "type": "object",
+            "properties": {
+              "recommendation": { "type": "string" },
+              "strength":       { "type": "string", "description": "e.g. Strong, Conditional, Class I, IIa, IIb, III" },
+              "evidence_level": { "type": "string", "description": "e.g. A, B, C, B-R, C-EO" },
+              "notes":          { "type": "string" }
+            }
+          }
+        },
+        "medications": {
+          "type": "array",
+          "description": "Drugs mentioned with dose, indication, and class",
+          "items": {
+            "type": "object",
+            "properties": {
+              "drug":       { "type": "string" },
+              "dose":       { "type": "string" },
+              "indication": { "type": "string" },
+              "class":      { "type": "string" }
+            }
+          }
+        },
+        "red_flags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Clinical warning signs requiring escalation or urgent action"
+        },
+        "follow_up":       { "type": "string", "description": "Recommended monitoring or follow-up schedule" },
+        "escalation_path": { "type": "string", "description": "When and how to escalate care or refer" },
+        "_chunked_extraction": { "type": "boolean", "description": "True if document was split into chunks for extraction" },
+        "_chunks_merged":      { "type": ["integer", "null"], "description": "Number of chunks merged if chunked extraction was used" }
+      }
+    },
+
+    "ite_intelligence": {
+      "description": "ITE exam intelligence block. Populated by ite_intelligence_enricher.py after extraction. Links this article to exam questions and provides semantic analysis of what was tested.",
+      "type": "object",
+      "properties": {
+        "matched_qids": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^QID-\\d{4}-\\d{4}$" },
+          "description": "QIDs that cite this article, drawn from ite_intelligence.db",
+          "default": []
+        },
+        "exam_years_cited": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "description": "Distinct exam years in which this article was a listed reference"
+        },
+        "citation_count": {
+          "type": "integer",
+          "description": "Total number of question-reference pairs linking to this article across all years"
+        },
+        "tier": {
+          "type": "string",
+          "enum": ["Must-Read", "Core", "Supplementary", "stub", ""],
+          "description": "ITE reference tier from ReferenceTiers table"
+        },
+        "question_summaries": {
+          "type": "array",
+          "description": "Per-question semantic summaries generated by Claude API",
+          "items": {
+            "type": "object",
+            "properties": {
+              "qid":         { "type": "string" },
+              "exam_year":   { "type": "integer" },
+              "concept":     { "type": "string", "description": "1-sentence: what clinical concept this question tested from this article" },
+              "keywords":    { "type": "array", "items": { "type": "string" }, "description": "Top exam-relevant keywords from stem+explanation" }
+            }
+          }
+        },
+        "high_yield_concepts": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Synthesized list of the highest-yield concepts from this article, derived from all question summaries"
+        },
+        "enriched_at": {
+          "type": ["string", "null"],
+          "description": "ISO datetime when ite_intelligence block was last populated"
+        },
+        "enrichment_model": {
+          "type": "string",
+          "description": "Claude model used for semantic enrichment e.g. claude-sonnet-4-20250514"
+        }
+      }
+    },
+
+    "governance": {
+      "description": "Human-curated governance fields. Populated manually after extraction review. NOT LLM-generated.",
+      "type": "object",
+      "properties": {
+
+        "badge": {
+          "type": "object",
+          "description": "Curation tier label. Assigned by program director after review.",
+          "properties": {
+            "label":       { "type": "string", "enum": ["must_read", "high_yield", "supplemental", "reference_only", ""], "default": "" },
+            "rationale":   { "type": "string", "description": "Why this badge was assigned" },
+            "assigned_by": { "type": "string" },
+            "assigned_date": { "type": ["string", "null"] }
+          }
+        },
+
+        "cross_guideline_impact": {
+          "type": "object",
+          "description": "How this document modifies or interacts with other guidelines.",
+          "properties": {
+            "modifies_pathways": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "source_ids of guidelines whose pathways this document modifies"
+            },
+            "changes": {
+              "type": "object",
+              "properties": {
+                "treatment_thresholds": { "type": "boolean", "default": false },
+                "new_drug_class":       { "type": "boolean", "default": false },
+                "screening_age":        { "type": "boolean", "default": false },
+                "monitoring_frequency": { "type": "boolean", "default": false },
+                "risk_calculation":     { "type": "boolean", "default": false }
+              }
+            },
+            "notes": { "type": "string" }
+          }
+        },
+
+        "change_log": {
+          "type": "array",
+          "description": "Version history for this document entry. Append-only.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date":       { "type": "string" },
+              "version":    { "type": "string" },
+              "changed_by": { "type": "string" },
+              "summary":    { "type": "string" }
+            }
+          }
+        },
+
+        "internal_qc": {
+          "type": "object",
+          "properties": {
+            "metadata_complete":             { "type": "boolean", "default": false },
+            "badge_assigned":                { "type": "boolean", "default": false },
+            "recommendations_reviewed":      { "type": "boolean", "default": false },
+            "thresholds_verified":           { "type": "boolean", "default": false },
+            "cross_pathway_links_reviewed":  { "type": "boolean", "default": false },
+            "prior_version_archived":        { "type": "boolean", "default": false },
+            "date_verified":                 { "type": ["string", "null"], "default": null }
+          }
+        }
+      }
+    },
+
+    "metadata": {
+      "description": "Pipeline execution metadata. Populated automatically on ingest.",
+      "type": "object",
+      "properties": {
+        "schema_version":        { "type": "string", "description": "e.g. unified_v1.1" },
+        "run_id":                { "type": "string" },
+        "extracted_at":          { "type": "string", "description": "ISO datetime of extraction" },
+        "engine_version":        { "type": "string", "description": "e.g. guideline_extractor_v2.3" },
+        "validation_passed":     { "type": "boolean" },
+        "validation_warnings":   { "type": "array", "items": { "type": "string" } },
+        "field_coverage_score":  { "type": ["number", "null"] },
+        "modules_activated":     { "type": "array", "items": { "type": "string" } },
+        "raw_text_chars":        { "type": "integer" },
+        "migration_note":        { "type": "string", "description": "Set if this record was migrated from a prior schema version" }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "timestamp": "20260303_123044",
+  "run_id": "a779e28a",
+  "file_name": "18.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "endocrine",
+    "reproductive"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 182777,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 15,
+  "thresholds_count": 9,
+  "medications_count": 7
+}

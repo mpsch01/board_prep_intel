@@ -1,0 +1,24 @@
+{
+  "timestamp": "20260304_004523",
+  "run_id": "78c0674e",
+  "file_name": "NEJMoa2000052.pdf",
+  "document_type": "rct",
+  "engine_used": "RCTEngine",
+  "confidence": 0.9,
+  "body_systems": [],
+  "modules_activated": [
+    "trial_design",
+    "population_eligibility",
+    "intervention_comparator",
+    "primary_endpoints",
+    "statistical_results",
+    "safety_adverse_events",
+    "clinical_implications"
+  ],
+  "raw_text_chars": 47703,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 5,
+  "thresholds_count": 7,
+  "medications_count": 6
+}

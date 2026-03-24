@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260304_003441",
+  "run_id": "9c5f0e43",
+  "file_name": "acg_GERD.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "gastrointestinal"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 189592,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 36,
+  "thresholds_count": 24,
+  "medications_count": 12
+}

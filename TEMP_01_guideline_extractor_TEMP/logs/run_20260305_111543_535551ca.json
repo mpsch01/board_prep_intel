@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260305_111543",
+  "run_id": "535551ca",
+  "file_name": "07_NAFLD_Westfall_2020 (1).pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "gastrointestinal",
+    "hepatobiliary",
+    "endocrine"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 49507,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 11,
+  "thresholds_count": 17,
+  "medications_count": 6
+}

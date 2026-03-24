@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260303_234557",
+  "run_id": "a36ce71f",
+  "file_name": "acg_IBD.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "gastrointestinal"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 448887,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 20,
+  "thresholds_count": 17,
+  "medications_count": 11
+}

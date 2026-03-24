@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260304_070657",
+  "run_id": "d9336599",
+  "file_name": "12.pdf",
+  "document_type": "chronic_guideline",
+  "engine_used": "ChronicRiskEngine",
+  "confidence": 0.8,
+  "body_systems": [
+    "musculoskeletal"
+  ],
+  "modules_activated": [
+    "disease_definition",
+    "diagnostic_thresholds",
+    "risk_stratification",
+    "escalation_ladder",
+    "medication_management",
+    "monitoring_schedule"
+  ],
+  "raw_text_chars": 19169,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 3,
+  "thresholds_count": 2,
+  "medications_count": 3
+}

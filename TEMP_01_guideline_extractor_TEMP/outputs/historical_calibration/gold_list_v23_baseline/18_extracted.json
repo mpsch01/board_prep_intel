@@ -1,0 +1,532 @@
+{
+  "source": {
+    "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline",
+    "organization": "Endocrine Society",
+    "document_type": "chronic_guideline",
+    "publication_year": null,
+    "version_number": "",
+    "doi": "",
+    "file_name": "18.pdf"
+  },
+  "classification": {
+    "engine_used": "ChronicRiskEngine",
+    "document_type": "chronic_guideline",
+    "confidence": 0.9,
+    "signals": [
+      "safe and effective hormone regimen",
+      "maintain sex hormone levels within the normal range",
+      "multidisciplinary treatment",
+      "endocrine treatments",
+      "hormone treatment"
+    ],
+    "body_systems": [
+      "endocrine"
+    ]
+  },
+  "extraction": {
+    "summary": "Evidence-based guidelines for endocrine treatment of gender-dysphoric/gender-incongruent persons. Addresses hormonal therapy for adolescents and adults seeking gender affirmation, with emphasis on multidisciplinary care and safety monitoring.",
+    "population": {
+      "age_criteria": "Adolescents with Tanner Stage G2/B2 puberty for suppression therapy; gender-affirming hormones typically by age 16; surgery delayed until age 18",
+      "risk_criteria": "Confirmed persistent gender dysphoria/gender incongruence by qualified mental health professional",
+      "disease_definition": "Gender dysphoria/gender incongruence - dissatisfaction with designated gender requiring multidisciplinary evaluation",
+      "exclusions": "Prepubertal children excluded from hormone therapy; conditions other than gender dysphoria that may not benefit from treatment",
+      "severity_staging": "Tanner staging used for pubertal development assessment"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Age for hormone initiation",
+        "value": "16",
+        "unit": "years",
+        "context": "Most adolescents have mental capacity for informed consent by this age"
+      },
+      {
+        "parameter": "Minimum age for genital surgery",
+        "value": "18",
+        "unit": "years",
+        "context": "Legal age of majority required"
+      },
+      {
+        "parameter": "Hormone level monitoring frequency",
+        "value": "3",
+        "unit": "months",
+        "context": "During first year of therapy, then 1-2 times yearly"
+      },
+      {
+        "parameter": "Clinical evaluation frequency",
+        "value": "3-6",
+        "unit": "months",
+        "context": "For pubertal development monitoring during treatment"
+      },
+      {
+        "parameter": "Duration of gender dysphoria",
+        "value": "6",
+        "unit": "months",
+        "context": "DSM-5 criteria for diagnosis in adolescents and adults"
+      },
+      {
+        "parameter": "Transsexual identity persistence",
+        "value": "2",
+        "unit": "years",
+        "context": "ICD-10 criteria for transsexualism diagnosis"
+      },
+      {
+        "parameter": "Testicular volume",
+        "value": "≥4",
+        "unit": "mL",
+        "context": "Initiation of physical puberty in boys"
+      },
+      {
+        "parameter": "Age for mental capacity",
+        "value": "16",
+        "unit": "years",
+        "context": "Most adolescents have sufficient mental capacity by this age"
+      },
+      {
+        "parameter": "Age for sex hormone initiation",
+        "value": "16",
+        "unit": "years",
+        "context": "Standard recommendation for sufficient mental capacity"
+      },
+      {
+        "parameter": "Testosterone target range",
+        "value": "320-1000",
+        "unit": "ng/dL",
+        "context": "Normal male range for transgender males"
+      },
+      {
+        "parameter": "Estradiol target range",
+        "value": "100-200",
+        "unit": "pg/mL",
+        "context": "Premenopausal female range for transgender females"
+      },
+      {
+        "parameter": "Testosterone suppression target",
+        "value": "<50",
+        "unit": "ng/dL",
+        "context": "For transgender females on estrogen therapy"
+      },
+      {
+        "parameter": "Hematocrit threshold",
+        "value": "50",
+        "unit": "%",
+        "context": "Upper limit to avoid erythrocytosis risk"
+      },
+      {
+        "parameter": "Testosterone level (transgender males)",
+        "value": "400-700",
+        "unit": "ng/dL",
+        "context": "Target range for injections; measure midway between injections"
+      },
+      {
+        "parameter": "Testosterone level (transgender females)",
+        "value": "<50",
+        "unit": "ng/dL",
+        "context": "Suppression target"
+      },
+      {
+        "parameter": "Estradiol level (transgender females)",
+        "value": "100-200",
+        "unit": "pg/mL",
+        "context": "Premenopausal female range; should not exceed peak physiologic range"
+      },
+      {
+        "parameter": "Age for genital surgery",
+        "value": "18",
+        "unit": "years",
+        "context": "Minimum age for surgery affecting fertility"
+      },
+      {
+        "parameter": "Hormone therapy duration",
+        "value": "12",
+        "unit": "months",
+        "context": "Required before genital surgery (unless contraindicated)"
+      },
+      {
+        "parameter": "Living in gender role",
+        "value": "12",
+        "unit": "months",
+        "context": "Continuous full-time living in new gender role before surgery"
+      },
+      {
+        "parameter": "Estrogen therapy for breast development",
+        "value": "2",
+        "unit": "years",
+        "context": "Complete duration before considering breast augmentation"
+      },
+      {
+        "parameter": "Treatment age minimum",
+        "value": "Adolescence onset",
+        "unit": "years",
+        "context": "Puberty suppression eligibility"
+      },
+      {
+        "parameter": "Prolactin levels",
+        "value": "Not specified",
+        "unit": "Not specified",
+        "context": "Monitoring for prolactinoma risk in hormone therapy"
+      },
+      {
+        "parameter": "Bone mineral density",
+        "value": "Not specified",
+        "unit": "Not specified",
+        "context": "Assessment before and during hormone therapy"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Only trained mental health professionals meeting specific criteria should diagnose gender dysphoria",
+        "strength": "Ungraded",
+        "evidence_level": "Good Practice Statement",
+        "notes": "Requires competence in DSM/ICD, psychiatric conditions, and transgender-specific assessment"
+      },
+      {
+        "recommendation": "Recommend against puberty blocking and gender-affirming hormone treatment in prepubertal children",
+        "strength": "Strong",
+        "evidence_level": "Very Low",
+        "notes": "1|⊕⊕⊕⊝"
+      },
+      {
+        "recommendation": "Begin pubertal hormone suppression after physical changes of puberty appear",
+        "strength": "Conditional",
+        "evidence_level": "Low",
+        "notes": "2|⊕⊕⊝⊝"
+      },
+      {
+        "recommendation": "Use GnRH analogues to suppress pubertal hormones where indicated",
+        "strength": "Strong",
+        "evidence_level": "Low",
+        "notes": "1|⊕⊕⊝⊝"
+      },
+      {
+        "recommendation": "Maintain physiologic levels of gender-appropriate hormones in adults",
+        "strength": "Conditional",
+        "evidence_level": "Very Low",
+        "notes": "Monitor for adverse effects"
+      },
+      {
+        "recommendation": "Only trained MHPs meeting specific criteria should diagnose GD/gender incongruence in adults",
+        "strength": "Ungraded",
+        "evidence_level": "Good Practice Statement",
+        "notes": "Requires competence in DSM/ICD, ability to distinguish from similar conditions, training in psychiatric diagnosis, and regular professional meeting attendance"
+      },
+      {
+        "recommendation": "Only MHPs with specialized training in child/adolescent development should diagnose GD/gender incongruence in children and adolescents",
+        "strength": "Ungraded",
+        "evidence_level": "Good Practice Statement",
+        "notes": "Requires additional training in developmental psychology and knowledge of puberty blocking criteria"
+      },
+      {
+        "recommendation": "Clinicians inform and counsel all individuals seeking gender-affirming medical treatment regarding options for fertility preservation prior to initiating puberty suppression in adolescents and prior to treating with hormonal therapy",
+        "strength": "Strong",
+        "evidence_level": "Low",
+        "notes": "Applies to both adolescents and adults"
+      },
+      {
+        "recommendation": "Against puberty blocking and gender-affirming hormone treatment in prepubertal children with GD/gender incongruence",
+        "strength": "Strong",
+        "evidence_level": "Very Low",
+        "notes": "85% of prepubertal children with GD do not remain gender dysphoric in adolescence"
+      },
+      {
+        "recommendation": "Adolescents meeting diagnostic criteria should initially undergo treatment to suppress pubertal development",
+        "strength": "Conditional",
+        "evidence_level": "Very Low",
+        "notes": "Must meet Table 5 criteria and be requesting treatment"
+      },
+      {
+        "recommendation": "Begin pubertal hormone suppression after first physical changes of puberty (Tanner stages G2/B2)",
+        "strength": "Conditional",
+        "evidence_level": "Very Low",
+        "notes": "Emotional reaction to first pubertal changes has diagnostic value"
+      },
+      {
+        "recommendation": "GnRH analogues are used to suppress pubertal hormones where indicated",
+        "strength": "Strong",
+        "evidence_level": "Very Low",
+        "notes": "Most effective method for pubertal suppression"
+      },
+      {
+        "recommendation": "Confirm diagnostic criteria of GD/gender incongruence before beginning treatment",
+        "strength": "Strong",
+        "evidence_level": "Ungraded",
+        "notes": "Essential prerequisite for hormone therapy"
+      },
+      {
+        "recommendation": "Evaluate medical conditions that can be exacerbated by hormones before treatment",
+        "strength": "Strong",
+        "evidence_level": "Ungraded",
+        "notes": "Address contraindications and risk factors"
+      },
+      {
+        "recommendation": "Initiate sex hormones using gradually increasing dose schedule after multidisciplinary team confirmation",
+        "strength": "Strong",
+        "evidence_level": "Very Low",
+        "notes": "Most adolescents have capacity by age 16 years"
+      },
+      {
+        "recommendation": "Monitor clinical development every 3-6 months, laboratory parameters every 6-12 months",
+        "strength": "Conditional",
+        "evidence_level": "Very Low",
+        "notes": "During sex hormone treatment"
+      },
+      {
+        "recommendation": "Measure hormone levels to ensure suppression and maintain physiologic range",
+        "strength": "Conditional",
+        "evidence_level": "Low",
+        "notes": "For treatment monitoring and safety"
+      },
+      {
+        "recommendation": "Regular clinical evaluation and laboratory monitoring of sex steroid hormone levels every 3 months during first year, then 1-2 times yearly",
+        "strength": "Conditional",
+        "evidence_level": "Not specified",
+        "notes": "Monitor for physical changes and adverse effects"
+      },
+      {
+        "recommendation": "Periodically monitor prolactin levels in transgender females treated with estrogens",
+        "strength": "Conditional",
+        "evidence_level": "Not specified",
+        "notes": "At baseline and annually during transition, then every 2 years"
+      },
+      {
+        "recommendation": "Evaluate for cardiovascular risk factors using fasting lipid profiles and diabetes screening",
+        "strength": "Conditional",
+        "evidence_level": "Not specified",
+        "notes": "Regular monitoring according to established guidelines"
+      },
+      {
+        "recommendation": "Obtain BMD measurements when risk factors for osteoporosis exist, especially after gonadectomy",
+        "strength": "Strong",
+        "evidence_level": "Not specified",
+        "notes": "Particularly important if sex hormone therapy is stopped"
+      },
+      {
+        "recommendation": "Pursue genital gender-affirming surgery only after both MHP and endocrine clinician agree surgery is medically necessary",
+        "strength": "Strong",
+        "evidence_level": "Low",
+        "notes": "Requires dual approval from mental health professional and hormone prescriber"
+      },
+      {
+        "recommendation": "Approve genital gender-affirming surgery only after completion of at least 1 year of hormone treatment",
+        "strength": "Ungraded",
+        "evidence_level": "Good Practice Statement",
+        "notes": "Unless hormone therapy not desired or medically contraindicated"
+      },
+      {
+        "recommendation": "Refer for genital surgery when individual has satisfactory social role change, satisfaction with hormonal effects, and desires surgical changes",
+        "strength": "Strong",
+        "evidence_level": "Very Low",
+        "notes": "Requires meeting all three criteria"
+      },
+      {
+        "recommendation": "Delay gender-affirming genital surgery involving gonadectomy/hysterectomy until patient is at least 18 years old",
+        "strength": "Conditional",
+        "evidence_level": "Very Low",
+        "notes": "Or legal age of majority in country"
+      },
+      {
+        "recommendation": "Determine timing of breast surgery for transgender males based on physical and mental health status",
+        "strength": "Conditional",
+        "evidence_level": "Very Low",
+        "notes": "Insufficient evidence for specific age requirement"
+      },
+      {
+        "recommendation": "Use GnRH agonists for puberty suppression in adolescents with gender dysphoria",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Based on clinical experience and follow-up studies"
+      },
+      {
+        "recommendation": "Monitor bone density during GnRH agonist treatment",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Due to potential bone loss effects"
+      },
+      {
+        "recommendation": "Consider testosterone therapy for female-to-male transgender individuals",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Multiple formulations available"
+      },
+      {
+        "recommendation": "Use estrogen therapy for male-to-female transgender individuals",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "With or without anti-androgens"
+      },
+      {
+        "recommendation": "Monitor prolactin levels in transgender women receiving estrogen therapy",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Risk of prolactinoma with long-term estrogen use"
+      },
+      {
+        "recommendation": "Assess bone mineral density in transgender patients",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Important for both male-to-female and female-to-male patients"
+      },
+      {
+        "recommendation": "Monitor cardiovascular risk factors during hormone therapy",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Includes lipids, thrombotic risk assessment"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "GnRH analogues",
+        "dose": "Not specified",
+        "indication": "Pubertal suppression in adolescents",
+        "class": "Gonadotropin-releasing hormone agonists"
+      },
+      {
+        "drug": "Sex steroids",
+        "dose": "Physiologic levels for affirmed gender",
+        "indication": "Gender-affirming hormone therapy",
+        "class": "Sex hormones"
+      },
+      {
+        "drug": "GnRH agonists",
+        "dose": "Not specified",
+        "indication": "Puberty blocking in eligible adolescents",
+        "class": "Hormone suppression"
+      },
+      {
+        "drug": "Testosterone",
+        "dose": "Not specified",
+        "indication": "Gender-affirming hormone therapy for transgender males",
+        "class": "Sex steroid"
+      },
+      {
+        "drug": "Estrogen/anti-androgens",
+        "dose": "Not specified",
+        "indication": "Gender-affirming hormone therapy for transgender females",
+        "class": "Sex steroid/hormone blockers"
+      },
+      {
+        "drug": "GnRH analogs",
+        "dose": "Not specified",
+        "indication": "Pubertal suppression in gender dysphoric adolescents",
+        "class": "Gonadotropin-releasing hormone agonists"
+      },
+      {
+        "drug": "Testosterone enanthate/cypionate",
+        "dose": "100-200mg every 2 weeks IM/SC",
+        "indication": "Masculinizing therapy for transgender males",
+        "class": "Androgen"
+      },
+      {
+        "drug": "Estradiol oral",
+        "dose": "2.0-6.0mg/day",
+        "indication": "Feminizing therapy for transgender females",
+        "class": "Estrogen"
+      },
+      {
+        "drug": "Estradiol transdermal",
+        "dose": "0.025-0.2mg/day",
+        "indication": "Feminizing therapy for transgender females",
+        "class": "Estrogen"
+      },
+      {
+        "drug": "Spironolactone",
+        "dose": "100-300mg/day",
+        "indication": "Anti-androgen for transgender females",
+        "class": "Anti-androgen"
+      },
+      {
+        "drug": "Estradiol",
+        "dose": "100-200 pg/mL range",
+        "indication": "Feminizing therapy for transgender females",
+        "class": "Estrogen"
+      },
+      {
+        "drug": "Estrogen therapy",
+        "dose": "Not specified",
+        "indication": "Gender-affirming hormone therapy for transgender females",
+        "class": "Sex hormone"
+      },
+      {
+        "drug": "Testosterone/Androgen therapy",
+        "dose": "Not specified",
+        "indication": "Gender-affirming hormone therapy for transgender males",
+        "class": "Sex hormone"
+      },
+      {
+        "drug": "Estrogen",
+        "dose": "Variable",
+        "indication": "Feminizing hormone therapy",
+        "class": "Estrogen"
+      },
+      {
+        "drug": "Cyproterone acetate",
+        "dose": "Variable",
+        "indication": "Anti-androgen therapy",
+        "class": "Anti-androgen"
+      }
+    ],
+    "red_flags": [
+      "Medical conditions that can be exacerbated by hormone depletion",
+      "Cardiovascular risk factors requiring monitoring",
+      "Conditions with similar features to gender dysphoria (e.g., body dysmorphic disorder)",
+      "Inadequate mental health evaluation or support",
+      "Severe psychiatric comorbidity interfering with treatment",
+      "Poor quality of surgery outcomes",
+      "Lack of social support",
+      "Inability to make informed decisions",
+      "Unrealistically high expectations for treatment outcomes",
+      "Uncontrolled mental health conditions that could interfere with treatment",
+      "Inability to provide informed consent",
+      "Medical contraindications to GnRH analog treatment",
+      "Conditions mimicking gender dysphoria (body dysmorphic disorder, body identity integrity disorder)",
+      "Thromboembolic events in transgender females on estrogen",
+      "Erythrocytosis (hematocrit >50%) in transgender males on testosterone",
+      "Severe liver dysfunction (transaminases >3x upper limit)",
+      "Arterial hypertension during treatment",
+      "Signs of incomplete gonadal axis suppression (continued menses, erections, progressive hair growth)",
+      "Deep vein thrombosis/pulmonary embolism symptoms",
+      "Erythrocytosis (elevated hematocrit/hemoglobin)",
+      "Excessive weight gain",
+      "Hypertension development",
+      "Persistent prolactin elevation despite stable/reduced estrogen levels",
+      "Signs of liver dysfunction",
+      "Excessive or cystic acne",
+      "Sleep apnea symptoms",
+      "Significant uncontrolled medical or mental health concerns",
+      "Ambivalence about surgery or hormone effects",
+      "Unsatisfactory social transition",
+      "Non-compliance with medical instructions",
+      "Dissatisfaction with social and physical outcomes during hormone transition",
+      "Thrombotic events during hormone therapy",
+      "Significant mood changes or psychiatric deterioration",
+      "Hepatic dysfunction",
+      "Severe bone loss during treatment",
+      "Cardiovascular complications",
+      "Signs of prolactinoma development",
+      "Venous thromboembolism symptoms",
+      "Cardiovascular events",
+      "Liver dysfunction with methyltestosterone",
+      "Breast cancer development",
+      "Prostate cancer in trans women"
+    ],
+    "follow_up": "Clinical evaluation every 3-6 months during treatment; hormone levels every 3 months in first year, then 1-2 times yearly; cardiovascular and metabolic monitoring; bone density assessment when risk factors present",
+    "escalation_path": "Multidisciplinary team required for adolescent treatment; collaboration between endocrinologist, mental health professional, and surgeon for surgical decisions; expert team management for complex cases",
+    "_chunked_extraction": true,
+    "_chunks_merged": 9
+  },
+  "metadata": {
+    "run_id": "803bb022",
+    "extracted_at": "2026-03-04T07:13:51.793219Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "disease_definition",
+      "diagnostic_thresholds",
+      "risk_stratification",
+      "escalation_ladder",
+      "medication_management",
+      "monitoring_schedule"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 182777
+  }
+}

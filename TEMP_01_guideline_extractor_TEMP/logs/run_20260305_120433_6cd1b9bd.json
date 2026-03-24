@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260305_120433",
+  "run_id": "6cd1b9bd",
+  "file_name": "dental-problems-primary-care.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.8,
+  "body_systems": [
+    "oral",
+    "respiratory",
+    "cardiovascular"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 32345,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 8,
+  "thresholds_count": 4,
+  "medications_count": 7
+}

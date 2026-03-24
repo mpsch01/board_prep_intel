@@ -1,0 +1,31 @@
+{
+  "timestamp": "20260311_064736",
+  "run_id": "df92742f",
+  "file_name": "afp_fatigue_eval.pdf",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "DiagnosticEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "neurologic",
+    "cardiovascular",
+    "respiratory",
+    "integumentary"
+  ],
+  "modules_activated": [
+    "diagnostic_criteria",
+    "test_thresholds",
+    "workup_algorithm",
+    "result_interpretation",
+    "referral_indications",
+    "follow_up_imaging"
+  ],
+  "raw_text_chars": 43764,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 13,
+  "thresholds_count": 6,
+  "medications_count": 8
+}

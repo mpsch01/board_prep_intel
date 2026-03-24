@@ -1,0 +1,25 @@
+{
+  "timestamp": "20260303_124024",
+  "run_id": "b43b5d44",
+  "file_name": "7.pdf",
+  "document_type": "diagnostic_guideline",
+  "engine_used": "DiagnosticEngine",
+  "confidence": 0.8,
+  "body_systems": [
+    "respiratory"
+  ],
+  "modules_activated": [
+    "diagnostic_criteria",
+    "test_thresholds",
+    "workup_algorithm",
+    "result_interpretation",
+    "referral_indications",
+    "follow_up_imaging"
+  ],
+  "raw_text_chars": 24752,
+  "validation_passed": true,
+  "validation_warnings": [],
+  "recommendations_count": 16,
+  "thresholds_count": 10,
+  "medications_count": 7
+}

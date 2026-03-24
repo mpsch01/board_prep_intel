@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260305_121533",
+  "run_id": "221561f0",
+  "file_name": "ped_bacterial_arthritis.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "musculoskeletal",
+    "infectious"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 358021,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 58,
+  "thresholds_count": 53,
+  "medications_count": 23
+}

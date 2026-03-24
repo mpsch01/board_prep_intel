@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260305_123221",
+  "run_id": "e80d2c24",
+  "file_name": "peds_febrile_newborn.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "infectious",
+    "pediatric"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 170260,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 57,
+  "thresholds_count": 38,
+  "medications_count": 17
+}

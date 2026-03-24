@@ -1,0 +1,29 @@
+{
+  "timestamp": "20260307_053901",
+  "run_id": "d2e697b1",
+  "file_name": "tox_tylenol.pdf",
+  "document_type": "acute_protocol",
+  "engine_used": "AcuteProtocolEngine",
+  "confidence": 0.95,
+  "body_systems": [
+    "hepatic",
+    "gastrointestinal"
+  ],
+  "modules_activated": [
+    "urgency_triage",
+    "stabilization_steps",
+    "critical_thresholds",
+    "emergency_medications",
+    "escalation_triggers",
+    "disposition"
+  ],
+  "raw_text_chars": 99107,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 27,
+  "thresholds_count": 39,
+  "medications_count": 4
+}

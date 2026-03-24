@@ -1,0 +1,768 @@
+{
+  "source": {
+    "title": "2024 ACC/AHA/AACVPR/APMA/ABC/SCAI/SVM/SVN/SVS/SIR/VESS Guideline for the Management of Lower Extremity Peripheral Artery Disease",
+    "organization": "Journal of the American College of Cardiology",
+    "document_type": "chronic_guideline",
+    "publication_year": 2024,
+    "version_number": "",
+    "doi": "",
+    "file_name": "jacc_PVD.pdf"
+  },
+  "classification": {
+    "engine_used": "ChronicRiskEngine",
+    "document_type": "chronic_guideline",
+    "confidence": 0.95,
+    "signals": [
+      "Guideline for the Management of Lower Extremity Peripheral Artery Disease",
+      "Clinical Practice Guideline",
+      "2024 ACC/AHA",
+      "Management",
+      "Peripheral Artery Disease"
+    ],
+    "body_systems": [
+      "cardiovascular",
+      "peripheral_vascular"
+    ]
+  },
+  "extraction": {
+    "summary": "The 2024 ACC/AHA guideline for management of lower extremity peripheral artery disease provides comprehensive recommendations for PAD across four clinical subsets: asymptomatic, chronic symptomatic, chronic limb-threatening ischemia, and acute limb ischemia. The guideline emphasizes team-based care, medical therapy for cardiovascular risk reduction, structured exercise therapy, and appropriate revascularization strategies.",
+    "population": {
+      "age_criteria": ">40 years of age",
+      "risk_criteria": "Patients with suspected or confirmed lower extremity peripheral artery disease",
+      "disease_definition": "Lower extremity peripheral artery disease affecting 10-12 million individuals in the United States",
+      "exclusions": "Not specified in provided text",
+      "severity_staging": "Four clinical subsets: 1) Asymptomatic PAD (may have functional impairment), 2) Chronic symptomatic PAD (including claudication), 3) Chronic limb-threatening ischemia, 4) Acute limb ischemia"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Ankle-brachial index",
+        "value": "Not specified",
+        "unit": "ratio",
+        "context": "Primary diagnostic test for PAD detection"
+      },
+      {
+        "parameter": "Age",
+        "value": "65",
+        "unit": "years",
+        "context": "Increased risk threshold"
+      },
+      {
+        "parameter": "Age with risk factors",
+        "value": "50-64",
+        "unit": "years",
+        "context": "Increased risk with atherosclerosis risk factors"
+      },
+      {
+        "parameter": "Claudication rest relief time",
+        "value": "10",
+        "unit": "minutes",
+        "context": "Typical claudication symptom resolution"
+      },
+      {
+        "parameter": "CLTI symptom duration",
+        "value": "2",
+        "unit": "weeks",
+        "context": "Chronic nature definition"
+      },
+      {
+        "parameter": "ALI symptom duration",
+        "value": "2",
+        "unit": "weeks",
+        "context": "Acute presentation timeframe"
+      },
+      {
+        "parameter": "ABI",
+        "value": "≤0.90",
+        "unit": "ratio",
+        "context": "Abnormal, diagnostic of PAD"
+      },
+      {
+        "parameter": "TBI",
+        "value": "≤0.70",
+        "unit": "ratio",
+        "context": "Abnormal, diagnostic of PAD when ABI noncompressible"
+      },
+      {
+        "parameter": "Toe pressure",
+        "value": "<30",
+        "unit": "mmHg",
+        "context": "Severe ischemia, associated with major amputation risk"
+      },
+      {
+        "parameter": "TcPO2",
+        "value": ">30",
+        "unit": "mmHg",
+        "context": "Predicts wound healing"
+      },
+      {
+        "parameter": "SPP",
+        "value": ">40",
+        "unit": "mmHg",
+        "context": "Predicts wound healing"
+      },
+      {
+        "parameter": "Geriatric Depression Score",
+        "value": "≥6",
+        "unit": "score",
+        "context": "Screening threshold for depression in PAD patients, associated with increased mortality risk"
+      },
+      {
+        "parameter": "eGFR",
+        "value": "<60",
+        "unit": "mL/min/1.73m²",
+        "context": "Chronic kidney disease definition as PAD risk amplifier"
+      },
+      {
+        "parameter": "Rivaroxaban dose",
+        "value": 2.5,
+        "unit": "mg twice daily",
+        "context": "Low-dose anticoagulation with aspirin"
+      },
+      {
+        "parameter": "Aspirin dose range",
+        "value": "75-325",
+        "unit": "mg daily",
+        "context": "Single antiplatelet therapy"
+      },
+      {
+        "parameter": "Clopidogrel dose",
+        "value": 75,
+        "unit": "mg daily",
+        "context": "Single antiplatelet therapy"
+      },
+      {
+        "parameter": "LDL-C reduction target",
+        "value": "≥50",
+        "unit": "percent",
+        "context": "High-intensity statin therapy goal"
+      },
+      {
+        "parameter": "LDL-C level for additional therapy",
+        "value": "≥70",
+        "unit": "mg/dL",
+        "context": "Threshold for adding PCSK9 inhibitors or ezetimibe"
+      },
+      {
+        "parameter": "Systolic blood pressure target",
+        "value": "<130",
+        "unit": "mmHg",
+        "context": "Hypertension management in PAD"
+      },
+      {
+        "parameter": "Diastolic blood pressure target",
+        "value": "<80",
+        "unit": "mmHg",
+        "context": "Hypertension management in PAD"
+      },
+      {
+        "parameter": "ABI diagnostic threshold",
+        "value": "<0.9",
+        "unit": "ratio",
+        "context": "PAD diagnosis"
+      },
+      {
+        "parameter": "Hemoglobin A1c",
+        "value": "6.5",
+        "unit": "%",
+        "context": "Lower amputation risk threshold in PAD patients with diabetes"
+      },
+      {
+        "parameter": "Fasting blood glucose",
+        "value": "144",
+        "unit": "mg/dL",
+        "context": "Threshold associated with higher major amputation rates"
+      },
+      {
+        "parameter": "Foot ulcer development risk in diabetes",
+        "value": "19-34",
+        "unit": "percent lifetime risk",
+        "context": "Patients with diabetes"
+      },
+      {
+        "parameter": "Exercise therapy duration",
+        "value": "30-45",
+        "unit": "minutes per session",
+        "context": "Supervised exercise therapy"
+      },
+      {
+        "parameter": "Exercise frequency",
+        "value": "3",
+        "unit": "times per week minimum",
+        "context": "Supervised exercise therapy"
+      },
+      {
+        "parameter": "Exercise program duration",
+        "value": "12",
+        "unit": "weeks minimum",
+        "context": "Supervised exercise therapy"
+      },
+      {
+        "parameter": "Clinical response to GDMT",
+        "value": "Adequate",
+        "unit": "qualitative",
+        "context": "Determines need for revascularization"
+      },
+      {
+        "parameter": "Functional limitation",
+        "value": "Significant impairment",
+        "unit": "qualitative",
+        "context": "Required for revascularization consideration"
+      },
+      {
+        "parameter": "Great saphenous vein diameter",
+        "value": "3",
+        "unit": "mm",
+        "context": "Minimum diameter for adequate conduit in BEST-CLI trial"
+      },
+      {
+        "parameter": "Primary patency rate",
+        "value": "78.5",
+        "unit": "%",
+        "context": "7-year patency rate for common femoral endarterectomy"
+      },
+      {
+        "parameter": "Complication rate",
+        "value": "7.9",
+        "unit": "%",
+        "context": "Minor or major complications in common femoral endarterectomy"
+      },
+      {
+        "parameter": "Muscle ischemia tolerance",
+        "value": "4-6",
+        "unit": "hours",
+        "context": "Time constraint for skeletal muscle viability in ALI"
+      },
+      {
+        "parameter": "Thrombolysis effectiveness",
+        "value": "14",
+        "unit": "days",
+        "context": "Maximum occlusion duration for effective catheter-directed thrombolysis"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Detection of PAD in most patients is accomplished through history, physical examination, and resting ankle-brachial index",
+        "strength": "Strong",
+        "evidence_level": "Not specified",
+        "notes": "Core diagnostic approach"
+      },
+      {
+        "recommendation": "Structured exercise is a core component of care for patients with PAD, including supervised exercise therapy and community-based programs",
+        "strength": "Strong",
+        "evidence_level": "Not specified",
+        "notes": "Includes structured home-based programs"
+      },
+      {
+        "recommendation": "Revascularization should be used to prevent limb loss in chronic limb-threatening ischemia and can improve QOL in claudication patients not responsive to medical therapy and exercise",
+        "strength": "Strong",
+        "evidence_level": "Not specified",
+        "notes": "Can be endovascular, surgical, or hybrid approach"
+      },
+      {
+        "recommendation": "Care for patients with PAD, especially chronic limb-threatening ischemia, is optimized when delivered by a multispecialty care team",
+        "strength": "Strong",
+        "evidence_level": "Not specified",
+        "notes": "Team-based approach essential"
+      },
+      {
+        "recommendation": "In patients at increased risk of PAD, a comprehensive medical history and review of symptoms to assess for exertional leg symptoms, lower extremity rest pain, and lower extremity wounds or other ischemic skin changes should be performed",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "For patients listed in Table 5 risk criteria"
+      },
+      {
+        "recommendation": "In patients at increased risk of PAD, a comprehensive vascular examination and inspection of the legs and feet should be performed regularly",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Includes pulse palpation and inspection as detailed in Table 6"
+      },
+      {
+        "recommendation": "Resting ABI with or without ankle PVR/Doppler waveforms to establish PAD diagnosis in patients with suggestive history/physical exam",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "Exercise treadmill ABI testing for suspected chronic symptomatic PAD with normal/borderline resting ABI",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "Toe pressure/TBI when resting ABI >1.40 (noncompressible)",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "Screening ABI in patients at increased PAD risk",
+        "strength": "Conditional",
+        "evidence_level": "B-NR",
+        "notes": "Class 2a recommendation"
+      },
+      {
+        "recommendation": "Duplex ultrasound, CTA, MRA, or catheter angiography for revascularization planning in functionally limiting claudication",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "Assess for and incorporate the presence of PAD-related risk amplifiers when developing patient-focused treatment recommendations",
+        "strength": "Strong",
+        "evidence_level": "C-EO",
+        "notes": "Risk amplifiers include diabetes, ongoing smoking, CKD, polyvascular disease, microvascular disease, depression, and older age"
+      },
+      {
+        "recommendation": "Actively pursue evidence of health disparities in diagnosis, treatment, and outcomes for patients with PAD and use efforts to limit the impact of these disparities on clinical outcomes",
+        "strength": "Strong",
+        "evidence_level": "C-EO",
+        "notes": "Particularly important for Black, Hispanic, and American Indian populations who have higher amputation rates"
+      },
+      {
+        "recommendation": "In patients with symptomatic PAD, single antiplatelet therapy is recommended to reduce the risk of MACE",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "COR 1"
+      },
+      {
+        "recommendation": "In patients with symptomatic PAD, low-dose rivaroxaban (2.5mg twice daily) combined with low-dose aspirin is effective to reduce the risk of MACE and MALE",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "COR 1"
+      },
+      {
+        "recommendation": "After endovascular or surgical revascularization for PAD, antiplatelet therapy is recommended",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "COR 1"
+      },
+      {
+        "recommendation": "In older patients (≥75 years) with PAD, assessment for geriatric syndromes can be useful to identify high-risk patients",
+        "strength": "Conditional",
+        "evidence_level": "B-NR",
+        "notes": "COR 2a - frailty, sarcopenia, malnutrition, mobility impairment"
+      },
+      {
+        "recommendation": "In patients with PAD without another indication, full-intensity oral anticoagulation should not be used to reduce the risk of MACE and MALE",
+        "strength": "Strong against",
+        "evidence_level": "A",
+        "notes": "COR 3: Harm"
+      },
+      {
+        "recommendation": "High-intensity statin therapy with aim of achieving ≥50% reduction in LDL-C",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "For all PAD patients"
+      },
+      {
+        "recommendation": "Add PCSK9 inhibitor therapy if LDL-C ≥70 mg/dL on maximal statin therapy",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Reasonable to add"
+      },
+      {
+        "recommendation": "Add ezetimibe therapy if LDL-C ≥70 mg/dL on maximal statin therapy",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Reasonable to add"
+      },
+      {
+        "recommendation": "Antihypertensive therapy to reduce MACE risk",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "For PAD patients with hypertension"
+      },
+      {
+        "recommendation": "ACE inhibitors or ARBs for hypertension management",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Selective use recommended"
+      },
+      {
+        "recommendation": "Smoking cessation advice at every visit",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "For all tobacco users with PAD"
+      },
+      {
+        "recommendation": "Pharmacotherapy and counseling for smoking cessation",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Includes varenicline, bupropion, nicotine replacement"
+      },
+      {
+        "recommendation": "GLP-1 agonists and SGLT-2 inhibitors for PAD patients with type 2 diabetes",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "To reduce MACE risk"
+      },
+      {
+        "recommendation": "Use GLP-1 agonists (liraglutide, semaglutide) and SGLT-2 inhibitors (canagliflozin, dapagliflozin, empagliflozin) in PAD patients with type 2 diabetes",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Effective to reduce MACE risk"
+      },
+      {
+        "recommendation": "Cilostazol for claudication symptom improvement and increased walking distance",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Contraindicated in heart failure patients"
+      },
+      {
+        "recommendation": "Annual influenza vaccination for PAD patients",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "Reduces cardiovascular event rates"
+      },
+      {
+        "recommendation": "Preventive foot self-care education for patients and family members",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "Essential for ulcer and amputation prevention"
+      },
+      {
+        "recommendation": "Education on foot self-care for patients with PAD and their family members",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Important for preventing foot ulcers"
+      },
+      {
+        "recommendation": "Supervised exercise therapy for chronic symptomatic PAD to improve walking performance, functional status, and QOL",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "Structured community-based exercise program with behavioral change techniques for chronic symptomatic PAD",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Effective alternative to supervised exercise"
+      },
+      {
+        "recommendation": "Comprehensive foot evaluation at least annually for patients with PAD",
+        "strength": "Strong",
+        "evidence_level": "C",
+        "notes": "Based on expert opinion"
+      },
+      {
+        "recommendation": "Referral to foot care specialist for ongoing examinations and surveillance",
+        "strength": "Conditional",
+        "evidence_level": "B",
+        "notes": "When available, reasonable approach"
+      },
+      {
+        "recommendation": "In patients with functionally limiting claudication who are being considered for revascularization, potential benefits with respect to QOL, walking performance, and overall functional status should be weighed against the risks and durability of intervention and possible need for repeated procedures",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Initial decision-making for claudication"
+      },
+      {
+        "recommendation": "In patients with functionally limiting claudication and an inadequate response to GDMT (including structured exercise), revascularization is a reasonable treatment option to improve walking function and QOL",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Second-line therapy after GDMT failure"
+      },
+      {
+        "recommendation": "In patients with claudication who have had an adequate clinical response to GDMT (including structured exercise), revascularization is not recommended",
+        "strength": "Strong against",
+        "evidence_level": "C-EO",
+        "notes": "No benefit when GDMT is successful"
+      },
+      {
+        "recommendation": "In patients with functionally limiting claudication and hemodynamically significant aortoiliac or femoropopliteal disease with inadequate response to GDMT, endovascular revascularization is effective to improve walking performance and QOL",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "First-line revascularization approach"
+      },
+      {
+        "recommendation": "In patients with asymptomatic PAD, revascularization procedures should not be performed solely to prevent progression of disease",
+        "strength": "Strong against",
+        "evidence_level": "B-NR",
+        "notes": "No evidence supports prophylactic revascularization"
+      },
+      {
+        "recommendation": "In patients undergoing surgical revascularization for functionally limiting claudication and hemodynamically significant femoropopliteal disease, bypass to the popliteal artery with autogenous vein is recommended in preference to prosthetic graft material",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients with CLTI, a multispecialty care team should evaluate and provide comprehensive care with goals of complete wound healing, minimizing tissue loss, and preservation of ambulatory status",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients with CLTI, surgical, endovascular, or hybrid revascularization techniques are recommended, when feasible, to minimize tissue loss, heal wounds, relieve pain, and preserve a functional limb",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients undergoing surgical revascularization for CLTI, bypass to the popliteal or infrapopliteal arteries should be constructed with autogenous vein if available",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "Patients with CLTI and diabetic foot ulcers should receive pressure offloading, when possible, to promote tissue growth and wound healing",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "Patients with PAD and previous diabetic foot ulcers should be referred for customized footwear that accommodates, protects, and fits the shape of their feet",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients with CLTI, prompt management of foot infection with antibiotics, debridement, and other surgical management is recommended",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients with CLTI with nonhealing wounds, wound care should be provided to optimize the wound-healing environment after revascularization with the goal of complete wound healing",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients with CLTI who require amputation, evaluation should be performed by a multispecialty care team to assess for the most distal level of amputation that facilitates healing and provides maximal functional ability",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "Multispecialty care team evaluation for most distal amputation level that facilitates healing and provides maximal functional ability",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Class 1 recommendation for CLTI patients requiring amputation"
+      },
+      {
+        "recommendation": "Primary amputation indicated when life over limb is prevailing consideration and limb is cause of patient instability",
+        "strength": "Strong",
+        "evidence_level": "C-EO",
+        "notes": "For ischemia, metabolic derangement, or advanced infection"
+      },
+      {
+        "recommendation": "Revascularization (endovascular or surgical) indicated for ALI with salvageable limb",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "To prevent amputation in categories I, IIa, IIb"
+      },
+      {
+        "recommendation": "Emergency evaluation by experienced clinician for ALI patients",
+        "strength": "Strong",
+        "evidence_level": "C-EO",
+        "notes": "Assess limb viability and implement appropriate therapy"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "Aspirin",
+        "dose": "81 mg daily",
+        "indication": "Antiplatelet therapy for cardiovascular risk reduction",
+        "class": "Antiplatelet"
+      },
+      {
+        "drug": "Rivaroxaban",
+        "dose": "2.5 mg twice daily",
+        "indication": "Combined with low-dose aspirin to prevent major adverse cardiovascular and limb events in patients not at increased bleeding risk",
+        "class": "Anticoagulant"
+      },
+      {
+        "drug": "High-intensity statin",
+        "dose": "Not specified",
+        "indication": "Lipid-lowering therapy",
+        "class": "HMG-CoA reductase inhibitor"
+      },
+      {
+        "drug": "Clopidogrel",
+        "dose": "75mg daily",
+        "indication": "Single antiplatelet therapy for symptomatic PAD",
+        "class": "P2Y12 inhibitor"
+      },
+      {
+        "drug": "Dual antiplatelet therapy",
+        "dose": "P2Y12 antagonist + low-dose aspirin",
+        "indication": "After endovascular revascularization for 1-6 months",
+        "class": "Antiplatelet combination"
+      },
+      {
+        "drug": "Atorvastatin",
+        "dose": "40-80 mg daily",
+        "indication": "High-intensity statin therapy",
+        "class": "HMG-CoA reductase inhibitor"
+      },
+      {
+        "drug": "Rosuvastatin",
+        "dose": "20-40 mg daily",
+        "indication": "High-intensity statin therapy",
+        "class": "HMG-CoA reductase inhibitor"
+      },
+      {
+        "drug": "Alirocumab/Evolocumab",
+        "dose": "Per FDA labeling",
+        "indication": "LDL-C ≥70 mg/dL on maximal statin",
+        "class": "PCSK9 inhibitor"
+      },
+      {
+        "drug": "Ezetimibe",
+        "dose": "Per FDA labeling",
+        "indication": "LDL-C ≥70 mg/dL on maximal statin",
+        "class": "Cholesterol absorption inhibitor"
+      },
+      {
+        "drug": "Liraglutide/Semaglutide",
+        "dose": "Per diabetes guidelines",
+        "indication": "PAD with type 2 diabetes",
+        "class": "GLP-1 agonist"
+      },
+      {
+        "drug": "Canagliflozin/Dapagliflozin/Empagliflozin",
+        "dose": "Per diabetes guidelines",
+        "indication": "PAD with type 2 diabetes",
+        "class": "SGLT-2 inhibitor"
+      },
+      {
+        "drug": "Liraglutide",
+        "dose": "Not specified",
+        "indication": "MACE reduction in PAD with type 2 diabetes",
+        "class": "GLP-1 agonist"
+      },
+      {
+        "drug": "Semaglutide",
+        "dose": "Not specified",
+        "indication": "MACE reduction in PAD with type 2 diabetes",
+        "class": "GLP-1 agonist"
+      },
+      {
+        "drug": "Canagliflozin",
+        "dose": "Not specified",
+        "indication": "MACE reduction in PAD with type 2 diabetes",
+        "class": "SGLT-2 inhibitor"
+      },
+      {
+        "drug": "Dapagliflozin",
+        "dose": "Not specified",
+        "indication": "MACE reduction in PAD with type 2 diabetes",
+        "class": "SGLT-2 inhibitor"
+      },
+      {
+        "drug": "Empagliflozin",
+        "dose": "Not specified",
+        "indication": "MACE reduction in PAD with type 2 diabetes",
+        "class": "SGLT-2 inhibitor"
+      },
+      {
+        "drug": "Cilostazol",
+        "dose": "Not specified",
+        "indication": "Claudication symptoms and walking distance improvement",
+        "class": "Phosphodiesterase III inhibitor"
+      },
+      {
+        "drug": "Prostanoids (prostaglandin E1, prostacyclin, iloprost)",
+        "dose": "Not specified",
+        "indication": "No-option CLTI patients for pain relief and wound healing",
+        "class": "Vasodilators/antiplatelet agents"
+      },
+      {
+        "drug": "Antibiotics",
+        "dose": "Not specified",
+        "indication": "Foot infection management in CLTI",
+        "class": "Antimicrobials"
+      }
+    ],
+    "red_flags": [
+      "Acute limb ischemia",
+      "Chronic limb-threatening ischemia",
+      "Signs of tissue loss or gangrene",
+      "Severe pain at rest",
+      "Non-healing wounds",
+      "Acute limb ischemia with pain, pallor, pulselessness, poikilothermia, paresthesias, paralysis",
+      "Chronic limb-threatening ischemia with ischemic rest pain, nonhealing wounds/ulcers, gangrene",
+      "Complete sensory loss and motor function loss in acute limb ischemia (Class III - irreversible)",
+      "Nonhealing lower extremity wounds",
+      "Lower extremity gangrene",
+      "Ischemic rest pain affecting forefoot worsened with limb elevation",
+      "Ischemic rest pain",
+      "Nonhealing or slow-healing lower extremity wound",
+      "Elevation pallor/dependent rubor",
+      "Absent lower extremity pulses",
+      "Vascular bruit",
+      "Calf muscle atrophy",
+      "Asymmetric hair growth",
+      "Nonhealing wounds in suspected CLTI",
+      "Advanced CKD in patients requiring gadolinium-enhanced MRA",
+      "Signs of acute limb ischemia requiring urgent intervention",
+      "Depression symptoms (GDS ≥6) associated with increased MACE and MALE risk",
+      "Polyvascular disease with diabetes creating synergistic risk amplification",
+      "Chronic limb-threatening ischemia (CLTI)",
+      "Signs of acute limb ischemia",
+      "Severe malnutrition in older patients (5x higher 30-day mortality)",
+      "Frailty with high predictive value for 30-day mortality",
+      "Dependent functional status in patients ≥70 years with CLTI",
+      "High bleeding risk with anticoagulation therapy",
+      "Sarcopenia with 10x higher prevalence in PAD patients",
+      "Life-threatening bleeding on antiplatelet therapy",
+      "Intracranial hemorrhage risk with vorapaxar",
+      "Progression to critical limb-threatening ischemia",
+      "Major adverse limb events requiring urgent intervention",
+      "Uncontrolled hypertension despite therapy",
+      "Acute cardiovascular events (MI, stroke)",
+      "Signs of drug-induced myopathy with statins",
+      "Congestive heart failure of any severity (contraindication for cilostazol)",
+      "Poor glycemic control with hemoglobin A1c >9.5%",
+      "History of previous foot ulcers or amputation",
+      "Presence of foot ulcers, calluses, or corns",
+      "Charcot or other foot deformities",
+      "Peripheral neuropathy with loss of protective sensation",
+      "End-stage kidney disease",
+      "Foot ulcers",
+      "Signs of infection",
+      "Foot deformities (bunions, hammertoe, claw toe, abnormal arch, Charcot deformity)",
+      "Dry, cracked skin",
+      "Corn or callus formation",
+      "Poor foot hygiene",
+      "Ill-fitting or inadequate footwear",
+      "Development of rest pain or tissue loss indicating CLTI",
+      "Acute limb ischemia (ALI)",
+      "Worsening functional status despite treatment",
+      "Major adverse limb events (MALE)",
+      "Life-threatening sepsis from lower extremity ischemia and infection",
+      "Nonviable limb",
+      "Limb-threatening infections until complete wound healing is achieved",
+      "Foot infection with abscess, gas, or necrotizing fasciitis requiring immediate surgical debridement",
+      "Rapid progression of foot infection, particularly in diabetic patients",
+      "Extensive tissue loss with exposure of vital structures precluding limb salvage",
+      "Life over limb considerations with threatened limb causing patient instability",
+      "Life-threatening sepsis due to foot infection requiring immediate amputation",
+      "Advanced soft-tissue infection with sepsis",
+      "Severe metabolic derangements attributable to extensive tissue necrosis",
+      "Loss of both arterial and venous Doppler signals indicating irreversible damage",
+      "Compartment syndrome after revascularization"
+    ],
+    "follow_up": "Longitudinal follow-up required for all PAD patients with regular assessment of cardiovascular risk factors, functional status, and limb symptoms",
+    "escalation_path": "Escalate to multispecialty team including vascular specialists, interventional cardiologists, vascular surgeons, podiatrists, and wound care experts for chronic limb-threatening ischemia or when medical therapy and exercise are insufficient for symptom management",
+    "_chunked_extraction": true,
+    "_chunks_merged": 12
+  },
+  "metadata": {
+    "run_id": "2be5fa74",
+    "extracted_at": "2026-03-04T00:52:27.951538Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "disease_definition",
+      "diagnostic_thresholds",
+      "risk_stratification",
+      "escalation_ladder",
+      "medication_management",
+      "monitoring_schedule"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 514116
+  }
+}

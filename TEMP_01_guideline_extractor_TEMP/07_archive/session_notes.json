@@ -1,0 +1,80 @@
+{
+  "session_date": "2026-03-03",
+  "project": "guideline_extractor",
+  "current_version": "v2.3",
+  "session_summary": "v2.2 deployed, gold_2 populated with 14 JACC/NEJM/USPSTF docs. Discovered magic byte bug (magic[:3] vs magic[:4]) causing all real PDFs to read as raw binary. Fixed. Cal run 3: 14/14 processed, 12/14 correct routing (86%), 577 recs/420 thresh/220 meds. v2.3 fixes: RCT pre-screen heuristic, max_tokens 2000->3000, preamble stripping in llm_generate_json, screening window 3000->5000.",
+  "versions": {
+    "v1.0": { "status": "superseded", "location": "guideline_extractor_v1/", "notes": "Scaffold only." },
+    "v2.0": { "status": "superseded", "notes": "First working version. 3 engines, routing bug for diagnostic." },
+    "v2.1": { "status": "superseded", "notes": "DiagnosticEngine, title metadata, chunking, per_document. Screener over-broad on diagnostic." },
+    "v2.2": { "status": "superseded", "notes": "Screener tightened, RCT type+engine, ZIP bundle support, chunk params 25k/2.5k/12. Had magic byte bug magic[:3] vs [:4]." },
+    "v2.3": {
+      "status": "current", "location": "guideline_extractor_v2/",
+      "notes": "magic[:4] fix, RCT pre-screen heuristic (journal name + content keywords), max_tokens 2000->3000, preamble stripping before first {, screening window 3000->5000 chars."
+    }
+  },
+  "calibration": {
+    "run_1": {
+      "version": "v2.0", "date": "2026-03-03", "documents": 21,
+      "source": "guideline_extractor_v1/gold_list/", "output_dir": "outputs/calibration_run1/",
+      "results": { "routing_correct": 14, "routing_accuracy": "67%", "total_recommendations": 85, "total_thresholds": 91, "issue": "No DiagnosticEngine, no chunking, no title extraction" }
+    },
+    "run_2": {
+      "version": "v2.1", "date": "2026-03-03", "documents": 21,
+      "source": "guideline_extractor_v1/gold_list/", "output_dir": "outputs/calibration_run2/",
+      "results": { "routing_correct": 19, "routing_accuracy": "90%", "chunked_extractions": 20, "total_recommendations": 326, "total_thresholds": 252, "total_medications": 139, "issue": "Screener over-routed 5 docs to diagnostic_guideline" }
+    },
+    "run_3": {
+      "version": "v2.2_patched", "date": "2026-03-03", "documents": 14,
+      "source": "documents/gold_2/ (JACC + NEJM + USPSTF)", "output_dir": "outputs/calibration_run3/",
+      "results": {
+        "processed": 14, "failed": 0, "validation_passed": 14,
+        "routing_correct": 12, "routing_accuracy": "86%",
+        "incorrect": ["NEJMoa1709118: rct->unknown", "NEJMoa2000052: rct->unknown"],
+        "chunked_extractions": 12, "chunk_failures": 3,
+        "chunk_failure_cause": "max_tokens=2000 truncation on complex population fields",
+        "total_recommendations": 577, "total_thresholds": 420, "total_medications": 220, "total_red_flags": 714,
+        "doc_type_breakdown": { "chronic_guideline": 7, "diagnostic_guideline": 2, "preventive_guideline": 3, "unknown": 2 },
+        "standouts": { "jacc_chest_pain": "71r/55t/4m", "jacc_cad": "69r/44t/42m", "jacc_heart_failure": "66r/28t/34m", "jacc_HTN": "51r/54t/26m" }
+      }
+    },
+    "run_4": {
+      "version": "v2.3", "date": "pending", "source": "documents/gold_2/", "output_dir": "outputs/calibration_run4/",
+      "expected": ["NEJMoa files route rct", "zero chunk failures", "zero preamble JSON errors"],
+      "results": "pending"
+    }
+  },
+  "bugs_fixed": {
+    "magic_byte_bug": {
+      "introduced": "v2.2", "fixed": "v2.3", "file": "utils/preprocess.py",
+      "description": "magic[:3] == b'%PDF' never matched — b'%PDF' is 4 bytes so %PD != %PDF. All PDFs fell through to _extract_text(), reading raw binary. Fixed to magic[:4].",
+      "impact": "100% of binary PDFs returning garbage to screener and extractor"
+    }
+  },
+  "files_modified_v2.3": [
+    "utils/preprocess.py     -- magic[:3] -> magic[:4]",
+    "utils/prompt_builder.py -- llm_generate_json strips preamble before first { or [",
+    "utils/prompt_builder.py -- max_tokens default 2000 -> 3000 in llm_extract and llm_extract_chunked",
+    "core/screening.py       -- RCT pre-screen heuristic, screening window 3000->5000, rct in VALID_TYPES",
+    "engines/base_engine.py  -- ENGINE_VERSION v2.3",
+    "main.py                 -- version string v2.3",
+    "session_notes.json      -- this file"
+  ],
+  "next_steps": [
+    "Full library ingest is cleared to proceed -- all 21 gold_list docs at quality 0.957",
+    "Full library available: afp-peds-uspstf (~50 docs), ID-renal-gi-hep (~60), neuro-tox-rheum-psych (~30), periop-dm2-vax (~15)",
+    "Run main.py (or a new run_full_library.py) pointing at each folder in sequence",
+    "v2.4 candidates: per-doc coverage % tracking, cross-guideline query interface, library-wide deduplication"
+  ],
+  "calibration_v1_closed": {
+    "date": "2026-03-05",
+    "scorer_bug": "_nonempty used len > 5, rejecting valid single-char evidence codes like 'A', 'B'. Fixed to len >= 1.",
+    "prompt_fix": "evidence_level codes expanded to descriptive strings, e.g. 'Grade A (RCT-supported)' instead of 'A'",
+    "final_scores": {
+      "overall_quality": 0.957,
+      "rec_evidence_rate": "100%",
+      "thr_unit_rate": "100%",
+      "engines_needing_fixes": 0
+    }
+  }
+}

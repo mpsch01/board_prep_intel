@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260307_055558",
+  "run_id": "d84a0e52",
+  "file_name": "AJKD_palliative_care.pdf",
+  "document_type": "rct",
+  "engine_used": "RCTEngine",
+  "confidence": 0.9,
+  "body_systems": [
+    "renal",
+    "genitourinary"
+  ],
+  "modules_activated": [
+    "trial_design",
+    "population_eligibility",
+    "intervention_comparator",
+    "primary_endpoints",
+    "statistical_results",
+    "safety_adverse_events",
+    "clinical_implications"
+  ],
+  "raw_text_chars": 49093,
+  "validation_passed": false,
+  "validation_warnings": [
+    "Missing top-level key: 'governance'",
+    "source.source_id is missing \u2014 link to ite_refs manifest not established"
+  ],
+  "recommendations_count": 8,
+  "thresholds_count": 17,
+  "medications_count": 0
+}

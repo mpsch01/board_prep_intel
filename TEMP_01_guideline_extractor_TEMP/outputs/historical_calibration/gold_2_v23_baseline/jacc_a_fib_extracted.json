@@ -1,0 +1,793 @@
+{
+  "source": {
+    "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation",
+    "organization": "American College of Cardiology",
+    "document_type": "chronic_guideline",
+    "publication_year": 2024,
+    "version_number": "",
+    "doi": "",
+    "file_name": "jacc_a_fib.pdf"
+  },
+  "classification": {
+    "engine_used": "ChronicRiskEngine",
+    "document_type": "chronic_guideline",
+    "confidence": 0.95,
+    "signals": [
+      "Guideline for the Diagnosis and Management of Atrial Fibrillation",
+      "American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+      "Clinical Practice Guideline",
+      "2023 ACC/AHA/ACCP/HRS Guideline",
+      "diagnosis and management"
+    ],
+    "body_systems": [
+      "cardiovascular"
+    ]
+  },
+  "extraction": {
+    "summary": "This 2023 ACC/AHA/ACCP/HRS guideline provides evidence-based recommendations for diagnosis and management of atrial fibrillation. The guideline introduces a new staging system for AF as a disease continuum and emphasizes early rhythm control, risk factor modification, and patient-centered care.",
+    "population": {
+      "age_criteria": "All ages affected by atrial fibrillation",
+      "risk_criteria": "Patients with diagnosed AF, risk factors for AF, or complications of AF",
+      "disease_definition": "Atrial fibrillation is the most sustained common arrhythmia with increasing incidence and prevalence",
+      "exclusions": "Not specified in provided excerpt",
+      "severity_staging": "New AF staging system introduced recognizing AF as disease continuum requiring various strategies at different stages"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "Annual thromboembolism risk",
+        "value": "2",
+        "unit": "percent",
+        "context": "Threshold for considering stroke risk modifiers in intermediate to low risk patients"
+      },
+      {
+        "parameter": "Body Mass Index",
+        "value": "5",
+        "unit": "kg/m² increase",
+        "context": "Associated with RR 1.28 increased AF risk"
+      },
+      {
+        "parameter": "Systolic Blood Pressure",
+        "value": "20",
+        "unit": "mmHg increase",
+        "context": "Associated with HR 1.22 increased AF risk"
+      },
+      {
+        "parameter": "Height",
+        "value": "10",
+        "unit": "cm increase",
+        "context": "Associated with HR 1.28 increased AF risk"
+      },
+      {
+        "parameter": "Resting Heart Rate",
+        "value": "68-80",
+        "unit": "bpm",
+        "context": "Lowest risk range for incident AF"
+      },
+      {
+        "parameter": "Atrial tachycardia rate",
+        "value": ">100",
+        "unit": "beats per minute",
+        "context": "Regular atrial rhythm definition"
+      },
+      {
+        "parameter": "AF rate",
+        "value": "300-500",
+        "unit": "beats per minute",
+        "context": "Chaotic, rapid atrial rhythm"
+      },
+      {
+        "parameter": "Paroxysmal AF duration",
+        "value": "≤7",
+        "unit": "days",
+        "context": "Intermittent AF that terminates within 7 days"
+      },
+      {
+        "parameter": "Persistent AF duration",
+        "value": ">7",
+        "unit": "days",
+        "context": "Continuous AF requiring intervention"
+      },
+      {
+        "parameter": "Long-standing persistent AF duration",
+        "value": ">12",
+        "unit": "months",
+        "context": "Continuous AF for over 12 months"
+      },
+      {
+        "parameter": "BMI for weight loss intervention",
+        "value": ">27",
+        "unit": "kg/m2",
+        "context": "Overweight/obese AF patients requiring weight management"
+      },
+      {
+        "parameter": "Weight loss target",
+        "value": "≥10",
+        "unit": "%",
+        "context": "Ideal target to reduce AF symptoms and burden"
+      },
+      {
+        "parameter": "Age threshold for C2HEST score",
+        "value": "≥75",
+        "unit": "years",
+        "context": "Elderly category (2 points) in AF risk stratification"
+      },
+      {
+        "parameter": "Alcohol consumption limit",
+        "value": "≤1",
+        "unit": "standard drink/day",
+        "context": "Moderate alcohol consumption for AF prevention"
+      },
+      {
+        "parameter": "BMI",
+        "value": "27",
+        "unit": "kg/m²",
+        "context": "Threshold for weight loss recommendation"
+      },
+      {
+        "parameter": "Exercise duration",
+        "value": "210",
+        "unit": "minutes per week",
+        "context": "Target for moderate-to-vigorous exercise training"
+      },
+      {
+        "parameter": "Alcohol consumption",
+        "value": "3",
+        "unit": "standard drinks per week",
+        "context": "Maximum recommended for AF patients"
+      },
+      {
+        "parameter": "Systolic BP target",
+        "value": "120",
+        "unit": "mmHg",
+        "context": "Aggressive BP control in SMAC-AF trial"
+      },
+      {
+        "parameter": "Sleep apnea prevalence",
+        "value": "20",
+        "unit": "percent",
+        "context": "Minimum prevalence in AF patients"
+      },
+      {
+        "parameter": "CHA₂DS₂-VASc stroke risk",
+        "value": "1",
+        "unit": "score (men)",
+        "context": "Intermediate risk threshold"
+      },
+      {
+        "parameter": "Annual stroke risk",
+        "value": "2",
+        "unit": "%/year",
+        "context": "Threshold for anticoagulation recommendation"
+      },
+      {
+        "parameter": "CHA2DS2-VASc score",
+        "value": "2",
+        "unit": "points",
+        "context": "High risk threshold for men"
+      },
+      {
+        "parameter": "INR target range",
+        "value": "2-3",
+        "unit": "INR",
+        "context": "Warfarin therapeutic window"
+      },
+      {
+        "parameter": "INR bleeding risk",
+        "value": "4",
+        "unit": "INR",
+        "context": "Threshold where bleeding risk becomes apparent"
+      },
+      {
+        "parameter": "Target INR",
+        "value": "2-3",
+        "unit": "ratio",
+        "context": "Warfarin therapy target range"
+      },
+      {
+        "parameter": "Time in therapeutic range",
+        "value": "70",
+        "unit": "percent",
+        "context": "Optimal warfarin management threshold"
+      },
+      {
+        "parameter": "Creatinine clearance",
+        "value": "30",
+        "unit": "mL/min",
+        "context": "Minimum threshold for DOAC use"
+      },
+      {
+        "parameter": "AHRE duration",
+        "value": "24",
+        "unit": "hours",
+        "context": "Threshold for reasonable anticoagulation with CHA2DS2-VASc ≥2"
+      },
+      {
+        "parameter": "LAA stump length",
+        "value": "1",
+        "unit": "cm",
+        "context": "Maximum acceptable stump length after surgical LAA exclusion"
+      },
+      {
+        "parameter": "Major bleeding incidence",
+        "value": "2-4",
+        "unit": "percent of patients",
+        "context": "Patients receiving oral anticoagulants"
+      },
+      {
+        "parameter": "Thromboembolism risk threshold",
+        "value": "5",
+        "unit": "percent per year",
+        "context": "High-risk conditions requiring early anticoagulation resumption"
+      },
+      {
+        "parameter": "CHA2DS2-VASc score threshold",
+        "value": "2",
+        "unit": "points",
+        "context": "Stroke risk assessment for DOAC management"
+      },
+      {
+        "parameter": "Creatinine clearance for apixaban",
+        "value": ">25",
+        "unit": "mL/min",
+        "context": "Minimum threshold for standard dosing"
+      },
+      {
+        "parameter": "Creatinine clearance for dabigatran",
+        "value": ">50",
+        "unit": "mL/min",
+        "context": "Standard dosing threshold"
+      },
+      {
+        "parameter": "Creatinine clearance for dabigatran (reduced)",
+        "value": "30-50",
+        "unit": "mL/min",
+        "context": "Requires extended hold time"
+      },
+      {
+        "parameter": "INR target for warfarin interruption (low bleeding risk)",
+        "value": "<1.5",
+        "unit": "ratio",
+        "context": "Target before low bleeding risk procedures"
+      },
+      {
+        "parameter": "INR target for warfarin interruption (high bleeding risk)",
+        "value": "<2.0",
+        "unit": "ratio",
+        "context": "Target before high bleeding risk procedures"
+      },
+      {
+        "parameter": "DOAC level threshold",
+        "value": "<30",
+        "unit": "ng/mL",
+        "context": "Target level for procedure safety"
+      },
+      {
+        "parameter": "End-stage CKD threshold",
+        "value": "<15",
+        "unit": "mL/min",
+        "context": "Creatinine clearance defining end-stage disease"
+      },
+      {
+        "parameter": "Heart rate target (acute)",
+        "value": "<90",
+        "unit": "bpm",
+        "context": "Acute rate control goal"
+      },
+      {
+        "parameter": "Heart rate target (long-term)",
+        "value": "<110",
+        "unit": "bpm",
+        "context": "Long-term rate control - lenient strategy"
+      },
+      {
+        "parameter": "Digoxin serum level",
+        "value": "<1.2",
+        "unit": "ng/mL",
+        "context": "Safe therapeutic range to avoid toxicity"
+      },
+      {
+        "parameter": "Ejection fraction threshold",
+        "value": "40",
+        "unit": "%",
+        "context": "Contraindication cutoff for calcium channel blockers"
+      },
+      {
+        "parameter": "Post-AVNA pacing rate",
+        "value": "80-90",
+        "unit": "bpm",
+        "context": "Initial pacemaker programming after AV nodal ablation"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "Use validated clinical risk scores such as CHA2DS2-VASc for anticoagulation decisions",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Flexibility allowed for patients with intermediate risk scores"
+      },
+      {
+        "recommendation": "Early rhythm control should be emphasized for AF management",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Focus on maintaining sinus rhythm and minimizing AF burden"
+      },
+      {
+        "recommendation": "Catheter ablation as first-line therapy in selected patients",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 indication based on recent randomized studies showing superiority over drug therapy"
+      },
+      {
+        "recommendation": "Catheter ablation for heart failure with reduced ejection fraction",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 indication based on superiority over drug therapy"
+      },
+      {
+        "recommendation": "Left atrial appendage occlusion devices for patients with long-term contraindications to anticoagulation",
+        "strength": "Conditional",
+        "evidence_level": "B",
+        "notes": "Class 2a recommendation upgraded from 2019 focused update"
+      },
+      {
+        "recommendation": "Intensive blood pressure control to SBP <120 mmHg in patients with hypertension at high risk for CVD reduces AF risk",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Part of comprehensive lifestyle risk factor modification"
+      },
+      {
+        "recommendation": "Weight loss in overweight or obese patients with AF as part of comprehensive lifestyle risk factor modification program reduces AF symptoms, burden, recurrence, and progression",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Bariatric surgery in class III obesity associated with reversal of AF type"
+      },
+      {
+        "recommendation": "Alcohol avoidance or reduction as part of comprehensive lifestyle risk factor modification program reduces AF burden, symptoms, and progression",
+        "strength": "Not specified",
+        "evidence_level": "Not specified",
+        "notes": "Randomized abstinence reduces AF recurrence and burden"
+      },
+      {
+        "recommendation": "Patients with AF, regardless of sex and gender diversity, race and ethnicity, or adverse social determinants of health, should be equitably offered guideline-directed stroke risk reduction therapies as well as rate or rhythm control strategies and LRFM as indicated to improve quality of life and prevent adverse outcomes",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Addresses health inequities and barriers to AF management"
+      },
+      {
+        "recommendation": "Patients at increased risk of AF should receive comprehensive guideline-directed LRFM for AF, targeting obesity, physical inactivity, unhealthy alcohol consumption, smoking, diabetes, and hypertension",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Primary prevention approach"
+      },
+      {
+        "recommendation": "In patients with AF who are overweight or obese (BMI >27 kg/m2), weight loss is recommended, with an ideal target of at least 10% weight loss",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "To reduce AF symptoms, burden, recurrence, and progression to persistent AF"
+      },
+      {
+        "recommendation": "In patients with newly diagnosed AF, a transthoracic echocardiogram, laboratory testing including CBC, metabolic panel, and thyroid function are recommended",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Basic clinical evaluation to determine stroke and bleeding risk factors"
+      },
+      {
+        "recommendation": "Initial AF diagnosis should be made by a clinician using visual interpretation of electrocardiographic signals, regardless of monitoring device type",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Among individuals without known history of AF"
+      },
+      {
+        "recommendation": "Use of evidence-based decision aids might be useful to guide stroke reduction therapy treatment decisions",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "To improve engagement, decisional quality, and patient satisfaction"
+      },
+      {
+        "recommendation": "Weight loss recommended for AF patients who are overweight or obese (BMI >27 kg/m²), with ideal target of at least 10% weight loss",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Reduces AF symptoms, burden, recurrence, and progression to persistent AF"
+      },
+      {
+        "recommendation": "Moderate-to-vigorous exercise training to target of 210 minutes per week for AF patients",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Excludes patients with AF related to excessive exercise training"
+      },
+      {
+        "recommendation": "Strong advice to quit smoking and receive GDMT for tobacco cessation",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Mitigates increased risks of AF-related cardiovascular complications"
+      },
+      {
+        "recommendation": "Minimize or eliminate alcohol consumption for rhythm control strategy",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Reduces AF recurrence and burden"
+      },
+      {
+        "recommendation": "Caffeine abstention is of no benefit for preventing AF episodes",
+        "strength": "No Benefit",
+        "evidence_level": "B-NR",
+        "notes": "May reduce symptoms in patients who report caffeine triggers"
+      },
+      {
+        "recommendation": "Optimal BP control for AF patients with hypertension",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Reduces AF recurrence and AF-related cardiovascular events"
+      },
+      {
+        "recommendation": "Screen for obstructive sleep apnea in AF patients",
+        "strength": "Conditional",
+        "evidence_level": "B-NR",
+        "notes": "High prevalence in AF patients, but treatment role uncertain"
+      },
+      {
+        "recommendation": "Comprehensive care addressing LRFM, AF symptoms, stroke risk, and associated conditions",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Reduces AF burden, progression, or consequences"
+      },
+      {
+        "recommendation": "Use CHA₂DS₂-VASc score for annual thromboembolic risk evaluation",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Validated clinical risk score"
+      },
+      {
+        "recommendation": "Bleeding risk scores should not be used in isolation to determine anticoagulation eligibility",
+        "strength": "No Benefit",
+        "evidence_level": "B-NR",
+        "notes": "Should identify and modify bleeding risk factors instead"
+      },
+      {
+        "recommendation": "For patients with AF and estimated annual thromboembolic risk ≥2% per year, anticoagulation is recommended to prevent stroke and systemic thromboembolism",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "CHA2DS2-VASc score ≥2 in men and ≥3 in women"
+      },
+      {
+        "recommendation": "DOACs are recommended over warfarin in patients without moderate to severe rheumatic mitral stenosis or mechanical heart valve",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "To reduce risk of mortality, stroke, systemic embolism, and ICH"
+      },
+      {
+        "recommendation": "Aspirin alone or with clopidogrel is not recommended as alternative to anticoagulation",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "For patients who are candidates for anticoagulation without antiplatelet indication"
+      },
+      {
+        "recommendation": "For patients with AF and annual stroke risk ≥2%, oral anticoagulation with either DOAC or warfarin is recommended to reduce mortality, stroke, systemic embolism, and ICH",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "DOACs preferred over warfarin"
+      },
+      {
+        "recommendation": "In patients with AF who are candidates for anticoagulation without indication for antiplatelet therapy, aspirin alone or combined with clopidogrel is not recommended",
+        "strength": "Strong against",
+        "evidence_level": "B",
+        "notes": "Inferior to anticoagulation for stroke risk reduction"
+      },
+      {
+        "recommendation": "For patients with AF receiving DOACs, optimal management of drug interactions is recommended, especially CYP3A4 and/or p-glycoprotein inhibitors or inducers",
+        "strength": "Strong",
+        "evidence_level": "C",
+        "notes": "Critical for maintaining efficacy and safety"
+      },
+      {
+        "recommendation": "For patients with device-detected AHRE lasting ≥24 hours and CHA2DS2-VASc score ≥2, initiate oral anticoagulation within SDM framework",
+        "strength": "Conditional",
+        "evidence_level": "B-NR",
+        "notes": "Class 2a recommendation"
+      },
+      {
+        "recommendation": "For patients with AHRE lasting 5 minutes-24 hours and CHA2DS2-VASc score ≥3, anticoagulation may be reasonable within SDM framework",
+        "strength": "Conditional",
+        "evidence_level": "B-NR",
+        "notes": "Class 2b recommendation"
+      },
+      {
+        "recommendation": "Patients with AHRE lasting <5 minutes should not receive oral anticoagulation",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Class 3: No Benefit recommendation"
+      },
+      {
+        "recommendation": "In AF patients with CHA2DS2-VASc ≥2 and contraindication to long-term anticoagulation, percutaneous LAAO is reasonable",
+        "strength": "Conditional",
+        "evidence_level": "B-NR",
+        "notes": "Class 2a recommendation"
+      },
+      {
+        "recommendation": "In AF patients undergoing cardiac surgery with CHA2DS2-VASc ≥2, surgical LAA exclusion in addition to continued anticoagulation is indicated",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1 recommendation"
+      },
+      {
+        "recommendation": "In patients with AF on oral anticoagulation scheduled for invasive procedures, temporary cessation without bridging anticoagulation is recommended",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Excludes recent stroke/TIA or mechanical valve patients"
+      },
+      {
+        "recommendation": "For AF patients with annual thromboembolism risk ≥5% undergoing pacemaker/defibrillator procedures, continued warfarin anticoagulation is recommended",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Reduces risk of pocket hematoma compared to bridging"
+      },
+      {
+        "recommendation": "Early (1-2 weeks) resumption of anticoagulation after ICH is reasonable in very high thromboembolic risk patients",
+        "strength": "Conditional",
+        "evidence_level": "C",
+        "notes": "Patients with rheumatic heart disease or mechanical heart valve"
+      },
+      {
+        "recommendation": "Delayed (4-8 weeks) resumption of anticoagulation after ICH may be considered",
+        "strength": "Conditional",
+        "evidence_level": "C",
+        "notes": "Requires careful risk-benefit assessment"
+      },
+      {
+        "recommendation": "In patients with AF and increased risk for stroke who undergo PCI, DOACs are preferred over VKAs in combination with APT to reduce clinically relevant bleeding",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class I recommendation"
+      },
+      {
+        "recommendation": "In most AF patients taking oral anticoagulation undergoing PCI, early discontinuation of aspirin (1-4 weeks) and continuation of dual antithrombotic therapy with OAC and P2Y12 inhibitor is preferred over triple therapy",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Reduces bleeding risk"
+      },
+      {
+        "recommendation": "For AF patients with CKD stage 3, treatment with warfarin or preferably evidence-based doses of DOACs is recommended",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "To reduce stroke risk"
+      },
+      {
+        "recommendation": "In AF patients with chronic coronary disease, oral anticoagulation monotherapy is recommended over combination therapy",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Beyond 1 year after revascularization"
+      },
+      {
+        "recommendation": "Beta-blockers or nondihydropyridine calcium channel blockers for acute rate control in hemodynamically stable patients with EF >40%",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "First-line therapy for acute rate control"
+      },
+      {
+        "recommendation": "Addition of intravenous magnesium to standard rate-control measures",
+        "strength": "Conditional",
+        "evidence_level": "A",
+        "notes": "Reasonable adjunctive therapy for rate control"
+      },
+      {
+        "recommendation": "Avoid nondihydropyridine calcium channel blockers in patients with LVEF <40%",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "Potential to exacerbate heart failure"
+      },
+      {
+        "recommendation": "AVNA with pacemaker for refractory rapid ventricular response",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "When rate control medications unsuccessful and rhythm control not viable"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "Amiodarone",
+        "dose": "Not specified",
+        "indication": "Prophylactic use to reduce postoperative AF after cardiac surgery",
+        "class": "Antiarrhythmic"
+      },
+      {
+        "drug": "Beta-blockers",
+        "dose": "Not specified",
+        "indication": "Prophylactic use to reduce postoperative AF after cardiac surgery",
+        "class": "Beta-adrenergic antagonist"
+      },
+      {
+        "drug": "Mineralocorticoid receptor antagonists",
+        "dose": "Not specified",
+        "indication": "Reduce AF burden",
+        "class": "Aldosterone antagonist"
+      },
+      {
+        "drug": "ACE inhibitors or ARBs",
+        "dose": "Not specified",
+        "indication": "Blood pressure and weight control, attenuation of pathologic changes",
+        "class": "RAAS inhibitors"
+      },
+      {
+        "drug": "ACE inhibitors",
+        "dose": "Not specified",
+        "indication": "Hypertension, upstream therapy for AF",
+        "class": "ACE inhibitor"
+      },
+      {
+        "drug": "Angiotensin receptor blockers",
+        "dose": "Not specified",
+        "indication": "Hypertension, upstream therapy for AF",
+        "class": "ARB"
+      },
+      {
+        "drug": "DOACs",
+        "dose": "Not specified",
+        "indication": "Stroke prevention in AF",
+        "class": "Direct oral anticoagulant"
+      },
+      {
+        "drug": "Warfarin",
+        "dose": "Not specified",
+        "indication": "Stroke prevention in AF",
+        "class": "Vitamin K antagonist"
+      },
+      {
+        "drug": "Dabigatran",
+        "dose": "110 mg or 150 mg twice daily",
+        "indication": "Stroke prevention in AF",
+        "class": "DOAC (direct thrombin inhibitor)"
+      },
+      {
+        "drug": "Apixaban",
+        "dose": "Not specified",
+        "indication": "Stroke prevention in AF",
+        "class": "DOAC (Factor Xa inhibitor)"
+      },
+      {
+        "drug": "Rivaroxaban",
+        "dose": "Not specified",
+        "indication": "Stroke prevention in AF",
+        "class": "DOAC (Factor Xa inhibitor)"
+      },
+      {
+        "drug": "Edoxaban",
+        "dose": "30 mg or 60 mg daily",
+        "indication": "Stroke prevention in AF",
+        "class": "DOAC (Factor Xa inhibitor)"
+      },
+      {
+        "drug": "Idarucizumab",
+        "dose": "Not specified",
+        "indication": "Reversal of dabigatran in life-threatening bleeding",
+        "class": "Dabigatran reversal agent"
+      },
+      {
+        "drug": "Andexanet alfa",
+        "dose": "Not specified",
+        "indication": "Reversal of factor Xa inhibitors (apixaban, rivaroxaban, edoxaban) in life-threatening bleeding",
+        "class": "Factor Xa inhibitor reversal agent"
+      },
+      {
+        "drug": "4-factor prothrombin complex concentrate",
+        "dose": "Not specified",
+        "indication": "Reversal of warfarin or DOACs in life-threatening bleeding",
+        "class": "Coagulation factor concentrate"
+      },
+      {
+        "drug": "4-Factor PCC",
+        "dose": "25-50 units/kg based on INR for warfarin reversal; 25-50 units/kg for factor Xa inhibitors",
+        "indication": "Urgent reversal of anticoagulation for major bleeding or urgent surgery",
+        "class": "Prothrombin complex concentrate"
+      },
+      {
+        "drug": "Metoprolol tartrate",
+        "dose": "2.5-5 mg IV bolus, then 25-200 mg PO twice daily",
+        "indication": "Acute and chronic rate control",
+        "class": "Beta-blocker"
+      },
+      {
+        "drug": "Diltiazem",
+        "dose": "0.25 mg/kg IV bolus, then 120-360 mg daily PO (avoid in HFrEF)",
+        "indication": "Acute and chronic rate control",
+        "class": "Nondihydropyridine calcium channel blocker"
+      },
+      {
+        "drug": "Digoxin",
+        "dose": "0.25-0.5 mg IV loading, then 0.0625-0.25 mg daily PO",
+        "indication": "Rate control especially with HF, target level <1.2 ng/mL",
+        "class": "Digitalis glycoside"
+      },
+      {
+        "drug": "Magnesium",
+        "dose": "≤5 g IV",
+        "indication": "Adjunctive acute rate control",
+        "class": "Electrolyte supplement"
+      }
+    ],
+    "red_flags": [
+      "Active bleeding on anticoagulant therapy",
+      "Intracranial hemorrhage in AF patients",
+      "AF with hemodynamic instability",
+      "Acute coronary syndrome with AF",
+      "AF in pregnancy",
+      "Severe sepsis (OR 6.82 increased AF risk)",
+      "Heart failure development (bidirectional relationship with AF)",
+      "Significant heart murmur (any diastolic and grade ≥3/6 systolic)",
+      "Acute coronary syndrome",
+      "Atrial high-rate episodes requiring visual inspection to confirm AF",
+      "Delayed afterdepolarizations leading to AF initiation",
+      "Calcium mishandling and sarcoplasmic reticulum dysfunction",
+      "Inflammatory activation and oxidative stress",
+      "Thrombotic changes in left atrium",
+      "Signs or symptoms suggesting myocardial ischemia",
+      "Signs or symptoms suggesting acute coronary syndrome",
+      "Signs or symptoms suggesting pulmonary embolism",
+      "Clinical suspicion of significant valvular disease",
+      "Wolff-Parkinson-White syndrome on ECG",
+      "QT duration abnormalities affecting pharmacological management",
+      "Excessive exercise training in AF patients (contraindication for exercise recommendations)",
+      "Inadequate ventricular rate control during exercise training",
+      "Atrial myopathy related to excessive exercise training",
+      "High bleeding risk factors (previous bleeding, drugs that increase bleeding risk)",
+      "Severe cardiovascular disease (LVEF <40-45%)",
+      "Severe obesity with contraindications to exercise",
+      "INR >4 on warfarin therapy",
+      "Signs of major bleeding",
+      "Intracranial hemorrhage",
+      "Previous bleeding history with anticoagulation",
+      "Uncontrolled hypertension",
+      "Severe renal impairment (GFR <45 mL/min/1.73m²)",
+      "Anemia",
+      "Active malignancy",
+      "Fall risk with anticoagulation",
+      "Major bleeding events while on anticoagulation",
+      "Signs of intracranial hemorrhage",
+      "Drug interaction with strong CYP3A4/p-glycoprotein inhibitors or inducers",
+      "Severe renal impairment (CrCl <15 mL/min)",
+      "Severe hepatic impairment (Child-Pugh C)",
+      "Off-label DOAC dosing",
+      "Life-threatening bleeding on anticoagulation therapy",
+      "Spontaneous intracranial/intraspinal bleeding due to nonreversible cause",
+      "Severe bleeding due to nonreversible cause involving gastrointestinal, pulmonary, or genitourinary systems",
+      "Serious bleeding related to recurrent falls when cause of falls is not treatable",
+      "Major bleeding requiring intervention (2-4% incidence)",
+      "Life-threatening or uncontrolled bleeding",
+      "Failure to achieve effective hemostasis (>3x higher risk of death)",
+      "Signs of volume overload with reversal agents",
+      "Thrombotic events after reversal agent use",
+      "Hemodynamic instability with coagulopathy",
+      "Recent bleeding or thromboembolism",
+      "Mechanical valve prosthesis",
+      "History of stent thrombosis",
+      "Complex revascularization procedures",
+      "Neuraxial anesthesia or spinal surgery",
+      "Abnormal liver or kidney function affecting drug clearance",
+      "Hemodynamic instability requiring emergency cardioversion",
+      "Decompensated heart failure with rapid ventricular response",
+      "Hypotension with rate control agents",
+      "Signs of digoxin toxicity (>1.2 ng/mL serum level)",
+      "Acute kidney injury within 48 hours of diltiazem in patients with LVEF ≤50%",
+      "Need for inotropic support within 48 hours of rate control initiation"
+    ],
+    "follow_up": "Regular monitoring based on individual patient risk factors and treatment responses, with emphasis on shared decision-making",
+    "escalation_path": "Escalate to cardiology/electrophysiology for complex rhythm management, bleeding complications requiring reversal agents, or consideration for interventional procedures",
+    "_chunked_extraction": true,
+    "_chunks_merged": 11
+  },
+  "metadata": {
+    "run_id": "fe8cec87",
+    "extracted_at": "2026-03-04T00:56:20.120992Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "disease_definition",
+      "diagnostic_thresholds",
+      "risk_stratification",
+      "escalation_ladder",
+      "medication_management",
+      "monitoring_schedule"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 827481
+  }
+}

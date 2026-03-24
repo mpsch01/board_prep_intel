@@ -1,0 +1,869 @@
+{
+  "source": {
+    "title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "organization": "American College of Cardiology",
+    "document_type": "chronic_guideline",
+    "publication_year": 2022,
+    "version_number": "",
+    "doi": "",
+    "file_name": "jacc_heart_failure.pdf"
+  },
+  "classification": {
+    "engine_used": "ChronicRiskEngine",
+    "document_type": "chronic_guideline",
+    "confidence": 0.95,
+    "signals": [
+      "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+      "CLINICAL PRACTICE GUIDELINE",
+      "Management of Heart Failure",
+      "American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+      "Writing Committee"
+    ],
+    "body_systems": [
+      "cardiovascular"
+    ]
+  },
+  "extraction": {
+    "summary": "This 2022 AHA/ACC/HFSA guideline provides comprehensive evidence-based recommendations for heart failure prevention, diagnosis, and management across all stages. Key updates include expanding GDMT for HFrEF to include 4 medication classes including SGLT2i, new recommendations for HFmrEF and HFpEF populations, and updated staging terminology.",
+    "population": {
+      "age_criteria": "Adults",
+      "risk_criteria": "Patients at risk for heart failure (Stage A), pre-HF (Stage B), symptomatic HF (Stage C), or advanced HF (Stage D)",
+      "disease_definition": "Heart failure defined by stages: Stage A (at risk), Stage B (pre-HF with structural heart disease), Stage C (symptomatic HF), Stage D (advanced HF)",
+      "exclusions": "No specific exclusions mentioned in this excerpt",
+      "severity_staging": "HFrEF (LVEF ≤40%), HFmrEF (LVEF 41-49%), HFpEF (LVEF ≥50%), HFimpHF (improved LVEF >40% from previously reduced)"
+    },
+    "key_thresholds": [
+      {
+        "parameter": "LVEF for HFrEF",
+        "value": "≤40",
+        "unit": "%",
+        "context": "Reduced ejection fraction heart failure classification"
+      },
+      {
+        "parameter": "LVEF for HFmrEF",
+        "value": "41-49",
+        "unit": "%",
+        "context": "Mildly reduced ejection fraction heart failure"
+      },
+      {
+        "parameter": "LVEF for HFpEF",
+        "value": "≥50",
+        "unit": "%",
+        "context": "Preserved ejection fraction heart failure"
+      },
+      {
+        "parameter": "LVEF for HFimpHF",
+        "value": ">40",
+        "unit": "%",
+        "context": "Previously HFrEF patients with improved LVEF"
+      },
+      {
+        "parameter": "E/e' ratio",
+        "value": ">9",
+        "unit": "ratio",
+        "context": "Echocardiographic evidence of elevated filling pressures"
+      },
+      {
+        "parameter": "PA systolic pressure",
+        "value": ">35",
+        "unit": "mmHg",
+        "context": "Echocardiographic evidence of elevated pressures"
+      },
+      {
+        "parameter": "E/e' for diastolic dysfunction",
+        "value": "≥15",
+        "unit": "ratio",
+        "context": "Strong evidence of elevated filling pressures"
+      },
+      {
+        "parameter": "H2FPEF score",
+        "value": "<2",
+        "unit": "points",
+        "context": "Low likelihood of HFpEF"
+      },
+      {
+        "parameter": "BNP screening threshold",
+        "value": "≥50",
+        "unit": "pg/mL",
+        "context": "Screening for at-risk patients"
+      },
+      {
+        "parameter": "BNP",
+        "value": "50",
+        "unit": "pg/mL",
+        "context": "Screening threshold for echocardiography and cardiology referral"
+      },
+      {
+        "parameter": "LVEF",
+        "value": "0.35",
+        "unit": "fraction",
+        "context": "Threshold for ICD consideration in genetic cardiomyopathy"
+      },
+      {
+        "parameter": "Peak VO2",
+        "value": "≤14",
+        "unit": "mL/kg/min",
+        "context": "Heart transplant consideration cutoff"
+      },
+      {
+        "parameter": "6-minute walk distance",
+        "value": "<300",
+        "unit": "m",
+        "context": "Associated with worse 3-year survival"
+      },
+      {
+        "parameter": "Blood pressure",
+        "value": "<130/80",
+        "unit": "mmHg",
+        "context": "Target for CVD risk ≥10%"
+      },
+      {
+        "parameter": "Dietary sodium",
+        "value": "<2300",
+        "unit": "mg/day",
+        "context": "General cardiovascular health"
+      },
+      {
+        "parameter": "Sodium intake",
+        "value": "1.5-2.3",
+        "unit": "g/day",
+        "context": "Dietary sodium restriction in HF patients"
+      },
+      {
+        "parameter": "Serum potassium",
+        "value": ">5.0",
+        "unit": "mEq/L",
+        "context": "Caution threshold for ACEi/ARB use"
+      },
+      {
+        "parameter": "eGFR",
+        "value": "30",
+        "unit": "mL/min/1.73m²",
+        "context": "Minimum for MRA initiation"
+      },
+      {
+        "parameter": "SBP",
+        "value": "95-100",
+        "unit": "mmHg",
+        "context": "Minimum for SGLT2i therapy"
+      },
+      {
+        "parameter": "Heart rate",
+        "value": "≥70",
+        "unit": "bpm",
+        "context": "Minimum heart rate for ivabradine consideration"
+      },
+      {
+        "parameter": "Serum digoxin concentration",
+        "value": "0.5-0.9",
+        "unit": "ng/mL",
+        "context": "Target therapeutic range"
+      },
+      {
+        "parameter": "Potassium levels",
+        "value": "<5.1",
+        "unit": "mEq/L",
+        "context": "Normokalemia target with potassium binders"
+      },
+      {
+        "parameter": "QRS duration",
+        "value": "≥150",
+        "unit": "ms",
+        "context": "Strong CRT indication with LBBB"
+      },
+      {
+        "parameter": "NT-proBNP",
+        "value": "≥1000",
+        "unit": "pg/mL",
+        "context": "Vericiguat eligibility in sinus rhythm"
+      },
+      {
+        "parameter": "Digoxin serum level",
+        "value": "<1.2",
+        "unit": "ng/mL",
+        "context": "Target range to avoid increased mortality risk"
+      },
+      {
+        "parameter": "LVESD",
+        "value": "70",
+        "unit": "mm",
+        "context": "Criteria for transcatheter edge-to-edge mitral valve repair"
+      },
+      {
+        "parameter": "LVEF range for TEER",
+        "value": "20-50",
+        "unit": "%",
+        "context": "Optimal range for transcatheter edge-to-edge repair benefit"
+      },
+      {
+        "parameter": "LV wall thickness",
+        "value": 14,
+        "unit": "mm",
+        "context": "Cardiac amyloidosis screening threshold"
+      },
+      {
+        "parameter": "Creatinine",
+        "value": 2.5,
+        "unit": "mg/dL",
+        "context": "Upper limit for MRA therapy"
+      },
+      {
+        "parameter": "Potassium",
+        "value": 5.0,
+        "unit": "mEq/L",
+        "context": "Upper limit for MRA therapy"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "GDMT for HFrEF now includes 4 medication classes including SGLT2 inhibitors",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Key update expanding standard therapy"
+      },
+      {
+        "recommendation": "SGLT2i for HFmrEF",
+        "strength": "Conditional",
+        "evidence_level": "B",
+        "notes": "Class of Recommendation 2a"
+      },
+      {
+        "recommendation": "SGLT2i for HFpEF",
+        "strength": "Conditional",
+        "evidence_level": "B",
+        "notes": "Class of Recommendation 2a"
+      },
+      {
+        "recommendation": "Continue HFrEF treatment in patients with improved LVEF >40%",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Patients should continue therapy despite LVEF improvement"
+      },
+      {
+        "recommendation": "Treat hypertension in HFpEF",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class of Recommendation 1"
+      },
+      {
+        "recommendation": "Classify heart failure by stages A-D to emphasize disease progression and guide therapeutic interventions",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Stage-based approach allows for targeted prevention and treatment strategies"
+      },
+      {
+        "recommendation": "Use LVEF to classify HF patients (HFrEF ≤40%, HFmrEF 41-49%, HFpEF ≥50%) for prognosis and treatment decisions",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "EF classification guides evidence-based treatment selection"
+      },
+      {
+        "recommendation": "Require evidence of elevated LV filling pressures for diagnosis of HFmrEF and HFpEF to improve diagnostic specificity",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Elevated natriuretic peptides or hemodynamic evidence needed beyond EF and symptoms"
+      },
+      {
+        "recommendation": "Continue HFrEF treatment in patients with improved EF (HFimpEF) as EF may decline with treatment withdrawal",
+        "strength": "Strong",
+        "evidence_level": "B",
+        "notes": "Structural abnormalities often persist despite EF improvement"
+      },
+      {
+        "recommendation": "In patients with HF, vital signs and evidence of clinical congestion should be assessed at each encounter to guide overall management",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Includes adjustment of diuretics and other medications"
+      },
+      {
+        "recommendation": "In patients presenting with dyspnea, measurement of BNP or NT-proBNP is useful to support diagnosis or exclusion of HF",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Higher sensitivity than specificity, more useful for ruling out HF"
+      },
+      {
+        "recommendation": "In patients with chronic HF, measurements of BNP or NT-proBNP levels are recommended for risk stratification",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Associated with greater risk for adverse outcomes"
+      },
+      {
+        "recommendation": "In patients at risk of developing HF, BNP or NT-proBNP-based screening followed by team-based care can be useful to prevent development of LV dysfunction",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Should include cardiovascular specialist involvement"
+      },
+      {
+        "recommendation": "In first-degree relatives of selected patients with genetic or inherited cardiomyopathies, genetic screening and counseling are recommended",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "To detect cardiac disease and prompt consideration of treatments to decrease HF progression and sudden death"
+      },
+      {
+        "recommendation": "In patients with suspected or new-onset HF, transthoracic echocardiography should be performed during initial evaluation",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "To assess cardiac structure and function"
+      },
+      {
+        "recommendation": "In patients with HF, routine use of invasive hemodynamic monitoring is not recommended",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "No benefit shown in routine management"
+      },
+      {
+        "recommendation": "In patients with LVEF ≤40%, ACE inhibitors should be used to prevent symptomatic HF and reduce mortality",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Stage B pre-HF patients"
+      },
+      {
+        "recommendation": "In patients with recent or remote history of MI or ACS, statins should be used to prevent symptomatic HF and adverse cardiovascular events",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Stage B pre-HF patients"
+      },
+      {
+        "recommendation": "In patients with hypertension, blood pressure should be controlled in accordance with GDMT to prevent symptomatic HF",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Stage A primary prevention"
+      },
+      {
+        "recommendation": "In patients with type 2 diabetes and established CVD or high cardiovascular risk, SGLT2 inhibitors should be used to prevent HF hospitalizations",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Stage A primary prevention"
+      },
+      {
+        "recommendation": "In selected ambulatory patients with HF, cardiopulmonary exercise testing is recommended to determine appropriateness of advanced treatments",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "For LVAD or heart transplant evaluation"
+      },
+      {
+        "recommendation": "In patients at least 40 days post-MI with LVEF ≤30% and NYHA class I symptoms while receiving GDMT, an ICD is recommended for primary prevention of SCD",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "With reasonable expectation of meaningful survival >1 year"
+      },
+      {
+        "recommendation": "ACE inhibitors should be used in patients with LVEF ≤40% to prevent symptomatic HF and reduce mortality",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class I recommendation"
+      },
+      {
+        "recommendation": "Statins should be used in patients with recent or remote history of MI or ACS to prevent symptomatic HF",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class I recommendation"
+      },
+      {
+        "recommendation": "Evidence-based beta-blockers should be used in patients with recent/remote MI or ACS and LVEF ≤40%",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Class I recommendation"
+      },
+      {
+        "recommendation": "ICD recommended for primary prevention of SCD in patients ≥40 days post-MI with LVEF ≤30%",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "NYHA class I symptoms on GDMT with >1 year life expectancy"
+      },
+      {
+        "recommendation": "Patients with HF should receive care from multidisciplinary teams",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "To facilitate GDMT implementation and reduce rehospitalization"
+      },
+      {
+        "recommendation": "Thiazolidinediones should not be used in patients with LVEF <50%",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Class III: Harm - increases HF risk including hospitalizations"
+      },
+      {
+        "recommendation": "Exercise training is recommended for patients with HF who are able to participate to improve functional status, exercise performance, and QOL",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Safe and beneficial in stable HFrEF and HFpEF patients"
+      },
+      {
+        "recommendation": "In patients with HF who have fluid retention, diuretics are recommended to relieve congestion, improve symptoms, and prevent worsening HF",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Should be combined with other GDMT, not used in isolation"
+      },
+      {
+        "recommendation": "In patients with HFrEF and NYHA class II to III symptoms, the use of ARNi is recommended to reduce morbidity and mortality",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Preferred over ACEi when feasible"
+      },
+      {
+        "recommendation": "In patients with HFrEF, use of 1 of the 3 beta blockers proven to reduce mortality (bisoprolol, carvedilol, sustained-release metoprolol succinate) is recommended",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Should be prescribed unless contraindicated or not tolerated"
+      },
+      {
+        "recommendation": "Use bisoprolol, carvedilol, or sustained-release metoprolol succinate to reduce mortality and hospitalizations in HFrEF",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 1A recommendation"
+      },
+      {
+        "recommendation": "MRA (spironolactone or eplerenone) recommended for NYHA class II-IV HFrEF if eGFR >30 and K+ <5.0",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Requires careful monitoring"
+      },
+      {
+        "recommendation": "SGLT2i recommended to reduce HF hospitalization and CV mortality regardless of diabetes status",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "For symptomatic chronic HFrEF"
+      },
+      {
+        "recommendation": "Hydralazine-isosorbide dinitrate for African American patients with NYHA III-IV on optimal therapy",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Race-specific recommendation"
+      },
+      {
+        "recommendation": "Discontinue MRA if serum potassium cannot be maintained <5.5 mEq/L",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Harm recommendation"
+      },
+      {
+        "recommendation": "Titrate GDMT medications to target doses achieved in clinical trials to reduce cardiovascular mortality and HF hospitalizations",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Unless not well tolerated"
+      },
+      {
+        "recommendation": "Dihydropyridine calcium channel-blocking drugs are not recommended for HFrEF treatment",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 3: No Benefit recommendation"
+      },
+      {
+        "recommendation": "Nondihydropyridine calcium channel-blocking drugs are not recommended",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Class 3: Harm recommendation"
+      },
+      {
+        "recommendation": "NSAIDs should be avoided or withdrawn when possible as they worsen HF symptoms",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "Class 3: Harm recommendation"
+      },
+      {
+        "recommendation": "Ivabradine can be beneficial to reduce HF hospitalizations and cardiovascular death in symptomatic stable chronic HFrEF patients",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "For patients on maximum tolerated beta-blocker with HR ≥70 bpm"
+      },
+      {
+        "recommendation": "Digoxin may be considered to decrease HF hospitalizations in symptomatic HFrEF patients despite GDMT",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "No mortality benefit, use with caution"
+      },
+      {
+        "recommendation": "Vericiguat may be considered in high-risk HFrEF patients with recent worsening on GDMT",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Reduces HF hospitalization and CV death by 10%"
+      },
+      {
+        "recommendation": "ICD therapy recommended for primary prevention in patients with LVEF ≤35% and NYHA II-III on GDMT",
+        "strength": "Strong",
+        "evidence_level": "A",
+        "notes": "Requires >1 year life expectancy"
+      },
+      {
+        "recommendation": "CRT indicated for patients with LVEF ≤35%, sinus rhythm, LBBB with QRS ≥150ms, NYHA II-IV on GDMT",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Reduces mortality, hospitalizations, improves symptoms and QOL"
+      },
+      {
+        "recommendation": "Surgical revascularization plus GDMT beneficial for selected HFrEF patients with suitable coronary anatomy",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Improves symptoms, CV hospitalizations, and long-term mortality"
+      },
+      {
+        "recommendation": "Surgical revascularization plus GDMT is beneficial in selected patients with HF, reduced EF (EF≤35%), and suitable coronary anatomy to improve symptoms, cardiovascular hospitalizations, and long-term all-cause mortality",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "STICH trial showed 10-year benefit"
+      },
+      {
+        "recommendation": "VHD should be managed in a multidisciplinary manner in accordance with clinical practice guidelines",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Prevents worsening HF and adverse outcomes"
+      },
+      {
+        "recommendation": "Optimization of GDMT is recommended before any intervention for secondary MR related to LV dysfunction",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "Can improve MR and obviate need for intervention"
+      },
+      {
+        "recommendation": "SGLT2i can be beneficial in decreasing HF hospitalizations and cardiovascular mortality in HFmrEF",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "EMPEROR-Preserved trial data"
+      },
+      {
+        "recommendation": "GDMT should be continued in patients with HFimpEF to prevent relapse of HF and LV dysfunction",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "40% relapse rate within 6 months if withdrawn"
+      },
+      {
+        "recommendation": "Patients with HFpEF and hypertension should have medication titrated to attain blood pressure targets",
+        "strength": "Strong",
+        "evidence_level": "C-LD",
+        "notes": "Prevents morbidity"
+      },
+      {
+        "recommendation": "SGLT2 inhibitors recommended in patients with HFpEF to reduce HF hospitalizations and cardiovascular death",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "21% reduction in primary composite endpoint, 29% reduction in HF hospitalization"
+      },
+      {
+        "recommendation": "MRA can be beneficial in selected patients with HFpEF to reduce HF hospitalizations",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Careful monitoring of potassium and renal function required"
+      },
+      {
+        "recommendation": "ARB may be considered in patients with HFpEF to reduce HF hospitalizations",
+        "strength": "Conditional",
+        "evidence_level": "B-R",
+        "notes": "Borderline statistical significance in trials"
+      },
+      {
+        "recommendation": "Screening for cardiac amyloidosis with serum/urine monoclonal light chains and immunofixation electrophoresis",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "In patients with clinical suspicion"
+      },
+      {
+        "recommendation": "Bone scintigraphy for transthyretin cardiac amyloidosis diagnosis",
+        "strength": "Strong",
+        "evidence_level": "B-NR",
+        "notes": "In patients without evidence of monoclonal light chains"
+      },
+      {
+        "recommendation": "Tafamidis for wild-type or variant transthyretin cardiac amyloidosis with NYHA Class I-III symptoms",
+        "strength": "Strong",
+        "evidence_level": "B-R",
+        "notes": "Reduces cardiovascular morbidity and mortality but low economic value"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "SGLT2 inhibitors",
+        "dose": "Not specified in excerpt",
+        "indication": "HFrEF, HFmrEF, HFpEF",
+        "class": "Sodium-glucose cotransporter-2 inhibitors"
+      },
+      {
+        "drug": "ACE inhibitors",
+        "dose": "Not specified in excerpt",
+        "indication": "HFrEF, HFmrEF",
+        "class": "Renin-angiotensin system inhibition"
+      },
+      {
+        "drug": "ARBs",
+        "dose": "Not specified in excerpt",
+        "indication": "HFrEF, HFmrEF, HFpEF",
+        "class": "Angiotensin receptor blockers"
+      },
+      {
+        "drug": "ARNi",
+        "dose": "Not specified in excerpt",
+        "indication": "HFrEF, HFmrEF, HFpEF",
+        "class": "Angiotensin receptor neprilysin inhibitor"
+      },
+      {
+        "drug": "Beta blockers",
+        "dose": "Not specified in excerpt",
+        "indication": "HFrEF, HFmrEF",
+        "class": "Beta-adrenergic blockers"
+      },
+      {
+        "drug": "MRAs",
+        "dose": "Not specified in excerpt",
+        "indication": "HFrEF, HFmrEF, HFpEF",
+        "class": "Mineralocorticoid receptor antagonists"
+      },
+      {
+        "drug": "ARNi (sacubitril/valsartan)",
+        "dose": "Not specified in extract",
+        "indication": "HFrEF management",
+        "class": "Angiotensin receptor-neprilysin inhibitors"
+      },
+      {
+        "drug": "MRA",
+        "dose": "Not specified in extract",
+        "indication": "Heart failure management",
+        "class": "Mineralocorticoid receptor antagonists"
+      },
+      {
+        "drug": "Diuretics",
+        "dose": "Variable, titrated to clinical congestion",
+        "indication": "Clinical congestion management",
+        "class": "Diuretic"
+      },
+      {
+        "drug": "Antihypertensive medications",
+        "dose": "Not specified",
+        "indication": "Component of H2FPEF scoring",
+        "class": "Antihypertensive"
+      },
+      {
+        "drug": "agalsidase beta",
+        "dose": "Not specified",
+        "indication": "Symptomatic Fabry's cardiomyopathy",
+        "class": "Enzyme replacement therapy"
+      },
+      {
+        "drug": "migalastat",
+        "dose": "Not specified",
+        "indication": "Fabry's cardiomyopathy",
+        "class": "Pharmacological chaperone"
+      },
+      {
+        "drug": "ARB",
+        "dose": "Not specified",
+        "indication": "Recent MI with LVEF ≤40% if ACE inhibitor intolerant",
+        "class": "RAAS inhibitor"
+      },
+      {
+        "drug": "Statins",
+        "dose": "Not specified",
+        "indication": "Recent or remote MI/ACS for HF prevention",
+        "class": "HMG-CoA reductase inhibitor"
+      },
+      {
+        "drug": "Evidence-based beta-blockers",
+        "dose": "Not specified",
+        "indication": "Recent/remote MI or ACS with LVEF ≤40%",
+        "class": "Beta-blockers"
+      },
+      {
+        "drug": "Sacubitril-valsartan (ARNi)",
+        "dose": "200 mg twice daily",
+        "indication": "HFrEF NYHA class II-III",
+        "class": "ARNi"
+      },
+      {
+        "drug": "Furosemide",
+        "dose": "20-40 mg once or twice daily, max 600 mg daily",
+        "indication": "Fluid retention/congestion",
+        "class": "Loop diuretic"
+      },
+      {
+        "drug": "Bisoprolol",
+        "dose": "Not specified",
+        "indication": "HFrEF",
+        "class": "Beta blocker"
+      },
+      {
+        "drug": "Carvedilol",
+        "dose": "Not specified",
+        "indication": "HFrEF",
+        "class": "Beta blocker"
+      },
+      {
+        "drug": "Metoprolol succinate (sustained-release)",
+        "dose": "Not specified",
+        "indication": "HFrEF",
+        "class": "Beta blocker"
+      },
+      {
+        "drug": "Metoprolol succinate",
+        "dose": "Target doses from clinical trials",
+        "indication": "HFrEF mortality reduction",
+        "class": "Beta-blocker"
+      },
+      {
+        "drug": "Spironolactone",
+        "dose": "25 mg daily, increase to 50 mg",
+        "indication": "HFrEF NYHA II-IV",
+        "class": "MRA"
+      },
+      {
+        "drug": "Eplerenone",
+        "dose": "25 mg daily, increase to 50 mg",
+        "indication": "HFrEF NYHA II-IV",
+        "class": "MRA"
+      },
+      {
+        "drug": "Dapagliflozin",
+        "dose": "Per trial protocols",
+        "indication": "Symptomatic chronic HFrEF",
+        "class": "SGLT2 inhibitor"
+      },
+      {
+        "drug": "Empagliflozin",
+        "dose": "Per trial protocols",
+        "indication": "Symptomatic chronic HFrEF",
+        "class": "SGLT2 inhibitor"
+      },
+      {
+        "drug": "Patiromer",
+        "dose": "Variable",
+        "indication": "Hyperkalemia in patients receiving RAASi",
+        "class": "Potassium binder"
+      },
+      {
+        "drug": "Sodium zirconium cyclosilicate (SZC)",
+        "dose": "Variable",
+        "indication": "Hyperkalemia in patients receiving RAASi",
+        "class": "Potassium binder"
+      },
+      {
+        "drug": "Ivabradine",
+        "dose": "5 mg twice daily (initial), 7.5 mg twice daily (target)",
+        "indication": "Heart rate reduction in HFrEF with HR ≥70 bpm",
+        "class": "If channel inhibitor"
+      },
+      {
+        "drug": "Digoxin",
+        "dose": "0.125-0.25 mg daily",
+        "indication": "Symptomatic HFrEF despite GDMT to decrease HF hospitalizations",
+        "class": "Cardiac glycoside"
+      },
+      {
+        "drug": "Vericiguat",
+        "dose": "Not specified in document",
+        "indication": "High-risk HFrEF patients with recent HF worsening on GDMT",
+        "class": "Soluble guanylyl cyclase stimulator"
+      },
+      {
+        "drug": "Sacubitril-valsartan",
+        "dose": "Not specified",
+        "indication": "HFmrEF patients with LVEF 45-57%",
+        "class": "ARNi"
+      },
+      {
+        "drug": "ACE inhibitors/ARBs",
+        "dose": "Not specified",
+        "indication": "HFmrEF and selected HFpEF patients",
+        "class": "RAAS inhibitor"
+      },
+      {
+        "drug": "Candesartan",
+        "dose": "Not specified",
+        "indication": "HFpEF with LVEF >40%",
+        "class": "Angiotensin receptor blocker"
+      },
+      {
+        "drug": "Tafamidis",
+        "dose": "80mg daily (4 x 20mg capsules) or 61mg daily",
+        "indication": "Wild-type or variant transthyretin cardiac amyloidosis",
+        "class": "Transthyretin tetramer stabilizer"
+      }
+    ],
+    "red_flags": [
+      "Cardiogenic shock",
+      "Advanced heart failure requiring specialty referral",
+      "Cardiac amyloidosis requiring specialized evaluation",
+      "Marked HF symptoms that interfere with daily life despite optimal GDMT",
+      "Recurrent hospitalizations despite optimized treatment",
+      "Evidence of cardiogenic shock",
+      "Acute decompensated heart failure",
+      "Signs of advanced heart failure (Stage D)",
+      "Advanced HF clinical factors identified through history and physical examination",
+      "Evidence of specific causes requiring disease-specific therapy (amyloid heart disease, sarcoidosis, hemochromatosis)",
+      "Concurrent illness (ongoing myocardial ischemia, pulmonary emboli, systemic infection)",
+      "Initiation of potentially detrimental medications (NSAIDs)",
+      "Chronic RV pacing complications",
+      "Nonadherence to medication or dietary regimen",
+      "Rapidly progressive clinical HF or worsening ventricular dysfunction despite appropriate medical treatment",
+      "Pathogenic variants associated with increased risk of sudden death",
+      "Desmosomal cardiac disease requiring exercise restriction",
+      "Acute cardiac rejection after heart transplantation",
+      "Persistent or worsening symptoms with uncertain hemodynamics",
+      "Cardiogenic shock or systemic hypoperfusion",
+      "Rapidly progressive clinical HF",
+      "Worsening ventricular dysfunction despite appropriate medical treatment",
+      "Suspected acute cardiac rejection after heart transplant",
+      "Suspected myocardial infiltrative processes",
+      "Unexplained rapidly progressive symptoms",
+      "NYHA Class IV symptoms with inability to carry out physical activity",
+      "Symptoms at rest",
+      "Patients with LVEF <50% on thiazolidinediones - increases HF hospitalization risk",
+      "Use of nondihydropyridine calcium channel blockers in patients with LVEF <50% - negative inotropic effects may be harmful",
+      "Depression, social isolation, frailty, and low health literacy as risk factors for poor self-care",
+      "History of angioedema with ACEi or ARNi",
+      "Symptomatic hypotension",
+      "Significant renal impairment or perfusion issues",
+      "Serum potassium >5.0 mEq/L",
+      "Diuretic resistance despite appropriate dosing",
+      "Serum potassium ≥5.5 mEq/L",
+      "eGFR ≤30 mL/min/1.73m²",
+      "History of angioedema",
+      "Euglycemic ketoacidosis with SGLT2i",
+      "Life-threatening hyperkalemia",
+      "Clinical deterioration with abrupt beta-blocker withdrawal",
+      "Major bleeding with anticoagulation therapy",
+      "Serum digoxin concentration ≥1.2 ng/mL",
+      "Hypomagnesemia with patiromer use",
+      "Edema with sodium zirconium cyclosilicate use",
+      "Worsening HF symptoms with thiazolidinediones or DPP-4 inhibitors",
+      "Proarrhythmic effects with class IC antiarrhythmics",
+      "Digoxin serum concentration ≥1.2 ng/mL (increased mortality risk)",
+      "Symptomatic hypotension with vericiguat",
+      "Syncope with vericiguat",
+      "Clinical worsening after digoxin withdrawal",
+      "NT-proBNP >5314 pg/mL may indicate lack of vericiguat benefit",
+      "Persistent severe secondary MR despite GDMT",
+      "Intractable HF with large thrombus",
+      "Persistent arrhythmias from well-defined aneurysm or scar",
+      "Refractory tricuspid regurgitation",
+      "Symptomatic severe aortic stenosis",
+      "LV wall thickness ≥14mm with fatigue, dyspnea, or edema",
+      "Discordance between wall thickness on echo and QRS voltage on ECG",
+      "Carpal tunnel syndrome with HFpEF",
+      "Spinal stenosis with HFpEF",
+      "Autonomic or sensory polyneuropathy with HFpEF",
+      "Hyperkalemia with MRA therapy",
+      "Worsening renal function with MRA therapy",
+      "NYHA Class IV symptoms",
+      "End-organ dysfunction",
+      "Critical cardiac dysfunction requiring escalating inotropic support"
+    ],
+    "follow_up": "Serial evaluation recommended with ongoing assessment of GDMT optimization, device therapy consideration, and monitoring for disease progression across heart failure stages",
+    "escalation_path": "Patients with advanced HF who wish to prolong survival should be referred to a team specializing in HF for review of HF management, assessment of suitability for advanced HF therapies, and palliative care coordination",
+    "_chunked_extraction": true,
+    "_chunks_merged": 12
+  },
+  "metadata": {
+    "run_id": "034a1633",
+    "extracted_at": "2026-03-04T01:11:51.899236Z",
+    "engine_version": "guideline_extractor_v2.3",
+    "modules_activated": [
+      "disease_definition",
+      "diagnostic_thresholds",
+      "risk_stratification",
+      "escalation_ladder",
+      "medication_management",
+      "monitoring_schedule"
+    ],
+    "validation_passed": true,
+    "validation_warnings": [],
+    "raw_text_chars": 771056
+  }
+}
