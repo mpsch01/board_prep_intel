@@ -1,0 +1,887 @@
+Dr. Firnhaber is a professor in the Department of Family Medicine at the Brody School of Medicine, where he also serves as Vice Chair for Academic Affairs and Chief Parent, meaning Residency Program Director.
+
+Jonathon, good afternoon and thanks for being here, sir, it's a pleasure.
+
+Thank you so much.
+
+All right, there's the disclosure statement.
+
+If you wanna read the learning objectives, please do so.
+
+All right, first things first, we have a lot to cover.
+
+ACS, all of acute coronary syndrome and then hyperlipidemia all bundled into one.
+
+So first things first, acute coronary syndrome and like Dr. Weiss Miller mentioned, I'm a residency program director.
+
+I'll mention some of the things that I try and coach our residents to not do.
+
+One is we've tried to get away from, we admitted to rule out MI, no, we evaluate for acute coronary syndrome.
+
+There's other things that fall under ACS besides just an MI.
+
+So ACS is really three things under the umbrella.
+
+Number one is unstable angina, number two NSTEMI or non-ST elevation MI.
+
+And number three is ST elevation MI.
+
+And really, when we admit someone who has some vague symptom between their chin and their belly button, ideally with, you know, all the, you know, classic symptoms in the Levine sign, remember the flexed fist or the clenched fist over the chest.
+
+Then we want to evaluate for acute coronary syndrome.
+
+Typically, it is, well it's always a supply demand mismatch.
+
+Typically it's a reduced supply.
+
+You've got a vessel that got occluded, therefore a supply has decreased.
+
+But you can also see increased demand.
+
+For example, take someone who had a 50% stenosis in a coronary artery, everything is fine if they can slowly walk through Walmart and do just dandy until they develop atrial fibrillation or a flutter with two to one conduction, and suddenly they've got a heart rate of 140.
+
+And that 50% stenosis, which was not flow limiting at a heart rate of 95, letting them walk through Walmart, is now flow limiting with a heart rate of 140.
+
+The lesion didn't change, the demand changed, and you have a increased demand.
+
+In essence, a supply demand mismatch.
+
+The issue is not the vessel, the issue was increased demand.
+
+So usually it's a supply issue, you know, a plaque ruptures, and most commonly that's an occlusive thrombus on top of a disrupted plaque.
+
+The difficult thing though is that little bullet point there, nearly 50% of plaque ruptures occur at sites that have less than 50% narrowing.
+
+Think about that for just a minute.
+
+If you do exercise stress tests, you put people on the treadmill, you exercise them, you're looking for 80 to 90% stenosis.
+
+Those are the ones that are gonna cause angina.
+
+50% stenosis doesn't cause angina until either a little bit occludes or it a lot occludes, when the plaque ruptures, you have a thrombus that now acutely closes that vessel and now you've got an entirely closed vessel.
+
+The problem is that the 50% lesions are not the ones that are easy to detect, but they're also the most vulnerable lesions.
+
+If you think about the life history of atherosclerotic plaque, it starts off with a fatty streak and then you get inflammation.
+
+Remember the lipid related macrophages, which are foam cells, you end up getting a more of a more inflammatory response, at that point, there's still a fairly thin fibrous cap.
+
+So the lesion is inflammatory and unstable.
+
+As that lesion progresses, it becomes less inflammatory, more calcified, more stable, and it has a thicker fibrous cap.
+
+So the progressive occlusion of the vessel leads to more angina and people are more symptomatic from an angina standpoint.
+
+But the plaque itself is actually physiologically more stable and less likely to rupture.
+
+So differentiate in your mind the 50% stenosis.
+
+The smaller narrowing of the vessel are the ones that are more likely to rupture, more likely to cause acute coronary syndrome.
+
+The 80, 90% stenosis are the ones that are more likely to cause angina, but they're more stable lesions.
+
+Other potential etiologies.
+
+You can see arterial spasm on top of a plaque.
+
+Again, a 50% lesion with cocaine on top of it now becomes a 95% lesion and then it becomes occlusive.
+
+You can't even see normal coronary arteries that will spasm, arterial inflammation.
+
+Kawasaki being one of the prototypes there.
+
+And again, cocaine is a common trigger for a coronary spasm.
+
+Remember the nitroglycerin calcium channel blockers are the drugs of choice.
+
+We also use, interestingly enough, benzodiazepines for those of you that don't do a lot of work in the ED, taking care of people who inhale cocaine, then coming into my chest hurts.
+
+So well, stop doing the cocaine please.
+
+Acute coronary syndrome, so one stable angina and NSTEMI very closely related.
+
+Clinically you cannot tell the difference.
+
+Looking at the patient, listening to the history, looking at the EKG, the only differentiating factor is basically ischemia that is significant enough to cause myocardial necrosis equals NSTEMI, non-ST elevation MI.
+
+So that is the same symptoms except with enzymes.
+
+Same symptoms with no troponin leak, no enzymes equals unstable angina.
+
+That is the only differentiating factor.
+
+ST elevation MI, hopefully that's one that you can pick up fairly quickly on an EKG.
+
+My recommendation to our residents and I guess for everybody is be comfortable enough reading EKGs that within about 10 seconds you can take an EKG and decide is this normal enough that I can set it aside, do my thorough interpretation later or is this abnormal enough that has now become a decision point for me and I have to do something now based on this EKG.
+
+ST elevation MI, STEMI should be in that category of let's do something now.
+
+This is an important one.
+
+So I said that the differentiating factor between unstable angina and NSTEMI is biomarkers, enzymes, intracellular enzymes that are released when you have myocardial necrosis.
+
+So when muscle cells break apart, they release their little guts and their little guts have troponin among other things in them.
+
+We don't use CK and we don't use myoglobin often anymore.
+
+Troponin is really the biomarker of choice.
+
+Depending on your hospital, you may have troponin I, troponin T, it doesn't matter and they're both considered equivalent.
+
+The plus and minus troponin is takes about three to six hours to be released.
+
+So if you don't mind me pointing at this one, if you look at the very, very beginning of that graph, there is a little bit of lag time between the onset of myocardial necrosis and when troponin actually shows up in the serum and you can detect it.
+
+Which is why when someone is coming to the hospital with chest pain of recent start and they about an hour ago develop chest pain, you have to sit and watch 'em for a little while.
+
+You have to get serial troponins because you may be so early in that process that you're not gonna see the troponin yet.
+
+A plus and minus is that troponin stays around for a long time.
+
+Depending on the height of the troponin elevation, it may take up to two weeks before a troponin drops completely to zero.
+
+That becomes helpful, if someone says, a week ago I had symptoms and what happened a week ago, if they had an MI, their troponin is still gonna be up and you may still be able to detect that.
+
+The minus is if you're in this zone right over here a week or 10 days out, someone had an event, they're on the downside of their troponin release and now they come back in, they say, I've got this new chest pain.
+
+It feels just like it did a week ago.
+
+You check troponin, it's still up and you don't know if that because of the index event or are they're having another event in a secondary manner.
+
+So that's actually one of the few cases where CK-MB and myoglobin can be helpful.
+
+CK-MB is cardiac muscle specific, myoglobin is not.
+
+So if someone goes and runs a race, you know they run a marathon and you check their myoglobin, it's gonna be elevated.
+
+They're gonna tear apart some muscle from some physical event.
+
+You don't know if that's cardiac or whether that's skeletal.
+
+So CK is the one that is specifically cardiac.
+
+All right, so let's move on to a question.
+
+Pull out your devices.
+
+We've got a 52-year-old man who presents within 40, excuse me, with 45 minutes of squeezing substernal chest pressure, radiating to his left arm.
+
+You might even get the Levine sign.
+
+EKG from a physical two months ago is normal and this is his EKG.
+
+Take a moment, maybe 10 seconds to glance over that.
+
+See what you think, question is, what are you looking at basically?
+
+All right, so history and EKG are most consistent with which the following is this, A, esophageal spasm, B, STEMI, ST elevation MI, C, NSTEMI, non-ST elevation MI or was this pericarditis?
+
+So most are going with NSTEMI, esophageal spasm, I don't know that there are actually EKG findings that you would see with that.
+
+ST elevation MI, there were not ST elevations.
+
+So that crossed that one off the list, pericarditis, I will show you an example of in a little bit.
+
+So what was seen on this EKG in leads two and AVF, inferior leads some ST segment depression.
+
+Remember ST depression equals ischemia.
+
+There's also in the lateral precordia leads V five and V six some ST depression as well.
+
+One important thing when you're either doing an exercise stress test or looking at an EKG that shows ST segment depression and you're tempted to say, because I see ST depression in the inferior leads or in the lateral corneal leads, that should somehow correspond to either inferior or lateral ischemia.
+
+It doesn't correlate at least well, you can't necessarily look at the ischemic changes here and say with certainty or with a solid conclusion that those are the vessels, that's the area of heart that is truly ischemic.
+
+The repolarization abnormalities, the ST segment depression doesn't point well to the site of ischemia.
+
+You might say it's in those leads in the inferior and the lateral precordial leads, but it doesn't necessarily point to the vessel that is the culprit.
+
+All right, so next question.
+
+Now we've got a 72-year-old with NSTEMI who presents to your rural emergency room with onset of pain two hours ago.
+
+What is an appropriate immediate intervention?
+
+So would you give some metoprolol and we're assuming that it's got history now, we've got a positive troponin.
+
+Would you fibrinolyse within two hours, give an enteric-coated aspirin, 81 milligrams or a chewable aspirin?
+
+All right, excellent, most everyone is going with aspirin.
+
+So the reason for the enteric coated not being a good choice is you want the aspirin to work quickly.
+
+Enteric coated aspirin basically delays absorption till it gets down past the stomach and you want it onboard as quickly as possible.
+
+So chew that little rascal up.
+
+So the 2014 guidelines, which seem dated, I mean they're now 10 years old but nothing much has changed.
+
+But these are the most current NSTEMI acute coronary syndrome guidelines.
+
+Basically separate things out to an ischemia guided strategy and an early invasive strategy.
+
+And you'll notice that they're exactly the same until you get down to group four, which basically says you give a two B, three A receptor blocker, which is another anti-platelet drug, just a different mechanism and they're going to the cath lab.
+
+That is the only difference.
+
+But the commonalities in all of them, always give aspirin, non-enteric coated, chewable, even if it's not the good tasting, you know the orange one, you can still chew up aspirin, P2Y12 inhibitor clopidogrel is most often used.
+
+Remember that one has to be loaded.
+
+And then anticoagulation with heparin, either unfractionated or low molecular weight, in many cases someone's going quickly to the cath lab.
+
+We end up using unfractionated heparin 'cause you can turn it on and off more quickly.
+
+But that's always the case.
+
+Whether you're doing a less invasive or a more invasive strategy, those three are always on board.
+
+And then the question is, do they go to the cath lab?
+
+And thankfully it's not us typically making that decision.
+
+You don't call your consultant cardiologist and say hi, I want you to take this person to the cath lab.
+
+You discuss the patient and they make the decision.
+
+So when does the invasive strategy win out?
+
+Meaning when are you pushing or you know, when is the cardiologist thinking that they need to go to the cath lab more quickly?
+
+Don't memorize these please.
+
+I'm just gonna run through them quickly.
+
+They're kind of common sense.
+
+Someone's not responding well to treatment.
+
+You've done everything you can and they still have crushing sternal chest pain.
+
+They've had previous intervention and they're not amenable to a repeat PCI.
+
+If they've got heart failure, serious arrhythmias, significant LV dysfunction, which you have to know already.
+
+They've got big anterior or multiple perfusion defects.
+
+You might know that from a nuclear stress, high risk TIMI or GRACE score.
+
+Other ways to categorize or classify someone in terms of their risk of bad things happening or markedly elevated troponin, which there's no actual numbers to say what is markedly elevated.
+
+A troponin of two or three doesn't really count when you're getting numbers in the fifties and sixties, you've got someone's attention.
+
+So there's not a question involved with this, but just so we're clear on what an ST elevation MI looks like.
+
+Lemme do this side here.
+
+Hopefully the 10 seconds would've been enough to glance over at this and say yikes, V two, V three, V four, V five, V six looks okay but big antreceptal MI, even stretching out with V five.
+
+You'd suggest that that's coming out to the lateral wall.
+
+So in this case gonna be LAD territory.
+
+If you're getting out to the lateral wall thinking circumflex involved as well.
+
+Concern this could actually be a left main lesion.
+
+This is a bad MI.
+
+So ST segment elevation, you may see with ST elevation MI we don't in this particular EKG, but you may see some corresponding or some collateral ST segment depression.
+
+What are termed reciprocal changes.
+
+The opposite of up, the opposite of ST elevation is ST depression.
+
+Just as with ischemia, the ST depression doesn't necessarily imply ischemia in that particular area.
+
+It is simply termed a reciprocal change that goes along with the ST elevation.
+
+So ST elevation occurs almost immediately post plaque rupture, actually had an individual we were in the ED admitting with our residency team and this fellow got brought in with chest pain, was talking with us, kind of animated.
+
+We're going along and getting his whole history and as we're talking he's becoming less animated, looking more ashen, starting to look a little diaphoretic.
+
+The residents, they're talking with him, I'm standing there watching the monitors, his ST segments are starting to push their way up.
+
+It's like, you know what, we're not gonna be the admitting service here anymore.
+
+We called a code STEMI and cardiology took that one.
+
+But the ST segment elevation happens, as plaque rupture occurs, it can be very quick.
+
+As ST segments come back down to baseline, that typically suggests that you have reperfusion.
+
+It's a positive sign.
+
+Persistent elevation, even though troponins peaked and heading its way back down, persistent ST elevation makes you worry about a ventricular aneurysm.
+
+Q waves are the kinda the end point of an ST elevation MI.
+
+If you think of a Q wave being, I was gonna say a red flag, but it's actually more like a black flag that says here's an area of dead muscle 'cause dead muscle doesn't make electricity.
+
+Q waves are basically an indication of completed myocardial necrosis with now non electrically active muscle and they are permanent.
+
+Importantly also, lemme back up a quick second.
+
+Remember that you can't date an ST elevation MI based on Q waves unless you have sequential EKGs and say, you know, two weeks ago it was normal, there were not Q waves.
+
+Now something happened and we have Q waves now two weeks later, okay you had that luxury of the previous EKG which was okay, but you can't look at a single EKG and say oh this is a recent MI or non recent MI, it is Q waves are Q waves.
+
+So if you ever worry, you know, do people just sound like radiologists and hedge in a bunch of stuff?
+
+You know, age undetermined, it's 'cause you can't determine the age.
+
+I had mentioned a couple, you know times which arteries and which portions of the EKG are involved.
+
+This is just a handy diagram, right coronary artery gets obviously the right side of the heart also swings around and gets the inferior wall.
+
+So that's leads two three and AVF, left main is fairly short.
+
+First takeoff of the left main is the circumflex which goes out to the lateral wall.
+
+This typically leads V five, V six, LAD hits the anterior wall and that's leads V one through V four.
+
+Probably all you need to know about coronary vasculature.
+
+So management of STEMI, reperfusion is the key and as quickly as possible is always the answer.
+
+Percutaneous coronary intervention is preferred.
+
+Meaning if you are standing here, you've got a cath lab right next to you over here and you've got a syringe of thrombolytic right here, cath lab is always gonna win.
+
+So the thrombolytic is when you don't have a good option to get someone to the cath lab, if there's some reason that that's not gonna happen, then you thrombolyse.
+
+However, if you've got the option in front of you within a reasonable amount of time, patient goes to the cath lab.
+
+There are, and it's really complicated to me because there's this whole algorithm of if your patient is at a PCI versus non PCI capable hospital, time from onset of symptoms, time till transport.
+
+There's this whole algorithm that lets you decide do you keep them at your non PCI capable hospital and thrombolyse or do you take time to transport to a PCI capable hospital?
+
+Again, the fortunate thing is that we're not typically making this decision ourselves.
+
+We're in consultation with one of our cardiology colleagues saying here's where we are, here's the onset of symptoms, which way you wanna go.
+
+We can thrombolyse here, we can send them, your choice.
+
+So what happens in the cath lab, stent in most cases and early, if you look at the progression of invasive interventional cardiology, it went from balloon angioplasty, which is kind of on the left there.
+
+It's basically taking a balloon, squeezing the balloon open and kind of expanding that vessel, then slowly deflating it with some crossed fingers hoping that the vessel stays open.
+
+Next step is a bare metal stent, which is doing that same procedure except having a wire scaffolding that now instead of just luck and prayers that's holding that vessel open, you've got a wire scaffold that is holding everything in place.
+
+The plus and the minus of the bare metal stent is sort of like when you get a splinter in your finger, you've got a nidus for clot formation.
+
+A metal scaffold inside a vessel is an inherently thrombogenic, clot forming presence.
+
+So the reason that we end up using dual antiplatelet therapy for bare metal stents is because you've got this clot formation potential in the middle of that vessel and you don't want it to clot off.
+
+What happens over time, and for a bare metal stent, typically over the course of one to six months, that bare metal stent, that metal scaffolding now becomes endothelialized, covered with a thin layer of endothelium that now takes away the visible metal, it's incorporated into the vessel wall and so you don't have a nidus for clot formation anymore.
+
+The problem there is that because that stent deployment is an inherently inflammatory process, as is the acute coronary symptom that likely triggered the stent to be placed, that inflammatory process can trigger endothelialization to progress more rapidly.
+
+And you end up, instead of having instant thrombosis clot formation, you end up with instant stenosis, which is essentially overly exuberant endothelialization.
+
+So now you've got this vessel and now there's a bare metal stent or a stent embedded in the vessel wall and you get instead of a little endothelium, a lot more endothelium.
+
+So bare metal stents have a greater risk of progression to instant stenosis.
+
+Basically the vessel re-closing.
+
+So that's where drug-eluting stents come in and also pay attention to the spelling.
+
+It's eluting with a T, meaning they leak out drug, eluding with a D is what happens when you steal something and you run from the police.
+
+So what the drug-eluting stent does is it basically delays that endothelialization and it holds it off until there's less inflammation and the vessel is less likely to develop instant stenosis.
+
+But because it stays looking like a bare metal stent longer, there's a longer time that there's metal exposed, longer time that there's the risk for thrombogenesis or clot formation.
+
+So with the drug-eluting stent, we use dual anti antiplatelet therapy longer because it takes longer for that drug to go away and then finally to endothelialyse and no longer be a metal stent.
+
+So what to do with dual antiplatelet therapy?
+
+This is a key point here.
+
+So it depends on what the trigger for the stent deployment or stent implantation was.
+
+If it was kind of like a scheduled stent, someone didn't come in with acute coronary syndrome, they've been having kind of this on and off angina, they end up having an angiogram and by the way they happen to have a vessel that's narrowed enough that they're gonna deploy a stent.
+
+So if that's the case, stable coronary disease, that's where the one in six month, bare metal stent gets one month of dual antiplatelet therapy.
+
+Drug-eluting stent six months, a lower time of drug-eluting, excuse me, of dual antiplatelet therapy than if the same procedure is done in the midst of an ACS situation.
+
+So if there's acute coronary syndrome, it's a higher risk for bad things happening.
+
+Dual antiplatelet therapy is continued on longer up to 12 months.
+
+There are three P2Y12 inhibitors.
+
+Again platelet inhibitors just by a different mechanism.
+
+Everyone's familiar with clopidogrel, brand name Plavix, the handy thing here.
+
+So they go from clopidogrel, which is a prodrug and its metabolism is influenced heavily by 2C19, meaning it can be inhibited and therefore it doesn't get converted from a prodrug to a regular drug, or the active form.
+
+Prasugrel, which is next down is also a prodrug but it's not as easily inhibited.
+
+And then finally, Ticagrelor is not a prodrug.
+
+They also go from top to bottom.
+
+Not only are they alphabetical, which makes it handy, but they go from the least effective to the most effective.
+
+So Ticagrelor is actually the most aggressive antiplatelet drug that there is, Prasugrel's in the middle, clopidogrel's at the least and they're alphabetical at least the generic names are.
+
+So if that helps to organize them, at least it does in my brain.
+
+Who ends up with bypass surgery, left main disease 'cause it's hard to stent the left main coronary artery.
+
+Three vessel disease.
+
+And one of the biggies is patients with diabetes.
+
+Patients with diabetes tend to have rather than a single area of stenosis that you can easily stent or easily bypass, they tend to have more diffuse disease, big long areas of stenosis.
+
+And those patients tend to do better with bypass surgery than they do with PCI.
+
+All right, let's move to another question.
+
+Got a 52-year-old man who's got an acute MI for which he had PCI with placement of two drug-eluting stents.
+
+Echo shows his EF is 35%.
+
+He started on numerous medications at discharge, which one of the following is more useful for symptom control than for improving mortality.
+
+So we've got atorvastatin, lisinopril, metoprolol and nitroglycerin, all right, awesome.
+
+So most you're going with nitroglycerin, which helps people feel better.
+
+Whether or not it saves lives is kind of debatable.
+
+No one's gonna quit using nitroglycerin 'cause people feel better.
+
+These are the four that you have to know, post MI, there are four classes of drugs that improve survival.
+
+ACE inhibitors and ARBs will be the, you know, in there as well beta blocker, statins and an antiplatelet drug aspirin, ideally, I feel like these are the four drugs that if you try to send some patient home from the hospital without an element of each or one of these four classes of drugs, the EHR will lock the hospital doors, ready to discharge, click send, nope, not gonna happen.
+
+Are you sure you don't wanna prescribe all four of these?
+
+I'm positive, locking doors now, patient will not leave.
+
+So those are the four that you have to have.
+
+Those are the four drugs that improve survival post MI.
+
+Again, we talked about dual antiplatelet therapy.
+
+There's a bunch of options that improve symptoms.
+
+Nitroglycerin, calcium channel blockers, digoxin is a tough one and the digoxin pendulum obviously swings back and forth pretty widely over the years.
+
+May improve symptoms, don't necessarily improve survival.
+
+Make sure you can quickly recognize a left bundle branch block, which when I say quickly, it's not always super easy.
+
+The minus is that when you're looking for ST and T wave changes, someone comes to the hospital with a crushing substernal chest pain, you do an EKG, you're looking for ST and T wave changes, depolarization and repolarization abnormalities and then you see a left bundle branch block which has that baseline ST and T wave abnormalities.
+
+It becomes very difficult to know are these changes I'm seeing on the EKG due to the existing left bundle branch block or is there something new that's hidden in there?
+
+There are criteria, there's the Sgarbossa criteria that are used to help differentiate, are these ST and T wave changes that I'm seeing more likely due to and left bundle branch block or more likely due to ischemia.
+
+The minus is that it's really hard to tell and the ED knows this, those rascals, 'cause they'll see someone with a left bundle branch block, it's like nope, they gotta come in.
+
+It's like, but you know there was a 22-year-old who has, you know, this vague chest pain three months ago.
+
+Nope, nope, left bundle branch block, they're coming in 'cause you recognize that you can't read the EKG easily and looking for ischemic changes when there's a left bundle branch block present.
+
+Previously we had been given guidance from American College of Cardiology, American Heart Association that a left bundle branch block was basically an MI equivalent.
+
+And we've kind of, well we speaking on behalf of the American Heart Association have gotten away from that to say an existing left bundle branch block may not necessarily be an ACS equivalent, even a new left bundle branch block.
+
+But still it raises concern.
+
+All right, oh I promised this.
+
+So we've got a 45-year-old man complains of acute sharp chest pain relieved by leaning forward.
+
+On exam, you hear a pericardial friction rub and the EKG will follow.
+
+I hope that you already have the diagnosis in mind.
+
+You know what the EKG is gonna look like, here it is.
+
+I will reassure you that the EKGs that, I mean you've taken the board exam before probably, but the EKGs are usually fairly straightforward.
+
+I've never run into one that I thought was like, oh my gosh, that is so subtle.
+
+How in the world can you call that an example of this?
+
+It is usually diffuse ST segment elevation.
+
+All right, so what is the most appropriate treatment?
+
+We're assuming that you know what the diagnosis is.
+
+What are you gonna do?
+
+It's got nitrates, NSAIDs, beta blockers or glucocorticoids.
+
+Oh wow, you guys are super fast.
+
+So most are going with NSAIDs, awesome.
+
+Usually viral pericarditis, usually viral, sometimes idiopathic.
+
+The classic description is the chest pain is relieved by sitting forward.
+
+It's an inflammatory process.
+
+Therefore we use anti-inflammatory medications.
+
+Indomethacin is the prototype kind of the gold standard here.
+
+It's also the gold standard for GI upset.
+
+So you might consider something other than indomethacin but an NSAID is the drug of choice.
+
+All right, oh we're doing great on time.
+
+Let's move on to hyperlipidemia, shall we?
+
+These are the 2013 cholesterol guidelines.
+
+There is a 2017 update which didn't change these so I'm still keeping it just so we're the same, keeping this here.
+
+Bottom line is what happened is we totally upended how we approached lipids and how we approach hyperlipidemia.
+
+Rather than a total numbers driven approach, it ended up being a risk driven approach.
+
+And so we were given and still have four statin benefit groups and they all make sense when you think about them.
+
+Group one is secondary prevention.
+
+Someone has already existing atherosclerotic cardiovascular disease, we don't even need to do a risk calculation, we don't need to do anything.
+
+We recognize that they've got disease, they're high risk, they need a statin.
+
+Group two, LDL above 190.
+
+That's an untreated LDL basically says this is an individual who has very likely a familial disorder.
+
+They are at high risk for atherosclerotic disease.
+
+They get treated.
+
+Group three and you'll notice the age 40 to 75, which never is meant to imply that we don't use statins in someone under age 40 or that ASCVD risks somehow magically evaporates after age 75.
+
+It just says when we're being very evidence-based, 40 to 75 is where the data is and what to do on the other ends of those age brackets is always a matter of debate.
+
+So age 40 to 75 with diabetes and LDL is less than 190 'cause otherwise they'd fall into group two.
+
+So if you happen to find someone with diabetes who has like a perfect LDL and I guess then you could consider not using a statin.
+
+But that's group three, group four without clinical disease, without diabetes.
+
+So they're not in group one or group three, they're in the right age group.
+
+Their LDL doesn't fall into group two, but you've calculated their estimated tenure risk and it's 7.5% or greater.
+
+Recognize ACC/AHA uses 7.5% as their statin threshold.
+
+Different organizations, I always think of USPSTF being a bit more conservative and they use a threshold of 10%, 10 year risk as their statin threshold.
+
+So the seven and half percent is not like carved in stone.
+
+Each organization may come up with slightly different recommendations.
+
+I purposely made this one look busy because it kind of is.
+
+It's basically saying here are the four groups and based on those four groups, how aggressive do you wanna be with a statin?
+
+The deal is it's not all that confusing 'cause almost everybody's high intensity.
+
+So clinical disease, age under 75, high intensity statin, age over 75, if there is a problem with a statin, you wanna dial back to moderate intensity.
+
+You could do that but it's still high intensity is still preferred.
+
+Group two, familial disorders always high intensity.
+
+Group three, if you happen to find a patient with diabetes who has an estimated ASCVD risk less than 7.5%, fine, moderate intensity, everybody else high intensity.
+
+And group four is moderate to high intensity.
+
+So what I would suggest is if someone falls into one of these four statin benefit groups, high intensity is the default.
+
+And then you're thinking is this someone that I could reasonably dial back to moderate intensity and still be doing them justice?
+
+So there's very few moderate intensity and the high intensity is easy to remember.
+
+It's only two drugs.
+
+So Atorvastatin, Lipitor 40 and 80 milligrams, Rosuvastatin, Crestor 20 milligrams are the only drugs and doses that will reliably decrease LDL by 50% or greater, bunch of stuff in the moderate intensity category and drugs that we're all familiar with.
+
+Excuse me, we've got the ASCVD risk calculator.
+
+This came out in 2013 as well.
+
+You may be familiar that the ACC/AHA is now releasing or has just rolled out a brand new risk calculator.
+
+It's called PREVENT and I honestly forget what the acronym stands for.
+
+It is a huge improvement over the current ASCVD risk calculator.
+
+Things that have changed.
+
+Number one, race was taken out of the equation and basically this risk calculator was validated.
+
+It was developed rather with roughly 25,000 patients, roughly five data sets.
+
+The new prevent calculator is just over 6 million patients and 46 data sets.
+
+So an extraordinarily larger number of people representing a better cross-section of the US and likely of the world.
+
+ASCVD risk calculator has all sorts of criticisms in that it's very narrowly focused on a middle aged white population.
+
+There's some minuses there as well.
+
+The new risk calculator also adds an attempt at social determinants of health and it's interestingly enough, it is based on zip code.
+
+So you don't have to have great knowledge of the patient other than simply where they live.
+
+And their zip code actually is considered a reasonable surrogate for other social determinants of health.
+
+Newest calculator also adds in the option to include data like UACR, urine albumin-creatinine ratio, evidence of chronic kidney disease.
+
+There are a couple other new variables that are dialed in to again improve the ability of the calculator to both detect risk and also better evaluate.
+
+But here's what we have right now and you probably still have this on your phone, which is fine 'cause the new app isn't out yet.
+
+And the couple important things to point out in here, one, total and HDL, you notice that LDL is not there.
+
+LDL has never been on a risk calculator including if you go all the way back to Framingham, these two number one allow you to calculate non HDL, which is actually a better measure of risk than is LDL, plus total in HDL you can do in a non-fasting state and they're still accurate so never have been on there.
+
+Blood pressure, medication use and smoking status.
+
+So when you use the ACC/AHA risk calculator, there're actually four different equations.
+
+One for boys, one for girls, actually it's one for white, one for non-white, one boys, one girls.
+
+And so as you start dialing data in, you kind of shunt down to the correct equation.
+
+Plus and minus, the old risk calculator and risk calculators in general tend to do a very good job at discrimination.
+
+Basically taking the patient in front of you and deciding is this someone who's high risk, intermediate risk, low risk, that works really well.
+
+The calibration, the actual number, meaning if you, you know, dial their numbers in and they come up with an estimated 10 year risk of 19.4%.
+
+Does that mean that out of a hundred people with the exact same numbers, exactly 19.4 in 10 years will have a heart attack or stroke?
+
+No, it probably means that a lower number 'cause this tends to overestimate numerically risk.
+
+So don't get as hung up on the calibration part, the actual numbers, but do recognize that the risk calculator does a nice job in helping with discrimination, separating people into larger categories of high, medium and low risk.
+
+One really key thing to note, a number to take away.
+
+Statins overall decrease cardiovascular risk by about 30%, meaning they decrease outcomes, heart attack and stroke.
+
+Why that matters is that you can apply that number to a population and to an individual.
+
+So you dial someone's risk in and they come up at 30%, put them on a statin, their risk drop from 30% down to 20%, 10% absolute risk reduction, that's impressive.
+
+Put someone in the calculator and they dial in a 3% 10 year risk.
+
+You put them on a stat and they will have the same 30% reduction in risk of heart attack and stroke.
+
+But they go from 3% to 2%, so only a 1% difference.
+
+So more risk at baseline, more to lose equals more to gain with a statin.
+
+The 2018 guidelines really didn't change the core recommendations.
+
+They did add a few things and added a little bit more information on non-statin therapies.
+
+And I'll go over some of that.
+
+Here's one of the things that got added.
+
+You're at evaluating a 56-year-old male with history of hypertension, no prior tobacco use, estimated 10 year ASCVD risk is 8.1%.
+
+Just nudged over that seven and a half threshold, he hesitates to start statin therapy unless it's really necessary.
+
+So which one of the following studies would be most appropriate to refine your evaluation of his risk?
+
+Would you send him for nuclear stress tests, an echo, coronary calcium scoring or straight to the cath lab for you?
+
+All right, most are going coronary calcium scoring.
+
+And I don't know if that's because the other three choices were bad or because that was really what you would've done.
+
+But either way, coronary calcium scoring can be helpful.
+
+There's a whole bunch of things that we can do when we're using a risk calculator that gives us kind of general buckets.
+
+High, medium, low risk, high and low risk people are pretty straightforward.
+
+High risk, treat as high risk, low risk, you're not typically gonna find more information that's gonna push someone from low risk to anything other than low risk.
+
+What to do when you're in the intermediate risk category and you want more information to try and decide is this person perhaps more high risk than I realize or perhaps more low risk?
+
+There's a whole bunch of things and this to me is saying we have to be one clinicians and two, maybe not memorize this list but be aware of all the things on this list to say, when I've got someone sitting in front of me, what is the whole myriad of potential risk factors that I need to have in the back of my mind?
+
+And I don't wanna read them all to you, you can read them all yourself.
+
+But again, these are ones where as we're having the discussion with patients and perhaps as you're taking an exam or again, you know, working in medicine, starting to mentally categorize all these things to say atherosclerotic disease is not just a single entity, it is part of an entire milieu that surrounds a patient.
+
+So we also consider things like lifestyle changes, side effects, cost and patient preference as well.
+
+Wanna make sure those are in there.
+
+Oh, other important thing is these are hard to quantify, right?
+
+So why are not a bunch of these in the risk calculator?
+
+'Cause you can't necessarily give a numeric score to family history.
+
+But we all know, I mean if family history is awful, that should influence your decision as well.
+
+And same thing with all of these.
+
+So the question was asking about coronary calcium testing.
+
+I dunno if you use that much, at least at our institution.
+
+Fairly inexpensive, quick, easy and you get some good data.
+
+Keep in mind a coronary calcium score of zero doesn't imply zero risk.
+
+Even if someone has a CAC score of zero, but they have underlying diabetes or they smoke, you still may not be too excited about writing off their risk.
+
+As a matter of fact, I would argue that if they have diabetes and they smoke, don't even do the coronary calcium scoring, they're already in a high risk category.
+
+So it probably wasn't gonna be helpful.
+
+A number that's up to 99 favors statin says that there's now been not just plaque formation, but progressive plaque formation that led to calcification that is now detected on this study.
+
+Once you hit a hundred, that is a clear indication for a statin.
+
+One super important thing to know about coronary calcium scoring.
+
+I touched on at the very beginning when I was talking about the life cycle of a atherosclerotic plaque.
+
+Remember it's toward the end of that lifecycle that you start seeing plaque stabilization and calcification.
+
+Interestingly enough, statins accelerate that process from a young, young little whipper snapper plaque that is inflammatory, has a thin fibrous cap.
+
+That progression to a more stable, thicker, fibrous cap and more heavily calcified plaque is accelerated by statins.
+
+When we talk about the pleomorphic effect of statins, the anti-inflammatory benefit of the drugs, part of that is decreasing the inflammation of these early plaques and moving it to a more stable plaque.
+
+Why that matters from a coronary calcium standpoint is if someone is already taking a statin, CAC scoring is irrelevant, they're gonna have almost always have coronary calcium.
+
+Plus you're not gonna, if you're deciding should I start a statin or not, they're already on a statin, it's not terribly helpful information.
+
+But CAC scoring is irrelevant or invalid when someone's already on a statin.
+
+Newest question, fasting or not.
+
+Like I mentioned, the total cholesterol and HDL in most risk calculators are valid and accurate in the fasting and non-fasting state.
+
+You're probably seeing progressive push to move from, you've gotta come in fasting for your lipids to, you're here today, let's go ahead and get your blood drawn.
+
+Oh no, I ate breakfast, fine with me.
+
+Let's see what your numbers are.
+
+Oh, but I had, you know, I actually I was at Bojangles this morning.
+
+We'll see what your numbers look like.
+
+Useful information, total and HDL will still be accurate in the non-fasting state, and you can get an idea.
+
+Good heavens, your triglycerides were 800, what did you eat for breakfast?
+
+That is useful information as well.
+
+So it also allows people to not in essence kind of slip past, you know, nope, can't get blood today.
+
+Sorry, sorry, I ate, oh no, great.
+
+We'll get that done right now.
+
+So you can either do that point of care and have information at your fingertips.
+
+Part of the reason that this becomes less of an issue is because we've finally gotten away from the Friedewald equation, which was the equation that we've used for years to estimate LDL, terrible equation.
+
+It was very much, it was actually never meant for clinical use.
+
+It was meant for dog studies.
+
+But as triglycerides approached 400, the LDL estimate became less and less accurate.
+
+And so the Friedewald equation was not a very good equation to use.
+
+We have better equations now that are less triglyceride dependent and give better estimations of LDL in a non-fasting state.
+
+We have a 68-year-old woman with a history of hypertension, type two diabetes, MI, prompted three drug-eluting stents last year.
+
+She takes some pravastatin, 40 milligrams, decidedly moderate intensity, hasn't been able to tolerate higher intensity statin therapy, despite multiple attempts, which one of the following options would be most appropriate to both lower her LDL and decrease her ASCVD risk.
+
+Bless you, so we've got ezetimibe, niacin, evolocumab, if you're not familiar with the dosing, that's correct dosing, and fenofibrate.
+
+Wonderful, most are going with ezetimibe, which is the next choice.
+
+So very high risk individuals, LDL is still above 70.
+
+One of the few times that we actually see an LDL number creeping back into our thought process.
+
+LDL is still above 70.
+
+You want their LDL low, you want them to be down to the ground and they're on maximum tolerated statin.
+
+You can next look at adding ezetimibe, ezetimibe drops LDL by typically another 25 to 30% on top of a statin.
+
+The cool thing there is if someone is only able to tolerate a moderate intensity statin, 40 pravastatin certainly counts.
+
+Addition of ezetimibe basically moves that LDL reduction into a high intensity reduction mode.
+
+So you can take a moderate intensity statin if that's the best they can tolerate, fantastic, ezetimibe on top of that almost always will move that to a high intensity LDL reduction 50% or greater.
+
+And finally, if you're still in that same situation, you've got the highest tolerated statin intensity and ezetimibe and LDL is still above 70.
+
+That's finally where a PCSK9 inhibitor could come in.
+
+If you're familiar with PCSK9 inhibitor, I'm not gonna try and pronounce all that.
+
+Basically the PCSK9 is the enzyme that clears LDL receptors.
+
+The injectable antibodies decrease its activity, therefore prolonging the life of LDL receptors, therefore more efficiently clearing LDL.
+
+There's also inclisiran which is a small interfering RNA molecule that basically inhibits PCSK9 formation.
+
+So PCSK9 focus just a different mechanism.
+
+The statement here, no decrease in CVD mortality with PCSK9 inhibitors just changed.
+
+Finally, there is actually some CV mortality outcome data with this class of drugs.
+
+Honestly, it's not robust, especially if you consider that these drugs decrease LDL by an additional 50% on top of statin.
+
+One would think that the CVD mortality event reduction would be equally robust.
+
+It is not, but there is finally some data saying that they actually do have some CVD mortality reduction.
+
+Omega-3 fatty acids, the only one that despite years and years of trying, the only one that actually has data is icosapent ethyl, brand name VASCEPA.
+
+You can see the numbers there, it does reduce outcomes.
+
+Keep in mind, the one study that brought this drug to market has some methodological concerns and there's still question about the data.
+
+In general, omega-3 fatty acids, useful for lowering triglycerides, not spectacularly useful for lowering CVD risk.
+
+Just the words that we use when we're talking about statin related myopathy, myalgia, myositis, and rhabdomyolysis.
+
+Even with that, we still don't monitor routinely CK and arbitrarily 10 times upper limit of normal is where we stop a statin.
+
+And with that, thank you for your kind attention.
+
+We'll see you in just a bit.
+
+Thank you very much, Dr. Firnhaber.

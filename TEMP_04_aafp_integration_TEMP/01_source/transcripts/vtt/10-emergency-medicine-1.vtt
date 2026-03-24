@@ -1,0 +1,2790 @@
+﻿WEBVTT
+
+1
+00:00:00.346 --> 00:00:02.929
+(gentle music)
+
+2
+00:00:08.040 --> 00:00:10.710
+<v ->I'm gonna go through a series this morning of,</v>
+
+3
+00:00:10.710 --> 00:00:12.690
+quote, emergency medicine lectures.
+
+4
+00:00:12.690 --> 00:00:15.600
+Now, it covers a number of topics
+
+5
+00:00:15.600 --> 00:00:18.600
+that isn't covered elsewhere in the course.
+
+6
+00:00:18.600 --> 00:00:20.040
+First things first,
+
+7
+00:00:20.040 --> 00:00:21.690
+I'm gonna do some just general principles
+
+8
+00:00:21.690 --> 00:00:26.460
+of emergency medicine, and here's my learning principles,
+
+9
+00:00:26.460 --> 00:00:27.960
+and then we'll also talk about stroke.
+
+10
+00:00:27.960 --> 00:00:31.500
+So I want to cover EMTALA, resuscitation, shock, and stroke,
+
+11
+00:00:31.500 --> 00:00:36.500
+phew, all in 30 minutes, and I'll try not to talk too fast,
+
+12
+00:00:36.570 --> 00:00:39.210
+but previously, these emergency medicine lectures
+
+13
+00:00:39.210 --> 00:00:41.040
+used to be four half-hour lectures,
+
+14
+00:00:41.040 --> 00:00:44.670
+but we recently said let's now do 'em in three lectures.
+
+15
+00:00:44.670 --> 00:00:46.350
+So I'll try not to talk too fast,
+
+16
+00:00:46.350 --> 00:00:48.060
+but we got a lotta ground to cover.
+
+17
+00:00:48.060 --> 00:00:49.980
+All right, I'm gonna start this lecture
+
+18
+00:00:49.980 --> 00:00:51.750
+with an AES question.
+
+19
+00:00:51.750 --> 00:00:54.360
+You have a 14-year-old female, arrives at the triage area
+
+20
+00:00:54.360 --> 00:00:57.270
+of your local rural hospital in the emergency department
+
+21
+00:00:57.270 --> 00:01:00.030
+with worsening abdominal pain for the past two days.
+
+22
+00:01:00.030 --> 00:01:02.220
+The patient's parents are out of town for the day
+
+23
+00:01:02.220 --> 00:01:04.230
+and unavailable by cell phone.
+
+24
+00:01:04.230 --> 00:01:06.660
+The patient is accompanied by her 17-year-old sister.
+
+25
+00:01:06.660 --> 00:01:09.060
+The triage nurse asks you for your advice.
+
+26
+00:01:09.060 --> 00:01:11.373
+In this case, you would recommend,
+
+27
+00:01:12.480 --> 00:01:15.540
+A, do not perform an H&amp;P on the patient
+
+28
+00:01:15.540 --> 00:01:17.520
+until you can get hold of those parents,
+
+29
+00:01:17.520 --> 00:01:19.140
+B, obtain a history from the patient,
+
+30
+00:01:19.140 --> 00:01:21.030
+but don't perform any physical exam
+
+31
+00:01:21.030 --> 00:01:24.450
+and don't touch her until the parent says it's okay,
+
+32
+00:01:24.450 --> 00:01:27.870
+C, inquire if the patient could be pregnant, and if so,
+
+33
+00:01:27.870 --> 00:01:29.640
+then you can proceed with further care,
+
+34
+00:01:29.640 --> 00:01:32.910
+or D, perform an H&amp;P and proceed with diagnostic testing
+
+35
+00:01:32.910 --> 00:01:34.800
+if there is concern for acute pathology
+
+36
+00:01:34.800 --> 00:01:36.850
+that can worsen if a delay were to occur.
+
+37
+00:01:40.980 --> 00:01:43.440
+This is right. Do the right thing.
+
+38
+00:01:43.440 --> 00:01:46.410
+Treat the patient. Treat the patient, absolutely.
+
+39
+00:01:46.410 --> 00:01:49.140
+And going back, EMTALA was initially known
+
+40
+00:01:49.140 --> 00:01:50.520
+as the anti-dumping rule.
+
+41
+00:01:50.520 --> 00:01:53.100
+In 1986, it was enacted.
+
+42
+00:01:53.100 --> 00:01:56.370
+It was designed to say, "Oh, you private hospitals,
+
+43
+00:01:56.370 --> 00:01:58.800
+you can't dish off the uninsured
+
+44
+00:01:58.800 --> 00:02:01.560
+to the county or public hospitals."
+
+45
+00:02:01.560 --> 00:02:03.600
+Every emergency department in the United States
+
+46
+00:02:03.600 --> 00:02:07.380
+has to accept patients irregardless
+
+47
+00:02:07.380 --> 00:02:10.020
+of their financial status.
+
+48
+00:02:10.020 --> 00:02:12.810
+Now, they have to at least be able to stabilize
+
+49
+00:02:12.810 --> 00:02:16.230
+and treat the patients under EMTALA.
+
+50
+00:02:16.230 --> 00:02:20.610
+All right, now some, such as my hospital even,
+
+51
+00:02:20.610 --> 00:02:22.620
+we're a community hospital but we don't have all services.
+
+52
+00:02:22.620 --> 00:02:25.200
+We are allowed, after we have done our best
+
+53
+00:02:25.200 --> 00:02:26.820
+to stabilize that patient,
+
+54
+00:02:26.820 --> 00:02:29.790
+to transfer them to the tertiary care center
+
+55
+00:02:29.790 --> 00:02:33.210
+where they have appropriate facilities.
+
+56
+00:02:33.210 --> 00:02:35.280
+So for example, we don't have a neurosurgeon in our place,
+
+57
+00:02:35.280 --> 00:02:37.530
+but if we need a neurosurgeon,
+
+58
+00:02:37.530 --> 00:02:40.590
+under EMTALA, we can obviously transfer the patient.
+
+59
+00:02:40.590 --> 00:02:45.180
+The accepting hospital has to accept the patient
+
+60
+00:02:45.180 --> 00:02:48.960
+if they have capacity and capabilities of doing so.
+
+61
+00:02:48.960 --> 00:02:50.460
+If you're at the local rural hospital
+
+62
+00:02:50.460 --> 00:02:52.680
+or my hospital before I transfer them,
+
+63
+00:02:52.680 --> 00:02:55.800
+I have to do my best to provide whatever care it is
+
+64
+00:02:55.800 --> 00:02:58.440
+to those patients, okay?
+
+65
+00:02:58.440 --> 00:02:59.640
+And that's EMTALA.
+
+66
+00:02:59.640 --> 00:03:02.700
+Also EMTALA, it talks about treating minors.
+
+67
+00:03:02.700 --> 00:03:05.670
+Essentially a minor may request
+
+68
+00:03:05.670 --> 00:03:07.410
+an emergency evaluation and treatment,
+
+69
+00:03:07.410 --> 00:03:11.670
+and it's your job and duty to try to stabilize
+
+70
+00:03:11.670 --> 00:03:13.053
+and evaluate that patient.
+
+71
+00:03:14.430 --> 00:03:16.263
+All right, next question.
+
+72
+00:03:17.370 --> 00:03:18.870
+You're on a plane ride when a passenger
+
+73
+00:03:18.870 --> 00:03:20.580
+suddenly becomes unresponsive.
+
+74
+00:03:20.580 --> 00:03:22.203
+Which statement below is true?
+
+75
+00:03:24.270 --> 00:03:25.830
+The person next to you on the plane
+
+76
+00:03:25.830 --> 00:03:30.000
+suddenly goes kaboom, unconscious and is on the floor.
+
+77
+00:03:30.000 --> 00:03:32.670
+You should immediately start chest compressions.
+
+78
+00:03:32.670 --> 00:03:35.760
+B, you should check a pulse, and if not present,
+
+79
+00:03:35.760 --> 00:03:37.260
+open the airway, give two rescue breaths,
+
+80
+00:03:37.260 --> 00:03:39.030
+and start chest compressions.
+
+81
+00:03:39.030 --> 00:03:41.490
+C, you should check a pulse, and if none present,
+
+82
+00:03:41.490 --> 00:03:42.900
+just start compressions.
+
+83
+00:03:42.900 --> 00:03:44.790
+D, you're aware that Good Samaritan laws
+
+84
+00:03:44.790 --> 00:03:46.140
+protect you in all 50 states,
+
+85
+00:03:46.140 --> 00:03:48.780
+but don't get involved because such laws do not exist
+
+86
+00:03:48.780 --> 00:03:49.743
+during air flight.
+
+87
+00:03:54.870 --> 00:03:56.850
+You should check a pulse, and if there's nothing there,
+
+88
+00:03:56.850 --> 00:04:00.120
+just start pounding on the chest, all right?
+
+89
+00:04:00.120 --> 00:04:03.870
+So I put in a couple of just BLS
+
+90
+00:04:03.870 --> 00:04:06.060
+and ALS questions because David noted
+
+91
+00:04:06.060 --> 00:04:07.710
+a couple of years ago when he took the boards,
+
+92
+00:04:07.710 --> 00:04:10.620
+he had one or two questions on BLS and ACLS.
+
+93
+00:04:10.620 --> 00:04:15.120
+So just to update you very, very quickly,
+
+94
+00:04:15.120 --> 00:04:18.720
+when someone goes kaboom unconscious, it's no longer ABC.
+
+95
+00:04:18.720 --> 00:04:20.280
+It's now CAB.
+
+96
+00:04:20.280 --> 00:04:22.560
+You go unconscious, you just start compressions.
+
+97
+00:04:22.560 --> 00:04:24.510
+Now, the general public is not encouraged
+
+98
+00:04:24.510 --> 00:04:26.520
+to do a pulse check 'cause they don't know
+
+99
+00:04:26.520 --> 00:04:27.600
+what they're checking for.
+
+100
+00:04:27.600 --> 00:04:29.280
+You and I, as healthcare professionals,
+
+101
+00:04:29.280 --> 00:04:30.390
+are encouraged to do a pulse check,
+
+102
+00:04:30.390 --> 00:04:32.640
+and if there's nothing there, start the compressions.
+
+103
+00:04:32.640 --> 00:04:35.340
+So it's CAB, and you keep doing that
+
+104
+00:04:35.340 --> 00:04:37.320
+until you can figure out what the rhythm is.
+
+105
+00:04:37.320 --> 00:04:40.350
+You get a defibrillator or a monitor nearby,
+
+106
+00:04:40.350 --> 00:04:43.920
+and then you decide is this patient in a shockable rhythm
+
+107
+00:04:43.920 --> 00:04:46.110
+or is it a non-shockable rhythm?
+
+108
+00:04:46.110 --> 00:04:48.660
+So the non-shockable rhythms are very easy.
+
+109
+00:04:48.660 --> 00:04:50.700
+It's asystole or PEA.
+
+110
+00:04:50.700 --> 00:04:54.660
+Asystole, unfortunately, you got asystole, you're dead.
+
+111
+00:04:54.660 --> 00:04:57.330
+You continue CPR and the only drug you give is epinephrine.
+
+112
+00:04:57.330 --> 00:04:58.890
+Atropine is out.
+
+113
+00:04:58.890 --> 00:05:03.890
+For PEA, you're encouraged to do the five Ts, six Hs.
+
+114
+00:05:04.170 --> 00:05:06.420
+Try to identify an underlying source
+
+115
+00:05:06.420 --> 00:05:09.090
+and treat accordingly if possible.
+
+116
+00:05:09.090 --> 00:05:12.480
+When it comes to shockable rhythms,
+
+117
+00:05:12.480 --> 00:05:15.810
+you have Vfib and V-tach, and what do you do right away?
+
+118
+00:05:15.810 --> 00:05:17.220
+If you see one of those, you just shock.
+
+119
+00:05:17.220 --> 00:05:18.810
+You just defibrillate at 200 joules,
+
+120
+00:05:18.810 --> 00:05:21.540
+go back to CPR, shock again.
+
+121
+00:05:21.540 --> 00:05:23.760
+Epi is the drug of choice, shock again,
+
+122
+00:05:23.760 --> 00:05:25.140
+and then when you finally get down,
+
+123
+00:05:25.140 --> 00:05:27.540
+if they're still in Vfib or V-tach,
+
+124
+00:05:27.540 --> 00:05:30.723
+amiodarone is the antiarrhythmic of choice.
+
+125
+00:05:31.710 --> 00:05:32.543
+I put this in.
+
+126
+00:05:32.543 --> 00:05:35.100
+I believe Dr. Firnhaber is gonna cover this more in detail
+
+127
+00:05:35.100 --> 00:05:39.330
+during his discussion of the arrhythmias,
+
+128
+00:05:39.330 --> 00:05:42.690
+but I just want to make sure you have clear in your head
+
+129
+00:05:42.690 --> 00:05:45.000
+the difference between defibrillation
+
+130
+00:05:45.000 --> 00:05:48.420
+and electrical synchronized cardioversion.
+
+131
+00:05:48.420 --> 00:05:51.270
+So the first three there,
+
+132
+00:05:51.270 --> 00:05:55.320
+rapid Afib, A flutter, or monomorphic V-tach,
+
+133
+00:05:55.320 --> 00:05:57.570
+if the patient is unstable,
+
+134
+00:05:57.570 --> 00:06:00.150
+you're going to cardiovert, okay?
+
+135
+00:06:00.150 --> 00:06:04.950
+I recently had a young man in the ER who had a Afib
+
+136
+00:06:04.950 --> 00:06:07.710
+and his rate was like 280, completely unstable.
+
+137
+00:06:07.710 --> 00:06:09.360
+We had to immediately cardiovert him,
+
+138
+00:06:09.360 --> 00:06:11.280
+a synchronized cardioversion.
+
+139
+00:06:11.280 --> 00:06:15.420
+You defibrillate with polymorphic V-tach or Vfib.
+
+140
+00:06:15.420 --> 00:06:17.163
+That's down below, okay?
+
+141
+00:06:18.180 --> 00:06:20.220
+And I alluded to Good Samaritan laws.
+
+142
+00:06:20.220 --> 00:06:22.740
+Just recognize you're covered in all 50 states
+
+143
+00:06:22.740 --> 00:06:27.740
+as well as up in the air for under Good Samaritan laws,
+
+144
+00:06:28.740 --> 00:06:30.510
+and the only time you'll get into trouble
+
+145
+00:06:30.510 --> 00:06:33.420
+is if you do gross, willful or wanton negligence
+
+146
+00:06:33.420 --> 00:06:37.600
+or you do things in lack of good faith
+
+147
+00:06:39.102 --> 00:06:40.410
+or you decide to send a bill.
+
+148
+00:06:40.410 --> 00:06:41.490
+Once you send a bill, forget it.
+
+149
+00:06:41.490 --> 00:06:44.673
+Good Samaritan laws are out. Don't send a bill, okay?
+
+150
+00:06:45.780 --> 00:06:48.180
+You are allowed to accept a gift, but don't send a bill.
+
+151
+00:06:48.180 --> 00:06:49.470
+All right, shock.
+
+152
+00:06:49.470 --> 00:06:53.280
+All right, you know the four types of shock.
+
+153
+00:06:53.280 --> 00:06:54.510
+I don't need to go through those,
+
+154
+00:06:54.510 --> 00:06:58.770
+although there's such an emphasis on sepsis.
+
+155
+00:06:58.770 --> 00:07:01.560
+How many of you do hospital medicine or in the hospital?
+
+156
+00:07:01.560 --> 00:07:04.189
+Aren't you, like, tired of the whole sepsis thing by now?
+
+157
+00:07:04.189 --> 00:07:05.022
+<v Attendee>Yeah.</v>
+
+158
+00:07:05.022 --> 00:07:06.810
+<v ->Oh, yeah, everything is septic,</v>
+
+159
+00:07:06.810 --> 00:07:10.050
+and you get the alerts on your EHR, alert, alert, alert,
+
+160
+00:07:10.050 --> 00:07:12.720
+and they're all false alarms and, oh yeah, I gotcha.
+
+161
+00:07:12.720 --> 00:07:15.060
+So I'll just do this real quick.
+
+162
+00:07:15.060 --> 00:07:19.230
+The sepsis definition, don't memorize, okay?
+
+163
+00:07:19.230 --> 00:07:22.560
+Just putting it in there for completeness sake.
+
+164
+00:07:22.560 --> 00:07:25.477
+This is the latest, quote, definition of sepsis,
+
+165
+00:07:25.477 --> 00:07:27.660
+"a life-threatening organ dysfunction."
+
+166
+00:07:27.660 --> 00:07:29.280
+Septic shock is the same thing,
+
+167
+00:07:29.280 --> 00:07:31.830
+but now you've got circulatory collapse.
+
+168
+00:07:31.830 --> 00:07:34.290
+Note that the whole SIRS thing,
+
+169
+00:07:34.290 --> 00:07:38.670
+SIRS is not part of the definition, okay?
+
+170
+00:07:38.670 --> 00:07:41.220
+All right, so you have these sepsis scores,
+
+171
+00:07:41.220 --> 00:07:43.143
+SIRS being one of them.
+
+172
+00:07:44.070 --> 00:07:47.460
+Just note all these scores are generally terrible.
+
+173
+00:07:47.460 --> 00:07:50.430
+All right, SIRS has got terribly poor sensitivity
+
+174
+00:07:50.430 --> 00:07:51.870
+and specificity.
+
+175
+00:07:51.870 --> 00:07:54.510
+I mean, if you have the flu,
+
+176
+00:07:54.510 --> 00:07:57.600
+you're gonna meet SIRS criteria, right?
+
+177
+00:07:57.600 --> 00:07:59.550
+You're not septic, right?
+
+178
+00:07:59.550 --> 00:08:01.710
+You've got the flu or COVID or whatever.
+
+179
+00:08:01.710 --> 00:08:03.150
+I mean, you've got something benign.
+
+180
+00:08:03.150 --> 00:08:04.530
+All right, well, whatever.
+
+181
+00:08:04.530 --> 00:08:07.170
+SOFA scores, qSOFA scores, same thing.
+
+182
+00:08:07.170 --> 00:08:09.450
+They're just scoring systems.
+
+183
+00:08:09.450 --> 00:08:13.863
+They're not part of the definition, all right?
+
+184
+00:08:14.790 --> 00:08:16.110
+What they could ask you,
+
+185
+00:08:16.110 --> 00:08:16.997
+I don't think they'll ask you anything on that
+
+186
+00:08:16.997 --> 00:08:19.620
+'cause it's, you know, it's up in the air,
+
+187
+00:08:19.620 --> 00:08:22.380
+but what they could ask you is managing sepsis.
+
+188
+00:08:22.380 --> 00:08:23.880
+That one I could see them asking,
+
+189
+00:08:23.880 --> 00:08:25.650
+and you know this hopefully by now.
+
+190
+00:08:25.650 --> 00:08:27.900
+You get your lactate levels. You get your blood cultures.
+
+191
+00:08:27.900 --> 00:08:31.980
+You start the antibiotics early, and if you are shocky,
+
+192
+00:08:31.980 --> 00:08:36.930
+then you start a fluid bolus of 30 mills per kilogram,
+
+193
+00:08:36.930 --> 00:08:38.610
+and if you're still shocky after that,
+
+194
+00:08:38.610 --> 00:08:42.153
+then the vasopressor of choice is norepinephrine.
+
+195
+00:08:43.170 --> 00:08:44.913
+All right, on to stroke and TIA.
+
+196
+00:08:45.930 --> 00:08:50.400
+So this is one I wanna cover in my remaining 18 minutes.
+
+197
+00:08:50.400 --> 00:08:52.740
+I wanna go through stroke risk factors and prevention.
+
+198
+00:08:52.740 --> 00:08:54.840
+That's what we do, primary prevention,
+
+199
+00:08:54.840 --> 00:08:57.540
+what to do if you have a patient with acute stroke, TIA,
+
+200
+00:08:57.540 --> 00:09:01.140
+and then secondary prevention of strokes in TIA.
+
+201
+00:09:01.140 --> 00:09:01.973
+All right.
+
+202
+00:09:03.330 --> 00:09:08.330
+Back to just basic pathophysiology, talking about strokes.
+
+203
+00:09:09.570 --> 00:09:11.970
+Two general types, ischemic,
+
+204
+00:09:11.970 --> 00:09:13.830
+not enough blood going to your brain.
+
+205
+00:09:13.830 --> 00:09:15.870
+Vast majority of strokes are that type,
+
+206
+00:09:15.870 --> 00:09:19.200
+or you decide to hemorrhage into your brain.
+
+207
+00:09:19.200 --> 00:09:22.110
+Of the ischemic types, you see about 2/3 of those
+
+208
+00:09:22.110 --> 00:09:24.690
+are gonna be because you got a thrombosis,
+
+209
+00:09:24.690 --> 00:09:26.070
+a thrombotic problem.
+
+210
+00:09:26.070 --> 00:09:28.470
+The other remaining 1/3 is because you had
+
+211
+00:09:28.470 --> 00:09:33.300
+that cardioembolic event that went upstream, okay?
+
+212
+00:09:33.300 --> 00:09:35.160
+Hemorrhagic, you have blood inside your brain
+
+213
+00:09:35.160 --> 00:09:38.340
+from one of two reasons: intracerebral, subarachnoid.
+
+214
+00:09:38.340 --> 00:09:41.490
+So the classic stroke risk factors,
+
+215
+00:09:41.490 --> 00:09:43.380
+you know them, you love them:
+
+216
+00:09:43.380 --> 00:09:45.630
+hypertension, Afib, diabetes, smoking.
+
+217
+00:09:45.630 --> 00:09:48.360
+Yeah, you know them. There's the non-modifiable ones.
+
+218
+00:09:48.360 --> 00:09:50.370
+You can't do anything about your age or your family history,
+
+219
+00:09:50.370 --> 00:09:52.980
+and there's some uncommon ones I'll just list at the end,
+
+220
+00:09:52.980 --> 00:09:55.380
+but let me just go through, I just highlighted two of them:
+
+221
+00:09:55.380 --> 00:09:57.150
+hypertension, and Afib.
+
+222
+00:09:57.150 --> 00:09:59.460
+Why did I highlight hypertension?
+
+223
+00:09:59.460 --> 00:10:02.490
+'Cause hypertension is the big bad player
+
+224
+00:10:02.490 --> 00:10:05.250
+on your brain over time.
+
+225
+00:10:05.250 --> 00:10:07.710
+Not that one day the patient has
+
+226
+00:10:07.710 --> 00:10:09.217
+a hypertensive urgency in their blood pressure.
+
+227
+00:10:09.217 --> 00:10:10.950
+"Oh my God, it's 180 over 80.
+
+228
+00:10:10.950 --> 00:10:13.050
+My God, you gotta go to the ER and they gotta fix that!"
+
+229
+00:10:13.050 --> 00:10:15.600
+Don't do that, please, okay?
+
+230
+00:10:15.600 --> 00:10:17.970
+Don't do that 'cause all I can do
+
+231
+00:10:17.970 --> 00:10:20.640
+is screw up your patient ER if you do that.
+
+232
+00:10:20.640 --> 00:10:25.170
+Don't do that, please. That's a hypertensive urgency.
+
+233
+00:10:25.170 --> 00:10:29.070
+And actually, people are trying to get rid of that saying.
+
+234
+00:10:29.070 --> 00:10:32.910
+It's just asymptomatic elevated blood pressure, all right?
+
+235
+00:10:32.910 --> 00:10:34.080
+It's just asymptomatic, all right?
+
+236
+00:10:34.080 --> 00:10:38.640
+It's the longstanding problem of hypertension,
+
+237
+00:10:38.640 --> 00:10:40.770
+the longstanding problem of hypertension.
+
+238
+00:10:40.770 --> 00:10:43.500
+The longstanding problem of hypertension
+
+239
+00:10:43.500 --> 00:10:46.530
+does all these things in red, potential things in red.
+
+240
+00:10:46.530 --> 00:10:48.810
+It gives you atherosclerotic disease in your brain
+
+241
+00:10:48.810 --> 00:10:51.270
+and you get a thrombosis that can involve
+
+242
+00:10:51.270 --> 00:10:52.890
+in the large vessels, your carotids,
+
+243
+00:10:52.890 --> 00:10:55.350
+your middle cerebral, or your small vessels.
+
+244
+00:10:55.350 --> 00:10:58.830
+Longstanding hypertension can cause Afib
+
+245
+00:10:58.830 --> 00:11:00.300
+and your problems from there.
+
+246
+00:11:00.300 --> 00:11:03.630
+Longstanding hypertension can cause a bleed
+
+247
+00:11:03.630 --> 00:11:05.160
+in your brain, right?
+
+248
+00:11:05.160 --> 00:11:07.410
+Those are the problem of longstanding hypertension,
+
+249
+00:11:07.410 --> 00:11:11.610
+not that your blood pressure is 190 over 90 that day.
+
+250
+00:11:11.610 --> 00:11:13.860
+Don't send them to me, please.
+
+251
+00:11:13.860 --> 00:11:15.063
+Okay? All right.
+
+252
+00:11:16.380 --> 00:11:20.310
+Afib, Afib, the problem I've already alluded to.
+
+253
+00:11:20.310 --> 00:11:22.200
+You got a clot in your atrium,
+
+254
+00:11:22.200 --> 00:11:24.720
+decides to go upstream, lands in your brain.
+
+255
+00:11:24.720 --> 00:11:27.570
+All right, this is one slide I want you to take home.
+
+256
+00:11:27.570 --> 00:11:30.300
+This is part of your take-home slides.
+
+257
+00:11:30.300 --> 00:11:33.480
+There's three things you should know about Afib.
+
+258
+00:11:33.480 --> 00:11:37.857
+The first is, if you take all comers with Afib,
+
+259
+00:11:37.857 --> 00:11:41.400
+and I'm talking young, old, very old,
+
+260
+00:11:41.400 --> 00:11:45.750
+all ages, everybody with Afib, all right,
+
+261
+00:11:45.750 --> 00:11:48.060
+and you do not anticoagulate them,
+
+262
+00:11:48.060 --> 00:11:51.900
+their chance of having a stroke is 4.5% per year.
+
+263
+00:11:51.900 --> 00:11:53.850
+That's all comers.
+
+264
+00:11:53.850 --> 00:11:58.080
+If you anticoagulate all of them,
+
+265
+00:11:58.080 --> 00:12:01.830
+you'll decrease their stroke rate down to 1.5% per year,
+
+266
+00:12:01.830 --> 00:12:06.270
+so a 3% absolute risk reduction per year, right?
+
+267
+00:12:06.270 --> 00:12:08.520
+Okay. Caveats.
+
+268
+00:12:08.520 --> 00:12:11.790
+The older you are, that's the graph.
+
+269
+00:12:11.790 --> 00:12:14.520
+That number goes up from 4.5%.
+
+270
+00:12:14.520 --> 00:12:17.633
+Younger than that, you go down from 4.5%,
+
+271
+00:12:18.750 --> 00:12:21.450
+and the strokes associated with cardioembolic events
+
+272
+00:12:21.450 --> 00:12:24.300
+are typically large strokes, okay?
+
+273
+00:12:24.300 --> 00:12:26.370
+They're large strokes, all right?
+
+274
+00:12:26.370 --> 00:12:29.610
+So who should we anticoagulate?
+
+275
+00:12:29.610 --> 00:12:30.750
+All right, the answer to this,
+
+276
+00:12:30.750 --> 00:12:33.480
+and I know Dr. Firnhaber's gonna mention this again,
+
+277
+00:12:33.480 --> 00:12:36.450
+you do the CHADS2-VASc score, all right,
+
+278
+00:12:36.450 --> 00:12:39.630
+to decide who's at risk, and now,
+
+279
+00:12:39.630 --> 00:12:42.750
+when you see these scoring systems for on the boards,
+
+280
+00:12:42.750 --> 00:12:44.677
+please do not go home and study.
+
+281
+00:12:44.677 --> 00:12:46.500
+"I get one point for this, two points for that,
+
+282
+00:12:46.500 --> 00:12:47.730
+one point, two point."
+
+283
+00:12:47.730 --> 00:12:49.470
+Don't do that. It's impossible.
+
+284
+00:12:49.470 --> 00:12:50.303
+You'll never remember it.
+
+285
+00:12:50.303 --> 00:12:53.340
+That's why you have MDCalc on your phone, right?
+
+286
+00:12:53.340 --> 00:12:56.730
+Right, so what you do need to know is
+
+287
+00:12:56.730 --> 00:12:59.220
+essentially if you have no risk factors,
+
+288
+00:12:59.220 --> 00:13:01.230
+zero for men, one for women.
+
+289
+00:13:01.230 --> 00:13:03.000
+You get one point for women because you're a woman.
+
+290
+00:13:03.000 --> 00:13:05.550
+If you have essentially no risk factors,
+
+291
+00:13:05.550 --> 00:13:07.830
+you can treat that patient with aspirin.
+
+292
+00:13:07.830 --> 00:13:10.980
+If you have any of those risk factors,
+
+293
+00:13:10.980 --> 00:13:15.360
+essentially the recommendations is to anticoagulate them
+
+294
+00:13:15.360 --> 00:13:18.300
+with a DOAC over warfarin.
+
+295
+00:13:18.300 --> 00:13:19.133
+All right.
+
+296
+00:13:20.070 --> 00:13:22.710
+All right, I told you already you can decrease it by 3%.
+
+297
+00:13:22.710 --> 00:13:24.660
+There's a calculator you can actually use on your phone
+
+298
+00:13:24.660 --> 00:13:27.690
+called the sparctool.com.
+
+299
+00:13:27.690 --> 00:13:29.490
+Understand when we put people on anticoagulants,
+
+300
+00:13:29.490 --> 00:13:30.960
+you can actually increase the risk of bleeding
+
+301
+00:13:30.960 --> 00:13:33.060
+into the brain or major bleeding rates.
+
+302
+00:13:33.060 --> 00:13:34.590
+I put those down.
+
+303
+00:13:34.590 --> 00:13:36.540
+All right, so those are the classics,
+
+304
+00:13:36.540 --> 00:13:37.500
+and we've got the non-modifiable,
+
+305
+00:13:37.500 --> 00:13:40.050
+and there's some uncommon ones.
+
+306
+00:13:40.050 --> 00:13:40.883
+They're not gonna ask you this,
+
+307
+00:13:40.883 --> 00:13:42.510
+but I did 'em for completeness sake,
+
+308
+00:13:42.510 --> 00:13:44.670
+migraine, vasculitis, autoimmune diseases,
+
+309
+00:13:44.670 --> 00:13:47.350
+prothrombotic states, sickle cell, yes, Moyamoya.
+
+310
+00:13:47.350 --> 00:13:50.943
+Okay, I gotcha. All right, AES question.
+
+311
+00:13:52.290 --> 00:13:56.040
+So you have a 65-year-old non-smoker with a history of
+
+312
+00:13:56.040 --> 00:13:58.050
+controlled hypertension and hyperlipidemia,
+
+313
+00:13:58.050 --> 00:14:00.300
+presents for routine exam,
+
+314
+00:14:00.300 --> 00:14:02.850
+just any routine exam, has some risk factors.
+
+315
+00:14:02.850 --> 00:14:04.980
+According to the USPSTF, which of the following
+
+316
+00:14:04.980 --> 00:14:08.400
+should be performed to assess his risk of stroke?
+
+317
+00:14:08.400 --> 00:14:12.330
+A, do nothing, B, auscultate the carotids.
+
+318
+00:14:12.330 --> 00:14:14.280
+C, obtain carotid duplex ultrasound,
+
+319
+00:14:14.280 --> 00:14:16.740
+or D, obtain a CTA of the carotid arteries
+
+320
+00:14:16.740 --> 00:14:18.590
+in this patient who has risk factors.
+
+321
+00:14:23.370 --> 00:14:26.010
+Oh, good. Most of you said no risk.
+
+322
+00:14:26.010 --> 00:14:28.110
+I'm really pleased to see that.
+
+323
+00:14:28.110 --> 00:14:30.663
+Yeah, you don't do anything. You don't do anything.
+
+324
+00:14:33.120 --> 00:14:34.470
+And here it is, the recommendation.
+
+325
+00:14:34.470 --> 00:14:36.900
+They recommend against doing anything
+
+326
+00:14:36.900 --> 00:14:39.843
+for patients who are asymptomatic.
+
+327
+00:14:40.680 --> 00:14:43.950
+Walks into your office. They're asymptomatic.
+
+328
+00:14:43.950 --> 00:14:44.910
+May have risk factors.
+
+329
+00:14:44.910 --> 00:14:49.910
+You do not start doing studies, carotid ultrasounds.
+
+330
+00:14:50.520 --> 00:14:54.720
+You don't start doing auscultation of the carotid arteries.
+
+331
+00:14:54.720 --> 00:14:56.160
+I know it's the first thing we were probably taught
+
+332
+00:14:56.160 --> 00:14:57.750
+back in medical school, right?
+
+333
+00:14:57.750 --> 00:14:59.070
+Yeah, you do your general field exam.
+
+334
+00:14:59.070 --> 00:15:00.270
+You take your stethoscope out.
+
+335
+00:15:00.270 --> 00:15:01.860
+Yeah, you should just do part of that.
+
+336
+00:15:01.860 --> 00:15:03.660
+It's really kind of funny.
+
+337
+00:15:03.660 --> 00:15:07.650
+My primary care doctor is one of the residents I taught.
+
+338
+00:15:07.650 --> 00:15:09.360
+Now he's the program director.
+
+339
+00:15:09.360 --> 00:15:12.810
+So I go to him, and I go in for my exam,
+
+340
+00:15:12.810 --> 00:15:16.290
+and invariably he'll take out the stethoscope
+
+341
+00:15:16.290 --> 00:15:20.910
+and listen to my carotids, and I just sit there and laugh.
+
+342
+00:15:20.910 --> 00:15:23.277
+I say, "John, don't you know?"
+
+343
+00:15:24.360 --> 00:15:28.770
+Because it's very unreliable, tons of false positives.
+
+344
+00:15:28.770 --> 00:15:32.520
+The sensitivity is terrible. You don't do this.
+
+345
+00:15:32.520 --> 00:15:36.480
+All right, so here is the guideline from the American Heart,
+
+346
+00:15:36.480 --> 00:15:38.940
+American Stroke Association on prevention
+
+347
+00:15:38.940 --> 00:15:42.300
+of ischemic strokes, ischemic strokes.
+
+348
+00:15:42.300 --> 00:15:44.250
+This slide, do not study.
+
+349
+00:15:44.250 --> 00:15:45.870
+This is the (indistinct). You know this.
+
+350
+00:15:45.870 --> 00:15:47.760
+Yeah, you're gonna recommend, you know,
+
+351
+00:15:47.760 --> 00:15:49.590
+keep their weight under control, physical activity,
+
+352
+00:15:49.590 --> 00:15:51.644
+control the hypertension, control diabetes, stop smoking.
+
+353
+00:15:51.644 --> 00:15:54.360
+Yeah, yeah, yeah, yeah. You do that at every appointment.
+
+354
+00:15:54.360 --> 00:15:56.310
+Alcohol, no, stay away from alcohol.
+
+355
+00:15:56.310 --> 00:15:58.710
+Afib, we've already talked about CHADS2.
+
+356
+00:15:58.710 --> 00:16:00.090
+Lipids, that's gonna be talked about
+
+357
+00:16:00.090 --> 00:16:02.132
+in the cardiology lecture.
+
+358
+00:16:02.132 --> 00:16:05.703
+I just wanna cover one last thing. What about aspirin?
+
+359
+00:16:06.750 --> 00:16:09.570
+Risk factor, patients got risk factors.
+
+360
+00:16:09.570 --> 00:16:12.630
+Should you say, "Take the baby aspirin," you know?
+
+361
+00:16:12.630 --> 00:16:15.330
+Baby aspirin a day keeps the doctor away or,
+
+362
+00:16:15.330 --> 00:16:16.163
+you know, something like that.
+
+363
+00:16:16.163 --> 00:16:18.090
+Should you recommend a baby aspirin
+
+364
+00:16:18.090 --> 00:16:19.790
+in patients who have risk factors?
+
+365
+00:16:20.790 --> 00:16:21.780
+And here's the pendulum.
+
+366
+00:16:21.780 --> 00:16:25.170
+It's just swung entirely the other way.
+
+367
+00:16:25.170 --> 00:16:27.750
+For years, we did kinda recommend it,
+
+368
+00:16:27.750 --> 00:16:32.490
+but then there's three large studies that came out,
+
+369
+00:16:32.490 --> 00:16:35.707
+and I love the headline from the second one there,
+
+370
+00:16:35.707 --> 00:16:37.650
+"'It's Not You, It's Me.'
+
+371
+00:16:37.650 --> 00:16:40.440
+It's Time to Break Up With Aspirin", okay?
+
+372
+00:16:40.440 --> 00:16:43.500
+All right, these three studies said,
+
+373
+00:16:43.500 --> 00:16:46.020
+listen, again, don't memorize the studies,
+
+374
+00:16:46.020 --> 00:16:48.120
+but they all came out in 2018.
+
+375
+00:16:48.120 --> 00:16:49.380
+The first one is they took patients
+
+376
+00:16:49.380 --> 00:16:52.140
+with lots of risk factors and they randomized them
+
+377
+00:16:52.140 --> 00:16:55.500
+to the aspirin and not, a placebo.
+
+378
+00:16:55.500 --> 00:16:57.450
+No difference in outcomes.
+
+379
+00:16:57.450 --> 00:17:00.930
+The next one involved patients who were old,
+
+380
+00:17:00.930 --> 00:17:04.687
+all over 70, all over 70, said,
+
+381
+00:17:04.687 --> 00:17:06.540
+"Just because you're old, you might have some risk factors.
+
+382
+00:17:06.540 --> 00:17:08.370
+You know, you're getting to that point in your life.
+
+383
+00:17:08.370 --> 00:17:10.230
+Take some aspirin. Don't take aspirin."
+
+384
+00:17:10.230 --> 00:17:12.390
+They randomized them. No difference.
+
+385
+00:17:12.390 --> 00:17:15.540
+No difference except, oh, we can make you bleed easier,
+
+386
+00:17:15.540 --> 00:17:17.730
+and then we took the diabetics in the third one
+
+387
+00:17:17.730 --> 00:17:18.930
+and did the same thing.
+
+388
+00:17:18.930 --> 00:17:22.050
+No difference. No difference.
+
+389
+00:17:22.050 --> 00:17:26.250
+So USPSTF came out with their recommendation. Here it is.
+
+390
+00:17:26.250 --> 00:17:29.760
+Take this slide home. They copped out.
+
+391
+00:17:29.760 --> 00:17:32.550
+I will say, I think they copped out a little bit
+
+392
+00:17:32.550 --> 00:17:35.100
+on the 40 to 59-year-olds
+
+393
+00:17:35.100 --> 00:17:38.940
+who have a greater than 10% risk factor
+
+394
+00:17:38.940 --> 00:17:39.930
+for cardiovascular disease.
+
+395
+00:17:39.930 --> 00:17:44.517
+They said, "C, kinda consider it."
+
+396
+00:17:45.480 --> 00:17:49.050
+I hate when recommendations say, "Consider it."
+
+397
+00:17:49.050 --> 00:17:52.290
+I go to the recommendations for a recommendation
+
+398
+00:17:52.290 --> 00:17:54.120
+because I'm already considering it.
+
+399
+00:17:54.120 --> 00:17:55.810
+Now they're telling me, "Consider it some more."
+
+400
+00:17:55.810 --> 00:17:58.710
+(audience laughing)
+
+401
+00:17:58.710 --> 00:18:00.360
+Thanks. Thanks a lot.
+
+402
+00:18:00.360 --> 00:18:01.980
+Thanks for nothing.
+
+403
+00:18:01.980 --> 00:18:06.980
+If you're over 60, it says, "Don't go there."
+
+404
+00:18:07.350 --> 00:18:08.580
+Don't give 'em aspirin
+
+405
+00:18:08.580 --> 00:18:10.320
+just because they have some risk factors.
+
+406
+00:18:10.320 --> 00:18:12.510
+All right, let me go to the bleeding
+
+407
+00:18:12.510 --> 00:18:13.860
+into your brain real quick.
+
+408
+00:18:15.000 --> 00:18:16.560
+Intracerebral hemorrhage.
+
+409
+00:18:16.560 --> 00:18:18.660
+There's lots of causes for intracerebral hemorrhage,
+
+410
+00:18:18.660 --> 00:18:23.660
+longstanding hypertension, amyloid angiopathy, vasculitises.
+
+411
+00:18:23.850 --> 00:18:27.720
+You see that drugs, the anticoagulants, cocaine,
+
+412
+00:18:27.720 --> 00:18:29.430
+yeah, all those can do it.
+
+413
+00:18:29.430 --> 00:18:30.390
+Subarachnoid hemorrhage.
+
+414
+00:18:30.390 --> 00:18:33.270
+I just wanna make one note about subarachnoid hemorrhage.
+
+415
+00:18:33.270 --> 00:18:36.220
+It's due to, you know, the berry aneurysms
+
+416
+00:18:37.318 --> 00:18:40.500
+that when you reach middle age
+
+417
+00:18:40.500 --> 00:18:43.170
+or beyond decide to go pff.
+
+418
+00:18:43.170 --> 00:18:46.050
+They go and you have that sudden,
+
+419
+00:18:46.050 --> 00:18:47.820
+unbelievable worst headache of my life
+
+420
+00:18:47.820 --> 00:18:49.560
+with the nuchal rigidity, sometimes with syncope,
+
+421
+00:18:49.560 --> 00:18:50.520
+and they just hurt.
+
+422
+00:18:50.520 --> 00:18:54.300
+They hurt, okay? That's your subarachnoid hemorrhage.
+
+423
+00:18:54.300 --> 00:18:55.410
+I would like to make a note of this,
+
+424
+00:18:55.410 --> 00:18:57.513
+and I purposely put that graph in there.
+
+425
+00:18:59.250 --> 00:19:03.240
+It goes off in patients who are middle aged or older.
+
+426
+00:19:03.240 --> 00:19:06.210
+Please don't send the 17-year-old
+
+427
+00:19:06.210 --> 00:19:08.280
+with the worst headache of her life to the ER
+
+428
+00:19:08.280 --> 00:19:11.430
+to go get a CT because of a subarachnoid hemorrhage.
+
+429
+00:19:11.430 --> 00:19:16.020
+All right, it can happen but rarely.
+
+430
+00:19:16.020 --> 00:19:19.020
+That's not the group it goes off in, all right?
+
+431
+00:19:19.020 --> 00:19:20.430
+Doesn't go off in them often,
+
+432
+00:19:20.430 --> 00:19:25.260
+and don't go sending them for MRIs right off the bat.
+
+433
+00:19:25.260 --> 00:19:26.093
+Why?
+
+434
+00:19:27.270 --> 00:19:31.500
+It's estimated that 2% of the population, US population,
+
+435
+00:19:31.500 --> 00:19:34.860
+harbor an aneurysm in their brain.
+
+436
+00:19:34.860 --> 00:19:36.630
+So there's, like, 200 of you in here.
+
+437
+00:19:36.630 --> 00:19:37.890
+So there's probably four or five of you
+
+438
+00:19:37.890 --> 00:19:39.990
+all have brain aneurysms.
+
+439
+00:19:39.990 --> 00:19:42.090
+Ooh. You know, he said, "Holy crap."
+
+440
+00:19:42.090 --> 00:19:47.070
+All right. Yeah, but the good news is they rarely go off.
+
+441
+00:19:47.070 --> 00:19:50.520
+They're just there, won't even bother ya.
+
+442
+00:19:50.520 --> 00:19:52.140
+It's the rare person that it will
+
+443
+00:19:52.140 --> 00:19:54.240
+then get larger, larger and go.
+
+444
+00:19:54.240 --> 00:19:56.490
+So just, you know, let's see if you got an aneurysm.
+
+445
+00:19:56.490 --> 00:19:57.480
+Well, you might have one.
+
+446
+00:19:57.480 --> 00:19:59.940
+Then you're gonna freak the patient out.
+
+447
+00:19:59.940 --> 00:20:02.520
+You're probably gonna send 'em to a neurosurgeon,
+
+448
+00:20:02.520 --> 00:20:05.310
+and then what happens?
+
+449
+00:20:05.310 --> 00:20:07.440
+You're down a path you don't wanna be. Okay.
+
+450
+00:20:07.440 --> 00:20:09.150
+All right, moving on.
+
+451
+00:20:09.150 --> 00:20:11.370
+82-year-old patient developed sudden dysarthria
+
+452
+00:20:11.370 --> 00:20:13.410
+and right upper extremity weakness.
+
+453
+00:20:13.410 --> 00:20:14.460
+Onset was 8:00 AM.
+
+454
+00:20:14.460 --> 00:20:18.030
+He or she arrived in the ER at 11:00 AM, three hours later.
+
+455
+00:20:18.030 --> 00:20:19.170
+IV is inserted, labs sent.
+
+456
+00:20:19.170 --> 00:20:21.330
+Which imaging study should be ordered STAT?
+
+457
+00:20:21.330 --> 00:20:25.770
+Patient suddenly said, "Nothing's coming out,
+
+458
+00:20:25.770 --> 00:20:27.920
+and I can't move my right upper extremity."
+
+459
+00:20:31.997 --> 00:20:35.490
+All right, this is you do the, 93%. Okay.
+
+460
+00:20:35.490 --> 00:20:37.350
+Non-contrast head CT.
+
+461
+00:20:37.350 --> 00:20:42.000
+You do a normal head CT, non-contrast right away. Why?
+
+462
+00:20:42.000 --> 00:20:46.590
+'Cause all you wanna do is decide if it's dry or ischemic
+
+463
+00:20:46.590 --> 00:20:47.970
+or if they're bleeding into their brain.
+
+464
+00:20:47.970 --> 00:20:48.803
+That's all you wanna do,
+
+465
+00:20:48.803 --> 00:20:51.990
+and CT is awesome for seeing blood in the brain.
+
+466
+00:20:51.990 --> 00:20:53.700
+That's what we wanna know.
+
+467
+00:20:53.700 --> 00:20:57.270
+All right, now, and when you have blood in the brain,
+
+468
+00:20:57.270 --> 00:20:58.320
+it just shows up white.
+
+469
+00:20:58.320 --> 00:21:00.300
+You got this white stuff in your brain.
+
+470
+00:21:00.300 --> 00:21:02.370
+I'm not great about reading CTs,
+
+471
+00:21:02.370 --> 00:21:04.320
+but I can see white stuff in the brain.
+
+472
+00:21:06.000 --> 00:21:07.250
+All right, next question.
+
+473
+00:21:08.310 --> 00:21:12.420
+That same 82-year-old comes in the ER.
+
+474
+00:21:12.420 --> 00:21:15.390
+Started at 8:00 AM. It's 11:00 AM now.
+
+475
+00:21:15.390 --> 00:21:16.260
+Did what I was supposed to do.
+
+476
+00:21:16.260 --> 00:21:18.540
+Got my lines, got my labs, got my head CT.
+
+477
+00:21:18.540 --> 00:21:21.510
+Everything's back within an hour. It's 12 noon now.
+
+478
+00:21:21.510 --> 00:21:25.680
+CT's, quote, "normal". There's no blood.
+
+479
+00:21:25.680 --> 00:21:28.830
+The patient is not a candidate for thrombolytic therapy,
+
+480
+00:21:28.830 --> 00:21:30.570
+and we'll discuss that in a second.
+
+481
+00:21:30.570 --> 00:21:32.940
+So your management now will include,
+
+482
+00:21:32.940 --> 00:21:36.777
+A, start nicardipine to control that blood pressure,
+
+483
+00:21:36.777 --> 00:21:39.600
+200 over 100, and start an aspirin,
+
+484
+00:21:39.600 --> 00:21:43.620
+B, start the nicardipine, but don't start aspirin,
+
+485
+00:21:43.620 --> 00:21:47.370
+C, don't start the nicardipine, but start aspirin,
+
+486
+00:21:47.370 --> 00:21:49.353
+or D, don't start either of them.
+
+487
+00:21:54.870 --> 00:21:58.050
+So the answer here is C.
+
+488
+00:21:58.050 --> 00:22:00.570
+C. C.
+
+489
+00:22:00.570 --> 00:22:03.690
+Yes, let's talk about C.
+
+490
+00:22:03.690 --> 00:22:05.730
+All right, first of all, let's just talk,
+
+491
+00:22:05.730 --> 00:22:07.830
+I'm gonna go through the tPA thing,
+
+492
+00:22:07.830 --> 00:22:10.320
+thrombolytic for strokes, all right?
+
+493
+00:22:10.320 --> 00:22:13.083
+And so tPA is that thrombolytic you heard all about.
+
+494
+00:22:13.950 --> 00:22:16.740
+I'm not gonna tell you about how good or bad it is,
+
+495
+00:22:16.740 --> 00:22:18.750
+but it's used in patients who don't have
+
+496
+00:22:18.750 --> 00:22:21.330
+any signs of hemorrhage, no history of hemorrhage,
+
+497
+00:22:21.330 --> 00:22:24.330
+no seizures, their blood pressure is under somewhat control,
+
+498
+00:22:24.330 --> 00:22:26.940
+and if they're under the age of 80,
+
+499
+00:22:26.940 --> 00:22:30.210
+you have up to 4.5 hours to give the drug.
+
+500
+00:22:30.210 --> 00:22:34.500
+If they're over 80, you're stuck at that three-hour rule,
+
+501
+00:22:34.500 --> 00:22:36.630
+and if in that stem of that question I gave you
+
+502
+00:22:36.630 --> 00:22:40.680
+an 82-year-old and it's now at the four-hour mark,
+
+503
+00:22:40.680 --> 00:22:44.430
+he is not a candidate for tPA, okay?
+
+504
+00:22:44.430 --> 00:22:48.270
+All right, blood pressure control. They love this question.
+
+505
+00:22:48.270 --> 00:22:51.390
+I see this almost every other year on the in-service.
+
+506
+00:22:51.390 --> 00:22:53.760
+What do you do with the blood pressure,
+
+507
+00:22:53.760 --> 00:22:55.410
+acutely elevated blood pressure
+
+508
+00:22:55.410 --> 00:22:57.390
+and someone's having a stroke?
+
+509
+00:22:57.390 --> 00:22:59.760
+Generally do not treat it.
+
+510
+00:22:59.760 --> 00:23:04.760
+Do not treat it unless it's over 220 over 120.
+
+511
+00:23:05.250 --> 00:23:07.290
+Don't treat it, okay?
+
+512
+00:23:07.290 --> 00:23:09.300
+This seems to be somewhat of a natural response.
+
+513
+00:23:09.300 --> 00:23:11.310
+Your brain's saying, "Let me get some blood up there
+
+514
+00:23:11.310 --> 00:23:15.240
+and feed that penumbra, that watershed threatened area."
+
+515
+00:23:15.240 --> 00:23:16.073
+All right?
+
+516
+00:23:16.073 --> 00:23:19.770
+If it's above that value, then you have to titrate closely
+
+517
+00:23:19.770 --> 00:23:21.263
+with nicardipine or labetalol.
+
+518
+00:23:22.830 --> 00:23:23.663
+This is a slide.
+
+519
+00:23:23.663 --> 00:23:25.080
+I just throw this in here for completeness sake.
+
+520
+00:23:25.080 --> 00:23:26.210
+I don't think they'll ask it.
+
+521
+00:23:26.210 --> 00:23:28.170
+If it's hemorrhagic stroke,
+
+522
+00:23:28.170 --> 00:23:30.720
+you treat that blood pressure little more aggressively.
+
+523
+00:23:30.720 --> 00:23:31.820
+That's all I'm saying.
+
+524
+00:23:32.700 --> 00:23:34.260
+The treatment for ischemic stroke.
+
+525
+00:23:34.260 --> 00:23:36.720
+What about aspirin? Just say, "Yes!"
+
+526
+00:23:36.720 --> 00:23:38.520
+Yeah, it's time to get an antiplatelet on board.
+
+527
+00:23:38.520 --> 00:23:40.680
+Yes, antipyretics. Treat the fever.
+
+528
+00:23:40.680 --> 00:23:41.910
+Treat the glucose.
+
+529
+00:23:41.910 --> 00:23:45.360
+Do a swallowing study before you feed them. Yes.
+
+530
+00:23:45.360 --> 00:23:48.030
+Don't put them on any prophylactic antiseizure medicines.
+
+531
+00:23:48.030 --> 00:23:50.330
+Don't start heparin, and don't start warfarin.
+
+532
+00:23:53.010 --> 00:23:55.473
+All right, TIA. All right, let's talk about TIA.
+
+533
+00:23:56.610 --> 00:23:58.072
+Here's the classic definition.
+
+534
+00:23:58.072 --> 00:24:01.348
+You know how we all grew up with that 24-hour thing, right?
+
+535
+00:24:01.348 --> 00:24:03.750
+You know, you had symptoms up to 24 hours,
+
+536
+00:24:03.750 --> 00:24:05.610
+and then you went back to your baseline,
+
+537
+00:24:05.610 --> 00:24:07.350
+and we said, "Oh, that's a TIA."
+
+538
+00:24:07.350 --> 00:24:08.977
+And then there was a group that came along and said,
+
+539
+00:24:08.977 --> 00:24:11.880
+"24 hours is silly. It really should be one hour."
+
+540
+00:24:11.880 --> 00:24:14.070
+And the answer to that, both of those are out.
+
+541
+00:24:14.070 --> 00:24:14.903
+Both of those are out.
+
+542
+00:24:14.903 --> 00:24:17.040
+That's not the definition of TIA anymore.
+
+543
+00:24:17.040 --> 00:24:18.900
+The definition of TIA is right here.
+
+544
+00:24:18.900 --> 00:24:20.910
+It's a transient episode of neurologic dysfunction
+
+545
+00:24:20.910 --> 00:24:25.530
+caused by some ischemia without infarction.
+
+546
+00:24:25.530 --> 00:24:29.730
+So there's no time thing on the definition of TIA,
+
+547
+00:24:29.730 --> 00:24:32.190
+and it is a tissue-based definition.
+
+548
+00:24:32.190 --> 00:24:34.560
+In other words, the American Heart,
+
+549
+00:24:34.560 --> 00:24:36.217
+American Stroke Association is saying,
+
+550
+00:24:36.217 --> 00:24:39.990
+"We want you to prove to us that there's no stroke,
+
+551
+00:24:39.990 --> 00:24:42.330
+there's no brain damage during that episode
+
+552
+00:24:42.330 --> 00:24:44.310
+of someone who couldn't, you know, speak for a short time
+
+553
+00:24:44.310 --> 00:24:46.500
+or had amaurosis fugax for a short time
+
+554
+00:24:46.500 --> 00:24:48.720
+and then went back to their baseline."
+
+555
+00:24:48.720 --> 00:24:49.553
+Why is that?
+
+556
+00:24:49.553 --> 00:24:52.140
+Because if you take that person who had some amaurosis fugax
+
+557
+00:24:52.140 --> 00:24:54.937
+or couldn't speak for 15 or 20 minutes and you said,
+
+558
+00:24:54.937 --> 00:24:57.450
+"Oh, that's TIA, right? It's TIA."
+
+559
+00:24:57.450 --> 00:24:59.940
+If you take them and you put them in the MRI machine
+
+560
+00:24:59.940 --> 00:25:02.100
+and you do the diffusion-weighted images,
+
+561
+00:25:02.100 --> 00:25:04.200
+you will see that that person
+
+562
+00:25:04.200 --> 00:25:06.150
+who couldn't just speak for 15, 20 minutes,
+
+563
+00:25:06.150 --> 00:25:09.333
+actually, about 1/3 of them actually stroked.
+
+564
+00:25:10.320 --> 00:25:11.420
+They actually stroked.
+
+565
+00:25:12.360 --> 00:25:14.100
+They'll have changes on their MRI
+
+566
+00:25:14.100 --> 00:25:16.893
+saying there is cell death here,
+
+567
+00:25:17.730 --> 00:25:20.400
+there's cell death here, so they actually stroked,
+
+568
+00:25:20.400 --> 00:25:23.370
+and the longer their symptoms lasted,
+
+569
+00:25:23.370 --> 00:25:24.960
+the greater their chance that you're gonna have
+
+570
+00:25:24.960 --> 00:25:26.760
+a positive MRI.
+
+571
+00:25:26.760 --> 00:25:29.670
+All right, that's why, and how does it show up
+
+572
+00:25:29.670 --> 00:25:31.140
+on the diffusion-weighted images?
+
+573
+00:25:31.140 --> 00:25:35.070
+Again, I look for white stuff. I look for the white stuff.
+
+574
+00:25:35.070 --> 00:25:39.090
+So white stuff says there's cytotoxic edema and cell death.
+
+575
+00:25:39.090 --> 00:25:41.490
+All right, so you have these transient neurological changes.
+
+576
+00:25:41.490 --> 00:25:45.930
+You are encouraged, as soon as you can get hold of an MRI,
+
+577
+00:25:45.930 --> 00:25:49.170
+okay, get them in, and you're encouraged to do it,
+
+578
+00:25:49.170 --> 00:25:52.980
+and if the MRI is, quote, normal or the patient's baseline,
+
+579
+00:25:52.980 --> 00:25:54.210
+it's a TIA.
+
+580
+00:25:54.210 --> 00:25:57.630
+They didn't have any cell death versus they had cell death
+
+581
+00:25:57.630 --> 00:26:00.330
+and they'll have a stroke.
+
+582
+00:26:00.330 --> 00:26:02.880
+That's a stroke. All right.
+
+583
+00:26:02.880 --> 00:26:05.010
+There are stroke and TIA mimics.
+
+584
+00:26:05.010 --> 00:26:08.610
+You know, there's lots of stroke and TIA mimics.
+
+585
+00:26:08.610 --> 00:26:09.540
+There's infection.
+
+586
+00:26:09.540 --> 00:26:11.940
+There's, you know, the Todd paralysis after a seizure,
+
+587
+00:26:11.940 --> 00:26:13.920
+complicated migraines, hypoglycemia.
+
+588
+00:26:13.920 --> 00:26:15.780
+These all can mimic a stroke.
+
+589
+00:26:15.780 --> 00:26:17.850
+This is how I lost all my hair in the ER,
+
+590
+00:26:17.850 --> 00:26:19.650
+trying to figure out whether this patient
+
+591
+00:26:19.650 --> 00:26:22.560
+had truly a stroke or it was something else, okay?
+
+592
+00:26:22.560 --> 00:26:24.210
+'Cause I have to decide if it's not one of
+
+593
+00:26:24.210 --> 00:26:26.370
+these other things, I have to give 'em tPA, et cetera.
+
+594
+00:26:26.370 --> 00:26:30.840
+Okay, so what helps you distinguish
+
+595
+00:26:30.840 --> 00:26:33.420
+whether it's stroke or a stroke mimic?
+
+596
+00:26:33.420 --> 00:26:36.180
+When it comes to the anterior circulation,
+
+597
+00:26:36.180 --> 00:26:38.107
+the neurologists like to teach and say,
+
+598
+00:26:38.107 --> 00:26:42.450
+"Listen, anterior circulation stroke or TIA
+
+599
+00:26:42.450 --> 00:26:45.690
+is associated a loss of something."
+
+600
+00:26:45.690 --> 00:26:49.680
+I lost some motor strength. I lost some vision.
+
+601
+00:26:49.680 --> 00:26:54.363
+I lost some speech. I lost something.
+
+602
+00:26:55.320 --> 00:27:00.320
+If you gained something, I gained,
+
+603
+00:27:00.660 --> 00:27:03.150
+I feel all this tingling in my hand now,
+
+604
+00:27:03.150 --> 00:27:06.570
+I'm gaining tingling, all right, that's different.
+
+605
+00:27:06.570 --> 00:27:08.460
+You don't wanna gain stuff.
+
+606
+00:27:08.460 --> 00:27:12.660
+There's one loss that is not associated with a stroke,
+
+607
+00:27:12.660 --> 00:27:15.660
+and that's loss of consciousness, okay?
+
+608
+00:27:15.660 --> 00:27:20.660
+Syncope is not a TIA or a stroke, okay?
+
+609
+00:27:21.240 --> 00:27:24.420
+Syncope is global hypoperfusion in the brain.
+
+610
+00:27:24.420 --> 00:27:25.830
+You drop your blood pressure.
+
+611
+00:27:25.830 --> 00:27:28.080
+You go boom. Down you go.
+
+612
+00:27:28.080 --> 00:27:30.180
+You wake up after 30, 60 seconds.
+
+613
+00:27:30.180 --> 00:27:33.753
+You're back to your baseline. That's syncope, all right?
+
+614
+00:27:35.280 --> 00:27:37.710
+All right, secondary prevention of stroke and TIA.
+
+615
+00:27:37.710 --> 00:27:39.510
+I've got just a couple of seconds left.
+
+616
+00:27:39.510 --> 00:27:41.010
+I'm gonna go through this real quick.
+
+617
+00:27:41.010 --> 00:27:45.690
+So you often will get patients back into your practice
+
+618
+00:27:45.690 --> 00:27:49.593
+who were hospitalized for their stroke or their TIA,
+
+619
+00:27:50.490 --> 00:27:53.190
+and now what are you supposed to do?
+
+620
+00:27:53.190 --> 00:27:55.110
+Okay, how do you manage them secondarily
+
+621
+00:27:55.110 --> 00:27:57.420
+'cause you don't want them to have another?
+
+622
+00:27:57.420 --> 00:28:00.420
+So first, the diagnostic.
+
+623
+00:28:00.420 --> 00:28:02.340
+We're gonna do four things, four slides.
+
+624
+00:28:02.340 --> 00:28:04.860
+The diagnostic evaluation, all right,
+
+625
+00:28:04.860 --> 00:28:06.270
+all this was probably done in the hospital,
+
+626
+00:28:06.270 --> 00:28:09.090
+your ECG, your labs, yada, yada, yada.
+
+627
+00:28:09.090 --> 00:28:13.050
+If it's an anterior circulation stroke,
+
+628
+00:28:13.050 --> 00:28:15.810
+you should look for a potentially correctable cause.
+
+629
+00:28:15.810 --> 00:28:19.680
+Now you look at the carotids, right?
+
+630
+00:28:19.680 --> 00:28:22.860
+If this was a vertebrobasilar stroke,
+
+631
+00:28:22.860 --> 00:28:24.480
+you don't look at the carotids.
+
+632
+00:28:24.480 --> 00:28:26.010
+You have to look at the vertebrobasilar system
+
+633
+00:28:26.010 --> 00:28:30.060
+with an MRA or a CTA, all right?
+
+634
+00:28:30.060 --> 00:28:33.150
+That's the distinguishing factor there.
+
+635
+00:28:33.150 --> 00:28:35.550
+The lifestyle changes. Yeah, you're gonna do all this.
+
+636
+00:28:35.550 --> 00:28:38.580
+This is, again, that's the no-brainer part.
+
+637
+00:28:38.580 --> 00:28:40.560
+You control the cholesterol, activities,
+
+638
+00:28:40.560 --> 00:28:43.320
+smoking, alcohol, drug use, of course.
+
+639
+00:28:43.320 --> 00:28:45.330
+Medical management.
+
+640
+00:28:45.330 --> 00:28:48.780
+When do you start controlling the blood pressure?
+
+641
+00:28:48.780 --> 00:28:52.260
+You can start that, like, day two or three in the hospital
+
+642
+00:28:52.260 --> 00:28:56.130
+to now start slowly trying to drive their blood pressure
+
+643
+00:28:56.130 --> 00:28:59.040
+back down below 130 over 80.
+
+644
+00:28:59.040 --> 00:29:01.620
+You don't do it the first day, okay?
+
+645
+00:29:01.620 --> 00:29:04.440
+You can control the lipids. Yes, you know that.
+
+646
+00:29:04.440 --> 00:29:06.690
+The anti-platelet stuff, I've gotta do this real quick
+
+647
+00:29:06.690 --> 00:29:08.703
+'cause this is so confusing.
+
+648
+00:29:11.010 --> 00:29:13.890
+You have a patient who's had a TIA, a high-risk TIA,
+
+649
+00:29:13.890 --> 00:29:16.710
+their ABCD score was high, okay?
+
+650
+00:29:16.710 --> 00:29:19.800
+They have high risk or they had a minor stroke,
+
+651
+00:29:19.800 --> 00:29:22.893
+which is defined as an NIHSS score less than three.
+
+652
+00:29:23.940 --> 00:29:26.817
+You start them on dual antiplatelets,
+
+653
+00:29:26.817 --> 00:29:29.250
+and it's based on two studies
+
+654
+00:29:29.250 --> 00:29:31.050
+that I put in your supplement, okay?
+
+655
+00:29:32.100 --> 00:29:34.320
+You put them on dual antiplatelets
+
+656
+00:29:34.320 --> 00:29:37.020
+for three weeks to three months,
+
+657
+00:29:37.020 --> 00:29:39.180
+three weeks to three months,
+
+658
+00:29:39.180 --> 00:29:41.850
+and after those three weeks to three months,
+
+659
+00:29:41.850 --> 00:29:44.928
+you go back to monotherapy.
+
+660
+00:29:44.928 --> 00:29:48.570
+You don't stay on it lifelong, okay?
+
+661
+00:29:48.570 --> 00:29:50.910
+So that's where dual antiplatelets come in.
+
+662
+00:29:50.910 --> 00:29:55.910
+Now, counterintuitive, you have a big stroke, all right,
+
+663
+00:29:56.310 --> 00:29:59.940
+large NIHSS score, I can't speak, I can't move half my body.
+
+664
+00:29:59.940 --> 00:30:02.070
+I mean, that's a problem, right?
+
+665
+00:30:02.070 --> 00:30:04.263
+There, you just get monotherapy.
+
+666
+00:30:05.520 --> 00:30:08.010
+It's counterintuitive, I know.
+
+667
+00:30:08.010 --> 00:30:12.750
+I'm less aggressive with the big bad stroke the patient had,
+
+668
+00:30:12.750 --> 00:30:15.930
+but this minor stroke, I'm gonna be more aggressive,
+
+669
+00:30:15.930 --> 00:30:18.600
+and that's based on the data, okay?
+
+670
+00:30:18.600 --> 00:30:21.390
+Now, I'm gonna stress again on the left-hand side,
+
+671
+00:30:21.390 --> 00:30:24.060
+I can't tell you how many patients,
+
+672
+00:30:24.060 --> 00:30:27.030
+once they get placed on dual antiplatelets,
+
+673
+00:30:27.030 --> 00:30:32.030
+stay on dual antiplatelets, and after a year or two,
+
+674
+00:30:32.220 --> 00:30:35.850
+they come in to me with their hemorrhage.
+
+675
+00:30:35.850 --> 00:30:38.610
+Okay, so understand that's what you're supposed to do.
+
+676
+00:30:38.610 --> 00:30:40.770
+All right, people asked this in the Q&amp;A.
+
+677
+00:30:40.770 --> 00:30:43.680
+Please don't ask this in the Q&amp;A 'cause I know it's coming.
+
+678
+00:30:43.680 --> 00:30:47.433
+Well, what happens if they have their second or third TIA?
+
+679
+00:30:48.840 --> 00:30:50.820
+Should I put them back on dual antiplatelets?
+
+680
+00:30:50.820 --> 00:30:53.570
+Should I keep them on dual antiplatelets? What do I do?
+
+681
+00:30:55.230 --> 00:30:56.780
+I don't have an answer for you.
+
+682
+00:30:57.630 --> 00:31:01.260
+People do try increasing the doses,
+
+683
+00:31:01.260 --> 00:31:03.840
+baby aspirin up to a full dose,
+
+684
+00:31:03.840 --> 00:31:05.490
+say, "Hey, put you back on dual antiplatelets.
+
+685
+00:31:05.490 --> 00:31:07.200
+Try a different antiplatelet regimen."
+
+686
+00:31:07.200 --> 00:31:09.870
+There's no right answer, no right answer, okay?
+
+687
+00:31:09.870 --> 00:31:11.340
+So please don't ask in the Q&amp;A.
+
+688
+00:31:11.340 --> 00:31:14.220
+All right, last, carotid endarterectomy.
+
+689
+00:31:14.220 --> 00:31:16.080
+Who do you recommend for carotid endarterectomy?
+
+690
+00:31:16.080 --> 00:31:21.060
+With patients who have a non-disabling stroke
+
+691
+00:31:21.060 --> 00:31:25.140
+or TIA in the ipsilateral side where the lesion was.
+
+692
+00:31:25.140 --> 00:31:26.700
+So that's who you do it on.
+
+693
+00:31:26.700 --> 00:31:28.590
+That's the long and short of it, okay,
+
+694
+00:31:28.590 --> 00:31:31.530
+not on asymptomatic patients for the most part.
+
+695
+00:31:31.530 --> 00:31:34.590
+So that's the secondary prevention of stroke and TIA,
+
+696
+00:31:34.590 --> 00:31:37.745
+and I got to the end, and I'm gonna say thank you very much.
+
+697
+00:31:37.745 --> 00:31:40.328
+(gentle music)
+

@@ -1,0 +1,20 @@
+Fully intact (A+B+C+D): 278 / 311
+Missing only D:         1
+Missing A or B:         31
+
+=== Session 2 Q5 p24 ===
+STEM: A 72 yo patient presents to the ED with sudden severe Right leg pain, located from the knee to toes. Past medical history is significant for HTN and DM. Exam: Vitals: 160/90, pulse = 120 and irregular
+  A: nan  |  B: nan  |  C: nan  |  D: nan
+
+=== Session 3 Q1 p5 ===
+STEM: A 52-y.o. man presents with 45 minutes of squeezing substernal chest pressure radiating to his left arm. EKG from a physical two months ago was normal. This is his current EKG:
+  A: nan  |  B: nan  |  C: nan  |  D: nan
+
+=== Session 3 Q4 p16 ===
+STEM: A 45-year-old man complains of acute, sharp chest pain relieved by leaning forward. On examination, you hear a pericardial friction rub. EKG follows.
+  A: nan  |  B: nan  |  C: nan  |  D: nan
+
+=== Session 5 Q3 p13 ===
+STEM: A 69-year-old woman with hypertension, previous MI, and EF 32% is seen in your office. She is comfortable at rest but is breathless when walking upstairs. Her current medications are atorvastatin, lis
+  A: nan  |  B: nan  |  C: nan  |  D: nan
+

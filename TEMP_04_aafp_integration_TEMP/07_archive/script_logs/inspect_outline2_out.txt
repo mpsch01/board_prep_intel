@@ -1,0 +1,93 @@
+Total paragraphs: 3804
+
+=== STYLE COUNTS ===
+  3683x  Normal
+    73x  Style1
+    48x  Heading1
+
+=== STYLE SAMPLES ===
+  [Normal] TABLE OF CONTENTS
+  [Heading1] Session 02: Peripheral Vascular Disease
+  [Style1] 02. PERIPHERAL VASCULAR DISEASE & AORTIC DISEASE
+
+=== SESSION HEADINGS (Heading1 style) ===
+  para[  82]  Session 02: Peripheral Vascular Disease
+  para[ 163]  Session 03: Acute Coronary Syndrome (ACS) & Hyperlipidemia
+  para[ 233]  Session 04: Hypertension
+  para[ 305]  Session 05: Heart Failure
+  para[ 382]  Session 06: Managing Dysrhythmias
+  para[ 441]  Session 07: Health Promotion & Prevention
+  para[ 487]  Session 08: Epidemiology & Medical Literature
+  para[ 509]  Session 09: Managing Common Cutaneous Problems
+  para[ 577]  Session 10: Emergency Medicine I
+  para[ 614]  Session 11: Emergency Medicine II
+  para[ 659]  Session 12: Emergency Medicine III
+  para[ 805]  Session 13: Obesity & Metabolic Syndrome
+  para[ 866]  Session 14: Diabetes Mellitus
+  para[ 940]  Session 15: Endocrine Diseases
+  para[1022]  Session 16: Lower GI Tract Diseases
+  para[1099]  Session 17: Upper GI Tract Diseases
+  para[1166]  Session 18: Geriatrics I — Systems of Care & Cognitive Impairment
+  para[1269]  Session 19: Geriatrics II — Osteoporosis, Gait & Prevention
+  para[1349]  Session 20: Geriatrics III — Pharmacokinetics & Polypharmacy
+  para[1423]  Session 21: Hematology Issues
+  para[1574]  Session 22: Fever & Infectious Disease in Children
+  para[1652]  Session 23: STIs, Vaginitis & Vaginosis
+  para[1761]  Session 24: Renal Disease I
+  para[1901]  Session 25: Renal Disease II
+  para[2040]  Session 26: Common Neurological Disorders
+  para[2185]  Session 27: Maternity Care I — Prenatal Care & Early Complications
+  para[2266]  Session 28: Maternity Care II — Medical Complications & Labor Management
+  para[2362]  Session 29: Women’s Health I — AUB & Gynecologic Oncology
+  para[2476]  Session 30: Women’s Health II — Breast Issues, Contraception & Infertility
+  para[2552]  Session 31: Musculoskeletal Medicine
+  para[2614]  Session 32: Fracture Care
+  para[2682]  Session 33: Sports Medicine
+  para[2684]  Session 34: Pediatric Orthopedics
+  para[2686]  Session 35: Common ENT Problems
+  para[2794]  Session 36: Management of Chronic Pain
+  para[2872]  Session 37: Common Newborn Issues
+  para[2977]  Session 38: Well-Child & Adolescent Issues
+  para[3071]  Session 39: Behavioral Medicine I — Depression
+  para[3127]  Session 40: Behavioral Medicine II — Bipolar & Anxiety Disorders
+  para[3193]  Session 41: Behavioral Medicine III — ADHD, Autism & OCD
+  para[3299]  Session 42: Pulmonary I — COPD
+  para[3356]  Session 43: Pulmonary II — Asthma
+  para[3403]  Session 44: Pulmonary III — Pulmonary Infections & Pneumonia Part 1
+  para[3490]  Session 45: Pulmonary IV — Infections, Pneumonia Part 2 & Occupational Lung Disease
+  para[3545]  Session 46: Pulmonary V — Lung Cancer, OSA, Sarcoidosis & Pulmonary Fibrosis
+  para[3594]  Session 47: The Major Arthritides
+  para[3663]  Session 48: Preoperative Examination & Management
+  para[3727]  Session 49: Urologic Problems
+
+=== CONTEXT AROUND FIRST SESSION (paras 0-30) ===
+  [  0] (Normal      ) 
+  [  1] (Normal      ) TABLE OF CONTENTS
+  [  2] (Normal      ) 
+  [  3] (Normal      ) CARDIOVASCULAR DISEASE
+  [  4] (Normal      ) Session 02. Peripheral Vascular Disease
+  [  5] (Normal      ) Session 03. Acute Coronary Syndrome (ACS) & Hyperlipidemia
+  [  6] (Normal      ) Session 04. Hypertension
+  [  7] (Normal      ) Session 05. Heart Failure
+  [  8] (Normal      ) Session 06. Managing Dysrhythmias
+  [  9] (Normal      ) PREVENTIVE MEDICINE & PUBLIC HEALTH
+  [ 10] (Normal      ) Session 07. Health Promotion & Prevention
+  [ 11] (Normal      ) Session 08. Epidemiology & Medical Literature
+  [ 12] (Normal      ) DERMATOLOGY
+  [ 13] (Normal      ) Session 09. Managing Common Cutaneous Problems
+  [ 14] (Normal      ) EMERGENCY MEDICINE
+  [ 15] (Normal      ) Session 10. Emergency Medicine I
+  [ 16] (Normal      ) Session 11. Emergency Medicine II
+  [ 17] (Normal      ) Session 12. Emergency Medicine III
+  [ 18] (Normal      ) ENDOCRINOLOGY
+  [ 19] (Normal      ) Session 13. Obesity & Metabolic Syndrome
+  [ 20] (Normal      ) Session 14. Diabetes Mellitus
+  [ 21] (Normal      ) Session 15. Endocrine Diseases
+  [ 22] (Normal      ) GASTROENTEROLOGY
+  [ 23] (Normal      ) Session 16. Lower GI Tract Diseases
+  [ 24] (Normal      ) Session 17. Upper GI Tract Diseases
+  [ 25] (Normal      ) GERIATRICS
+  [ 26] (Normal      ) Session 18. Geriatrics I: Systems of Care & Cognitive Impairment
+  [ 27] (Normal      ) Session 19. Geriatrics II: Osteoporosis, Gait, & Prevention
+  [ 28] (Normal      ) Session 20. Geriatrics III: Pharmacokinetics & Polypharmacy
+  [ 29] (Normal      ) HEMATOLOGY

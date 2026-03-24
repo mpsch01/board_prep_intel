@@ -1,0 +1,1081 @@
+Dr. Holt is back, of course.
+
+We're gonna talk about hematology.
+
+Thank you, ma'am.
+
+Awesome.
+
+All right, this is a fun talk.
+
+I always love this talk because I feel like this has changed a lot over the last five to 10 years, hematology.
+
+Unfortunately, nothing exciting happened to me over the break.
+
+I still have no disclosures.
+
+What are we gonna spend time on today?
+
+A fair bit of time on anemia.
+
+A wee little bit of time on sickle cell, TTP, leukemia, hemophilia, multiple myeloma.
+
+Just those real quick bullet points again.
+
+And then the most of our time on DVT and PE and a little bit on what to do if they're pregnant person with DVT and PE.
+
+So you're gonna see a lot of this.
+
+Obviously, all of you have seen this before.
+
+You're gonna continue to see this.
+
+2/3 of the time, it will be a DVT, 1/3 a PE.
+
+And oftentimes they go together, right?
+
+So if you have a proximal DVT, 40% chance, you also have a PE at the time of diagnosis.
+
+70% of those with PE also have a DVT at the time of diagnosis if you go looking for it.
+
+Mortality rates are 6% with the DVT.
+
+I always think that's interesting.
+
+What the heck are they dying from?
+
+Well, if you look at the incidents, they die because they progress to a PE or from some of their other comorbidities.
+
+They're old, they have cancer and they have cardiovascular disease.
+
+So it's some of those comorbidities contributing.
+
+But PE stands alone as a 12% mortality.
+
+So pretty darn high.
+
+Dr. Virchow was making this happen in long, long time ago, and it's still valid to this day.
+
+So way to go for him.
+
+Stasis, hypercoagulability, endothelial injury.
+
+We have added to Dr. Virchow's list with a few things here.
+
+So male gender is difference in this.
+
+As you know, Dr. Connor pointed out, and it doesn't matter in a lot of medicine.
+
+It does matter here.
+
+Family history, thrombophilia is a really important risk factor.
+
+Obesity, right?
+
+We know we're in this epidemic of obesity right now.
+
+So we're seeing more and more blood clots these days.
+
+Also for the really thin people, those are usually cancer patients though.
+
+That's why they have a higher incidence.
+
+Prior history of it certainly increases it.
+
+Cancer, as we mentioned, stroke, pregnancy, and of course, COVID has been added to the list.
+
+So we'll talk about that briefly.
+
+The Well's criteria is still a really valid tool.
+
+Hopefully, you all have it on your MD calc.
+
+When you see a patient in the office and you can just calculate them right up.
+
+But here are the point systems.
+
+I love that last one.
+
+You know, alternative diagnosis is more likely.
+
+If they have a unilateral swollen ankle 'cause they just sprang their ankle, right?
+
+You're not gonna think as much of a DVT there.
+
+You're gonna pull that back with those minus two points.
+
+As you've added up your points, you wanna know what are their risks.
+
+Zero, low risk.
+
+Three or more points, high risk.
+
+That's all you need to know there.
+
+So let's get into our first question.
+
+38-year-old female patient presents with pain in her right calf of three days duration.
+
+She had a lap coli eight weeks ago, cervical colonization for carcinoma in situ two, six years ago with no recurrence.
+
+No one in her family has had a clot.
+
+She has two plus bilateral ankle edema.
+
+What's your initial diagnostic study?
+
+D-dimer, protein C and S, venous compression ultrasounds or a venogram?
+
+Okay, so we had some debate here.
+
+D-dimer or venous compression ultrasound.
+
+I'm glad we're here.
+
+We have a little bit of a learning opportunity.
+
+So the D-dimer is a really great test for kind of one thing.
+
+It has excellent negative predictive value.
+
+So 95% negative predictive value.
+
+So if you have a negative D-dimer, you can really speak highly that that person does not have a clot.
+
+Unfortunately, most patients end up with a little positive D-dimer, especially if they're in the ER and then you're not sure what to do.
+
+But this is an important test.
+
+As you get older, everybody's D-dimer gets a little more mature as well, I'll say.
+
+And so you can consider age times 10 for those over 50 as a better cutoff because of that increased false positive with age.
+
+So if you have a normal D-dimer and a low probability Well score, which our patient did in this question, your your DVT is very unlikely.
+
+You do not need any additional testing.
+
+So that's why you wouldn't have done venous compression ultrasound in her because she was low probability.
+
+So your D-dimer is super helpful.
+
+If you have a moderate or high pretest probability with your Well's score, just skip the D-dimer and go right to the ultrasounds.
+
+Okay?
+
+So that's why that one in this question was the way it was.
+
+Ultrasounds are pretty great for this.
+
+Look at that positive predictive value, 94%.
+
+But if they're negative and you're just shocked, you're like, "You gotta be kidding me.
+
+I really thought that'd be positive." You can opt to test them again in five to seven days.
+
+It has the best sensitivity and specificity for more proximal disease.
+
+It gets worse the lower down you go.
+
+And there are some limitations.
+
+It won't tell you newer old clot.
+
+Sometimes, abscesses or infection can trick it a little bit.
+
+So be aware that it's not, you know, 100%.
+
+This is a common question that we get clinically and sometimes on the boards too.
+
+So if you diagnose that clot, who do we need to go hunting for things on?
+
+Who has cancer?
+
+Who has something in their family history that's a hemophilia?
+
+So we've got some good data on this now.
+
+Screening for malignancy.
+
+Cancer risk is 1.3 times expected, not 78 times expected, which is maybe like what was in my brain initially.
+
+It's a little higher, but it's not crazy high.
+
+Do your history and physical.
+
+Do what you already know how to do.
+
+Do routine cancer screenings but don't go on this big aggressive cancer hunt because usually, cancer is gonna present itself in another way before you get that first clot.
+
+And this is now strength the recommendation A coming out of AFP.
+
+Just do routine age appropriate cancer screens.
+
+If you are gonna have that link, stage four cancer has much higher risk of clotting regardless of cancer origination.
+
+Myeloproliferative is a really big hot player for clots.
+
+So if you have a patient with myeloproliferative disease, and we'll talk about that a little later, anticoagulation is important process for them.
+
+Lungs, ovary, brain, other big players.
+
+Who needs screening for thrombophilia?
+
+Another strength of recommendation A says, "Relax, don't get it on everybody," which is good advice, but who does need it?
+
+If you're young when you first have that clot, age prior to 50.
+
+If you do have that family history, if you've had another clot before and you're coming up on number two, maybe consider it.
+
+What if you have an unusual vascular bed?
+
+That means it's not in an arm or leg, it's in a gut.
+
+It's in a brain.
+
+You might wanna think about thrombophilia workup.
+
+And you also wanna put myeloproliferative disease in your brain too 'cause that's a really hot link for that one.
+
+Warfarin-induced Coumadin skin necrosis.
+
+We've kind of heard about that for a long time.
+
+Hopefully, we're not seeing much of that these days 'cause we understand how important it is to bridge them with Lovenox.
+
+But we know then that they could have low protein CNS and that could be why they had that Coumadin skin necrosis.
+
+So if someone gets that, test for that.
+
+I've put a list of all the things on here.
+
+They're not gonna test you on this on the board.
+
+This is for your clinical brain right here.
+
+But if they ask you a question about would you test them before starting treatment?
+
+The answer is yes.
+
+'Cause a lot of these tests are messed up.
+
+If you're already on a DOAC, or you're already on Coumadin.
+
+Okay?
+
+So try to get that testing done before you begin that treatment.
+
+Okay, next question here.
+
+63-year-old male presents with a history of several days of shortness of breath with exertion and pleuritic chest pain.
+
+He had a DVT five years ago.
+
+His O2 SAT is 85% on room air.
+
+Heart rate's one 10.
+
+He just returned from traveling to Japan.
+
+What is the best test for initial evaluation of this patient's symptoms?
+
+D-dimer, compression ultrasound of the lower extremities, a VQ scanning or CT angiography.
+
+Love it.
+
+CT angiography.
+
+So if we were an ER doctor, they'd be 100% 'cause they just love to get CTPAs.
+
+But in this case, this patient really does need a CTPA.
+
+And let's talk through why some of these other things aren't your first choice.
+
+PE is hard.
+
+The symptoms are pretty non-specific a lot of the times.
+
+You know we learned about in med school, oh, the EKG will show an S1, Q3, T3.
+
+Now, it usually just shows sinus attack, which can go with a million other things, right?
+
+The chest X-Ray will show a Hampton's hump.
+
+I've seen that once in 25 years.
+
+So probably not gonna see a Hampton's hump, that wedge shape, resection from a wedge shape infarction that can happen from a PE.
+
+And then normal O2 sat.
+
+You can't even hang your hat completely on that because if a normal O2 sat doesn't rule out a PE.
+
+It rules out a massive PE.
+
+but it doesn't rule out some smaller ones.
+
+So gosh, it's a hard diagnosis to make.
+
+So your clinical suspicion is really important here.
+
+This also has a Well's criteria.
+
+It's a little modified for PE, but it's been consistent for a long time.
+
+And if you look at our gentleman, he came up with 7 1/2 points.
+
+His other diagnosis is less likely 'cause this sort of screamed PE to us.
+
+Heart rate was above 100 and he was immobilized because of his travel.
+
+So with that, he had some points going on.
+
+He also had that previous clot, 1.5 there.
+
+So high risk was his score being above six.
+
+So D-dimer, again, most helpful for a low probability test.
+
+If you already have a high probability, it's very reasonable to go straight to the CTPA and skip the D-dimer.
+
+There are some newer kind of recommendations coming out that, gosh, maybe we get too many CTPAs.
+
+I think that's a true statement.
+
+I have a person in my own practice who has a lot of panic disorder.
+
+Goes to the ER way too often.
+
+I'm embarrassed I can't get this under control for her.
+
+She's had 58 CTPAs.
+
+Holy smokes, right?
+
+That's a problem.
+
+So you're gonna start seeing some guidelines that say, "Gosh, maybe we should get D-dimers for everybody because we're way ordering too many of these in the ER." But if you really follow the Well's criteria, you wouldn't be ordering all those to begin with.
+
+So give that some thought.
+
+But negative D-dimer again, makes it very unlikely.
+
+CTPA is gonna be our test of choice here.
+
+High sensitivity and specificity, 99% negative predictive value.
+
+So it's an excellent test.
+
+It is your test of choice if you have a low probability Well's but your D-dimer's positive.
+
+Or test of choice if you have a moderate or high pretest probability.
+
+You can go straight to the CTPA.
+
+Why don't we just angio everybody?
+
+Well because you could kill them accidentally.
+
+That would be unfortunate.
+
+2% mortality rate, 5% morbidity.
+
+So I haven't seen an angio done in a really long time 'cause our CTPAs are really good tests.
+
+What about the old VQ scan?
+
+It's still a great test, we just don't see a lot of it anymore.
+
+But if you have a normal VQ, regardless of your pretest probability, you have ruled out a PE, you are done.
+
+If you have a low probability and a low probability VQ and a low pretest probability, you've excluded it, high probability with high pretest, you've ruled it in.
+
+Everybody else still needs a CTPA.
+
+So who do we really think about these in?
+
+If they have a contrast allergy can't tolerate a CTPA.
+
+If they have pretty severe renal disease greater than stage three, you think about this.
+
+Pregnancy is a consideration.
+
+The current guidelines say that if your institution only has a high dose CT scanner, then think about the VQ.
+
+If you have a traditional low dose CT scanner, which most institutions do now, it's acceptable to go straight to the CTPA.
+
+Here's that VQ scan look and abnormal there on the left.
+
+48-year-old female presents with three days of left lower extremity swelling.
+
+Venous doppler reveal proximal DVT, she's stable.
+
+No other medical conditions.
+
+What's gonna be our treatment of choice?
+
+Rivaroxaban only as an outpatient.
+
+Low molecular weight heparin for five days as a bridge to the rivaroxaban is outpatient.
+
+Hospitalization for unfractionated heparin and warfarin therapy.
+
+Or hospitalization for thrombolytic therapy.
+
+Good stuff.
+
+So this has been a change, right?
+
+We used to do a lot more Coumadin.
+
+Obviously, these DOACs, NOACs, have really taken over the world here.
+
+And Xarelto does not need a bridge.
+
+Some of them do and we'll talk about that.
+
+So DOACs are now preferred for treatment of venous thromboembolism, whether it's PE or DVT.
+
+The only exception to that is if you have a GI luminal cancer, and we'll talk about that in a moment.
+
+But for everybody else, DOACs are preferred.
+
+You're in the therapeutic window more often, you have less major bleeding and improved patient convenience.
+
+But CHEST guidelines don't really care about patient convenience.
+
+But those first two are major factors.
+
+So CHEST change their recommendation to say these are superior to Coumadin.
+
+That recommendation was changed in 2021.
+
+So we see the Xarelto and Eliquis are the most commonly used ones because you don't need to bridge them with Lovenox.
+
+But sometimes insurance will dictate that you use one of the other ones.
+
+Or if it's a self-pay patient, Sava is one of the cheaper ones.
+
+It's still very expensive.
+
+But sometimes, you'll have a patient on that for the cost and in which case, you'll need to bridge them with Lovenox.
+
+Remember, renal disease in these patients, they all need to be renal dosed.
+
+So just pull up an app to remind yourself of that.
+
+Okay?
+
+What if you can't afford these?
+
+Which is a common problem.
+
+Then low molecular weight bridge to a warfarin is still acceptable, it's just not preferred.
+
+So try the first thing with the DOAC.
+
+If you can't get that covered, then transition over there.
+
+Reversal agents for many now.
+
+So if somebody comes in with a major bleed, you can use a reversal agent, you can charcoal them, you can dialyze them all off if you're really in a pickle.
+
+Cancer associated thrombosis has been a recent change.
+
+CHEST guidelines used to say it's Lovenox for everybody if they have a cancer-associated clot.
+
+Data started coming out in 2019 of like, "Hey, maybe that's not the case.
+
+Maybe these DOACs are pretty good." And actually, they are.
+
+And now they're recommended over Lovenox except for GI luminal cancers.
+
+For that specific type of cancer, your low molecular weight has better data.
+
+They have less hemorrhaging from that essentially.
+
+Coumadin is considered third line for cancer-associated clots.
+
+This is also kind of newer stuff.
+
+If you have an isolated distal DVT, so not a proximal but a distal DVT, you don't have to anticoagulate them.
+
+This is gonna take some, you know, informed consent with your patient of course, and you're gonna wanna make sure that you're following them every two weeks to make sure they're not propagating to a more proximal location.
+
+You also have to make sure they don't have any of these risk factors for extension listed here.
+
+So if it's a really big distal clot, I'm gonna anticoagulate that.
+
+If it's close to one of those bigger veins, I'm gonna anticoagulate that.
+
+If they have cancer, I'm gonna anticoagulate that.
+
+So it takes a special patient to not need it, but it is an acceptable thing in recommended per CHEST guidelines to just expectantly manage those isolated distal DVTs.
+
+Is it okay to treat them as an outpatient?
+
+Yes, and we talked about that in one of our earlier questions.
+
+So if you're ambulatory, you're not needing oxygen, you don't need IV meds, you're not on IV antibiotics, low risk of bleeding, renal insufficiency isn't such a big thing for you, that's a great outpatient candidate.
+
+Who needs to come in?
+
+If they have a massive DVT oftentimes for pain control, they'll need to come in.
+
+If they're a symptomatic PE, that's kind of a slam dunk, we're gonna bring those in.
+
+High risk for bleeding or other comorbid conditions, might need to bring them in the hospital.
+
+Duration of treatment, three months is your kinda money to hang your hat on.
+
+So if it is a provoked DVT and now we sort of call that transient risk factors.
+
+So that may mean surgery, that may mean I just traveled to Japan.
+
+That may mean I just had COVID.
+
+Those would be considered transient risk factors and three months is pretty clearly recommended for those.
+
+That's part of the hematology Choosing Wisely campaign.
+
+What if it was unprovoked or what we would consider a long-term risk factor?
+
+There's some debate on this, but three plus months is what's recommended.
+
+CHEST says at least three months.
+
+The ASH guidelines, American Society of Hematology says three to six.
+
+So you'll see a couple different numbers, but at least three, maybe longer.
+
+What is a grade 2B recommendation?
+
+Long term.
+
+If there's low risk of bleeding.
+
+If they're one of those higher risk of bleeding patients, which you can check on your MD calc with your has blood formula, then you would stop at three months.
+
+'cause at that point, the risk benefit ratio is not there and you would transition them to aspirin if they can tolerate that.
+
+If it's a recurrent DVT, then it's lifelong until their bleeding risk is too high.
+
+What about this catheter directed thrombolysis?
+
+We're starting to hear a little bit more about this.
+
+It is an adjunct to anticoagulation to reduce that clot burden faster.
+
+So you have less complications, less valve damage in the long run.
+
+The problem is we just need some randomized controlled trials.
+
+So I don't think you're gonna be tested on this, but just clinically I wanted you to be aware of that.
+
+What do we say about, we used to put everybody on bedrest and put them all on compression stockings.
+
+Those things are no longer recommended.
+
+They did not show benefit and those are also part of the hematology Choosing Wisely campaigns.
+
+So if you get long-term edema because of a DVT, you can use compression stockings there.
+
+But if you have a DVT today, starting compression stockings doesn't decrease your chances of having a long-term issue.
+
+Okay?
+
+So it does not decrease recurrent DVT or thrombophlebitis.
+
+What about PE?
+
+What's different?
+
+They oftentimes can be unstable.
+
+So if they have hemodynamic instability, hypotension, you need to think about a systemic thrombolytic in that patient.
+
+And for PE, again, because they're hard to diagnose if it's on your brain, just treat them while you're working it up.
+
+You know, give them a dose of Lovenox in the ER or urgent care even from your office while you're working them up if you need to.
+
+Who needs an IVC filter?
+
+Pretty much if you can't tolerate anticoagulants.
+
+Anticoagulation is much better but if you can't tolerate it, then IVC filters a reasonable choice for you.
+
+Do remember to remove that filter when your treatment window is up.
+
+Okay?
+
+80% can be removed.
+
+If you just kinda put it in and leave it there, you are gonna increase your risk of DVT in the long run.
+
+Just like we said, distal isolated DVTs don't need treated.
+
+Subsegmental PEs can also just be observed.
+
+That's a new recommendation that came out of CHEST in 2021.
+
+There are some guidelines here as well.
+
+You can't have proximal artery involvement.
+
+You can't have a proximal DVT in the leg 'cause we would need to treat those anyway.
+
+And they shouldn't be a person with high risk of recurrence.
+
+Again, if this is a cancer patient, you're not gonna opt to not treat them.
+
+Okay?
+
+Again, informed consent, very important here.
+
+But they do recommend clinical surveillance is superior to anticoagulation if you meet all those parameters.
+
+All right, so what do we do if there's a pregnant person?
+
+28-year-old G3P2 is diagnosed with DVT in her right lower extremity.
+
+The treatment of choice for this patient would be apixaban, unfractionated heparin and warfarin, low molecular weight heparin or a vena cava filter.
+
+Low molecular weight heparin, excellent.
+
+92, 91% of you got that, love it.
+
+That is the right answer.
+
+You're definitely gonna see blood clots in pregnancy.
+
+It increases fivefold compared to general population.
+
+Overall risk is about one outta 1,600 pregnancies and PE is still a leading cause of morbidity and mortality in pregnancy.
+
+Up to half of those can have an underlying thrombophilia.
+
+So we already mentioned that some things can lower your protein CNS.
+
+pregnancy is one that can do that.
+
+So that is already gonna be low, but you might have a secondary thrombophilia on top of it.
+
+If you've had one before, you've got up to a four times higher chance of having one again.
+
+Overall, the risk of clots DVT and PE together are pretty equal.
+
+Antepartum and postpartum pretty equal throughout the trimesters.
+
+If you pull out just PE though, that's a postpartum thing.
+
+Much more PE in that first week to 10 days after delivery.
+
+So keep that a little higher on your radar if you're seeing them back for unrelated things.
+
+D-dimer is still a great test, but oh, it's almost always positive in the prepartum period of time.
+
+So not so helpful.
+
+Low dose CTPAs, as we mentioned, are safe in pregnancy.
+
+And so if you only have a high dose option available to you, ACOG recommends you do chest X-Ray first.
+
+If the chest X-Ray is normal, then you have an option of getting that VQ.
+
+If you have a baseline abnormal chest X-Ray, the VQ is not an option for you.
+
+So you would have no choice but to do a high dose CAT scan if that was your only option.
+
+It takes a whole lot of rads to injure a baby.
+
+So you're not gonna get in trouble with, you know, even a single high dose CTPA.
+
+It takes a lot of them, but certainly, we still want to decrease radiation exposure.
+
+Anticoagulation in pregnancy says heparin and low molecular weight heparin are safe.
+
+Strength of recommendation B.
+
+We know that unfractionated heparin, the dose changes a lot more with that one.
+
+So we use the low molecular weight heparin.
+
+There's data in non-pregnant people that low molecular weight heparin is better 'cause of less bleeding.
+
+We don't have much of those data in pregnancy.
+
+We don't test a lot of pregnant women for things.
+
+They do have less HIIT heparin induced thrombocytopenia with low molecular weight heparin.
+
+So that's your advantage.
+
+Has a longer half-life, which is great for dosing.
+
+Not so great if you're trying to get an epidural though.
+
+You need to have about 12 hours distance between your last Lovenox dose to get any kind of a spinal anesthesia.
+
+That's just expert opinion though.
+
+Warfarin is a no-no, I think we already know that.
+
+There are occasionally mechanical valve patients who are pregnant that might need to be on Coumadin.
+
+Those are not gonna be in your practice.
+
+So those are seeing a very high risk doctor and they can handle that.
+
+That's not something I would ever do.
+
+DOACs have just not been studied in pregnancy.
+
+So I'm hoping five, 10 years from now, we'll find that they're safe.
+
+We just don't know that answer yet.
+
+For breastfeeding, Coumadin and low molecular weight heparin have great evidence years and years of data.
+
+DOACs, there's limited data but we believe them to be safe.
+
+You can have this option of converting from low molecular weight to unfractionated heparin in that last month of pregnancy.
+
+Just so you don't interfere with any of your anesthesia products.
+
+When can you restart things after?
+
+About six hours after a vaginal birth, six to 12 hours after a C-section.
+
+And again, remember that bridging.
+
+If you are using postpartum Coumadin bridge with Lovenox, it's very essential 'cause of their already low protein CNS.
+
+What about if they've had COVID?
+
+If they've had COVID and are hospitalized, you do need to do prophylaxis while they're hospitalized and for two weeks after discharge.
+
+There is no data on doing that for an outpatient pregnant person who has COVID.
+
+If they're not sick enough to be in the hospital, there's no data on anticoagulation.
+
+We'll see some OBGYNs doing it, but the ACOG says you don't have to do that.
+
+What about estrogen?
+
+Can I use estrogen as a form of birth control if you've had a clot?
+
+The answer is no.
+
+What about progesterones?
+
+It's a little more controversial.
+
+NIH says okay, if you've had only one, you can do it.
+
+But if you've had more than one, no.
+
+And if you're gonna do it, maybe we don't use depo 'cause potentially, that has a little higher risk of clot potential.
+
+All right, you guys are doing great.
+
+We're switching gears here.
+
+48-year-old female with rheumatoid arthritis presents to your office complaining of two months of fatigue, dyspnea on exertion.
+
+Hemoglobin's 9.2, normochromic, normocytic.
+
+You order iron studies which show low iron, low TIBC, high ferritin.
+
+What's the best treatment for this patient?
+
+Oral B12 for fatigue, oral ferrous sulfate for anemia, home oxygen for dyspnea or disease modifying anti rheumatic drugs for rheumatoid arthritis.
+
+Okay, good.
+
+Most of you got this right.
+
+If the boards ever give you an option to treat the underlying disease, choose that option.
+
+And so that's the case here.
+
+Treat the underlying rheumatoid arthritis.
+
+So when we think about anemia, there's sort of two ways to think about it.
+
+You can think about the kinetic approach, which is why are they getting anemia?
+
+Maybe they're not making enough of it.
+
+A hint there would be your reticulocyte index would be under two.
+
+Or maybe they're losing that blood somewhere.
+
+They could be hemolyzing it.
+
+If that's the case, your reticulocyte index would be over two or maybe it's just a blood loss.
+
+Well lots of times, I don't know why they're losing it.
+
+So then you use this morphologic approach and that's where your indices on your CBC can direct your management.
+
+MCV is kind of your money here.
+
+So I talked about reticulocyte index being really important.
+
+MCB is really important too, and that basically will just help direct what type of anemia we're talking about.
+
+So macrocytic, MCB over 100, you'll see reticulocytosis.
+
+That says that your body realizes you're low on blood.
+
+So it starts kicking out immature red blood cells, which are those big round beefy ones.
+
+They haven't became like those biconcave discs yet.
+
+So the RDW, red cell distribution width will be higher.
+
+This is your body saying, "Hey, I've identified it, I'm doing something about it.
+
+So you know there's some chronicity with this." This shows up on the boards over and over and over and over.
+
+B12 deficiency, folate deficiency fall within this category and PPIs and metformin can cause B12 deficiency.
+
+So that's a common thing that they'll ask you about.
+
+Alcohol abuse is also a common one in this category.
+
+Microcytic anemia on the flip side of that.
+
+MCV less than 80, this is usually your iron deficiency patients.
+
+You can also see lead, sideroblastic anemia here.
+
+Rarely, you can see this as a chronic anemia, like anemia of chronic disease, but usually anemia of chronic disease is this one.
+
+Normal chronic normocytic anemia.
+
+Also in this category is acute blood loss, acute hemolysis and hypersplenism.
+
+So just a couple words on iron deficiency anemia.
+
+What would your iron studies look like?
+
+Low iron, high iron binding capacity, high TIBC, and low ferritin.
+
+That's why the person in this one shouldn't have just gotten the iron that some of you recommended.
+
+They had a low iron binding capacity.
+
+So that is not consistent with iron deficiency.
+
+Iron deficiency anemia really should be kind of like a symptom, not a final diagnosis.
+
+You must figure out why.
+
+You can't just leave that on your chart and feel good about it.
+
+Are they having menstrual blood loss?
+
+Is there an occult GI bleed that you don't know about If you think you've solved the mystery and they're on iron, one of the quickest ways to test and actually the board's like this.
+
+If you test in just one week, that reticulocyte count, it should normalize within a week.
+
+If they're no longer bleeding and they're taking their iron.
+
+If it isn't normalizing, you might still need to be hunting down the source of the issue.
+
+Hematocrit won't correct itself for about a month, month and a half, and your total iron stores won't correct for six months.
+
+So I think this is another mistake that we sometimes make.
+
+You know, they'll have a GI bleed, we see them back in a month, we check their blood counts, they look great, we stop iron.
+
+You still have a total storage depletion.
+
+So continue that iron for six months.
+
+Low dose, just as effective.
+
+We no longer need to do the 325 TID like maybe we were trained on.
+
+Low dose is fine, even every other day is fine.
+
+That's just expert opinion.
+
+Another gear swift shift here.
+
+Three-year-old patients brought to you after moving to your community.
+
+He has SS disease, hemoglobin SS disease.
+
+Parents wanna know if he still needs to be taking his prophylactic penicillin.
+
+Should you stop the penicillin to avoid antibiotic resistance?
+
+Take 125 daily for the rest of his life.
+
+Take two 50 BID until five years of age at least, or take 250 until age 12.
+
+But look how smart you guys are with test taking.
+
+Again, if you knew nothing else, look at the things that look similar.
+
+Two of them say 250.
+
+So if I don't know anything else, I'm gonna say that.
+
+And one of them said till age five at least.
+
+Oh, that sounds pretty good 'cause that could even be up to 12 'cause it's at least.
+
+So just from test taking, C is the right answer.
+
+So what do we need to know about this?
+
+Occasionally, they'll ask you about a sickle SC disease.
+
+Remember that that has less severe disease overall but more retinal disease.
+
+So sometimes, they'll talk about eye symptoms there.
+
+Sickle-Thal can be all over the map.
+
+It just depends on how much fetal hemoglobin you have.
+
+Important clinical manifestations here.
+
+Low hemoglobin, we're talking less than eight.
+
+And all these vaso-occlusive crisis, which is what we see them in the hospital for.
+
+If they're having a pain crisis, it's strength of recommendation B, to use IV narcotics for severe pain, and to use NSAIDs for mild to moderate pain.
+
+I think sometimes we get in a cycle of just everybody getting on IV narcotics.
+
+If they're a sickle patient and that's not necessarily supported.
+
+Give them all the vaccines and give them some of the extra ones.
+
+They're ones that get the PREVNAR 20 early.
+
+They're also ones that get the MenB early, okay?
+
+The prophylaxis is here.
+
+There's data up to age five.
+
+After that, it's controversial.
+
+This was recently tested on.
+
+Annual screening with the transcranial doppler ultrasound to evaluate for the risk of stroke between the ages of two and 16.
+
+That's strength of recommendation A, that's really big information.
+
+So if you do have any sickle cell patients in your practice, that needs to be happening.
+
+Hydroxyurea, strength of recommendation B because it is a disease modifying agent.
+
+Okay?
+
+And you can see the age ranges here, kids nine to 42 months or adults who are having three or more crisis in a year.
+
+Very quickly on multiple myeloma.
+
+We know that this is a disease.
+
+More of those who are elder.
+
+This is a more a common thing in our Black patients.
+
+It's 10% of hematologic cancers overall.
+
+Anemia, bone pain, and elevated creatinine are the classic triad for this.
+
+Here's some of the workup things that you may need to do, but this is what was recently on a board.
+
+Bisphosphonate treatment at the time of diagnosis.
+
+That's a primary care thing.
+
+Their hematologist may or not be doing that, but you need to be doing that.
+
+DVT prevention, that also falls to us.
+
+Low molecular weight.
+
+Heparin was the treatment of choice before, now DOACs have also been felt to be appropriate for that.
+
+So either one, whatever you can get covered is fine.
+
+They do need infection prevention with prophylactic antibiotics for that first three months of treatment.
+
+And they do need all the vaccines as well.
+
+Hemophilia, very, very briefly.
+
+Remember that only 50% have bleeding at the time of circumcision.
+
+So that doesn't mean you're totally out of the woods as they didn't bleed at the circ.
+
+5% will have bleeding still in the prenatal period.
+
+Joints are a big issue for these patients.
+
+If they have bleeding into a joint space, they have very early and progressive arthritis, which can be very debilitating.
+
+So using factor concentrate can really be disease modifying for them.
+
+TTP, very briefly, here's the five things that involve the TTP.
+
+Most patients don't have all of those things.
+
+Some will only have a few.
+
+If they have really pronounced renal insufficiency, that's probably in the hemolytic uremic syndrome, which is kind of this, if there's a continuation of this.
+
+If it's really strong neurologic symptoms, TTP is gonna be more likely.
+
+If you're only seeing the platelet issue, right?
+
+That's ITP that we're worried about.
+
+ADAMTS13 deficiency did show up on an ITE recently.
+
+That's a tricky one.
+
+So it is a protease of Von Willebrand's Factor and it's an inhibitory autoantibody.
+
+So if you don't have enough ADAMTS13, you don't break down things like you're supposed to.
+
+So you end up with these really long polymers of Von Willebrand's that attracts a bunch of platelets and it messes up your platelet counts.
+
+E.coli can do this as well.
+
+'cause of the shiga toxin and Plavix.
+
+That's probably the most common 'cause we see of TTP nowadays, clopidogrel 'cause so many patients are on that.
+
+Treatment, avoid the offending agent, stop it.
+
+And then plasma exchange.
+
+Leukemia.
+
+The only thing they usually test us on here is it'll be a kid who has fever and bleeding.
+
+Think about leukemia.
+
+For an adult, they're usually asymptomatic for those chronic leukemias.
+
+You'll just find it incidentally with leukocytosis on a CBC that you check for something else.
+
+The workup, this was on an ITE.
+
+Repeat the CBC, do a smear, check a flow cytometry, and get them off to oncology.
+
+You guys did it.
+
+That was a lot of stuff to cover.
+
+Here's your thing for your study folder and I again appreciate your attention today.
+
+Thank you very much, Dr. Holt.

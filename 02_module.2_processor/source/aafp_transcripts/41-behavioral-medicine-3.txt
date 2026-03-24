@@ -1,0 +1,735 @@
+Dr. Heinrich is returning.
+
+We're going to talk about ADHD, autism, and something about which I know nothing, OCD.
+
+Okay, Thomas, take it away, sir. Thank you.
+
+All right, share that I have nothing to disclose in regards to these topics.
+
+And what we're gonna talk about is recognize the characteristics of both ADHD and autism spectrum disorder, both in adults and children.
+
+We're gonna talk about the management of these conditions, focused on kind of behavioral therapy, behavioral modification, as well as psychopharm, when it's relevant.
+
+Then, we're gonna switch gears and talk about obsessive compulsive disorder, both its presentation as well as its treatment.
+
+So I appreciate Dr. Oakley sharing his slides.
+
+So start with a little bit of humor.
+
+It's a quote from Conan O'Brien, "Just read part of an incredible synopsis of an article "about attention deficit something or another." All right, it's funny. I take credit for that.
+
+It's actually from Dr. Oakley, so pretty good, I like that.
+
+And if you haven't found it funny, hopefully, you'll find it funny by the end of the talk, okay?
+
+All right, so let's talk here.
+
+So an 11-year-old boy is diagnosed with ADHD.
+
+The most common psychiatric comorbidity in his case would be, A, oppositional defiant disorder; B, conduct disorder; C, substance use disorder; or D, learning disability.
+
+And I'll give you guys a chance.
+
+All right, well, let's see where people lie.
+
+It's learning disability, and you guys got it right.
+
+Next one, which of the following would be consistent with a diagnosis of ADHD?
+
+Hyperactivity and impulsive or inattentive symptoms before the age of 12; impairment from symptoms is observed only at school or grandma's house or daycare but not at home; a lack of impairment in quality of social, academic, or occupational functioning; or six or more criteria present for only three months?
+
+Yep, and the onset before 12, that's completely correct and we'll get into why some of the other ones may be wrong as we progress in the talk.
+
+All right, what about the diagnostic criteria?
+
+That's where a lot of those answers kinda come from.
+
+So ADHD is this persistent pattern in which the patient has either inattentive and/or hyperactivity for at least six months.
+
+And this hyperactivity or impulsivity is inappropriate for the patient's stage of development.
+
+It's one of the reasons why we don't like diagnosing ADHD before five because at that development, it's really hard to discern what's normal development and what's abnormal from a hyperactivity/impulsivity standpoint.
+
+So these kids or adults need to have the following symptoms, these cardinal symptoms of inattention.
+
+They need to have six or more.
+
+And if the diagnosis is made in an individual that's age over 17, it's five or more.
+
+And it's six or more either inattentive and/or hyperactive.
+
+Patients can have both, but it's six or more.
+
+These symptoms, they don't have to meet full criteria, but these symptoms in hyperactivity or inattentive, some have to be present before age 12.
+
+And these symptoms cause distress in two or more settings or impairment in two or more settings, and they lead to clinically significant distress.
+
+So I'm not gonna go through all of these symptoms.
+
+These are kinda the symptoms that you have to click that six or five-button as you kinda go through them.
+
+They're broken up in inattentive and hyperactivity.
+
+You can have either predominantly inattentive, so they have six of those, or primarily hyperactive, and they have six of those.
+
+If they have the combined, they have six of both at least, okay?
+
+So they have both, meet criteria for both.
+
+It's not three and three, it's six and six at a minimum.
+
+So to make the diagnosis, you have to meet these DSM-V criteria, which we just went over.
+
+Have you guys used a checklist to help diagnose kids in your practice with this?
+
+You send the checklist home with the parent, and you instruct them to give it to a couple of teachers at school or maybe the sitter.
+
+And the tools you use depend on the child's age as far as, and there's a list there, and you kinda pick the one based on the child's age and send that home.
+
+Do you guys use formal neuropsychological testing to help diagnose ADHD?
+
+Yeah, I do. And I use it in pretty specific cases.
+
+I see primarily adults, so I use it in adults that are coming to me thinking they have ADD, but it's really hard to piece that history of prior to 12 having impairment.
+
+I always have kind of the prototypical courses, I see some medical students or some college students that have really prospered throughout grade school and college and got into medical school, got a competitive residency, and now all of a sudden they think they have ADHD.
+
+Where is the impairment prior?
+
+They're pretty high achieving, so I find testing to be really helpful for this.
+
+And then, one, this was included from Dr. Oakley's slide, and I've never thought about this, but in talking to my colleagues, some have seen people do this is you just trial a patient on a stimulant.
+
+If they're better, it's ADD.
+
+Don't do that, just so we're aware.
+
+So what does it look like?
+
+Very much like depression, the presentation of ADHD may change at the individual's level of development.
+
+In childhood, the symptoms are primarily that of hyperactivity.
+
+And we don't really like to make the diagnosis of ADHD, again, as I alluded to, prior to ages six because it's very difficult to discern what's normal behavioral and what's abnormal at that stage from a hyperactivity and inattentive standpoint.
+
+If you look at those symptoms I just showed you, go to a McDonald's.
+
+You'll see it everywhere.
+
+Adolescents, the presentation tends to change a little bit.
+
+Hyperactivity doesn't become so consistent or so predominant, rather.
+
+Because, now, the school provides some degree of structure and limit setting around that hyperactivity.
+
+The inattentive stuff becomes more obvious because of that structure that's being placed on them.
+
+I'm not saying that the hyperactivity goes away.
+
+There's still fidgeting.
+
+They may describe an inner sense of restlessness.
+
+It's just not nearly as obvious as kids that are in grade school.
+
+And then, as we get into adulthood, that same trend continues.
+
+The hyperactivity gets less and less, and the inattentive can often become more and more apparent as we're going for.
+
+Again, the hyperactivity doesn't go away, it just is not as prevalent in the symptom profile.
+
+So what's the epidemiology? This is looking at adults.
+
+And in seeing this slide, I just realized, I forgot to say what the epidemiology was in children.
+
+For adults, 19 to 45. It's about 2.5% in the population.
+
+For children under six, it's around 2%.
+
+As you go from 6 to 12, it gets up to 9%.
+
+And then, 12 to 17, 12 to 18, it's about 12%.
+
+So what this is telling us that in adulthood, the numbers drop off.
+
+And that's really consistent with the longitudinal data that suggests a pretty small minority of individuals diagnosed with ADHD as a child go on to have full fledged ADHD as an adult.
+
+And this slide presents that number of about 15%.
+
+I've seen numbers at about 20%.
+
+The good news is a substantial minority, right around 50%, may have some continued symptoms, but it's primarily, it's subsyndromal type of ADHD.
+
+But the really good news is a pretty good minority of them are in remission.
+
+They no longer have the symptoms of ADHD, so this can be reassuring.
+
+So there seems to be kind of this growing out within adulthood.
+
+Some continue to have it, but it tends to mitigate as one gets older.
+
+This is the comorbidity slide.
+
+I expanded this, and that's why the question was wrong.
+
+I did not update the question as I expanded this table.
+
+You can see we kinda break down the comorbidity and behavioral health conditions.
+
+We can see that oppositional defiant is quite high at 20 to 30%.
+
+We see depression and anxiety are also quite prevalent.
+
+But it's the learning disabilities, it's the developmental disorders that are also very prevalent, specifically learning and language disorders.
+
+So one of the take-home points is if you're treating an individual for ADHD in school and the grades continue to suffer but the parents are reporting the ADD symptoms are better, it may be time for some testing at school, looking for the learning and language disabilities.
+
+And then, other conditions occur as well.
+
+So what do we know?
+
+We know treatment is effective for ADD and ADHD.
+
+We know that early treatment is even better than later treatment.
+
+We know that treatment is associated with greater academic achievement.
+
+It's associated with less mood disturbance, less behavioral problems, less criminal activity, and less substance abuse.
+
+Interestingly, it's also associated with less accidents, leading to less TBIs and motor vehicle accidents in kids.
+
+So the treatment is effective and can really address a lot of the concerns we have with ADHD.
+
+When I was a resident way back in the day when Dr. Oakley was starting his teaching, I was a resident back then, we learned that the treatment of choice for ADHD was just stimulants, right?
+
+It's a medication.
+
+Behavioral modification really played no role.
+
+Subsequent studies have really demonstrated that the optimal treatment is both medication and behavioral modification.
+
+And we'll talk a little bit about that was, and this was referring to this landmark study that demonstrated medications are better than no treatment alone, but the combination is better than just psychopharmacology with a stimulant.
+
+So what are those psychopharmacology choices that we have?
+
+There are two camps.
+
+There are the stimulants and the non-stimulants.
+
+The non-stimulants are broken down into the norepinephrine reuptake inhibitors and the alpha agonists, clonidine and guanfacine.
+
+We know from a stimulant standpoint that there's two general classes.
+
+You have the methylphenidate and you have the amphetamines.
+
+And at some point during this talk, I'm gonna say methamphetamines.
+
+That is not a treatment for ADHD, okay? Just not.
+
+But I will say that.
+
+When you look at the stimulants, there is multiple different formulations.
+
+There's multiple different half-lives, long-acting, short-acting.
+
+There's different formulations.
+
+There's syrup, there's patches, there's pills, there's chewables.
+
+And you really pick and choose based on the patient and what works for them.
+
+And we'll talk about the various roles of stimulants and non-stimulants kinda going forward.
+
+So how do the stimulants work?
+
+Well, we don't know how they actually address ADHD, but we know what they are is they increase levels of norepinephrine and dopamine.
+
+They both do it through the blocking of the presynaptic channels, but amphetamines actually have an added bonus as they push a little bit of dopamine out.
+
+So they have a little bit of push.
+
+And again, these are the first-line treatments for ADHD, whether for a vast majority of the population of patients that are presenting with it because they work.
+
+And I'm just showing you some of the effect sizes, and they're pretty significant for both children and adolescents and adults.
+
+You kinda see that maybe that extra dopamine means something given the effect size of amphetamines being higher than methylphenidate.
+
+The clinicians, when I asked my child psychiatry colleagues about this, they say they see pretty much equal responses in both.
+
+It's pretty much dependent on the kid.
+
+Adults, you see a little less efficacy, compared to children, of stimulants, but still pretty good results actually.
+
+So stimulants are the first-line treatments, but they do have side effects.
+
+The side-effect types are similar between methylphenidate and amphetamines.
+
+However, amphetamines tend to have a higher incidence of those side effects.
+
+As children are younger, they tend to have more side effects to stimulants than older children.
+
+So those are a couple take-home points.
+
+The biggest one I always hear about when I talk to families too are, one, is the lack of appetite, the appetite suppression.
+
+And that's really real for these kids.
+
+Couple of tricks that I've learned after talking to my colleagues is really push a big high-calorie breakfast before their morning pill, okay?
+
+And then, depending on the half-life of the medication, usually it's worn off by dinner time, another high-caloric.
+
+I'll tell you, they just don't eat lunch often because of the appetite suppression, so you wanna hit the meals.
+
+And then, you have the holidays over the weekends.
+
+If they don't need to attend to stimuli, if they don't need to really control their hyperactivity that much, then give 'em a holiday over the weekend and really push the high-caloric stuff, the high caloric.
+
+And then, the summers are another time for them to regain their weight and regain potential growth trajectory.
+
+The other big one is sleep.
+
+That has a lot to do with the half-life of the medication.
+
+But I will tell you ADHD throws off the sleep cycle anyways.
+
+If any of you have ever dealt with somebody with ADHD, it really makes it hard.
+
+So you really wanna address the sleep hygiene, the CBT for insomnia aspects.
+
+If you need to go down the route, you change the half-life, the formulation of the stimulant to a shorter half-life to see how that goes.
+
+And then, last but not least, you can try a little bit of melatonin can be efficacious in these patients.
+
+So one of the risk factors on there that I did not talk about is cardiovascular disease.
+
+The American Heart Association kinda caused a ruckus when they said that every kid on a stimulant should have an EKG.
+
+The American Academy of Pediatrics came out and said not necessary and really left it up to the clinician, the physician's judgment on whether to get that or not.
+
+A couple of rules of when I've seen my colleagues get them is if there's a family history of cardiac death.
+
+We just learned earlier today about sudden or long QT syndrome, one of the major reasons for sudden cardiac death in a younger family member.
+
+That's what you're looking for when we check an EKG sometimes for this patient population.
+
+If a patient is complaining of symptoms that may be related to underlying heart disease such as palpitations, dizziness, syncope, we check an EKG before we start a stimulant.
+
+Or if our exam recognizes some cyanosis or something like that, we would also check an EKG to make sure, but it's really up to the physician to make that call.
+
+So when do we look to the non-stimulants?
+
+Okay, again, the stimulants are first line.
+
+When do we look at the second line without even going to the first line?
+
+Well, sometimes we've done the first line, and either they haven't reached optimal therapy, so we wanna add on a non-stimulant to that.
+
+In that case, we usually use the alpha agonist.
+
+Sometimes, patients just don't tolerate.
+
+The side effects are too much.
+
+They're not gaining weight, they're falling off their growth trajectory.
+
+At that point, we may use one of the non-stimulants.
+
+And I'll tell you, from an adult practice side, I use non-stimulants for patients in which I'm concerned about substance use disorders or a history of that.
+
+And again, there's two classes out there.
+
+There's the norepinephrine reuptake inhibitors.
+
+We have a lot more data on atomoxetine, I can't even say that, but its effect size, as you can note, is lower than that of the stimulants that we just talked about.
+
+So it works, but there's a reason the stimulants are first line.
+
+It works for both adults and children.
+
+And guanfacine, the alpha agonist, the data exists for children, but I'll tell you, I'm having some luck using it in adults as well.
+
+And we'll kinda see, I'm waiting for the studies to come out in that as well.
+
+There's no reason it shouldn't help in adults.
+
+So we'll hopefully see that.
+
+So this is the clonidine and guanfacine.
+
+And then, there's the behavioral component that now we're trying to use if at all possible in children with ADHD.
+
+So this behavioral modification and just to level set is most effective in kids.
+
+Loses effectiveness in adulthood, and there isn't a lot of data at all to suggest that these behavioral modifications can help.
+
+Well, it works a little bit in adolescence, but very little if anything in adulthood.
+
+And the concept here is, I'm gonna take you back to psychology 101 in high school or college, it's operant conditioning, right?
+
+It's positive reinforcement.
+
+If the child is doing something you want to encourage, you reward them.
+
+If a child with ADHD has handed in their homework on time for a week, there's a reward that is meaningful to the child that encourages that type of behavior.
+
+Again, this doesn't occur in isolation, They have the medication therapy as well, but the combination is what's most effective.
+
+And these types of behaviors are primarily directed not at the child.
+
+It's not the child that's learning the operant, it's the parents, it's the teachers, it's the school.
+
+Where the child takes home stuff is the routine aspect, learning to manage a routine and those kind of things.
+
+So that's that contingent behavior.
+
+And for kids that we're kinda questioning the diagnosis, the five-year-olds, the four-year-olds, this is first line and actually quite effective in those patients as well.
+
+All right, for adults, again, as I mentioned, very little evidence that the behavioral therapy works.
+
+When I asked my colleague in my clinic who specialized in adult ADHD, he actually recommended the book.
+
+I haven't read the book.
+
+Has anybody read the book, "Driven to Distraction?" He said that, that was quite helpful for many of his patients to demystify the diagnosis and come up with some strategies and help to manage the distractions that they're having.
+
+But the logic comes down to organization, to-do lists, calendars, utilizing your Outlook on your phone as much as you possibly can to stay organized.
+
+So these are the behavioral aspects of working with ADHD as an adult in addition to the pharmacology that I just mentioned.
+
+So this is a young gentleman, 27-year-old, who has ADHD.
+
+Which of the following will most likely be true in his case?
+
+He's unlikely to have his symptoms confirmed by his spouse, coworkers, or employer.
+
+He's more likely to be inattentive than hyperactive.
+
+And he's less likely to have a comorbid anxiety disorder than his age-matched peers without ADHD.
+
+And he's unlikely to have symptoms of ADHD prior to the age of 12.
+
+And you guys, you got it right.
+
+He's more likely to be inattentive than hyperactive as his primary.
+
+All the other ones have to do with the diagnosis requirements.
+
+All right, the optimal treatment.
+
+I've just kinda beat you over the head with this for a while here.
+
+The optimal treatment for children with ADHD is medication alone, medication plus behavioral modification, behavioral modification alone, or crossing our fingers and hoping it goes away?
+
+And good. All right, perfect.
+
+All right, let's switch gears.
+
+Let's talk about autism spectrum disorder.
+
+So in 2013, when the DSM-V came out, just so we're all aware, DSM-V stands for, or the DSM-V came out and now there's a TR formulation that came out.
+
+Was it last year?
+
+You know, this is the Bible in psychiatry.
+
+And in 2013, the DSM-V did something fairly dramatic.
+
+They took four diagnoses: Autism disorder, Asperger's disorder, childhood disintegrative disorder, which is the most terrifying name of a diagnosis ever.
+
+Is it not?
+
+Just that name, reading that and having kids just terrified me.
+
+And then, Rett syndrome.
+
+They took all four of those and rolled them into the autism spectrum disorder.
+
+And that was pretty, pretty intense, and they got a lot of flashback for that.
+
+But they did that.
+
+And what the autism spectrum disorder is in the DSM-V is it's a neurodevelopmental disorder that really is defined by a deficit in one's ability to socially communicate as well as a propensity to have restrictive or repetitive behaviors.
+
+And these result in impairment in functioning.
+
+When we think of the social communication impairment, I like that first box that I have in there, the deficits in social and emotional reciprocity.
+
+That's it at its core.
+
+That's the give-and-take that occurs in a conversation.
+
+It's one's ability to read when it's appropriate to say something and when it's appropriate to shut up.
+
+It's appropriate with what to say, much less when to say something.
+
+And that's often a fundamental deficit in which patients with autism spectrum disorder have.
+
+The restrictive behaviors, they can have very repetitive behaviors.
+
+These can be vocalizations.
+
+These can be complex behaviors or just motor movements.
+
+But they can also have very restrictive focuses on unusual things, trains, car washes, things like that.
+
+And really, all of the conversations revolve around that.
+
+And then, very commonly, especially in very young children with autism, it's this hypersensitivity to the environment.
+
+It's either too little stimulation or too much stimulation can cause them to be quite upset.
+
+So how common is it?
+
+What's really fascinating is if we look at just simply the age of eight years old between 2008 when we were dealing with DSM-IV and 2018 when the new DSM-V came out, we've seen an increase in autism diagnoses from 1.1 to 2.3, so a little over two times the rate.
+
+And there could be a couple reasons for that.
+
+Again, I mentioned that the DSM-V kind of broadened the criteria for autism spectrum disorders by including all of these.
+
+I think there's that.
+
+I also think that there's more of a general acceptance.
+
+The lay person is more comfortable with the diagnosis of autism spectrum disorder now.
+
+There are movies and TV shows that have central characters with this degree of neurodiversity.
+
+And I think that, that's really helped a lot.
+
+But we also now have therapies that we can offer for patients with autism spectrum disorder that have a pretty good evidence base, and we'll talk about that in a bit.
+
+What's really interesting is the gender difference between autism spectrum disorder.
+
+For example, again, at age eight, boys are three to four times more likely to be diagnosed with autism spectrum disorder than girls.
+
+Why is that?
+
+Couple of theories are out there that girls are just better to mask the symptoms, and we call that camouflaging.
+
+Some individuals think, diagnostically, we don't pay as much attention to these symptoms in girls as we do in boys.
+
+And then, there may be a diagnostic bias to diagnosing this, either in the tools we use or the diagnostic criteria leading to more diagnoses in boys than girls.
+
+So lots to really consider here, but we're seeing an increased number of patients with this.
+
+So like many behavioral health and neurodevelopmental conditions, it's a mix of hereditary factors as well as environmental factors.
+
+Hereditary factors seem to play more of a role in autism spectrum disorder, and we have some data for that.
+
+Some of the best data is regarding maternal age.
+
+A maternal age greater than 35 increases the odds rate of having a child on the autism spectrum by 1.3.
+
+For every 10 years of maternal age past that, there's a 20 to 21% increased rate of having an autism spectrum disorder patient.
+
+But there's also environmental factors, and one of the more common and touchy ones are pharmacotherapy.
+
+We do know, I mentioned valproate and its teratogenic aspects, well, it also has the behavioral aspect of increasing the rate of autism spectrum.
+
+In mothers who are exposed to valproate during pregnancy, it's 4.4%.
+
+In women who are not exposed, it's 1.5%.
+
+Initially, there were some cohort studies that raised the concern that antidepressants, specifically various SSRIs, are associated with autism spectrum disorder.
+
+Meta-analysis subsequently kinda concluded that, that increased tick was most likely related to confounding factors.
+
+And the biggest one being partially treated major depressive disorder.
+
+So it's not the antidepressant, it's the underlying disorder for which the antidepressant was being treated.
+
+And the conclusion of the meta-analysis was that antidepressants do not cause autism spectrum disorder.
+
+And I don't know if I have to mention it, but I wanted to call it out.
+
+There is no good evidence that vaccines cause autism spectrum disorder.
+
+Just felt I had to put that out there, and I did.
+
+Feel good about myself.
+
+All right, from a comorbidity standpoint, comorbidity is common in patients with autism spectrum disorder.
+
+ADHD occurs in over 28%.
+
+Almost a third of patients with autism spectrum disorder will have ADHD.
+
+Intellectual disability is coming close at about 25% of patients will have a degree of intellectual disability.
+
+Anxiety disorders and mood disorders, 10 and 11%, respectively.
+
+And then, we get into the more physical things.
+
+This really surprised me in preparing for this talk is how common epilepsy is.
+
+If you have an intellectual disability and on an autism spectrum disorder, that's 28% will have, or excuse me, 21% will have comorbid epilepsy.
+
+If you take away the learning disability and it's just autism, the number decreases, but it's still 10 times that of the general population at 8%.
+
+Really kinda speaking to the genetic component of autism spectrum.
+
+I remember constipation dealing with a lot of my kids with autism in clinic was a big issue for them as well.
+
+So asking about constipation and bowel movements can be very helpful.
+
+And then, as well as sleep disturbances are amazingly common.
+
+So the American Academy of Pediatrics recommends screening for autism spectrum disorder.
+
+However, the US Preventive Services Taskforce said, whoa, there is inadequate or insufficient data to really recommend screening for autism spectrum disorder unless the parents have a concern or unless the teacher has a concern, unless the concern of the child having it is raised.
+
+But if you're so moved to do the screening, there's a tool out there.
+
+It's called M-CHAT.
+
+It's a 20-question questionnaire, and it's truly a screening.
+
+If somebody scores positive, which is two or more, you have to do a follow-up assessment that's pretty detailed.
+
+And that follow-up assessment actually has pretty impressive sensitivity and specificity.
+
+So my colleagues will end up doing the M-CHAT, do the follows-up, and if it's positive, then they're referred to psychology for some testing because the referral to psychology is really that goal.
+
+It sets the bar for that gold standard of making the diagnosis.
+
+As the physician who's gotten the history and interacted with the patient, you have your clinical judgment about the kid, whether they have autism spectrum or not.
+
+And then, you have the neuropsychological batteries, which consist of the psychologist interviewing the parent on a structured interview, as well as an observation period in which they observe the child.
+
+The combination of your clinical opinion as well as the testing really is the diagnosis.
+
+If the kid has autism spectrum, the American Pediatrics recommends genetic testing.
+
+I refer to a geneticist or I always did.
+
+From an environmental intervention, the real key here is applied behavioral analytics, ABA.
+
+You've all heard that.
+
+That's kind of operant conditioning for kids with autism, working both environmentally to ensure the environment is optimally set up for them to engage, as well as reinforcing the positive behaviors.
+
+Kid going to school, learning to hang up his coat, there are signs there to remind him to do it.
+
+And you reward him in a meaningful way when he does hang up his coat.
+
+What's often forgotten is when we mainstream these neurodiverse individuals and they just don't have the same social skillset as part of the disorder, they can really suffer in high school and middle school as they're not being able to engage with their colleagues.
+
+So there are various support groups up that can do social skills training that can be very helpful.
+
+From pharmacotherapy, there is no pharmacotherapy agent that's been shown to address the core symptomatology of autism spectrum disorder.
+
+Our symptoms are meant to address secondary issues, agitation, aggression.
+
+We have two antipsychotics with FDA approval that have pretty good effect sizes.
+
+ADHD, very common.
+
+We have the stimulants, and we have the non-stimulant medications with some efficacy.
+
+Not as good as if a patient doesn't have autism, but still fairly good.
+
+They do have more side effects.
+
+They're more sensitive to the stimulants than a non-autism spectrum patient with ADHD.
+
+What's impressive with this, and I wasn't aware, is the alpha agonist have a very good effect size in this patient population.
+
+But still, the literature suggests starting with a stimulant.
+
+So what's the prognosis?
+
+We're almost done with this here.
+
+So these patients live less independently or less commonly employed than individuals without ASD, autism spectrum disorder.
+
+If there's a baseline solid cognitive foundation, they have better academic achievement, more employment, more likely to live independently.
+
+However, if you ask their caregivers, they're less likely to have meaningful friendships.
+
+I don't actually like that last line.
+
+I think it's up to the patient, the one with autism to tell us if they've had meaningful relationship.
+
+What's to say if what they consider is meaningful or not?
+
+Again, appreciating some degree of the neurodiversity that we have.
+
+And what was striking for me in this talk is this increased early mortality, two times that of the general population.
+
+When they looked further in, they saw it was related to the epilepsy I mentioned.
+
+That's one of the reasons I included it on the slide, as well as an increased suicide rate.
+
+The odds rate three times that of non-patients with autism, which I found very starkly concerning.
+
+So very briefly, obsessive compulsive disorder.
+
+We're almost done here.
+
+It's very simply the presence of obsessions or compulsions or both.
+
+The most common presentation is they have both obsessions and compulsions.
+
+These obsessions and compulsions are very time-consuming or very disturbing to the patient.
+
+Usually, they're both very time-consuming and very disturbing to the patient, causing a lot of distress.
+
+So what is an obsession?
+
+An obsession are recurrent thoughts, images, or beliefs.
+
+Sometimes, impulses that cause significant anxiety.
+
+The fear of contamination is a big one.
+
+These thoughts cause significant concern, panic attacks.
+
+And they're not related to schizophrenia or anything else, but these obsessions, because they're so distressing, the patient develops compulsions, which is a pathological way to calm that anxiety.
+
+So they do the compulsions to release, decrease that anxiety.
+
+Sometimes, the compulsions are thematically related to the obsession, i.e., hand washing, but disproportionate to the risk.
+
+Sometimes, they have absolutely nothing to do with the compulsion.
+
+"I'm concerned my mother's gonna have a stroke, "so I'm gonna say three, three times; two twice; "one once; four, four times; and five, five times every time "I have that thought and she won't have a stroke." Not remotely related, but that's the compulsion that relieves the obsessions and associated anxiety.
+
+These are such the common ones.
+
+My wife would say, "I would add a garage door closure "on the bottom there." And then, my compulsion would be the checking of the garage door closure, having to go back.
+
+It's actually not very prevalent.
+
+One to 2% of the population.
+
+Men and women are equally affected as adults.
+
+But in children, this can be a board question, males are often more affected than females at a pretty good clip.
+
+And therefore, there's a lower age of onset in boys than in girls with this.
+
+And comorbidity with depression is more the rule than the exception.
+
+And the treatment are antidepressants. They're the SSRIs.
+
+The dose of the SSRI is higher than we use for depression commonly.
+
+Sertraline is pushed to 150 or 200, and the typical trial in depression is four to six weeks before we say if it's gonna work or not.
+
+In OCD, it's 8 to 12 weeks before it declared a failure or not.
+
+It's a long, high dose type of treatment.
+
+And then, cognitive behavioral therapy is the treatment.
+
+So comorbidity is common in ADHD, mostly learning disability, remember that.
+
+ADHD must be present in more than one setting and symptoms present before age 12.
+
+The best treatment is medication management co-occurring with behavioral modification, at least in childhood and early adolescence.
+
+And ADD in adults is primarily inattentive and the high doses for OCD.
+
+Thank you, all. I appreciate you staying a little late.
+
+Thank you very much, Dr. Heinrich.

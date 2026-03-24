@@ -1,0 +1,811 @@
+Dr. Bestie is coming back for one final pediatric presentation as we look at issues related to fever and infectious diseases in kids.
+
+Okay, Jan, take it away.
+
+Bring us home for the day.
+
+Okay, so we're gonna talk about sick kids this time.
+
+I still don't have anything to disclose.
+
+We're gonna talk mostly about fever, illnesses of the respiratory tract, and then some rashes, viral rashes, or infectious rashes.
+
+So let's start with fever.
+
+What is the definition of a fever?
+
+A fever is a condition of the body characterized by a rise in temperature, quickening of the pulse, and disturbance of various body functions.
+
+Really, what do we all wanna know?
+
+It's a number.
+
+Fever is greater than or equal to a hundred 0.4 rectally.
+
+So it doesn't indicate serious illness.
+
+It doesn't mean that they're gonna have brain damage.
+
+It does help to fight infection.
+
+Fever is fabulous.
+
+So let's talk about fever specifically in infants.
+
+So if you have a fever, rectal temperature of greater than a hundred, greater than or equal to a hundred 0.4, probably all of you remember this from med school and residency, they get admitted to the hospital.
+
+This is your full septic workup, they get a CBC, blood cultures, chest x-ray, urinalysis, urine culture, lumbar puncture.
+
+Nowadays, we also can add a procalcitonin or a C-reactive protein if that's available.
+
+HSV studies, which I do now pretty much all the time after my scary outcome I had before.
+
+And there actually is a newborn sepsis calculator, if you're not familiar with it, if you use that, it can decrease excessive antibiotic use.
+
+It's really great right after delivery.
+
+We use that on all of our brand new newborns.
+
+Why do we, what do we worry about?
+
+We worry about things that come from mom.
+
+So, it makes sense that in those first 21 days, group B strep, e coli, listeria, herpes, these are things that come from mom during the delivery process.
+
+And the antibiotics have not changed.
+
+It's still amp and gent.
+
+It's still amp and cefotaxime.
+
+These are the same antibiotics they were when I was in medical school a very long time ago.
+
+You do add vancomycin if you're concerned about streptococcus pneumonia and meningitis.
+
+You may add acyclovir if your level suspicion is high for herpes.
+
+You don't use ceftriaxone because of the risk of chronic .
+
+So let's talk about the kids who are over the age of 21 days.
+
+So three weeks to three months.
+
+If they look abnormal, so they have poor rousability, poor caregiver interaction, their breathing is abnormal, it's too fast, it's too slow, their circulation is poor, they have poor capillary refill, they're modeled looking, all of those kids, you basically just lump 'em back in the same category as the kids under the age of 21 days.
+
+Admit to the hospital, full septic workup.
+
+So this group is easy.
+
+Ooh, let's talk about the ones that aren't quite so easy.
+
+So this is your kids between 21 days and 90 days, or three weeks and three months, who look well.
+
+You know. They, have a fever, but mom's like, "I don't know, kid's been acting fine.
+
+Everybody else, no one's sick in the house.
+
+So I don't know what's going on." So there's a couple of things you can do.
+
+This is called the step-by-step approach.
+
+You wanna do three main things.
+
+You check their urine.
+
+Do they have leukocytes?
+
+Nope. You can get a procalcitonin.
+
+Is it elevated? Nope.
+
+You can check their CRP or their absolute neutrophil count.
+
+Are those elevated?
+
+If not, you actually can say they're at low risk for invasive bacterial disease, and you could potentially treat them as an outpatient.
+
+Now all of those things have to be no, and you have to have reliable parents who have transportation, who have a phone, who can figure out how to take a temperature.
+
+There's a lot of things that you have to use your, your judgment to say, is this somebody that we can manage at home and follow-up at home?
+
+Now, if any of those are yeses, then they go right back into the same category as the younger children, and they get admitted to the hospital for a full septic workup.
+
+Okay. So fever can cause seizures.
+
+Not an insignificant number of kids will have febrile seizures.
+
+Usually in the toddler period, there are two different kinds.
+
+There's the simple ones which last less than 15 minutes, and they're your standard generalized tonic-clonic seizure.
+
+They happen just once.
+
+Everyone is terrified.
+
+911 is called, it's very, very frightening.
+
+Then you have complex seizures which last longer and maybe focal, and/or they recur in the 24 hours.
+
+So if a child has had a febrile seizure, they are more likely to have another febrile seizure.
+
+Oh, look at this family history, huh?
+
+What do you know?
+
+And obviously if the child has an underlying neurological condition, it does, it's not associated with brain damage.
+
+And this is the hardest thing to convince parents.
+
+If it's a simple febrile seizure, there's no other evaluation that needs to be done besides figuring out what caused the fever.
+
+Do they have an ear infection?
+
+Do they have pneumonia?
+
+What else is going on that caused 'em to have the fever?
+
+The fever. Increased risk of febrile seizure if the MMR is given later rather than earlier.
+
+When I try to argue with my parents who wanna spread out their vaccines, I'm like, "Hmm, better give that MMR earlier 'cause they have a lower seizure risk." Okay, first question.
+
+Alright, a three-year-old girl presents with a four day history of fever, no other symptoms, her ears, throat, lungs, abdominal exam are normal, but she just looks kind of puny.
+
+So what would be your next step?
+
+So this is a three-year-old girl.
+
+Would you treat the fever and evaluate her in 24 hours?
+
+Would you order a urinalysis with cultures?
+
+Would you get an abdominal ultrasound, or would you give her some IV fluids hoping to perk her up?
+
+Okay, good. About a little over half of you realize that you're gonna order a urinalysis with cultures.
+
+So why is that?
+
+Urinary tract infections are the most common serious bacterial infection in children less than age three.
+
+If you don't see a source, think about a urinary tract infection, particularly in girls.
+
+Up to 7% of girls, and 2% of boys will have had a urinary tract infection by age six.
+
+Now the thing that's frustrating about this, is you really have to get this by catheterization, or suprapubic tap, or if the child is potty trained, you can send mom in there with the little, the little container and let her try to catch that urine.
+
+You cannot do the bag urine on babies.
+
+So how do you diagnose this?
+
+They have a urinalysis with pyuria, and you have a positive culture of greater than 50,000 colony following units.
+
+So that's your, that's your diagnosis of a urinary tract infection.
+
+And so your treatment, these are all treatments that you've seen before.
+
+But you can use your bactrim, you can use your augmentin, and you wanna treat 'em for seven to 14 days.
+
+So, when do you do any imaging, you would do an ultrasound if they had their first febrile urinary tract infection less than age two.
+
+Why is that?
+
+Because you're concerned that maybe the reason why this kid had a urinary tract infection is because there's something anatomically wrong.
+
+So you're looking at that with an ultrasound.
+
+Or if they have more than one urinary tract infection.
+
+So a recurrent UTI.
+
+When do you do a Voiding CystoUrethroGram, if the ultrasound is abnormal, or again, if they have a recurrent febrile UTI.
+
+Alright. A 16-year-old patient is evaluated for a four day history of sore throat, non-productive cough, and rhinorrhea.
+
+She's afebrile. Her exam reveals enlarged erythematous tonsils, no exudate.
+
+No lymphadenopathy. Ooh, what is the next step?
+
+Dun, dun, dun, supportive care, rapid strep test, oral penicillin for 10 days or azithromycin for five days.
+
+Excellent. Y'all knew what the right answer was, right?
+
+Supportive care. So why is that?
+
+So this is the modified center criteria for group A strep pharyngitis.
+
+Probably a lot of you remember seeing this back in residency.
+
+So you basically get points for having a fever, no cough, swollen, tender anterior lymph nodes, tonsillar swelling, and or exudate.
+
+And then you notice you get a point if you're three to 14, Zero points if you're 15 to 44.
+
+And if you're over 45, you actually get a negative point.
+
+So if you look under the column of the total, this just tells you what to do.
+
+If they are zero to one points, no testing or treatment.
+
+Could consider testing them at one if you really feel like it.
+
+So one thing I wanna point out with kids, if the points are two to three, you're gonna test with your rapid antigen detection testing.
+
+But in kids you always wanna also get a culture.
+
+So swap 'em with both Q-tips at the same time.
+
+If the antigen test is negative, you send the culture out.
+
+That's a little bit different in kids than it is in adults.
+
+And if they're four to five, you just treat 'em.
+
+Okay. Pharyngitis. You're gonna hear a theme.
+
+The most common cause pharyngitis in children is viruses.
+
+Amongst bacterial causes is our group A strep.
+
+So post streptococcal illness, the things that we worry about, rheumatic fever, you can treat that with NSAIDs, glomerulonephritis, they'll come in with gross hematuria, hypertension and edema, reactive arthritis.
+
+And something some of you may not have heard of, is pediatric autoimmune neuropsychiatric disorders associated with streptococcal infections.
+
+Very fondly known as "PANDAS." So if you have a child who has an abrupt psychiatric change, and they recently had a strep infection, please consider this.
+
+This is a real thing.
+
+So how do you treat this?
+
+You can treat with penicillin or amoxicillin for 10 days.
+
+It prevents rheumatic fever, but it does not prevent glomerular nephritis.
+
+So you still need to warn your parents that if they see bloody urine, or the kid is getting swollen, they need to come in to be seen.
+
+This is something else that I think is really important.
+
+The Infectious Disease Society of America said that, that group A strep infection is really uncommon in children younger than three.
+
+If you're gonna, if you find it in the throat, it's not infection, it's colonization.
+
+So do not test under the age of three.
+
+We see this all the time.
+
+A 12 month old comes in with strep throat.
+
+They don't have strep throat, they have strep colonization.
+
+Okay, abscesses you can, so if they have untreated strep throat, they can develop an abscess.
+
+They'll have severe throat or neck pain.
+
+They often won't eat, very high fevers.
+
+They have that hot potato voice.
+
+They may not be able to open their mouth.
+
+And the treatment is the same treatment as for every other abscess under the sun.
+
+You drain it, you can give 'em some IV antibiotics, maybe some steroids, but it needs to be drained.
+
+Epiglottitis, we don't see this as much anymore, although maybe we'll start seeing it some more if people don't vaccinate their kids.
+
+You'll see a swollen cherry red epiglottis.
+
+You see the thumbprint sign.
+
+See how it looks like a little thumb sort of sticking in like that.
+
+And the key thing with this, that big epiglottis is gonna occlude their airway if you don't watch out.
+
+So you need to make sure you have good airway management.
+
+You can treat them with antibiotics.
+
+You don't need steroids or racemic epinephrine.
+
+So it's basically make sure that they breathe, get 'em some antibiotics.
+
+Oh, now this is something none of us ever sees, right?
+
+Viral upper respiratory infections, the bane of our existence.
+
+So, for kids, over the counter cough and cold medicines not indicated.
+
+And actually they cause more harm than good.
+
+So do not recommend over the counter cough and cold medicines for children under the age of four.
+
+What can you do?
+
+'Cause parents want something to do.
+
+So honey. Honey is actually the best treatment for cough in this age group.
+
+Over the age of one, they can put it on toast, they can mix it into their milk, they can put it on a spoon and give it to their mouth.
+
+They can, however they wanna have their honey, they can have honey.
+
+Nasal saline irrigation, there are no side effects.
+
+It just keeps squirting it in their nose, and they'll snort and buck it out however they can.
+
+Vapor rub over the age of two, just under the age of two can irritate airways.
+
+And of course all your analgesics.
+
+So Tylenol, ibuprofen, sometimes that's enough to make 'em feel better.
+
+I don't think I need to say this, but don't use antibiotics for upper respiratory infections.
+
+That does come up on the boards once in a while.
+
+Seems like a no brainer, but it should be said.
+
+Lymphadenopathy. 50% of kids will have some sort of lymphadenopathy.
+
+The parents will come and see "There's a bump on his neck." "There's a bump on his head." "There's a bump here.
+
+I don't know what it is." Most of the time you can just watch for about a month.
+
+And as long as they aren't having fever, weight loss, night sweats, sort of your, "Oh my gosh, they have cancer." kind of symptoms.
+
+If there's a lot of inflammation, you can try some oral antibiotics.
+
+If it persists, that's when you start your workup.
+
+So you do your CBC, said rate, look at chest x-ray.
+
+If you need to do some imaging, for younger kids it's ultrasound, for older kids, it's a CAT scan.
+
+And of course a needle aspiration if it persists.
+
+Ooh, fun pictures.
+
+Okay, not as fun as Gary's, but some fun pictures.
+
+So herpes, you can get herpes gingivos dermatitis.
+
+That's all the like swollen ulcers inside the mouth.
+
+You can see what looks like.
+
+Terrible canker sores.
+
+They have a fever, they have lymphadenopathy, they don't feel very good.
+
+You do wanna treat them with oral acyclovir.
+
+Then also they can get the standard cold sores on the lips just like adults can.
+
+Again, teeth, you can treat 'em with topical acyclovir.
+
+Herpangina, which is coxsackie virus, fever, headaches, sore throat, may just have these little ulcers in back.
+
+This is actually my daughter's throat.
+
+She used to get a lot of these when she was a kid.
+
+So she's like, "Mom, why are you taking pictures?" Like I'm gonna show it to thousands of people you'll never meet.
+
+The benefit of being a a doctor's kid, right?
+
+And then of course your standard canker sores, which we don't know what causes it.
+
+You treat it symptomatically.
+
+Please consider dexamethasone, topical dexamethasone for these kids if they can, you know, swab, swish it around and spit it out as opposed to swallowing it.
+
+It does help resolve them a lot faster.
+
+Okay, next question.
+
+Okay, I can almost guarantee you that the next two things we talk about will be on your board exam.
+
+So if you've been sort of dozing off, kind of, whew, wake yourself and pay attention.
+
+"A two year-old child is brought to the emergency department with a barking cough, strider that worsened tonight, and a temperature of 101.
+
+What is the treatment?" Do you give them nebulized albuterol?
+
+Do you give them inhaled steroid?
+
+Do you do nebulized epinephrine and dexamethasone, or do you do humidified oxygen?
+
+Alright, nebulized epinephrine and dexamethasone, because this is, say it together.
+
+Croup.
+
+Croup. Yes, excellent.
+
+This is croup.
+
+So croup is a viral illness.
+
+There's all different causes, but it causes a edema of the upper airway, if you can see in this X-ray, there's sort of a, the airway is narrowed.
+
+They have URI symptoms, but they have that classic barky cough.
+
+Sounds like a seal.
+
+It's worse at night.
+
+And the problem is sometimes when they come and see you in the office, they just look like a cold.
+
+And then the mom says, "Well I took 'em home, and at 10 o'clock at night they started, you know, having more problems breathing and making this barky cough.
+
+So I always ask, say, "Tell me how the cough sounds." Sometimes I'll actually do the cough.
+
+Entertains them all to no end.
+
+Alright. And you'll see the steeple sign, the narrowing of the airways.
+
+You don't really need to do any other testing.
+
+Most of the time, this is a completely clinical diagnosis.
+
+You hear the barky cough, the kid's in the right age group, and you go, "Yep, that's croup." So if you haven't treated croup in a while, this is important, 'cause this is a little bit different than how it used to be.
+
+You treat every episode of croup no matter how mild, with dexamethasone.
+
+And it's 0.15 to 0.6 mgs/kg IM or oral.
+
+It reduces hospitalization rates, and it shortens ED stays.
+
+One dose. That's all you gotta give 'em.
+
+So if you have it in your office, you give it to 'em then, if not, you write a prescription and say, "Go pick it up and give it to 'em right now before they go home.
+
+Any severity. So even mild croup, you would still give this to 'em.
+
+So let's say they have moderate to severe croup.
+
+So bad enough to maybe go to the emergency department, or they've come into your office, and you're like, "Whoa, they don't look so good." You would give them nebulized receiving epinephrine.
+
+You do wanna keep them under observation for at least four hours.
+
+Most of the time the standard case is that they come into the emergency department in the middle of the night, you get called for admission.
+
+You observe them overnight, send them home some time during the next day.
+
+You still give them dexamethasone.
+
+Okay, next question.
+
+Also one I can pretty much guarantee is going to be on your boards.
+
+A nine month old child is admitted in January for cough, wheezing, feeding difficulty, and a fever of 38 degrees celsius.
+
+Chest X-ray showed mild parabronchial cuffing.
+
+Which treatment is indicated?
+
+Amoxicillin/clavulanate, systemic corticosteroids, supplemental oxygen and fluids, or nebulized ipratropium?
+
+Excellent. Most of you knew that supplemental oxygen and fluids is the right answer because this is bronchiolitis.
+
+So croup, bronchiolitis.
+
+If you learn nothing else from this lecture, pay attention to those two.
+
+So the most common cause of bronchiolitis and pneumonia is respiratory syncytial virus.
+
+We already talked about there is now a monoclonal antibody for it.
+
+Woo-hoo. If you can get it.
+
+It looks like a cold, rhinorrhea, pharyngitis, cough, wheezing.
+
+The biggest thing is they have some wheezing.
+
+And so you're thinking why is this, you know, young kid wheezing?
+
+You know? they're too young to have asthma, maybe.
+
+But they definitely, the wheezing is the thing that usually gives this away.
+
+You can do the antigen detection assay for RSV, especially if you're not sure if it's the wrong time of the year.
+
+We were doing a lot of those a couple years ago when we were seeing RSV in the summer.
+
+So the treatment is supportive.
+
+Oxygen, Tylenol, fluids, you can use nebulized hypertonic saline mixed evidence on that.
+
+You do not use bronchodilators.
+
+You don't give 'em albuterol, you don't give them steroids, you don't give 'em any antibiotics.
+
+You basically do supportive treatment.
+
+If they are sick enough to be hospitalized because of their oxygen levels, that's the reason why you admit them is 'cause they need oxygen until they have recovered enough to not need oxygen anymore.
+
+We already talked a little bit about nirsevimab.
+
+This actually says it can be given to premature infants, but actually give it to all infants.
+
+And what we used to know, which was synagis, you give monthly.
+
+So if you can't get ahold of the nirsevimab, that's your other alternative for kids who are born prematurely or have chronic lung disease.
+
+Pertussis, again, starting to see a bit of a resurgence of this because of decrease in vaccinations in certain populations.
+
+Why do we admit kids who are under the age of six months, eh, because 50% of them have become apneic.
+
+That's not something you wanna have happen at home.
+
+They have pneumonia, seizures, and they can die.
+
+So you wanna test.
+
+If you are suspicious of pertussis, and you're going to treat for pertussis, you need to test.
+
+This is a reportable disease.
+
+So please make sure you test.
+
+This is for both kids and adults anytime you think you might have pertussis.
+
+The treatment is supportive.
+
+The antibiotics does not make you get better faster.
+
+It helps decrease the spread to everybody else, but it does not make you get better faster.
+
+And for your close contacts, you wanna give them azithromycin.
+
+And of course all of your adults should have had their TDAP at least once.
+
+Okay, to continue with our theme, the most common cause of pneumonia in kids are viruses.
+
+We already talked about RSV is a big one in those younger kids.
+
+You really only need to do a chest x-ray if their O2 saturation is less than 90%, or if you're not really sure what's going on.
+
+You don't need to do a chest x-ray for all pneumonias.
+
+You will hospitalize them if they have low oxygen levels, or if you're thinking they maybe have MRSA, or obviously if they're in significant distress or dehydration, or parents can't seem to treat them as an outpatient.
+
+Your bacterial causes, strep pneumonia, mycoplasmal, where you would treat with amoxicillin as your first choice, and azithromycin or clarithromycin as your second choice.
+
+Gastroenteritis. Guess what? Viruses.
+
+Dr. Weismiller already talked about rotavirus and norovirus.
+
+Your bacterial causes are usually going to cause bloody diarrhea.
+
+And how do you prevent this?
+
+Oh, look at that.
+
+Breastfeeding. Still good.
+
+Your rotavirus vaccines and washing your hands.
+
+If we've learned nothing over the past few years, it should be that washing your hands is also good.
+
+If you have signs of dehydration, lethargy, dry mucus membranes, decreased tears, I just threw this in here too.
+
+You don't need to do stool studies unless you've had more than 14 days of diarrhea or it's bloody diarrhea.
+
+How to treat dehydration.
+
+Half strength apple juice is actually really great.
+
+And then once they can drink whatever fluids they can keep down, resume their normal diet, you can give them a little bit of Zofran.
+
+You can do some probiotics.
+
+Do not give them anti-diarrheals.
+
+Alright, next question.
+
+A two year old boy has very red cheeks and a fine rash, but does not appear ill.
+
+He had a fever a couple of days ago.
+
+When can he return to daycare?
+
+He has very red cheeks.
+
+Today, tomorrow, five days, or after the rash has gone?
+
+Excellent. Today, because this is fifth disease, right?
+
+The slap cheeks.
+
+So it's very, very, very common caused by parvovirus B19.
+
+The rash is immune mediated.
+
+So usually the kid is sick, and then the rash appears.
+
+So by the time the rash appears they can go to school.
+
+Usually we don't worry about this too much except for pregnant women.
+
+They can have fetal hydros, or fetal demise if they are not immune.
+
+And this is just sort of the phases that get the slapped cheeks.
+
+They will have this sort of reticular rash all over of the body.
+
+And the thing to remember that with kids, is it may pop up again later.
+
+So if they had this in February, when they go out to the beach in May, it may pop up again.
+
+So just warn the parents that if it comes up, it doesn't mean they're sick again, it's just the body responding again.
+
+Measles, we see this in under vaccinated populations.
+
+They have fever, malaise, anorexia.
+
+And then remember, the four, the four C's, conjunctivitis, coryza, cough, and well Koplik starts with a K, so a little license with that.
+
+This is that macular popu, macular papular rash, starts on the face and goes down and out, and these kids are sick.
+
+Why do we care?
+
+Well, there's all kinds of scary complications that can happen with it.
+
+Roseola, I think when I, we see roseola obviously way more than we see measles.
+
+I get parents coming in saying, "Is this measles?" And it's important to be able to know the difference.
+
+A lot of it is the history.
+
+So for this, the kids will often have a fever, and then otherwise they start to look pretty good.
+
+And by the time they start to look pretty good, this rash pops out and it can be very frightening.
+
+'Cause the kid is fine one day, and the next day, boom, they're covered in this, this maculos all over the trunk.
+
+Here's a picture of it, and it starts on the trunk and sort of spreads its way out.
+
+Almost all kids have had this by the age of three.
+
+This is really fun for my medical students, 'cause they come in, "I think it's measles." I'm like, "Yeah, it's roseola." Which is good.
+
+Mumps, under vaccinated populations as well.
+
+They have myalgia, fatigue, loss of appetite, fever, headache.
+
+The most common manifestation is a parotitis.
+
+And complications are infertility.
+
+That's the big one.
+
+That'll show up on the boards.
+
+Henoch-Schonlein Purpura.
+
+90% of cases occur under the age of 10.
+
+So the classic board question will be, had a child who had a upper respiratory infection with a little bit of fever, fatigue, and now they have abdominal pain, arthritis, and this weird rash on their legs, and it's macular papular progressing to purpura on buttocks and legs.
+
+The reason why we care about this is because renal disease is pretty common.
+
+About half of kids will get renal disease.
+
+You wanna check for hematuria, proteinuria in these kids, and you wanna treat with oral prednisone.
+
+Hand, Foot, and Mouth Disease.
+
+We all see this usually in kids less than five.
+
+Although guess what?
+
+They give it to their parents.
+
+And their parents are really miserable when they get this.
+
+It's coxsackie virus, oral fecal spread.
+
+They have fever, sore throat, anorexia, and then boom, a rash shows up on the palms and the soles of the feet, also shows up on the butt for little babies.
+
+So that's called, Hand, Foot, Mouth and Butt Disease, jokingly.
+
+And it'll go away.
+
+Mostly the kids, if their mouth really hurts, will not want to eat.
+
+So you may need to think about some sort of pain control for that.
+
+Ooh, Kawasaki Disease.
+
+Kawasaki Disease is a vasculitis.
+
+We don't know what causes it.
+
+It's the leading cause of acquired cardiac disease in children.
+
+So, if you have a child who's had a fever for greater than five days, think about these other criteria.
+
+So do they have bilateral conjunctivitis?
+
+Do they have erythema of their mouth that strawberry tongue, fissuring crusting their lips, mouth just looks like it's peeling and sore?
+
+Induration of the hands and feet.
+
+So you often see 'em and their hands are starting to peel and their fingers are starting to peel off, the erythematous rash all over the body.
+
+And a big enlarged lymph node mass, 1.5 centimeters.
+
+If you think about it, that's a pretty good size lymph node.
+
+So if you have any of those things, think, "It's Kawasaki's Disease." Ooh, so why am I bringing up Kawasaki's Disease?
+
+You know, I saw it maybe once or twice my whole career.
+
+Over the past four years, I've seen it probably 10 to 15 times.
+
+And that was before we knew about this.
+
+And I'm sure some of you saw this multi-system inflammatory syndrome in children.
+
+So these were adolescents and kids under the age of 21 who had a lot of the things that looked like Kawasaki Disease.
+
+They came in with multisystem organ involvement, and they had recent COVID-19.
+
+A lot of these, these kids we thought initially had Kawasaki Disease until we diagnosed them with MIS-C, MIS-C.
+
+So the risks are the same.
+
+Both of 'em are at risk for coronary artery aneurysms.
+
+For kids with the MIS-C, they ended up in the PI, Pediatric Intensive Care Unit, the PICU, with hypertension and shock as well sometimes.
+
+So the treatment is the same.
+
+You give them a single dose of IV immunoglobulin, you give them low dose aspirin, you might give them corticosteroids, some debate about that.
+
+And you do an echo at the beginning, and then six to eight weeks after.
+
+So if you were to take care of a child who'd been hospitalized for Kawasaki's, you would wanna make sure to follow up on their inflammatory markers and make sure they had a repeat echocardiogram.
+
+Meningitis, meningococcal meningitis, if you haven't seen this, it's pretty terrible.
+
+Abrupt onset of fever, chills, malaise.
+
+They have that rash, the macular papular, macular rash all over their body, and they can develop DIC, shock and die.
+
+It's not very fun.
+
+Here is the meningitis causes by age.
+
+Again, viruses fortunately are your most common cause.
+
+But you'll notice that in the zero to one month age, it's those bacteria that we think about in the newborns group B strep, e-coli, listeria, one to 23, it's three months.
+
+It's streptococcus pneumonia, listeria, E. coli, hits sort of a transition period.
+
+After the age of two, you're in the streptococcus pneumonia, and neisseria mening is mostly the things you think about with adults.
+
+And the treatment of course, is pretty similar to what you would do for adults in that group.
+
+Younger kids, it's still your amp and gent, or amp and cefotaxime.
+
+And think about vancomycin.
+
+We never used to think about vancomycin, but now we do.
+
+Okay, frequent flyers.
+
+Community acquired pneumonia.
+
+I can almost guarantee you will see croup and bronchiolitis.
+
+So please take a few minutes and study that.
+
+Kawasaki's, I think with the recurrence of the MIS-C that came up recently, it seems to have popped up.
+
+Viral URI Treatment.
+
+Please don't give antibiotics.
+
+Urinary tract infections and the sepsis workup for newborns.
+
+So, here are your answers.
+
+Thank you very much, Dr. Bestie.

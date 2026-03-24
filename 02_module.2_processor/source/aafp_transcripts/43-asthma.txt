@@ -1,0 +1,833 @@
+Dr. Conner is back, and we're gonna turn our ascension to Pulmonary Number Two, and we're gonna discuss asthma.
+
+Thank you, Shawn.
+
+Thank you, David.
+
+So we're back with the discussion of obstructive illnesses.
+
+So now we're going to talk about asthma.
+
+What's new in asthma?
+
+Everything is new.
+
+So the last time they gave us asthma guidelines, do y'all remember?
+
+2007.
+
+So we've been waiting with bated breath for all these years.
+
+17 years later, they finally gave us updates.
+
+Now, so the NIH in 2020 updated the asthma guidelines.
+
+So the expert panel focused group, the same people work with the World Health Organization and created GINA.
+
+How many are familiar with GINA guidelines?
+
+GINA are the same people at GOLD.
+
+So the Global Obstructive Lung Disease group that we talked about last time, it's the same with GINA.
+
+GINA stands for Global Initiative for Asthma.
+
+So it's the NIH people in conjunction with the World Health Organization.
+
+They both gave us new updates in 2020 and everything has changed except for diagnosis.
+
+So I underline management under guidelines because diagnosis has not changed.
+
+So that part at least is easy.
+
+So let's dive in.
+
+Asthma physiology, of course, lots of inflammation here.
+
+Way back in the day, we used to think this was a disease of bronchoconstriction.
+
+Now we know how much inflammation plays a role.
+
+So keep that in mind with your asthma patients.
+
+That's why, you know, David was joking about the steroids.
+
+With respiratory medicine, particularly obstructive illnesses, steroids are almost always the right answer.
+
+So your asthma symptoms are intermittent and recurrent.
+
+They come and go, you know, in between exacerbations the patient may be normal, asymptomatic and abnormal lung function.
+
+Of course, cough and wheezing, dyspnea are common symptoms, exacerbations and triggers, which can be seasonal or perennial.
+
+Common asthma triggers upper respiratory infections, environmental insults, medications, and other illnesses.
+
+Again, don't forget about GERD.
+
+Okay, our first question.
+
+So we have a 12-year-old who's brought into your office for a well visit.
+
+Their parents report, they have nighttime cough and wheezing for the past several months.
+
+They deny chest pain and are otherwise healthy and up-to-date on immunizations, physical exam is unremarkable.
+
+Which one of the following tests would be most appropriate at this time?
+
+So we have a 12-year-old with several months of nighttime cough and wheezing.
+
+Would we do A allergy testing, B, a chest x-ray, C fractional exhaled nitric oxide, also known as pheno or D spirometry?
+
+Good, 92% of you got the correct answer spirometry.
+
+So that's how we diagnosed obstructive illnesses like asthma and COPD.
+
+Spirometry is the way to go here.
+
+Now I will say maybe if the patient was two years old, I might think of, you know, an inhaled foreign body or something, but a 12-year-old it would be different.
+
+Alright, so how do we make the diagnosis of asthma?
+
+Well, we talk to the patient.
+
+We verify a history of variable and intermittent respiratory symptoms.
+
+We document that airflow obstruction with spirometry, which we use in order to make the diagnosis to assess the level of severity based on impairment and risk.
+
+That hasn't changed since 2007, and to exclude alternate causes.
+
+Our friends at choosing wisely say we should not diagnose or manage asthma without spirometry.
+
+And I would agree.
+
+Unless the patient's under five, in which case you're gonna go ahead and treat because they can't do the spirometry.
+
+So this is the recommended test.
+
+You may want to do other specific tests based on each individual patient.
+
+That could include allergy testing.
+
+If you're unsure of the diagnosis, you might do a pheno level.
+
+Pheno is, how many of are familiar with pheno levels?
+
+So this is an evolving trend in respiratory medicine to look for inflammation.
+
+So if you're not sure, you could do a pheno level.
+
+And higher levels are consistent with elevated inflammation.
+
+Next question.
+
+Same case.
+
+When performing a spirometry on your 12-year-old wheezing patient, after the administration of a bronchodilator, what percentage of airway reversibility and change in FEV1 is consistent with the diagnosis of asthma?
+
+Here we go again with these number questions.
+
+I hate them.
+
+Is it A, 12% in 500 milliliters?
+
+Is it B, 25% in 200 milliliters?
+
+Is it C, 12% in 200 milliliters or D, 18% and 100 milliliters?
+
+Now let me see, can I sleuth this one out?
+
+Well, maybe.
+
+A and C both have 12%, B and C both have 200 milliliters.
+
+What do they have in common?
+
+C, which is the right answer?
+
+Woo, we got lucky.
+
+Do try to memorize these numbers.
+
+However, because you never know how the boards are gonna ask them.
+
+They may not give you something as easy as I did.
+
+So your asthma diagnosis with spirometry, you're gonna see an FEV1 decrease to less than 80% of predicted.
+
+And you're gonna get reversibility after a bronchodilator by 12% and 200 milliliters.
+
+Those are the numbers to memorize for the boards.
+
+Increase by 12% and 200 ml.
+
+Here's your spirometric values.
+
+Here's your tracing that I showed you before with COPD, that FEV1 because of obstruction is gonna be hard to get out.
+
+And then there's your flow volume curve.
+
+Your differential.
+
+You know, anything else that can cause wheezing.
+
+What do they teach us in medical school?
+
+All that wheezes is not asthma, right?
+
+Lots of other things can happen here.
+
+In younger kids, it could be upper respiratory infections.
+
+Upper respiratory cough syndrome.
+
+That's that throat clearing from sinus drainage.
+
+It could be an inhaled foreign body.
+
+It could certainly be gastroesophageal reflux disease.
+
+Older kids.
+
+Think about Alpha-1 antitrypsin deficiency, if they're a young adult.
+
+COPD, if they're older, cardiac failure emboli.
+
+And again, don't forget about tuberculosis.
+
+Asthma diagnosis in other contexts.
+
+Occupational asthma is a big deal.
+
+Pregnant women should all be evaluated.
+
+The elderly, they often go undiagnosed.
+
+You may think that it's only you know their CHF or ischemia, but maybe some of their symptoms are coming from COPD.
+
+Smokers and ex-smokers we'll talk about the, well, we already, no, we will talk about the asthma COPD overlap syndrome.
+
+Athletes have exercise induced bronchoconstriction.
+
+And then these patients with persistent cough, which we'll talk about this afternoon.
+
+You know they don't have asthma, they don't have COPD, but they're coughing.
+
+Is it sinus drainage down?
+
+Is it reflex up?
+
+It's an interesting discussion.
+
+This hasn't changed either.
+
+The level of severity.
+
+This is the treatment that's required to control their symptoms.
+
+So it's retro, it's assessed retroactively after several months of symptom control.
+
+That's how you determine the severity level.
+
+The problem here is the whole mild asthma category is tricky.
+
+GINA, the Global Initiative for Asthma, has recommended we stop using the term mild asthma.
+
+Because you label someone with mild asthma, but 30 to 37% of adults with acute asthma had symptoms less than weekly in the previous three months.
+
+So just because a patient's mild doesn't mean they can't have a severe exacerbation.
+
+Control is a different word that means different things to the patient as it does to me.
+
+Is your asthma controlled?
+
+Yeah, I'm great.
+
+I saw one of these patients just a few weeks ago, came in for a routine visit.
+
+How's your asthma?
+
+Great.
+
+You feel like it's controlled?
+
+Yes.
+
+How often are you using your inhaler?
+
+Patient was only taking a short acting bronchodilator.
+
+Oh, six or eight times a day.
+
+A day.
+
+And you think that's controlled?
+
+Well yes, because I use the inhaler.
+
+My symptoms improve, I feel fine.
+
+Sure, I guess I'm controlled.
+
+You're not controlled at all.
+
+So that's why of course we have these validated questionnaires.
+
+In COPD, it's the COPD assessment test.
+
+In asthma, it's the asthma control test for patients 12 and older.
+
+So you should be using these.
+
+Now we want to assess their severity and their control within both domains of impairment and also risk.
+
+Impairment, I like to think of is how bad are they?
+
+Risk, how bad can they get?
+
+This is the NIH asthma severity classification, which again, like I said, has not changed since 2007.
+
+You've got intermittent asthma and then you've got persistent asthma, which is mild, moderate, or severe.
+
+We all remember this, right?
+
+So it's based on symptoms.
+
+Intermittent asthma, they have symptoms less than twice a week.
+
+Mild persistent more than twice a week.
+
+Moderate persistent daily.
+
+Severe continual.
+
+Probably won't be asked that question on the board because this is so old and it hasn't changed since 2007.
+
+Here again, we talk about the risk of mild asthma.
+
+GINA no longer recommends that we use this term at all.
+
+Okay, so we have different categories of asthma medications.
+
+We've got our controller therapy and that's traditionally been an inhaled corticosteroid that they might use once or twice a day to keep their symptoms at bay.
+
+And then you've got the reliever therapy, which is the short-acting albuterol beta-agonist, right?
+
+Oh, well, you know, which inhaler do you use for what?
+
+I don't know.
+
+I got the gray one and I got the red one.
+
+Well, which do you use?
+
+You know, I don't know doc, I get confused.
+
+So this is problematic.
+
+You know, sometimes the patients don't know which inhaler to use.
+
+Is this my controller or my reliever therapy?
+
+Not every patient is savvy enough to remember what their short-acting beta-agonist is, versus their inhaled corticosteroid with throughout a long-acting beta-agonist.
+
+They don't know.
+
+That's why these guidelines have changed.
+
+So next question.
+
+Same patient, same case.
+
+Your patient with asthma had been managed with a daily inhaled corticosteroid along with a short acting beta agonist.
+
+So they had the two inhalers, two separate inhalers.
+
+On a routine follow-up visit, their asthma control test score was 15, indicating that they were uncontrolled.
+
+After assessing for proper inhaler adherence and technique, the next best step in management would be, which one of the following.
+
+The boards love to ask these questions where they say the next best thing.
+
+Now that doesn't mean that any of these could be bad, they want you to pick the best one.
+
+So in this case, what should we do?
+
+A add a long-acting muscarinic antagonist, B, add salmeterol, C, change their therapy to low-dose inhaled corticosteroid with formoterol daily, and prn, or D, continue present management.
+
+I don't think D'S the right answer 'cause the patient is, you know, worsening symptoms.
+
+So it can't be continue present management.
+
+So we're either gonna add a LAMA, we're gonna add a LABA, or we're gonna change their therapy to this daily and prn combination.
+
+What do we like?
+
+Good, y'all maybe played the long answer card.
+
+I don't know, but you got the right answer, which is correct.
+
+So these are the new asthma guidelines, which are amazing.
+
+So inhaled corticosteroids have always been the preferred controller therapy for many years.
+
+In patients with asthma, they reduce hospitalizations and death.
+
+They can be used intermittently or along with long-acting beta agonists.
+
+And of course we now have the triple inhalers now too.
+
+There's a couple of those.
+
+Inhaled short-acting beta-agonist.
+
+Again, like I said, this has been the mainstay of therapy for years.
+
+Patients think they get better, you know, so we're just treating this bronchoconstriction as it happens.
+
+The problem is we're missing the anti-inflammatory.
+
+And asthma always has an inflammatory component, not just bronchoconstriction.
+
+So this monotherapy with a short-acting beta-agonist in the GINA guidelines is out.
+
+And the NIH guidelines, they still use them.
+
+Okay, so we also know that frequent use of a short-acting beta-agonist can have worse clinical outcomes.
+
+The boards love to ask you if a patient is using one canister or more a month of their albuterol, that increases their risk of death.
+
+So they love to ask that question.
+
+And as I mentioned, GINA no longer recommends short-acting beta-agonist as monotherapy at any age.
+
+You've got long-acting beta-agonists, but this is contraindicated as monotherapy and asthma.
+
+Remember I mentioned this.
+
+It's okay in COPD, it's not okay in asthma.
+
+You have to combine a long-acting beta-agonist with a steroid.
+
+Now, what's new about these guidelines is what's called SMART therapy.
+
+How many of our familiar with these new SMART therapy guidelines?
+
+Not enough of you.
+
+So this is replacing everything.
+
+So we now have one inhaler that serves as both your maintenance and your reliever therapy.
+
+I don't have to deal with the gray one and the red one.
+
+I've got one inhaler now.
+
+And that inhaler is an inhaled corticosteroid with a formoterol.
+
+It's called SMART therapy that stands for Single Maintenance and Reliever Therapy.
+
+So any of these patients at like a persistent asthma level, you would give them this inhaler, and you would say use it as needed.
+
+If you're feeling fine, you don't need it.
+
+If your asthma starts acting up, you might need it once or twice a day.
+
+If you get worse, use it four times a day as needed.
+
+And then of course if you need it more than that, you probably should come in and see me.
+
+But this allows the patient, gives them the freedom and the ability to respond to their symptoms with one single inhaler.
+
+I love this, especially for adolescent.
+
+How many of us teach adolescent medicine?
+
+How many of us have?
+
+Come on now.
+
+How many of you see teenagers in your practice?
+
+Yes.
+
+Good, same.
+
+So trying to get an adolescent or a teenager to schedule something twice a day, good luck.
+
+So this is a wonderful addition to our armamentarium, to change them from a bid inhaled corticosteroid and a prn, short-acting beta-agonist to the one single inhaler.
+
+Love these guidelines.
+
+Alright, long-acting muscarinic and have antagonist play less of a role in asthma as they do in COPD.
+
+Cromolyn is out because it's takes too long.
+
+You gotta do it four times a day.
+
+Leukotriene modifiers were in for many years, they've fallen out of favor because of the neuropsych issues and the new black box warning.
+
+So singular not what it was.
+
+Now here are the guidelines.
+
+This is the NIH guidelines, not GINA.
+
+They're age related.
+
+So you've got the zero to four age, you start with a prn, short-acting beta-agonist.
+
+If they get a respiratory tract infection, you add an inhaled corticosteroid, and then you step up as needed.
+
+Now in this age group, any patient beyond at step three or higher probably should be seen pulmonology.
+
+If you have pediatric pulmonologists available where you live.
+
+And you step up and you add, you increase the amount and the strength of the steroid as needed.
+
+At five to 11, it's similar.
+
+But at step three we have the SMART therapy option with the inhaled corticosteroid and formoterol.
+
+The real star of the show here with SMART therapy is the formoterol molecule.
+
+Formoterol is unique among long-acting beta-agonists, because of its very rapid onset of action under five minutes.
+
+So the only problem here with the SMART therapy is that it's not an FDA approved indication.
+
+So we're still having insurance companies kick back 'cause they don't wanna pay for it.
+
+So you step up as needed.
+
+12 and up, same situation, put 'em on the SMART therapy.
+
+Don't forget about subcutaneous in immunotherapy.
+
+And at five or six you might want to consider the biologics.
+
+So it's pretty self-explanatory.
+
+So with intermittent asthma, you can get away within inhaled short-acting beta-agonist per the NIH guidelines.
+
+Persistent asthma needs an inhaled corticosteroid with a short-acting beta-agonist.
+
+And anyone at moderate to severe needs the SMART therapy.
+
+Step up or down as needed, refer to pulmonology as needed.
+
+Here's some options for severe asthma.
+
+I don't think they'll ask you these on the boards.
+
+Our friends at Choosing Wisely say that we should avoid stepping up asthma therapy, adding new drugs or going to a higher dose without first assessing adherence, appropriateness of device, and technique with current asthma medications.
+
+So it's very important if they ask you on the boards, always assess their inhaler technique before making any other changes.
+
+This is a very important slide.
+
+They love to ask these on the boards.
+
+Risk factors for poor outcomes with asthma.
+
+High use of the short-acting beta-agonist, more than one canister a month.
+
+As I mentioned, they love that question on the boards.
+
+Exposure to cigarette smoking, yes, and maybe other inflammatory markers.
+
+But especially the overusing, the short-acting beta-agonist.
+
+Now your monitoring, you bring 'em back, see how they're doing.
+
+Follow up visits should be every couple of months.
+
+If a patient's really well-controlled and stable, I usually like to see 'em every six months.
+
+I'm from Detroit.
+
+So with our allergy season, I like to see patients in the spring and the fall.
+
+That's typically when my patients get into trouble.
+
+So every six months is fine.
+
+You assess their technique.
+
+Your measurements of control are the same as the severity.
+
+Those are the asthma control test questionnaires.
+
+And then you go up or down as needed.
+
+With the SMART therapy, you give the patient the permission to kind of do some of this on their own.
+
+And that's the day-to-day adjustment that they can do.
+
+There's also short-term step up where you increase the frequency of the strength of the inhaled corticosteroid and then a sustained follow up as well.
+
+Stepping down.
+
+If they're doing very well, you could consider stepping down their treatment.
+
+The Symbicort, which is the brand name for the budesonide and formoderol, it comes in two strengths.
+
+It comes in 80 milligrams or 160.
+
+So you could, if they were on 160, you could step 'em down to the 80, if you were doing SMART therapy.
+
+Be sure that the time is appropriate.
+
+You don't want them traveling, you don't want them pregnant, you don't want them in their present state upper respiratory infection.
+
+And you approach each one of these steps as a therapeutic trial.
+
+You know what, we're gonna try this.
+
+We're gonna see you back in a couple months and see how you did.
+
+Schedule a follow up visit.
+
+Peak flow meters, we don't have data, but the expert panel loves them.
+
+Along with asthma action plans.
+
+So you should be giving your patients written asthma action plans that are individualized.
+
+They tell the patient how to recognize and respond to their symptoms.
+
+They provide advice on what to do.
+
+And this is based their personal peak flow best.
+
+Okay, so asthma action plans are endorsed.
+
+They have been proven to reduce morbidity and decrease hospitalizations.
+
+Next question, question four, same case.
+
+Your patients' asthma had been well controlled until an abrupt onset of nasal congestion, clear drainage, body aches, and worsening cough of five days duration.
+
+They're now wheezing and requiring use of their short-acting beta-agonist every three to four hours.
+
+Exam reveals a slightly anxious patient in no acute distress.
+
+Respiration of 18, SaO2 of 97%, temp of 99.4, no retractions.
+
+Auscultation shows mild inspiratory and marked expiratory wheezes.
+
+In addition to continued frequent use of their short-acting beta-agonist, which one of the following would be the next best step in the management of their problem?
+
+A, admission to the hospital. B, oral antibiotics.
+
+C, oral corticosteroids, or D oxygen.
+
+Remember what I told you about respiratory medicine and what?
+
+Steroids, yeah.
+
+So of course oral corticosteroids are what we need to prescribe here, good.
+
+GINA prefers that we use the term flare-up as opposed to exacerbation.
+
+When we're having a discussion, you know, amongst our colleagues, we can say exacerbation.
+
+We know what that means.
+
+But you should probably try to use the term flare-up when you're talking to your patient.
+
+So this is a worsening of their symptoms.
+
+And of course the management can go anywhere from your written action plan to come into the office.
+
+You know, maybe you need some steroids, maybe you need some antibiotics, I don't know.
+
+And then all the way to the emergency care and hospitalization if they're more severe.
+
+Technically this is a decreased peak flow.
+
+Less than 70% of predicted normal.
+
+Oftentimes it's just the symptom of I'm no longer responding to my beta-agonist.
+
+Pay attention to these slides.
+
+Historical risk factors for death with asthma.
+
+History of severe exacerbations requiring intubation prior admission to the unit.
+
+ER visit in the last year.
+
+Current use or recent withdrawal from systemic steroids.
+
+Not currently using an inhaled corticosteroid.
+
+Overusing their short-acting beta-agonist.
+
+Those are the biggest historical risk factors.
+
+Physical risk factors.
+
+The biggest one here is absence of wheezing.
+
+A patient in a severe exacerbation, they're not moving any air at all.
+
+So you don't hear any wheezing.
+
+That's an ominous finding.
+
+Exacerbation management.
+
+You're gonna put 'em on oxygen as needed.
+
+You're gonna do short-acting beta-agonist.
+
+You can do the metered dose inhaler or the nebulizer.
+
+Current data suggests the MDI is equal to the nebulizer.
+
+Continuous nebs are superior to intermittent, definitely put them on steroids, oral or IV.
+
+There is some role for inhaled ipratropium, and then the others are no longer used.
+
+Antibiotics.
+
+Maybe in clinical practice you might, for the purposes of the boards, I would say usually yes in COPD, but no in asthma.
+
+'Cause the boards don't like antibiotics.
+
+Exacerbation management, the degree of severity.
+
+Mild, moderate, severe, life-threatening, that's self-explanatory.
+
+You have to follow up in the office with all of these patients to be sure their symptoms have normalized.
+
+So a patient has an asthma exacerbation.
+
+I like to think of this as an opportunity.
+
+You know, what has gone wrong?
+
+Well, you know, I was fine until I got that upper respiratory infection.
+
+Okay, well you, maybe you can't do anything about that.
+
+You know, I ran out of my inhaler.
+
+My insurance company won't cover it.
+
+So I stopped using it.
+
+There's all sorts of reasons here that it could explain an exacerbation.
+
+So it's a great opportunity.
+
+Next question, same case.
+
+Your patient's now 18 years old and their asthma severity level is presently intermittent, requiring only a short-acting beta-agonist occasionally.
+
+They recently started training for a marathon, however, and they're now complaining of worsening cough and decreased perform when they run.
+
+Requiring daily use of their short-acting beta-agonist.
+
+Which one of the following would be the next best step in their treatment regimen?
+
+A, add a daily inhaled low-dose corticosteroid.
+
+B, increase the frequency of short-acting beta-agonist use.
+
+C, lifestyle modifications like decreasing their exercise frequency, warming up until the symptoms improve.
+
+Or D, substitute a long-acting beta-agonist prior to exercise.
+
+So this is of course exercise induced bronchoconstriction.
+
+That's the new term.
+
+We don't say exercise induced asthma anymore.
+
+They're no longer responding to the short-acting beta-agonist.
+
+What could we use next in respiratory medicine with an obstructive disease?
+
+I don't know.
+
+I think maybe it's the steroid.
+
+Yes, and the majority of you agreed.
+
+Good.
+
+Those of you who did the long-acting beta-agonist, that used to be in the old guidelines.
+
+But remember, monotherapy with a long-acting beta-agonist and asthma type illnesses is out.
+
+Okay.
+
+All right, so exercise induced bronchoconstriction.
+
+This is thought to be due to cold dry air.
+
+You diagnose it with spirometry.
+
+You do a before and an after.
+
+So before you exercise, exercise, and then repeat the spirometry.
+
+And you'll see a decrease in the FEV1 of 10% or more.
+
+What's interesting about EIB is it occurs in 90% of asthmatics, but up to 20% of athletes who don't have asthma will get exercise induced bronchoconstriction.
+
+And some newer studies are suggesting the pheno levels.
+
+Short-acting beta-agonists are preferred prior to exercise.
+
+If they don't improve, you put them on an inhaled corticosteroid or you could use the SMART therapy.
+
+Okay, good warmup.
+
+Yes, yes, yes.
+
+The asthma COPD overlap.
+
+There's a confluence here in patients who smoke.
+
+The take home message, I would say is you want to treat according to the predominant symptom.
+
+So if they are asthma predominant, if they have a lot of, you know, mucus production and cough, you're probably gonna put them on a inhaled corticosteroid.
+
+If they have more COPD predominant where it's more dyspnea, you're gonna use combination bronchodilators.
+
+And of course, like I said, there's two triple therapy inhalers out now and a third one coming.
+
+Asthma during pregnancies, a highly variable.
+
+A third of the time they worsen.
+
+A third of the time they improve.
+
+Sometimes they remain stable.
+
+But the portion symptom control and exacerbations are a risk both to the mother and the fetus.
+
+So we have to take asthma during pregnancy very seriously.
+
+We want to see them often.
+
+For the purposes of the boards.
+
+Albuterol is your preferred SABA, and budesonide is your preferred inhaled corticosteroid.
+
+Monthly monitoring is recommended.
+
+It is also recommended not to step up your step down your, I'm sorry, don't step down the therapy during pregnancy.
+
+And you definitely don't stop the inhaled corticosteroid.
+
+Don't forget to treat other illnesses that may be at play, including allergies and reflux.
+
+And always remember that inadequate control of a pregnant patient's asthma poses a far greater risk to the fetus than any medication.
+
+So do not be afraid to use medications in your pregnant patients with asthma.
+
+Alright, thank you very much.
+
+Thank you very much Dr. Conner.

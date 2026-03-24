@@ -1,0 +1,801 @@
+So this is the first of a series of lecture on pulmonary.
+
+And remember, this is 13% of the questions.
+
+At least.
+
+So let's get started with pulmonary.
+
+This morning we're gonna discuss obstructive diseases, starting with COPD.
+
+Now, what's new here is of course the GOLD guidelines.
+
+How many are familiar with GOLD?
+
+This is the Global Obstructive Lung Disease.
+
+This is the NIH and the World Health Organization together that every year update the COPD guidelines.
+
+Now, you'll see these guidelines a lot in these presentations here at the AAFP.
+
+Pay attention because the boards love to ask you questions about any updated guidelines within the last several years.
+
+So when you see a presenter talk about a new guideline, this is very important.
+
+When you hear the term, US Preventive Services Task Force Guide Recommendation, always pay careful attention.
+
+So these are the updated gold guidelines.
+
+So COPD, Chronic Obstructive Pulmonary Disease.
+
+Currently the fifth leading cause of death in the US.
+
+Used to be number three.
+
+Well in 2017, accidental injury deaths took over the third spot.
+
+Do we know why?
+
+Because of a surge in opioid-related deaths.
+
+In 2020 COVID-19 took over the third spot, but now we're back to the new normal, and cardiovascular number one, cancer number two, and accidental injury deaths due to a surge in opioid-related fentanyl deaths is now the third leading cause of death in this country.
+
+Interesting.
+
+Now, COPD is common, preventable and treatable.
+
+It's underdiagnosed and misdiagnosed.
+
+So we need to do a bit better job.
+
+I like to think of COPD as a complicated course of an illness that it results in obstruction and inflammation.
+
+So with COPD, you have chronic progressive airflow obstruction, as opposed to asthma, which would be chronic reversible airflow obstruction, right.
+
+This is a complicated factor.
+
+Here you've got internal genetic issues, like many issues in medicine, say diabetes for example.
+
+And then you have environmental insults, in this case, inhaled irritants.
+
+And then these things can combine over time, and depending on these factors, a patient may develop COPD.
+
+The biggest environmental insult that we'll see in this country is smoking.
+
+Smoking, smoking, smoking is the number one cause of COPD.
+
+In other countries, third world countries, it may be the burning of fossil fuels to cook or heat the home.
+
+And then of course, don't forget about occupational exposures, which we'll talk about later.
+
+The pathophysiology here.
+
+You inhale a bunch of things that irritate the lungs.
+
+The lungs are very sensitive.
+
+I don't like the lungs as a delivery system for anything, which is why we hate vaping.
+
+You know, the verdict is out on vaping, but I don't want patients breathing shit into their lungs.
+
+You know, the nicotine is not that harmful of a chemical.
+
+It's, it's all the other things that you're breathing in along, you know, the propylene glycol, which is one carbon chain removed from ethylene glycol, which is antifreeze.
+
+This keeps me up at night.
+
+Anyway.
+
+So patients are breathing things into their lungs like cigarette smoke.
+
+Causes irritation that results in inflammation.
+
+Eventually airflow limitation, which leads to the symptoms.
+
+Now, the hallmark symptoms of course, you know this, chronic cough, dyspnea and sputum production are the biggest ones.
+
+Pay attention to the last one on the left.
+
+Recurrent respiratory infection.
+
+Some of these patients with COPD may not think they have COPD.
+
+They might deny symptoms, but they're frequent flyers at your office or at urgent care with respiratory infections.
+
+Also on the right, weight loss is an independent risk factor for mortality.
+
+So with the work of breathing in your end stage patients, they will actually start losing weight, and that's a ominous sign.
+
+Now, when to think about COPD?
+
+Every smoker?
+
+No.
+
+The recommendation is, you wanna think of symptomatic smokers.
+
+The reason is because many patients with GOLD level two COPD don't complain of any symptoms at all.
+
+So you really wanna look at the symptoms.
+
+Again, remember, recurrent respiratory infections are something to consider.
+
+If you have a younger patient, you should do an Alpha-1 antitrypsin level.
+
+The World Health Organization has recently changed their recommendation, and they now recommend an Alpha-1 antitrypsin level on all COPD patients at diagnosis.
+
+What about screening high risk asymptomatic patients?
+
+Well, this patient has you know, a 50 pack year history of smoking.
+
+Shouldn't we screen them?
+
+Well, 2022 JAMA study showed that although screening does find disease, it doesn't change the outcome of the disease.
+
+So that's what's interesting here with COPD is, we're really concerned with the disease outcome.
+
+The best way to change the course of the illness is to get them to quit smoking.
+
+So the US Preventive Services Task Force in 2022 told us that we should not be screening asymptomatic patients.
+
+So you wanna stick with screening your symptomatic smokers.
+
+Your differential here, think of anything that can cause dyspnea and sputum production.
+
+Cough.
+
+Asthma is probably the biggest one, tends to occur earlier in life, tends to be reversible that responds well to a bronchodilator.
+
+CHF is another big one.
+
+You know, same ages, you know, middle aged to older patients can have heart failure.
+
+Don't forget about tuberculosis.
+
+As David mentioned, they will ask you tuberculosis questions, plural on the boards.
+
+So we'll deal with that this afternoon as well.
+
+Other differentials, I like to think of intrathoracic or extrathoracic.
+
+Intrathoracic causes.
+
+Could be interstitial lung diseases like pulmonary fibrosis, cystic fibrosis, lung cancer.
+
+Don't forget about lung cancer.
+
+Extra thoracic.
+
+There's a lot of things that can cause chronic cough.
+
+Chronic cough can come from the lung parenchyma itself.
+
+It can come from sinus drainage down.
+
+That's very common.
+
+That tends to be the throat clearing.
+
+That kind of thing that your patients will do.
+
+Or it could come from gastroesophageal reflux up.
+
+And then medication effects like ACE inhibitors.
+
+Imaging studies.
+
+You're probably gonna do a chest x-ray or a CT on these patients.
+
+Helpful to exclude other causes.
+
+Don't forget about ABGs to see if they need oxygen.
+
+Okay, first question.
+
+We have a 52-year-old patient.
+
+Hold on.
+
+Now, I said 52-year-old patient.
+
+I did not say black or white.
+
+I did not say male or female.
+
+The evolving trend and board questions is to not specify race or sex unless it matters.
+
+It's an evolving trend.
+
+So we're not fully there yet.
+
+There's a huge bank of questions.
+
+Some of these are old, some of them are new.
+
+Not all test writers, you know, adhere to this formula.
+
+But the new evolving trend with test questions is to not mention the sex of the patient or the race of the patient unless it matters.
+
+So in my questions, you won't see it, but if you do pay attention.
+
+All right.
+
+So we have a 52-year-old patient presents with progressive cough, wheezing, and occasional sputum production over the past few years.
+
+They, not he or she.
+
+We're trying to be general gender neutral today, right.
+
+This is 2024.
+
+They have smoked one pack of cigarettes per day for 20 years, and their symptoms have worsened lately so that they often feel too short of breath to play with their grandkids.
+
+Which one of the following spirometry results would be consistent with the diagnosis of moderate COPD?
+
+A, an FEV 1 over FC ratio greater than 70% with an FEV 1 greater than 80% predicted.
+
+There's a lot going on with these number slides.
+
+Two, the ratio less than 70% with an FEV 1 between 50 and 80.
+
+C, the ratio greater than 70% with the same ratio, the same percentage of FEV 1, 50 to 80.
+
+Or D, the lower ratio with the lower predicted percentage.
+
+So if you didn't memorize this, sometimes if you're lucky, you can sleuth it out.
+
+So it asked what the diagnosis of moderate COPD was.
+
+It didn't ask for mild, it didn't ask for severe.
+
+So I'm probably gonna go with B or C if I don't know anything, just because those are the middle numbers, right.
+
+But if you look a little deeper, B and D both have the lower ratio, and B and C both have the same predictive percentage.
+
+If I knew nothing, I would do the intersection of those two, which happens to be B.
+
+My goodness.
+
+It happens to be the right answer.
+
+So sometimes you can get lucky with these.
+
+Good job, everybody.
+
+Okay.
+
+So our strategy for assessing COPD, we're gonna look at four things.
+
+Airflow limitation looking at with spirometry.
+
+We're gonna look at symptoms.
+
+Risk of exacerbation and comorbidities.
+
+These are all important.
+
+So spirometry is the key test for diagnosing obstructive illnesses, including COPD and asthma.
+
+What we're looking at is the FEV 1.
+
+That's the amount of air they can get out in the first second.
+
+With an obstruction, it's kind of like breathing through a straw.
+
+It's gonna take a long time to get that air out.
+
+So your forced expiratory volume in the first second is going to be delayed, right.
+
+And then that ratio over the forced vital capacity, the amount of error you can get out in total should be less than 70%, and that confirms the diagnosis of COPD.
+
+Try to memorize that percentage for the boards.
+
+Now here's an example of a flow volume loop.
+
+On the bottom we have the inspiration, which is a nice curve.
+
+And then we have the expiration on the top.
+
+You've got the peak expiratory flow is your highest number, and then the amount you can get out in a second, and then down from there.
+
+Now here is a volume over time curve.
+
+Again, pay attention to the forced expiratory volume in the first second.
+
+Normal patients, they can get it out pretty quickly.
+
+Asthmatics and COPD, it takes a lot longer.
+
+Asthmatics can eventually get all the air out, but COPD patients usually, you know, do have some decreased in their forced vital capacity.
+
+Okay.
+
+When not to do spirometry?
+
+Well, some of these are pretty common sense, but they could pop up on the boards.
+
+You're not gonna do it if a patient's hemodynamically unstable.
+
+If they've had a you know, very recent MI.
+
+If they've got a infection, a pneumothorax.
+
+If they've got an aneurysm of the abdominal aorta.
+
+Intracranial hypertension or retinal detachments.
+
+Those would be absolute contraindications.
+
+Relative contraindications.
+
+Children, anyone under five isn't gonna sit still in order to go through the spirometry and so forth.
+
+Now, let's go back a couple slides to that.
+
+Look at that in inspiratory curve.
+
+That inspiratory curve should look that way.
+
+If it's flat, then that need, that means that there's an upper airway obstruction, and then you want to send the patient off for nasopharyngoscopy.
+
+I was asked that question on the boards last time.
+
+It annoyed me because I've never seen it in practice, but that's why I've included the information here for y'all.
+
+So think of that.
+
+If you see a flattened inspiratory loop, nasal obstruction and nasopharyngoscopy.
+
+These are in between diagnoses that they won't ask you on the board Pre-COPD and PRISm.
+
+Now what hasn't changed is the classification strategy for COPD.
+
+So we have Gold 1, 2, 3, and 4.
+
+We typically call them mild, moderate, severe or very severe.
+
+Or I prefer the term end stage.
+
+And this is with our ratio less than 70%.
+
+If we have greater than 80% predicted on FEV 1, that's mild.
+
+Less than 80% is moderate.
+
+Less than 50% is severe, and less than 30% is end stage.
+
+So greater than 80, less than 80.
+
+Less than 50, less than 30.
+
+Those are the ways to remember these GOLD levels.
+
+Now this was another one of these questions that popped up on the boards that annoyed me.
+
+If you are a radiologist or if you're into research, there are different morphologic emphysematous subtypes on CT scans.
+
+Who knew?
+
+Well here's what they are.
+
+If you see central lobar emphysema, that's classically associated with smoking-induced COPD.
+
+If you see pan lobular emphysema, that's classically associated with homozygous alpha-1 antitrypsin deficiency.
+
+I was asked that question on the boards.
+
+For me in private practice, it's not very relevant.
+
+But here you have it.
+
+Next question.
+
+Due to the weak correlation between the severity of airflow limitation, and the symptoms experienced by most patients with COPD, which one of the following should be obtained at each office visit?
+
+A, a chest radiograph.
+
+B, laboratory assessment including CBC, C-reactive protein and procalcitonin.
+
+C, spirometry.
+
+Or D, a validated multidimensional questionnaire.
+
+Good.
+
+Validated multidimensional questionnaires is always the right answer on the boards.
+
+They love these questionnaires.
+
+So this is assessing the symptoms.
+
+These are highly variable.
+
+Like I said, many patients don't complain of any symptoms at all till you start getting into the nitty gritty here.
+
+The best one is the COPD Assessment or CAT test, which is multidimensional, followed by the mMRC, which is more symptom based.
+
+There's a link to it if you wanna look at it.
+
+There's what it looks like.
+
+You add 'em up.
+
+Higher is worse.
+
+Anything above 15 is bad.
+
+Okay.
+
+The risk of exacerbations is next.
+
+The best predictor of future behavior is past behavior, right.
+
+So that's how we predict risk.
+
+If they've had two or more exacerbations within the last year, they're at high risk or if they've had one or more hospitalizations for their COPD.
+
+Next is comorbidities.
+
+These are very important and very common.
+
+They can worsen the diagnosis for either illness when they occur concomitantly.
+
+Cardiovascular diseases are very high, especially atrial fibrillation, which goes hand in hand with COPD.
+
+Don't forget about lung cancer.
+
+Sleep apnea is a big one as well as GERD, which confers an independent risk factor for exacerbations.
+
+How you manage these, you're not going to do anything differently.
+
+You're gonna manage them the same, but it's very important that they be recognized.
+
+For example, patient comes in with COPD and their, "Doc ,"I'm short of breath." Well, is it the COPD?
+
+Maybe it's heart failure, cardiovascular disease.
+
+"Doc, I've got this worsening cough.
+
+Is it my COPD?" I don't know.
+
+Could it be gastroesophageal reflux disease?
+
+"I'm fatigued." Is that COPD?
+
+Could it be depression?
+
+So these are the things you need to look for as clinicians with these comorbidities.
+
+And then there's the Global Assessment Tool.
+
+It used to be the ABCD.
+
+It's the ABE.
+
+How many of are you familiar with the the Global Tool?
+
+We'll get to it.
+
+I'll show it to you when we get into the management areas.
+
+Okay.
+
+The goal here with COPD is to reduce the symptoms and reduce the risk, right.
+
+The best way to do that is to get them to quit smoking.
+
+So this has the greatest capacity to influence the history of the disease.
+
+It's important to remember that nothing prolongs the life of a patient with COPD, which this is really all symptomatic management.
+
+The only thing that can prolong their life is removing the environmental insult, which is usually cigarette smoking.
+
+Okay, next question.
+
+So what I like to do when I present is I give you one case, and we follow that same patient through the illness.
+
+So this is still our 52-year-old patient.
+
+So your patient with GOLD stage two COPD comes in for a routine visit.
+
+They had been controlled on a LABA/LAMA combination inhaler, but for the past several months they have been complaining of increased breathing difficulty, and sputum production requiring one visit at Urgent Care.
+
+They deny chest pain or fever.
+
+When considering adding an inhaled corticosteroid, which test would be most helpful to order?
+
+A, a blood eosinophil count.
+
+B, a chest radiograph.
+
+C, C-reactive protein.
+
+Or D, procalcitonin level.
+
+Good.
+
+Blood eosinophil count.
+
+Y'all are gonna do great on the boards because this is new stuff.
+
+Good for you.
+
+All right.
+
+So let's get into management.
+
+Beta agonist first line therapy in mild patients at low risk.
+
+Long-acting bronchodilators are generally preferred over short-acting.
+
+Keep in mind that in asthma, monotherapy with a long-acting beta-agonist is out because it worsens cardiovascular mortality.
+
+Long-acting beta-agonist monotherapy, and asthma out, but it doesn't cause a problem in COPD.
+
+So you are allowed to use monotherapy with a LABA in COPD, but the evolving trend is really combination therapy.
+
+Antimuscarinic.
+
+Long-acting muscarinic antagonist.
+
+These are your preferred starting medications.
+
+Host of benefits with minimal side effects.
+
+Combination therapy has the best results.
+
+We've got tons of these inhalers, which one is up to you.
+
+Inhaled corticosteroids.
+
+More of a benefit in asthma.
+
+But if you have a patient with you know, recurrent exacerbations, a lot of sputum production, you might want to consider adding an inhaled corticosteroid if they are at GOLD stages two to four.
+
+The best way to determine it is we have this objective measurement called a CBC.
+
+And there's a blood eosinophil count on there.
+
+So if you see an eosinophil count greater than 300, they are more likely to benefit from an inhaled corticosteroid or if they have asthma of course, and that's the COPD overlap syndrome.
+
+So here's your slide to help you.
+
+Should we put 'em on an inhaled corticosteroid?
+
+If they've had frequent hospitalizations, exacerbations, or a high blood eosinophil count.
+
+Yes.
+
+If it's in the middle maybe, and if it's not or if they've had repeated pneumonia, probably no.
+
+So that's a helpful slide.
+
+Oral glucocorticoids, yes for exacerbations, but not for routine management.
+
+PDE-4 inhibitors like Roflumilast, yes for GOLD stages three or four.
+
+Daily or biweekly Azithromycin has been shown to reduce exacerbations in those that get frequent infections, but it can come with a cost.
+
+Don't forget about your inhaler delivery system.
+
+The metered dose inhaler is you know, the most commonly used, but you've gotta have the coordination to use it, right, which some elderly patients or younger patients might struggle with.
+
+The dry powder inhaler is breath activated.
+
+So you don't have to worry about the coordination, but you gotta be able to take a big strong breath.
+
+So keep that one in mind.
+
+The nebulizers are great but expensive and require electricity.
+
+You got the tubing maintenance to deal with.
+
+The soft mist inhalers are really nice.
+
+They're kinda the best of the both world.
+
+Really elegant, but they're a little bit more expensive, and they do come with a shelf life.
+
+Pulmonary rehabilitation.
+
+This is a multidimensional approach here.
+
+Please say to pulmonary rehab at any stage of COPD if you are asked that question on the boards.
+
+What about oxygen?
+
+Many of these patients require oxygen.
+
+So here's the information for when to prescribe supplemental oxygen.
+
+It's indicated for resting PAO2, less than 55 or 55 to 60 if they have heart failure.
+
+Or a O2 SAT of less than 88%.
+
+Put 'em on oxygen, titrate up to greater than 90, have 'em come back for follow up.
+
+In a couple months, see how they're doing if they need to stay on it or if they find it effective.
+
+Palliative care with opioids, neuromuscular stimulation, oxygen, even fans blowing air onto the patient's face at night have all been found to be helpful.
+
+Ventilatory support if needed, and surgical interventions for your more severe patients with like your extreme bullets emphysema.
+
+Okay.
+
+Here's that ABE combined assessment tool.
+
+Here's what it looks like.
+
+So it used to be ABCD, it used to include the levels, they keep changing it.
+
+The newer iteration is the ABE tool.
+
+So on the X axis, we have symptoms.
+
+Fewer symptoms on the left, greater symptoms on the right.
+
+On the Y axis we have risk of exacerbations, Lower risk down, higher risk up.
+
+So your group a fewer symptoms, lower risk.
+
+Put 'em on a once a day bronchodilator, like a long-acting, you know, beta agonist or muscarinic antagonist.
+
+Group B, they're more symptomatic.
+
+So these patients have a COPD Assessment Test greater than 10.
+
+So those patients, when you see them in the office, and you give them that validated multidimensional questionnaire, you fill it out, add up the numbers.
+
+Oh look, you know "Mrs. Smith is at a 12." So she's got more symptoms.
+
+So now she needs a combination inhaler.
+
+LABA/LAMA.
+
+Higher risk patients need the combination bronchodilator plus or minus the inhaled corticosteroid if they have a blood eosinophil count above what?
+
+300.
+
+Good.
+
+Good, good, good, good, good.
+
+So this is your combined assessment tool.
+
+Now your management, what do you do?
+
+Mrs. Smith comes back in you know, a month later she's like, "You know, I'm still having dyspnea.
+
+Well, what are you on?" So you're gonna add another inhaler.
+
+She's not on a long-acting muscarinic antagonist.
+
+She needs to be on it.
+
+Don't forget about other comorbid illnesses that could be at play.
+
+Patient who has exacerbations probably needs to be on a steroid, but of course you may consider Roflumilast or weekly azithromycin in those cases.
+
+Always remember to assess their inhaler technique.
+
+This is big with COPD and asthma.
+
+It is amazing how many patients use these inhalers incorrectly.
+
+So have them come in, bring their inhaler and demonstrate in front of you.
+
+Next question, same patient.
+
+So your patient with COPD developed an upper respiratory infection last week.
+
+They now present with increased cough, yellow sputum and increasing dyspnea, and wheezing.
+
+Exam reveals no respiratory distress with an SAO2 of 89% on room air, and no signs of consolidation on lung auscultation.
+
+In addition to steroids, which one of the following would be most appropriate for you to prescribe at this time?
+
+A, Augmentin.
+
+B, Mucinex.
+
+C, Oxygen.
+
+Or D, Theophylline.
+
+Good.
+
+Augmentin.
+
+This is a classic case for needing antibiotics.
+
+Good.
+
+The SAO2 isn't low enough to prescribe oxygen.
+
+And no one uses...
+
+Does anyone use theophylline anymore?
+
+Theophylline is out.
+
+There's no reason to use theophylline anymore.
+
+Almost none.
+
+All right.
+
+So an acute COPD exacerbation worsening of symptoms.
+
+The most common cause is a viral upper respiratory infection.
+
+Increased dyspnea is one of the key symptoms.
+
+Don't forget to assess whether they need oxygen.
+
+Other things that can cause acute dyspnea.
+
+The differential is long here.
+
+Pneumonias, pneumo, pleural effusions, pulmonary emboli, pulmonary edema, cardiac arrhythmias.
+
+All of these things can contribute to and cause dyspnea.
+
+So they should be evaluated if you have clinical suspicion.
+
+COPD exacerbation classification hasn't changed.
+
+Mild, moderate or severe.
+
+That's pretty self-explanatory.
+
+Indications for admission.
+
+I've listed these here.
+
+For the purposes of the boards, they would make it very obvious to you if they felt the patient needed to be admitted to the hospital.
+
+Don't forget about assessing their O2 SATs.
+
+Titrate their O2.
+
+The SAO2 is greater than 88% in the presence of an exacerbation.
+
+Yes to bronchodilators.
+
+Yes to systemic steroids.
+
+Typically we're gonna use prednisone 40 milligrams a day for five days.
+
+That can be once a 20 milligrams BID or 40 milligrams once a day.
+
+What about antibiotics?
+
+Probably.
+
+Now for the purposes of the boards, they say that you should prescribe antibiotics if a patient presents with increased dyspnea, sputum volume or sputum purulence, that's the most important.
+
+Mrs. Smith may say, "You know, I cough up some clear sputum every day, but now it's yellow and green.
+
+That is a key change with a COPD patient.
+
+Which antibiotic you want to prescribe is up to you.
+
+The boards don't tell us.
+
+I will say that Augmentin would be commonly prescribed.
+
+Azithromycin, less commonly prescribed.
+
+You'll find that Zithromax is now out in medicine.
+
+It's out in respiratory.
+
+It's out in ENT.
+
+It's out in sexually transmitted infection.
+
+So it's now a second tier antibiotic, and we will discuss that this afternoon when we discuss pneumonias.
+
+Thank you.
+
+Thank you very much, Dr. Conner.

@@ -1,0 +1,745 @@
+Dr. Firnhaber is returning for the final presentation as we look at cardiovascular medicine.
+
+Jonathon's gonna talk about dysrhythmias.
+
+Take it away, sir.
+
+All right, let's do this.
+
+So we're doing dysrhythmias, which is also, I mean, aren't they all fun?
+
+And the cardiac topics to me are just fascinating.
+
+I love the physiology.
+
+All right, so if you know, I think I put up the cardiac, the coronary circulation, basically as you need to know, you know, where the right and left corona artery are circumflex.
+
+Basically what those all covered, this is really all you need to know about the coronary conduction system.
+
+The wiring.
+
+So SA node sits high up in the right atrium.
+
+So when you're looking at an EKG and you see abnormalities in the initial part of the P wave, the atria depolarize right to left.
+
+So the P wave is right atrial depolarization followed by left atrial depolarization.
+
+SA node conduction both hard wire and intrinsic path and intrinsic pathways go down to AV node which sits between the atria and ventricles.
+
+Next up is the bundle of His which quickly splits apart to the right bundle, which is only the right bundle.
+
+The left bundle is fairly short because it splits apart again into both an anterior and a posterior fascial.
+
+If you're trying to correlate both the conducting system and the circulatory system, typically the the AV node is supplied by the right coronary artery, which also supplies the inferior wall.
+
+Therefore, inferior MIs, more often than not, will cause AV conduction abnormalities or AV nodal ischemia.
+
+Anterior wall of the heart.
+
+The LAD also supplies the distal conducting system, the His Purkinje system.
+
+Why that's important is the AV node tends to recover more readily than the distal conducting system does.
+
+So anterior MIs with conduction abnormalities tend not to see recovery of electrical conduction.
+
+All right, so let's go right to a question.
+
+We've got a 52-year-old male who's got a blood pressure of 154 over 86.
+
+He's an avid tennis player.
+
+Past history is benign.
+
+Given this rhythm strip, which of the following drugs would be inappropriate to use in this patient for treatment of his hypertension?
+
+So first take a look at the rhythm strip.
+
+It is a funny one, isn't it?
+
+Yeah, so if you're trying to count boxes, 300, 150, 175, 60, just below 60, it's like a heart rate of maybe 58, somewhere in there.
+
+All right, so there's the rhythm strip.
+
+Which drugs would be inappropriate?
+
+Either a dihydropyridine calcium channel blocker, non-dihydrodpyridine calcium channel blocker, beta blocker, or cyanide.
+
+So what concerns me is that...
+
+59% of you seem to think that cyanide is still an okay choice.
+
+It's not.
+
+Please don't prescribe cyanide for your patients.
+
+And they're not gonna be this easy on the board exam so be prepared.
+
+The point is that all the other drugs are fine except for cyanide.
+
+So what we saw here, two things of note on this rhythm strip.
+
+One was sinus bradycardia and the second is that there's a first degree AV block.
+
+And the important point is neither of those findings by themselves is an absolute contraindication to a drug that slows heart rate or slows AV conduction.
+
+Meaning if you had a compelling reason, granted, you know, you're probably not gonna start a beta blocker first line for this individual for blood pressure.
+
+He's an avid tennis player.
+
+He's already a bit bradycardic.
+
+But if you had a compelling reason to use a beta blocker, then you use a beta blocker.
+
+The first degree AV block and even the slow heart rate are not absolute contraindications to either a beta blocker or to a calcium channel blocker that slows AV conduction.
+
+Remember verapamil slows AV conduction slightly more than does verapamil, the non-dihydropyridine, so excuse me, the dihydropyridine.
+
+So all the pain drugs technically shouldn't slow AV conduction significantly.
+
+All right, this one isn't quite as easy.
+
+Question two, just that there's not a cyanide one there.
+
+52-year-old male with COPD and hypertension has worsening fatigue.
+
+He denies chest pain, shortness of breath.
+
+Exam is notable for a slow, irregular pulse.
+
+Lungs are clear.
+
+Medications include lisinopril, chlorthalidone, tiotropium inhaled, and aspirin.
+
+Based on his history and this rhythm strip, what's the diagnosis?
+
+So what are you seeing here?
+
+So we've got options, A, blocked PAC, Mobitz type one, Mobitz type two, or third degree AV block.
+
+What were you looking at?
+
+Okay, so the majority going with a second degree type one, which is correct.
+
+So let's take a look at this.
+
+Second degree type one is fairly common thing.
+
+If you read over Holter monitors for example, or our organization, we use the Zio monitor, which is one you can use up to 14 days.
+
+And I read all of our department's monitors probably one out of 20, somewhere in there, I'll see someone will have an overnight episode of a second degree type one block.
+
+They basically drop a beat in there someplace.
+
+So progressive PR interval lengthening, meaning that the AV node is becoming progressively more fatigued, less likely to conduct, to finally have a P wave that just doesn't get through and you've got a dropped beat.
+
+We do term this as second degree AV block and this is almost always an AV nodal problem.
+
+It's usually not a significant problem is the thing.
+
+So if you happen to see someone who drops a beat overnight, they're a younger, typically more athletic or more physically fit individual, high overnight vagal tone may see enough vagal tone that the AV conduction slows enough that they periodically drop a beat.
+
+Doesn't mean much.
+
+They rouse, they wake up, vagal tone decreases, conduction through the AV node improves, and conduction normalizes.
+
+So not a big issue.
+
+If you do see this in the acute setting, again, the right coronary artery, which supplies the inferior wall of the heart, typically supplies the AV node.
+
+So in the setting of inferior ischemia or an inferior infarct, you may also see AV nodal ischemia and may see this particular rhythm.
+
+Important thing, take care of the underlying ischemia.
+
+This is not one to, you know, call cardiologists.
+
+They'll simply snicker at you and say, "You know what?
+
+Take care of the ischemia.
+
+Don't worry about the second degree type one." So this is second degree type two AV block.
+
+And so the difference here, you'll notice that one of the hallmarks of a second degree AV block is that basically you've got a gap.
+
+Everything was going fine.
+
+You were expecting a beat right here and it didn't happen.
+
+There is a P wave, it's just that there's not a QRS that followed.
+
+When you see that, the next step is to go and look to see what the PR interval is looking like.
+
+Progressive PR lengthening, ultimately drop a beat.
+
+Second degree type one, I'm less concerned.
+
+PR interval is staying exactly the same, which is the case here.
+
+And now we simply have a non-conducted P.
+
+This is much more concerning.
+
+And these are ones that you do call cardiology about.
+
+As a matter of fact, if you're working inpatient medicine, you put the transcutaneous pacemaker on, put the stickers on as you're calling cardiology, and they'll say it's probably a type one and you'll say, "That's fine, still come look at them.
+
+We've got the stickers on." And then you're right and you're like, "No, it is a type two." These can progress to a third degree AV block, a complete heart block, without a lot of warning and then pacemaker may be necessary.
+
+So you only need to see one dropped beat to call this.
+
+You don't have to have, like, a whole string of them or sit back and wait for it to happen again.
+
+This is a huge, huge red flag when it happens.
+
+So third degree AV block messes people up a lot.
+
+And the reason is is that there are two independent rhythms.
+
+So we've got a ventricular rhythm which is typically slow and then we've got an atrial rhythm because in essence, the SA node doesn't realize that the ventricles aren't listening to it.
+
+The SA node continues to fire just like it normally does, ventricles depolarize.
+
+It's just that the connection between the atria and the ventricles is lost.
+
+So if you were to use calipers here, you could see here's P wave, there's another little P wave buried in the T.
+
+The T looks kind of funny.
+
+Here's another P, another P, another P, P, P.
+
+So you've basically got an atrial rhythm that's there and then a ventricular rhythm that's there and the two simply don't coincide.
+
+Why this becomes tricky is a lot of times people will want to try to connect and call this like a second degree type one because they'll say the distance between the P wave and the subsequent QRS complex is variable.
+
+Again, the variability is simply saying that the two just aren't connected at all.
+
+But you don't see progressive lengthening of the PR interval till you finally have a P wave that's non-conducted, that leaves a gap.
+
+Third degree AV blocks don't have a gap.
+
+The ventricles beat on their own just slowly.
+
+So again, if this comes along with an inferior MI and it's associated with AV nodal ischemia, that may recover.
+
+If this is associated with an anterior MI and a distal conducting system abnormality or distal conducting ischemia or damage, that generally doesn't recover and more often not than not, these end up with a pacemaker.
+
+The important thing is you'll see with pacemakers, you have to be able to correlate electrocardiographic or electrical abnormalities and symptoms.
+
+We actually had a patient, Dr. Levine, who you heard from earlier in the week is one of my colleagues.
+
+He had a patient who had a third degree AV block.
+
+This older woman who wanted nothing to do with this pacemaker thing and I think she's finally died, but she had a heart rate in the mid-40s for a long time.
+
+Felt fine, she didn't do a whole lot, it got her by, no interest in a pacemaker.
+
+It's like, "Okay, let us know if you get symptomatic." And she never did.
+
+I'm not sure exactly what she died of.
+
+So third degree AV block almost always needs a pacemaker.
+
+If it helps, this is how I mentally categorize or lump things together even though we've got, you know, second degree that's got a type one, type two.
+
+So we kind of have four blocks there.
+
+I lump a first degree AV block and a second degree type one into my I'm not terribly worried category.
+
+Second degree type two and third degree AV block I lump into my I'm very worried category.
+
+Time to call cardiology, may need a pacemaker.
+
+So if that helps you to kinda mentally categorize things, there you go.
+
+If I were to ask everyone what is this, everyone would say SVT.
+
+It is, supraventricular tachycardia though keep in mind that is a very broad category.
+
+A sinus rhythm of 101 is technically an SVT, a supraventricular.
+
+It comes from above the ventricles and it is greater than 100 beats per minute.
+
+A heart rate of 101 that is sinus is an SVT.
+
+So even though we'll say, "Oh, this is SVT," thinking a little bit more narrowly that this is likely a reentrant tachycardia and I'll agree with you 100% but again the SVT nomenclature encompasses a lot of things.
+
+Atrial fibrillation, if it's the heart rate's above 100 is an SVT.
+
+A flutter if it's typically two to one conduction, heart rate's above 100, that is an SVT.
+
+So keep in mind that's a broad umbrella.
+
+If we're thinking paroxysmal SVT, this is typically a reentrant tachycardia and in essence, it's like you've got this little circular short circuit that involves the AV node and the atrium and basically goes round and round and round and just keeps peppering the ventricle with impulse after impulse to contract and contract it does.
+
+SVTs, in this case, like a reentrant tachycardia, rates typically in the 180 190, 200 range.
+
+They tend to go fairly fast.
+
+The paroxysmal part is just that it comes in paroxysms.
+
+It's like flipping on a light switch, everything's fine, you flip on the switch, the heart rate goes real fast, a lot of times people will cough or they'll do something else that increases vagal tone somewhat inadvertently and then it converts and then they go back to sinus conduction.
+
+So a lot of times, it can be triggered by a premature beat.
+
+AV nodal reentrant tachycardia versus AV reentrant tachycardia.
+
+The differentiation is not that critical.
+
+Simply know that it is a short circuit pathway that's for the electrophysiologist to figure out for us.
+
+All right, question three.
+
+We've got a 24-year-old woman with a history of panic disorder presents to the ED with a heart rate of 180 beats a minute without clear atrial activity.
+
+The strip may look just like the one we saw, BP 130 over 80.
+
+She reports feeling anxious but does not have any dizziness or chest pain.
+
+You diagnose assuming paroxysmal SVT, you try vagal maneuvers 'cause you gotta do something while you're getting an IV in, right?
+
+Doesn't change the rhythm or rate, usually it doesn't, but if it does, what a cool thing.
+
+It's like you're healing someone with your hands, you know, take a big breath in and bear down and they'll go.
+
+It's like, "No, no, no, bear down like you're pushing a cow out of your bottom.
+
+I want you to push hard." And if you check your own pulse and do that, bear down super hard, you will slow your heart rate down.
+
+Unilateral carotid massage.
+
+We don't do bilateral because you can actually overdo the stimulation of the vagal nerve and end up with a significant block.
+
+But if you keep in mind the carotid baroreceptors are right at the carotid bifurcation.
+
+So gently massaging the carotid baroreceptor says, "Blood pressure is super high, let's slow things down just a bit." And sometimes you can actually block down a supraventricular tachycardia, but we'll say none of that worked.
+
+So what do you do next?
+
+Next best step.
+
+We've got adenosine, amiodarone, diltiazem, or better living through electricity.
+
+Let's cardiovert.
+
+Keeping in mind someone who's hemodynamically stable, feeling well just has a fast heart rate.
+
+AMI adenosine.
+
+All right, wonderful.
+
+Have you ever gotten to use adenosine?
+
+Isn't it fun because you get at least a full screen of flat line, you're like, "Huh, I wonder if it's gonna restart." And it always does because adenosine disappears really quickly.
+
+But it's kind of like an electrical pause that it's like, "All right, let's take a break here.
+
+Slow down, let's relax." So adenosine is cool stuff.
+
+Six milligram bolus.
+
+It's not like a slow gentle push.
+
+You want it to come through as a bolus.
+
+12 milligrams is the follow-up dose.
+
+If you don't convert with 12 milligrams of adenosine, abandon adenosine and do something else, either metoprolol.
+
+Diltiazem versus verapamil seems to be more institution-specific.
+
+We use diltiazem exclusively in our institution.
+
+I don't know if we even probably stock IV verapamil.
+
+It just never gets used.
+
+If you inadvertently give adenosine or a AV nodal blocking drug like a beta blocker or diltiazem to someone who, oh goodness, you mistook this and it's just sinus tachycardia, you'll cause a gradual slowing in heart rate.
+
+Whereas a reentrant tachycardia, which is due to a short circuit pathway, converts abruptly.
+
+So it can be helpful.
+
+The mode of conversion back to a slower heart rate or back to sinus rhythm can be helpful as well in diagnosing what's there.
+
+You can use digoxin but it takes a long time to load.
+
+It eventually will work, but it doesn't work quickly.
+
+Long-term therapy, typically you'll use the drug that converted the rhythm, assuming that wasn't adenosine 'cause you can't really do oral adenosine or carry an IV adenosine bolus around with you to just squirt in periodically when this happens.
+
+So diltiazem, any of the beta blockers, especially the ones without intrinsic sympathomimetic activity are reasonable.
+
+I'm not gonna prescribe flecainide.
+
+I will leave that to our electrophysiologist.
+
+Most of these patients end up with EP, most end up with a catheter ablation as opposed to medical therapy.
+
+MAT simply be aware of.
+
+Fortunately the name says it all.
+
+It's multifocal atrial tachycardia.
+
+The multifocal part implies that you've got multiple different atrial foci that can fire meaning what'll happen is you get P waves of different morphology.
+
+So if you've got two atria here and the SA node sits high up in the right atrium, if he happen to have a focus of atrial depolarization that's really close to the SA node, the P wave's gonna look like the P wave normally looks.
+
+On the other hand, if you've got a focus way over here on the other side of the left atrium that fires, it's gonna create a very different looking P wave.
+
+So one of the hallmarks or the hallmark of MAT is if you look closely, you got a bunch of different looking P waves.
+
+They're still P waves.
+
+It's just that they're not all consistent.
+
+This one tends to be a little bit irregular, sometimes gets mistaken for atrial fibrillation.
+
+Basically an AV nodal slowing drug is helpful here.
+
+And one of the important things is that this will almost always be associated with someone who has severe pulmonary disease.
+
+So if the stem of the question describes someone who's got, you know, severe COPD and now they've got a rhythm strip that looks like this, or a description that sounds like this, think MAT and that would be the the diagnosis.
+
+AFib.
+
+I don't have to tell you a whole lot about diagnosing that.
+
+The one thing I will point out is if you're tempted to say atrial fib slash flutter because you look at the rhythm strip and say, "Well, it does look like AFib but maybe this right here could be a couple of P waves." Okay fine, call it AFib slash flutter.
+
+It doesn't really matter much.
+
+You still treat it as atrial fibrillation.
+
+Bottom line is that in the chaos of atrial fibrillation, sometimes you'll see a little bit of rhythmic organization, you know, kind of the opposite of entropy and you may see something that looks kinda like a P wave.
+
+If you're tempted to say that, step back and look at the rhythm strip as a whole and say, "Okay as a whole there is nothing significant there as far as atrial activity.
+
+It is all scattered and variable." There are terms that paroxysmal versus permanent.
+
+Permanent is simply a term that means we've decided to stop trying to convert this.
+
+We're just gonna declare you got atrial fibrillation, we're not gonna keep trying to convert this.
+
+It's gonna be there always.
+
+So permanent is not really an electrocardiographic finding.
+
+Permanent simply says we've stepped back and are gonna just let this happen.
+
+All right, so we've got a 76-year-old man who's into your office with new atrial fibrillation, rate of 130, BP's 130 over 80.
+
+He also has COPD from smoking and uses an albuterol inhaler, inhaled corticosteroids.
+
+He's got some wheezes and rhonchi on exam.
+
+So which of the following would be the best choice to control his heart rate?
+
+We've got digoxin, diltiazem, propanolol.
+
+And you could almost use any beta blocker there if you don't like propanolol, or electrical cardioversion.
+
+So most are going with diltiazem.
+
+Excellent and a beta blocker would've been a reasonable choice.
+
+But I hear probably some concern about the COPD and are we gonna complicate the COPD management with the drug that we're using for rate reduction?
+
+So going back even to 2002 was a fairly landmark trial, the AFFIRM trial, that basically tried to answer the question which is better: rhythm control, meaning trying to convert someone from AFib back to sinus rhythm, or rate control, leaving the AFib alone and simply trying to decrease heart rate.
+
+And the bottom line is that it didn't make any difference.
+
+And we all recognize that we may have a patient who completely doesn't tolerate being in atrial fibrillation, therefore, rhythm control is better for that individual.
+
+And we may find someone who does not tolerate the drugs that keep them in sinus rhythm and in that case, rate control may be better for that individual.
+
+So granted there are individuals who will have a preference, whether it's a personal preference or medical preference for one or the other.
+
+But when you look at large populations, rate control versus rhythm control are considered equivalent.
+
+So we can use the dihydropyridine the non-dihydropyridine calcium channel blockers.
+
+Diltiazem is the typically the drug of choice if you're not wanting to use a beta blocker.
+
+Keep in mind beta blockers do a better job of controlling rate, not just at rest, but also with activity.
+
+Diltiazem does a better job of controlling rate at rest.
+
+It tends to work less well when someone is more active and that's the trigger for their increased heart rate.
+
+The next question once we've decided on rate versus rhythm control is, okay, what to do about anticoagulation?
+
+What about stroke risk?
+
+In essence, risks ratification on both sides, both the risk of stroke and the risk of bleeding with anticoagulation, both are important and our job is to weigh the risks versus the benefits.
+
+And we have risk assessment schemes for both of those.
+
+The CHADS2 score is now fully replaced by CHADS2-VASc.
+
+I'll show you that in just a second.
+
+And then we counter that with the HAS-BLED score, which gives us a rough idea of what's this person's bleeding risk and how can we weigh this out.
+
+So here are the elements of CHADS2-VASc and if you don't remember those, you should have a medical calculator on your device that you carry in your pocket at all times and it will have the CHADS2-VASc score.
+
+So if you don't remember the numbers, you can use a little calculator to figure them up.
+
+So as you can see, you get points for heart failure, hypertension, age.
+
+So the difference between CHADS2 and CHADS2-VASc, CHADS2-VASc now adds a point for 65 to 74, 2 points for 75 and above, you still get a point for diabetes, two points for stroke.
+
+So if you've done this in the past, then there's a greater risk you're gonna do it again.
+
+Vascular disease is kind of an all encompassing term and it's a little bit subjective.
+
+And then unfortunately, women with atrial fibrillation have a greater stroke risk than men with atrial fibrillation.
+
+So unfortunately, women get an extra point on the CHADS2-VASc score.
+
+We basically take the score and that gives an idea or estimation of what someone's stroke risk is.
+
+Please don't take these numbers right here as the gospel and don't memorize those numbers.
+
+The reason is is that the, when the scoring scheme is applied to different populations with variable stroke risk at baseline, the numbers are gonna pan out differently.
+
+So it's not so much memorize these numbers right here, but recognize that a CHADS2 score of, or CHADS2-VASc score of two or above equals anticoagulation.
+
+In all populations, the risk of anticoagulation is outweighed by the benefit of anticoagulation and the decrease in stroke risk.
+
+CHADS2-VASc score of one is challenging, especially if the only point is for female sex.
+
+That's one where if you happen to find someone who truly has a score of one, aspirin is still an option.
+
+Anticoagulation is preferred.
+
+So what about anticoagulation?
+
+Warfarin is becoming a thing of the pas it seems.
+
+Kind of sad.
+
+I mean, I kind of miss dosing warfarin.
+
+It's sort of fun to tinker with it.
+
+I know some people say, "No, I don't miss that at all." But if you kind of enjoy, that's sort of like, you know, dosing unfractionated heparin, you know, as a resident, you know, call up with the PTT and stuff, kinda miss that too.
+
+So we don't say NOAC anymore, which is novel oral anticoagulant.
+
+It's now DOAC, which is direct.
+
+They're no longer novel drugs.
+
+If you have trouble remembering which drug does what because there are four, dabigatran is the only direct thrombin inhibitor and then the 10A inhibitors all have, and I'm sure it was intentional, all have Xa or 10A in their name.
+
+So if you ever struggle to remember which one does what, the 10A inhibitors have given you a handy clue by including Xa in their names.
+
+Which is better among the three 10A inhibitors?
+
+Again, it's going to depend, there's no head-to-head study and it's all gonna depend on the trial that you look at and how each trial carves down different subsets of patients to say, "In this little subset with these characteristics, this drug outperformed that drug." But there's no broad data to say head to head one of these drugs is clearly superior to the other.
+
+Do keep in mind they have the same bleeding risk as warfarin.
+
+And again, there are studies that will say, "Well, in this tiny population, this one had a lower bleeding risk than warfarin.
+
+Across the board, we consider the bleeding risk equivalent." I think that's important to make sure your patients understand that because the ads on TV, for example, seem to suggest that this is a safer alternative to warfarin.
+
+Really, it's not.
+
+It's still an anticoagulant.
+
+Granted, you don't have to monitor it, but that doesn't make it less safe or more safe.
+
+It simply says you don't have to monitor the efficacy of it.
+
+We do adjust the dose in renal disease and thankfully, we have IV antidotes for all four drugs now.
+
+So what if we're only looking at rhythm control 'cause step one is identification of atrial fibrillation.
+
+Step two is controlling rate.
+
+And then step three is now we decided anticoagulation.
+
+But what if we get to step four and say we truly wanna convert this person from atrial fibrillation back to sinus rhythm.
+
+If someone is hemodynamically unstable, cardioversion is an option.
+
+If they're not unstable, then make sure they're anticoagulated first.
+
+Again, this is typically not in our purview, but you ought to be aware of the sequence here.
+
+There are a bunch of drugs that we don't often use for pharmacologic conversion.
+
+Amiodarone we recognize even though it's being used so much more frequently now.
+
+I think back to when I was a resident and it was kind of like Voldemort.
+
+I mean, you just didn't say amiodarone.
+
+It's like, "We're gonna use amiodarone", and you know, then it's, like, in hushed tones and everybody in the room gets silent.
+
+And now it's like, "Oh, we're gonna start amiodarone.
+
+Fine." But do recognize it can cause thyroid abnormalities and cause interstitial lung disease.
+
+Catheter ablation.
+
+Again, we'll leave to our EP colleagues.
+
+Basically what happens is the disordered left atrium is targeted and in essence, is ablated so that the conduction through it becomes less good and the conduction then preferentially comes from the SA node.
+
+That may be described as a maze procedure or left atrial appendage obliteration that's generally done if the patient is going in for surgery for other reasons.
+
+You've probably seen more of your patients going to get a watchman device placed.
+
+It is a really cool, little device.
+
+It's sort of like an IVC filter except it doesn't actually filter blood.
+
+It obliterates the left atrial appendage.
+
+The interesting thing though is the left atrial appendage is obviously on the left side of the heart.
+
+This is a transcatheter approach that comes on the venous side.
+
+So in order to get from the right atrium over to the left atrium, they gotta puncture through the atrial septum.
+
+It's really an interesting procedure.
+
+So it comes up on the venous side, on the right side, punctures through the septum, which actually gives apparently the best aim over to the left atrial appendage.
+
+The subtle balloon device is deployed into the left atrial appendage and once successfully deployed, basically, it obviates the need for anticoagulation.
+
+So a very cool device we ought to be aware at least of how it works.
+
+I love atrial flutter just because it's so much fun on EKGs.
+
+Remember flutter is always described as a ratio.
+
+So it's a ratio of flutter waves to ventricular response.
+
+Flutter waves typically run in the high 200s to 300 rate.
+
+So in theory, if you had atrial flutter with a one to one conduction, you would have a heart rate of around 300.
+
+A flutter with a two to one conduction, every other flutter wave gets through.
+
+Heart rate typically the mid-130s up to around 150.
+
+And this is important enough that if you see someone in clinic and they're sitting there, you know, hopefully asymptomatic and hemodynamically stable with a heart rate in the mid-130s and it is very, very, very consistent, you ought to be thinking to yourself, take a step back.
+
+Is this a flutter with a two to one conduction?
+
+Had a recent patient of mine who came in with a heart rate in the mid-130s and our med tech or our nursing assistant rather who's now gonna be in our medical school so I'm very happy, had, you know, the brains to say, "His heart rate's 130, would you like me to get an EKG?" Heck yes I would.
+
+And how was he feeling?
+
+He didn't even know his heart rate was 130.
+
+The guy was in his mid-80s with a heart rate in the mid-130s.
+
+So he had a flutter with a two to one conduction.
+
+Two to one conduction, which is what you see right up here, the heart rate right around 150, is fairly difficult to recognize, because you don't actually see flutter waves, you just see a compilation flutter wave and T wave in between each QRS complex.
+
+But if you can slow the ventricular response down a little bit, like do a vagal maneuver, once you hit a three to one or lower conduction, typically, flutter waves are a lot easier to see, but two to one conduction is hard to pick up.
+
+And again, we manage that just as we would atrial fibrillation.
+
+All right, next question.
+
+We've got a 32-year-old woman who presents with dyspnea, palpitations, and near syncope.
+
+EKG shows, here's the key findings, AFib at 150 with delta waves.
+
+Which one of the following treatments is a class one recommendation for acute treatment?
+
+So what's the diagnosis?
+
+And once you know that, what do you wanna do with the AFib with rapid ventricular response?
+
+So we got metoprolol, diltiazem, dig, and procainamide.
+
+So almost a, well, a majority but not quite 50% are going with procainamide.
+
+Nicely done.
+
+The description delta wave should make you think this is pre-excitation.
+
+The prototype is Wolff-Parkinson-White syndrome.
+
+And if you're an epidem geek, it's the bundle of Kent that is the bypass pathway in WPW.
+
+But WPW is a prototype.
+
+There are multiple pre-excitation syndromes and multiple pre-excitation pathways that can develop.
+
+The things that you're looking for.
+
+One is a short PR interval and it is kind of artificial.
+
+The short PR interval is created because the beginning of the QRS complex widens.
+
+And the delta part is, in essence, describing that the first part of the QRS complex looks like a little triangle or a delta wave.
+
+So that is the, in essence, describing conduction down that accessory pathway.
+
+Once you get through the accessory pathway and back onto the main highway down the His Purkinje system, the rest of the QS complex looks normal.
+
+The problem is that a drug that slows conduction through the AV node and all the ones that were on the list there other than procainamide slow AV conduction, basically shunt conduction down that pathway.
+
+By blocking the AV node, you now increase conduction down the accessory pathway and run the risk of making the, in essence, hard wiring this and keeping someone in the pre-excitation pathway longer.
+
+So AV nodal blocking agents, I don't know that I'd remember procainamide as the prototype drug here as we want to use, but I would remember that in the case of pre-excitation, we don't wanna slow AV conduction 'cause it preferentially shunts down the accessory pathway.
+
+So what to do here, if it's SVT, you can treat like SVT.
+
+AFib or flutter, again, procainamide or a drug that doesn't slow AV conduction.
+
+Again, this is almost always in conjunction with your, one of your cardiology colleagues.
+
+But again, avoid agents that slow AV conduction.
+
+Many of these end up going to electrophysiology for ablation of the accessory pathway.
+
+Sinus node disease or sick sinus syndrome, can see all sorts of things with that.
+
+Either slow rates, fast rates.
+
+Key thing here is that when you're looking at this and you say, "Oh, there's a little hole here, there's a gap." What happened during that gap?
+
+Is it a second degree block and there's a P wave that didn't conduct?
+
+In this case, nothing happened.
+
+The SA node just kind of took a little rest.
+
+Just like with third degree AV block, for sinus node disease, you need to be able to correlate EKG abnormalities with symptoms before that patient ends up with a pacemaker.
+
+V-tach, three or more beats in a row.
+
+So technically a triplet that is a rate of greater than 100 is non-sustained V-tach.
+
+The sustained versus non-sustained is strictly a time definition.
+
+Once you hit the 30 second mark, it becomes sustained V-tach, under 30 seconds is non-sustained.
+
+Torsades is just a fascinating thing because it is basically a V-tach that does not come from a single focus.
+
+It comes from multiple areas around the heart.
+
+So you get this almost sinusoidal-looking pattern to the ventricular fibulator waves, typically is drug-associated.
+
+A lot of times goes along with long QT syndrome.
+
+Remember that the QT is the absolute value.
+
+QTC is corrected for heart rate.
+
+The list here, please don't memorize the list, but recognize that there are classes of drugs that typically prolong QT interval.
+
+A lot of antibiotics, a lot of the azole antifungals, psychotropic drugs, and antiarrhythmics are on the list.
+
+And with that, thank you for your time.
+
+Thank you very much, Dr. Firnhaber.

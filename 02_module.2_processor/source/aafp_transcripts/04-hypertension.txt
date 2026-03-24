@@ -1,0 +1,577 @@
+Back to issues related to cardiovascular.
+
+And for that, Dr. Firnhaber is returning, and we're going to focus our time on high blood pressure and hypertension.
+
+Learning objectives: We're gonna talk about hypertension.
+
+All right, let's move forward.
+
+So here's some important things to know.
+
+I mean, one, you always have to start with, here's why this is an important topic.
+
+So independent risk factor for ischemic cardiovascular events.
+
+As a matter of fact, it is one of the most, if not the most significant worldwide risk factor for cardiovascular disease.
+
+Here's the part that's really cool.
+
+So if you're trying to mentally wrap your head around how risky is this patient's blood pressure, who is sitting in front of me?
+
+If you were to start with a theoretically normal blood pressure of 115/75, for every 20 millimeter systolic increase, 10 millimeter diastolic increase, you double cardiovascular risk.
+
+Meaning, if someone's sitting in front of you at 155 systolic, they've had two doublings.
+
+So now they've quadrupled their cardiovascular risk, they're coming in at 175, eightfold increase in risk.
+
+So it's something that you'd kind of intuitively think it's more linear, when in reality it's actually more of a log linear relationship.
+
+We do recognize that treatment of hypertension decreases cardiovascular events, also improves left ventricular hypertrophy.
+
+Have you struggled to follow hypertension guidelines?
+
+There are new ones coming out soon, by the way, and we're hoping if, right, oh boy, that there's gonna be some kind of harmonization.
+
+There was a recent paper that was released by, it came out from actually a European Society of Cardiology, European Society of Hypertension, that attempted to reconcile the ACC/AHA guidelines, which I'll talk about in just a minute, very, very aggressive guidelines compared to JNC 8, and the European guidelines, which are somewhat in between JNC 8, which is like, "Meh, your blood pressure's a bit elevated, it's fine, don't worry." And then we turned around a couple years later and said, no, your blood pressure's this much elevated, oh my god, you're gonna die today.
+
+So we've got these two almost dichotomous guidelines.
+
+The European guidelines are somewhat in the middle and there's an attempt to at least reconcile on a more of a worldly approach to say, how really should we address blood pressure?
+
+So JNC 8 is now 10 years old, which I still, our EHR by the way still says according to JNC 8, and I type back to the people that send this in there, it's a 10-year-old guideline, should we not update this?
+
+Well, this is still what people like to do.
+
+Okay, so JNC 8 has some good parts and some bad parts.
+
+Number one, it was a very evidence-based guideline, which is why it took so long to come out, JNC Late, JNC Wait, there was all sorts of clever words that we used for it.
+
+But it was an attempt to be much more evidence-based than JNC 7, which is an atrocious guideline.
+
+Parts of JNC 8 were good.
+
+So JNC 8 said a general population under age 60, including those with CKD, including those with diabetes, you make the diagnosis with either a systolic blood pressure of 140 or a diastolic of 90.
+
+And in order to actually have achieved your goal, you have to have both less than 140 less than 90.
+
+Here's the part about JNC 8 that really upset people.
+
+It is the cutoff at age 60 to say at age 60, you can relax on your systolic threshold for treatment and your target for treatment.
+
+The concept is sound, and most every other guideline in the whole freaking world does this, but says at its age 80, recognizing that at some point as patients become more frail, and it's always hard to define frailty simply by an age number, but as patients become more frail, aggressive blood pressure lowering may become more problematic.
+
+And you run the risk of, if you're aggressively lowering systolic pressure, diastolic can follow.
+
+Patients who as they age, they tend to have more coronary atherosclerosis, they tend to have widened pulse pressures, higher systolic, lower diastolic.
+
+And if you push diastolic lower and lower, remember when do the coronary arteries perfuse?
+
+During diastole.
+
+Diastolic pressures less than 60 run the risk of coronary malperfusion.
+
+So there are risks to aggressively lowering blood pressure in older patients.
+
+The question is, should you make the cutoff at age 60, which seems inappropriately low for a lot of people, or should it be a higher age?
+
+But that's what JNC 8 said.
+
+2017 guidelines, which came out just a couple years later, right, as we were still kind of getting adjusted to JNC 8 being a little bit relaxed, said, our threshold for most everybody who is at low risk is still gonna be 140/90.
+
+However, our target's always less than 130/80.
+
+And the primary driver for this set of guidelines was the "SPRINT" trial, which basically looked at what was considered kind of standard of care versus more aggressive blood pressure lowering, found that in patients without diabetes, "SPRINT" was a trial that did not include patients with diabetes, specifically, that aggressive blood pressure lowering did improve outcome some.
+
+There was some increase in renal outcomes, people had worsening creatinine, they tended to fall a little bit more.
+
+But in the end, there was better data to say more aggressive blood pressure lowering is a good thing.
+
+The reason incidentally "SPRINT" didn't include patient with diabetes is that the "ACCORD BP," the blood pressure arm of the "ACCORD" trial basically did the same study, except in patients with diabetes, saw a no incremental benefit to more aggressive blood pressure lowering.
+
+So one of the criticisms of the 2017 guidelines is that it was very "SPRINT" driven, "SPRINT" had its pluses and minuses as well.
+
+But you'll see that in secondary prevention, people who are higher risk, this guideline is recommending 130/80 as our threshold, and 130/80 almost always as our target.
+
+You're probably aware AAFP said, "We like JNC 8 better, we don't like the new guidelines." And this was not an unpopular stance by the way.
+
+So if you're kind of curious on the exam, 'cause the question comes down to the exam, right, which one are we going to be asked about?
+
+I would be familiar with both.
+
+I'd be familiar with the idea that we have competing guidelines for hypertension.
+
+The real answer is probably someplace in between those.
+
+JNC 8 says we have to be a bit cautious in patients as they age to not aggressively lower blood pressure.
+
+The next set of guidelines that came out three years later said there is data showing that in many patients, more aggressive blood pressure lowering does improve outcomes, but it's always a risk versus benefit evaluation.
+
+So in a frail risky patient, you may not wanna lower blood pressure quite as aggressively in someone who can tolerate 130/80 or lower without undue treatment side effects, fantastic, move in that direction.
+
+One thing that did change in the transition from JNC 8 to the newest ACC/AHA guidelines was an increased emphasis on out-of-office blood pressure measurements.
+
+Invariably this is going to come up on the exam.
+
+Recognizing that the blood pressure that we typically get in clinic, patient had a little incident in the parking lot, they wanted this parking spot, someone else parked in it, then they had to walk all the way in, pay a co-payment and get weighed, and then they sit down in the exam room and get their blood pressure checked, is that really an accurate blood pressure?
+
+Does that truly describe what this patient's overall blood pressure is likely to be?
+
+Probably not.
+
+So out-of-office blood pressure measurements are becoming more and more the norm, and really the drive to get more data to say, is this one blood pressure in the office really predictive?
+
+Or if we have more and more data, whether it's ambulatory blood pressure monitoring, home blood pressure monitoring, I disagree that Walmart blood pressure monitoring is a good thing, I get hives and hypertension when I go to Walmart, so probably a bad place to check your blood pressure.
+
+But out-of-office blood pressure monitoring is a good thing.
+
+And those out-of-office numbers typically have better predictive value than your in-office numbers that you may get, one value every three months.
+
+Really what we're trying to ferret out is white coat versus masked hypertension.
+
+And white coat hypertension as you're probably aware, is patient comes to clinic, their blood pressure's elevated and they say, "No, no, I keep checking.
+
+Here's all my home numbers, they look great." They bring their blood pressure cuff, and their cuff is reading accurately.
+
+So the good thing is that white coat hypertension is, from a cardiovascular risk standpoint, is not all that risky.
+
+Masked hypertension is just the opposite.
+
+That's when they look good in clinic and then they go out of clinic and their numbers are higher.
+
+This is a much more risky situation in the...
+
+If you're asking what's the clinical situation, short acting antihypertensive drugs are typically what causes this.
+
+So a short acting beta blocker, atenolol for example, short-acting dihydropyridine calcium channel blockers, any short acting beta blocker for example taken in the morning, patient comes in that morning, their blood pressure looks better, they go home, the blood pressure medication that lasts for less than 24 hours starts to taper off, and their blood pressure ratchets up in the evening and overnight hours, which is masked hypertension.
+
+And that actually has significant cardiovascular risk.
+
+Prevalence data is really hard to come by because we don't have much ambulatory blood pressure monitoring information for most of our patients.
+
+But we do recognize that masked hypertension is a worry.
+
+What about kids?
+
+Big thing to recall is that there are tables for what is the blood pressure percentile range based on age, gender, and height.
+
+And if you think that you can look at a child's blood pressure and intuitively know if it's okay or not okay, you're way smarter than I am 'cause every time I think, "That doesn't look too bad." Then you look at the chart, it's like "Oh my goodness, it is high." So if your EHR doesn't calculate that, use the tables.
+
+I would encourage you not to rely on your memory, but recognize age, gender, height, are the variables that go along with blood pressure for kids.
+
+Most of the time when we see elevated blood pressure in kids, it's due to obesity, sleep apnea is actually starting to increase kind of nudge its way up in terms of the other triggers for elevated blood pressure.
+
+Think also about congenital problems, renal vascular disease, renal parenchymal disease, rheumatologic disorders, and so on.
+
+Evaluation, the guidelines that are out there are kind of variable.
+
+Chemistry, lipids, blood sugar, are all reasonable things.
+
+Whether or not to get an echo, whether or not to get a renal ultrasound, is variable depending on which guideline you look at.
+
+But consider some advanced imaging to say is there echocardiographic evidence of say LVH, coarctation, anything that would make you worried, and renal disease as well.
+
+Most often weight loss and exercise are high on the list.
+
+So let's move to a question.
+
+All right, we've got a 48-year-old female who presents to clinic as a new patient.
+
+BP 172/110 in both arms.
+
+Her BMI is 24.
+
+Unremarkable exam, no meds, no OTC supplements.
+
+Chemistry, the only thing that's notable is a potassium of 3.3 on no medications, creatinine is fine.
+
+If her hypertension should prove refractory to treatment, which one of the following is most likely to reveal the cause of her elevated blood pressure.
+
+So what are you thinking this might be?
+
+And would you wanna check 24-hour urine catecholamines, an aldosterone to renin ratio, do an MRA of the renal arteries, or a sleep study?
+
+Great, so most are going with an aldosterone to renin ratio.
+
+'Cause really the description here is leading you down the path of primary hyperaldosteronism.
+
+And this is probably more common than we realize because we use drugs that block the renin-angiotensin-aldosterone system all the time and likely treat a bunch of this without even knowing it, without actually diagnosing it.
+
+More common in those who have resistant hypertension.
+
+The hypokalemia part, if you're wanting to hang on that to say you always have to see hypokalemia to make the diagnosis, not so.
+
+It's helpful, but it's not necessary to make the diagnosis.
+
+It's the aldosterone to renin ratio.
+
+Aldosterone, A comes before R, so that's how I remember which one goes on top.
+
+Don't remember numbers because different labs report aldosterone region in different units and obviously the units make a difference in how the numbers pan out.
+
+So if you remember this part that you have to order serum aldosterone and renin, first thing in the morning, and ideally off of any drug that impacts the renin-angiotensin-aldosterone system for at least two weeks can be problematic.
+
+So this is why we don't do it all the time.
+
+Sleep apnea for adults has now moved to the very top.
+
+It used to be other things, we're seeing more and more sleep apnea, whether it's more prevalent or we're just recognizing it more, it's now the leading cause of secondary hypertension, and think of that often.
+
+If you're thinking about maybe this is renal artery stenosis in those under age 30, fibromuscular disease, which tends to be more congenital is typically the cause.
+
+But over age 30, actually, is where atherosclerotic disease starts to take over the fibromuscular disease.
+
+And we recognize the complications, difficult to control hypertension, flash pulmonary edema.
+
+Remember ACE inhibitors/ARBs may worsen the situation 'cause in essence the the one kidney that is actually being perfused, if it's unilateral renal artery stenosis is pumping out a ton of renin and aldosterone trying to maintain blood pressure, maintain perfusion.
+
+And so that will worsen renal function if you add an ACEI/ARB on top of that.
+
+The gold standard diagnosis is an MRA, although for screening, just a simple renal ultrasound, and if you direct attention to the renal arteries, if you've got normal renal artery flow by a doppler ultrasound, you can cross the diagnosis off the list.
+
+And the frustrating thing here is one would think that opening up, and we open up arteries all over the place, in the heart, in the legs, opening up the renal arteries doesn't actually improve outcomes.
+
+There is one trial, the "ROOSTER" trial, which I love the acronym, that is looking more closely at other outcomes with renal artery stenosis, data's not there yet.
+
+But for now, revascularization of renal arteries except in very few situations, and I leave those to our vascular surgeons in very few situations where there's actually benefit to revascularizing.
+
+Most other causes of secondary hypertension, either the stuff we learned in medical school we'll never see like pheochromocytomas, and probably in a room this size, two people have seen a few, maybe three, maybe four, something like that, not many hands, right?
+
+It's not like 75% of people raise their hand, it's pretty uncommon.
+
+Thyroid disease, kidney disease high on the list, and then all the drugs that people take and don't tell you about are high on the list.
+
+All right, let's move to another question.
+
+We've got a 58-year-old woman who has a home BP of 155/95 confirmed by multiple similar readings and office BP that is similar as well.
+
+She does all the right things.
+
+She exercises, follows a low salt diet, rarely drinks alcohol.
+
+Which one of the following medications would be most appropriate as initial therapy for this patient?
+
+So we've got chlorthalidone, clonidine, doxazosin, and metoprolol.
+
+Wow, 96%.
+
+And would you have chosen chlorthalidone if I put HCTZ on there?
+
+Probably not, not as much.
+
+And the other drugs are ones that we rarely reach for other than beta blockers, which haven't appeared in a JNC guideline since either JNC 5 or 6.
+
+It's been a long time since beta blockers were on the list.
+
+So here's what JNC 8 and also the 2017 guidelines say about drugs.
+
+Top of the list, in the general non-Black population, we've got four drug classes that we can pick, any of them are considered acceptable.
+
+And granted there are clinical situations which may drive us to pick one or the other, but we recognize that they're all relatively equal in terms of CV outcomes data.
+
+So ACE inhibitor/ARB, thiazide diuretic, which should be HCTZ, thiazide-like diuretic, which should be chlorthalidone or indapamide or calcium channel blocker.
+
+The implication here is always that it is a long-acting dihydropyridine calcium channel blocker, meaning not verapamil, not diltiazem, not immediate release nifedipine, if you can still find that.
+
+So long-acting dihydropyridine calcium channel blocker.
+
+The follow-up statement is in the general Black population, including those with diabetes, initial treatment should include a thiazide diuretic or a calcium channel blocker.
+
+Recognizing that in Black patients, and if you're curious, these studies, the researchers didn't have people parade in front of them and decide ethnicity, it's how patients self-identify.
+
+So if you wanted to add in the general self-identified Black population, that might be appropriate as well.
+
+But we do recognize that in that population, ACE inhibitors, ARBs, and incidentally beta blockers, as monotherapy, typically work less well from a blood pressure reduction and a cardiovascular outcome standpoint.
+
+Meaning don't use those drugs at all, just saying if you're picking drugs as initial therapy and you want a drug that's gonna lower blood pressure best and give you best outcomes, calcium channel blockers thiazides typically work better.
+
+So in those over 18 with chronic kidney disease, an ACEI or ARB should be on the list somewhere.
+
+If it's not initial therapy, at least needs to be add-on therapy.
+
+All sorts of guidance now that we just don't mix ARBs and ACE inhibitors, we recognize that neither one of them fully suppresses the renin-angiotensin-aldosterone system.
+
+So there was some thought for a while, "What if we add the two together?" Renal outcomes worsened, cardiovascular outcomes didn't improve, everything just went bad, so we don't mix those two together.
+
+What I like most about JNC 8 is actually the final recommendation.
+
+It was the ninth of the recommendations, and it basically says our objective is to identify hypertension and pick drugs that lower blood pressure and keep doing that until we get blood pressure to goal.
+
+Meaning we're looking at the endpoint, we're a bit less concerned about the path that we have to take to get to that endpoint.
+
+Our goal is to simply identify blood pressure and get blood pressure to goal.
+
+If it takes three drugs, if it takes two drugs, you pick this first, you pick this next, you take this drug and ramp it all up before you add something else, to use a couple different drugs in low dose, hmm, not quite as relevant.
+
+The goal is to get to the endpoint, which is a lower blood pressure.
+
+So how do we decide?
+
+So thiazide diuretics, typically more effective than ACE inhibitors for improving heart failure and cardiovascular outcomes in African American patients, that came from one of the most landmark hypertension trials, the "ALLHAT" trial.
+
+Incidentally, "ALLHAT" also gave us guidance that we don't use alpha blocker monotherapy.
+
+That arm of "ALLHAT" was actually stopped early because of adverse outcomes.
+
+But alpha blocker is still very reasonable choices as drug four or drug five for example.
+
+Reducing strokes, calcium channel blocker is also more effective than ACE inhibitors, and certainly for ARBs as well.
+
+We do recognize that in CKD heart failure ethnicity disappears, we use ACE inhibitors/ARBs preferentially there.
+
+What about thiazides or thiazide-like diuretics?
+
+Pluses and minuses.
+
+So very likely, I don't know that, I've taken the exam like four times, there's always been a question that reads something like, "You have a patient with hypertension and osteoporosis.
+
+What drug will decrease urinary calcium excretion?" Thiazide diuretics decrease urinary calcium excretion.
+
+That also means that for someone who has hypercalciuria, this is a useful drug as well.
+
+They do increase the excretion or decrease the excretion of uric acid.
+
+If someone has asymptomatic hyperuricemia, it is still asymptomatic hyperuricemia, thiazide is fine.
+
+Someone has history of gout, it is no longer asymptomatic hyperuricemia.
+
+Thiazide diuretics can worsen that just 'cause they can increase uric acid levels.
+
+If you do have patients that still take lithium, thiazides decrease lithium excretion, it's become a less and less commonly seen drug.
+
+Potassium excretion certainly increases with a thiazide.
+
+Here's an interesting point though, is that the patients who have the most potassium loss with a thiazide are those that have the highest dietary sodium intake.
+
+Meaning, one approach to managing the hypokalemia seen with a thiazide diuretic is having your patient decrease their dietary sodium intake.
+
+You can replace the potassium with a supplement or take in less sodium, and therefore excrete less potassium, two options.
+
+Finally, it's great that with BMP is now a CHEM-8 and has calcium on there.
+
+I wish to the world that it was a CHEM-9 and we always got a magnesium, 'cause I always want a magnesium, especially if someone's taking a thiazide.
+
+If magnesium is low, it's almost impossible to get the potassium back up to normal until you normalize magnesium first.
+
+We used to panic a whole lot about diabetes and thiazides, oh my gosh, you can't mix the two together.
+
+The blood sugar increase of the thiazide is pretty minimal, it's not gonna move someone from a fasting sugar of 80 to a fasting sugar of 400.
+
+Most people are not gonna notice a 3 to 5 milligram per deciliter change in their blood sugar.
+
+So diabetes is not a contraindication to thiazides.
+
+You can see a slight bump in triglycerides as well, again, not typically clinically significant.
+
+Big thing to know is, all the way back to medical school to physiology, and recall where the thiazide diuretics work at the level of the distal convoluted tubule, meaning as GFR declines, and now, thankfully, most of our lab computers are not just reporting creatinine but also reporting estimated GFR, super helpful thing.
+
+As GFR declines, and 30 is usually considered the threshold, the fluid delivery to the distal tubule where the thiazides work becomes so little that they become essentially ineffective.
+
+Not that they're supremely effective of the GFR of 31 and they don't work at all at 29, it's a progressive decline of thiazide efficacy.
+
+But once you cross roughly the 30 threshold, so when you're moving from CKD 3 to 4, that's the point where thiazide is typically not considered useful.
+
+And in that case, switch over to a loop diuretic, very reasonable there.
+
+And in case you didn't recall metolazone or brand name Zaroxolyn, is actually a thiazide diuretic.
+
+We don't use it for hypertension.
+
+We almost always, if not always use it in conjunction with a loop diuretic to accentuate the efficacy of a loop diuretic.
+
+But metolazone is technically a thiazide-like diuretic, but it still retains its efficacy with lower GFR.
+
+Here's dosing: If you're an HCTZ fan and you wanna practice evidence-based medicine, the trials that used HCTZ and show cardiovascular outcomes are exactly zero.
+
+Chlorthalidone in the newest hypertension guidelines is always preferred.
+
+There's probably the most outcomes data using chlorthalidone, going all the way back to "ALLHAT." Even the most recent "SPRINT" trial was a chlorthalidone preferred trial.
+
+Indapamide, if you're curious, I love indapamide for patients who are milligram phobic.
+
+So like, "Oh you know, so many milligrams.
+
+Yeah, we're gonna start a little 1 1/4 milligram of indapamide." Oh my God.
+
+It sometimes is more palatable.
+
+So keep that little fact in mind.
+
+If people are milligram phobic, indapamide is your buddy, plus it's a good diuretic.
+
+ACE inhibitors/ARBs, again, CKD or diabetes, ACE inhibitor or ARB should be on the ticket.
+
+We've long debated, "Are ACE inhibitors better than ARBs?" For quite a few years, the answer was typically yes, mostly because there was just a larger body of evidence behind ACE inhibitors, they've been around longer.
+
+At this point, they're really considered to be at par in terms of cardiovascular outcomes.
+
+And if you recognize that African American patients have typically a 2 to 4 time greater likelihood of developing angioedema with ACE inhibitors over ARBs, all things being equal, if you're on a quandary and the patient in front of you is African American, myself, I pick ARBs preferentially just 'cause why would I pick a drug that's got equal outcomes data but is gonna increase the risk of angioedema more than another option.
+
+So again, we don't use 'em together in the same patient.
+
+The cough is due to bradykinin accumulation.
+
+When people see angioedema, it is not an allergic-induced problem, so steroids don't help.
+
+What do you do if someone has angioedema with an ACE inhibitor?
+
+Can you use an ARB?
+
+The answer is, "Sometimes," and our nephrologist and our ICU docs will typically draw the line at if this patient had angioedema to the extent that they ended up in the ICU, intubated for airway protection or because there was risk of needing airway protection on an ACE inhibitor, then skip the ARBs as well.
+
+Short of that, the risk of ARB-induced angioedema is incredibly tiny compared to ACE inhibitor-induced angioedema.
+
+Here are some representative drugs.
+
+I put incidentally, the ones that are in italics here, and this is just me, these are drugs that are actually more potent and better blood pressure reduction drugs, than the others that are not in italics.
+
+Take that for what it's worth, but there are some ARBs and some ACE inhibitors.
+
+Calcium-channel blockers.
+
+Like I said, when you read guidelines and it says a calcium-channel blocker, the assumption is always a long-acting dihydropyridine calcium channel blocker, which is any drug that ends in "pine".
+
+The non-dihydropyridine calcium channel blockers we don't commonly use for hypertension, that's verapamil and diltiazem.
+
+Recall, verapamil and diltiazem, verapamil to a slightly larger extent than diltiazem, slow AV conduction.
+
+Very useful drugs when you have tachy arrhythmias that involve the AV node, diltiazem and verapamil can be very useful there, less effective for blood pressure reduction, they're also negative inotropes.
+
+So in heart failure, and we'll come to this tomorrow when we talk about heart failure, you can still use a dihydropyridine, the non-dihydropyridine, verapamil or diltiazem, as negative inotropes are not used in heart failure.
+
+Plus verapamil is super constipating.
+
+So if you have someone with mild hypertension 'cause it's not a very good blood pressure-reducing drug, and chronic diarrhea, maybe pick verapamil, otherwise not so much.
+
+Recall when we're talking about heart failure, there are only three beta blockers that are approved and have good data for heart failure.
+
+Most guidelines will kinda nudge you toward these three drugs because of the beta blockers that are out in existence, these three have the best data, not just in heart failure but in ischemic heart disease as well.
+
+From heart failure standpoint, remember it's metoprolol succinate, not the tartrate, the BID version, the succinate is the once a day version, carvedilol and bisoprolol, but that does not mean that other beta blockers are not useful for blood pressure reduction, these three have the best outcome data.
+
+Once we see ischemic heart disease, again, the hypertension guidelines essentially ignore beta blockers, and have done so for several different iterations of the guidelines, mostly because outcomes data with beta blockers and hypertension are not as good.
+
+Stroke reduction in particular with beta blockers is not nearly as robust as stroke reduction with any of the other four classes of drugs, ACE inhibitors, ARBs, diuretics, or calcium-channel blockers.
+
+There's still may be reasons why we would use a beta blocker in hypertension.
+
+And AHA says, "Don't forget about ischemic heart disease.
+
+That's a good indication for a beta blocker." Recognizing that they do reduce blood pressure, do improve some cardiovascular outcomes, especially in ischemic heart disease.
+
+So even though we've got four classes of drugs, which are initial choices for hypertension, don't think that there are not other drugs that we can still use for hypertension.
+
+That's kind of in the general generic sort of patient, there was the four drugs we'd pick.
+
+Once you start adding in comorbidities, that'll likely decide for you which drug is gonna be the best choice.
+
+Alrighty, so we've got a 62-year-old man who presents for followup of hypertension.
+
+Despite adherence to his daily regimen.
+
+chlorthalidone, carvedilol, amlodipine, lisinopril, he's got an A, B, C, and D, all the drugs are there, blood pressure's still high.
+
+Recent labs are normal.
+
+Which of the following adjustments would be most appropriate to bring his blood pressure to goal?
+
+The board really likes optimization questions.
+
+We've got all the right things here.
+
+What can we do to further tweak this, further optimize this regimen?
+
+Basically, what is your drug number five?
+
+So let's see here.
+
+Chlorthalidone to furosemide, we're told that his chemistry is normal.
+
+Lisinopril to losartan.
+
+Add some isosorbide, or add spironolactone.
+
+Excellent, and I'm hoping this is because you would've done this and it's not just the others are bad choices.
+
+Drug number four, and definitely drug number five.
+
+If you have not already used spironolactone, it should be drug number four, definitely be drug number five.
+
+That is the sequence to follow.
+
+Resistant hypertension is defined as persistent blood pressure elevation despite three or more drugs, caveats being they have to be in decent doses.
+
+So 2 1/2 of amlodipine doesn't count as a decent dose, and one must be a diuretic also at an adequate dose.
+
+Heads up, 12 1/2 of HCTZ is not an adequate dose, 25 of chlorthalidone is.
+
+Usually the problem is not us prescribing inappropriate medications.
+
+Usually the problem is, as you know, is our patients don't take medications or they're taking other things that are screwing with their blood pressure.
+
+Suboptimal, again, usually it's inadequate diuresis.
+
+If the problem is us, use a longer-acting diuretic or a more potent diuretic, add spironolactone.
+
+The other options were not great options.
+
+Alpha blockers still can be in that as drug five or six.
+
+Aldosterone antagonists, here's the dosing.
+
+Remember that they will increase potassium, be mindful of that.
+
+Got a 50...
+
+This one appears on the board exam almost always in one form or another.
+
+57-year-old male with type 2 diabetes, blood pressure is 148/94, baseline creatinine is 1.25.
+
+You start lisinopril 20 milligrams.
+
+Blood pressure improves appropriately.
+
+However, creatinine increases to 1.6.
+
+You repeat that a week later it's still unchanged, what do you do?
+
+Excellent, so most are going with continue the lisinopril at the same dose.
+
+This is what happened.
+
+You saw a treatment induced decline in renal function.
+
+The number to keep in mind, the threshold for saying "I'm okay with this" is 30% increase in creatinine.
+
+Above 30%, you basically take a step back and say, "Wow, what did I do?
+
+Am I looking at renal artery stenosis?
+
+What exactly happened?" Up to a 30% increase in creatinine is basically evidence that you have decreased intraglomerular pressure.
+
+That is a good thing because elevated intraglomerular pressure leads to glomerular sclerosis, which ultimately leads to end-stage renal disease and dialysis, which we want to avoid.
+
+Difference between hypertensive emergency, a hypertension with target organ damage.
+
+We don't use the urgency terminology anymore, it is now considered severe asymptomatic hypertension, meaning no target organ damage.
+
+Treatment, we don't precipitously lower blood pressure in cases of asymptomatic hypertension.
+
+The only exception to that rule is aortic dissection.
+
+Non-pharmacologic treatments.
+
+You can read yourself, I have to put this in there 'cause people say, "What about non-drug options?" There they are.
+
+Less sodium, more potassium, drink less, exercise more.
+
+This is a quick rundown of systolic and diastolic murmurs just because it doesn't fit any place else.
+
+The easy way to remember is systolic murmurs are either going to be narrowing or stenosis of valves that are open during systole, i.e. the aortic and pulmonic valves, or regurgitation of valves that are typically closed during systole, which are the AV valve, the mitral and tricuspid.
+
+Remember with aortic stenosis, common problem, the key thing with aortic stenosis is that valve area is not the driver for valve replacement, it is velocities across that valve or really was what dictates the degree of stenosis.
+
+More often than not, our patients are moving to non-open valve replacements with a transcatheter Aortic Valve Replacement or TAVR.
+
+Diastolic murmurs, basically the valves that should be closed during diastole, aortic and pulmonic valve, are either leaking or the valves that are open during diastole, which are the mitral and tricuspid valves are stenotic, those are the ones.
+
+Thank you for your time, I will wrap up.

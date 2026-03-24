@@ -1,0 +1,741 @@
+Okay, Dr. Levine is returning.
+
+Everybody's favorite topic, management of chronic pain.
+
+Dr. Levine, please take it away, sir.
+
+Thank you, Dr. Weismiller.
+
+Some references that you should be aware of.
+
+In 2016, CDC came up with some guidelines on how to prescribe opioids for chronic pain.
+
+They had 12 recommendations that applied to patients outside of active cancer treatment, palliative care, or end-of-life care.
+
+And they even came up with a nice little app that you could download and follow their advice.
+
+Well, they went ahead in 2022 and they changed some of those fairly minimally, but they updated them.
+
+They didn't update the app yet.
+
+But there are new guidelines available that are related to those 2016 CDC guidelines.
+
+CDC again tells you if you're gonna use the guidelines for adults for chronic non-cancer pain, there is no dosage cutoff for the use of opioids according to the guideline.
+
+They want you not to abruptly withdraw patients from opioids, especially on a high dose.
+
+And then if you have a patient with opioid use disorder, they want you to use medically-assisted therapy, not put them in a detox center and stop their medication.
+
+So remembering that, again, guidelines are not a replacement for clinical judgment.
+
+They're not intended to be inflexible standards of care, laws, regulations, or policies for us.
+
+Again, not applicable to sickle cell disease, cancer-related pain, palliative care, and they did not focus on opioids for opioid use disorder.
+
+So CDC wants us to make sure you know all that.
+
+There are also some guidelines that were put forth by the Federation of State Medical Boards, 2017.
+
+This is an organization that creates information for individual state medical boards.
+
+So the laws in your state relate to how you prescribe opioids probably came out of this particular set of guidelines.
+
+And we're gonna talk about those in a very short period of time.
+
+There's also information from the government specifically on best practices for pain management.
+
+So those are out there for you if you want.
+
+Now, what is pain?
+
+It's an unpleasant sensory and emotional experience associated with or resembling that associated with actual or potential damage.
+
+That's the definition from the IASP.
+
+Pain can be acute or chronic.
+
+Chronic pain can be neuropathic, mixed, nociceptive or visceral depending on its origin.
+
+Chronic pain is persistent pain, lasts for more than 12 weeks.
+
+No functional benefit from it and doesn't get better when the insult that created it gets better.
+
+How many people are out there with chronic pain?
+
+If you practice medicine, you know us on a day-to-day basis, 10% to 30% of our population has chronic pain.
+
+7% has high impact pain that limits their work or life activities, and it's the most common reason people come to see you is pain.
+
+If you think about some of the things you see in your typical clinical practice that cause pain, you know, back pain is right up there, arthritis is right up there, chronic headaches are right up there.
+
+Not sure why osteoporosis is on this list other than for fractures.
+
+Those people don't really have pain.
+
+Diabetic neuropathy, fibromyalgia, the dreaded fibromyalgia actually pretty low in terms of how many people are afflicted.
+
+So our first question for you, which of the following statements is correct?
+
+Depression is commonly associated with chronic pain.
+
+On numerical pain scale, 10 represents true happiness.
+
+The Federation of State Medical Boards mandates consultation with a pain management specialist for patients receiving chronic opioid therapy for chronic pain.
+
+And allodynia is an elevated pain response to a painful stimulus.
+
+So which one of those is correct?
+
+And if you practice, you know that A is correct 'cause we see this constantly all the time.
+
+There are two terms in patients with chronic pain you need to be aware of.
+
+These could show up in the boards.
+
+Hyperalgesia is when you create a painful stimulus and you get an elevated pain response from the patient more so than you would expect.
+
+Allodynia is a non-painful stimulus that produces a painful response by the patient.
+
+Depression, highly associated with chronic pain.
+
+Anxiety, insomnia, weight loss, just a poor quality of life in people who have to struggle with that on a regular basis.
+
+You know, all of us were not trained to be pain management specialists.
+
+It's not easy to objectively assess pain.
+
+There's no blood test for that obviously.
+
+Guidelines are coming and going.
+
+We all worry about controlled substances and addiction and contributing to overdose and side effect management.
+
+So it's not easy to manage pain.
+
+That's why we have pain management specialists to help us with that often when they're available.
+
+How do you assess pain?
+
+You can ask the patient, how bad is it from no pain to the worst possible pain.
+
+You know, how did it feel when you went through childbirth?
+
+Which works well for women, but not necessarily for men.
+
+Ask on a pain scale of zero to 10, 10 as the worst possible pain.
+
+Well doc, it's over 14.
+
+A lot of those, you can show 'em a funny face or a frowny face, gets last, doesn't help a lot.
+
+There is some truth to the fact that patients from ethnic minorities and cultures different from the provider treating them are at risk for receiving inadequate pain management.
+
+So be aware of that.
+
+I mentioned the federation medical board's guidelines.
+
+I'll go through some of them because if you follow these guidelines, you're probably gonna be in compliance with your state's guidelines as well.
+
+And they're pretty simple.
+
+Know that when you treat chronic pain, you treat it in the context of a reason for it.
+
+So you're not just gonna treat pain, you're gonna treat a patient.
+
+You're gonna examine them, you're gonna talk to them, you're gonna do an evaluation for why they're hurting and you wanna make sure that it's documented.
+
+You wanna make sure that you assess their alcohol or medication misuse risk.
+
+You wanna review the state's Prescription Drug Monitoring Program.
+
+As of two years ago, there was one state that didn't have one, Missouri, which is now in compliance.
+
+So all states now have one of those things.
+
+You wanna screen your patients for depression because the association is so high.
+
+When you treat the patient, document their response.
+
+How are they doing with the treatment?
+
+And monitor their effectiveness each time you see 'em.
+
+And you can use the five A's for that.
+
+There are five A's for a lot of different conditions, but as it relates to chronic pain management, it's analgesia, their activities of daily living, and the adverse effects from their medication, any aberrant drug taking behaviors that you identify, and how that patient affect is doing during this treatment process.
+
+The medical board's guidelines recommend that you document a signed, written informed consent and treatment agreement, and we'll go over those in more detail later as well.
+
+You want to do periodic random drug testing.
+
+That doesn't mean, "Mr. Smith, when you come in next time, we're gonna check your urine." It means random.
+
+And if you check a urine, it comes back abnormal, the expectation is you're gonna do something about it, not just leave it, sit there in the medical record.
+
+You wanna record all your treatments, your prescriptions, and have the patient return appropriate intervals for evaluation more frequently when you're starting treatment.
+
+You know, how frequent should it be?
+
+Probably if you're doing it every three months, you're probably very reasonable.
+
+Stable patients, maybe less often, unstable patients, more often.
+
+But you want to continue to see them back.
+
+If your patient's difficult, then you might want to see consultation.
+
+There are pain management experts who initially were anesthesiologists, psychiatrists, those who are borne to addiction medicine, mental health specialists, a lot of people that can help you in this process.
+
+Our second question, which of the following statements regarding pharmacotherapy in chronic pain is true?
+
+Nonpharmacologic therapy and nonopioid pharmacologic therapy are preferred for chronic pain management.
+
+Neuroleptic malignant syndrome is a concerning side effect when you combine tramadol and cyclobenzaprine.
+
+TCA antidepressants have not been shown to be effective in the treatment of diabetic neuropathy.
+
+And SSRIs are effective in treating the pain of postherpetic neuralgia.
+
+And you voted for the first one.
+
+Nonpharmacologic therapy, nonopioid pharmacologic therapy are preferred for chronic pain and this comes right out of the CDC's guidelines.
+
+Number one, top of the list.
+
+They say nonopioid therapies are at least as effective as opioids for many types of acute pain.
+
+And the clinician should maximize those nonopioid therapies.
+
+And then moving to subacute and chronic pain, basically the same statements.
+
+Okay, we have a lot of modalities we can use for chronic pain.
+
+We have physical modalities, nonpharmacologic behavioral therapies, pharmacologic therapies, neural blockades, even devices that we implant in people.
+
+And what are some of the nonpharmacologic things?
+
+Acupuncture's out there, physical therapy is out there, osteopathic manipulation, chiropractic, massage therapy, ultrasound and spinal cord stimulation are out there.
+
+Acupuncture has been shown to be helpful in things like chronic neck pain, low back pain, DJD, headaches, even fibromyalgia.
+
+What about nonpharmacologic behavioral treatments?
+
+Cognitive behavioral therapy, mindfulness, relaxation, meditation.
+
+What would you rather be doing than being here today particularly?
+
+Sleep.
+
+Sleep is incredibly important in treating patients with chronic pain.
+
+Now, if you're gonna use drugs, not you personally, if you're gonna use them in treating patients, start with monotherapy if possible.
+
+Titrate one drug at a time.
+
+Your goal is not necessarily to get rid of all that pain, it's to improve it, to improve their function while limiting side effects, and knowing that not everybody reacts the same way, the same things that you might try for somebody else.
+
+So you have to individualize things.
+
+With our pharmacologic agents, we kind of have a pyramid.
+
+We start at the bottom.
+
+Acetaminophen for most folks, moving up into NSAIDs, both traditional and Cox-2, they have the same analgesic effects essentially.
+
+There are adjuvant agents available to us.
+
+Then there are kind of semi-opioids like tramadol and tapentadol, and then there are the more classical opioids that we have.
+
+Adjuvant agents include SNRIs and TCAs.
+
+Anticonvulsants are centrally acting agents like clonidine.
+
+Muscle relaxants and even topical anesthetics.
+
+The TCAs we use include amitriptyline and nortriptyline.
+
+Remember, they're quite anticholinergic and have those side effects.
+
+SNRIs are good for pain, SSRIs are not.
+
+Duloxetine, milnacipran, venlafaxine, desvenlafaxine are available to help us.
+
+If you look at some of the effectiveness of our antidepressants in chronic pain, the best effectiveness is in their treatment of diabetic neuropathies and not quite as good for fibromyalgia.
+
+Anticonvulsants.
+
+We've used those for pain for quite a while.
+
+You know, carbamazepine for tic douloureux, trigeminal neuralgia for years.
+
+Depakote's out there, gabapentin, pregabalin, and in Topamax used for chronic pain.
+
+Clonidine, other centrally acting alpha-adrenergic agents are useful for a number of different modalities.
+
+Muscle relaxants like cyclobenzaprine, carisoprodol, methocarbamol.
+
+We're seeing a lot of methocarbamol use in our area.
+
+I'm not sure why.
+
+Often by surgeons.
+
+Carisoprodol or Soma.
+
+Watch out for patients who are dependent on those and may withdraw if you stop 'em abruptly.
+
+They are sedating, tend to work better before sleep to help people rest as well as help their pain.
+
+Tramadol is a weak mu opioid receptor agonist.
+
+Is also weak SNRI, so it has some antidepressant properties.
+
+If you use it in conjunction with other serotonin agents, you can get a serotonin syndrome, not a neuroleptic malignant syndrome that was in your question.
+
+And it does lower seizure threshold.
+
+Tapentadol, fairly similar to tramadol, but a little stronger analgesic.
+
+A little weaker SSRI effect.
+
+What about marijuana and chronic pain?
+
+Well, cannabis has certain chemicals that are associated with it.
+
+THC gives you your high, CBD, not typically intoxicating.
+
+There are synthetic cannabinoids that we've used in practice.
+
+Dronabinol and abalone for example.
+
+So those are out there.
+
+You know, what about chronic pain or what about indications for using cannabis?
+
+Well, there are some indications for using it in seizure, giving seizure disorders with nausea, vomiting, and chemotherapy.
+
+In anorexia, weight loss, AIDs patients, spasticity, multiple sclerosis.
+
+There's some good data on that.
+
+There's also some data on usefulness and a myriad of other conditions, but the data is not as robust or as strong, but chronic pain is, in fact, one of those.
+
+There was an article in the board's own journal back about 10 years ago.
+
+It talked about some of the benefits of cannabis.
+
+Here's some others that came a little bit less in the past, the more in the recent ones as well.
+
+And again, there's some data to support it.
+
+If you look at the map of medical marijuana, Wikipedia does one of these every year, and these maps are filling in more with green and blue as states decide to allow medical marijuana and marijuana use.
+
+Where we stand today, it's a map that continues to evolve.
+
+It's a therapy that continues to evolve.
+
+I think we're finding more uses for it.
+
+We're also seeing more issues with it.
+
+So kind of keep your eyes and ears open to what use in your community and what you feel comfortable with.
+
+Which of the following statements is true?
+
+Topical analgesics are not typically associated with systemic side effects in drug interactions.
+
+The dose of topical diclofenac is higher for treating osteoarthritis in the upper extremity than the dose you would use in the lower extremity.
+
+EMLA cream, mixing lidocaine and diphenhydramine, is FDA approved for the topical treatment of pain.
+
+And finally, lidocaine 5% patch is effective when applied anywhere in the body, not just over the site of pain.
+
+And you've chosen the first one, which is correct.
+
+These agents do not typically get too many side effects or drug interactions.
+
+Topical agents act within the skin, adjacent peripheral nerves.
+
+You don't get much in the way of serum levels, so they're relatively, but not totally free of systemic side effects or drug interactions.
+
+Some of the ones we have are salicylate related.
+
+Diclofenac is out there.
+
+If you use that, the dose is dependent on the size of the joints, so typically smaller, upper extremities, larger, lower extremities.
+
+Capsaicin is used for neuropathic pain.
+
+EMLA is actually a combination of lidocaine and prilocaine and we use that before we poke kids for blood draws and lumbar punctures and procedures.
+
+It's not for pain, it's to reduce subsequent pain.
+
+And then we have our Lidoderm patches.
+
+5% is the prescription, I think 4% and others you can get over the counter.
+
+When you use the Lidoderm patch, you can use 'em up to three patches at a time.
+
+They're about 12 hours in duration.
+
+You can cut 'em if you need 'em and you wanna put 'em over the site of pain.
+
+There's efficacy, good efficacy for postherpetic neuralgia and that's where insurance companies will pay you for it reliably.
+
+They don't pay for it reliably for a lot of other things.
+
+Moving on to talk about opioids.
+
+When was the first time that you remember hearing about opioids?
+
+Do you remember as a young person watching a movie where a bunch of travelers came up on a yellow road over a hillside and saw this green city in front of them and that hillside was full of flowers where they promptly fell asleep?
+
+And what were those flowers?
+
+Poppies.
+
+Poppies.
+
+Yeah, poppies.
+
+Which of the following statements regarding opioids is true?
+
+Opioids have been shown to be highly effective for non-cancer related chronic pain.
+
+A realistic goal of opioid therapy is complete pain relief.
+
+It's unnecessary to identify individuals at risk for substance abuse prior to beginning opioids.
+
+And if opioids are prescribed for chronic pain, begin treatment with immediate acting rather than extended-release preparations and then titrate to optimal effect.
+
+All right, D, D is correct.
+
+D is correct.
+
+Start with immediate acting and then titrate them to effect.
+
+We are in the midst and have been for a while in opioid epidemic.
+
+Half a million or more people died from opioid overdose just 1999.
+
+A lot, and it continues to get bigger unfortunately.
+
+There are waves of opioids used in this epidemic.
+
+Earlier, there were prescription drugs like OxyContin.
+
+More recently it's fentanyl in combination with amphetamines.
+
+The overdose death rates however parallel are increased in prescription analgesic drug sales.
+
+And a drug overdose now the leading cause of accidental deaths in adults in the US in more than half of our states.
+
+And motor vehicle accidents being number two.
+
+Unfortunately still a problem for us, so we need to use them wisely.
+
+There is good evidence for effectiveness of opioids in cancer-related pain.
+
+What about chronic non-cancer pain?
+
+Weak, weak evidence both in Cochrane review and some other studies as well.
+
+In fact, patients with chronic diffuse pain like your fibromyalgias, your chronic pelvic pains, much less likely to benefit, much more likely to be harmed when you treat them with opioids.
+
+CDC's guideline number two, before you start opioid therapy, discuss with patients benefits and risks.
+
+Establish treatment goals and consider how the therapy will be stopped if benefits don't outweigh your risk.
+
+Remember, complete pain relief, rarely achieved, may not be the goal, but improved function is, pain reduction is, improved mood, improved ability to work.
+
+Those are realistic goals.
+
+Before doing opioid therapy for your patient, look at other treatable pain generators.
+
+Use physical and psychological modalities.
+
+Help them rest better, treat their associated mood disorders and use nonopioid analgesics.
+
+If they don't work, there you go with your opioids.
+
+When you start therapy with opioids, get an agreement in place.
+
+Consider the initial 90 days sort of therapeutic trial.
+
+Begin short acting agents, titrate them up.
+
+Be proactive with side effects.
+
+Figure they're probably gonna get constipated.
+
+Talk to them about how to avoid that and treat that.
+
+Screen them at onset for inappropriate drugs at least yearly, and reassess them.
+
+Are they doing well with it?
+
+If not, they having issues?
+
+Do I need to stop?
+
+When you start, again, immediate release opioids instead of extended release opioids.
+
+Review the patient's history of controlled substances with the registry.
+
+Make sure you do that.
+
+They're not getting medicines from different sources.
+
+Check their risk for problems related to opioid use.
+
+There's an opioid risk tool out there.
+
+The best way to find this is to use my favorite medical website, www.google.com, type in opioid risk tool, and 17 will show up for you.
+
+Which of the following statements regarding opioids is true?
+
+There are three opioid receptors, phi, beta and kappa.
+
+When prescribing opioids for acute pain, more than seven days supply will rarely be needed.
+
+Oxycodone is roughly three times as potent as morphine.
+
+And transdermal fentanyl is indicated for acute and post-op pain management.
+
+You have decided B, and B in fact is correct.
+
+Usually don't need more than seven days of therapy.
+
+There are three opioid receptor classes, mu, kappa and delta.
+
+When opioids are initiated, again, start with the lowest effective dose.
+
+Usually only for the expected duration of pain and that's gonna be three days or less for most people and rarely will you need more than a week's worth for acute pain.
+
+What are some short-acting opioids?
+
+There's morphine, codeine, hydrocodone, oxycodone, hydromorphone, oxymorphone, fentanyl are a few of them.
+
+Long-acting opioids include methadone, the sustained-release products of morphine, oxycodone, hydromorphone, your buprenorphine, naloxone or Suboxone is long-acting, your transdermal buprenorphine or fentanyl.
+
+In order to safely use long-acting opioids, your patients should be opioid tolerant first.
+
+That means they're on opioids at least for a week at a high enough dose so that they're tolerant.
+
+Then you don't risk the problem of an overdose.
+
+Don't cut those sustained-release tablets.
+
+Don't cut a patch or you risk overdosing your patient.
+
+At times, you'll switch from one opioid to another.
+
+Maybe it's formulary, maybe one is not effective or available.
+
+And it's nice to know if you're gonna switch how you can maintain the appropriate dose for your patient.
+
+And there are these opioid equianalgesic dosing tables out there.
+
+Don't memorize it, just get an app that has it.
+
+The board may ask you some questions including how to use this information if they give you a chart, and they may ask you about some commonly used agents that you should know about.
+
+And you probably should know that oral morphine 30 milligrams is the same as 10 milligrams of parental morphine or 3:1.
+
+That's something we would use pretty often.
+
+To note that oxycodone is stronger than morphine orally.
+
+So 20 milligrams of oxycodone is the same thing as 30 milligrams of morphine.
+
+That Lortab, Vicodin, hydrocodone, about the same thing as oral morphine.
+
+That Dilaudid is much stronger, almost three to four times as strong as morphine, if not more so.
+
+Dilaudid is a particularly decent agent for patients in renal failure, by the way.
+
+But morphine is not a good analgesic in renal failure because metabolites that buildup.
+
+Here's the CDCs table.
+
+Again, just find one that you can use.
+
+if you're going to switch opioids, again, use the tables to help you.
+
+If you're switching for formulary reasons, then when you switch, use a reduce dose of the second agent to avoid possible toxicity.
+
+If you're changing because the first thing isn't working real well, then don't reduce it even further and that kind of patient use an equal analgesic dose.
+
+Long term opioid therapy, your long-acting agents are very helpful and reasonable.
+
+They give you a stable blood level.
+
+Typically, 12.5 microgram fentanyl patch is like 30 milligrams a day of oral morphine.
+
+And a patches can be used in patients who can't take their own medicine, can be applied by a caregiver, hopefully onto the patient and not onto themselves.
+
+Fentanyl and buprenorphine patches, don't use 'em if the patient's not opioid tolerant.
+
+Don't use 'em for acute pain or acute post-op pain or intermittent pain, and take it off before you put the patient through an MRI machine.
+
+It has a little bit of metal backing and you'll fry the patient's skin if you're not careful.
+
+Which the following is correct?
+
+One should avoid prescribing opioids and benzos concurrently.
+
+Withdrawal symptoms are not seen by stopping long-acting opioids like methadone.
+
+Miosis, small pupils, is noted during opioid withdrawal.
+
+And opioid withdrawal precipitated by opioid antagonists like Narcan, typically severe and often life-threatening.
+
+And you got this one right too.
+
+Avoid opioids and benzos concurrently.
+
+Opioid guideline number seven, evaluate your benefits and risks after starting opioids.
+
+Look at those risks carefully.
+
+And those risks include side effects including constipation, respiratory, depression, sedation, edema, itching, may not be allergy, just a side effect.
+
+Opioid-induced hyperalgesia.
+
+Pain gets worse on opioids.
+
+How do you know that's happening?
+
+You stop it or reduce it and the pain gets better.
+
+Be careful about opioids and benzos together.
+
+Same thing with opioids and other CNS depressants like TCAs.
+
+If you're worried about your patient overdosing, then look at naloxone.
+
+You can prescribe it and many of the pharmacies can do without your consent and it's a good idea for some patients.
+
+In the medical setting, we give Narcan IV or IM.
+
+It's available for patients as an autoinjector or as a nasal spray.
+
+Nalmefone, also similar to Narcan.
+
+Also available, but very expensive.
+
+Opioid withdrawal happens when you stop an opioid or you give a partial agonist, agonist-antagonist, or a pure antagonist like Narca.
+
+Begin six to 12 hours after the last dose and persist for several days.
+
+24 to 40 hours after you stop methadone.
+
+To give Narcan, you stop immediately.
+
+Lasts for about 48 hours.
+
+How do you know a patient's withdrawing?
+
+Well, they'll tell you quickly.
+
+Nausea, vomiting, abdominal pain, myalgias, anxiety, restlessness.
+
+They don't look real good and they'll tell you they don't feel very good.
+
+Big pupils, yawning, tachycardia, hyper, hypotension.
+
+They don't feel well.
+
+How do you treat 'em?
+
+If you had stopped withdraw, 'em from an opioid over time, and the withdrawing, you can give 'em the opioid back again or you can give 'em some clonidine.
+
+Use benzos for nausea, antibiotics for nausea and vomiting as well.
+
+But if you gave Narcan and they withdrew, it's hard to tell how much of an opioid to give 'em back again.
+
+Then you might want to use things more like clonidine.
+
+There are some definitions you might wanna know for the boards.
+
+Tolerance, physical dependence, addiction, and pseudo-addiction are often found.
+
+Tolerance is when you use a drug for a long time, it takes more of that drug to get the same effect.
+
+Physical dependence, they've been on drug for a long time, you stop it abruptly and they have withdrawal symptoms.
+
+Addiction is a chronic problem where patients use substances and new behaviors that are compulsive even in spite of continued harmful consequences.
+
+Pseudo addiction is behaviors of patients who are in pain who have not been treated adequately.
+
+You treat them better, the symptoms go away.
+
+But this is kind of a controversial thing.
+
+Be wary of your patients who are forging prescriptions, using illicit drugs, the dog ate it, I need more.
+
+They're selling it on the street.
+
+Those are aberrant behaviors.
+
+For those patients, for those with opioid use disorders, they should be appropriately treated.
+
+If that's not you, then somebody in your community that you feel will do a good job for them.
+
+Our last question, which of the following statements is true?
+
+Pain management agreements that has informed consent and treatment agreements have been proven to dramatically decrease addiction.
+
+They have been recommended for all chronic opioid saving patients by the Federation of State Medical Boards.
+
+They typically mandate regularly scheduled as opposed to periodic drug testing and synthetic and semisynthetic opioids like oxycodone, fentanyl, methadone are usually detected by simple office-based amino acid, urine drug testing.
+
+And you have voted for the second one, which is absolutely true.
+
+Again, opioid guidelines talk about risk, benefits, your responsibilities, the patient's responsibilities, and again, these agreements are recommended by experts including the boards, but there are no studies that show they're effective in reducing addiction.
+
+I put into your handout a link to the New Hampshire Medical Society.
+
+Anybody here from New Hampshire?
+
+but they do a good job for opioid prescribing resources.
+
+The informed consent part talks about risks and benefits, side effects, tolerance, misuse, and side effects.
+
+Particularly the treatment agreement is who's gonna prescribe the medicines?
+
+What the patient's responsibility of taking them and keeping them within themselves, how they might be started or stopped?
+
+Consider again, the risk and benefits of drug testing and they are recommended again.
+
+Your simple enzyme-linked immunoassays are quick but not always accurate.
+
+The GCMS, gas chromatography, mass spectrometry studies are much more accurate and can identify a specific drug.
+
+If you're doing standard urine drug testing, morphine and codeine are usually accurate.
+
+Things like oxycodone and fentanyl may not be found even if the patient's taking it, but you can check that with GCMS.
+
+Cocaine is usually accurate, but then 48 hours, no matter what the patient tells you, and they'll tell you a lot about that.
+
+Negative tests for benzos may not be accurate with recent use and there's a lot of cross-reactivity between amphetamines and things like pseudoephedrine, so be aware.
+
+When do you continue opioid therapy?
+
+When there's improvement, pain relief and function, lack of aberrant behaviors, lack of side effects.
+
+If you're seeing problems, taper them off.
+
+Discontinue them if you're getting illicit drug use, threatening behaviors to your staff, forgeries or overdoses.
+
+You can taper them gradually or rapidly if you need to.
+
+Gradually is much more humane.
+
+Unless there are signs of life-threatening issues, again gradually rather than abruptly reduce opioid doses.
+
+Who goes to a pain specialist?
+
+When you're on high dose of morphine equivalence, abuse or drug-related issues, failure to comply with a number of trials of treatment, those who need invasive therapies that you can't give, often those who need behavioral therapies.
+
+I hope this information's helpful for you in the boards and in the care of your patients.

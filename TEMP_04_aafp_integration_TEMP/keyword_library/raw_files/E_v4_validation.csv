@@ -1,0 +1,239 @@
+session_id,session_title,qid,year,kw_score,kw_hits,ai_focus
+02,Peripheral Vascular Disease,Q2021-291,2021,3.517,6,AAA screening recommendations by age and smoking history Abdominal Aortic Aneurysm Screening
+02,Peripheral Vascular Disease,Q2023-799,2023,3.2126,7,AAA surveillance and follow-up intervals Abdominal Aortic Aneurysm
+02,Peripheral Vascular Disease,Q2022-491,2022,3.0343,6,AAA rupture risk stratification Abdominal Aortic Aneurysm
+02,Peripheral Vascular Disease,Q2020-096,2020,2.8603,5,USPSTF AAA screening recommendations in older men Abdominal Aortic Aneurysm Screening
+02,Peripheral Vascular Disease,Q2024-847,2024,2.8603,5,AAA risk factors and recognition Abdominal Aortic Aneurysm
+03,Acute Coronary Syndrome & Hyperlipidemia,Q2021-285,2021,3.4935,11,Dual antiplatelet therapy duration after PCI Post-MI Medication Management
+03,Acute Coronary Syndrome & Hyperlipidemia,Q2025-132,2025,3.2594,9,EKG findings indicating acute MI in chest pain Acute Coronary Syndrome
+03,Acute Coronary Syndrome & Hyperlipidemia,Q2020-168,2020,2.9879,5,Statin initiation timing in diabetic patients Cardiovascular Risk Assessment
+03,Acute Coronary Syndrome & Hyperlipidemia,Q2021-277,2021,2.9485,5,Statin intensity for diabetic dyslipidemia Cardiovascular Risk in Diabetes
+03,Acute Coronary Syndrome & Hyperlipidemia,Q2024-825,2024,2.9485,5,Statin therapy for primary prevention of CVD Cardiovascular Risk Reduction
+04,Hypertension,Q2025-187,2025,3.3942,10,Antihypertensive regimen selection stage 2 HTN Hypertension Treatment
+04,Hypertension,Q2022-437,2022,3.3314,11,First-line antihypertensive therapy in CKD stage 3 Hypertension in CKD with Proteinuria
+04,Hypertension,Q2020-071,2020,2.3947,8,ACE inhibitor combination therapy for HTN with diabetes Hypertension Management
+04,Hypertension,Q2023-699,2023,1.9293,6,ACE inhibitors causing acute renal dysfunction Hypertension and Renal Artery Stenosis
+04,Hypertension,Q2022-401,2022,1.8144,5,Screening for primary hyperaldosteronism in hypertension Secondary Hypertension Evaluation
+05,Heart Failure,Q2022-448,2022,7.4824,15,SGLT2 inhibitor therapy in heart failure Heart Failure with Reduced Ejection Fraction
+05,Heart Failure,Q2020-082,2020,7.0967,13,Optimal medical therapy in HFrEF post-PCI Heart Failure with Reduced Ejection Fraction
+05,Heart Failure,Q2020-089,2020,6.8757,13,CRT indication in heart failure with LBBB Heart Failure with Reduced Ejection Fraction
+05,Heart Failure,Q2025-093,2025,6.6584,12,Mortality reduction in HFrEF management Heart Failure with Reduced Ejection Fraction
+05,Heart Failure,Q2021-261,2021,6.6441,11,Mortality reduction in HFrEF Heart Failure with Reduced Ejection Fraction
+06,Managing Dysrhythmias,Q2024-871,2024,3.3804,7,QTc prolongation screening in methadone patients Methadone Adverse Effects
+06,Managing Dysrhythmias,Q2024-802,2024,3.2018,7,Perioperative anticoagulation in high-risk AF Perioperative Anticoagulation Management
+06,Managing Dysrhythmias,Q2021-389,2021,2.9523,7,EKG findings in acute hyperkalemia Hyperkalemia EKG Changes
+06,Managing Dysrhythmias,Q2020-046,2020,2.3026,5,Warfarin vs DOAC selection in AF Atrial Fibrillation Anticoagulation
+06,Managing Dysrhythmias,Q2022-413,2022,2.3026,3,Anticoagulation therapy selection for AF stroke prevention Atrial Fibrillation Stroke Prevention
+07,Health Promotion & Prevention,Q2023-788,2023,6.182,11,Pharmacologic agents for smoking cessation Smoking Cessation
+07,Health Promotion & Prevention,Q2025-183,2025,5.443,9,Pharmacotherapy for tobacco dependence Smoking Cessation
+07,Health Promotion & Prevention,Q2025-090,2025,5.0064,10,Behavioral interventions for smoking cessation Smoking Cessation Counseling
+07,Health Promotion & Prevention,Q2020-176,2020,4.2661,9,Motivational interviewing for tobacco cessation Smoking Cessation Counseling
+07,Health Promotion & Prevention,Q2021-383,2021,3.8691,7,Nicotinic receptor partial agonist for smoking cessation Smoking Cessation
+08,Epidemiology & Medical Literature,Q2021-219,2021,3.5884,9,Number needed to treat calculation Evidence-Based Medicine and Statistics
+08,Epidemiology & Medical Literature,Q2025-041,2025,3.2583,5,Number needed to treat calculation Lipid Management and Cardiovascular Prevention
+08,Epidemiology & Medical Literature,Q2020-031,2020,2.9074,7,Number needed to treat for vaccine efficacy Influenza Vaccination
+08,Epidemiology & Medical Literature,Q2023-639,2023,2.7437,5,ACC/AHA ASCVD risk calculation components Cardiovascular Risk Assessment
+08,Epidemiology & Medical Literature,Q2022-567,2022,2.4445,5,Number needed to screen calculation Lung Cancer Screening
+09,Managing Common Cutaneous Problems,Q2020-108,2020,3.5777,5,Diagnosing hidradenitis suppurativa presentation Hidradenitis Suppurativa
+09,Managing Common Cutaneous Problems,Q2024-943,2024,3.3649,9,Differentiating psoriasis from other skin eruptions Psoriasis Diagnosis
+09,Managing Common Cutaneous Problems,Q2022-562,2022,3.2885,6,Topical antifungal treatment selection for tinea versicolor Tinea Versicolor Diagnosis and Treatment
+09,Managing Common Cutaneous Problems,Q2024-820,2024,3.2593,6,Oral antifungal therapy for scalp ringworm Tinea Capitis
+09,Managing Common Cutaneous Problems,Q2020-149,2020,3.1226,7,Topical antifungal therapy for tinea versicolor Tinea Versicolor Treatment
+10,Emergency Medicine I,Q2021-201,2021,2.4933,6,Asymptomatic carotid disease screening guidelines Stroke Risk Screening
+10,Emergency Medicine I,Q2025-097,2025,2.2483,4,Acute secondary stroke prevention post-TIA Transient Ischemic Attack
+10,Emergency Medicine I,Q2022-505,2022,1.8054,2,Acute confusion in elderly patient Delirium Diagnosis
+10,Emergency Medicine I,Q2023-620,2023,1.575,3,Post-thrombolytic window acute stroke treatment Acute Ischemic Stroke Management
+10,Emergency Medicine I,Q2024-938,2024,1.4911,3,Distinguishing postictal paralysis from acute stroke Seizure Disorders and Postictal States
+11,Emergency Medicine II,Q2024-945,2024,4.5483,7,Imaging selection for acute bowel obstruction Bowel Obstruction Diagnosis
+11,Emergency Medicine II,Q2020-050,2020,3.633,9,Etiology of small bowel obstruction Small Bowel Obstruction
+11,Emergency Medicine II,Q2023-720,2023,3.587,6,Timing of cholecystectomy in gallstone pancreatitis Acute Pancreatitis Management
+11,Emergency Medicine II,Q2020-084,2020,3.2472,4,Assessing patient capacity for medical decisions Medical Decision-Making Capacity
+11,Emergency Medicine II,Q2021-286,2021,3.1596,6,Diagnostic imaging for suspected biliary disease Biliary Colic and Cholecystitis
+12,Emergency Medicine III,Q2025-033,2025,2.8708,5,Antibiotic selection in drug-intolerant patient Lyme Disease Treatment
+12,Emergency Medicine III,Q2021-386,2021,2.7713,7,Recognizing erythema migrans and Lyme disease Lyme Disease
+12,Emergency Medicine III,Q2020-053,2020,2.7523,5,Recognizing erythema migrans in Lyme disease Lyme Disease Diagnosis
+12,Emergency Medicine III,Q2022-586,2022,2.2305,4,Erythema migrans recognition and diagnosis Lyme Disease Diagnosis
+12,Emergency Medicine III,Q2022-479,2022,1.6497,4,Identifying phytophotodermatitis from clinical presentation Phytophotodermatitis
+13,Obesity & Metabolic Syndrome,Q2022-528,2022,6.4343,11,Post-bariatric surgery outcomes and recommendations Bariatric Surgery and Obesity
+13,Obesity & Metabolic Syndrome,Q2024-965,2024,6.0346,10,Bariatric surgery efficacy in diabetes treatment Bariatric Surgery and Obesity
+13,Obesity & Metabolic Syndrome,Q2023-761,2023,5.7672,12,Choosing appropriate bariatric surgery for morbid obesity Bariatric Surgery Selection
+13,Obesity & Metabolic Syndrome,Q2021-379,2021,5.564,9,First-line treatment of NAFLD Nonalcoholic Fatty Liver Disease
+13,Obesity & Metabolic Syndrome,Q2021-234,2021,4.8003,11,Early complications of sleeve gastrectomy Bariatric Surgery Complications
+14,Diabetes Mellitus,Q2022-539,2022,3.9527,9,GLP-1 agonist for glycemic control and weight loss Type 2 Diabetes Management
+14,Diabetes Mellitus,Q2024-951,2024,3.7575,9,SGLT2 inhibitor-associated euglycemic DKA Diabetic Ketoacidosis
+14,Diabetes Mellitus,Q2022-526,2022,3.7289,9,SGLT2 inhibitor selection in diabetic CKD Type 2 Diabetes in CKD
+14,Diabetes Mellitus,Q2025-155,2025,3.3981,7,Diagnostic imaging for diabetic foot osteomyelitis Diabetic Foot Ulcer with Osteomyelitis
+14,Diabetes Mellitus,Q2023-730,2023,3.3408,9,Choosing diabetes agent with weight loss benefits Type 2 Diabetes Management
+15,Endocrine Diseases,Q2021-314,2021,4.573,10,Asymptomatic TSH elevation management approach Subclinical Hypothyroidism Screening
+15,Endocrine Diseases,Q2023-698,2023,4.3692,9,Acute thyroiditis treatment after viral illness Thyroiditis
+15,Endocrine Diseases,Q2020-157,2020,4.2281,9,Acute management of thyroid storm Thyroid Storm
+15,Endocrine Diseases,Q2020-076,2020,3.7712,7,TSH suppression with elevated thyroid antibodies Graves Disease Diagnosis
+15,Endocrine Diseases,Q2025-194,2025,3.3098,8,Antithyroid drug selection in Graves disease Graves' Disease Management
+16,Lower GI Tract Diseases,Q2020-021,2020,4.8134,14,Distinguishing Crohn's disease from other inflammatory bowel conditions Crohn's Disease Diagnosis
+16,Lower GI Tract Diseases,Q2022-463,2022,3.9302,10,First-line nonpharmacologic IBS treatment Irritable Bowel Syndrome Management
+16,Lower GI Tract Diseases,Q2024-970,2024,3.0989,8,OTC treatment options for IBS-D symptoms IBS-D Management
+16,Lower GI Tract Diseases,Q2025-029,2025,2.8235,8,Surveillance intervals after adenoma removal Colorectal Cancer Screening
+16,Lower GI Tract Diseases,Q2022-579,2022,2.6597,7,Negative stool DNA test follow-up interval Colorectal Cancer Screening
+17,Upper GI Tract Diseases,Q2023-749,2023,5.8936,14,Post-treatment H. pylori test of cure Helicobacter pylori Treatment Verification
+17,Upper GI Tract Diseases,Q2021-393,2021,5.8269,16,H. pylori testing in dyspepsia Peptic Ulcer Disease
+17,Upper GI Tract Diseases,Q2023-603,2023,5.7422,13,Long-term PPI therapy for NSAID gastroprotection NSAID-Related Gastroprotection
+17,Upper GI Tract Diseases,Q2025-120,2025,5.7311,12,H. pylori testing in dyspepsia Peptic Ulcer Disease Diagnosis
+17,Upper GI Tract Diseases,Q2022-403,2022,4.5992,9,Variceal prophylaxis in compensated cirrhosis Esophageal Varices Management
+18,Geriatrics I,Q2022-578,2022,3.4518,7,Distinguishing POLST from advance directives Advance Care Planning and POLST
+18,Geriatrics I,Q2020-062,2020,1.6893,4,Temporal arteritis association with polymyalgia rheumatica Polymyalgia Rheumatica and Giant Cell Arteritis
+18,Geriatrics I,Q2020-193,2020,1.6893,4,Differential diagnosis of temporal headache Temporomandibular Disorder
+18,Geriatrics I,Q2020-152,2020,1.6686,3,Anticholinergic medication risks in elderly patients Medication Safety in Older Adults
+18,Geriatrics I,Q2025-080,2025,1.5321,3,Evidence-based fall prevention strategies elderly Fall Prevention in Older Adults
+19,Geriatrics II,Q2024-809,2024,4.1451,7,Anabolic therapy for severe osteoporosis with fracture Osteoporosis Treatment
+19,Geriatrics II,Q2023-615,2023,4.057,9,Osteoporosis treatment initiation based on FRAX risk Osteoporosis Management
+19,Geriatrics II,Q2020-043,2020,3.4504,6,Bisphosphonate therapy duration in osteoporosis Osteoporosis Treatment Duration
+19,Geriatrics II,Q2022-421,2022,2.8258,5,Medication management of transfusion-related bone disease Thalassemia Major Complications
+19,Geriatrics II,Q2022-458,2022,2.7661,5,DEXA screening timing in postmenopausal women Osteoporosis Screening
+20,Geriatrics III,Q2021-252,2021,2.0592,3,Dementia screening in older adults Cognitive Impairment Screening
+20,Geriatrics III,Q2020-152,2020,1.7749,3,Anticholinergic medication risks in elderly patients Medication Safety in Older Adults
+20,Geriatrics III,Q2020-141,2020,0.6673,2,Ethical principles in elderly care decisions Medical Ethics and Decision-Making
+21,Hematology Issues,Q2025-083,2025,4.992,11,Initial anticoagulation for unprovoked DVT Deep Vein Thrombosis Management
+21,Hematology Issues,Q2024-802,2024,3.452,7,Perioperative anticoagulation in high-risk AF Perioperative Anticoagulation Management
+21,Hematology Issues,Q2021-356,2021,2.8995,5,Stroke prevention in nonvalvular atrial fibrillation Atrial Fibrillation Stroke Prevention
+21,Hematology Issues,Q2024-860,2024,2.8995,5,Antiplatelet therapy post-noncardioembolic stroke Ischemic Stroke Secondary Prevention
+21,Hematology Issues,Q2025-036,2025,2.762,6,DVT anticoagulation in advanced CKD Deep Vein Thrombosis Management
+22,Fever & Infectious Disease in Children,Q2022-560,2022,3.2829,6,Dexamethasone for croup treatment Croup Management
+22,Fever & Infectious Disease in Children,Q2023-701,2023,3.0855,8,First-line antibiotic for pediatric pneumonia Community-Acquired Pneumonia
+22,Fever & Infectious Disease in Children,Q2021-373,2021,3.0168,7,First-line treatment for viral croup Croup Management
+22,Fever & Infectious Disease in Children,Q2021-249,2021,3.0011,7,Supportive care vs intervention in mild viral respiratory illness Viral Bronchiolitis Management
+22,Fever & Infectious Disease in Children,Q2024-932,2024,2.7195,6,Supportive care in infant bronchiolitis Bronchiolitis Management
+23,STIs Vaginitis & Vaginosis,Q2024-868,2024,3.7321,7,USPSTF STI screening in sexually active young women STI Screening
+23,STIs Vaginitis & Vaginosis,Q2020-085,2020,3.6378,7,HIV screening in sexually active adults HIV Screening
+23,STIs Vaginitis & Vaginosis,Q2025-068,2025,3.209,6,STI prophylaxis after sexual assault Sexual Assault Post-Exposure Prophylaxis
+23,STIs Vaginitis & Vaginosis,Q2024-919,2024,2.9237,6,Hepatitis C screening in asymptomatic adults Infectious Disease Screening
+23,STIs Vaginitis & Vaginosis,Q2025-105,2025,2.7394,5,Treatment of NGU with negative gonorrhea/chlamydia Nongonococcal Urethritis
+24,Renal Disease I,Q2023-785,2023,2.1308,5,Urgent dialysis indications in AKI Acute Kidney Injury Complications
+24,Renal Disease I,Q2022-411,2022,1.8143,5,Prerenal AKI etiology in ICU Acute Kidney Injury
+24,Renal Disease I,Q2023-662,2023,1.4398,6,ACE inhibitor-related creatinine elevation monitoring ACE Inhibitor-Induced Renal Function Changes
+24,Renal Disease I,Q2022-585,2022,0.9981,3,Workup of asymptomatic microscopic hematuria Asymptomatic Microscopic Hematuria
+24,Renal Disease I,Q2021-382,2021,0.9129,7,ACE-I/ARB for diabetic albuminuria Diabetic Nephropathy Management
+25,Renal Disease II,Q2022-437,2022,3.6659,11,First-line antihypertensive therapy in CKD stage 3 Hypertension in CKD with Proteinuria
+25,Renal Disease II,Q2020-125,2020,3.3384,9,Dietary sodium restriction benefits in CKD Chronic Kidney Disease Management
+25,Renal Disease II,Q2023-611,2023,3.1243,8,Laboratory monitoring in CKD-MBD CKD-Mineral Bone Disorder
+25,Renal Disease II,Q2024-944,2024,2.9833,7,CKD-MBD laboratory findings and pathophysiology CKD-Mineral Bone Disorder
+25,Renal Disease II,Q2020-055,2020,2.7522,6,Oral iron selection in chronic kidney disease Iron Deficiency Anemia in CKD
+26,Common Neurological Disorders,Q2024-938,2024,1.86,3,Distinguishing postictal paralysis from acute stroke Seizure Disorders and Postictal States
+26,Common Neurological Disorders,Q2023-781,2023,1.7875,3,Blood pressure reduction targets in hypertensive emergency Hypertensive Emergency Management
+26,Common Neurological Disorders,Q2021-384,2021,1.7633,4,Migraine prevention medication selection Migraine Prophylaxis
+26,Common Neurological Disorders,Q2023-784,2023,1.5123,4,First-line preventive treatment for cluster headaches Cluster Headache Prophylaxis
+26,Common Neurological Disorders,Q2024-862,2024,1.2957,3,Recognizing febrile seizure in young child Febrile Seizure
+27,Maternity Care I,Q2025-060,2025,4.413,9,High-dose folic acid dosing in pregnancy Prenatal Folic Acid Supplementation
+27,Maternity Care I,Q2022-465,2022,2.9733,6,Postpartum glucose screening after gestational diabetes Gestational Diabetes Follow-up
+27,Maternity Care I,Q2025-030,2025,2.8582,7,Induction at 39 weeks versus expectant management Labor Induction at Term
+27,Maternity Care I,Q2021-280,2021,2.7844,5,Preeclampsia prevention in high-risk pregnancy Hypertension in Pregnancy
+27,Maternity Care I,Q2024-935,2024,2.5081,4,Preconception supplementation and nutrition Preconception Counseling
+28,Maternity Care II,Q2021-212,2021,3.8007,9,Expectant management risks in preterm PROM Premature Rupture of Membranes
+28,Maternity Care II,Q2021-357,2021,3.7181,10,Iron supplementation in preterm infants Infant Nutrition and Supplementation
+28,Maternity Care II,Q2020-066,2020,3.3613,7,Maternal tobacco cessation pregnancy outcomes Tobacco Cessation in Pregnancy
+28,Maternity Care II,Q2025-030,2025,3.3406,7,Induction at 39 weeks versus expectant management Labor Induction at Term
+28,Maternity Care II,Q2020-087,2020,2.7577,7,Insulin transition postpartum in gestational/type 2 diabetes Postpartum Diabetes Management
+29,Women's Health I,Q2021-352,2021,4.5257,11,Evaluating abnormal uterine bleeding in premenopausal women Abnormal Uterine Bleeding
+29,Women's Health I,Q2025-173,2025,3.9853,8,Postmenopausal bleeding workup with normal imaging Postmenopausal Bleeding Evaluation
+29,Women's Health I,Q2025-119,2025,3.7678,9,Workup of heavy menstrual bleeding in adolescent Abnormal Uterine Bleeding
+29,Women's Health I,Q2024-804,2024,3.1699,6,Acute heavy menstrual bleeding treatment Abnormal Uterine Bleeding
+29,Women's Health I,Q2024-947,2024,3.1586,7,Treatment of atypical endometrial hyperplasia Atypical Endometrial Hyperplasia
+30,Women's Health II,Q2024-888,2024,3.971,9,Abnormal uterine bleeding with contraceptive methods Hormonal Contraception Counseling
+30,Women's Health II,Q2025-064,2025,3.4886,6,PCOS diagnosis based on hormonal findings Polycystic Ovary Syndrome
+30,Women's Health II,Q2025-025,2025,3.2869,8,Acute heavy vaginal bleeding with anemia treatment Acute Abnormal Uterine Bleeding
+30,Women's Health II,Q2023-775,2023,3.0282,7,Most effective emergency contraceptive agent Emergency Contraception
+30,Women's Health II,Q2024-828,2024,2.8552,7,Contraceptive safety post-stroke Contraception in High-Risk Patients
+31,Musculoskeletal Medicine,Q2022-564,2022,3.408,5,Stepwise analgesic therapy for acute back pain Acute Low Back Strain
+31,Musculoskeletal Medicine,Q2020-184,2020,3.3213,5,Opioid-induced sexual dysfunction Medication Side Effects and Adverse Effects
+31,Musculoskeletal Medicine,Q2025-138,2025,3.2028,5,Red flag indications for advanced imaging in acute low back pain Low Back Pain Evaluation
+31,Musculoskeletal Medicine,Q2020-112,2020,3.1946,4,Evidence-based treatment for acute low back pain Acute Low Back Pain Management
+31,Musculoskeletal Medicine,Q2023-617,2023,3.1192,4,Endocrine complications of long-term opioid therapy Opioid-Induced Hypogonadism
+32,Fracture Care,Q2023-747,2023,3.2075,10,Acute flexor tendon rupture diagnosis and referral Flexor Tendon Injury
+32,Fracture Care,Q2024-923,2024,3.0092,8,Treatment of simple distal phalanx fracture Distal Phalanx Fracture Management
+32,Fracture Care,Q2022-509,2022,2.9485,7,Nondisplaced radial head fracture treatment Radial Head Fracture Management
+32,Fracture Care,Q2024-960,2024,2.8467,7,Buckle fracture immobilization treatment Pediatric Buckle Fracture
+32,Fracture Care,Q2023-731,2023,2.7783,7,Appropriate immobilization for pediatric wrist fracture Distal Radius Fracture Management
+33,Sports Medicine,Q2024-902,2024,2.7793,6,Initial management of sports-related concussion Concussion Management
+33,Sports Medicine,Q2024-953,2024,2.4467,7,HCM murmur characteristics and sports clearance Hypertrophic Cardiomyopathy Screening
+33,Sports Medicine,Q2024-925,2024,1.9361,4,Distinguishing innocent cardiac murmurs in children Cardiac Murmur Differentiation
+33,Sports Medicine,Q2025-039,2025,1.8819,3,Contraindications to sports participation in adolescents Sports Preparticipation Physical Evaluation
+33,Sports Medicine,Q2022-587,2022,1.7606,3,Clinical diagnosis without unnecessary imaging Osgood-Schlatter Disease
+34,Pediatric Orthopedics,Q2022-571,2022,2.3194,6,Occult fracture management in toddlers Toddler Limb Pain and Limp
+34,Pediatric Orthopedics,Q2021-258,2021,1.7327,3,Optimal imaging for hip labral tear diagnosis Hip Labral Tear
+34,Pediatric Orthopedics,Q2024-908,2024,1.5929,3,Appropriate imaging for suspected hip fracture Hip Fracture Diagnosis
+34,Pediatric Orthopedics,Q2023-682,2023,1.4457,2,Confirming Paget's disease with alkaline phosphatase Paget's Disease of Bone
+34,Pediatric Orthopedics,Q2024-920,2024,1.2519,2,Recognizing acute flaccid paralysis requiring hospitalization Acute Paralysis and Guillain-BarrÃ© Syndrome
+35,Common ENT Problems,Q2025-088,2025,4.5253,7,Antibiotic selection in penicillin-allergic child Acute Otitis Media
+35,Common ENT Problems,Q2020-104,2020,2.7586,8,BPPV diagnosis and canalith repositioning treatment Benign Paroxysmal Positional Vertigo
+35,Common ENT Problems,Q2021-294,2021,2.2991,6,Differentiating vertigo etiologies by clinical presentation Meniere's Disease Diagnosis
+35,Common ENT Problems,Q2025-040,2025,2.0136,6,Diagnostic workup of episodic vertigo with audiovestibular symptoms Meniere's Disease Diagnosis
+35,Common ENT Problems,Q2025-065,2025,1.929,5,Peripheral vertigo management approach Vestibular Disorders
+36,Management of Chronic Pain,Q2020-115,2020,4.2977,9,Overdose prevention in high-dose opioid therapy Opioid Safety and Risk Mitigation
+36,Management of Chronic Pain,Q2020-045,2020,2.8961,4,Benzodiazepine and opioid drug screening interpretation Controlled Substance Monitoring
+36,Management of Chronic Pain,Q2023-617,2023,2.8675,4,Endocrine complications of long-term opioid therapy Opioid-Induced Hypogonadism
+36,Management of Chronic Pain,Q2022-442,2022,2.8494,6,Opioid selection for acute severe pain Acute Pain Management
+36,Management of Chronic Pain,Q2021-273,2021,2.2745,5,Urine drug screening limitations and false negatives Opioid Use Disorder Monitoring
+37,Common Newborn Issues,Q2021-303,2021,4.2613,8,Risk factors for phototherapy initiation in jaundiced neonates Neonatal Hyperbilirubinemia
+37,Common Newborn Issues,Q2021-357,2021,3.6267,10,Iron supplementation in preterm infants Infant Nutrition and Supplementation
+37,Common Newborn Issues,Q2025-077,2025,2.7338,8,Identifying inadequate breastfeeding in newborns Breastfeeding Assessment and Lactation
+37,Common Newborn Issues,Q2020-098,2020,2.6686,8,Vitamin D supplementation in breastfed infants Infant Nutritional Supplementation
+37,Common Newborn Issues,Q2021-207,2021,2.6144,6,Early peanut introduction reduces allergy risk Food Allergy Prevention
+38,Well-Child & Adolescent Issues,Q2021-295,2021,3.5293,5,Age-appropriate car safety restraints Child Safety and Injury Prevention
+38,Well-Child & Adolescent Issues,Q2022-419,2022,2.444,6,Blood pressure screening initiation in children Pediatric Health Maintenance
+38,Well-Child & Adolescent Issues,Q2025-158,2025,2.3425,3,Physical activity guidelines for child weight management Childhood Obesity Prevention
+38,Well-Child & Adolescent Issues,Q2023-638,2023,2.2637,3,Fluoride varnish timing in pediatric caries prevention Dental Caries Prevention
+38,Well-Child & Adolescent Issues,Q2024-913,2024,2.0007,3,USPSTF screening recommendations for adolescent diabetes Type 2 Diabetes Screening
+39,Behavioral Medicine I - Depression,Q2021-305,2021,2.4255,9,Prevention of postpartum depression in high-risk patients Perinatal Depression Prevention
+39,Behavioral Medicine I - Depression,Q2025-125,2025,2.367,7,FDA-approved antidepressants for adolescent depression Major Depressive Disorder in Adolescents
+39,Behavioral Medicine I - Depression,Q2023-718,2023,2.213,6,FDA-approved antidepressants in children Pediatric Major Depressive Disorder
+39,Behavioral Medicine I - Depression,Q2022-518,2022,1.8966,4,Antidepressant selection by adverse effect profile Major Depressive Disorder
+39,Behavioral Medicine I - Depression,Q2021-287,2021,1.7487,4,Postpartum depression screening at well child visits Maternal Depression Screening
+40,Behavioral Medicine II - Bipolar & Anxiety,Q2023-672,2023,4.8532,10,Recognizing borderline personality disorder diagnostic criteria Borderline Personality Disorder
+40,Behavioral Medicine II - Bipolar & Anxiety,Q2023-692,2023,4.7496,9,DSM-5 diagnostic criteria for bipolar I disorder Bipolar I Disorder Diagnosis
+40,Behavioral Medicine II - Bipolar & Anxiety,Q2024-814,2024,4.7322,11,Distinguishing bipolar I from other mood disorders Bipolar I Disorder Diagnosis
+40,Behavioral Medicine II - Bipolar & Anxiety,Q2023-634,2023,4.3119,7,Recognizing and managing serotonin syndrome Serotonin Syndrome
+40,Behavioral Medicine II - Bipolar & Anxiety,Q2025-049,2025,3.4228,9,Mood stabilizer selection in bipolar disorder Bipolar Disorder Management
+41,Behavioral Medicine III - ADHD Autism OCD,Q2025-116,2025,3.2546,7,USPSTF screening recommendations for amblyopia Vision Screening in Children
+41,Behavioral Medicine III - ADHD Autism OCD,Q2021-245,2021,3.1077,7,Speech and language development assessment Developmental Screening
+41,Behavioral Medicine III - ADHD Autism OCD,Q2023-640,2023,2.9633,5,Developmental red flags for autism spectrum disorder Autism Spectrum Disorder Screening
+41,Behavioral Medicine III - ADHD Autism OCD,Q2022-596,2022,2.9302,9,First-line ADHD treatment in preschool-age child ADHD Management in Children
+41,Behavioral Medicine III - ADHD Autism OCD,Q2020-061,2020,2.6766,7,Adult ADHD diagnostic criteria and management principles Adult ADHD
+42,Pulmonary I - COPD,Q2021-317,2021,3.7744,14,COPD pharmacotherapy escalation per GOLD guidelines COPD Escalation Therapy
+42,Pulmonary I - COPD,Q2020-060,2020,3.7431,15,Early COPD treatment in asymptomatic airflow obstruction COPD Prevention and Management
+42,Pulmonary I - COPD,Q2024-901,2024,3.2322,13,COPD diagnosis via spirometry interpretation COPD Diagnosis
+42,Pulmonary I - COPD,Q2022-573,2022,2.9713,10,COPD pharmacotherapy escalation strategy COPD Management
+42,Pulmonary I - COPD,Q2020-103,2020,2.4397,9,GOLD stage C COPD initial pharmacotherapy COPD Management
+43,Pulmonary II - Asthma,Q2024-939,2024,3.43,10,Step-up therapy for persistent asthma Asthma Management
+43,Pulmonary II - Asthma,Q2025-053,2025,3.2925,8,GINA-guided asthma treatment escalation Asthma Management
+43,Pulmonary II - Asthma,Q2023-602,2023,2.941,8,SMART therapy regimen selection asthma Asthma Management
+43,Pulmonary II - Asthma,Q2021-284,2021,2.7525,7,Asthma control and exacerbation prevention Asthma Management
+43,Pulmonary II - Asthma,Q2024-829,2024,2.2109,4,Inhaled corticosteroid adverse effects Oral Candidiasis
+44,Pulmonary III - Infections Part 1,Q2021-253,2021,2.8639,7,Recurrent infections with vaccine nonresponse Common Variable Immunodeficiency
+44,Pulmonary III - Infections Part 1,Q2020-200,2020,2.6553,6,CAP severity assessment and site-of-care decision Community-Acquired Pneumonia
+44,Pulmonary III - Infections Part 1,Q2023-734,2023,2.214,6,Appropriate treatment of viral laryngitis Viral Laryngitis Management
+44,Pulmonary III - Infections Part 1,Q2024-813,2024,2.1439,6,PCP pneumonia treatment in immunosuppressed patient Opportunistic Infection in Immunocompromised Host
+44,Pulmonary III - Infections Part 1,Q2022-510,2022,1.9732,5,Sepsis fluid resuscitation protocol Sepsis Management
+45,Pulmonary IV - Infections Part 2,Q2020-127,2020,2.4903,3,Diagnostic approach to bilateral pulmonary infiltrates Interstitial Lung Disease Diagnosis
+45,Pulmonary IV - Infections Part 2,Q2021-266,2021,2.4903,3,HRCT diagnosis of idiopathic pulmonary fibrosis Idiopathic Pulmonary Fibrosis
+45,Pulmonary IV - Infections Part 2,Q2022-573,2022,2.4903,10,COPD pharmacotherapy escalation strategy COPD Management
+45,Pulmonary IV - Infections Part 2,Q2023-670,2023,2.4903,3,Initial diagnostic approach to hemoptysis Hemoptysis Evaluation
+45,Pulmonary IV - Infections Part 2,Q2023-701,2023,2.4903,8,First-line antibiotic for pediatric pneumonia Community-Acquired Pneumonia
+46,Pulmonary V - Lung Cancer OSA,Q2021-270,2021,3.4115,8,Evaluating abnormal spirometry with decreased FVC Restrictive Lung Disease Workup
+46,Pulmonary V - Lung Cancer OSA,Q2022-588,2022,3.3732,8,Restrictive lung disease spirometry pattern Spirometry Interpretation
+46,Pulmonary V - Lung Cancer OSA,Q2023-632,2023,3.0291,7,Diagnostic criteria for obesity hypoventilation syndrome Obesity Hypoventilation Syndrome
+46,Pulmonary V - Lung Cancer OSA,Q2021-260,2021,2.7136,5,Recognition of OSA cardinal symptom Obstructive Sleep Apnea
+46,Pulmonary V - Lung Cancer OSA,Q2024-900,2024,2.6882,7,USPSTF OSA screening recommendations Obstructive Sleep Apnea Screening
+47,The Major Arthritides,Q2023-690,2023,4.8493,8,Recognizing calcium pyrophosphate deposition disease Pseudogout and Crystal Arthropathies
+47,The Major Arthritides,Q2024-968,2024,3.4417,7,SLE diagnosis using clinical and serologic findings Systemic Lupus Erythematosus
+47,The Major Arthritides,Q2021-316,2021,3.1842,5,Anti-CCP antibody specificity in RA Rheumatoid Arthritis Diagnosis
+47,The Major Arthritides,Q2024-967,2024,3.0446,5,Laboratory confirmation of acute gout Gout Diagnosis
+47,The Major Arthritides,Q2025-061,2025,2.6859,6,Urate-lowering therapy initiation with anti-inflammatory coverage Gout Prophylaxis Management
+48,Preoperative Examination,Q2023-766,2023,3.2844,8,DOAC management in preoperative setting Perioperative Anticoagulation Management
+48,Preoperative Examination,Q2020-075,2020,2.7543,8,Preoperative testing for low-risk surgery Preoperative Risk Stratification
+48,Preoperative Examination,Q2023-716,2023,2.3703,4,Timely surgical intervention in hip fracture Hip Fracture Perioperative Management
+48,Preoperative Examination,Q2024-890,2024,1.899,4,AHA 14-point cardiac screening for sports clearance Sports Preparticipation Cardiovascular Screening
+48,Preoperative Examination,Q2021-274,2021,1.3035,2,Postoperative IV fluid selection in pediatrics Postoperative Fluid Management
+49,Urologic Problems,Q2022-530,2022,1.6604,3,Monitoring adverse effects of testosterone therapy Testosterone Replacement Therapy
+49,Urologic Problems,Q2021-339,2021,1.5729,4,Diagnostic workup before testosterone replacement therapy Hypogonadism and Testosterone Replacement
+49,Urologic Problems,Q2025-076,2025,1.5461,5,Alpha-antagonist for BPH lower urinary tract symptoms Benign Prostatic Hyperplasia
+49,Urologic Problems,Q2025-037,2025,1.3831,5,Antibiotic selection for chronic bacterial prostatitis Chronic Prostatitis
+49,Urologic Problems,Q2023-726,2023,1.3239,5,Evaluating hypercalcemia in recurrent kidney stones Recurrent Nephrolithiasis

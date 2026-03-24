@@ -1,0 +1,44 @@
+﻿Loading keyword library...
+  48 sessions
+Loading tier DB...
+  1065 refs
+Loading crosswalk...
+Loading AI_ClinicalFocus from archive...
+  AI focus loaded: 1200 QIDs
+Loading master questions...
+  1200 questions
+  Questions with Reference: 1194/1200
+    2020: 199/200 refs
+    2021: 200/200 refs
+    2022: 200/200 refs
+    2023: 199/200 refs
+    2024: 196/200 refs
+    2025: 200/200 refs
+
+Scoring questions vs sessions...
+Building session inserts...
+
+Writing C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\02_working\session_hy_inserts_v6.json...
+Validation CSV: C:\Users\mpsch\Desktop\claude_knowledge\board_prep\aafp_integration\keyword_library\raw_files\E_v4_validation.csv
+
+=== SUMMARY ===
+  Sessions with questions : 48/48
+  Sessions with must-read : 10/48
+  Total questions placed  : 238
+  Total refs placed       : 387
+  Must-Read refs          : 11
+  Core refs               : 177
+  Sessions w/ 0 questions : 0
+
+Spot-check top 3 sessions:
+  Session 02 [Peripheral Vascular Disease]: 5 Qs, 5 refs
+    [2021] AAA screening recommendations by age and smoking history Abd (score=3.517)
+    [2023] AAA surveillance and follow-up intervals Abdominal Aortic An (score=3.2126)
+  Session 03 [Acute Coronary Syndrome & Hyperlipidemia]: 5 Qs, 6 refs
+    [2021] Dual antiplatelet therapy duration after PCI Post-MI Medicat (score=3.4935)
+    [2025] EKG findings indicating acute MI in chest pain Acute Coronar (score=3.2594)
+  Session 04 [Hypertension]: 5 Qs, 7 refs
+    [2025] Antihypertensive regimen selection stage 2 HTN Hypertension  (score=3.3942)
+    [2022] First-line antihypertensive therapy in CKD stage 3 Hypertens (score=3.3314)
+
+Done.

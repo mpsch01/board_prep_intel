@@ -1,0 +1,621 @@
+Okay, Dr. Levine, it is all yours sir.
+
+Please take it away.
+
+All right, I'm back.
+
+And for those of you who survived AKI, you get a treat.
+
+You get to hear about CKD.
+
+And I've not made any investments over the past half an hour, so there are no new disclosures.
+
+We're gonna talk now about CKD.
+
+I hope everybody has some water or other liquid in front of you 'cause this really is a very dry subject.
+
+I apologize.
+
+There are about 35 million adults in this country with CKD, over 500,000 on dialysis, with 130,000 new dialysis patients annually.
+
+The only good news here is that the incidence prevalence of CKD has been stable roughly the past 10 to 15 years.
+
+Patients with CKD are more likely to die from cardiovascular disease, more likely to have infections than those who obviously don't.
+
+What are the risk factors for CKD?
+
+I've listed them in the next two slides alphabetically, but you really need to remember two important ones, diabetes and hypertension, 'cause that's where things really are.
+
+You can get CKD from Coronavirus.
+
+Many patients get AKI from that if they're sick enough to wind up in the ICU.
+
+Diabetic kidney disease accounts for 39% of CKD and the vast majority of that are Type 2, rather than Type 1 diabetics.
+
+For non-diabetic kidney disease, CKD, most of that is vascular and most of that is hypertension.
+
+Glomerular diseases which were minor contributors to AKI are much more major contributors to CKD.
+
+Whereas the tubular interstitial processes like ATN and AIN, which caused AKI are very unlikely to result in CKD.
+
+The ones that go on to dialysis and transplantation, the same big actors again: diabetes and hypertension.
+
+Anybody here see any patients with diabetes?
+
+Anybody see any patients with hypertension?
+
+So you got a great opportunity to work on these patients and prevent these things from happening.
+
+Chronic glomerulonephritis, polycystic kidney disease, chronic pyelo, chronic kidney stones can cause ESRD and transplant.
+
+Okay, here's our first question, pretty simple one.
+
+Stage four chronic kidney disease defined as an estimated GFR of what?
+
+60 to 90, 30 to 60, 15 to 30, or less than 15 mLs per minute.
+
+And we did good on this one.
+
+Again, this is stage four is 15 to 30 mLs per minute.
+
+So what is the definition of CKD?
+
+Brought to you by the same people who defined AKI.
+
+It is A GFR of less than 60, with or without kidney damage, or the presence of kidney damage for more than three months.
+
+And that damage can be a nephrectomy.
+
+It could be a proteinuria that occurs.
+
+A proteinuria of significance with a relatively normal GFR is still gonna be CKD.
+
+We have five stages with some sub-stages in there.
+
+Stage one, GFR is fairly normal but there's evidence of kidney damage, like proteinuria.
+
+Stage two that GFR is between 60 and 90.
+
+Stage three, the GFR between 45 and 60 is 3a, 3b, 30 to 45.
+
+And the reason we subdivide that is we're starting to see metabolic consequences when you hit stage 3b, so be aware of that.
+
+Stage four is when we start to dial in nephrologists generally, if we've not done so already.
+
+Stage five is where we actually treat that patient for end stage kidney disease.
+
+Albuminuria occurs in stages as well: A1, A2, and A3.
+
+A1 is normal, a microalbumin/creatine ratio less than 30.
+
+A2 is 30 to 300, which is microalbuminuria.
+
+Over 300, macroalbuminuria.
+
+Know those terms for the boards.
+
+Do we screen patients in practice for CKD?
+
+Well the U.S. Preventive Services Task Force said insufficient evidence to make a recommendation back in 2012.
+
+They made it inactive in 2016 and they're currently reviewing it as we speak.
+
+So look for a recommendation from them again, sometime in the near future.
+
+If you have a patient with CKD, there's a certain evaluation you should do for them.
+
+You wanna assess their GFR, their protein excretion, and you may wanna do some blood work and some imaging as well.
+
+Kidney biopsies are indicated in certain instances and we'll discuss those a little bit later.
+
+So what are the things you're gonna do in your practice?
+
+You're gonna do a urine.
+
+You can look at a microscopic evaluation of that.
+
+You're gonna do a random or 24 hour creatinine estimation or clearance or one for protein as well.
+
+You're gonna check a CBC and a metabolic panel looking at calcium, phosphorus and uric acid.
+
+Wise to do a serum protein electrophoresis.
+
+You don't wanna miss CKD dual myelomas.
+
+Hepatitis B, hepatitis C, HIV, nephrologist will do those tests if you don't, because anybody heading to dialysis needs to know that.
+
+And there also are those viruses can cause CKD.
+
+An ANA complement studies, ANCA, anti-GBM antibody, those are more sophisticated that we don't always do.
+
+It's wise to image a patient whose creatinines are getting high and GFRs are getting low to make sure they don't have an obstruction, which is something fairly simple to correct.
+
+And a renal ultrasound carries no risk and is very good for that.
+
+CT scans, MRIs, renal angiograms, those are things that are for specific indications.
+
+What about our renal biopsies?
+
+If you have a patient with persistent hematuria, a low GFR, persistent proteinuria, particularly its nephrotic range, CKD is not known and they don't have big or large kidneys, then you can go ahead and biopsy them.
+
+I'm sorry, they have big or large, normal or big kidneys, they don't have small kidneys, you can biopsy them.
+
+Moving on to the next question.
+
+Nephrogenic systemic fibrosis may occur as a result of which of the following?
+
+Chemotherapy with an alkylating agent, hemodialysis, peritoneal dialysis, or MRI with gadolinium contrast.
+
+And you voted for MRI with gadolinium and that's correct.
+
+How many of you have seen a case of this?
+
+How many of you have heard of a case of this?
+
+Very good.
+
+This is a condition that occurs or has occurred in stage four to five chronic kidney disease patients, particularly on dialysis who are given an MRI with an older gadolinium-based contrast agent.
+
+And gadolinium is a cation.
+
+It complexes with various anions and causes insoluble precipitates in tissues that you don't want those in.
+
+Also fibrosis then occurs, skin plaques, joint contractures, and fibrosis in vital organs.
+
+Problem with this is if it occurs, there's really no way to really treat this, so you wanna not let it happen.
+
+Happens post-op with infections, thrombosis or in patients on EPO.
+
+So we recommended for a while that you not use gadolinium contrast in patients CKD four, particularly CKD five.
+
+Now we've also learned that recently the last five, 10 years, we've not seen many cases of this.
+
+So with the newer agents it's probably not as bad a problem like it was in the past.
+
+But the board had a question on this and its SAMS and knowledge based things they had before, so beware that they may potentially ask something like that.
+
+How do you manage chronic kidney disease?
+
+Specific therapy, based on the diagnosis.
+
+You wanna do things to slow the loss of kidney function.
+
+You wanna identify and treat comorbid conditions, particularly involving the heart.
+
+You wanna prepare the patient for potentially needing a transplant or dialysis if they continue to get worse.
+
+Treat complications that arise related to their chronic kidney disorder.
+
+And our management changes by the stage of chronic kidney disease.
+
+Early on, again, we're trying to treat things that are going on and identifying any premorbid conditions.
+
+Stage three particularly b, we're treating complications.
+
+Stage four, we're talking with that nephrologist, preparing the patient that they may, if they get worse, need dialysis or transplant, which happens with stage five.
+
+Patients have a role in this as well.
+
+Certainly if they're diabetic, they need to maintain their sugars.
+
+Hypertension, watch their pressures and control their diet and take their meds, get rid of those cigarettes, exercise and take the medications that we appropriately prescribe for them.
+
+Monitor their GFR creatinine clearance at least yearly, more often if those creatinines are rising or if they're getting worse for one reason or another.
+
+Always review medications with your renal patients.
+
+We do that with everybody anyway, but really with these patients it's extremely important because as kidney function changes, medication doses change, certain things become contraindicated and you want to make sure your patient's getting the appropriate therapy.
+
+There are a number of things that are associated with CKD.
+
+We're gonna talk about them for the rest of this session, things like hypertension, anemia, acidosis, hyperkalemia, bone disorders, and some cardiovascular issues as well.
+
+So here's your next question.
+
+Which of the following statements are true about CKD and hypertension?
+
+Most patients with hypertension and elevated creatinine levels can be treated safely with an ACE inhibitor or an ARB.
+
+JNC-8 recommends a target blood pressure of 130/90.
+
+ACC/AHA recommends a target blood pressure of 140/90 in patients who have an albumin/creatinine ratio over 300.
+
+Hypertension in patient with CKD is typically not responsive to diuretic therapy.
+
+And you voted for the top one, which is correct.
+
+Most patients with hypertension, elevated creatinines can be treated safely with an ACE inhibitor or an ARB.
+
+JNC-8 came out in 2014.
+
+The lead author was a family physician, University of Iowa.
+
+In general population, our target was 150/90.
+
+Those younger, 140/90, so higher range blood pressures.
+
+But those with diabetes or CKD, the number was 140/90, like those who were younger.
+
+And that was JNC-8.
+
+They recommended we treat CKD patients with an ACE or an ARB.
+
+If they didn't have CKD but had hypertension, then first line agents, African American patients, thiazide diuretic or a calcium channel blocker.
+
+Caucasian patients, either of those two or an ACE or an ARB.
+
+So that is JNC-8.
+
+The ACC, American College of Cardiology, American Heart Association, their guidelines came out later.
+
+They're based on the SPRINT study that was done.
+
+They looked at normal blood pressures at a lower range than JNC-8, where stage two hypertension was 140/90, normal less than 120/80.
+
+They recommended a target of 140/90 in patients with no cardiovascular disease and a low 10 year risk.
+
+If they had cardiovascular disease, a risk of over 10%, then it was 130/80.
+
+In the elderly it was 130 systolic.
+
+Same thing with diabetes, same thing with CKD 130/80 for most people, again based on the SPRINT study, which said the lower the blood pressure, the better that they tended to do.
+
+So their recommendations about therapy.
+
+CKD with macroalbuminuria, an ACE or an ARB.
+
+CKD without macroalbuminuria you could use any of the usual blood pressure medicines, diuretics, CCBs, ACEs or ARBs.
+
+So that came from ACC/AHA.
+
+Then they're the kidney folks.
+
+They have their own recommendations, but they support most of what came out of the ACC and the AHA.
+
+They said prescribe ACE or ARB in chronic kidney disease with hypertension if the patient has diabetes or proteinuria.
+
+Diuretics used in most patients and other regimens as needed by other conditions that they may in fact have.
+
+So ACE and ARBs can be used safely in most patients with CKD.
+
+When ACEs first came out, nephrologists said don't use 'em in patients with a creatinine more than three.
+
+Then it was more than five.
+
+Then it was more than eight.
+
+And then they got rid of it all together.
+
+So there's no creatinine or GFR mechanism for not using ACEs or ARBs.
+
+Continue them unless these GFR declines are more than 30% from baseline.
+
+We talked about that earlier.
+
+Also, stop 'em if potassium is more than 5.5.
+
+Usually a moderate to high dose, just don't skimp on them if you're gonna use 'em.
+
+You can use an ACE or an ARB, your choice, but don't use them together.
+
+If use 'em together, patients don't do well.
+
+Most patients with CKD and hypertension should be on a diuretic.
+
+If that GFR is over 30, your thiazides work better for hypertension control.
+
+If it's less than 30, they don't work at all or work well.
+
+In those patients you wanna use a loop diuretic like furosemide or Bumex.
+
+Also, if you have patients who are quite volume expanded, you can use a loop diuretic and a thiazide diuretic together or metolazone that helps to decrease that edema.
+
+Be careful about potassium sparing diuretics in patients with low GFRs.
+
+Be careful about using them in combination with ACEs or ARBs because of hyperkalemia.
+
+We also recommend a dietary sodium intake of less than two grams in most patients with CKD and hypertension.
+
+Good luck in getting your patients to adhere to that.
+
+That's pretty darn difficult.
+
+So what do you do about these dueling guidelines?
+
+You know, you're gonna take a board exam.
+
+Which ones do you follow?
+
+Which ones do you follow in clinical practice?
+
+Well, we used to say follow JNC-8 for the boards, but the last run through the boards, we got feedback that they're also asking some questions related to ACC/AHA.
+
+So you might wanna know both.
+
+Dr. Fernhaber may cover more of that later in his cardiovascular agents.
+
+But usually if the board asks you about a specific recommendation, they'll tell you which specific guideline that they're referring to.
+
+They're not gonna ask you to try to guess what they're asking about and which guideline they're using.
+
+In general, in clinical practice, patient with the proteinuria should be treated more aggressively for their hypertension.
+
+Lower blood pressures usually give you better outcomes as long as the patient can tolerate it and doesn't get symptomatic hypotension.
+
+And again, ACEs or ARB plus a diuretic are the cornerstones pretty much of treating hypertension in patients with CKD.
+
+Moving on to talk about anemia.
+
+Which of the following is true regarding anemia and CKD?
+
+Packed red cell transfusion indicated for hemoglobin less than 10.
+
+A target hemoglobin for patients with CKD-4 receiving EPO is 13 for women, 14 for men.
+
+Most anemia in patients with CKD is due to iron deficiency.
+
+Therapy with EPO is associated with an increased risk of MIs and thromboembolic events.
+
+You voted for the last one.
+
+Last one is correct, is correct.
+
+What about anemia in chronic kidney disease?
+
+The kidney folks recommend that you test for hemoglobin annually.
+
+Their diagnosed anemia is less than 13.5 in men and 12 in women.
+
+Also get a CBC looking at other blood factors.
+
+Get a ferritin.
+
+Get an iron saturation.
+
+Most anemia in chronic kidney disease turns out to be anemia of chronic disease.
+
+Those folks have low serum irons, low TIBCs, normal saturations and a normal ferritin, where opposed, those people with iron deficiency tend to have low irons, high TIBCs, low saturations, and a low ferritin.
+
+Most, again are anemia of chronic disease.
+
+Chronic kidney disease, the most common reason for anemia of chronic disease these days, but infections, malignancies can also do it.
+
+So how do you treat anemia of chronic disease?
+
+You treat the underlying cause if you identify it.
+
+If they don't get better and they're symptomatic, you can use an EPO stimulating agent, transfusions for those patients who don't do better by treating their underlying disease with EPO and are still symptomatic.
+
+So what is EPO?
+
+It's a glycoprotein produced in the kidney in response to decreased oxygen delivery to that kidney from anemia or hypoxemia.
+
+There are several of them on the market that we use, predominantly used in our community by the nephrologists and the hematologist.
+
+But in your community you may be the person giving EPO.
+
+But EPO only works if the iron is adequate.
+
+So you wanna maintain a ferritin of over 100 and you may need to give iron to do so in addition to giving EPO.
+
+Consider them in CKD patients when the hemoglobin is 11 or less than 10 if they're on dialysis, especially if they're symptomatic.
+
+But it can increase mortality, can cause MIs, can cause strokes, can cause tumor progression in cancer patients, and emboli in post-op patients as well.
+
+And don't use it in uncontrolled hypertension.
+
+Red cell transfusions, be careful about that in kidney patients.
+
+It may sensitize some different antigens and make them harder to get a kidney in the future.
+
+So don't do it willy-nilly.
+
+The target hemoglobin for EPO therapy in your renal patients is 11, but that's not a transfusion trigger.
+
+The most common acid base abnormality in CKD is which of the following?
+
+Metabolic acidosis, metabolic alkalosis, respiratory acidosis, or respiratory alkalosis.
+
+You got this one right, metabolic acidosis.
+
+Do you remember MUDPILES from back when you were a student or a resident?
+
+Well the U in MUDPILES stood for uremia, which is CKD.
+
+Diabetic ketoacidosis, alcoholic ketoacidosis, lactic acidosis, polyethylene, ethylene glycol ingestion, salicylates, all cause an increased anion gap metabolic acidosis.
+
+In the case of our kidney patients, it's due to decreased hydrogen ion excretion.
+
+A bicarb of less than 22 is associated with an increased progression of CKD and increased overall mortality.
+
+So in CKD 3, 4, and 5, maintain that CO2, that bicarb on your basic metabolic panel over 22 if you can.
+
+And how are you gonna do that?
+
+You can give 'em bicarb tablets.
+
+You can give 'em sodium citrate, which is Shohl's solution metabolized onto bicarb or calcium citrate, acetate, or carbonate such as Tums.
+
+Next question.
+
+Which of the following patterns is commonly found in patients with CKD?
+
+Is it a high calcium, low phosphorus, high PTH?
+
+Low calcium, high phosphate, high PTH?
+
+High calcium, high phosphate, low PTH?
+
+Low calcium, high phosphorus or low PTH?
+
+And you voted for B low calcium, high phosphorus, high PTH and that's correct.
+
+Now we're talking about mineral bone disorders, CKD-MBD.
+
+Used to say renal osteodystrophy.
+
+MBD is characterized by abnormalities of calcium phosphate and PTH, ectopic calcifications, abnormal mineralizations of the bones, lots of problems.
+
+The pattern you see is secondary hyperparathyroidism.
+
+Again the low calcium, high phosphate, and high PTH.
+
+The problem is that when the GFR decreases, phosphorus excretion decreases and phosphate levels go up.
+
+That then complexes with calcium that goes down.
+
+Then you need to get more calcium, but kidneys are diseased, don't make enough vitamin D and then the parathyroid kicks in and says we need more of all this stuff.
+
+So the PTH level goes up and that's the problem.
+
+So what do you do here?
+
+You measure calcium phosphate and PTH in patients with CKD-3 or worse.
+
+You try to treat that phosphate, get it toward a normal range.
+
+How do you do that?
+
+With dietary phosphate restrictions?
+
+If that doesn't work, restricting 800 to 1,000 milligrams a day, then use a phosphate binder, okay.
+
+Remember Coca-Cola is phosphoric acid, so don't drink Coke if you have renal disease.
+
+What are the things we use to treat this, our binders?
+
+First line agents are the non-calcium containing binders.
+
+This is new over the last couple years.
+
+Things like sevelamer and lanthanum.
+
+The calcium containing binders were cheaper.
+
+Things like calcium carbonate, calcium acetate, but those are no longer first line agents.
+
+Stay away from antagel, aluminum hydroxide because you can get aluminum toxicity in kidney patients.
+
+What about DEXA scanning?
+
+You can use DEXA scanning.
+
+Had nothing to do with these MBD illness whatsoever.
+
+You can do it in renal patients.
+
+Bone X-rays are not indicated in patients who have high PTH levels.
+
+There's a entity called calciphylaxis.
+
+Have any you seen patients with this?
+
+It's no fun.
+
+You tend to see it in dialysis patients.
+
+They have calcium deposits in small vessels and they ulcerate.
+
+They have pretty unrelenting pain.
+
+The treatment is sodium thiosulfate, but doesn't work all that great.
+
+These patients typically have a fairly poor prognosis.
+
+Diabetic kidney disease occurs in about 20 to 40% of diabetics.
+
+It's the leading cause of end stage renal disease, dialysis, transplantation.
+
+Microalbuminuria is a marker for this.
+
+That's why we follow it closely.
+
+If microalbuminuria progresses to macroalbuminuria that predicts progression to end stage renal disease, as well as diabetic retinopathy and diabetic neuropathy.
+
+So screen your diabetics for micro and macroalbuminuria at least annually.
+
+Type two diabetics with initial diagnosis.
+
+Type ones you can wait a couple years if you want.
+
+Abnormal values are reconfirmed and followed closely.
+
+So remember those numbers again, less than 30, normal.
+
+30 to 300 microalbuminuria, over 300 macroalbuminuria.
+
+How do you delay this progression to kidney disease?
+
+Intensive blood glucose management, intensive blood pressure control.
+
+ACEs and ARB are first line here.
+
+Their effect is independent of their blood pressure effect.
+
+The SGLT2 inhibitors also help to reduce end stage renal disease and mortality.
+
+So we use those and should be using those frequently in our diabetic patients with CKD.
+
+So use ACEs or ARBs in normotensive patients with diabetes and albumin ratios of microalbumin over 30 who are at high risk.
+
+But no matter what your insurance company says, there's no need to use ACEs or ARBs to prevent CKD in patients with normal blood pressure and normal renal function.
+
+Normal blood pressure, normal renal function, not secreting albumin, they don't need ACEs or ARBs.
+
+You should use an SGLT2 in patient with diabetes and chronic kidney disease as long as the GFR is over 30 and probably safe with the GFR over 20.
+
+So again, who gets ACEs and ARBs?
+
+Diabetics with albuminuria, diabetics with a GFR of less than 60, diabetics with hypertension or non-diabetics with albuminuria over 300, hypertension, and CKD.
+
+SGLT2 agents were both in diabetic and non-diabetic CKD.
+
+They reduced the decline in GFR, reduce the likelihood of getting CKD-5, mortality for cardiovascular disease, and hospitalizations for heart failure.
+
+So use them in patients with diabetic kidney disease and GFR over 30, perhaps over 20, and any of these agents here will work.
+
+What about finerenone?
+
+Known it's a nonsteroidal mineralocorticoid receptor agonist, very similar in its effectiveness as your SGLT2 agents.
+
+So use them in patients at increased risk for CKD progression who have diabetes and CKD who can't use ACEs or ARBs or SGLT2s, or get worse with renal function despite the use of those agents as long as GFR is over 25 and they have albumin in the urine.
+
+Nutritional guidelines, reduce dietary protein intake.
+
+That may help improve renal function and is recommended.
+
+And again, sodium restriction too if you can manage it with your patient.
+
+Immunizations.
+
+Immunize patients with CKD-4 or 5 with flu annually with pneumococcal vaccine, against Hep B, against COVID, and make sure their TDaP is up to date.
+
+And this I think is our last question for you, I believe.
+
+Indications for nephrology referral in patient with CKD include which of the following?
+
+A GFR less than 30.
+
+A blood pressure over 130/80 despite treatment with an ACE and a diuretic.
+
+The presence of a new recently trained, highly indebted nephrologist in town.
+
+Or diabetes and a urine microalbumin creatinine ratio of 30 to 300.
+
+It's that first one.
+
+The one who's now at stage four CKD.
+
+If they haven't seen 'em already, they should.
+
+So referrals for acute complex or severe cardiovascular disease with CKD anemia, bone and mineral disorders that you can't manage, adverse medication effects, severe hyperkalemia despite treatment, refractory proteinuria, resistant hypertension that's not responsive with at least three good drugs, stage four CKD, or an unexplained decreased in GFR over 30% over four months and you're not able to figure out why.
+
+Evidence-based guidelines are to use an ACE inhibitor or an ARB, as we mentioned earlier.
+
+Don't use 'em together.
+
+Remember the hemoglobin goal should not be over 11 if you're gonna use EPO.
+
+Here are your answers.
+
+So congratulations on making it through AKI and CKD.

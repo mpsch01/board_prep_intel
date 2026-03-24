@@ -1,0 +1,641 @@
+It is a pleasure to welcome Dr. Benjamin Gilmer.
+
+Dr. Gilmer is the associate professor at the University of North Carolina School of Medicine.
+
+He is part of the MAHEC Family Medicine Residency in Asheville.
+
+He is going to be leading our conversation on urology.
+
+So Benjamin, thank you very much.
+
+Pleasure to see you, sir.
+
+Thank you, Dave.
+
+Good to be here.
+
+I have nothing to disclose.
+
+So today we're gonna take a look at some of the hallmark aspects of this caveman science of urology.
+
+We can all be a urologist in 28 minutes and 13 seconds.
+
+So we're gonna take a look at some of the aspects of BPH.
+
+We're gonna look at ED.
+
+We're gonna look at PSA and why Dr. Weissmiller's father should not have had a PC, PSA at age 90.
+
+And then we'll take a look at some kidney stones too.
+
+Starting off with a question.
+
+52-year-old male presents with evolving symptoms of nocturia.
+
+He notes an increase in dribbling following urination and less force of stream.
+
+Which of the following is the most appropriate first-line agent of treatment?
+
+Is it Cipro, Terazosin, Dutasteride, or Saw Palmetto?
+
+74%. That's a great start.
+
+So Terazosin, excellent.
+
+Let's dig into this a little bit more.
+
+BPH, as you have all encountered in your careers, is extremely prevalent.
+
+By the time you're 30, you have an eight to 10% chance of having it.
+
+By the time you're 80, you have an 80% chance of having BPH.
+
+So it's so common.
+
+It's a collaboration of the increased dynamic tension of the prostate and the increased volume of the prostate.
+
+Together, they equal BPH.
+
+The best way to sort of risk stratify where you are on the BPH spectrum is to take a look at the American Neurologic Association Symptom Scoring Index, which is the next slide.
+
+The symptoms have not changed since the last time you took a board exam.
+
+Decreased force of stream is in this patient, hesitancy, terminal dribbling, nocturia, et cetera.
+
+The reason why we're so concerned about BPH...
+
+A, there's a lot of morbidity associated with it, but the complications can ultimately lead to increased UTIs, hydronephrosis, and ultimately renal failure.
+
+So if you have a score that's greater than 20...
+
+So this is a good slide to circle, to come back to look at the hallmark features of BPH.
+
+If your score is greater than 20, that puts you in a severe category.
+
+So what are the risk factors?
+
+If you're older than 30, if you have even a slight drinking problem at night, that's not good for sleep, but it's also not good for BPH.
+
+Smoking, diabetes, insulin as a growth hormone affects all organ systems, including the prostate.
+
+Hypertension, obesity, and a sedentary lifestyle.
+
+So the medications have not really changed much either over the years.
+
+There have been a few additional ones added, but overall, you have the Alpha-1 antagonists and you have the 5-Alpha reductase inhibitors.
+
+There's not a lot of difference in terms of efficacy between the five Alpha-1 antagonists.
+
+There are selective ones and there are non-selective ones.
+
+Terazosin and doxazosin are the non-selective ones.
+
+They can make your blood pressure go down more so than tamsulosin, Flomax.
+
+They all collaborate with decreasing the dynamic component in contrast with the 4-Alpha reductase inhibitors such as finasteride.
+
+This affects the size, right?
+
+Because it decreases the amount of testosterone that gets converted to DHT.
+
+DHT being the active metabolite that increases the size of the prostate.
+
+So overall, out of all of your testosterone, 10% of that becomes, ultimately, DHT.
+
+And 5-Alpha reductase inhibitors block that.
+
+So what if your patient comes back and says after six months, "I don't believe this is working.
+
+The finasteride is not working." What do you tell them?
+
+Give it another six months because it can take up to a year for it to have full efficacy.
+
+The number needed to treat at a year is excellent, so two.
+
+So BPH medicines can be used in concert together.
+
+The 5-Alpha reductase inhibitors are the most effective if you have a large prostate.
+
+Now, how many of you can determine if one's prostate is greater than 30 CCs?
+
+I can't do that. Nobody can do that.
+
+Even the urologists are kidding themselves.
+
+It's a difficult exam, which is why we don't do them very frequently.
+
+And we have this beautiful thing called ultrasound that's really good at determining the size of your prostate.
+
+So that would be the best way to measure.
+
+And if you notice that your prostate size is greater than 30, then the 5-Alpha reductase inhibitors are great.
+
+If it's less than 30, they're much less effective.
+
+Saw palmetto, as in this question, is not effective.
+
+It is equal to placebo.
+
+How many of you have had patients who have told you, "Oh, it's saw palmetto." Yeah, it's equal to placebo.
+
+There are other treatments as well.
+
+Cialis has great data.
+
+In fact, Cialis versus Finasteride or the alpha antagonist are the same.
+
+So the efficacy is about the same.
+
+Outside of those three classes of medicines, there are a number of different treatments.
+
+The TURP being the gold standard.
+
+So that's the gold standard surgical treatment.
+
+There are others.
+
+There are the microwave thermotherapy treatments.
+
+There are the other incision-based treatments.
+
+None of them are as effective as a TURP.
+
+However, the side effects and the morbidity associated with the surgery is oftentimes better.
+
+So we hear a lot of people having like a lift surgery or an incision or a slit surgery.
+
+Those can be very effective, but the TURP is still the gold standard.
+
+So in all my slides, I'm gonna include practice recommendations for you.
+
+So put a big star on these.
+
+They kind of give the A evidence, A and B evidence and good slides to go back to do a quick review.
+
+Next question is a 70-year-old male who presents with dysuria, polyuria, urgency, incomplete voiding and suprapubic pain for several days.
+
+On exam, his prostate is tender, enlarged, and boggy.
+
+You diagnose him with acute bacterial prostatitis, ABP.
+
+All the following risk factors increase the risk of a poor prognosis with ABP in his age group except...
+
+History of BPH, a BMI greater than 25, a fever, or urinary retention?
+
+So the except answer is BMI.
+
+All these other things do contribute to a greater risk of sequelae associated with the acute bacterial prostatitis.
+
+So acute bacterial prostatitis, there's sort of a bimodal incidence between 20 and 40 and then greater than 70.
+
+This is the opportunity to do a rectal exam to determine if it's warm, tender and boggy.
+
+That's still very appropriate for a rectal exam.
+
+The ultimate goal is to determine the pathogen.
+
+So getting a culture or urine culture, et cetera.
+
+The symptoms as in this patient are classic.
+
+They're irritative, obstructive symptoms.
+
+You can have suprapubic pain, you can have rectal pain, you can have painful ejaculation, but be careful for the systemic one.
+
+So the systemic symptoms are the ones that are the most critical to identify because ABP can evolve into a septic picture.
+
+So be careful with that.
+
+When you're thinking about the differential, BPH is on the list, of course.
+
+Chronic bacterial prostatitis and the key word there is greater than three months.
+
+Chronic pelvic pain syndrome where there's no identifiable infection present, and then run-of-the-mill cystitis as well.
+
+So those are all on the differential.
+
+Treatment has not changed much except that you need to know what are the pathogens in your region and what are the resistance patterns in your region.
+
+So E coli is still big player, gram-negative enterics, still big players.
+
+Know what your pathogens are in their resistance patterns just as you would for UTI.
+
+If it's a mild case of ABP, 10 to 14 days is appropriate duration of therapy.
+
+If it's more severe, then you're gonna treat for four weeks.
+
+So there are lots of reasons to have lower-urinary-tract symptoms besides BPH.
+
+So just to keep this in mind, there are anatomic reasons, other types of infections, UTIs, et cetera.
+
+Inflammatory conditions like the chronic pelvic pain syndrome, the malignancy issues.
+
+Don't forget the malignancy issues.
+
+And then all sorts of medications that we know that have been referred to already today, namely the anticholinergics, the Beers medications, antihistamines, beta agonists as well.
+
+Opioids, you may see this with your chronic opioid patients, have have lower-urinary-tract symptoms.
+
+And then TCAs because they ultimately have strong anticholinergic properties.
+
+And then there are the neurologic conditions to not forget.
+
+Next question.
+
+62-year-old male presents with ED and increased fatigue for six months.
+
+His past medical history is significant for obstructive sleep apnea and BPH.
+
+On exam, you notice decreased muscle mass and thinning hair.
+
+What is the most appropriate next diagnostic step?
+
+Do you check an LH?
+
+Do you check a prolactin?
+
+Do you check an early-morning testosterone?
+
+Or do you check a scrotal ultrasound?
+
+Good. 90.
+
+We're getting closer to Dr. Gary's goal. 92%.
+
+Yes, you got that diagnosis right.
+
+So this is hypogonadism.
+
+Classic symptoms that you know already.
+
+The question is, what type of hypogonadism is this?
+
+Is it a primary or is it a secondary type?
+
+And so this patient likely had low testosterone.
+
+And again, low testosterone can be best evaluated between 7:00 AM and 10:00 PM.
+
+That's where the maximum level of testosterone is.
+
+If you have a low T and a high FSH and LH, that tells you that the circuitry is intact, that the pituitary gland is working.
+
+So that will be a primary problem, a problem with the pump itself.
+
+In contrast to a low T with a low FSH and LH, that tells you something is going on with the HPA axis.
+
+So in that case, you need to consider MRI.
+
+You need to think about the other hormones that we'll talk about tomorrow that are associated with the pituitary gland, checking a T4, TSH and a prolactin.
+
+This is a good one to go back to, just thinking about all the different reasons to have a primary problem, which could be an infiltrated problem, it could be a traumatic problem, it could be a drug problem, all these things compared to a secondary problem, which would be the pituitary tumor, the micro adenoma, the inflammatory process, the Kallmann's process.
+
+Kallmann's disease, which is a problem with GnRH that didn't form properly during puberty.
+
+It is also the one that you may remember where you can't smell.
+
+There's the anosmia associated with Kallmann's syndrome.
+
+That's sort of a classic.
+
+And then HIV can also contribute to secondary causes.
+
+And you can have enzymatic problems.
+
+So this is where the 5-Alpha reductase enzyme itself has a relative deficiency.
+
+And so that doesn't enable testosterone to be converted to its active metabolite, DHT.
+
+Or you could even have a problem with the receptor.
+
+So the DHT does not interface well with the actual receptor.
+
+So you can have multiple areas where you can have hypogonadism, just thinking about that whole picture.
+
+So this is one where they're usually questions.
+
+Like, when is it appropriate to treat?
+
+When is it not appropriate to treat?
+
+Because everybody wants to be treated.
+
+And so the the primary goal is to restore sexual function overall, libido, well-being, and behavior.
+
+Don't forget that hypogonadism can lead to increased risk of bone density issues, growth hormone issues, and ultimately cardiovascular issues.
+
+If you have a metabolic syndrome that's a consequence of low testosterone.
+
+Replacement.
+
+No new information here, but there's one important thing to remember, is that whether you're replacing with IM injections or transdermal replacement, the efficacy and the ultimate result is gonna be the same.
+
+It's just a lot cheaper of course to use IM.
+
+If you wanna improve fertility, then you can jump into the hCG, hMG and GnRH.
+
+Probably unlikely to have a board-exam question regarding GnRH or hCG.
+
+So there are contraindications to testosterone, and in elderly population, those folks who are asking to be treated...
+
+Really, if you're gonna initiate treatment, they need to have an ultra-low testosterone.
+
+If you have a testosterone that's like say 400 to 600 and they're having all these symptoms, the likelihood of the benefit of the testosterone is pretty low.
+
+So low, meaning less than 300 deciliters per...
+
+Nanograms per deciliter.
+
+Also important to know what your hospital, how they report their testosterones.
+
+Normally, it's gonna be in nanoliters...
+
+Nanograms per deciliter.
+
+But if you have prostate cancer or breast cancer, that's an absolute contraindication.
+
+It's a relative contraindication if you have BPH or if you've had a known prostate nodule before or erythrocytosis, or heart failure.
+
+Sleep apnea, gynecomastia, VTE, those are also relative contraindications.
+
+So testosterone brings with it risk as well.
+
+So here are your practice recommendations.
+
+Again, testosterone therapy leads to small improvements in ED.
+
+And if you treat someone with testosterone and we'll just say there the testosterone is 300 to 350, and you treat them and their ED doesn't get better, then really there's no benefit to continuing therapy at that point, unless they have profound metabolic syndrome, et cetera.
+
+Here's a younger person, a 46-year-old male, who comes in with worsening ED.
+
+He denies history of depression, anxiety, CAD or peripheral vascular disease.
+
+His BMI is 32, he exercises three times a week.
+
+A recent AM testosterone level was 310.
+
+Which of the following is the most appropriate step?
+
+Testosterone gel, Trazodone, a phosphodiesterase inhibitor, or yohimbine?
+
+70%. So...
+
+This is a good illustration, again, of if you have a mild to moderately low testosterone.
+
+The likelihood of testosterone supplementation benefiting that person is much less likely than using Viagra.
+
+So that's why this answer is C, a phosphodiesterase inhibitor.
+
+Keep in mind that ED is equal to small vessel disease.
+
+So the hazard ratios are pretty significant.
+
+So with these patients, please make that association that there's increased risk of mortality and cardiovascular events associated with the ED.
+
+The phosphodiesterase inhibitors are very, very effective.
+
+So number needed to treat, only two.
+
+They work especially well with folks who have diabetes, spinal cord dysfunction, and of course SSRIs.
+
+Very helpful.
+
+They can be helpful also in the nerve sparing prostatectomies.
+
+And overall, the efficacy amongst all of the phosphodiesterase inhibitors are fairly similar.
+
+Dropout rates are a little bit diminished or decreased with sildenafil.
+
+There are negative consequences though.
+
+Visual disturbances can happen.
+
+Priapism, especially with those folks who are already on Trazodone.
+
+Trazodone, which does not benefit ED greatly.
+
+Angina and even some central neural hearing loss can be associated with with phosphodiesterase inhibitors.
+
+Here are all the other ED treatments.
+
+Again, the testosterone, only if it's ultra low will be beneficial.
+
+There is actually good data for all these others.
+
+Alprostadil, less preferred mechanism, it's the injection.
+
+Yohimbine surprisingly does have some data to support it, but it's much less potent than the others.
+
+Vacuuming devices also have data.
+
+Trazodone, and this can come up on board exams, may worsen ED, so it is not beneficial, it may actually worsen and that is the true also with the fibrates.
+
+So be careful with fibrates, even statins can potentially make ED worse.
+
+And of course, being on the obesity curve, also there is a linear relationship with obesity.
+
+So lifestyle-management issues are also very important.
+
+Here are your practice recommendations.
+
+Don't forget the psychosocial elements of ED.
+
+That's a big component as well.
+
+61-year-old male comes in for a routine physical requesting your blessing to perform a PSA for prostate cancer.
+
+He denies any symptoms at the time and he doesn't have any prostate cancer history.
+
+What would you recommend this person?
+
+Would you recommend a routine screening at 60?
+
+Would you recommend a 55 to 69 against screening with PSA, or per the USPSTF, this is an I recommendation.
+
+Or, per the USPSTF, this is a C recommendation between 55 and 69.
+
+So merits a conversation.
+
+This gentleman is 61.
+
+Learning opportunity here.
+
+So we'll jump into this.
+
+So the correct answer is D.
+
+Between the ages of 55 and 69, the USPSTF recommends that there should be a conversation had with your patient.
+
+So let's take a look at this.
+
+Here is the USPSTF initial recommendation in 2017 where they recommended a C recommendation.
+
+In 2018, the following year, the AFP jumped on board with this recommendation as well, saying that it's a C recommendation, that there should be a conversation.
+
+If you are 70 or above, as in Dr. Weissmiller's father, this is a D recommendation.
+
+Do not do.
+
+And when you break down the data, and this is a conversation we've had with all of our male patients at some time, the numbers are a little bit squishy, but overall, if you have 1,000 patient, 1,000 men and you screen them with a PSA and 240 of them come back positive, out of those 240, 80 have positive biopsies.
+
+Out of those 80 positive biopsies who go to surgery, there is one to two lives that are spared out of 1,000 people.
+
+And there's considerable morbidity associated with the surgery.
+
+So that is the data.
+
+That is why this is a D recommendation after 70 and a C recommendation between 55 and 69.
+
+This is a very common question.
+
+So here's a 49-year-old who comes in with recurrent episodes of hematuria and flank pain.
+
+A spiral CT scan of the abdomen and pelvis reveals a kidney stone.
+
+Eventually she passes the stone into her urinary strainer and the analysis of the stone reveals a calcium oxalate stone.
+
+So what kind of dietary recommendation would you make?
+
+Would you tell them to decrease their calcium or would you say it's okay to have a normal calcium diet?
+
+Or would you ask them to decrease their fiber or to decrease their vitamin C that they're taking?
+
+Good. Good, good, good.
+
+A normal calcium diet would be the recommendation.
+
+So decreasing calcium doesn't make much of a difference.
+
+Decreasing fiber makes a difference and decreasing natural forms of citrate make a difference, or don't make a difference.
+
+So basically, for a calcium stone, the things that contribute to a calcium stone are the amount of calcium that's circulating through the nephron and the status of the pH.
+
+So presence of calcium, high.
+
+High pHs favor the formation of of calcium phosphate stones, which would be the most common.
+
+So here are your risk factors if you're a male.
+
+If you are 65 or above, if you're chronically dehydrated, if you live where I do, in North Carolina, in the sweet tea belt, geography is important.
+
+If you have a family history, if you have high levels of dietary sodium, which is also a part of our sweet tea belt, and certain medications, which we'll talk about.
+
+The symptoms, I don't think we need to review for you.
+
+But here are the meds that can favor stone formation.
+
+So triamterene and sulfonamides, due to their solubility.
+
+Massively increased amounts of calcium and vitamin D that increased the amount of calcium flowing through the nephron.
+
+The carbonic anhydrase inhibitors which increase urinary pH in contrast with the citrate like the vitamin C, which decreases your pH.
+
+Certain protease inhibitors.
+
+And this is one to always remember, but not hydrochlorothiazide.
+
+And you'll see.
+
+We'll talk about hydrochlorothiazide again, but hydrochlorothiazide reabsorbs calcium in the nephron so it decreases the amount of calcium that's passing through, in contrast with gout, which we'll talk about in a little bit.
+
+So where do you go to first in terms of imaging options?
+
+If you have someone with a known stone already, just get an X-ray, 'cause you know it could be there.
+
+If you're pregnant or have other gallbladder related issues, get an ultrasound.
+
+You don't always see the stone with ultrasound, but you can see hydronephrosis with ultrasound.
+
+But gold standard with everybody else is to get a spiral CT, a non-contrast spiral CT.
+
+So this is a situation where size does matter.
+
+So less than four, almost all those will pass.
+
+They will almost always pass.
+
+And good to remember that the expulsion therapy such as an alpha blocker or tamsulosin, really has no benefit with a small stone.
+
+So less than four, don't give them Flomax.
+
+It's not helpful.
+
+If they have a larger stone between five and 10, then expulsion therapy with an alpha blocker, nifedipine or tamsulosin is effective.
+
+Still, in the five to 10 range, half of those stones will pass on their own.
+
+If they don't pass, then you need to consider getting your friendly urologists on board.
+
+Here are your practice recommendations for those.
+
+Again, the alpha blockers are the first choice for medical expulsion therapy in that five to 10 range.
+
+Don't forget the importance of hydration.
+
+And then if you have recurrent stones, please put them on a thiazide if possible.
+
+Last question.
+
+This is a 55-year-old who's noted to have kidney stones on plain films.
+
+He denies any pain at the time, no vomiting or bowel changes.
+
+Abdominal exam is overall unremarkable.
+
+So what do you do next?
+
+Do you get the urologist on board to break it up?
+
+Do you do an an ERCP?
+
+Do you watch patiently or do you pursue lithotripsy?
+
+Oh, we shattered Dr. Gary!
+
+Yes.
+
+Please, no one else vote.
+
+We're gonna watchfully wait.
+
+One last slide on what do we do about hematospermia.
+
+Most of the time hematospermia resolves on its own.
+
+Most of the time it's related to one of these things, either a biopsy or a radiation.
+
+It can happen sporadically.
+
+We have seen these questions on the board exam.
+
+Think about these things.
+
+STIs, infection, prostatitis, maybe cancer.
+
+Frequent daily ejaculation can do it.
+
+And then if you live in Tanzania, schistosomiasis is a common culprit for sporadic hematospermia.
+
+Most of the time you could just wait.
+
+If the symptoms are persistent for more than a month, then you need to do something about it.
+
+You need to either look with an ultrasound...
+
+If you can't do that, then get an MRI, which is okay for second line.
+
+Make sure they don't have an infection.
+
+Rule out prostatitis.
+
+Don't get a PSA and give them reassurance for the most part because it's gonna get better, for the most part.
+
+There is some new merging data with Finasteride.
+
+We'll see how that pans out for patients who have refractory symptoms.
+
+And there are some other supplementary slides that you might want to take a look at later that look at some of the other elements of urology that are a little bit less tested.
+
+Epididymitis, torsion, and a few other things on kidney stones.
+
+Thank you Dr. Gilmer.

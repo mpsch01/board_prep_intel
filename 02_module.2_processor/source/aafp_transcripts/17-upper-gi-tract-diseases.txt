@@ -1,0 +1,755 @@
+Okay, we're gonna go ahead and get started then.
+
+So I have nothing to disclose still.
+
+You learned everything about me, even the stuff you don't want to know.
+
+Here are our learning objectives.
+
+Of course, the big one is dyspepsia, motility disorders, GERD and helicobacter, and peptic ulcer disease.
+
+So let's start with the top, which is esophageal disorders.
+
+You can have disorders of motility, you can have gastro-esophageal reflux, you can have inflammation, and you can have tumors.
+
+Now if we look at the symptoms from the esophagus, these are typically going to be some type of swallowing difficulty, like dysphasia.
+
+You can have pain, you can have heartburn, you can have chest pain, particularly if you have esophageal spasm.
+
+And then you have this issue of regurgitation, which is this effortless appearance of gastric contents up into the esophageal tract.
+
+Now, there are three basic disorders you have to worry about.
+
+Achalasia, spasm, which can be diffused or localized, and scleroderma.
+
+Now if we think about these particular disorders, they're all treated essentially the same exact way.
+
+Achalasia, which is the absence of peristaltic progression.
+
+You will see that these patients will present with dysphagia, both solids and liquids.
+
+They have a slightly increased risk of squamous cell carcinoma.
+
+We diagnose this by a barium swallow or some form of manometry.
+
+The treatment, like with diffuse esophageal spasm, is going to be a long-acting nitrate or a calcium channel blocker.
+
+Some of these patients will need to go on for a pneumatic dilatation.
+
+Now the spastic disorder is the diffuse esophageal spasm.
+
+This is the one you've always gotta think about.
+
+Could this be CAD?
+
+Because they will have what is appears to be the equivalent of chest pain.
+
+Barium swallow is the best way to diagnose it.
+
+We treat it the same way as achalasia.
+
+Now, scleroderma, thank goodness, is not common.
+
+But 90% of people who have scleroderma will eventually have involvement of the esophagus.
+
+They may present with no symptoms.
+
+They can have severe symptoms, not uncommon to find a stricture, and they will have motility abnormalities.
+
+We manage their reflux.
+
+We treat the esophagitis typically with an H2 blocker or a PPI.
+
+Some of these individuals though, will need a prokinetic drug, like metoclopramide or erythromycin.
+
+Now let's do an AES question here.
+
+We've got a 54-year-old woman who comes to the GI clinic with a history of GERD that has been unresponsive to maximum PPI therapy.
+
+She reports persistent heartburn, regurgitation, and nocturnal symptoms despite adhering to the optimized regimen for the past six months.
+
+She's otherwise healthy with no significant comorbidities.
+
+So what's the next step in her evaluation?
+
+Will we do esophageal manometry, 24 hour pH monitoring, barium radiology, or urea breath test?
+
+Okay, you know what this is?
+
+It's a learning opportunity.
+
+The correct answer here is a 24 hour pH monitoring, 24 hour pH monitoring.
+
+The recommendation in the US is if you have GERD, we don't go routinely looking for helicobacter.
+
+If you practice in Europe, they do, but we don't do that in the US.
+
+Now in terms of diagnosing GERD, there's no gold standard.
+
+The EGD is used to assess complications.
+
+Now what would be those complications?
+
+We could see erosive esophagitis, a stricture, the ever popular Barrett's esophagus.
+
+We think about it, very uncommon, and then onto malignancy.
+
+But when we look at sensitivity and specificity, the EGD does not have adequate of either of those to determine pathologic reflux.
+
+So the diagnostic testing, esophageal manometry not recommended.
+
+The 24 hour pH monitoring, it's not recommended in the routine diagnosis of GERD and is not required in the presence of Barrett's.
+
+However, if you have refractory PPI therapy, then your gastroenterologist will put or can put a pH probe down into the lower esophagus to detect what the ongoing issue is there in terms of pH.
+
+Now, some would argue, how is this going to change anything?
+
+I'm still gonna have to maximize their PPI therapy.
+
+And would this be, though, a candidate for a fundoplication?
+
+That's the issue here.
+
+Would they be a surgical candidate?
+
+But remember, even with surgery, you're still going to need a PPI therapy, typically.
+
+Barium radiology: limited usefulness, it is not recommended.
+
+Now, in terms of screening for helicobacter, it is not recommended here.
+
+Eradication is not part of routine anti-reflux therapy.
+
+There's really insufficient evidence to recommend it in terms of all patients who need to be on a PPI.
+
+Now, if you do test them and they're found to be H. pylori positive, the recommendation is to treat them, but to let them know their GERD may not get any better, probably will not, and may actually get worse, because helicobacter has a net suppressive effect on acid production.
+
+So you can actually increase your acid production by eradicating it.
+
+So how do we diagnose it?
+
+An empiric trial of acid suppression therapy unless they have alarm symptoms.
+
+So when residents come into precept, they say, I'm gonna get a helicobacter, and I'm gonna start them on a PPI, I think this is GERD.
+
+Okay, you gotta make a decision here.
+
+You know, if they don't have any epigastric tenderness, likelihood is they do not have peptic ulcer disease or erosive gastritis.
+
+If they have alarm symptoms, of course, those patients are going to immediately go to assess complications potentially for GERD and an upper endoscopy would be needed.
+
+So here's the summary of the diagnostic testing.
+
+You can put that with your study materials as a summary slide.
+
+Now, the treatment.
+
+PPIs are more effective in relieving heartburn than our H2 or prokinetic agents.
+
+Different PPIs at the same or similar efficacy at standard doses.
+
+Long-term PPI use may increase fracture risk.
+
+But there's inconsistent evidence, when we look at hip fracture in particular.
+
+And then anti-secretory therapy has not been shown to reduce the need for recurrent dilatation secondary to stricture formation.
+
+Okay, here's our next AES question.
+
+Mr. Anderson is a 68-year-old male is scheduled for initiation on proton pump inhibitor therapy due to persistent symptoms of GERD.
+
+He has not received PPI treatment previously.
+
+You decide to discuss potential risks associated with therapy during the consult.
+
+In discussing initiation, which of the following is a potential risk of therapy that should be reviewed?
+
+Increased risk of B12 deficiency, enhanced likelihood of bacterial overgrowth, and an heightened susceptibility to allergic reactions, or an increased risk of iron deficiency anemia.
+
+Okay, the correct answer is an increased risk of vitamin B12 deficiency.
+
+So as we look at PPI therapy, here are the potential risks.
+
+Keeping in mind, because we don't know about the increased hip fracture risk, patients with known osteoporosis, you can still stay on it.
+
+There is an increased risk of hypomagnesemia, increased risk of B12 deficiency.
+
+Because spores now get through an environment in which there's a less acidic or higher pH, there's an increased risk of clostridium difficile infection.
+
+You may see an increase of CAP.
+
+So, community acquired pneumonia, there's a 27% increase in some series, and PPI therapy does not need to be altered if you're on concomitant clopidogrel.
+
+Now, if that's an issue in your local neck of the woods, worry about it there.
+
+But on the exam, you don't have to change anything.
+
+So here's a summary of our treatment, then.
+
+I wanna remind you, although you're gonna hear a lot about diet, lifestyle, and self-help measures, there's really limited evidence they make any difference.
+
+So as we think about GERD, one of the big things that makes a difference is weight loss.
+
+The second thing that makes a difference is avoiding peppermint.
+
+And the third thing that makes a difference is avoiding caffeine, like in coffee.
+
+'cause caffeine and peppermint actually relax the lower esophageal sphincter.
+
+If these other things contribute to your worsening GERD, then you're going to make modification as well.
+
+Now, if you have it when you lie down, then prop the bed up.
+
+You need to elevate it about eight to ten inches.
+
+You can use a wedge or a block.
+
+Pillows don't tend to help you very much, 'cause they're just gonna bring your neck up a little bit.
+
+Okay?
+
+So here are the basic treatment guidelines.
+
+You don't see people with step one therapy.
+
+They have mild symptoms.
+
+They do a trial of patient directed therapy, and they adjusted their life as necessary.
+
+You start seeing them when they're no longer responding, but they typically have non erosive disease.
+
+You're gonna continue any lifestyle that makes a difference for them as an individual.
+
+PPI, maybe a pro motility agent, and they're gonna get eight to 12 weeks of therapy.
+
+Severe symptoms.
+
+These are the patients typically that need to go for an EGD to assess for complications.
+
+You're gonna continue the lifestyle measures.
+
+They go on a high dose H2 antagonist or a high dose PPI.
+
+Now, optimally, if they're on a scheduled PPI, you wanna do a 30 to 60 minutes before the first meal of the day.
+
+This has been shown to optimize effectiveness.
+
+Now what's the AGA say?
+
+If you've got a erosive esophagitis, you should be biopsied when there's concern of dysplasia or malignancy.
+
+They go on a daily proton pump inhibitor and they get a reevaluation in about eight weeks.
+
+If you're on pharmacologic treatment for GERD, long-term acid suppression therapy, you wanna titrate it to the lowest possible dose, and if possible, titrate them off of the PPI onto an H2 blocker.
+
+Now, how do we de-prescribe that medication?
+
+If I've got chronic GERD, it's recommended, particularly at those who are at low risk and are symptom free after four weeks of therapy.
+
+There are several methods that have been used.
+
+Some, though, if you abruptly stop, it will have a rebound acid production and have worsening of the symptoms.
+
+Now, we know that changing the PPI prescription to as needed results in about four pills per week being taken.
+
+So I get less pills.
+
+However, patients are not nearly as satisfied.
+
+Taking a PPI, though, as needed will decrease the need in about two thirds of patients.
+
+Okay, so that's dramatic.
+
+You can add a rescue histamine blocker that can maybe potentially reduce the risk of needing to restart the PPI upwards to about 80%.
+
+Now, if they need to be on long-term therapy, and I want to try to titrate it down, am I better to just discontinue it abruptly or titrate them off?
+
+It's a tossup.
+
+Whatever works for you and your patient practice.
+
+If I'm gonna titrate them off, I initially titrate them off over two weeks, and at the beginning of the second week, I will start the H2 blocker.
+
+But either can be used.
+
+Now, Barrett's, we think about this a lot.
+
+It is very uncommon.
+
+And if you have Barrett's, only about 1% will go on to develop adenocarcinoma.
+
+Now, who do we think about in terms of screening?
+
+Well, we need to screen those using an upper endoscopy, if they have at least three of the risk factors.
+
+And what are those risk factors?
+
+I am male, particularly, non-Hispanic white.
+
+I am maturing.
+
+I have chronic GERD, obesity, current or past history of smoking, and a confirmed family history of either Barrett's or esophageal adenocarcinoma.
+
+And that needs to be in a first degree relative. Okay?
+
+Screening women for Barrett's is like screening men for breast cancer.
+
+Very uncommon you're gonna find any issue.
+
+So you need three of those in order to potentially put forward that this patient should be screened for Barrett's.
+
+Now, if you have some type of related neoplasia, of course, those go on to an endoscopist for imaging, resection, and ablation.
+
+If you have Barrett's esophagus, you should be placed on at least a daily proton pump inhibitor.
+
+These are the individuals who do not have any neoplasia.
+
+If they have a nondysplastic Barrett's, they undergo surveillance at a minimum of three years, okay?
+
+A minimum of three years.
+
+Now, as we think about medical versus surgical treatment of GERD, you can do a laparoscopic fundoplication, but as we said, most of these patients are gonna continue to need medication.
+
+Endoscopic procedures.
+
+They may reduce some of the symptoms, though, and make the medication more effective.
+
+So here are a summary of our GERD treatment recommendations here, all the SOR criteria we've looked at.
+
+These two slides I would put with your study materials as a review of the topic we just discussed.
+
+Okay? Now, inflammatory disorders, esophagitis, what are we dealing with here?
+
+Well, it could be pill induced.
+
+You know, I'm taking ibuprofen.
+
+800 doesn't work for me, so I take 1200. Okay?
+
+Now keep in mind, just as an aside, ibuprofen is now known to have an analgesic ceiling effect.
+
+One of the largest studies to date now shows that in patients who come to an emergency department, this is where the study was done, 70% of patients who have pain have musculoskeletal pain.
+
+And this particular study published about 18 months ago, looked at is 600 or 800 any better than 400?
+
+And what the randomized controlled trial showed was, no.
+
+So how's that changed practice for me?
+
+Well, if you come in and you say, listen, I'm taking 400 of ibuprofen for this shoulder pain four times a day, and it's no help, I don't increase it to 600 or 800.
+
+I actually change the class of the non-steroidal anti-inflammatory drug.
+
+If you're on 600 or 800 for analgesia, I tell you, give it a try at 400.
+
+Now, we know that acetaminophen potentiates the effects of non-steroidals like it does narcotics.
+
+So my regimen for patients is always, if they're gonna use ibuprofen or any NSAID, they take 325 to 500 of acetaminophen with that particular NSAID.
+
+So for example, ibuprofen, 400 milligrams four times a day.
+
+You would take that with 325 to 500 of acetaminophen simultaneously.
+
+Now, infective, these are mostly in immunocompromised patients, could be viral, it could be fungal, corrosive, of course, if you consume something, you're gonna have a problem.
+
+And then eosinophilic.
+
+Now this is not common, but it's an allergic reaction appears in most people.
+
+But for some it's idiopathic.
+
+We treat this, though, like an allergic reaction with steroids and anti-allergy medications, okay?
+
+They will typically have a pronounced eosinophil infiltration on biopsy.
+
+And you will see a peripheral eosinophilia, not uncommonly as well.
+
+Now, esophageal tumors, 90% of these are gonna be cancer.
+
+There are two forms.
+
+There's squamous cell carcinoma.
+
+This is the one that's associated with heavy alcohol and smoking.
+
+The adenocarcinoma, as we said, GERD is the risk factor.
+
+And the risk there is what makes my GERD worse?
+
+Well, obesity and tobacco use.
+
+So it's an indirect cause, not a direct cause of increasing the risk.
+
+Now, diseases of the stomach.
+
+Acid peptic disorders, infections, motor disorders, and cancer.
+
+Let's go for this as we look at this question.
+
+49-year-old female comes in with a four week history of epigastric pain.
+
+She reports the pain gets better when she eats, but gets worse about an hour after eating.
+
+She's been using an over-the-counter liquid antacid, which she reports decreases her symptoms.
+
+She denies weight loss, hematemesis, melena, or hematochezia.
+
+Except for the mid epigastric tenderness, her exam is unremarkable.
+
+Her only medication is periodic acetaminophen.
+
+She uses that for her headaches.
+
+So which of the following diagnostic tests would you recommend in her evaluation?
+
+A serum gastrin, helicobacter pylori serology, an EGD, or get a urea breath test on her?
+
+Close to a learning opportunity, but the correct answer is a urea breath test.
+
+You want a test for active infection.
+
+Now, when we're thinking about dyspepsia, this is epigastric pain, discomfort, or burning sensation.
+
+Peptic ulcer disease can include gastric and duodenal ulcers.
+
+Peptic ulcer disease is most commonly caused by helicobacter pylori and the use of NSAIDs.
+
+Now, why do we develop these?
+
+Well, there's this imbalance between what protects and the aggressive factors.
+
+So the protective factors, you know, we have these surface epithelial cells.
+
+Oh, it's like snuggling into mashed potatoes.
+
+It's just all of this mucus and bicarbonate, that's so lovely.
+
+And we've got these specialized apical surface membranes, all this prostaglandin.
+
+And then we come along, and, you know, we're taking 1200 of ibuprofen four times a day.
+
+We wanna be on high dose steroids, 'cause we went to urgent care.
+
+We smoke three packs a day, we're drinking a 40 ounce or two a beer a day, probably not diet.
+
+And it's ongoing, as to whether stress is going to cause this.
+
+Because, I will tell you, I have yet to meet a patient who is not stressed.
+
+Like you guys are all in here stressed.
+
+Most dyspepsia is not peptic ulcer disease.
+
+It's functional.
+
+It's functional.
+
+Now, how do we diagnose this with the Rome IV diagnostic criteria?
+
+You need the presence of at least one of the following: postprandial fullness, three days per week, early satiety, epigastric pain, epigastric burning, and no evidence of structural disease.
+
+We all have these patients, they take a look down there, they don't find anything. Okay?
+
+Now, 25% of people who come in with dyspepsia will have some type of organic issue, but 75% are gonna have functional dyspepsia.
+
+Functional dyspepsia, okay?
+
+Now, what about the medications?
+
+These are the ones you have to worry about.
+
+Any antibiotic, steroids, herbs, especially if they're taking the white willow bark. Okay?
+
+Iron, Metformin, NSAIDs, Orlistat, or as my patients say, the most expensive laxative you'll ever take.
+
+Dr. Veil didn't point out on the package insert, it says, don't wear white pants.
+
+Potassium chloride, theo.
+
+I mean, theophylline, when was the last time you saw somebody on theophylline?
+
+You know, that's like dig.
+
+Although some of you, when you were in training, everybody was on theophylline, and you remember being in the NICU, they were all on aminophylline.
+
+You remember that?
+
+People here talking, what in the world are they talking about?
+
+Aminophylline.
+
+Now, here are the clinical indications associated with possible etiologies, though.
+
+I'm growing more mature, and I gotta think now about malignancy.
+
+I got pain, particularly it's radiating to the back, the right upper quadrant, then I'm thinking of biliary or pancreatic process.
+
+Vomiting or severe nausea, I could have gastroparesis.
+
+Here's the diagnostic approach.
+
+Always, history and physical exam to start.
+
+The laboratory is going to affirm my diagnosis.
+
+How much NSAID are you taking?
+
+Are there any warning signs?
+
+Is there nausea and vomiting?
+
+The physical exam is typically going to be normal, except for the fact that you've got epigastric tenderness.
+
+And then the laboratory tests, really, they should only be used when you're identifying patients with alarm features.
+
+Otherwise, they're not really gonna tell you much.
+
+Now, here are the alarm features I'm worried about with dyspepsia.
+
+Of course, anytime unintentional weight loss, difficulty swallowing, pain on swallowing.
+
+I can't explain why you have iron deficiency anemia.
+
+Why are you having this vomiting?
+
+Okay, I got a palpable mass.
+
+Or, you know, there's a supraclavicular node.
+
+I got a family history of upper GI cancer.
+
+Those are the ones I'm being concerned about when I'm thinking about dyspepsia and where I need to go looking.
+
+So the diagnostic approach here is if you're over 60, basically you need an EGD with biopsies, and at the same time you will get a urease activity examination during the time of the EGD to look for H. pylori.
+
+If you're younger than 60, of course you're gonna be tested and treated for H. pylori, and selectively you're going to do an upper endoscopy.
+
+Now, in terms of H. pylori, you wanna do a test for active infection.
+
+Active infection, and that would be either a stool antigen test, or we would be using a breath urea test or urea breath test. Okay?
+
+Most patients who have a normal upper endoscopy, and routine laboratory tests are normal, they're gonna have functional dyspepsia. Okay?
+
+Now, if we think about those who we test for helicobacter pylori, if they're negative, they get empiric proton pump inhibitor treatment.
+
+If they're positive, they get treated.
+
+Now, in terms of how we're going to move with eradication, if we look at functional dyspepsia and eradication, you can see there the number needed to treat is eight.
+
+If you are a patient, though, and your H. pylori is negative, it's functional, they should still be started on a PPI.
+
+Now, in terms of acid suppression and functional dyspepsia.
+
+Standard daily doses, and typically these are taken for about eight weeks, they're superior to placebo for reduction of their functional dyspepsia symptoms.
+
+Long-term PPIs, so you gotta be careful here.
+
+Chronic kidney disease, potential for bone fracture, as we said, C. diff infection, community acquired pneumonia, the number needed to harm there is about 1000, or one per 1000.
+
+H2 blockers are superior to placebo, as well.
+
+And you see that the number needed to treat here is seven.
+
+Okay? So they may do just as well on an H2 blocker as they do on a PPI.
+
+The prokinetics, metoclopramide is really the only one that's available.
+
+It has a significant effect on reducing global symptoms when you have functional dyspepsia.
+
+Now, helicobacter pylori, this actually won Barry Marshall and his colleague Warren a Nobel Prize.
+
+Dr. Marshall is a delightful gentleman.
+
+He was actually one of my preceptors when I was a resident at the University of Virginia where he's still on the faculty.
+
+He gave himself a ulcer by ingesting helicobacter pylori.
+
+He is one of the nicest people, but I'm, like, Dr. Marshall, why did you give yourself an..?
+
+"Well, I had to prove it, you know?
+
+And people weren't believing me." How could an ulcer be caused by an infection?
+
+But it was, and it got him a Nobel Prize for that. Okay?
+
+Now, 90% of duodenal ulcers, 70% of gastric ulcers are associated with H. pylori.
+
+Look at this, H. pylori gastritis upwards of 70 to 80%.
+
+Now, what is the history here?
+
+Well, it's similar to functional dyspepsia, persistent pain relieved by food and antacids, potentially, mid epigastric tenderness.
+
+The only test that's helpful here is the H. pylori test, and you're looking for active infection again.
+
+Now they could have a Zollinger-Ellison, and you might have a gastronoma.
+
+So, yes, you can consider a serum gastrin.
+
+You need to get a hematocrit, perhaps, look for blood in the stool.
+
+But the big issue here is they need an endoscopy, that's 90% sensitive and specific when we look at peptic ulcer disease.
+
+Now, the test for H. pylori infection in terms of active infection, we're looking at the urea breath test or the stool antigen test.
+
+Okay? Both of these can be used.
+
+You do not wanna be looking though at anything related to the serum, because they're all gonna be IgG positive.
+
+We've all come up against this bacteria at some point.
+
+Now, eradication, the choice of therapy is gonna be individualized here.
+
+You've gotta look at previous exposures, allergies and local resistance, because here the cure rates are only gonna be about 80%.
+
+And look at this, the World Health Organization, they've released a list of 12 bacterial families, which are the most dangerous, and clarithromycin resistant H. pylori is the same high priority as MRSA and VRE.
+
+That's how significant this is.
+
+We want a test of cure, using a test for active infection, one to two weeks after completion of the PPI therapy and at least four weeks after completion of the antibiotics.
+
+Now, here's the therapy.
+
+Quadruple is most effective, and you wanna do it for 14 days.
+
+So it can be the bismuth quadruple therapy or the clarithromycin triple therapy.
+
+It depends on the resistance.
+
+I don't think you're gonna be examined on the specific regimens.
+
+You do need to know that 14 days and quadruple therapy is the best, particularly the bismuth quadruple therapy.
+
+This is the first line treatment, if they tell you you're in a clarithromycin resistant area.
+
+Now, do probiotics help here?
+
+Do they enhance the eradication?
+
+Yes, they bring rates to greater than 90%.
+
+So, actually adding a lactobacillus containing quadruple or lactobacillus to the quadruple therapy is more effective than the quadruple therapy alone.
+
+Now, other therapies that can be used, there is a Levofloxacin sequential, there is a Levofloxacin triple.
+
+Again, depending on where you live and resistance, you wanna avoid any clarithromycin in locations where the resistance is greater than 15%.
+
+So they would have to tell you that on the exam.
+
+If you are pen allergic, you need to look at whether they've had previous macrolide exposure, because if they have, then it is going to dictate which regimen you use.
+
+Again, the key here is, is there been previous macrolide exposure, potentially increasing risk of resistance?
+
+Now, if it's not H. pylori, then I discontinue the NSAID.
+
+All patients will get PPI therapy.
+
+All patients will get a PPI therapy.
+
+The duration.
+
+Helicobacter pylori-positive ulcer typically is only 14 days.
+
+If it's a complicated ulcer, they get eight to 12 weeks.
+
+If it is an NSAID-induced ulcer, typically four to eight weeks.
+
+Duodenal ulcer, four weeks, eight weeks for the gastric ulcer.
+
+Non H. pylori, non NSAID ulcer, very high rates of recurrence, you may want to consider a longer PPI treatment somewhere between 12 and 24 weeks.
+
+The NSAID ulcers risks.
+
+Prior adverse GI event.
+
+I'm older.
+
+High dose NSAIDs.
+
+Look at this, the risk for NSAID induced GI toxicity is about 10% at six months if you got multiple factors, and I've gotta go on a long-term NSAID for whatever reason, H. pylori is now a significant risk factor for developing complicated ulcer disease.
+
+The recommendation is you may want to screen those individuals looking for active infection before you start the long-term NSAID.
+
+Now, which NSAID is best to use in terms of GI?
+
+They're all potentially at risk.
+
+Here's the summary, though.
+
+If you're going to go on long-term NSAIDs, you should be tested, as I said, for H. pylori and eradicated before you start it.
+
+If we think about, then, the ulcer, it's really risk benefit.
+
+The risk is GI toxicity.
+
+If you've got multiple risk factors, the risk is even greater.
+
+Risk reduction using a Cox-2 selective, or if it's a non-selective NSAID like naproxen or ibuprofen, to add a PPI or misoprostol to that particular regimen.
+
+Typically, we're using misoprostol at 200 micrograms QID, and one of the PPIs, typically, at either the standard or high dose daily.
+
+Okay, and finally, 65-year-old male smoker complains of dyspepsia, weight loss, early satiety, and occasional nausea and vomiting.
+
+Which one of the following would be the initial diagnostic method of choice?
+
+An upper GI, a CT of the abdomen, upper, a single-contrast upper GI barium swallow, or an endoscopic ultra sonography?
+
+What one of those do we want to choose?
+
+Okay, an upper GI endoscopy.
+
+That's exactly right.
+
+Cancer of the stomach. Adenocarcinoma.
+
+Chronic GERD is, of course, the leading cause of esophageal adenocarcinoma, but that is not what is going to be causing the adenocarcinoma of the stomach.
+
+Most of these are going to be associated with a history of H. pylori.
+
+And we don't see a lot in this in the US, because, actually, our H. pylori rates are fairly low.
+
+Surgical excision, five-year survival is dismal.
+
+The only thing worse is pancreatic cancer.
+
+This is the fourth leading cause of cancer-related death.
+
+Higher incidents both in male and African Americans.
+
+The risk factors, like everything, smoking, chronic pancreatitis, there is a hereditary predisposition.
+
+We don't yet have a screening tool for this.
+
+You know what the history is?
+
+Pain, weight loss, jaundice, abdominal mass.
+
+Diagnosis, any of the imaging can be used.
+
+Node positive, the five year survival is about 10%.
+
+And then, finally, keep in mind, pancreatitis.
+
+Choledocholithiasis, chronic alcohol use, hypertriglyceridemia are the three leading causes.
+
+Enteral feeding, shorter hospitalizations.
+
+We feed early now.
+
+You reduce mortality, multi-organ failure, infection.
+
+Early enteral feeding is tolerated over restricted.
+
+Absence of infection, prophylactic antibiotics are not recommended even if there's pancreatic necrosis, and a cholecystectomy for mild acute biliary pancreatitis, that should be considered after that initial admission.
+
+Choosing wisely.
+
+Do not test for amylase in cases of acute pancreatitis.
+
+Instead, test for lipase.
+
+That's the American Society for Clinical Pathology.
+
+And with that, we're done with the upper tract.
+
+Thank you very much.

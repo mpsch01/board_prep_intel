@@ -1,0 +1,719 @@
+Dr. Firnhaber is returning and he is going to be leading our discussion on heart failure.
+
+Good morning, Jonathan.
+
+Thank you sir.
+
+And take it away.
+
+Good morning.
+
+We are talking heart failure this morning.
+
+I still have nothing to disclose.
+
+Here are learning objectives.
+
+First things first, the heart failure guidelines were just updated.
+
+It seems like it was just, but it was still the end of 2022.
+
+So a little over a year now.
+
+Some stuff changed, some stuff didn't change.
+
+I'll show you what the differences are.
+
+This did not change.
+
+So heart failure with reduced ejection fraction has an EF of 40% or less, sometimes called systolic heart failure.
+
+And when we're thinking about how to treat heart failure, this is what we know really well.
+
+If you're comparing heart failure with preserved versus heart failure with reduced ejection fraction.
+
+Reduced ejection fraction, very homogeneous group of people.
+
+When you've got a a cluster of patients that all behave the same, their hearts have the same physiology, there's a whole lot of similarities.
+
+There are a lot of good RCTs, a lot of randomized controlled trials that tell us exactly how to manage this.
+
+You'll see when we talk about heart failure preserved ejection fraction, totally heterogeneous group, meaning the ability to say, here's what always works is completely out the window.
+
+There's a lot of, well you can try this, usually do this, typically this, often this.
+
+But there's not the same body of evidence because this group is so heterogeneous or so homogeneous rather, this is a much easier group in many ways to say, here's what we do to manage this.
+
+So preserved ejection fraction is challenging 'cause there's a lot of reasons that you can see people with heart failure symptoms, heart failure pathophysiology, but still a decent ejection fraction.
+
+And one of the things that I'd suggest as you're trying to wrap your head around heart failure is think of it more as a syndrome.
+
+Basically a syndrome of inadequate cardiac output to meet metabolic needs.
+
+And as you'll see when we talk, you can't, and you probably know, you can't look at someone and say, I can predict what your ejection fraction is, you are at 34%.
+
+We see people who come in massively fluid overloaded, barely able to walk, have class three, class four symptoms and they've got an EF of 55%.
+
+And then you see people who are moving along pretty good, got some class two symptoms, they're managing well and they've got an EF of 18%.
+
+So you can't glance at someone and say, I can predict your ejection fraction.
+
+So if you think you can let me know how you do it because I'm not sure.
+
+So what did change is they got rid of the 41 to 49% has been there.
+
+It was previously called borderline ejection fraction or borderline reduced, which is is a terrible term.
+
+I always think it's like being borderline pregnant.
+
+I mean it's just such a bad way of describing things in medicine.
+
+So it's now mildly reduced as the 40s, 41 to 49%.
+
+And then finally we've still got a category which is improved, meaning they used to be lower, they used to be in the reduced ejection fraction category, but we did a good job.
+
+We revascularized, we used a lot of good medications.
+
+Now we've got their EF above 40%.
+
+So they were bad but they're better, so we have an improved category.
+
+This is new-ish.
+
+And I don't know if y'all have seen, if your cardiologist that you work with use this much, at least in our academic medical center it still hasn't gained a whole lot of traction.
+
+But there are now stages of heart failure.
+
+The reason that I think it's kind of not all that helpful personally is that, it's a really coarse cut.
+
+So stage A is at risk, meaning if you have hypertension or family history of heart failure, you're at risk.
+
+Labeling someone who doesn't have heart failure but has hypertension as stage A heart failure seems kind of odd but that's what they've done.
+
+Stage B is pre-heart failure, meaning you've got some structural damage, evidence of LVH for example that could eventually lead to heart failure but you don't really have heart failure yet, it's just pre-heart failure.
+
+That's stage B.
+
+Stage C then is everybody who is symptomatic, a huge swath of the heart failure population.
+
+And then you know, you move prayer abruptly to stage D, which is advanced, where people are almost in the end stage.
+
+So you're kind of, you know, at risk.
+
+You may be having, you're getting closer to heart failure, now you have heart failure, now you're advanced.
+
+So it's sort of course cuts but there they are.
+
+So first looking at medical therapy or GDMT guideline-directed medical therapy for reduced ejection fraction.
+
+Here's the big thing that changed in 2022 is the addition of SGLT2 inhibitors in both the reduced and preserved ejection fraction GDMT categories.
+
+Interestingly enough, this is actually gets the same class of recommendation one for SGLT2 inhibitors.
+
+To me this was like the most landmark thing.
+
+Here is a class of drugs that is relatively new on the horizon.
+
+Relatively new in our armamentarium.
+
+It's not a drug that we actually had ever thought of as a heart failure drug.
+
+And the first time it hits the heart failure guidelines, it comes in as a class one recommendation.
+
+You know in there with heavy hitters like ARNI or brand name Entresto, beta-blockers, MRAs and ACE inhibitors or ARBs.
+
+So a huge, huge change.
+
+For mildly reduced ejection fraction preserved ejection fraction.
+
+You'll notice that the recommendations, the strength of recommendations in the AHA guidelines are lower.
+
+And the class of recommendations if you recall, class one is the stuff that we should do.
+
+Class one is the most evidence-based.
+
+It's the ones you have to have.
+
+If you go down to class three, class three is the don't.
+
+And I always pay good attention to class one recommendations.
+
+So what I know I have to do, pay equal attention to the class three recommendations.
+
+What's the stuff that I may have done in the past that is now considered bad?
+
+Class two recommendations are broken down to 2a, which are almost like class one, just the evidence isn't quite as strong.
+
+Class 2b, even weaker recommendations but probably still okay.
+
+And you'll notice that with heart failure with reduced or with preserved ejection fraction, all the drugs that we're used to using ACE inhibitors, ARBs, beta blockers, MRAs, get a 2b recommendation.
+
+SGLT2 inhibitors get a 2a recommendation.
+
+So not only did this class of drugs hit the guidelines from a preserved ejection fraction standpoint actually hit the guidelines at a higher level of recommendation than the classic drugs that we use for heart failure.
+
+If you're familiar with the class one, class two, class three NYHA heart failure classifications, class one is no limitation.
+
+I will usually ask people, what makes you short of breath?
+
+Class two recommended, or class two heart failure.
+
+Are you short of breath with more strenuous activity?
+
+For example, carrying a couple of bags of groceries up some stairs from the car into the house.
+
+That'd be class two symptoms.
+
+Class three.
+
+Are you short of breath walking around the house?
+
+Class four, are you short of breath at rest?
+
+So there's the NYHA classification.
+
+So let's move on to a question.
+
+So we've got an 86-year-old woman who presents with shortness of breath and a non-productive cough.
+
+Think for just a minute 'cause we're gonna have like a differential diagnosis of two things.
+
+She's slightly tachypneic and tachycardic, temperature and BP are normal.
+
+Cardiac exam is normal but she's got bilateral crackles on lung exam and bilateral fluffy infiltrates noted on chest x-ray.
+
+CBC, metabolic panel, and initial troponin or normal.
+
+EKG shows sinus tachycardia.
+
+So the question is basically you're trying to decide this is a clinical picture that may be pneumonia, may be heart failure.
+
+Which labs might you use to help differentiate between the two?
+
+So we've got a d-dimer.
+
+I'm not gonna knock the ED folks.
+
+Emergency medicine and d-dimer just go together like macaroni and cheese.
+
+BNP and procal.
+
+Serial troponin and CK.
+
+Sed rate and CRP or a lactic acid.
+
+Alright, excellent.
+
+Most went with BNP and procal.
+
+So really you're again trying to differentiate between, is this a pneumonia or is this heart failure?
+
+We need some additional data.
+
+BNP is a really helpful bit of information here.
+
+And oddly enough the B is for brain.
+
+'Cause when it was first characterized, apparently there's some of it that's found in the brain as well, but it doesn't come from the brain, it comes from the heart, from the ventricles actually.
+
+So brain natriuretic peptide.
+
+Natriuretic meaning sodium out in the urine, sodium in the urine, is the intent of BNP.
+
+It is released in direct proportion to ventricular stretch.
+
+Meaning, if you're thinking about BNP elevations in heart failure with reduced versus preserved ejection fraction, those with preserved ejection fraction typically have thicker less compliant ventricles.
+
+There's less end diastolic stretch.
+
+Therefore lower levels of BNP with preserved ejection fraction.
+
+Those who have reduced ejection fraction, typically their ventricles are kind of big baggy and have this huge end diastolic volume.
+
+Typically you see much higher BNP elevations with reduced ejection fraction.
+
+Also make sure you recognize that it is partially renally cleared.
+
+So for some patients who have more significant levels of CKD, you may need to establish a BNP baseline that says, when they are stable, you know dry or euvolemic and then you check a BNP to say, here's where they are at their finest and it may not be a normal BNP, especially if they you know have poor renal function.
+
+The BNP, they're secreting that you're measuring today, they may have secreted two weeks ago and it's still lingering around.
+
+Numberwise, BNP less than a hundred is typically a cut point to say this is unlikely due to ventricular stretch, unlikely due to heart failure.
+
+Above 400 is usually the point where we say okay, this is pretty likely heart failure.
+
+Obviously there's a gray zone in there, 100 to 400, lots of things can cause that degree of BNP elevation.
+
+Things that cause increased right-sided pressures.
+
+So like pulmonary embolism with especially with a high clot burden, cor pulmonale can cause BNP elevation as well.
+
+One little caveat here is right here at the bottom and that is that that patients who are more obese tend to secrete less BNP and the lower, the levels are basically lower.
+
+So if you're saying 100 is my usual cut point to start getting excited, drop that down to close to 50 for someone who's more obese, they tend to secrete less BNP, their levels are typically lower.
+
+Just a quick point here, there is at least in the older 2017 guidelines, there was some suggestion that using BNP earlier in the evaluation of patients who are either maybe in the at risk or pre-heart failure categories may be useful if you take that information and combine it always with this, you know, incredibly comprehensive program that none of us have availability of but that may decreased risk of progression of heart failure.
+
+Good things on echos.
+
+It just makes me cringe when our residents get an echo report back and like scroll right to the bottom as like I want the EF.
+
+But you went past all the good stuff, there's a lot of good information there that you just went past.
+
+I mean EF is important obviously we wanna know that.
+
+But a lot of other good things that you can pick up from the echo.
+
+Really an objective or an assessment of LV function.
+
+Is there evidence of wall motion abnormalities?
+
+What's the LV thickness looks like?
+
+How contractile is the left ventricle?
+
+What does the relaxation phase look like?
+
+Obviously you're looking for valvular abnormalities and impairment of diastolic function.
+
+And there are different ways that that can be described, it's now more consistently, at least our cardiologists will more consistently describe.
+
+There's a sentence, here's what the diastolic function looks like.
+
+So systolic dysfunction doesn't necessarily have to have a big baggy ventricle.
+
+You may have a normal size ventricle that is just impaired by a lot of ischemic heart disease, multiple areas of wall motion abnormality or akinesis, meaning the ventricle doesn't contract at all even though the ventricle size looks okay.
+
+More often than not in patients who have impaired diastolic function tend to have thicker ventricles that just don't relax well.
+
+So the physiologic basis of treatment.
+
+Here are the drugs that we use for heart failure with reduced ejection fraction.
+
+And you'll notice that in essence we're undoing all of these physiologic things.
+
+So you say when heart, when cardiac output is poor, remember cardiac output is a function of stroke volume plus heart rate, cardiac output is poor.
+
+And if we think of heart failure as a syndrome of inadequate cardiac output to meet metabolic needs, poor cardiac output leads to a whole bunch of compensatory mechanisms.
+
+You have increased sympathetic outflow, increase contractility, increase heart rate to improve cardiac output.
+
+You want to retain sodium, therefore retain fluid, want to vasoconstrict.
+
+And all these things make perfect sense if you were to say, perhaps the reason for cardiac output if we go back to caveman times would be, you just got gored by a saber-toothed tiger and lost 50% of your blood volume as a reason for poor cardiac output, all these mechanisms make perfect sense in that case, right?
+
+But we don't get gored by saber-toothed tigers often today and we still have poor cardiac output but the compensatory mechanisms have not changed.
+
+So the mechanisms that are useful in acute blood loss become counterproductive in reduced ejection fraction that's due to ischemic heart disease for example.
+
+So we're trying to counteract the compensatory mechanisms.
+
+Long-term sympathetic outflow causes cardiac muscle apoptosis or cardiac cell muscle death.
+
+Long-term retention of fluid or recognized ends up having people congested, long-term sodium retention, blood pressure goes up, they get more congested, they get more ischemic, et cetera, et cetera.
+
+So all of our attempts here are to in essence sabotage or take away the compensatory mechanisms.
+
+So we do preload reduction, diuretics and nitrates help there.
+
+Afterload reduction, ACE inhibitors, ARBs are the prototypes.
+
+Sympathetic blockade obviously, and don't forget that it is the renin-angiotensin-aldosterone system.
+
+We always have to focus on aldosterone antagonism.
+
+So let's move on to another question.
+
+We've got a 72-year-old male with a new diagnosis of hypertensive cardiomyopathy.
+
+His EF is 30%, he has dyspnea at rest, class four symptoms and with minimal exertion.
+
+Okay that's class three.
+
+Which one of the following drugs will reduce his mortality risk?
+
+All sorts of choices.
+
+Atenolol, lisinopril, digoxin, furosemide and nifedipine.
+
+All right, so lisinopril.
+
+Realistically, if I put any ACE inhibitor or any ARB up here, it would've been a correct answer.
+
+As a matter of fact, if you're in an exam situation and the question is asking about some positive thing that is you want to do and ACE inhibitors on the list, probably choose that 'cause it's almost always good for whatever ails you.
+
+So ACE inhibitors and a close, close second is ARBs both reduce morbidity and mortality.
+
+Really importantly, there is not a threshold ejection fraction where you say this patient will no longer benefit from an ACE inhibitor or ARB.
+
+You may not start with massive doses, but there's still no threshold ejection fraction where you say no longer a consideration.
+
+We talked about angioedema and we were talking about heart failure.
+
+Obviously if blood pressure's low, be cautious and start slowly.
+
+Decreased renal function, hyperkalemia, all possibilities.
+
+Here's a list of some ACE inhibitors in heart failure.
+
+Also recognize that when you're treating, if you happen to for whatever reason, still be using Captopril, Enalapril, it is dosed differently for heart failure than for blood pressure for hypertension.
+
+Captopril, from a antihypertensive standpoint, you can dose twice daily.
+
+From a heart failure perspective, it's thrice daily.
+
+Enalapril, I'm still not certain why anyone uses Enalapril once daily for heart for hypertension, but it is a b.i.d. drug from a heart failure perspective and some ARBs as well.
+
+Beta blockers, if you ask one of our cardiologists got someone with heart failure with reduced ejection fraction, which do we want to start first?
+
+ACE inhibitor slash ARB or beta blocker?
+
+The answer is yes.
+
+And the answer might change, you know if Jupiter's in you know, alignment with Mars or something like that.
+
+But it is basically they are all important.
+
+Beta blockers, even with below very low ejection fractions still have benefit.
+
+There's no absolute threshold ejection fraction.
+
+The last sentence there's really critical though.
+
+Beta blockers are started when the patient is hemodynamically stable and euvolemic.
+
+If you remember from the Q and A yesterday, someone asked about, in essence reflexively starting a rate limiting drug for someone who is tachycardic.
+
+You said no, you gotta first figure out why the tachycardia is there.
+
+Recall in heart failure, the tachycardia might simply be the heart's mechanism to improve cardiac output.
+
+If stroke volume is really tiny, stroke volume plus heart, stroke volume plus heart rate equals cardiac output.
+
+Tiny stroke volume, heart rate may be the only thing that's maintaining cardiac output.
+
+So hemodynamically stable and euvolemic are the times to start beta blockers.
+
+Remember there are only three beta blockers that have data for heart failure, metoprolol succinate is the long acting version.
+
+You're probably familiar, one of the cool things about this tablet is one of the very, very few long acting or extended release tablets that is actually designed to be cut.
+
+So there's no coding on it that says this is what makes it long acting.
+
+It's not like a delivery mechanism for a pill, for medicine or something.
+
+It is a bunch of little beads that are compressed together.
+
+So it's scored designed to be cut, cut away.
+
+Metoprolol can be started at teeny little doses.
+
+Same with carvedilol, which is an alpha beta blocker.
+
+Bisoprolol is the one that is often forgotten but is a really cool beta blocker 'cause it's once a day.
+
+It's relatively inexpensive, easy to use, tend to use a fair amount of beta blocker, bisoprolol rather.
+
+The cautions are really straightforward.
+
+Hemodynamic instability of course, heart block, and it's not just a first degree AV block, it's like a second degree type two or a third degree AV block obviously fix that first before you do something with a beta blocker.
+
+Bradycardia is relative.
+
+If someone's got a resting heart rate of 58, fine, put them on a beta blocker.
+
+If their heart rate is 30, then figure out why it is that low.
+
+Alright, another question.
+
+We've got a 69-year-old woman with hypertension, previous MI and EF of 32% who's seen in your office.
+
+Comfortable at rest but is breathless when walking upstairs.
+
+So I put that as a class two symptomatology.
+
+Current meds, atorvastatin, lisinopril, metoprolol succinate, the long acting version, furosemide and aspirin, BP 132 over 78.
+
+Exam, her heart has no murmur, her lungs have some bibasilar crackles, a little bit of edema.
+
+EKG, heart rate's 52, she's got multifocal PVCs.
+
+Her QRS duration is 0.1.
+
+A lot of information.
+
+So the question is adding which one of the following would help to decrease both mortality and decrease the risk of hospitalization?
+
+So it's kind of a what was missing from this picture.
+
+We've got spironolactone, digoxin, furosemide and losartan.
+
+Awesome.
+
+and I hope that this was, you looked at this and said, gosh, you're missing an MRA, you're missing spironolactone in that picture.
+
+So we have spironolactone, which the prototype eplerenone known as basically spironolactone without the hormonal side effects.
+
+One of the questions came up in the Q and A yesterday, or at least on the written questions, why would you use spironolactone in the first base if it causes potentially hormonal side effects and eplerenone doesn't?
+
+Not at all expensive, very expensive.
+
+There's a good place to start.
+
+And not everybody gets hormonal side effects from spironolactone.
+
+But if that is an issue then eplerenone is an excellent option.
+
+I do recognize that in cases of worsening CKD, once you cross over from the CKD three to four threshold, then ideally you need to start looking at dialing back or getting rid of an MRA.
+
+They do cause potassium increase.
+
+So if potassium at baseline is higher than four and a half, be following that closely as well.
+
+NSAIDs and COX-2 inhibitors basically reduce renal function and worsen the hyperkalemia associated with an MRA.
+
+So those are the big GDMT guideline-directed medical therapy drugs.
+
+What if either someone can't tolerate them, you're not getting enough improvement in symptoms, what if those are not, you know the best options for you always fall back to the tried and true hydralazine isosorbide combination.
+
+There is brand name BiDil which like so many brand name drugs like that.
+
+Basically BiDil is a combination that you can't create with existing tablet sizes of hydralazine and isosorbide.
+
+Whether there's pixie dust that's in BiDil also that makes it work better than a combination of hydralazine and isosorbide you could make for yourself.
+
+I don't know, but BiDil is BiDil.
+
+Think of that actually the, there's actually one study that looked at class three, class four heart failure in African American patients as the niche where BiDil tends to truly shine.
+
+Reasonable in other individuals, but that is the kinda little carve out where the data was particularly strong.
+
+The dihydropyridine purine calcium channel blockers, which we talked about yesterday as being all the pines, amlodipine, nisoldipine, nicardipine, felodipine, et cetera.
+
+Think of these as antihypertensive drugs that you can use in heart failure.
+
+They're not drugs for heart failure.
+
+However, if you have exhausted all of the medications that you'd normally use for heart failure and you still need additional blood pressure reduction, that's where dihydropyridine calcium channel blocker can come in.
+
+From a heart failure standpoint, they're decidedly neutral.
+
+Don't make things worse, don't make things better, they simply lower blood pressure and they do so without affecting cardiac function.
+
+Alright, question four.
+
+We've got a 62-year-old man with hypertension, heart failure with reduced ejection fraction who reports dyspnea on exertion.
+
+Current meds, lisinopril, carvedilol, spironolactone, furosemide.
+
+On exam, he's at 128 over 82, pulse is 62.
+
+EF is 35%.
+
+BNP is a bit elevated at 250.
+
+There's all of that.
+
+So current AHA guidelines recommend which of the following to further reduce morbidity and mortality.
+
+Would you ramp up the furosemide?
+
+Add ivabradine?
+
+If you don't know what that is, I will tell you in just a moment.
+
+Add some losartan on top of I think the lisinopril.
+
+Stop enalapril and start sacubitril slash valsartan brand name Entresto.
+
+Alright, excellent.
+
+So most are going with ARNI, which is such a great acronym.
+
+I like that it's got a name like a real human sort of name.
+
+So neprilysin is basically another hormone that we ideally want to antagonize in heart failure.
+
+What neprilysin inhibition does causes some vasodilation also some natriuresis, sodium goes out in the urine.
+
+Combination is approved up to class three but not class four, heart failure.
+
+So if you have someone who is still symptomatic despite maximum GDMT and they're not at class four but up to class three, then switching over from either the ACE or ARB to ARNI and the only one that's there is Entresto is helpful.
+
+SGLT2 inhibitors and to be clear, the data here is still not, if you're looking for these, these massive absolute risk reductions in heart failure, hospitalizations and death and so on, it is in the single digit percentage range.
+
+So it's not a massive, massive improvement.
+
+But nonetheless the data is there.
+
+There is to date no head-to-head data among the SGLT2 inhibitors.
+
+So when you see some that, well this may be better, this one may be better here, this one may be better there.
+
+It's truly the best data that's out there.
+
+And as you probably recognize, each study will assign patients a little bit differently.
+
+Each study will carve its data up and say, well in this little subset here, this patient group with this and this and this characteristic, this drug did better.
+
+So there's always gonna be those kind of odd comparisons.
+
+And so if you're looking for what is the best SGLT2 inhibitor, the answer is not really known yet.
+
+But heart failure with reduced ejection fraction or preserved with or without diabetes up to class four heart failure and in conjunction with background of GDMT.
+
+There we go.
+
+Ivabradine which is brand name Corlanor is a sinus node modulator.
+
+The bottom line is that, if despite maximally tolerated beta blockade, someone still has elevated heart rate that's associated with worse outcomes.
+
+Ivabradine does nothing other than tell the sinus node to slow the heck down.
+
+That's it.
+
+It's a sinus node modulator.
+
+It is not one, I'll be honest, I've never prescribed myself.
+
+I've got probably two patients who see our cardiologist in our heart failure clinic and we've got a couple of patients who take this medication.
+
+But it is basically just be aware that it is a sinus node modulator.
+
+It slows down heart rate but does not do so in a beta blocker type of mechanism.
+
+Alrighty, next question.
+
+We've got a 70-year-old man with history of MI.
+
+Now has heart with EF of 30%.
+
+EKG shows sinus rhythm.
+
+Question is, which one of the following medications that he's currently taking is potentially harmful and should be discontinued?
+
+Which of these doesn't fit in a heart failure regimen?
+
+Awesome.
+
+Diltiazem.
+
+That is the one.
+
+And the numbers keep going up.
+
+So there are good and bad drugs for heart failure.
+
+We've talked a lot about the good drugs.
+
+There are some drugs that are not as good.
+
+Digoxin and furosemide are tough ones because there's not great data that they actually improve mortality.
+
+Some data that digoxin may reduce heart failure, hospitalizations.
+
+Loop diuretics.
+
+Can you imagine trying to do a study that is randomized, controlled, has a placebo arm that says we're going to evaluate whether loop diuretics improve or do not improve outcomes in heart failure.
+
+No one's gonna do the study and no one really cares because we're still gonna use loop diuretics to treat heart failure because they diurese well.
+
+So we don't really have good data there and there probably never will be, but we're still gonna use loop diuretics.
+
+I mentioned yesterday that the dihydropyridine calcium channel blockers are typically not considered negative inotropes, whereas the non dihydropyridines verapamil and diltiazem are negative inotropes, they decrease cardiac contractility.
+
+There are very few if any situations where these are useful from a heart failure perspective.
+
+You can use better drugs than these.
+
+There was an attempt, if we look at BNP and say, well BNP is released for a reason natriuretic peptide.
+
+Gosh, what if we were to make synthetic BNP?
+
+Wouldn't that be a handy thing for heart failure?
+
+It turns out it did actually cause vasodilation but it didn't really affect hospitalization or death and so that medication was basically abandoned.
+
+Most antiarrhythmic drugs are not good from a heart failure standpoint.
+
+I hope NSAIDs make you cringe when you think about them.
+
+Plus heart failure.
+
+DCTs, and I still leave it as plural even though I don't know if you could find a tablet of rosiglitazone in the US anymore, but pioglitazone as the prototype there.
+
+Contraindicated in class three, class four.
+
+In lower stages of heart failure you could still consider using the drug but recognize that it does cause fluid retention.
+
+Incidentally, that is not a dose dependent mechanism.
+
+It is, so if someone's on 45 of pioglitazone and you're like other retaining fluid, I'll drop down to 30 or 15.
+
+No go.
+
+The drug simply has to go.
+
+It is not dose dependent.
+
+Preserved ejection fraction.
+
+This is not just diastolic dysfunction, it is multifactorial, very heterogeneous.
+
+Most often is hypertensive LV hypertrophy.
+
+The things we see clinically, chronotropic incompetence, meaning someone starts to walk or starts to exercise, their heart rate doesn't pick up quickly.
+
+They get to the top of a flight of stairs and they have to stand there and wait for their heart rate and their cardiac output to catch up to what they just did.
+
+Once it does catch up, takes forever for them to slow back down.
+
+Put them on the treadmill, you're four minutes, five minutes into recovery, they're still sitting there clipping along on 130 beats a minute.
+
+Evidence-based treatment recommendations are limited.
+
+It's an incredibly heterogeneous group.
+
+It is hard to make broad recommendations on what always works.
+
+We do recognize that treating hypertension is the top of the list.
+
+Increased risk of atrial fibrillation is associated.
+
+Diabetes, CKD also associated.
+
+The treatment always has the word careful in front of it.
+
+Careful preload reduction, careful heart rate reduction.
+
+These folks tend to be, in some cases sometimes more difficult to manage than someone with reduced ejection fraction.
+
+If you consider that what is improving or causing end diastolic distension or end diastolic volume, it's that preload which comes in.
+
+They don't relax very well because they've got these big thick left ventricles.
+
+So what is really improving or helping to maintain their end diastolic volume, therefore their stroke volume is the preload that's coming in.
+
+These folks tend to be very volume dependent and you can over volume, over diurese them in a hurry.
+
+They can go from doing okay, another hit of Lasix and all of a sudden they've decompensated.
+
+Same thing with heart rate.
+
+Again, keep in mind that elevated heart rate may be what is maintaining their cardiac output.
+
+So decreasing heart rate beta blocker, a non-dihydropyridine calcium channel blocker.
+
+While I said that they're not good drugs from a heart failure standpoint, it's one of these, like if you kind of grit your teeth and say, okay, you may still have a place for diltiazem in this case.
+
+Afib, a flutter can be horrible for these individuals.
+
+'Cause not only do they have the heart rate increase, decrease in their diastolic filling time, they lose their atrial kick and so their end diastolic volume can tank pretty quickly.
+
+Advanced heart failure care ICDs typically with a EF less than 35%, class two to class three symptoms.
+
+And even though it sounds like rationing life expectancy of a year, resynchronization therapy, basically those who have a wide QRS, that's in essence saying we're going to now resynchronize the ventricles to contract simultaneously and that improves cardiac output.
+
+An LVAD or left ventricular assist device is basically a bridge to a new heart.
+
+And with that, thank you so much for your time.

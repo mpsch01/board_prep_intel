@@ -1,0 +1,52 @@
+Processing VTT files...
+  02: 26.3min | extremity=250s, aaa=240s, dissection=217s, lower extremity=187s, extremities=187s
+  03: 45.8min | someone=746s, coronary=551s, statin=479s, elevation=408s, ekg=376s
+  04: 34.4min | pressure=1057s, blood pressure=1026s, hypertension=781s, outcomes=437s, guidelines=435s
+  05: 32.2min | heart=1350s, heart failure=1153s, failure=1153s, ejection=594s, fraction=594s
+  06: 34.6min | rate=750s, atrial=599s, rhythm=563s, heart rate=559s, conduction=531s
+  07: 57.8min | smoking=536s, cancer=493s, health=434s, quit=405s, vaccine=403s
+  08: 52.3min | absolute=485s, calculate=461s, number needed=460s, needed=460s, absolute risk=454s
+  09: 59.4min | lesions=856s, topical=741s, skin=568s, acne=462s, rash=401s
+  10: 31.7min | stroke=678s, brain=407s, tia=398s, aspirin=283s, afib=187s
+  11: 31.4min | quadrant=311s, surgeon=280s, bowel=278s, abdomen=277s, upper quadrant=250s
+  12: 33.1min | lyme=346s, mrsa=310s, reaction=285s, bite=283s, lyme disease=250s
+  13: 29.3min | weight=958s, weight loss=671s, diabetes=414s, lose weight=380s, lose=380s
+  14: 30.3min | insulin=490s, diabetes=426s, metformin=406s, glucose=347s, failure=341s
+  15: 33.3min | thyroid=848s, tsh=750s, hypothyroidism=385s, state=341s, contribute=221s
+  16: 33.9min | colonoscopy=429s, diarrhea=404s, bowel=252s, serologic=221s, fecal=218s
+  17: 33.3min | ppi=628s, pylori=508s, gerd=504s, dyspepsia=340s, ulcer=316s
+  18: 24.8min | medicare=305s, living=248s, folks=223s, assisted=218s, assisted living=218s
+  19: 25.4min | fracture=439s, somebody=378s, osteoporosis=345s, dexa=216s, bisphosphonate=215s
+  20: 27.9min | old=431s, medicines=369s, creatinine=280s, older adults=219s, dementia=189s
+  21: 33.0min | dvt=506s, clot=342s, molecular=314s, low molecular=314s, molecular weight=314s
+  22: 27.4min | fever=686s, kids=682s, strep=278s, cough=276s, parents=274s
+  23: 36.1min | sti=440s, hiv=347s, sex=320s, gonorrhea=282s, partner=280s
+  24: 30.0min | aki=849s, renal=617s, urine=434s, creatinine=348s, kidney=282s
+  25: 32.0min | ckd=1196s, kidney=725s, kidney disease=478s, gfr=434s, arb=319s
+  26: 33.0min | seizure=803s, seizures=498s, migraine=378s, headache=374s, meds=311s
+  27: 31.1min | pregnancy=586s, screening=501s, baby=373s, gestational=252s, culture=248s
+  28: 31.6min | pregnancy=558s, preeclampsia=443s, delivery=338s, fetal=303s, placenta=252s
+  29: 32.1min | estrogen=555s, bleeding=523s, cancer=494s, endometrial=340s, progesterone=308s
+  30: 29.0min | breast=278s, bleeding=255s, hormonal=253s, infertility=248s, contraception=221s
+  31: 33.7min | pain=1068s, individuals=668s, low back=472s, back pain=409s, overuse=191s
+  32: 32.8min | fracture=995s, fractures=559s, joint=334s, distal=332s, radiographs=305s
+  33: 39.5min | athletes=566s, sports=434s, injury=350s, athlete=315s, acl=281s
+  34: 35.5min | hip=467s, pediatric=374s, bone=276s, apophysitis=210s, femoral=191s
+  35: 29.4min | otitis=531s, media=530s, otitis media=500s, acute otitis=374s, antibiotics=373s
+  36: 36.7min | pain=1350s, opioid=754s, opioids=719s, chronic pain=593s, pain management=307s
+  37: 28.3min | baby=749s, breastfeeding=567s, mom=439s, feeding=313s, infants=284s
+  38: 26.9min | children=471s, parents=344s, screening=344s, kids=314s, adolescents=283s
+  39: 33.0min | depression=1310s, antidepressant=433s, serotonin=378s, side effects=316s, postpartum=314s
+  40: 33.5min | anxiety=905s, disorder=845s, bipolar=694s, depression=568s, mania=498s
+  41: 34.2min | adhd=815s, autism=632s, disorder=564s, autism spectrum=537s, spectrum=537s
+  42: 27.1min | copd=990s, boards=407s, gold=249s, asthma=248s, exacerbations=216s
+  43: 29.2min | asthma=1299s, inhaled=681s, beta-agonist=594s, short-acting=527s, corticosteroid=497s
+  44: 28.4min | pneumonia=589s, boards=378s, respiratory=284s, vaccine=282s, outpatient=246s
+  45: 24.0min | lung=316s, pulmonary=258s, cough=240s, tuberculosis=221s, coccidioidomycosis=192s
+  46: 26.7min | lung=585s, sleep=372s, apnea=311s, sleep apnea=311s, lung cancer=249s
+  47: 34.9min | joint=555s, process=494s, joints=405s, arthritis=379s, gout=350s
+  48: 29.8min | surgery=1084s, prior=310s, cardiac=224s, procedures=223s, low-risk=193s
+  49: 29.2min | testosterone=381s, bph=313s, inhibitors=283s, prostate=281s, stone=186s
+
+Done. Output: C:\Users\mpsch\Desktop\claude_knowledge\ABFM_curriculum\keyword_library\raw_files\vtt_time_weights.json
+Sessions processed: 48

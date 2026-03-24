@@ -1,0 +1,4147 @@
+﻿WEBVTT
+
+1
+00:00:00.540 --> 00:00:03.040
+(light music)
+
+2
+00:00:08.310 --> 00:00:11.580
+<v ->This is everybody's favorite topic.</v>
+
+3
+00:00:11.580 --> 00:00:16.350
+So we're gonna look at eight equations today, just eight.
+
+4
+00:00:16.350 --> 00:00:20.700
+Okay, so we're gonna try
+
+5
+00:00:20.700 --> 00:00:22.500
+to prevent your head from exploding.
+
+6
+00:00:24.000 --> 00:00:26.070
+What I would do if I were you,
+
+7
+00:00:26.070 --> 00:00:29.580
+but nobody ever listens to me about this,
+
+8
+00:00:29.580 --> 00:00:30.870
+is if I were you,
+
+9
+00:00:30.870 --> 00:00:34.743
+I would just sit back right now and listen.
+
+10
+00:00:36.150 --> 00:00:37.710
+Okay?
+
+11
+00:00:37.710 --> 00:00:40.560
+And then you're gonna go back through
+
+12
+00:00:40.560 --> 00:00:43.440
+and each of the questions we work through,
+
+13
+00:00:43.440 --> 00:00:45.933
+you're gonna work through them on your own.
+
+14
+00:00:46.830 --> 00:00:48.570
+But I think if you don't listen
+
+15
+00:00:48.570 --> 00:00:50.790
+and you're busy taking notes,
+
+16
+00:00:50.790 --> 00:00:52.980
+you're gonna get confused and lost.
+
+17
+00:00:52.980 --> 00:00:56.430
+So I just would just sit back and listen.
+
+18
+00:00:56.430 --> 00:00:59.250
+Some of this is going to be back
+
+19
+00:00:59.250 --> 00:01:01.500
+in the hind parts of your brain
+
+20
+00:01:01.500 --> 00:01:04.200
+that you haven't used in a while maybe,
+
+21
+00:01:04.200 --> 00:01:06.393
+but it's all there someplace.
+
+22
+00:01:07.380 --> 00:01:08.820
+And I think if you just listen
+
+23
+00:01:08.820 --> 00:01:12.570
+and then go back and take this presentation
+
+24
+00:01:12.570 --> 00:01:15.150
+and go through it yourself,
+
+25
+00:01:15.150 --> 00:01:18.930
+and then you're going to have access to it,
+
+26
+00:01:18.930 --> 00:01:21.240
+go listen to it again if you want to
+
+27
+00:01:21.240 --> 00:01:23.719
+while you're going through the questions though.
+
+28
+00:01:23.719 --> 00:01:25.293
+That's how I would do it.
+
+29
+00:01:27.240 --> 00:01:28.080
+But what do I know?
+
+30
+00:01:28.080 --> 00:01:30.390
+Okay, nothing to disclose here.
+
+31
+00:01:30.390 --> 00:01:31.984
+Here are our learning objectives
+
+32
+00:01:31.984 --> 00:01:34.323
+and what do you need to know?
+
+33
+00:01:35.460 --> 00:01:38.943
+These are the eight equations.
+
+34
+00:01:42.990 --> 00:01:47.990
+Now you see all these letters here.
+
+35
+00:01:48.750 --> 00:01:50.310
+B, D, A, C.
+
+36
+00:01:50.310 --> 00:01:52.113
+We didn't do more than four letters.
+
+37
+00:01:54.129 --> 00:01:59.129
+They correspond to any two by two table
+
+38
+00:01:59.610 --> 00:02:01.160
+you're going to have to set up.
+
+39
+00:02:02.610 --> 00:02:04.620
+Now, a two by two table
+
+40
+00:02:04.620 --> 00:02:09.620
+can mathematically be set up any way you want it to be.
+
+41
+00:02:12.390 --> 00:02:15.150
+If you're going to use the equations this way
+
+42
+00:02:15.150 --> 00:02:16.170
+with those letters,
+
+43
+00:02:16.170 --> 00:02:18.570
+you have to set 'em up the way I have set them up
+
+44
+00:02:18.570 --> 00:02:20.160
+for you in this presentation,
+
+45
+00:02:20.160 --> 00:02:24.840
+which is the standard method, okay?
+
+46
+00:02:24.840 --> 00:02:26.760
+I.e what goes along the x-axis
+
+47
+00:02:26.760 --> 00:02:28.560
+or what goes along the y-axis
+
+48
+00:02:28.560 --> 00:02:30.723
+of the particular two by two.
+
+49
+00:02:31.650 --> 00:02:34.500
+Some of you're already thinking, okay, this is beyond me,
+
+50
+00:02:35.340 --> 00:02:37.563
+but I promise you you can do this.
+
+51
+00:02:39.480 --> 00:02:43.620
+Now, why do we focus on these eight?
+
+52
+00:02:43.620 --> 00:02:46.510
+Because if you're reading any literature
+
+53
+00:02:47.485 --> 00:02:52.113
+and it is a sound publication,
+
+54
+00:02:53.130 --> 00:02:55.830
+if it talks about any of these measurements,
+
+55
+00:02:55.830 --> 00:02:57.900
+you should be able to calculate them
+
+56
+00:02:57.900 --> 00:03:01.053
+from the data that is provided to you in the paper.
+
+57
+00:03:03.300 --> 00:03:07.710
+If you can't, if I can't, what I'm thinking is,
+
+58
+00:03:07.710 --> 00:03:09.423
+why didn't they give me that data?
+
+59
+00:03:11.250 --> 00:03:13.020
+That's fishy.
+
+60
+00:03:13.020 --> 00:03:14.670
+I should be able to calculate it.
+
+61
+00:03:15.900 --> 00:03:18.390
+Now, there are some things we're not gonna get into today
+
+62
+00:03:18.390 --> 00:03:19.650
+because they're beyond the scope
+
+63
+00:03:19.650 --> 00:03:21.870
+of what you're gonna see on the exam,
+
+64
+00:03:21.870 --> 00:03:25.500
+which is, how do I set a sample size?
+
+65
+00:03:25.500 --> 00:03:30.500
+Okay, a sample size of 100,
+
+66
+00:03:30.630 --> 00:03:34.350
+meaning 100 participants may be perfect
+
+67
+00:03:34.350 --> 00:03:36.540
+for the question you have in hand
+
+68
+00:03:36.540 --> 00:03:39.333
+because it's a dramatic endpoint.
+
+69
+00:03:41.310 --> 00:03:44.280
+But for some things where you have subtle endpoints,
+
+70
+00:03:44.280 --> 00:03:46.140
+even though it's death,
+
+71
+00:03:46.140 --> 00:03:49.110
+it may take 15,000 in the sample size
+
+72
+00:03:49.110 --> 00:03:52.050
+to see a difference, okay?
+
+73
+00:03:52.050 --> 00:03:53.850
+So you can't just say, oh, well this study's no good,
+
+74
+00:03:53.850 --> 00:03:55.470
+it only had 10 people in it.
+
+75
+00:03:55.470 --> 00:03:57.000
+That may be all you need to know,
+
+76
+00:03:57.000 --> 00:03:59.580
+all you need in order to see a difference
+
+77
+00:03:59.580 --> 00:04:01.560
+in the question you have.
+
+78
+00:04:01.560 --> 00:04:05.096
+And there are mathematical models and statistical methods
+
+79
+00:04:05.096 --> 00:04:08.850
+that have been developed in the field of epidemiology,
+
+80
+00:04:08.850 --> 00:04:10.620
+biostatistics, and mathematics
+
+81
+00:04:10.620 --> 00:04:15.073
+that allow you to predict what your sample size needs to be.
+
+82
+00:04:15.073 --> 00:04:19.980
+Keep in mind, if you have an insufficient,
+
+83
+00:04:19.980 --> 00:04:22.560
+if you never get to your sample,
+
+84
+00:04:22.560 --> 00:04:26.040
+let's say your sample size needs to be 15,000
+
+85
+00:04:26.040 --> 00:04:29.070
+and you only recruit 13,000 people
+
+86
+00:04:29.070 --> 00:04:30.630
+and you have a negative study,
+
+87
+00:04:30.630 --> 00:04:31.860
+it may be just because
+
+88
+00:04:31.860 --> 00:04:36.860
+you didn't have a sufficient sample size, okay?
+
+89
+00:04:37.050 --> 00:04:39.840
+But we're not gonna get into all that today, okay?
+
+90
+00:04:39.840 --> 00:04:41.940
+That is beyond the scope of this.
+
+91
+00:04:41.940 --> 00:04:45.480
+What I want you to focus on are these eight equations.
+
+92
+00:04:45.480 --> 00:04:48.870
+And if you can use data from a question
+
+93
+00:04:48.870 --> 00:04:50.460
+and plug it into this equation,
+
+94
+00:04:50.460 --> 00:04:52.263
+you will get the question right.
+
+95
+00:04:55.380 --> 00:04:56.940
+Now, I'm not saying on your exam
+
+96
+00:04:56.940 --> 00:04:59.520
+you're gonna have seven of these eight equations,
+
+97
+00:04:59.520 --> 00:05:02.706
+but remember, we're just trying to gain points here.
+
+98
+00:05:02.706 --> 00:05:05.010
+And you may need to do
+
+99
+00:05:05.010 --> 00:05:07.170
+just as much studying in sports medicine right now
+
+100
+00:05:07.170 --> 00:05:10.170
+to remind yourself of all the pediatric hip issues
+
+101
+00:05:10.170 --> 00:05:11.623
+as you gotta do to remind yourself
+
+102
+00:05:11.623 --> 00:05:14.370
+of how you use these equations.
+
+103
+00:05:14.370 --> 00:05:16.720
+Okay, so there are various sources of evidence.
+
+104
+00:05:17.790 --> 00:05:20.730
+We have observational studies, we have meta analysis,
+
+105
+00:05:20.730 --> 00:05:22.680
+we have systematic reviews, we have basic research,
+
+106
+00:05:22.680 --> 00:05:23.520
+we have clinical experience,
+
+107
+00:05:23.520 --> 00:05:24.870
+and we have randomized control trials.
+
+108
+00:05:24.870 --> 00:05:28.800
+These are all the types or sources of evidence
+
+109
+00:05:28.800 --> 00:05:32.010
+from which we're trying to make clinical decisions.
+
+110
+00:05:32.010 --> 00:05:36.450
+Now, when we come down to looking at observational studies
+
+111
+00:05:36.450 --> 00:05:38.400
+and randomized controlled trials,
+
+112
+00:05:38.400 --> 00:05:41.640
+this is where statistics in particular comes into play.
+
+113
+00:05:41.640 --> 00:05:44.880
+Now it comes into play of course in meta analysis as well.
+
+114
+00:05:44.880 --> 00:05:46.380
+But different methods are used
+
+115
+00:05:46.380 --> 00:05:49.050
+depending on the type of study that you have.
+
+116
+00:05:49.050 --> 00:05:50.910
+Now, I wanna remind you with our strength
+
+117
+00:05:50.910 --> 00:05:51.998
+of recommendation taxonomy,
+
+118
+00:05:51.998 --> 00:05:55.438
+because there will be a question on the exam on this.
+
+119
+00:05:55.438 --> 00:05:59.397
+The question is not going to be this recommendation
+
+120
+00:06:02.850 --> 00:06:05.700
+which was made by the American College of Obstetricians
+
+121
+00:06:05.700 --> 00:06:08.220
+and Gynecologists is A, B, or C.
+
+122
+00:06:08.220 --> 00:06:09.657
+That's not what they're gonna ask you.
+
+123
+00:06:09.657 --> 00:06:11.070
+They're going to say, you know,
+
+124
+00:06:11.070 --> 00:06:16.070
+we have a category A recommendation to, I don't know,
+
+125
+00:06:18.090 --> 00:06:20.604
+put peanut butter on white bread.
+
+126
+00:06:20.604 --> 00:06:23.168
+And this came from doing a study
+
+127
+00:06:23.168 --> 00:06:26.040
+of 100 kids in elementary school
+
+128
+00:06:26.040 --> 00:06:28.020
+where 50 were given peanut butter on bread
+
+129
+00:06:28.020 --> 00:06:30.648
+and 50 were given nothing on bread.
+
+130
+00:06:30.648 --> 00:06:32.970
+So we got a randomized controlled trial here.
+
+131
+00:06:32.970 --> 00:06:34.890
+You know, somehow they didn't know what they got.
+
+132
+00:06:34.890 --> 00:06:39.000
+Would this be sufficient for an A recommendation?
+
+133
+00:06:39.000 --> 00:06:40.080
+And you'd need to know, oh yeah,
+
+134
+00:06:40.080 --> 00:06:42.120
+that's a randomized controlled trial.
+
+135
+00:06:42.120 --> 00:06:43.260
+And if it was positive,
+
+136
+00:06:43.260 --> 00:06:45.210
+that's gonna be a sure A recommendation
+
+137
+00:06:45.210 --> 00:06:47.250
+because it's based on consistent,
+
+138
+00:06:47.250 --> 00:06:48.870
+good quality, patient-oriented evidence.
+
+139
+00:06:48.870 --> 00:06:52.590
+And we looked at this, if it's an A recommendation,
+
+140
+00:06:52.590 --> 00:06:56.490
+it's typically a systematic review, a meta analysis,
+
+141
+00:06:56.490 --> 00:06:59.895
+a high-quality randomized control trial.
+
+142
+00:06:59.895 --> 00:07:01.830
+A B recommendation is gonna be
+
+143
+00:07:01.830 --> 00:07:04.402
+some kind of observational study,
+
+144
+00:07:04.402 --> 00:07:06.750
+cohort study, case control study,
+
+145
+00:07:06.750 --> 00:07:08.403
+cross-sectional study,
+
+146
+00:07:08.403 --> 00:07:12.000
+might be a case reporter case series.
+
+147
+00:07:12.000 --> 00:07:13.410
+And then a C recommendation
+
+148
+00:07:13.410 --> 00:07:15.210
+is an expert opinion or an anecdote.
+
+149
+00:07:16.260 --> 00:07:19.813
+Now, keep in mind, sometimes the best evidence,
+
+150
+00:07:19.813 --> 00:07:22.473
+all we have is a C.
+
+151
+00:07:23.610 --> 00:07:25.740
+You know, a lot of times when I'm working with residents,
+
+152
+00:07:25.740 --> 00:07:26.756
+you know, and we have journal club,
+
+153
+00:07:26.756 --> 00:07:29.250
+they're like, oh, I can't do this paper
+
+154
+00:07:29.250 --> 00:07:31.860
+because it's only a C recommendation.
+
+155
+00:07:31.860 --> 00:07:32.693
+Okay.
+
+156
+00:07:32.693 --> 00:07:34.260
+No, no, no, no, no, no, no, no.
+
+157
+00:07:34.260 --> 00:07:36.033
+That's the best we have.
+
+158
+00:07:37.440 --> 00:07:38.853
+We want an A.
+
+159
+00:07:39.930 --> 00:07:42.000
+The best example of where, oh my gosh,
+
+160
+00:07:42.000 --> 00:07:44.120
+I wish we'd have had the A before we employed the B
+
+161
+00:07:44.120 --> 00:07:45.930
+is the Women's Health Initiative.
+
+162
+00:07:45.930 --> 00:07:47.583
+So let's go back to that.
+
+163
+00:07:48.778 --> 00:07:53.778
+Observational studies in the '70s and '80s,
+
+164
+00:07:54.360 --> 00:07:57.660
+we're gonna say, demonstrated, oh my gosh,
+
+165
+00:07:57.660 --> 00:07:59.520
+you know, women who are post-menopausal
+
+166
+00:07:59.520 --> 00:08:03.380
+on hormone therapy have fewer cardiovascular events.
+
+167
+00:08:03.380 --> 00:08:06.600
+That's what the observational data showed.
+
+168
+00:08:06.600 --> 00:08:09.400
+So, you know, when I was in residency, like some of you,
+
+169
+00:08:10.997 --> 00:08:12.840
+everybody who was post-menopausal
+
+170
+00:08:12.840 --> 00:08:14.010
+got put on hormone therapy,
+
+171
+00:08:14.010 --> 00:08:16.013
+didn't matter if you had symptoms or not.
+
+172
+00:08:16.890 --> 00:08:20.680
+Then the randomized control trial is done.
+
+173
+00:08:20.680 --> 00:08:22.533
+It's an eight-year study,
+
+174
+00:08:23.880 --> 00:08:25.380
+hundreds of thousands of women
+
+175
+00:08:27.180 --> 00:08:30.300
+and 5.8 years into the eight-year study,
+
+176
+00:08:30.300 --> 00:08:32.460
+normal internal metrics,
+
+177
+00:08:32.460 --> 00:08:33.293
+which are set up
+
+178
+00:08:33.293 --> 00:08:34.770
+for any randomized controlled trial
+
+179
+00:08:34.770 --> 00:08:36.870
+to make sure you're not hurting people
+
+180
+00:08:36.870 --> 00:08:41.520
+were examined at a set point, as they always are.
+
+181
+00:08:41.520 --> 00:08:43.350
+And people not involved in the study
+
+182
+00:08:43.350 --> 00:08:45.150
+are looking at the data, right?
+
+183
+00:08:45.150 --> 00:08:46.890
+You don't want anybody involved looking at it,
+
+184
+00:08:46.890 --> 00:08:50.279
+you need to have individuals who are uninvolved,
+
+185
+00:08:50.279 --> 00:08:52.192
+but they're experts in this field
+
+186
+00:08:52.192 --> 00:08:55.203
+and they're like, oh my gosh,
+
+187
+00:08:56.430 --> 00:08:59.280
+this was a primary prevention trial to say yes,
+
+188
+00:08:59.280 --> 00:09:00.630
+women who were on hormone therapy
+
+189
+00:09:00.630 --> 00:09:02.280
+had fewer cardiovascular events
+
+190
+00:09:02.280 --> 00:09:04.230
+and it was just the opposite.
+
+191
+00:09:04.230 --> 00:09:08.318
+The women in the hormone arm, in the active arm,
+
+192
+00:09:08.318 --> 00:09:12.390
+were dying more often and having more heart attacks.
+
+193
+00:09:12.390 --> 00:09:14.590
+So the study was stopped abruptly
+
+194
+00:09:16.920 --> 00:09:19.110
+and published within four weeks.
+
+195
+00:09:19.110 --> 00:09:21.180
+Okay, don't do this anymore.
+
+196
+00:09:21.180 --> 00:09:22.503
+We're harming people.
+
+197
+00:09:23.640 --> 00:09:25.410
+You know, another example of this is,
+
+198
+00:09:25.410 --> 00:09:28.020
+if you go back to the '60s and the early '70s
+
+199
+00:09:28.020 --> 00:09:29.820
+when electronic fetal monitoring
+
+200
+00:09:29.820 --> 00:09:31.170
+continuously was introduced,
+
+201
+00:09:31.170 --> 00:09:32.400
+you guys remember some of that?
+
+202
+00:09:32.400 --> 00:09:36.024
+You know, mom is having dinner,
+
+203
+00:09:36.024 --> 00:09:38.790
+she's 39 and a half weeks, she's having dinner,
+
+204
+00:09:38.790 --> 00:09:41.070
+she's out, I don't know, where'd she go?
+
+205
+00:09:41.070 --> 00:09:43.983
+Outback, she's having a steak.
+
+206
+00:09:44.850 --> 00:09:47.334
+All of a sudden her membranes rupture
+
+207
+00:09:47.334 --> 00:09:48.720
+and the next thing you know,
+
+208
+00:09:48.720 --> 00:09:53.720
+she's in a gown tied down to a bed because she's sick.
+
+209
+00:09:54.960 --> 00:09:57.900
+I.e. she's about to deliver a baby, okay?
+
+210
+00:09:57.900 --> 00:10:00.210
+So you know, we use continuous electronic fetal monitoring
+
+211
+00:10:00.210 --> 00:10:02.460
+because the observational data showed, oh my gosh,
+
+212
+00:10:02.460 --> 00:10:04.396
+those women who have continuous electronic fetal monitoring,
+
+213
+00:10:04.396 --> 00:10:07.923
+their kids are less likely to have CP or cerebral palsy.
+
+214
+00:10:09.335 --> 00:10:11.880
+10 randomized controlled trials were done
+
+215
+00:10:11.880 --> 00:10:15.120
+after that technology was introduced.
+
+216
+00:10:15.120 --> 00:10:18.153
+Nine of the 10 showed no difference in outcomes.
+
+217
+00:10:19.170 --> 00:10:20.730
+But what do we do today?
+
+218
+00:10:20.730 --> 00:10:22.320
+We still do it.
+
+219
+00:10:22.320 --> 00:10:23.490
+And it's gotten even worse now
+
+220
+00:10:23.490 --> 00:10:26.119
+'cause they can monitor from the desk.
+
+221
+00:10:26.119 --> 00:10:27.000
+Okay?
+
+222
+00:10:27.000 --> 00:10:29.070
+So now you go into the room,
+
+223
+00:10:29.070 --> 00:10:30.150
+the patient's tied down
+
+224
+00:10:30.150 --> 00:10:33.183
+and there's not a soul in sight sometimes,
+
+225
+00:10:34.050 --> 00:10:38.550
+dad's down getting coffee, support person is down,
+
+226
+00:10:38.550 --> 00:10:41.520
+having a, I don't know, having a Pop-Tart or something.
+
+227
+00:10:41.520 --> 00:10:42.363
+Who knows?
+
+228
+00:10:43.350 --> 00:10:46.413
+Thank God for doulas, okay.
+
+229
+00:10:48.330 --> 00:10:51.142
+So measures of risk,
+
+230
+00:10:51.142 --> 00:10:56.142
+there are essentially two of them we have to worry about,
+
+231
+00:10:56.820 --> 00:10:59.943
+relative risk and absolute risk.
+
+232
+00:11:01.110 --> 00:11:03.840
+Now, anytime that you talk to anybody
+
+233
+00:11:03.840 --> 00:11:06.540
+in the field of pharmaceuticals,
+
+234
+00:11:06.540 --> 00:11:09.450
+they're always going to present to you an absolute risk,
+
+235
+00:11:09.450 --> 00:11:11.163
+or excuse me, a relative risk.
+
+236
+00:11:12.660 --> 00:11:15.090
+You know, you're 39% more likely
+
+237
+00:11:15.090 --> 00:11:17.400
+not to have something if you take this medication,
+
+238
+00:11:17.400 --> 00:11:18.557
+for example.
+
+239
+00:11:18.557 --> 00:11:20.927
+But when you look at the event rate,
+
+240
+00:11:20.927 --> 00:11:23.523
+that is the absolute risk,
+
+241
+00:11:25.410 --> 00:11:26.580
+it's quite tiny.
+
+242
+00:11:26.580 --> 00:11:29.273
+You know, one per 1,000 or something.
+
+243
+00:11:29.273 --> 00:11:32.730
+Now, when you look at absolute risk, so for example,
+
+244
+00:11:32.730 --> 00:11:34.920
+I said when you look at the women
+
+245
+00:11:34.920 --> 00:11:36.090
+in the Women's Health Initiative
+
+246
+00:11:36.090 --> 00:11:39.356
+who were on both estrogen and progesterone,
+
+247
+00:11:39.356 --> 00:11:42.573
+those were the group at increased risk for breast cancer.
+
+248
+00:11:43.410 --> 00:11:46.080
+The absolute risk was nine per 10,000.
+
+249
+00:11:46.080 --> 00:11:48.060
+Now you think, well that's a tiny number,
+
+250
+00:11:48.060 --> 00:11:51.330
+but when you take the total population
+
+251
+00:11:51.330 --> 00:11:54.090
+of postmenopausal women in the world
+
+252
+00:11:54.090 --> 00:11:56.850
+divided by 10,000 times nine,
+
+253
+00:11:56.850 --> 00:12:00.933
+that number becomes exponentially large very quickly.
+
+254
+00:12:02.700 --> 00:12:04.860
+So what we are always interested though,
+
+255
+00:12:04.860 --> 00:12:07.590
+is in the absolute risk.
+
+256
+00:12:07.590 --> 00:12:11.070
+The problem is when you look at absolute risk,
+
+257
+00:12:11.070 --> 00:12:14.288
+because typically it's a very tiny number,
+
+258
+00:12:14.288 --> 00:12:17.673
+you look at an absolute risk and it's like .0159.
+
+259
+00:12:20.550 --> 00:12:22.800
+Well, now you try to explain that to the patient.
+
+260
+00:12:22.800 --> 00:12:26.190
+Yeah, the absolute risk is .0159.
+
+261
+00:12:26.190 --> 00:12:27.790
+What in the heck does that mean?
+
+262
+00:12:28.650 --> 00:12:29.880
+So statistically,
+
+263
+00:12:29.880 --> 00:12:32.153
+we've developed a number
+
+264
+00:12:36.470 --> 00:12:40.377
+that speaks to us more than .0159
+
+265
+00:12:40.377 --> 00:12:43.383
+and that's what's called the number needed to treat.
+
+266
+00:12:44.610 --> 00:12:45.900
+So that's what we're gonna look at
+
+267
+00:12:45.900 --> 00:12:49.410
+as our third issue as we look at risk.
+
+268
+00:12:49.410 --> 00:12:53.610
+Now, in order to calculate these three dimensions,
+
+269
+00:12:53.610 --> 00:12:56.583
+you have to look at a disease outcome against an exposure.
+
+270
+00:12:58.620 --> 00:13:00.610
+Now here's the first two by two table
+
+271
+00:13:02.400 --> 00:13:04.920
+or contingency table.
+
+272
+00:13:04.920 --> 00:13:06.840
+If you're going to use the equations
+
+273
+00:13:06.840 --> 00:13:09.423
+in that first table that I presented,
+
+274
+00:13:11.370 --> 00:13:15.390
+you need to set up your two by two table like that.
+
+275
+00:13:15.390 --> 00:13:18.750
+On the y-axis will be the disease or outcome,
+
+276
+00:13:18.750 --> 00:13:21.333
+and on the x-axis will be the exposure.
+
+277
+00:13:22.800 --> 00:13:23.633
+Okay?
+
+278
+00:13:25.170 --> 00:13:26.340
+So relative risk,
+
+279
+00:13:26.340 --> 00:13:28.920
+you could have an increase or a decrease, of course.
+
+280
+00:13:28.920 --> 00:13:29.753
+Absolute risk,
+
+281
+00:13:29.753 --> 00:13:31.350
+you could have an increase or a decrease.
+
+282
+00:13:31.350 --> 00:13:34.470
+And then there's the number needed to treat.
+
+283
+00:13:34.470 --> 00:13:38.010
+You can calculate a number needed to harm,
+
+284
+00:13:38.010 --> 00:13:39.540
+and sometimes you need to calculate
+
+285
+00:13:39.540 --> 00:13:40.560
+a number needed to screen,
+
+286
+00:13:40.560 --> 00:13:43.410
+which is just like calculate the number needed to treat.
+
+287
+00:13:43.410 --> 00:13:44.460
+The number needed to harm
+
+288
+00:13:44.460 --> 00:13:45.510
+and the number needed to treat
+
+289
+00:13:45.510 --> 00:13:47.850
+actually you will see is an inverse of one another.
+
+290
+00:13:47.850 --> 00:13:50.033
+And we'll take a look at that in just a moment.
+
+291
+00:13:50.910 --> 00:13:53.096
+So that's how we gotta set up the table
+
+292
+00:13:53.096 --> 00:13:57.720
+to use those equations for measuring risk.
+
+293
+00:13:57.720 --> 00:13:58.800
+Everybody with me still?
+
+294
+00:13:58.800 --> 00:14:00.600
+Nod your head.
+
+295
+00:14:00.600 --> 00:14:04.830
+I mean even our colleagues up there in the control booths,
+
+296
+00:14:04.830 --> 00:14:07.074
+they're all nodding their head, they're all with us.
+
+297
+00:14:07.074 --> 00:14:08.790
+I mean, they're like, oh my gosh,
+
+298
+00:14:08.790 --> 00:14:10.230
+they're just salivating up there thinking
+
+299
+00:14:10.230 --> 00:14:12.210
+about all this math.
+
+300
+00:14:12.210 --> 00:14:14.313
+We haven't done any math yet, okay.
+
+301
+00:14:15.570 --> 00:14:18.778
+So let's start by looking at a cohort study.
+
+302
+00:14:18.778 --> 00:14:20.541
+What are we talking about here?
+
+303
+00:14:20.541 --> 00:14:23.070
+Well, we got a population,
+
+304
+00:14:23.070 --> 00:14:24.224
+and in that population,
+
+305
+00:14:24.224 --> 00:14:26.520
+people are either disease free
+
+306
+00:14:26.520 --> 00:14:28.500
+or they got the disease we're looking at.
+
+307
+00:14:28.500 --> 00:14:29.493
+Whatever it is.
+
+308
+00:14:30.450 --> 00:14:34.560
+We're really interested in a prospective study of saying,
+
+309
+00:14:34.560 --> 00:14:37.143
+okay, let me find the disease free people.
+
+310
+00:14:39.450 --> 00:14:41.850
+They're gonna be exposed to some factor.
+
+311
+00:14:41.850 --> 00:14:43.890
+Let's just follow 'em forward.
+
+312
+00:14:43.890 --> 00:14:45.300
+Now, I can't randomize them
+
+313
+00:14:45.300 --> 00:14:47.340
+because the exposure is the exposure.
+
+314
+00:14:47.340 --> 00:14:48.600
+You know, they might live at a place
+
+315
+00:14:48.600 --> 00:14:51.900
+where they're exposed to nuclear waste or something,
+
+316
+00:14:51.900 --> 00:14:53.220
+or maybe they live in a place
+
+317
+00:14:53.220 --> 00:14:54.750
+where they're drinking water that's bad
+
+318
+00:14:54.750 --> 00:14:55.583
+and I don't know who drinks it
+
+319
+00:14:55.583 --> 00:14:58.080
+and who doesn't drink it or who lives where,
+
+320
+00:14:58.080 --> 00:15:00.960
+but I can determine whether they're exposed or unexposed.
+
+321
+00:15:00.960 --> 00:15:04.200
+And then I follow 'em forward to see what happens to 'em.
+
+322
+00:15:04.200 --> 00:15:05.610
+Now the same thing can be done
+
+323
+00:15:05.610 --> 00:15:08.280
+with a retrospective cohort study.
+
+324
+00:15:08.280 --> 00:15:12.783
+It's a rare outcome, penile cancer.
+
+325
+00:15:14.100 --> 00:15:16.680
+So there, I wanna find the disease people
+
+326
+00:15:16.680 --> 00:15:19.620
+and then retrospectively go back and say,
+
+327
+00:15:19.620 --> 00:15:21.630
+I'm concerned that maybe this was the factor
+
+328
+00:15:21.630 --> 00:15:23.520
+that it caused this.
+
+329
+00:15:23.520 --> 00:15:25.350
+Were you exposed or not exposed to it?
+
+330
+00:15:25.350 --> 00:15:26.430
+Then how much were you exposed,
+
+331
+00:15:26.430 --> 00:15:28.260
+not exposed, et cetera, et cetera.
+
+332
+00:15:28.260 --> 00:15:30.930
+So cohort studies can be done either prospectively
+
+333
+00:15:30.930 --> 00:15:35.930
+if it's a relatively common outcome like having a baby,
+
+334
+00:15:36.120 --> 00:15:38.820
+or it can be done retrospectively,
+
+335
+00:15:38.820 --> 00:15:43.820
+particularly if you're looking at a rare occurrence.
+
+336
+00:15:44.220 --> 00:15:45.780
+Now, what do you think is cheaper to do,
+
+337
+00:15:45.780 --> 00:15:48.600
+a retrospective study or a prospective study?
+
+338
+00:15:48.600 --> 00:15:49.770
+A retrospective study.
+
+339
+00:15:49.770 --> 00:15:52.720
+I can find those people and then I just do a questionnaire.
+
+340
+00:15:55.020 --> 00:16:00.020
+But sometimes you need to do it prospectively
+
+341
+00:16:01.710 --> 00:16:03.930
+and see what happens.
+
+342
+00:16:03.930 --> 00:16:07.020
+You know, a good example of a prospective study,
+
+343
+00:16:07.020 --> 00:16:10.110
+is anybody familiar with the Dietary Approaches
+
+344
+00:16:10.110 --> 00:16:13.983
+to Stop Hypertension eating plan or the DASH diet?
+
+345
+00:16:14.940 --> 00:16:18.960
+The DASH diet is recognized as not only an eating plan
+
+346
+00:16:18.960 --> 00:16:20.580
+for helping you manage your hypertension,
+
+347
+00:16:20.580 --> 00:16:22.230
+but it's actually when you read it, you're like,
+
+348
+00:16:22.230 --> 00:16:24.743
+well this is a healthy eating plan, period.
+
+349
+00:16:24.743 --> 00:16:28.887
+This was a prospective cohort study.
+
+350
+00:16:28.887 --> 00:16:32.127
+Individuals in that study
+
+351
+00:16:32.127 --> 00:16:36.810
+did not have uncontrolled blood pressure,
+
+352
+00:16:36.810 --> 00:16:40.080
+but they were given every bit of food they eat.
+
+353
+00:16:40.080 --> 00:16:43.656
+They did not have to recall anything.
+
+354
+00:16:43.656 --> 00:16:45.420
+You think that was expensive?
+
+355
+00:16:45.420 --> 00:16:49.020
+Of course it was, giving people every bit of food they eat.
+
+356
+00:16:49.020 --> 00:16:51.840
+So that was a prospective cohort study to look at,
+
+357
+00:16:51.840 --> 00:16:53.440
+did it make a difference or not?
+
+358
+00:16:55.020 --> 00:16:56.340
+They didn't vary what you ate,
+
+359
+00:16:56.340 --> 00:16:58.380
+they just said, did you get better?
+
+360
+00:16:58.380 --> 00:17:03.380
+Okay, now here's an example we're gonna use.
+
+361
+00:17:04.320 --> 00:17:06.813
+This is a retrospective study.
+
+362
+00:17:10.800 --> 00:17:12.780
+Consider a study that examines the risk factors
+
+363
+00:17:12.780 --> 00:17:14.220
+for breast cancer among women
+
+364
+00:17:14.220 --> 00:17:16.020
+participating in the first National Health
+
+365
+00:17:16.020 --> 00:17:17.670
+and Nutrition Examination Survey.
+
+366
+00:17:18.510 --> 00:17:21.180
+In a sample of 4,540 women who gave birth
+
+367
+00:17:21.180 --> 00:17:23.520
+to their first child before the age of 25,
+
+368
+00:17:23.520 --> 00:17:25.736
+65 developed breast cancer.
+
+369
+00:17:25.736 --> 00:17:27.930
+Of the 1,628 women
+
+370
+00:17:27.930 --> 00:17:30.762
+who first gave birth at age 25 or older,
+
+371
+00:17:30.762 --> 00:17:33.300
+31 were diagnosed with breast cancer.
+
+372
+00:17:33.300 --> 00:17:34.507
+So already you're thinking,
+
+373
+00:17:34.507 --> 00:17:37.590
+"Hmm, this study is considering,
+
+374
+00:17:37.590 --> 00:17:42.590
+is there some relationship between age at first child birth
+
+375
+00:17:42.750 --> 00:17:45.630
+and breast cancer?"
+
+376
+00:17:45.630 --> 00:17:47.700
+Okay, that is a typo there.
+
+377
+00:17:47.700 --> 00:17:49.710
+That should be a retrospective cohort study.
+
+378
+00:17:49.710 --> 00:17:50.880
+You can make that change.
+
+379
+00:17:50.880 --> 00:17:52.080
+I apologize about that.
+
+380
+00:17:52.080 --> 00:17:54.420
+It should say retrospective cohort study.
+
+381
+00:17:54.420 --> 00:17:58.770
+Overall, and the reason that's there,
+
+382
+00:17:58.770 --> 00:18:00.420
+what we have is a retrospective.
+
+383
+00:18:00.420 --> 00:18:05.420
+The National Health and Nutrition Examination Survey overall
+
+384
+00:18:05.910 --> 00:18:08.820
+was a prospective cohort study
+
+385
+00:18:08.820 --> 00:18:10.890
+'cause it's a study that's going on, okay?
+
+386
+00:18:10.890 --> 00:18:12.759
+It's a prospective one,
+
+387
+00:18:12.759 --> 00:18:16.080
+but in any database
+
+388
+00:18:16.080 --> 00:18:18.660
+you can go back and take a look at other issues
+
+389
+00:18:18.660 --> 00:18:21.210
+that you might be interested in potentially.
+
+390
+00:18:21.210 --> 00:18:25.830
+And that's why the aspect of the study we're looking at now
+
+391
+00:18:25.830 --> 00:18:27.393
+is a retrospective.
+
+392
+00:18:28.560 --> 00:18:30.690
+They had already given birth, okay?
+
+393
+00:18:30.690 --> 00:18:32.250
+And you knew what age they gave birth at.
+
+394
+00:18:32.250 --> 00:18:33.240
+Does that make sense?
+
+395
+00:18:33.240 --> 00:18:35.760
+So overall, the National Health
+
+396
+00:18:35.760 --> 00:18:38.793
+and Nutrition Examination Survey is a prospective study,
+
+397
+00:18:39.660 --> 00:18:42.248
+but this particular entity of this study
+
+398
+00:18:42.248 --> 00:18:45.153
+is a retrospective component of it.
+
+399
+00:18:48.210 --> 00:18:49.043
+Okay.
+
+400
+00:18:50.160 --> 00:18:54.123
+So what's the exposure?
+
+401
+00:18:55.157 --> 00:18:59.328
+The researchers define this.
+
+402
+00:18:59.328 --> 00:19:01.800
+It is the condition of having
+
+403
+00:19:01.800 --> 00:19:05.070
+or first given birth at age 25 or older.
+
+404
+00:19:05.070 --> 00:19:07.134
+They could have defined it in the opposite way,
+
+405
+00:19:07.134 --> 00:19:10.890
+but this is defined the way they wanted to define it.
+
+406
+00:19:10.890 --> 00:19:15.890
+So that's our exposure, first birth at age 25 or older.
+
+407
+00:19:19.710 --> 00:19:22.290
+So we've got an observational study,
+
+408
+00:19:22.290 --> 00:19:24.480
+we know what the exposure is,
+
+409
+00:19:24.480 --> 00:19:25.590
+we've got two groups of women
+
+410
+00:19:25.590 --> 00:19:27.210
+and we know what the outcome is,
+
+411
+00:19:27.210 --> 00:19:30.060
+we can now construct a two by two contingency table
+
+412
+00:19:30.060 --> 00:19:32.280
+and estimate the relative risk.
+
+413
+00:19:32.280 --> 00:19:36.330
+So I'm looking at those who were diseased,
+
+414
+00:19:36.330 --> 00:19:40.020
+have breast cancer, exposed to the factor,
+
+415
+00:19:40.020 --> 00:19:41.730
+unexposed to the factor.
+
+416
+00:19:41.730 --> 00:19:42.810
+Did you develop the disease
+
+417
+00:19:42.810 --> 00:19:44.490
+or did you not develop the disease?
+
+418
+00:19:44.490 --> 00:19:48.780
+Okay, initially they were looking at the disease free women,
+
+419
+00:19:48.780 --> 00:19:50.940
+but then this particular entity
+
+420
+00:19:50.940 --> 00:19:52.923
+looked at those who had the disease.
+
+421
+00:19:54.030 --> 00:19:58.743
+Okay, now here's how we calculate the relative risk.
+
+422
+00:20:00.930 --> 00:20:04.600
+It is a ratio of the experimental event rate
+
+423
+00:20:05.864 --> 00:20:08.133
+to the control event rate.
+
+424
+00:20:11.010 --> 00:20:12.710
+What's the event we're looking at?
+
+425
+00:20:16.500 --> 00:20:18.990
+What's the event we're looking at here?
+
+426
+00:20:18.990 --> 00:20:19.983
+Breast cancer.
+
+427
+00:20:21.990 --> 00:20:23.373
+and what's the exposure?
+
+428
+00:20:24.660 --> 00:20:26.043
+Older or younger.
+
+429
+00:20:27.240 --> 00:20:28.683
+Pretty straightforward.
+
+430
+00:20:30.240 --> 00:20:35.240
+Okay, the relative risk is a ratio of the incidence.
+
+431
+00:20:37.692 --> 00:20:39.993
+The incidence is the rate.
+
+432
+00:20:41.430 --> 00:20:42.690
+Experimental event rate
+
+433
+00:20:42.690 --> 00:20:44.820
+divided by the control event rate.
+
+434
+00:20:44.820 --> 00:20:47.373
+So there's that initial two by two table.
+
+435
+00:20:49.140 --> 00:20:53.220
+I know that the experimental event rate, by definition,
+
+436
+00:20:53.220 --> 00:20:56.970
+given that initial table is A divided by A plus C,
+
+437
+00:20:56.970 --> 00:20:59.190
+that's the incidence rate.
+
+438
+00:20:59.190 --> 00:21:03.240
+The control event rate is B divided by B plus D.
+
+439
+00:21:03.240 --> 00:21:05.670
+That's the control event rate.
+
+440
+00:21:05.670 --> 00:21:07.500
+If I do the ratio of those,
+
+441
+00:21:07.500 --> 00:21:09.933
+I can estimate the relative risk.
+
+442
+00:21:12.240 --> 00:21:15.183
+Okay, they gave me all those numbers.
+
+443
+00:21:16.800 --> 00:21:20.343
+They told me 31 and 65,
+
+444
+00:21:21.450 --> 00:21:23.250
+they told me the totals,
+
+445
+00:21:23.250 --> 00:21:24.900
+so if I've got A and B
+
+446
+00:21:24.900 --> 00:21:27.630
+and I know the totals of exposure to the factor,
+
+447
+00:21:27.630 --> 00:21:31.813
+I can get C and D by simple subtraction,
+
+448
+00:21:31.813 --> 00:21:36.780
+1,628 minus 31, 4,540 minus 65,
+
+449
+00:21:36.780 --> 00:21:39.757
+and I get the cells C and D.
+
+450
+00:21:39.757 --> 00:21:42.483
+All the numbers were given to me.
+
+451
+00:21:44.280 --> 00:21:46.323
+Now I just plug 'em into my equation.
+
+452
+00:21:48.966 --> 00:21:53.966
+31 over 1,628 divided by 65 over 4,540.
+
+453
+00:21:55.470 --> 00:21:57.270
+Using that equation
+
+454
+00:21:57.270 --> 00:22:00.813
+and I come up with a relative risk of 1.33.
+
+455
+00:22:02.700 --> 00:22:04.173
+What does that mean?
+
+456
+00:22:05.280 --> 00:22:07.920
+Women who gave birth at 25 years of age or older
+
+457
+00:22:07.920 --> 00:22:11.220
+are 33% more likely to develop breast cancer
+
+458
+00:22:11.220 --> 00:22:13.893
+than women who gave birth at a younger age.
+
+459
+00:22:17.970 --> 00:22:20.040
+So I have a simple two by two table,
+
+460
+00:22:20.040 --> 00:22:22.067
+I know what the exposure is defined as
+
+461
+00:22:22.067 --> 00:22:24.930
+'cause they have to tell me that.
+
+462
+00:22:24.930 --> 00:22:27.180
+And they gave me the number of people who developed cancer
+
+463
+00:22:27.180 --> 00:22:30.000
+and the total number of women in each group.
+
+464
+00:22:30.000 --> 00:22:32.310
+So I'm able to quickly set up that table.
+
+465
+00:22:32.310 --> 00:22:36.273
+Now that 1.33 is what we call point estimate.
+
+466
+00:22:38.641 --> 00:22:42.180
+Now we're not going to calculate this,
+
+467
+00:22:42.180 --> 00:22:43.830
+but around any point estimate,
+
+468
+00:22:43.830 --> 00:22:45.990
+regardless of what you're calculating,
+
+469
+00:22:45.990 --> 00:22:48.933
+you can calculate something called a confidence interval.
+
+470
+00:22:51.510 --> 00:22:54.300
+You do not need to know how to calculate this,
+
+471
+00:22:54.300 --> 00:22:56.013
+but you need to understand it.
+
+472
+00:23:01.830 --> 00:23:04.570
+So let's say our point estimate is 1.33
+
+473
+00:23:06.081 --> 00:23:08.640
+and they tell you that the confidence interval
+
+474
+00:23:08.640 --> 00:23:13.153
+around that is 1.21 to 1.63, which encompasses 1.33.
+
+475
+00:23:14.880 --> 00:23:19.880
+What that means is there's at least a 21% chance,
+
+476
+00:23:22.830 --> 00:23:26.460
+or there is at least women who developed,
+
+477
+00:23:26.460 --> 00:23:28.620
+who had their first child, 25 or older,
+
+478
+00:23:28.620 --> 00:23:32.610
+are at least 21% more likely to develop breast cancer
+
+479
+00:23:32.610 --> 00:23:35.220
+and as much as 63% more likely
+
+480
+00:23:35.220 --> 00:23:39.030
+to develop breast cancer than those who had a child younger.
+
+481
+00:23:39.030 --> 00:23:42.850
+Our best estimate of what the actual risk is is 33%
+
+482
+00:23:46.230 --> 00:23:50.910
+'cause there's a statistical range
+
+483
+00:23:50.910 --> 00:23:52.893
+around any point estimate.
+
+484
+00:23:54.180 --> 00:23:57.900
+Now, let's say they told you the confidence interval
+
+485
+00:23:57.900 --> 00:24:01.983
+was 0.89 to 1.63.
+
+486
+00:24:04.170 --> 00:24:06.210
+Anytime a confidence interval
+
+487
+00:24:06.210 --> 00:24:08.883
+around a point estimate crosses one,
+
+488
+00:24:10.560 --> 00:24:13.032
+there's a probability that that breast cancer
+
+489
+00:24:13.032 --> 00:24:16.023
+is unrelated to the exposure.
+
+490
+00:24:18.330 --> 00:24:19.500
+Because what you're saying
+
+491
+00:24:19.500 --> 00:24:22.110
+is the probabilities of the disease
+
+492
+00:24:22.110 --> 00:24:23.910
+and the exposed group and the unexposed group,
+
+493
+00:24:23.910 --> 00:24:27.123
+if it's one, is exactly the same.
+
+494
+00:24:30.390 --> 00:24:32.373
+Your brow is furrowed.
+
+495
+00:24:33.420 --> 00:24:34.743
+Not making sense, is it?
+
+496
+00:24:37.410 --> 00:24:41.340
+Okay, so whenever a confidence interval crosses one,
+
+497
+00:24:41.340 --> 00:24:45.180
+you're essentially saying there is a possibility
+
+498
+00:24:45.180 --> 00:24:48.573
+there's no difference between the groups.
+
+499
+00:24:50.700 --> 00:24:53.100
+Now why is there no difference?
+
+500
+00:24:53.100 --> 00:24:55.350
+Maybe I don't have a large enough sample size
+
+501
+00:24:56.340 --> 00:24:58.233
+or maybe there's no difference.
+
+502
+00:24:59.580 --> 00:25:01.620
+Well, if I know I have a large enough sample size,
+
+503
+00:25:01.620 --> 00:25:03.510
+I know there's no difference,
+
+504
+00:25:03.510 --> 00:25:05.280
+that factor does not make any difference
+
+505
+00:25:05.280 --> 00:25:07.113
+in this outcome I'm looking at.
+
+506
+00:25:08.280 --> 00:25:09.113
+Okay?
+
+507
+00:25:10.740 --> 00:25:13.350
+So regardless of what you're reading,
+
+508
+00:25:13.350 --> 00:25:15.633
+if the confidence interval crosses one,
+
+509
+00:25:16.745 --> 00:25:20.583
+there's the potential that the point estimate is one,
+
+510
+00:25:20.583 --> 00:25:23.343
+and therefore there's no difference between the groups.
+
+511
+00:25:25.350 --> 00:25:26.850
+Let's try this question.
+
+512
+00:25:26.850 --> 00:25:28.230
+The results of a given study report
+
+513
+00:25:28.230 --> 00:25:31.310
+is achieving a significance at a P-value of less than .05,
+
+514
+00:25:31.310 --> 00:25:32.580
+the 5% level.
+
+515
+00:25:32.580 --> 00:25:33.960
+True statements about this finding
+
+516
+00:25:33.960 --> 00:25:35.880
+include which one of the following?
+
+517
+00:25:35.880 --> 00:25:38.100
+I had to throw this in there someplace.
+
+518
+00:25:38.100 --> 00:25:39.660
+There's a 5% likelihood of the results
+
+519
+00:25:39.660 --> 00:25:41.040
+having occurred by chance alone.
+
+520
+00:25:41.040 --> 00:25:42.810
+If the study were replicated 100 times,
+
+521
+00:25:42.810 --> 00:25:46.230
+95 studies would repeat this finding and five would not.
+
+522
+00:25:46.230 --> 00:25:48.390
+The confidence interval is zero to 10%
+
+523
+00:25:48.390 --> 00:25:51.603
+or the null hypothesis has a 5% chance of being true.
+
+524
+00:25:57.480 --> 00:25:59.763
+So that's what a P-value means.
+
+525
+00:26:01.410 --> 00:26:05.040
+Now, and a researcher, an experimenter,
+
+526
+00:26:05.040 --> 00:26:07.390
+they can set the P-value wherever they want it.
+
+527
+00:26:09.030 --> 00:26:12.363
+But remember, here's the hypothesis going into a study,
+
+528
+00:26:13.530 --> 00:26:15.573
+it's always the null hypothesis.
+
+529
+00:26:17.730 --> 00:26:19.780
+There's no difference between the groups.
+
+530
+00:26:20.940 --> 00:26:23.729
+Regardless of what I'm trying to demonstrate,
+
+531
+00:26:23.729 --> 00:26:25.113
+there's no difference.
+
+532
+00:26:26.550 --> 00:26:28.200
+'Cause what am I trying to prove?
+
+533
+00:26:29.130 --> 00:26:32.310
+There is a difference based on medicine they're taking
+
+534
+00:26:32.310 --> 00:26:33.843
+or a study they're taking.
+
+535
+00:26:36.030 --> 00:26:38.460
+I want everybody just to relax your brows right now.
+
+536
+00:26:38.460 --> 00:26:39.930
+You are not gonna make it through this day,
+
+537
+00:26:39.930 --> 00:26:43.260
+your brow, just relax them, it's fine.
+
+538
+00:26:43.260 --> 00:26:47.853
+Just go to someplace that's not here right now, okay?
+
+539
+00:26:49.140 --> 00:26:52.113
+The P-value can be set at any level.
+
+540
+00:26:53.940 --> 00:26:58.940
+I can set that at 5%, 1%, 1/10 of 1%, 10%.
+
+541
+00:27:03.750 --> 00:27:07.473
+It is a level of statistical significance.
+
+542
+00:27:09.570 --> 00:27:11.223
+And what it says is,
+
+543
+00:27:12.150 --> 00:27:13.800
+I'm thinking that the difference
+
+544
+00:27:13.800 --> 00:27:14.880
+in between these two groups
+
+545
+00:27:14.880 --> 00:27:18.153
+was secondary to some factor or drug.
+
+546
+00:27:19.650 --> 00:27:22.830
+I'm willing to accept a 5% or 1%
+
+547
+00:27:22.830 --> 00:27:27.390
+or 10% chance that by chance alone
+
+548
+00:27:27.390 --> 00:27:28.953
+I'm seeing this difference,
+
+549
+00:27:30.360 --> 00:27:33.240
+has nothing to do with what I thought.
+
+550
+00:27:33.240 --> 00:27:38.193
+It's just random chance, okay?
+
+551
+00:27:39.900 --> 00:27:42.240
+Sometimes you'll see the P-value.
+
+552
+00:27:42.240 --> 00:27:45.300
+Now I set my P-value at 5%.
+
+553
+00:27:45.300 --> 00:27:47.019
+I'm willing to take a risk of 5%
+
+554
+00:27:47.019 --> 00:27:51.270
+and when I calculate my P-value around my estimate,
+
+555
+00:27:51.270 --> 00:27:54.363
+the P-value comes out to 0.00001.
+
+556
+00:27:55.530 --> 00:27:58.620
+Then I know the risk of this being secondary
+
+557
+00:27:58.620 --> 00:28:02.013
+to chance alone is one in a million.
+
+558
+00:28:03.271 --> 00:28:07.350
+I'm not a betting person, but if I were a betting person,
+
+559
+00:28:07.350 --> 00:28:09.000
+I wouldn't be down on the strip in Vegas,
+
+560
+00:28:09.000 --> 00:28:12.258
+betting a lot if my chances of winning was one in a million.
+
+561
+00:28:12.258 --> 00:28:15.330
+That's why I'm better at retail therapy.
+
+562
+00:28:15.330 --> 00:28:16.830
+I go across the street to the place
+
+563
+00:28:16.830 --> 00:28:20.130
+where you get that turquoise bag,
+
+564
+00:28:20.130 --> 00:28:22.230
+much better to leave there with that.
+
+565
+00:28:22.230 --> 00:28:23.063
+Some people are thinking,
+
+566
+00:28:23.063 --> 00:28:24.490
+what the heck's a turquoise bag?
+
+567
+00:28:26.370 --> 00:28:29.100
+Okay, so the confidence interval,
+
+568
+00:28:29.100 --> 00:28:31.323
+you can have around a P-value also,
+
+569
+00:28:32.250 --> 00:28:34.140
+but the P-value itself says nothing
+
+570
+00:28:34.140 --> 00:28:38.130
+about the truth or falsity of the null hypothesis.
+
+571
+00:28:38.130 --> 00:28:41.670
+The null hypothesis is still, there's no difference.
+
+572
+00:28:41.670 --> 00:28:45.561
+It's just if there is a difference,
+
+573
+00:28:45.561 --> 00:28:47.883
+how much risk am I willing to accept
+
+574
+00:28:47.883 --> 00:28:50.733
+that that difference is secondary to chance alone?
+
+575
+00:28:51.990 --> 00:28:52.823
+Okay?
+
+576
+00:28:55.254 --> 00:28:57.210
+Now, why do we need to know the difference
+
+577
+00:28:57.210 --> 00:28:58.230
+between this relative risk,
+
+578
+00:28:58.230 --> 00:28:59.490
+absolute risk, and number needed to treat?
+
+579
+00:28:59.490 --> 00:29:04.080
+As I said, it is because the relative risk tends
+
+580
+00:29:04.080 --> 00:29:06.240
+to amplify very small differences.
+
+581
+00:29:06.240 --> 00:29:08.082
+These can be clinically insignificant
+
+582
+00:29:08.082 --> 00:29:12.923
+and it sounds really significant.
+
+583
+00:29:12.923 --> 00:29:15.513
+They're 50% more likely not to.
+
+584
+00:29:16.735 --> 00:29:18.960
+The absolute risk reduction
+
+585
+00:29:18.960 --> 00:29:20.010
+and the number needed to treat,
+
+586
+00:29:20.010 --> 00:29:21.810
+that is what gives you a much better appreciation
+
+587
+00:29:21.810 --> 00:29:23.820
+of the magnitude of this.
+
+588
+00:29:23.820 --> 00:29:26.520
+It could be a benefit, it could be a potential impact.
+
+589
+00:29:27.450 --> 00:29:30.690
+And like I said, you should be able to,
+
+590
+00:29:30.690 --> 00:29:33.540
+if they have calculated
+
+591
+00:29:33.540 --> 00:29:35.970
+an absolute risk reduction in the paper
+
+592
+00:29:35.970 --> 00:29:37.980
+and a number needed to treat in the paper
+
+593
+00:29:37.980 --> 00:29:39.030
+that's being published,
+
+594
+00:29:39.030 --> 00:29:41.490
+you should be able to calculate it yourself.
+
+595
+00:29:41.490 --> 00:29:42.990
+There should be no confusion.
+
+596
+00:29:42.990 --> 00:29:44.940
+Good morning, Dr. Hold.
+
+597
+00:29:44.940 --> 00:29:47.124
+She's back, she's like, "Oh, this is really good."
+
+598
+00:29:47.124 --> 00:29:49.290
+(chuckles)
+
+599
+00:29:49.290 --> 00:29:50.123
+Okay.
+
+600
+00:29:51.690 --> 00:29:56.690
+Now, the absolute risk reduction is simply not in ratio,
+
+601
+00:29:57.600 --> 00:29:59.973
+it's simple subtraction.
+
+602
+00:30:00.870 --> 00:30:02.670
+I'm gonna subtract my control event
+
+603
+00:30:02.670 --> 00:30:05.820
+or my experimental event rate from the control event rate.
+
+604
+00:30:05.820 --> 00:30:09.360
+So instead of comparing the rates via division,
+
+605
+00:30:09.360 --> 00:30:11.313
+I'm gonna compare them by subtraction.
+
+606
+00:30:12.359 --> 00:30:14.580
+Now as I said, when you look at those numbers,
+
+607
+00:30:14.580 --> 00:30:16.134
+you're like, "Well, that doesn't make any sense."
+
+608
+00:30:16.134 --> 00:30:17.940
+The number needed to treat
+
+609
+00:30:17.940 --> 00:30:21.033
+is simply an inverse of the absolute risk reduction.
+
+610
+00:30:25.380 --> 00:30:26.213
+Okay?
+
+611
+00:30:26.213 --> 00:30:27.900
+So those are the three formulas, okay.
+
+612
+00:30:27.900 --> 00:30:29.430
+So let's take a look at that.
+
+613
+00:30:29.430 --> 00:30:31.080
+You are considering how beneficial
+
+614
+00:30:31.080 --> 00:30:32.910
+a new treatment might be in preventing stroke.
+
+615
+00:30:32.910 --> 00:30:35.070
+A well-designed study was reported
+
+616
+00:30:35.070 --> 00:30:36.420
+with 200 patients in the treated group
+
+617
+00:30:36.420 --> 00:30:38.070
+and 200 patients in the untreated group.
+
+618
+00:30:38.070 --> 00:30:40.620
+The study finds a five-year risk of stroke of 3%
+
+619
+00:30:40.620 --> 00:30:43.413
+in the treated group versus 5% in the untreated group.
+
+620
+00:30:44.310 --> 00:30:46.050
+Assuming this study is valid and applicable
+
+621
+00:30:46.050 --> 00:30:47.130
+to your patient population,
+
+622
+00:30:47.130 --> 00:30:48.607
+how many patients would you have to treat
+
+623
+00:30:48.607 --> 00:30:51.273
+for five years to prevent one stroke?
+
+624
+00:30:56.670 --> 00:30:58.170
+There you go.
+
+625
+00:30:58.170 --> 00:31:02.250
+Correct answer is 50, 50.
+
+626
+00:31:02.250 --> 00:31:03.783
+So how did we do that?
+
+627
+00:31:05.340 --> 00:31:07.410
+The control event rate was 5%,
+
+628
+00:31:07.410 --> 00:31:09.720
+the experimental event rate was 3%,
+
+629
+00:31:09.720 --> 00:31:11.193
+five minus three,
+
+630
+00:31:13.050 --> 00:31:14.010
+2%.
+
+631
+00:31:14.010 --> 00:31:15.450
+Now we had to go to percentages.
+
+632
+00:31:15.450 --> 00:31:16.500
+So instead of one over,
+
+633
+00:31:16.500 --> 00:31:19.563
+we do 100 over and that equals 50.
+
+634
+00:31:22.410 --> 00:31:23.243
+You're thinking now,
+
+635
+00:31:23.243 --> 00:31:25.020
+"Oh well, I should have been able to do that."
+
+636
+00:31:25.020 --> 00:31:26.520
+He gave me the control event rate,
+
+637
+00:31:26.520 --> 00:31:28.920
+the experimental event rate, and I do the inverse of that.
+
+638
+00:31:28.920 --> 00:31:30.960
+That's all you have to do.
+
+639
+00:31:30.960 --> 00:31:33.240
+Now, you could have done that without a calculator.
+
+640
+00:31:33.240 --> 00:31:36.308
+So this could be a question you could do on the exam.
+
+641
+00:31:36.308 --> 00:31:40.353
+They're not gonna give you weird numbers, okay.
+
+642
+00:31:41.220 --> 00:31:42.960
+The absolute risk reduction is the difference
+
+643
+00:31:42.960 --> 00:31:45.240
+between the incidence of disease in the treatment group
+
+644
+00:31:45.240 --> 00:31:47.463
+and the incidence in the control group.
+
+645
+00:31:52.466 --> 00:31:54.000
+Absolute risk reduction
+
+646
+00:31:54.000 --> 00:31:55.380
+or the number needed to treat
+
+647
+00:31:55.380 --> 00:31:57.153
+is simply the reciprocal of that.
+
+648
+00:31:58.200 --> 00:32:00.213
+That's all it is.
+
+649
+00:32:01.680 --> 00:32:04.320
+Results of a clinical study show a relative risk reduction
+
+650
+00:32:04.320 --> 00:32:09.320
+of 33% and an absolute risk reduction of 0.2 or 20%.
+
+651
+00:32:09.479 --> 00:32:11.520
+There are 1,000 patients each in the treatment
+
+652
+00:32:11.520 --> 00:32:12.353
+and control groups.
+
+653
+00:32:12.353 --> 00:32:14.671
+To help determine the potential benefit of the treatment,
+
+654
+00:32:14.671 --> 00:32:17.490
+it is necessary to identify the number needed to treat.
+
+655
+00:32:17.490 --> 00:32:18.360
+Which one of the following
+
+656
+00:32:18.360 --> 00:32:19.680
+is the number needed to treat for this study?
+
+657
+00:32:19.680 --> 00:32:21.723
+3, 5, 13, or you can't determine it?
+
+658
+00:32:23.490 --> 00:32:25.701
+Remember, this is the way it will always be.
+
+659
+00:32:25.701 --> 00:32:30.701
+Answer D or E is never all the above or none of the above.
+
+660
+00:32:30.774 --> 00:32:31.893
+Okay?
+
+661
+00:32:35.760 --> 00:32:36.780
+Okay, good.
+
+662
+00:32:36.780 --> 00:32:37.860
+Five.
+
+663
+00:32:37.860 --> 00:32:39.153
+So let's take a look.
+
+664
+00:32:41.130 --> 00:32:44.940
+100% divided by 20% equals five
+
+665
+00:32:44.940 --> 00:32:48.450
+'cause they gave you what the absolute risk reduction was.
+
+666
+00:32:48.450 --> 00:32:50.343
+So I just gotta do the inverse of it.
+
+667
+00:32:57.480 --> 00:33:02.100
+Okay, let's try this with the Women's Health Initiative
+
+668
+00:33:02.100 --> 00:33:04.773
+and we're gonna calculate the number needed to harm.
+
+669
+00:33:07.980 --> 00:33:10.590
+Now this is a primary prevention trial,
+
+670
+00:33:10.590 --> 00:33:12.960
+was looking at the role of estrogen and progesterone
+
+671
+00:33:12.960 --> 00:33:16.140
+or estrogen alone in preventing cardiac events
+
+672
+00:33:16.140 --> 00:33:17.703
+in postmenopausal women.
+
+673
+00:33:19.260 --> 00:33:21.300
+Now I talk about this study so much
+
+674
+00:33:21.300 --> 00:33:24.990
+because for those of you who don't know,
+
+675
+00:33:24.990 --> 00:33:28.950
+this was a landmark study, okay?
+
+676
+00:33:28.950 --> 00:33:32.850
+I mean, and for those of you who are of my era,
+
+677
+00:33:32.850 --> 00:33:35.490
+finishing med school in the late '80s, early '90s,
+
+678
+00:33:35.490 --> 00:33:37.020
+I mean, it's probably one of the biggest changes
+
+679
+00:33:37.020 --> 00:33:38.553
+we've seen in our career.
+
+680
+00:33:42.210 --> 00:33:44.310
+And when this study was published,
+
+681
+00:33:44.310 --> 00:33:47.550
+we were literally on the phone calling people,
+
+682
+00:33:47.550 --> 00:33:49.953
+telling them, please stop your hormone therapy.
+
+683
+00:33:50.795 --> 00:33:54.210
+Now I spend a lot of time now talking about this
+
+684
+00:33:54.210 --> 00:33:56.730
+because we're 21 years since this study
+
+685
+00:33:56.730 --> 00:33:58.770
+and we've learned a lot in those women
+
+686
+00:33:58.770 --> 00:34:00.693
+who have continued to be followed.
+
+687
+00:34:01.530 --> 00:34:03.870
+So I have residents who come in who I'm like,
+
+688
+00:34:03.870 --> 00:34:06.937
+okay, they've got vasomotor symptoms, they're miserable.
+
+689
+00:34:06.937 --> 00:34:08.880
+"Oh, I don't use hormones, Dr. Weismiller."
+
+690
+00:34:08.880 --> 00:34:12.067
+I'm like, "What? Why not?"
+
+691
+00:34:12.067 --> 00:34:13.830
+"Well, the Women's Health Initiative."
+
+692
+00:34:13.830 --> 00:34:15.480
+God.
+
+693
+00:34:15.480 --> 00:34:17.790
+Or my favorite was, I mentioned this
+
+694
+00:34:17.790 --> 00:34:19.200
+to a third-year medical student the other day
+
+695
+00:34:19.200 --> 00:34:21.837
+and she's like, "What's the Women's Health Initiative?"
+
+696
+00:34:21.837 --> 00:34:23.880
+(laughs)
+
+697
+00:34:23.880 --> 00:34:27.073
+Okay, so the total number of women
+
+698
+00:34:27.073 --> 00:34:32.073
+who were in the experimental arm
+
+699
+00:34:33.060 --> 00:34:35.793
+receiving hormones was 8,506,
+
+700
+00:34:37.584 --> 00:34:40.290
+had 164 events.
+
+701
+00:34:40.290 --> 00:34:44.073
+Total of women receiving placebo, 8,102,
+
+702
+00:34:44.940 --> 00:34:46.803
+122 cardiac events.
+
+703
+00:34:47.700 --> 00:34:50.220
+Now, before somebody calls me out on something,
+
+704
+00:34:50.220 --> 00:34:52.143
+just I wanna remind everybody though,
+
+705
+00:34:54.930 --> 00:34:58.173
+this was not a perfect study by any means,
+
+706
+00:34:59.070 --> 00:35:01.740
+and it will never be done again.
+
+707
+00:35:01.740 --> 00:35:03.922
+Okay, it would be unethical.
+
+708
+00:35:03.922 --> 00:35:06.510
+And part of the issue with this study,
+
+709
+00:35:06.510 --> 00:35:09.390
+which is what we've learned over the last 18 years
+
+710
+00:35:09.390 --> 00:35:11.560
+is that the women in the study were older
+
+711
+00:35:12.630 --> 00:35:14.460
+and we now know starting hormone therapy
+
+712
+00:35:14.460 --> 00:35:18.600
+closer to menopause, I.e. within 10 years
+
+713
+00:35:18.600 --> 00:35:22.560
+or before the age of 60 is the safest.
+
+714
+00:35:22.560 --> 00:35:24.890
+The risk outweighs the benefit when you're older than 60
+
+715
+00:35:24.890 --> 00:35:27.125
+or more than 10 years from the last period.
+
+716
+00:35:27.125 --> 00:35:29.045
+Okay?
+
+717
+00:35:29.045 --> 00:35:34.045
+So we can calculate our relative risk
+
+718
+00:35:34.187 --> 00:35:37.110
+'cause we can calculate the control event rate
+
+719
+00:35:37.110 --> 00:35:38.710
+and the experimental event rate.
+
+720
+00:35:40.890 --> 00:35:43.833
+Here, in calculating a number needed to harm,
+
+721
+00:35:45.570 --> 00:35:48.663
+it's still the inverse of the absolute risk reduction,
+
+722
+00:35:49.920 --> 00:35:52.860
+but we have to reverse it.
+
+723
+00:35:52.860 --> 00:35:54.600
+And it is the experimental event rate
+
+724
+00:35:54.600 --> 00:35:55.980
+minus the control event rate
+
+725
+00:35:55.980 --> 00:35:59.820
+when we're looking at calculating number needed to harm.
+
+726
+00:35:59.820 --> 00:36:02.940
+So it's the inverse, not of the control event rate
+
+727
+00:36:02.940 --> 00:36:04.620
+minus the experimental event rate,
+
+728
+00:36:04.620 --> 00:36:06.270
+that's the number needed to treat,
+
+729
+00:36:06.270 --> 00:36:09.150
+but rather the inverse of the experimental event rate
+
+730
+00:36:09.150 --> 00:36:10.773
+minus the control event rate.
+
+731
+00:36:14.490 --> 00:36:18.033
+Okay, so here's our two by two table, again,
+
+732
+00:36:19.620 --> 00:36:21.870
+our disease of interest on the y-axis,
+
+733
+00:36:21.870 --> 00:36:24.684
+our exposure to the factor on the x-axis.
+
+734
+00:36:24.684 --> 00:36:25.950
+(attendee sneezes)
+
+735
+00:36:25.950 --> 00:36:26.783
+Bless you.
+
+736
+00:36:26.783 --> 00:36:29.823
+Our exposure was estrogen or estrogen plus progesterone,
+
+737
+00:36:31.440 --> 00:36:33.213
+or placebo.
+
+738
+00:36:34.290 --> 00:36:35.730
+And I either had a cardiac event
+
+739
+00:36:35.730 --> 00:36:37.280
+or didn't have a cardiac event.
+
+740
+00:36:40.350 --> 00:36:41.250
+Pretty basic here.
+
+741
+00:36:41.250 --> 00:36:43.863
+I mean this is not rocket science.
+
+742
+00:36:45.330 --> 00:36:49.983
+Now when I do my calculation,
+
+743
+00:36:51.600 --> 00:36:56.430
+it's 164 divided by 164 plus 8,342
+
+744
+00:36:56.430 --> 00:36:57.960
+'cause that's gonna gimme my total
+
+745
+00:36:57.960 --> 00:36:59.940
+of those who had an event
+
+746
+00:36:59.940 --> 00:37:03.510
+divided by 122 over 122 plus 7,980.
+
+747
+00:37:03.510 --> 00:37:05.973
+So that's my relative risk.
+
+748
+00:37:08.610 --> 00:37:13.610
+Now, when I look at my experimental event rate
+
+749
+00:37:14.504 --> 00:37:17.160
+divided by my control event rate,
+
+750
+00:37:17.160 --> 00:37:18.917
+which is the relative risk, I get 1.26.
+
+751
+00:37:18.917 --> 00:37:22.230
+So you were 26% more likely to have a heart attack
+
+752
+00:37:22.230 --> 00:37:24.933
+or cardiovascular event if you are on hormone therapy.
+
+753
+00:37:26.119 --> 00:37:28.413
+Now that's a point estimate.
+
+754
+00:37:30.300 --> 00:37:33.150
+When I look at the absolute risk reduction or increase,
+
+755
+00:37:33.150 --> 00:37:34.890
+which is what we saw here.
+
+756
+00:37:34.890 --> 00:37:37.800
+We saw a .004 increase,
+
+757
+00:37:37.800 --> 00:37:40.170
+well, that doesn't mean much to anybody.
+
+758
+00:37:40.170 --> 00:37:43.320
+So we have to then calculate the number needed to harm,
+
+759
+00:37:43.320 --> 00:37:44.940
+which is the experimental event rate
+
+760
+00:37:44.940 --> 00:37:47.153
+minus the control event rate.
+
+761
+00:37:47.153 --> 00:37:52.153
+The number needed to harm is one over that or 250.
+
+762
+00:37:54.180 --> 00:37:59.040
+So I have to treat 250 people for 5.8 years with hormones
+
+763
+00:37:59.040 --> 00:38:01.323
+to have one additional cardiovascular event.
+
+764
+00:38:03.090 --> 00:38:05.490
+The number of post-menopausal people in the world
+
+765
+00:38:05.490 --> 00:38:09.900
+divided by 250, problematic.
+
+766
+00:38:09.900 --> 00:38:12.450
+That's why we stopped, okay?
+
+767
+00:38:12.450 --> 00:38:14.880
+So that's the number needed to harm.
+
+768
+00:38:14.880 --> 00:38:17.760
+We can't calculate the number needed to treat
+
+769
+00:38:17.760 --> 00:38:19.290
+because we weren't treating anybody,
+
+770
+00:38:19.290 --> 00:38:20.670
+we were harming them.
+
+771
+00:38:20.670 --> 00:38:21.503
+Okay?
+
+772
+00:38:25.440 --> 00:38:30.440
+Patients taking HRT for 5.2 years have a 26% more MIs.
+
+773
+00:38:31.627 --> 00:38:34.530
+1.9% of patients taking HRT for 5.2 years
+
+774
+00:38:34.530 --> 00:38:37.980
+had an MI compared to 1.5% not taking HT.
+
+775
+00:38:37.980 --> 00:38:41.370
+If 250 women took HT for 5.2 years,
+
+776
+00:38:41.370 --> 00:38:43.620
+the drug would cause one additional heart attack.
+
+777
+00:38:43.620 --> 00:38:46.923
+They're the three parameters, okay?
+
+778
+00:38:48.030 --> 00:38:49.440
+You can see why that number needed to harm
+
+779
+00:38:49.440 --> 00:38:52.320
+and number needed to treat is so important.
+
+780
+00:38:52.320 --> 00:38:55.050
+Now, there's no absolute number
+
+781
+00:38:55.050 --> 00:38:55.883
+where the number needed to treat
+
+782
+00:38:55.883 --> 00:38:59.643
+and number needed to harm is correct.
+
+783
+00:39:01.260 --> 00:39:05.130
+Sometimes the number needed to treat of 1,000 is great.
+
+784
+00:39:05.130 --> 00:39:09.483
+Sometimes the number needed to treat of 10 is great, okay?
+
+785
+00:39:10.920 --> 00:39:11.753
+Okay.
+
+786
+00:39:12.720 --> 00:39:14.790
+Cochrane Library periodically reviews the evidence
+
+787
+00:39:14.790 --> 00:39:17.760
+of the effectiveness of mammography screening
+
+788
+00:39:17.760 --> 00:39:18.960
+for the detection of breast cancer.
+
+789
+00:39:18.960 --> 00:39:20.970
+One analysis from their 2006 review
+
+790
+00:39:20.970 --> 00:39:22.650
+looked at deaths ascribed to breast cancer
+
+791
+00:39:22.650 --> 00:39:24.420
+for women at least 50 years of age,
+
+792
+00:39:24.420 --> 00:39:25.860
+who had screening mammography generally
+
+793
+00:39:25.860 --> 00:39:28.650
+every one to three years compared with women who did not.
+
+794
+00:39:28.650 --> 00:39:30.270
+After 13 years of follow up,
+
+795
+00:39:30.270 --> 00:39:34.860
+595 out of 146,284 women in the screen group
+
+796
+00:39:34.860 --> 00:39:39.285
+died of breast cancer compared with 701 of 122,590
+
+797
+00:39:39.285 --> 00:39:40.563
+in the unscreened group.
+
+798
+00:39:41.940 --> 00:39:44.190
+You're thinking, now how am I gonna do this math?
+
+799
+00:39:44.190 --> 00:39:45.270
+According to this analysis,
+
+800
+00:39:45.270 --> 00:39:47.160
+the number of needed to screen with mammography
+
+801
+00:39:47.160 --> 00:39:48.720
+to prevent one death from breast cancer
+
+802
+00:39:48.720 --> 00:39:51.993
+over 13 years of follow up is approximately 606.
+
+803
+00:39:52.830 --> 00:39:55.590
+Which the following statements is true?
+
+804
+00:39:55.590 --> 00:39:57.513
+It cannot be calculated actually.
+
+805
+00:39:58.442 --> 00:40:00.224
+The number needed to screen is that,
+
+806
+00:40:00.224 --> 00:40:01.391
+the number needed to screen is that,
+
+807
+00:40:01.391 --> 00:40:04.023
+the absolute risk reduction is that.
+
+808
+00:40:05.940 --> 00:40:07.380
+So what would you have to do for this?
+
+809
+00:40:07.380 --> 00:40:08.610
+They give you all the numbers,
+
+810
+00:40:08.610 --> 00:40:10.237
+you just gotta set up the two by two table
+
+811
+00:40:10.237 --> 00:40:12.510
+and plug in the numbers to your formula
+
+812
+00:40:12.510 --> 00:40:14.553
+to see if actually you can do this.
+
+813
+00:40:20.940 --> 00:40:23.613
+Okay, so the correct answer there is B.
+
+814
+00:40:25.380 --> 00:40:26.910
+That's why I said what I want you to do
+
+815
+00:40:26.910 --> 00:40:31.910
+is just go back and you have all the numbers
+
+816
+00:40:33.210 --> 00:40:36.720
+and plug those into the equations.
+
+817
+00:40:36.720 --> 00:40:37.830
+So the number needed to screen
+
+818
+00:40:37.830 --> 00:40:41.523
+and the number needed to treat is calculated the same way.
+
+819
+00:40:43.050 --> 00:40:45.379
+Control event rate minus the experimental event rate.
+
+820
+00:40:45.379 --> 00:40:48.780
+The number needed to harm is the one that's different,
+
+821
+00:40:48.780 --> 00:40:51.230
+experimental event rate minus control event rate.
+
+822
+00:40:52.470 --> 00:40:53.970
+So there, the number needed to screen
+
+823
+00:40:53.970 --> 00:40:55.530
+it's the number of patients needed to screen
+
+824
+00:40:55.530 --> 00:40:57.360
+with a study test for the specified length of time
+
+825
+00:40:57.360 --> 00:40:59.940
+in order to produce the good outcome specified.
+
+826
+00:40:59.940 --> 00:41:01.350
+Okay?
+
+827
+00:41:01.350 --> 00:41:03.630
+Same thing as we saw with number needed to treat.
+
+828
+00:41:03.630 --> 00:41:05.763
+And if you plug the numbers in,
+
+829
+00:41:07.290 --> 00:41:11.017
+you can see there 595, 146,284, 701, 122,590,
+
+830
+00:41:15.221 --> 00:41:17.853
+and that's what those numbers would look like.
+
+831
+00:41:18.960 --> 00:41:22.689
+And then if I take the inverse of that, I get the 606.
+
+832
+00:41:22.689 --> 00:41:23.522
+Okay?
+
+833
+00:41:24.390 --> 00:41:27.150
+So there, if we just go back, those are all the equation.
+
+834
+00:41:27.150 --> 00:41:29.730
+So you have that control event rate,
+
+835
+00:41:29.730 --> 00:41:31.230
+they give you the experimental event rate,
+
+836
+00:41:31.230 --> 00:41:32.980
+you just gotta plug the numbers in.
+
+837
+00:41:39.060 --> 00:41:39.893
+Okay.
+
+838
+00:41:43.200 --> 00:41:44.033
+Take a breath.
+
+839
+00:41:48.930 --> 00:41:51.900
+Now those were tests of risk.
+
+840
+00:41:51.900 --> 00:41:54.063
+Now let's take a look at tests of validity,
+
+841
+00:41:55.770 --> 00:41:57.510
+and therefore equations here are sensitivity,
+
+842
+00:41:57.510 --> 00:41:59.340
+specificity, positive predictive value,
+
+843
+00:41:59.340 --> 00:42:00.640
+negative predictive value.
+
+844
+00:42:01.890 --> 00:42:04.590
+Okay, so let's take a look at this question.
+
+845
+00:42:04.590 --> 00:42:07.530
+The specificity of screening test is best described as what?
+
+846
+00:42:07.530 --> 00:42:09.390
+The proportion of persons with the condition
+
+847
+00:42:09.390 --> 00:42:10.253
+who test positive,
+
+848
+00:42:10.253 --> 00:42:11.970
+with the condition who test negative,
+
+849
+00:42:11.970 --> 00:42:13.291
+without the condition who test positive,
+
+850
+00:42:13.291 --> 00:42:15.873
+or without the condition who test negative?
+
+851
+00:42:21.600 --> 00:42:24.453
+Right, without the condition who test negative.
+
+852
+00:42:27.482 --> 00:42:31.503
+So let's take a look at this.
+
+853
+00:42:32.940 --> 00:42:36.663
+There are four possibilities here in diagnostic testing.
+
+854
+00:42:38.850 --> 00:42:40.920
+What we're looking at are the ability
+
+855
+00:42:40.920 --> 00:42:44.280
+to correctly detect people with or without the disease.
+
+856
+00:42:44.280 --> 00:42:46.800
+Now, here is the two by two table
+
+857
+00:42:46.800 --> 00:42:49.860
+to use these four equations.
+
+858
+00:42:49.860 --> 00:42:54.000
+My test result is along the y-axis
+
+859
+00:42:54.000 --> 00:42:58.020
+and my disease is along the x-axis.
+
+860
+00:42:58.020 --> 00:42:59.910
+The test result will be positive or negative,
+
+861
+00:42:59.910 --> 00:43:01.530
+the disease is either present or absent.
+
+862
+00:43:01.530 --> 00:43:04.080
+You can see there, if the test result is positive
+
+863
+00:43:04.080 --> 00:43:06.570
+and they have the disease, that's true positive.
+
+864
+00:43:06.570 --> 00:43:07.961
+If the test result is negative
+
+865
+00:43:07.961 --> 00:43:10.740
+and they don't have the disease, that's a true negative.
+
+866
+00:43:10.740 --> 00:43:13.710
+Now you can have a type one error or an alpha error.
+
+867
+00:43:13.710 --> 00:43:16.757
+This is where, okay, my test result is positive
+
+868
+00:43:16.757 --> 00:43:19.233
+but they don't have the disease.
+
+869
+00:43:20.070 --> 00:43:21.630
+Or you can have a false negative,
+
+870
+00:43:21.630 --> 00:43:23.640
+that's a type two or beta error
+
+871
+00:43:23.640 --> 00:43:25.860
+where my test result is negative,
+
+872
+00:43:25.860 --> 00:43:27.150
+but they actually have the disease.
+
+873
+00:43:27.150 --> 00:43:29.820
+So we're always trying to minimize B and C
+
+874
+00:43:29.820 --> 00:43:32.250
+in any screening test.
+
+875
+00:43:32.250 --> 00:43:34.380
+Now, sensitivity and specificity
+
+876
+00:43:34.380 --> 00:43:36.333
+are inherent characteristics
+
+877
+00:43:36.333 --> 00:43:40.620
+of a particular test, they do not change.
+
+878
+00:43:40.620 --> 00:43:42.630
+Now the sensitivity is the ability
+
+879
+00:43:42.630 --> 00:43:45.273
+to detect people who do have the disease.
+
+880
+00:43:46.542 --> 00:43:48.900
+It is defined as the true positives
+
+881
+00:43:48.900 --> 00:43:50.220
+divided by the true positives
+
+882
+00:43:50.220 --> 00:43:53.250
+plus the false negatives or A over A plus C
+
+883
+00:43:53.250 --> 00:43:55.563
+using the way this contingency table is.
+
+884
+00:43:57.030 --> 00:43:58.560
+Very sensitive tests
+
+885
+00:43:58.560 --> 00:44:00.750
+are used for screening and ruling out disease.
+
+886
+00:44:00.750 --> 00:44:01.583
+Okay?
+
+887
+00:44:03.630 --> 00:44:06.600
+Please think through this 10 times
+
+888
+00:44:06.600 --> 00:44:09.975
+before you come and ask me, are you sure this is correct?
+
+889
+00:44:09.975 --> 00:44:11.880
+Because I know somebody's gonna come up to me
+
+890
+00:44:11.880 --> 00:44:13.647
+and say, "This doesn't make sense."
+
+891
+00:44:14.790 --> 00:44:17.790
+A sensitive test with a negative result
+
+892
+00:44:17.790 --> 00:44:19.323
+rules out the disease.
+
+893
+00:44:21.240 --> 00:44:26.240
+You want a very sensitive screening test, right?
+
+894
+00:44:26.580 --> 00:44:30.000
+You don't want to tell somebody you're HIV negative
+
+895
+00:44:30.000 --> 00:44:31.980
+and they're really HIV positive.
+
+896
+00:44:31.980 --> 00:44:34.590
+So we're willing to take false positives.
+
+897
+00:44:34.590 --> 00:44:37.286
+We'll get rid of those with the diagnostic test,
+
+898
+00:44:37.286 --> 00:44:39.513
+which is very specific.
+
+899
+00:44:40.980 --> 00:44:42.760
+So a sensitive test
+
+900
+00:44:44.760 --> 00:44:49.230
+with a negative result rules out the disease.
+
+901
+00:44:49.230 --> 00:44:52.383
+You want a very highly-sensitive screening test.
+
+902
+00:44:55.440 --> 00:44:56.430
+Specificity.
+
+903
+00:44:56.430 --> 00:44:57.750
+This is the ability to detect people
+
+904
+00:44:57.750 --> 00:44:58.860
+who do not have the disease.
+
+905
+00:44:58.860 --> 00:44:59.730
+It's the true negatives
+
+906
+00:44:59.730 --> 00:45:00.990
+divided by the false positive
+
+907
+00:45:00.990 --> 00:45:04.083
+plus the true negatives or D over B plus D.
+
+908
+00:45:07.080 --> 00:45:12.080
+A specific test with a positive result rules in the disease.
+
+909
+00:45:14.400 --> 00:45:19.083
+Yep, that positive we got when we screen you is really true.
+
+910
+00:45:20.400 --> 00:45:22.053
+You have the disease.
+
+911
+00:45:24.630 --> 00:45:28.920
+So a diagnostic test is highly specific.
+
+912
+00:45:28.920 --> 00:45:31.350
+Now we use a combination of these in practice
+
+913
+00:45:31.350 --> 00:45:33.090
+and we gotta set a cut point.
+
+914
+00:45:33.090 --> 00:45:33.923
+This is done,
+
+915
+00:45:33.923 --> 00:45:36.022
+this is beyond what we need to talk about here,
+
+916
+00:45:36.022 --> 00:45:37.334
+but we're willing to accept
+
+917
+00:45:37.334 --> 00:45:41.613
+a certain number of false positives with any screening test.
+
+918
+00:45:45.690 --> 00:45:48.150
+That's because we use a combination of tests.
+
+919
+00:45:48.150 --> 00:45:51.420
+We screen your for celiac disease with some antibodies,
+
+920
+00:45:51.420 --> 00:45:54.873
+and then we do a diagnostic test with a biopsy.
+
+921
+00:45:58.500 --> 00:45:59.961
+So we do a highly sensitive test
+
+922
+00:45:59.961 --> 00:46:02.763
+followed by a more specific test.
+
+923
+00:46:03.630 --> 00:46:05.913
+Now the predictive value,
+
+924
+00:46:08.550 --> 00:46:11.130
+this is what the patient is interested in
+
+925
+00:46:11.130 --> 00:46:14.370
+because this particular entity varies
+
+926
+00:46:14.370 --> 00:46:17.970
+with the prevalence of the disease in the society,
+
+927
+00:46:17.970 --> 00:46:20.130
+unlike sensitivity and specificity,
+
+928
+00:46:20.130 --> 00:46:22.773
+which are inherent characteristics of the test.
+
+929
+00:46:23.760 --> 00:46:25.329
+Because what the patient wants to know is,
+
+930
+00:46:25.329 --> 00:46:28.110
+well, when the sensitivity of that test is known,
+
+931
+00:46:28.110 --> 00:46:29.460
+given the patient has the disease,
+
+932
+00:46:29.460 --> 00:46:31.760
+what's the ability of the test to discover it?
+
+933
+00:46:33.030 --> 00:46:34.770
+Or when I know the specificity,
+
+934
+00:46:34.770 --> 00:46:36.540
+given that the patient is free of the disease,
+
+935
+00:46:36.540 --> 00:46:39.183
+what is the ability of the test to discover this?
+
+936
+00:46:40.710 --> 00:46:43.170
+Okay, so the positive predictive value
+
+937
+00:46:43.170 --> 00:46:45.930
+is the true positives over the true positives
+
+938
+00:46:45.930 --> 00:46:50.750
+plus the false positives, or A over A plus B.
+
+939
+00:46:54.180 --> 00:46:55.650
+The negative predictive value
+
+940
+00:46:55.650 --> 00:46:57.210
+is the proportion of negative results
+
+941
+00:46:57.210 --> 00:46:58.140
+that are true negatives.
+
+942
+00:46:58.140 --> 00:46:59.250
+So that's the true negatives
+
+943
+00:46:59.250 --> 00:47:02.250
+divided by the false negatives plus the true negatives,
+
+944
+00:47:02.250 --> 00:47:04.113
+that's D over C plus D.
+
+945
+00:47:09.060 --> 00:47:10.383
+Let's try this question.
+
+946
+00:47:11.910 --> 00:47:14.460
+In a study to evaluate a test
+
+947
+00:47:14.460 --> 00:47:15.943
+as a screen for the presence of a disease,
+
+948
+00:47:15.943 --> 00:47:19.895
+235 of the 250 people with the disease had a positive test
+
+949
+00:47:19.895 --> 00:47:21.594
+and 600 of the 680 people
+
+950
+00:47:21.594 --> 00:47:24.180
+without the disease had a negative test.
+
+951
+00:47:24.180 --> 00:47:25.013
+Based on this data,
+
+952
+00:47:25.013 --> 00:47:28.184
+the specificity of the test for the disease is.
+
+953
+00:47:28.184 --> 00:47:30.333
+So you've got the numbers,
+
+954
+00:47:31.440 --> 00:47:34.380
+you got your two by two table,
+
+955
+00:47:34.380 --> 00:47:38.733
+you simply set it up and plug the numbers in.
+
+956
+00:47:44.250 --> 00:47:45.600
+Okay, there we go.
+
+957
+00:47:45.600 --> 00:47:49.050
+The correct answer is C, six over 680.
+
+958
+00:47:49.050 --> 00:47:51.963
+So there they gave me those numbers,
+
+959
+00:47:56.400 --> 00:47:57.573
+that's my two by two.
+
+960
+00:47:58.950 --> 00:48:02.110
+I can plug in the other numbers by simple subtraction
+
+961
+00:48:03.840 --> 00:48:06.213
+and then I can plug them into the formulas.
+
+962
+00:48:14.670 --> 00:48:15.503
+Okay.
+
+963
+00:48:17.850 --> 00:48:19.530
+Now, calculation of the positive
+
+964
+00:48:19.530 --> 00:48:21.030
+and negative predictive value.
+
+965
+00:48:22.020 --> 00:48:25.623
+This is easily done from the same exact data.
+
+966
+00:48:26.820 --> 00:48:30.123
+This is done from the same exact data.
+
+967
+00:48:35.534 --> 00:48:37.050
+Positive predictive value,
+
+968
+00:48:37.050 --> 00:48:38.490
+true positives divided by the true positives
+
+969
+00:48:38.490 --> 00:48:40.050
+plus the false positives,
+
+970
+00:48:40.050 --> 00:48:41.250
+the negative predictive value,
+
+971
+00:48:41.250 --> 00:48:42.930
+true negatives divided by the false negatives
+
+972
+00:48:42.930 --> 00:48:44.130
+plus the true negatives.
+
+973
+00:48:45.570 --> 00:48:50.570
+And there I can calculate 75% and 97%.
+
+974
+00:48:50.700 --> 00:48:54.750
+Now, as the prevalence of the disease
+
+975
+00:48:54.750 --> 00:48:56.460
+in a population increases,
+
+976
+00:48:56.460 --> 00:48:58.983
+the positive predictive value increases.
+
+977
+00:49:00.720 --> 00:49:03.592
+As the prevalence of the disease in a population decreases,
+
+978
+00:49:03.592 --> 00:49:06.663
+the negative predictive value increases.
+
+979
+00:49:11.160 --> 00:49:12.669
+The sensitivity and the specificity
+
+980
+00:49:12.669 --> 00:49:15.693
+do not vary with the population.
+
+981
+00:49:17.340 --> 00:49:19.323
+So let's take an example of this.
+
+982
+00:49:20.220 --> 00:49:24.150
+We're going to use a generalized population.
+
+983
+00:49:30.960 --> 00:49:35.160
+So I'm going to do HIV testing
+
+984
+00:49:35.160 --> 00:49:40.160
+in San Francisco and Kalispell, Montana.
+
+985
+00:49:45.570 --> 00:49:48.750
+Based on the prevalence of the disease,
+
+986
+00:49:48.750 --> 00:49:50.914
+if I tell somebody living in San Francisco,
+
+987
+00:49:50.914 --> 00:49:53.850
+your HIV is positive,
+
+988
+00:49:53.850 --> 00:49:56.940
+the likelihood that that is a true positive is very high
+
+989
+00:49:56.940 --> 00:49:58.360
+'cause the prevalence of HIV
+
+990
+00:49:58.360 --> 00:50:03.360
+is high there in comparison to Kalispell, Montana,
+
+991
+00:50:04.010 --> 00:50:08.550
+whereas if I tell somebody your HIV is negative,
+
+992
+00:50:08.550 --> 00:50:12.690
+the likelihood that this is a true negative is quite good
+
+993
+00:50:12.690 --> 00:50:15.210
+because the prevalence of the disease
+
+994
+00:50:15.210 --> 00:50:18.423
+in that society is lower.
+
+995
+00:50:20.100 --> 00:50:22.620
+The sensitivity and specificity of the test
+
+996
+00:50:22.620 --> 00:50:24.964
+I used didn't change,
+
+997
+00:50:24.964 --> 00:50:27.270
+the positive and negative predictive value
+
+998
+00:50:27.270 --> 00:50:29.913
+of using that test did change.
+
+999
+00:50:31.230 --> 00:50:32.063
+Okay.
+
+1000
+00:50:35.160 --> 00:50:39.273
+So for those of you who are test taking,
+
+1001
+00:50:41.160 --> 00:50:43.173
+I sit down to take the exam.
+
+1002
+00:50:46.590 --> 00:50:48.510
+Longitudinal or one day secure.
+
+1003
+00:50:48.510 --> 00:50:50.224
+If I'm sitting down to take the one day secure,
+
+1004
+00:50:50.224 --> 00:50:53.070
+as soon as they say you may begin,
+
+1005
+00:50:53.070 --> 00:50:54.720
+you write down these eight equations
+
+1006
+00:50:54.720 --> 00:50:56.223
+on your dry erase board.
+
+1007
+00:50:57.990 --> 00:51:01.410
+You might even wanna put down the two by two tables
+
+1008
+00:51:01.410 --> 00:51:02.820
+so that when you get to the question,
+
+1009
+00:51:02.820 --> 00:51:05.850
+you don't have to think, now how do I set up that table?
+
+1010
+00:51:05.850 --> 00:51:09.270
+They're right there, okay?
+
+1011
+00:51:09.270 --> 00:51:11.040
+You're not gonna have time to write down
+
+1012
+00:51:11.040 --> 00:51:16.040
+the 11 diagnostic criteria for rheumatoid arthritis or SLE,
+
+1013
+00:51:16.560 --> 00:51:18.630
+but I would take the time to write these down
+
+1014
+00:51:18.630 --> 00:51:20.910
+because these are easy questions
+
+1015
+00:51:20.910 --> 00:51:22.200
+'cause they're gonna give you the numbers
+
+1016
+00:51:22.200 --> 00:51:23.553
+and you just plug them in.
+
+1017
+00:51:25.290 --> 00:51:26.123
+Okay?
+
+1018
+00:51:27.000 --> 00:51:28.740
+But those are the eight.
+
+1019
+00:51:28.740 --> 00:51:31.560
+Now, like I said, you can set your two by two tables
+
+1020
+00:51:31.560 --> 00:51:33.810
+up any way you would like.
+
+1021
+00:51:33.810 --> 00:51:37.050
+But if you're going to use the two by two tables,
+
+1022
+00:51:37.050 --> 00:51:39.300
+I'm sorry, if you're gonna use these letters
+
+1023
+00:51:39.300 --> 00:51:41.220
+for these equations,
+
+1024
+00:51:41.220 --> 00:51:44.370
+you need to set the two by two table up
+
+1025
+00:51:44.370 --> 00:51:46.260
+the way I have set them up,
+
+1026
+00:51:46.260 --> 00:51:48.993
+which is the standard way to do it.
+
+1027
+00:51:52.380 --> 00:51:53.850
+And if my chair were here right now,
+
+1028
+00:51:53.850 --> 00:51:56.220
+she would say, "Gosh, Dr. Weismiller
+
+1029
+00:51:56.220 --> 00:51:58.620
+doesn't do anything in the standard way.
+
+1030
+00:51:58.620 --> 00:52:00.690
+Lord, couldn't he help."
+
+1031
+00:52:00.690 --> 00:52:01.523
+Okay.
+
+1032
+00:52:03.018 --> 00:52:03.851
+Whew.
+
+1033
+00:52:05.100 --> 00:52:08.850
+Okay, we're done with 19 seconds to spare.
+
+1034
+00:52:08.850 --> 00:52:10.817
+Excellent job, ladies and gentlemen.
+
+1035
+00:52:10.817 --> 00:52:14.393
+(audience applauding)
+Okay.
+
+1036
+00:52:14.393 --> 00:52:16.893
+(light music)
+

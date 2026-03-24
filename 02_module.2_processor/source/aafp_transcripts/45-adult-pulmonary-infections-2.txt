@@ -1,0 +1,511 @@
+Dr. Conner is back.
+
+We're gonna be talking about Pulmonary Infections, Part 2.
+
+Okay, Shawn, take it away.
+
+Thank you, sir.
+
+Thank you, David.
+
+So this one is a little bit more heavy-hitting than the last one.
+
+Community-acquired pneumonia, like I said, I think is fairly straightforward.
+
+The pneumococcal recommendations again, the PCV 21 and done for any condition, doesn't matter, they don't need a second one, they never need a second one.
+
+That's how powerful that vaccine is.
+
+Whether they've got a splenectomy, cochlear implant, doesn't matter.
+
+A CFS, it's all the same.
+
+So don't overthink that vaccine, it's very simplified.
+
+This one, we get into a little bit more weeds because we're discussing some other types of infections that I guarantee you will show up on the boards, if not once but multiple times.
+
+First question: A 38-year-old consults you with marked fatigue, cough, headache, night sweats, and myalgias.
+
+Past medical history is unremarkable.
+
+Social history reveals that they returned from a summer hiking trip in Arizona two weeks ago.
+
+Now, why the hell did they tell me that?
+
+I don't care.
+
+Well, unless you do, right?
+
+So they return from a summer hiking trip in Arizona two weeks ago, interesting.
+
+Physical examination reveals a fever of 101 degrees Fahrenheit but is otherwise unremarkable.
+
+Chest x-ray shows nonspecific left perihilar patchy infiltrate and their PPD is negative.
+
+These findings are most likely a result of, A: Histoplasmosis.
+
+B: Coccidioidomycosis, C: Crytococcosis.
+
+Or D: Tuberculosis.
+
+The key here is there's some piece of information in the stem of the question that should lead you down the right path.
+
+And in this case, it is the Southwestern United States, including the state of Arizona, and that gives you the answer to the question, which, of course, is cocci, coccidioidomycosis.
+
+Now, this is an example of a fungal lung infection.
+
+They always ask fungal lung infections on the boards.
+
+Did y'all hear me?
+
+Always, if not one, multiple.
+
+I had multiple when I took the boards last year.
+
+Which ones they're gonna...
+
+It could be histo, it could be blasto, it could be cocci.
+
+I suspect very strongly that they're going to be cocci-related because coccidioidomycosis cases are vastly on the rise.
+
+Because of global warming, we suspect the range has spread significantly beyond the states that you would normally think about.
+
+The FDA is currently involved in a huge study about treating this earlier with fluconazole.
+
+There's a whole big video series you can watch at the CDC's website about cocci.
+
+So my guess is that's the one you're gonna see the most questions on, and that's why I've included the most data.
+
+So fungal lung infections, they can be opportunistic in an immunocompromised patient, that's aspergillosis and candidiasis, or they're endemic.
+
+That means they're based on the region where you grew up or you spent time.
+
+They're often asymptomatic.
+
+They may present as community-acquired pneumonia or they could be incidental findings.
+
+Another common one would be the multiple BB-sized miliary pattern on a routine chest X-ray in an asymptomatic patient.
+
+Well, I grew up on a farm in Ohio, so it's histo in that case, right?
+
+So a lot of it is dependent on the area.
+
+All right, let's move on.
+
+Next question: Which laboratory result might support the suspected diagnosis in your 38-year-old patient presenting with atypical pneumonia?
+
+A: An elevated alkaline phosphatase.
+
+B: An elevated blood eosinophil count C: An elevated creatinine phosphokinase.
+
+Or D: A macrocytic anemia.
+
+I was asked this exact same question on the boards last April, that's why I've included it here for y'all.
+
+So there's a specific laboratory test that might help aid you in the diagnosis if you're suspecting a fungal lung infection.
+
+What do we think it is?
+
+Come on folks.
+
+I bet you you'll get this right.
+
+Y'all have been a really smart audience thus far.
+
+I'm gonna take B.
+
+Good, that's correct, an elevated blood eosinophil count may help you.
+
+Next question: "Desert Rheumatism" is a colloquial term describing a classic triad in coccidioidomycosis describing fever, myalgias, and which specific dermatologic finding of the bilateral lower extremities?
+
+A: Erythema migraines.
+
+B: Erythema multiforme, C: Erythema nodosum.
+
+Or D: Palpable purpuric papules.
+
+I was asked this question as well on the boards, and I did not know the answer to it.
+
+So this is a learning opportunity for me.
+
+So desert rheumatism, fever, myalgias, and a bilateral lower leg dermatologic finding, what do we think?
+
+Good, y'all are smarter than I was.
+
+I think I guessed right and got it.
+
+But anyway, erythema nodosum is the correct answer.
+
+All right, so we're gonna discuss coccidioidomycosis.
+
+This is, I think, the most likely to occur on the on the boards, you can never say exactly.
+
+The cases arising as I said, symptomatic cases can be up to 40% of the time, and that will be within the first few weeks after exposure.
+
+In our case, it was two weeks after his trip to Arizona with classic symptoms of an atypical pneumonia.
+
+Most of them recover, but some move on to develop chronic lung diseases.
+
+Tons of ways to diagnose it, and blood eosinophilia may help support the diagnosis.
+
+Here's a picture of the erythema nodosum on the bilateral lower legs of this patient.
+
+It's an inflammation of the subcutaneous fat, actually.
+
+Now, there's no evidence from randomized clinical trials to determine whether antifungal treatment for uncomplicated cocci infections reduces symptom duration or prevents complications.
+
+But as I mentioned, there's a current prospective trial that the government is doing right now about treating these patients with fluconazole treatment.
+
+And the guess is by infectious disease that it's gonna make a difference.
+
+In any case, you should institute treatment in anyone who is at higher risk.
+
+These patients are not contagious, you can follow their disease progress with complement fixation titers.
+
+Some recommend treatment if the titer is greater than 1 to 16, less than 1 to 4 is a better prognosis.
+
+Complications, this was also asked of me on the boards.
+
+Possible complications are meningitis and an infectious monoarthritis.
+
+if you're going to treat, it's likely going to be fluconazole, 400 milligrams once a day for 3 to 12 months.
+
+Now, this is off the CDC's website.
+
+They use the term cocci when talking about coccidioidomycosis.
+
+So the acronym here is, number one, consider the diagnosis, think about it.
+
+Number two, order the right tests.
+
+Number three, check for risk factors, check for complications, and then initiate management.
+
+So this is our algorithm for cocci.
+
+All right, I would definitely know those slides 'cause I'm suspecting you're gonna get asked questions.
+
+Now we're gonna move along to tuberculosis, and I guarantee there's gonna be questions on TB as well, they love to ask all manner of, in my opinion, very tricky questions about tuberculosis.
+
+So this is infection with mycobacterium to TB.
+
+Several factors determine the risk.
+
+These are important.
+
+So the infectiousness of the source patient, how many bacteria are they spewing?
+
+How susceptible is the host?
+
+How long is the exposure and the environment of the exposure?
+
+Again, small spaces with poor ventilation confer the highest risk, right?
+
+And then lastly, the infectiousness of the particular MTB strain.
+
+Now, patients with TB, they can go anywhere from active tuberculosis, we call that TB disease, anywhere to those infected with no clinical disease, we call that latent TB infection or LTBI.
+
+And here's the guidelines from the Infectious Disease Society of America from 2017, that was the latest update.
+
+Who should be tested for TB?
+
+The goal is to identify patients who would benefit from therapy.
+
+So that's not everyone, everyone doesn't need to be tested for TB.
+
+If you're at low risk, you probably don't need it.
+
+Higher risk patient, if you live with someone who has TB, you're immune suppressed, you're from a country where it's common, occupational or social situations like nursing homes, healthcare providers, obviously, if we care for TB patients, use of illicit substances, and don't forget about those with symptoms.
+
+You got two options for testing.
+
+There's the traditional skin test, that's the injection of purified protein derivative subcutaneously.
+
+And then the newer kid on the block is the Interferon-Gamma Release Assay, usually the QuantiFERON Gold, and that's a blood test.
+
+Now if you're gonna do the skin test, remember you're looking for induration, not erythema.
+
+Induration is elevated skin, and you're gonna read this in 2 to 3 days, you're gonna record it in millimeters.
+
+A positive test can be read accurately for up to seven days.
+
+Negative tests are only good for three days.
+
+These are what I call the money slides.
+
+These are the slides you should memorize for the boards.
+
+These are the slides that you might get asked a question.
+
+So if they have five millimeters or more of induration, that's considered positive in these situations.
+
+I live with someone who has tuberculosis.
+
+I've got clinical or radiographic evidence of current or prior TB or I'm immunosuppressed.
+
+Look at that, immunosuppression.
+
+Not only HIV seropositive patients and organ transplant recipients, your rheumatologic patients who might be on prednisone 15 milligrams a day or on tumor necrosis factor alpha antagonist.
+
+There's a lot of those patients out there.
+
+Even your patients coming from dermatology because they've got a psoriasis, there's a lot of uses for these biologics now.
+
+So in those cases, five millimeters or more is considered positive result.
+
+10 is positive if they're a recent immigrant from a high-risk country, they live in a high-prevalence area, they have diabetes, renal failure, or cancer, they're a long-term care facility resident or employee, a prison inmate, an IV drug user, young children, or those working in a mycobacteriology lab.
+
+And then for the rest of us it's 15 millimeters, so that's pretty much anyone else including healthcare workers.
+
+Pros and cons to IGRAs: They're more sensitive and specific.
+
+They are now recommended by the CDC.
+
+There are fewer false positives.
+
+They're preferred overall.
+
+The negative is it's a blood study and they have to be processed within a certain amount of hours, they're gonna be more expensive.
+
+But you don't have to come back in 2 or 3 days and haven't looked at either.
+
+So I give my patients the option, which one do you want?
+
+Now, guidelines for the diagnosis of latent TB infection, the IGRA is recommended over the skin test now and anyone above the age of five who are likely to be infected have low to moderate risk of disease progression.
+
+Testing is warranted, and they either have a history of BCG vaccination or they're unlikely to return for their skin test.
+
+These are all the times where you should reach for the IGRA.
+
+Overall, it is recommended over the skin test.
+
+Okay, people at low risk for TB don't need to be tested.
+
+If you're gonna do testing in these low risk groups, the IGRA is recommended.
+
+And then if the initial test is positive, you're gonna do a second diagnostic test, you wanna repeat the test.
+
+And the repeat test could be the IGRA or the skin test.
+
+All right, what about TB disease?
+
+This is a patient with active tuberculosis.
+
+This could be suspected based on pulmonary imaging or your screening tests.
+
+You're gonna do a CT.
+
+Send 'em into the radiology department, let's get a CT.
+
+You can get active TB or prior TB and they have different appearances.
+
+The boards would make it pretty obvious.
+
+Okay, next question.
+
+We have a different case now.
+
+We have a 42-year-old recent immigrant from Cambodia who presents with a one month history of cough, night sweats, and weight loss.
+
+Their PPD is positive at 14 millimeters and the chest X-ray reveals a left upper lobe cavitary lesion.
+
+Induced sputum smear shows acid-fast bacilli.
+
+Which one of the following is the most appropriate initial therapy?
+
+So, this is one of these board questions where you need to know what the diagnosis is, and then you need to know the treatment.
+
+In this case, it's pretty obvious he's got TB, right?
+
+So what are we gonna do?
+
+A: Isoniazid monotherapy.
+
+B: INH and ethambutol.
+
+C: INH, ethambutol, and pyrazinamide.
+
+Or D: INH, ethambutol, pyrazinamide, and rifampin.
+
+What do we like for treating tuberculosis initially?
+
+The most appropriate initial therapy is the STEM set.
+
+Good, the majority of you throw the kitchen sink at 'em till you figure out what's going on.
+
+And then based on cultures, you might refine that therapy, but initially you're gonna throw the kitchen sink.
+
+So once weekly, isoniazid and rifapentine for 12 weeks is now recommended over isoniazid for nine months for latent TB infection.
+
+Please memorize that if you don't already know it.
+
+This is a change from the previous guidelines.
+
+For latent TB, so they don't have active TB but they tested positive, we need once weekly is isoniazid and rifapentine for 12 weeks.
+
+That is the new recommendation over isoniazid for nine months.
+
+You can do self-administered therapy or directly observe therapy.
+
+They also recommend doing video conferencing to be sure that the patient's taking their pill as well, increases efficacy.
+
+Now, with TB disease, you wanna do aggressive combination therapy.
+
+Your intensive phase for two months is INH, rifampin, ethambutol, and pyrazinamide.
+
+And then your continuation phase for an additional four months would be INH and rifampin.
+
+Don't forget about supplementing with B6 in your patients taking isoniazid.
+
+Post-treatment follow up.
+
+They don't need to be retested with a skin test.
+
+They need to have documentation about what was tested, how they were tested, educate them about their symptoms, et cetera.
+
+That's fairly obvious.
+
+All right, next question.
+
+"Which work site exposures confer the greatest risk of lung cancer among those workers who develop an occupational lung disease due to their exposure?" So, is it A: Construction sites, B: Factories, C: Farms, D: Mines or stone quarries?
+
+One of these has the highest occupational risk for lung cancer.
+
+I was asked this question on the boards as well, so that's why I've included it.
+
+All right, what do we think?
+
+Okay, learning opportunity, construction sites is the answer here.
+
+I see where you're coming from with the stone quarries, that it could be a tricky question actually, the way I answered it.
+
+Anyway, asbestos confers the highest risk for lung cancer among patients with occupational lung disease, so those who breathe in asbestos.
+
+Now, with idiopathic with pulmonary fibrosis and other diseases, silicosis is a huge problem, so in your stone quarries.
+
+But for lung cancer, it's asbestosis, which is generally in construction workers.
+
+Patients who work in farms are exposed to bio dusts and aerosols, doesn't increase the risk of lung cancer.
+
+Factory workers who have chemical pneumonitis, same.
+
+Silicosis definitely can cause chronic lung diseases, interstitial lung diseases, but it's less risky as far as the lung cancer risk.
+
+There will be some question on occupational lung diseases in some regard on the exam, it's hard to say which way they'll go.
+
+All right, so I'm rounding things out here.
+
+Pulmonary hypertension, I really didn't know if I should put this in here or not.
+
+It's technically an elevated blood pressure in the pulmonary arteries.
+
+But Dr. Firnhaber doesn't talk about it in hypertension, so I've included it here, primarily because many times the risks can be pulmonary.
+
+Patients with COPD, patients with silicosis, these patients can go on to develop pulmonary artery hypertension, which of course narrows the pulmonary arteries, and it's harder for the right ventricle to pump the blood through them, so then the right ventricle eventually fails.
+
+So right heart failure can happen as a result of pulmonary hypertension, which can happen from chronic pulmonary diseases.
+
+You follow me?
+
+So that's kind of the thinking behind why we've included this here and the way the boards might ask that type of a question.
+
+Therapy is supportive, it can be a life-threatening situation, there's really no treatment.
+
+But they're using vasodilators and other agents.
+
+There are five groups of pulmonary artery hypertension.
+
+Group 1 is pretty much idiopathic, that could be a genetic factor.
+
+Group 2 comes from left-sided heart failure, that's actually the most common.
+
+Group 3 is pulmonary hypertension due to chronic lung diseases or hypoxia.
+
+4 is due to chronic thromboembolic diseases.
+
+And 5 is unclear or multifactorial.
+
+That one also includes sarcoidosis.
+
+Okay, the workup can be extensive, obviously.
+
+All right, we mentioned this earlier.
+
+Moving on to another topic: Chronic Adult Cough of Unknown Etiology.
+
+This is someone who's coughing for eight weeks or more, not sure if it's voluntary or involuntary, but they're doing it.
+
+As I said, you can get these from the lung parenchyma itself.
+
+You can get them from sinus drainage down, or you can get them from gastroesophageal reflux up.
+
+That's how I like to think of these anatomically.
+
+If they're on an ACE inhibitor, switch 'em to an ARB.
+
+Smokers should quit.
+
+You're probably gonna do pulmonary function testing and a chest X-ray.
+
+The most common causes of chronic cough are upper airway cough syndrome, cough variant asthma, or gastroesophageal reflux disease, either alone or in combination.
+
+But this is a common problem that we contend with in primary care.
+
+The upper airway cough syndrome is probably the most common.
+
+So this is sinus drainage down, they could have allergies.
+
+I will tell you personally, since I've been down here in Dallas, my allergies have been acting up a bit.
+
+So I've got a little bit of sinus drainage as well from the allergens here, because the allergen season, you've got four allergy seasons.
+
+You've got spring, summer, fall, and winter.
+
+Spring is tree pollen, and it depends on where you live.
+
+In Detroit, our trees aren't pollinating yet, it hasn't been warm enough.
+
+In Dallas, obviously they are.
+
+In the summer you've got grass pollen.
+
+In the fall it's ragweed.
+
+And in the winter, it's dust and indoor allergens, right?
+
+All of these can cause a cough.
+
+So if you suspect this is what's going on, put 'em on saline irrigation, maybe a decongestion, and then antihistamines, and nasal steroids.
+
+Antihistamines and nasal steroids are a very effective combination.
+
+Cough-variant asthma, very common to see asthma where they don't have wheezing or dyspnea, but they just have the cough.
+
+It's not uncommon with asthma at all.
+
+And those patients respond very well to inhaled corticosteroids.
+
+Also non-asthmatic eosinophilic bronchitis.
+
+Dr. Holt was asked this question and she asked me about it earlier.
+
+The treatment there focuses again on inhaled corticosteroids.
+
+Gastroesophageal reflux disease, you get acid reflux up that irritates the esophagus.
+
+It's interesting if you take a stomach acid, hydrochloric acid, and I have a vial of it, and I pour the vial out on this table.
+
+Of course the liquid would eventually start eating through the tablecloth and the table, but it doesn't stop there.
+
+You get these clouds that kind of just move and waft along, and the same thing happens inside the body when you have reflux of the stomach acid, whether it's the actual acid or the vapors of the acid can irritate the sinuses in the throat and cause chronic sore throat or chronic cough.
+
+So the easiest solution there, put 'em on two weeks of a trial of a proton-pump inhibitor.
+
+Every pharmacy in the country now sells these little bottles of 14 pills of Prilosec or Nexium, because we do a two-week trial in outpatient medicine and see how your symptoms do.
+
+If your symptoms are gone, we've probably nailed the diagnosis, and that's easier than doing expensive testing on them, like EGDs and so forth.
+
+Cough hypersensitivity syndrome.
+
+This is basically a neurologic situation where the patient probably had some chronic cough, and then the nerves got irritated, and now they want to cough all the time even though there's really no underlying pathology.
+
+So you would treat that as really a neurologic disorder and consider gabapentin to downregulate their cough reflex.

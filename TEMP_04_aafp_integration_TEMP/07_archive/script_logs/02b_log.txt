@@ -1,0 +1,104 @@
+TIER 1 (17 sessions)  [Yield >= 1.0]
+  [1.60] Sess 07: Health Promotion & Prevention
+         Tier1 subcats: Lung Cancer Screening, Cervical Cancer Screening, Alcohol Use Screening and Intervention
+  [1.60] Sess 46: Pulmonary V: Lung Cancer OSA Sarcoidosis & Pulmonary Fi
+         Tier1 subcats: Lung Cancer Screening
+  [1.35] Sess 15: Endocrine Diseases
+         Tier1 subcats: Polycystic Ovary Syndrome
+  [1.35] Sess 19: Geriatrics II: Osteoporosis Gait & Prevention
+         Tier1 subcats: Osteoporosis Management, Osteoporosis Screening
+  [1.35] Sess 29: Women's Health I: AUB & Gynecologic Oncology
+         Tier1 subcats: Cervical Cancer Screening
+  [1.35] Sess 30: Women's Health II: Breast Issues Contraception & Infert
+         Tier1 subcats: Polycystic Ovary Syndrome
+  [1.27] Sess 02: Peripheral Vascular Disease
+         Tier1 subcats: Deep Vein Thrombosis Management, Acute Limb Ischemia
+  [1.27] Sess 12: Emergency Medicine III
+         Tier1 subcats: Deep Vein Thrombosis Management, Delirium Management
+  [1.27] Sess 28: Maternity Care II: Medical Complications & Labor Manage
+         Tier1 subcats: Deep Vein Thrombosis Management
+  [1.18] Sess 16: Lower GI Tract Diseases
+         Tier1 subcats: Celiac Disease Diagnosis
+  [1.18] Sess 43: Pulmonary II: Asthma
+         Tier1 subcats: Asthma Management
+  [1.09] Sess 42: Pulmonary I: COPD
+         Tier1 subcats: COPD Management
+  [1.02] Sess 05: Heart Failure
+         Tier1 subcats: Severe Hyponatremia Management
+  [1.02] Sess 10: Emergency Medicine I
+         Tier1 subcats: Acute Limb Ischemia, Severe Hyponatremia Management
+  [1.02] Sess 18: Geriatrics I: Systems of Care & Cognitive Impairment
+         Tier1 subcats: Delirium Management
+  [1.02] Sess 20: Geriatrics III: Pharmacokinetics & Polypharmacy
+         Tier1 subcats: Delirium Management
+  [1.02] Sess 33: Sports Medicine
+         Tier1 subcats: Concussion Management
+
+TIER 2 (29 sessions)  [Yield 0.5-0.99]
+  [0.93] Sess 03: Acute Coronary Syndrome & Hyperlipidemia
+         Top subcats: Acute Coronary Syndrome, Stable Angina Management, Smoking Cessation Counseling
+  [0.93] Sess 04: Hypertension
+         Top subcats: Orthostatic Hypotension, Hypertension Management
+  [0.93] Sess 24: Renal Disease I
+         Top subcats: Hematuria Evaluation
+  [0.93] Sess 25: Renal Disease II
+         Top subcats: Hematuria Evaluation, CKD-Mineral Bone Disorder, Recurrent Nephrolithiasis Prevention
+  [0.93] Sess 27: Maternity Care I: Prenatal Care & Early Complications
+         Top subcats: Food Allergy Prevention, Dental Caries Prevention, Preeclampsia Prevention
+  [0.93] Sess 37: Common Newborn Issues
+         Top subcats: Food Allergy Prevention, Dental Caries Prevention
+  [0.85] Sess 11: Emergency Medicine II
+         Top subcats: Hypothermia Management
+  [0.85] Sess 17: Upper GI Tract Diseases
+         Top subcats: Acute Pancreatitis Management
+  [0.85] Sess 21: Hematology Issues
+         Top subcats: Chronic Urticaria Management, Multiple Myeloma Diagnosis
+  [0.76] Sess 36: Management of Chronic Pain
+         Top subcats: Fibromyalgia Management
+  [0.76] Sess 47: The Major Arthritides
+         Top subcats: Fibromyalgia Management
+  [0.75] Sess 44: Pulmonary III: Pulmonary Infections & Pneumonia Part 1
+         Top subcats: Community-Acquired Pneumonia
+  [0.75] Sess 45: Pulmonary IV: Infections Pneumonia Part 2 & Occupationa
+         Top subcats: Community-Acquired Pneumonia
+  [0.68] Sess 09: Managing Common Cutaneous Problems
+         Top subcats: Postinflammatory Hyperpigmentation, Hidradenitis Suppurativa, Trigeminal Neuralgia
+  [0.68] Sess 14: Diabetes Mellitus
+         Top subcats: Type 2 Diabetes Diagnosis, Type 2 Diabetes Management
+  [0.68] Sess 22: Fever & Infectious Disease in Children
+         Top subcats: Kawasaki Disease, Group A Streptococcal Pharyngitis
+  [0.68] Sess 26: Common Neurological Disorders
+         Top subcats: Cervical Myelopathy
+  [0.68] Sess 32: Fracture Care
+         Top subcats: Complex Regional Pain Syndrome
+  [0.68] Sess 40: Behavioral Medicine II: Bipolar & Anxiety Disorders
+         Top subcats: Bipolar I Disorder Diagnosis, Obsessive-Compulsive Disorder
+  [0.68] Sess 41: Behavioral Medicine III: ADHD Autism & OCD
+         Top subcats: Obsessive-Compulsive Disorder
+  [0.68] Sess 48: Preoperative Examination & Management
+         Top subcats: Perioperative Anticoagulation Management
+  [0.68] Sess 49: Urologic Problems
+         Top subcats: Prostate Cancer Screening, Recurrent Nephrolithiasis Prevention
+  [0.65] Sess 08: Epidemiology & Medical Literature
+         Top subcats: Influenza Vaccination
+  [0.65] Sess 13: Obesity & Metabolic Syndrome
+         Top subcats: Type 2 Diabetes Management, Bariatric Surgery and Obesity
+  [0.59] Sess 23: STIs Vaginitis & Vaginosis
+         Top subcats: HIV Screening
+  [0.59] Sess 39: Behavioral Medicine I: Depression
+         Top subcats: Alcohol Use Disorder Treatment, Anorexia Nervosa Complications
+  [0.50] Sess 31: Musculoskeletal Medicine
+         Top subcats: Greater Trochanteric Pain Syndrome
+  [0.50] Sess 35: Common ENT Problems
+         Top subcats: Tinnitus Management, Group A Streptococcal Pharyngitis, Meniere's Disease Diagnosis
+  [0.50] Sess 38: Well-Child & Adolescent Issues
+         Top subcats: Adolescent Depression Screening
+
+STANDARD (2 sessions)  [Yield < 0.5]
+  [0.16] Sess 06: Managing Dysrhythmias
+         Best: Supraventricular Tachycardia, Atrial Fibrillation Stroke Prevention
+  [0.33] Sess 34: Pediatric Orthopedics
+         Best: Child Abuse Recognition, Distal Radius Fracture Management
+
+Total sessions: 48
+Output: C:/Users/mpsch/Desktop/claude_knowledge/ABFM_curriculum/AAFP_course_integration/02_processed/session_hy_inserts_v2.json

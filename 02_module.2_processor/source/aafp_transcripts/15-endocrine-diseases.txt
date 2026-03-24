@@ -1,0 +1,773 @@
+Good morning everyone.
+
+So we're gonna switch gears a little bit to talk about endocrine disorders.
+
+As you know, there are a number of endocrine disorders, so we're gonna try to hit the highlights and focus mostly on the thyroid, thyroid parathyroid, and then we'll take a look at some cushings and some Addisons and how to work up masses, which is a common board question.
+
+So let's start with a question.
+
+This is a 17-year-old who has neck swelling for two to three weeks, five pound weight gain and feels increasingly tired.
+
+Otherwise, no additional symptoms.
+
+The exam is significant for diffusely, enlarged, smooth and non-tender thyroid.
+
+So what do you do first?
+
+You get a T4 or reverse T3, a TSH, or a thyroid ultrasound.
+
+Good, good, good.
+
+Most of us got this right.
+
+So the workup, just as a rule, the initial diagnostic step for any thyroid disorder will always be TSH.
+
+It will never be a reverse T3.
+
+In fact, the reverse T3 will probably never be asked on a test.
+
+It will be a TSH.
+
+That's always, whether you're looking at hyperthyroidism or hypothyroidism, TSH will always be your initial intersection for beginning your diagnostic journey.
+
+So here's your, our spectrum from hypothyroidism to hyperthyroidism, and then we have this ambiguous zone in the middle, which is the subclinical hypothyroidism, and we'll talk about that briefly.
+
+So this patient is another younger person, a 20-year-old who comes in for a routine Suboxone refill and has no cardiovascular risk factors other than obesity.
+
+He's been tired and has had some weight gain and wants you to check his thyroid and his testosterone.
+
+His TSH comes back at 9.1.
+
+His free T4 is normal, and his testosterone is 401.
+
+What is the next appropriate step?
+
+Do you start him on treatment with TSH?
+
+Do you encourage a Mediterranean diet?
+
+Do you watch and wait and then consider repeating?
+
+Where do you check thyroid antibody studies?
+
+Good.
+
+Most of us got this, the opportunity to learn here, again, what is the testosterone of 401?
+
+Do you treat a testosterone of 401?
+
+No, good.
+
+So this is, puts us in the zone of what might be considered a subclinical hypothyroidism.
+
+So this patient is symptomatic.
+
+He could be symptomatic from a number of things, but he's symptomatic and has a TSH of 9.1.
+
+Now, not every person is symptomatic with a TSH of 9.1.
+
+If you are in the geriatric spectrum of life and you have a TSH of 9.1, you may not be symptomatic at all because it's very common for TSHs to be elevated up to 7.5 or eight, if you're 70 or above.
+
+It's not the situation when this patient, look for your symptoms.
+
+If your TSH is greater than 10 and you're somewhat symptomatic, you can still treat that.
+
+If you have a TSH greater than 10 and you have TPO antibodies that are positive, TPO antibodies tell you that there's a greater likelihood of moving from, even if you have a TSH of say eight, or you're pregnant and you have a TSH that's slightly elevated.
+
+Anytime you have TPO antibodies, that indicates that you have a greater likelihood of one day becoming hypothyroid and that would require increased vigilance and surveillance.
+
+Be careful though, if we overtreat subclinical hypothyroidism, there's always a risk for AFib and osteoporosis.
+
+So that's a good test question right there.
+
+Risk of overtreating or super therapeutic TSHs with super therapeutic levothyroxine bears the risk of osteoporosis and AFib.
+
+Interestingly, not everybody feels better if you treat them.
+
+So there's lots of data that shows that treatment does not always improve in addition to symptoms, survival and morbidity.
+
+There is, however, a slightly increased risk of cardiovascular disease if you have subclinical hypothyroidism.
+
+So I think most of us tend to treat that overall.
+
+So hypothyroidism is very common.
+
+Females greater than males, six to one.
+
+There are a variety of reasons for it.
+
+The most important ones are the primary ones.
+
+So these are your autoimmune thyroiditis such as Hashimoto's, which will be the most common one, ablations, etcetera.
+
+Other secondary ones that are good to remember, especially the medications.
+
+Lithium and amiodarone are the two big ones that pop up on board questions.
+
+If you recall, amiodarone is, has a double-edged sword because it can cause both hypothyroidism and hyperthyroidism.
+
+So it has that duality of it.
+
+And then there are the transient, mostly viral induced subacute thyroiditis that we'll talk about.
+
+And then there can be problems in the brain in your central access that can contribute.
+
+In your pituitary gland.
+
+We will come back to that in just a little bit.
+
+So here are the classic factors that contribute to hypothyroidism.
+
+We already talked about the female sex being, having increased risk.
+
+Growing old brings you increased risk.
+
+Caucasians Type 1 diabetes, down syndrome, and if you have a family history, that will always put you at a greater risk.
+
+If you've had a previous episode or radiation, that also brings greater risk.
+
+These are the classic symptoms as in this case that I think we're all pretty familiar with.
+
+Interesting to think about the myalgias, which can come.
+
+How many of you're checking your deep tendon reflexes if you're concerned about hypothyroidism.
+
+That's a good physical exam finding to turn back to depression and bradycardia and the coarse hair.
+
+These are classic symptoms.
+
+So how do we diagnose?
+
+And I feel like this is a great place to refresh what we do when we're starting our diagnostic pathway.
+
+TSH, TSH, will always be your initial, so you don't need to check a T4, T3, someone comes in, they're symptomatic, they have two or three of these symptoms and you wanna start the process.
+
+So you're gonna get a TSH first, not a TSH and a T4 and a T3 or a TPO or a thyroid globulin receptor antibody.
+
+You're just gonna get a TSH.
+
+If the TSH comes back and it's elevated.
+
+So a normal TSH is like 0.5 to five.
+
+If your TSH is elevated, then you, you would consider getting a T4.
+
+You do not need to get a T3 initially, but you could get a T4 and a TSH just to reinforce that diagnosis.
+
+The thyroid antibody studies, that will be more important if you're thinking about either Graves or Hashimoto's.
+
+So we'll come back and speak about that a little bit, in a moment.
+
+There are some other surrogate markers to remind yourself of, especially lipids.
+
+You can have anemia associated with hypothyroidism.
+
+The thyroid hormone is very important in terms of the metabolism of producing hemoglobin.
+
+So you can commonly see anemias.
+
+So you decide to start therapy and six weeks later you, after starting levothyroxine, you check a steady state TSH.
+
+So that's when you do it.
+
+The TSH decreased from 9.3 to 7.2.
+
+All of the following factors are barriers to reaching a therapeutic TSH except treating with desiccated thyroid supplementation.
+
+So that would be like armor.
+
+Treating with T4 rather than T3.
+
+Patient is also taking lithium.
+
+Patient is taking iron sulfate for iron deficiency already.
+
+So which of these is not a barrier?
+
+Excellent, most of us got this right.
+
+Let's take a look at these.
+
+So why do we not treat in general with, this is a question that always comes up.
+
+Why do we not treat in general with T4 and T3 or armour?
+
+You can do that in two ways.
+
+You can treat with armour, which is ground up pick thyroid, or you can treat with synthetic T4 or synthetic T3.
+
+That's cytomel.
+
+Why do we not do that?
+
+It's not recommended to do that.
+
+Well, if you think about the physiology of what happens with T4 and T3.
+
+T4 is the vast majority of the product that comes from the thyroids.
+
+Vast majority.
+
+T4 lasts for a week.
+
+It's half life is seven days.
+
+The half-life of T3 sticks around for like five to six hours.
+
+So the, what happens, the reason why we treat with T4 is because T4 is the molecule that's doing most of the work.
+
+So it interacts with whatever cell, all cells in the body.
+
+Interacts with the cell.
+
+T4 gets delineated, it becomes T3.
+
+We think about the T3 as the activated molecule, but it's actually the conversion of T4 to T3 at the membrane that makes that that metabolic magic happen.
+
+So the T4 is vastly more important than the T3 in terms of supplementation.
+
+You'll sometimes see the psychiatrist who will add T3 to patients who have refractory depression.
+
+There's some data for that, but not great data, but there is no great data for routinely treating T4, T3.
+
+That's a a question that always comes up.
+
+You can, however, and you may have patients out there who have a TSH that you normalize with with synthetic T4, but they still feel terrible.
+
+So in those patients you can consider, and those patients might be folks who've either had an ablation.
+
+They've either had surgery to remove their thyroid.
+
+They've either had a history of Hashimoto's.
+
+Those people you can consider in certain circumstances to give them T3 and T4.
+
+But in general, just T4.
+
+When you do start your therapy, the typical loading dose is 1.6 mcg per kilo.
+
+For a younger person and an older person, you start at a lower dose.
+
+You start at one.
+
+Generally you recommend taking on a fasting stomach and waiting 30 to 60 minutes before eating and then you always check steady state is five to six weeks.
+
+So it's not helpful to check before that time.
+
+Again, don't use armour, don't use combination therapy.
+
+You can come back and review this.
+
+There are a lot of other things that contribute to the dysregulation of the thyroid.
+
+We'll talk about some of those right now, but in general, you can push a little bit lower if your patient's not feeling well to three or 2.5.
+
+But there can be problems with the conversion of T4 to T3 so that the physiology of this, the metabolism of the thyroid gland is exquisitely detailed and it's much bigger than what we think about it because there are all these things that can contribute to the different enzymes, the dyonisus, the antibody binding, the liver metabolism of all these things.
+
+But you can have deficiencies in these things, selenium, notably and other vitamins.
+
+A vitamins, the B vitamins, D and E that can contribute to the conversion of T4 and T3.
+
+So all of these things can decrease your T4, T3 conversion.
+
+Steroids.
+
+Lithium, we talked about SSRIs, interestingly, phenytoin beta blockers and theophylline.
+
+So these are are classic estrogen.
+
+So HRT can potentially decrease your T4 to T3 conversion.
+
+And other factors we mentioned getting older.
+
+Alcohol use can affect T4, T3 conversion, radiation, broccoli and cauliflower.
+
+I'm not sure how potent that is.
+
+Still recommend that to my children.
+
+Receptor antibodies, soy, because it's a phytoestrogen, smoking, because it's bad hemochromatosis and kidney disease as well.
+
+These are all things that contribute to the T4, T3.
+
+So if you get to a place where you're treating, they're not getting better, this is when getting a T3 could be important.
+
+Their TSH is fine, their T4 is fine.
+
+And then you look at their T3 and there's much more variability with T3 because of the half-life, which is somewhat shorter, but this is where you could see a discrepancy between T4, T3.
+
+And you need to consider, well what else could be affecting that conversion.
+
+Here are your practice recommendations.
+
+Good ones to go back, especially that first one.
+
+Patients with hypothyroidism should not be treated with T3 alone or in combination.
+
+So this gentleman has fatigue, weight loss, voracious appetite, a tremor, headaches, and worsening anxiety symptoms for four weeks.
+
+I think you know what that is.
+
+Exam is significant for a diffusely enlarged non-tender thyroid and a fine hand tremor as TSH is suppressed.
+
+And his T4 is elevated.
+
+So what do you do next?
+
+What's your next diagnostic step?
+
+Do you check a CBC?
+
+Do you do a radio iodine uptake study to check thyroid antibodies or do you do an ultrasound.
+
+Good, most of us got the the right answer right.
+
+Radio iodine uptake study.
+
+I understand those of you who chose the ultrasound, if you have one like Dr. Docks will pull out his ultrasound and check your thyroid in a second.
+
+It's actually very easy to look at an inflamed hyperactive thyroid with ultrasound.
+
+You can learn that skill in about five minutes because you'll see increased vascularity with doppler.
+
+Most of us don't have ultrasounds in our clinics.
+
+But the most definitive diagnosis, and the reason why this is correct is that you need to, you need to do a radio iodine uptake study to see what exactly is happening in the thyroid, how much hyperactivity there is.
+
+Is it diffuse, is it a single nodule, etcetera.
+
+And I'll show you a graph on that in a moment.
+
+So the most common reasons for hyperthyroidism, again, females greater than males, similar to hypothyroidism, the prevalence of close to 0.2%.
+
+Anybody remember what prevalence that's similar to that we talked about yesterday?
+
+That is the ankylosing spondylitis is that has the same prevalence, number one cause, number two cause, number three cause is gonna be Graves' disease.
+
+So that is your most common reason.
+
+That is where we have the TSH receptor antibodies that stimulate the thyroid and start dumping its contents.
+
+You can have functional nodules and we'll take a look at that in a second.
+
+And then you can have a thyroiditis that's associated with either Hashimoto's, maybe a postpartum.
+
+Oral, a viral induced thyroiditis.
+
+Word of clarity about Hashimoto's.
+
+'cause it's sometimes confusing.
+
+Most of us think of Hashimoto's as a hypothyroidism problem.
+
+In the initial phases of Hashimoto's, it's a hyperstimulation problem.
+
+So initially you have a hyperthyroid state, you dump all the thyroid continents, then you destroy the cells, and then that leads to a hypothyroid state.
+
+So it begins hyper and then it ends up hypo.
+
+There's your amiodarone again.
+
+Unfortunately you can have cancer that provokes hyperthyroidism and hyperemesis gravidarum is also associated with a hyperthyroid state.
+
+This is a slide for you to go back and just take a look at later.
+
+Put a circle on that.
+
+This is your diagnostic pathway.
+
+I would spend a a couple minutes just refreshing with that.
+
+So that's a study study guide for you.
+
+Few risks of hyperthyroid.
+
+Advancing age, race can be a factor.
+
+Low iodine intake is really not a problem in this country.
+
+Again, if you have a family history, and again, amiodarone.
+
+Signs and symptoms were classic in this case, palpitations, tremor, weight loss, headaches, insomnia, irritability, mental changes, etcetera.
+
+So again, where do we start with the diagnosis?
+
+This was sort of a clear cut picture.
+
+This patient.
+
+Getting the TSH initially is what you should do.
+
+But if you're pretty convinced that it's a hyperthyroid state, okay, to go ahead and get a T4.
+
+You really don't need to get a T3 initially.
+
+If your TSH is suppressed and you have a high T4 and they're symptomatic, it doesn't really matter what their Te is at this point, but the definitive process or next step is to get the iodine uptake study.
+
+You can't check a CBC because hyperthyroid states can increase your ferritin.
+
+And so that informs your metabolism that it's an inflamed state and that can also affect your hemoglobin production and decrease it.
+
+If you're worried about a subacute thyroiditis you might want to get an ESR and then you might want to consider antibody studies, but that's much later down the pathway.
+
+And if you have an ultrasound, by all means pull it out and look.
+
+So when you do a scan, this is what you're looking for.
+
+So if your TSH is low and your T4 is high, notice T3 is not up there.
+
+You do your radioactive thyroid scan and if you see diffuse uptake, that is Graves.
+
+If you see a single nodule, 95% of the time that nodule is gonna be a hyperactive adenoma.
+
+If you see multiple nodules, then that's gonna be a multinodular goiter.
+
+How do you treat Graves' disease?
+
+These days you treat with radioactive iodine.
+
+So this is a radioactive ablation, excuse me.
+
+Surgery is much less common these days, so it's gonna be radioactive iodine.
+
+If you are in the initial stages and the patient comes in on a Friday afternoon, you confirm they have elevated T4 and a super suppressed TSH, you are gonna start with symptomatic management with a beta blocker.
+
+Propanolol better than atenolol, unless you have asthma or COPD.
+
+But you can also start with methimazole 2, with one exception, and we'll come back to when you would use PTU.
+
+So methimazole is always gonna be safer than PTU for liver hepatic toxicity, except if you are in the first trimester of pregnancy.
+
+So this is one of those nuances that's worth circling that comes up on board exams.
+
+Methimazole, always, except in the first trimester of pregnancy.
+
+So if you're in the second trimester or third trimester of pregnancy, you're gonna convert from PTU to methimazole.
+
+And that's because of the liver potential damage.
+
+65-year-old with a painless neck mass for six weeks.
+
+They come in and they tell you, oh, I think I feel something in my thyroid.
+
+And you feel it.
+
+And indeed there is a little mass there.
+
+You pull out your ultrasound and you confirm that it's a hypo or isoechoic lesion.
+
+Not a anechoic cystic type lesion, but a a concerning lesion.
+
+The concerning lesions on ultrasound in your thyroid are most commonly isoechoic or hypoechoic.
+
+What is your first initial test?
+
+Do you get a TSH?
+
+Do you go ahead and biopsy that thing?
+
+You check a free T4 or do you ultrasound it?
+
+Oh, you didn't get it, but I really appreciate that you chose ultrasound because I have a deep love for ultrasound.
+
+But what did I tell you?
+
+ITSH, ITSH, any thyroid disorder, any thyroid disorder, whether it be an a lesion, whatever, if you're talking remotely about the thyroid, your initial diagnostic step will always be a TSH, including lesions.
+
+Yeah, and this is why.
+
+The reason why, and we'll get to a little graph in a second, it's because some lesions only five, maybe in some cases 10% are malignant lesions.
+
+The vast majority of lesions are benign lesions.
+
+But we have to work them up.
+
+And you always start with a TSH.
+
+Always.
+
+Most of these lesions that they ask you what the most common lesion you find in the thyroid is, it's gonna be adenoma, it's gonna be adenoma, it's gonna be adenoma.
+
+Cysts are very common.
+
+If we ultrasound at everybody's thyroids in here, I've got a really ratty tatty looking 50-year-old thyroid that has a bunch of cysts.
+
+And most of us as we age, we see increasing junk in our thyroid, namely cysts, and sometimes lesions too.
+
+The malignant ones, remember, for a a potential board question, is the papillary carcinoma, 60%.
+
+So the vast majority of malignant ones, which only occur and 5% of the cases are papillary carcinomas.
+
+And this is what you do, you start with a TSH.
+
+If the TSH is low and you get your radioactive iodine scan and you see a hot lesion, again, a hot lesion, it's a metabolic lesion.
+
+So it's taking up the radioactive iodine.
+
+You see a hot lesion, that means it's doing something, it's hyperactive.
+
+And those lesions rarely are malignant, but you don't want them because they're causing problems.
+
+So you go to surgery.
+
+If you have a cold lesion, those lesions are also rarely malignant.
+
+But you don't know, five to 10% of the cold lesions could be malignant.
+
+So those need to get a biopsy.
+
+If you have a normal TSH or a high TSH in that lesion, you're just gonna biopsy that thing.
+
+So these are the two types of thyroiditis to remember.
+
+You're gonna remember Hashimoto's, which is the chronic lymphocytic thyroiditis.
+
+Usually it's painless.
+
+In rare occasions you can't have pain.
+
+In rare occasions you can't have low grade fever.
+
+But it's the one that you should consider to be mostly painless, non-tender, and diffuse, in contrast with de Quervains, which is a response to a virus.
+
+And these are the ones that will cause pain, fever, enlarged palpable thyroid.
+
+That feels bad.
+
+The thyroid in pregnancy is something that's always important to remember because your TSH goal should always be lower.
+
+So 3.0 or even 2.5 in some communities.
+
+Treatment is not required for an isolated T4 that's elevated or suppressed.
+
+If you have a woman who's already on supplementation for thyroid disorder and then become pregnant, as soon as they become pregnant, you should increase their dose by 25 to 50% because that's what they'll need.
+
+You don't want to use anti-thyroid meds for women with gestational hyperthyroidism.
+
+You would use a beta blocker instead.
+
+And again, for Graves, PTU in the first semester, otherwise metamizol for the second and third trimester.
+
+Postpartum thyroiditis is very common up to five to 10%.
+
+So that's a good one to remember.
+
+Most of these patients will convert back to a euthyroid state, but you should monitor them.
+
+If they need supplementation, go ahead and initiate supplementation for six months to a year and then you can continue to monitor them and wean them as necessary.
+
+Again, don't use any radioactive iodine in a pregnant woman because that will also destroy the fetuses thyroid.
+
+So here are your recommendations.
+
+Your review slide to go back to and take a look.
+
+This is a 58 person, year old person with hypertension and an elevated calcium that comes back just on routine lab work.
+
+He denies any complaints on his exam.
+
+Is otherwise unremarkable.
+
+Additional labs are significant for an elevated calcium, an elevated PTH, low phosphate levels, and you suspect that he has hyperparathyroidism.
+
+All the following are common except bone pain, increased appetite, depression, or renal stones.
+
+That teeny tiny little gland, good.
+
+So I think everybody remembers this.
+
+The bone stones, abdominal moans and psychic groans.
+
+Everybody remember that from way back when.
+
+They're still the number one symptoms for a hyper parathyroid state.
+
+So hyperparathyroidism much, much, much more common than hypoparathyroidism.
+
+So the more common question on any board exam, considering that the parathyroid gland will be a hyperparathyroid state treatment is to take it out.
+
+There's no medication to treat this.
+
+You take it out.
+
+There are primary and secondary reasons just to consider this.
+
+Again, the adenomas are always, always the culprit.
+
+They're everywhere.
+
+There's on the AFP website, there's a webinar that I did a few years ago about adenomas that you, if you want to go back and take a deeper dive into adenomas, that is there for you, but you're gonna take it out.
+
+Secondary causes are most commonly chronic kidney disease and low vitamin D states, which will trigger the parathyroid to become more hyperactive.
+
+Quick little snapshot at the different elements that can contribute to hypercalcemia, which are numerous.
+
+You can have the parathyroid hormone related proteins, that could do it.
+
+Vitamin D intoxication.
+
+If you give someone 50,000 units of vitamin D for weeks, which we did to one of our patients once, they become toxic and hypercalcemic.
+
+Granuloma, just disease sarcoid, TB can do it.
+
+Hodgkin's lymphoma and then a variety of different malignancies.
+
+Those will be mainly the PTH related protein ones and the head and neck squamous cell carcinomas.
+
+So those are the the two big ones to remember.
+
+And then there are medications.
+
+Why thiazide?
+
+This is the fourth time thiazides have come up during the last 24 hours.
+
+Again, the thiazides reabsorb calcium, so they're gonna increase your calcium levels.
+
+So that is good for kidney stones, bad for.
+
+Count Count, that's right.
+
+Other endocrine disorders to think about.
+
+Adrenal insufficiency, we're gonna touch on that in a moment.
+
+Familial issues.
+
+And then anytime you have high bone turnover, paget disease, rhabdo, etcetera, you can see hypercalcemia.
+
+Hypoparathyroidism, ultra rare, probably won't be on the test.
+
+Happens 900 patients per year and the only treatment for it is supplementation.
+
+Supplementation.
+
+Getting towards the end here.
+
+33-year-old patient presents with irregular menses in galactorrhea for three months.
+
+The remainder of her history and physical are unremarkable.
+
+Your lab studies are within normal limits except for a prolactin that's 310.
+
+What do you do next?
+
+Do you do a dexamethasone suppression test?
+
+PET scan, an MRI or a CT?
+
+Good.
+
+You are worried about a brain tumor that could be secreting prolactin.
+
+Perfect.
+
+So this is a prolactinoma.
+
+Remember the rule.
+
+Two hundreds.
+
+If you have prolactin greater than 200, this is almost always a prolactinoma.
+
+Consider pregnancy tests.
+
+Also consider what else could be happening in the thyroid gland.
+
+MRI will always be more definitive.
+
+CT can be helpful in certain certain situations, but think about what is globally happening in the pituitary because lots of things can happen.
+
+You can have prolactin that's secreted.
+
+You can have growth hormones that are secreted.
+
+You can have Cushing's disease where corticotropin are secreted and you can have hyper thyroidism if TSH is affected.
+
+Again, MRI number one.
+
+If you're worried about a Craniopharyngioma or meningoma, CT can sometimes be better for that.
+
+Again, differential for a cellar mass.
+
+Benign pituitary adenomas will always be number one.
+
+There are some malignant ones to come back and look to you a little bit later.
+
+Craniopharyngioma is seen on CT.
+
+This is the crankcase oil, are generally benign tumors.
+
+So very briefly, a couple slides on Cushing's and Addison's, then we'll wrap it up here.
+
+Cushing's syndrome.
+
+You think about getting crushed, crushed by cortisol.
+
+If you have increased cortisol state, it contributes to all of these things.
+
+Hypertension, even increased WBCs, plethora, etcetera.
+
+The treatment for Cushings is to try to identify the source, reducing the steroid use.
+
+Sometimes you may need to consider radiation.
+
+So if it's an adenoma that's causing it, you will need to take it out.
+
+Just note, the higher prevalence of patients with diabetes, obesity, hypertension, and osteoporosis.
+
+Those are the four buckets that you most commonly see Cushings.
+
+And it happens in a younger population, 25 to 40.
+
+How do you diagnose it?
+
+There are a number of things to diagnose it, but the number of one methodology is the dexamethasone suppression test.
+
+So that's a not an uncommon question.
+
+Might want to go back and just refresh later on.
+
+How do you do a dexamethasone suppression test?
+
+And Addison's is the opposite of Cushing's disease.
+
+So Addison's, you have to add more cortisol.
+
+So it's a decreased cortisol state.
+
+It's a decreased aldosterone state that leads most commonly to a primary disorder.
+
+But you can have secondary reasons for Addison.
+
+So that would be happening at the level of the pituitary glands, and where a CTH is inadequate.
+
+The clinical presentation, is sort of the opposite of of Cushing's disease.
+
+So you have low blood pressure instead of high, you have weight loss, you have muscle cramps, salt cravings, etcetera.
+
+You have your electrolyte imbalances accordingly.
+
+So diagnosis includes looking for those things.
+
+You might consider doing a CTH STEM test.
+
+You would eventually get a CT scan of the adrenals to take a closer look.
+
+Treatment will be to replace the cortisol and to consider replacing the aldosterone.
+
+So here are your summary pearls to go back and reflect on later, thinking about the thyroid.
+
+thinking about TSH as your primary first step for any diagnosis, being vigilant about pregnancy.
+
+If you have a parathyroid question, it's most likely gonna be a hyper parathyroid state.
+
+If you have a pituitary mass, think about the type of hormone that's being affected.
+
+And then a quick review of the Addisons in Cushings.
+
+There are a few other supplementary slides to turn to that focus a little bit more on some of the nuances of the thyroid gland and ultrasound.
+
+Thank you very much.
+
+Thank you very much Dr. Gilmer.

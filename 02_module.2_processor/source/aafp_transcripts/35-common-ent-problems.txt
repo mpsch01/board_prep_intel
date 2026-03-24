@@ -1,0 +1,901 @@
+Dr. Holt is here.
+
+She is gonna be leading our discussion this morning on some ENT issues.
+
+We are gonna be talking about ENT, and I always said I wish I had something to disclose.
+
+I feel like that makes me sound a little cooler.
+
+Today, we're gonna spend most of our time talking about otitis media, sinusitis, and a little bit on vertigo.
+
+And then we're gonna just kind of do rapid fire board review, kind of one slide per topic on everything, from tinnitus to, I'd say some trauma for the ENT system, to Bell's Palsy, just real quick hitters for you guys.
+
+We're gonna get right into our first question.
+
+12-month-old male patient is brought into your office by his mother for fever, cough, and pooling on his left ear.
+
+He's afebrile in the office, playful, and interactive.
+
+When you examine his ear, the tympanic membranes are slightly erythematous, but he's uncooperative for pneumatic otoscopy.
+
+What is your diagnosis?
+
+URI with acute otitis media uncertain, otitis media with the effusion, acute otitis media, or Ramsay Hunt syndrome?
+
+Okay, URI With otitis media uncertain is the answer.
+
+For those that were toying with that acute otitis media, we're gonna talk through why we wouldn't call that in this kiddo.
+
+So everyone thinks their lecture is the most important.
+
+You know, I'm no different.
+
+When you look at the original 15 Choosing Wisely campaign from the American Academy of Family Physicians, two were from this lecture, 2 out of 15.
+
+So I'm gonna point those out when we get to them.
+
+Hint, this is one of them.
+
+So for diagnosing acute otitis media, we really wanna use stringent criteria.
+
+This is the most common disease diagnosed in children in our country.
+
+We give more than 20 million antibiotic prescriptions for this.
+
+So we don't wanna be over diagnosing and leading to more antibiotic resistance.
+
+We need three things.
+
+We need a sudden onset of symptoms, you have to prove that there's an effusion, that's the one we kind of fall apart on the most, and you have to see some acute signs of inflammation.
+
+So let's hit these one by one.
+
+What are these symptoms?
+
+This is should be a pretty sudden onset, a peak amount of symptoms within 48 hours.
+
+This is not, "My kid's been complaining for three weeks on ear pain." That doesn't fit.
+
+Severe symptoms are though a bit subjective.
+
+There are some objectivity put into here, fever greater than 39, which is equal to 102.2.
+
+That's a really weird temp.
+
+But above 102.2, that's a severe otitis media symptom.
+
+For that child that's non-verbal, you have to look at other things.
+
+Are they fussy? Are they not eating?
+
+Are they pulling at the ear?
+
+That kind of thing.
+
+The effusion, as I said, was the hardest part for us to do because you have to show that that TM isn't moving.
+
+You can't do this just visually.
+
+Just by like seeing fluid behind the ear, that doesn't count.
+
+So you really have to demonstrate that there's a middle ear effusion.
+
+The best way to do that is that little bulb thing that goes on our otoscopes, right?
+
+If they're not moving with that, that's an indication.
+
+So pneumatic otoscopy is the standard of care.
+
+It is better than any of the other tests.
+
+It's better than the old Weber.
+
+I'm sure you use that Weber test with your tuning fork all the time.
+
+It is certainly better too than tympanometry, which is maybe surprises some people.
+
+We will talk about later when tympanometry is needed.
+
+Inflammation, I think, we're pretty good at looking at this, right?
+
+It looks bulging, full.
+
+There's sometimes bullae on it.
+
+Sometimes there's acute drainage coming out of it, but you have to pay attention for that to not be otitis externa, okay?
+
+So that can be tricky sometimes.
+
+Erythema alone, not very helpful.
+
+We just learned about positive predictive value in the last lecture, only 15% positive predictive value when it comes to erythema alone.
+
+So that's why our kiddo in that description didn't have acute otitis media.
+
+We hadn't proven that he had effusion.
+
+So how can you tell if it's acute otitis media versus just effusion, otitis media with effusion?
+
+Those can be tricky.
+
+They both have effusion by definition, right?
+
+But there's a lot of absence of these acute inflammation symptoms.
+
+This could be more the kid is like, "Ah, the ears just been achy for a long time." That could be more the effusion.
+
+You're not usually gonna see a fever here.
+
+So if you're seeing fever, that should point you along the other line.
+
+But visually, this is kind of the difference, right?
+
+That picture on the left, acute otitis media, it looks like it's gonna blow.
+
+It's pretty exciting.
+
+I think the otitis media with effusion kind of looks cute.
+
+It's like round bubbles, it's kind of artistic.
+
+Those look different and those feel different to the kid.
+
+When do we need this tympanometry?
+
+When you can't tell with pneumatic otoscopy.
+
+If you do the little bulb thing and you're like, "I don't know," then you could think about using this tympanometry.
+
+but it's not for kids under seven months of age.
+
+Their canals are so pliable, you can make them be whatever you want them to be.
+
+We have occasionally seen this on ITEs and the boards.
+
+And if they show you a curve, they're usually gonna show you this B curve, which is a flat line.
+
+So when you're kind of panicking in the moment of the test, you're thinking, "What are they putting this on there?
+
+There's nothing on this curve. It's empty." It's that flat line.
+
+They want you to see that membrane is not moving.
+
+So that shows that there's an effusion.
+
+The type C curves are less helpful.
+
+So I don't think they'll put those on there, and that A curve is normal.
+
+So they could put that on there to show you that this is not an acute otitis media.
+
+Okay, let's get into our next question here.
+
+That 22-month-old male patient is brought to you for crying in an obvious acute distress from right ear pain.
+
+Fever of 103.6.
+
+On exam, it is immobile, bulging, erythematous.
+
+What is the best treatment option?
+
+Do not use antibiotics because this is probably a viral illness.
+
+Have the parents observe for 48 hours and treat with antibiotics if no improvement.
+
+Treat with antihistamines and decongestants alone.
+
+Start antibiotics immediately.
+
+Okay, what do we think?
+
+75%, start antibiotics immediately.
+
+Excellent job.
+
+So we're gonna find out why observation may not be appropriate in this kid because for other kids, it might be appropriate.
+
+So what is helpful for all kids?
+
+Pain management.
+
+Ibuprofen, acetaminophen, that's important, whether you're choosing to do antibiotics or not.
+
+All those other things, not helpful.
+
+Decongestants, antihistamines, no improvement.
+
+There are randomized controlled trials looking at this and they did not help.
+
+The only thing is antihistamines maybe provide some benefit in older kids who have a lot of congestion along with otitis media, but for the general person, not helpful.
+
+This is kind of nice.
+
+So much of medicine changes all the time.
+
+This hasn't changed since we were all in med school.
+
+Strep pneumo, H. Flu, Moraxella catarrhalis.
+
+Moraxella has changed names a few times, but it's still the same bug.
+
+When do we start thinking about observation?
+
+This really came out of Europe, and this is good reason to think about this.
+
+61% of symptoms resolved within one day, 80% by three days.
+
+So maybe all these kids don't really need antibiotics.
+
+So how do we know?
+
+This is an important slide.
+
+So if you're under six months of age and you diagnose acute titis media with those three components, they get antibiotics, regardless.
+
+If you're 6 to 23 months of age, there's two criteria where you would need antibiotics.
+
+It has to be bilateral or severe.
+
+So if it's unilateral and not severe symptoms, you could hold on antibiotics.
+
+If you're over two, or 24 months, you have to have severe disease to be treated with antibiotics.
+
+Otherwise, it's recommended that you have a period of observation.
+
+What does that observation look like?
+
+You have to be able to see the kid back, if they're not doing well.
+
+And really, it usually involves a reexamination to make sure you haven't missed the diagnosis.
+
+Some people will opt for that last option, which is postdating scripts.
+
+I'm gonna give you this antibiotic, but you're not gonna start it yet 'cause I'm not even gonna start a fill date until three days from now.
+
+So if they're that kid with 80% getting better in three days, hopefully, the parents won't fill it.
+
+What does AFP say?
+
+Strength the recommendation B, observation for 48 to 72 hours for those low risk kids.
+
+This is one of our Choose Wisely campaigns.
+
+So you already have one under your belt right here.
+
+All right, here comes a little bit of math.
+
+You diagnose acute otitis media with severe symptoms in a 22-month-old patient who weighs 20 kilos, what is the most appropriate treatment?
+
+amoxicillin 900, amoxicillin 1,800 for the day, amoxicillin-clavulanate 900, or amoxicillin-clavulanate 1,800?
+
+Look at you, guys. Good.
+
+60 something percent of you got amoxicillin is the treatment of choice, and it is the higher dose amoxicillin.
+
+So AAP and AFP have solid agreement on this.
+
+amoxicillin, roughly 90 mgs per kg per day, and you divide that every 12 hours.
+
+Who needs that Augmentin option?
+
+If you have been on other antibiotics in the last 30 days, you could bump to that.
+
+If you have what looks like H. Flu, your eyes are very leaky.
+
+That's an indication that Augmentin might be better for you.
+
+And if you're taking antibiotics for recurrent otitis media, and I hope you're not because that guideline changed in 2013, but if you happen to be taking daily prophylaxis, that would be a kid who would benefit from Augmentin instead.
+
+Oh, the penicillin allergy. Always a fun one, right?
+
+We do know that 90% of people who have penicillin allergy on their chart do not have penicillin allergy.
+
+And so you use that in your mind.
+
+If this was a non anaphylactic type of reaction in the past, you can feel very comfortable doing cephalosporin.
+
+If it was anaphylaxis in the past, there is some cross reactivity.
+
+So in this case, azithromycin becomes our top choice.
+
+Those others are not recommended.
+
+Trimethoprim-sulfa, because of resistance, and Levaquin as well with resistance.
+
+But we don't do a lot of quinolones anyway in kids.
+
+Duration of treatment.
+
+This has been studied for quite a while now.
+
+We have a solid answer.
+
+10 days. 10 days, Shorter courses do not have better outcomes.
+
+So five to seven days do not work better.
+
+And there was actually no difference in drug resistance in the group.
+
+So 10 days is your solid answer there.
+
+So you treat that kid with acute otitis media with antibiotics, see him back four weeks later.
+
+He's asymptomatic, but he still has a middle ear effusion.
+
+What's your recommendation?
+
+Reassurance and reevaluate in two months, oral and antihistamines for 30 days, re-treat, but this time bump up to that Augmentin, do nasal steroids for 30 days, or do an ENT referral to consider tubes?
+
+Wonderful! Reassurance and reevaluate.
+
+You wisely knew that this is normal.
+
+That effusion can last a long time.
+
+70% at that two week mark, it continues to go down to about 10% at that three-month mark.
+
+So that's usually when we recommend following up is like a 8 to 12 weeks, just to kind of see if it's gone.
+
+If it is a kid who's at that language acquisition phase, you wanna make sure we're not inhibiting their ability to do that.
+
+Now this is different.
+
+This is a kid who is still symptomatic, a persistent acute otitis media.
+
+They're just not getting better after 48 to 72 hours.
+
+This is important to see them back in the office.
+
+If you thought they had acute otitis media and you gave them antibiotics that were appropriate and they're still not better, see them back.
+
+Make sure you're not missing a mastoiditis or something else.
+
+If you say, "Yeah, that's still acute otitis media," then you wanna switch to one of these second line agents.
+
+So Augmentin is gonna be your first choice, other, cephalosporin, and so on.
+
+We talked about recurrent acute otitis media very briefly and that antibiotics are not recommended.
+
+They have said that in 2013 and reconfirm that multiple times since.
+
+Give them all the vaccines. That does help, right?
+
+Flu and pneumococcal in particular make a difference in decreasing the incidence of acute otitis media.
+
+Don't smoke, wonderful advice.
+
+If that's a choice on the boards, always pick that choice.
+
+Bottle feeding is a risk factor.
+
+Pacifier use is a risk factor, and that's because that sort of constant sucking keeps that eustachian tube open, which allows bacteria to get into the system.
+
+If you breastfeed for six or more months, that's very protective.
+
+So that's something we really wanna encourage.
+
+And then daycare, a lot of parents don't have a choice about that, but daycare attendance does increase the risk of acute otitis media.
+
+So we know that this effusion can be normal.
+
+When do we start getting worried if it still hasn't gone away?
+
+And so as we said, watchful waiting for three months is appropriate.
+
+If it's still going on at three months, you do wanna check in on that hearing because of language acquisition.
+
+At that point, we used to send everybody for tubes.
+
+Now it's pretty controversial.
+
+A patient-oriented evidence that matters from AFP in 2016 looked at 16 randomized controlled trials, no hearing benefit 12 to 24 months after getting tubes.
+
+So, hm, now we're not sure what to do with it.
+
+There is still some data on recurrent acute otitis media getting tubes, but if it's just a persistent effusion, it's a little more of a waiting game.
+
+And unfortunately, all those treatments at the bottom have been tried and not helpful.
+
+So nasal steroids, oral steroids, you name it, none of those have made a difference in the effusion.
+
+So this is a conversation with your parents here.
+
+This is one of those rapid fire tinnitus here.
+
+You hear sound, but there's actually no acoustic stimulus for that sound.
+
+This is a symptom, not a diagnosis.
+
+Most commonly, it's idiopathic, which is very frustrating for you and very frustrating for your patients.
+
+The second most common cause is sensory neural hearing loss.
+
+You see some of the other causes up there.
+
+Some of those will point to it based on the history.
+
+Meds are a big thing. Look through the med list.
+
+That can be something you can do to turn this around.
+
+So if they're on chronic NSAIDs, if they're on chronic antimicrobials for prophylaxis, for example, loop diuretics, there's a bunch of things on this list, but those are the big ones.
+
+Potentially switching them off of those may really make your patient's life a lot better.
+
+What does expert opinion say?
+
+Don't do anything other than get a history and physical.
+
+If the history and physical points you somewhere else other than a idiopathic, then you can do some workup.
+
+And if you have a bunch of hearing loss, you might need an audiogram, right?
+
+If you're having a lot of vertigo, you might need a vestibular eval.
+
+If it's pulsatile, you might think about getting an MRA.
+
+If it's unilateral, you do have to consider is this one of those schwannomas, okay?
+
+So hearing loss should be a really big component of that.
+
+Vertigo should be a much smaller component.
+
+And then if you don't think they have any of those things and you can't reverse it and they're not on any of those meds, CBT actually has some decent data strength of recommendation B that that can help them for that sort of like, "Oh, I'm gonna go bonkers 'cause my ears are always ringing." Sudden sensory neuro hearing loss, again, idiopathic up to 90% of the time.
+
+That's frustrating, but this is kind of a new thing.
+
+Hyperbaric oxygen therapy has pretty darn good data for this.
+
+So if you start some, if someone has a sudden onset and you get them into treatment relatively quickly, number needed to treat is only 5.3.
+
+That's pretty great NNT in medicine.
+
+Oral corticosteroids have pretty mixed data.
+
+Pretty equivocal, but they are still recommended in the guidelines because they help some people, essentially.
+
+The things that don't work, calcium channel blockers, anti-platelets, antibiotic course doesn't work unless you're diagnosing acute otitis media as the source of their hearing loss.
+
+If it persists, you can think about some other work up here, but most of the time, get that hyperbaric, if you can get 'em in.
+
+All right, moving to our next big category here.
+
+43-year-old male patient presents to your office with five days of nasal congestion and headache.
+
+Temperature is 100.8, purulent rhinorrhea, minimal tenderness to pop patient over the frontal maxillary sinuses.
+
+What's our next step?
+
+Transilluminate those sinuses, get a sinus X-ray, treat with nasal saline and topical steroids, or treat with amoxicillin-clavulanate?
+
+Treat with nasal saline topical steroids is the answer.
+
+Good work.
+
+About 68% of you got that.
+
+Some of you were tempted to treat with antibiotics.
+
+This is gonna be the next Choosing Wisely campaign.
+
+So what is this acute rhinosinusitis?
+
+Less than four weeks of symptoms is a really important differentiation.
+
+So get that on your history.
+
+Etiology, only about 2% is bacterial.
+
+Patients hate this answer, okay, but that is what it is.
+
+How do you know if it might be one of those people that is that bacterial?
+
+You dig into it from your history.
+
+Symptoms more than seven days is an important piece.
+
+Progression of symptoms.
+
+It's not a flat symptoms.
+
+They're continuing to escalate in their symptoms.
+
+Moderate to severe pain and fever over 101.
+
+Bimodal disease is another really good clue.
+
+I had it at first, I got better, and then it suddenly got worse again.
+
+That's usually the viral component at the beginning and a secondary bacterial component thereafter.
+
+Tobacco use, again, as a risk factor, as well as chronic allergies.
+
+All this stuff is not helpful.
+
+So you don't have to put the light up to their face even though that feels kind of fun and exciting.
+
+It does not help you.
+
+Not swabbing their nose for cultures, no help.
+
+If you end up having to send 'em to ENT later, there is some evidence for endoscopic cultures, but not the cultures we could do.
+
+And none of that imaging is needed, unless you think some other diagnosis is going on.
+
+So viral rhinosinusitis is a self-limited disease.
+
+There are a lot of these patients showing up in your office, in the ER and urgent cares.
+
+What has strength of recommendation A is supportive care.
+
+Analgesics, nasal saline sprays, and actually irrigations do better here.
+
+Intranasal corticosteroids.
+
+The next best category you could consider is ipratropium.
+
+There's some NIH data that says that's really helpful for rhinorrhea, but not much for pain of congestion.
+
+So if it's really they're going crazy 'cause their nose is running all the time at work, that could be an option.
+
+Topical decongestants, the old ephedrine.
+
+It does actually work, but you really have to have a great patient who's willing to stop it at that third day, 'cause otherwise, they're gonna just have rebound afterwards.
+
+All the things at the bottom are not recommended.
+
+I wanna specifically call out oral decongestion, pseudoephedrine, not recommended.
+
+Multiple randomized controlled trials with no benefit.
+
+If anyone saw the FDA came out in September of last year and said, "No more." And it's still a $2.8 billion industry, pseudoephedrine.
+
+So that's a great opportunity to educate your patients on why that's not a great idea.
+
+So what about this bacterial process?
+
+How do we know?
+
+Strength of recommendation A says, "Watchful waiting without antibiotics is important." Supportive treatment for that first seven days.
+
+Again, 70% are gonna resolve by that one week.
+
+So just support them through that,.
+
+the vast majority will get better.
+
+It's only expert opinion that says do antibiotics after the seven-day mark.
+
+Another nice study came out AFP, number needed to treat with antibiotics for benefit is 17.
+
+You're like, "Well, that feels pretty good." Number needed to harm with antibiotics is eight.
+
+So that's a number that I share with my patients as well.
+
+There's that Choosing Wisely number two, so don't do so much antibiotics.
+
+What does IDSA say?
+
+The International Disease Society of America, Infectious Disease Society of America, excuse me.
+
+They have even more stringent criteria.
+
+Whereas before, we set 101 fever, IDSA says 102 to be able to think about if it's a bacterial process.
+
+They also don't like the seven days, they like 10 days.
+
+They do like the double sickening.
+
+They also call out immunocompromised patients as maybe needing antibiotics.
+
+So this is good criteria here.
+
+What antibiotic do we use?
+
+IDSA says Augmentin, amoxicillin-clavulanate.
+
+And the duration is a little bit different.
+
+It's actually shorter for adults, a slightly bit longer for kids.
+
+High dose, if you have any of these risk factors.
+
+And do the same adjunct therapy as the viral that we talked about.
+
+Again, help them through the discomfort of the disease process.
+
+What is second line?
+
+For adults, it's fluoroquinolones and doxycycline.
+
+It is no longer macrolide.
+
+So all these sort of over-prescribing of a Z-PAK for sinusitis has really burned out that ability to be helpful.
+
+So Zithromax is not gonna be helpful for you.
+
+For kids, again, because we wanna avoid fluoroquinolones and doxy, we're gonna do cephalosporins there, even though some of that resistance is not great.
+
+What does AAP say?
+
+They actually still say amoxicillin is the first line.
+
+So IDSA says Augmentin for all, American Academy of Pediatrics says amoxicillin.
+
+So what does AFP say?
+
+Either one is first line in adults and kids.
+
+So they're not gonna test you on that on the boards of like this one versus this one.
+
+They might test you with the dose, and you gotta think through that, but either one is acceptable.
+
+How is that different from chronic rhinosinusitis?
+
+This is 12 weeks or more of symptoms.
+
+And this is not a bacterial process.
+
+This is just a chronic chronic symptom management.
+
+It's an inflammatory disease.
+
+Nasal saline is very helpful for this.
+
+Low pressure, high volume neti pots actually have the best data compared to other nasal installations.
+
+That's a strength of recommendation B.
+
+Intranasal steroids are helpful.
+
+Oral steroids have been helpful only if they have nasal polyps as well, and that's a short term benefit only.
+
+If you've tried all these things and you're still struggling, that's where you might consider ENT.
+
+They could consider endoscopic cultures to see if it's an unusual bacteria or a fungal process that would require treatment.
+
+Another rapid fire, allergic rhinitis.
+
+IgE mediated, intermittent, less than four days a week.
+
+Just use nasal saline there. That's pretty clear.
+
+Persistent greater than four days per week for at least a month.
+
+Allergen avoidance is helpful.
+
+Intranasal steroids are strength of recommendation A here.
+
+Your next line would be an intranasal antihistamine, more effective and quicker onset, less side effects than an oral antihistamine.
+
+And then your next line would be your second-generation antihistamine.
+
+So that strengths of recommendation B.
+
+All this stuff that we heard about for a while, like mattress covers, pillow covers, HEPA filters actually didn't seem to make any difference.
+
+That's the Choosing Wisely campaign from ENT.
+
+So we're not the only ones who have that.
+
+Now, the rapid fire, chronic cough.
+
+Cough greater than eight weeks duration.
+
+You do an examination, you do a chest X-ray on all, you make sure they're not on an eighth.
+
+Even if they've been on it for years, it could still be the cause of their chronic cough.
+
+What are the most common causes?
+
+What we used to call postnasal drip now has this new fun name, upper airway cough syndrome.
+
+Nasal steroids is your treatment.
+
+Asthma, you are gonna get that out of your history, hopefully.
+
+If you have any concern, get that spirometry.
+
+Non-asthmatic eosinophilic bronchitis we're kinda learning more about is a source of chronic cough and GERD.
+
+I think we've realized that one for a while.
+
+And here's some options.
+
+If they don't improve, you might escalate your workup.
+
+And if all that exam is normal and they're just a cough, cough, cough kind of person, gabapentin has some expert opinion stuff on it.
+
+Pregabalin, for Lyrica also.
+
+And then speech therapy, expert opinion only.
+
+Laryngitis.
+
+Acute hoarseness for less than three to four weeks.
+
+What they sometimes test you on here is what is the treatment?
+
+The answer is complete voice rest, not whispering.
+
+Whispering, hurt your vocal cords more.
+
+So that's all you gotta do. No other treatments are helpful.
+
+Just tell them you may not speak for a few days, and that usually gets better.
+
+I wish someone would tell me that, huh?
+
+Chronic, greater than three to four weeks, you have to worry about other things here, right?
+
+And the key point here is if you have a high risk person that's a smoker, someone with alcohol use disorder, or any homeostasis, you don't wait that three months to think about a laryngoscope.
+
+You might consider that at the two-week mark because they have a much higher risk of having disease process.
+
+Voice therapy for those chronic patients actually a strength of recommendation A here, has really good benefit for them.
+
+So think about that.
+
+Ooh, we get to hear about this again apparently, no, I'm not gonna whisper for you again.
+
+ENT emergencies.
+
+Foreign bodies in the ear is a pretty common thing with kids.
+
+What we're seeing a lot of is these little button batteries, those are pretty harmful.
+
+They can cause very rapid pressure necrosis due to the electrical currents in them.
+
+So if you have a kiddo that you think has a button battery in their ear, that's like an ENT emergency.
+
+If you can't get that out, they need to see ENT like within the next couple of hours.
+
+Commonly with our wrestlers, you'll see this auricular hematoma.
+
+Make sure you do I&amp;D those, otherwise you'll end up with that cauliflower ear.
+
+Those scrum caps are kind of preventative for that.
+
+Common, really common, obviously, see is this epistaxis.
+
+Important things you'll see here, if it's an anterior bleed, you've got a lot of treatment options.
+
+You've got packing, silver nitrate, TXA, electrocautery 'cause you can get to it.
+
+If it's a posterior bleed, you're gonna need to do a balloon packing or like tampon in the nose, that kind of thing.
+
+Somehow, these button batteries end up the nose as well in our children.
+
+So again, very important to get that out quickly.
+
+If you do see a nasal fracture, it's kind of interesting, you don't need an x-ray.
+
+That can be diagnosed clinically.
+
+But if there is a septal hematoma, you do wanna drain that as well, or you're gonna have a permanent sort of saddle deformity.
+
+Dental trauma.
+
+There's two things I want you to know from this slide.
+
+Number one, if there's blood on the surface of the tooth, we have a core or pulp injury, then they need to see a dentist ASAP.
+
+If the tooth has already come out and it's not a baby tooth, put it back in.
+
+That's another important one.
+
+Don't scrub it, leave whatever goo is on it, just gently clean it and put it back in and then go see the dentist.
+
+Next question here.
+
+It's your last patient of the day.
+
+Your nurse says they're added on for dizziness, and you're like, "Oh, Lord." But luckily, 57-year-old female patient of yours presents with dizziness and a sensation she is spinning.
+
+It occurs when she turns in bed or lifts her head to look at an upper cabinet.
+
+Episodes are brief but are becoming more frequent.
+
+No tinnitus or hearing loss.
+
+What is your most likely diagnosis?
+
+Yes, the dizziness gods were in our favor today, BPPV.
+
+Good stuff.
+
+So just very quickly, between a peripheral and a central vertigo.
+
+Peripheral vertigo is actually less severe and a lot of ear symptoms, right?
+
+Fullness, hearing loss, you name it.
+
+Central vertigo, these people are usually not walking into your office, they're in a wheelchair and they're barfing as they come in 'cause it's so intense.
+
+So that can help you to know who needs a big workup.
+
+This is kind of fun. They like to test us on this a lot.
+
+I don't know why this has showed up more than once.
+
+But for BPPV, if you look at their eye, they typically have a torsional up-beating nystagmus, and that's because BPPV is stones in the canalith, right?
+
+This canalith eyes, And it's usually in that posterior semi-circular canal.
+
+And that's what causes that nystagmus in that direction.
+
+Vestibular neuritis, another common cause of peripheral vertigo.
+
+It usually is short-lived, one to two days.
+
+So that's one we don't have to worry too much about in terms of its long-term issues.
+
+Meniere's, much more of a chronic disease, pretty hard to treat.
+
+Big thing about that is that ear fullness.
+
+So they'll really be bothered by that ear fullness.
+
+If so, think about that.
+
+And that's an endolymphatic hydrops.
+
+So too much fluid, right, in that area.
+
+Acoustic neuroma we've hinted to already.
+
+We know that tinnitus and hearing loss are major complaints, vertigo is a minor complaint, so that can help you a bit.
+
+The old Ramsey Hunt Syndrome, herpes zoster oticus.
+
+I don't think I've ever seen it, but we get tested on it a lot.
+
+So someone has vertigo and they can't taste and they have facial paralysis, that's your slam dunk there.
+
+Central vertigo, you have to worry about infarctions.
+
+Sometimes vestibular migraines can do this to you.
+
+This is important in that if you're working up vertigo, it is really just history and physical exam.
+
+Labs are helpful less than 1% of the time.
+
+You only need to image them if there are other neuro signs and symptoms, or if profound hearing loss is a part of that.
+
+The Dix-Hallpike is wonderful.
+
+It has great negative predictive value.
+
+So if you think their BPPV and you do a Dix-Hallpike and it's negative, think about another diagnosis.
+
+Medications for vertigo are crap 'cause they have so many side effects, right?
+
+So it's really only gonna be considered for types of vertigo that are very chronic.
+
+You're not gonna do this for BPPV, obviously.
+
+What are you gonna do for BPPV?
+
+The Epley maneuvers.
+
+You will walk out of that office feeling like a hero that day 'cause they walk in feeling terrible.
+
+You put 'em through the Epley, they hit you at the time, but then they feel better, and they love you when they go.
+
+PT is also great.
+
+Vestibular rehab has really great data for peripheral sources of vertigo, medium data for central sources of vertigo, but it's good stuff.
+
+Bell's palsy, we're coming in the home stretch here.
+
+Idiopathic facial paralysis, what do you need to know about it?
+
+Antivirals and corticosteroids are more effective than either one alone.
+
+Number needed to treat there as 15.
+
+Antivirals alone are not helpful.
+
+That strength of recommendation A.
+
+Here's your Board Frequent Flyers to put in your study folder, and I thank you so much for your attention today.

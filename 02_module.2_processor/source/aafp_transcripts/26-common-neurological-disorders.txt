@@ -1,0 +1,1011 @@
+Dr. Holt, she is going to be doing some discussion here on neurology, everything you need to know.
+
+We're gonna cover a lot of things today.
+
+We're gonna spend most of our time on seizures.
+
+What is the classification?
+
+Let's talk about some meds.
+
+What do we do with that pregnant patient who has epilepsy?
+
+A fair bit on vascular headaches, and then kind of a whirlwind through MS.
+
+So let's get right into our first question.
+
+65-year-old male patient of yours presents to the ED having had a seizure in his bedroom witnessed by his wife.
+
+She heard a cry, fall to the ground, saw him stiffen and shake all over, and then become incontinent of urine.
+
+He was not arousable until he had been in the ED for several minutes.
+
+His seizure would be classified as which type?
+
+Complex partial, generalized tonic-clonic, grand mal, or myoclonic?
+
+Good, it is generalized tonic-clonic.
+
+The nomenclature has changed completely in the neurology world, so I wanted to just point this out.
+
+So that grand mal term is no more.
+
+So what is a seizure?
+
+It's a transient occurrence that occurs due to abnormal excitation and synchronous activity within the brain.
+
+It can be focal, it can be generalized.
+
+10% of adults will have a seizure throughout their lifetime.
+
+So it's pretty common.
+
+One-third will have a recurrence within that first year of their initial seizure.
+
+We used to call all this stuff partial seizures.
+
+Now it's being called focal seizures, and they're classified as local, meaning it starts here and stays here.
+
+You can have ipsilateral propagation along the same side.
+
+You can have contralateral propagation going to the other side of your brain.
+
+It can start here and then become secondarily generalized throughout the brain.
+
+And then you would say consciousness is impaired or not impaired.
+
+We no longer use that complex versus simple.
+
+So literally, every term that could have been changed in neurology, they've changed 'em all up, keepin' it exciting.
+
+When we think of these generalized seizures, non-convulsive or absence is the one that I'm afraid some of you might be having now.
+
+I'm gonna keep an eye on you.
+
+You're staring, you're blinking.
+
+I'm a little worried.
+
+We might have some Depakote at the break if we need it.
+
+So typical absence seizure, those three-per-second spikes on the EEG.
+
+Atypical is not three per second.
+
+It's less than that.
+
+But EEG, very important for this one.
+
+Convulsive types, you see all the different classifications up there.
+
+They can be a little tricky kinda memorizing which is which.
+
+But there they are.
+
+Atonic attacks are worth kind of calling out because those cause a complete loss of muscle tone and they have really high rates of injury with them.
+
+They're just walking along fine, and then, bam, they're down.
+
+So that's kind of a one to be aware of.
+
+PNES has also changed names.
+
+We might remember it as pseudoseizures.
+
+It is now psychogenic non-epileptic seizure.
+
+So again, changing everything that they can.
+
+What would be the most likely cause of a new seizure in a patient over the age of 65?
+
+CVA or stroke, idiopathic, metabolic derangement or a brain tumor.
+
+Okay, this is good.
+
+You just squeaked it out, but only 40% or so of you.
+
+So we're gonna talk about why this is the case.
+
+So CVA and stroke is the most common.
+
+If I said for all comers, those idiopathics would've had it right.
+
+So for all comers, 62% at all ages, idiopathic.
+
+We never find an answer, which is very frustrating for you as a clinician and very frustrating for the patients who are dealing with this.
+
+Stroke is only 15% overall, but it's 49% for those over the age of 60.
+
+And likewise, brain tumor, about 6% overall.
+
+Goes up to 11% over the age of 60.
+
+So I remember this 60, 60% badness over the age of 60.
+
+Okay, so that's important.
+
+Head trauma, obviously your history's gonna give you some of that.
+
+Intracranial infections are gonna be important here.
+
+COVID has crept into this lecture as well.
+
+We're seeing 55% more seizures in the first six months after having COVID versus those who had influenza in that six-month period.
+
+So it's not just, like, "Oh, you had an infection and had a fever.
+
+That's what caused it." There's something different about COVID.
+
+I think we've already figured that out, right.
+
+It's a bizarre one.
+
+In kids, that association is even stronger.
+
+So be aware of that.
+
+Congenital brain malformations, you're usually gonna have plenty of other signs before a seizure.
+
+Inborn errors of metabolism, similarly.
+
+What is a provoked seizure?
+
+It means there's a specific thing that happened that, presumably, if you took that away, you wouldn't have another seizure.
+
+Hypoglycemia is kind of the hot one on this list, very common.
+
+Hyponatremia, particularly if you got there quickly, not if it was a really slow progression but more of a sudden drop.
+
+For neonates, hypocalcemia is a really big source of a provoked seizure.
+
+Renal failure and uremia, again, really sudden people would get there, not people who've been solely progressing over years.
+
+It's pretty rare.
+
+But if you have a sudden progression to uremia, that is a high risk.
+
+More rare causes here.
+
+I just like to throw acute intermittent porphyria here because it seems to be on the differential diagnosis of everything.
+
+But what's more common in adolescents, we see this syncope with brief hypoventilation.
+
+This is the classic you'll see on the boards.
+
+The kid is at a choir concert, and they fall down and have some shaking on the ground.
+
+That's a hypoventilation-induced seizure.
+
+And certainly we see it with alcohol and benzo use as well as withdrawal.
+
+Epilepsy, if you wanna make a neurologist crazy, just tell them you have a patient with seizure disorder.
+
+They hate that.
+
+If they've had more than one seizure that wasn't provoked, they have epilepsy.
+
+They don't want us to use the term seizure disorder.
+
+So two unprovoked seizures at least 24 hours apart, you have epilepsy.
+
+I think we're afraid to say that sometimes, but that's what it is.
+
+A patient with a new onset seizure has a complete workup that is unremarkable for any provoked causes, signs of infection, drug toxicities, or neurologic disease.
+
+What is the next step in workup?
+
+Event monitor, prolactin level, neuroimaging, or lumbar puncture.
+
+Okay, so we have a lot for neuroimaging, a lot for event monitor, but it is neuroimaging.
+
+That is the next best test.
+
+So let's talk through this.
+
+As with everything else in medicine, you wanna start with your history and physical 'cause that's who we are, right?
+
+We're clinicians.
+
+If somebody witnessed the event, that's super helpful for you to know.
+
+Did it start on one side and generalize somewhere else?
+
+If you can find someone who saw it from the beginning, that's really gonna give you great insight to the type of seizure that it was.
+
+Is there any substance use disorder history?
+
+Was there a trauma history?
+
+Do they have a history of heart disease?
+
+Do they have any arrhythmias at baseline?
+
+Have they had strokes before?
+
+Sleep disorders is an important one.
+
+Sometimes people will say, like, "Oh, my husband has, you know, a seizure every night before bed.
+
+He kinda like goes like this." Those are hypnagogic twitches.
+
+Those are not seizures.
+
+So that's great history to kinda dig through.
+
+Insomnia, patients who really struggle with insomnia do have more seizures because it lowers the seizure threshold.
+
+And there are certain seizures that increase frequency at bedtime and are actually more fatal because of that.
+
+So get into that sleep history a bit.
+
+This is a really important slide.
+
+There are many medications that patients are on that can lower that seizure threshold.
+
+So if you have somebody with the first onset of seizure, you really wanna dig into their med list.
+
+The ones that I'll call out in particular, tramadol and Wellbutrin.
+
+Those are kinda the two hot players that you see a lot on boards, and it's also important in real life.
+
+But look at that antihistamine.
+
+That one came as a surprise to me.
+
+They've done a fair bit of studies on this now.
+
+Histamine levels are kind of important.
+
+If you have lower histamine levels by taking antihistamines, you lower your seizure threshold.
+
+You have more seizures and seizures of longer duration.
+
+So this was a knowledge deficit for me a few years back.
+
+I had one of my patients with epilepsy who was taking over-the-counter antihistamines 'cause I didn't tell her not to.
+
+She ended up with a pretty big seizure that lasted a long time in the ER.
+
+So now that's a part of my routine talk.
+
+If anyone's ever had a seizure, I say, "Hey, you know what?
+
+You can't take over the counter Benadryl, and let's talk about why." Basic evaluation for everybody are some basic labs.
+
+You don't need to get crazy here.
+
+But basic things really are important for everybody.
+
+So CBC, electrolytes, including calc, mag and phos, glucose and some renal function.
+
+ESR, LFTs, RPR, only if my history is pointing me in that direction, okay?
+
+And prolactin, just throw that away.
+
+We used to think that was a really great test.
+
+"If the prolactin was up, oh they really did have a seizure." Nope, that's been completely and proven to be very low sensitivity.
+
+Lumbar puncture, only if your history points you there if there's signs of infection.
+
+But the EEG is important for everybody 'cause there's certain things on an EEG that will prompt you for different treatment.
+
+Neuroimaging, as we talked about in this question, is an important part of the workup.
+
+MRI is preferred over a CT, but as with anything else with MRI, you might find a bunch of stuff.
+
+Is that the source of the seizure?
+
+We don't know.
+
+It's hard to know if the lesion is actually causing the problem.
+
+Okay so, patient presents to you having a single new unprovoked seizure with a completely negative workup.
+
+Your first step in treatment would be: start no medications at this time, start oral valproic acid, start oral phenytoin, or start some oral Keppra.
+
+What do we wanna do for this patient?
+
+Good job.
+
+So even though Keppra's super popular right now, starting no meds at this point is actually the recommended treatment.
+
+So if it's a single seizure, not a recurrent, but a single seizure or very infrequent seizures, you can opt for no treatment at all.
+
+If they did some studies comparing immediate anti-epileptic drugs to just kinda watchful waiting, you do decrease your chances of having a next seizure within two years by starting anti-epileptic drugs.
+
+Well, I hope so. That's what they're there for.
+
+But it does not improve quality of life, okay?
+
+And if you look beyond that two-year window, if you look at three years and beyond, there's no difference in amount of seizures, quality of life, any of that stuff.
+
+So really we wanna look at who are those high risk seizure patients that might need treatment even after their first time.
+
+Status epilepticus is one of them.
+
+If you have a single episode of status in the hospital, you're on lifelong antiepileptic drugs.
+
+If you have a history of a brain injury, if there is an abnormality on that MRI that you got, that's probably somebody who warrants treatment.
+
+If you have any focal neurologic abnormalities on exam, you're gonna treat those people.
+
+If you have a patient with intellectual disability, treat that person.
+
+And then there are certain high-risk seizure types that either they're really high risk of recurrence or really high risk of injury from them, like we talked out with the atonic or the nocturnal seizures, Treat those.
+
+Something just hit from AFP, the little thing that they email me all the time.
+
+They found a a link with nocturnal seizures and SIDS now.
+
+So, hmm, maybe we'll learn more about that.
+
+If you are gonna start somebody on antiepileptic medication, you're gonna just do one of them, right?
+
+So monotherapy is really important, and the selection is based on what type of seizure they had, what their insurance looks like, what other meds they're on.
+
+There's a lot of factors that you can use.
+
+But it's important to not do any combination therapy unless they have failed two different monotherapy trials.
+
+And unfortunately, one-third of patients with epilepsy will be on multiple meds and still have refractory seizures.
+
+So that is important for the patient to realize that we sometimes can't get you seizure-free even with a bunch of meds.
+
+Classifications are kind of broken into broad spectrum and narrow spectrum, and they're just what they sound like.
+
+Broad spectrum covers a bunch of types of seizures, whereas narrow spectrum is only for certain.
+
+First generation are older ones, right?
+
+They're less expensive.
+
+So some of our patients have to be on those.
+
+But there are many more drug interactions, and oftentimes we have to do more monitoring of drug levels.
+
+Second generation agents, easier to take, no monitoring needed, but the price tag does go up.
+
+Here's some examples of first generation and second generation.
+
+This I thought was really fascinating.
+
+I guess I assumed there was just excellent data on, like, "If I have this type of seizure, this is the type of medicine that is strength of recommendation A." You see there's very little of that.
+
+Focal seizures, we're pretty good.
+
+We have a lot of strength of recommendation A.
+
+When you look at generalized, the only thing that really has a great data is absence seizures in less than 16-year-olds.
+
+Everybody else is really expert opinion.
+
+And so you just base it on side effect, profile, cost, that kind of thing.
+
+Toxicities, the boards love medication toxicities.
+
+So if you have somebody and there's something about a epileptic patient, blah, blah blah, havin' these weird symptoms, and if a choice is a medication side effect, choose that answer.
+
+Antiepileptic drugs have a ton.
+
+31% report adverse effects, and the adherence to these medications are very, very low because of that.
+
+Suicidality goes up two times.
+
+And it's not just the epilepsy.
+
+They look at those who are on meds with epilepsy and those who aren't, and they have a higher rate of suicidality.
+
+Neurotoxicity, this is the main reason people stop.
+
+"I feel like junk on them.
+
+I have fatigue, I have a headache, I'm dizzy, I keep falling asleep at work." All these kinds of things can be, obvious, a major issue for patients.
+
+The rash, we get really excited about this, and we need to.
+
+You can have anything from a little macular papular rash all the way to Stevens-Johnson.
+
+So you do need to tell any patient starting on a anti-epileptic drug, "If you develop any rash, I need to see you, like, today in the office 'cause it could be an emergency.
+
+And then liver enzyme induction, you're always just gonna have to check med lists if they're on these anti-epileptic drugs.
+
+46-year-old male patient of your practice presents with fever, arthralgias and erythrodermic.
+
+No respiratory symptoms.
+
+His meds include lisinopril, valproic acid and atenolol.
+
+Fever of 102.2.
+
+His skin reveals erythematous macular papular rash with some tenderness.
+
+No oral lesions.
+
+White count is 16,000 with 17% eosinophils.
+
+ALT and AST are twice normal.
+
+What is your most likely diagnosis?
+
+Toxic shock syndrome, DRESS syndrome.
+
+Stephens-Johnson syndrome, or neurocutaneous phakomatosis syndrome.
+
+Okay, good.
+
+60% of you are DRESS syndrome.
+
+This is growing over the last few years.
+
+First time I put this up, kinda nobody knew what that was.
+
+So we're startin' to hear a little more about this, and we're gonna find out why that is the case.
+
+If you knew what DRESS syndrome stood for, you would've gotten it right, for sure, 'cause it just lays it right out there for you.
+
+Drug reaction with eosinophilia and systemic symptoms.
+
+So the rash is common, fever, arthralgias, lymphadenopathy, has up to a 25% mortality rate.
+
+That's pretty terrible.
+
+Why the heck are we talking about it now?
+
+Because antiepileptic drugs are the most common offending agents of this.
+
+You do see a little bit with allopurinol and sulfonamides as well, but it's usually due to epilepsy medications.
+
+So we understand there to be some sort of a continuum between Stevens-Johnson's and DRESS syndrome.
+
+DRESS syndrome, they're not gonna look as bad, like mucocutaneous, and skin won't look as scary, but they're actually far sicker.
+
+Their organ dysfunction is actually higher for DRESS syndrome.
+
+So how do you treat them?
+
+You take them off the med that probably caused it, and you support them.
+
+There is no other treatment other than supportive care.
+
+But again, tell those patients, "Call me if you ever get a rash on this." That's important.
+
+So we talked before that status is a big deal, and if you have one time you get on meds, this is what it is.
+
+So it's a single seizure lasting for more than five minutes, or it's recurrent seizures without a return to baseline between them.
+
+Convulsive are the most common, and it's a generalized convulsive tonic-clonic kind of seizure.
+
+Non-convulsive ones are tough 'cause they're a little bit harder to tell it's happening.
+
+Refractory are obviously also tough 'cause they're not responding to treatment.
+
+The non-convulsive, though, is important, and we miss this a lot.
+
+These are typically patients in the ICU or they're their post-ICU stay, and they're kinda wandering around confused, and you just think they've got some delirium.
+
+Or if they're in the unit sedated on event, make sure you're opening their eyes every day.
+
+That is like the one clue for a non-convulsive status.
+
+You'll just see those eyes goin', and they're in status, and we're not treating them.
+
+So that's why this one can be really scary because we miss it.
+
+Mortality rates up to 52% in some studies for a non convulsive 'cause we just didn't diagnose it.
+
+What do you do to treat this?
+
+Lorazepam, that's kind of our treatment of choice.
+
+If you don't have IV access or IV blue, we've got IM options.
+
+We've got rectal options.
+
+The whole thing, though, is you just start treating them.
+
+You work it up while you're treating, but you don't wait to find the reason to give them treatment.
+
+Just start throwing stuff at them.
+
+Most of the time you will need very urgent control with an antiepileptic med as well.
+
+So you'll start those right after you start that Ativan.
+
+So fosphenytoin is a common one or phenobarb, valproate, those are all things you can do IV to get them loaded very quickly.
+
+So Dr. Weissmuller talked about a guideline, I think, from 1992.
+
+I've got one from 1994 here that says if you have a seizure and you're driving, you should resist driving for three months.
+
+So any seizure, whatever setting it was in, you should not drive for three months.
+
+The neurologic association said that in '94, and they've actually stuck by that recommendation.
+
+We do know that MVAs are not that common because of seizures.
+
+They're way more common from things like alcohol use.
+
+But it is still a recommendation for no driving.
+
+But it's important to know your own state laws.
+
+They're all different.
+
+So wherever you practice, know what those rules are.
+
+Most will prohibit lifetime commercial driving with even a single episode of a seizure.
+
+So just be aware of what those rules may be where you are.
+
+What about when it comes to contraception?
+
+We know that these meds, as I said, have a lot of drug interactions, and they can really mess this up.
+
+So we have seen numerous examples and studies confirm contraception failure on antiepileptic drugs that stimulate the cytochrome P450 system.
+
+The ones that don't do this are your Keppra and your Depakote.
+
+So those would be potentially better options if a patient needs to be on hormonal treatment.
+
+Antiepileptic drugs also interfere with progestin-only pills, contraceptive rings, progestin implants.
+
+They do not seem to be interfering with Depo or any type of IUD.
+
+So that's gonna be a great option for patients who have requirements for antiepileptic drugs.
+
+Be aware, too, that particularly with Lamictal, lamotrigine, oral contraceptives can decrease the level of Lamictal and increase your rate of having seizures.
+
+What about that patient who has epilepsy who's getting pregnant?
+
+Well, maybe you have that unicorn patient who actually comes in for a preconception counseling.
+
+I don't seem to get many of those.
+
+But if they do, you have a conversation.
+
+If they haven't had a seizure in two years, you would think about weaning them off of their antiepileptic drug six months before becoming pregnant.
+
+Most of the time they roll in after they're already pregnant, and they're on their antiepileptic drug.
+
+If so, you let it be.
+
+You do not change the medication based on that.
+
+Dr. Weissmuller already pointed out that if you're on some meds, you need way more folic acid than usual.
+
+So four milligrams if you're on carbamazepine or valproic acid because of that neural tube issue.
+
+For all the other antiepileptics, it's 800 micrograms a day, whereas everybody else is 400.
+
+You're gonna monitor drug levels more frequently 'cause people's weights are changing.
+
+Their fluid status is changing a lot with pregnancy.
+
+There's some recommendations for vitamin K supplementation that last month of pregnancy if you're on certain anti-epileptic drugs.
+
+And you are allowed to breastfeed on all of them, except Lamotrigine.
+
+That would be recommended to not breastfeed with that one.
+
+Okay, we're switching gears here.
+
+46-year-old male smoker comes to you for a complaint of a unilateral cyclical nocturnal headache that lasts 30 minutes each.
+
+He's taken over-the-counter meds, but they have not been helpful.
+
+The best prophylactic medication for his headaches would be: oxygen, sumatriptan, propanolol or verapamil.
+
+How are we gonna prevent his headaches?
+
+Okay, we have some learning opportunity here.
+
+But a little more of you squeaked out verapamil, which is the answer.
+
+So oxygen people, sumatriptan people, that would be decent for abortive therapy but not for preventative therapy.
+
+So what are we gonna hit today?
+
+Primary headaches, and obviously headaches could be, like, a multi-day conference all by itself.
+
+I'm gonna hit kind of three major types, tension types, trigeminal types and migraine.
+
+There's lots of others, and we're not gonna touch on them at all.
+
+For the chronic tension headaches, these are band-like, right?
+
+Your head feels like it's in a vice kind of thing.
+
+Treatment is over-the-counter analgesics to start with.
+
+If you're using those more than twice a week, though, you do increase the risk of progressing to chronic daily headache.
+
+So if so, think about those TCAs, amitriptyline.
+
+Elavil is a great choice for prevention of these, and that's strength of recommendation B Butalbital, opioids, not recommended for these.
+
+They have a much higher chance of getting you onto that chronic headache, daily chronic headache, which we don't want.
+
+So what are these poor chronic daily headache people?
+
+15 or more headaches every month for three or more months.
+
+So this is a lotta, lotta headache.
+
+It doesn't matter what it started from.
+
+It might have started from a migraine, or it might have started from chronic tension.
+
+Once you get to chronic daily, it doesn't really matter.
+
+The treatment is the same.
+
+Stop all abortive therapy.
+
+This is actually personally the hardest thing I've ever tried to convince patients to do in the office.
+
+They don't want to give up.
+
+They're Motrin, they're Excedrin, they're triptans, whatever it is.
+
+'Cause they're like, "I'm gonna be hurting all the time." So this takes a lot of education to help them get through this.
+
+Pharmacologic treatment is gonna be so important for prevention.
+
+And topiramate and valproic acid are your strength of recommendation A.
+
+So I always start there unless there's a reason I can't.
+
+Second line would be your amitriptyline, gabapentin and tizanidine.
+
+SSRIs, Botox, propanolol, that might be helpful for migraine prevention, but has no helpfulness in chronic daily headache.
+
+So again, Topamax and valproic are gonna be your best bet.
+
+There is some recommendation for CBT.
+
+That's another thing that kinda if it shows up on the boards, most of the time CBT is the right answer.
+
+And biofeedback and relaxation also strength of the recommendation B if you have patients who are really not interested in pharmacotherapy.
+
+Cluster headaches was the person in our example here, right?
+
+So we see this not very commonly, less than 1% of time.
+
+But there is a male to female predominance of a two to three to one ratio.
+
+This is unilateral orbital, and they're kind of leaking on the same side as their headache.
+
+Their nose is running, their eye is running, they're just all over the place.
+
+Triggers listed here.
+
+Alcohol, nitroglycerin, nitrates in foods.
+
+So very processed foods is a really common trigger for our country.
+
+Strong odors.
+
+When you look at acute treatment, the oxygen and sub-Q or intranasal triptans have the best data, strength of recommendation A.
+
+Second line, somatostatin receptor agonist, that just recently got into the list.
+
+Nasal lidocaine also a new addition to the headache protocol there.
+
+But again, those are second line.
+
+They also talk a little bit about transitional therapy.
+
+If you have the ability or have someone in your kinda circle of colleagues who has the ability to do suboccipital steroid injections, they do really well as they're waiting for these other preventative medicines to get up in their system.
+
+Otherwise, they tend to be recurring and coming back to the ER a lot.
+
+Treatment of choice far and away is verapamil.
+
+But it's a big honkin' dose.
+
+You see that 240 to 320 is the dose that's most effective for patients.
+
+So sometimes people simply won't have enough blood pressure to be on that.
+
+If not, you'll see some of these second line agents up here.
+
+Topamax tends to be what most of us go to.
+
+Interesting that melatonin was on this list.
+
+So, hmm, I would try that first.
+
+It's cheap and pretty low risk.
+
+For refractory cases, we're seeing these gene-related, calcitonin gene-related peptide inhibitors coming into play, and we'll talk about that a little later with migraine.
+
+Deep brain stimulation, actually, for very refractory cases has very, very good effectiveness.
+
+Migraine's, much more common.
+
+We're gonna see this.
+
+About 25% of women, just under 10% of men will have these throughout their life.
+
+We don't know what's causing it.
+
+There's some genetic factor playing in there 'cause there's a lot of family history of it, but we don't really understand it.
+
+There are these phases, the prodrome, the aura.
+
+We'll talk a little bit more about this aura, but oftentimes it's visual.
+
+This flickering lights is kind of the classic one.
+
+Shiny moving lights on one side, that's the scintillating scotoma.
+
+Then the headache comes, and then afterwards, "I'm totally fine as long as I don't move." But if I, like, bend over or move, the headache comes back.
+
+That's that postdrome.
+
+So migraine is a big deal.
+
+It's the sixth-leading cause of missed work in our country and counts for about $36 billion.
+
+Wow, that's a lot, with a B.
+
+So we need to make sure we're diagnosing it properly and getting people on treatment to really impact that disability.
+
+You have to have five different headaches before you call it migraine.
+
+It has to last between four and 72 hours.
+
+You need two of those top characteristics, unilateral, pulsitile, moderate or severe pain aggravated by physical activity and at least one of those next two, nausea and/or vomiting or photophobia and phonophobia.
+
+That's a change. That used to be an "or." So now to get that bottom point, you have to have both.
+
+If you don't have photophobia and phonophobia then you must have nausea, okay?
+
+They made it a little more strict for the criteria.
+
+And it can't be due to something else.
+
+If I have a big honkin' brain tumor, then I just have a headache from a brain tumor.
+
+I don't actually have migraines.
+
+What about migraine with aura.
+
+You have to have at least had two headaches that have the aura to call it.
+
+They have to be fully-reversible symptoms.
+
+And you see three of these things here.
+
+So kind of them.
+
+Aura comes on first, goes away, and then headache comes on within the hour.
+
+At least one of the aura symptoms must be positive for that point.
+
+So this is like, you know, like the scintillating scotoma.
+
+Whereas a negative symptom would mean, "I can't see or I can't hear." That'd be pretty troublesome.
+
+That's what a negative symptom is.
+
+So diagnosis here is clinical.
+
+There's not a lab test that's gonna show you.
+
+There's not an x-ray or CT that's gonna show you.
+
+So laboratory testing really limited but get a good history.
+
+They should have a normal neurologic exam.
+
+If they don't, you maybe have a different diagnosis.
+
+Neuroimaging is unnecessary.
+
+That's part of the radiology Choosing Wisely Campaign.
+
+So for the average migraine person, you do not need to image.
+
+You do not need an EEG.
+
+That's neurology choosing wisely campaign.
+
+It's not gonna add to your situation.
+
+These are red flags for neuroimaging, though.
+
+This is an important slide.
+
+Who needs neuroimage?
+
+Rapid increase in your headache frequency?
+
+"Like, I used to get migraines about, you know, three times a month, and now I'm getting 'em every day for, you know, the last six weeks." That's not normal.
+
+Loss of coordination, abnormal exam, papilledema on exam.
+
+I'm sure we're all doing dilated fundoscopic exams on these patients, right?
+
+No, we're not.
+
+But if they have visual symptoms, maybe take a look back there and see if that's what's goin' on.
+
+Migraine should not awaken you from sleep.
+
+You can awake with a migraine.
+
+But if it's bad enough to wake you up from sleep, you need to think about another headache etiology and think about neuroimaging.
+
+Worst headache of your life, right?
+
+That's a subarachnoid hemorrhage.
+
+If you have a patient with cancer, and they have headaches that are new, you have to look for mets.
+
+If they're an HIV patient, you wanna think about opportunistic infections.
+
+Lyme's disease, meningoencephalitis, all these things are gonna direct you.
+
+New onset of migraines over 50, very weird.
+
+Check that out.
+
+Rapid onset with strenuous exercise, that's our aneurysm, right?
+
+And what is the best test?
+
+No contrast.
+
+Okay, that's important.
+
+You can do a CT or MRI, but no contrast.
+
+Acute treatments, acetaminophen and NSAIDs and triptans.
+
+Watch out for some of these familial conditions or really uncontrolled hypertension that can be made worse.
+
+Second line agents would be, like, your metoclopramide, your Reglan.
+
+Pretty helpful there.
+
+They do have some risk of extrapyramidal side effects.
+
+Be aware of that.
+
+So not great for long-term use.
+
+Intranasal DHE, very helpful but lots of hypertension there.
+
+Opiates should be used very sparingly if at all.
+
+If they're very refractory and they end up in the hospital, IV DHE 45 is really great.
+
+It has a lot of puking, though.
+
+So you almost always have to have 'em on, like, a drip or something for all that nausea and vomiting.
+
+Mag sulfate, who knew it wasn't just for OB.
+
+You can also use this for refractory migraine.
+
+And if you have any of these treatments going on, you're oftentimes gonna do a steroid taper over 10 to 14 days so they don't rebound right away.
+
+Preventative treatment, less than one out of five people who qualify are getting preventative treatment.
+
+This is how you can change that disability index for them.
+
+So, "I'm having too many migraines.
+
+The medicines aren't working." Or, "I have one of these migraines that looks like a stroke." We don't want them in the ER getting CT'd all the time for a stroke eval.
+
+They need prevention.
+
+First line agents, this was a change in 2019.
+
+Amitriptyline has fallen off the list of first line down to second line, not because it doesn't work but because it has more side effects.
+
+So what are they listed as strength of recommendation A?
+
+Your valproic acid, frovatriptan.
+
+Wait, how can a triptan be prevention?
+
+Only for menstrual migraines.
+
+So you would start it, like, two days before your period starts and use it throughout the time of your menses.
+
+Propranolol has been on there for years.
+
+Timolol, metoprolol.
+
+Topiramate is one of the, literally, big stays for this.
+
+It's very, very effective.
+
+If no single agent is working, consider an alternative then go to a combination before going to a second line agent that you see here.
+
+Refractory cases, these are these calcitonin gene-related peptide meds.
+
+They're really effective.
+
+They're very expensive.
+
+I've listed the IV versions here.
+
+There is now an oral version, Nurtec, that some of you might be hearing about every other day use for prevention.
+
+These are hard to get covered, and oftentimes you'll have to engage with a neurologist, depending on the insurance in your area to get these covered.
+
+Neuromodulation has some good data.
+
+Botox has some good data.
+
+So what about this whole estrogen thing?
+
+We're not sure how consistent this link is.
+
+"Neurology" released a meta-analysis in 2017 of 15 studies.
+
+Seven of 'em showed no impact. The others did.
+
+The highest impact was like an odds ratio of seven if you've had migraine with aura and a smoker without causing a stroke.
+
+So even though the data's mixed, it was recently on an ITE, and I do counsel my patients about this.
+
+So if you've had migraine at all over the age of 35, I think estrogen's not for you.
+
+If you've had migraine with aura at any age, you need to think about non-estrogen.
+
+We have no time left.
+
+Multiple sclerosis, here's all I want you to know about this.
+
+It is very common in young people.
+
+The boards will have a young female, right?
+
+That's who's gonna be on there.
+
+There's lots of vague symptoms that it can be, but the questions they're gonna ask you about are optic neuritis.
+
+They're gonna ask you about that Lhermitte's sign.
+
+"A patient flexes their neck, and they have electric shocks down their arm." That's what the questions gonna say.
+
+Or, "They were feeling fine until they went to vacation at this hot spot, and they suddenly couldn't move part of their body." That's the Uhthoff's phenomenon.
+
+It gets worse when your body temperature goes up.
+
+Relapsing/remitting is the most common, which is great 'cause it's also the best prognosis.
+
+If you have an exacerbation, they get a crap ton of steroids.
+
+And it doesn't matter if you do an oral or IV.
+
+They both work about the same.
+
+But that's very important.
+
+If they're refractory to those IV steroids or oral steroids, then plasmapheresis.
+
+Tobacco cessation, we know it's great for everything.
+
+It's also good for MS.
+
+There's clear data now, strength of recommendation B, that says you will decrease disease progression by stopping smoking.
+
+Disease modifying agents should be started early.
+
+It does impact their relapse rate and decreased brain lesions on MRI.
+
+Immunomodulators is where we're at now because the immunosuppressives that we were using before have way too many side effects.
+
+Board frequent flyers right here.
+
+Put this in your study folder so you can be successful on the neuro part of the exam.
+
+Thank you so much.
+
+Thank you very much, Dr. Holt.

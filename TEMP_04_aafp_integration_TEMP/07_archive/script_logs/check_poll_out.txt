@@ -1,0 +1,45 @@
+=== Session 02 - 7 poll questions ===
+
+Q1 keys: ['question_num', 'page_num', 'stem', 'choice_A', 'choice_B', 'choice_C', 'choice_D', 'matched_subcat']
+  question_num: '1'
+  page_num: '5'
+  stem: 'Because of the prevalence and its lethality, the USPSTF recommends that ultrasound screening be performed in which pati
+  choice_A: 'One-time screening for men ages 65-75, who have ever smoked'
+  choice_B: 'One-time screening for men ages 65-75, regardless of smoking'
+  choice_C: 'One time screening for both men and women ages 65-75, who'
+  choice_D: 'One time screening for both men and women ages 65-75,'
+  matched_subcat: 'Abdominal Aortic Aneurysm'
+
+Q2 keys: ['question_num', 'page_num', 'stem', 'choice_A', 'choice_B', 'choice_C', 'choice_D', 'matched_subcat']
+  question_num: '2'
+  page_num: '7'
+  stem: 'You identified an abdominal aortic aneurysm (AAA) in your patient. At what size (in centimeters) should you refer your 
+  choice_A: '3 - 3.5 cm'
+  choice_B: '4 - 4.5 cm'
+  choice_C: '5 - 5.5 cm'
+  choice_D: '6 - 6.5 cm'
+  matched_subcat: 'Acute Limb Ischemia'
+
+Q3 keys: ['question_num', 'page_num', 'stem', 'choice_A', 'choice_B', 'choice_C', 'choice_D', 'matched_subcat']
+  question_num: '3'
+  page_num: '16'
+  stem: 'A 68 yo patient presents with complaints of an aching pain in both thighs when he/she walks about one block. The pain s
+  choice_A: 'Perform an ankle-brachial index (ABI)'
+  choice_B: 'Perform bilateral leg ultrasound'
+  choice_C: 'Perform pulse volume recordings (PVR)'
+  choice_D: 'Perform lower extremity magnetic resonance'
+  matched_subcat: 'Peripheral Arterial Disease'
+
+
+=== ITE Question structure ===
+Session 02, Q1 keys: ['question_id', 'exam_year', 'cluster', 'ref_raw', 'is_must_read_ref', 'matched_must_read']
+  question_id: 'Q2025-093'
+  exam_year: '2025'
+  cluster: 'Cardiovascular_C5'
+  ref_raw: ''
+  is_must_read_ref: 'False'
+  matched_must_read: 'None'
+
+
+Sessions with poll_questions: 48
+Total sessions: 48

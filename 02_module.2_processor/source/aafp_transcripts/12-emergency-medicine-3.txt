@@ -1,0 +1,825 @@
+We're gonna do the last of the emergency medicine topics: infectious disease, allergy, and toxicology.
+
+Here we go.
+
+I'm gonna try to cover soft tissue infection, animal bites, tick-related illnesses, acute allergic reactions, toxicology in the half hour.
+
+We can do it. Your stomach will make it, honest.
+
+All right, so I just wanna talk about infectious disease topic, in particular topic of cellulitis.
+
+And here I want you to recognize that the Infectious Disease Society of America says when you have a patient who has cellulitis, okay, the residents do it all the time, I'm admitting a patient for cellulitis, I always have to say it's recommended you give the prefects.
+
+Is it a non-purulent cellulitis or is it a purulent cellulitis, right?
+
+Why?
+
+Because it will tell you almost immediately what the organisms you're dealing with.
+
+Non-purulent cellulitis, the picture on the left, we all have seen this patient, right, that's either strep pyogenes, group A beta-hemolytic strep, or it's MSSA, right?
+
+It's staph or strep, right?
+
+The one that's purulent, the one with the one puss is coming out of it or associated with it or big abcess is, soft tissue infection is typically community-acquired MRSA.
+
+Now I said the word MRSA and then I gave it the prefix community-acquired.
+
+So let me go back, give you a little history on MRSA 'cause everybody's all, "It's MRSA." Let's just do this.
+
+When Fleming developed penicillin, okay, when he developed penicillin, penicillin initially could kill staph aureus.
+
+No problem.
+
+But within one year, staph aureus said, "I'm gonna make resistance to that," all right?
+
+So we suddenly had staph aureus resistance to penicillin.
+
+So what did we do? We made semisynthetic penicillins.
+
+We made methicillin.
+
+And so we had methicillin through the 1950s and into the early 1960s, right?
+
+Methicillin.
+
+And then in the early 1960s, staph aureus once again said, "I'm gonna make resistance that too." And that became the era of MRSA, methicillin-resistant staph aureus, in the early 1960s.
+
+Now it stayed at very, very, very low levels until the burgeoning of critical care and ICU medicine in all your hospitals in the late '70s, early '80s and all of a sudden, boom, MRSA took off in hospitals, okay, with our critically ill patients.
+
+And to this day, still kills approximately 16,000 patients per year in the United States from MRSA in the hospital, okay?
+
+All right, and as you know, that is a bug that's very, very difficult to kill.
+
+I mean, it's got resistance to like everything and then you have to put them on vanco, right?
+
+Vancomycin you need usually, typically.
+
+Well, in the mid '90s, late '90s, early 2000s, typically in ER, we start to see these patients coming in with abscesses on them, okay?
+
+And we ID them, culture 'em, and we got, "MRSA, what's that all about?
+
+MRSA," and then some deep dive.
+
+You looked at the genotype and phenotypes of the MRSA that's causing now these abscesses and it was completely different than what was sitting in the ICUs.
+
+It's genotype and phenotype was USSA 300 or 400, whereas the hospital-acquired ones where USA 100 or 500 typically.
+
+And what would happen with the USA 300s, 400, they had this predilection, they had this exotoxin called the Panton-Valentine leukocidin exotoxin that would create abscesses, which the original MRSA did not, okay?
+
+And what you will find is how these present, is they will present with all these abscesses and the patients invariably come in saying, "I think I got a spider bite." You've seen this patient, right?
+
+They get this tiny little eschar here in the middle, and they get this big abscess, and cellulitis surround it, and they get another one up here, and that's community-acquired MRSA.
+
+We first started seeing this first typically in patients who were in close proximity to each other.
+
+The first couple of reports on community-acquired MRSA was in a prison system in LA, then there was a wrestling team in Vermont that got it, eventually the then St. Louis Rams, all the linemen who were, you know, rubbing up against each other they got it all over them, and that was community-acquired MRSA.
+
+So you're encouraged now, when you have a patient who has a non-purulent or, cellulitis to say non-purulent 'cause it's strep or MSSA, and the treatment is there for the typical cellulitis, dicloxacillin, cephalexin, doxycycline, clindamycin, linezolid, versus community-acquired MRSA.
+
+From their abscesses after their I&amp;D, you can put them on trimethoprim-sulfa, doxycycline, clindamycin, and linezolid.
+
+Okay, a lot of times, and this happens I'm sure in all your hospitals, they will not do the genotype/phenotype testing for it.
+
+All you'll get on your report is MRSA, all right, when you culture it.
+
+And you may sit there saying, "Well, is that the hospital one or is it the community-acquired one?" Well, usually from history you can tell.
+
+But if you didn't even see the patient, you just look down at the sensitivities, all right?
+
+So in the community-acquired MRSA, the one with the abscesses, like you say, sensitive to trimethoprim-sulfa, sensitive to doxy, sensitive to clinda, they got a lot of Ss there.
+
+The hospital-acquired one, you look down at the sensitivities and all you see is R, R, R, resistant, until you get down to vanco.
+
+And that's how you know difference, okay, of the two types of MRSA.
+
+All right, now we're gonna go on to some other soft tissue infections.
+
+Now we got through that.
+
+How about the following question?
+
+Which of the following bites has the highest risk of infection?
+
+Cat bite to the hand, human bite to the face, dog bite to the thigh, or spider bite to the arm.
+
+Which one has the highest risk of infection?
+
+Yeah, so actually it's cat bite of the hand is the one that's the highest risk for a infection there.
+
+Okay, why cat bite of the hand?
+
+It's not that cats are worse than humans.
+
+Humans are worse than cats.
+
+Dogs are worse than...
+
+All animals have organisms in their mouth, right?
+
+Why the cat in this situation? Two reasons.
+
+It's the mechanism, all right?
+
+It's the mechanism, all right?
+
+So cats have some Pasteurella multocida in their mouth.
+
+Cats, they have these little sharp pointy teeth, right, and then they bite.
+
+And they're like perfect little autoinjectors, putting that Pasteurella right underneath your skin.
+
+You can't clean it out really well, right?
+
+And then the other part of that equation was it's on the hand.
+
+So I alluded to this the last lecture.
+
+Hand, feet are high risk places, all right?
+
+For those of you who picked human bite to the face, okay, so humans got organisms just like anybody else, but human bite to the face, the face rarely gets infected.
+
+You know, scalps rarely get infected.
+
+It's so well-vascularized, all right?
+
+So think about it for a moment, you know, talking about human bites.
+
+How many times you've bit your lip, right?
+
+Did it get infected? Of course not.
+
+You've got great vascular supply.
+
+So think about location and mechanism.
+
+In the case of cat bites, because of the high risk, you're gonna put them on amoxicillin-clavulanate.
+
+For human bites, and if you think it's at risk, of course then you can put them on amoxicillin-clavulanate and then make it really easy for yourself.
+
+For dog bites, it's also amoxicillin-clavulanate.
+
+You can close dog bites.
+
+People always ask that question.
+
+The answer is yes, providing you can do the following: that you can clean it out really well.
+
+And typically dog bites, unlike cat bites, you can clean out really well.
+
+'Cause what do dogs do?
+
+Unlike cats, who just do this little autoinjection thing, dogs bite and tear, okay?
+
+That's what they do.
+
+So you usually have a big open wound that you can clean out really well.
+
+The exception to the rule in dog bites would be police dogs.
+
+Police dogs are taught to bite and hold, and they get crush injuries, okay?
+
+But they do not do the tear.
+
+So don't mess around with a police dog, all right?
+
+Don't run away from a police dog, they will catch you and they will hurt you, okay?
+
+All right, here's the long list of other infections.
+
+I've already ran for the first three.
+
+Anthrax is another possibility.
+
+When you're dealing with animal hides and carcasses, think of anthrax.
+
+How many people watch "Doc Martin?" Did anybody watch a show "Doc Martin?" "Doc Martin" had a case of anthrax. I love that show.
+
+So far it's going away.
+
+There's freshwater injuries, that you put people on trimethoprim-sulfa and fluoroquinolones.
+
+The one I want you to really remember is the salt water injury.
+
+This is a potential problematic problem.
+
+Salt water injuries has vibrio, and you need to really hop on those and treat those appropriately.
+
+There you have a third-generation cephalosporin or fluoroquinolone and then the other two.
+
+I'm gonna move on. Cat scratch.
+
+Speaking of cats, one last thing, cat scratch is common enough.
+
+You see 22,000 cases a year.
+
+And they present, after the cat scratches, typically the upper extremity, right?
+
+Typically it's the upper extremity that you will then get this regional lymphadenopathy, epitrochlear lymph nodes, axillary lymph nodes.
+
+Many years ago, when I first trained, we didn't know what the organism is.
+
+The organism now is this gram-negative rod called Bartonella.
+
+That's the organism.
+
+It's a self-limiting disease, which is the good news.
+
+Your body eventually takes care of it in your lymph nodes so you don't have to do anything about it, but they will have this regional lymphadenopathy for one to two months.
+
+Don't do an I&amp;D.
+
+Now, when you go to UpToDate, because some of you're smart enough to go to UpToDate, they will say, "Oh, you know, if you have immunocompromised patients, we're gonna treat you with some antibiotics." Azithromycin.
+
+How about immunocompetent patients?
+
+Me and you, for example, okay?
+
+Some people say no, textbooks say no, some say yes, including UpToDate, based on a study of a whopping 29 patients who found that half of 'em, 14 or 15 of 'em, got azithromycin and had earlier resolution.
+
+So the authors of UpToDate, they like it.
+
+Because it's controversial, I can't imagine that question coming up on the boards, but I just want them to be complete.
+
+All right, question number two.
+
+A 24-year-old male presents with a three-day history of a rash that is increasing in size.
+
+It is not painful and it's not tender.
+
+It's just this rash that's getting bigger over the next three days.
+
+It's flat, it's oval, it's 14 centimeters by seven centimeters in size, I'll show you a picture in a second, has central clearing and has no fluctuance.
+
+No associated fevers or chills or systemic symptoms.
+
+No new medications, no recall of any insect bite.
+
+He recently vacationed on Martha's Vineyard in Massachusetts.
+
+This is a true case.
+
+I took this picture of this gentleman in my ER, and there you got it.
+
+And now based on that, in this case, you would A, prescribe ceftriaxone; B, prescribe doxycycline for 10 days; C, obtain a Lyme titer; and if positive, treat with ceftriaxone; D, obtain a Lyme titer; if positive, confirm with a Western blot study; and if positive, treat with ceftriaxone.
+
+B is the answer.
+
+So the rash there, you know, you all recognize where that rash is, right?
+
+Erythema migrans, all right?
+
+That's Lyme disease.
+
+And this is due to the spirochete, Borrelia burgdorferi, that lives in the gut of the deer tick.
+
+And what happens?
+
+The deer tick, typically the nymph stage, that's why you don't see them on you, typically the nymph stage gets on you, they are on there for about 36 hours to 48 hours, they have their blood meal.
+
+At the end of the blood meal, they regurgitate their stomach contents back into you and that's where the Borrelia burgdorferi has been hanging out, in the stomach contents of the tick.
+
+They regurgitate that into you and that's how you get the disease.
+
+Isn't that disgusting?
+
+Right before lunch too, right?
+
+Yeah, yeah, it's really disgusting.
+
+But that's how you get Lyme disease.
+
+All right, Lyme disease is all over the place.
+
+In my neck of the woods, this is almost daily visit in our ER, urgent care from someone with Lyme disease.
+
+As of when I last look, there's 48 states that's had Lyme disease.
+
+Oklahoma hasn't reported it, nor has Hawaii.
+
+If someone has some information about Oklahoma that I don't know about, pass it on to me.
+
+But as of yet, I'm unaware of Oklahoma having any Lyme disease.
+
+It might be there and just not recognized or reported.
+
+All right, so the early stages.
+
+Erythema migrans, I've already mentioned, happens in about two-thirds of the cases.
+
+They'll have the, quote, "bullseye" rash.
+
+I love it when they're perfect bullseye rashes like the pictures the CDC shows.
+
+They're big rashes. These things are large.
+
+They're not like just little dots all over the place, okay?
+
+They're good size areas of erythema.
+
+You may or may not have that central clearing.
+
+It doesn't hurt. People have mistaking it for cellulitis.
+
+But unlike cellulitis, it doesn't have the rubor, calor, dolor part, okay?
+
+It doesn't have that.
+
+You touch it, they're like, "Yeah, it doesn't bother me." "Yeah, it's not warm, it doesn't hurt, but it's a big red blotch," okay?
+
+It's not cellulitis, okay?
+
+All right, so the early diseases is the Lyme.
+
+Neurologic disease can show up early on.
+
+In my neck of the woods, when we see someone come in with a seventh nerve cranial palsy, we don't automatically say it's Bell's.
+
+Bell's is idiopathic.
+
+The patients in my neck of the woods, we consider Lyme disease as the cause.
+
+Cardiac disease, if you have a young, healthy person who suddenly has an AV block, you're like, "What's that all about," think about Lyme disease.
+
+Later disease stages. There's the Lyme arthritis.
+
+It can be monoarticular or polyarticular.
+
+This is a case I had in the ER of a child.
+
+You can see both knees are huge and swollen and inflamed.
+
+I also took care of our VP at our hospital who had just one knee that's markedly swollen from Lyme disease.
+
+One of the points here, it's usually the large joints.
+
+It's almost always picked up on knees, hips is common, sometimes shoulders, elbows.
+
+It's not, "Oh, my fingers are hurting today," you know, it's not one of those, right?
+
+Large joints get involved.
+
+Neurologic disease later can happen also in the post-Lyme syndrome, is also a possibility according to USDA.
+
+All right, so treatment.
+
+If you see the erythema migrans, you don't test, you just treat.
+
+You just treat, okay?
+
+If you decide to say, "I wanna do a Lyme titer anyway," it's going to be negative.
+
+Most Lyme titers is your IgG.
+
+It takes four to six weeks for the IgG to turn positive, all right, while the rash is already present within about 10 to 14 days from the time of the tick bite.
+
+So it's going to be negative.
+
+So don't test, all right, just treat.
+
+And there's the treatment regimen up there.
+
+Children, I just put this in for completeness sake.
+
+I wouldn't memorize this, you'd look it up.
+
+So who do you test?
+
+All right, so you test patients in a two-tiered testing system if they have unexplained symptoms.
+
+So good case scenario: the patient who comes into my neck of the woods who's got a seventh nerve cranial palsy.
+
+They got, you know?
+
+Well, is it bells or is it Lyme? I don't know.
+
+So in that situation, I would do a Lyme titer.
+
+And if it's a positive or equivocal result, you then get the confirmatory Western blot.
+
+So it's a two-step testing for Lyme disease, okay?
+
+All right, and there is the rest of the treatment regimen.
+
+This is for completeness sake. Don't memorize.
+
+Is it 21 days, 28 days for this one, that one, that one?
+
+I can't believe they'd ask you that.
+
+That's just for completeness sake.
+
+When you do treat, just be aware that the patient, they have all these spirochetes in them, right?
+
+They have all these spirochetes in 'em.
+
+Just like syphilis, syphilis has spirochetes, right?
+
+So what happens when you give penicillin to a patient who has got syphilis?
+
+You can have the Jarisch-Herxheimer reaction, right?
+
+What happens?
+
+You give them the penicillin and what happens is those spirochetes start exploding and now it's got all this spirochete debris in you and you just feel crummy, okay?
+
+You get achy, low-grade fever, "I don't feel so good, my head aches," that lasts for a day and then it dissipates.
+
+Same thing when you're treating Lyme disease, okay?
+
+It's not an allergic reaction to the doxycycline, right?
+
+You just tell a patient, "That's good.
+
+It's good you're killing all those bad germs.
+
+Keep goin," and give 'em some Tylenol and he'll be fine.
+
+Okay, all right, Lyme disease prophylaxis.
+
+This is a question.
+
+Patient comes in, they've had a tick on them.
+
+You know, can you prophylax for Lyme disease?
+
+And the answer from the Infectious Disease Society of America is a single dose of doxycycline may be offered, a single dose meaning 200 milligrams, 2 tablets, can be offered as prophylaxis if the tick can be identified as a, I can't never say it, a deer tick, okay?
+
+All right, if it's a deer tick.
+
+Like, you can tell the difference between deer ticks and dog ticks and wood ticks, right?
+
+All right, it's been estimated to be on for 36 hours, and the prophylaxis can be started within 72 hours, and it happens in endemic area, like my area.
+
+And there's no contraindication, you give 'em the two tablets.
+
+All right, other dear tick-borne illnesses.
+
+Be aware, they can ask you questions about anaplasmosis.
+
+Anaplasmosis gives you this flu-like illness.
+
+So in our neck of the woods, so we see someone in the summertime coming in a flu-like illness.
+
+We'd say, "Mm, could it be anaplasmosis?" "They have fevers, chills, headaches.
+
+You do the blood work, they have thrombocytopenia, leukopenia and elevated LFTs," we say.
+
+That might be anaplasmosis.
+
+And then there's babesiosis, which also gives you more a malaria-like illness, high fevers, waxing and waning due to this intracellular protozoa and that kinda looks like malaria.
+
+So that babesiosis.
+
+The other tick-borne illness, just to be aware for the boards, is Rocky Mountain spotted fever.
+
+It has nothing to do with deer ticks.
+
+It's either a dog tick or a wood tick that will do this in endemic areas, typically more the southeastern United States where patients will come in flu-like illness again, but then they get the rash and multisystem involvement, you start thinking about Rocky Mountain spotted fever.
+
+Next one, changing topics.
+
+64-year-old male presents to the emergency department with diffuse pruritus and erythema along with facial and oral swelling.
+
+I'll show you a picture in a second.
+
+This occurs 15 minutes after eating peanuts.
+
+His blood pressure is 65 over 35, and his pulse is 120.
+
+This is what he looks like.
+
+His hands are swollen and red.
+
+He's got urticariac wheals all over his upper extremity and all over his body.
+
+His face is swollen, the lips are swollen.
+
+And he's hypotensive.
+
+This ain't good, right?
+
+Okay, so here's the case.
+
+And the first medication this patient should receive is A, epinephrine; B, diphenhydramine; C, methylprednisolone; or D, ranitidine?
+
+All right, you all know this.
+
+She's gonna give an EpiPen, epi.
+
+You're gonna give epi, epi, epi right away.
+
+Yes, this patient's got anaphylaxis.
+
+So we see a lot of allergic reactions, and from anything mild to life threatening, of course.
+
+Urticaria is very common.
+
+Those are the wheals that you'll get.
+
+Angioedema is when the reaction now involves the deeper dermal layers, that gives you swelling of the face, neck, and tongue.
+
+Anaphylaxis, alluded too, can happen within seconds.
+
+If it's a bee sting, for example, the venom gets into your system quickly.
+
+If it's oral, it takes a little bit longer.
+
+Anywhere from a half hour to up to two hours later you can develop anaphylaxis.
+
+There you get the skin rash, respiratory symptoms, hypotension, GI distress.
+
+And then there is what we used to call anaphylactoid reactions.
+
+Understand we don't use that term anymore.
+
+It's called non-immunologic or non-IgE reactions.
+
+And let me explain the difference real quick to you.
+
+So anaphylactic reactions is due to IgE.
+
+Another words, the first time you came in contact with a peanut or penicillin, you didn't have a problem, but your body said and your immune system said, "That looks foreign to me.
+
+I'm gonna make some IgE." So the next time you take that peanut or penicillin, I'm gonna have that IgE attached to all my mast cells, basophils and they're gonna sorta degranulate like crazy and get this histamine release and all these mediators all over your body and you're gonna go into anaphylaxis.
+
+Okay, that's IgE-mediated anaphylaxis.
+
+Anaphylactoid, or what we used to call anaphylactoid, are now non-IgE, has nothing to do with IgE.
+
+It's the first time you happen to get an opioid or you happen to get IV contrast and you get an anaphylactic-like reaction.
+
+For those of you who do hospital medicine, you know, if you're a hospitalist, let's say, or a resident, you're gonna get the call, I know it's gonna happen to you, it happens all the time, you're gonna get the call, "A patient just got some morphine." And what happened?
+
+They gave it an IV morphine and their arm got itchy, and they start doing this and it's red a little bit.
+
+And what happens is that's opiates, in this case, morphine, causing direct degranulation of the mast cells and basophils.
+
+Same thing with radiocontrast media.
+
+See the difference? That's the difference, okay?
+
+All right, in either situation, if it's life-threatening, you're gonna use epi, IM.
+
+I typically do not give IV, unless the patient's literally dying right in front of you.
+
+And we do that occasionally in ER very rarely.
+
+We have to dilute down the IV epinephrine and give it.
+
+But you and most people, hopefully, have an EpiPen or some sort of intramuscular epi that you use in these situations.
+
+They guess this question in the past.
+
+So you get a call from the patient, they use their EpiPen at home, what do you recommend they do now?
+
+Because they say, "I feel fine now.
+
+I took my EpiPen. What do I do?" And you say, "You should still go to the ER." The reason is 'cause this chance of what we call biphasic or delayed second wave reaction, the good news is it doesn't happen often.
+
+And if it does happen often, it's not usually severe, you know?
+
+So the patients coming in, I hear the story, and I say, "All right, we'll just sit here now and we'll watch you." And they say, "How long do I have to sit here and be watched?" And I say, "I don't know." There's no answer to that question.
+
+I watch 'em for an hour or two.
+
+They usually get bored at that point.
+
+And they say, "Can I go home?" And I say, "Yeah," but I give 'em another prescription for their EpiPen for the future.
+
+Okay, the other things, treatment options for allergic reactions.
+
+If it's a mild reaction and they just have some urticaria, you know, you use H1 and H2 blockers.
+
+They will decrease the itch.
+
+Steroids do nothing for the acute episode, right?
+
+Steroids take four, six hours to start working.
+
+Steroids ain't gonna help your anaphylaxis right then and there, or your urticaria right then and there.
+
+And it doesn't prevent the biphasic reaction.
+
+This patient, you've likely seen, this is not an allergic reaction.
+
+This is the patient who wakes up one morning and sit and all of a sudden their tongue is like swollen.
+
+And they come in and they go, "I don't know what happened." , all right?
+
+And it's usually a older individual who has been taking an ACE or an ARB.
+
+And it's interesting.
+
+These ACE-induced angioedemas can happen anywhere from day one of their ACE to 12 years later.
+
+You know, the background on this is we believe it happens to be due to an accumulation of bradykinin and then one day it just, boom, causes this idiopathic reaction.
+
+More common in African Americans, more common in women.
+
+And they will come in with all different, these are pictures of patients I've had.
+
+The patient on the left was one of my patients, I was very, very worried about her airway.
+
+We had to intubate her, which yeah, we call down anesthesia, that is not an easy intubation, versus, you know, patients who've had, like the gentleman on the right, just the upper lip and half of the lower lip.
+
+I've seen half a tongue once.
+
+I mean, so I've seen probably 20 or 30 of these in my career now.
+
+And they're all kinda different, all right?
+
+And they're very, very weird.
+
+And the treatment is supportive, which really just drives me crazy.
+
+I will tell you, myself and my ER colleagues, yeah, we throw the epi at them.
+
+Yeah, we throw the steroids at them.
+
+We throw everything at them knowing they ain't gonna work.
+
+'Cause this is not IgE-mediated, this has nothing to do with mast cells, basophils or anything like that.
+
+But, you know, in reality, it's like, you know, "Oh, you're about to use your airway.
+
+I hope I'm feeling support for you.
+
+Do you feel some support?" Oh, yeah, you know, the reality is we end up throwing a lot of stuff at them in hopes it may help.
+
+But there you go.
+
+Scombroid poisoning is pseudo fish allergy.
+
+So scombroid poisoning is named after those dark meaty fish from the family Scombroidaes.
+
+That's your mackerel, swordfish, tuna, the big, you know, dark, meaty fishes.
+
+But it can happen with any fish.
+
+And what happens with this is that when a fish is caught, and if it's poorly preserved, okay, it's poorly preserved, it's not put on ice right way, it's poorly preserved, there'll be muscle breakdown in the fish.
+
+And in a fish's muscle, it has histidine.
+
+And if there's bacterial contamination, the bacteria will break down histidine to histamine.
+
+Now you eat a meal of histamine.
+
+What do you think happens?
+
+Well, you get flushed and red and itchy, okay?
+
+It's not an allergic reaction, it's scombroid poisoning.
+
+Fortunately it's self-limiting, it's not life-threatening.
+
+You can treat it with H1 and H2 blockers and it goes away after a couple hours.
+
+That's scombroid poisoning.
+
+The other fish poisoning to know about, since I'm talking about fish poisoning now, is ciguatera poisoning.
+
+This happens when you're ingesting the fish that often eat the reefs such as grouper, snapper, you guys see those there, barracuda.
+
+What happens is that they will, on the reefs, they'll eat these dinoflagellates that have a neurotoxin in it.
+
+And so the neurotoxin gets into the meat of the fish, you then eat the fish and you eat this neurotoxin and you get these strange, weird neurologic symptoms.
+
+The classic, if they were to ever ask this, I've never seen this on boards, but I'm just being complete, the one that's pathognomonic is this reversal of hot and cold.
+
+That is they'll touch something cold and it'll feel hot to them, or vice versa.
+
+You touch something hot and it'll feel cold.
+
+And it's very strange, very bizarre.
+
+I've only met one or two physicians who ever seen this.
+
+And typically they work in the Caribbean where the patients are eating a lot of these reef fish.
+
+Has anybody ever seen a case of this ciguatera poisoning?
+
+Yeah, you have? Yeah, you've seen a case?
+
+How did the patient present by the way? Just curious.
+
+They had the reversal of the symptoms, yeah.
+
+It was after eating some barracuda.
+
+It's after eating barracuda.
+
+Yeah, yeah, it's strange, yeah.
+
+Yeah, good, all right.
+
+So that's ciguatera poisoning.
+
+All right, 21-year-old college student presents to the ED with friends who report the student swallowed a whole bottle of acetaminophen 45 minutes before arrival.
+
+They also note the patient has been drinking alcohol.
+
+The patient is awake but appears intoxicated.
+
+All right, in this situation, which of the following would be the best course of action?
+
+Administer syrup of ipecac; B, perform a gastric lavage; C, administer activated charcoal; D, administered N-acetylcysteine.
+
+All right, so the answer here is administer activated charcoal.
+
+So we're talking, first, we're gonna do some gastric decontamination.
+
+I know why some of you picked the acetylcysteine, and I'll get to that in a second.
+
+But here, you wanted first to, it's only 45 minutes ago, you wanna do some gastric decontamination.
+
+When it comes to that, do not use syrup of ipecac, all right?
+
+You don't wanna do that anymore.
+
+Do not do a gastric lavage, all right?
+
+That's out, all right?
+
+How many of you had the pleasure of actually doing a gastric lavage, an oral, all right, this is no fun, right?
+
+This is terrible.
+
+You're supposed to take these, it's not putting it on an NG tube, but you're taking these, you know, 40 French oral gastric tubes in an awake patient and you're trying to put it down their throat.
+
+If they have an intact gag reflex, all you do is create trauma.
+
+It is a mess. It's difficult.
+
+And, you know, there's been plenty of reports of esophaguses being torn or a pharyngeal trauma.
+
+Don't do it, okay?
+
+Administer activated charcoal, all right?
+
+That's your answer there.
+
+The earlier, the better for gastric decontamination.
+
+When it comes to acetaminophen toxicity, yes, the antidote is the N-acetylcysteine.
+
+You're right there. Brand name: Mucomyst.
+
+However, when do you start administering it?
+
+Well, you wanna know if the patient is truly acetaminophen toxic.
+
+When do you check that? At the four-hour mark.
+
+Four hours after administration.
+
+This case I gave you, she was in only for 45 minutes.
+
+So at 45 minutes, the acetaminophen levels is gonna be really high.
+
+If you do good gastric decontamination, perhaps that number at the hour at four hours, will be low enough that you don't have to do the whole regimen.
+
+The whole regimen, as you know, is a 24-hour or a 72-hour regimen.
+
+So you draw these acetaminophen levels.
+
+And if it's elevated four hours, then you treat with N-acetylcysteine.
+
+All right, when it comes to toxicology emergencies, take this one slide, put it in your study folder.
+
+All the agents on the left, I have the antidotes on the right.
+
+I'm not gonna name them all, but that's a good study slide.
+
+All right, there's two syndromes you should know about and then we'll be done.
+
+First is the anticholinergic syndrome.
+
+You remember this from med school as hot as Hades, blind as a bat, dry as a bone, red as a beat, and mad as a hatter.
+
+All right, that's due to the anticholinergic syndrome.
+
+When they take too many of the anti-drugs, gives you the anticholinergic syndrome.
+
+The anti-drugs are the antihistamines, the anti-Parkinson's, anti-psychotics, anti-emetics, you're getting the idea, antidepressants.
+
+The anti-drugs give you the anticholinergic syndrome.
+
+The one they love to ask questions about, I usually say this about every other year on the inservice, serotonin syndrome.
+
+Serotonin syndrome is patients who come in with this agitation, delirium, drowsy, there are tremors, they're hyperreflexic, and it's due to too much either SSRIs; or if they start combining SSRIs with cocaine or dextromethorphan or tramadol or linezolid, these will give you the serotonin syndrome.
+
+This is what it looks like. They're very sweaty.
+
+And that's a big difference between that and the anticholinergics.
+
+They're sweaty, tremorless, autonomic instability.
+
+And, again, this is the big differential between the two.
+
+The skin and serotonin syndrome, they're just sweating like crazy and you're dry, dry, dry, dry in anticholinergic syndrome.
+
+And the treatment for the serotonin syndrome is cyproheptadine.
+
+It's only orally available, no IV.
+
+And I'm gonna say thank you very much.

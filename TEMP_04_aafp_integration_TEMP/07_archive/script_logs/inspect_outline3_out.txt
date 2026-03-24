@@ -1,0 +1,80 @@
+Total para blocks found by regex: 3804
+
+=== para[82] ===
+
+<w:p w14:paraId="44DF8732" w14:textId="77777777" w:rsidR="0066644A" w:rsidRDefault="00000000">
+<w:pPr>
+<w:pStyle w:val="Heading1"/></w:pPr>
+<w:r>
+<w:t>Session 02: Peripheral Vascular Disease</w:t></w:r></w:p>
+
+=== para[83] ===
+
+<w:p w14:paraId="4E525ECE" w14:textId="77777777" w:rsidR="008370D8" w:rsidRPr="00D26483" w:rsidRDefault="00CE6E60" w:rsidP="00CE6E60">
+<w:pPr>
+<w:pStyle w:val="Style1"/></w:pPr>
+<w:r>
+<w:t>02. PERIPHERAL VASCULAR DISEASE &amp; AORTIC DISEASE</w:t></w:r></w:p>
+
+=== para[84] ===
+
+<w:p w14:paraId="490BF647" w14:textId="77777777" w:rsidR="008370D8" w:rsidRPr="00D26483" w:rsidRDefault="00000000" w:rsidP="00B71DEE">
+<w:pPr>
+<w:keepNext/>
+<w:keepLines/>
+<w:spacing w:before="220" w:after="220"/>
+<w:rPr>
+<w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/></w:rPr></w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/></w:rPr>
+<w:t>A. Abdominal Aortic Aneurysm (AAA)</w:t></w:r></w:p>
+
+=== para[85] ===
+
+<w:p w14:paraId="6AF3DBC8" w14:textId="77777777" w:rsidR="008370D8" w:rsidRPr="00D26483" w:rsidRDefault="00000000" w:rsidP="00B71DEE">
+<w:pPr>
+<w:keepNext/>
+<w:keepLines/>
+<w:numPr>
+<w:ilvl w:val="0"/>
+<w:numId w:val="249"/></w:numPr>
+<w:spacing w:before="220"/>
+<w:rPr>
+<w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/></w:rPr></w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/></w:rPr>
+<w:t>Definition &amp; Epidemiology</w:t></w:r></w:p>
+
+=== para[86] ===
+
+<w:p w14:paraId="28436744" w14:textId="77777777" w:rsidR="008370D8" w:rsidRPr="00D26483" w:rsidRDefault="00000000" w:rsidP="00B71DEE">
+<w:pPr>
+<w:keepNext/>
+<w:keepLines/>
+<w:numPr>
+<w:ilvl w:val="1"/>
+<w:numId w:val="249"/></w:numPr>
+<w:rPr>
+<w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/></w:rPr></w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/></w:rPr>
+<w:t>Defined as a vessel diameter &gt; 50% of its normal size. Normal abdominal aorta is 1.8–2.0 cm, meaning an aneurysm is defined at 3.0 cm.</w:t></w:r></w:p>
+
+=== para[87] ===
+
+<w:p w14:paraId="3CDD6CDA" w14:textId="77777777" w:rsidR="008370D8" w:rsidRPr="00D26483" w:rsidRDefault="00000000" w:rsidP="00B71DEE">
+<w:pPr>
+<w:keepNext/>
+<w:keepLines/>
+<w:numPr>
+<w:ilvl w:val="1"/>
+<w:numId w:val="249"/></w:numPr>
+<w:rPr>
+<w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/></w:rPr></w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Aptos" w:hAnsi="Aptos"/></w:rPr>
+<w:t>95% are infrarenal.</w:t></w:r></w:p>

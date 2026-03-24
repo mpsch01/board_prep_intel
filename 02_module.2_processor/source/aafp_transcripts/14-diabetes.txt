@@ -1,0 +1,647 @@
+There is so much stuff on diabetes and the test can have a fair amount, or it can actually have a lot of questions on diabetes.
+
+And so you're going to see throughout my slides stars and different colors.
+
+And anytime you see those things, please pay attention, because those have been in training exam or board questions in the past, so.
+
+So you have a 62-year-old obese male with diabetes and anemia who presents to your office.
+
+Which of the following anemias could falsely elevate his A1C?
+
+Hemolytic anemia, sickle cell, iron deficiency, or acute blood loss?
+
+Very good.
+
+So, iron deficiency anemia.
+
+All right, you need to know the diagnosis of diabetes.
+
+I know it seems silly.
+
+But the A1C of 6.5 fasting glucose of 126.
+
+You can also use a glucose load or a random glucose, but they have to be symptomatic with that.
+
+And you need two values and they can be the same value twice.
+
+So you can have two A1Cs.
+
+So notice that things that increase your A1C, so the glucose gets globbed onto the blood molecule.
+
+So in iron deficiency anemia, you have really small cells, but a lot of those small cells, so you're gonna have more glucose stuck on them.
+
+In things like when when you have something like sickle cell or blood loss, you're going to actually have fewer blood cells so that there's less glucose attached, so your A1C will be falsely low, okay?
+
+They do like to ask those questions.
+
+Please know the difference between type one and type two and when you start screening.
+
+So in type one, we usually start screening five years after for things like retinopathy, after the diagnosis, because it's a fairly acute onset disease while type two is an insidious onset that you've been getting for some time.
+
+A couple years ago there was an article in the AAFP on maturity onset diabetes of the young.
+
+And there's already been a question on the in-training exam, so please know what MODY is.
+
+The question they're probably gonna answer is, how do you treat it?
+
+And the sulfonylureas is actually the answer.
+
+because in MODY it's a mild diabetes and they usually just need a little touch of sulfonylureas to get them in control.
+
+Self-management.
+
+What you need to know about this is continuous glucose monitoring because that's where it's all going.
+
+CGMs are revolutionizing the treatment of diabetes.
+
+But if we're just doing finger sticks, there are times when you have to monitor your sugars.
+
+So if you're on insulin, if you're changing your therapies, if you're ill, you know, you need to know what's going on.
+
+But for those people who are well controlled, they don't need to be doing finger sticks all the time.
+
+That's just, that's really a waste of time.
+
+You can see the benefit actually of self-monitoring with finger sticks goes away after about a year.
+
+But we're gonna see this different now with continuous glucose monitors.
+
+Management goals, probably the best number is still seven.
+
+But with all of these new diabetes drugs, we're really pushing that below seven and people should, you know, we're now saying that if you are above seven, you're not well controlled.
+
+Now remember that there are different values for different people.
+
+If you're end of life, what is the value of getting someone to 6.5?
+
+So if you can just get them in reasonable control and get them under eight, that's good.
+
+And blood pressure control, very, very, very important.
+
+You can see that the number has been 140 over 90, but most organizations push for it to be significantly lower, 130 over 80.
+
+If you have kidney disease, the American Kidney Association likes it less than 125 over 75.
+
+So the values will change for different patients, and the lower the blood pressure in general, the better it is.
+
+All right, let's talk about the therapies.
+
+This is the new model that we're using, so don't freak out.
+
+It's really not that hard, okay?
+
+We've made it easy.
+
+I know it looks hard, but this is what is.
+
+When you look up there, number one, metformin.
+
+Then you go to the left, and we're gonna talk about those.
+
+So if on the left, if you have other conditions, heart disease, heart failure, atherosclerotic heart disease, or kidney disease, we're gonna treat that differently.
+
+Otherwise after metformin, then we're just gonna make sure that we don't make people hypoglycemic.
+
+We're gonna talk about getting them to lose weight.
+
+And then we're gonna have that category on the right for people who can't afford anything else.
+
+All right, here we go.
+
+Which of the following medications affects B12 levels necessitating monitoring?
+
+Metformin, acarbose, glyburide, repaglinide, or sitagliptin.
+
+Perfect. You guys all knew this And new study out that we probably ought to be looking at B12 on a yearly basis, just getting a B12 level on anybody who's on Metformin.
+
+All right, metformin's is your number one choice.
+
+It's still the number one choice.
+
+It decreases gluconeogenesis in the liver.
+
+It's also a peripheral insulin sensitizer, so that's why it works so well in type two diabetes.
+
+It improves cardiovascular outcomes, it decreases mortality, it has the best data, so it's very important that we continue to use it.
+
+It's the only oral medication for children that's FDA approved in children, okay?
+
+You can still use it in pregnancy.
+
+We are stopping it now when the GFR is less than 30, it's not based on creatinine, it's GFR.
+
+Don't start it if the GFR is less than 45.
+
+We're still stopping it for IV contrast.
+
+And again, check for BB 12 levels.
+
+53-year-old male with well-controlled type two diabetes on metformin 1,000 milligrams BID.
+
+He was hospitalized last month for chest pain and had a right coronary artery angioplasty.
+
+Which medication should you add?
+
+Semaglutide, pioglitazone, sitagliptin, or nateglinide.
+
+So we're gonna go back and work through that big chart that I showed you in the beginning.
+
+Yes, semaglutide.
+
+And this is why.
+
+If you have atherosclerotic coronary vascular disease, if you have heart failure, if you have kidney disease, you should be on, even if you're well-controlled, if you're on metformin and your A1C is 6.5, you should still be on an SGLT2 for most of those things.
+
+If it's just atherosclerotic cardiovascular disease, either a GLP-1 or an SGLT2.
+
+Doesn't matter, pick whichever one.
+
+If they're overweight, I would pick the GLP-1.
+
+But either one, I've given you the ones there that are recommended in those categories.
+
+If you have heart failure or chronic kidney disease, expect they're going to ask this question of you.
+
+You need an SGLT2.
+
+Pick the SGLT2.
+
+The nice thing about this is no matter what, you can pick an SGLT2, okay?
+
+But if it's heart failure or kidney disease, SGLT2 is your first choice, GLP-1 is your second if for some reason they can't take the the SGLT2.
+
+And that's even if they're controlled, okay?
+
+So we're gonna move to those very quickly in anybody who has those diseases.
+
+Let's look at the SGLT2s.
+
+These are the currently available.
+
+Notice there's a new one down there, bexagliflozin.
+
+And notice that they all have different GFRs that you can use 'em down to and we're using them lower and lower.
+
+You'll notice that it says recommended in nephropathy if the SGLT2 is over 30.
+
+Remember how these drugs work?
+
+They reabsorb, they block the reabsorption of glucose in the kidney.
+
+So glucose comes out, water comes out, we reabsorb glucose in water, but they're blocking glucose, so you're just literally going to pee out the sugar in your blood.
+
+That's how they work.
+
+And so if your kidneys aren't working, you can't expect them to do what you, so it's not going to work.
+
+The drug just simply won't work if your GFR is too low.
+
+Look at all the side effects.
+
+They slow progression of kidney disease.
+
+They decrease risk of MI, stroke, cardiovascular disease.
+
+These are important drugs.
+
+The question they ask is almost always about DKA.
+
+You can increase your risk of DKA, even at a type two diabetic if they're using an SGLT2, and there is a slight increase risk of foot ulcers becoming even worse and ending up with a foot amputation.
+
+That's a very small risk, but you should be aware of it.
+
+The GLP-1s, these are subcutaneous injections.
+
+I talked about 'em before.
+
+They slow gastric emptying and increase satiety.
+
+Liraglutide was, really exenatide was the first in this category, but liraglutide then came out, it's a daily one.
+
+And notice L, liraglutide, is not secreted renally, so you can continue to use it even in significant renal failure.
+
+And semaglutide, of course, we've talked about before.
+
+And then tirzepatide is the newest in this category, which is also a GIP.
+
+They will ask you about pancreatitis risk with this and they will ask about thyroid cell tumors.
+
+So if you have anyone who's had a thyroid tumor, they are not a candidate for these drugs.
+
+All right, so your first step is metformin, and then if they have any kind of, if they have heart failure, cardiovascular disease, or kidney failure, you're going to add a GLP-1 or an SGLT2, right?
+
+Okay, after metformin, if you just need another drug, they don't have any of these things, so they're not on that.
+
+Then you could also add a DPP-4 inhibitor or thiazolidinedione.
+
+You can also add, notice every single category you can also add your SGLT2 or GLP-1.
+
+If you want weight loss, you're gonna add GLP-1 or SGLT2.
+
+But if cost is your major issue and you need something beyond metformin, oh, sorry, then you're gonna go to a thiazolidinedione or a sulfonylurea.
+
+Those are the only two places if cost is your reason.
+
+Okay, let's look really quickly at the DPP-4s.
+
+So what DPP-4 does is it inhibits the re-uptake of GLP-1.
+
+GLP-1 is excreted when you eat, but it comes out very quickly and it lasts for a very short period of time, but it does increase your satiety.
+
+And so it's a, you know, it's a very important hormone.
+
+And so DPP-4 blocks the reabsorption so your normal GLP-1 stays around longer.
+
+And it's given as an oral medication once a day, but it's going to work primarily with meals because of the way it works.
+
+Linagliptin, and the other L here, linagliptin is not renally excreted.
+
+The others are, so you have to be careful of those in renal failure.
+
+The biggest thing with these drugs is they just aren't a lot of bang for your buck.
+
+They work well, they don't have very many side effects, but they just don't work as well as the GLP-1s or the SGLT2s.
+
+Thiazolidinediones, don't throw them away entirely.
+
+Pioglitazone works, it's a little bit like metformin works at the liver and then a little bit peripherally.
+
+Thiazolidinediones work peripherally.
+
+They're insulin sensitizers and also work a little bit at the liver, okay?
+
+And they can be used with metformin.
+
+The biggest bad thing about these is the propensity of patients to take on fluid when they take them.
+
+And so you can't use them, there's a black box warning for class III or IV heart failure.
+
+And that's the question that they like to ask.
+
+55-year-old with newly diagnosed diabetes and hypertension with chronic renal failure and creatinine of 2.4.
+
+Which medication would be the safest with regard to renal function?
+
+Acarbose, glyburide, sitagliptin, or glipizide?
+
+Ooh, this is a hard question.
+
+And the answer is glipizide.
+
+So, we're gonna go through all of these so you'll get it.
+
+Sulfonylureas.
+
+You can use sulfonylureas in most people, but glyburide has a metabolite that's secreted through the kidney, so you have to be careful of using it in patients who have renal failure.
+
+Glipizide and glimeperide are okay.
+
+The nice thing about the sulfonylureas again, is that you can use them in just about everybody.
+
+In older patients, be very careful and use them only at low doses, but you can use them in mild renal insufficiency, in cardiac problems, in patients with hepatic failure, all kinds of things.
+
+But they are just insulin secretagogues.
+
+They just make you secrete more insulin.
+
+And so if a patient's already using insulin, it's kind of a waste of time.
+
+But for patients that just need a little bit of something, sulfonylureas can be very helpful and should stay in your armamentarium because they're cheap.
+
+The meglitinides are just, they work like rapid-acting sulfonylureas, so they just cause insulin secretion for a short period of time when you take them.
+
+So they're taken at meals.
+
+So if you have like an elderly patient who takes their sulfonylurea and then doesn't eat, switching them to a meglitinide would be a good choice.
+
+Otherwise, they really don't have much use anymore.
+
+Alpha-glucosidase inhibitors, acarbose and miglitol, block the breakdown of carbohydrates, of disaccharides in the gut.
+
+So they looked like they'd be really good, you just can't absorb the glucose.
+
+It's just gonna pass on through the gut.
+
+So you get a lot of GI problems, as you can imagine, with these drugs.
+
+And again, just not a lot of bang for your buck.
+
+And they also can't be used with a creatinine greater than two.
+
+And so that's why that choice was there.
+
+And remember, sitagliptin was on that list.
+
+And remember, linagliptin is the only one that we can use in renal failure of the DPP-4s.
+
+So that's why the answer to the the question was glipizide.
+
+All right, so now after we've done metformin and we've added another drug and we're still not controlled, we simply add another drug, okay?
+
+Anything from the list.
+
+But just be careful that you're not using two drugs that are similar, like using a DPP-4 and a GLP-1 make no sense, because they're doing essentially the same thing.
+
+So make sure you're using drugs with different mechanisms.
+
+Metformin can be used with nearly everything.
+
+And as you will see, clear at the back of my slides I gave you a list of the combination drugs, which is like a page long, and really almost every drug is combined with metformin, all the oral drugs.
+
+So we don't use the combos too often because they just are a little bit clunkier to use.
+
+And when they're combined with metformin, they don't really save you all that much because metformin's cheap.
+
+You guys should all know insulin.
+
+They tend to not ask very many questions about it.
+
+Bioavailability is faster in the abdomen.
+
+If you put it in the thigh you have to be careful with exercising after that.
+
+We're seeing a lot of changes in hospital use of insulin now in using more corrective factor insulin.
+
+And a lot of these changes are because of the new, because of things like the GLP-1s.
+
+Intensive insulin therapy.
+
+The only thing I wanna say about this is when you have someone who is newly diagnosed who's totally out of control, do not be afraid to use insulin early on to get that patient under control.
+
+And you can always take them off again.
+
+We had some, you know, some idea at some point that if we didn't, you know, once people got on insulin, they could never get off, which is totally crazy.
+
+And so don't be afraid to use it to get them under control.
+
+These are your long-acting insulins.
+
+NPH is kind of a medium dose.
+
+Glargine has been the standard for a long, long time.
+
+Detemir or Levemir is coming off the market next month.
+
+So if you've got anybody on it, you're gonna have to switch them either to glargine or to degludec.
+
+It's coming, literally it's coming off the market to make more room to make Ozempic.
+
+So, there you go.
+
+And do know that degludec is the longest acting and has the least hypoglycemia.
+
+So that's the question they like to ask.
+
+The rapid-acting analogs, lispro, aspart, glulisine, all very similar.
+
+have a short onset of action in about 15 minutes.
+
+You take 'em, you can eat, you can also take them immediately after you eat.
+
+And they are the basis for what we use in the pumps.
+
+You know, we, so we use these a lot.
+
+Please note that there are new ultra rapid insulins.
+
+They combine them with, lispro and aspart with B vitamins so that they're absorbed really quickly.
+
+And if you use those, they're gonna be way more expensive, you're not gonna get much, they're just gonna act really rapidly.
+
+But the thing about those is that you have to eat immediately.
+
+So you can not take them 15 minutes before you eat and then think you're gonna eat.
+
+That's not gonna work.
+
+You need to take them when you're actually ready to eat.
+
+Please note that there is also an inhaled insulin out on the market, it's Afrezza.
+
+You can't use it if you have any kind of respiratory issues.
+
+The boards continue to stay away from insulin pumps.
+
+I don't know why, but they have become really the mainstay for patients with difficult to control diabetes and are really particularly for type one diabetes, but are used extensively in type two as well, and are really incredibly good, particularly with the continuous glucose monitors.
+
+And we're going to see those all.
+
+We're gonna see a system that just does itself.
+
+You know, we're not even gonna have to intervene because it's gonna do its own.
+
+All right, which of the following medications would be outside the recommendations for a 15-year-old with type two diabetes, hypertension, and hyperlipidemia?
+
+Metformin, sitagliptin, liraglutide, lisinopril, or pravastatin?
+
+Very good, thank you, you guys are.
+
+So the only oral diabetes medication is metformin for kids, right?
+
+So in kids we have metformin, and of course insulin, and also liraglutide is recommended for children now.
+
+And so, but it's a injection, not an oral medication.
+
+I've given you a couple of things there on metformin and lifestyle change.
+
+In screening for complications in kids, which are a little bit different than in adults.
+
+And when you start, like retinopathy start at age 15 or five years after the diagnosis, so.
+
+Also, we wanna make sure we're screening for hypertension and for hypothyroidism.
+
+In kids, if you have type one, remember it is an autoimmune type disease, so you wanna screen for hypothyroidism and celiac disease.
+
+So very important to remember those two things.
+
+Hypertension in kids, we're still treating that with lisinopril.
+
+But remember that if you have a female, you can't use the ACE inhibitors in someone who's pregnant.
+
+So all of these kids should also be on birth control if you're using lisinopril.
+
+Preferably a long acting, reversible, not oral contraceptives.
+
+These are the immunizations.
+
+So just make sure you're getting your influenza yearly.
+
+Now your Covid, PCV20 is now recommended in all patients with diabetes.
+
+And hepatitis B is recommended in all patients less than 60 and anyone over 60 that you think it would be of benefit to.
+
+These are the complications that we're gonna talk about really pretty quickly here.
+
+So, screening for complications.
+
+Make sure you're looking for tobacco use, autonomic neuropathies.
+
+Ask about things like sexual dysfunction.
+
+Hypothyroidism.
+
+Every visit, check their blood pressure and a visual inspection of their feet.
+
+You don't have to do a monofilament exam, just look at their feet, make sure they don't have ulcers on 'em.
+
+The best way to prevent foot ulcers is have the patients look at their feet.
+
+Look at them every day.
+
+It's the easiest thing you do in diabetes.
+
+Look at your feet.
+
+Again, in type one screen for hypothyroidism and celiac.
+
+Yearly you need to do a monofilament exam, pulses and vibrations or light touch.
+
+So all of those, it's not just a monofilament exam.
+
+We need a urine microalbumin and creatinine ratio for nephropathy.
+
+This is not required if you're on an ACE and ARB, but we're seeing it become back into vogue because you can moderate how much, you know, you can increase your dose of their ACE or ARB and help decrease the amount of microalbumin in their spleen.
+
+And also screen yearly for depression.
+
+Lipids you should screen for and a dilated eye exam for retinopathy.
+
+But this has changed.
+
+If you have normal exams, you only need to get them every two years now, okay?
+
+Prevention of complications are easy, glycemic control, blood pressure control, smoking cessation, and correction of dyslipidemia.
+
+It's the standard for everything.
+
+Again, notice that blood pressure control.
+
+Lower if you're younger, lower to prevent stroke.
+
+Lower, lower, lower if we can.
+
+You have a patient on IV fluids and insulin, that's the initial treatment for ketoacidosis.
+
+For which reason would you delay the use of insulin in a patient with ketoacidosis?
+
+If their serum glucose is only 260, if their anion is 11, if their serum potassium is 3.2, or if the patient is awake and alert.
+
+Very good.
+
+It's the only reason you do not start insulin drip initially is if their potassium is low.
+
+Usually what you're gonna see in ketoacidosis is a really high potassium, right?
+
+Because the potassium has all bled out of the cells.
+
+So if it's low, there's no more potassium anywhere.
+
+So you've gotta put potassium in before you can start your insulin, otherwise the the treatment is lots of IV fluids and IV insulin.
+
+Remember that ketoacidosis is just insufficient insulin, so you get increased gluconeogenesis and fatty acid oxidation, which gives you the metabolic acidosis.
+
+And again, it's uncommon in type two, but more common if they're on an SGLT2, so we're gonna see a little bit more of it now.
+
+I've given you the criteria there.
+
+Again, volume replacement, insulin drip, continue the insulin drip.
+
+This is a common question.
+
+Continue the insulin drip until the ketones are gone, until the acidosis is resolved.
+
+And so what's gonna happen is you're gonna, when the sugars start to drop, they get down to around between 200, 250, you need to add glucose to the IV solution.
+
+But you continue the insulin.
+
+Do not stop the insulin.
+
+And when the potassium gets down around five, then you need to put potassium into the solution as well.
+
+And if it's already low to start with, start with potassium in the solution.
+
+Hyperosmolar, hyperglycemic state is actually fairly uncommon.
+
+It acts very much like diabetic ketoacidosis and we treat it very much the same, we're just not in such a big hurry as we are with DKA.
+
+And these patients will be often very confused.
+
+You'll see glucose levels really high, like over 1,000 and so the confusion in all of that will resolve with the hyperglycemia.
+
+Macrovascular complications for cardiac disease.
+
+The screening for that is a stress echo or stress thallium.
+
+And so there are no criteria for when you get it.
+
+It has to do with your, when their symptomatic or you have a high index of suspicion.
+
+Microvascular complications, nephropathy, retinopathy, neuropathy, all treated with glycemic control, blood pressure control.
+
+Retinopathy.
+
+Notice there's a lot, they've been asking a lot of questions here.
+
+So those tele-retinal screenings in the office are very good for increasing your screening.
+
+Patients with non-proliferative diabetic retinopathy should avoid exercises like power lifting, things that do put a lot of stress.
+
+And proliferative retinopathy leading to retinal detachment is a neovascularization problem.
+
+And the most common cause of sudden monocular vision loss is vitreous hemorrhage.
+
+So sorry, there's a lot of stuff there, but those are recent questions.
+
+Neuropathy's gonna be covered to some extent later.
+
+There's not much we can do about it and so symptomatic treatment and pregabalin and duloxetine are FDA approved.
+
+So they are your first line choices.
+
+Also amitriptyline or nortriptyline, but not FDA approved for that.
+
+And you can see the other choices there.
+
+Nephropathy, avoid your NSAIDs, manage your blood sugar and your blood pressure.
+
+Don't use an ACE and an ARB together, one or the other, and you'll get more on renal failure next, or in the renal talk.
+
+57-year-old male with diabetic foot ulcer.
+
+What is the best indicator of the ability to heal?
+
+The size of the ulcer, the patient's pulse, signs of infection, their blood sugar, or their blood pressure.
+
+Very good.
+
+The patient's pulse, most important.
+
+This is the diabetic foot.
+
+Best test for sensation is the monofilament.
+
+The first test is a plain film if you think they have osteo, but the best test is an MRI.
+
+The best indicator for successful healing are their pulses, and then you can do, if they don't have any, you can do an ankle brachial index.
+
+Please note down there what Charcot foot is, it sometimes appears.
+
+These are things that you are at increased risk for if you have diabetes.
+
+I want you to look over this slide.
+
+These are other complications that you see with diabetes.
+
+They love to ask these.
+
+And all they ask is, basically, is it associated with diabetes?
+
+So look over that list.
+
+Things like adhesive capsulitis and trigger finger appear a lot.
+
+And these are the practice recommendations.
+
+So thank you very much for that whirlwind tour of diabetes.
+
+Thank you.

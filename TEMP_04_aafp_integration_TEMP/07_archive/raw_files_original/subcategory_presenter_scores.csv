@@ -1,0 +1,100 @@
+matched_subcategory,presenter_count,presenter_score,Subcategory,Yield_Score,Trend_Slope,Total_Questions_6yr,adjusted_score
+Abdominal Aortic Aneurysm,1,0.0909,Abdominal Aortic Aneurysm,0.76,0.086,3,0.76
+Abnormal Uterine Bleeding,2,0.1818,Abnormal Uterine Bleeding,0.93,0.143,3,0.93
+Acute Asthma Exacerbation,3,0.2727,Acute Asthma Exacerbation,-0.01,-0.114,2,0.0
+Acute Coronary Syndrome,6,0.5455,Acute Coronary Syndrome,0.93,0.143,3,1.09
+Acute Ischemic Stroke Management,2,0.1818,Acute Ischemic Stroke Management,0.16,-0.057,2,0.16
+Acute Limb Ischemia,2,0.1818,Acute Limb Ischemia,1.02,0.229,2,1.02
+Acute Pancreatitis Management,1,0.0909,Acute Pancreatitis Management,0.85,0.171,2,0.85
+Adhesive Capsulitis,1,0.0909,Adhesive Capsulitis,0.24,-0.086,3,0.24
+Adolescent Depression Screening,6,0.5455,Adolescent Depression Screening,0.5,0.057,2,0.5
+Alcohol Use Disorder Treatment,2,0.1818,Alcohol Use Disorder Treatment,0.59,0.029,3,0.59
+Alcohol Use Screening and Intervention,1,0.0909,Alcohol Use Screening and Intervention,1.02,0.229,2,1.02
+Alcohol Withdrawal Syndrome,1,0.0909,Alcohol Withdrawal Syndrome,-0.01,-0.114,2,0.0
+Allergic Rhinitis Management,2,0.1818,Allergic Rhinitis Management,-0.01,-0.114,2,0.0
+Ankle Sprain Management,1,0.0909,Ankle Sprain Management,0.5,0.057,2,0.5
+Anorexia Nervosa Treatment,2,0.1818,Anorexia Nervosa Treatment,0.33,0.0,2,0.33
+Asthma Management,2,0.1818,Asthma Management,1.18,0.171,4,1.18
+Atrial Fibrillation Anticoagulation,3,0.2727,Atrial Fibrillation Anticoagulation,-0.01,-0.114,2,0.0
+Bariatric Surgery and Obesity,3,0.2727,Bariatric Surgery and Obesity,0.5,0.057,2,0.5
+Bipolar I Disorder Diagnosis,3,0.2727,Bipolar I Disorder Diagnosis,0.68,0.114,2,0.68
+Borderline Personality Disorder,1,0.0909,Borderline Personality Disorder,0.33,0.0,2,0.33
+Breast Cancer Screening,7,0.6364,Breast Cancer Screening,0.16,-0.057,2,0.16
+Breast Cancer Surveillance,2,0.1818,Breast Cancer Surveillance,-0.35,-0.229,2,0.0
+Bronchiolitis Management,4,0.3636,Bronchiolitis Management,0.16,-0.057,2,0.16
+CKD-Mineral Bone Disorder,1,0.0909,CKD-Mineral Bone Disorder,0.68,0.114,2,0.68
+COPD Diagnosis,2,0.1818,COPD Diagnosis,0.33,0.0,2,0.33
+COPD Management,2,0.1818,COPD Management,1.09,0.086,5,1.09
+Cardiovascular Risk Assessment,3,0.2727,Cardiovascular Risk Assessment,-0.1,-0.2,3,0.0
+Cardiovascular Risk Reduction,3,0.2727,Cardiovascular Risk Reduction,0.24,-0.086,3,0.24
+Cardiovascular Risk in Diabetes,3,0.2727,Cardiovascular Risk in Diabetes,-0.18,-0.171,2,0.0
+Celiac Disease Diagnosis,4,0.3636,Celiac Disease Diagnosis,1.18,0.171,4,1.18
+Cervical Myelopathy,2,0.1818,Cervical Myelopathy,0.68,0.114,2,0.68
+Community-Acquired Pneumonia,1,0.0909,Community-Acquired Pneumonia,0.75,-0.029,5,0.75
+Complex Regional Pain Syndrome,1,0.0909,Complex Regional Pain Syndrome,0.68,0.114,2,0.68
+Concussion Management,3,0.2727,Concussion Management,1.02,0.229,2,1.02
+Conduct Disorder,1,0.0909,Conduct Disorder,-0.35,-0.229,2,0.0
+Croup Management,2,0.1818,Croup Management,-0.01,-0.114,2,0.0
+Delirium Management,2,0.1818,Delirium Management,1.02,0.229,2,1.02
+Distal Phalanx Fracture Management,2,0.1818,Distal Phalanx Fracture Management,0.33,0.0,2,0.33
+Distal Radius Fracture Management,1,0.0909,Distal Radius Fracture Management,0.16,-0.057,2,0.16
+Diverticulitis Management,1,0.0909,Diverticulitis Management,-0.01,-0.114,2,0.0
+Fall Prevention in Older Adults,3,0.2727,Fall Prevention in Older Adults,0.76,0.086,3,0.76
+Fibromyalgia Management,8,0.7273,Fibromyalgia Management,0.76,0.086,3,0.76
+Food Allergy Prevention,2,0.1818,Food Allergy Prevention,0.93,0.143,3,0.93
+Greater Trochanteric Pain Syndrome,3,0.2727,Greater Trochanteric Pain Syndrome,0.5,0.057,2,0.5
+Group A Streptococcal Pharyngitis,2,0.1818,Group A Streptococcal Pharyngitis,0.5,0.057,2,0.5
+HIV Screening,6,0.5455,HIV Screening,0.59,0.029,3,0.59
+Heart Failure Management,2,0.1818,Heart Failure Management,0.85,0.171,2,0.85
+Heart Failure with Reduced Ejection Fraction,5,0.4545,Heart Failure with Reduced Ejection Fraction,0.65,-0.257,5,0.65
+Hematuria Evaluation,6,0.5455,Hematuria Evaluation,0.93,0.143,3,1.09
+Hirsutism Management,1,0.0909,Hirsutism Management,-0.35,-0.229,2,0.0
+Hypertension Management,3,0.2727,Hypertension Management,0.65,-0.4,8,0.65
+Hypothermia Management,2,0.1818,Hypothermia Management,0.85,0.171,2,0.85
+Influenza Treatment in Pregnancy,11,1.0,Influenza Treatment in Pregnancy,-0.01,-0.114,2,0.0
+Influenza Vaccination,4,0.3636,Influenza Vaccination,0.65,-0.286,4,0.65
+Insomnia Management,5,0.4545,Insomnia Management,0.41,-0.029,3,0.57
+Iron Deficiency Anemia,4,0.3636,Iron Deficiency Anemia,-0.1,-0.2,3,0.0
+Kawasaki Disease,1,0.0909,Kawasaki Disease,0.68,0.114,2,0.68
+Lumbar Spinal Stenosis,2,0.1818,Lumbar Spinal Stenosis,0.16,-0.057,2,0.16
+Lung Cancer Screening,1,0.0909,Lung Cancer Screening,1.6,0.143,7,1.6
+Meniere's Disease Diagnosis,2,0.1818,Meniere's Disease Diagnosis,0.5,0.057,2,0.5
+Multiple Myeloma Diagnosis,1,0.0909,Multiple Myeloma Diagnosis,0.5,0.057,2,0.5
+Nephrolithiasis Management,4,0.3636,Nephrolithiasis Management,-0.01,-0.114,2,0.0
+Nonalcoholic Fatty Liver Disease,3,0.2727,Nonalcoholic Fatty Liver Disease,0.16,-0.057,2,0.16
+Obsessive-Compulsive Disorder,2,0.1818,Obsessive-Compulsive Disorder,0.68,0.114,2,0.68
+Onychomycosis Treatment,5,0.4545,Onychomycosis Treatment,0.33,0.0,2,0.33
+Orthostatic Hypotension,1,0.0909,Orthostatic Hypotension,0.93,0.143,3,0.93
+Osgood-Schlatter Disease,9,0.8182,Osgood-Schlatter Disease,-0.01,-0.114,2,0.0
+Osteoarthritis Management,3,0.2727,Osteoarthritis Management,0.24,-0.086,3,0.24
+Osteoporosis Management,1,0.0909,Osteoporosis Management,1.35,0.229,4,1.35
+Osteoporosis Screening,3,0.2727,Osteoporosis Screening,1.1,0.2,3,1.1
+Patellofemoral Pain Syndrome,1,0.0909,Patellofemoral Pain Syndrome,-0.01,-0.114,2,0.0
+Pelvic Inflammatory Disease,3,0.2727,Pelvic Inflammatory Disease,0.33,0.0,2,0.33
+Perioperative Anticoagulation Management,5,0.4545,Perioperative Anticoagulation Management,0.68,0.114,2,0.68
+Peripheral Arterial Disease,3,0.2727,Peripheral Arterial Disease,0.5,0.057,2,0.5
+Pertussis Diagnosis,2,0.1818,Pertussis Diagnosis,0.33,0.0,2,0.33
+Postinflammatory Hyperpigmentation,5,0.4545,Postinflammatory Hyperpigmentation,0.68,0.114,2,0.68
+Preeclampsia Prevention,5,0.4545,Preeclampsia Prevention,0.68,0.114,2,0.68
+Primary Hyperparathyroidism,1,0.0909,Primary Hyperparathyroidism,-0.01,-0.114,2,0.0
+Primary Ovarian Insufficiency,4,0.3636,Primary Ovarian Insufficiency,0.24,-0.086,3,0.24
+Prostate Cancer Screening,3,0.2727,Prostate Cancer Screening,0.68,0.114,2,0.68
+Pulmonary Embolism Diagnosis,6,0.5455,Pulmonary Embolism Diagnosis,0.65,-0.171,4,0.65
+Recurrent Nephrolithiasis Prevention,1,0.0909,Recurrent Nephrolithiasis Prevention,0.5,0.057,2,0.5
+Scaphoid Fracture Management,2,0.1818,Scaphoid Fracture Management,0.16,-0.057,2,0.16
+Sepsis Management,1,0.0909,Sepsis Management,-0.27,-0.257,3,0.0
+Serotonin Syndrome,4,0.3636,Serotonin Syndrome,0.24,-0.086,3,0.24
+Severe Hyponatremia Management,1,0.0909,Severe Hyponatremia Management,1.02,0.229,2,1.02
+Spirometry Interpretation,6,0.5455,Spirometry Interpretation,-0.01,-0.114,2,0.0
+Stress Fracture Diagnosis,2,0.1818,Stress Fracture Diagnosis,0.33,0.0,2,0.33
+Stress Urinary Incontinence,6,0.5455,Stress Urinary Incontinence,-0.18,-0.171,2,0.0
+Stroke Prevention and Secondary Prevention,5,0.4545,Stroke Prevention and Secondary Prevention,0.33,0.0,2,0.33
+Supraventricular Tachycardia,5,0.4545,Supraventricular Tachycardia,0.16,-0.057,2,0.16
+Systemic Lupus Erythematosus,3,0.2727,Systemic Lupus Erythematosus,0.33,0.0,2,0.33
+Thyroid Nodule Evaluation,5,0.4545,Thyroid Nodule Evaluation,0.65,-0.229,4,0.65
+Tinnitus Management,1,0.0909,Tinnitus Management,0.5,0.057,2,0.5
+Tuberculosis Screening,1,0.0909,Tuberculosis Screening,-0.1,-0.2,3,0.0
+Tumor Lysis Syndrome,1,0.0909,Tumor Lysis Syndrome,-0.01,-0.114,2,0.0
+Type 1 Diabetes Management,2,0.1818,Type 1 Diabetes Management,-0.35,-0.229,2,0.0
+Type 2 Diabetes Management,5,0.4545,Type 2 Diabetes Management,0.65,-0.286,8,0.65
+Vitamin B12 Deficiency,2,0.1818,Vitamin B12 Deficiency,0.93,0.143,3,0.93

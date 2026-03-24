@@ -1,0 +1,709 @@
+Well, we're gonna turn our attention to a discussion of behavioral medicine and it's really a pleasure to welcome Dr. Thomas Heinrich.
+
+Dr. Heinrich is a professor of psychiatry and of family medicine at the Medical College of Wisconsin.
+
+He completed a combined residency in psychiatry and in family medicine, and he currently serves as the executive vice chair in the Department of Psychiatry and Behavioral Medicine at the Medical College of Wisconsin.
+
+So we are delighted to have you here and take it away.
+
+It's all yours.
+
+Please join me in welcoming him.
+
+Thanks, thanks, yeah.
+
+So we're gonna talk about major depression for the next 30 minutes or so.
+
+We're gonna also talk, the next one's gonna be about anxiety and bipolar disorder.
+
+And then we're gonna conclude with a talk about autism spectrum disorder as well as ADH and a little bit on OCD, so we got quite a bit to cover.
+
+I don't have anything to disclose on this talk or any of the other three talks I do.
+
+What we're gonna hit on is the diagnostic criteria, the presentation of major depression in adults and in other special populations, the elderly, and pregnancy and postpartum as well.
+
+And we'll talk about some of the therapeutic tools we have to treat that.
+
+Again, Dr. Oakley was kind enough to share his slides, he covers a lot in his slides and I've taken them at heart and built upon them.
+
+This is an Express Board Review course, but as you'll see as you taken a look at the number of slides we have to cover, it's probably better described as a supersonic overdrive in what we're gonna cover the next hour and a half or so.
+
+So we're gonna start with an audience response question here.
+
+Which of the following is true concerning screening for depression and suicidal ideation in primary care?
+
+Does the PHQ-2 counts as a tool to screen for this?
+
+Depression should be delayed until at least two months when a woman is postpartum.
+
+The US Preventive Services Task Force recommends that all adults be screened for suicidal ideation in the primary care setting.
+
+And the task force does not recommend screening for adults and adolescents for depression.
+
+Well, this was an easy one, you guys are clicking on it quick.
+
+That's great, so yes.
+
+How many of you are screening for depression in your primary care practices?
+
+That's great, perfect.
+
+Because that is what the US Preventive Services Task Force wants us to do, with the Level B evidence, is regarding, and they require that or ask us to do that in adults as well as the elderly.
+
+And at the time was a pretty stunning recommendation to do this in pregnancy and in postpartum populations as well.
+
+However, what they did say is they did not recommend screening for, or insufficient evidence was available to screen for suicide in this patient population, the risks and benefits weren't quite there, they didn't have the data to really make a recommendation from that point of view.
+
+What they aren't able to tell us is what the cadence to our screening for depression should be, they didn't really comment on that.
+
+Are you guys doing it probably yearly in patient populations that don't have a history?
+
+That's what I've seen done, that's what we do in our institution.
+
+What about adolescents and children?
+
+So the USPF recommends that children, ages 12 to 18, be screened for depression with that level B.
+
+However, children younger than 12, again, we get the insufficient and we have the same insufficient rating for suicide screening in this population, which is depressing given that suicide is the second leading cause of death after accidents in childhood.
+
+So pretty scary stuff, wish we had a better tool to screen.
+
+So let's go to the next question here.
+
+Which of the following is true about major depressive disorder and persistent depressive disorder, which used to be called dysthymia?
+
+The depression associated with dysthymia is equal or as severe as that is associated with major depressive disorder.
+
+The lifetime risk is equal between men and women.
+
+Depression is more common in the medically ill patients.
+
+And dysthymic patients may have a period of a normal mood for at least one year during the course of their persistent depression.
+
+Looks like we got a clear favor, that depression is more common in medically ill patients.
+
+And we'll talk about how prevalent it is in a bit, so what is the diagnosis of major depression?
+
+Well, DSM-5-TR does a nice job defining it.
+
+It's five symptoms of depression, present more days than not, over a two week period of time.
+
+Of those five symptoms, one has to be either a depressed mood or a loss of interest in things that the individual used to find interesting, we call that anhedonia.
+
+And to be pathologic, the symptoms have to impair the individual's functioning, school, work, family, there's a consequence to this mood.
+
+We don't mean to pathologize being sad, this is a disorder.
+
+I don't remember all those criteria, I'll be honest with you.
+
+So I often go back to the SIG-E-CAPS.
+
+So there were eight criteria in DSM-5, there are seven in SIG-E-CAPS.
+
+The one that's missing is depression.
+
+I think the people that came up with with it assume that was a no brainer.
+
+But you're looking at sleep disturbances, too much, too little.
+
+A loss of interest or pleasure, that's that anhedonia.
+
+Then there's feelings of guilt or worthlessness that occurs within those two weeks.
+
+There can be decreased energy or fatigue.
+
+The concentration becomes impaired.
+
+Appetites change, either too much, too little, weight gain, weight loss, you ask about, and then psychomotor agitation and depression, as well as the dreaded suicidal ideation.
+
+What we'll see is when we talk about special populations, younger individuals, young adults, have a different presentation of symptoms than the older folks.
+
+This is a graphic representation of what depression can look like with the black bar being the normal mood state.
+
+You see that decrease down there and we'll contrast that with the dysthymia as well as bipolar going forward.
+
+So what does dysthymia, or the new term for that persistent depressive disorder look like?
+
+It's a depressed mood that's present for most days, more days than not, most of the day, more days than not, for at least two years.
+
+And during that course of time, it's the rules of two, the patient cannot be asymptomatic for greater than two consecutive months.
+
+In addition to being depressed, they have to have two additional symptoms of depression.
+
+So you're not at that five level, you're at that three level.
+
+So it's a more mild form of depression that's very chronic but is still impairing, it's still pathologic.
+
+And interestingly enough has the same degree or same significant level of impairment and adverse outcomes.
+
+So we really need to pay attention for this as well.
+
+And to give you an idea, the patient is hovering along that mildly depressed, not getting into the major depressive.
+
+And again, no periods of euthymia during, no significant periods of euthymia during this course of illness.
+
+So when we're talking about depression, I get the sense that there's a recognition of how common depression is.
+
+20 to 25% of women at some point in their life will suffer from a major depression.
+
+The number's closer to 10% in men.
+
+If you look at a community prevalence, it's between five and 10% at any one time.
+
+And then in our practices, in a primary care practice where we're dealing with patients where often comorbidity is more the rule or co-occurring illness is often more the rule than the exception, we see depression rates approaching 25%.
+
+Does that seem familiar or consistent with your clinical practices?
+
+20, 25% of patients will have a mood disturbance, depression.
+
+I don't think that's something our colleagues in psychiatry truly get or are categorical, they don't understand the complexity of the patients we see as well as the number of patients we see.
+
+Just to tease the AAFP livestream updates course, I'll be talking about how we can best address this issue in a primary care setting through some innovative practice models.
+
+Next question here.
+
+Which of the following is true about the treatments for depression?
+
+And we're gonna start talking about that.
+
+If a patient does not respond to an SSRI within two weeks, it's time to start another antidepressant.
+
+The medication of choice for patients with epilepsy is bupropion.
+
+ECT is one of the most effective treatments we have out there for depression.
+
+And antidepressants are contraindicated in patients, in women who are breastfeeding, who may have a postpartum depression.
+
+Yeah, everybody's getting this one right.
+
+Have you referred patients to ECT?
+
+Are you caring for patients with ECT?
+
+It really is an amazingly effective treatment that is commonly underutilized.
+
+One of the trends I'm gonna try to get across regarding depression, anxiety, bipolar, all sorts of things, is there a symptom?
+
+The disease of depression is just one potential etiology for somebody who's complaining of loss of interest or pleasure or depression or insomnia, they're a symptom.
+
+And any symptom really does require an evaluation.
+
+And there are various medications that could cause it, the most common or the CNS depressants like alcohol and sedative hypnotics like benzodiazepines or barbiturates.
+
+The centrally acting anti-hypertensives like reserpine, people still prescribe it, my grandmother was on it in the early 2000s, actually, it really shocked me.
+
+It's actually reserpine because it depletes monoamines in the brain, causes depression.
+
+It was one of the prototypical or theoretical basis for the monoamine theory of depression, it's very fascinating.
+
+And then steroids and antiepileptic medications are often on the list.
+
+But what you'll notice is not on the list are beta blockers.
+
+Beta blockers historically have been thought to cause depression, they can cause fatigue, but meta-analysis really don't suggest depression is a concern with them.
+
+We do a history and physical exam and we don't have a lot of evidence base to guide our evaluation of patients.
+
+But I'll tell you the first four bullet points there.
+
+I routinely do in my patients, BMP, CMP, I'm gonna check TSH if that's abnormal.
+
+I'll look at their free T4.
+
+And I live in Wisconsin, we have no sun for half of the year, so I'm gonna check a vitamin D.
+
+And then folate and B12 deficiency are associated with depression as well.
+
+And then the other ones are based primarily on individual risk factors of the patient.
+
+So I'm gonna frame the treatment of depression in these four big boxes to start with.
+
+One is patient education.
+
+We need to discuss our treatment of depression with the patient, the rationale for the choice and our recommendations, how long the medication's gonna take to work, the potential side effects of that medication.
+
+All are important to ensure adherence with our prescription.
+
+Reassurance.
+
+Stigma is still real.
+
+We have to ensure patients that depression is a medical disease.
+
+It's not a character flaw or a sign of moral weakness and it's a treatable disease is that.
+
+And then we wanna make sure that if they're willing to take our agreed upon course.
+
+We wanna make sure we're monitoring their treatment, not just for efficacy but also for side effects.
+
+We wanna be proactive in querying about side effects like sexual dysfunction, 'cause patients are really hesitant to talk about that sort of stuff, and that can lead to non-adherence.
+
+And then if we're monitoring patients and they're not doing well, for goodness sake, let's do something about it, let's adjust our treatment.
+
+Because the goal is remission, not just response, not just better, we want them in remission.
+
+So how do we pick antidepressants?
+
+The pharma reps are gonna tell you that A is better than B, and A is always what they're selling, they're never selling B.
+
+But I'll tell you that for the most part, the antidepressants are entirely similar as far as an efficacy standpoint.
+
+So how do we choose?
+
+We choose first and foremost for what's best for the patient, what's safest for the patient.
+
+We wanna take into account their medical comorbidities and their psychiatric comorbidities.
+
+We wanna avoid medications that may exacerbate a medical condition and if ideal, we would like the two birds one stone theory.
+
+I have one medication that can treat a couple of problems that the patient has.
+
+We wanna avoid drug-to-drug interactions through pharmacokinetic and pharmacodynamic interactions, and we'll talk a little bit about that as we go on.
+
+If the medications are safe, then what does the patient want?
+
+Do they have a family member or a friend that's responded well to one?
+
+That's one they're more likely to take, right?
+
+It's really hard to talk a patient into taking a medication they don't wanna take.
+
+Ideally the medication they wanna take, they have a history of response to or they have a family member that's responded to.
+
+And last but not least, we consider the importance of cost in the medications that we're prescribing.
+
+Which of the following medications is avoided due to, which is commonly avoided due to potentially life-threatening side effects?
+
+SSRIs, monoamine oxidase inhibitors, serotonin modulators or norepinephrine reuptake inhibitors?
+
+Yeah, I'm making these too easy for you.
+
+Have any of you ever prescribed a monoamine ox inhibitor?
+
+Got one person.
+
+Has anybody followed a patient with a mono?
+
+That's impressive.
+
+I have never prescribed a mono, I've been doing this for 30 years, I never prescribed one.
+
+We're gonna break down the antidepressants in two big cohorts, first generation and second generation, and they're broken by side effects.
+
+These are the pharmacodynamic interactions I was talking about a couple of slides before.
+
+These are predictable side effects.
+
+If I give you a medication that impacts serotonin, I can educate the patient about potential side effects.
+
+So serotonin, norepinephrine and dopamine, they're we think important for the treatment response of an antidepressant, but they're associated with side effects.
+
+Serotonin causes sexual dysfunction, it can cause GI disturbance, increased bleeding risks, and it can lead to toxicity if combined with other serotonergic medications, and you get serotonin toxicity, also called serotonin syndrome.
+
+Norepinephrine, great for depression but can cause anxiety, arousal, insomnia, and even autonomic arousal.
+
+Dopamine, nausea, sometimes psychosis and some activation.
+
+The other neurotransmitters here are primarily nuisance side effects, with orthostasis, not necessarily a nuisance side effect.
+
+if an older person gets orthostatic falls and breaks a hip.
+
+They also have anticholinergic side effects that we wanna really avoid in the elderly.
+
+That's cognitive, that's constipation, urinary retention, dry mouth, cognitive issues.
+
+And then histamine and sedation and weight gain, which can be a negative side effect in some patients if they're obese already or at risk of diabetes.
+
+But if they're cachectic and medically ill, can be a benefit, and if they're not sleeping well, so we'll talk a little bit about that.
+
+The first generations we don't commonly use for depression are the monoamines and the tricyclics.
+
+The monoamines, they prevent the breakdown of the the monoamines in the synaptic cleft, hence their name.
+
+They're associated, that life-threatening risk, is due to drug-to-drug interactions.
+
+But also due to the tyramine diet that these patients have to follow.
+
+They have to avoid aged cheese, processed meats, smoked meats, draft beer, not a Wisconsin friendly diet.
+
+That's one of the reasons we never prescribe it in Wisconsin.
+
+But it can be dangerous if they don't follow that diet or if they take another medication that may impact serotonin, risk of serotonin syndrome.
+
+The tricyclic antidepressants were one of the first antidepressants because, well, actually they were originally used as antihistamines, they have very potent antihistaminergic properties.
+
+But they discovered that these patients were no longer sneezing, they didn't have a runny nose and they weren't depressed anymore.
+
+So they went down the line of depression.
+
+It has a lot of pharmacotherapy properties.
+
+Some are good, the serotonin and the norepinephrine, some are bad.
+
+The anticholinergic impact, the alpha antagonism, causing falls.
+
+And I'm really glad I never was practicing too much where TCAs were a primary treatment because of that one at six o'clock, the blockade of the sodium channels.
+
+That's why these medications are lethal in overdoses.
+
+So one week supply of an antidepressant is lethal in overdose, not a great antidepressant, from a safety standpoint.
+
+Good antidepressant, not just that great.
+
+So we use the second generations every chance we get, and we'll talk a little bit about those.
+
+The serotonin reuptake inhibitors, primarily inhibit the reuptake of serotonin, so are associated with those serotonin side effects, of GI upset, increased risk of bleeding, sexual dysfunction.
+
+There are five for depression, I draw that black line.
+
+I usually prescribe the top three, I very rarely prescribe the bottom two.
+
+The last speaker mentioned the QT concerns with citalopram.
+
+Paroxetine I tend not to use 'cause it has a very short half-life.
+
+People forget a dose, they go through discontinuation syndrome and they're not happy.
+
+It also has a lot of drug-to-drug interactions and is anticholinergic.
+
+So I tend to avoid it for all of those reasons.
+
+We go to the SNRIs, they're serotonin reuptake inhibitors, so we have those side effects, but now we have norepinephrine pushed in, which can be beneficial but is associated with its own problems of autonomic arousal, anxiety and those kind of things.
+
+So the same black line, I tend to use the ones above it, and tend not to use the ones below it.
+
+One of the important things is they may all be classified as SNRIs but they have different activity at serotonin and norepinephrine.
+
+Venlafaxine is just a really expensive SSRI until you get past 100 milligrams.
+
+Then the norepinephrine reuptake kicks in.
+
+Duloxetine, pretty much equal across the dose range.
+
+And then you have the one down there, Levomilnacipran, is more norepinephrine than serotonin across the dose ranges.
+
+The unique one here, I'm sure you're all very familiar with, is the FDA indications for neuropathic pain and chronic pain with duloxetine, which is a nice thing.
+
+Norepinephrine and dopamine reuptake inhibitor is what bupropion is.
+
+And therefore it doesn't cause sexual dysfunction, it doesn't cause weight gain, but it does have a concern of seizures.
+
+Initially, when we were using the old IR formulation that required three times a day dosing, you'd see a spike in the serum levels, that was associated with the lowering of seizure threshold, but it still carries that as a risk factor.
+
+So we tend to avoid it at patients with a history of seizures or at risk of seizures.
+
+And also eating disorder patients because they get a lot of electrolyte abnormalities, which may also predispose them to seizures.
+
+But a lot of benefits there as far as weight gain and lack of sexual dysfunction.
+
+Mirtazapine increases serotonin through a different mechanism.
+
+It's through the Alpha-2 antagonism, but it has a couple of really unique other factors.
+
+It's antihistaminergic so it increases weight gain and is fairly sedating.
+
+So it can be helpful for the cachectic insomnia patient that when I round in the hospital on a consult service is really, really common.
+
+It also blocks various serotonin receptors and one that it blocks is 5HT3.
+
+What other medication blocks 5HT3 that we use all the time?
+
+Zofran, ondansetron.
+
+So this also can help prevent some nausea.
+
+So we use this like water when we're rounding on the oncology service on consults, not sleeping, not eating, nauseated all the time and depressed.
+
+It's a good medication for those patients.
+
+These are some of the newer ones, the serotonin modulators.
+
+The serotonin modulators are all re-uptake inhibitors, but they have different addition to serotonin receptors, agonism, partial agonism and antagonism.
+
+We really don't know what those add.
+
+They have less weight gain and less sexual side effects and we'll take it at that, but they're the same antidepressant properties.
+
+Same with Vilazodone.
+
+SSRI with a partial agonism at 5HT1.
+
+Good for depression with less sexual side effects.
+
+The one thing I will say about the two serotonin modulators on the bottom is they're associated with a lot of nausea.
+
+So you start low and inch your way up or patients just do not like it.
+
+These are two new ones that I just want to talk about 'cause you have some pharma reps coming to you.
+
+The first one is Gepirone.
+
+Have you guys heard about that?
+
+Has anybody come to talk to you about that?
+
+This medication has been around for 40 years and pharma has been trying to get it approved for major depression for 40 years, but it's been turned down.
+
+I don't know how they did it, they finally got it approved.
+
+It probably brings nothing, it's probably a very mediocre antidepressant if that.
+
+Really the only role I can think of is it has no sexual side effects.
+
+So it may be appropriate for the patients that can't tolerate anything else, but have that.
+
+This is the other new one.
+
+This is an interesting mechanism, it's a combination of dextromethorphan, yes, just dextromethorphan and bupropion.
+
+The bupropion, it's unique in that the dextromethorphan, so it has the dopamine, it has the norepinephrine, but now we bring another neurotransmitter, glutamate, into the picture through dextromethorphan.
+
+So it has that antidepressant property as well.
+
+What's unique about this medication is it may work faster.
+
+There's some evidence that it can work within a week to two weeks.
+
+So maybe that glutamate brings something to the picture.
+
+Very fascinating.
+
+The bupropion is actually added because it inhibits the metabolism of dextromethorphan, and extends its half life to about a day.
+
+Also it's an antidepressant as well.
+
+But it's interesting.
+
+So the American College of Physicians has a couple of general statements here.
+
+Recommendation one in how we approach depression is moderate or severe depression can be treated through either evidence-based psychotherapy, primarily CBT, that's almost always the answer on a board exam, is CBT when psychotherapy comes in.
+
+Or through a combination of both CBT and psycho-pharmacology.
+
+Mild depression, primary treatment should be evidence-based cognitive behavioral therapy.
+
+So you have monotherapy for severe, moderate-severe or combination therapy, and then for mild you're looking at CBT.
+
+But as I mentioned, we wanna monitor patient's outcomes.
+
+We use the same score, the same scale we did for the diagnosis or the screening of depression.
+
+We can use to follow somebody's response with the goal of that being less than five remission.
+
+We wanna get them to response, half their prior score, and move them towards remission.
+
+How do we do that? Not always easy to do.
+
+If we prescribe a medication, we visit the patient in four to six weeks, not working, we wanna look at a couple things.
+
+One, did I get the diagnosis right?
+
+Two, are they taking the medications that are prescribed?
+
+Three, do I have the dose as high as I can reasonably, as high as I can get it that they can tolerate it?
+
+If the answers are all yes to those, you look, did they have any response to the antidepressant?
+
+If they did, but I just can't get 'em over the hump, maybe then augmenting, adding another medication is the answer.
+
+If they really haven't had any response, then it may be time to consider switching.
+
+So how do you do that? That's recommendation three here, is you can consider switching to or augmenting the existing treatment with cognitive behavioral therapy or you can switch to a different second generation antidepressant or augment with an entirely different type of psychiatric medication, we'll talk about in a bit here.
+
+So this is what the treatment of depression should look like.
+
+You get somebody down, you initiate treatment, and then the goal is to get them into that remission back at euthymic.
+
+And then, important, is you have a continuation phase.
+
+The average length of a depression episode is about four to six months, natural history.
+
+So we'd use this continuity phase to treat them through that episode.
+
+Then some patients need ongoing maintenance, potentially for the rest of their life.
+
+Those are patients that had a really bad first episode or the key, often on tests, are they've had three or more episodes of depression.
+
+Those are the patients that are likely to have a fourth, fifth, and sixth, so we'd like to prevent that by maintenance therapy.
+
+The good news, it's the antidepressant dose that worked to get them over is what you continue.
+
+So as far as augmentation, we talk that we can add psychotherapy, we can also add these kind of medications to the mix, various antipsychotics, atypical antipsychotics.
+
+We have six out there that have been approved to augment non-patients who have had a partial response to antidepressants.
+
+So you leave them on the antidepressant and you add those.
+
+The two that I use most commonly are aripiprazole and brexpiprazole.
+
+Sometimes I'll refer to a specialty clinic for Esketamine or I'll add an antidepressant from a different class.
+
+So if they're on an SSRI, I may add mirtazapine or bupropion to the mix.
+
+If that doesn't work, then you get a little bit more experimental.
+
+And depending on your comfort level, you may want to add quetiapine, add lithium.
+
+There's some evidence that T3 works, SAM-e i folate.
+
+But usually these patients should end up going to a psychiatric consultant 'cause we'll consider a number of things including that ECT given its effectiveness.
+
+Patients have a lot of concern about the memory problems, they're usually very short term and tend to resolve as time progresses, RTMS and then ketamine.
+
+You have all those ketamine clinics kind of springing up where you're practicing, the billboards, come to us.
+
+Usually they're run by anesthesiologists, not psychiatrists, so take those ketamine clinics with a grain of salt.
+
+Let's switch to the different patient populations for the next five or six minutes here.
+
+So geriatric depression, a little bit more common than the patient and the adult.
+
+As medical illnesses progress, as they become more severe, you see increasing rates of depression.
+
+Some suggest that geriatric depression can be up to 50% and it's unfortunately not commonly diagnosed when present in primary care settings.
+
+The good news is the PHQ-nine works for this population as well.
+
+They're commonly comorbid with anxiety disorders.
+
+But depression is also quite comorbid with dementia, neurocognitive deficits and actually leads to more nursing home placements and things like that.
+
+And unfortunately, the elderly are overrepresented in completed suicides, they represent 12% of the population, but almost double that, 25%, over double that, 25% of completed suicides.
+
+Very sad.
+
+They usually use more lethal means i.e guns, and don't have the biological reserve to recover as well as the younger.
+
+I alluded to the fact that elderly and younger folks have different depression.
+
+The elderly have a very somatic type of depression.
+
+They usually don't come presenting with depression, I'm feeling sad or tearful.
+
+It's I've lost interest in doing things and I'm not sleeping and I have no energy.
+
+They both have suicidal ideation.
+
+They both can feel guilt and things like that.
+
+But primarily the elderly are more somatically preoccupied when they get depressed.
+
+That leads to this concept of pseudo-dementia.
+
+We usually don't use that term anymore, it's called dementia of depression.
+
+It's the idea that when patients are depressed, they often will complain of cognitive deficits, if the depression is treated, the depression lifts, the cognitive issues resolve.
+
+We'll tell you that most of these patients with dementia of depression will go on to develop dementia if you follow them longitudinally.
+
+One of the key tricks of the trade is patients with dementia itself usually don't complain about the memory loss, it's their family.
+
+Whereas patients with dementia of depression let you know about their cognitive issues all of the time.
+
+So that's one of the tricks of the trade.
+
+And potentially one of the serotonin modulators, Vortioxetine, has been shown to improve cognitive functioning in patients with depression, so it may have a unique role there.
+
+Elderly patients suffer psychotic depression more than non-elderly.
+
+And when they suffered, it's not the hallucinations type, it's the nihilistic delusions.
+
+They have pessimistic delusions about death, dying and disease, and often very somatic.
+
+And psychotic depression is not managed only by an antidepressant, you have to add an antipsychotic often to the mix.
+
+And then ECT is amazingly effective, with one or two ECTs, you can resolve a psychotic depression much faster than you can with psychopharm.
+
+If we just are dealing with regular depression, it's an SSRI is first line, start low, go slow, well tolerated, dependence doesn't develop, but don't minimize the other antidepressants in your armamentarium.
+
+The SNRIs, bupropion can work as well as again, mirtazapine for those cachectic, nauseated, not sleeping patients that are anxious.
+
+So pediatric patients, I'm pretty comfortable with the SSRIs.
+
+The FDA has approved fluoxetine and escitalopram.
+
+I tend to stay away from other pharmacotherapies, I don't wanna minimize the importance of therapy, CBT in this patient populations.
+
+Antidepressants are not contraindicated in lactation, they're very appropriate in lactation.
+
+If families are very concerned, you can get an infant level tested for a level to show it's non-detectable.
+
+Which of the following is true for postpartum depression?
+
+Baby blues typically resolve spontaneously at the eighth week postpartum.
+
+Patients are predisposed by a prior history of depression.
+
+Therapy is more effective than medications for moderate to severe PPD.
+
+Or antidepressant discontinuation does not increase the risk of subsequent PPD.
+
+All right, you guys are getting that done.
+
+Good.
+
+So a pregnancy is not protected for depression.
+
+The same 15% of women that were depressed in the general population before, go on to be depressed during peripartum, during their pregnancy and postpartum.
+
+Baby blues is not pathologic, it's amazingly common, it's onset with is in 48 to 72 hours and it is self-limited by two weeks, it's usually gone.
+
+Support, the treatment is support, encourage family members to be there, encourage the woman to ask for support as much as possible.
+
+The goal is to get through that two weeks as easy as possible.
+
+It is a risk factor for postpartum depression, though.
+
+Postpartum depression is really clinically defined as any depression that occurs within a year of delivery.
+
+Research-wise, it's about three months is the window we look at.
+
+Again, it's that 15% prevalence.
+
+Depression comes across as a very anxious depression with a lot of overactivity.
+
+And they have thoughts of harming the infant, not stabbing the infant or killing the infant, but doing something wrong and the infant being harmed as a consequence of that.
+
+And there's multiple psychological, socioeconomic issues as well as biological.
+
+And the biggest biological risk factor for postpartum depression is depression during pregnancy.
+
+So how do we address that?
+
+We treat a patient that is depressed during pregnancy for that depression.
+
+If it's mild, we use psychotherapy, if it's moderate to severe, we use psychopharmacology and/or therapy.
+
+If we use a therapy, we use some of the SSRIs and monotherapy is probably the best.
+
+Really important is lost in this slide, is that if we stop the antidepressant during pregnancy, they have five times the risk of relapsing going forward.
+
+And then there's a new antidepressant coming out that's indicated only for postpartum, it's a two week oral medication, it's $20,000 for the two week.
+
+They're limiting that to psychiatrists right now, surprise.
+
+Have any of you seen postpartum psychosis?
+
+Yeah, it's really scary, right?
+
+I mean, you round on the woman one day, you round on her the next day, and it's a completely different picture.
+
+She is psychotic, it happens like a lightning bolt, within 12 to 72 hours after delivery, they can get psychotic.
+
+If it's gonna happen, it's usually happened by about three to four months.
+
+They're very bizarre, very hypermotor.
+
+Bipolar disorder and a history of postpartum psychosis are the biggest risk factors.
+
+These are a true psychiatric emergency, these patients often require admission to a psychiatric unit for both their safety and the infant's safety.
+
+So in conclusion, the key points of the exam is pay attention to the screening, know the aspects of the treatment of depression, the importance of continuity treatment for those patients with three or more episodes, and know that the adequate trial for depression is about four to six weeks.
+
+Know that pregnancy is not protective as well as antidepressants are okay with lactation.
+
+And that's what I got so far.
+
+So, all right.
+
+Thank you very much Dr. Heinrich.

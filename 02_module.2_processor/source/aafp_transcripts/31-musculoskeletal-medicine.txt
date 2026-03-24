@@ -1,0 +1,605 @@
+Dr. Gary is going to be leading our discussion of musculoskeletal medicine.
+
+Joe is the professor and head in the Department of Family and Community Medicine at the University of Illinois College of Medicine Rockford.
+
+He is going to be starting today, looking at some common orthopedic problems.
+
+Good morning, Dr. Gary. Thank you for being here.
+
+I appreciate it.
+
+Thank you, David.
+
+It's a pleasure to be here with all of you.
+
+We're gonna get started right away.
+
+I have no disclosures, nor will I for any of my four talks.
+
+We're gonna talk mostly, we're gonna spend the first 15 minutes talking about low back pain, imaging, the evidence for treatment, and then we're gonna spend the second 15 minutes talking about some common overuse injuries, okay?
+
+So as we get started, remember that the vast majority of low back pain is of a benign etiology, okay?
+
+And imaging thus isn't really gonna help us in that, which takes us to the whole process of when do we image individuals with new onset or acute low back pain?
+
+Well, we image them if we're concerned about cauda equina syndrome, we image them if they have progressive and more severe neurologic symptoms in the lower extremity.
+
+But otherwise, for individuals, and you're gonna see this throughout all four of my talks, I'm really highlighting the Choose Wisely, Choosing Wisely campaign, which David will talk more about later on in the course as we get into it.
+
+But the point is, how do we provide effective medical care in a cost-effective manner?
+
+And the first year of Choosing Wisely for the American Academy of Family Physicians, number one was don't get X-rays or imaging of the low back for low back pain within the first six weeks.
+
+Start treatment first.
+
+If treatment fails or they don't improve, then you can consider imaging at that point in time.
+
+Okay, so if we're looking for red flags, what are these red flags?
+
+And this is what we now glean from the literature.
+
+If I'm an individual and I have a history of cancer that's metastatic to bone, there's five of them, depending upon my sex or gender, that may be a little bit different, but it's breast, thyroid, renal, prostate, and lung.
+
+Then I may want to consider early imaging in those individuals.
+
+Otherwise, signs or symptoms of cauda equina syndrome.
+
+So urinary or fecal incontinence, urinary retention.
+
+If I have trauma that is significant related to age, right?
+
+So relatively minor trauma when I'm very young, or if I'm older and I have osteoporosis, otherwise, I really need significant trauma as an adolescent or adult.
+
+And then the other one is, if I've had lumbar spine surgery in the past 12 months and I have new severe pain, they should be imaged early on.
+
+Okay, so let's get to our first question.
+
+You have a 43-year-old male who is moving a dresser four days ago and felt pain in his low back.
+
+The pain persists and radiates to the left buttock.
+
+He was seen and had an MRI, which demonstrated a disc protrusion at L5S1.
+
+His lower extremity neurological exam is normal.
+
+Of the following recommendations, which has not been shown to be helpful for his recovery?
+
+Okay, let's take a look. Excellent.
+
+So it's corticosteroids.
+
+All right, we're gonna, we're gonna move quickly on this.
+
+You're gonna see these in exam questions, and you're going to, these are distractors.
+
+They're giving you information that I, otherwise, wouldn't even want to know because I wouldn't have gotten an MRI in this individual in the first place.
+
+So it becomes a distractor to me, even though they give me that information.
+
+Why is it a distractor and why wouldn't I have wanted that information in the first place?
+
+I didn't have a clinical scenario that suggested that I had a radiculopathy.
+
+And not having a radiculopathy, I know that, in general, and we teach this to our learners all the time, MRI is very good at finding abnormalities.
+
+And in individuals who are asymptomatic, the literature shows us that roughly 30, 25, to 35% of asymptomatic individuals will have an abnormality of the area that I am imaging.
+
+I'm talking about musculoskeletal medicine.
+
+So if I'm looking at the shoulder, about 1/3 will have an abnormality, a rotator cuff tear, they'll have a labral tear.
+
+If I image the knee, they'll have a meniscal tear.
+
+If I image the lumbar spine or the cervical spine, they'll have some disc bulging, disc protrusion, and some are gonna have some spinal stenosis.
+
+All of this is asymptomatic.
+
+So your clinical, your history and your clinical exam must drive your MR Imaging in musculoskeletal medicine.
+
+Okay, so let's look, I'm gonna give you a a couple of pieces of information, and they overlap to some extent.
+
+So these are individual studies that we go through to try and glean out what is most useful in acute low back pain?
+
+And it's nonsteroidals and advice to remain active for individuals.
+
+That's what we want to utilize, okay?
+
+What are likely beneficial therapies?
+
+You see them there.
+
+The American College of Physicians did an extensive review of this, which was published in 2017, which is still really the predominant guideline for us.
+
+And for acute low back pain, they say, "Start with non-pharmacologic therapies of which superficial heat is the very best." So that you ought to remember that always.
+
+Acute or subacute low back pain, start with superficial heat.
+
+If that doesn't work, then you go to nonsteroidals, or, that is the most important word in that sentence, or skeletal muscle relaxants, not both, okay?
+
+Both just increases my side effects and causes problems and gives no additional analgesia to the patient.
+
+Again, if we go back to looking at the pool of studies that have been done and what's useful for chronic low back pain, and again, I would pay attention to the things that are bolded.
+
+They tend to be the most helpful.
+
+And particularly, paying attention to mindfulness-based stress reduction.
+
+Again, the clinical practice guideline comes back and tells us we start with exercise.
+
+Consider multidisciplinary rehab.
+
+What is that?
+
+That means I'm using typically behavioral medicine, physical therapy, maybe some level of pain management.
+
+I'm probably doing that myself as the physician, probably what you would be managing as well, that goes along with that.
+
+And then again, mindfulness-based stress reduction.
+
+If there's an inadequate response to that, then nonsteroidals as first line therapy.
+
+If that doesn't work, then either tramadol or duloxetine.
+
+And we're gonna talk a little bit more about duloxetine, the dosing, and the timeframe.
+
+But it's something to consider in terms of pain management for your patients with musculoskeletal disease and chronic musculoskeletal pain, think about duloxetine and start it earlier rather than later because it's gonna take some time to get the effect that you want.
+
+So if we look at our medications, for acute low back pain in your top left third of this pie, nonsteroidals are effective, skeletal muscle relaxants are effective, and tramadol is effective.
+
+Moving around in a counterclockwise fashion, I get two chronic low back pain.
+
+Acetaminophen is effective, nonsteroidals are effective, duloxetine and tramadol.
+
+So what do I have to do with duloxetine?
+
+It's clear, I've gotta get 60 milligrams a day.
+
+If I can't, there's no benefit at 20 or 30.
+
+So if you can't get to 60, then it's not gonna be beneficial in terms of pain management.
+
+May be beneficial in terms of mood management, but it's not gonna be beneficial in terms of pain management.
+
+Typically, I want them at that dose somewhere between two and three months, and then I'm really seeing an effect, an analgesic effect.
+
+Now we use this a lot in osteoarthritis as well for individuals that we can't get adequate pain management for those individuals.
+
+And then if we look at the top right third of this pie, what's ineffective?
+
+And I would just cast this into your mind, acetaminophen is ineffective for acute low back pain.
+
+So don't prescribe it for acute low back pain.
+
+Benzodiazepine shouldn't be used to treat any of the low back pain, any low back pain.
+
+I know you see it in the emergency department.
+
+I know you see it coming out of the orthopedist.
+
+You know, they're adding it.
+
+Theoretically, it makes sense.
+
+20 years ago, I was doing the same thing because, theoretically, it made sense.
+
+I have a lot of muscle spasm.
+
+Let me use sort of the best muscle relaxant, but just not effective, not effective.
+
+And corticosteroids are really ineffective.
+
+There is no evidence to demonstrate they're effective, unless I'm giving them at the site within a short timeframe from the onset of this inflammatory condition, okay?
+
+That's not typically what we see with individuals.
+
+So that's not an effective strategy.
+
+Okay, and I'm just gonna show this one slide to talk about opiates because opiates, again, are not really effective for chronic low back pain.
+
+But the number one use of opiates for analgesia is what?
+
+Chronic low back pain.
+
+And yet, they're really not effective.
+
+They certainly don't have, they don't help our patients in terms of functionality.
+
+Our patient with chronic low back pain, who now can't work, gets put on an opiate for some period of time, and let's say months or years, they still haven't returned to work, okay?
+
+That's what this means when we talk about unclear clinical significance.
+
+There was no drop off in the number of patient visits or healthcare resources that were sought out.
+
+There was no drop off in disability, or no significant return to, if we will, functionality or productivity.
+
+The VA then did a study, the Space Study, which looked at side effects of opiates in male and female veterans for chronic musculoskeletal pain, and they did nonsteroidals versus opiates.
+
+Nonsteroidals won, hands down.
+
+They were preferred among the veterans, fewer side effects, and less dropout.
+
+So we have some new evidence, if you will.
+
+Gabapentin is out.
+
+It's not beneficial in the treatment of back pain with or without radiculopathy.
+
+Topiramate might be beneficial for chronic non-specific low back pain.
+
+And then if you have somebody and you're referring 'em to physical therapy, actually writing on there, the McKenzie method can be helpful for these individuals in terms of overall health.
+
+When we look at what are the predictors of chronic low back pain, you see this, you can sort of think about how duloxetine can fit in here, right?
+
+Earlier, perhaps, rather than later.
+
+But these are your predictors for individuals who have an episode, a single episode of low back pain and then go on to develop chronic low back pain.
+
+Okay, our next question.
+
+You have a 3-year-old male with diabetes, an A1C of 7.4%, who presents with acute low back and right leg pain after reaching down to load the dishwasher.
+
+The following day, he noted right leg pain and dorsal foot paraesthesia.
+
+At presentation, he complains of worsening right leg pain and you find dorsi flexor weakness at two out of five, in addition to a positive leg raise test on the right.
+
+Which of the following recommendations is best supported by the clinical evidence?
+
+Excellent. Consider microdiscectomy.
+
+So we've already told you corticosteroids are out and gabapentin is out.
+
+And one of the first things that we talked about was advice to remain active for these individuals.
+
+So that defaults us to a place we don't normally like to go, surgery, but that's the best evidence answer to this particular question.
+
+And so let's talk a little bit about lumbar disc herniations.
+
+Most of these resolve, they resolve with time.
+
+And the question is, how do I get from point A, the onset of my symptoms, to 12 weeks later when the vast majority when my symptoms are gonna resolve?
+
+How do I get there and how do I get there most comfortably?
+
+And so for individuals, right, we want them to be active.
+
+We're not using corticosteroids.
+
+We might consider transforaminal epidural steroids.
+
+So that the injection of a steroid directly at the nerve root that is being affected, that can be helpful.
+
+That's just buying us time, right?
+
+My symptoms get better for a period of time so I can go on and continue and non-operative recovery as long as that works.
+
+But for other individuals, right, we are gonna have to look at some kind of surgical intervention because either they're having progressive symptoms or I can't get them relief of their symptoms, right?
+
+So they keep coming back and saying, "Doc, I need more.
+
+I need some kind of relief. I can't get any kind of relief." So traditionally what we think of is we think of these individuals who have these severe progressive neurological deficits that they would go on to have a discectomy.
+
+However, the sport trial really kind of changed all this because now with minimally invasive surgery, what we find is if my symptoms are so bad that I just can't function, I can't function well, okay, and I need some kind of surgical intervention.
+
+Performing a microdiscectomy on these individuals provides them great relief.
+
+And at two years, everybody looks the same, whether I had the surgery or whether I didn't have the surgery, overall.
+
+Again, because we have the ability to perform minimally invasive surgery.
+
+This is a sheet that you can print out for you that just gives you some of the evidence-based recommendations.
+
+And just a final word or two about lumbar spinal stenosis.
+
+Remember that this is the most common indication for spinal surgery in those over age 65.
+
+And these are individuals, who are gonna have neurogenic claudication.
+
+So yes, my leg pain gets worse when I walk, just like with vascular claudication, but I get better when I bend forward and I get better when I sit down.
+
+And a non-contrast MRI is really your diagnostic test of choice.
+
+Most of these individuals are gonna do fine.
+
+They're gonna remain stable.
+
+That doesn't mean they're gonna be pain-free or symptom-free, but they'll be stable.
+
+And your go-to when they have an exacerbation of their symptoms is straight back to physical therapy.
+
+And so they, over the course of three years or five years, you may have five or six courses of physical therapy, depending on how often they have these exacerbations.
+
+Okay, so let's move in and talk a little bit about overuse injury.
+
+And so we apply overuse injury as these repetitive motions that we undertake.
+
+Typically, we start something new, we do it with a certain amount of intensity.
+
+So you can think of an athlete doing the same thing over and over again.
+
+You can think about your patient who works in an assembly line, starting a new job, doing the same thing over and over again.
+
+And they've limited time for overall recovery from day-to-day.
+
+That is the overuse injury.
+
+So let's go to our next question.
+
+Which of the following statements best describes an overuse tendinopathy such as lateral epicondylosis or patellar tendinosis?
+
+Okay, excellent. So A is the correct answer.
+
+Eccentric contractions are recommended for therapy.
+
+These are non-inflammatory conditions.
+
+That was my hint to you, osis versus itis, right?
+
+Osis being more chronic, itis being more acute in our vocabulary.
+
+And so for all of these, when we look at this, and I give you this because this is really the clinical picture of what these overuse injuries look like.
+
+On the left, or on the y-axis, consider this a measure of microscopic injury, okay?
+
+As I go from zero, no microscopic injury, to 2.5, where I have probably macroscopic injury now.
+
+The individual starts an activity and they build and have microscopic injury to the tendon, the bone, whatever area that's involved.
+
+And this occurs over time, but it's at a sub pain threshold.
+
+So they don't feel it, but the injury is occurring.
+
+And over time, and time is anywhere from typically six to 12 weeks from the time they start this activity, then all of a sudden, you see the injury or their pain moves above the pain threshold.
+
+So they feel it.
+
+So they stop what they're doing for a day or so, the pain drops back down, but there isn't recovery.
+
+There's just enough recovery that they're below the pain threshold.
+
+They go back to work or they go back to their activity and they pop right back up again.
+
+Huh? What's wrong?
+
+Well, maybe I'll wait a couple more days, maybe I'll take a couple more days.
+
+Maybe I got a long weekend coming up, so now I can recover over that timeframe and then I go right back to work or I go back to my activity and my pain pops right up again because I haven't had really any substantial recovery.
+
+So that's what happens with these individuals.
+
+Typically, they're gonna see you the third time they cross this pain threshold.
+
+The first time, they're gonna manage it themselves.
+
+The second time, they're gonna manage it themselves.
+
+The third time, this is a problem.
+
+This is what they think.
+
+This is a problem, they're gonna come in to see you.
+
+And so by seeing this and understanding this, it helps you in getting the history from the patient and understanding, "I'm dealing with an overuse injury." In general, it's gonna take twice as long for them to recover from an overuse injury as it will from an acute injury.
+
+So if we think, I break a bone, it takes six weeks to recover, I have an overuse injury, it's gonna take about three months to recover, okay?
+
+Okay, and so these, they just highlight and give you some of the evidence about eccentric strengthening for the chronic tendinopathies.
+
+Also, autologous blood injections.
+
+So I draw blood off your antecubital vein, I take it and I inject it, the same way I would with a corticosteroid for over the lateral epicondyle, the extensor carpi radialis brevis tendon origin, and you get better, okay?
+
+This is autologous blood is better than corticosteroids for tennis elbow, right?
+
+It's the healing factors within the blood, the growth factors within the blood, they're not concentrated.
+
+And we then turn around and re-inject those.
+
+You should be aware of that.
+
+Corticosteroids, this is just, this information is just telling you that corticosteroids are not curative.
+
+They're great analgesics, but they don't fix the problem.
+
+So the minute the analgesia wears off, the patient's coming back, asking for another corticosteroid injection.
+
+Topical nitroglycerin can be used.
+
+We typically use a patch, cut it into four sections, and then put a section of the patch right over the area of the tendon for tendinopathy, right over the area of the tendon that is most tender or painful.
+
+Side effect, headache for these individuals who aren't used to it.
+
+Quarter of a patch works better than a full patch.
+
+And then, certainly, can consider platelet-rich plasma or autologous blood in other areas for recalcitrant tendinopathies.
+
+Platelet-rich plasma, I take your blood, I spin it down, I get the plasma, I look for a certain, depending on what aspect of the plasma I want to use.
+
+It's concentrated with platelets and growth factors.
+
+I then take that and inject that back in.
+
+So you see more and more about that in terms of treatment for osteoarthritis, et cetera.
+
+Shoulder impingement, these are adults who are gonna be over age 35.
+
+You need to know they like to ask questions about some specific exams and Neer's exam and Hawkin's test, they like to ask questions about.
+
+So I just show you what these are.
+
+These are the positions you get the shoulder into.
+
+It's either painful or not painful, real simple.
+
+And they are suggestive of, or perhaps even diagnostic of shoulder impingement.
+
+In terms of management of shoulder impingement, this is primarily the supraspinatus tendon that's involved.
+
+But remember, this one is different.
+
+This would be concentric exercise, not eccentric exercise.
+
+So this is the one that's just a little bit different.
+
+I don't think you'll be asked about it, okay?
+
+And then there's information on sort of interesting studies that really demonstrate that it's the corticosteroid that alleviates the pain, but it's the exercise that resolves the condition that leads to the pain in the first place.
+
+Adhesive capsulitis, right?
+
+This is limited range of motion of the shoulder with pain at limited ranges of motion.
+
+Think about your Parkinson's patient who presents with shoulder pain.
+
+It'll be adhesive capsulitis.
+
+And what do we do?
+
+Really, to be honest with you, we don't do anything, okay?
+
+I know that I gave you the evidence that's up here.
+
+If we provide an intraarticular corticosteroid injection into the shoulder joint, we can help reduce pain and improve function for a short period of time.
+
+But generally, frozen shoulder's gonna last for two to three years.
+
+And I typically get it on my left side, that's where it starts.
+
+And I'm at very high risk of getting it on the contralateral shoulder, just about the time it resolves on one side, it's gonna pop up on the other side, but it generally resolves.
+
+It just takes time, you know?
+
+Okay, our next question.
+
+The 29-year-old female recently started a running program in order to assist with weight control.
+
+She presents with right anterior knee pain that started three weeks ago.
+
+She recalls the pain was initially noted late in her run, but now is bothersome at five to six blocks into her run and painful after the run.
+
+Examination demonstrates a BMI of 28.4.
+
+She has no joint effusion.
+
+She has full range of motion in the knee, no ligamentous laxity, but she does have pain and crepitus with manipulation of the patella.
+
+So our question, which of the following is the most appropriate next step in her management?
+
+Do you want a knee MRI, patellar taping, put her in a patellofemoral brace, or have her reduce her running distance and start physical therapy?
+
+Great. So you all got this.
+
+They all work. All of these work, okay?
+
+And they all have a role, it's just that D is your best answer and most consistent in terms of improvement for individuals.
+
+So you all have seen anterior knee pain or patellofemoral pain.
+
+If I can tell you anything about this, the focus is all on the hip.
+
+The gluteus medias, hip abductors, quadriceps, that's where the focus of the rehab is for the vast majority of these individuals.
+
+And as I said, all of these works.
+
+So patellar taping works in individuals.
+
+The question is, will it work in me or will it work in you?
+
+And bracing works particularly in runners.
+
+So if I have a runner, give them a patellofemoral brace, and you can probably let them continue to run.
+
+They might have to reduce their distance a bit.
+
+Avoid the MRI in anterior knee pain in a patient without a effusion or mechanical symptoms, unless the patient hasn't responded to appropriate rehab.
+
+Choosing Wisely again.
+
+Okay, another question.
+
+Which of the following is the most sensitive finding in patients with carpal tunnel syndrome?
+
+The flick sign, Tinel's test, Phalen's test, or hypothenar atrophy?
+
+Good.
+
+We're kind of split, but flick test is the most sensitive finding.
+
+And what is flick test?
+
+Patient tells you, "My hand is painful or numb or whatever." And you ask them what they do to relieve it, and they say, "This is what I do to relieve it." That is the flick sign.
+
+Most sensitive finding in carpal tunnel syndrome.
+
+Remember, median nerve entrapment, it is the most common peripheral nerve entrapment that we encounter.
+
+You can put individuals in wrist splints, if it's minor.
+
+They love to ask you the question about do you want to give them a prednisone pill or do you want to give them a corticosteroid injection?
+
+And the answer here, again, is somewhat counterintuitive to us in family medicine.
+
+The pill is less invasive.
+
+It should work as well, but it does not.
+
+The injection is the preferred delivery method for the corticosteroid.
+
+Okay, now you have a 41-year-old female who presents with medial left heel pain for five weeks.
+
+She describes it as burning and worse with weight-bearing activity or prolonged standing and better with rest.
+
+On exam, you note a normal gait, subtalar pronation, leading to flatfootedness, and no tenderness of the heel or ankle.
+
+Symptoms are aggravated by full passive dorsiflexion of the ankle.
+
+And you conclude which of the following?
+
+She has tarsal tunnel syndrome, you provide her an orthotic.
+
+She has a calcaneal stress fracture, you order an MRI.
+
+She has heel pad syndrome, you give her a heel cup.
+
+Or she has plantar fasciitis, and you provide her with a night splint.
+
+This individual has tarsal tunnel syndrome, and so you provide an orthotic for her.
+
+So we're just very briefly gonna go through these.
+
+You all have seen plantar fasciitis.
+
+Typically, they're tender right over the medial calcaneal tubercle.
+
+And it's the first steps in the morning or the first steps after I've had some prolonged rest, but I am actually tender.
+
+This patient wasn't tender.
+
+Your patients are gonna do lots of things.
+
+They're gonna ice and stretch and do a little bit of massage.
+
+You can give them a night splint, effective for up to three weeks.
+
+Really not effective beyond that.
+
+Or you can put them in orthotics, and it's over the counter orthotics.
+
+They have gotten so good, we just really don't use custom orthotics in general.
+
+And then Morton's neuroma, remember the entrapment of the intermetatarsal nerve.
+
+Third and fourth web space most common, women are more commonly affected.
+
+How do we treat it?
+
+A wide toe box, low heels, and consider possibly orthotics and/or an injection.
+
+And then tarsal tunnel syndrome, which is what this patient had, which is the great mimicker of plantar fasciitis.
+
+She had that medial heel pain, but no tenderness.
+
+If you are really gonna sort of decipher this, you might try doing Tine's test over the posterior tibial nerve to see if I can aggravate her symptoms through that.
+
+Okay, and that's it. Thank you very much.
+
+Thank you very much Dr. Gary.

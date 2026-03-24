@@ -1,0 +1,751 @@
+I'm gonna go through a series this morning of, quote, emergency medicine lectures.
+
+Now, it covers a number of topics that isn't covered elsewhere in the course.
+
+First things first, I'm gonna do some just general principles of emergency medicine, and here's my learning principles, and then we'll also talk about stroke.
+
+So I want to cover EMTALA, resuscitation, shock, and stroke, phew, all in 30 minutes, and I'll try not to talk too fast, but previously, these emergency medicine lectures used to be four half-hour lectures, but we recently said let's now do 'em in three lectures.
+
+So I'll try not to talk too fast, but we got a lotta ground to cover.
+
+All right, I'm gonna start this lecture with an AES question.
+
+You have a 14-year-old female, arrives at the triage area of your local rural hospital in the emergency department with worsening abdominal pain for the past two days.
+
+The patient's parents are out of town for the day and unavailable by cell phone.
+
+The patient is accompanied by her 17-year-old sister.
+
+The triage nurse asks you for your advice.
+
+In this case, you would recommend, A, do not perform an H&amp;P on the patient until you can get hold of those parents, B, obtain a history from the patient, but don't perform any physical exam and don't touch her until the parent says it's okay, C, inquire if the patient could be pregnant, and if so, then you can proceed with further care, or D, perform an H&amp;P and proceed with diagnostic testing if there is concern for acute pathology that can worsen if a delay were to occur.
+
+This is right. Do the right thing.
+
+Treat the patient. Treat the patient, absolutely.
+
+And going back, EMTALA was initially known as the anti-dumping rule.
+
+In 1986, it was enacted.
+
+It was designed to say, "Oh, you private hospitals, you can't dish off the uninsured to the county or public hospitals." Every emergency department in the United States has to accept patients irregardless of their financial status.
+
+Now, they have to at least be able to stabilize and treat the patients under EMTALA.
+
+All right, now some, such as my hospital even, we're a community hospital but we don't have all services.
+
+We are allowed, after we have done our best to stabilize that patient, to transfer them to the tertiary care center where they have appropriate facilities.
+
+So for example, we don't have a neurosurgeon in our place, but if we need a neurosurgeon, under EMTALA, we can obviously transfer the patient.
+
+The accepting hospital has to accept the patient if they have capacity and capabilities of doing so.
+
+If you're at the local rural hospital or my hospital before I transfer them, I have to do my best to provide whatever care it is to those patients, okay?
+
+And that's EMTALA.
+
+Also EMTALA, it talks about treating minors.
+
+Essentially a minor may request an emergency evaluation and treatment, and it's your job and duty to try to stabilize and evaluate that patient.
+
+All right, next question.
+
+You're on a plane ride when a passenger suddenly becomes unresponsive.
+
+Which statement below is true?
+
+The person next to you on the plane suddenly goes kaboom, unconscious and is on the floor.
+
+You should immediately start chest compressions.
+
+B, you should check a pulse, and if not present, open the airway, give two rescue breaths, and start chest compressions.
+
+C, you should check a pulse, and if none present, just start compressions.
+
+D, you're aware that Good Samaritan laws protect you in all 50 states, but don't get involved because such laws do not exist during air flight.
+
+You should check a pulse, and if there's nothing there, just start pounding on the chest, all right?
+
+So I put in a couple of just BLS and ALS questions because David noted a couple of years ago when he took the boards, he had one or two questions on BLS and ACLS.
+
+So just to update you very, very quickly, when someone goes kaboom unconscious, it's no longer ABC.
+
+It's now CAB.
+
+You go unconscious, you just start compressions.
+
+Now, the general public is not encouraged to do a pulse check 'cause they don't know what they're checking for.
+
+You and I, as healthcare professionals, are encouraged to do a pulse check, and if there's nothing there, start the compressions.
+
+So it's CAB, and you keep doing that until you can figure out what the rhythm is.
+
+You get a defibrillator or a monitor nearby, and then you decide is this patient in a shockable rhythm or is it a non-shockable rhythm?
+
+So the non-shockable rhythms are very easy.
+
+It's asystole or PEA.
+
+Asystole, unfortunately, you got asystole, you're dead.
+
+You continue CPR and the only drug you give is epinephrine.
+
+Atropine is out.
+
+For PEA, you're encouraged to do the five Ts, six Hs.
+
+Try to identify an underlying source and treat accordingly if possible.
+
+When it comes to shockable rhythms, you have Vfib and V-tach, and what do you do right away?
+
+If you see one of those, you just shock.
+
+You just defibrillate at 200 joules, go back to CPR, shock again.
+
+Epi is the drug of choice, shock again, and then when you finally get down, if they're still in Vfib or V-tach, amiodarone is the antiarrhythmic of choice.
+
+I put this in.
+
+I believe Dr. Firnhaber is gonna cover this more in detail during his discussion of the arrhythmias, but I just want to make sure you have clear in your head the difference between defibrillation and electrical synchronized cardioversion.
+
+So the first three there, rapid Afib, A flutter, or monomorphic V-tach, if the patient is unstable, you're going to cardiovert, okay?
+
+I recently had a young man in the ER who had a Afib and his rate was like 280, completely unstable.
+
+We had to immediately cardiovert him, a synchronized cardioversion.
+
+You defibrillate with polymorphic V-tach or Vfib.
+
+That's down below, okay?
+
+And I alluded to Good Samaritan laws.
+
+Just recognize you're covered in all 50 states as well as up in the air for under Good Samaritan laws, and the only time you'll get into trouble is if you do gross, willful or wanton negligence or you do things in lack of good faith or you decide to send a bill.
+
+Once you send a bill, forget it.
+
+Good Samaritan laws are out. Don't send a bill, okay?
+
+You are allowed to accept a gift, but don't send a bill.
+
+All right, shock.
+
+All right, you know the four types of shock.
+
+I don't need to go through those, although there's such an emphasis on sepsis.
+
+How many of you do hospital medicine or in the hospital?
+
+Aren't you, like, tired of the whole sepsis thing by now?
+
+Yeah.
+
+Oh, yeah, everything is septic, and you get the alerts on your EHR, alert, alert, alert, and they're all false alarms and, oh yeah, I gotcha.
+
+So I'll just do this real quick.
+
+The sepsis definition, don't memorize, okay?
+
+Just putting it in there for completeness sake.
+
+This is the latest, quote, definition of sepsis, "a life-threatening organ dysfunction." Septic shock is the same thing, but now you've got circulatory collapse.
+
+Note that the whole SIRS thing, SIRS is not part of the definition, okay?
+
+All right, so you have these sepsis scores, SIRS being one of them.
+
+Just note all these scores are generally terrible.
+
+All right, SIRS has got terribly poor sensitivity and specificity.
+
+I mean, if you have the flu, you're gonna meet SIRS criteria, right?
+
+You're not septic, right?
+
+You've got the flu or COVID or whatever.
+
+I mean, you've got something benign.
+
+All right, well, whatever.
+
+SOFA scores, qSOFA scores, same thing.
+
+They're just scoring systems.
+
+They're not part of the definition, all right?
+
+What they could ask you, I don't think they'll ask you anything on that 'cause it's, you know, it's up in the air, but what they could ask you is managing sepsis.
+
+That one I could see them asking, and you know this hopefully by now.
+
+You get your lactate levels. You get your blood cultures.
+
+You start the antibiotics early, and if you are shocky, then you start a fluid bolus of 30 mills per kilogram, and if you're still shocky after that, then the vasopressor of choice is norepinephrine.
+
+All right, on to stroke and TIA.
+
+So this is one I wanna cover in my remaining 18 minutes.
+
+I wanna go through stroke risk factors and prevention.
+
+That's what we do, primary prevention, what to do if you have a patient with acute stroke, TIA, and then secondary prevention of strokes in TIA.
+
+All right.
+
+Back to just basic pathophysiology, talking about strokes.
+
+Two general types, ischemic, not enough blood going to your brain.
+
+Vast majority of strokes are that type, or you decide to hemorrhage into your brain.
+
+Of the ischemic types, you see about 2/3 of those are gonna be because you got a thrombosis, a thrombotic problem.
+
+The other remaining 1/3 is because you had that cardioembolic event that went upstream, okay?
+
+Hemorrhagic, you have blood inside your brain from one of two reasons: intracerebral, subarachnoid.
+
+So the classic stroke risk factors, you know them, you love them: hypertension, Afib, diabetes, smoking.
+
+Yeah, you know them. There's the non-modifiable ones.
+
+You can't do anything about your age or your family history, and there's some uncommon ones I'll just list at the end, but let me just go through, I just highlighted two of them: hypertension, and Afib.
+
+Why did I highlight hypertension?
+
+'Cause hypertension is the big bad player on your brain over time.
+
+Not that one day the patient has a hypertensive urgency in their blood pressure.
+
+"Oh my God, it's 180 over 80.
+
+My God, you gotta go to the ER and they gotta fix that!" Don't do that, please, okay?
+
+Don't do that 'cause all I can do is screw up your patient ER if you do that.
+
+Don't do that, please. That's a hypertensive urgency.
+
+And actually, people are trying to get rid of that saying.
+
+It's just asymptomatic elevated blood pressure, all right?
+
+It's just asymptomatic, all right?
+
+It's the longstanding problem of hypertension, the longstanding problem of hypertension.
+
+The longstanding problem of hypertension does all these things in red, potential things in red.
+
+It gives you atherosclerotic disease in your brain and you get a thrombosis that can involve in the large vessels, your carotids, your middle cerebral, or your small vessels.
+
+Longstanding hypertension can cause Afib and your problems from there.
+
+Longstanding hypertension can cause a bleed in your brain, right?
+
+Those are the problem of longstanding hypertension, not that your blood pressure is 190 over 90 that day.
+
+Don't send them to me, please.
+
+Okay? All right.
+
+Afib, Afib, the problem I've already alluded to.
+
+You got a clot in your atrium, decides to go upstream, lands in your brain.
+
+All right, this is one slide I want you to take home.
+
+This is part of your take-home slides.
+
+There's three things you should know about Afib.
+
+The first is, if you take all comers with Afib, and I'm talking young, old, very old, all ages, everybody with Afib, all right, and you do not anticoagulate them, their chance of having a stroke is 4.5% per year.
+
+That's all comers.
+
+If you anticoagulate all of them, you'll decrease their stroke rate down to 1.5% per year, so a 3% absolute risk reduction per year, right?
+
+Okay. Caveats.
+
+The older you are, that's the graph.
+
+That number goes up from 4.5%.
+
+Younger than that, you go down from 4.5%, and the strokes associated with cardioembolic events are typically large strokes, okay?
+
+They're large strokes, all right?
+
+So who should we anticoagulate?
+
+All right, the answer to this, and I know Dr. Firnhaber's gonna mention this again, you do the CHADS2-VASc score, all right, to decide who's at risk, and now, when you see these scoring systems for on the boards, please do not go home and study.
+
+"I get one point for this, two points for that, one point, two point." Don't do that. It's impossible.
+
+You'll never remember it.
+
+That's why you have MDCalc on your phone, right?
+
+Right, so what you do need to know is essentially if you have no risk factors, zero for men, one for women.
+
+You get one point for women because you're a woman.
+
+If you have essentially no risk factors, you can treat that patient with aspirin.
+
+If you have any of those risk factors, essentially the recommendations is to anticoagulate them with a DOAC over warfarin.
+
+All right.
+
+All right, I told you already you can decrease it by 3%.
+
+There's a calculator you can actually use on your phone called the sparctool.com.
+
+Understand when we put people on anticoagulants, you can actually increase the risk of bleeding into the brain or major bleeding rates.
+
+I put those down.
+
+All right, so those are the classics, and we've got the non-modifiable, and there's some uncommon ones.
+
+They're not gonna ask you this, but I did 'em for completeness sake, migraine, vasculitis, autoimmune diseases, prothrombotic states, sickle cell, yes, Moyamoya.
+
+Okay, I gotcha. All right, AES question.
+
+So you have a 65-year-old non-smoker with a history of controlled hypertension and hyperlipidemia, presents for routine exam, just any routine exam, has some risk factors.
+
+According to the USPSTF, which of the following should be performed to assess his risk of stroke?
+
+A, do nothing, B, auscultate the carotids.
+
+C, obtain carotid duplex ultrasound, or D, obtain a CTA of the carotid arteries in this patient who has risk factors.
+
+Oh, good. Most of you said no risk.
+
+I'm really pleased to see that.
+
+Yeah, you don't do anything. You don't do anything.
+
+And here it is, the recommendation.
+
+They recommend against doing anything for patients who are asymptomatic.
+
+Walks into your office. They're asymptomatic.
+
+May have risk factors.
+
+You do not start doing studies, carotid ultrasounds.
+
+You don't start doing auscultation of the carotid arteries.
+
+I know it's the first thing we were probably taught back in medical school, right?
+
+Yeah, you do your general field exam.
+
+You take your stethoscope out.
+
+Yeah, you should just do part of that.
+
+It's really kind of funny.
+
+My primary care doctor is one of the residents I taught.
+
+Now he's the program director.
+
+So I go to him, and I go in for my exam, and invariably he'll take out the stethoscope and listen to my carotids, and I just sit there and laugh.
+
+I say, "John, don't you know?" Because it's very unreliable, tons of false positives.
+
+The sensitivity is terrible. You don't do this.
+
+All right, so here is the guideline from the American Heart, American Stroke Association on prevention of ischemic strokes, ischemic strokes.
+
+This slide, do not study.
+
+This is the . You know this.
+
+Yeah, you're gonna recommend, you know, keep their weight under control, physical activity, control the hypertension, control diabetes, stop smoking.
+
+Yeah, yeah, yeah, yeah. You do that at every appointment.
+
+Alcohol, no, stay away from alcohol.
+
+Afib, we've already talked about CHADS2.
+
+Lipids, that's gonna be talked about in the cardiology lecture.
+
+I just wanna cover one last thing. What about aspirin?
+
+Risk factor, patients got risk factors.
+
+Should you say, "Take the baby aspirin," you know?
+
+Baby aspirin a day keeps the doctor away or, you know, something like that.
+
+Should you recommend a baby aspirin in patients who have risk factors?
+
+And here's the pendulum.
+
+It's just swung entirely the other way.
+
+For years, we did kinda recommend it, but then there's three large studies that came out, and I love the headline from the second one there, "'It's Not You, It's Me.' It's Time to Break Up With Aspirin", okay?
+
+All right, these three studies said, listen, again, don't memorize the studies, but they all came out in 2018.
+
+The first one is they took patients with lots of risk factors and they randomized them to the aspirin and not, a placebo.
+
+No difference in outcomes.
+
+The next one involved patients who were old, all over 70, all over 70, said, "Just because you're old, you might have some risk factors.
+
+You know, you're getting to that point in your life.
+
+Take some aspirin. Don't take aspirin." They randomized them. No difference.
+
+No difference except, oh, we can make you bleed easier, and then we took the diabetics in the third one and did the same thing.
+
+No difference. No difference.
+
+So USPSTF came out with their recommendation. Here it is.
+
+Take this slide home. They copped out.
+
+I will say, I think they copped out a little bit on the 40 to 59-year-olds who have a greater than 10% risk factor for cardiovascular disease.
+
+They said, "C, kinda consider it." I hate when recommendations say, "Consider it." I go to the recommendations for a recommendation because I'm already considering it.
+
+Now they're telling me, "Consider it some more." Thanks. Thanks a lot.
+
+Thanks for nothing.
+
+If you're over 60, it says, "Don't go there." Don't give 'em aspirin just because they have some risk factors.
+
+All right, let me go to the bleeding into your brain real quick.
+
+Intracerebral hemorrhage.
+
+There's lots of causes for intracerebral hemorrhage, longstanding hypertension, amyloid angiopathy, vasculitises.
+
+You see that drugs, the anticoagulants, cocaine, yeah, all those can do it.
+
+Subarachnoid hemorrhage.
+
+I just wanna make one note about subarachnoid hemorrhage.
+
+It's due to, you know, the berry aneurysms that when you reach middle age or beyond decide to go pff.
+
+They go and you have that sudden, unbelievable worst headache of my life with the nuchal rigidity, sometimes with syncope, and they just hurt.
+
+They hurt, okay? That's your subarachnoid hemorrhage.
+
+I would like to make a note of this, and I purposely put that graph in there.
+
+It goes off in patients who are middle aged or older.
+
+Please don't send the 17-year-old with the worst headache of her life to the ER to go get a CT because of a subarachnoid hemorrhage.
+
+All right, it can happen but rarely.
+
+That's not the group it goes off in, all right?
+
+Doesn't go off in them often, and don't go sending them for MRIs right off the bat.
+
+Why?
+
+It's estimated that 2% of the population, US population, harbor an aneurysm in their brain.
+
+So there's, like, 200 of you in here.
+
+So there's probably four or five of you all have brain aneurysms.
+
+Ooh. You know, he said, "Holy crap." All right. Yeah, but the good news is they rarely go off.
+
+They're just there, won't even bother ya.
+
+It's the rare person that it will then get larger, larger and go.
+
+So just, you know, let's see if you got an aneurysm.
+
+Well, you might have one.
+
+Then you're gonna freak the patient out.
+
+You're probably gonna send 'em to a neurosurgeon, and then what happens?
+
+You're down a path you don't wanna be. Okay.
+
+All right, moving on.
+
+82-year-old patient developed sudden dysarthria and right upper extremity weakness.
+
+Onset was 8:00 AM.
+
+He or she arrived in the ER at 11:00 AM, three hours later.
+
+IV is inserted, labs sent.
+
+Which imaging study should be ordered STAT?
+
+Patient suddenly said, "Nothing's coming out, and I can't move my right upper extremity." All right, this is you do the, 93%. Okay.
+
+Non-contrast head CT.
+
+You do a normal head CT, non-contrast right away. Why?
+
+'Cause all you wanna do is decide if it's dry or ischemic or if they're bleeding into their brain.
+
+That's all you wanna do, and CT is awesome for seeing blood in the brain.
+
+That's what we wanna know.
+
+All right, now, and when you have blood in the brain, it just shows up white.
+
+You got this white stuff in your brain.
+
+I'm not great about reading CTs, but I can see white stuff in the brain.
+
+All right, next question.
+
+That same 82-year-old comes in the ER.
+
+Started at 8:00 AM. It's 11:00 AM now.
+
+Did what I was supposed to do.
+
+Got my lines, got my labs, got my head CT.
+
+Everything's back within an hour. It's 12 noon now.
+
+CT's, quote, "normal". There's no blood.
+
+The patient is not a candidate for thrombolytic therapy, and we'll discuss that in a second.
+
+So your management now will include, A, start nicardipine to control that blood pressure, 200 over 100, and start an aspirin, B, start the nicardipine, but don't start aspirin, C, don't start the nicardipine, but start aspirin, or D, don't start either of them.
+
+So the answer here is C.
+
+C. C.
+
+Yes, let's talk about C.
+
+All right, first of all, let's just talk, I'm gonna go through the tPA thing, thrombolytic for strokes, all right?
+
+And so tPA is that thrombolytic you heard all about.
+
+I'm not gonna tell you about how good or bad it is, but it's used in patients who don't have any signs of hemorrhage, no history of hemorrhage, no seizures, their blood pressure is under somewhat control, and if they're under the age of 80, you have up to 4.5 hours to give the drug.
+
+If they're over 80, you're stuck at that three-hour rule, and if in that stem of that question I gave you an 82-year-old and it's now at the four-hour mark, he is not a candidate for tPA, okay?
+
+All right, blood pressure control. They love this question.
+
+I see this almost every other year on the in-service.
+
+What do you do with the blood pressure, acutely elevated blood pressure and someone's having a stroke?
+
+Generally do not treat it.
+
+Do not treat it unless it's over 220 over 120.
+
+Don't treat it, okay?
+
+This seems to be somewhat of a natural response.
+
+Your brain's saying, "Let me get some blood up there and feed that penumbra, that watershed threatened area." All right?
+
+If it's above that value, then you have to titrate closely with nicardipine or labetalol.
+
+This is a slide.
+
+I just throw this in here for completeness sake.
+
+I don't think they'll ask it.
+
+If it's hemorrhagic stroke, you treat that blood pressure little more aggressively.
+
+That's all I'm saying.
+
+The treatment for ischemic stroke.
+
+What about aspirin? Just say, "Yes!" Yeah, it's time to get an antiplatelet on board.
+
+Yes, antipyretics. Treat the fever.
+
+Treat the glucose.
+
+Do a swallowing study before you feed them. Yes.
+
+Don't put them on any prophylactic antiseizure medicines.
+
+Don't start heparin, and don't start warfarin.
+
+All right, TIA. All right, let's talk about TIA.
+
+Here's the classic definition.
+
+You know how we all grew up with that 24-hour thing, right?
+
+You know, you had symptoms up to 24 hours, and then you went back to your baseline, and we said, "Oh, that's a TIA." And then there was a group that came along and said, "24 hours is silly. It really should be one hour." And the answer to that, both of those are out.
+
+Both of those are out.
+
+That's not the definition of TIA anymore.
+
+The definition of TIA is right here.
+
+It's a transient episode of neurologic dysfunction caused by some ischemia without infarction.
+
+So there's no time thing on the definition of TIA, and it is a tissue-based definition.
+
+In other words, the American Heart, American Stroke Association is saying, "We want you to prove to us that there's no stroke, there's no brain damage during that episode of someone who couldn't, you know, speak for a short time or had amaurosis fugax for a short time and then went back to their baseline." Why is that?
+
+Because if you take that person who had some amaurosis fugax or couldn't speak for 15 or 20 minutes and you said, "Oh, that's TIA, right? It's TIA." If you take them and you put them in the MRI machine and you do the diffusion-weighted images, you will see that that person who couldn't just speak for 15, 20 minutes, actually, about 1/3 of them actually stroked.
+
+They actually stroked.
+
+They'll have changes on their MRI saying there is cell death here, there's cell death here, so they actually stroked, and the longer their symptoms lasted, the greater their chance that you're gonna have a positive MRI.
+
+All right, that's why, and how does it show up on the diffusion-weighted images?
+
+Again, I look for white stuff. I look for the white stuff.
+
+So white stuff says there's cytotoxic edema and cell death.
+
+All right, so you have these transient neurological changes.
+
+You are encouraged, as soon as you can get hold of an MRI, okay, get them in, and you're encouraged to do it, and if the MRI is, quote, normal or the patient's baseline, it's a TIA.
+
+They didn't have any cell death versus they had cell death and they'll have a stroke.
+
+That's a stroke. All right.
+
+There are stroke and TIA mimics.
+
+You know, there's lots of stroke and TIA mimics.
+
+There's infection.
+
+There's, you know, the Todd paralysis after a seizure, complicated migraines, hypoglycemia.
+
+These all can mimic a stroke.
+
+This is how I lost all my hair in the ER, trying to figure out whether this patient had truly a stroke or it was something else, okay?
+
+'Cause I have to decide if it's not one of these other things, I have to give 'em tPA, et cetera.
+
+Okay, so what helps you distinguish whether it's stroke or a stroke mimic?
+
+When it comes to the anterior circulation, the neurologists like to teach and say, "Listen, anterior circulation stroke or TIA is associated a loss of something." I lost some motor strength. I lost some vision.
+
+I lost some speech. I lost something.
+
+If you gained something, I gained, I feel all this tingling in my hand now, I'm gaining tingling, all right, that's different.
+
+You don't wanna gain stuff.
+
+There's one loss that is not associated with a stroke, and that's loss of consciousness, okay?
+
+Syncope is not a TIA or a stroke, okay?
+
+Syncope is global hypoperfusion in the brain.
+
+You drop your blood pressure.
+
+You go boom. Down you go.
+
+You wake up after 30, 60 seconds.
+
+You're back to your baseline. That's syncope, all right?
+
+All right, secondary prevention of stroke and TIA.
+
+I've got just a couple of seconds left.
+
+I'm gonna go through this real quick.
+
+So you often will get patients back into your practice who were hospitalized for their stroke or their TIA, and now what are you supposed to do?
+
+Okay, how do you manage them secondarily 'cause you don't want them to have another?
+
+So first, the diagnostic.
+
+We're gonna do four things, four slides.
+
+The diagnostic evaluation, all right, all this was probably done in the hospital, your ECG, your labs, yada, yada, yada.
+
+If it's an anterior circulation stroke, you should look for a potentially correctable cause.
+
+Now you look at the carotids, right?
+
+If this was a vertebrobasilar stroke, you don't look at the carotids.
+
+You have to look at the vertebrobasilar system with an MRA or a CTA, all right?
+
+That's the distinguishing factor there.
+
+The lifestyle changes. Yeah, you're gonna do all this.
+
+This is, again, that's the no-brainer part.
+
+You control the cholesterol, activities, smoking, alcohol, drug use, of course.
+
+Medical management.
+
+When do you start controlling the blood pressure?
+
+You can start that, like, day two or three in the hospital to now start slowly trying to drive their blood pressure back down below 130 over 80.
+
+You don't do it the first day, okay?
+
+You can control the lipids. Yes, you know that.
+
+The anti-platelet stuff, I've gotta do this real quick 'cause this is so confusing.
+
+You have a patient who's had a TIA, a high-risk TIA, their ABCD score was high, okay?
+
+They have high risk or they had a minor stroke, which is defined as an NIHSS score less than three.
+
+You start them on dual antiplatelets, and it's based on two studies that I put in your supplement, okay?
+
+You put them on dual antiplatelets for three weeks to three months, three weeks to three months, and after those three weeks to three months, you go back to monotherapy.
+
+You don't stay on it lifelong, okay?
+
+So that's where dual antiplatelets come in.
+
+Now, counterintuitive, you have a big stroke, all right, large NIHSS score, I can't speak, I can't move half my body.
+
+I mean, that's a problem, right?
+
+There, you just get monotherapy.
+
+It's counterintuitive, I know.
+
+I'm less aggressive with the big bad stroke the patient had, but this minor stroke, I'm gonna be more aggressive, and that's based on the data, okay?
+
+Now, I'm gonna stress again on the left-hand side, I can't tell you how many patients, once they get placed on dual antiplatelets, stay on dual antiplatelets, and after a year or two, they come in to me with their hemorrhage.
+
+Okay, so understand that's what you're supposed to do.
+
+All right, people asked this in the Q&amp;A.
+
+Please don't ask this in the Q&amp;A 'cause I know it's coming.
+
+Well, what happens if they have their second or third TIA?
+
+Should I put them back on dual antiplatelets?
+
+Should I keep them on dual antiplatelets? What do I do?
+
+I don't have an answer for you.
+
+People do try increasing the doses, baby aspirin up to a full dose, say, "Hey, put you back on dual antiplatelets.
+
+Try a different antiplatelet regimen." There's no right answer, no right answer, okay?
+
+So please don't ask in the Q&amp;A.
+
+All right, last, carotid endarterectomy.
+
+Who do you recommend for carotid endarterectomy?
+
+With patients who have a non-disabling stroke or TIA in the ipsilateral side where the lesion was.
+
+So that's who you do it on.
+
+That's the long and short of it, okay, not on asymptomatic patients for the most part.
+
+So that's the secondary prevention of stroke and TIA, and I got to the end, and I'm gonna say thank you very much.

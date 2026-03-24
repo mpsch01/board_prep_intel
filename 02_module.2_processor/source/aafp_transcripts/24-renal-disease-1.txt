@@ -1,0 +1,569 @@
+Dr. Levine is an associate professor in the Department of Family Medicine at the Brody School of Medicine at East Carolina University.
+
+He is well acquainted with preparing individuals for board examinations, expert educator, and we're delighted to have him here.
+
+So, Gary, take it away.
+
+Good morning, sir, I appreciate you're being here.
+
+Well, thank you for that kind introduction, David, and welcome, everybody.
+
+I don't have any disclaimers.
+
+I don't have any investments or anything or relationships with companies that would create bias in the information that we bring to you today.
+
+Now, the kidney is a very important part of our body as you know.
+
+Helps us to maintain our fluid environment, to excrete waste products, maintain water, electrolyte, and acid-based balance.
+
+It also secretes hormones, the renin, angiotensin system that works with our hemodynamics, erythropoietin to make red cells, and vitamin D analogs for our bone metabolism.
+
+When you see patients in the office, often you do a urinalysis, a dipstick, your nurse does that for you, and you're looking there pretty much for the presence of blood or protein or pus essentially in there.
+
+And we tell our residents, "Well, don't stop there." If there are any abnormalities, do a microscopic urine because it's very, very helpful, and I hope you all do that still.
+
+The board loves to ask you a question where there is a dipstick positive for blood, but there are no RBCs on that microscopic exam.
+
+So think in that case about hemolysis, think about rhabdomyolysis.
+
+They also may try to trick you and say that the urine dipstick is positive for protein, so the patient must have myeloma.
+
+Well, the positive protein is only albumin, and you're not gonna detect Bence Jones protein on a dipstick alone.
+
+If you see white cells and probably UTI, but if you see white cells and there are no bacteria in there, think about chlamydia, gonorrhea, think about prostatitis.
+
+And if it look like eosinophils, the board loves interstitial nephritis, so think about that one as well.
+
+Hyaline, granular cast can be normal, but muddy brown cast, think about ATN in the appropriate setting.
+
+If there are red cell casts, glomerulonephritis.
+
+If there are white cell casts, pyelonephritis.
+
+So that microscopic exam gives you a lot of good information.
+
+We also are important in our appreciation of renal function and a way to measure that certainly is the GFR, which is kind of the holy grail of things.
+
+They do it in a research lab.
+
+We can measure creatinine clearance, but typically don't measure it.
+
+We do measure creatinine in their various formulas we use to estimate GFR or estimate creatinine clearance.
+
+The MDRD formula has been around for a long time.
+
+As you notice, it has a correction for age, sex, used to have a correction for race, and does not have a correction for weight.
+
+So it may underestimate the GFR in large people and overestimate it in smaller people.
+
+There's also something called the CKD-EPI.
+
+We don't do that.
+
+Most of the nephrologists do however because they use of something called cystatin C instead of creatinine in the equation.
+
+More expensive, not as well available for us.
+
+The Cockcroft-Gault equation's been around for a long time.
+
+This has a, again, a modification for age and for sex and for weight, and it's less accurate for renal function but better for renally-dosing medicines, especially in the elderly.
+
+The board is not gonna ask you to calculate any of these, but you may want to know which one is available for estimating renal function.
+
+In general, if you have a 70-kilogram man with a creatinine of one, then the creatinine clearance is roughly 140 minus that person's age.
+
+And every time you double creatinine, you decrease GFR or creatinine clearance by about 50%.
+
+If you want more information on these calculators and equations or anything at all about renal function, you can go to this website from the Kidney Organization.
+
+I guarantee you that after half an hour, you'd be ready for bed.
+
+It'll put you to sleep.
+
+Protein excretion also very important.
+
+We used to have 24-hour collections.
+
+Patient will carry these jugs around with them.
+
+Don't do that anymore.
+
+We use spot collections now.
+
+A normal protein excretion would be less than 150 milligrams per 24 hours.
+
+Over three grams, what we call nephrotic range proteinuria.
+
+We also often measure the urine microalbumin creatinine ratio.
+
+A ratio of less than 30 is normal, 30 to 300 is microalbuminuria, over 300 macroalbuminuria.
+
+We're gonna see this time and time again as we talk about diabetic kidney disease.
+
+Moving on, I'll talk a little bit about AKI, acute kidney injury.
+
+We used to call this acute renal failure.
+
+Early recognition of this may help prevent it from worsening and causing multiorgan system failure.
+
+If people get AKI and die, it's not typically from uremia, it's typically from infections and cardiopulmonary complications.
+
+We'll see the same thing with chronic kidney disease as well.
+
+How do you diagnose AKI?
+
+It's an objective diagnosis, not symptomatic, it's based on changes in creatinine and changes in urine output.
+
+KDIGO, which is an organization in the nephrology world, brought us a minimal criteria for AKI diagnosis.
+
+They include an absolute increase in creatinine of 0.3 milligrams per deciliter within two days or an increase to 1.5 times baseline within seven days.
+
+Or urine volume of less than 0.5 ml per kilogram per hour lasting more than six hours.
+
+Any of those will qualify your patient for a diagnosis of AKI.
+
+AKI can be oliguric or can be anuric or can occur with normal urine output.
+
+Let's look at a question for you.
+
+See how you do.
+
+The most common cause of AKI is which of the following?
+
+Ureteral calculus with hydronephrosis, diuretic-induced volume depletion, acute tubular necrosis, or acute interstitial nephritis.
+
+If you work in the hospital setting, this is something that's pretty obvious for you.
+
+And you have voted for B, and B is not right.
+
+It's actually ATN but don't feel bad 'cause none of the groups have generally got this one correct.
+
+So ATN counts for about 45% of AKI were prerenal disease including that diuresis and nausea, vomiting, diarrhea.
+
+It's only about 21%.
+
+UTIs weigh down the list, obstruction only about 10%.
+
+Glomerulonephritis weigh down the list as well.
+
+So ATN and number two would be prerenal causes.
+
+Prerenal causes can be either actual volume depletion or disease entities that decrease effective arterial blood volume.
+
+Some medicines can also do that and cause prerenal AKI.
+
+Volume depletion can be bleeding, can be nausea, vomiting, diarrhea, can be burns, shock, heart failure, cirrhosis, PE, can also cause decreased renal perfusion.
+
+Intrarenal causes are very common.
+
+ATN being a tubular cause.
+
+They're also interstitial reasons.
+
+Glomerular and vascular causes of AKI.
+
+We mentioned ATN being the most common.
+
+You see this with patients who have hypotension, even a short period of that can cause ATN.
+
+Ischemia, burns, post-op patients, or rhabdo, all can do it.
+
+There's no specific ATN treatment.
+
+You wanna treat the underlying disease process and avoid hypotension.
+
+Acute interstitial nephritis, AIN, board happens to like this one.
+
+This is typically caused by drugs or autoimmune disorders.
+
+Symptoms include fevers, rashes, and the presence of eosinophils in the urine, so look for that.
+
+If you find this, stop the offending drug, treat the underlying infection, treat the autoimmune problem, and they get better.
+
+Question number two for you.
+
+Speaking of AIN, which of the following drugs is the most commonly associated with it?
+
+Pregabalin or ertapenem, omeprazole, or fluoxetine.
+
+And you have voted for omeprazole.
+
+Excellent, that is in fact true.
+
+There are a number of drugs associated with AIN, many of which are commonly used antibiotics, have been around forever.
+
+Phenytoin can as well, NSAIDs can, but the newer agents on the block, so to speak, are the PPIs, probably a class effect of all of them, not dose related.
+
+Not only does it increase AIN at a four or five times ratio, it can also cause CKD in patients with underlying renal disease.
+
+There are multiple other entities cause AKI.
+
+Other tubular interstitial diseases include myeloma, hypercalcemia, the tumor lysis syndrome in patients treated with chemotherapy and phosphate nephropathy.
+
+We used to use sodium phosphate as a clean out for colonoscopy.
+
+We stopped it when we found it caused AKI in patients.
+
+There are glomerular causes as well of AKI.
+
+They're uncommon.
+
+Think of these when you have systemic side effects and manifestations, fever, rash, arthralgias, when there's an abnormal urine sediment, these patients may need to be seen by the nephrologist and even biopsy.
+
+There are two types of glomerular diseases.
+
+Nephritic and nephrotic.
+
+Nephritic, those patients have red cell casts in the urine.
+
+They're hypertensive.
+
+They may have mild proteinuria.
+
+Whereas your nephrotic are bloated, edematous folks, massive proteinuria.
+
+They may have hypercoagulable states and their lipids are off the wall.
+
+The board is not likely gonna ask you specific entities in these categories.
+
+But if they may give you a urine sediment that looks nephrItic or a obvious proteinuric state with bloating, you may wanna identify that as nephrotic.
+
+But some nephritic diseases include postinfectious glomerulonephritis, IgA nephropathy, membranoproliferative glomerulonephritis, HS purpura.
+
+Your nephrotic are your diabetics, minimal change disease, your membranous glomerulonephritis, amyloidosis.
+
+Those are nephrotic diseases.
+
+Vascular cause of AKI include vasculitis like Wegener's.
+
+There was a question of Wegener's many years ago.
+
+Thromboembolic disease, malignant hypertension, scleroderma, for example.
+
+Postrenal causes not a common cause of AKI.
+
+The good news is that's the reason then it's pretty reversible and ultrasounds are a good way to assess for that in any patient who has AKI.
+
+Some of these causes include urethral valves in children, urethral strictures, renal calculi, BPH, and prostate cancer or pelvic neoplasms.
+
+Who needs a biopsy in the face of AKI?
+
+People who are getting worse, they're oliguric.
+
+You excluded other causes of prerenal or postrenal causes.
+
+You're thinking of putting them on immunosuppressants.
+
+Then you and the nephrologist may wanna move in that direction.
+
+Question number three, we're doing good so far.
+
+70-year-old man scheduled to have a CT of his abdomen with IV contrast to look for a tumor.
+
+He has Type II diabetes, creatinine is 2.8, which one of the following will most likely decrease the possibility of contrast-related nephropathy?
+
+Hydration with isotonic solutions, oral acetylcysteine twice a day for 48 hours, beginning the day following the procedure, acidification of the urine with ascorbic acid, vitamin C beginning 24 hours before and continuing for 48 hours afterwards or asking the radiologist to use a hyperosmolar contrast medium.
+
+Hydration with isotonic solution is the answer.
+
+This brings us to the topic of contrast-induced nephropathy, kind of a controversial topic.
+
+It has different names now including post-contrast AKI or contrast associated AKI, usually happens in 48 hours when you administer these agents.
+
+The decline in renal function typically begins about 48 hours afterwards like we said.
+
+Follow a predictable course, typically is better within a week.
+
+Usually reversible, but we believe to be preventable.
+
+It is controversial where the risk that we were really worried about in the past is probably overstated.
+
+But the lower the GFR, probably the greater the risk that this will happen to your patient.
+
+So patients with a GFR of less than 60, maybe a 5% risk at best, less than 30, maybe a 30% risk at best.
+
+Post-contrast AKI to avoid this, try to avoid using that medium in patients really at risk for AKI.
+
+Those are those.
+
+We have CKD to begin with, are dehydrated, diabetic, sickle cell disease or the very elderly.
+
+There's a lot of literature coming out of emergency medicine primarily that says this is not all that important, came out in the 2017, 2018 range, and it's pretty good data.
+
+But the ED docs and the kidney docs got together, and they have a consensus statement that says, "One, the risk is overstated, but it may be there.
+
+Uncertain patients with kidney disease even when it's severe, but you can prevent it by IV saline infusion in appropriate patients, particularly those with AKI, low GFRs, or at high risk." So there you have it.
+
+Other things you wanna do may wanna do before a dye study is hold metformin for about 48 hours, hold their diuretics at high risk patients, again, hydrate them.
+
+There's no good data to support alkalization or acetylcysteine anymore.
+
+There are a lot of drugs that cause nephrotoxicity, but there are a few that you really might wanna know about, pre-boards.
+
+NSAIDs, you know, our nephrologists wear badges like this with a no NSAID kind of diagonal red line, lithium, certain antibiotics, especially combinations of aminoglycosides and vancomycin, amphoterrible, IV acyclovir can do that as well.
+
+What about ACEs and ARBs?
+
+They're not nephrotoxic, but in the setting of AKI, you may want to hold them until the renal function improves.
+
+Same thing with diuretics, PPIs, and watch out for methotrexate.
+
+What about metformin?
+
+Metformin can increase the risk of lactic acidosis.
+
+So the guidelines have been around now for almost 10 years, say don't start metformin for GFR less than 45.
+
+If a patient on it and hits 45, consider decreasing your dose by 50% and don't start it if a GFR is less than 30.
+
+Enoxaparin, use that with caution.
+
+Patients with renal dysfunction, use heparin instead.
+
+Nitrofurantoin needs to be metabolized excreted in the kidneys in order to work.
+
+We used to say don't use it with GFRs, anything less than 60.
+
+Now, you can use it with GFRs down to 30, but you may want to use a shorter course of therapy.
+
+Our next question for you, you are reviewing the lab findings of a 64-year-old man hospitalized AKI, who has no history of any long-term medication use.
+
+Renal function has been normal, but now the creatinine's 2.8, BUN 60.
+
+To the gravity 1.025, urine sediment hyaline cast.
+
+His FENa, F-E-N-A, is 0.5%.
+
+Based on these findings, which one the following is most likely?
+
+Is it his hypovolemia from vomiting, acute pyelonephritis, interstitial nephritis, or obstruction from BPH?
+
+And you voted for the first one, great.
+
+This is hypovolemia.
+
+And this is the FENa question.
+
+The board is not likely gonna ask you to calculate a FENa, but it may likely ask you what you're gonna order to do so.
+
+And you're gonna order a urine sodium and urine creatinine and a plasma sodium, a plasma creatinine, order to calculate that.
+
+A FENa of less than one is prerenal.
+
+A FENa of over two to three is intrarenal and generally ATN, and they may ask you that specifically.
+
+Now, using diuretics, the patient on diuretics can screw up all the FENa calculations.
+
+The reason for this is that with intrinsic renal disease, the kidney's a waste sodium.
+
+And that's what you're measuring with a FENa calculation.
+
+So what do diuretics do?
+
+They make you waste sodium to get rid of fluid.
+
+So a patient on diuretics will look like a prerenal...
+
+Look like an intrinsic renal AKI, rather than a prerenal AKI.
+
+And those patients consider ordering a fractional excretion of urea instead of a FENa.
+
+To do so, instead of using a serum sodium and a urine sodium, you order a BUN and a urine urea, and then you can do your calculation.
+
+Another limitation of the FENa is gonna be less than one looking prerenal if you have ATN superimposed on a chronic renal disease like heart failure or cirrhosis.
+
+Obstruction can cause FENas to go in any direction, so it's not helpful there.
+
+Our next question for you.
+
+Metabolic manifestations of AKI include which of the following?
+
+Metabolic alkalosis, metabolic acidosis, hypophosphatemia, or hypokalemia.
+
+And 88% of you got this right, it's a metabolic acidosis.
+
+There are many things that happen during AKI, one are metabolic arrangements.
+
+Usually, the hypers, hyperkalemia, hyperphosphatemia and acidosis because of the inability to excrete hydrogen ion.
+
+There are a lot of GI symptoms here.
+
+Nausea, vomiting, diarrhea.
+
+You often will see anemia, neutrophilia, platelet dysfunction, hypertension, and neuromuscular disturbances, weakness, lethargy going onto uremic encephalopathy, and eventually, you can see coma and death.
+
+How do we manage AKI?
+
+Well, a patient with pretty floored AKI should be hospitalized.
+
+You may treat them as an outpatient.
+
+If it's mild, you clearly know what's causing it, and you feel it's reversible.
+
+In the hospitals, a collaboration between us and the nephrologist and others who may be involved and the supportive management treating the primary problem if you can identify it, hypertension, sepsis, DKA, et cetera.
+
+Make sure the patient has adequate renal perfusion that the blood pressure is reasonable.
+
+Maintain a map of at least 65 millimeters of mercury.
+
+The board may ask you how to calculate a map.
+
+Remember systolic plus two times a diastolic pressure divided by three.
+
+They may ask you that.
+
+Avoid exposure to aggravating factors in patients with AKI.
+
+So don't give them contrast studies, don't give them toxic meds, hold your ACE and ARBs until the renal function improves.
+
+It's true nonoliguric patients do better than those with lower urine outputs, but don't give them diuretics to make 'em pee because it doesn't improve the renal function, it increases mortality, unless they're volume overloaded.
+
+And in that case, yes, you're gonna give them diuretics.
+
+Typically, IV Lasix, you may want to use a Lasix drip.
+
+If you're not able to do it with boluses, you can substitute Bumex and dialysis as a last resort.
+
+What about hyperkalemia?
+
+You see that in AKI as well.
+
+We usually give calcium gluconate to stabilize and protect our membranes and avoid arrhythmias.
+
+It's temporary.
+
+We also use things to shift potassium intracellularly.
+
+Again, this is temporary, insulin glucose, albuterol inhalation, sodium bicarb drips, it buys us some time to get rid of the potassium from the system.
+
+For many years, we used something called Kayexalate.
+
+Give it orally.
+
+We use sorbitol with it to keep it from concreting in the bowel until we learn that it may cause colonic necrosis.
+
+So we're not using that very much anymore.
+
+There's also no good data that it works despite using it for a century or more.
+
+We now have two other ail genes.
+
+We have patiromer or Veltassa, and sodium zirconium or Lokelma.
+
+Both of these are slow-acting, and they tend to be expensive.
+
+And patients with acidosis, we give them bicarb if the serum bicarb is less than 15 or the pH less than 7.2.
+
+In patient AKI, urgent dialysis is not indicated in which of the following situations.
+
+Hyperkalemia refractory to medical therapy, volume overload unresponsive to diuretics, metabolic acidosis, pH 7.25, or uremic pericarditis.
+
+And we just told you the answer a couple slides before, and you're right.
+
+It's metabolic acidosis with a reasonable pH.
+
+So who gets dialysis in AKI?
+
+Metabolic acidosis, pH less than 7.1 or bicarb doesn't work.
+
+Uremic encephalopathies, pericarditis, those folks need dialysis.
+
+Fluid overload refractory to diuretics, severe hyperkalemia refractory to therapy, certain poisonings and intoxications.
+
+Remember to prevent AKI maintain a good blood pressure, use pressors if needed.
+
+And your cirrhotic patients, if you're gonna do a paracentesis, make sure you give them albumin infusions.
+
+Your chemotherapy patients, make sure you hydrate 'em and use allopurinol before chemo.
+
+Don't give 'em nephrotoxic meds.
+
+Don't use contrast in patients who are at risk.
+
+Patients of rhabdo, give them lots of fluids.
+
+Pre-op surgical patients.
+
+make sure they have adequate volume going in and consider holding an ACE or an ARB if their blood pressure is borderline.
+
+Patient AKI are more likely to get CKD later as well as premature death.
+
+So we wanted to do a good job in caring for them with their condition.
+
+Now, the kidney and the heart, our bosom buddies have been so for many, many years.
+
+Disease in one tends to cause disease in the other.
+
+Cardiovascular disease responsible for 50% of deaths in patients with renal failure, and the government has recognized this and developed for us the cardiorenal syndrome.
+
+Type 1 is where acute heart failure causes AKI.
+
+Type 2 with chronic heart failure causes CKD.
+
+Type 3 AKI causes heart failure.
+
+Type 4 is CKD develops chronic heart failure.
+
+And Type 5 is when acute systemic disorders cause both the kidneys and the heart to dysfunction at the same time like sepsis for example.
+
+The board will not ask you Type 1 versus Type 2 to Type 3 but to know there is something called a cardiorenal syndrome and why that there is.
+
+Your last question.
+
+So which one of the following is true?
+
+ACE inhibitors enhanced angiotensin 2 mediated vasoconstriction, angiotensin 2 inhibits secretion of aldosterone and vasopressin, ACE inhibitor therapy should be stopped if there's a 10 to 15% increase in creatinine, and ACE inhibitors dilate efferent arterioles.
+
+And your vote is for the last one.
+
+Excellent.
+
+ACE inhibitors dilate efferent arterioles.
+
+Here's a nice picture with the angiotensin renin system, sitting there on the right.
+
+Renin is a hormone released by the kidneys.
+
+It helps to convert angiotensinogen in the angiotensin 1.
+
+Angiotensin 2 is formed from angiotensin 1 using the ACE enzyme.
+
+Angiotensin 2 is the bad guy.
+
+It causes vasoconstriction, sodium retention, fluid retention due to vasopressin release.
+
+All this stuff causes heart failure and dysrhythmias.
+
+So we wanna block that conversion of angiotensin 1 to angiotensin 2.
+
+We use ACE inhibitors and ARBs to do so.
+
+When you block that, the precursors build up so you get higher levels of renin, angiotensin 1, and bradykinin, which causes the cough that you see with ACE inhibitors.
+
+But ACE inhibitors do good things, they cause a central enhancement of parasympathetic activity.
+
+So they break that cycle of dysrhythmias causes you not to retain fluid, so it helps with heart failure as well.
+
+So decreases sudden death and helps with heart failure.
+
+Now, the ACE inhibitors do dilate the efferent arteriole.
+
+What that does is increase the flow through the glomerulus but also decreases the pressure in the glomerulus, and the excretion of creatinine is a pressure and not a volume effect.
+
+So creatinines tend to go up when you put a patient on an ACE inhibitor, and that's okay as long as it doesn't go up to 20 to 30% over the baseline.
+
+That's not good.
+
+That means there may be something like renal artery stenosis.
+
+And those patients, you might want to hold that ACE or ARB until you figure out what's going on.
+
+Again, you wanna rule out bilateral renal-artery obstruction.
+
+You wanna rule out a intravascular volume depletion and the use of other nephrotoxic meds as a cause for that before restarting your ACE or your ARB.
+
+So here are your answers.
+
+This group actually did quite well on these questions compared to groups in the past.
+
+So looking forward to doing well when we hit chronic kidney disease later.

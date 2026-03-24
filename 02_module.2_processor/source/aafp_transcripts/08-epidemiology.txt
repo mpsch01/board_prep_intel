@@ -1,0 +1,943 @@
+This is everybody's favorite topic.
+
+So we're gonna look at eight equations today, just eight.
+
+Okay, so we're gonna try to prevent your head from exploding.
+
+What I would do if I were you, but nobody ever listens to me about this, is if I were you, I would just sit back right now and listen.
+
+Okay?
+
+And then you're gonna go back through and each of the questions we work through, you're gonna work through them on your own.
+
+But I think if you don't listen and you're busy taking notes, you're gonna get confused and lost.
+
+So I just would just sit back and listen.
+
+Some of this is going to be back in the hind parts of your brain that you haven't used in a while maybe, but it's all there someplace.
+
+And I think if you just listen and then go back and take this presentation and go through it yourself, and then you're going to have access to it, go listen to it again if you want to while you're going through the questions though.
+
+That's how I would do it.
+
+But what do I know?
+
+Okay, nothing to disclose here.
+
+Here are our learning objectives and what do you need to know?
+
+These are the eight equations.
+
+Now you see all these letters here.
+
+B, D, A, C.
+
+We didn't do more than four letters.
+
+They correspond to any two by two table you're going to have to set up.
+
+Now, a two by two table can mathematically be set up any way you want it to be.
+
+If you're going to use the equations this way with those letters, you have to set 'em up the way I have set them up for you in this presentation, which is the standard method, okay?
+
+I.e what goes along the x-axis or what goes along the y-axis of the particular two by two.
+
+Some of you're already thinking, okay, this is beyond me, but I promise you you can do this.
+
+Now, why do we focus on these eight?
+
+Because if you're reading any literature and it is a sound publication, if it talks about any of these measurements, you should be able to calculate them from the data that is provided to you in the paper.
+
+If you can't, if I can't, what I'm thinking is, why didn't they give me that data?
+
+That's fishy.
+
+I should be able to calculate it.
+
+Now, there are some things we're not gonna get into today because they're beyond the scope of what you're gonna see on the exam, which is, how do I set a sample size?
+
+Okay, a sample size of 100, meaning 100 participants may be perfect for the question you have in hand because it's a dramatic endpoint.
+
+But for some things where you have subtle endpoints, even though it's death, it may take 15,000 in the sample size to see a difference, okay?
+
+So you can't just say, oh, well this study's no good, it only had 10 people in it.
+
+That may be all you need to know, all you need in order to see a difference in the question you have.
+
+And there are mathematical models and statistical methods that have been developed in the field of epidemiology, biostatistics, and mathematics that allow you to predict what your sample size needs to be.
+
+Keep in mind, if you have an insufficient, if you never get to your sample, let's say your sample size needs to be 15,000 and you only recruit 13,000 people and you have a negative study, it may be just because you didn't have a sufficient sample size, okay?
+
+But we're not gonna get into all that today, okay?
+
+That is beyond the scope of this.
+
+What I want you to focus on are these eight equations.
+
+And if you can use data from a question and plug it into this equation, you will get the question right.
+
+Now, I'm not saying on your exam you're gonna have seven of these eight equations, but remember, we're just trying to gain points here.
+
+And you may need to do just as much studying in sports medicine right now to remind yourself of all the pediatric hip issues as you gotta do to remind yourself of how you use these equations.
+
+Okay, so there are various sources of evidence.
+
+We have observational studies, we have meta analysis, we have systematic reviews, we have basic research, we have clinical experience, and we have randomized control trials.
+
+These are all the types or sources of evidence from which we're trying to make clinical decisions.
+
+Now, when we come down to looking at observational studies and randomized controlled trials, this is where statistics in particular comes into play.
+
+Now it comes into play of course in meta analysis as well.
+
+But different methods are used depending on the type of study that you have.
+
+Now, I wanna remind you with our strength of recommendation taxonomy, because there will be a question on the exam on this.
+
+The question is not going to be this recommendation which was made by the American College of Obstetricians and Gynecologists is A, B, or C.
+
+That's not what they're gonna ask you.
+
+They're going to say, you know, we have a category A recommendation to, I don't know, put peanut butter on white bread.
+
+And this came from doing a study of 100 kids in elementary school where 50 were given peanut butter on bread and 50 were given nothing on bread.
+
+So we got a randomized controlled trial here.
+
+You know, somehow they didn't know what they got.
+
+Would this be sufficient for an A recommendation?
+
+And you'd need to know, oh yeah, that's a randomized controlled trial.
+
+And if it was positive, that's gonna be a sure A recommendation because it's based on consistent, good quality, patient-oriented evidence.
+
+And we looked at this, if it's an A recommendation, it's typically a systematic review, a meta analysis, a high-quality randomized control trial.
+
+A B recommendation is gonna be some kind of observational study, cohort study, case control study, cross-sectional study, might be a case reporter case series.
+
+And then a C recommendation is an expert opinion or an anecdote.
+
+Now, keep in mind, sometimes the best evidence, all we have is a C.
+
+You know, a lot of times when I'm working with residents, you know, and we have journal club, they're like, oh, I can't do this paper because it's only a C recommendation.
+
+Okay.
+
+No, no, no, no, no, no, no, no.
+
+That's the best we have.
+
+We want an A.
+
+The best example of where, oh my gosh, I wish we'd have had the A before we employed the B is the Women's Health Initiative.
+
+So let's go back to that.
+
+Observational studies in the '70s and '80s, we're gonna say, demonstrated, oh my gosh, you know, women who are post-menopausal on hormone therapy have fewer cardiovascular events.
+
+That's what the observational data showed.
+
+So, you know, when I was in residency, like some of you, everybody who was post-menopausal got put on hormone therapy, didn't matter if you had symptoms or not.
+
+Then the randomized control trial is done.
+
+It's an eight-year study, hundreds of thousands of women and 5.8 years into the eight-year study, normal internal metrics, which are set up for any randomized controlled trial to make sure you're not hurting people were examined at a set point, as they always are.
+
+And people not involved in the study are looking at the data, right?
+
+You don't want anybody involved looking at it, you need to have individuals who are uninvolved, but they're experts in this field and they're like, oh my gosh, this was a primary prevention trial to say yes, women who were on hormone therapy had fewer cardiovascular events and it was just the opposite.
+
+The women in the hormone arm, in the active arm, were dying more often and having more heart attacks.
+
+So the study was stopped abruptly and published within four weeks.
+
+Okay, don't do this anymore.
+
+We're harming people.
+
+You know, another example of this is, if you go back to the '60s and the early '70s when electronic fetal monitoring continuously was introduced, you guys remember some of that?
+
+You know, mom is having dinner, she's 39 and a half weeks, she's having dinner, she's out, I don't know, where'd she go?
+
+Outback, she's having a steak.
+
+All of a sudden her membranes rupture and the next thing you know, she's in a gown tied down to a bed because she's sick.
+
+I.e. she's about to deliver a baby, okay?
+
+So you know, we use continuous electronic fetal monitoring because the observational data showed, oh my gosh, those women who have continuous electronic fetal monitoring, their kids are less likely to have CP or cerebral palsy.
+
+10 randomized controlled trials were done after that technology was introduced.
+
+Nine of the 10 showed no difference in outcomes.
+
+But what do we do today?
+
+We still do it.
+
+And it's gotten even worse now 'cause they can monitor from the desk.
+
+Okay?
+
+So now you go into the room, the patient's tied down and there's not a soul in sight sometimes, dad's down getting coffee, support person is down, having a, I don't know, having a Pop-Tart or something.
+
+Who knows?
+
+Thank God for doulas, okay.
+
+So measures of risk, there are essentially two of them we have to worry about, relative risk and absolute risk.
+
+Now, anytime that you talk to anybody in the field of pharmaceuticals, they're always going to present to you an absolute risk, or excuse me, a relative risk.
+
+You know, you're 39% more likely not to have something if you take this medication, for example.
+
+But when you look at the event rate, that is the absolute risk, it's quite tiny.
+
+You know, one per 1,000 or something.
+
+Now, when you look at absolute risk, so for example, I said when you look at the women in the Women's Health Initiative who were on both estrogen and progesterone, those were the group at increased risk for breast cancer.
+
+The absolute risk was nine per 10,000.
+
+Now you think, well that's a tiny number, but when you take the total population of postmenopausal women in the world divided by 10,000 times nine, that number becomes exponentially large very quickly.
+
+So what we are always interested though, is in the absolute risk.
+
+The problem is when you look at absolute risk, because typically it's a very tiny number, you look at an absolute risk and it's like .0159.
+
+Well, now you try to explain that to the patient.
+
+Yeah, the absolute risk is .0159.
+
+What in the heck does that mean?
+
+So statistically, we've developed a number that speaks to us more than .0159 and that's what's called the number needed to treat.
+
+So that's what we're gonna look at as our third issue as we look at risk.
+
+Now, in order to calculate these three dimensions, you have to look at a disease outcome against an exposure.
+
+Now here's the first two by two table or contingency table.
+
+If you're going to use the equations in that first table that I presented, you need to set up your two by two table like that.
+
+On the y-axis will be the disease or outcome, and on the x-axis will be the exposure.
+
+Okay?
+
+So relative risk, you could have an increase or a decrease, of course.
+
+Absolute risk, you could have an increase or a decrease.
+
+And then there's the number needed to treat.
+
+You can calculate a number needed to harm, and sometimes you need to calculate a number needed to screen, which is just like calculate the number needed to treat.
+
+The number needed to harm and the number needed to treat actually you will see is an inverse of one another.
+
+And we'll take a look at that in just a moment.
+
+So that's how we gotta set up the table to use those equations for measuring risk.
+
+Everybody with me still?
+
+Nod your head.
+
+I mean even our colleagues up there in the control booths, they're all nodding their head, they're all with us.
+
+I mean, they're like, oh my gosh, they're just salivating up there thinking about all this math.
+
+We haven't done any math yet, okay.
+
+So let's start by looking at a cohort study.
+
+What are we talking about here?
+
+Well, we got a population, and in that population, people are either disease free or they got the disease we're looking at.
+
+Whatever it is.
+
+We're really interested in a prospective study of saying, okay, let me find the disease free people.
+
+They're gonna be exposed to some factor.
+
+Let's just follow 'em forward.
+
+Now, I can't randomize them because the exposure is the exposure.
+
+You know, they might live at a place where they're exposed to nuclear waste or something, or maybe they live in a place where they're drinking water that's bad and I don't know who drinks it and who doesn't drink it or who lives where, but I can determine whether they're exposed or unexposed.
+
+And then I follow 'em forward to see what happens to 'em.
+
+Now the same thing can be done with a retrospective cohort study.
+
+It's a rare outcome, penile cancer.
+
+So there, I wanna find the disease people and then retrospectively go back and say, I'm concerned that maybe this was the factor that it caused this.
+
+Were you exposed or not exposed to it?
+
+Then how much were you exposed, not exposed, et cetera, et cetera.
+
+So cohort studies can be done either prospectively if it's a relatively common outcome like having a baby, or it can be done retrospectively, particularly if you're looking at a rare occurrence.
+
+Now, what do you think is cheaper to do, a retrospective study or a prospective study?
+
+A retrospective study.
+
+I can find those people and then I just do a questionnaire.
+
+But sometimes you need to do it prospectively and see what happens.
+
+You know, a good example of a prospective study, is anybody familiar with the Dietary Approaches to Stop Hypertension eating plan or the DASH diet?
+
+The DASH diet is recognized as not only an eating plan for helping you manage your hypertension, but it's actually when you read it, you're like, well this is a healthy eating plan, period.
+
+This was a prospective cohort study.
+
+Individuals in that study did not have uncontrolled blood pressure, but they were given every bit of food they eat.
+
+They did not have to recall anything.
+
+You think that was expensive?
+
+Of course it was, giving people every bit of food they eat.
+
+So that was a prospective cohort study to look at, did it make a difference or not?
+
+They didn't vary what you ate, they just said, did you get better?
+
+Okay, now here's an example we're gonna use.
+
+This is a retrospective study.
+
+Consider a study that examines the risk factors for breast cancer among women participating in the first National Health and Nutrition Examination Survey.
+
+In a sample of 4,540 women who gave birth to their first child before the age of 25, 65 developed breast cancer.
+
+Of the 1,628 women who first gave birth at age 25 or older, 31 were diagnosed with breast cancer.
+
+So already you're thinking, "Hmm, this study is considering, is there some relationship between age at first child birth and breast cancer?" Okay, that is a typo there.
+
+That should be a retrospective cohort study.
+
+You can make that change.
+
+I apologize about that.
+
+It should say retrospective cohort study.
+
+Overall, and the reason that's there, what we have is a retrospective.
+
+The National Health and Nutrition Examination Survey overall was a prospective cohort study 'cause it's a study that's going on, okay?
+
+It's a prospective one, but in any database you can go back and take a look at other issues that you might be interested in potentially.
+
+And that's why the aspect of the study we're looking at now is a retrospective.
+
+They had already given birth, okay?
+
+And you knew what age they gave birth at.
+
+Does that make sense?
+
+So overall, the National Health and Nutrition Examination Survey is a prospective study, but this particular entity of this study is a retrospective component of it.
+
+Okay.
+
+So what's the exposure?
+
+The researchers define this.
+
+It is the condition of having or first given birth at age 25 or older.
+
+They could have defined it in the opposite way, but this is defined the way they wanted to define it.
+
+So that's our exposure, first birth at age 25 or older.
+
+So we've got an observational study, we know what the exposure is, we've got two groups of women and we know what the outcome is, we can now construct a two by two contingency table and estimate the relative risk.
+
+So I'm looking at those who were diseased, have breast cancer, exposed to the factor, unexposed to the factor.
+
+Did you develop the disease or did you not develop the disease?
+
+Okay, initially they were looking at the disease free women, but then this particular entity looked at those who had the disease.
+
+Okay, now here's how we calculate the relative risk.
+
+It is a ratio of the experimental event rate to the control event rate.
+
+What's the event we're looking at?
+
+What's the event we're looking at here?
+
+Breast cancer.
+
+and what's the exposure?
+
+Older or younger.
+
+Pretty straightforward.
+
+Okay, the relative risk is a ratio of the incidence.
+
+The incidence is the rate.
+
+Experimental event rate divided by the control event rate.
+
+So there's that initial two by two table.
+
+I know that the experimental event rate, by definition, given that initial table is A divided by A plus C, that's the incidence rate.
+
+The control event rate is B divided by B plus D.
+
+That's the control event rate.
+
+If I do the ratio of those, I can estimate the relative risk.
+
+Okay, they gave me all those numbers.
+
+They told me 31 and 65, they told me the totals, so if I've got A and B and I know the totals of exposure to the factor, I can get C and D by simple subtraction, 1,628 minus 31, 4,540 minus 65, and I get the cells C and D.
+
+All the numbers were given to me.
+
+Now I just plug 'em into my equation.
+
+31 over 1,628 divided by 65 over 4,540.
+
+Using that equation and I come up with a relative risk of 1.33.
+
+What does that mean?
+
+Women who gave birth at 25 years of age or older are 33% more likely to develop breast cancer than women who gave birth at a younger age.
+
+So I have a simple two by two table, I know what the exposure is defined as 'cause they have to tell me that.
+
+And they gave me the number of people who developed cancer and the total number of women in each group.
+
+So I'm able to quickly set up that table.
+
+Now that 1.33 is what we call point estimate.
+
+Now we're not going to calculate this, but around any point estimate, regardless of what you're calculating, you can calculate something called a confidence interval.
+
+You do not need to know how to calculate this, but you need to understand it.
+
+So let's say our point estimate is 1.33 and they tell you that the confidence interval around that is 1.21 to 1.63, which encompasses 1.33.
+
+What that means is there's at least a 21% chance, or there is at least women who developed, who had their first child, 25 or older, are at least 21% more likely to develop breast cancer and as much as 63% more likely to develop breast cancer than those who had a child younger.
+
+Our best estimate of what the actual risk is is 33% 'cause there's a statistical range around any point estimate.
+
+Now, let's say they told you the confidence interval was 0.89 to 1.63.
+
+Anytime a confidence interval around a point estimate crosses one, there's a probability that that breast cancer is unrelated to the exposure.
+
+Because what you're saying is the probabilities of the disease and the exposed group and the unexposed group, if it's one, is exactly the same.
+
+Your brow is furrowed.
+
+Not making sense, is it?
+
+Okay, so whenever a confidence interval crosses one, you're essentially saying there is a possibility there's no difference between the groups.
+
+Now why is there no difference?
+
+Maybe I don't have a large enough sample size or maybe there's no difference.
+
+Well, if I know I have a large enough sample size, I know there's no difference, that factor does not make any difference in this outcome I'm looking at.
+
+Okay?
+
+So regardless of what you're reading, if the confidence interval crosses one, there's the potential that the point estimate is one, and therefore there's no difference between the groups.
+
+Let's try this question.
+
+The results of a given study report is achieving a significance at a P-value of less than .05, the 5% level.
+
+True statements about this finding include which one of the following?
+
+I had to throw this in there someplace.
+
+There's a 5% likelihood of the results having occurred by chance alone.
+
+If the study were replicated 100 times, 95 studies would repeat this finding and five would not.
+
+The confidence interval is zero to 10% or the null hypothesis has a 5% chance of being true.
+
+So that's what a P-value means.
+
+Now, and a researcher, an experimenter, they can set the P-value wherever they want it.
+
+But remember, here's the hypothesis going into a study, it's always the null hypothesis.
+
+There's no difference between the groups.
+
+Regardless of what I'm trying to demonstrate, there's no difference.
+
+'Cause what am I trying to prove?
+
+There is a difference based on medicine they're taking or a study they're taking.
+
+I want everybody just to relax your brows right now.
+
+You are not gonna make it through this day, your brow, just relax them, it's fine.
+
+Just go to someplace that's not here right now, okay?
+
+The P-value can be set at any level.
+
+I can set that at 5%, 1%, 1/10 of 1%, 10%.
+
+It is a level of statistical significance.
+
+And what it says is, I'm thinking that the difference in between these two groups was secondary to some factor or drug.
+
+I'm willing to accept a 5% or 1% or 10% chance that by chance alone I'm seeing this difference, has nothing to do with what I thought.
+
+It's just random chance, okay?
+
+Sometimes you'll see the P-value.
+
+Now I set my P-value at 5%.
+
+I'm willing to take a risk of 5% and when I calculate my P-value around my estimate, the P-value comes out to 0.00001.
+
+Then I know the risk of this being secondary to chance alone is one in a million.
+
+I'm not a betting person, but if I were a betting person, I wouldn't be down on the strip in Vegas, betting a lot if my chances of winning was one in a million.
+
+That's why I'm better at retail therapy.
+
+I go across the street to the place where you get that turquoise bag, much better to leave there with that.
+
+Some people are thinking, what the heck's a turquoise bag?
+
+Okay, so the confidence interval, you can have around a P-value also, but the P-value itself says nothing about the truth or falsity of the null hypothesis.
+
+The null hypothesis is still, there's no difference.
+
+It's just if there is a difference, how much risk am I willing to accept that that difference is secondary to chance alone?
+
+Okay?
+
+Now, why do we need to know the difference between this relative risk, absolute risk, and number needed to treat?
+
+As I said, it is because the relative risk tends to amplify very small differences.
+
+These can be clinically insignificant and it sounds really significant.
+
+They're 50% more likely not to.
+
+The absolute risk reduction and the number needed to treat, that is what gives you a much better appreciation of the magnitude of this.
+
+It could be a benefit, it could be a potential impact.
+
+And like I said, you should be able to, if they have calculated an absolute risk reduction in the paper and a number needed to treat in the paper that's being published, you should be able to calculate it yourself.
+
+There should be no confusion.
+
+Good morning, Dr. Hold.
+
+She's back, she's like, "Oh, this is really good." Okay.
+
+Now, the absolute risk reduction is simply not in ratio, it's simple subtraction.
+
+I'm gonna subtract my control event or my experimental event rate from the control event rate.
+
+So instead of comparing the rates via division, I'm gonna compare them by subtraction.
+
+Now as I said, when you look at those numbers, you're like, "Well, that doesn't make any sense." The number needed to treat is simply an inverse of the absolute risk reduction.
+
+Okay?
+
+So those are the three formulas, okay.
+
+So let's take a look at that.
+
+You are considering how beneficial a new treatment might be in preventing stroke.
+
+A well-designed study was reported with 200 patients in the treated group and 200 patients in the untreated group.
+
+The study finds a five-year risk of stroke of 3% in the treated group versus 5% in the untreated group.
+
+Assuming this study is valid and applicable to your patient population, how many patients would you have to treat for five years to prevent one stroke?
+
+There you go.
+
+Correct answer is 50, 50.
+
+So how did we do that?
+
+The control event rate was 5%, the experimental event rate was 3%, five minus three, 2%.
+
+Now we had to go to percentages.
+
+So instead of one over, we do 100 over and that equals 50.
+
+You're thinking now, "Oh well, I should have been able to do that." He gave me the control event rate, the experimental event rate, and I do the inverse of that.
+
+That's all you have to do.
+
+Now, you could have done that without a calculator.
+
+So this could be a question you could do on the exam.
+
+They're not gonna give you weird numbers, okay.
+
+The absolute risk reduction is the difference between the incidence of disease in the treatment group and the incidence in the control group.
+
+Absolute risk reduction or the number needed to treat is simply the reciprocal of that.
+
+That's all it is.
+
+Results of a clinical study show a relative risk reduction of 33% and an absolute risk reduction of 0.2 or 20%.
+
+There are 1,000 patients each in the treatment and control groups.
+
+To help determine the potential benefit of the treatment, it is necessary to identify the number needed to treat.
+
+Which one of the following is the number needed to treat for this study?
+
+3, 5, 13, or you can't determine it?
+
+Remember, this is the way it will always be.
+
+Answer D or E is never all the above or none of the above.
+
+Okay?
+
+Okay, good.
+
+Five.
+
+So let's take a look.
+
+100% divided by 20% equals five 'cause they gave you what the absolute risk reduction was.
+
+So I just gotta do the inverse of it.
+
+Okay, let's try this with the Women's Health Initiative and we're gonna calculate the number needed to harm.
+
+Now this is a primary prevention trial, was looking at the role of estrogen and progesterone or estrogen alone in preventing cardiac events in postmenopausal women.
+
+Now I talk about this study so much because for those of you who don't know, this was a landmark study, okay?
+
+I mean, and for those of you who are of my era, finishing med school in the late '80s, early '90s, I mean, it's probably one of the biggest changes we've seen in our career.
+
+And when this study was published, we were literally on the phone calling people, telling them, please stop your hormone therapy.
+
+Now I spend a lot of time now talking about this because we're 21 years since this study and we've learned a lot in those women who have continued to be followed.
+
+So I have residents who come in who I'm like, okay, they've got vasomotor symptoms, they're miserable.
+
+"Oh, I don't use hormones, Dr. Weismiller." I'm like, "What? Why not?" "Well, the Women's Health Initiative." God.
+
+Or my favorite was, I mentioned this to a third-year medical student the other day and she's like, "What's the Women's Health Initiative?" Okay, so the total number of women who were in the experimental arm receiving hormones was 8,506, had 164 events.
+
+Total of women receiving placebo, 8,102, 122 cardiac events.
+
+Now, before somebody calls me out on something, just I wanna remind everybody though, this was not a perfect study by any means, and it will never be done again.
+
+Okay, it would be unethical.
+
+And part of the issue with this study, which is what we've learned over the last 18 years is that the women in the study were older and we now know starting hormone therapy closer to menopause, I.e. within 10 years or before the age of 60 is the safest.
+
+The risk outweighs the benefit when you're older than 60 or more than 10 years from the last period.
+
+Okay?
+
+So we can calculate our relative risk 'cause we can calculate the control event rate and the experimental event rate.
+
+Here, in calculating a number needed to harm, it's still the inverse of the absolute risk reduction, but we have to reverse it.
+
+And it is the experimental event rate minus the control event rate when we're looking at calculating number needed to harm.
+
+So it's the inverse, not of the control event rate minus the experimental event rate, that's the number needed to treat, but rather the inverse of the experimental event rate minus the control event rate.
+
+Okay, so here's our two by two table, again, our disease of interest on the y-axis, our exposure to the factor on the x-axis.
+
+Bless you.
+
+Our exposure was estrogen or estrogen plus progesterone, or placebo.
+
+And I either had a cardiac event or didn't have a cardiac event.
+
+Pretty basic here.
+
+I mean this is not rocket science.
+
+Now when I do my calculation, it's 164 divided by 164 plus 8,342 'cause that's gonna gimme my total of those who had an event divided by 122 over 122 plus 7,980.
+
+So that's my relative risk.
+
+Now, when I look at my experimental event rate divided by my control event rate, which is the relative risk, I get 1.26.
+
+So you were 26% more likely to have a heart attack or cardiovascular event if you are on hormone therapy.
+
+Now that's a point estimate.
+
+When I look at the absolute risk reduction or increase, which is what we saw here.
+
+We saw a .004 increase, well, that doesn't mean much to anybody.
+
+So we have to then calculate the number needed to harm, which is the experimental event rate minus the control event rate.
+
+The number needed to harm is one over that or 250.
+
+So I have to treat 250 people for 5.8 years with hormones to have one additional cardiovascular event.
+
+The number of post-menopausal people in the world divided by 250, problematic.
+
+That's why we stopped, okay?
+
+So that's the number needed to harm.
+
+We can't calculate the number needed to treat because we weren't treating anybody, we were harming them.
+
+Okay?
+
+Patients taking HRT for 5.2 years have a 26% more MIs.
+
+1.9% of patients taking HRT for 5.2 years had an MI compared to 1.5% not taking HT.
+
+If 250 women took HT for 5.2 years, the drug would cause one additional heart attack.
+
+They're the three parameters, okay?
+
+You can see why that number needed to harm and number needed to treat is so important.
+
+Now, there's no absolute number where the number needed to treat and number needed to harm is correct.
+
+Sometimes the number needed to treat of 1,000 is great.
+
+Sometimes the number needed to treat of 10 is great, okay?
+
+Okay.
+
+Cochrane Library periodically reviews the evidence of the effectiveness of mammography screening for the detection of breast cancer.
+
+One analysis from their 2006 review looked at deaths ascribed to breast cancer for women at least 50 years of age, who had screening mammography generally every one to three years compared with women who did not.
+
+After 13 years of follow up, 595 out of 146,284 women in the screen group died of breast cancer compared with 701 of 122,590 in the unscreened group.
+
+You're thinking, now how am I gonna do this math?
+
+According to this analysis, the number of needed to screen with mammography to prevent one death from breast cancer over 13 years of follow up is approximately 606.
+
+Which the following statements is true?
+
+It cannot be calculated actually.
+
+The number needed to screen is that, the number needed to screen is that, the absolute risk reduction is that.
+
+So what would you have to do for this?
+
+They give you all the numbers, you just gotta set up the two by two table and plug in the numbers to your formula to see if actually you can do this.
+
+Okay, so the correct answer there is B.
+
+That's why I said what I want you to do is just go back and you have all the numbers and plug those into the equations.
+
+So the number needed to screen and the number needed to treat is calculated the same way.
+
+Control event rate minus the experimental event rate.
+
+The number needed to harm is the one that's different, experimental event rate minus control event rate.
+
+So there, the number needed to screen it's the number of patients needed to screen with a study test for the specified length of time in order to produce the good outcome specified.
+
+Okay?
+
+Same thing as we saw with number needed to treat.
+
+And if you plug the numbers in, you can see there 595, 146,284, 701, 122,590, and that's what those numbers would look like.
+
+And then if I take the inverse of that, I get the 606.
+
+Okay?
+
+So there, if we just go back, those are all the equation.
+
+So you have that control event rate, they give you the experimental event rate, you just gotta plug the numbers in.
+
+Okay.
+
+Take a breath.
+
+Now those were tests of risk.
+
+Now let's take a look at tests of validity, and therefore equations here are sensitivity, specificity, positive predictive value, negative predictive value.
+
+Okay, so let's take a look at this question.
+
+The specificity of screening test is best described as what?
+
+The proportion of persons with the condition who test positive, with the condition who test negative, without the condition who test positive, or without the condition who test negative?
+
+Right, without the condition who test negative.
+
+So let's take a look at this.
+
+There are four possibilities here in diagnostic testing.
+
+What we're looking at are the ability to correctly detect people with or without the disease.
+
+Now, here is the two by two table to use these four equations.
+
+My test result is along the y-axis and my disease is along the x-axis.
+
+The test result will be positive or negative, the disease is either present or absent.
+
+You can see there, if the test result is positive and they have the disease, that's true positive.
+
+If the test result is negative and they don't have the disease, that's a true negative.
+
+Now you can have a type one error or an alpha error.
+
+This is where, okay, my test result is positive but they don't have the disease.
+
+Or you can have a false negative, that's a type two or beta error where my test result is negative, but they actually have the disease.
+
+So we're always trying to minimize B and C in any screening test.
+
+Now, sensitivity and specificity are inherent characteristics of a particular test, they do not change.
+
+Now the sensitivity is the ability to detect people who do have the disease.
+
+It is defined as the true positives divided by the true positives plus the false negatives or A over A plus C using the way this contingency table is.
+
+Very sensitive tests are used for screening and ruling out disease.
+
+Okay?
+
+Please think through this 10 times before you come and ask me, are you sure this is correct?
+
+Because I know somebody's gonna come up to me and say, "This doesn't make sense." A sensitive test with a negative result rules out the disease.
+
+You want a very sensitive screening test, right?
+
+You don't want to tell somebody you're HIV negative and they're really HIV positive.
+
+So we're willing to take false positives.
+
+We'll get rid of those with the diagnostic test, which is very specific.
+
+So a sensitive test with a negative result rules out the disease.
+
+You want a very highly-sensitive screening test.
+
+Specificity.
+
+This is the ability to detect people who do not have the disease.
+
+It's the true negatives divided by the false positive plus the true negatives or D over B plus D.
+
+A specific test with a positive result rules in the disease.
+
+Yep, that positive we got when we screen you is really true.
+
+You have the disease.
+
+So a diagnostic test is highly specific.
+
+Now we use a combination of these in practice and we gotta set a cut point.
+
+This is done, this is beyond what we need to talk about here, but we're willing to accept a certain number of false positives with any screening test.
+
+That's because we use a combination of tests.
+
+We screen your for celiac disease with some antibodies, and then we do a diagnostic test with a biopsy.
+
+So we do a highly sensitive test followed by a more specific test.
+
+Now the predictive value, this is what the patient is interested in because this particular entity varies with the prevalence of the disease in the society, unlike sensitivity and specificity, which are inherent characteristics of the test.
+
+Because what the patient wants to know is, well, when the sensitivity of that test is known, given the patient has the disease, what's the ability of the test to discover it?
+
+Or when I know the specificity, given that the patient is free of the disease, what is the ability of the test to discover this?
+
+Okay, so the positive predictive value is the true positives over the true positives plus the false positives, or A over A plus B.
+
+The negative predictive value is the proportion of negative results that are true negatives.
+
+So that's the true negatives divided by the false negatives plus the true negatives, that's D over C plus D.
+
+Let's try this question.
+
+In a study to evaluate a test as a screen for the presence of a disease, 235 of the 250 people with the disease had a positive test and 600 of the 680 people without the disease had a negative test.
+
+Based on this data, the specificity of the test for the disease is.
+
+So you've got the numbers, you got your two by two table, you simply set it up and plug the numbers in.
+
+Okay, there we go.
+
+The correct answer is C, six over 680.
+
+So there they gave me those numbers, that's my two by two.
+
+I can plug in the other numbers by simple subtraction and then I can plug them into the formulas.
+
+Okay.
+
+Now, calculation of the positive and negative predictive value.
+
+This is easily done from the same exact data.
+
+This is done from the same exact data.
+
+Positive predictive value, true positives divided by the true positives plus the false positives, the negative predictive value, true negatives divided by the false negatives plus the true negatives.
+
+And there I can calculate 75% and 97%.
+
+Now, as the prevalence of the disease in a population increases, the positive predictive value increases.
+
+As the prevalence of the disease in a population decreases, the negative predictive value increases.
+
+The sensitivity and the specificity do not vary with the population.
+
+So let's take an example of this.
+
+We're going to use a generalized population.
+
+So I'm going to do HIV testing in San Francisco and Kalispell, Montana.
+
+Based on the prevalence of the disease, if I tell somebody living in San Francisco, your HIV is positive, the likelihood that that is a true positive is very high 'cause the prevalence of HIV is high there in comparison to Kalispell, Montana, whereas if I tell somebody your HIV is negative, the likelihood that this is a true negative is quite good because the prevalence of the disease in that society is lower.
+
+The sensitivity and specificity of the test I used didn't change, the positive and negative predictive value of using that test did change.
+
+Okay.
+
+So for those of you who are test taking, I sit down to take the exam.
+
+Longitudinal or one day secure.
+
+If I'm sitting down to take the one day secure, as soon as they say you may begin, you write down these eight equations on your dry erase board.
+
+You might even wanna put down the two by two tables so that when you get to the question, you don't have to think, now how do I set up that table?
+
+They're right there, okay?
+
+You're not gonna have time to write down the 11 diagnostic criteria for rheumatoid arthritis or SLE, but I would take the time to write these down because these are easy questions 'cause they're gonna give you the numbers and you just plug them in.
+
+Okay?
+
+But those are the eight.
+
+Now, like I said, you can set your two by two tables up any way you would like.
+
+But if you're going to use the two by two tables, I'm sorry, if you're gonna use these letters for these equations, you need to set the two by two table up the way I have set them up, which is the standard way to do it.
+
+And if my chair were here right now, she would say, "Gosh, Dr. Weismiller doesn't do anything in the standard way.
+
+Lord, couldn't he help." Okay.
+
+Whew.
+
+Okay, we're done with 19 seconds to spare.
+
+Excellent job, ladies and gentlemen.
+
+Okay.

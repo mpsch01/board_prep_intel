@@ -1,0 +1,483 @@
+So more geriatrics.
+
+We're gonna talk some more about osteoporosis.
+
+We already did the gait disorders.
+
+We'll go into some urinary issues and some geriatric prevention type stuff.
+
+So osteoporosis, the definition, World Health Organization, negative 2.5 standard deviations on your T score is considered osteoporosis.
+
+Someone asked a good question before to Dr. Gary too.
+
+If somebody has a fragility fracture, a fracture from standing height, do they have osteoporosis?
+
+Yes, okay.
+
+We'll get into DEXA scanning a little bit here in a second too.
+
+But there's your cutoff you're looking for when you do get your DEXA scan.
+
+So femoral neck bone mineral density is the best predictor.
+
+The central DEXA, which most of us, if we just order a DEXA scan, that's given us the femur and the lumbar measurements, and yeah, fracture risk doubles for every one unit decrease in the T score.
+
+So, you think 1.5 to 2, or 2.5 to 2.5 is not a big deal.
+
+It actually is a pretty significant risk for the patient.
+
+Now, who needs bone mineral density testing?
+
+For your board exam, we will follow the USPSTF.
+
+So women, 65 and over should have bone mineral density testing.
+
+Women, 50 to 64, based on risk factors, okay?
+
+What are some of those risk factors?
+
+Smoking, alcohol use, chemotherapy, early menopause.
+
+Another thing not to forget to ask about, and this would be a good board question, family history.
+
+If mom has a hip fracture at the age of 67, that's somebody that's probably at elevated risk.
+
+They would warrant earlier screening.
+
+Men, RNI.
+
+If you were to not believe me, and you look this up on your own today, plug in USPSTF osteoporosis in your favorite search engine, you will notice that this is currently being updated.
+
+So don't forget in your clinical practice, there's also men who might be heavy drinkers, perhaps they have advanced COPD, and they're getting steroids, or maybe they're on steroids chronically.
+
+Other things, people on long-term PPIs, those type of things increase risk.
+
+After Dr. Gary's lecture earlier, I made the comment to him, I said, "I hate hip fractures." They keep me awake at night, because I start looking back, and I think, what could we have done different?
+
+If somebody never has a hip fracture, that's hard to really prove that we help that good outcome, right?
+
+But we do, so it's devastating when this happens.
+
+More on the difference the USPSTF versus the National Osteoporosis Foundation and the International Society for Clinical Densitometry I think is what ISCD stands for.
+
+Somebody's gonna ask how often we do DEXA scans.
+
+We'll get to that.
+
+The ISCD folks recommend every two years.
+
+That's their game, right, of course they do.
+
+So we'll talk about that.
+
+We'll get to that in a second though, what the evidence actually shows.
+
+So now, first question, we got a 72-year-old woman, BMI of 35, sudden onset, mid-back pain.
+
+X-ray confirms T4 vertebral compression fracture and diffuse osteopenia.
+
+What is our next step?
+
+All those things in your questions, now remember, look for the clues.
+
+That's one of the few benefits of obesity.
+
+You're gonna have stronger bones.
+
+This person's a little bit younger, so this is a pretty abnormal location for this person.
+
+So this person needs to look up secondary causes, worried about a multiple myeloma or something else going on with this person.
+
+Primary idiopathic osteoporosis risk factors.
+
+Y'all know this. We'll see.
+
+It's gonna be really interesting with this next iteration of the recommendation where men fall on this, 'cause a risk factor for hip fractures, compression fractures, is age.
+
+So at what point should men be screened?
+
+It really depends.
+
+It also really bothers me when men have hip fractures.
+
+I'm equal opportunity being upset in bad outcomes.
+
+It's not good.
+
+Screening for secondary causes, this person, in our question stem we had a second ago, some of these things.
+
+If somebody does have a fracture, whether it's primary or secondary, that's one of the few cases where I'll check a vitamin D level, and maybe treat to improve that.
+
+I caught a vitamin D level of three the other day, and a man who was there with us for a hip fracture.
+
+70-year-old, DEXA scan reveals lowest T score of negative 2.
+
+10-year fracture risk is 19% for major osteoporotic fracture, 5% for femur fracture.
+
+What's the most appropriate next step?
+
+Start calcium and vitamin D. Start a bisphosphonate.
+
+Repeat the DEXA in two years or repeat the DEXA in five years.
+
+All right, so not only do we treat for that negative 2.5 T score, we also treat based on the 10-year fracture risk.
+
+That's down at that bottom.
+
+Where I am, the DEXA scan results calculate the FRAX score for me, which is really nice.
+
+If hip fracture risk is greater than 3% or major osteoporotic fracture's greater than 20%, that's an indication for treatment, so don't miss that.
+
+Just 'cause their T-score is less than negative 2.5, they might still need treatment.
+
+Additionally, if somebody does have a fragility fracture, and they argue with you that they don't want to go get a DEXA scan, that's fine, they still need treatment to prevent this from happening again, to decrease the risk.
+
+Used to be we would say, "Wait after a fracture." You wanna wait a couple of months, 'cause you worry about bone healing with bisphosphonates.
+
+That's less and less standard, and it looks like you're okay starting treatment a little earlier right after the fracture, even a couple of weeks after is probably fine.
+
+It's more important for that person to get on treatment than to delay it and it get missed.
+
+Which of the following is a USPSTF's recommendation regarding daily supplementation of vitamin D and calcium for postmenopausal women to prevent fracture?
+
+A, not recommended, B, C, and D have different doses for you to choose from.
+
+And currently, it is not recommended to prevent fracture for primary prevention.
+
+If somebody does have osteoporosis, or they've had a fracture, and you start them on therapy with a bisphosphonate or Prolia or something like that, they should be on calcium and vitamin D.
+
+But just somebody who's going along in life fine and hadn't had any problems, the recommendation is not to do it.
+
+It's actually a D, potentially causing harm.
+
+The big thing was kidney stones.
+
+That's one of the factors causing problems.
+
+Insufficient evidence with higher doses, and they don't address, like we said, with women with osteoporosis, but if they're gonna be on treatment, they probably need supplementation, and here are things in our toolbox for treatment of osteoporosis.
+
+The ones with stars by them are anabolic agents to really aggressively rebuild and are approved for severe osteoporosis.
+
+Or maybe you've got somebody that's been on Alenddronate for four years and then they still have a fracture, consider one of those with a star.
+
+Also notice down at the bottom, Ibandronate and Raloxifene do nothing for femur fractures.
+
+They do something for compression fractures, vertebral fractures, but nothing for femur.
+
+I used to tell our residents that Sally Field used to do commercials for Boniva.
+
+Some of y'all remember that? Yeah, yeah.
+
+The medical students or residents don't know who that is anymore.
+
+I've had to stop using that story.
+
+Forrest Gump's mama, and then they're like, "Oh yeah, yeah." So bisphosphonates, empty stomach, full glass of water, sit up for 30 minutes.
+
+Contraindications, esophageal stricture, achalasia, if they can't sit upright, and then GFR calculations.
+
+Also remember this, if they've got hypocalcemia, you don't wanna give 'em a bisphosphonate.
+
+It's gonna make that calcium go lower.
+
+Bless you.
+
+Here's what everybody always asks about, what about jaw necrosis?
+
+I've got a friend who had jaw necrosis with a bisphosphonate.
+
+More often with IV bisphosphonates, you are more likely to get struck by lightning than to have jaw necrosis from a bisphosphonate.
+
+Also, as was pointed out earlier, the longer you're on a bisphosphonate, the higher these risk factors go up.
+
+That's why we cut them off for an oral bisphosphonate, typically five years.
+
+IV bisphosphonates, maybe three years.
+
+If it's really severe osteoporosis and you don't have any other options, you can double those, potentially do the IV for six years, maybe the oral for 10, but that's pushing it.
+
+You gotta be aware of the risk.
+
+Those risks go up the longer they're on it, especially the atypical femur fracture.
+
+So there you go.
+
+You still get the benefit of a bisphosphonate up to five years after you stop it.
+
+So you could stop it and give them a quote/unquote drug holiday.
+
+If maybe their insurance doesn't cover something, switch into something else, so you're still gonna get the benefit.
+
+Time to benefit is about a year.
+
+Obviously, if somebody's on hospice, limited life expectancy, they're not ambulatory anymore, it's reasonable to stop it.
+
+Which of the following has been shown to have an analgesic benefit in acute osteoporotic fractures?
+
+Yeah, calcitonin. Y'all were listening. Nice job, nice job!
+
+Intranasal, you do one spray, one side of the nostril.
+
+The next day, you do the other.
+
+We don't extend that longer than a few weeks, 'cause we worry about increased cancer risk.
+
+That's the reason you limit it to about four days, I mean, excuse me, about four weeks.
+
+Raloxifene, we mentioned that earlier, does not decrease hip fracture risk.
+
+So remember that, would be way down on your list of osteoporosis treatments.
+
+Teriparatide, parathyroid hormone, this is for severe osteoporosis, daily injections, high risk, severe osteoporosis.
+
+Don't do it for longer than two years, because of the risk of osteosarcoma, also known as Forteo.
+
+Denosumab, typically bisphosphonates are our first line.
+
+It would be reasonable though to do Prolia as a first line potentially, every six months, sub-q injection.
+
+Here's the key.
+
+Once you stop using Prolia, you lose the benefit.
+
+Whereas bisphosphonates, you get a benefit extending still in their system for a few years.
+
+Prolia, you lose it, so you better have something ready to go.
+
+Also, about five-year, five-year length of treatment.
+
+So what do you do? Maybe you go bisphosphonate, then Prolia.
+
+Or maybe you do Prolia then a bisphosphonate.
+
+Maybe you consider after five years that bisphosphonate's gonna be out of their system, so you can do bisphosphonate, Prolia, then back to bisphosphonate.
+
+Maybe at that point the DEXA scans getting worse.
+
+I agree with Dr. Gary, about five years.
+
+I usually get DEXA scans about five years, about the time I'm about to switch treatment.
+
+There's a good AAFP article not long ago showing that really the benefits of doing DEXA scans more frequently than every three years doesn't do a darn thing.
+
+So you always have to ask yourself, is this gonna change what I do?
+
+Demented 70-year-old, widowed woman is admitted to your service, determined to lack capacity.
+
+There are no advanced directives.
+
+Who typically is next in line for decision making.
+
+The power of attorney appointed after admission, her fiancé of two years, her sister, or her 16-year-old grandson.
+
+Yeah, her sister.
+
+Can't appoint a power of attorney after admission.
+
+Fiancé has no legal bearing, and the 16-year-old is a minor, so it'd be the sister in this case.
+
+Ideally, we're all doing our advanced-care planning visits and making sure all these things are in place.
+
+Documented advanced directives.
+
+Different states are gonna have different rules.
+
+If you get a question about definitions, there you go for substituted judgment and the best-interest standard too.
+
+Sometimes questions like that pop up.
+
+All right, now we got a demented patient admitted for Sick Sinus Syndrome.
+
+Cardiologist recommends a pacemaker, and the patient refuses.
+
+You and the cardiologist explain the procedure to the patient and believes she understands the pros and cons.
+
+The daughter is the healthcare power of attorney and wants to proceed with the pacemaker placement.
+
+What are we gonna do?
+
+Proceed with the procedure, consult psychiatry, don't do the procedure, or don't trust the daughter, call the son.
+
+So she's not gonna be the one to take care of me.
+
+In this case, we don't proceed with the procedure.
+
+Even though the person was demented, they still were able to repeat back the risks of the procedure.
+
+Just 'cause someone has dementia doesn't mean they lack capacity.
+
+Capacity is also very subjective.
+
+Somebody can have the capacity whether to have the chicken or the brisket for lunch, or to get the Mickey Mouse or the princess bandaid, but maybe not bigger decisions, so it's very subjective.
+
+Most states require two physicians to determine that someone lacks capacity.
+
+In a AAFP article, not long ago, they recommended, and this is the one I use, the Aid to Capacity Exam.
+
+It's gonna go through those questions like, "Do you understand what we're saying?
+
+"Can you repeat back the risks?" Those type of things.
+
+Key technical term, competency is determined by the courts.
+
+A judge gets involved with that.
+
+Physicians determine capacity.
+
+We don't determine competency.
+
+And American Bar Association has different things.
+
+High yield points, don't recommend percutaneous feeding tubes in people with dementia, causes all kinds of problems, agitation, doesn't improve outcomes.
+
+You just make the patient miserable.
+
+That is part of the disease process and totally okay.
+
+The person's gonna be comfortable.
+
+They're not gonna be hungry.
+
+The brain is shutting off, that's okay.
+
+Don't use appetite stimulants.
+
+On the Beers Criteria is to avoid megestrol.
+
+I still see it every now and then.
+
+Don't use it, 'cause it kills people and causes clots.
+
+We like to not kill people. Don't use it.
+
+Most of these things are evidence for appetite simulates.
+
+They don't really work anyway.
+
+Somebody's gonna ask, "Well, what do you do?" We try to give the patient things they like.
+
+If they're depressed, maybe mirtazapine or something like that could be beneficial.
+
+Ultimately, this is a lot of education and not a lot of great tools in our toolbox.
+
+I also, like Dr. Vail, had something earlier about people with gastric bypass, you encourage them to eat protein first.
+
+I would say the same thing in older adults.
+
+If you're gonna be limited on your intake, really make sure you get the protein to maintain your muscle mass.
+
+All right, 87-year-old progressive decline, baseline mental status, has anorexia, constipation, intermittent nausea, 10-pound weight loss.
+
+More recently, she became nonverbal, unable to ambulate at all and using a wheelchair, disoriented and intermittently incontinent of urine.
+
+On exam, affect is flat, mucus membranes dry, irregular pulse of 105, otherwise unremarkable.
+
+Pretty lethargic, large decline, now how's that pulse?
+
+Which is the following is the most likely cause of this patient's symptoms?
+
+UTI, hypothyroidism, elder abuse, or hyperthyroidism?
+
+Yeah, look at that, 25% still picked it.
+
+This could actually be hyperthyroidism, which can present differently in older adults, and it could be apathetic thyrotoxicosis, could have that lethargy, weight loss, constipation, but you still have some of the hyperthyroidism symptoms, like AFib and weight loss.
+
+So this could be a little paradoxical from what we typically expect.
+
+Don't recommend screening breast, colorectal, prostate, lung cancer without considering life expectancy and the risks of potentially...
+
+There's things that we do to screen.
+
+There's USPSTF recommendations.
+
+For the gray area there for our colorectal and mammography, like Dr. Weiss Miller mentioned earlier, the mammography is being updated.
+
+What to consider is, do I think this person's gonna be alive 10 years from now?
+
+If you think they are, then colorectal and mammography are probably worth doing.
+
+There's a tool you can plug in, which is validated Eprognosis.
+
+You can plug in the patient's characteristics, and it will tell you, you can pull it up in the room with a patient, whether they should get screened or not.
+
+It'll say very clear, more risk, more benefit, and you can talk about it.
+
+It's a great tool.
+
+Y'all went through stress testing already.
+
+The common one, that cataract surgery question.
+
+Y'all get that, right? You just had a whole lecture on this.
+
+Elder abuse, this is gonna be one of those things you look for the buzzwords.
+
+Also being updated from the USPSTF whether to screen for this.
+
+You're gonna have in your question stem, that's gonna be poor health, low socioeconomic status, dementia.
+
+Let's acknowledge too, caregiving is incredibly hard.
+
+It's a big problem for us, big problem.
+
+There's some more question STEM things.
+
+I mean these new dementia treatments that got approved that cost $26,000 a year, which I could go on and on about my concerns about them.
+
+Then the average social security check in the US is about 1,500 bucks a month.
+
+So, we make decisions on where our resources are.
+
+Caregiving is incredibly hard, and this ain't gonna get any easier.
+
+All right, which medication's least likely to be associated with erectile dysfunction?
+
+Remember what I said?
+
+I tell all the medical students, they can always just say to all my questions, anticholinergic symptoms.
+
+You can use that to think about this one too.
+
+Yeah, Losartan, HCTZ is a diuretic.
+
+The others are gonna have some anticholinergic effects.
+
+There's your causes of ED in order, most commonly vascular.
+
+And almost, let's wrap up here.
+
+Oh, here we go, greater than 100,000 e. coli.
+
+You should prescribe antimicrobials if the IDSA has good guidelines on this.
+
+And also, if you wanna write down something to look up, it's been validated, it's the McGeer Criteria for older adults that live in residential care.
+
+If there's not specific urinary tract symptoms present of which confusion alone is not a symptom, it's not a UTI.
+
+Don't use my, here it is, from the AGS too, "Choosing Wisely." Don't use antimicrobials unless there's specific urinary tract symptoms.
+
+Urgent incontinence, big problem, medicines only work in about 30% of folks.
+
+I underlined the safer ones, the least anticholinergic options and treatment for urgent incontinence.
+
+Beta 3 agonists are reasonable, 'cause they don't cross the blood-brain barrier too.
+
+And then don't forget pelvic muscle exercises, bladder training.
+
+And here's some high-yield stuff.
+
+Weight loss is effective for stress incontinence for men.
+
+Make sure you're checking post void residual before starting meds for incontinence, like some of those antimuscarinics.
+
+Make sure they're not holding onto urine, or you'll cause a problem.
+
+And then you got really demented folks with incontinence.
+
+Encourage them to do frequent bathroom trips.
+
+And there's my answers, and I'll be back again in a little while.
+
+Send your questions. Thank y'all.
+
+Thank thank you, Dr. Blackwelder.
