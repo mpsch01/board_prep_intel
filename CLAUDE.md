@@ -48,13 +48,14 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_006_20260324_temp05.md` |
+| Active BATON | `BATON_active_007_20260325_m3_pipeline.md` |
 | DB articles | 1,936 |
 | DB questions | 1,629 (2018–2025) |
 | PDFs | 404 across 4 tiers |
-| M2 scripts | 45 + 1 config JSON (all paths dynamic) |
+| M2 scripts | 47 Python + 6 JS + 1 config JSON (all paths dynamic) |
+| M3 scripts | 4 Python + 1 JS + 2 JSON config |
 | Next ART-ID | ART-1938 |
-| Git branch | `main`, latest `064d322` |
+| Git branch | `main`, latest `cedab1c` |
 
 → Full state: `.auto-memory/project_overhaul_state.md` and `.auto-memory/project_current_db_state.md`
 
@@ -90,8 +91,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 006)
-1. TEMP_06 → TEMP_07 → TEMP_08 audits/migrations
+## Next Steps (as of BATON 007)
+1. **Windows cleanup:** Delete TEMP_07, TEMP_08, TEMP_05 remnants, M3 duplicates, root BATONs (see BATON 007 for full list)
 2. Articles table gap-fill (389 articles at 0% for source_type/categories/tier)
 3. Intelligence 2.0 Layer 2 (article_currency via PubMed MCP)
-4. Manual deletes by Mikey: M3 duplicates (`build_clinical_pathways.py`, `build_topic_trends.py`), TEMP_05 garbage, `BoardPrep-ContentOutline_HY-ENRICHED-v4.docx`
+4. ITE question pipeline end-to-end test (01→02→03→ite_tag_questions on 2025 source docs)
