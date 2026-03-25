@@ -1,0 +1,464 @@
+Year,QuestionNum,BodySystem
+2022,136,Special Sensory
+2022,33,Musculoskeletal
+2022,109,Musculoskeletal
+2022,170,Endocrine
+2022,134,Respiratory
+2022,150,Cardiovascular
+2022,3,Gastrointestinal
+2022,45,Neurologic
+2022,51,Musculoskeletal
+2022,149,Gastrointestinal
+2022,56,Endocrine
+2022,60,Respiratory
+2022,189,Cardiovascular
+2022,67,Musculoskeletal
+2022,82,Musculoskeletal
+2022,171,Musculoskeletal
+2022,20,Neurologic
+2022,108,Respiratory
+2022,30,Cardiovascular
+2022,75,Musculoskeletal
+2022,95,Special Sensory
+2022,24,Integumentary
+2022,49,Respiratory
+2022,160,Respiratory
+2022,180,Respiratory
+2022,140,Cardiovascular
+2022,199,Cardiovascular
+2022,164,Musculoskeletal
+2022,98,Endocrine
+2022,162,Integumentary
+2022,70,Respiratory
+2022,124,Respiratory
+2022,168,Respiratory
+2022,131,Musculoskeletal
+2022,154,Musculoskeletal
+2022,16,Gastrointestinal
+2022,120,Gastrointestinal
+2022,165,Gastrointestinal
+2022,65,Endocrine
+2022,50,Integumentary
+2022,66,Respiratory
+2022,93,Respiratory
+2022,148,Respiratory
+2022,173,Respiratory
+2022,123,Cardiovascular
+2022,193,Gastrointestinal
+2022,182,Endocrine
+2022,155,Respiratory
+2022,69,Cardiovascular
+2022,197,Musculoskeletal
+2022,28,Endocrine
+2022,130,Endocrine
+2022,141,Respiratory
+2022,42,Musculoskeletal
+2022,102,Musculoskeletal
+2022,187,Musculoskeletal
+2022,79,Integumentary
+2022,169,Integumentary
+2022,186,Integumentary
+2022,200,Respiratory
+2022,188,Respiratory
+2022,23,Cardiovascular
+2022,48,Cardiovascular
+2022,15,Musculoskeletal
+2022,90,Musculoskeletal
+2022,46,Gastrointestinal
+2022,86,Gastrointestinal
+2022,179,Gastrointestinal
+2022,145,Endocrine
+2022,195,Endocrine
+2022,184,Neurologic
+2022,76,Respiratory
+2022,27,Musculoskeletal
+2022,116,Musculoskeletal
+2022,177,Musculoskeletal
+2022,38,Special Sensory
+2022,190,Special Sensory
+2022,143,Neurologic
+2022,100,Respiratory
+2022,41,Respiratory
+2022,84,Respiratory
+2022,5,Musculoskeletal
+2022,122,Musculoskeletal
+2022,104,Gastrointestinal
+2022,114,Endocrine
+2022,139,Endocrine
+2022,25,Respiratory
+2022,85,Cardiovascular
+2022,172,Cardiovascular
+2022,181,Cardiovascular
+2022,2,Respiratory
+2022,14,Respiratory
+2022,32,Respiratory
+2022,101,Respiratory
+2022,1,Cardiovascular
+2022,13,Cardiovascular
+2022,39,Cardiovascular
+2022,61,Cardiovascular
+2022,58,Musculoskeletal
+2022,142,Musculoskeletal
+2022,147,Musculoskeletal
+2022,26,Gastrointestinal
+2022,31,Gastrointestinal
+2022,135,Gastrointestinal
+2022,6,Endocrine
+2022,17,Endocrine
+2022,43,Endocrine
+2022,81,Endocrine
+2022,10,Integumentary
+2022,36,Integumentary
+2022,68,Integumentary
+2022,111,Integumentary
+2022,78,Neurologic
+2022,113,Neurologic
+2022,117,Respiratory
+2022,91,Cardiovascular
+2022,107,Cardiovascular
+2022,119,Cardiovascular
+2022,132,Cardiovascular
+2022,137,Integumentary
+2022,156,Cardiovascular
+2022,194,Hematologic/Immune
+2022,106,Hematologic/Immune
+2022,115,Patient-Based Systems
+2022,185,Nephrologic
+2022,128,Hematologic/Immune
+2022,19,Population-Based Care
+2022,73,Population-Based Care
+2022,40,Psychogenic
+2022,151,Hematologic/Immune
+2022,12,Reproductive:Female
+2022,54,Reproductive:Female
+2022,167,Population-Based Care
+2022,159,Psychogenic
+2022,183,Psychogenic
+2022,152,Reproductive:Female
+2022,191,Hematologic/Immune
+2022,103,Hematologic/Immune
+2022,64,Population-Based Care
+2022,4,Psychogenic
+2022,105,Psychogenic
+2022,8,Reproductive:Male
+2022,62,Nephrologic
+2022,18,Hematologic/Immune
+2022,125,Patient-Based Systems
+2022,89,Hematologic/Immune
+2022,198,Patient-Based Systems
+2022,88,Reproductive:Female
+2022,37,Nephrologic
+2022,126,Nephrologic
+2022,53,Hematologic/Immune
+2022,7,Hematologic/Immune
+2022,34,Hematologic/Immune
+2022,161,Population-Based Care
+2022,153,Population-Based Care
+2022,112,Reproductive:Female
+2022,29,Hematologic/Immune
+2022,35,Population-Based Care
+2022,59,Patient-Based Systems
+2022,196,Psychogenic
+2022,158,Reproductive:Male
+2022,110,Hematologic/Immune
+2022,121,Hematologic/Immune
+2022,83,Patient-Based Systems
+2022,174,Psychogenic
+2022,192,Reproductive:Female
+2022,176,Hematologic/Immune
+2022,9,Patient-Based Systems
+2022,144,Patient-Based Systems
+2022,22,Psychogenic
+2022,57,Psychogenic
+2022,72,Psychogenic
+2022,92,Psychogenic
+2022,127,Reproductive:Female
+2022,175,Reproductive:Female
+2022,11,Nephrologic
+2022,96,Nephrologic
+2022,71,Hematologic/Immune
+2022,47,Hematologic/Immune
+2022,55,Hematologic/Immune
+2022,74,Population-Based Care
+2022,80,Population-Based Care
+2022,52,Population-Based Care
+2022,87,Population-Based Care
+2022,94,Population-Based Care
+2022,133,Population-Based Care
+2022,44,Patient-Based Systems
+2022,178,Patient-Based Systems
+2022,118,Psychogenic
+2022,129,Psychogenic
+2022,146,Psychogenic
+2023,27,Musculoskeletal
+2023,111,Integumentary
+2023,20,Neurologic
+2023,131,Musculoskeletal
+2023,48,Cardiovascular
+2023,132,Cardiovascular
+2023,164,Musculoskeletal
+2023,104,Gastrointestinal
+2023,135,Gastrointestinal
+2023,179,Gastrointestinal
+2023,98,Endocrine
+2023,108,Respiratory
+2023,180,Respiratory
+2023,25,Respiratory
+2023,141,Respiratory
+2023,1,Cardiovascular
+2023,17,Endocrine
+2023,68,Integumentary
+2023,66,Respiratory
+2023,172,Cardiovascular
+2023,171,Musculoskeletal
+2023,78,Neurologic
+2023,188,Respiratory
+2023,23,Cardiovascular
+2023,61,Cardiovascular
+2023,166,Cardiovascular
+2023,122,Musculoskeletal
+2023,147,Musculoskeletal
+2023,182,Endocrine
+2023,36,Integumentary
+2023,162,Integumentary
+2023,169,Integumentary
+2023,123,Cardiovascular
+2023,181,Cardiovascular
+2023,86,Gastrointestinal
+2023,120,Gastrointestinal
+2023,65,Endocrine
+2023,184,Neurologic
+2023,32,Respiratory
+2023,101,Respiratory
+2023,33,Musculoskeletal
+2023,58,Musculoskeletal
+2023,3,Gastrointestinal
+2023,31,Gastrointestinal
+2023,38,Special Sensory
+2023,95,Special Sensory
+2023,28,Endocrine
+2023,114,Endocrine
+2023,2,Respiratory
+2023,77,Cardiovascular
+2023,91,Cardiovascular
+2023,102,Musculoskeletal
+2023,136,Special Sensory
+2023,139,Endocrine
+2023,186,Integumentary
+2023,160,Respiratory
+2023,200,Respiratory
+2023,150,Cardiovascular
+2023,189,Cardiovascular
+2023,90,Musculoskeletal
+2023,43,Endocrine
+2023,130,Endocrine
+2023,137,Integumentary
+2023,45,Neurologic
+2023,70,Respiratory
+2023,76,Respiratory
+2023,117,Respiratory
+2023,155,Respiratory
+2023,51,Musculoskeletal
+2023,154,Musculoskeletal
+2023,46,Gastrointestinal
+2023,163,Endocrine
+2023,24,Integumentary
+2023,168,Respiratory
+2023,173,Respiratory
+2023,14,Respiratory
+2023,13,Cardiovascular
+2023,5,Musculoskeletal
+2023,15,Musculoskeletal
+2023,82,Musculoskeletal
+2023,116,Musculoskeletal
+2023,63,Gastrointestinal
+2023,149,Gastrointestinal
+2023,165,Gastrointestinal
+2023,81,Endocrine
+2023,79,Integumentary
+2023,97,Integumentary
+2023,187,Musculoskeletal
+2023,100,Respiratory
+2023,199,Cardiovascular
+2023,42,Musculoskeletal
+2023,177,Musculoskeletal
+2023,26,Gastrointestinal
+2023,56,Endocrine
+2023,145,Endocrine
+2023,170,Endocrine
+2023,195,Endocrine
+2023,10,Integumentary
+2023,50,Integumentary
+2023,134,Respiratory
+2023,148,Respiratory
+2023,85,Cardiovascular
+2023,107,Cardiovascular
+2023,75,Musculoskeletal
+2023,193,Gastrointestinal
+2023,41,Respiratory
+2023,49,Respiratory
+2023,60,Respiratory
+2023,84,Respiratory
+2023,30,Cardiovascular
+2023,39,Cardiovascular
+2023,69,Cardiovascular
+2023,99,Cardiovascular
+2023,109,Musculoskeletal
+2023,142,Musculoskeletal
+2023,197,Musculoskeletal
+2023,6,Endocrine
+2023,113,Neurologic
+2023,143,Neurologic
+2023,93,Respiratory
+2023,124,Respiratory
+2023,119,Cardiovascular
+2023,52,Population-Based Care
+2023,74,Hematologic/Immune
+2023,83,Patient-Based Systems
+2023,112,Reproductive:Female
+2023,158,Reproductive:Male
+2023,103,Hematologic/Immune
+2023,110,Hematologic/Immune
+2023,64,Population-Based Care
+2023,18,Hematologic/Immune
+2023,47,Hematologic/Immune
+2023,157,Hematologic/Immune
+2023,34,Hematologic/Immune
+2023,35,Patient-Based Systems
+2023,198,Patient-Based Systems
+2023,118,Psychogenic
+2023,192,Reproductive:Female
+2023,55,Hematologic/Immune
+2023,115,Population-Based Care
+2023,105,Psychogenic
+2023,71,Hematologic/Immune
+2023,128,Hematologic/Immune
+2023,161,Hematologic/Immune
+2023,133,Population-Based Care
+2023,167,Population-Based Care
+2023,94,Patient-Based Systems
+2023,125,Patient-Based Systems
+2023,175,Reproductive:Female
+2023,80,Hematologic/Immune
+2023,151,Hematologic/Immune
+2023,92,Psychogenic
+2023,106,Hematologic/Immune
+2023,29,Hematologic/Immune
+2023,73,Population-Based Care
+2023,57,Psychogenic
+2023,183,Psychogenic
+2023,88,Reproductive:Female
+2023,127,Reproductive:Female
+2023,152,Reproductive:Female
+2023,185,Nephrologic
+2023,191,Hematologic/Immune
+2023,121,Hematologic/Immune
+2023,40,Psychogenic
+2023,146,Psychogenic
+2023,159,Psychogenic
+2023,126,Nephrologic
+2023,4,Psychogenic
+2023,12,Reproductive:Female
+2023,62,Nephrologic
+2023,53,Hematologic/Immune
+2023,153,Population-Based Care
+2023,9,Patient-Based Systems
+2023,21,Hematologic/Immune
+2023,7,Hematologic/Immune
+2023,89,Hematologic/Immune
+2023,19,Population-Based Care
+2023,22,Psychogenic
+2023,72,Psychogenic
+2023,174,Psychogenic
+2023,196,Psychogenic
+2023,54,Reproductive:Female
+2023,8,Reproductive:Male
+2023,11,Nephrologic
+2023,37,Nephrologic
+2023,96,Nephrologic
+2023,138,Hematologic/Immune
+2023,176,Hematologic/Immune
+2023,194,Population-Based Care
+2023,44,Population-Based Care
+2023,87,Population-Based Care
+2023,59,Patient-Based Systems
+2023,144,Patient-Based Systems
+2023,178,Patient-Based Systems
+2024,9,Musculoskeletal
+2024,13,Respiratory
+2024,183,Psychogenic
+2024,50,Cardiovascular
+2024,89,Musculoskeletal
+2024,73,Psychogenic
+2024,196,Psychogenic
+2024,174,Reproductive:Female
+2024,160,Musculoskeletal
+2024,186,Respiratory
+2024,112,Psychogenic
+2024,94,Reproductive:Female
+2024,123,Musculoskeletal
+2024,185,Respiratory
+2024,15,Reproductive:Female
+2024,46,Reproductive:Female
+2024,98,Musculoskeletal
+2024,77,Psychogenic
+2024,130,Musculoskeletal
+2024,18,Respiratory
+2024,132,Respiratory
+2024,85,Psychogenic
+2024,125,Cardiovascular
+2024,17,Musculoskeletal
+2024,42,Musculoskeletal
+2024,184,Musculoskeletal
+2024,5,Cardiovascular
+2024,134,Cardiovascular
+2024,178,Musculoskeletal
+2024,193,Musculoskeletal
+2024,87,Musculoskeletal
+2024,102,Musculoskeletal
+2024,131,Reproductive:Female
+2024,162,Cardiovascular
+2024,58,Musculoskeletal
+2024,82,Musculoskeletal
+2024,136,Musculoskeletal
+2024,171,Respiratory
+2024,179,Reproductive:Female
+2024,128,Cardiovascular
+2024,56,Respiratory
+2024,111,Respiratory
+2024,156,Psychogenic
+2024,107,Reproductive:Female
+2024,147,Reproductive:Female
+2024,19,Cardiovascular
+2024,24,Cardiovascular
+2024,188,Cardiovascular
+2024,192,Cardiovascular
+2024,27,Musculoskeletal
+2024,101,Respiratory
+2024,14,Psychogenic
+2024,71,Psychogenic
+2024,57,Reproductive:Female
+2024,200,Cardiovascular
+2024,11,Cardiovascular
+2024,92,Cardiovascular
+2024,189,Musculoskeletal
+2024,104,Reproductive:Female
+2024,150,Cardiovascular
+2024,139,Respiratory
+2024,22,Reproductive:Female
+2024,100,Cardiovascular
+2024,23,Cardiovascular
+2024,66,Cardiovascular
+2024,142,Cardiovascular
+2024,175,Psychogenic
+2024,159,Cardiovascular
+2024,61,Psychogenic
+2024,146,Cardiovascular
+2024,176,Cardiovascular
+2024,99,Musculoskeletal
+2024,108,Musculoskeletal
+2024,168,Musculoskeletal
+2024,122,Respiratory
+2024,52,Psychogenic
+2024,133,Psychogenic
+2024,166,Psychogenic

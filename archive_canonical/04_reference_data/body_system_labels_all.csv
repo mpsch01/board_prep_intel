@@ -1,0 +1,469 @@
+Year,QuestionNum,QuestionID,BodySystem
+2022,1,Q2022-001,Cardiovascular
+2022,2,Q2022-002,Respiratory
+2022,3,Q2022-003,Gastrointestinal
+2022,4,Q2022-004,Psychogenic
+2022,5,Q2022-005,Musculoskeletal
+2022,6,Q2022-006,Endocrine
+2022,7,Q2022-007,Nonspecific
+2022,8,Q2022-008,Reproductive: Male
+2022,9,Q2022-009,Patient-Based Systems
+2022,10,Q2022-010,Integumentary
+2022,11,Q2022-011,Nephrologic
+2022,12,Q2022-012,Reproductive: Female
+2022,13,Q2022-013,Cardiovascular
+2022,14,Q2022-014,Respiratory
+2022,15,Q2022-015,Musculoskeletal
+2022,16,Q2022-016,Gastrointestinal
+2022,17,Q2022-017,Endocrine
+2022,18,Q2022-018,Nonspecific
+2022,19,Q2022-019,Population-Based Care
+2022,20,Q2022-020,Neurologic
+2022,21,Q2022-021,Hematologic/ Immune
+2022,22,Q2022-022,Psychogenic
+2022,23,Q2022-023,Cardiovascular
+2022,24,Q2022-024,Integumentary
+2022,25,Q2022-025,Respiratory
+2022,26,Q2022-026,Gastrointestinal
+2022,27,Q2022-027,Musculoskeletal
+2022,28,Q2022-028,Endocrine
+2022,29,Q2022-029,Nonspecific
+2022,30,Q2022-030,Cardiovascular
+2022,31,Q2022-031,Gastrointestinal
+2022,32,Q2022-032,Respiratory
+2022,33,Q2022-033,Musculoskeletal
+2022,34,Q2022-034,Nonspecific
+2022,35,Q2022-035,Population-Based Care
+2022,36,Q2022-036,Integumentary
+2022,37,Q2022-037,Nephrologic
+2022,38,Q2022-038,Special Sensory
+2022,39,Q2022-039,Cardiovascular
+2022,40,Q2022-040,Psychogenic
+2022,41,Q2022-041,Respiratory
+2022,42,Q2022-042,Musculoskeletal
+2022,43,Q2022-043,Endocrine
+2022,44,Q2022-044,Patient-Based Systems
+2022,45,Q2022-045,Neurologic
+2022,46,Q2022-046,Gastrointestinal
+2022,47,Q2022-047,Nonspecific
+2022,48,Q2022-048,Cardiovascular
+2022,49,Q2022-049,Respiratory
+2022,50,Q2022-050,Integumentary
+2022,51,Q2022-051,Musculoskeletal
+2022,52,Q2022-052,Population-Based Care
+2022,53,Q2022-053,Hematologic/ Immune
+2022,54,Q2022-054,Reproductive: Female
+2022,55,Q2022-055,Nonspecific
+2022,56,Q2022-056,Endocrine
+2022,57,Q2022-057,Psychogenic
+2022,58,Q2022-058,Musculoskeletal
+2022,59,Q2022-059,Patient-Based Systems
+2022,60,Q2022-060,Respiratory
+2022,61,Q2022-061,Cardiovascular
+2022,62,Q2022-062,Nephrologic
+2022,64,Q2022-064,Population-Based Care
+2022,65,Q2022-065,Endocrine
+2022,66,Q2022-066,Respiratory
+2022,67,Q2022-067,Musculoskeletal
+2022,68,Q2022-068,Integumentary
+2022,69,Q2022-069,Cardiovascular
+2022,70,Q2022-070,Respiratory
+2022,71,Q2022-071,Hematologic/ Immune
+2022,72,Q2022-072,Psychogenic
+2022,73,Q2022-073,Population-Based Care
+2022,74,Q2022-074,Nonspecific
+2022,75,Q2022-075,Musculoskeletal
+2022,76,Q2022-076,Respiratory
+2022,77,Q2022-077,Cardiovascular
+2022,78,Q2022-078,Neurologic
+2022,79,Q2022-079,Integumentary
+2022,80,Q2022-080,Nonspecific
+2022,81,Q2022-081,Endocrine
+2022,82,Q2022-082,Musculoskeletal
+2022,83,Q2022-083,Patient-Based Systems
+2022,84,Q2022-084,Respiratory
+2022,85,Q2022-085,Cardiovascular
+2022,86,Q2022-086,Gastrointestinal
+2022,87,Q2022-087,Population-Based Care
+2022,88,Q2022-088,Reproductive: Female
+2022,89,Q2022-089,Nonspecific
+2022,90,Q2022-090,Musculoskeletal
+2022,91,Q2022-091,Cardiovascular
+2022,92,Q2022-092,Psychogenic
+2022,93,Q2022-093,Respiratory
+2022,94,Q2022-094,Population-Based Care
+2022,95,Q2022-095,Special Sensory
+2022,96,Q2022-096,Nephrologic
+2022,98,Q2022-098,Endocrine
+2022,99,Q2022-099,Cardiovascular
+2022,100,Q2022-100,Patient-Based Systems
+2022,101,Q2022-101,Respiratory
+2022,102,Q2022-102,Musculoskeletal
+2022,103,Q2022-103,Nonspecific
+2022,104,Q2022-104,Gastrointestinal
+2022,105,Q2022-105,Psychogenic
+2022,106,Q2022-106,Hematologic/ Immune
+2022,107,Q2022-107,Cardiovascular
+2022,108,Q2022-108,Respiratory
+2022,109,Q2022-109,Musculoskeletal
+2022,110,Q2022-110,Nonspecific
+2022,111,Q2022-111,Integumentary
+2022,112,Q2022-112,Reproductive: Female
+2022,113,Q2022-113,Neurologic
+2022,114,Q2022-114,Endocrine
+2022,115,Q2022-115,Patient-Based Systems
+2022,116,Q2022-116,Musculoskeletal
+2022,117,Q2022-117,Respiratory
+2022,118,Q2022-118,Psychogenic
+2022,119,Q2022-119,Cardiovascular
+2022,120,Q2022-120,Gastrointestinal
+2022,121,Q2022-121,Nonspecific
+2022,122,Q2022-122,Musculoskeletal
+2022,123,Q2022-123,Cardiovascular
+2022,124,Q2022-124,Respiratory
+2022,125,Q2022-125,Patient-Based Systems
+2022,126,Q2022-126,Nephrologic
+2022,127,Q2022-127,Reproductive: Female
+2022,128,Q2022-128,Nonspecific
+2022,129,Q2022-129,Psychogenic
+2022,130,Q2022-130,Endocrine
+2022,131,Q2022-131,Musculoskeletal
+2022,132,Q2022-132,Cardiovascular
+2022,133,Q2022-133,Population-Based Care
+2022,134,Q2022-134,Respiratory
+2022,135,Q2022-135,Gastrointestinal
+2022,136,Q2022-136,Special Sensory
+2022,137,Q2022-137,Integumentary
+2022,139,Q2022-139,Endocrine
+2022,140,Q2022-140,Cardiovascular
+2022,141,Q2022-141,Respiratory
+2022,142,Q2022-142,Musculoskeletal
+2022,143,Q2022-143,Neurologic
+2022,144,Q2022-144,Patient-Based Systems
+2022,145,Q2022-145,Endocrine
+2022,146,Q2022-146,Psychogenic
+2022,147,Q2022-147,Musculoskeletal
+2022,148,Q2022-148,Respiratory
+2022,149,Q2022-149,Gastrointestinal
+2022,150,Q2022-150,Cardiovascular
+2022,151,Q2022-151,Nonspecific
+2022,152,Q2022-152,Reproductive: Female
+2022,153,Q2022-153,Population-Based Care
+2022,154,Q2022-154,Musculoskeletal
+2022,155,Q2022-155,Respiratory
+2022,156,Q2022-156,Cardiovascular
+2022,158,Q2022-158,Reproductive: Male
+2022,159,Q2022-159,Psychogenic
+2022,160,Q2022-160,Respiratory
+2022,161,Q2022-161,Nonspecific
+2022,162,Q2022-162,Integumentary
+2022,163,Q2022-163,Endocrine
+2022,164,Q2022-164,Musculoskeletal
+2022,165,Q2022-165,Gastrointestinal
+2022,167,Q2022-167,Population-Based Care
+2022,168,Q2022-168,Respiratory
+2022,169,Q2022-169,Integumentary
+2022,170,Q2022-170,Endocrine
+2022,171,Q2022-171,Musculoskeletal
+2022,172,Q2022-172,Cardiovascular
+2022,173,Q2022-173,Respiratory
+2022,174,Q2022-174,Psychogenic
+2022,175,Q2022-175,Reproductive: Female
+2022,176,Q2022-176,Nonspecific
+2022,177,Q2022-177,Musculoskeletal
+2022,178,Q2022-178,Patient-Based Systems
+2022,179,Q2022-179,Gastrointestinal
+2022,180,Q2022-180,Respiratory
+2022,181,Q2022-181,Cardiovascular
+2022,182,Q2022-182,Endocrine
+2022,183,Q2022-183,Psychogenic
+2022,184,Q2022-184,Neurologic
+2022,185,Q2022-185,Nephrologic
+2022,186,Q2022-186,Integumentary
+2022,187,Q2022-187,Musculoskeletal
+2022,188,Q2022-188,Respiratory
+2022,189,Q2022-189,Cardiovascular
+2022,190,Q2022-190,Special Sensory
+2022,191,Q2022-191,Hematologic/ Immune
+2022,192,Q2022-192,Reproductive: Female
+2022,193,Q2022-193,Gastrointestinal
+2022,194,Q2022-194,Nonspecific
+2022,195,Q2022-195,Endocrine
+2022,196,Q2022-196,Psychogenic
+2022,197,Q2022-197,Musculoskeletal
+2022,198,Q2022-198,Patient-Based Systems
+2022,199,Q2022-199,Cardiovascular
+2022,200,Q2022-200,Respiratory
+2023,1,Q2023-001,Cardiovascular
+2023,2,Q2023-002,Respiratory
+2023,3,Q2023-003,Gastrointestinal
+2023,4,Q2023-004,Psychogenic
+2023,5,Q2023-005,Musculoskeletal
+2023,6,Q2023-006,Endocrine
+2023,7,Q2023-007,Nonspecific
+2023,8,Q2023-008,Reproductive: Male
+2023,9,Q2023-009,Patient-Based Systems
+2023,10,Q2023-010,Integumentary
+2023,11,Q2023-011,Nephrologic
+2023,12,Q2023-012,Reproductive: Female
+2023,13,Q2023-013,Cardiovascular
+2023,14,Q2023-014,Respiratory
+2023,15,Q2023-015,Musculoskeletal
+2023,16,Q2023-016,Gastrointestinal
+2023,17,Q2023-017,Endocrine
+2023,18,Q2023-018,Nonspecific
+2023,19,Q2023-019,Population-Based Care
+2023,20,Q2023-020,Neurologic
+2023,21,Q2023-021,Hematologic/ Immune
+2023,22,Q2023-022,Psychogenic
+2023,23,Q2023-023,Cardiovascular
+2023,24,Q2023-024,Integumentary
+2023,25,Q2023-025,Respiratory
+2023,26,Q2023-026,Gastrointestinal
+2023,27,Q2023-027,Musculoskeletal
+2023,28,Q2023-028,Endocrine
+2023,29,Q2023-029,Nonspecific
+2023,30,Q2023-030,Cardiovascular
+2023,31,Q2023-031,Gastrointestinal
+2023,32,Q2023-032,Respiratory
+2023,33,Q2023-033,Musculoskeletal
+2023,34,Q2023-034,Nonspecific
+2023,35,Q2023-035,Patient-Based Systems
+2023,36,Q2023-036,Integumentary
+2023,37,Q2023-037,Nephrologic
+2023,38,Q2023-038,Special Sensory
+2023,39,Q2023-039,Cardiovascular
+2023,40,Q2023-040,Psychogenic
+2023,41,Q2023-041,Respiratory
+2023,42,Q2023-042,Musculoskeletal
+2023,43,Q2023-043,Endocrine
+2023,44,Q2023-044,Population-Based Care
+2023,45,Q2023-045,Neurologic
+2023,46,Q2023-046,Gastrointestinal
+2023,47,Q2023-047,Nonspecific
+2023,48,Q2023-048,Cardiovascular
+2023,49,Q2023-049,Respiratory
+2023,50,Q2023-050,Integumentary
+2023,51,Q2023-051,Musculoskeletal
+2023,52,Q2023-052,Population-Based Care
+2023,53,Q2023-053,Hematologic/ Immune
+2023,54,Q2023-054,Reproductive: Female
+2023,55,Q2023-055,Nonspecific
+2023,56,Q2023-056,Endocrine
+2023,57,Q2023-057,Psychogenic
+2023,58,Q2023-058,Musculoskeletal
+2023,59,Q2023-059,Patient-Based Systems
+2023,60,Q2023-060,Respiratory
+2023,61,Q2023-061,Cardiovascular
+2023,62,Q2023-062,Nephrologic
+2023,63,Q2023-063,Gastrointestinal
+2023,64,Q2023-064,Population-Based Care
+2023,65,Q2023-065,Endocrine
+2023,66,Q2023-066,Respiratory
+2023,68,Q2023-068,Integumentary
+2023,69,Q2023-069,Cardiovascular
+2023,70,Q2023-070,Respiratory
+2023,71,Q2023-071,Hematologic/ Immune
+2023,72,Q2023-072,Psychogenic
+2023,73,Q2023-073,Population-Based Care
+2023,74,Q2023-074,Nonspecific
+2023,75,Q2023-075,Musculoskeletal
+2023,76,Q2023-076,Respiratory
+2023,77,Q2023-077,Cardiovascular
+2023,78,Q2023-078,Neurologic
+2023,79,Q2023-079,Integumentary
+2023,80,Q2023-080,Nonspecific
+2023,81,Q2023-081,Endocrine
+2023,82,Q2023-082,Musculoskeletal
+2023,83,Q2023-083,Patient-Based Systems
+2023,84,Q2023-084,Respiratory
+2023,85,Q2023-085,Cardiovascular
+2023,86,Q2023-086,Gastrointestinal
+2023,87,Q2023-087,Population-Based Care
+2023,88,Q2023-088,Reproductive: Female
+2023,89,Q2023-089,Nonspecific
+2023,90,Q2023-090,Musculoskeletal
+2023,91,Q2023-091,Cardiovascular
+2023,92,Q2023-092,Psychogenic
+2023,93,Q2023-093,Respiratory
+2023,94,Q2023-094,Patient-Based Systems
+2023,95,Q2023-095,Special Sensory
+2023,96,Q2023-096,Nephrologic
+2023,97,Q2023-097,Integumentary
+2023,98,Q2023-098,Endocrine
+2023,99,Q2023-099,Cardiovascular
+2023,100,Q2023-100,Patient-Based Systems
+2023,101,Q2023-101,Respiratory
+2023,102,Q2023-102,Musculoskeletal
+2023,103,Q2023-103,Nonspecific
+2023,104,Q2023-104,Gastrointestinal
+2023,105,Q2023-105,Psychogenic
+2023,106,Q2023-106,Hematologic/ Immune
+2023,107,Q2023-107,Cardiovascular
+2023,108,Q2023-108,Respiratory
+2023,109,Q2023-109,Musculoskeletal
+2023,110,Q2023-110,Nonspecific
+2023,111,Q2023-111,Integumentary
+2023,112,Q2023-112,Reproductive: Female
+2023,113,Q2023-113,Neurologic
+2023,114,Q2023-114,Endocrine
+2023,115,Q2023-115,Population-Based Care
+2023,116,Q2023-116,Musculoskeletal
+2023,117,Q2023-117,Respiratory
+2023,118,Q2023-118,Psychogenic
+2023,119,Q2023-119,Cardiovascular
+2023,120,Q2023-120,Gastrointestinal
+2023,121,Q2023-121,Nonspecific
+2023,122,Q2023-122,Musculoskeletal
+2023,123,Q2023-123,Cardiovascular
+2023,124,Q2023-124,Respiratory
+2023,125,Q2023-125,Patient-Based Systems
+2023,126,Q2023-126,Nephrologic
+2023,127,Q2023-127,Reproductive: Female
+2023,128,Q2023-128,Nonspecific
+2023,130,Q2023-130,Endocrine
+2023,131,Q2023-131,Musculoskeletal
+2023,132,Q2023-132,Cardiovascular
+2023,133,Q2023-133,Population-Based Care
+2023,134,Q2023-134,Respiratory
+2023,135,Q2023-135,Gastrointestinal
+2023,136,Q2023-136,Special Sensory
+2023,137,Q2023-137,Integumentary
+2023,138,Q2023-138,Nonspecific
+2023,139,Q2023-139,Endocrine
+2023,140,Q2023-140,Cardiovascular
+2023,141,Q2023-141,Respiratory
+2023,142,Q2023-142,Musculoskeletal
+2023,143,Q2023-143,Neurologic
+2023,144,Q2023-144,Patient-Based Systems
+2023,145,Q2023-145,Endocrine
+2023,146,Q2023-146,Psychogenic
+2023,147,Q2023-147,Musculoskeletal
+2023,148,Q2023-148,Respiratory
+2023,149,Q2023-149,Gastrointestinal
+2023,150,Q2023-150,Cardiovascular
+2023,151,Q2023-151,Nonspecific
+2023,152,Q2023-152,Reproductive: Female
+2023,153,Q2023-153,Population-Based Care
+2023,154,Q2023-154,Musculoskeletal
+2023,155,Q2023-155,Respiratory
+2023,156,Q2023-156,Cardiovascular
+2023,157,Q2023-157,Hematologic/ Immune
+2023,158,Q2023-158,Reproductive: Male
+2023,159,Q2023-159,Psychogenic
+2023,160,Q2023-160,Respiratory
+2023,161,Q2023-161,Nonspecific
+2023,162,Q2023-162,Integumentary
+2023,163,Q2023-163,Endocrine
+2023,164,Q2023-164,Musculoskeletal
+2023,165,Q2023-165,Gastrointestinal
+2023,166,Q2023-166,Cardiovascular
+2023,167,Q2023-167,Population-Based Care
+2023,168,Q2023-168,Respiratory
+2023,169,Q2023-169,Integumentary
+2023,170,Q2023-170,Endocrine
+2023,171,Q2023-171,Musculoskeletal
+2023,172,Q2023-172,Cardiovascular
+2023,173,Q2023-173,Respiratory
+2023,174,Q2023-174,Psychogenic
+2023,175,Q2023-175,Reproductive: Female
+2023,176,Q2023-176,Nonspecific
+2023,177,Q2023-177,Musculoskeletal
+2023,178,Q2023-178,Patient-Based Systems
+2023,179,Q2023-179,Gastrointestinal
+2023,180,Q2023-180,Respiratory
+2023,181,Q2023-181,Cardiovascular
+2023,182,Q2023-182,Endocrine
+2023,183,Q2023-183,Psychogenic
+2023,184,Q2023-184,Neurologic
+2023,185,Q2023-185,Nephrologic
+2023,186,Q2023-186,Integumentary
+2023,187,Q2023-187,Musculoskeletal
+2023,188,Q2023-188,Respiratory
+2023,189,Q2023-189,Cardiovascular
+2023,190,Q2023-190,Special Sensory
+2023,191,Q2023-191,Hematologic/ Immune
+2023,192,Q2023-192,Reproductive: Female
+2023,193,Q2023-193,Gastrointestinal
+2023,194,Q2023-194,Nonspecific
+2023,195,Q2023-195,Endocrine
+2023,196,Q2023-196,Psychogenic
+2023,197,Q2023-197,Musculoskeletal
+2023,198,Q2023-198,Patient-Based Systems
+2023,199,Q2023-199,Cardiovascular
+2023,200,Q2023-200,Respiratory
+2024,5,Q2024-005,Cardiovascular
+2024,9,Q2024-009,Injuries/Musculoskeletal
+2024,11,Q2024-011,Cardiovascular
+2024,13,Q2024-013,Respiratory
+2024,14,Q2024-014,Psychiatric/Behavioral
+2024,15,Q2024-015,Sexual and Reproductive
+2024,17,Q2024-017,Injuries/Musculoskeletal
+2024,18,Q2024-018,Respiratory
+2024,19,Q2024-019,Cardiovascular
+2024,22,Q2024-022,Sexual and Reproductive
+2024,23,Q2024-023,Cardiovascular
+2024,24,Q2024-024,Cardiovascular
+2024,27,Q2024-027,Injuries/Musculoskeletal
+2024,42,Q2024-042,Injuries/Musculoskeletal
+2024,46,Q2024-046,Sexual and Reproductive
+2024,50,Q2024-050,Cardiovascular
+2024,52,Q2024-052,Psychiatric/Behavioral
+2024,56,Q2024-056,Respiratory
+2024,57,Q2024-057,Sexual and Reproductive
+2024,58,Q2024-058,Injuries/Musculoskeletal
+2024,61,Q2024-061,Psychiatric/Behavioral
+2024,66,Q2024-066,Cardiovascular
+2024,71,Q2024-071,Psychiatric/Behavioral
+2024,73,Q2024-073,Psychiatric/Behavioral
+2024,77,Q2024-077,Psychiatric/Behavioral
+2024,82,Q2024-082,Injuries/Musculoskeletal
+2024,85,Q2024-085,Psychiatric/Behavioral
+2024,87,Q2024-087,Injuries/Musculoskeletal
+2024,89,Q2024-089,Injuries/Musculoskeletal
+2024,92,Q2024-092,Cardiovascular
+2024,94,Q2024-094,Sexual and Reproductive
+2024,98,Q2024-098,Injuries/Musculoskeletal
+2024,99,Q2024-099,Injuries/Musculoskeletal
+2024,101,Q2024-101,Respiratory
+2024,102,Q2024-102,Injuries/Musculoskeletal
+2024,104,Q2024-104,Sexual and Reproductive
+2024,107,Q2024-107,Sexual and Reproductive
+2024,108,Q2024-108,Injuries/Musculoskeletal
+2024,111,Q2024-111,Respiratory
+2024,112,Q2024-112,Psychiatric/Behavioral
+2024,122,Q2024-122,Respiratory
+2024,123,Q2024-123,Injuries/Musculoskeletal
+2024,125,Q2024-125,Cardiovascular
+2024,128,Q2024-128,Cardiovascular
+2024,130,Q2024-130,Injuries/Musculoskeletal
+2024,131,Q2024-131,Sexual and Reproductive
+2024,132,Q2024-132,Respiratory
+2024,133,Q2024-133,Psychiatric/Behavioral
+2024,134,Q2024-134,Cardiovascular
+2024,136,Q2024-136,Injuries/Musculoskeletal
+2024,139,Q2024-139,Respiratory
+2024,142,Q2024-142,Cardiovascular
+2024,146,Q2024-146,Cardiovascular
+2024,147,Q2024-147,Sexual and Reproductive
+2024,156,Q2024-156,Psychiatric/Behavioral
+2024,159,Q2024-159,Cardiovascular
+2024,160,Q2024-160,Injuries/Musculoskeletal
+2024,162,Q2024-162,Cardiovascular
+2024,166,Q2024-166,Psychiatric/Behavioral
+2024,168,Q2024-168,Injuries/Musculoskeletal
+2024,171,Q2024-171,Respiratory
+2024,174,Q2024-174,Sexual and Reproductive
+2024,175,Q2024-175,Psychiatric/Behavioral
+2024,176,Q2024-176,Cardiovascular
+2024,178,Q2024-178,Injuries/Musculoskeletal
+2024,179,Q2024-179,Sexual and Reproductive
+2024,183,Q2024-183,Psychiatric/Behavioral
+2024,184,Q2024-184,Injuries/Musculoskeletal
+2024,185,Q2024-185,Respiratory
+2024,186,Q2024-186,Respiratory
+2024,188,Q2024-188,Cardiovascular
+2024,189,Q2024-189,Injuries/Musculoskeletal
+2024,192,Q2024-192,Cardiovascular
+2024,193,Q2024-193,Injuries/Musculoskeletal
+2024,196,Q2024-196,Psychiatric/Behavioral
