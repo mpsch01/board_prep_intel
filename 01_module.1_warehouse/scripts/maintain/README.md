@@ -24,6 +24,16 @@ used to keep the warehouse current, extend it with new layers, and manage the PD
 | `build_match_staging.py` | Proposes ART-ID matches for unmatched PDFs (staging review) |
 | `rename_to_codon.py` | Executes approved codon renames on PDFs in warehouse |
 
+### Reference Tier Matching & Acquisition
+| Script | What It Does | Output |
+|--------|-------------|--------|
+| `match_tiers_to_library.py` | Scans warehouse PDFs against `ABFM_ITE_ReferenceTiers_Expanded_v1369.csv`; classifies each ref as MATCHED/NOT_FOUND | `archive_canonical/05_acquisition/match_summary.csv`, `matched_high.csv`, `not_found.csv`, `match_report.json` |
+| `rebuild_acquisition_list.py` | Reads `match_summary.csv` → builds confirmed present list and ranked acquisition XLSX | `archive_canonical/05_acquisition/confirmed_present.csv`, `ABFM_ITE_ReferenceAcquisitionList_Core_Ranked.xlsx` |
+
+**Typical use:** Run `match_tiers_to_library.py` first, then `rebuild_acquisition_list.py`. Together they answer "what do we have, what do we still need, and what should we prioritize acquiring?"
+
+---
+
 ### Intelligence Layers (DB enrichment — needs live data)
 | Script | What It Does | Output |
 |--------|-------------|--------|
@@ -55,4 +65,4 @@ used to keep the warehouse current, extend it with new layers, and manage the PD
 
 ---
 
-*Last updated: 2026-03-24 (BATON 003 → 004 session)*
+*Last updated: 2026-03-24 (BATON 005 → 006 session — added match_tiers_to_library.py, rebuild_acquisition_list.py from TEMP_05 migration)*

@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-03-24 (BATON 004 → 005)
-**Status:** Current — updated post TEMP_04 migration + path hardcoding elimination
+**Last Updated:** 2026-03-24 (BATON 005 → 006)
+**Status:** Current — updated post TEMP_05 migration (crosswalk pipeline, extracted_json/ root)
 
 > This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 00_#PROJECT_OVERHAUL/
-├── BATON_active_005_20260324_pathfixes.md ← active session handoff (BATON 005)
+├── BATON_active_006_20260324_temp05.md    ← active session handoff (BATON 006)
 ├── README.json                            ← STALE (March 17) — needs rebuild
 ├── README_PROJECT.md                      ← STALE (March 17) — needs rebuild
 ├── master_map.JSON                        ← STALE — reflects old 7-module structure
@@ -30,6 +30,7 @@
 ├── key_data_files/                        ← critical reference data files
 ├── re-org_guidance/                       ← architecture docs, auto-memory, protocol
 ├── sectional_READMEs/                     ← legacy JSON/MD READMEs consolidated
+├── extracted_json/                        ← 242 extracted JSONs (middle-man layer; not git-tracked)
 ├── skills_abilities/                      ← SDK docs, agent toolbox, skill files
 ├── tagging_bundle/                        ← working scripts + data for question tagging
 └── (no loose scripts at root)
@@ -114,12 +115,14 @@
 │       ├── build_match_staging.py         ← proposes ART-ID matches for unmatched PDFs
 │       ├── rename_to_codon.py             ← executes approved codon renames
 │       ├── build_clinical_pathways.py     ← Layer 3: clinical_pathways table builder
-│       └── build_topic_trends.py          ← Layer 4a: trend CSVs
+│       ├── build_topic_trends.py          ← Layer 4a: trend CSVs
+│       ├── match_tiers_to_library.py      ← scans warehouse PDFs vs ReferenceTiers CSV → match_summary.csv
+│       └── rebuild_acquisition_list.py    ← match_summary → confirmed_present.csv + ranked XLSX
 ├── has_extraction_audit.txt
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
 ```
-*M1 scripts migration complete (BATON 004 session). build/ = 6 scripts, maintain/ = 11 scripts.*
+*M1 scripts migration complete (BATON 004+006 sessions). build/ = 6 scripts, maintain/ = 13 scripts.*
 *M3 duplicates (`build_clinical_pathways.py`, `build_topic_trends.py`) pending manual delete by user — VM cannot rm mounted files.*
 
 ---
@@ -191,6 +194,12 @@
     ├── rematch_unmatched.py               ← fuzzy re-matcher for orphaned question_ref_pairs
     ├── run_test_batch.py                  ← pipeline test runner (vs gold baseline 0.957)
     │
+    │── LINKED REFS CROSSWALK PIPELINE (run order: build_crosswalk_v2 → apply_overrides → gen_linked_refs_v2)
+    ├── build_crosswalk_v2.py              ← session_hy_inserts_v7 + extracted JSONs → linked_refs_crosswalk_v2.csv
+    ├── apply_overrides.py                 ← crosswalk_v2.csv + overrides JSON → crosswalk_final.csv
+    ├── gen_linked_refs_v2.js              ← crosswalk_final.csv → ABFM_BoardPrep_LinkedRefs_v2.docx
+    ├── crosswalk_overrides.json           ← gold exclusions, null overrides, manual pins (config)
+    │
     │── DOCX BUILDERS (JS)
     ├── build_db_docx.js                   ← DB-powered DOCX builder
     ├── build_exemplar_v2.js               ← Intelligence 2.0 DOCX w/ ICD-10 + pathways
@@ -205,7 +214,7 @@
     ├── install_context_menu.reg           ← Windows right-click setup
     └── uninstall_context_menu.reg         ← Windows right-click removal
 ```
-*41 Python + JS scripts. All Python/JS paths dynamic as of commit `ed85b06` (BATON 005). .bat/.ps1/.reg paths deferred. Files with `# TODO: not yet migrated` annotations are pointing to correct future locations — update annotation when file arrives.*
+*45 Python + JS scripts + 1 config JSON. All Python/JS paths dynamic (BATON 005+006). .bat/.ps1/.reg paths deferred. Files with `# TODO: not yet migrated` in BATCH_DIRS point to `extracted_json/` subdirs — update annotation when JSONs are sorted into batch folders.*
 
 ---
 
@@ -232,13 +241,27 @@
 ### `archive_canonical/` — Curated Deliverables Archive
 ```
 archive_canonical/
-├── 01_curriculum/     ← enriched VC outline, board prep supplement, previous versions
+├── 01_curriculum/     ← enriched VC outline, board prep supplement, linked refs DOCX
 ├── 02_question_bank/  ← formatted question bank exports (CSV, DOCX vQA + vExam)
 ├── 03_analysis/       ← ITE analysis workbook, QC report, reference analysis
-├── 04_reference_data/ ← reference tier CSVs, QRP pairs (2020-2025)
+├── 04_reference_data/ ← reference tier CSVs, QRP pairs, crosswalk CSVs (v2 + final)
 ├── 05_acquisition/    ← ranked acquisition list, BATON templates, chrome prompt
 └── README_canonical.json
 ```
+
+### `extracted_json/` — Extracted Article JSONs (middle-man layer; not git-tracked)
+```
+extracted_json/
+├── [242 article JSONs — flat, not yet sorted into batch subdirs]
+├── raw_txt/           ← 21 raw text files (pre-JSON)
+├── manifest.json      ← extraction manifest
+├── pre_calibration_archive/    ← placeholder (empty — for gold list 21 JSONs)
+├── afp_peds_uspstf_batch/      ← placeholder (empty)
+├── id_renal_gi_hep_batch/      ← placeholder (empty)
+├── jacc_pulm_batch/            ← placeholder (empty)
+└── neuro_tox_rheum_psych_batch/ ← placeholder (empty)
+```
+*Flat layout is temporary. build_crosswalk_v2.py expects JSONs in the named subdirs (BATCH_DIRS). The TODO annotations in that script mark when sorting is needed. Sorting the 242 flat JSONs into batch subdirs is a deferred task.*
 
 ### `baton_archive/` — Session Handoff History
 - 28+ archived BATONs (pre-001 naming debt — batch rename pending)
@@ -382,6 +405,7 @@ M4 Sandbox — experiment
 
 | Date | Action |
 |------|--------|
+| 2026-03-24 | `_index.md` updated to BATON 005 → 006. TEMP_05 fully migrated: `build_crosswalk_v2.py` + `apply_overrides.py` + `crosswalk_overrides.json` → M2/scripts/. `gen_linked_refs_v2.js` → M2/scripts/ (de-hardcoded). `match_tiers_to_library.py` + `rebuild_acquisition_list.py` → M1/maintain/. `extracted_json/` root created (242 flat JSONs + 5 batch subdirs as placeholders). `linked_refs_crosswalk_final.csv` → archive_canonical/04_reference_data/. gen_gold_tier_v2.js excluded (does not migrate). M1/maintain count: 11 → 13. M2/scripts count: 41 → 45 (+1 config JSON). |
 | 2026-03-24 | `_index.md` updated to BATON 004 → 005. TEMP_04 fully migrated: Module F (9 scripts) + keyword library (7 scripts A-G) + 5 hygiene/utility scripts → M2/scripts/. M2/source/ layer created with content outline DOCX + 50 AAFP transcripts. 4 key data files added to key_data_files/. All 30 Python/JS scripts de-hardcoded (commit `ed85b06`). M2 script count: 10 → 41. |
 | 2026-03-24 | `_index.md` updated to BATON 003 → 004. M1 `scripts/build/` and `scripts/maintain/` created and populated (11 scripts total). 7 scripts relocated from M2/scripts to M1/maintain or M1/build. `aafp_vc_batch_download.py` relocated from agents/scripts to M1/maintain. M2/scripts count: 17 → 10. M3 script duplication flagged. |
 | 2026-03-24 | `_index.md` updated to BATON 002. DB counts updated: 1,936 articles, 1,629 questions (added 2018-2019 integration). New scripts documented: `backfill_keywords_2018_2019.py`, `preprocess_concept_tags.py`. `tagging_bundle/` section added. Schema coverage table added. |

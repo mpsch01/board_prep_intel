@@ -1,0 +1,62 @@
+{
+  "manual_pins": [
+    {
+      "citation": "Hagan JF Jr, Shaw JS, Duncan PM (eds): Bright Futures: Guidelines for Health Supervision of Infants, Children and Adolescents, ed 4. American Academy of Pediatrics, 2017.",
+      "json_file": "bfpg-4th-ed-cover-outlined-fonts-indd-1-1-20-17-2-01-pm-cf401fd742.json",
+      "json_title": "Bright Futures: Guidelines for Health Supervision of Infants, Children, and Adolescents [pocket guide]",
+      "reason": "Book/edited volume \u2014 auto-matching fails on non-article format. Manually pinned in prior session.",
+      "pinned_by": "Mike",
+      "pinned_date": "2026-03-08",
+      "json_path": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\guideline_extractor_v2\\outputs\\pre_calibration_archive\\bfpg-4th-ed-cover-outlined-fonts-indd-1-1-20-17-2-01-pm-cf401fd742.json",
+      "citation_fragment": "Bright Futures"
+    }
+  ],
+  "null_overrides": [
+    {
+      "citation": "Bradley JS, Byington CL, Shah SS, et al. Executive summary: the management of community acquired pneumonia in infants and children older than 3 months of age: clinical practice guidelines by the Pediatric Infectious Diseases Society and the Infectious Diseases Society of America. Clin Infect Dis. 2011;53(7):617-630.",
+      "reason": "B-quality false match \u2014 peds CAP citation incorrectly matched to 2023 PIDS/IDSA bacterial arthritis guideline. Different condition entirely.",
+      "nulled_by": "Mike",
+      "nulled_date": "2026-03-08"
+    },
+    {
+      "citation": "Nici L, Mammen MJ, Charbek E, et al: Pharmacologic management of chronic obstructive pulmonary disease. An official American Thoracic Society clinical practice guideline. Am J Respir Crit Care Med 2020;201(9):e56-e69.",
+      "reason": "B-quality false match \u2014 COPD pharmacology citation incorrectly matched to Endocrine Society gender dysphoria guideline. Completely unrelated.",
+      "nulled_by": "Mike",
+      "nulled_date": "2026-03-08"
+    },
+    {
+      "citation": "Qaseem A, Wilt TJ, Weinberger SE, et al: Diagnosis and management of stable chronic obstructive pulmonary disease",
+      "reason": "B-quality false match \u2014 COPD management citation incorrectly matched to KDOQI kidney disease guideline. Unrelated condition.",
+      "nulled_by": "Mike",
+      "nulled_date": "2026-03-09"
+    }
+  ],
+  "notes": "Created 2026-03-08 during id_renal_gi_hep batch QC. Bright Futures pin restored from linked_refs_crosswalk_final.csv prior session. B-matches 3 and 5 nulled after manual review.",
+  "last_updated": "2026-03-09",
+  "gold_list_exclusions": [
+    "adhesive-capsulitis-diagnosis-and-management-a243d8dfee.json",
+    "bfpg-4th-ed-cover-outlined-fonts-indd-1-1-20-17-2-01-pm-cf401fd742.json",
+    "bonus-digital-content-practice-guidelines-tuberculosis-guidelines-for-diagnosis-4aa73dec43.json",
+    "c-l-i-n-i-c-a-l-p-r-a-c-t-i-c-e-g-u-i-d-e-l-i-n-e-endocrine-treatment-of-gender--cf64a1ba84.json",
+    "chronic-obstructive-pulmonary-disease-diagnosis-and-management-1f7a1374f3.json",
+    "clinicalreview-education-jama-uspreventiveservicestaskforce-recommendationstatem-a3cee5e8a1.json",
+    "clinicalreview-education-jama-uspreventiveservicestaskforce-recommendationstatem-ce94ef61af.json",
+    "croup-diagnosis-and-management-6915a9ddf9.json",
+    "diagnosis-and-management-of-acute-diverticulitis-51793218a4.json",
+    "evaluating-medical-decision-making-capacity-in-practice-431fd10300.json",
+    "hand-foot-and-mouth-disease-rapid-evidence-review-6e718600f6.json",
+    "idsa-guidelines-idsa-clinical-practice-guideline-for-acute-bacterial-rhinosinusi-e5e4265a8b.json",
+    "implementing-ahrq-effective-health-care-reviews-helping-clinicians-make-better-t-45698dc8de.json",
+    "incidentalomas-initial-management-a55a2f538e.json",
+    "influenza-diagnosis-and-treatment-382f671a16.json",
+    "managing-hypertension-using-combination-therapy-ffe7d9004e.json",
+    "office-spirometry-indications-and-interpretation-88c59a629f.json",
+    "oncologic-emergencies-recognition-and-initial-management-ba2b6cdca1.json",
+    "peripheral-nerve-entrapment-and-injury-in-the-upper-extremity-cc62f659c8.json",
+    "respiratory-syncytial-virus-bronchiolitis-in-children-066943d0cf.json",
+    "thyroid-nodules-advances-in-evaluation-and-management-4c70729bf9.json"
+  ],
+  "_notes": {
+    "gold_list_exclusions": "These 21 JSONs are the pre_calibration_archive gold list. They are already fully represented in the GoldTier doc and must be excluded from the crosswalk matching pool to prevent false positive matches."
+  }
+}
