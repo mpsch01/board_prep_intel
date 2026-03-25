@@ -43,7 +43,7 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
 
 # ── Config ────────────────────────────────────────────────────────────────
 BASE_DIR    = Path(__file__).resolve().parent.parent
-DB_PATH     = BASE_DIR / "db" / "ite_intelligence.db"
+DB_PATH     = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR     = BASE_DIR / "logs"
 MODEL       = "claude-sonnet-4-20250514"
 MAX_RAW_CHARS = 120_000   # ~30K tokens; truncate raw text beyond this

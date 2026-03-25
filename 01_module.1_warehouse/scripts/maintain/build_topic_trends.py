@@ -24,7 +24,7 @@ from collections import Counter, defaultdict
 
 # ── Config ──────────────────────────────────────────────────────────────────
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(SCRIPT_DIR, "..", "db", "ite_intelligence.db")
+DB_PATH = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "..", "..", "00_database", "db", "ite_intelligence.db"))
 
 # ── Helpers ─────────────────────────────────────────────────────────────────
 

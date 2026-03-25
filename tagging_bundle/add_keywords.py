@@ -32,7 +32,7 @@ from datetime import datetime
 
 # ── Paths ──────────────────────────────────────────────────────────────────
 BASE_DIR    = Path(__file__).resolve().parent.parent
-DB_PATH     = BASE_DIR / "db" / "ite_intelligence.db"
+DB_PATH     = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
 LOG_PATH    = BASE_DIR / "logs" / "add_keywords_log.json"
 
 DEFAULT_SOURCE = Path(

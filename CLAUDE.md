@@ -48,11 +48,11 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_007_20260325_m3_pipeline.md` |
+| Active BATON | `BATON_active_008_20260325_mac_qc_enrichment.md` |
 | DB articles | 1,936 |
 | DB questions | 1,629 (2018–2025) |
 | PDFs | 404 across 4 tiers |
-| M2 scripts | 47 Python + 6 JS + 1 config JSON (all paths dynamic) |
+| M2 scripts | 50 Python + 6 JS + 1 config JSON (all paths dynamic) |
 | M3 scripts | 4 Python + 1 JS + 2 JSON config |
 | Next ART-ID | ART-1938 |
 | Git branch | `main`, latest `cedab1c` |
@@ -91,8 +91,11 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 007)
-1. **Windows cleanup:** Delete TEMP_07, TEMP_08, TEMP_05 remnants, M3 duplicates, root BATONs (see BATON 007 for full list)
-2. Articles table gap-fill (389 articles at 0% for source_type/categories/tier)
-3. Intelligence 2.0 Layer 2 (article_currency via PubMed MCP)
-4. ITE question pipeline end-to-end test (01→02→03→ite_tag_questions on 2025 source docs)
+## Next Steps (as of BATON 008, 2026-03-25)
+1. **IMMEDIATE: Retrieve batch enrichment results** — `python3 batch_retrieve_enrichment.py --batch-info logs/batch_info_20260325_143424.json --wait`
+2. **Post-enrichment QC** — spot-check enriched JSONs, verify `ite_intelligence{}` blocks
+3. **End-to-end module tests** — M1 build, M2 extract→enrich→DOCX, M3 analysis
+4. **ITE question pipeline E2E test** — `01→02→03→ite_tag_questions` on 2025 source docs
+5. **2018–2019 qid_art_xref crosswalk pass** — 0 entries for these years
+6. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
+7. **Supabase evaluation** — defer until pipeline stable

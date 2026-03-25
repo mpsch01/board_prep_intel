@@ -36,8 +36,9 @@ from datetime import datetime, timezone
 
 # ── Paths ──────────────────────────────────────────────────────────────────
 BASE_DIR    = Path(__file__).resolve().parent.parent
-DB_PATH     = BASE_DIR / "db" / "ite_intelligence.db"
-DB_BACKUP   = BASE_DIR / "db" / f"ite_intelligence_v1_backup_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.db"
+PROJECT_ROOT = BASE_DIR.parent.parent
+DB_PATH     = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
+DB_BACKUP   = PROJECT_ROOT / "00_database" / "db" / f"ite_intelligence_v1_backup_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.db"
 LOG_DIR     = BASE_DIR / "logs"
 LOG_PATH    = LOG_DIR / f"rebuild_v2_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json"
 

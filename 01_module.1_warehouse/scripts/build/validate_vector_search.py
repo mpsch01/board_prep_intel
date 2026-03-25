@@ -28,7 +28,9 @@ from collections import defaultdict
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
-DB_PATH   = Path(__file__).parent.parent / "db" / "ite_intelligence.db"
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent          # build/ -> scripts/ -> M1/ -> PROJECT_ROOT
+DB_PATH   = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 EMBED_DIM = 1536
 
 # ---------------------------------------------------------------------------

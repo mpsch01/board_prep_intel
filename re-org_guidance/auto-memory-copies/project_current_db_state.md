@@ -1,52 +1,79 @@
 ---
 name: project_current_db_state
-description: Current ite_intelligence.db state as of BATON 005 (March 24 2026), post 2018-2019 integration
+description: DB state as of BATON 007 session 3 (2026-03-25) — 1,936 articles 100% standardized, vec tables 100% populated, FLAG 33 closed
 type: project
 ---
 
-## DB State (Post-2018/2019 Integration — Current)
+## DB State (as of BATON 007 session 3, 2026-03-25)
 
-As of BATON 005 (2026-03-24):
-- articles: 1,936 rows (ART-0001 through ART-1937, ART-0404 deleted/merged)
-- questions: 1,629 rows (2018–2025)
-- qid_art_xref: 1,818 rows (2020-2025 only — diverges from question_ref_pairs)
-- question_ref_pairs: 2,722 rows (2018–2025)
-- article_icd10: 3,855 rows
-- clinical_pathways: 4,528 rows
-- icd10_rollup: 736 rows
-- icd10_code_xref: 1,668 rows
+| Table | Rows | Notes |
+|-------|------|-------|
+| articles | 1,936 | ART-0001 → ART-1937; next = ART-1938 |
+| questions | 1,629 | 2018–2025 (all years complete) |
+| question_ref_pairs | 2,722 | |
+| qid_art_xref | 1,818 | 2018-2019 not yet crosswalked (0 entries for those years) |
+| article_icd10 | 3,855 | |
+| clinical_pathways | 3,093 | corrected (stale 4,528 in older BATONs) |
+| icd10_rollup | 614 | corrected (stale 736 in older BATONs) |
+| icd10_code_xref | 1,006 | corrected (stale 1,668 in older BATONs) |
+| article_vec | 1,936 | sqlite-vec virtual table, 100% coverage — FLAG 33 closed |
+| question_vec | 1,629 | sqlite-vec virtual table, 100% coverage — FLAG 33 closed |
 
-**Keyword coverage (questions table):**
-- stem_keywords, explanation_keywords, all_keywords: 1,629/1,629 (100%)
-- concept_tags: ~100% (440 new 2018-2019 records backfilled via API)
-- body_system_merged: 1,629/1,629 (100%)
-- blueprint: ~33% populated (pre-existing gap, not fixed)
+---
 
-**Articles table gaps (389 new 2018-2019 articles):**
-- source_type, categories, tier, auto_assigned, engine_type: 0% for ART-1549–ART-1937
-- Requires classification + VC gate pipeline pass (BATON 005 Step 8)
+## ART-ID Insert History
 
-**Why:** Track this so future scripts and integrations know the current baseline and can verify deltas.
-
-## DB Insert History
 | Session | ART-ID Range | Count |
 |---------|-------------|-------|
 | Pre-project | ART-0001 – ART-1397 | 1,397 |
 | Mar 20 S1 | ART-1398 – ART-1425 | 28 |
-| Mar 20 S2 | ART-1426 – ART-1443 | 18 |
-| Mar 20 S2 | ART-1444 – ART-1449 | 6 |
-| Mar 20 S2 | ART-1450 – ART-1548 | 99 |
+| Mar 20 S2 | ART-1426 – ART-1548 | 123 (includes ART-0404 deleted) |
 | Mar 24 (2018-2019 integration) | ART-1549 – ART-1937 | 389 |
-| Deleted | ART-0404 | -1 |
-| **TOTAL** | | **1,936** |
+| **Next** | ART-1938 | — |
 
-## PDF Library State (as of BATON 005)
-- 00_non-codon/: ~147 PDFs (codon-named, not yet pipeline-processed)
-- 01_local_lite/: 117 PDFs (ITE-linked, not VC-cited)
-- 02_codon/: ~90 PDFs (codon-named, ITE-linked, VC-cited)
-- 03_right_click/: ~70 PDFs (VC-cited, enriched)
-- Total: 404 PDFs
+---
 
-**Next ART-ID:** ART-1938 (if new articles are added)
+## Articles Table Column Coverage (fully standardized 2026-03-25)
 
-**How to apply:** New articles from any source continue sequential ART-IDs from ART-1938+. VC gate check (session_hy_inserts_v7.json) determines tier assignment — DB membership alone is not sufficient.
+| Column | Coverage | Notes |
+|--------|----------|-------|
+| source_type | 100% | Rule-based journal detection across all 1,936 rows |
+| categories | 90.2% (1,747/1,936) | 189 unresolvable — no linked questions or unmapped body systems |
+| tier | 100% | Legacy Core/Supplementary/Must-Read fully retired. Tier: non-codon (1,399) / codon (362) / local_lite (117) / right_click (58) |
+| engine_type | 100% | right_click + local_lite values preserved (extraction-derived ground truth) |
+| auto_assigned | 100% | |
+
+---
+
+## Questions Table Column Coverage
+
+| Column | Coverage | Notes |
+|--------|----------|-------|
+| body_system_merged | 100% | Backfilled for 2018-2019 |
+| stem_keywords | 100% | Backfilled for 2018-2019 |
+| explanation_keywords | 100% | Backfilled for 2018-2019 |
+| all_keywords | 100% | Backfilled for 2018-2019 |
+| concept_tags | ~100% | API batch via preprocess_concept_tags.py |
+| blueprint | ~33% | Pre-existing debt — cross-year gap |
+
+---
+
+## Vec Table Details (FLAG 33 — closed 2026-03-25)
+
+- **Model:** OpenAI `text-embedding-3-small`, 1536 dimensions
+- **Extension:** `sqlite_vec` (pip install sqlite-vec) + `conn.enable_load_extension(True)` required to query
+- **article_vec:** virtual table with shadow tables (_chunks, _info, _rowids, _vector_chunks00)
+- **article text:** title | clean_ref | categories | blueprint_cats | tier
+- **question text:** question_text[:600] | correct_text | body_system/subcategory | concept_tags (summary, diagnoses, drugs)
+- **Incremental update:** `compute_embeddings.py --new-only` (both articles and questions supported)
+- **Cost:** ~$0.015 full corpus, ~$0.002 per 1,000-item gap fill
+
+---
+
+## Backup Checkpoints
+
+- `ite_intelligence_pre2018_backup_20260324_001256.db` — pre-2018/2019 integration rollback
+- `ite_intelligence_pre_flag15_backup.db` — earlier rollback point
+- `ite_intelligence_v1_backup_20260310_095728.db` — v1 snapshot
+
+**How to apply:** When adding new records, continue from ART-1938. Always run `compute_embeddings.py --new-only` after adding articles or questions. Schema-level QC after every integration.

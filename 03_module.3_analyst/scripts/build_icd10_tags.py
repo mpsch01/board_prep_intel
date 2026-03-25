@@ -33,7 +33,7 @@ from collections import defaultdict
 
 # ── Config ──────────────────────────────────────────────────────────────────
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "db", "ite_intelligence.db"))
+DB_PATH = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "..", "00_database", "db", "ite_intelligence.db"))
 SCHEMAS_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "schemas"))
 OUTPUT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "readable_db_files"))
 SYNONYM_MAP_PATH = os.path.join(SCHEMAS_DIR, "clinical_synonym_map.json")

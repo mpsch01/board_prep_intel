@@ -39,7 +39,7 @@ except ImportError:
 
 # ── Paths ──────────────────────────────────────────────────────────────────
 BASE_DIR    = Path(__file__).resolve().parent.parent
-DB_PATH     = BASE_DIR / "db" / "ite_intelligence.db"
+DB_PATH     = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
 LOG_PATH    = BASE_DIR / "logs" / "rematch_log.json"
 REPORT_PATH = BASE_DIR / "logs" / "rematch_report.txt"
 

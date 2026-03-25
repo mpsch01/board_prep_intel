@@ -55,7 +55,7 @@ except ImportError:
 
 # ── Config ─────────────────────────────────────────────────────────────────
 BASE_DIR  = Path(__file__).resolve().parent.parent
-DB_PATH   = BASE_DIR / "db" / "ite_intelligence.db"
+DB_PATH   = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR   = BASE_DIR / "logs"
 LOG_PATH  = LOG_DIR / f"preprocess_keywords_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json"
 

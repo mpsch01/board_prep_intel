@@ -1,42 +1,64 @@
 ---
 name: project_overhaul_state
-description: PROJECT_OVERHAUL current state - 4-module rebuild in progress, BATON 006, TEMP_05 migrated, extracted_json/ created
+description: PROJECT_OVERHAUL current state - BATON 007 session 3, FLAG 33 closed, vec tables at 100%, articles standardized, M3 fully structured
 type: project
 ---
 
-**Project:** ABFM Knowledge Base & Extraction Pipeline (`00_#PROJECT_OVERHAUL/` in claude_knowledge directory on user's Windows desktop)
+**Project:** ABFM ITE Intelligence System (Family Medicine board exam knowledge base)
+**Root (Windows):** `C:\Users\mpsch\Desktop\claude_knowledge\00_#PROJECT_OVERHAUL\`
+**Active BATON:** `BATON_active_007_20260325_m3_pipeline.md`
+**Git:** `main`, latest commit `cedab1c`
 
-**Current Phase:** PROJECT_OVERHAUL — 4-module rebuild. Structural migration largely complete. Remaining work: TEMP_06/07/08 folder audits, articles table gap-fill (389 new 2018-2019 articles missing source_type/categories/tier), Intelligence 2.0 Layer 2.
+---
 
-**Active BATON:** 006 (`BATON_active_006_20260324_temp05.md`)
+## Current Phase: Post-TEMP-Migration / Intelligence Enrichment
 
-**Sessions Summary (March 21–24, 2026):**
-- 4-module architecture established: M1 Warehouse, M2 Processor, M3 Analyst, M4 Sandbox
-- DB expanded: 2018-2019 integration added 440 questions, 389 new articles (ART-1549–ART-1937)
-- All 4 keyword columns backfilled for 2018-2019 (1,629/1,629 = 100%)
-- M1 scripts organized: `build/` (6) + `maintain/` (13)
-- M2 scripts fully migrated: 45 Python + JS scripts + 1 config JSON, all paths dynamic
-- M2/source/ layer: content outline DOCX + 50 AAFP transcripts
-- Module F (VC outline pipeline) + keyword library (A-G) migrated from TEMP_04
-- TEMP_05 (ITE refs crosswalk pipeline) fully migrated: 5 scripts, 1 config JSON, 1 crosswalk CSV
-- `extracted_json/` root folder created: 242 flat JSONs + 5 batch subdir placeholders (NOT git-tracked)
-- Git initialized: `main` branch, latest commit `94fdc6a` (next commit staged but blocked by index.lock)
+The 4-module rebuild and TEMP migration campaign are complete. Articles table fully standardized (100% on source_type/tier/engine_type). Vec tables at 100% coverage (FLAG 33 closed). Next phase: Intelligence 2.0 Layer 2 (PubMed article_currency) and ITE question pipeline end-to-end test.
 
-**Key Numbers (as of 2026-03-24, BATON 006):**
-- DB: 1,936 articles, 1,629 questions (2018–2025), 2,722 question-ref pairs
-- article_icd10: 3,855 rows | clinical_pathways: 4,528 rows | qid_art_xref: 1,818 rows
-- PDFs: 404 in library (4 tiers in M1 Warehouse)
-- Intelligence 2.0: Layers 1 (ICD-10), 3 (Pathways), 4a (Trends) complete. Layer 2 (PubMed) not started
-- M1/maintain: 13 scripts | M1/build: 6 scripts | M2/scripts: 45 scripts + 1 config JSON | M3/scripts: 5 (+2 pending delete)
+---
 
-**Script Location Rules (locked):**
-- All JS → M2/scripts (no exceptions, no de novo JS)
-- Python M2/scripts path: `SCRIPT_DIR.parent.parent` = PROJECT_ROOT
-- Python M1/maintain path: `SCRIPT_DIR.parent.parent.parent` = PROJECT_ROOT
-- JS path: `path.resolve(__dirname, "../../")` = PROJECT_ROOT
+## Module State
 
-**Active Flags:** 33 (embeddings deferred), 30 (encrypted PDFs), BATCH_DIRS sorting, M3 duplicates pending delete, git index.lock blocking commit, TEMP_05 Windows cleanup pending, TEMP_06/07/08 not yet audited
+| Module | Location | Scripts | Status |
+|--------|----------|---------|--------|
+| M1 Warehouse | `01_module.1_warehouse/` | 6 build + 13 maintain | Complete |
+| M2 Processor | `02_module.2_processor/scripts/` | 47 Python + 6 JS + 1 config JSON | Complete |
+| M3 Analyst | `03_module.3_analyst/` | 4 Python + 1 JS + 2 JSON config | Fully structured (BATON 007) |
+| M4 Sandbox | `04_module.4_sandbox/` | Empty placeholder | N/A |
+| DB | `00_database/db/ite_intelligence.db` | Source of truth | 1,936 articles, 1,629 questions |
 
-**Why:** The project extends beyond exam prep into clinical decision support. The DB is the source of truth. Derivatives (JSONs, DOCXs) are disposable. Pre-compute everything deterministic at ingest.
+---
 
-**How to apply:** Always read the active BATON first — it has the current DB state, deferred flags, and next steps. `_index.md` is the ground-truth directory map. BATON supersedes everything else if there's a conflict.
+## Key Numbers (as of BATON 007 session 3, 2026-03-25)
+
+- **DB articles:** 1,936 (ART-0001 → ART-1937; next = ART-1938)
+- **DB questions:** 1,629 (2018–2025, all years complete)
+- **PDFs:** 404 across 4 tiers (non-codon 145 / local_lite 117 / codon ~90 / right_click ~58)
+- **M2 scripts:** 47 Python + 6 JS + 1 config JSON (all paths dynamic)
+- **M3 scripts:** 4 Python + 1 JS + 2 JSON config
+- **extracted_json/:** 249 flat article JSONs (gitignored, not yet batch-sorted)
+- **VC gate:** `key_data_files/session_hy_inserts_v7.json` — 352 citations
+- **article_vec:** 1,936/1,936 embeddings (100%) — OpenAI text-embedding-3-small, 1536-dim
+- **question_vec:** 1,629/1,629 embeddings (100%)
+
+---
+
+## Active Deferred Flags
+
+| Flag | Description |
+|------|-------------|
+| ~~FLAG 33~~ | **CLOSED 2026-03-25** — vec tables at 100%, path bug fixed, new_only support added |
+| BATCH_DIRS | 249 flat JSONs in extracted_json/ need sorting into 5 batch subdirs |
+| Scholl PDFs | scholl_2025_ENCRYPTED_22/23/24.pdf in M3/resident_data/ — need password |
+
+---
+
+## Next Steps
+
+1. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP (freshness checks, superseded_by)
+2. **ITE question pipeline end-to-end test** — `01_ite_extractor.py` → `02_ite_categorizer.py` → `03_ite_merger.py` → `ite_tag_questions.py` on 2025 source docs
+3. **2018–2019 qid_art_xref crosswalk pass** — 0 entries for these years; expected pipeline gap
+
+**Why:** The DB is the source of truth. Derived files (JSONs, DOCXs, CSVs) are disposable. Architecture extends toward clinical decision support, not just exam prep.
+
+**How to apply:** Always read the active BATON first. TEMP_MIGRATION_MANIFEST.md is the root reference for all TEMP folder history and Windows delete checklist.

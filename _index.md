@@ -74,17 +74,19 @@
     └── ite-data-context-skill/            ← skill files copy (canonical in skills_abilities/)
 ```
 
-**DB Counts (as of 2026-03-24, post 2018-2019 integration):**
-| Table | Rows |
-|-------|------|
-| articles | 1,936 |
-| questions | 1,629 (2018–2025) |
-| question_ref_pairs | 2,722 |
-| qid_art_xref | 1,818 |
-| article_icd10 | 3,855 |
-| clinical_pathways | 4,528 |
-| icd10_rollup | 736 |
-| icd10_code_xref | 1,668 |
+**DB Counts (verified live 2026-03-25):**
+| Table | Rows | Notes |
+|-------|------|-------|
+| articles | 1,936 | |
+| questions | 1,629 (2018–2025) | |
+| question_ref_pairs | 2,722 | |
+| qid_art_xref | 1,818 | 2018-2019 not yet crosswalked |
+| article_icd10 | 3,855 | |
+| clinical_pathways | 3,093 | corrected (prior BATONs had stale 4,528) |
+| icd10_rollup | 614 | corrected (prior BATONs had stale 736) |
+| icd10_code_xref | 1,006 | corrected (prior BATONs had stale 1,668) |
+| article_vec | 1,936 | sqlite-vec virtual table — 100% coverage (FLAG 33 closed 2026-03-25) |
+| question_vec | 1,629 | sqlite-vec virtual table — 100% coverage (FLAG 33 closed 2026-03-25) |
 
 ---
 
@@ -102,8 +104,8 @@
 │   │   ├── build_clean_question_bank.py   ← Excel → ite_questions_clean.json
 │   │   ├── integrate_2018_2019.py         ← 2018-2019 integration (already run 2026-03-24)
 │   │   ├── validate_db_v2.py              ← post-build QC
-│   │   ├── compute_embeddings.py          ← vector embeddings (deferred — FLAG 33)
-│   │   └── validate_vector_search.py      ← post-embedding QC (deferred — FLAG 33)
+│   │   ├── compute_embeddings.py          ← vector embeddings (OpenAI text-embedding-3-small, 1536-dim; --new-only for incremental)
+│   │   └── validate_vector_search.py      ← post-embedding QC (recall@K validation against known pairs)
 │   └── maintain/                          ← operational/recurring (assume DB exists)
 │       ├── README.md
 │       ├── aafp_cleanup_filenames.py      ← fix ALL-CAPS author names
@@ -118,7 +120,8 @@
 │       ├── build_clinical_pathways.py     ← Layer 3: clinical_pathways table builder
 │       ├── build_topic_trends.py          ← Layer 4a: trend CSVs
 │       ├── match_tiers_to_library.py      ← scans warehouse PDFs vs ReferenceTiers CSV → match_summary.csv
-│       └── rebuild_acquisition_list.py    ← match_summary → confirmed_present.csv + ranked XLSX
+│       ├── rebuild_acquisition_list.py    ← match_summary → confirmed_present.csv + ranked XLSX
+│       └── backfill_new_article_metadata.py ← gap-fills source_type/categories/tier/engine_type for new articles (VC gate + rule-based)
 ├── has_extraction_audit.txt
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
@@ -425,11 +428,11 @@ M4 Sandbox — experiment
 ### articles table (1,936 rows)
 | Column | Coverage | Notes |
 |--------|----------|-------|
-| source_type | ~72% | New 389 articles: 0% — requires classification pipeline |
-| categories | ~56% | New 389 articles: 0% |
-| tier | ~72% | New 389 articles: 0% — requires VC gate check |
-| auto_assigned | ~70% | Populated during tier assignment |
-| engine_type | ~71% | Populated during PDF extraction |
+| source_type | 100% | Full table standardized 2026-03-25 — rule-based journal detection |
+| categories | 90.2% | 189 unresolvable (no linked questions / unmapped body systems). Existing multi-category values preserved. |
+| tier | 100% | Full table standardized 2026-03-25. Legacy Core/Supplementary/Must-Read retired. Tier: non-codon (1,399) / codon (362) / local_lite (117) / right_click (58) |
+| engine_type | 100% | Full table standardized 2026-03-25. right_click + local_lite values preserved (extraction-derived). |
+| auto_assigned | 100% | Full table standardized 2026-03-25 |
 
 ---
 
@@ -437,6 +440,8 @@ M4 Sandbox — experiment
 
 | Date | Action |
 |------|--------|
+| 2026-03-25 | FLAG 33 closed — vec table catch-up complete. article_vec + question_vec now at 100% coverage (1,936 / 1,629). Previously stale (1,397 / 1,189 from old corpus). Catch-up: 540 articles + 440 questions embedded via `compute_embeddings.py --new-only` ($0.002, 16s). One orphan vec entry removed. Path bug fixed in both vec scripts (`parent.parent/db/` → `SCRIPT_DIR.parent.parent.parent/"00_database"/"db"`). `embed_questions()` now supports `--new-only`. |
+| 2026-03-25 | Full articles table standardized (1,936 rows): source_type/tier/engine_type/auto_assigned at 100%; categories at 90.2% (189 unresolvable). Core/Supplementary/Must-Read tier labels permanently retired — VC gate + warehouse scan now sole tier criterion. engine_type preserved for right_click + local_lite (extraction-derived ground truth). `backfill_new_article_metadata.py` upgraded to handle full table with warehouse scan. `audit_engine_type_changes.py` added as one-time diagnostic. M1/maintain count: 14 → 15. DB counts corrected (clinical_pathways: 3,093; icd10_rollup: 614; icd10_code_xref: 1,006). BATON 006 recovered from git and archived. Windows cleanup confirmed complete. Vec tables discovered in DB (article_vec, question_vec) — FLAG 33 pending. |
 | 2026-03-25 | `_index.md` updated to BATON 006 → 007. TEMP_06 migrated: 9 ITE question pipeline scripts → M2/scripts/; reference CSVs/XLSXs/PDFs → archive_canonical/04_reference_data/; ite_source/ created in M2/source/. TEMP_07+08 migrated: M3 fully structured (scripts/ + docs/ + outputs/ + resident_data/); abfm_reference_2025.json + ite_parser_config.json → M3/scripts/; 2024+2025 handbooks → archive_canonical/04_reference_data/. TEMP_09 confirmed empty. TEMP_MIGRATION_MANIFEST.md added to root. .gitignore updated: M3/outputs/, M3/resident_data/, extracted_json/ added. M2 script count: 45 → 47 Python + 6 JS. extracted_json count: 242 → 249. |
 | 2026-03-24 | `_index.md` updated to BATON 005 → 006. TEMP_05 fully migrated: `build_crosswalk_v2.py` + `apply_overrides.py` + `crosswalk_overrides.json` → M2/scripts/. `gen_linked_refs_v2.js` → M2/scripts/ (de-hardcoded). `match_tiers_to_library.py` + `rebuild_acquisition_list.py` → M1/maintain/. `extracted_json/` root created (242 flat JSONs + 5 batch subdirs as placeholders). `linked_refs_crosswalk_final.csv` → archive_canonical/04_reference_data/. gen_gold_tier_v2.js excluded (does not migrate). M1/maintain count: 11 → 13. M2/scripts count: 41 → 45 (+1 config JSON). |
 | 2026-03-24 | `_index.md` updated to BATON 004 → 005. TEMP_04 fully migrated: Module F (9 scripts) + keyword library (7 scripts A-G) + 5 hygiene/utility scripts → M2/scripts/. M2/source/ layer created with content outline DOCX + 50 AAFP transcripts. 4 key data files added to key_data_files/. All 30 Python/JS scripts de-hardcoded (commit `ed85b06`). M2 script count: 10 → 41. |

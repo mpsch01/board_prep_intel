@@ -17,7 +17,8 @@ from pathlib import Path
 from collections import defaultdict
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DB_PATH  = BASE_DIR / "db" / "ite_intelligence.db"
+PROJECT_ROOT = BASE_DIR.parent.parent
+DB_PATH  = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 
 CONCEPT_TAG_KEYS = {"diagnoses", "drugs", "guidelines", "thresholds", "concept_summary"}
 

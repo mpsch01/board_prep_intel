@@ -51,7 +51,7 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
 
 # ── Paths ─────────────────────────────────────────────────────────────────
 BASE_DIR  = Path(__file__).resolve().parent.parent
-DB_PATH   = BASE_DIR / "db" / "ite_intelligence.db"
+DB_PATH   = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR   = BASE_DIR / "logs"
 JSON_DIR  = BASE_DIR.parent.parent / "clinical_guidelines" / "03_enriched_JSON"
 MODEL     = "claude-sonnet-4-20250514"

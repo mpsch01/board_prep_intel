@@ -20,7 +20,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 # ── Paths (relative to script location — no hardcoded Windows paths) ─────
 BASE_DIR     = Path(__file__).resolve().parent.parent
-DB_PATH      = BASE_DIR / "db" / "ite_intelligence.db"
+DB_PATH      = BASE_DIR.parent.parent / "00_database" / "db" / "ite_intelligence.db"
 ROOT         = BASE_DIR.parent.parent
 PDF_DIR      = ROOT / "clinical_guidelines" / "01_pdf_guideline_library" / "pdf_codon"
 OUT_JSON     = BASE_DIR / "crosswalk_index.json"

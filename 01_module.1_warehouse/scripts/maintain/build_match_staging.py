@@ -38,7 +38,7 @@ from collections import Counter
 # ── Paths ──────────────────────────────────────────────────────────────────
 BASE_DIR     = Path(__file__).resolve().parent.parent          # 02_ite_intelligence/
 PROJ_ROOT    = BASE_DIR.parent.parent                          # claude_knowledge/
-DB_PATH      = BASE_DIR / "db" / "ite_intelligence.db"
+DB_PATH      = PROJ_ROOT / "00_database" / "db" / "ite_intelligence.db"
 CROSSWALK    = BASE_DIR / "crosswalk_index.json"
 OVERRIDES    = BASE_DIR / "manual_overrides.json"
 PDF_DIR      = PROJ_ROOT / "clinical_guidelines" / "01_pdf_guideline_library" / "pdf_non-codon"

@@ -183,13 +183,14 @@ def build_pearl_block(session_id, session_title, refs_for_session):
         red_flags = ref.get("red_flags", [])
         if red_flags:
             rf_text = "   ·   ".join([str(r)[:60] for r in red_flags[:4]])
+            _warning_xml = run_xml("⚠  Red Flags: ", bold=True, color=AMBER, size=17)
             parts.append(f"""<w:p>
               <w:pPr>
                 <w:keepLines/>
                 <w:spacing w:before="30" w:after="20"/>
                 <w:shd w:val="clear" w:color="auto" w:fill="{AMBER_LITE}"/>
               </w:pPr>
-              {run_xml("\u26A0  Red Flags: ", bold=True, color=AMBER, size=17)}
+              {_warning_xml}
               {run_xml(rf_text[:240], color=DARK, size=17)}
             </w:p>""")
 
