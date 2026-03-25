@@ -1,0 +1,53 @@
+{
+  "directory": "08_ite_score_analysis",
+  "purpose": "ITE Score Analysis Pipeline v2.1 — end-to-end resident exam analysis from ABFM score report PDFs",
+  "created": "2026-03-18",
+  "pipeline_version": "2.1",
+  "status": "production — both residents validated end-to-end",
+  "structure": {
+    "raw_pdfs/": {
+      "purpose": "Source ABFM score report PDFs, renamed for clarity",
+      "naming": "{resident}_{year}_{blueprint|bodysystem}.pdf",
+      "note": "Scholl PDFs are encrypted (FLAG 30) — need password or unencrypted versions",
+      "reference/": "ABFM Score Result Handbooks (2024, 2025)"
+    },
+    "pipeline/": {
+      "purpose": "All pipeline code — parser, analyzer, CLI, report builder",
+      "entry_point": "ite_analyze_v2.py",
+      "key_files": {
+        "ite_analyze_v2.py": "CLI entry point — orchestrates parser → analyzer → report builder",
+        "ite_parser.py": "PDF extraction (PyMuPDF) — reads ABFM scatter plot PDFs",
+        "ite_parser_config.json": "Parser calibration (column positions, spacing)",
+        "ite_analyzer_v2.py": "5-layer analysis engine + 3-tier question cascade",
+        "ite_report_builder_v2.js": "Node.js DOCX generator — 10-section report + exam version",
+        "abfm_reference_2025.json": "ABFM benchmarks, score conversion, SEM values"
+      },
+      "v1/": "Legacy v1 pipeline code (preserved for --v1-only fallback)"
+    },
+    "reports/": {
+      "purpose": "Final validated outputs per resident",
+      "per_resident": {
+        "analysis_v2.json": "Full analysis data (consumed by report builder)",
+        "score_analysis.json": "Same data, v1-compatible filename",
+        "ITE_{year}_v2_Analysis_{name}.docx": "10-section analysis report + practice questions with answers",
+        "ITE_{year}_v2_Exam_{name}.docx": "Exam version (no answers) + answer key"
+      }
+    },
+    "archive/": {
+      "purpose": "Historical outputs — v1 reports, v2 test iterations, development artifacts",
+      "safe_to_delete": true
+    }
+  },
+  "usage": {
+    "full_pipeline": "python pipeline/ite_analyze_v2.py --blueprint raw_pdfs/{name}_blueprint.pdf --bodysystem raw_pdfs/{name}_bodysystem.pdf --db ../02_ite_intelligence/db/ite_intelligence.db --output-dir reports/{name}_{year} --pgy-level 2 --plugins concept,icd10",
+    "report_only": "node pipeline/ite_report_builder_v2.js reports/{name}/analysis_v2.json reports/{name}/",
+    "dependencies": {
+      "python": "pymupdf (pip install pymupdf --break-system-packages)",
+      "node": "docx (npm install docx)"
+    }
+  },
+  "residents_processed": {
+    "hopkins_2025": {"score": "65.4%", "scaled": 510, "tier": "strong", "questions": 50},
+    "sarkar_2025": {"score": "57.1%", "scaled": "~430", "tier": "on_track", "questions": 50}
+  }
+}

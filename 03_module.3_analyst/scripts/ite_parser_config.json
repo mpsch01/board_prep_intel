@@ -1,0 +1,145 @@
+{
+  "version": "1.0",
+  "source_report": "ABFM ITE 2025",
+  "color_signatures": {
+    "incorrect": {
+      "rgb": [
+        255,
+        0,
+        0
+      ],
+      "font": "Helvetica-Bold",
+      "flags": 16
+    },
+    "correct": {
+      "rgb": [
+        0,
+        128,
+        0
+      ],
+      "font": "Helvetica",
+      "flags": 0
+    },
+    "axis_label": {
+      "rgb": [
+        47,
+        110,
+        181
+      ],
+      "font": "Helvetica-Bold",
+      "flags": 16
+    },
+    "column_header": {
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "font": "Helvetica",
+      "flags": 0
+    },
+    "metadata": {
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "font": "Helvetica",
+      "flags": 0
+    }
+  },
+  "score_axis": {
+    "formula": "score = -3.0581 * y + 1703.06",
+    "slope": -3.0581,
+    "intercept": 1703.06,
+    "range": [
+      0,
+      1000
+    ],
+    "step": 50
+  },
+  "blueprint_columns": {
+    "Acute Care": {
+      "header_x": 114.4,
+      "x_min": 80,
+      "x_max": 220,
+      "subcol_count": 8
+    },
+    "Chronic Care": {
+      "header_x": 242.9,
+      "x_min": 220,
+      "x_max": 350,
+      "subcol_count": 8
+    },
+    "Emergent/Urgent": {
+      "header_x": 373.0,
+      "x_min": 350,
+      "x_max": 470,
+      "subcol_count": 7
+    },
+    "Preventive": {
+      "header_x": 522.4,
+      "x_min": 470,
+      "x_max": 600,
+      "subcol_count": 5
+    },
+    "Foundations": {
+      "header_x": 644.8,
+      "x_min": 600,
+      "x_max": 700,
+      "subcol_count": 4
+    }
+  },
+  "bodysystem_columns_page1": {
+    "Cardiovascular": {
+      "header_x": 120.5,
+      "x_min": 70,
+      "x_max": 200
+    },
+    "Injuries/Musculoskeletal": {
+      "header_x": 237.1,
+      "x_min": 200,
+      "x_max": 370
+    },
+    "Respiratory": {
+      "header_x": 391.4,
+      "x_min": 370,
+      "x_max": 480
+    },
+    "Psychiatric/Behavioral": {
+      "header_x": 504.9,
+      "x_min": 480,
+      "x_max": 610
+    },
+    "Sexual and Reproductive": {
+      "header_x": 631.7,
+      "x_min": 610,
+      "x_max": 700
+    }
+  },
+  "page_dimensions": {
+    "width": 792.0,
+    "height": 612.0
+  },
+  "subcol_spacing_px": 15.56,
+  "deleted_items_2025": [
+    3,
+    23,
+    25,
+    36,
+    55,
+    59,
+    129,
+    142,
+    171
+  ],
+  "total_items_2025": 200,
+  "scored_items_2025": 191,
+  "validation": {
+    "items_extracted": 191,
+    "color_ambiguity": "none",
+    "axis_labels_verified": 21,
+    "cross_report_overlap": 62,
+    "notes": "Subcategory labels not in PDF text. Body System PDF shows 5 of 15 systems per page."
+  }
+}

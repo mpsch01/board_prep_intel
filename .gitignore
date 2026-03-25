@@ -40,6 +40,15 @@ __pycache__/
 02_module.2_processor/ite_2018_2019_extracted.json
 00_database/readable_db_files/
 
+# --- M3 ANALYST OUTPUTS (derived — regenerable from PDFs + DB) ---
+03_module.3_analyst/outputs/
+
+# --- M3 RESIDENT DATA (binary PDFs — already covered by *.pdf, explicit for clarity) ---
+03_module.3_analyst/resident_data/
+
+# --- EXTRACTED JSON OUTPUTS (derived — article enrichment outputs, not scripts) ---
+extracted_json/
+
 # --- TAGGING BUNDLE DATA FILES (large outputs, not scripts) ---
 tagging_bundle/*.csv
 tagging_bundle/*.xlsx
@@ -62,6 +71,8 @@ Thumbs.db
 #   key_data_files/session_hy_inserts_v7.json  ← VC gate
 #   00_database/schemas/*.json                 ← clinical synonyms, ICD-10 lookup
 #   00_database/crosswalk/*.json               ← crosswalk index
+#   03_module.3_analyst/scripts/*.json         ← parser config + ABFM reference (M3 config)
+#   03_module.3_analyst/docs/*.md, *.json      ← pipeline documentation
 #   re-org_guidance/ docs
 #   skills_abilities/ reference docs
 # ============================================================
