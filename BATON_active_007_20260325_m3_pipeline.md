@@ -96,6 +96,7 @@ The following are accumulating in the project root and need to be manually delet
 |------|--------|
 | `TEMP_07_score_reports_TEMP/` | Delete entirely — superseded by M3/outputs/ |
 | `TEMP_08_ite_score_analysis_TEMP/` | Delete entirely — all content migrated or archived |
+| `TEMP_09_afp_library_TEMP/` | Delete entirely — empty shell (no files, never populated) |
 | `BATON_active_006_20260324_temp05.md` | Move to `baton_archive/` (or delete — archive copy exists) |
 | `03_module.3_analyst/scripts/build_clinical_pathways.py` | Delete — duplicate, deferred from BATON 006 |
 | `03_module.3_analyst/scripts/build_topic_trends.py` | Delete — duplicate, deferred from BATON 006 |

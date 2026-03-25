@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-03-24 (BATON 005 → 006)
-**Status:** Current — updated post TEMP_05 migration (crosswalk pipeline, extracted_json/ root)
+**Last Updated:** 2026-03-25 (BATON 006 → 007)
+**Status:** Current — updated post TEMP_06/07/08 migrations (ITE question pipeline, score analysis pipeline, M3 fully structured)
 
 > This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,8 @@
 
 ```
 00_#PROJECT_OVERHAUL/
-├── BATON_active_006_20260324_temp05.md    ← active session handoff (BATON 006)
+├── BATON_active_007_20260325_m3_pipeline.md  ← active session handoff (BATON 007)
+├── TEMP_MIGRATION_MANIFEST.md             ← root reference: all TEMP migrations, status, delete checklist
 ├── README.json                            ← STALE (March 17) — needs rebuild
 ├── README_PROJECT.md                      ← STALE (March 17) — needs rebuild
 ├── master_map.JSON                        ← STALE — reflects old 7-module structure
@@ -30,7 +31,7 @@
 ├── key_data_files/                        ← critical reference data files
 ├── re-org_guidance/                       ← architecture docs, auto-memory, protocol
 ├── sectional_READMEs/                     ← legacy JSON/MD READMEs consolidated
-├── extracted_json/                        ← 242 extracted JSONs (middle-man layer; not git-tracked)
+├── extracted_json/                        ← 249 extracted JSONs (middle-man layer; not git-tracked)
 ├── skills_abilities/                      ← SDK docs, agent toolbox, skill files
 ├── tagging_bundle/                        ← working scripts + data for question tagging
 └── (no loose scripts at root)
@@ -148,8 +149,9 @@
 ├── prompts/candidates/                    ← 4 extraction prompt candidates
 ├── source/                                ← pipeline source inputs (not code)
 │   ├── 00_EX_content_outline_w_q.docx    ← VC content outline (6.1MB, Mar 6) — input to A, 01, 03, 04, 07, 09
-│   └── aafp_transcripts/                 ← 50 cleaned .txt files — input to B_build_tfidf_keywords.py
-└── scripts/                               ← 41 standalone pipeline scripts (all paths dynamic)
+│   ├── aafp_transcripts/                 ← 50 cleaned .txt files — input to B_build_tfidf_keywords.py
+│   └── ite_source/                       ← ITE question source docs: 2025_ITE_Questions.docx + 2025_ITE_Critique.docx
+└── scripts/                               ← 47 Python + 6 JS standalone pipeline scripts (all paths dynamic)
     │
     │── MODULE F — VC OUTLINE PIPELINE (run order: 01→02b→03→04→07→08→09→build_v6)
     ├── 01_build_crosswalk.py              ← outline sessions → session_cluster_crosswalk.csv
@@ -208,29 +210,59 @@
     ├── build_qbank_exam_version.py        ← exam-version question bank DOCX builder
     ├── synthesize.js                      ← JSON → DOCX pre-processor
     │
+    │── ITE QUESTION PIPELINE (run order: 01→02→03→ite_tag_questions)
+    ├── 00_body_system_extractor.py        ← extract ABFM body system labels from blueprint PDFs
+    ├── 01_ite_extractor.py                ← ITE PDF → CSV (EXAM_YEAR config at top, --year override)
+    ├── 02_ite_categorizer.py              ← SBERT + XGBoost body system classifier
+    ├── 03_ite_merger.py                   ← merge new-year CSV into master bank
+    ├── ite_tag_questions.py               ← Claude API batch tagger (Haiku) — BlueprintCategory, Subcategory, QuestionType, ClinicalFocus; resumable
+    ├── ite_build_from_text.py             ← text-input question extractor (CLI utility)
+    ├── ite_merge_csv.py                   ← generic CSV merge (--master/--incoming/--out/--priority)
+    ├── ite_diff_banks.py                  ← diff two question banks: MISSING, STEM_DRIFT, ANSWER_MISMATCH
+    ├── ite_check_columns.py               ← null-check QA on pipeline CSV outputs
+    │
     │── WINDOWS SYSTEM FILES (paths deferred — not dynamically resolvable)
     ├── batch_reprocess.ps1                ← batch reprocessing runner
     ├── extract_guideline.bat              ← Windows one-click orchestrator
     ├── install_context_menu.reg           ← Windows right-click setup
     └── uninstall_context_menu.reg         ← Windows right-click removal
 ```
-*45 Python + JS scripts + 1 config JSON. All Python/JS paths dynamic (BATON 005+006). .bat/.ps1/.reg paths deferred. Files with `# TODO: not yet migrated` in BATCH_DIRS point to `extracted_json/` subdirs — update annotation when JSONs are sorted into batch folders.*
+*47 Python + 6 JS scripts + 1 config JSON. All Python/JS paths dynamic. .bat/.ps1/.reg paths deferred. Files with `# TODO: not yet migrated` in BATCH_DIRS point to `extracted_json/` subdirs — update annotation when JSONs are sorted into batch folders.*
 
 ---
 
-### `03_module.3_analyst/` — Analysis Scripts (5 scripts + 2 pending deletion)
+### `03_module.3_analyst/` — Score Analysis + ICD-10 + Pathways
 ```
 03_module.3_analyst/
-└── scripts/
-    ├── build_icd10_tags.py                ← Layer 1: article_icd10 table builder
-    ├── ite_analyze_v2.py
-    ├── ite_analyzer_v2.py
-    ├── ite_parser.py
-    ├── ite_report_builder_v2.js
-    ├── build_clinical_pathways.py         ← PENDING DELETE (canonical now in M1/maintain/)
-    └── build_topic_trends.py              ← PENDING DELETE (canonical now in M1/maintain/)
+├── scripts/                               ← 4 Python + 1 JS pipeline scripts + 2 JSON configs
+│   ├── ite_analyze_v2.py                  ← CLI entry point: --blueprint --bodysystem --db --output-dir --pgy-level --plugins
+│   ├── ite_analyzer_v2.py                 ← 5-layer analysis engine + plugin architecture; loads abfm_reference_2025.json
+│   ├── ite_parser.py                      ← PyMuPDF PDF parser (color signature detection); loads ite_parser_config.json
+│   ├── ite_report_builder_v2.js           ← Node.js DOCX builder (10-section report + exam version)
+│   ├── build_icd10_tags.py                ← Layer 1: article_icd10 table builder
+│   ├── abfm_reference_2025.json           ← ABFM benchmarks, scaled score conversion, SEM values (config)
+│   ├── ite_parser_config.json             ← parser calibration: column x-positions, color signatures (config)
+│   ├── build_clinical_pathways.py         ← PENDING DELETE (canonical now in M1/maintain/)
+│   └── build_topic_trends.py              ← PENDING DELETE (canonical now in M1/maintain/)
+├── docs/                                  ← pipeline documentation (git-tracked)
+│   ├── ITE_SCORE_ANALYSIS_PIPELINE.md     ← full pipeline walkthrough
+│   └── README_ite_score_analysis.json     ← pipeline README: structure, usage, residents processed
+├── outputs/                               ← analysis JSON outputs per resident (gitignored — derived)
+│   ├── hopkins_2025/
+│   │   ├── analysis_v2.json               ← full analysis data (input to report builder)
+│   │   └── score_analysis.json            ← v1-compatible name (same data)
+│   └── sarkar_2025/
+│       ├── analysis_v2.json
+│       └── score_analysis.json
+└── resident_data/                         ← resident score PDFs (gitignored — binary PHI-adjacent)
+    ├── hopkins_2025_blueprint.pdf
+    ├── hopkins_2025_bodysystem.pdf
+    ├── sarkar_2025_blueprint.pdf
+    ├── sarkar_2025_bodysystem.pdf
+    ├── scholl_2025_ENCRYPTED_22/23/24.pdf ← Mikey's own scores; ENCRYPTED (FLAG 30)
 ```
-*Two duplicates pending manual delete by user (VM cannot rm mounted files).*
+*2 duplicates (build_clinical_pathways.py, build_topic_trends.py) pending Windows delete.*
+*Scholl scores encrypted — need password or unencrypted version to process.*
 
 ### `04_module.4_sandbox/` — Empty placeholder
 
@@ -252,7 +284,7 @@ archive_canonical/
 ### `extracted_json/` — Extracted Article JSONs (middle-man layer; not git-tracked)
 ```
 extracted_json/
-├── [242 article JSONs — flat, not yet sorted into batch subdirs]
+├── [249 article JSONs — flat, not yet sorted into batch subdirs]
 ├── raw_txt/           ← 21 raw text files (pre-JSON)
 ├── manifest.json      ← extraction manifest
 ├── pre_calibration_archive/    ← placeholder (empty — for gold list 21 JSONs)
@@ -261,7 +293,7 @@ extracted_json/
 ├── jacc_pulm_batch/            ← placeholder (empty)
 └── neuro_tox_rheum_psych_batch/ ← placeholder (empty)
 ```
-*Flat layout is temporary. build_crosswalk_v2.py expects JSONs in the named subdirs (BATCH_DIRS). The TODO annotations in that script mark when sorting is needed. Sorting the 242 flat JSONs into batch subdirs is a deferred task.*
+*Flat layout is temporary. build_crosswalk_v2.py expects JSONs in the named subdirs (BATCH_DIRS). The TODO annotations in that script mark when sorting is needed. Sorting the 249 flat JSONs into batch subdirs is a deferred task.*
 
 ### `baton_archive/` — Session Handoff History
 - 28+ archived BATONs (pre-001 naming debt — batch rename pending)
@@ -405,6 +437,7 @@ M4 Sandbox — experiment
 
 | Date | Action |
 |------|--------|
+| 2026-03-25 | `_index.md` updated to BATON 006 → 007. TEMP_06 migrated: 9 ITE question pipeline scripts → M2/scripts/; reference CSVs/XLSXs/PDFs → archive_canonical/04_reference_data/; ite_source/ created in M2/source/. TEMP_07+08 migrated: M3 fully structured (scripts/ + docs/ + outputs/ + resident_data/); abfm_reference_2025.json + ite_parser_config.json → M3/scripts/; 2024+2025 handbooks → archive_canonical/04_reference_data/. TEMP_09 confirmed empty. TEMP_MIGRATION_MANIFEST.md added to root. .gitignore updated: M3/outputs/, M3/resident_data/, extracted_json/ added. M2 script count: 45 → 47 Python + 6 JS. extracted_json count: 242 → 249. |
 | 2026-03-24 | `_index.md` updated to BATON 005 → 006. TEMP_05 fully migrated: `build_crosswalk_v2.py` + `apply_overrides.py` + `crosswalk_overrides.json` → M2/scripts/. `gen_linked_refs_v2.js` → M2/scripts/ (de-hardcoded). `match_tiers_to_library.py` + `rebuild_acquisition_list.py` → M1/maintain/. `extracted_json/` root created (242 flat JSONs + 5 batch subdirs as placeholders). `linked_refs_crosswalk_final.csv` → archive_canonical/04_reference_data/. gen_gold_tier_v2.js excluded (does not migrate). M1/maintain count: 11 → 13. M2/scripts count: 41 → 45 (+1 config JSON). |
 | 2026-03-24 | `_index.md` updated to BATON 004 → 005. TEMP_04 fully migrated: Module F (9 scripts) + keyword library (7 scripts A-G) + 5 hygiene/utility scripts → M2/scripts/. M2/source/ layer created with content outline DOCX + 50 AAFP transcripts. 4 key data files added to key_data_files/. All 30 Python/JS scripts de-hardcoded (commit `ed85b06`). M2 script count: 10 → 41. |
 | 2026-03-24 | `_index.md` updated to BATON 003 → 004. M1 `scripts/build/` and `scripts/maintain/` created and populated (11 scripts total). 7 scripts relocated from M2/scripts to M1/maintain or M1/build. `aafp_vc_batch_download.py` relocated from agents/scripts to M1/maintain. M2/scripts count: 17 → 10. M3 script duplication flagged. |
