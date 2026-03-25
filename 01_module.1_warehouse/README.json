@@ -1,83 +1,89 @@
 {
-  "folder": "clinical_guidelines/01_pdf_guideline_library",
-  "description": "Tiered PDF guideline library organized by processing status and VC-citation tier. All folders fully audited as of Mar 20. 1,547 articles in DB, 404 PDFs in library, 100% codon coverage.",
-  "last_updated": "2026-03-20",
-  "structure_version": "4.0",
-  "total_files": 407,
+  "folder": "00_#PROJECT_OVERHAUL/01_module.1_warehouse",
+  "description": "M1 Warehouse — PDF guideline library (4 tiers, 404 PDFs) and warehouse maintenance scripts. Stores source PDFs and runs operational scripts that keep the library current.",
+  "last_updated": "2026-03-24",
+  "baton": "006",
+  "structure_version": "5.0",
   "total_pdfs": 404,
-  "folder_structure": {
-    "root": {
-      "files": ["MOVE_STUCK_FILES.ps1", "README.json", "desktop.ini"],
-      "count": 3,
-      "notes": "MOVE_STUCK_FILES.ps1 is a PowerShell script for resolving permission-locked files"
-    },
+  "pdf_tiers": {
     "00_non-codon": {
-      "description": "Processing backlog. All 146 PDFs are codon-named with DB records but have NOT been through the extraction/enrichment/synthesis pipeline.",
-      "root_pdfs": 146,
-      "root_other": 1,
-      "root_notes": "146 codon-named PDFs awaiting pipeline processing. 1 txt file (has_extraction_audit.txt). Composition: 28 from has_extraction audit (ART-1398–1425) + 18 from needs_review (ART-1426–1443) + 1 BackPainPCP reference + 99 from unexamined (ART-1450–1548).",
-      "subfolders": {
-        "has_extraction": {
-          "description": "Former staging area. Now empty after audit.",
-          "file_count": 0,
-          "subfolders": {
-            "needs_review": {
-              "description": "Former review staging. Now empty — all 20 files processed.",
-              "file_count": 0
-            }
-          }
-        },
-        "unexamined": {
-          "description": "Former holding area for unaudited PDFs. Now empty — all 101 files processed.",
-          "file_count": 0
-        }
-      }
+      "description": "Codon-named PDFs that have NOT yet been through the extraction/enrichment/synthesis pipeline. Backlog.",
+      "count": "~147"
     },
     "01_local_lite": {
-      "description": "ITE-linked articles with lightweight processing. Not VC-cited.",
-      "file_count": 117
+      "description": "ITE-linked articles with lightweight processing. Not VC-cited (not in session_hy_inserts_v7.json).",
+      "count": 117
     },
     "02_codon": {
-      "description": "VC-cited articles with verified correct content. All 70 PDFs audited and content-verified against DB records. Permissions unlocked.",
-      "file_count": 70,
-      "accessible": 70,
-      "permission_locked": 0,
-      "notes": "Was 73 pre-audit. 3 deleted (wrong content), 6 re-IDed with correct ART-IDs."
+      "description": "Codon-named, ITE-linked, VC-cited PDFs. Verified correct content.",
+      "count": "~90"
     },
     "03_right_click": {
-      "description": "Fully processed PDFs — ran through the complete right-click pipeline (extract → synthesize → enrich → DOCX).",
-      "file_count": 71
+      "description": "Fully processed PDFs — ran through the complete right-click pipeline (extract → synthesize → enrich → DOCX). VC-cited tier.",
+      "count": "~70"
     }
   },
-  "naming_conventions": [
-    "Codon format: Author_Year#@#ART-XXXX@#@.pdf — ART-ID embedded between #@# start codon and @#@ stop codon",
-    "Multi-author: Author1_Author2_Year#@#ART-XXXX@#@.pdf",
-    "ALL files in library now use codon format (100% coverage as of Mar 20)"
-  ],
-  "recent_changes": {
-    "session_date": "2026-03-20 (Session 2)",
-    "changes": [
-      "Processed 20 needs_review PDFs: 18 new DB records (ART-1426–1443), 1 dupe deleted, 1 reference kept",
-      "Audited all 73 PDFs in 02_codon/: found 10 content mismatches + 1 duplicate ART-ID",
-      "Fixed 02_codon: deleted 3 wrong files, renamed 1 duplicate ART-ID, swapped 1 with correct PDF, re-IDed 6 mismatches (ART-1444–1449)",
-      "Processed 101 unexamined PDFs: 99 new DB records (ART-1450–1548), 2 dupes deleted",
-      "Emptied has_extraction/, needs_review/, and unexamined/ folders",
-      "Unlocked permissions on 02_codon and unexamined via icacls"
-    ]
-  },
-  "companion_libraries": {
-    "docx_summaries": "../02_docx_guideline_library/ (1,518 files)",
-    "enriched_json": "../03_enriched_JSON/ (217 extracted JSON files)",
-    "raw_text": "../03_enriched_JSON/raw_txt/ (217 raw text files)"
+  "naming_convention": "Author_Year#@#ART-XXXX@#@.pdf — ART-ID embedded between #@# start codon and @#@ stop codon",
+  "vc_gate": "key_data_files/session_hy_inserts_v7.json (352 citations) — sole criterion for right_click vs local_lite tier assignment",
+  "scripts": {
+    "build": {
+      "path": "scripts/build/",
+      "description": "Structural / one-time scripts. Assume DB does NOT exist yet. Run once during initial setup.",
+      "count": 6,
+      "scripts": [
+        "rebuild_ite_db_v2.py — primary DB constructor",
+        "build_clean_question_bank.py — Excel → ite_questions_clean.json",
+        "integrate_2018_2019.py — 2018-2019 integration (already run 2026-03-24)",
+        "validate_db_v2.py — post-build QC",
+        "compute_embeddings.py — vector embeddings (deferred — FLAG 33)",
+        "validate_vector_search.py — post-embedding QC (deferred — FLAG 33)"
+      ]
+    },
+    "maintain": {
+      "path": "scripts/maintain/",
+      "description": "Operational / recurring scripts. Assume DB exists and has data.",
+      "count": 13,
+      "scripts": [
+        "aafp_cleanup_filenames.py — fix ALL-CAPS author names",
+        "aafp_fill_gaps.py — download missing AAFP PDFs",
+        "aafp_retry_playwright.py — paywalled PDF fallback",
+        "aafp_retry_selenium.py — Selenium fallback",
+        "aafp_top20_downloader.py — top-20 article downloader",
+        "aafp_vc_batch_download.py — batch VC article downloader",
+        "build_crosswalk_index.py — scans codons → crosswalk_index.json",
+        "build_match_staging.py — proposes ART-ID matches for unmatched PDFs",
+        "rename_to_codon.py — executes approved codon renames",
+        "build_clinical_pathways.py — Layer 3: clinical_pathways table builder",
+        "build_topic_trends.py — Layer 4a: trend CSVs",
+        "match_tiers_to_library.py — scans warehouse PDFs vs ReferenceTiers CSV → match_summary.csv (migrated BATON 006)",
+        "rebuild_acquisition_list.py — match_summary → confirmed_present.csv + ranked acquisition XLSX (migrated BATON 006)"
+      ],
+      "path_pattern": "SCRIPT_DIR.parent.parent.parent = PROJECT_ROOT (3 levels: maintain → scripts → 01_module → PROJECT_ROOT)"
+    }
   },
   "database": {
-    "path": "../../abfm_prep/02_ite_intelligence/db/ite_intelligence.db",
-    "articles": 1547,
-    "questions": 1189,
-    "qid_art_xref": 1818,
-    "article_icd10": 3093,
-    "clinical_pathways": 3093,
-    "codon_coverage": "100% (1547/1547)",
-    "art_id_range": "ART-0001 through ART-1548 (ART-0404 deleted)"
+    "path": "../00_database/db/ite_intelligence.db",
+    "articles": 1936,
+    "questions": 1629,
+    "note": "DB lives in 00_database/, not in M1. M1 scripts reach it via PROJECT_ROOT / '00_database' / 'db' / 'ite_intelligence.db'"
+  },
+  "companion_libraries_absorbed": {
+    "note": "Old companion libraries (02_docx_guideline_library, 03_enriched_JSON) are being absorbed into the new structure. Enriched JSONs now live in extracted_json/ at PROJECT_ROOT.",
+    "extracted_json": "PROJECT_ROOT/extracted_json/ — 242 article JSONs (flat, not git-tracked)"
+  },
+  "recent_changes": {
+    "baton_006_20260324": [
+      "Added match_tiers_to_library.py to maintain/ (migrated from TEMP_05, de-hardcoded)",
+      "Added rebuild_acquisition_list.py to maintain/ (migrated from TEMP_05, removed stale 00_canonical/ copy step)"
+    ],
+    "baton_004_20260324": [
+      "Created scripts/build/ and scripts/maintain/ subdirectory structure",
+      "Populated maintain/ with 11 scripts (7 from M2 + 1 from agents + 3 existing)",
+      "Populated build/ with 6 scripts"
+    ],
+    "pre_overhaul_20260320": [
+      "PDF library migrated from old structure into 4-tier folder system",
+      "04 tier audit complete: 3 wrong-content files deleted, 6 re-IDed, permissions unlocked"
+    ]
   }
 }

@@ -1,130 +1,77 @@
 {
-  "project_name": "ABFM Knowledge Base & Extraction Pipeline",
-  "description": "Comprehensive clinical knowledge management system integrating ITE exam intelligence, guideline extraction, AAFP course content, and Anthropic Claude API-based enrichment.",
-  "location": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\",
-  "last_updated": "2026-03-17",
-  "active_baton": "house_keeping_hub/baton_archive/BATON_active_20260317.md",
-  "codon_migration": {
-    "status": "COMPLETE — FLAG 12 closed. Codon migration finished, v4 pipeline operational.",
-    "completed": "2026-03-15"
+  "project_name": "ABFM ITE Intelligence System",
+  "description": "Family medicine board exam knowledge base: queryable question bank (1,629 questions, 2018-2025) linked to a clinical guideline library (1,936 articles, 404 PDFs) via a structured SQLite pipeline. Extends beyond exam prep into clinical decision support.",
+  "location": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\00_#PROJECT_OVERHAUL\\",
+  "last_updated": "2026-03-24",
+  "architecture": "4-module rebuild (PROJECT_OVERHAUL)",
+  "active_baton": "BATON_active_006_20260324_temp05.md",
+  "git_status": "Initialized (main branch). Latest clean commit: 94fdc6a. Next commit staged but blocked by .git/index.lock (Windows delete needed).",
+  "database": {
+    "path": "00_database/db/ite_intelligence.db",
+    "articles": 1936,
+    "questions": 1629,
+    "question_ref_pairs": 2722,
+    "qid_art_xref": 1818,
+    "article_icd10": 3855,
+    "clinical_pathways": 4528,
+    "icd10_rollup": 736,
+    "icd10_code_xref": 1668,
+    "art_id_range": "ART-0001 through ART-1937 (ART-0404 deleted/merged)",
+    "next_art_id": "ART-1938"
   },
-  "intelligence_2_0": {
-    "layer_1_icd10": {
-      "status": "COMPLETE",
-      "approach": "MCP-first (zero API cost, zero fabrication)",
-      "rows": 3093,
-      "distinct_codes": 1006,
-      "parent_rollups": 614,
-      "rebuilt": "2026-03-17",
-      "assets": [
-        "schemas/clinical_synonym_map.json (151 clinical term translations)",
-        "schemas/icd10_mcp_lookup.json (1,406 MCP-verified ICD-10 codes)"
-      ]
-    },
-    "layer_2_pubmed": { "status": "NOT STARTED" },
-    "layer_3_pathways": {
-      "status": "COMPLETE",
-      "rows": 3093,
-      "pathway_roles": 7,
-      "api_cost": "$0"
-    },
-    "layer_4a_trends": { "status": "COMPLETE" }
+  "module_structure": {
+    "00_database": "Source of truth (DB + supporting data, schemas, logs)",
+    "01_module.1_warehouse": "PDF library (4 tiers, 404 PDFs) + M1 scripts (build/6, maintain/13)",
+    "02_module.2_processor": "Extraction + enrichment pipeline (45 scripts + 1 config JSON, all paths dynamic)",
+    "03_module.3_analyst": "Analysis scripts (5 active + 2 pending delete)",
+    "04_module.4_sandbox": "Experiments placeholder (empty)"
   },
-  "pipeline_scripts": [
-    "convert_pdfs_to_json.py v1.2 (PDF → extracted JSON)",
-    "ite_intelligence_enricher.py v4 (codon-first enrichment)",
-    "ite_intelligence_enricher_batch.py v4 (Batch API enrichment)",
-    "build_crosswalk_index.py v2.0 (codon-only crosswalk)",
-    "build_icd10_tags.py v2 (MCP-first Layer 1 + crosswalk + pathways, zero API cost)",
-    "build_clinical_pathways.py (ENGINE_ROLE_MAP routing)",
-    "build_topic_trends.py (Layer 4a trend CSVs)"
+  "supporting_folders": {
+    "archive_canonical": "Curated deliverables (curriculum, question bank, analysis, reference data, acquisition lists)",
+    "baton_archive": "Session handoff history (28+ archived BATONs)",
+    "extracted_json": "242 extracted article JSONs — middle-man layer, NOT git-tracked",
+    "key_data_files": "Critical reference data (VC gate, exam CSVs, question bank)",
+    "re-org_guidance": "Architecture docs, auto-memory copies, rebuild protocols",
+    "tagging_bundle": "Question tagging scripts + reference data (archival)"
+  },
+  "pdf_library": {
+    "total": 404,
+    "00_non-codon": "~147 PDFs (codon-named, not yet pipeline-processed)",
+    "01_local_lite": "117 PDFs (ITE-linked, not VC-cited)",
+    "02_codon": "~90 PDFs (codon-named, ITE-linked, VC-cited)",
+    "03_right_click": "~70 PDFs (VC-cited, fully enriched)"
+  },
+  "codon_convention": "Author_Year#@#ART-XXXX@#@.pdf — ART-ID embedded between #@# start and @#@ stop codon",
+  "vc_gate": "key_data_files/session_hy_inserts_v7.json (352 citations — sole criterion for right_click vs local_lite tier)",
+  "intelligence_layers": {
+    "layer_1_icd10": "COMPLETE — 3,855 rows (article_icd10 table)",
+    "layer_2_pubmed": "NOT STARTED — article_currency table, superseded_by chains",
+    "layer_3_pathways": "COMPLETE — 4,528 rows (clinical_pathways table)",
+    "layer_4a_trends": "COMPLETE — body_system/subcategory/concept_tag trend CSVs",
+    "layer_4b_alerts": "NOT STARTED — pubmed_alerts table"
+  },
+  "script_placement_rules": {
+    "all_js": "M2/scripts only — no exceptions",
+    "m2_python_path": "SCRIPT_DIR.parent.parent = PROJECT_ROOT",
+    "m1_maintain_python_path": "SCRIPT_DIR.parent.parent.parent = PROJECT_ROOT",
+    "js_path": "path.resolve(__dirname, '../../') = PROJECT_ROOT",
+    "no_hardcoded_paths": "All paths dynamic — no C:\\Users\\... anywhere in scripts"
+  },
+  "key_conventions": {
+    "source_data_protected": "DB + PDFs + VC gate survive everything. Derivatives are disposable.",
+    "schema_first": "Define schema before writing build script",
+    "fix_data_not_code": "Upstream data cleanup preferred over defensive code",
+    "baton_supersedes_all": "Active BATON is the source of truth for current state"
+  },
+  "pending_windows_actions": [
+    "Delete .git/index.lock (0-byte file at project root .git folder) to unblock staged commit",
+    "Delete BATON_active_005_20260324_pathfixes.md from project root (archived in baton_archive/)",
+    "Delete from TEMP_05: gen_gold_tier_v2.js, 1-21.pdf gold list PDFs, cri_crossref_v4.py, tier_match_qc/ scripts, 04_outputs/tier_match/",
+    "Delete M3 duplicate scripts: build_clinical_pathways.py + build_topic_trends.py from 03_module.3_analyst/scripts/"
   ],
-  "project_scope": {
-    "primary_use": "ABFM board exam preparation and clinical guideline knowledge engineering",
-    "knowledge_domains": [
-      "Canonical reference data (curriculum, question bank, analysis)",
-      "ITE exam intelligence (databases, analytics, processing)",
-      "Clinical guideline extraction and enrichment",
-      "AAFP video course integration",
-      "Reference article processing"
-    ]
-  },
-  "top_level_structure": {
-    "00_canonical": {
-      "description": "Canonical reference data and curricula",
-      "files": 28,
-      "size_mb": 31,
-      "contents": [
-        "ABFM curriculum definitions",
-        "Question bank master data",
-        "Domain analysis frameworks",
-        "Reference materials"
-      ]
-    },
-    "abfm_prep": {
-      "description": "ABFM preparation ecosystem (6 integrated modules)",
-      "files": 1754,
-      "size_mb": 796,
-      "submodules": [
-        "01_guideline_extractor (v2.3 - extraction pipeline)",
-        "02_ite_intelligence (ITE intelligence DB + analysis)",
-        "03_ite_exam (ITE exam data + processing)",
-        "04_aafp_integration (AAFP video course integration)",
-        "05_ite_refs (ITE reference article processing)",
-        "06_ite_pipeline (orchestration + coordination)"
-      ]
-    },
-    "clinical_guidelines": {
-      "description": "Guideline library repository (PDFs, DOCXs, enriched JSON, alt_refs)",
-      "files": "~1,600+",
-      "size_mb": 376,
-      "structure": [
-        "01_pdf_guideline_library (216 PDFs — 146 codon-renamed, 70 original names)",
-        "02_docx_guideline_library (1,366 DOCXs — 139 merged clinical+DB, 1,227 DB-only)",
-        "03_enriched_JSON (217 extracted JSONs — 146 enriched with ite_intelligence, 71 extracted-only)",
-        "alt_refs (76 point-of-care tools: bedside, life_support, vaccine sheets)"
-      ]
-    },
-    "house_keeping_hub": {
-      "description": "Project organization, dependency maps, and planning docs",
-      "files": 30,
-      "purpose": "Documentation, architecture, proposals"
-    },
-    "scratch_scripts": {
-      "description": "Diagnostic and debugging utility scripts",
-      "files": 9
-    },
-    "node_modules": {
-      "description": "JavaScript dependencies (build tools)",
-      "files": 384,
-      "size_mb": 8
-    }
-  },
-  "key_files": {
-    "_index.md": "Project index, directory map, and navigation (ground-truth map of disk)",
-    "README.json": "Machine-readable project metadata (this file)",
-    "README_PROJECT.md": "Human-readable project overview",
-    "package.json": "Node.js dependencies",
-    "package-lock.json": "Locked dependency versions"
-  },
-  "total_project_stats": {
-    "total_files": "~2200+",
-    "total_size_mb": "~1200+",
-    "active_modules": 6,
-    "api_backend": "Anthropic Claude"
-  },
-  "workflow_integration": {
-    "guideline_extraction": "01_guideline_extractor pipeline v2.3 → 02_docx_guideline_library + 03_enriched_json",
-    "ite_processing": "03_ite_exam + 05_ite_refs → 02_ite_intelligence analytics",
-    "aafp_integration": "04_aafp_integration with canonical reference data",
-    "orchestration": "06_ite_pipeline coordinates all modules"
-  },
-  "removed_legacy_folders": {
-    "note": "The following are archived or removed (not in current working directory):",
-    "guideline_extractor_v1": "v1 prototype, superseded by v2.3",
-    "guideline_lib_linked": "duplicate of 03_enriched_json",
-    "data_plug-in": "redundant copies (installed as plugin skills)",
-    "claude_root_working": "legacy working directory (empty)"
-  },
-  "git_status": "No version control tracking at this time"
+  "stale_files_at_root": [
+    "README_PROJECT.md — stale (March 17), needs rebuild",
+    "master_map.JSON — stale (March 19, old 7-module structure), needs rebuild",
+    "MASTER_MAP_V.1.html — stale (old structure)"
+  ]
 }

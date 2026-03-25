@@ -74,25 +74,45 @@ TEMP_05 was the ITE refs pipeline folder (linked refs crosswalk + tier matching)
 
 ---
 
+## Verification Findings: gen_linked_refs_v2.js vs gen_gold_tier_v2.js
+
+Mid-session, both scripts were read in full before migration decisions were made.
+
+**gen_linked_refs_v2.js (MIGRATED):**
+- Input: `linked_refs_crosswalk_final.csv` + individual extracted JSON files (paths from crosswalk)
+- Output: `ABFM_BoardPrep_LinkedRefs_v2.docx` — organized by AAFP session, lists linked article refs per session
+- Role: Crosswalk pipeline terminal step. Produces the board-prep linked refs document.
+- De-hardcoded in migration. New paths: `archive_canonical/04_reference_data/linked_refs_crosswalk_final.csv` → `archive_canonical/01_curriculum/00_RPT_linked_refs_20-25.docx`
+
+**gen_gold_tier_v2.js (NOT MIGRATED — DELETE):**
+- Input: 21 pre_calibration_archive JSONs (gold list articles, hardcoded to old `01_guideline_extractor/outputs/pre_calibration_archive` path)
+- Output: `ABFM_BoardPrep_GoldTier_v2.docx` — gold list summary doc, organized by specialty
+- Role: One-time gold list report generator. Fully hardcoded to old `med-nav_rebuild` structure. Gold list output (00_RPT_gold_tier_20-25.docx) already exists in `archive_canonical/01_curriculum/`. Script has no path to the new `extracted_json/` layout and would require a full rewrite.
+- Decision: Does not migrate. The deliverable already exists. Delete the script.
+
+---
+
 ## Deferred Flags (Carried Forward)
 
 | Flag | Description |
 |------|-------------|
 | FLAG 33 | `compute_embeddings.py` + `validate_vector_search.py` deferred — requires vector DB decision |
 | M3 duplicates | `build_clinical_pathways.py` + `build_topic_trends.py` in M3/scripts/ pending manual delete (VM cannot rm NTFS) |
-| BATCH_DIRS sorting | 242 flat JSONs in `extracted_json/` need to be sorted into 5 named subdirs for `build_crosswalk_v2.py` to use them correctly |
-| TEMP_05 Windows cleanup | User to delete from Windows: `gen_gold_tier_v2.js`, `1–21.pdf` gold list PDFs, `cri_crossref_v4.py`, `tier_match_qc/` scripts, `04_outputs/tier_match/` intermediate files |
+| BATCH_DIRS sorting | 242 flat JSONs in `extracted_json/` need to be sorted into 5 named subdirs for `build_crosswalk_v2.py` to use them correctly. Subdirs exist as placeholders. |
+| TEMP_05 Windows cleanup | Delete from Windows: `gen_gold_tier_v2.js`, `1–21.pdf` (gold list PDFs), `cri_crossref_v4.py`, `tier_match_qc/` scripts, `04_outputs/tier_match/` intermediate files |
+| BATON_active_005 root copy | `BATON_active_005_20260324_pathfixes.md` is still at project root — Windows delete needed (archived copy exists in `baton_archive/`) |
 | Remaining TEMP folders | TEMP_06, TEMP_07, TEMP_08 not yet audited/migrated |
-| Old BATON 005 | Archive `BATON_active_005_20260324_pathfixes.md` → `baton_archive/` |
+| **GIT COMMIT BLOCKED** | `.git/index.lock` is a stale 0-byte file that the VM cannot delete (NTFS permission). Must be deleted from Windows before `git commit` will run. Staged files are ready — the index just can't be written. Delete: `00_#PROJECT_OVERHAUL\.git\index.lock` then run the commit command provided in session. |
 
 ---
 
 ## Next Steps
 
-1. **Windows cleanup:** Delete TEMP_05 disposable content (gen_gold_tier_v2.js, gold PDFs 1-21.pdf, cri_crossref_v4.py, tier_match_qc/ scripts, 04_outputs/tier_match/)
-2. **BATCH_DIRS sorting (deferred):** Sort 242 flat JSONs into `extracted_json/` batch subdirs when crosswalk pipeline is re-run. Subdirs exist; just need the files moved in.
-3. **Continue TEMP migrations:** TEMP_06 → TEMP_07 → TEMP_08 (TEMP_08 was originally flagged in BATON 005 as next)
-4. **Git commit** this session's changes
+1. **Windows — unblock git:** Delete `00_#PROJECT_OVERHAUL\.git\index.lock` (0-byte file), then run: `git commit -m "feat(TEMP_05): migrate crosswalk pipeline + tier matching..."`
+2. **Windows — cleanup TEMP_05:** Delete `gen_gold_tier_v2.js`, gold PDFs `1–21.pdf`, `cri_crossref_v4.py`, `tier_match_qc/` scripts, `04_outputs/tier_match/`
+3. **Windows — cleanup root BATON:** Delete `BATON_active_005_20260324_pathfixes.md` from root (archived copy is in `baton_archive/`)
+4. **BATCH_DIRS sorting (deferred):** When crosswalk pipeline is re-run, sort flat JSONs into `extracted_json/` batch subdirs. Scripts will WARN (not crash) until this is done.
+5. **Continue TEMP migrations:** TEMP_06 → TEMP_07 → TEMP_08
 
 ---
 

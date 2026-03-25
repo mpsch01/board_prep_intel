@@ -87,6 +87,39 @@ Also planned: richer human-readable filename prefixes beyond `Author_Year` — t
 
 ---
 
+---
+
+### 6. Script Placement and Path Convention (Locked — BATON 004/006)
+
+All scripts have a single canonical home determined by their role in the pipeline.
+
+**JS Rule:** No de novo JavaScript. Existing JS scripts that already work migrate like any other script. All JS lives in `02_module.2_processor/scripts/` — no exceptions.
+
+**Python path resolution pattern:**
+```python
+# M2/scripts (2 levels to PROJECT_ROOT):
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+
+# M1/scripts/maintain (3 levels to PROJECT_ROOT):
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
+```
+
+**JS path resolution pattern:**
+```js
+const path = require("path");
+const PROJECT_ROOT = path.resolve(__dirname, "../../");  // M2/scripts → PROJECT_ROOT
+```
+
+**Never hardcode:** No absolute Windows paths, no `C:\Users\...` anywhere in scripts. Every path in every script resolves from `PROJECT_ROOT` at runtime.
+
+**TODO annotation:** When a path points to a location not yet populated, use `# TODO: not yet migrated` inline comment so the gap is visible during future migration passes.
+
+**Extracted JSONs** (`extracted_json/` root folder): These are middle-man data artifacts — not git-tracked, not source code, not disposable either. They live at project root. They are the output of `convert_pdfs_to_json.py` and the input to `build_crosswalk_v2.py`. Batch subdirs exist as placeholders; JSONs are currently flat until a sorting pass.
+
+---
+
 ### How These Five Work Together
 
 ```
@@ -102,4 +135,5 @@ Each layer makes the one above it more reliable. Git gives BATON a stable substr
 ---
 
 *Committed to memory: March 23, 2026*
+*Updated: March 24, 2026 — Guideline 6 added (JS rule + path conventions, BATON 004/006)*
 *Source: ROOT_BATON_DRAFT session (fervent-hopeful-thompson, March 21, 2026) + confirmed by Mikey*

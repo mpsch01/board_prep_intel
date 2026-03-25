@@ -48,13 +48,13 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_005_20260324_pathfixes.md` |
+| Active BATON | `BATON_active_006_20260324_temp05.md` |
 | DB articles | 1,936 |
 | DB questions | 1,629 (2018–2025) |
 | PDFs | 404 across 4 tiers |
-| M2 scripts | 41 (all paths dynamic as of `ed85b06`) |
+| M2 scripts | 45 + 1 config JSON (all paths dynamic) |
 | Next ART-ID | ART-1938 |
-| Git branch | `main`, latest `c00b4bb` |
+| Git branch | `main`, latest `064d322` |
 
 → Full state: `.auto-memory/project_overhaul_state.md` and `.auto-memory/project_current_db_state.md`
 
@@ -90,8 +90,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 005)
-1. TEMP_08 audit (ite_score_analysis — score PDFs + M3 configs)
-2. Articles table gap-fill (389 new articles at 0% for source_type/categories/tier)
+## Next Steps (as of BATON 006)
+1. TEMP_06 → TEMP_07 → TEMP_08 audits/migrations
+2. Articles table gap-fill (389 articles at 0% for source_type/categories/tier)
 3. Intelligence 2.0 Layer 2 (article_currency via PubMed MCP)
-4. Manual deletes by Mikey: `TEMP_04_aafp_integration_TEMP/`, `BoardPrep-ContentOutline_HY-ENRICHED-v4.docx`, M3 duplicates
+4. Manual deletes by Mikey: M3 duplicates (`build_clinical_pathways.py`, `build_topic_trends.py`), TEMP_05 garbage, `BoardPrep-ContentOutline_HY-ENRICHED-v4.docx`
