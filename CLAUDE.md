@@ -22,15 +22,15 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | **codon** | Filename format: `Author_Year#@#ART-XXXX@#@.pdf` — start `#@#`, stop `@#@` |
 | **ART-ID** | Article primary key (e.g. ART-1234) — embedded in codon filename |
 | **QID** | Question ID format: `QID-YYYY-NNNN` (e.g. QID-2024-0042) |
-| **right_click / $right_click$** | PDF tier: VC-cited articles — densest enrichment path |
-| **local_lite** | PDF tier: ITE-linked but NOT VC-cited |
-| **codon tier** | PDF tier 02_codon/ — codon-named, ITE-linked, VC-cited (pre-enrichment) |
-| **non-codon** | PDF tier 00_non-codon/ — codon-named but not yet pipeline-processed |
+| **right_click / $right_click$** | M2 completed tier: VC_pass + fully enriched (DOCX exists) |
+| **local_lite** | M2 completed tier: VC_fail + fully enriched (DOCX exists) |
+| **VC_pass** | M1 staging tier: passed VC gate, awaiting full pipeline (`VC_pass/` folder, was `02_codon/`) |
+| **VC_fail** | M1 staging tier: failed VC gate, awaiting full pipeline (`VC_fail/` folder, was `00_non-codon/`) |
 | **HY inserts** | High-Yield inserts — the enrichment content injected into the VC outline |
 | **enricher** | `ite_intelligence_enricher.py` — primary v4 enricher, Strategy 0 = codon parse |
 | **Strategy 0** | Regex parse of codon to extract ART-ID — primary match strategy, always first |
 | **the DB** | `00_database/db/ite_intelligence.db` — source of truth, never disposable |
-| **PROJECT_ROOT** | 2 levels up from `M2/scripts/` — `Path(__file__).resolve().parent.parent` |
+| **PROJECT_ROOT** | 2 levels up from SCRIPT_DIR — `SCRIPT_DIR = Path(__file__).resolve().parent; PROJECT_ROOT = SCRIPT_DIR.parent.parent` (= 3 hops from file) |
 | **M1 / M2 / M3 / M4** | Warehouse / Processor / Analyst / Sandbox modules |
 | **Module F** | VC Outline Pipeline: 01→02b→03→04→07→08→09→build_v6 |
 | **keyword pipeline** | A→B→C→D→E_v4→F→G scripts |
@@ -48,14 +48,15 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_009_20260325_windows_sync_complete.md` |
+| Active BATON | `BATON_active_011_20260326_vc_pass_batch_enriched.md` |
 | DB articles | 1,936 |
 | DB questions | 1,629 (2018–2025) |
 | PDFs | 404 across 4 tiers |
-| M2 scripts | 50 Python + 6 JS + 1 config JSON (all paths dynamic) |
+| qid_art_xref | 2,470 (all 8 years: 2018–2025) |
+| M2 scripts | 51 Python + 6 JS + 1 config JSON (all paths dynamic) |
 | M3 scripts | 4 Python + 1 JS + 2 JSON config |
 | Next ART-ID | ART-1938 |
-| Git branch | `main`, latest `cedab1c` |
+| Git branch | `main`, latest `02d8a37` |
 
 → Full state: `.auto-memory/project_overhaul_state.md` and `.auto-memory/project_current_db_state.md`
 
@@ -91,10 +92,11 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 009, 2026-03-25)
-1. **Post-enrichment QC** — spot-check 5–10 enriched JSONs, verify `ite_intelligence{}` block quality
-2. **End-to-end module tests** — M1 build, M2 extract→enrich→DOCX, M3 analysis
-3. **ITE question pipeline E2E test** — `01→02→03→ite_tag_questions` on 2025 source docs
-4. **2018–2019 qid_art_xref crosswalk pass** — 0 entries for these years
-5. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
-6. **Supabase evaluation** — defer until pipeline stable
+## Next Steps (as of BATON 011, 2026-03-26)
+1. **Nomenclature sweep** — rename `02_codon/`→`VC_pass/`, `00_non-codon/`→`VC_fail/`, `02_codon_batch/`→`VC_pass_batch/`; update DB tier values; update all docs
+2. **2018–2019 xref tier backfill** — tier=None for all 652 new xref rows; backfill Must-Read/Core labels
+3. **ART-0864 title fix** — title stored as "e45-e67" (page range); needs manual correction to Metlay/Waterer 2019 CAP guideline
+4. **54 no-art-id flat JSONs** — title-match pass to link to DB
+5. **VC_fail extraction** — extract 146 VC_fail PDFs → `extracted_json/VC_fail_batch/`
+6. **E2E module tests** — M1 `build_crosswalk_index.py`, M3 `build_icd10_tags.py` report
+7. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP

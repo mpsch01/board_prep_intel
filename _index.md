@@ -93,10 +93,10 @@
 ### `01_module.1_warehouse/` — PDF Library (404 total) + Scripts
 ```
 01_module.1_warehouse/
-├── 00_non-codon/     ← 147 PDFs (codon-named but not yet pipeline-processed)
-├── 01_local_lite/    ← 117 PDFs (ITE-linked, not VC-cited)
-├── 02_codon/         ← ~90 PDFs (codon-named, ITE-linked, VC-cited)
-├── 03_right_click/   ← ~70 PDFs (VC-cited — $right_click$ tier, enriched)
+├── VC_fail/          ← 146 PDFs (VC gate failed — destined for local_lite; was 00_non-codon/)
+├── 01_local_lite/    ← 117 PDFs (VC_fail + fully enriched)
+├── VC_pass/          ← 94 PDFs (VC gate passed — destined for right_click; was 02_codon/)
+├── 03_right_click/   ← ~70 PDFs (VC_pass + fully enriched — $right_click$ tier)
 ├── scripts/
 │   ├── build/                             ← structural/one-time (assume DB doesn't exist)
 │   │   ├── README.md

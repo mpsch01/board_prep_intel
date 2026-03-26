@@ -6,6 +6,7 @@ Creates two virtual tables (article_vec, question_vec) for semantic similarity s
 
 Usage:
     python compute_embeddings.py                 # embed everything
+    python compute_embeddings.py --new-only      # incremental: only items not yet embedded
     python compute_embeddings.py --articles-only # just articles
     python compute_embeddings.py --questions-only # just questions
     python compute_embeddings.py --dry-run       # show what would be embedded, no API calls
@@ -14,8 +15,9 @@ Requires:
     pip install sqlite-vec openai
     Environment variable: OPENAI_API_KEY
 
-Cost estimate: ~$0.006 for full corpus (1,397 articles + 1,189 questions)
-Runtime: ~30 seconds
+Cost estimate: ~$0.015 for full corpus (1,936 articles + 1,629 questions)
+             ~$0.006 for gap-fill pass (--new-only: ~979 items)
+Runtime: ~60 seconds full, ~20 seconds gap-fill
 """
 
 import sqlite3
@@ -29,7 +31,9 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 # CONFIG — tune these knobs
 # ---------------------------------------------------------------------------
-DB_PATH       = Path(__file__).parent.parent / "db" / "ite_intelligence.db"
+SCRIPT_DIR    = Path(__file__).resolve().parent
+PROJECT_ROOT  = SCRIPT_DIR.parent.parent.parent          # build/ -> scripts/ -> M1/ -> PROJECT_ROOT
+DB_PATH       = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 EMBED_MODEL   = "text-embedding-3-small"   # 1536 dimensions, $0.02/M tokens
 EMBED_DIM     = 1536
 BATCH_SIZE    = 100                        # OpenAI supports up to 2048 per call
@@ -217,13 +221,23 @@ def embed_articles(conn, client, dry_run=False, new_only=False):
     return embedded, int(total_tokens)
 
 
-def embed_questions(conn, client, dry_run=False):
-    """Compute and store embeddings for all questions."""
-    questions = conn.execute("""
-        SELECT qid, question_text, correct_text, body_system, subcategory, concept_tags
-        FROM questions
-        ORDER BY qid
-    """).fetchall()
+def embed_questions(conn, client, dry_run=False, new_only=False):
+    """Compute and store embeddings for all questions (or only new ones)."""
+    if new_only:
+        questions = conn.execute("""
+            SELECT q.qid, q.question_text, q.correct_text, q.body_system, q.subcategory, q.concept_tags
+            FROM questions q
+            LEFT JOIN question_vec v ON q.qid = v.qid
+            WHERE v.qid IS NULL
+            ORDER BY q.qid
+        """).fetchall()
+        print(f"  [new-only mode] {len(questions)} questions without embeddings")
+    else:
+        questions = conn.execute("""
+            SELECT qid, question_text, correct_text, body_system, subcategory, concept_tags
+            FROM questions
+            ORDER BY qid
+        """).fetchall()
 
     print(f"\n{'='*60}")
     print(f"QUESTIONS: {len(questions)} to embed")
@@ -375,7 +389,7 @@ def main():
 
     # Embed questions
     if not args.articles_only:
-        n, t = embed_questions(conn, client, dry_run=args.dry_run)
+        n, t = embed_questions(conn, client, dry_run=args.dry_run, new_only=args.new_only)
         total_embedded += n
         total_tokens += t
 
