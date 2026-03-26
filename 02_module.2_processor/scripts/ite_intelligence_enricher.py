@@ -45,9 +45,9 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
 # ── Paths ──────────────────────────────────────────────────────────────────
-BASE_DIR  = Path(__file__).resolve().parent.parent
+BASE_DIR  = Path(__file__).resolve().parent.parent.parent
 DB_PATH   = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
-LOG_DIR   = BASE_DIR / "logs"
+LOG_DIR   = BASE_DIR / "00_database" / "logs"
 MODEL     = "claude-sonnet-4-20250514"
 
 
