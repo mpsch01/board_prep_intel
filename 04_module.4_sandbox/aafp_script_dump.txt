@@ -1,0 +1,263 @@
+AAFP Script Dump v2
+URL: https://www.aafp.org/assessment/take/13882/c/49733
+HTML: 58,229 chars
+
+============================================================
+EXTERNAL SCRIPT URLS (9 total)
+============================================================
+https://ui.aafp.net/aafp-brand-components/2/components/aafp-web-components/aafp-web-components.esm.js
+https://ui.aafp.net/aafp-brand-components/2/components/aafp-web-components/aafp-web-components.js
+https://code.jquery.com/jquery-1.8.3.min.js
+https://code.jquery.com/ui/1.8.24/jquery-ui.min.js
+/assessment/Scripts/takeClinicalQuestion.js?v={VERSION}
+https://www.aafp.org/jsparse/AAFPUser.js
+https://lpcdn.lpsnmedia.net/api/chat/public/lpChat.min.js
+https://js.aafp.org/global/libs/utils.js
+//www.googletagmanager.com/gtm.js?id=GTM-PXLQG7
+
+============================================================
+INLINE SCRIPTS (4)
+============================================================
+
+── INLINE 1 (len=53) ──
+
+        var t_pagestart = new Date().getTime();
+    
+── INLINE 2 (len=1065) ──
+
+			var searchFormId = 'search\u002Dboxsearch\u002Dbox';
+			var searchFormQ = 'qsearch\u002Dbox';
+			var searchFormAction = '\/content\/brand\/aafp\/global\u002Dsearch.html';
+			var searchFormAdditionalParams = '';
+			 
+			function processSearchForm(e) {
+			    if (e.preventDefault) e.preventDefault();
+
+			    var qValue = document.getElementById(searchFormQ).value;
+				var searchFormParams = "";
+				if(qValue != ""){
+					searchFormParams = "q=" + qValue;
+				}
+				
+				if(searchFormAdditionalParams != ""){
+					if(searchFormParams != ""){
+						searchFormParams += "&";
+					}
+					
+					searchFormParams += searchFormAdditionalParams;
+				}
+			    
+				if(searchFormParams != ""){
+					searchFormAction = searchFormAction + "#" + searchFormParams;
+				}
+				
+				window.location.href = searchFormAction;
+				
+			    return false;
+			}
+
+			var form = document.getElementById(searchFormId);
+			if (form.attachEvent) {
+			    form.attachEvent("submit", processSearchForm);
+			} else {
+			    form.addEventListener("submit", processSearchForm);
+			}
+		 
+		 
+		
+── INLINE 3 (len=398) ──
+
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PXLQG7');
+
+── INLINE 4 (len=109) ──
+
+        jQuery(document).ready(function () {
+            jQuery('#cme').addClass('active');
+        });
+    
+
+============================================================
+DATA-* ATTRIBUTES (27 elements)
+============================================================
+<input id='AssessmentNumber' class=''> {'data-val': 'true', 'data-val-number': 'The field AssessmentNumber must be a number.', 'data-val-required': 'The AssessmentNumber field is required.'}
+<input id='AssessmentId' class=''> {'data-val': 'true', 'data-val-number': 'The field AssessmentId must be a number.', 'data-val-required': 'The AssessmentId field is required.'}
+<input id='Question_Id' class=''> {'data-val': 'true', 'data-val-number': 'The field Id must be a number.', 'data-val-required': 'The Id field is required.'}
+<aafp-link id='' class=''> {'data-text': 'About AAFP', 'data-url': '/about.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Board of Directors', 'data-url': '/about/meet-our-leadership/board.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Advocacy', 'data-url': '/advocacy.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'AAFP Apparel', 'data-url': 'https://store.aafp.org/?bc=website-footer', 'data-is-external-link': 'true', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Using AAFP Content', 'data-url': '/about/using-aafp-content.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Work at AAFP', 'data-url': 'https://aafp.wd5.myworkdayjobs.com/AAFP_Careers', 'data-is-external-link': 'true', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Contact Us', 'data-url': 'https://www.aafp.org/account/home/contactus', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'CME', 'data-url': '/cme.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Events', 'data-url': '/events.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Physician Careers', 'data-url': '/family-physician/practice-and-career/managing-your-career/find-a-job.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Advocacy Wins', 'data-url': '/advocacy/wins.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'News', 'data-url': '/news.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Join AAFP', 'data-url': '/membership/join.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Pay Dues', 'data-url': 'https://www.aafp.org/ecommerce/quickpay', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Partner Program', 'data-url': '/about/partner.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Sponsored Resources', 'data-url': '/about/sponsored-resources.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Media Center', 'data-url': '/news/media-center.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'My Account', 'data-url': 'https://www.aafp.org/account/profile/home', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Report CME', 'data-url': 'https://www.aafp.org/credit-reporting/reporting/claim-credit', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'View Transcript', 'data-url': 'https://www.aafp.org/credit-reporting/reporting/transcript/', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'AAFP Credit System', 'data-url': '/cme/credit-system.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'Chapter Staff', 'data-url': '/chapter-staff.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'ALSO', 'data-url': '/cme/programs/also.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+<aafp-link id='' class=''> {'data-text': 'BLSO', 'data-url': '/cme/programs/blso.html', 'data-is-external-link': 'false', 'data-is-restricted': 'false'}
+
+============================================================
+HIDDEN INPUTS
+============================================================
+  name='first_search' id='' value='0'
+  name='search' id='' value='Entire Site'
+  name='AssessmentNumber' id='AssessmentNumber' value='13882'
+  name='AssessmentId' id='AssessmentId' value='16874'
+  name='Question.Id' id='Question_Id' value='49733'
+
+============================================================
+FORM HTML
+============================================================
+<form action="/assessment/take/13882/c/49733" method="post"> <div class="aafp-form__container">
+<fieldset class="aafp-form__wrapper">
+<div class="adl-space__sm__m-b-sm">
+    A 42-year-old female presents for follow-up after being treated for recurrent respiratory problems at an urgent care facility. She is feeling a little better after a short course of oral prednisone and use of an albuterol (Proventil, Ventolin) inhaler. She has had a gradual increase in shortness of breath, a chronic cough, and a decrease in her usual activity level over the past year. She has brought a copy of a recent chest radiograph report for your review that describes panlobular basal emphysema. She does not have a history of smoking, secondhand smoke exposure, or occupational exposures. Spirometry in the office reveals an FEV1/FVC ratio of 0.67 with no change after bronchodilator administration.<br/>
+<br/>
+Which one of the following underlying conditions is the most likely cause for this clinical presentation? 
+    <span class="small"><em>(check one)</em></span><br/>
+</div>
+<div class="adl-space__sm__m-b-sm">
+<div>
+<input id="ClinicalAnswer|201985" name="ClinicalAnswer|49733" type="radio" value="201985"/>
+<label for="ClinicalAnswer|201985">α1-Antitrypsin deficiency</label>
+</div>
+<div>
+<input id="ClinicalAnswer|201986" name="ClinicalAnswer|49733" type="radio" value="201986"/>
+<label for="ClinicalAnswer|201986">Bronchiectasis</label>
+</div>
+<div>
+<input id="ClinicalAnswer|201987" name="ClinicalAnswer|49733" type="radio" value="201987"/>
+<label for="ClinicalAnswer|201987">Diffuse panbronchiolitis</label>
+</div>
+<div>
+<input id="ClinicalAnswer|201988" name="ClinicalAnswer|49733" type="radio" value="201988"/>
+<label for="ClinicalAnswer|201988">Interstitial lung disease</label>
+</div>
+<div>
+<input id="ClinicalAnswer|201989" name="ClinicalAnswer|49733" type="radio" value="201989"/>
+<label for="ClinicalAnswer|201989">Left heart failure</label>
+</div>
+</div>
+<input data-val="true" data-val-number="The field AssessmentNumber must be a number." data-val-required="The AssessmentNumber field is required." id="AssessmentNumber" name="AssessmentNumber" type="hidden" value="13882"/>
+<input data-val="true" data-val-number="The field AssessmentId must be a number." data-val-required="The AssessmentId field is required." id="AssessmentId" name="AssessmentId" type="hidden" value="16874"/>
+<input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Question_Id" name="Question.Id" type="hidden" value="49733"/>
+</fieldset>
+<div class="aafp-form__messages">
+<span class="answer hide incorrectResponse field-validation-error" id="noAnswersChosen">Error: Please select an answer</span>
+</div>
+</div>
+<div class="action-row">
+<button class="try aafp-button button-primary" id="submitAnswer">Submit Answers</button>
+</div>
+</form>
+============================================================
+EXTERNAL QUIZ JS (quiz-related keywords found)
+============================================================
+
+============================================================
+EXT JS: https://www.aafp.org/assessment/Scripts/takeClinicalQuestion.js?v={VERSION} (3,394 chars)
+============================================================
+/// <reference path="jquery-1.5-vsdoc.js" />
+
+$(function () {
+    $("#submitAnswer").click(function () {
+        var form = $(this).closest("form");
+        var noAnswersChosenDiv = $("#noAnswersChosen");
+
+        var hasCheckboxesOrRadioButtons = $(form).find("input:checkbox").length + $(form).find("input:radio").length > 0;
+        if (hasCheckboxesOrRadioButtons) {
+            if (($(form).find("input:checkbox:checked").length + $(form).find("input:radio:checked").length) == 0) {
+                noAnswersChosenDiv.show();
+                return false;
+            }
+        }
+
+        $(this).addClass("adl-button__loading-spinner");
+        $(this).attr("disabled", true);
+
+        $.ajax({
+            type: "POST",
+            url: $(form).attr("action"),
+            data: $(form).serialize(),
+            dataType: "json",
+            success: function (response) {
+                if (response.length > 0 && response.substring(0, 5) === "Error") {
+                    noAnswersChosenDiv.show();
+                } else {
+                    noAnswersChosenDiv.hide();
+                    disableRadioAndCheckboxes(form);
+                    showResult(response);
+
+                    var continueUrl;
+                    if (window.location.href.indexOf("summary") !== -1 || response.NextQuestionId === null) {
+                        var assessmentNumber = $("#AssessmentNumber").val();
+                        continueUrl = "/assessment/take/" + assessmentNumber + "/Summary/c";
+                    } else {
+                        var lastSlash = window.location.href.lastIndexOf("/");
+                        continueUrl = window.location.href.substring(0, lastSlash + 1) + response.NextQuestionId;
+                    }
+                    $(".continue").click(function () { window.location.href = continueUrl; });
+
+                    $("#submitAnswer").hide();
+                }
+            },
+            error: function (xhr, err) {
+                alert("Failed to Submit Answer.  Try again later.\n\n" + xhr.responseText);
+            }
+        });
+
+        return false;
+    });
+
+    $(".tryagain").click(function (event) {
+        window.location.href = window.location.href;
+    });
+});
+
+function showResult(answerResponse) {
+    if (answerResponse.IsCorrect) {
+        $("#correctAnswer").show();
+        $("#correctScore").text(answerResponse.ScorePercentage);
+        $("#answerExplanation").html(answerResponse.AnswerExplanation);
+        setScoreColor($("#correctScore"), answerResponse.ScoreDecimal);
+    } else {
+        $("#incorrectAnswer").show();
+        $("#incorrectScore").text(answerResponse.ScorePercentage);
+        setScoreColor($("#incorrectScore"), answerResponse.ScoreDecimal);
+
+        if (!answerResponse.AllowMultipleAnswerAttempts && answerResponse.ShowCorrectAnswers) {
+            $("#correctAnswerIndicators").text(answerResponse.CorrectAnswerIndicators);
+            $("#answerExplanationIncorrect").html(answerResponse.AnswerExplanation);
+        }
+    }
+}
+
+function setScoreColor(controlToSet, scoreDecimal) {
+    if (scoreDecimal < .8)
+        $(controlToSet).attr("class", "incorrectResponse");
+    else
+        $(controlToSet).attr("class", "correctResponse");
+}
+
+function disableRadioAndCheckboxes(theForm) {
+    $(theForm).find("input:checkbox").attr("disabled", true);
+    $(theForm).find("input:radio").attr("disabled", true);
+}

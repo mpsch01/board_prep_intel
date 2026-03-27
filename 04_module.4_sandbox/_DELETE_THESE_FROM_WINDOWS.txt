@@ -1,0 +1,11 @@
+Files moved to 01_module.1_warehouse/aafp_brq/ — delete these originals from Windows:
+
+  aafp_brq_scraper.py         → moved to 01_module.1_warehouse/aafp_brq/scraper/
+  aafp_cookies.json            → moved to 01_module.1_warehouse/aafp_brq/scraper/
+  aafp_quiz_map.json           → moved to 01_module.1_warehouse/aafp_brq/scraper/
+  aafp_explore_dump.txt        → moved to 01_module.1_warehouse/aafp_brq/scraper/
+
+Also delete from 02_module.2_processor/outputs/:
+  aafp_brq_staging.json        → moved to 01_module.1_warehouse/aafp_brq/staging/
+
+After deletion, remove this file too.

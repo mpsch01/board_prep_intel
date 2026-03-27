@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-03-27 (BATON 014)
-**Status:** Current — updated post full inventory sweep, M2 cleanup, M1 build sequence completed, folder consolidation
+**Last Updated:** 2026-03-27 (BATON 015)
+**Status:** Current — updated post AAFP BRQ scraper build, 1,221 Q imported, M1 aafp_brq/ added, citation gap list built
 
 > This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 00_#PROJECT_OVERHAUL/
-├── BATON_active_014_20260327_m1_complete_m2_clean_critique_extractor_designed.md  ← active BATON
+├── BATON_active_015_20260327_aafp_brq_scraper_built_citation_gap_complete.md  ← active BATON
 ├── CLAUDE.md                              ← project memory + conventions
 ├── README.json                            ← machine-readable project metadata
 ├── README_PROJECT.md                      ← human-readable overview
@@ -20,10 +20,10 @@
 ├── .gitattributes / .gitignore
 │
 ├── 00_database/                           ← source of truth (DB + supporting data)
-├── 01_module.1_warehouse/                 ← M1 PDF library (4 tiers, 404 PDFs) + build/maintain scripts
+├── 01_module.1_warehouse/                 ← M1 PDF library (4 tiers, 404 PDFs) + AAFP BRQ warehouse + build/maintain scripts
 ├── 02_module.2_processor/                 ← M2 pipeline scripts + source inputs
 ├── 03_module.3_analyst/                   ← M3 score analysis + ICD-10 + pathways
-├── 04_module.4_sandbox/                   ← M4 experiments (empty placeholder)
+├── 04_module.4_sandbox/                   ← M4 experiments (_DELETE_THESE_FROM_WINDOWS.txt — cleanup checklist)
 │
 ├── archive_canonical/                     ← curated deliverables archive
 ├── auto-memory-copies/                    ← durable backup of all auto-memory files (moved from re-org_guidance 2026-03-27)
@@ -80,19 +80,29 @@
 | icd10_code_xref | 1,006 | |
 | article_vec | 1,936 | sqlite-vec — 100% coverage |
 | question_vec | 1,629 | sqlite-vec — 100% coverage |
+| **aafp_questions** | **1,221** | AAFP BRQ scrape — separate from questions (Option B+C); aafp_qid = AAFP-{question_id} |
 
-**Planned table (designed BATON 014, not yet built):**
+**Planned tables (designed, not yet built):**
 - `article_citation_trend` — companion to articles; tracks years_cited, consecutive_streak, is_watch_list per article
+- `aafp_qid_art_xref` — parallel to qid_art_xref; one row per AAFP question-article link (schema: aafp_qid / article_id / match_status)
 
 ---
 
-### `01_module.1_warehouse/` — PDF Library (404 total) + Scripts
+### `01_module.1_warehouse/` — PDF Library (404 total) + AAFP BRQ Data + Scripts
 ```
 01_module.1_warehouse/
 ├── VC_fail/          ← 146 PDFs (VC gate failed — destined for local_lite)
 ├── 01_local_lite/    ← 117 PDFs (VC_fail + fully enriched)
 ├── VC_pass/          ← 94 PDFs (VC gate passed — destined for right_click)
 ├── 03_right_click/   ← 71 PDFs (VC_pass + fully enriched)
+├── aafp_brq/                              ← AAFP Board Review Questions (scraper + staging)
+│   ├── scraper/
+│   │   ├── aafp_brq_scraper.py            ← v3 + resume/salvage logic (Windows-only: VM proxy blocks HTTPS)
+│   │   ├── aafp_cookies.json              ← 38 auth cookies (refresh before each scrape run)
+│   │   ├── aafp_quiz_map.json             ← 135 quiz sets (assessment_id → quiz_title)
+│   │   └── aafp_explore_dump.txt          ← Q49733 reference (explore mode output)
+│   └── staging/
+│       └── aafp_brq_staging.json          ← 1,221 scraped questions (4MB); import script in M2
 ├── scripts/
 │   ├── build/                             ← full DB build sequence (run in order)
 │   │   ├── README.md
@@ -153,7 +163,7 @@
 │   ├── 00_EX_content_outline_w_q.docx
 │   ├── aafp_transcripts/                 ← 50 cleaned .txt files
 │   └── ite_source/                       ← 2025_ITE_Questions.docx + 2025_ITE_Critique.docx
-└── scripts/                               ← 44 Python + 6 JS + 1 JSON + 4 Windows files
+└── scripts/                               ← 45 Python + 6 JS + 1 JSON + 4 Windows files
     │
     │── MODULE F — VC OUTLINE PIPELINE (run order: 01→02b→03→04→07→08→09→build_v6)
     ├── 01_build_crosswalk.py
@@ -222,6 +232,9 @@
     ├── ite_check_columns.py
     ├── build_qbank_exam_version.py
     │
+    │── AAFP BRQ IMPORT
+    ├── aafp_brq_import.py                 ← staging JSON → aafp_questions table; 51% article linkage first pass
+    │
     │── WINDOWS SYSTEM FILES
     ├── batch_reprocess.ps1
     ├── extract_guideline.bat
@@ -264,7 +277,11 @@
 ```
 *4 Python + 1 JS + 2 JSON configs*
 
-### `04_module.4_sandbox/` — Empty placeholder
+### `04_module.4_sandbox/` — Experiments
+```
+04_module.4_sandbox/
+└── _DELETE_THESE_FROM_WINDOWS.txt  ← cleanup checklist (sandbox AAFP files → moved to M1; delete originals from Windows)
+```
 
 ---
 
@@ -342,7 +359,7 @@ key_data_files/
 External Sources (ITE exams 2018-2025, AAFP course, guidelines, score reports)
         ↓
 M1 Warehouse — store
-  00_database/        (DB: 1,936 articles, 1,629 questions)
+  00_database/        (DB: 1,936 articles, 1,629 ITE questions, 1,221 AAFP BRQ questions)
   01_module.1_warehouse/  (PDF library: 404 PDFs, 4 tiers)
   key_data_files/     (VC gate, exam CSVs, architecture docs)
         ↓
@@ -405,6 +422,7 @@ Uses M1/build/ scripts 3-6 as template, adapted for year-specific PDF format.
 
 | Date | Action |
 |------|--------|
+| 2026-03-27 | BATON 015: AAFP BRQ scraper built (v3 + resume/salvage). 1,221 Q scraped across 135 quizzes. aafp_questions table created + populated (1,221 rows, 51.1% article-linked). M1 reorganized: aafp_brq/ as proper warehouse source (scraper/ + staging/). aafp_brq_import.py added to M2/scripts/ (+1 → 45 Python). citation_gap_list_2024_2025.txt built (229 unmatched ITE Critique refs). FUSE oplock conflict documented (DO NOT poll staging file from VM during active scrape). Option B+C confirmed: aafp_questions stays separate from questions. |
 | 2026-03-27 | BATON 014: Full inventory sweep + M2 cleanup. Deleted: sectional_READMEs/, tagging_bundle/, re-org_guidance/, master_map.JSON, MASTER_MAP_V.1.html, TEMP_MIGRATION_MANIFEST.md, 3 one-time M2 scripts (backfill_merge_source_fields, build_xref_2018_2019, batch_retrieve_enrichment). Moved: backfill_keywords_2018_2019.py → M1/build/; preprocess_concept_tags.py → M1/maintain/; auto-memory-copies/ → root; re-org_guidance keep files → key_data_files/. M1 build sequence now self-contained (9 scripts). synthesis_library confirmed at 242 files (all legacy flat JSONs). qid_art_xref corrected to 2,470 (build_xref_2018_2019.py ran post-BATON 013). Designed: article_citation_trend table + extract_ite_critique_refs.py + update_citation_trends.py (not yet built). |
 | 2026-03-26 | BATON 012: Nomenclature sweep complete — VC_pass/VC_fail naming. VC_fail 146 PDFs enriched. rematch_unmatched.py (8 new links). classify_null_refs.py added. rename_tier_labels_in_db.py added. Git: 609ef99, 10d8208. |
 | 2026-03-25 | FLAG 33 closed — vec tables at 100%. Articles table fully standardized. TEMP migrations complete. |

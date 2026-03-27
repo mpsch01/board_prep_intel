@@ -1,23 +1,28 @@
 ---
 name: project_current_db_state
-description: DB state as of BATON 007 session 3 (2026-03-25) — 1,936 articles 100% standardized, vec tables 100% populated, FLAG 33 closed
+description: DB state as of BATON 015 (2026-03-27) — aafp_questions table added (1,221 rows), qid_art_xref corrected to 2,470
 type: project
 ---
 
-## DB State (as of BATON 007 session 3, 2026-03-25)
+## DB State (as of BATON 015, 2026-03-27)
 
 | Table | Rows | Notes |
 |-------|------|-------|
 | articles | 1,936 | ART-0001 → ART-1937; next = ART-1938 |
-| questions | 1,629 | 2018–2025 (all years complete) |
-| question_ref_pairs | 2,722 | |
-| qid_art_xref | 1,818 | 2018-2019 not yet crosswalked (0 entries for those years) |
+| questions | 1,629 | ITE only — 2018–2025 (all years complete) |
+| question_ref_pairs | 2,673 | 49 below BATON 014 baseline — pre-existing gap, not session-caused |
+| qid_art_xref | 2,470 | All 8 years (2018–2025); build_xref_2018_2019.py added 2018-2019 rows post-BATON 013 |
 | article_icd10 | 3,855 | |
-| clinical_pathways | 3,093 | corrected (stale 4,528 in older BATONs) |
-| icd10_rollup | 614 | corrected (stale 736 in older BATONs) |
-| icd10_code_xref | 1,006 | corrected (stale 1,668 in older BATONs) |
+| clinical_pathways | 3,093 | |
+| icd10_rollup | 614 | |
+| icd10_code_xref | 1,006 | |
 | article_vec | 1,936 | sqlite-vec virtual table, 100% coverage — FLAG 33 closed |
 | question_vec | 1,629 | sqlite-vec virtual table, 100% coverage — FLAG 33 closed |
+| **aafp_questions** | **1,221** | NEW this session — AAFP BRQ scrape; PK = aafp_qid ("AAFP-{question_id}"); separate from questions (Option B+C) |
+
+**Planned tables (designed, not yet built):**
+- `article_citation_trend` — years_cited, consecutive_streak, is_watch_list per article (pure SQL from qid_art_xref)
+- `aafp_qid_art_xref` — parallel to qid_art_xref; one row per AAFP question-article link
 
 ---
 
