@@ -48,12 +48,13 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_012_20260326_vfail_enriched_rematch.md` |
+| Active BATON | `BATON_active_014_20260327_m1_complete_m2_clean_critique_extractor_designed.md` |
 | DB articles | 1,936 |
 | DB questions | 1,629 (2018–2025) |
 | PDFs | 404 across 4 tiers |
-| qid_art_xref | 1,818 (all 8 years: 2018–2025) |
-| M2 scripts | 53 Python + 6 JS + 1 config JSON (all paths dynamic) |
+| qid_art_xref | 2,470 (all 8 years: 2018–2025) |
+| M1 scripts | 9 build + 16 maintain (self-contained build sequence) |
+| M2 scripts | 44 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
 | M3 scripts | 4 Python + 1 JS + 2 JSON config |
 | Next ART-ID | ART-1938 |
 | Git branch | `main`, latest `10d8208` |
@@ -92,10 +93,10 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 012, 2026-03-26)
-1. **NULL out 4 data_corrupt rows** — question_ref_pairs rows with question stem text (QID-2024-0133, QID-2025-0029, QID-2025-0079, QID-2025-0138)
-2. **Investigate 179 well_formed NULL clean_ref rows** — likely new 2024-2025 articles not yet in DB; verify and plan ingestion pass
-3. **ART-0864 title fix** — title stored as "e45-e67"; fix to Metlay/Waterer 2019 CAP guideline
-4. **54 no-art-id flat JSONs** — title-match pass to link to DB
-5. **E2E module tests** — M1 `build_crosswalk_index.py`, M3 `build_icd10_tags.py` report
-6. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
+## Next Steps (as of BATON 014, 2026-03-27)
+1. **Windows:** Archive BATON 013 → `baton_archive/`
+2. **Build designed scripts** — `article_citation_trend` table + `update_citation_trends.py` (M1/maintain/) + `extract_ite_critique_refs.py` (M2/scripts/)
+3. **88 AFP missing articles** — batch download pass using `null_clean_ref_missing_articles_20260326.csv`; codon rename → ingest → enrich
+4. **E2E module tests** — M1 `build_crosswalk_index.py`, M3 `build_icd10_tags.py` report
+5. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
+6. **Pre-codon VC_fail no_match** — `acute-low-back-imaging...` PDF: ART-ID lookup → codon rename → re-extract → re-enrich
