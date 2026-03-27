@@ -4,7 +4,7 @@
 - [user_profile.md](user_profile.md) — Mikey: family medicine physician, self-taught data architect, builds clinical knowledge systems
 
 ## Project
-- [project_overhaul_state.md](project_overhaul_state.md) — Current PROJECT_OVERHAUL state: BATON 009, Windows sync complete, all 15 scripts fixed, 129/134 JSONs enriched, pipeline ready for E2E testing
+- [project_overhaul_state.md](project_overhaul_state.md) — Current PROJECT_OVERHAUL state: BATON 012, nomenclature sweep complete, VC_fail enriched (NC), rematch + classifier added, clean_ref linkage gap diagnosed
 - [project_current_db_state.md](project_current_db_state.md) — DB state BATON 007: 1,936 articles, 1,629 questions, table row counts, articles gap (389 at 0% for source_type/categories/tier)
 - [project_new_architecture.md](project_new_architecture.md) — 4-module rebuild design: Warehouse, Processor, Analyst, Sandbox. AAFP course = external priority filter.
 - [project_architecture_tiered_system.md](project_architecture_tiered_system.md) — Two-tier pipeline ($right_click$ vs local_lite), VC gate, codon system, 5 locked rebuild principles

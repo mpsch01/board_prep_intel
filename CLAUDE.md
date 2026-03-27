@@ -48,15 +48,15 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_011_20260326_vc_pass_batch_enriched.md` |
+| Active BATON | `BATON_active_012_20260326_vfail_enriched_rematch.md` |
 | DB articles | 1,936 |
 | DB questions | 1,629 (2018–2025) |
 | PDFs | 404 across 4 tiers |
-| qid_art_xref | 2,470 (all 8 years: 2018–2025) |
-| M2 scripts | 51 Python + 6 JS + 1 config JSON (all paths dynamic) |
+| qid_art_xref | 1,818 (all 8 years: 2018–2025) |
+| M2 scripts | 53 Python + 6 JS + 1 config JSON (all paths dynamic) |
 | M3 scripts | 4 Python + 1 JS + 2 JSON config |
 | Next ART-ID | ART-1938 |
-| Git branch | `main`, latest `02d8a37` |
+| Git branch | `main`, latest `10d8208` |
 
 → Full state: `.auto-memory/project_overhaul_state.md` and `.auto-memory/project_current_db_state.md`
 
@@ -92,11 +92,10 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 011, 2026-03-26)
-1. **Nomenclature sweep** — rename `02_codon/`→`VC_pass/`, `00_non-codon/`→`VC_fail/`, `02_codon_batch/`→`VC_pass_batch/`; update DB tier values; update all docs
-2. **2018–2019 xref tier backfill** — tier=None for all 652 new xref rows; backfill Must-Read/Core labels
-3. **ART-0864 title fix** — title stored as "e45-e67" (page range); needs manual correction to Metlay/Waterer 2019 CAP guideline
+## Next Steps (as of BATON 012, 2026-03-26)
+1. **NULL out 4 data_corrupt rows** — question_ref_pairs rows with question stem text (QID-2024-0133, QID-2025-0029, QID-2025-0079, QID-2025-0138)
+2. **Investigate 179 well_formed NULL clean_ref rows** — likely new 2024-2025 articles not yet in DB; verify and plan ingestion pass
+3. **ART-0864 title fix** — title stored as "e45-e67"; fix to Metlay/Waterer 2019 CAP guideline
 4. **54 no-art-id flat JSONs** — title-match pass to link to DB
-5. **VC_fail extraction** — extract 146 VC_fail PDFs → `extracted_json/VC_fail_batch/`
-6. **E2E module tests** — M1 `build_crosswalk_index.py`, M3 `build_icd10_tags.py` report
-7. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
+5. **E2E module tests** — M1 `build_crosswalk_index.py`, M3 `build_icd10_tags.py` report
+6. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP

@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-03-25 (BATON 006 → 007)
-**Status:** Current — updated post TEMP_06/07/08 migrations (ITE question pipeline, score analysis pipeline, M3 fully structured)
+**Last Updated:** 2026-03-26 (BATON 012)
+**Status:** Current — updated post VC_fail enrichment, enricher Path B fix, nomenclature sweep (VC_pass/VC_fail), clean_ref linkage gap classified
 
 > This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,8 @@
 
 ```
 00_#PROJECT_OVERHAUL/
-├── BATON_active_007_20260325_m3_pipeline.md  ← active session handoff (BATON 007)
+├── BATON_active_012_20260326_vfail_enriched_rematch.md  ← active session handoff (BATON 012)
+├── BATON_active_011_20260326_vc_pass_batch_enriched.md  ← pending archive → baton_archive/
 ├── TEMP_MIGRATION_MANIFEST.md             ← root reference: all TEMP migrations, status, delete checklist
 ├── README.json                            ← STALE (March 17) — needs rebuild
 ├── README_PROJECT.md                      ← STALE (March 17) — needs rebuild
@@ -74,17 +75,17 @@
     └── ite-data-context-skill/            ← skill files copy (canonical in skills_abilities/)
 ```
 
-**DB Counts (verified live 2026-03-25):**
+**DB Counts (verified live 2026-03-26):**
 | Table | Rows | Notes |
 |-------|------|-------|
 | articles | 1,936 | |
 | questions | 1,629 (2018–2025) | |
-| question_ref_pairs | 2,722 | |
-| qid_art_xref | 1,818 | 2018-2019 not yet crosswalked |
+| question_ref_pairs | 2,722 | 222 NULL clean_ref (2024-2025 linkage gap — classified: 179 well_formed, 26 web_resource, 13 journal_stub, 4 data_corrupt) |
+| qid_art_xref | 1,818 | All 8 years complete (2018–2025) |
 | article_icd10 | 3,855 | |
-| clinical_pathways | 3,093 | corrected (prior BATONs had stale 4,528) |
-| icd10_rollup | 614 | corrected (prior BATONs had stale 736) |
-| icd10_code_xref | 1,006 | corrected (prior BATONs had stale 1,668) |
+| clinical_pathways | 3,093 | |
+| icd10_rollup | 614 | |
+| icd10_code_xref | 1,006 | |
 | article_vec | 1,936 | sqlite-vec virtual table — 100% coverage (FLAG 33 closed 2026-03-25) |
 | question_vec | 1,629 | sqlite-vec virtual table — 100% coverage (FLAG 33 closed 2026-03-25) |
 
@@ -96,7 +97,7 @@
 ├── VC_fail/          ← 146 PDFs (VC gate failed — destined for local_lite; was 00_non-codon/)
 ├── 01_local_lite/    ← 117 PDFs (VC_fail + fully enriched)
 ├── VC_pass/          ← 94 PDFs (VC gate passed — destined for right_click; was 02_codon/)
-├── 03_right_click/   ← ~70 PDFs (VC_pass + fully enriched — $right_click$ tier)
+├── 03_right_click/   ← ~58 PDFs (VC_pass + fully enriched — $right_click$ tier)
 ├── scripts/
 │   ├── build/                             ← structural/one-time (assume DB doesn't exist)
 │   │   ├── README.md
@@ -126,7 +127,7 @@
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
 ```
-*M1 scripts migration complete (BATON 004+006 sessions). build/ = 6 scripts, maintain/ = 13 scripts.*
+*M1 scripts: build/ = 6 scripts, maintain/ = 14 scripts (added `rename_tier_labels_in_db.py` BATON 012).*
 *M3 duplicates (`build_clinical_pathways.py`, `build_topic_trends.py`) pending manual delete by user — VM cannot rm mounted files.*
 
 ---
@@ -154,7 +155,7 @@
 │   ├── 00_EX_content_outline_w_q.docx    ← VC content outline (6.1MB, Mar 6) — input to A, 01, 03, 04, 07, 09
 │   ├── aafp_transcripts/                 ← 50 cleaned .txt files — input to B_build_tfidf_keywords.py
 │   └── ite_source/                       ← ITE question source docs: 2025_ITE_Questions.docx + 2025_ITE_Critique.docx
-└── scripts/                               ← 47 Python + 6 JS standalone pipeline scripts (all paths dynamic)
+└── scripts/                               ← 53 Python + 6 JS standalone pipeline scripts (all paths dynamic)
     │
     │── MODULE F — VC OUTLINE PIPELINE (run order: 01→02b→03→04→07→08→09→build_v6)
     ├── 01_build_crosswalk.py              ← outline sessions → session_cluster_crosswalk.csv
@@ -196,7 +197,8 @@
     ├── pre_scan.py                        ← pre-flight PDF scanner (INGEST/SKIP/REVIEW)
     ├── preprocess_concept_tags.py         ← Claude API concept_tags generator
     ├── reextract_gold_list.py             ← re-extraction runner for gold list PDFs
-    ├── rematch_unmatched.py               ← fuzzy re-matcher for orphaned question_ref_pairs
+    ├── rematch_unmatched.py               ← fuzzy re-matcher for orphaned question_ref_pairs (threshold 85; 8 matches BATON 012)
+    ├── classify_null_refs.py              ← classifies NULL clean_ref rows into 4 buckets: well_formed/web_resource/journal_stub/data_corrupt (NEW BATON 012)
     ├── run_test_batch.py                  ← pipeline test runner (vs gold baseline 0.957)
     │
     │── LINKED REFS CROSSWALK PIPELINE (run order: build_crosswalk_v2 → apply_overrides → gen_linked_refs_v2)
@@ -230,7 +232,7 @@
     ├── install_context_menu.reg           ← Windows right-click setup
     └── uninstall_context_menu.reg         ← Windows right-click removal
 ```
-*47 Python + 6 JS scripts + 1 config JSON. All Python/JS paths dynamic. .bat/.ps1/.reg paths deferred. Files with `# TODO: not yet migrated` in BATCH_DIRS point to `extracted_json/` subdirs — update annotation when JSONs are sorted into batch folders.*
+*53 Python + 6 JS scripts + 1 config JSON. All Python/JS paths dynamic. .bat/.ps1/.reg paths deferred. Files with `# TODO: not yet migrated` in BATCH_DIRS point to `extracted_json/` subdirs — update annotation when JSONs are sorted into batch folders.*
 
 ---
 
@@ -287,16 +289,20 @@ archive_canonical/
 ### `extracted_json/` — Extracted Article JSONs (middle-man layer; not git-tracked)
 ```
 extracted_json/
-├── [249 article JSONs — flat, not yet sorted into batch subdirs]
+├── VC_pass_batch/     ← 94 enriched JSONs from VC_pass tier (enriched BATON 011; 85 full, 9 no_match)
+├── VC_fail_batch/     ← 146 enriched JSONs from VC_fail tier (enriched BATON 012; 144 NC, 1 OK, 1 no_match)
+├── [~242 legacy flat JSONs — not yet sorted into archive subdirs]
 ├── raw_txt/           ← 21 raw text files (pre-JSON)
 ├── manifest.json      ← extraction manifest
-├── pre_calibration_archive/    ← placeholder (empty — for gold list 21 JSONs)
-├── afp_peds_uspstf_batch/      ← placeholder (empty)
-├── id_renal_gi_hep_batch/      ← placeholder (empty)
-├── jacc_pulm_batch/            ← placeholder (empty)
-└── neuro_tox_rheum_psych_batch/ ← placeholder (empty)
+├── pre_calibration_archive/    ← historical gold list JSONs
+├── VC_pass_archive/            ← (target) completed right_click JSONs from legacy flat batch
+├── VC_fail_archive/            ← (target) completed local_lite JSONs from legacy flat batch
+├── afp_peds_uspstf_batch/      ← legacy placeholder (empty)
+├── id_renal_gi_hep_batch/      ← legacy placeholder (empty)
+├── jacc_pulm_batch/            ← legacy placeholder (empty)
+└── neuro_tox_rheum_psych_batch/ ← legacy placeholder (empty)
 ```
-*Flat layout is temporary. build_crosswalk_v2.py expects JSONs in the named subdirs (BATCH_DIRS). The TODO annotations in that script mark when sorting is needed. Sorting the 249 flat JSONs into batch subdirs is a deferred task.*
+*~242 legacy flat JSONs still unsorted. Deferred: sort into VC_pass_archive/ and VC_fail_archive/ based on DB tier. 54 have no art_id — need title-match pass first.*
 
 ### `baton_archive/` — Session Handoff History
 - 28+ archived BATONs (pre-001 naming debt — batch rename pending)
@@ -430,7 +436,7 @@ M4 Sandbox — experiment
 |--------|----------|-------|
 | source_type | 100% | Full table standardized 2026-03-25 — rule-based journal detection |
 | categories | 90.2% | 189 unresolvable (no linked questions / unmapped body systems). Existing multi-category values preserved. |
-| tier | 100% | Full table standardized 2026-03-25. Legacy Core/Supplementary/Must-Read retired. Tier: non-codon (1,399) / codon (362) / local_lite (117) / right_click (58) |
+| tier | 100% | Full table standardized 2026-03-25. Legacy Core/Supplementary/Must-Read retired. Tier: VC_fail (1,399) / VC_pass (362) / local_lite (117) / right_click (58). Renamed 2026-03-26. |
 | engine_type | 100% | Full table standardized 2026-03-25. right_click + local_lite values preserved (extraction-derived). |
 | auto_assigned | 100% | Full table standardized 2026-03-25 |
 
@@ -440,6 +446,7 @@ M4 Sandbox — experiment
 
 | Date | Action |
 |------|--------|
+| 2026-03-26 | BATON 012: Nomenclature sweep complete — `02_codon/`→`VC_pass/`, `00_non-codon/`→`VC_fail/` across filesystem, DB (1,761 rows), scripts, and docs. qid_art_xref confirmed complete for all 8 years (2018–2025). VC_fail 146 PDFs extracted + enriched: 144 enriched_no_context (NC), 1 full context, 1 no_match. Root cause of VC_fail no_match identified + fixed in enricher (Path B: `_build_payload()` no longer returns None when questions=0). `rematch_unmatched.py` run at threshold 85: 8 new clean_ref links. `classify_null_refs.py` added: 222 remaining NULL clean_ref classified (179 well_formed / 26 web_resource / 13 journal_stub / 4 data_corrupt). `rename_tier_labels_in_db.py` added to M1/maintain. M2: +6 scripts (total 53 Python). Git: `609ef99` (renames), `10d8208` (enricher fix + docs). |
 | 2026-03-25 | FLAG 33 closed — vec table catch-up complete. article_vec + question_vec now at 100% coverage (1,936 / 1,629). Previously stale (1,397 / 1,189 from old corpus). Catch-up: 540 articles + 440 questions embedded via `compute_embeddings.py --new-only` ($0.002, 16s). One orphan vec entry removed. Path bug fixed in both vec scripts (`parent.parent/db/` → `SCRIPT_DIR.parent.parent.parent/"00_database"/"db"`). `embed_questions()` now supports `--new-only`. |
 | 2026-03-25 | Full articles table standardized (1,936 rows): source_type/tier/engine_type/auto_assigned at 100%; categories at 90.2% (189 unresolvable). Core/Supplementary/Must-Read tier labels permanently retired — VC gate + warehouse scan now sole tier criterion. engine_type preserved for right_click + local_lite (extraction-derived ground truth). `backfill_new_article_metadata.py` upgraded to handle full table with warehouse scan. `audit_engine_type_changes.py` added as one-time diagnostic. M1/maintain count: 14 → 15. DB counts corrected (clinical_pathways: 3,093; icd10_rollup: 614; icd10_code_xref: 1,006). BATON 006 recovered from git and archived. Windows cleanup confirmed complete. Vec tables discovered in DB (article_vec, question_vec) — FLAG 33 pending. |
 | 2026-03-25 | `_index.md` updated to BATON 006 → 007. TEMP_06 migrated: 9 ITE question pipeline scripts → M2/scripts/; reference CSVs/XLSXs/PDFs → archive_canonical/04_reference_data/; ite_source/ created in M2/source/. TEMP_07+08 migrated: M3 fully structured (scripts/ + docs/ + outputs/ + resident_data/); abfm_reference_2025.json + ite_parser_config.json → M3/scripts/; 2024+2025 handbooks → archive_canonical/04_reference_data/. TEMP_09 confirmed empty. TEMP_MIGRATION_MANIFEST.md added to root. .gitignore updated: M3/outputs/, M3/resident_data/, extracted_json/ added. M2 script count: 45 → 47 Python + 6 JS. extracted_json count: 242 → 249. |
