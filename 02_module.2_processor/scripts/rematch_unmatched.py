@@ -38,10 +38,11 @@ except ImportError:
     raise ImportError("Run: pip install rapidfuzz")
 
 # ── Paths ──────────────────────────────────────────────────────────────────
-BASE_DIR    = Path(__file__).resolve().parent.parent
-DB_PATH     = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
-LOG_PATH    = BASE_DIR / "logs" / "rematch_log.json"
-REPORT_PATH = BASE_DIR / "logs" / "rematch_report.txt"
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
+LOG_PATH     = PROJECT_ROOT / "00_database" / "logs" / "rematch_log.json"
+REPORT_PATH  = PROJECT_ROOT / "00_database" / "logs" / "rematch_report.txt"
 
 DEFAULT_THRESHOLD = 72
 

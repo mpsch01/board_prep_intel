@@ -212,9 +212,11 @@ def _build_payload(conn, clean_ref, tier, match_method):
         ORDER BY q.exam_year, p.qid
     """, (clean_ref,))
     questions = cur.fetchall()
-    if not questions:
-        return None
-    # Pull citation_display from articles table for page-1 citation rendering
+    # NOTE: Do NOT return None when questions is empty.
+    # An article found via Strategy 0 (codon parse → ART-ID) is a confirmed DB match
+    # even if question_ref_pairs has no linked rows yet. This is expected for 2024-2025
+    # articles where clean_ref linkage has not yet been resolved. The article still
+    # gets a valid (no-context) ite_intelligence block — NOT a no_match.
     cur.execute("SELECT citation_display FROM articles WHERE clean_ref=?", (clean_ref,))
     cit_row = cur.fetchone()
     citation_display = (cit_row[0] or "").strip() if cit_row else ""
@@ -325,7 +327,42 @@ def process_file(client, conn, json_path, dry_run):
 
     if not payload:
         return {"file": json_path.name, "status": "no_match",
-                "reason": "not found in DB or no linked questions"}
+                "reason": "not found in DB (no ART-ID codon match, no clean_ref match)"}
+
+    # Article is in DB but has no linked questions yet (clean_ref linkage gap).
+    # Write a minimal ite_intelligence block — no API call needed.
+    # These will be re-enriched automatically once clean_ref linkage is resolved,
+    # because citation_count=0 is falsy and the "already enriched" guard won't skip them.
+    if not payload["questions"]:
+        if not dry_run:
+            ite_block = {
+                "enrichment_confidence": compute_enrichment_confidence(payload["match_method"], 0),
+                "_match_method":   payload["match_method"],
+                "_enriched_at":    datetime.now(timezone.utc).isoformat(),
+                "_no_ite_context": True,
+                "citation_count":  0,
+                "exam_years_cited": [],
+                "question_ids":    [],
+                "high_yield_concepts": [],
+                "concept_summary": "",
+                "tier_rationale":  (
+                    f"Article confirmed in DB via {payload['match_method']} ({payload['tier']} tier); "
+                    f"no linked ITE questions found yet — clean_ref linkage pending resolution."
+                ),
+                "linked_qids": [],
+                "exam_years":  [],
+            }
+            doc["ite_intelligence"] = ite_block
+            if payload.get("citation_display"):
+                doc.setdefault("source", {})["citation_display"] = payload["citation_display"]
+            if "metadata" in doc:
+                doc["metadata"]["schema_version"] = "unified_v1.1"
+            with open(json_path, "w", encoding="utf-8") as f:
+                json.dump(doc, f, indent=2, ensure_ascii=False)
+        return {"file": json_path.name, "status": "enriched_no_context",
+                "clean_ref": payload["clean_ref"][:80],
+                "match_method": payload["match_method"], "tier": payload["tier"],
+                "question_count": 0}
 
     if dry_run:
         return {"file": json_path.name, "status": "dry_run_match",
@@ -407,7 +444,7 @@ def main():
     conn   = sqlite3.connect(DB_PATH)
 
     results = []
-    enriched = no_match = skipped = errors = 0
+    enriched = no_context = no_match = skipped = errors = 0
     method_counts = {}
 
     for i, fpath in enumerate(files, 1):
@@ -429,6 +466,10 @@ def main():
                 print(f"             concepts: {hy}")
             if not args.dry_run:
                 time.sleep(args.delay)
+        elif status == "enriched_no_context":
+            no_context += 1
+            print(f"  [{i:3}/{len(files)}] [NC] {fpath.name[:52]}")
+            print(f"           -> 0 Qs (no clean_ref link yet) | {method}")
         elif status == "no_match":
             no_match += 1
         elif status == "skipped":
@@ -441,13 +482,16 @@ def main():
     print(f"\n{'-'*60}")
     if args.dry_run:
         print(f"DRY RUN COMPLETE")
-        print(f"  Would enrich: {enriched}/{len(files)}")
-        print(f"  No DB match:  {no_match}")
+        print(f"  Would enrich (with Qs): {enriched}/{len(files)}")
+        print(f"  Would enrich (no Qs):   {no_context}/{len(files)}")
+        print(f"  No DB match:            {no_match}")
         print(f"  Match methods: {method_counts}")
     else:
         print(f"ENRICHMENT COMPLETE")
-        print(f"  Enriched: {enriched}  No match: {no_match}  "
-              f"Skipped: {skipped}  Errors: {errors}")
+        print(f"  Enriched (with ITE context): {enriched}")
+        print(f"  Enriched (no context yet):   {no_context}")
+        print(f"  No DB match:                 {no_match}")
+        print(f"  Skipped: {skipped}  Errors: {errors}")
         print(f"  Methods: {method_counts}")
 
     LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -456,7 +500,8 @@ def main():
     with open(log_file, "w") as f:
         json.dump({"run_at": datetime.now().isoformat(), "dry_run": args.dry_run,
                    "target": str(args.dir or args.file), "total": len(files),
-                   "enriched": enriched, "no_match": no_match, "skipped": skipped,
+                   "enriched": enriched, "enriched_no_context": no_context,
+                   "no_match": no_match, "skipped": skipped,
                    "errors": errors, "method_counts": method_counts,
                    "results": results}, f, indent=2)
     print(f"  Log: {log_file}")
