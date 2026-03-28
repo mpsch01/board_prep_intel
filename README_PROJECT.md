@@ -1,14 +1,14 @@
 # ABFM ITE Intelligence System — PROJECT_OVERHAUL
 
-**Last updated:** 2026-03-27 (BATON 014)
+**Last updated:** 2026-03-27 (BATON 016)
 **Status:** Active development
-**Active BATON:** `BATON_active_014_20260327_m1_complete_m2_clean_critique_extractor_designed.md`
+**Active BATON:** `BATON_active_016_20260327_aafp_enrichment_complete_ite_similarity_scored.md`
 
 ---
 
 ## Project Overview
 
-A queryable Family Medicine board exam knowledge base: 1,629 ITE questions (2018–2025) linked to a clinical guideline library of 1,936 articles and 404 PDFs via a structured SQLite pipeline. Intelligence 2.0 layers (ICD-10 diagnostic linkage, clinical pathways, topic trends, vector embeddings) provide structured clinical navigation across the full corpus. System extends beyond exam prep into clinical decision support.
+A queryable Family Medicine board exam knowledge base: 1,629 ITE questions (2018–2025) and 1,221 AAFP BRQ questions linked to a clinical guideline library of 1,936 articles and 404 PDFs via a structured SQLite pipeline. Intelligence 2.0 layers (ICD-10 diagnostic linkage, clinical pathways, topic trends, vector embeddings, cross-corpus semantic similarity) provide structured clinical navigation across the full corpus. System extends beyond exam prep into clinical decision support.
 
 ---
 
@@ -21,17 +21,19 @@ Source of truth. Never disposable.
 - `logs/` — Pipeline run logs
 
 ### 01_module.1_warehouse/
-PDF library (4 tiers, 404 PDFs) + pipeline build and maintenance scripts.
+PDF library (4 tiers, 404 PDFs) + pipeline build and maintenance scripts + AAFP BRQ data.
 - `VC_fail/` — 146 PDFs: codon-named, not VC-cited, awaiting full pipeline
 - `local_lite/` — 117 PDFs: enriched, not VC-cited (pipeline complete)
 - `VC_pass/` — 94 PDFs: codon-named, VC-cited, awaiting full pipeline
 - `right_click/` — 71 PDFs: VC-cited, fully enriched (pipeline complete)
 - `build/` — 9 scripts: self-contained full rebuild sequence
 - `maintain/` — 16 scripts: recurring DB population and maintenance operations
+- `aafp_brq/scraper/` — aafp_brq_scraper.py + cookies + quiz map (Windows-only)
+- `aafp_brq/staging/` — aafp_brq_staging.json (1,221 records, 4MB)
 
 ### 02_module.2_processor/
 Extraction, enrichment, and DOCX build pipeline.
-- `scripts/` — 44 Python + 6 JS + 1 JSON config + 4 Windows utilities
+- `scripts/` — 49 Python + 6 JS + 1 JSON config + 4 Windows utilities
 - `source/` — Input data for pipeline scripts
 
 ### 03_module.3_analyst/
@@ -63,20 +65,27 @@ Critical reference data:
 
 ---
 
-## Database State (as of 2026-03-27)
+## Database State (as of 2026-03-27, BATON 016)
 
-| Table | Rows |
-|-------|------|
-| articles | 1,936 |
-| questions | 1,629 |
-| question_ref_pairs | 2,722 |
-| qid_art_xref | 2,470 |
-| article_icd10 | 3,855 |
-| clinical_pathways | 3,093 |
-| icd10_rollup | 614 |
-| icd10_code_xref | 1,006 |
-| article_vec | 1,936 |
-| question_vec | 1,629 |
+| Table | Rows | Notes |
+|-------|------|-------|
+| articles | 1,936 | |
+| questions (ITE) | 1,629 | 2018–2025 |
+| question_ref_pairs | 2,722 | |
+| qid_art_xref | 2,470 | |
+| article_icd10 | 3,855 | |
+| clinical_pathways | 3,093 | |
+| icd10_rollup | 614 | |
+| icd10_code_xref | 1,006 | |
+| article_vec | 1,936 | 100% coverage |
+| question_vec | 1,629 | 100% coverage |
+| aafp_questions | 1,221 | 7 enrichment cols (keywords, body_system, source_type, ite_nearest_qid/dist) |
+| aafp_explanations | 1,221 | explanation_keywords populated |
+| aafp_citations | 1,600 | one row per parsed citation |
+| aafp_citation_raw | 1,600 | full text archive + coordinates |
+| aafp_qid_art_xref | 797 | 586 unique questions linked (48%) |
+| aafp_question_vec | 1,221 | 100% coverage |
+| aafp_question_icd10 | 1,876 | 577 questions × ~3.25 ICD codes |
 
 **Next ART-ID:** ART-1938
 
@@ -126,13 +135,31 @@ Full DB rebuild from scratch runs M1/build/ scripts in order. All build-time ope
 
 ---
 
-## Next Steps (BATON 014)
+## AAFP BRQ Pipeline (added BATON 015–016)
 
-1. Build `article_citation_trend` table + `update_citation_trends.py` + `extract_ite_critique_refs.py`
-2. 88 AFP missing articles — batch download → codon rename → ingest → enrich
-3. Intelligence 2.0 Layer 2 — `article_currency` via PubMed MCP
-4. E2E module tests — M1 `build_crosswalk_index.py`, M3 `build_icd10_tags.py`
-5. Pre-codon VC_fail no_match — `acute-low-back-imaging...` PDF
+AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and fully enriched. Separate 7-table schema from ITE questions.
+
+**Pipeline run order:**
+```powershell
+python aafp_brq_import.py           # 5-table schema, citation splitting
+python compute_embeddings.py --aafp-only  # from M1/build/
+python aafp_keyword_extractor.py    # TF-IDF stem + explanation keywords
+python aafp_context_propagator.py   # body_system, source_type, ICD-10
+python aafp_vector_explorer.py --save    # cross-corpus AAFP↔ITE similarity
+```
+
+**Key finding:** Near-identical question pairs at dist<0.27 confirm likely direct question reuse between AAFP BRQ and ABFM ITE. Linked vs unlinked mean distance gap: 0.4497 vs 0.6973 — strong validation that citation matching is doing real clinical work.
+
+---
+
+## Next Steps (BATON 016)
+
+1. **Windows:** Archive BATONs 013+014+015 → `baton_archive/`; delete sandbox originals; git commit
+2. **AAFP question reuse investigation** — query WHERE ite_nearest_dist < 0.30; confirm exact dupes vs paraphrased
+3. **AAFP-ITE lag analysis** — xref + shared citations + timing delta + ite_nearest_dist signal
+4. **AAFP ref matching second pass** — 784 unmatched citations → target 70-80%
+5. **229 citation gap articles** — 88 AFP batch-downloadable from `null_clean_ref_missing_articles_20260326.csv`
+6. **Build designed scripts** — `article_citation_trend` table + `update_citation_trends.py` + `extract_ite_critique_refs.py`
 
 ---
 

@@ -4,12 +4,13 @@
   "location": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\00_#PROJECT_OVERHAUL\\",
   "last_updated": "2026-03-27",
   "architecture": "4-module rebuild (PROJECT_OVERHAUL)",
-  "active_baton": "BATON_active_014_20260327_m1_complete_m2_clean_critique_extractor_designed.md",
-  "git_status": "main branch. Latest commit: 10d8208. No new commits BATON 014 session (filesystem + design work only).",
+  "active_baton": "BATON_active_016_20260327_aafp_enrichment_complete_ite_similarity_scored.md",
+  "git_status": "main branch. Latest commit: cd32816 (BATON 015). New commit needed for BATON 016 session work.",
   "database": {
     "path": "00_database/db/ite_intelligence.db",
     "articles": 1936,
-    "questions": 1629,
+    "questions_ite": 1629,
+    "questions_aafp_brq": 1221,
     "question_ref_pairs": 2722,
     "qid_art_xref": 2470,
     "article_icd10": 3855,
@@ -18,15 +19,22 @@
     "icd10_code_xref": 1006,
     "article_vec": 1936,
     "question_vec": 1629,
+    "aafp_questions": 1221,
+    "aafp_explanations": 1221,
+    "aafp_citations": 1600,
+    "aafp_citation_raw": 1600,
+    "aafp_qid_art_xref": 797,
+    "aafp_question_vec": 1221,
+    "aafp_question_icd10": 1876,
     "art_id_range": "ART-0001 through ART-1937 (ART-0404 deleted/merged)",
     "next_art_id": "ART-1938"
   },
   "module_structure": {
     "00_database": "Source of truth (DB + supporting data, schemas, logs)",
-    "01_module.1_warehouse": "PDF library (4 tiers, 404 PDFs) + M1 scripts (build/9, maintain/16)",
-    "02_module.2_processor": "Extraction + enrichment pipeline (44 Python + 6 JS + 1 JSON + 4 Windows, all paths dynamic)",
+    "01_module.1_warehouse": "PDF library (4 tiers, 404 PDFs) + M1 scripts (build/9, maintain/16) + aafp_brq/scraper+staging",
+    "02_module.2_processor": "Extraction + enrichment pipeline (49 Python + 6 JS + 1 JSON + 4 Windows, all paths dynamic)",
     "03_module.3_analyst": "Analysis scripts (4 Python + 1 JS + 2 JSON config)",
-    "04_module.4_sandbox": "Experiments placeholder (empty)"
+    "04_module.4_sandbox": "Experiments placeholder (cleanup pending)"
   },
   "supporting_folders": {
     "archive_canonical": "Curated deliverables (curriculum, question bank, analysis, reference data, acquisition lists)",
@@ -68,19 +76,33 @@
     "strategy_0_first": "Codon parse always the first matching strategy in every enricher",
     "baton_supersedes_all": "Active BATON is the source of truth for current state"
   },
+  "aafp_brq": {
+    "description": "AAFP Board Review Questions: 135 quizzes x 10 questions. Separate table schema from ITE questions.",
+    "scraper": "01_module.1_warehouse/aafp_brq/scraper/aafp_brq_scraper.py (Windows-only — VM proxy blocks HTTPS)",
+    "staging": "01_module.1_warehouse/aafp_brq/staging/aafp_brq_staging.json (1,221 records)",
+    "import": "02_module.2_processor/scripts/aafp_brq_import.py",
+    "pipeline_order": "aafp_brq_import.py → compute_embeddings.py --aafp-only → aafp_keyword_extractor.py → aafp_context_propagator.py → aafp_vector_explorer.py --save",
+    "key_finding": "Near-identical AAFP-ITE pairs at dist<0.27 (likely direct question reuse). Linked vs unlinked mean dist gap: 0.4497 vs 0.6973.",
+    "known_gap": "129 missing questions (~13 incomplete quizzes from FUSE oplock stall during scrape)"
+  },
   "deferred_flags": {
     "HIGH": [
-      "212 missing articles (clean_ref gap) — 88 AFP batch-downloadable via aafp_vc_batch_download.py",
+      "AAFP question reuse investigation — query WHERE ite_nearest_dist < 0.30; confirm exact dupes vs paraphrased",
+      "AAFP-ITE lag analysis — xref + shared citations + timing delta + ite_nearest_dist signal",
+      "AAFP ref matching second pass — 784 unmatched citations; vol/page + guideline keyword → target 70-80%",
+      "229 citation gap articles — 88 AFP batch-downloadable from null_clean_ref_missing_articles_20260326.csv",
       "Build article_citation_trend table in DB",
       "Build update_citation_trends.py (M1/maintain/)",
       "Build extract_ite_critique_refs.py (M2/scripts/)"
     ],
     "MEDIUM": [
-      "1 pre-codon VC_fail no_match — acute-low-back-imaging... PDF needs ART-ID lookup + codon rename",
-      "E2E module tests — M1 build_crosswalk_index.py, M3 build_icd10_tags.py",
+      "Interactive vector dashboard — HTML from aafp_vector_explorer data (data:interactive-dashboard-builder)",
+      "129 missing AAFP questions — ~13 incomplete quizzes from stalled scrape",
+      "Cookie refresh — aafp_cookies.json session cookies before next scrape",
       "Intelligence 2.0 Layer 2 — article_currency via PubMed MCP"
     ],
     "LOW": [
+      "FLAG 33 — VC_pass ART-ID rename scheme: designed, not implemented",
       "Right_click DOCX regeneration — 71 DOCXs regenerable via build_summary.js",
       "Scholl PDFs — scholl_2025_ENCRYPTED need password"
     ]
