@@ -1,14 +1,14 @@
 {
   "project_name": "ABFM ITE Intelligence System",
-  "description": "Family medicine board exam knowledge base: queryable question bank (1,629 questions, 2018-2025) linked to a clinical guideline library (1,936 articles, 404 PDFs) via a structured SQLite pipeline. Extends beyond exam prep into clinical decision support.",
+  "description": "Family medicine board exam knowledge base: queryable question bank (1,629 ITE questions, 2018-2025; 1,221 AAFP BRQ questions) linked to a clinical guideline library (1,985 articles, 404 PDFs) via a structured SQLite pipeline. Both ITE and AAFP corpora are schema-parallel with full enrichment (body_system, concept_tags, subcategory, ICD-10). Extends beyond exam prep into clinical decision support.",
   "location": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\00_#PROJECT_OVERHAUL\\",
-  "last_updated": "2026-03-27",
+  "last_updated": "2026-03-29",
   "architecture": "4-module rebuild (PROJECT_OVERHAUL)",
-  "active_baton": "BATON_active_016_20260327_aafp_enrichment_complete_ite_similarity_scored.md",
-  "git_status": "main branch. Latest commit: cd32816 (BATON 015). New commit needed for BATON 016 session work.",
+  "active_baton": "BATON_active_022_20260329_aafp_concept_tags_complete.md",
+  "git_status": "main branch. Latest committed: 066a94f. Commit pending for BATON 021-022 session (3 new M2 scripts + BATONs + CLAUDE.md + _index.md).",
   "database": {
     "path": "00_database/db/ite_intelligence.db",
-    "articles": 1936,
+    "articles": 1985,
     "questions_ite": 1629,
     "questions_aafp_brq": 1221,
     "question_ref_pairs": 2722,
@@ -23,17 +23,36 @@
     "aafp_explanations": 1221,
     "aafp_citations": 1600,
     "aafp_citation_raw": 1600,
-    "aafp_qid_art_xref": 797,
+    "aafp_qid_art_xref": 864,
     "aafp_question_vec": 1221,
-    "aafp_question_icd10": 1876,
-    "art_id_range": "ART-0001 through ART-1937 (ART-0404 deleted/merged)",
-    "next_art_id": "ART-1938"
+    "aafp_question_icd10": 4065,
+    "art_id_range": "ART-0001 through ART-1986 (ART-0404 deleted/merged; +49 AAFP acquisition 2026-03-28)",
+    "next_art_id": "ART-1987"
+  },
+  "aafp_questions_column_coverage": {
+    "body_system": "100% (1221/1221) — 3-tier classifier",
+    "body_system_method": "100% — audit trail",
+    "stem_keywords": "100%",
+    "all_keywords": "100%",
+    "source_type": "100%",
+    "ite_nearest_qid": "100%",
+    "ite_nearest_dist": "100%",
+    "concept_tags": "100% (1221/1221) — Haiku 4.5 API, complete 2026-03-29",
+    "subcategory": "100% (1221/1221) — Haiku 4.5 API, complete 2026-03-29"
+  },
+  "ite_questions_column_coverage": {
+    "body_system_merged": "100%",
+    "stem_keywords": "100%",
+    "all_keywords": "100%",
+    "concept_tags": "100%",
+    "subcategory": "100%",
+    "blueprint": "~33% (pre-existing debt)"
   },
   "module_structure": {
     "00_database": "Source of truth (DB + supporting data, schemas, logs)",
     "01_module.1_warehouse": "PDF library (4 tiers, 404 PDFs) + M1 scripts (build/9, maintain/16) + aafp_brq/scraper+staging",
-    "02_module.2_processor": "Extraction + enrichment pipeline (49 Python + 6 JS + 1 JSON + 4 Windows, all paths dynamic)",
-    "03_module.3_analyst": "Analysis scripts (4 Python + 1 JS + 2 JSON config)",
+    "02_module.2_processor": "Extraction + enrichment pipeline (53 Python + 6 JS + 1 JSON + 4 Windows, all paths dynamic)",
+    "03_module.3_analyst": "Analysis scripts (5 Python + 1 JS + 2 JSON config)",
     "04_module.4_sandbox": "Experiments placeholder (cleanup pending)"
   },
   "supporting_folders": {
@@ -47,7 +66,8 @@
     "VC_fail": "146 PDFs (codon-named, awaiting full pipeline — not VC-cited)",
     "local_lite": "117 PDFs (enriched, not VC-cited — pipeline complete)",
     "VC_pass": "94 PDFs (codon-named, awaiting full pipeline — VC-cited)",
-    "right_click": "71 PDFs (VC-cited, fully enriched — pipeline complete)"
+    "right_click": "71 PDFs (VC-cited, fully enriched — pipeline complete)",
+    "pending": "49 PDFs for ART-1938–ART-1986 — download_aafp_acquisitions.py ready to run"
   },
   "codon_convention": "Author_Year#@#ART-XXXX@#@.pdf — ART-ID embedded between #@# start and @#@ stop codon. Strategy 0 = regex parse of codon. Primary match strategy in all enrichers.",
   "vc_gate": "key_data_files/session_hy_inserts_v7.json (352 citations — sole criterion for right_click vs local_lite tier assignment)",
@@ -60,8 +80,11 @@
   },
   "designed_not_yet_built": {
     "article_citation_trend": "Companion table: years_cited, distinct_year_count, first_cited_year, most_recent_year, consecutive_streak, is_watch_list. Derived from qid_art_xref via pure SQL.",
-    "update_citation_trends.py": "M1/maintain/ — populates article_citation_trend. Pure SQL, no API. ~40 lines.",
     "extract_ite_critique_refs.py": "M2/scripts/ — local PDF-native critique ref extractor. pdfplumber, dispatcher architecture, zero API cost. Replaces DOCX dependency for future year integration."
+  },
+  "built_not_yet_run": {
+    "update_citation_trends.py": "M1/maintain/ — populates article_citation_trend. Pure SQL, no API. ~200 lines. Ready to run.",
+    "download_aafp_acquisitions.py": "M1/maintain/ — downloads 49 PMC PDFs for ART-1938–1986; codon filenames; places in VC_fail/. Ready to run."
   },
   "script_path_convention": {
     "python": "SCRIPT_DIR = Path(__file__).resolve().parent; PROJECT_ROOT = SCRIPT_DIR.parent.parent",
@@ -77,34 +100,31 @@
     "baton_supersedes_all": "Active BATON is the source of truth for current state"
   },
   "aafp_brq": {
-    "description": "AAFP Board Review Questions: 135 quizzes x 10 questions. Separate table schema from ITE questions.",
+    "description": "AAFP Board Review Questions: 135 quizzes x 10 questions. Separate table schema from ITE questions. Now schema-parallel to ITE (body_system, concept_tags, subcategory, ICD-10 all at 100%).",
     "scraper": "01_module.1_warehouse/aafp_brq/scraper/aafp_brq_scraper.py (Windows-only — VM proxy blocks HTTPS)",
-    "staging": "01_module.1_warehouse/aafp_brq/staging/aafp_brq_staging.json (1,221 records)",
+    "staging": "01_module.1_warehouse/aafp_brq/staging/aafp_brq_staging.json (1,221 records, 4MB)",
     "import": "02_module.2_processor/scripts/aafp_brq_import.py",
-    "pipeline_order": "aafp_brq_import.py → compute_embeddings.py --aafp-only → aafp_keyword_extractor.py → aafp_context_propagator.py → aafp_vector_explorer.py --save",
-    "key_finding": "Near-identical AAFP-ITE pairs at dist<0.27 (likely direct question reuse). Linked vs unlinked mean dist gap: 0.4497 vs 0.6973.",
-    "known_gap": "129 missing questions (~13 incomplete quizzes from FUSE oplock stall during scrape)"
+    "pipeline_order": "aafp_brq_import.py → compute_embeddings.py --aafp-only → aafp_keyword_extractor.py → aafp_merge_keywords.py → aafp_context_propagator.py → aafp_assign_body_system.py → aafp_vector_explorer.py --save → aafp_enrich_concept_tags.py --mode linked → aafp_enrich_concept_tags.py --mode unlinked",
+    "key_finding": "Near-identical AAFP-ITE pairs at dist<0.27 confirm likely direct question reuse. 38 shared-vignette pairs identified (BATON 020). Linked vs unlinked mean dist gap: 0.4497 vs 0.6973.",
+    "model_selection": "Haiku 4.5 selected for concept_tags enrichment — ~3x cost savings vs Sonnet 4.6 at near-identical quality (BATON 022 comparison study)"
   },
   "deferred_flags": {
     "HIGH": [
-      "AAFP question reuse investigation — query WHERE ite_nearest_dist < 0.30; confirm exact dupes vs paraphrased",
-      "AAFP-ITE lag analysis — xref + shared citations + timing delta + ite_nearest_dist signal",
-      "AAFP ref matching second pass — 784 unmatched citations; vol/page + guideline keyword → target 70-80%",
+      "49 PDF download — download_aafp_acquisitions.py ready to run; then backfill_new_article_metadata.py --art-id-min 1938",
+      "AAFP vs ITE trend comparison — both corpora schema-parallel; body_system + subcategory + concept_tags + ICD-10 side-by-side",
       "229 citation gap articles — 88 AFP batch-downloadable from null_clean_ref_missing_articles_20260326.csv",
-      "Build article_citation_trend table in DB",
-      "Build update_citation_trends.py (M1/maintain/)",
-      "Build extract_ite_critique_refs.py (M2/scripts/)"
+      "Run update_citation_trends.py — confirmed built, ready to run (M1/maintain/)"
     ],
     "MEDIUM": [
       "Interactive vector dashboard — HTML from aafp_vector_explorer data (data:interactive-dashboard-builder)",
-      "129 missing AAFP questions — ~13 incomplete quizzes from stalled scrape",
-      "Cookie refresh — aafp_cookies.json session cookies before next scrape",
-      "Intelligence 2.0 Layer 2 — article_currency via PubMed MCP"
+      "AAFP-ITE lag analysis — 38 shared-vignette pairs as seed set; build predictive watch list",
+      "Intelligence 2.0 Layer 2 — article_currency via PubMed MCP",
+      "Build extract_ite_critique_refs.py (M2/scripts/) — local PDF-native critique ref extractor"
     ],
     "LOW": [
       "FLAG 33 — VC_pass ART-ID rename scheme: designed, not implemented",
       "Right_click DOCX regeneration — 71 DOCXs regenerable via build_summary.js",
-      "Scholl PDFs — scholl_2025_ENCRYPTED need password"
+      "ite_shared_vignette column — designed for aafp_questions, deprioritized (38 pairs insufficient signal)"
     ]
   }
 }

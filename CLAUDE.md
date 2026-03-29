@@ -48,19 +48,21 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_020_20260328_aafp_question_reuse_investigation_complete.md` |
+| Active BATON | `BATON_active_022_20260329_aafp_concept_tags_complete.md` |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) |
 | DB questions (AAFP BRQ) | 1,221 (`aafp_questions` table — separate from `questions`) |
+| aafp_questions.concept_tags | 1,221/1,221 (100%) — complete 2026-03-29 |
+| aafp_questions.subcategory | 1,221/1,221 (100%) — complete 2026-03-29 |
 | PDFs | 404 across 4 tiers (49 new articles awaiting PDF download) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
-| aafp_question_icd10 | 1,915 rows (589 questions covered) |
+| aafp_question_icd10 | ~4,065 rows (1,208 unique questions, 98.9%) |
 | M1 scripts | 9 build + 16 maintain + aafp_brq/scraper (self-contained build sequence) |
-| M2 scripts | 51 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
+| M2 scripts | 53 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
 | M3 scripts | 5 Python + 1 JS + 2 JSON config |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest `4caa6f5` (3 commits pending this session) |
+| Git branch | `main`, latest `066a94f` (commit pending: 3 new M2 scripts + BATONs 021/022) |
 | GitHub remote | `https://github.com/mpsch01/project-overhaul` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -98,12 +100,11 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 020, 2026-03-28)
-1. **Windows:** Stage + commit pending git changes; archive BATONs 013-019 → `baton_archive/`; clean up temp files from project root
-2. **PDF download** — 49 new articles (ART-1938–1986); codon filenames in BATON 019; place in `VC_fail/`; run `backfill_new_article_metadata.py --art-id-min 1938` after
-3. **AAFP question reuse — next step:** run script with `--csv`; add `ite_shared_vignette` column to `aafp_questions`; pull answer choices side-by-side for 12 MODERATE pairs
-4. **AAFP-ITE lag analysis** — xref + shared citations + timing delta + `ite_nearest_dist`; 38 shared-vignette pairs are highest-confidence seed set; build predictive watch list
+## Next Steps (as of BATON 022, 2026-03-29)
+1. **Windows:** git commit (3 M2 scripts + BATONs 021/022 + CLAUDE.md + _index.md); archive BATONs 020+021 → `baton_archive/`; delete temp files (`qc_check.py`, `run_compare.py`) from project root
+2. **PDF download** — 49 new articles (ART-1938–1986); run `download_aafp_acquisitions.py` from M1/maintain/; place in `VC_fail/`; run `backfill_new_article_metadata.py --art-id-min 1938` after
+3. **Run `update_citation_trends.py`** — confirmed built (M1/maintain/); populates `article_citation_trend` table
+4. **AAFP vs ITE trend comparison** — now fully unblocked; both corpora schema-parallel (body_system + subcategory + concept_tags + ICD-10)
 5. **229 citation gap articles** — 88 AFP batch-downloadable from `null_clean_ref_missing_articles_20260326.csv`; codon rename → ingest → enrich → re-run `aafp_ref_match_v2.py`
-6. **Build designed scripts** — `article_citation_trend` table + `update_citation_trends.py` (M1/maintain/) + `extract_ite_critique_refs.py` (M2/scripts/)
-7. **Interactive vector dashboard** — HTML from vector explorer data (`data:interactive-dashboard-builder`)
-8. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
+6. **Interactive vector dashboard** — HTML from vector explorer data (`data:interactive-dashboard-builder`)
+7. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
