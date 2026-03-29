@@ -6,7 +6,7 @@
 ---
 
 ## The Project in One Sentence
-ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledge base (1,629 questions, 2018–2025) linked to a clinical guideline library (1,936 articles, 404 PDFs) via a structured SQLite pipeline.
+ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledge base (1,629 questions, 2018–2025) linked to a clinical guideline library (1,985 articles, 404 PDFs) via a structured SQLite pipeline.
 
 ---
 
@@ -48,18 +48,18 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_018_20260328_pubmed_sweep_complete_acquisition_queue_built.md` |
-| DB articles | 1,936 |
+| Active BATON | `BATON_active_020_20260328_aafp_question_reuse_investigation_complete.md` |
+| DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) |
 | DB questions (AAFP BRQ) | 1,221 (`aafp_questions` table — separate from `questions`) |
-| PDFs | 404 across 4 tiers |
+| PDFs | 404 across 4 tiers (49 new articles awaiting PDF download) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
-| aafp_qid_art_xref | 815 rows (598 unique questions linked, 49.1%) |
-| aafp_question_icd10 | 1,876 rows (577 questions covered) |
+| aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
+| aafp_question_icd10 | 1,915 rows (589 questions covered) |
 | M1 scripts | 9 build + 16 maintain + aafp_brq/scraper (self-contained build sequence) |
-| M2 scripts | 50 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
-| M3 scripts | 4 Python + 1 JS + 2 JSON config |
-| Next ART-ID | ART-1938 |
+| M2 scripts | 51 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
+| M3 scripts | 5 Python + 1 JS + 2 JSON config |
+| Next ART-ID | ART-1987 |
 | Git branch | `main`, latest `4caa6f5` (3 commits pending this session) |
 | GitHub remote | `https://github.com/mpsch01/project-overhaul` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
@@ -98,12 +98,12 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 018, 2026-03-28)
-1. **Windows:** Stage + commit 3 pending git changes; archive BATONs 013-017 → `baton_archive/`; clean up temp files (parse_remaining.py, show_remaining.py, remaining_parsed.json, remaining_named.json) from project root
-2. **AAFP article acquisition** — `00_database/readable_db_files/aafp_pubmed_acquisition_queue_20260328.csv` — 46 articles with PMID URLs ready; download PDFs, add to articles table with codon filenames, re-run aafp_ref_match_v2.py
-3. **AAFP question reuse investigation** — query WHERE ite_nearest_dist < 0.30; confirm exact dupes vs paraphrased; sets up lag analysis correctly
-4. **AAFP-ITE lag analysis** — xref + shared citations + timing delta + ite_nearest_dist; build predictive watch list
-5. **229 citation gap articles** — 88 AFP batch-downloadable from `null_clean_ref_missing_articles_20260326.csv`; codon rename → ingest → enrich → re-run aafp_ref_match_v2.py
+## Next Steps (as of BATON 020, 2026-03-28)
+1. **Windows:** Stage + commit pending git changes; archive BATONs 013-019 → `baton_archive/`; clean up temp files from project root
+2. **PDF download** — 49 new articles (ART-1938–1986); codon filenames in BATON 019; place in `VC_fail/`; run `backfill_new_article_metadata.py --art-id-min 1938` after
+3. **AAFP question reuse — next step:** run script with `--csv`; add `ite_shared_vignette` column to `aafp_questions`; pull answer choices side-by-side for 12 MODERATE pairs
+4. **AAFP-ITE lag analysis** — xref + shared citations + timing delta + `ite_nearest_dist`; 38 shared-vignette pairs are highest-confidence seed set; build predictive watch list
+5. **229 citation gap articles** — 88 AFP batch-downloadable from `null_clean_ref_missing_articles_20260326.csv`; codon rename → ingest → enrich → re-run `aafp_ref_match_v2.py`
 6. **Build designed scripts** — `article_citation_trend` table + `update_citation_trends.py` (M1/maintain/) + `extract_ite_critique_refs.py` (M2/scripts/)
 7. **Interactive vector dashboard** — HTML from vector explorer data (`data:interactive-dashboard-builder`)
 8. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
