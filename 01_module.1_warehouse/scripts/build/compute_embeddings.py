@@ -1,23 +1,26 @@
 """
-compute_embeddings.py — Upgrade #1: sqlite-vec + OpenAI Embeddings
+compute_embeddings.py — sqlite-vec + OpenAI Embeddings
 ==================================================================
-Computes vector embeddings for all articles and questions in ite_intelligence.db.
-Creates two virtual tables (article_vec, question_vec) for semantic similarity search.
+Computes vector embeddings for articles, ITE questions, and AAFP BRQ questions.
+Creates virtual tables (article_vec, question_vec, aafp_question_vec) for
+semantic similarity search across all three corpora.
 
 Usage:
     python compute_embeddings.py                 # embed everything
     python compute_embeddings.py --new-only      # incremental: only items not yet embedded
     python compute_embeddings.py --articles-only # just articles
-    python compute_embeddings.py --questions-only # just questions
+    python compute_embeddings.py --questions-only # just ITE questions
+    python compute_embeddings.py --aafp-only     # just AAFP BRQ questions
     python compute_embeddings.py --dry-run       # show what would be embedded, no API calls
 
 Requires:
     pip install sqlite-vec openai
     Environment variable: OPENAI_API_KEY
 
-Cost estimate: ~$0.015 for full corpus (1,936 articles + 1,629 questions)
-             ~$0.006 for gap-fill pass (--new-only: ~979 items)
-Runtime: ~60 seconds full, ~20 seconds gap-fill
+Cost estimate: ~$0.015 for full ITE corpus (1,936 articles + 1,629 questions)
+             ~$0.007 for AAFP BRQ questions (1,221 questions)
+             ~$0.006 for gap-fill pass (--new-only)
+Runtime: ~60 seconds full ITE, ~25 seconds AAFP only
 """
 
 import sqlite3
@@ -161,7 +164,46 @@ def create_vec_tables(conn):
             embedding  float[{EMBED_DIM}]
         )
     """)
+    conn.execute(f"""
+        CREATE VIRTUAL TABLE IF NOT EXISTS aafp_question_vec USING vec0(
+            aafp_qid   TEXT PRIMARY KEY,
+            embedding  float[{EMBED_DIM}]
+        )
+    """)
     conn.commit()
+
+
+def build_aafp_question_text(row: dict) -> str:
+    """
+    Build a text representation of an AAFP BRQ question for embedding.
+    Joins aafp_questions + aafp_explanations fields.
+    Combines stem, correct answer, and explanation into a rich semantic representation.
+    No concept_tags yet — those come in the API enrichment pass later.
+    """
+    parts = []
+
+    # Question stem (cap at 600 chars)
+    stem = (row.get("stem") or "").strip()
+    if stem:
+        parts.append(stem[:600])
+
+    # Correct answer
+    correct = (row.get("correct_text") or "").strip()
+    if correct:
+        parts.append(f"Answer: {correct}")
+
+    # Explanation — rich clinical reasoning (cap at 800 chars)
+    explanation = (row.get("explanation") or "").strip()
+    if explanation:
+        parts.append(f"Explanation: {explanation[:800]}")
+
+    text = " | ".join(parts)
+
+    max_chars = MAX_TOKENS * 3
+    if len(text) > max_chars:
+        text = text[:max_chars]
+
+    return text
 
 
 def embed_articles(conn, client, dry_run=False, new_only=False):
@@ -277,6 +319,64 @@ def embed_questions(conn, client, dry_run=False, new_only=False):
     return embedded, int(total_tokens)
 
 
+def embed_aafp_questions(conn, client, dry_run=False, new_only=False):
+    """Compute and store embeddings for AAFP BRQ questions (or only new ones)."""
+    if new_only:
+        questions = conn.execute("""
+            SELECT q.aafp_qid, q.stem, e.correct_text, e.explanation
+            FROM aafp_questions q
+            JOIN aafp_explanations e ON q.aafp_qid = e.aafp_qid
+            LEFT JOIN aafp_question_vec v ON q.aafp_qid = v.aafp_qid
+            WHERE v.aafp_qid IS NULL
+            ORDER BY q.aafp_qid
+        """).fetchall()
+        print(f"  [new-only mode] {len(questions)} AAFP questions without embeddings")
+    else:
+        questions = conn.execute("""
+            SELECT q.aafp_qid, q.stem, e.correct_text, e.explanation
+            FROM aafp_questions q
+            JOIN aafp_explanations e ON q.aafp_qid = e.aafp_qid
+            ORDER BY q.aafp_qid
+        """).fetchall()
+
+    print(f"\n{'='*60}")
+    print(f"AAFP QUESTIONS: {len(questions)} to embed")
+    print(f"{'='*60}")
+
+    if dry_run:
+        for q in questions[:3]:
+            text = build_aafp_question_text(dict(q))
+            print(f"  {q['aafp_qid']}: {text[:120]}...")
+        print(f"  ... and {len(questions)-3} more")
+        return 0, 0
+
+    total_tokens = 0
+    embedded = 0
+
+    for i in range(0, len(questions), BATCH_SIZE):
+        batch  = questions[i:i+BATCH_SIZE]
+        texts  = [build_aafp_question_text(dict(q)) for q in batch]
+        qids   = [q["aafp_qid"] for q in batch]
+
+        embeddings = get_embeddings(client, texts)
+        total_tokens += sum(len(t.split()) * 1.3 for t in texts)
+
+        for aafp_qid, emb in zip(qids, embeddings):
+            import struct
+            blob = struct.pack(f"{len(emb)}f", *emb)
+            conn.execute(
+                "INSERT OR REPLACE INTO aafp_question_vec(aafp_qid, embedding) VALUES (?, ?)",
+                (aafp_qid, blob)
+            )
+
+        embedded += len(batch)
+        print(f"  Batch {i//BATCH_SIZE + 1}: embedded {len(batch)} AAFP questions "
+              f"({embedded}/{len(questions)})")
+
+    conn.commit()
+    return embedded, int(total_tokens)
+
+
 # ---------------------------------------------------------------------------
 # Verification
 # ---------------------------------------------------------------------------
@@ -287,45 +387,50 @@ def verify(conn):
     print("VERIFICATION")
     print(f"{'='*60}")
 
-    art_count = conn.execute("SELECT COUNT(*) FROM article_vec").fetchone()[0]
-    q_count   = conn.execute("SELECT COUNT(*) FROM question_vec").fetchone()[0]
+    art_count  = conn.execute("SELECT COUNT(*) FROM article_vec").fetchone()[0]
+    q_count    = conn.execute("SELECT COUNT(*) FROM question_vec").fetchone()[0]
+    aafp_count = conn.execute("SELECT COUNT(*) FROM aafp_question_vec").fetchone()[0]
 
-    art_total = conn.execute("SELECT COUNT(*) FROM articles").fetchone()[0]
-    q_total   = conn.execute("SELECT COUNT(*) FROM questions").fetchone()[0]
+    art_total  = conn.execute("SELECT COUNT(*) FROM articles").fetchone()[0]
+    q_total    = conn.execute("SELECT COUNT(*) FROM questions").fetchone()[0]
+    aafp_total = conn.execute("SELECT COUNT(*) FROM aafp_questions").fetchone()[0]
 
-    print(f"  article_vec: {art_count}/{art_total} articles embedded")
-    print(f"  question_vec: {q_count}/{q_total} questions embedded")
+    print(f"  article_vec:       {art_count}/{art_total} articles embedded")
+    print(f"  question_vec:      {q_count}/{q_total} ITE questions embedded")
+    print(f"  aafp_question_vec: {aafp_count}/{aafp_total} AAFP questions embedded")
 
-    # Quick similarity test: find the closest article to the first question
-    first_q = conn.execute("SELECT qid, embedding FROM question_vec LIMIT 1").fetchone()
-    if first_q:
+    # Smoke test: nearest ITE questions to first AAFP question
+    first_aafp = conn.execute(
+        "SELECT aafp_qid, embedding FROM aafp_question_vec LIMIT 1"
+    ).fetchone()
+    if first_aafp:
         results = conn.execute("""
-            SELECT article_id, distance
-            FROM article_vec
+            SELECT qid, distance
+            FROM question_vec
             WHERE embedding MATCH ?
             AND k = 3
             ORDER BY distance
-        """, (first_q[1],)).fetchall()
+        """, (first_aafp[1],)).fetchall()
 
         if results:
-            print(f"\n  Smoke test — nearest articles to {first_q[0]}:")
+            print(f"\n  Smoke test — nearest ITE questions to {first_aafp[0]}:")
             for r in results:
-                # Look up the article title
-                art = conn.execute(
-                    "SELECT title, tier FROM articles WHERE article_id=?",
-                    (r[0],)
+                q = conn.execute(
+                    "SELECT question_text FROM questions WHERE qid=?", (r[0],)
                 ).fetchone()
-                title = (art[0] or "")[:80] if art else "?"
-                print(f"    {r[0]} (dist={r[1]:.4f}, tier={art[1] if art else '?'}): {title}")
+                stem_snippet = (q[0] or "")[:80] if q else "?"
+                print(f"    {r[0]} (dist={r[1]:.4f}): {stem_snippet}")
 
-    # Coverage check
+    # Coverage warnings
     if art_count < art_total:
-        print(f"\n  WARNING: {art_total - art_count} articles missing embeddings!")
+        print(f"\n  WARNING: {art_total - art_count} articles missing embeddings")
     if q_count < q_total:
-        print(f"\n  WARNING: {q_total - q_count} questions missing embeddings!")
+        print(f"\n  WARNING: {q_total - q_count} ITE questions missing embeddings")
+    if aafp_count < aafp_total:
+        print(f"\n  WARNING: {aafp_total - aafp_count} AAFP questions missing embeddings")
 
-    if art_count == art_total and q_count == q_total:
-        print(f"\n  ALL CLEAR — 100% embedding coverage")
+    if art_count == art_total and q_count == q_total and aafp_count == aafp_total:
+        print(f"\n  ALL CLEAR — 100% embedding coverage across all three corpora")
 
 
 # ---------------------------------------------------------------------------
@@ -336,9 +441,10 @@ def main():
     parser = argparse.ArgumentParser(description="Compute vector embeddings for ITE Intelligence DB")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be embedded, no API calls")
     parser.add_argument("--new-only", action="store_true",
-                        help="Only embed articles/questions not yet in vec tables (incremental update)")
-    parser.add_argument("--articles-only", action="store_true", help="Only embed articles")
-    parser.add_argument("--questions-only", action="store_true", help="Only embed questions")
+                        help="Only embed items not yet in vec tables (incremental update)")
+    parser.add_argument("--articles-only",  action="store_true", help="Only embed articles")
+    parser.add_argument("--questions-only", action="store_true", help="Only embed ITE questions")
+    parser.add_argument("--aafp-only",      action="store_true", help="Only embed AAFP BRQ questions")
     parser.add_argument("--db", type=str, default=str(DB_PATH), help="Path to SQLite DB")
     args = parser.parse_args()
 
@@ -381,15 +487,25 @@ def main():
     total_embedded = 0
     total_tokens = 0
 
-    # Embed articles
-    if not args.questions_only:
+    # Determine which corpora to embed
+    aafp_only  = args.aafp_only
+    ite_only   = args.articles_only or args.questions_only
+
+    # Embed articles (skip if --questions-only or --aafp-only)
+    if not args.questions_only and not aafp_only:
         n, t = embed_articles(conn, client, dry_run=args.dry_run, new_only=args.new_only)
         total_embedded += n
         total_tokens += t
 
-    # Embed questions
-    if not args.articles_only:
+    # Embed ITE questions (skip if --articles-only or --aafp-only)
+    if not args.articles_only and not aafp_only:
         n, t = embed_questions(conn, client, dry_run=args.dry_run, new_only=args.new_only)
+        total_embedded += n
+        total_tokens += t
+
+    # Embed AAFP BRQ questions (skip if --articles-only or --questions-only)
+    if not ite_only:
+        n, t = embed_aafp_questions(conn, client, dry_run=args.dry_run, new_only=args.new_only)
         total_embedded += n
         total_tokens += t
 

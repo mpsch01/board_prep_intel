@@ -1,0 +1,909 @@
+{
+  "vol_page": [
+    {
+      "citation_id": "AAFP-50524-C2",
+      "aafp_qid": "AAFP-50524",
+      "raw_text": "Quintero BM, Yazbeck C, Sweeney LB. Thyroiditis: evaluation and treatment. Am Fam Physician. 2021;104(6):609-617.",
+      "type": "journal_volpage",
+      "author": "Quintero",
+      "year": 2021,
+      "journal": "Am Fam Physician",
+      "volume": "104",
+      "first_page": "609"
+    },
+    {
+      "citation_id": "AAFP-50722-C2",
+      "aafp_qid": "AAFP-50722",
+      "raw_text": "Deak TM, Moskovitz JB: Hypertension and pregnancy. Emerg Med Clin North Am 2012;30(4): 903–917.",
+      "type": "journal_volpage",
+      "author": "Deak",
+      "year": 2012,
+      "journal": "Emerg Med Clin North Am",
+      "volume": "30",
+      "first_page": "903"
+    }
+  ],
+  "guideline_other": [
+    {
+      "citation_id": "AAFP-49920-C1",
+      "aafp_qid": "AAFP-49920",
+      "raw_text": "Final Recommendation Statement: Abdominal Aortic Aneurysm Screening . US Preventive Services Task Force, 2014.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-49945-C1",
+      "aafp_qid": "AAFP-49945",
+      "raw_text": "Authors/Task Force members; Elliott PM,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-49955-C1",
+      "aafp_qid": "AAFP-49955",
+      "raw_text": "Henry DA: In the clinic: Hyponatremia. Ann Intern Med 2015;163(3):ITC1-ITC19.",
+      "type": "guideline_or_other",
+      "year": 2015
+    },
+    {
+      "citation_id": "AAFP-49964-C1",
+      "aafp_qid": "AAFP-49964",
+      "raw_text": "Division of Reproductive Health: Effectiveness of family planning methods. Centers for Disease Control and Prevention.",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-49968-C1",
+      "aafp_qid": "AAFP-49968",
+      "raw_text": "Nahid P, Dorman SE, Alipanah N, et al: Official American Thoracic Society/Centers for Disease Control and Prevention/Infectious Diseases Society of America clinical practice guidelines: Treatment of drug-susceptible tuberculosis. Clin Infect Dis 2016;63(7):e147-e195.",
+      "type": "guideline_or_other",
+      "year": 2016
+    },
+    {
+      "citation_id": "AAFP-49998-C1",
+      "aafp_qid": "AAFP-49998",
+      "raw_text": "Christian CW; Committee on Child Abuse and Neglect,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50001-C1",
+      "aafp_qid": "AAFP-50001",
+      "raw_text": "US Preventive Services Task Force. Final recommendation statement: obstructive sleep apnea in adults: screening. Updated November 15,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50006-C1",
+      "aafp_qid": "AAFP-50006",
+      "raw_text": "ACR-ASNR-ASSR-SIR-SNIS Practice Parameter for the Performance of Vertebral Augmentation . American College of Radiology, amended 2014.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-50010-C1",
+      "aafp_qid": "AAFP-50010",
+      "raw_text": "Cardiovascular disease: Risk assessment and reduction, including lipid modification. National Institute for Health and Care Excellence, updated 2016.",
+      "type": "guideline_or_other",
+      "year": 2016
+    },
+    {
+      "citation_id": "AAFP-50012-C1",
+      "aafp_qid": "AAFP-50012",
+      "raw_text": "Shonkoff JP, Garner AS; Committee on Psychosocial Aspects of Child and Family Health, et al: The lifelong effects of early childhood adversity and toxic stress. Pediatrics 2012;129(1):e232-e246.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-50014-C1",
+      "aafp_qid": "AAFP-50014",
+      "raw_text": "Moyer VA; US Preventive Services Task Force: Screening for and management of obesity in adults: US Preventive Services Task Force recommendation statement. Ann I n t e r n M e d 2012:157(5):373-378.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-50034-C1",
+      "aafp_qid": "AAFP-50034",
+      "raw_text": "HPV vaccines: Vaccinating your preteen or teen. Centers for Disease Control and Prevention, 2016.",
+      "type": "guideline_or_other",
+      "year": 2016
+    },
+    {
+      "citation_id": "AAFP-50036-C1",
+      "aafp_qid": "AAFP-50036",
+      "raw_text": "Zawistowski CA, Frader JE: Ethical problems in pediatric critical care: Consent. Crit Care Med 2003;31(5 Suppl):S407-S410.",
+      "type": "guideline_or_other",
+      "year": 2003
+    },
+    {
+      "citation_id": "AAFP-50042-C1",
+      "aafp_qid": "AAFP-50042",
+      "raw_text": "Stevens DL, Bisno AL, Chambers HF, et al: Practice guidelines for the diagnosis and management of skin and soft-tissue infections: 2014 update by the Infectious Diseases Society of America. Clin Infect Dis 2014;59(2):e10-e52.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-50049-C2",
+      "aafp_qid": "AAFP-50049",
+      "raw_text": "Islam SU: Clinical uses of probiotics. Medicine (Baltimore) 2016;95(5):e2658.",
+      "type": "guideline_or_other",
+      "year": 2016
+    },
+    {
+      "citation_id": "AAFP-50064-C1",
+      "aafp_qid": "AAFP-50064",
+      "raw_text": "US Preventive Services Task Force: Published recommendations . USPSTF website.",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50081-C1",
+      "aafp_qid": "AAFP-50081",
+      "raw_text": "Final Recommendation Statement: Abdominal Aortic Aneurysm Screenin g . US Preventive Services Task Force, 2014.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-50090-C1",
+      "aafp_qid": "AAFP-50090",
+      "raw_text": "ACR Appropriateness Criteria: Clinical condition: Acute onset of flank pain—Suspicion of stone disease (urolithiasis). American College of Radiology, 2015.",
+      "type": "guideline_or_other",
+      "year": 2015
+    },
+    {
+      "citation_id": "AAFP-50099-C1",
+      "aafp_qid": "AAFP-50099",
+      "raw_text": "US Preventive Services Task Force: The Guide to Clinical Preventive Services 2014: Recommendations of the US Preventive Services Task Force . Agency for Healthcare Research and Quality, 2014.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-50101-C1",
+      "aafp_qid": "AAFP-50101",
+      "raw_text": "Manske RC, Prohaska D: Diagnosis and management of adhesive capsulitis. Curr Rev Musculoskelet Med 2008;1(3-4):180-189.",
+      "type": "guideline_or_other",
+      "year": 2008
+    },
+    {
+      "citation_id": "AAFP-50113-C1",
+      "aafp_qid": "AAFP-50113",
+      "raw_text": "Pliquett RU, Mohr P, Obermuller N: Endocrine testing for the syndrome of inappropriate antidiuretic hormone secretion (SIADH). Endotext website, 2014.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-50114-C1",
+      "aafp_qid": "AAFP-50114",
+      "raw_text": "Ralston SL, Lieberthal AS, Meissner HC, et al: Clinical practice guideline: The diagnosis, management, and prevention of bronchiolitis. Pediatrics 2014;134(5):e1474-e1502.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-50121-C1",
+      "aafp_qid": "AAFP-50121",
+      "raw_text": "Final Recommendation Statement: BRCA-Related Cancer: Risk Assessment, Genetic Counseling, and Genetic Testing . US Preventive Services Task Force, 2013.",
+      "type": "guideline_or_other",
+      "year": 2013
+    },
+    {
+      "citation_id": "AAFP-50168-C1",
+      "aafp_qid": "AAFP-50168",
+      "raw_text": "Final Recommendation Statement: Chronic Obstructive Pulmonary Disease: Screening. US Preventive Services Task Force, 2022.",
+      "type": "guideline_or_other",
+      "year": 2022
+    },
+    {
+      "citation_id": "AAFP-50191-C1",
+      "aafp_qid": "AAFP-50191",
+      "raw_text": "Final Recommendation Statement: Obesity in Adults: Screening and Management. US Preventive Services Task Force, 2016.",
+      "type": "guideline_or_other",
+      "year": 2016
+    },
+    {
+      "citation_id": "AAFP-50306-C3",
+      "aafp_qid": "AAFP-50306",
+      "raw_text": "McMurray JJV, Solomon SD, Inzucchi SE, et al: Dapagliflozin in patients with heart failure and reduced ejection fraction. N Engl J Med 2019;381:1995-2008",
+      "type": "guideline_or_other",
+      "year": 2019
+    },
+    {
+      "citation_id": "AAFP-50325-C1",
+      "aafp_qid": "AAFP-50325",
+      "raw_text": "American Diabetes Association: 14. Diabetes care in the hospital: Standards of medical care in diabetes—2018. Diabetes Care 2018;41(Suppl 1):S144-S151.",
+      "type": "guideline_or_other",
+      "year": 2018
+    },
+    {
+      "citation_id": "AAFP-50341-C1",
+      "aafp_qid": "AAFP-50341",
+      "raw_text": "Michaudet C, Malaty J: Chronic cough: Evaluation and management. Am Fam Physician 2017:96(9):575-580.",
+      "type": "guideline_or_other",
+      "year": 2017
+    },
+    {
+      "citation_id": "AAFP-50352-C2",
+      "aafp_qid": "AAFP-50352",
+      "raw_text": "Final Recommendation Statement: Colorectal Cancer: Screening. US Preventive Services Task Force, 2021.",
+      "type": "guideline_or_other",
+      "year": 2021
+    },
+    {
+      "citation_id": "AAFP-50356-C1",
+      "aafp_qid": "AAFP-50356",
+      "raw_text": "US Preventive Services Task Force. Final recommendation statement: prostate cancer: screening. Updated May 8,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50373-C2",
+      "aafp_qid": "AAFP-50373",
+      "raw_text": "A comprehensive strategy to eliminate transmission of hepatitis B virus infection in the United States. Recommendations of the Advisory Committee on Immunization Practices (ACIP). Part II: Immunization of adults. MMWR Recommend Rep 2006;55(RR16):1-25.",
+      "type": "guideline_or_other",
+      "year": 2006
+    },
+    {
+      "citation_id": "AAFP-50383-C1",
+      "aafp_qid": "AAFP-50383",
+      "raw_text": "American Geriatrics Society. Tip sheet: ten things clinicians and patients should question. ABIM Foundation Choosing Wisely campaign. Updated June 2017",
+      "type": "guideline_or_other",
+      "year": 2017
+    },
+    {
+      "citation_id": "AAFP-50416-C3",
+      "aafp_qid": "AAFP-50416",
+      "raw_text": "Advisory Committee on Immunization Practices: Recommended adult immunization schedule: United States, October 2007-September 2008. Ann Intern Med 2007:147(10):725-729.",
+      "type": "guideline_or_other",
+      "year": 2007
+    },
+    {
+      "citation_id": "AAFP-50422-C1",
+      "aafp_qid": "AAFP-50422",
+      "raw_text": "American Diabetes Association: Standards of medical care in diabetes—2013. Diabetes Care 2013;36(Suppl 1):S11-S66.",
+      "type": "guideline_or_other",
+      "year": 2013
+    },
+    {
+      "citation_id": "AAFP-50423-C1",
+      "aafp_qid": "AAFP-50423",
+      "raw_text": "US Preventive Services Task Force. Final recommendation statement: cervical cancer: screening. Updated August 21,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50443-C2",
+      "aafp_qid": "AAFP-50443",
+      "raw_text": "Young SS: Appropriate Use of Common OTC Analgesics and Cough and Cold Medications. American Academy of Family Physicians monograph, 2008.",
+      "type": "guideline_or_other",
+      "year": 2008
+    },
+    {
+      "citation_id": "AAFP-50481-C1",
+      "aafp_qid": "AAFP-50481",
+      "raw_text": "Bernard-Bonnin AC: Feeding problems of infants and toddlers. Can Fam Physician 2006;52:1247-1251.",
+      "type": "guideline_or_other",
+      "year": 2006
+    },
+    {
+      "citation_id": "AAFP-50494-C1",
+      "aafp_qid": "AAFP-50494",
+      "raw_text": "Final Recommendation Statement: Chlamydia and Gonorrhea: Screening . US Preventive Services Task Force, 2016.",
+      "type": "guideline_or_other",
+      "year": 2016
+    },
+    {
+      "citation_id": "AAFP-50553-C1",
+      "aafp_qid": "AAFP-50553",
+      "raw_text": "Chow AW, Benninger MS, Brook I, et al. IDSA clinical practice guideline for acute bacterial rhinosinusitis in children and adults. Clin Infect Dis. 2012;54(8):e72-e112.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-50571-C1",
+      "aafp_qid": "AAFP-50571",
+      "raw_text": "Physical activity guidelines for Americans. 2nd ed. US Department of Health and Human Services. 2018.",
+      "type": "guideline_or_other",
+      "year": 2018
+    },
+    {
+      "citation_id": "AAFP-50573-C1",
+      "aafp_qid": "AAFP-50573",
+      "raw_text": "Adult immunization schedule by age: recommendations for ages 19 years or older,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50578-C1",
+      "aafp_qid": "AAFP-50578",
+      "raw_text": "Christian CW; Committee on Child Abuse and Neglect,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50603-C1",
+      "aafp_qid": "AAFP-50603",
+      "raw_text": "Grade definitions. US Preventive Services Task Force, 2014.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-50612-C1",
+      "aafp_qid": "AAFP-50612",
+      "raw_text": "Park JK, Black PM, Vernick DM: Acoustic neuroma. Up To Date 2003.",
+      "type": "guideline_or_other",
+      "year": 2003
+    },
+    {
+      "citation_id": "AAFP-50633-C1",
+      "aafp_qid": "AAFP-50633",
+      "raw_text": "American Psychiatric Association. Bipolar and related disorders. In: Diagnostic and Statistical Manual of Mental Disorders. 5th ed,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50645-C2",
+      "aafp_qid": "AAFP-50645",
+      "raw_text": "Moise KJ: Diagnosis and management of Rhesus (Rh) alloimmunization. UpToDate 5/23/03. Version 11.3.",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50646-C1",
+      "aafp_qid": "AAFP-50646",
+      "raw_text": "Recommendations to prevent and control iron deficiency in the United States. MMWR 1998;47(RR-3):1.",
+      "type": "guideline_or_other",
+      "year": 1998
+    },
+    {
+      "citation_id": "AAFP-50663-C2",
+      "aafp_qid": "AAFP-50663",
+      "raw_text": "Information for healthcare professionals: Tumor necrosis factor (TNF) blockers (marketed as Remicade, Enbrel, Humira, Cimzia, and Simponi). US Food and Drug Administration, 2009.",
+      "type": "guideline_or_other",
+      "year": 2009
+    },
+    {
+      "citation_id": "AAFP-50674-C2",
+      "aafp_qid": "AAFP-50674",
+      "raw_text": "Pallan S, Rahman MO, Khan AA: Diagnosis and management of primary hyperparathyroidism. BMJ 2012;344:e1013.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-50677-C1",
+      "aafp_qid": "AAFP-50677",
+      "raw_text": "Nunes VD, O’Flynn N, Evans J, et al: Management of bedwetting in children and young people: Summary of NICE guidance. BMJ 2010;341:c5399. Ref:",
+      "type": "guideline_or_other",
+      "year": 2010
+    },
+    {
+      "citation_id": "AAFP-50681-C1",
+      "aafp_qid": "AAFP-50681",
+      "raw_text": "Workowski KA, Berman S, CDC: Sexually transmitted diseases treatment guidelines, 2010. MMWR Recomm Rep 2010;59(RR-12):1-110.",
+      "type": "guideline_or_other",
+      "year": 2010
+    },
+    {
+      "citation_id": "AAFP-50684-C1",
+      "aafp_qid": "AAFP-50684",
+      "raw_text": "McDonald R: Acoustic neuroma: What the evidence says about evaluation and treatment. J Fam Pract 2011;60(6):E1-E4.",
+      "type": "guideline_or_other",
+      "year": 2011
+    },
+    {
+      "citation_id": "AAFP-50686-C1",
+      "aafp_qid": "AAFP-50686",
+      "raw_text": "FDA Drug Safety Communication: New contraindication and updated warning on kidney impairment for Reclast (zoledronic acid). US Food and Drug Administration, 2011.",
+      "type": "guideline_or_other",
+      "year": 2011
+    },
+    {
+      "citation_id": "AAFP-50688-C1",
+      "aafp_qid": "AAFP-50688",
+      "raw_text": "Verbalis JG, Goldsmith SR, Greenberg A, et al: Hyponatremia treatment guidelines 2007: Expert panel recommendations. Am J Med 2007;120(11 Suppl 1):S1-S21.",
+      "type": "guideline_or_other",
+      "year": 2007
+    },
+    {
+      "citation_id": "AAFP-50692-C2",
+      "aafp_qid": "AAFP-50692",
+      "raw_text": "Centers for Disease Control and Prevention: Facts about Hantaviruses: What you need to know to prevent the disease Hantavirus Pulmonary Syndrome (HP). US Dept of Health and Human Services, nd.",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50695-C1",
+      "aafp_qid": "AAFP-50695",
+      "raw_text": "Wilson JF: In the clinic. The polycystic ovary syndrome. Ann Intern Med 2011;154(3):ITC2-2-ITC2-15.",
+      "type": "guideline_or_other",
+      "year": 2011
+    },
+    {
+      "citation_id": "AAFP-50697-C1",
+      "aafp_qid": "AAFP-50697",
+      "raw_text": "Shaw BA, Segal LS: Evaluation and referral for developmental dysplasia of the hip in infants. Pediatrics 2016;138(6):pii:e20163107.",
+      "type": "guideline_or_other",
+      "year": 2016
+    },
+    {
+      "citation_id": "AAFP-50706-C1",
+      "aafp_qid": "AAFP-50706",
+      "raw_text": "Reproductive health: US Medical Eligibility Criteria for contraceptive use,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50714-C2",
+      "aafp_qid": "AAFP-50714",
+      "raw_text": "Schwartz SR, Cohen SM, Dailey SH, et al: Clinical practice guideline: Hoarseness (dysphonia). Otolaryngol Head Neck Surg 2009;141(3 Suppl 2):S1-S31.",
+      "type": "guideline_or_other",
+      "year": 2009
+    },
+    {
+      "citation_id": "AAFP-50720-C1",
+      "aafp_qid": "AAFP-50720",
+      "raw_text": "Guyatt GH, Akl EA, Crowther M, et al: Executive summary: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest 2012;141(2 Suppl):7S-47S.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-50722-C1",
+      "aafp_qid": "AAFP-50722",
+      "raw_text": "Vanden Hoek TL, Morrison LJ, Shuster M, et al: Part 12: Cardiac arrest in special situations: 2010 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 2010;122(18 Suppl 3):S829-S861.",
+      "type": "guideline_or_other",
+      "year": 2010
+    },
+    {
+      "citation_id": "AAFP-50741-C2",
+      "aafp_qid": "AAFP-50741",
+      "raw_text": "Binic I, Jankovic A: Coral-red fluorescence. N Engl J Med 2011;364(13):e25.",
+      "type": "guideline_or_other",
+      "year": 2011
+    },
+    {
+      "citation_id": "AAFP-50744-C4",
+      "aafp_qid": "AAFP-50744",
+      "raw_text": "The National Institute for Occupational Safety and Health (NIOSH): Work-Related Lung Disease Surveillance System (eWoRLD). Centers for Disease Control and Prevention, 2013.",
+      "type": "guideline_or_other",
+      "year": 2013
+    },
+    {
+      "citation_id": "AAFP-50755-C1",
+      "aafp_qid": "AAFP-50755",
+      "raw_text": "Al-Hussaini A, Latif F, Berry S: Ear pain, vesicular rash, and facial palsy. BMJ 2014;349:g7572.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-50761-C1",
+      "aafp_qid": "AAFP-50761",
+      "raw_text": "Bonow RO, Carabello BA, Chatterjee K, et al: 2008 Focused update incorporated into the ACC/AHA 2006 guidelines for the management of patients with valvular heart disease: A report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines (Writing Committee to Revise the 1998 Guidelines for the Management of Patients With Valvular Heart Disease): Endorsed by the Society of Cardiovascular Anesthesiologists, Society for Cardiovascular Angiography and Interventions, and Society of Thoracic Surgeons. Circulation 2008;118(15):e523-e661.",
+      "type": "guideline_or_other",
+      "year": 2008
+    },
+    {
+      "citation_id": "AAFP-50763-C1",
+      "aafp_qid": "AAFP-50763",
+      "raw_text": "Parish SJ: From whence comes HSDD? J Fam Pract 2009;58(7 Suppl Hypoactive):S16-S21.",
+      "type": "guideline_or_other",
+      "year": 2009
+    },
+    {
+      "citation_id": "AAFP-50763-C3",
+      "aafp_qid": "AAFP-50763",
+      "raw_text": "Simon JA. Opportunities for intervention in HSDD. J Fam Pract. 2009;58(7 Suppl Hypoactive):S26-30. Review.",
+      "type": "guideline_or_other",
+      "year": 2009
+    },
+    {
+      "citation_id": "AAFP-50768-C1",
+      "aafp_qid": "AAFP-50768",
+      "raw_text": "Khan QJ, O’Dea AP, Sharma P: Musculoskeletal adverse events associated with adjuvant aromatase inhibitors. J Oncol 2010:65438",
+      "type": "guideline_or_other",
+      "year": 2010
+    },
+    {
+      "citation_id": "AAFP-50769-C1",
+      "aafp_qid": "AAFP-50769",
+      "raw_text": "Foran JM, Shammo JM: Clinical presentation, diagnosis, and prognosis of myelodysplastic syndromes. Am J Med 2012;125(7 Suppl):S6-S13.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-50770-C1",
+      "aafp_qid": "AAFP-50770",
+      "raw_text": "Expert Panel Report 3: Guidelines for the Diagnosis and Management of Asthma. National Asthma Education and Prevention Program, NIH pub no 07-4051, 2007.",
+      "type": "guideline_or_other",
+      "year": 2007
+    },
+    {
+      "citation_id": "AAFP-50771-C2",
+      "aafp_qid": "AAFP-50771",
+      "raw_text": "Stewart DE: Depression during pregnancy. N Engl J Med 2011;365:1605-1611.",
+      "type": "guideline_or_other",
+      "year": 2011
+    },
+    {
+      "citation_id": "AAFP-50772-C2",
+      "aafp_qid": "AAFP-50772",
+      "raw_text": "Accountable Care Organizations. Centers for Medicare and Medicaid Services, 2013.",
+      "type": "guideline_or_other",
+      "year": 2013
+    },
+    {
+      "citation_id": "AAFP-50786-C1",
+      "aafp_qid": "AAFP-50786",
+      "raw_text": "US Preventive Services Task Force. Final recommendation statement: breast cancer: screening. Updated April 30,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50804-C1",
+      "aafp_qid": "AAFP-50804",
+      "raw_text": "May A. Cluster headache: pathogenesis,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50805-C1",
+      "aafp_qid": "AAFP-50805",
+      "raw_text": "Sun safety: information for parents about sunburn & sunscreen. American Academy of Pediatrics. Updated November 20,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50825-C1",
+      "aafp_qid": "AAFP-50825",
+      "raw_text": "Guyatt GH, Akl EA, Crowther M, et al: Executive summary: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest 2012;141(2 Suppl):7S-47S.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-50862-C1",
+      "aafp_qid": "AAFP-50862",
+      "raw_text": "American Diabetes Association: Standards of medical care in diabetes—2013. Diabetes Care 2013;36(Suppl 1):S40-S43.",
+      "type": "guideline_or_other",
+      "year": 2013
+    },
+    {
+      "citation_id": "AAFP-50883-C1",
+      "aafp_qid": "AAFP-50883",
+      "raw_text": "American Diabetes Association: Standards of medical care in diabetes—2015: 7. Approaches to glycemic treatment. Diabetes Care 2015;38(Suppl):S41-S48.",
+      "type": "guideline_or_other",
+      "year": 2015
+    },
+    {
+      "citation_id": "AAFP-50885-C1",
+      "aafp_qid": "AAFP-50885",
+      "raw_text": "Nishizaka MK, Zaman MA, Calhoun DA: Efficacy of low-dose spironolactone in subjects with resistant hypertension. Am J Hypertens 2003;16(11 Pt 1):925-930.",
+      "type": "guideline_or_other",
+      "year": 2003
+    },
+    {
+      "citation_id": "AAFP-50885-C2",
+      "aafp_qid": "AAFP-50885",
+      "raw_text": "Myat A, Redwood SR, Qureshi AC, et al: Resistant hypertension. BMJ 2012;345:e7473.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-50889-C1",
+      "aafp_qid": "AAFP-50889",
+      "raw_text": "Sinz E, Navarro K, Soderberg ES (eds): Advanced Cardiovascular Life Support: Provider Manual. American Heart Association, 2011.",
+      "type": "guideline_or_other",
+      "year": 2011
+    },
+    {
+      "citation_id": "AAFP-50894-C1",
+      "aafp_qid": "AAFP-50894",
+      "raw_text": "US Preventive Services Task Force. Final recommendation statement: syphilis infection in pregnant women: screening. Updated September 4,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50906-C1",
+      "aafp_qid": "AAFP-50906",
+      "raw_text": "Hoffbrand AV. Megaloblastic anemias. In: Loscalzo J,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-50916-C1",
+      "aafp_qid": "AAFP-50916",
+      "raw_text": "US Preventive Services Task Force. Final recommendation statement: lung cancer: screening. Updated March 9, 2021.",
+      "type": "guideline_or_other",
+      "year": 2021
+    },
+    {
+      "citation_id": "AAFP-50921-C3",
+      "aafp_qid": "AAFP-50921",
+      "raw_text": "US Preventive Services Task Force. Final recommendation statement: colorectal cancer: screening. Updated May 18, 2021.",
+      "type": "guideline_or_other",
+      "year": 2021
+    },
+    {
+      "citation_id": "AAFP-50928-C3",
+      "aafp_qid": "AAFP-50928",
+      "raw_text": "Global Strategy for the Diagnosis, Management, and Prevention of Chronic Obstructive Pulmonary Disease. Global Initiative for Chronic Obstructive Lung Disease, 2022.",
+      "type": "guideline_or_other",
+      "year": 2022
+    },
+    {
+      "citation_id": "AAFP-50938-C2",
+      "aafp_qid": "AAFP-50938",
+      "raw_text": "Goundry B, Bell L, Langtree M, Moorthy A: Diagnosis and management of Raynaud’s phenomenon. BMJ 2012;344:e289.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-50939-C1",
+      "aafp_qid": "AAFP-50939",
+      "raw_text": "Stengel JW, Remer EM: Sonography of the scrotum: Case-based review. AJR Am J Roentgenol 2008;190(6 Suppl):S35-S41.",
+      "type": "guideline_or_other",
+      "year": 2008
+    },
+    {
+      "citation_id": "AAFP-50953-C1",
+      "aafp_qid": "AAFP-50953",
+      "raw_text": "Reddy RG, Aung T, Karavitaki N, Wass JA: Opioid induced hypogonadism. BMJ 2010;341:c4462.",
+      "type": "guideline_or_other",
+      "year": 2010
+    },
+    {
+      "citation_id": "AAFP-50954-C1",
+      "aafp_qid": "AAFP-50954",
+      "raw_text": "Bonow RO, Carabello BA, Chatterjee K, et al: 2008 focused update incorporated into the ACC/AHA 2006 guidelines for the management of patients with valvular heart disease: A report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines (Writing Committee to revise the 1998 guidelines for the management of patients with valvular heart disease). J Am Coll Cardiol 2008;52(13):e1-e142.",
+      "type": "guideline_or_other",
+      "year": 2008
+    },
+    {
+      "citation_id": "AAFP-50954-C3",
+      "aafp_qid": "AAFP-50954",
+      "raw_text": "American Society of Echocardiography: Five things physicians and patients should question. ABIM Foundation Choosing Wisely campaign, 2014.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-50960-C1",
+      "aafp_qid": "AAFP-50960",
+      "raw_text": "Frequency of communication problems among Joint Commission sentinel events. The Joint Commission, 2011.",
+      "type": "guideline_or_other",
+      "year": 2011
+    },
+    {
+      "citation_id": "AAFP-50962-C1",
+      "aafp_qid": "AAFP-50962",
+      "raw_text": "American College of Obstetricians and Gynecologists: Diagnosis and Management of Preeclampsia and Eclampsia. ACOG Practice Bulletin no 33, 2002 (reaffirmed 2012).",
+      "type": "guideline_or_other",
+      "year": 2002
+    },
+    {
+      "citation_id": "AAFP-50965-C1",
+      "aafp_qid": "AAFP-50965",
+      "raw_text": "Lieberthal AS, Carroll AE, Chonmaitree T, et al: The diagnosis and management of acute otitis media. Pediatrics 2013;131(3):e964-e999.",
+      "type": "guideline_or_other",
+      "year": 2013
+    },
+    {
+      "citation_id": "AAFP-50980-C3",
+      "aafp_qid": "AAFP-50980",
+      "raw_text": "Final Recommendation Statement: Abdominal Aortic Aneurysm: Screening. US Preventive Services Task Force, 2019.",
+      "type": "guideline_or_other",
+      "year": 2019
+    },
+    {
+      "citation_id": "AAFP-50994-C1",
+      "aafp_qid": "AAFP-50994",
+      "raw_text": "Committee on Adolescence; Braverman PK,",
+      "type": "guideline_or_other",
+      "year": null
+    },
+    {
+      "citation_id": "AAFP-51006-C2",
+      "aafp_qid": "AAFP-51006",
+      "raw_text": "Ford AC, Moayyedi P, Hanauer SB: Ulcerative colitis. BMJ 2013;346:f432.",
+      "type": "guideline_or_other",
+      "year": 2013
+    },
+    {
+      "citation_id": "AAFP-51009-C2",
+      "aafp_qid": "AAFP-51009",
+      "raw_text": "Byington CL, Reynolds CC, Korgenski K, et al: Costs and infant outcomes after implementation of a care process model for febrile infants. Pediatrics 2012;130(1):e16-e24.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-51009-C3",
+      "aafp_qid": "AAFP-51009",
+      "raw_text": "Pantell RH: Febrile infants: Aligning science, guidelines, and cost reduction with quality of individualized care. Pediatrics 2012;130(1):e199-e200.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-51018-C1",
+      "aafp_qid": "AAFP-51018",
+      "raw_text": "Mittal V, Darnell C, Walsh B, et al: Inpatient bronchiolitis guideline implementation and resource utilization. Pediatrics 2014;133(3):e730-e737.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-51019-C1",
+      "aafp_qid": "AAFP-51019",
+      "raw_text": "Wald ER, Applegate KE, Bordley C, et al: Clinical practice guideline for the diagnosis and management of acute bacterial sinusitis in children aged 1 to 18 years. Pediatrics 2013;132(1):e262-e280.",
+      "type": "guideline_or_other",
+      "year": 2013
+    },
+    {
+      "citation_id": "AAFP-51021-C1",
+      "aafp_qid": "AAFP-51021",
+      "raw_text": "Wilson JF: Stable ischemic heart disease. Ann Intern Med 2014;160(1):ITC1-1-ITC1-16.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-51026-C4",
+      "aafp_qid": "AAFP-51026",
+      "raw_text": "Department of Health and Human Services: Group A Streptococcal (GAS) Disease (strep throat, necrotizing fasciitis, impetigo). Centers for Disease Control and Prevention, 2008.",
+      "type": "guideline_or_other",
+      "year": 2008
+    },
+    {
+      "citation_id": "AAFP-51034-C1",
+      "aafp_qid": "AAFP-51034",
+      "raw_text": "Verani JR, McGee L, Schrag SJ: Prevention of perinatal group B streptococcal disease—Revised guidelines from CDC, 2010. MMWR Recomm Rep 2010;59(RR-10):1-36.",
+      "type": "guideline_or_other",
+      "year": 2010
+    },
+    {
+      "citation_id": "AAFP-51035-C1",
+      "aafp_qid": "AAFP-51035",
+      "raw_text": "Feeding tubes in advanced dementia position statement. American Geriatrics Society, 2013.",
+      "type": "guideline_or_other",
+      "year": 2013
+    },
+    {
+      "citation_id": "AAFP-51035-C2",
+      "aafp_qid": "AAFP-51035",
+      "raw_text": "American Geriatrics Society: Five things physicians and patients should question. ABIM Foundation Choosing Wisely campaign, 2014.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-51044-C3",
+      "aafp_qid": "AAFP-51044",
+      "raw_text": "Amsterdam EA, Wenger NK, Brindis RG, et al: 2014 AHA/ACC guideline for the management of patients with non–ST-elevation acute coronary syndromes: A report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines. Circulation 2014;Sep 23[Epub ahead of print].",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-51047-C2",
+      "aafp_qid": "AAFP-51047",
+      "raw_text": "Ford AC, Moayyedi P, Hanauer SB: Ulcerative colitis. BMJ 2013;346:f432.",
+      "type": "guideline_or_other",
+      "year": 2013
+    },
+    {
+      "citation_id": "AAFP-51049-C5",
+      "aafp_qid": "AAFP-51049",
+      "raw_text": "Global Strategy for the Diagnosis, Management and Prevention of COPD. Global Initiative for Chronic Obstructive Lung Disease (GOLD), 2014.",
+      "type": "guideline_or_other",
+      "year": 2014
+    },
+    {
+      "citation_id": "AAFP-51050-C1",
+      "aafp_qid": "AAFP-51050",
+      "raw_text": "Bocchetta A, Loviselli A: Lithium treatment and thyroid abnormalities. Clin Pract Epidemiol Ment Health 2006;2:23.",
+      "type": "guideline_or_other",
+      "year": 2006
+    },
+    {
+      "citation_id": "AAFP-51050-C2",
+      "aafp_qid": "AAFP-51050",
+      "raw_text": "The Management of Bipolar Disorder Working Group: VA/DoD Clinical Practice Guideline for management of bipolar disorder in adults. Department of Veteran Affairs, 2010.",
+      "type": "guideline_or_other",
+      "year": 2010
+    },
+    {
+      "citation_id": "AAFP-51053-C1",
+      "aafp_qid": "AAFP-51053",
+      "raw_text": "Mansour D, Korver T, Marintcheva-Petrova M, Fraser IS: The effects of Implanon on menstrual bleeding patterns. Eur J Contracept Reprod Health Care 2008;13(Suppl 1):13-28.",
+      "type": "guideline_or_other",
+      "year": 2008
+    },
+    {
+      "citation_id": "AAFP-51066-C1",
+      "aafp_qid": "AAFP-51066",
+      "raw_text": "American Diabetes Association Professional Practice Committee: 9. Pharmacologic approaches to glycemic treatment: Standards of Medical Care in Diabetes—2022.",
+      "type": "guideline_or_other",
+      "year": 2022
+    },
+    {
+      "citation_id": "AAFP-51067-C2",
+      "aafp_qid": "AAFP-51067",
+      "raw_text": "Kiire CA, Chong NV: Managing retinal vein occlusion. BMJ 2012;344:e499.",
+      "type": "guideline_or_other",
+      "year": 2012
+    },
+    {
+      "citation_id": "AAFP-51078-C1",
+      "aafp_qid": "AAFP-51078",
+      "raw_text": "Grossman E, Verdecchia P, Shamiss A, et al: Diuretic treatment of hypertension. Diabetes Care 2011;34(Suppl 2):S313-S319.",
+      "type": "guideline_or_other",
+      "year": 2011
+    }
+  ],
+  "cochrane": [
+    {
+      "citation_id": "AAFP-49971-C1",
+      "aafp_qid": "AAFP-49971",
+      "raw_text": "Walitt B, Urrútia G, Nishishinya MB, et al: Selective serotonin reuptake inhibitors for fibromyalgia syndrome. Cochrane Database Syst Rev 2015;(6):CD011735.",
+      "type": "cochrane_no_match"
+    },
+    {
+      "citation_id": "AAFP-50003-C1",
+      "aafp_qid": "AAFP-50003",
+      "raw_text": "Ma C, Xie J, Wang H, et al: Radioiodine therapy versus antithyroid medications for Graves’ disease. Cochrane Database Syst Rev 2016;(2):CD010094.",
+      "type": "cochrane_no_match"
+    },
+    {
+      "citation_id": "AAFP-50078-C1",
+      "aafp_qid": "AAFP-50078",
+      "raw_text": "Venekamp RP, Javed F, van Dongen TM, et al: Interventions for children with ear discharge occurring at least two weeks following grommet (ventilation tube) insertion. Cochrane Database Syst Rev 2016;(11):CD011684.",
+      "type": "cochrane_no_match"
+    },
+    {
+      "citation_id": "AAFP-50682-C1",
+      "aafp_qid": "AAFP-50682",
+      "raw_text": "Albalawi ZH, Othman SS, Alfaleh K: Intranasal ipratropium bromide for the common cold. Cochrane Database Syst Rev 2011;(7):CD008231.",
+      "type": "cochrane_no_match"
+    },
+    {
+      "citation_id": "AAFP-50759-C1",
+      "aafp_qid": "AAFP-50759",
+      "raw_text": "Binks CA, Fenton M, McCarthy L, et al: Psychological therapies for people with borderline personality disorder. Cochrane Database Syst Rev 2006;(1):CD005652.",
+      "type": "cochrane_no_match"
+    },
+    {
+      "citation_id": "AAFP-50820-C1",
+      "aafp_qid": "AAFP-50820",
+      "raw_text": "Herbert RD, de Noronha M, Kamper SJ: Stretching to prevent or reduce muscle soreness after exercise. Cochrane Database Syst Rev 2011;(7):CD004577.",
+      "type": "cochrane_no_match"
+    },
+    {
+      "citation_id": "AAFP-50820-C2",
+      "aafp_qid": "AAFP-50820",
+      "raw_text": "Yeung SS, Yeung EW, Gillespie LD: Interventions for preventing lower limb soft-tissue running injuries. Cochrane Database Syst Rev 2011;(7):CD001256.",
+      "type": "cochrane_no_match"
+    },
+    {
+      "citation_id": "AAFP-50869-C1",
+      "aafp_qid": "AAFP-50869",
+      "raw_text": "Keay L, Lindsley K, Tielsch J, et al: Routine preoperative medical testing for cataract surgery. Cochrane Database Syst Rev 2012;(3):CD007293.",
+      "type": "cochrane_no_match"
+    },
+    {
+      "citation_id": "AAFP-50971-C3",
+      "aafp_qid": "AAFP-50971",
+      "raw_text": "Dennis CL, Allen K: Interventions (other than pharmacological, psychosocial or psychological) for treating antenatal depression. Cochrane Database Syst Rev 2008;(4):CD006795.",
+      "type": "cochrane_no_match"
+    }
+  ],
+  "url": [
+    {
+      "citation_id": "AAFP-49879-C1",
+      "aafp_qid": "AAFP-49879",
+      "raw_text": "https://www.cancer.gov/about-cancer/causes-prevention/risk/infectious-agents/hpv-vaccine-fact-sheet (May 25, 2021).",
+      "type": "url"
+    },
+    {
+      "citation_id": "AAFP-50676-C1",
+      "aafp_qid": "AAFP-50676",
+      "raw_text": "Expert Panel Report 3: Guidelines for the Diagnosis and Management of Asthma. National Asthma Education and Prevention Program, 2007, pp 43-45. Available at http://www.nhlbi.nih.gov/guidelines/asthma/asthgdln.pdf.",
+      "type": "url"
+    },
+    {
+      "citation_id": "AAFP-50692-C1",
+      "aafp_qid": "AAFP-50692",
+      "raw_text": "Hantavirus. Centers for Disease Control website, 2012. http://www.cdc.gov/hantavirus",
+      "type": "url"
+    }
+  ]
+}

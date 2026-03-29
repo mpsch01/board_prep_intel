@@ -3,7 +3,9 @@
 **Session platform:** Windows PC (Cowork VM) + dispatch
 **Status:** Active
 **Preceding BATON:** `BATON_active_014_20260327_m1_complete_m2_clean_critique_extractor_designed.md` (→ archive)
-**Git hash:** `10d8208` (no new commits this session — all filesystem + DB work, no git run yet)
+**Git hash:** `cd32816` (pushed to GitHub post-session)
+**GitHub remote:** `https://github.com/mpsch01/project-overhaul` (private repo)
+**Push note:** PDFs and DB excluded via `.gitignore` by design — code + docs on GitHub, binaries (PDFs, .db, extracted_json) on local disk / Google Drive
 
 ---
 
