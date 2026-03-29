@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-03-27 (BATON 016)
-**Status:** Current — updated post AAFP enrichment pipeline complete (5-table schema, vectors, keywords, ICD-10, ITE similarity scores)
+**Last Updated:** 2026-03-28 (BATON 020)
+**Status:** Current — updated post AAFP question reuse investigation (38 shared AAFP-ITE vignettes; 49 new articles ART-1938-1986 inserted)
 
 > This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 00_#PROJECT_OVERHAUL/
-├── BATON_active_016_20260327_aafp_enrichment_complete_ite_similarity_scored.md  ← active BATON
+├── BATON_active_020_20260328_aafp_question_reuse_investigation_complete.md  ← active BATON
 ├── CLAUDE.md                              ← project memory + conventions
 ├── README.json                            ← machine-readable project metadata
 ├── README_PROJECT.md                      ← human-readable overview
@@ -67,10 +67,10 @@
     └── ite-data-context-skill/
 ```
 
-**DB Counts (verified live 2026-03-27, BATON 016):**
+**DB Counts (verified live 2026-03-28, BATON 020):**
 | Table | Rows | Notes |
 |-------|------|-------|
-| articles | 1,936 | |
+| articles | 1,985 | +49 AAFP acquisition (ART-1938–ART-1986) |
 | questions | 1,629 (2018–2025) | |
 | question_ref_pairs | 2,722 | 222 NULL clean_ref |
 | qid_art_xref | 2,470 | All 8 years (2018–2025) |
@@ -78,15 +78,15 @@
 | clinical_pathways | 3,093 | |
 | icd10_rollup | 614 | |
 | icd10_code_xref | 1,006 | |
-| article_vec | 1,936 | sqlite-vec — 100% coverage |
+| article_vec | 1,936 | sqlite-vec — 100% coverage (49 new articles pending embeddings) |
 | question_vec | 1,629 | sqlite-vec — 100% coverage |
-| **aafp_questions** | **1,221** | 7 enrichment cols: stem_keywords, body_system, source_type, ite_nearest_qid, ite_nearest_dist |
+| **aafp_questions** | **1,221** | 7 enrichment cols + ite_shared_vignette (designed, not yet added) |
 | **aafp_explanations** | **1,221** | explanation_keywords populated |
 | **aafp_citations** | **1,600** | one parsed citation per row |
 | **aafp_citation_raw** | **1,600** | full text archive + coordinates |
-| **aafp_qid_art_xref** | **797** | 586 unique questions linked (48%) |
+| **aafp_qid_art_xref** | **864** | 643 unique questions linked (52.7%) |
 | **aafp_question_vec** | **1,221** | sqlite-vec — 100% coverage |
-| **aafp_question_icd10** | **1,876** | 577 questions × ~3.25 ICD codes avg |
+| **aafp_question_icd10** | **1,915** | 589 questions covered |
 
 **Planned tables (designed, not yet built):**
 - `article_citation_trend` — companion to articles; tracks years_cited, consecutive_streak, is_watch_list per article
@@ -238,10 +238,12 @@
     ├── build_qbank_exam_version.py
     │
     │── AAFP BRQ PIPELINE (4 scripts — run in order after import)
-    ├── aafp_brq_import.py                 ← v3: 5-table schema, citation splitting, vol/page dupe finder (797 xref rows)
+    ├── aafp_brq_import.py                 ← v3: 5-table schema, citation splitting, vol/page dupe finder (864 xref rows)
     ├── aafp_keyword_extractor.py          ← TF-IDF stem+explanation keywords; --top N; 100% coverage
     ├── aafp_context_propagator.py         ← body_system, source_type, aafp_question_icd10 from xref JOIN
-    └── aafp_vector_explorer.py            ← AAFP-ITE cross-corpus KNN + --save; ite_nearest_qid+dist persisted
+    ├── aafp_vector_explorer.py            ← AAFP-ITE cross-corpus KNN + --save; ite_nearest_qid+dist persisted
+    ├── aafp_ref_match_v2.py              ← second-pass matcher: S2 space-tolerant vol/page, S3 AFP title, S4 Cochrane CD#, S5 guideline/society keyword (BATON 017)
+    └── batch_insert_aafp_articles.py     ← AAFP acquisition inserter: reads pubmed_acquisition_queue CSV, assigns ART-IDs, links xref (BATON 019)
     │
     │── WINDOWS SYSTEM FILES
     ├── batch_reprocess.ps1
@@ -250,9 +252,9 @@
     └── uninstall_context_menu.reg
 ```
 
-**Planned scripts (designed BATON 014, not yet built):**
-- `extract_ite_critique_refs.py` — local PDF-native critique ref extractor (pdfplumber, no API, dispatcher architecture)
-- `update_citation_trends.py` — populates/refreshes article_citation_trend table from qid_art_xref (pure SQL)
+**Planned scripts (designed, not yet built):**
+- `extract_ite_critique_refs.py` — local PDF-native critique ref extractor (pdfplumber, no API, dispatcher architecture) [BATON 014]
+- `update_citation_trends.py` — populates/refreshes article_citation_trend table from qid_art_xref (pure SQL) [BATON 014]
 
 **Ref extraction architecture (two paths):**
 - **Path A — DOCX (2020-2025):** `F_extract_question_refs.py` — legacy, already processed
@@ -270,6 +272,7 @@
 │   ├── ite_parser.py
 │   ├── ite_report_builder_v2.js
 │   ├── build_icd10_tags.py
+│   ├── aafp_question_reuse_investigation.py  ← AAFP-ITE shared vignette finder; --full, --csv flags; 38 pairs found (BATON 020)
 │   ├── abfm_reference_2025.json
 │   └── ite_parser_config.json
 ├── docs/
@@ -447,6 +450,7 @@ Uses M1/build/ scripts 3-6 as template, adapted for year-specific PDF format.
 
 | Date | Action |
 |------|--------|
+| 2026-03-28 | BATON 020: AAFP question reuse investigation complete. 38 shared AAFP-ITE vignettes found (verbatim identical stems, all dist 0.23–0.30). aafp_question_reuse_investigation.py built (M3/scripts/). 49 new articles inserted (ART-1938–ART-1986); aafp_qid_art_xref: 864 rows (643 unique Q linked, 52.7%). aafp_ref_match_v2.py (S2-S5 strategies, 12 new links). batch_insert_aafp_articles.py built. M2: 49→51 Python. M3: 4→5 Python. |
 | 2026-03-27 | BATON 016: AAFP enrichment pipeline complete. aafp_brq_import.py v3: 5-table schema (aafp_questions, aafp_explanations, aafp_citations, aafp_citation_raw, aafp_qid_art_xref — 797 rows, 586Q linked). aafp_question_vec: 1221/1221 vectors. aafp_keyword_extractor.py: stem+explanation TF-IDF keywords 100%. aafp_context_propagator.py: body_system/source_type propagated + aafp_question_icd10 (1,876 rows). aafp_vector_explorer.py: AAFP-ITE KNN analysis + --save; ite_nearest_dist on all 1221 rows. Key finding: near-identical AAFP-ITE question pairs (dist<0.27); linked/unlinked dist gap = 0.25. M2 scripts: 45→49 Python. |
 | 2026-03-27 | BATON 015: AAFP BRQ scraper built (v3 + resume/salvage). 1,221 Q scraped across 135 quizzes. aafp_questions table created + populated (1,221 rows, 51.1% article-linked). M1 reorganized: aafp_brq/ as proper warehouse source (scraper/ + staging/). aafp_brq_import.py added to M2/scripts/ (+1 → 45 Python). citation_gap_list_2024_2025.txt built (229 unmatched ITE Critique refs). FUSE oplock conflict documented. Option B+C confirmed. **Git: cd32816 — pushed to GitHub (github.com/mpsch01/project-overhaul, private). .gitignore strategy: code + docs on GitHub; binaries (*.db, *.pdf, extracted_json/) on local disk / Google Drive.** |
 | 2026-03-27 | BATON 014: Full inventory sweep + M2 cleanup. Deleted: sectional_READMEs/, tagging_bundle/, re-org_guidance/, master_map.JSON, MASTER_MAP_V.1.html, TEMP_MIGRATION_MANIFEST.md, 3 one-time M2 scripts (backfill_merge_source_fields, build_xref_2018_2019, batch_retrieve_enrichment). Moved: backfill_keywords_2018_2019.py → M1/build/; preprocess_concept_tags.py → M1/maintain/; auto-memory-copies/ → root; re-org_guidance keep files → key_data_files/. M1 build sequence now self-contained (9 scripts). synthesis_library confirmed at 242 files (all legacy flat JSONs). qid_art_xref corrected to 2,470 (build_xref_2018_2019.py ran post-BATON 013). Designed: article_citation_trend table + extract_ite_critique_refs.py + update_citation_trends.py (not yet built). |
