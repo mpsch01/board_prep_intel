@@ -5,9 +5,9 @@ A domain-specific data context skill for querying and analyzing the ABFM In-Trai
 ## Database
 
 - **Engine**: SQLite 3 (with optional `sqlite-vec` extension for vector search)
-- **Path**: `abfm_prep/02_ite_intelligence/db/ite_intelligence.db`
-- **Windows absolute**: `C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\db\ite_intelligence.db`
-- **Schema version**: v2 (rebuilt 2026-03-10 via `rebuild_ite_db_v2.py`)
+- **Path** (relative to project root): `00_database/db/ite_intelligence.db`
+- **Windows absolute**: `C:\Users\mpsch\Desktop\#PROJECT_OVERHAUL\00_database\db\ite_intelligence.db`
+- **Schema version**: v2 (rebuilt 2026-03-10 via `rebuild_ite_db_v2.py`; AAFP corpus added 2026-03-29)
 
 ## Mission
 
@@ -32,21 +32,28 @@ See: `references/entities.md`
 ### Core Entities
 | Entity | Table | Primary Key | Count |
 |--------|-------|-------------|-------|
-| Article (reference) | `articles` | `clean_ref` (TEXT) | 1,397 |
-| Question | `questions` | `qid` (TEXT) | 1,189 |
-| Question↔Article Link | `question_ref_pairs` | `id` (INTEGER AUTO) | 2,069 |
-| QID↔ART Crossref | `qid_art_xref` | `(qid, article_id)` composite | 1,818 |
-| Article ICD-10 Tags | `article_icd10` | `(article_id, icd10_code)` | 4,528 |
-| ICD-10 Rollup | `icd10_rollup` | `parent_code` (TEXT) | 736 |
-| ICD-10 Code Crossref | `icd10_code_xref` | `icd10_code` (TEXT) | 1,668 |
-| Clinical Pathways | `clinical_pathways` | `(article_id, icd10_code)` | 4,528 |
-| Article Embedding | `article_vec` | `article_id` (TEXT) | 1,397 |
-| Question Embedding | `question_vec` | `qid` (TEXT) | 1,189 |
+| Article (reference) | `articles` | `clean_ref` (TEXT) | 1,985 |
+| ITE Question | `questions` | `qid` (TEXT) | 1,629 |
+| AAFP BRQ Question | `aafp_questions` | `aafp_qid` (TEXT) | 1,221 (blueprint 100% filled) |
+| Question↔Article Link | `question_ref_pairs` | `id` (INTEGER AUTO) | 2,673 |
+| ITE QID↔ART Crossref | `qid_art_xref` | `(qid, article_id)` composite | 2,470 |
+| AAFP QID↔ART Crossref | `aafp_qid_art_xref` | `(aafp_qid, article_id)` composite | 864 |
+| Article ICD-10 Tags | `article_icd10` | `(article_id, icd10_code)` | 3,855 |
+| AAFP Question ICD-10 | `aafp_question_icd10` | `(aafp_qid, icd10_code)` | 4,240 |
+| ICD-10 Rollup | `icd10_rollup` | `parent_code` (TEXT) | 614 |
+| ICD-10 Code Crossref | `icd10_code_xref` | `icd10_code` (TEXT) | 1,006 |
+| Clinical Pathways | `clinical_pathways` | `(article_id, icd10_code)` | 3,093 |
+| Citation Trends | `article_citation_trend` | `article_id` (TEXT) | 1,740 |
+| Article Embedding | `article_vec` | `article_id` (TEXT) | ~1,397 |
+| ITE Question Embedding | `question_vec` | `qid` (TEXT) | ~1,189 |
 
 ### Key Relationships
-- **articles ↔ questions**: Many-to-many via `question_ref_pairs` (canonical join path, uses `clean_ref`)
-- **articles ↔ questions**: Also joinable via `qid_art_xref` (ergonomic path, uses `article_id`)
+- **articles ↔ ITE questions**: Many-to-many via `question_ref_pairs` (canonical join path, uses `clean_ref`)
+- **articles ↔ ITE questions**: Also joinable via `qid_art_xref` (ergonomic path, uses `article_id`)
+- **articles ↔ AAFP questions**: Via `aafp_qid_art_xref` (ergonomic path, uses `article_id`)
+- **aafp_questions**: self-contained — includes correct_letter, correct_text, explanation, explanation_keywords directly (merged 2026-03-30; `aafp_explanations` dropped)
 - **articles ↔ ICD-10 codes**: Via `article_icd10` (primary/secondary/related relevance)
+- **AAFP questions ↔ ICD-10 codes**: Via `aafp_question_icd10`
 - **articles ↔ clinical pathways**: Via `clinical_pathways` (article_id + icd10_code → pathway_role)
 - **ICD-10 specific→parent**: Via `icd10_code_xref` → `icd10_rollup`
 - Join via pairs: `question_ref_pairs.clean_ref = articles.clean_ref` AND `question_ref_pairs.qid = questions.qid`
@@ -57,12 +64,12 @@ See: `references/entities.md`
 
 | Domain | Reference File | What It Covers |
 |--------|---------------|----------------|
-| Entities & IDs | `references/entities.md` | Entity definitions, ID formats, relationships, qid_art_xref |
+| Entities & IDs | `references/entities.md` | Entity definitions, ID formats, relationships, qid_art_xref, AAFP tables |
 | Metrics & KPIs | `references/metrics.md` | Citation count, TF-IDF scoring, enrichment confidence |
 | Articles table | `references/tables/articles.md` | 18 columns, source_type/tier distributions, 3 sample queries |
-| Questions table | `references/tables/questions.md` | 16 columns, concept_tags JSON schema, exam_year distribution |
+| ITE Questions table | `references/tables/questions.md` | 16 columns, concept_tags JSON schema, blueprint column, exam_year distribution 2018–2025 |
 | Pairs table | `references/tables/question_ref_pairs.md` | Junction table, match_status distribution, 3 sample queries |
-| QID-ART Crossref | `references/tables/qid_art_xref.md` | Ergonomic join table using article_id instead of clean_ref |
+| ITE QID-ART Crossref | `references/tables/qid_art_xref.md` | Ergonomic join table using article_id instead of clean_ref |
 | Vector tables | `references/tables/vectors.md` | Embedding tables, similarity search |
 | Clinical Pathways | `references/tables/clinical_pathways.md` | Layer 3 blending engine, pathway roles, engine_type |
 | Pipeline & Scripts | `references/pipeline.md` | v4 enrichment pipeline, script inventory, data flow |

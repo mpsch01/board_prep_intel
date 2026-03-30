@@ -10,7 +10,7 @@
 
 **ID formats**:
 - `clean_ref`: Full citation text, e.g., `"Smith DK, Lennon RP, Carlsgaard PB: Managing hypertension using combination therapy. Am Fam Physician 2020;101(6):341-348"`
-- `article_id`: `ART-0001` through `ART-1397` — zero-padded 4-digit integer
+- `article_id`: `ART-0001` through `ART-1985` — zero-padded 4-digit integer. Next ID: ART-1987.
 - `canonical_filename`: `Smith_Lennon_2020` — derived from author1, author2, year
 - `codon_filename`: `Smith_Lennon_2020#@#ART-0470@#@.pdf` — canonical + codon delimiters wrapping article_id
 
@@ -55,7 +55,7 @@
 
 **Primary table**: `qid_art_xref`
 **Primary key**: `(qid, article_id)` composite
-**Row count**: 1,818
+**Row count**: 2,470
 
 **Columns**:
 | Column | Type | Description |
@@ -69,7 +69,7 @@
 
 **When to use**: Use `qid_art_xref` when you want to join questions to articles by `article_id` (shorter, more readable queries). Use `question_ref_pairs` when you need `match_status`, `match_score`, or `ref_raw` fields.
 
-**Note**: Row count (1,818) differs from `question_ref_pairs` (2,069) because `qid_art_xref` excludes unmatched/partial pairs.
+**Note**: Row count (2,470) differs from `question_ref_pairs` (2,673) because `qid_art_xref` excludes unmatched/partial pairs.
 
 ```sql
 -- Ergonomic: questions for an article using article_id
@@ -83,15 +83,21 @@ ORDER BY q.exam_year;
 ## Relationship Diagram
 
 ```
-articles (1,397)
+articles (1,985)
     │
-    ├── clean_ref ─── question_ref_pairs (2,069) ─── qid ─── questions (1,189)
+    ├── clean_ref ─── question_ref_pairs (2,673) ─── qid ─── questions / ITE (1,629)
     │
-    ├── article_id ── qid_art_xref (1,818) ──────── qid ─── questions (1,189)
+    ├── article_id ── qid_art_xref (2,470) ─────── qid ─── questions / ITE (1,629)
     │
-    ├── article_id ── article_icd10 (4,528) ──────── icd10_code ─── icd10_code_xref (1,668) ─── icd10_rollup (736)
+    ├── article_id ── aafp_qid_art_xref (864) ──── aafp_qid ─── aafp_questions (1,221)
     │
-    └── article_id ── clinical_pathways (4,528) ──── (pathway_role + icd10_code)
+    ├── article_id ── article_icd10 (3,855) ──────── icd10_code ─── icd10_code_xref (1,006) ─── icd10_rollup (614)
+    │
+    └── article_id ── clinical_pathways (3,093) ──── (pathway_role + icd10_code)
+
+aafp_questions (1,221)  ← self-contained: stem, choices, correct_letter, correct_text, explanation, concept_tags
+    ├── aafp_qid ── aafp_question_icd10 (4,240) ── icd10_code ─── icd10_code_xref ─── icd10_rollup
+    └── aafp_qid ── aafp_citations (1,600) ──────── article_id ─── articles
 ```
 
 ## Article ICD-10 Tags
@@ -99,7 +105,7 @@ articles (1,397)
 **What it represents**: ICD-10 diagnostic codes assigned to each article via Anthropic Batch API (Layer 1). Each article can have primary, secondary, and related codes.
 
 **Primary table**: `article_icd10`
-**Row count**: 4,528
+**Row count**: 3,855
 **Key columns**: `article_id` (FK → articles), `icd10_code`, `icd10_desc`, `relevance` (primary/secondary/related)
 
 ## ICD-10 Condensation Crosswalk
@@ -107,8 +113,8 @@ articles (1,397)
 **What it represents**: Parent-level rollup of ICD-10 codes for high-level querying.
 
 **Tables**:
-- `icd10_rollup` (736 rows): 3-char parent categories with pre-computed article counts + chapter
-- `icd10_code_xref` (1,668 rows): Maps each specific code to its 3-char parent
+- `icd10_rollup` (614 rows): 3-char parent categories with pre-computed article counts + chapter
+- `icd10_code_xref` (1,006 rows): Maps each specific code to its 3-char parent
 
 **Join chain**: `icd10_rollup` → `icd10_code_xref` → `article_icd10` → `articles` → `qid_art_xref` → `questions`
 
@@ -117,7 +123,7 @@ articles (1,397)
 **What it represents**: Maps each (article, ICD-10 code) pair to a clinical pathway role — what function the article serves for that condition (screening, diagnosis, first-line treatment, etc.). Built at zero cost from ABFM subcategory data + engine-type classification.
 
 **Primary table**: `clinical_pathways`
-**Row count**: 4,528
+**Row count**: 3,093
 **Key columns**:
 
 | Column | Type | Description |
@@ -163,10 +169,78 @@ WHERE cp.icd10_code LIKE 'E11%'
 ORDER BY cp.pathway_role, q.exam_year;
 ```
 
+## AAFP Board Review Questions (BRQ)
+
+**What it represents**: Questions from the AAFP's online board prep course — a separate question bank used as a priority filter for the article library. AAFP BRQ questions are NOT ABFM ITE questions; they are a parallel corpus that validates article relevance.
+
+**Primary table**: `aafp_questions`
+**Primary key**: `aafp_qid` (TEXT)
+**Row count**: 1,221
+**Key columns**:
+| Column | Type | Description |
+|--------|------|-------------|
+| `aafp_qid` | TEXT | PK, format `AAFP-NNNN` |
+| `stem` | TEXT | Question stem |
+| `choices` | TEXT | JSON array of answer choices |
+| `body_system` | TEXT | Body system category |
+| `concept_tags` | TEXT | Claude-preprocessed JSON (same schema as ITE questions) — 1,221/1,221 (100%) |
+| `correct_letter` | TEXT | Correct answer letter ("A"–"E") — 1,221/1,221 (100%) |
+| `correct_text` | TEXT | Correct answer full text — 1,221/1,221 (100%) |
+| `explanation` | TEXT | Plain-text explanation — 1,221/1,221 (100%) |
+| `explanation_keywords` | TEXT | Comma-separated keywords from explanation |
+| `blueprint` | TEXT | ABFM blueprint category — 1,221/1,221 (100%). Same 5 categories as ITE. Applied via batch API classifier (same rubric + gold-standard examples as ITE v2). Distribution: Acute 48.2%, Chronic 20.7%, Emergent 13.6%, Preventive 11.5%, Foundations 6.1% |
+| `stem_keywords` | TEXT | Extracted keywords |
+| `ite_nearest_qid` | TEXT | Nearest ITE question by vector similarity |
+| `ite_nearest_dist` | REAL | Vector distance to nearest ITE question |
+
+**AAFP Citation Tables**:
+- **`aafp_citations`** (1,600 rows): One row per individual parsed citation — `citation_id`, `aafp_qid`, `citation_seq`, `article_id`, `match_status`, `unmatched_class`. Multi-citation refs are split (e.g. AAFP-49733-C1, AAFP-49733-C2).
+- **`aafp_citation_raw`** (1,600 rows): Raw untruncated citation text archive — `citation_id`, `aafp_qid`, `raw_text`.
+
+**AAFP QID↔ART Crossref**:
+- **Table**: `aafp_qid_art_xref`
+- **Row count**: 864 rows (643 unique AAFP questions linked, 52.7%)
+- **Join**: `aafp_qid_art_xref.article_id = articles.article_id`
+
+**AAFP Question ICD-10 Tags**:
+- **Table**: `aafp_question_icd10`
+- **Row count**: 4,240 rows
+- **Key columns**: `aafp_qid`, `icd10_code`, `icd10_desc`, `relevance` (primary/secondary/related)
+
+**Key query — find ITE + AAFP questions covering the same article**:
+```sql
+SELECT a.article_id, a.canonical_filename,
+       COUNT(DISTINCT x.qid) AS ite_citations,
+       COUNT(DISTINCT ax.aafp_qid) AS aafp_citations
+FROM articles a
+LEFT JOIN qid_art_xref x ON a.article_id = x.article_id
+LEFT JOIN aafp_qid_art_xref ax ON a.article_id = ax.article_id
+WHERE x.qid IS NOT NULL OR ax.aafp_qid IS NOT NULL
+GROUP BY a.article_id
+ORDER BY (ite_citations + aafp_citations) DESC
+LIMIT 20;
+```
+
+## Citation Trend Tracking
+
+**Table**: `article_citation_trend`
+**Row count**: 1,740
+**What it represents**: Pre-computed longitudinal citation data for each article that has ever appeared in `qid_art_xref`. Rebuilt on demand via `update_citation_trends.py` (full DELETE + re-insert).
+
+**Key columns**: `article_id`, `years_cited` (comma-separated), `distinct_year_count`, `first_cited_year`, `most_recent_year`, `consecutive_streak`, `is_watch_list` (1 if streak ≥ 2)
+
+```sql
+-- Articles cited in 3+ consecutive years (watch list)
+SELECT article_id, years_cited, consecutive_streak
+FROM article_citation_trend
+WHERE is_watch_list = 1
+ORDER BY consecutive_streak DESC, distinct_year_count DESC;
+```
+
 ## Vector Embeddings (Optional Extension)
 
 Two virtual tables store OpenAI `text-embedding-3-small` (1536-dim) vectors:
-- `article_vec`: keyed by `article_id`, embeds article title + org + year (1,397 vectors)
-- `question_vec`: keyed by `qid`, embeds question stem + concept summary (1,189 vectors)
+- `article_vec`: keyed by `article_id`, embeds article title + org + year (~1,397 vectors; new articles not yet embedded)
+- `question_vec`: keyed by `qid`, embeds question stem + concept summary (~1,189 vectors; 2018-2019 ITE questions not yet embedded)
 
 These require the `sqlite-vec` extension loaded at runtime. They were used by Strategy 5 (semantic fallback) in the v3 enrichment pipeline. **In v4, vector search is no longer used for enrichment** — the codon migration eliminated the need for semantic matching. The vectors remain in the DB for potential future analytical use (e.g., "find questions similar to this one").

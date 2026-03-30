@@ -3,7 +3,7 @@
 **Location**: `ite_intelligence.db` → `questions`
 **Description**: One row per ABFM ITE exam question. Contains full question content (stem, choices, answer, explanation) plus preprocessed keyword and concept tag fields.
 **Primary Key**: `qid` (TEXT)
-**Row Count**: 1,189
+**Row Count**: 1,629
 **Update Frequency**: Rebuilt via `rebuild_ite_db_v2.py`. Concept tags populated by `preprocess_keywords_v2.py`.
 
 ## Columns
@@ -11,10 +11,10 @@
 | Column | Type | Description | Notes |
 |--------|------|-------------|-------|
 | `qid` | TEXT | Question ID: `QID-2020-0001` | PK. Per-year numbering (resets each year). |
-| `exam_year` | INTEGER | Exam year: 2020–2025 | 6 years of ITE data. |
+| `exam_year` | INTEGER | Exam year: 2018–2025 | 8 years of ITE data. |
 | `body_system` | TEXT | ABFM body system category | e.g., Cardiovascular, Respiratory, Musculoskeletal. |
 | `subcategory` | TEXT | Clinical subcategory | e.g., Pharmacology, Prevention, Diagnosis. |
-| `blueprint` | TEXT | ABFM blueprint category | Often empty. |
+| `blueprint` | TEXT | ABFM blueprint category | 1,629/1,629 (100%) populated. Gold Standard for 2024-2025; v2 classifier (batched, few-shot) for 2020-2023; v1 classifier for 2018-2019. Values: "Acute Care and Diagnosis", "Chronic Care Management", "Emergent and Urgent Care", "Foundations of Care", "Preventive Care". |
 | `question_text` | TEXT | Full question stem | Can be long (500+ chars). Includes clinical vignette. |
 | `choices` | TEXT | JSON array of answer choices | `[{"letter": "A", "text": "..."}, ...]`. Usually 4-5 choices. |
 | `correct_letter` | TEXT | Correct answer letter | "A", "B", "C", "D", or "E". |
@@ -24,7 +24,7 @@
 | `stem_keywords` | TEXT | Keywords extracted from stem | Comma-separated. Legacy field. |
 | `explanation_keywords` | TEXT | Keywords from explanation | Comma-separated. Legacy field. |
 | `all_keywords` | TEXT | Merged stem + explanation keywords | Comma-separated. Legacy field. |
-| `concept_tags` | TEXT | Claude-preprocessed JSON | See schema below. 1,189/1,189 populated (100%). |
+| `concept_tags` | TEXT | Claude-preprocessed JSON | See schema below. 1,629/1,629 populated (100%). |
 | `body_system_merged` | TEXT | Normalized body system name | Maps 2024 renamed categories back to historical names. Use for longitudinal analysis. |
 
 ## body_system_merged — Taxonomy Normalization
@@ -81,21 +81,23 @@ WHERE concept_tags LIKE '%USPSTF%';
 
 ## exam_year Distribution
 
-| Year | Count |
-|------|-------|
-| 2020 | 198 |
-| 2021 | 198 |
-| 2022 | 199 |
-| 2023 | 199 |
-| 2024 | 195 |
-| 2025 | 200 |
+| Year | Count | Blueprint Method |
+|------|-------|-----------------|
+| 2018 | 240 | v1 classifier |
+| 2019 | 200 | v1 classifier |
+| 2020 | 198 | v2 classifier |
+| 2021 | 198 | v2 classifier |
+| 2022 | 199 | v2 classifier |
+| 2023 | 199 | v2 classifier |
+| 2024 | 195 | Gold Standard (ABFM official) |
+| 2025 | 200 | Gold Standard (ABFM official) |
 
 ## Sample Queries
 
 ### Questions by body system frequency (use merged for trends)
 ```sql
 SELECT body_system_merged, COUNT(*) AS n,
-       ROUND(100.0 * COUNT(*) / 1189, 1) AS pct
+       ROUND(100.0 * COUNT(*) / 1629, 1) AS pct
 FROM questions
 GROUP BY body_system_merged
 ORDER BY n DESC;
