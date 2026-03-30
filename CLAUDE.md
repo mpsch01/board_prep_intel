@@ -48,9 +48,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_024_20260329_blueprint_complete.md` |
+| Active BATON | `BATON_active_025_20260330_2020_2023_blueprint_v2.md` |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
-| DB questions (ITE) | 1,629 (2018–2025) — questions.blueprint **100% filled** (2024/2025 Gold Standard; 2018-2023 API pseudo-label) |
+| DB questions (ITE) | 1,629 (2018–2025) — questions.blueprint **100% filled** (2024/2025 Gold Standard; 2020-2023 v2 API; 2018-2019 v1 API) |
 | DB questions (AAFP BRQ) | 1,221 (`aafp_questions` table — separate from `questions`) |
 | aafp_questions.concept_tags | 1,221/1,221 (100%) — complete 2026-03-29 |
 | aafp_questions.subcategory | 1,221/1,221 (100%) — complete 2026-03-29 |
@@ -100,9 +100,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 024, 2026-03-29)
-1. **Windows:** git commit (5 M2 scripts + BATONs 021-023 + dashboard + CLAUDE.md + _index.md); archive BATONs 020–023 → `baton_archive/`
-2. **QC blueprint by year** — `SELECT exam_year, blueprint, COUNT(*) FROM questions GROUP BY exam_year, blueprint ORDER BY exam_year` — verify 2024/2025 match 70/50/40/30/10
+## Next Steps (as of BATON 025, 2026-03-30)
+1. **Windows:** git commit (blueprint_api_classifier_v2.py + write_blueprint_to_db.py + blueprint_classifications_v2.xlsx + BATONs 021-024 + dashboard + CLAUDE.md + _index.md); archive BATONs 020–024 → `baton_archive/`
+2. **QC 2018-2019 v1 blueprint** — `SELECT exam_year, blueprint, COUNT(*) FROM questions WHERE exam_year IN (2018,2019) GROUP BY exam_year, blueprint` — verify v1 labels populated
 3. **Verify dashboard subcategory constants** (FLAG-D) — `SELECT subcategory, COUNT(*) FROM aafp_questions GROUP BY subcategory`
 4. **PDF download** — 49 new articles (ART-1938–1986); run `download_aafp_acquisitions.py` from M1/maintain/; run `backfill_new_article_metadata.py --art-id-min 1938` after
 5. **Run `update_citation_trends.py`** — confirmed built (M1/maintain/); populates `article_citation_trend` table

@@ -1,4 +1,11 @@
 """
+⚠️  DEPRECATED — 2026-03-29
+    Superseded by: 02_module.2_processor/scripts/unified_keyword_extractor.py
+    Reason: frequency-based extraction replaced by TF-IDF + clinical phrase
+            detection, applied uniformly to both ITE and AAFP corpora.
+    Do not run. Flag for deletion on next Windows housekeeping pass.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 backfill_keywords_2018_2019.py
 ==============================
 Backfill stem_keywords, explanation_keywords, and all_keywords

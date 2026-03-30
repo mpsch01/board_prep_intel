@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 """
+⚠️  DEPRECATED — 2026-03-29
+    Superseded by: 02_module.2_processor/scripts/unified_keyword_extractor.py
+    Reason: TF-IDF + bigram method replaced by TF-IDF + clinical phrase
+            detection (unigrams only), applied uniformly to both corpora.
+            Bigrams produced structurally incomparable output vs ITE keywords.
+    Do not run. Flag for deletion on next Windows housekeeping pass.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 AAFP BRQ Keyword Extractor
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 Extracts clinical keywords from AAFP question stems and explanations
