@@ -2,10 +2,10 @@
   "project_name": "ABFM ITE Intelligence System",
   "description": "Family medicine board exam knowledge base: queryable question bank (1,629 ITE questions, 2018-2025; 1,221 AAFP BRQ questions) linked to a clinical guideline library (1,985 articles, 404 PDFs) via a structured SQLite pipeline. Both ITE and AAFP corpora are schema-parallel with full enrichment (body_system, concept_tags, subcategory, ICD-10). Extends beyond exam prep into clinical decision support.",
   "location": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\00_#PROJECT_OVERHAUL\\",
-  "last_updated": "2026-03-31",
+  "last_updated": "2026-03-31 (BATON 029)",
   "architecture": "4-module rebuild (PROJECT_OVERHAUL)",
-  "active_baton": "BATON_active_028_20260331_icd10_symmetry_complete.md",
-  "git_status": "main branch. Latest committed: 066a94f. Commit pending for BATON 021-022 session (3 new M2 scripts + BATONs + CLAUDE.md + _index.md).",
+  "active_baton": "BATON_active_029_20260331_clinical_pathways_v2.md",
+  "git_status": "main branch. Latest committed: 9817449. Clean.",
   "database": {
     "path": "00_database/db/ite_intelligence.db",
     "articles": 1985,
@@ -17,7 +17,7 @@
     "question_icd10": 5284,
     "aafp_question_icd10": 4753,
     "pubmed_pmid_cache": 344,
-    "clinical_pathways": 3093,
+    "clinical_pathways": 4020,
     "icd10_rollup": 614,
     "icd10_code_xref": 1006,
     "icd10_vec": 2219,
@@ -79,7 +79,7 @@
   "intelligence_layers": {
     "layer_1_icd10": "COMPLETE — article_icd10 (4,137 rows) + question_icd10 (5,284 rows ITE) + aafp_question_icd10 (4,753 rows). Full symmetry both banks. 2026-03-31.",
     "layer_2_pubmed": "SEEDED — pubmed_pmid_cache (344 PMIDs). article_currency table not yet built.",
-    "layer_3_pathways": "PARTIAL — 3,093 rows (ART-0002–ART-1397 only). Rebuild pending (build_clinical_pathways_v2.py — blueprint signal, both banks, full range).",
+    "layer_3_pathways": "COMPLETE — 4,020 rows. blueprint-based routing, both banks (ITE + AAFP), full ART range ART-0002–ART-1985. Rebuilt 2026-03-31. Script: build_clinical_pathways_v2.py.",
     "layer_4a_trends": "COMPLETE — body_system/subcategory/concept_tag trend CSVs",
     "layer_4b_alerts": "NOT STARTED — pubmed_alerts table"
   },
@@ -115,7 +115,6 @@
   },
   "deferred_flags": {
     "HIGH": [
-      "Rebuild clinical_pathways_v2.py — blueprint signal, both banks, full ART range ART-0002–ART-1985, source_bank column",
       "49 PDF download — download_aafp_acquisitions.py ready to run; then backfill_new_article_metadata.py --art-id-min 1938",
       "Rebuild ICD-10 vector layers — build_icd10_embeddings.py --derive (question_icd10_vec + article_icd10_vec both stale)",
       "229 citation gap articles — 88 AFP batch-downloadable from null_clean_ref_missing_articles_20260326.csv"
