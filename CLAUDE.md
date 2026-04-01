@@ -48,25 +48,28 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_027_20260330_icd10_embeddings.md` |
+| Active BATON | `BATON_active_028_20260331_icd10_symmetry_complete.md` |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
 | aafp_questions.blueprint | 1,221/1,221 (100%) — batch API, same rubric as ITE v2 — complete 2026-03-30 |
 | aafp_questions.concept_tags | 1,221/1,221 (100%) |
-| aafp_question_icd10 | 4,240 rows — relevance normalized (primary/secondary/related) |
-| icd10_vec | 2,219 rows — OpenAI text-embedding-3-small (1536d) — NEW 2026-03-30 |
-| article_icd10_vec | 1,674 rows — weighted-avg ICD-10 feature per article (93.7%) — NEW 2026-03-30 |
-| question_icd10_vec | 2,733 rows — 1,525 ITE (93.6%) + 1,208 AAFP (98.9%) — NEW 2026-03-30 |
+| article_icd10 | 4,137 rows (+282 AAFP backfill — 2026-03-31) |
+| question_icd10 | 5,284 rows — NEW 2026-03-31 — 1,512/1,629 ITE questions (92.8%) |
+| aafp_question_icd10 | 4,753 rows — relevance normalized, related cap applied (2026-03-31) |
+| pubmed_pmid_cache | 344 rows — NEW 2026-03-31 — Layer 2 seed (citation_id → PMID) |
+| icd10_vec | 2,219 rows — OpenAI text-embedding-3-small (1536d) |
+| article_icd10_vec | 1,674 rows — needs rebuild after article_icd10 expansion |
+| question_icd10_vec | 2,733 rows — needs rebuild now that question_icd10 (ITE) exists |
 | clinical_pathways | 3,093 rows (ART-0002–ART-1397 only — legacy, rebuild pending with blueprint signal) |
 | PDFs | 404 across 4 tiers (49 new articles awaiting PDF download) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 9 build + 16 maintain + aafp_brq/scraper (self-contained build sequence) |
-| M2 scripts | 61 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
+| M2 scripts | 65 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
 | M3 scripts | 5 Python + 1 JS + 2 JSON config |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest `066a94f` (commit pending: 4 new M2 scripts + BATONs 025-027 + CLAUDE.md) |
+| Git branch | `main`, latest `066a94f` (commit pending: 6 new M2 scripts + BATONs 025-028 + CLAUDE.md) |
 | GitHub remote | `https://github.com/mpsch01/project-overhaul` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -104,12 +107,12 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 027, 2026-03-30)
-1. **Windows:** git commit — 4 new M2 scripts (flatten_aafp_questions, blueprint_api_classifier_aafp, write_blueprint_aafp_to_db, build_icd10_embeddings) + source files (xlsx, json) + BATONs 025-027 + CLAUDE.md; archive BATONs 025-026 → `baton_archive/`
-2. **ICD-10 symmetry** — build `question_icd10` for ITE (Batch API: stem + concept_tags + answer_rationale → top 3 ICD-10); build AAFP article_icd10 entries (aggregate from aafp_question_icd10 → aafp_qid_art_xref)
-3. **Rebuild clinical_pathways** — new `build_clinical_pathways_v2.py` using blueprint signal; covers full article range; both banks feed same table; adds `source_bank` column
-4. **PDF download** — 49 new articles (ART-1938–1986); run `download_aafp_acquisitions.py` from M1/maintain/; run `backfill_new_article_metadata.py --art-id-min 1938` after; then re-run `build_icd10_embeddings.py --derive` to capture new articles
+## Next Steps (as of BATON 028, 2026-03-31)
+1. **Windows:** git commit — 6 new M2 scripts (build_ite_question_icd10, backfill_aafp_article_icd10, build_pubmed_citation_icd10, apply_aafp_related_cap + 2 from BATON 027) + BATONs 025-028 + CLAUDE.md + README.json; archive BATONs 025-027 → `baton_archive/`
+2. **Rebuild clinical_pathways** — new `build_clinical_pathways_v2.py` using blueprint signal; covers full article range ART-0002–ART-1985; both banks feed same table; adds `source_bank` column
+3. **Rebuild ICD-10 vector layers** — `python scripts/build_icd10_embeddings.py --derive` to update `question_icd10_vec` (now that `question_icd10` exists for ITE) and `article_icd10_vec` (+282 new rows)
+4. **PDF download** — 49 new articles (ART-1938–1986); run `download_aafp_acquisitions.py` from M1/maintain/; run `backfill_new_article_metadata.py --art-id-min 1938` after; then re-run `build_icd10_embeddings.py --derive`
 5. **Run `update_citation_trends.py`** — run after step 4; populates `article_citation_trend` table
-6. **Fill question vector gaps** — embed 440 ITE (2018–2019) + 1,221 AAFP questions → `question_vec` (needed for threshold validation pipeline)
-7. **229 citation gap articles** — 88 AFP batch-downloadable from `null_clean_ref_missing_articles_20260326.csv`
-8. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
+6. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed; 344 PMIDs already cached in `pubmed_pmid_cache` (Layer 2 seed ready)
+7. **Fill question vector gaps** — embed 440 ITE (2018–2019) + 1,221 AAFP questions → `question_vec`
+8. **229 citation gap articles** — 88 AFP batch-downloadable from `null_clean_ref_missing_articles_20260326.csv`

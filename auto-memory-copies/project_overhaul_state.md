@@ -1,19 +1,26 @@
 ---
 name: project_overhaul_state
-description: Current PROJECT_OVERHAUL state: BATON 015, AAFP BRQ scraper built + imported, citation gap list built, M1 reorganized with aafp_brq/
+description: Current PROJECT_OVERHAUL state as of BATON 028 (2026-03-31) — ICD-10 symmetry complete, PubMed crawler built, Layer 2 seeded
 type: project
 ---
 
 **Project:** ABFM ITE Intelligence System (Family Medicine board exam knowledge base)
 **Root (Windows):** `C:\Users\mpsch\Desktop\claude_knowledge\00_#PROJECT_OVERHAUL\`
-**Active BATON:** `BATON_active_015_20260327_aafp_brq_scraper_built_citation_gap_complete.md`
-**Git:** `main`, latest committed `10d8208`
+**Active BATON:** `BATON_active_028_20260331_icd10_symmetry_complete.md`
+**Git:** `main`, latest committed `066a94f` (commit pending: 6 new M2 scripts + BATONs + housekeeping)
 
 ---
 
-## Current Phase: AAFP BRQ Scraped + Imported; Citation Gap List Built
+## Current Phase: ICD-10 Symmetry Complete
 
-BATON 015 session: Two major workstreams. (1) Citation gap list built from ITE Critique staging JSONs — 229 unique unmatched refs across 2024+2025, prioritized by cross-year overlap. (2) AAFP Board Review Questions scraper designed, debugged, and run: 1,221 Q across 135 quizzes scraped and imported to new `aafp_questions` table (separate from `questions`, Option B+C confirmed). Key discovery: AnswerExplanation only returned on correct-answer POST response. FUSE oplock conflict documented (VM polling staging file froze Windows write). Resume/salvage logic added to scraper. M1 reorganized with `aafp_brq/` as proper warehouse source.
+BATON 028 session completed the ICD-10 symmetry work that was the primary deferred flag from BATON 027. Both question banks and both article levels now have ICD-10 coverage. Zero API cost — all propagation and PubMed eutils.
+
+**What was built:**
+- `build_ite_question_icd10.py` — propagation from article_icd10 → qid_art_xref → NEW `question_icd10` table (5,284 rows, 92.8% ITE coverage)
+- `backfill_aafp_article_icd10.py` — reverse propagation to fill 86 AAFP articles in article_icd10 (+282 rows)
+- `build_pubmed_citation_icd10.py` — PubMed eutils crawler for 377 JOURNAL_MISSING citations → 344 PMIDs → MeSH → 921 new aafp_question_icd10 rows; 91.2% resolution rate
+- `apply_aafp_related_cap.py` — tier-aware cap on aafp_question_icd10 related codes (408 rows trimmed)
+- `pubmed_pmid_cache` table — NEW — 344 rows; Layer 2 seed for article_currency
 
 ---
 
@@ -21,40 +28,73 @@ BATON 015 session: Two major workstreams. (1) Citation gap list built from ITE C
 
 | Module | Location | Scripts | Status |
 |--------|----------|---------|--------|
-| M1 Warehouse | `01_module.1_warehouse/` | 9 build + 16 maintain + aafp_brq/scraper | Self-contained build sequence complete; aafp_brq/ added this session |
-| M2 Processor | `02_module.2_processor/scripts/` | 45 Python + 6 JS + 1 config JSON + 4 Windows | +1 aafp_brq_import.py this session |
-| M3 Analyst | `03_module.3_analyst/` | 4 Python + 1 JS + 2 JSON config | Unchanged |
-| M4 Sandbox | `04_module.4_sandbox/` | _DELETE_THESE_FROM_WINDOWS.txt only | Cleanup checklist (originals pending Windows deletion) |
-| DB | `00_database/db/ite_intelligence.db` | Source of truth | 1,936 articles, 1,629 ITE Q, 1,221 AAFP BRQ Q |
+| M1 Warehouse | `01_module.1_warehouse/` | 9 build + 16 maintain + aafp_brq/scraper | Self-contained; PDF download (49 articles) pending |
+| M2 Processor | `02_module.2_processor/scripts/` | 65 Python + 6 JS + 1 JSON + 4 Windows | +4 scripts this session |
+| M3 Analyst | `03_module.3_analyst/` | 5 Python + 1 JS + 2 JSON config | Unchanged |
+| M4 Sandbox | `04_module.4_sandbox/` | Experiments placeholder | Cleanup pending |
+| DB | `00_database/db/ite_intelligence.db` | Source of truth | 1,985 articles, 1,629 ITE Q, 1,221 AAFP Q |
 
 ---
 
-## Key Numbers (as of BATON 015, 2026-03-27)
+## Key Numbers (as of BATON 028, 2026-03-31)
 
-- **DB articles:** 1,936 (next = ART-1938)
-- **DB questions (ITE):** 1,629 (2018–2025, all years complete)
-- **DB questions (AAFP BRQ):** 1,221 (new `aafp_questions` table)
-- **PDFs:** 404 across 4 tiers (VC_fail 146 / local_lite 117 / VC_pass 94 / right_click 71)
-- **qid_art_xref:** 2,470 rows — all 8 years complete (2018–2025)
-- **question_ref_pairs:** 2,673 rows (49 below BATON 014 baseline — pre-existing gap, not session-caused)
-- **M2 scripts:** 45 Python + 6 JS + 1 config JSON + 4 Windows (all paths dynamic)
-- **M1 aafp_brq:** 1,221 records in staging/aafp_brq_staging.json (4MB)
-- **VC gate:** `key_data_files/session_hy_inserts_v7.json` — 352 citations
-- **Citation gap list:** `02_module.2_processor/outputs/citation_gap_list_2024_2025.txt` — 229 unmatched ITE Critique refs
+- **DB articles:** 1,985 (next = ART-1987; 49 new AAFP articles awaiting PDF download)
+- **DB questions (ITE):** 1,629 (2018–2025, all years complete; blueprint 100%)
+- **DB questions (AAFP BRQ):** 1,221 (blueprint 100%, concept_tags 100%)
+- **question_icd10 (ITE):** 5,284 rows — NEW — 1,512/1,629 questions (92.8%)
+- **article_icd10:** 4,137 rows (+282 AAFP backfill)
+- **aafp_question_icd10:** 4,753 rows (~99% AAFP coverage)
+- **pubmed_pmid_cache:** 344 rows (Layer 2 seed)
+- **PDFs:** 404 across 4 tiers
+- **qid_art_xref:** 2,470 rows (all 8 years: 2018–2025)
+- **aafp_qid_art_xref:** 864 rows (643 unique questions linked, 52.7%)
+- **M2 scripts:** 65 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic)
 
 ---
 
-## AAFP BRQ Match Rates (first pass)
+## ICD-10 Symmetry State (COMPLETE)
 
-| Status | Count | Pct |
-|--------|-------|-----|
-| matched (exact clean_ref) | 360 | 29.5% |
-| fuzzy (author+year) | 264 | 21.6% |
-| unmatched | 578 | 47.3% |
-| no_ref | 19 | 1.6% |
-| **Total article-linked** | **624** | **51.1%** |
+| | Article-level | Question-level |
+|---|---|---|
+| ITE | article_icd10: 4,137 rows | question_icd10: 5,284 rows ✅ |
+| AAFP | article_icd10: +282 AAFP rows ✅ | aafp_question_icd10: 4,753 rows ✅ |
 
-578 unmatched = mostly AFP journal articles (format mismatch) + guidelines (GOLD, ACC/AHA, USPSTF). Second-pass matcher planned.
+---
+
+## Intelligence 2.0 Layer Status
+
+| Layer | Status |
+|-------|--------|
+| Layer 1 — ICD-10 | COMPLETE — full symmetry both banks (2026-03-31) |
+| Layer 2 — PubMed currency | SEEDED — 344 PMIDs in pubmed_pmid_cache. article_currency table not yet built. |
+| Layer 3 — Clinical pathways | PARTIAL — 3,093 rows (ART-0002–ART-1397). Rebuild pending (blueprint-based v2). |
+| Layer 4 — Trends/alerts | article_citation_trend built, update_citation_trends.py ready to run |
+
+---
+
+## Active Deferred Flags
+
+| Flag | Priority | Description |
+|------|----------|-------------|
+| CLINICAL-PATHWAY | HIGH | Rebuild clinical_pathways_v2.py — blueprint signal, both banks, full ART range |
+| DEFERRED-A | HIGH | PDF download: 49 new AAFP articles ART-1938–1986 |
+| Q-ICD10-VEC | MEDIUM | Rebuild question_icd10_vec + article_icd10_vec (both stale) |
+| DEFERRED-F | MEDIUM | Intelligence 2.0 Layer 2 — article_currency (344 PMIDs already cached) |
+| DEFERRED-B | MEDIUM | update_citation_trends.py — run after DEFERRED-A |
+| DEFERRED-D | MEDIUM | 229 citation gap articles (88 AFP batch-downloadable) |
+| Q-VEC-GAP | MEDIUM | Fill question_vec gaps: 440 ITE (2018–2019) + 1,221 AAFP |
+| DEFERRED-C | MEDIUM | AAFP vs ITE trend comparison |
+| DEFERRED-E | LOW | Interactive vector dashboard |
+
+---
+
+## Next Steps (BATON 028 priority order)
+
+1. **Git commit** — 6 new M2 scripts + BATONs 025-028 + CLAUDE.md + README.json + memory files; archive BATONs 025-027
+2. **Rebuild clinical_pathways_v2.py** — blueprint-based, both banks, full ART range ART-0002–ART-1985
+3. **Rebuild ICD-10 vector layers** — `python scripts/build_icd10_embeddings.py --derive`
+4. **PDF download** — 49 articles (ART-1938–1986) → `download_aafp_acquisitions.py`
+5. **Intelligence 2.0 Layer 2** — `article_currency` table (344 PMIDs already cached)
 
 ---
 
@@ -65,47 +105,3 @@ BATON 015 session: Two major workstreams. (1) Citation gap list built from ITE C
 | M2/scripts | `SCRIPT_DIR = Path(__file__).resolve().parent; PROJECT_ROOT = SCRIPT_DIR.parent.parent` | PROJECT_ROOT |
 | M1/scripts/build, M1/scripts/maintain | same | PROJECT_ROOT |
 | M3/scripts | `SCRIPT_DIR.parent.parent` | PROJECT_ROOT |
-
----
-
-## AAFP Scraper Reference (locked)
-
-- **Scraper location:** `01_module.1_warehouse/aafp_brq/scraper/aafp_brq_scraper.py`
-- **Staging output:** `01_module.1_warehouse/aafp_brq/staging/aafp_brq_staging.json`
-- **Windows-only** — VM proxy blocks outbound HTTPS
-- **Cookie refresh required** before each run: re-export aafp_cookies.json from Chrome → aafp.org
-- **DO NOT poll staging file from VM while scraper runs** — FUSE oplock conflict freezes Windows write
-- **Formula:** `first_q = 49733 + (assessment_id - 13882) * 10`
-- **Resume = automatic** — scraper detects and salvages existing output on restart
-
----
-
-## Active Deferred Flags
-
-| Flag | Description | Priority |
-|------|-------------|----------|
-| AAFP ref matching (second pass) | 578 unmatched; AFP format + guideline title keyword matcher | HIGH |
-| `aafp_qid_art_xref` table | Parallel to qid_art_xref; one row per AAFP Q-article link | HIGH |
-| AAFP-ITE lag analysis | After xref: shared article citations, timing delta, predictive watch list | HIGH |
-| 229 citation gap articles | 88 AFP batch-downloadable from null_clean_ref_missing_articles_20260326.csv | HIGH |
-| `extract_ite_critique_refs.py` | BATON 014 design, not yet built | HIGH |
-| `update_citation_trends.py` | BATON 014 design, not yet built | HIGH |
-| `article_citation_trend` table | BATON 014 design, not yet created | HIGH |
-| 129 missing AAFP questions | ~13 incomplete quizzes from stall; fix resume to detect < 10 Q quizzes | MEDIUM |
-| Cookie refresh | aafp_cookies.json has session cookies — re-export before future scrape | MEDIUM |
-| 1 pre-codon VC_fail no_match | `acute-low-back-imaging...` PDF: ART-ID lookup → codon rename | MEDIUM |
-| E2E module tests | M1 `build_crosswalk_index.py`, M3 `build_icd10_tags.py` | MEDIUM |
-| Intelligence 2.0 Layer 2 | `article_currency` via PubMed MCP | MEDIUM |
-| Right_click DOCX regeneration | 71 DOCXs regenerable via build_summary.js | LOW |
-| Scholl PDFs | `scholl_2025_ENCRYPTED_22/23/24.pdf` — need password | LOW |
-
----
-
-## Next Steps
-
-1. **Windows:** Archive BATONs 013 + 014 → `baton_archive/`; delete sandbox originals per `_DELETE_THESE_FROM_WINDOWS.txt`
-2. **AAFP ref matching second pass** — volume/page extraction + guideline title keyword → target 70-80%
-3. **Build `aafp_qid_art_xref` table** — populate from aafp_questions.article_id + second-pass matches
-4. **AAFP-ITE lag analysis** — after xref populated
-5. **Build `article_citation_trend` table + `update_citation_trends.py` + `extract_ite_critique_refs.py`**
-6. **88 AFP missing articles** batch download from null_clean_ref_missing_articles_20260326.csv

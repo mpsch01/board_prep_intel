@@ -2,9 +2,9 @@
   "project_name": "ABFM ITE Intelligence System",
   "description": "Family medicine board exam knowledge base: queryable question bank (1,629 ITE questions, 2018-2025; 1,221 AAFP BRQ questions) linked to a clinical guideline library (1,985 articles, 404 PDFs) via a structured SQLite pipeline. Both ITE and AAFP corpora are schema-parallel with full enrichment (body_system, concept_tags, subcategory, ICD-10). Extends beyond exam prep into clinical decision support.",
   "location": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\00_#PROJECT_OVERHAUL\\",
-  "last_updated": "2026-03-29",
+  "last_updated": "2026-03-31",
   "architecture": "4-module rebuild (PROJECT_OVERHAUL)",
-  "active_baton": "BATON_active_022_20260329_aafp_concept_tags_complete.md",
+  "active_baton": "BATON_active_028_20260331_icd10_symmetry_complete.md",
   "git_status": "main branch. Latest committed: 066a94f. Commit pending for BATON 021-022 session (3 new M2 scripts + BATONs + CLAUDE.md + _index.md).",
   "database": {
     "path": "00_database/db/ite_intelligence.db",
@@ -13,10 +13,16 @@
     "questions_aafp_brq": 1221,
     "question_ref_pairs": 2722,
     "qid_art_xref": 2470,
-    "article_icd10": 3855,
+    "article_icd10": 4137,
+    "question_icd10": 5284,
+    "aafp_question_icd10": 4753,
+    "pubmed_pmid_cache": 344,
     "clinical_pathways": 3093,
     "icd10_rollup": 614,
     "icd10_code_xref": 1006,
+    "icd10_vec": 2219,
+    "article_icd10_vec": 1674,
+    "question_icd10_vec": 2733,
     "article_vec": 1936,
     "question_vec": 1629,
     "aafp_questions": 1221,
@@ -25,7 +31,6 @@
     "aafp_citation_raw": 1600,
     "aafp_qid_art_xref": 864,
     "aafp_question_vec": 1221,
-    "aafp_question_icd10": 4065,
     "art_id_range": "ART-0001 through ART-1986 (ART-0404 deleted/merged; +49 AAFP acquisition 2026-03-28)",
     "next_art_id": "ART-1987"
   },
@@ -72,9 +77,9 @@
   "codon_convention": "Author_Year#@#ART-XXXX@#@.pdf — ART-ID embedded between #@# start and @#@ stop codon. Strategy 0 = regex parse of codon. Primary match strategy in all enrichers.",
   "vc_gate": "key_data_files/session_hy_inserts_v7.json (352 citations — sole criterion for right_click vs local_lite tier assignment)",
   "intelligence_layers": {
-    "layer_1_icd10": "COMPLETE — 3,855 rows (article_icd10 table)",
-    "layer_2_pubmed": "NOT STARTED — article_currency table, superseded_by chains",
-    "layer_3_pathways": "COMPLETE — 3,093 rows (clinical_pathways table)",
+    "layer_1_icd10": "COMPLETE — article_icd10 (4,137 rows) + question_icd10 (5,284 rows ITE) + aafp_question_icd10 (4,753 rows). Full symmetry both banks. 2026-03-31.",
+    "layer_2_pubmed": "SEEDED — pubmed_pmid_cache (344 PMIDs). article_currency table not yet built.",
+    "layer_3_pathways": "PARTIAL — 3,093 rows (ART-0002–ART-1397 only). Rebuild pending (build_clinical_pathways_v2.py — blueprint signal, both banks, full range).",
     "layer_4a_trends": "COMPLETE — body_system/subcategory/concept_tag trend CSVs",
     "layer_4b_alerts": "NOT STARTED — pubmed_alerts table"
   },
@@ -110,16 +115,17 @@
   },
   "deferred_flags": {
     "HIGH": [
+      "Rebuild clinical_pathways_v2.py — blueprint signal, both banks, full ART range ART-0002–ART-1985, source_bank column",
       "49 PDF download — download_aafp_acquisitions.py ready to run; then backfill_new_article_metadata.py --art-id-min 1938",
-      "AAFP vs ITE trend comparison — both corpora schema-parallel; body_system + subcategory + concept_tags + ICD-10 side-by-side",
-      "229 citation gap articles — 88 AFP batch-downloadable from null_clean_ref_missing_articles_20260326.csv",
-      "Run update_citation_trends.py — confirmed built, ready to run (M1/maintain/)"
+      "Rebuild ICD-10 vector layers — build_icd10_embeddings.py --derive (question_icd10_vec + article_icd10_vec both stale)",
+      "229 citation gap articles — 88 AFP batch-downloadable from null_clean_ref_missing_articles_20260326.csv"
     ],
     "MEDIUM": [
-      "Interactive vector dashboard — HTML from aafp_vector_explorer data (data:interactive-dashboard-builder)",
-      "AAFP-ITE lag analysis — 38 shared-vignette pairs as seed set; build predictive watch list",
-      "Intelligence 2.0 Layer 2 — article_currency via PubMed MCP",
-      "Build extract_ite_critique_refs.py (M2/scripts/) — local PDF-native critique ref extractor"
+      "Intelligence 2.0 Layer 2 — article_currency table; 344 PMIDs already in pubmed_pmid_cache (seed ready)",
+      "Run update_citation_trends.py — M1/maintain/, ready to run after PDF download",
+      "AAFP vs ITE trend comparison — both corpora schema-parallel; body_system + concept_tags + ICD-10 side-by-side",
+      "Interactive vector dashboard — HTML from aafp_vector_explorer data",
+      "Fill question vector gaps — 440 ITE (2018–2019) + 1,221 AAFP → question_vec"
     ],
     "LOW": [
       "FLAG 33 — VC_pass ART-ID rename scheme: designed, not implemented",
