@@ -1,0 +1,1595 @@
+{
+  "resident": {
+    "name": "Oceana Hopkins, M.D.",
+    "abfm_id": "210357",
+    "program": "St Luke's Hospital"
+  },
+  "exam_year": "2025",
+  "deleted_items": [
+    3,
+    23,
+    25,
+    36,
+    55,
+    59,
+    129,
+    142,
+    171
+  ],
+  "analysis_version": "3.0",
+  "performance": {
+    "overall": {
+      "total": 191,
+      "correct": 125,
+      "incorrect": 66,
+      "pct": 65.4
+    },
+    "blueprint": {
+      "Acute Care": {
+        "correct": 38,
+        "total": 68,
+        "rate": 0.559
+      },
+      "Chronic Care": {
+        "correct": 39,
+        "total": 49,
+        "rate": 0.796
+      },
+      "Emergent/Urgent": {
+        "correct": 22,
+        "total": 36,
+        "rate": 0.611
+      },
+      "Foundations": {
+        "correct": 6,
+        "total": 9,
+        "rate": 0.667
+      },
+      "Preventive": {
+        "correct": 20,
+        "total": 29,
+        "rate": 0.69
+      }
+    },
+    "body_system": {
+      "Cardiovascular": {
+        "correct": 10,
+        "total": 14,
+        "rate": 0.714
+      },
+      "Injuries/Musculoskeletal": {
+        "correct": 12,
+        "total": 22,
+        "rate": 0.545
+      },
+      "Psychiatric/Behavioral": {
+        "correct": 6,
+        "total": 9,
+        "rate": 0.667
+      },
+      "Respiratory": {
+        "correct": 4,
+        "total": 8,
+        "rate": 0.5
+      },
+      "Sexual and Reproductive": {
+        "correct": 6,
+        "total": 9,
+        "rate": 0.667
+      }
+    },
+    "cross_tab": {
+      "Cardiovascular \u00d7 Acute Care": {
+        "correct": 3,
+        "total": 4,
+        "rate": 0.75
+      },
+      "Cardiovascular \u00d7 Chronic Care": {
+        "correct": 4,
+        "total": 4,
+        "rate": 1.0
+      },
+      "Cardiovascular \u00d7 Emergent/Urgent": {
+        "correct": 3,
+        "total": 6,
+        "rate": 0.5
+      },
+      "Injuries/Musculoskeletal \u00d7 Acute Care": {
+        "correct": 7,
+        "total": 11,
+        "rate": 0.636
+      },
+      "Injuries/Musculoskeletal \u00d7 Chronic Care": {
+        "correct": 4,
+        "total": 5,
+        "rate": 0.8
+      },
+      "Injuries/Musculoskeletal \u00d7 Emergent/Urgent": {
+        "correct": 1,
+        "total": 6,
+        "rate": 0.167
+      },
+      "Psychiatric/Behavioral \u00d7 Chronic Care": {
+        "correct": 5,
+        "total": 7,
+        "rate": 0.714
+      },
+      "Psychiatric/Behavioral \u00d7 Emergent/Urgent": {
+        "correct": 1,
+        "total": 2,
+        "rate": 0.5
+      },
+      "Respiratory \u00d7 Acute Care": {
+        "correct": 2,
+        "total": 5,
+        "rate": 0.4
+      },
+      "Respiratory \u00d7 Chronic Care": {
+        "correct": 2,
+        "total": 3,
+        "rate": 0.667
+      },
+      "Sexual and Reproductive \u00d7 Acute Care": {
+        "correct": 3,
+        "total": 6,
+        "rate": 0.5
+      },
+      "Sexual and Reproductive \u00d7 Chronic Care": {
+        "correct": 3,
+        "total": 3,
+        "rate": 1.0
+      }
+    }
+  },
+  "thresholds": {
+    "tier1_pass_probability": {
+      "scaled_score": 510,
+      "pass_tier": {
+        "tier": "strong",
+        "description": "Well above mean, >95% pass probability",
+        "scaled": 510
+      },
+      "national_mean": 443,
+      "national_sd": 77,
+      "percentile_estimate": 80.8,
+      "vs_mps": 130
+    },
+    "tier2_relative": {
+      "thresholds": {
+        "personal_mean": 0.642,
+        "personal_sd": 0.084,
+        "relative_weakness": 0.558,
+        "relative_strength": 0.726
+      },
+      "classifications": {
+        "Acute Care": {
+          "rate": 0.559,
+          "classification": "within_range",
+          "items": 68
+        },
+        "Chronic Care": {
+          "rate": 0.796,
+          "classification": "relative_strength",
+          "items": 49
+        },
+        "Emergent/Urgent": {
+          "rate": 0.611,
+          "classification": "within_range",
+          "items": 36
+        },
+        "Foundations": {
+          "rate": 0.667,
+          "classification": "within_range",
+          "items": 9
+        },
+        "Preventive": {
+          "rate": 0.69,
+          "classification": "within_range",
+          "items": 29
+        },
+        "Cardiovascular": {
+          "rate": 0.714,
+          "classification": "within_range",
+          "items": 14
+        },
+        "Injuries/Musculoskeletal": {
+          "rate": 0.545,
+          "classification": "relative_weakness",
+          "items": 22
+        },
+        "Psychiatric/Behavioral": {
+          "rate": 0.667,
+          "classification": "within_range",
+          "items": 9
+        },
+        "Respiratory": {
+          "rate": 0.5,
+          "classification": "relative_weakness",
+          "items": 8
+        },
+        "Sexual and Reproductive": {
+          "rate": 0.667,
+          "classification": "within_range",
+          "items": 9
+        }
+      }
+    },
+    "tier3_sem": {
+      "Acute Care": {
+        "sem": 69,
+        "reliable": true,
+        "note": "Statistically reliable"
+      },
+      "Chronic Care": {
+        "sem": 82,
+        "reliable": true,
+        "note": "Statistically reliable"
+      },
+      "Emergent/Urgent": {
+        "sem": 97,
+        "reliable": true,
+        "note": "Statistically reliable"
+      },
+      "Foundations": {
+        "sem": 187,
+        "reliable": false,
+        "note": "Large SEM \u2014 interpret as hypothesis only"
+      },
+      "Preventive": {
+        "sem": 109,
+        "reliable": false,
+        "note": "Large SEM \u2014 interpret as hypothesis only"
+      },
+      "Cardiovascular": {
+        "sem": 132,
+        "reliable": true,
+        "note": "Statistically reliable"
+      },
+      "Injuries/Musculoskeletal": {
+        "sem": 121,
+        "reliable": true,
+        "note": "Statistically reliable"
+      },
+      "Psychiatric/Behavioral": {
+        "sem": 179,
+        "reliable": false,
+        "note": "Large SEM \u2014 interpret as hypothesis only"
+      },
+      "Respiratory": {
+        "sem": 183,
+        "reliable": false,
+        "note": "Large SEM \u2014 interpret as hypothesis only"
+      },
+      "Sexual and Reproductive": {
+        "sem": 190,
+        "reliable": false,
+        "note": "Large SEM \u2014 interpret as hypothesis only"
+      }
+    }
+  },
+  "difficulty_profile": {
+    "overall": {
+      "mid_range": 34,
+      "easy_miss": 23,
+      "hard_miss": 9
+    },
+    "by_blueprint": {
+      "Acute Care": {
+        "mid_range": 14,
+        "easy_miss": 11,
+        "hard_miss": 5
+      },
+      "Emergent/Urgent": {
+        "mid_range": 7,
+        "hard_miss": 2,
+        "easy_miss": 5
+      },
+      "Preventive": {
+        "mid_range": 6,
+        "easy_miss": 3
+      },
+      "Chronic Care": {
+        "mid_range": 6,
+        "easy_miss": 3,
+        "hard_miss": 1
+      },
+      "Foundations": {
+        "hard_miss": 1,
+        "mid_range": 1,
+        "easy_miss": 1
+      }
+    },
+    "by_bodysystem": {
+      "Cardiovascular": {
+        "mid_range": 3,
+        "hard_miss": 1
+      },
+      "Respiratory": {
+        "mid_range": 3,
+        "easy_miss": 1
+      },
+      "Injuries/Musculoskeletal": {
+        "mid_range": 3,
+        "easy_miss": 5,
+        "hard_miss": 2
+      },
+      "Psychiatric/Behavioral": {
+        "easy_miss": 2,
+        "hard_miss": 1
+      },
+      "Sexual and Reproductive": {
+        "easy_miss": 1,
+        "hard_miss": 1,
+        "mid_range": 1
+      }
+    },
+    "easy_misses": [
+      {
+        "item": 6,
+        "score": 1000,
+        "blueprint": "Acute Care",
+        "body_system": null
+      },
+      {
+        "item": 65,
+        "score": 1000,
+        "blueprint": "Acute Care",
+        "body_system": null
+      },
+      {
+        "item": 69,
+        "score": 1000,
+        "blueprint": "Acute Care",
+        "body_system": "Sexual and Reproductive"
+      },
+      {
+        "item": 105,
+        "score": 1000,
+        "blueprint": "Acute Care",
+        "body_system": null
+      },
+      {
+        "item": 111,
+        "score": 1000,
+        "blueprint": "Emergent/Urgent",
+        "body_system": "Injuries/Musculoskeletal"
+      },
+      {
+        "item": 124,
+        "score": 1000,
+        "blueprint": "Preventive",
+        "body_system": null
+      },
+      {
+        "item": 139,
+        "score": 1000,
+        "blueprint": "Foundations",
+        "body_system": null
+      },
+      {
+        "item": 89,
+        "score": 955,
+        "blueprint": "Emergent/Urgent",
+        "body_system": "Injuries/Musculoskeletal"
+      },
+      {
+        "item": 61,
+        "score": 906,
+        "blueprint": "Emergent/Urgent",
+        "body_system": "Injuries/Musculoskeletal"
+      },
+      {
+        "item": 112,
+        "score": 906,
+        "blueprint": "Acute Care",
+        "body_system": null
+      },
+      {
+        "item": 27,
+        "score": 856,
+        "blueprint": "Preventive",
+        "body_system": null
+      },
+      {
+        "item": 170,
+        "score": 856,
+        "blueprint": "Chronic Care",
+        "body_system": "Psychiatric/Behavioral"
+      },
+      {
+        "item": 40,
+        "score": 757,
+        "blueprint": "Acute Care",
+        "body_system": null
+      },
+      {
+        "item": 53,
+        "score": 757,
+        "blueprint": "Chronic Care",
+        "body_system": "Respiratory"
+      },
+      {
+        "item": 66,
+        "score": 757,
+        "blueprint": "Chronic Care",
+        "body_system": null
+      },
+      {
+        "item": 131,
+        "score": 757,
+        "blueprint": "Preventive",
+        "body_system": null
+      },
+      {
+        "item": 197,
+        "score": 757,
+        "blueprint": "Acute Care",
+        "body_system": "Injuries/Musculoskeletal"
+      },
+      {
+        "item": 8,
+        "score": 707,
+        "blueprint": "Acute Care",
+        "body_system": null
+      },
+      {
+        "item": 33,
+        "score": 707,
+        "blueprint": "Acute Care",
+        "body_system": null
+      },
+      {
+        "item": 68,
+        "score": 707,
+        "blueprint": "Emergent/Urgent",
+        "body_system": "Psychiatric/Behavioral"
+      },
+      {
+        "item": 127,
+        "score": 707,
+        "blueprint": "Emergent/Urgent",
+        "body_system": "Injuries/Musculoskeletal"
+      },
+      {
+        "item": 156,
+        "score": 707,
+        "blueprint": "Acute Care",
+        "body_system": null
+      },
+      {
+        "item": 190,
+        "score": 707,
+        "blueprint": "Acute Care",
+        "body_system": null
+      }
+    ],
+    "easy_miss_count": 23,
+    "mid_range_count": 34,
+    "hard_miss_count": 9,
+    "tier_definitions": {
+      "easy_miss": {
+        "min_score": 700,
+        "label": "Easy Miss (\u2265700)",
+        "interpretation": "Most examinees get these right \u2014 genuine knowledge gap, highest priority"
+      },
+      "mid_range": {
+        "min_score": 300,
+        "max_score": 699,
+        "label": "Mid-Range (300\u2013699)",
+        "interpretation": "High-yield study targets \u2014 greatest ROI"
+      },
+      "hard_miss": {
+        "max_score": 299,
+        "label": "Hard Miss (<300)",
+        "interpretation": "Most examinees miss these \u2014 low-yield to chase"
+      }
+    }
+  },
+  "concept_clustering": {
+    "top_diagnoses": {
+      "concussion": 2,
+      "septic shock": 1,
+      "pneumonia": 1,
+      "diarrhea-predominant irritable bowel syndrome": 1,
+      "IBS-D": 1,
+      "urinary incontinence": 1,
+      "stress incontinence": 1,
+      "mixed incontinence": 1,
+      "chest pain": 1,
+      "coronary artery disease": 1,
+      "intermediate cardiac risk": 1,
+      "upper gastrointestinal bleeding": 1,
+      "dental caries prevention": 1,
+      "acromegaly": 1,
+      "pituitary adenoma": 1
+    },
+    "top_drugs": {
+      "ceftriaxone": 5,
+      "amoxicillin": 3,
+      "doxycycline": 3,
+      "azithromycin": 3,
+      "ibuprofen": 2,
+      "chloramphenicol": 2,
+      "promethazine": 2,
+      "ciprofloxacin": 2,
+      "aspirin": 2,
+      "clopidogrel": 2,
+      "albuterol": 2,
+      "antiemetics": 2,
+      "prednisone": 2,
+      "metronidazole": 2,
+      "famotidine": 2
+    },
+    "top_guidelines": {
+      "USPSTF": 2,
+      "Surviving Sepsis Campaign": 1,
+      "AGA 2022": 1,
+      "Ottawa knee rules": 1,
+      "AASLD": 1,
+      "2024 Optimal Timing of Anticoagulation": 1,
+      "GINA": 1,
+      "ACR": 1,
+      "CDC 2022": 1,
+      "American Diabetes Association": 1
+    },
+    "recurring_diagnoses": {
+      "concussion": 2
+    },
+    "recurring_drugs": {
+      "ceftriaxone": 5,
+      "amoxicillin": 3,
+      "doxycycline": 3,
+      "azithromycin": 3,
+      "ibuprofen": 2,
+      "chloramphenicol": 2,
+      "promethazine": 2,
+      "ciprofloxacin": 2,
+      "aspirin": 2,
+      "clopidogrel": 2,
+      "albuterol": 2,
+      "antiemetics": 2,
+      "prednisone": 2,
+      "metronidazole": 2,
+      "famotidine": 2,
+      "naloxone": 2,
+      "hydrochlorothiazide": 2
+    },
+    "items_matched": 66,
+    "items_queried": 66,
+    "coverage_pct": 100.0
+  },
+  "spatial_clustering": {
+    "subcol_concentration": {
+      "Foundations": {
+        "total_misses": 3,
+        "unique_subcols": 1,
+        "herfindahl": 1.0,
+        "concentrated": true,
+        "dominant_subcol": 0,
+        "dominant_count": 3
+      },
+      "Chronic Care": {
+        "total_misses": 10,
+        "unique_subcols": 4,
+        "herfindahl": 0.34,
+        "concentrated": false,
+        "dominant_subcol": 0,
+        "dominant_count": 4
+      },
+      "Preventive": {
+        "total_misses": 9,
+        "unique_subcols": 2,
+        "herfindahl": 0.506,
+        "concentrated": true,
+        "dominant_subcol": 0,
+        "dominant_count": 5
+      },
+      "Acute Care": {
+        "total_misses": 30,
+        "unique_subcols": 7,
+        "herfindahl": 0.242,
+        "concentrated": false,
+        "dominant_subcol": 0,
+        "dominant_count": 11
+      },
+      "Emergent/Urgent": {
+        "total_misses": 14,
+        "unique_subcols": 4,
+        "herfindahl": 0.398,
+        "concentrated": false,
+        "dominant_subcol": 0,
+        "dominant_count": 8
+      }
+    },
+    "consecutive_miss_runs": [
+      [
+        35,
+        37,
+        38
+      ],
+      [
+        46,
+        47,
+        48
+      ],
+      [
+        51,
+        52,
+        53,
+        54
+      ],
+      [
+        68,
+        69,
+        70
+      ],
+      [
+        110,
+        111,
+        112
+      ]
+    ],
+    "longest_run": 4,
+    "miss_score_mean": 543,
+    "miss_score_sd": 265
+  },
+  "cross_dimensional_patterns": {
+    "patterns": [
+      {
+        "type": "blueprint_gap",
+        "description": "Consistent 24-point gap: Chronic Care (80%) vs Acute Care (56%)",
+        "best": "Chronic Care",
+        "worst": "Acute Care",
+        "gap": 0.237
+      },
+      {
+        "type": "difficulty_inversion",
+        "description": "Paradoxical: accuracy on easy items (38%) lower than mid-difficulty (58%). Possible second-guessing pattern.",
+        "easy_rate": 0.375,
+        "mid_rate": 0.578
+      }
+    ],
+    "accuracy_by_difficulty_band": {
+      "0": 0.905,
+      "200": 0.689,
+      "400": 0.578,
+      "600": 0.348,
+      "800": 0.375,
+      "1000": 0.0
+    }
+  },
+  "yield_priorities": [
+    {
+      "dimension": "Acute Care",
+      "dimension_type": "blueprint",
+      "current_rate": 0.559,
+      "target_rate": 0.7,
+      "item_count": 68,
+      "recoverable_items": 9.6,
+      "exam_weight_pct": 35,
+      "priority_score": 33.6
+    },
+    {
+      "dimension": "Injuries/Musculoskeletal",
+      "dimension_type": "body_system",
+      "current_rate": 0.545,
+      "target_rate": 0.7,
+      "item_count": 22,
+      "recoverable_items": 3.4,
+      "sem": 121,
+      "statistically_meaningful": true,
+      "priority_score": 6.8
+    },
+    {
+      "dimension": "Emergent/Urgent",
+      "dimension_type": "blueprint",
+      "current_rate": 0.611,
+      "target_rate": 0.7,
+      "item_count": 36,
+      "recoverable_items": 3.2,
+      "exam_weight_pct": 20,
+      "priority_score": 6.4
+    },
+    {
+      "dimension": "Injuries/Musculoskeletal \u00d7 Emergent/Urgent",
+      "dimension_type": "cross_tab",
+      "current_rate": 0.167,
+      "target_rate": 0.7,
+      "item_count": 6,
+      "recoverable_items": 3.2,
+      "priority_score": 4.8
+    },
+    {
+      "dimension": "Respiratory",
+      "dimension_type": "body_system",
+      "current_rate": 0.5,
+      "target_rate": 0.7,
+      "item_count": 8,
+      "recoverable_items": 1.6,
+      "sem": 183,
+      "statistically_meaningful": true,
+      "priority_score": 3.2
+    },
+    {
+      "dimension": "Respiratory \u00d7 Acute Care",
+      "dimension_type": "cross_tab",
+      "current_rate": 0.4,
+      "target_rate": 0.7,
+      "item_count": 5,
+      "recoverable_items": 1.5,
+      "priority_score": 2.25
+    },
+    {
+      "dimension": "Cardiovascular \u00d7 Emergent/Urgent",
+      "dimension_type": "cross_tab",
+      "current_rate": 0.5,
+      "target_rate": 0.7,
+      "item_count": 6,
+      "recoverable_items": 1.2,
+      "priority_score": 1.8
+    },
+    {
+      "dimension": "Sexual and Reproductive \u00d7 Acute Care",
+      "dimension_type": "cross_tab",
+      "current_rate": 0.5,
+      "target_rate": 0.7,
+      "item_count": 6,
+      "recoverable_items": 1.2,
+      "priority_score": 1.8
+    },
+    {
+      "dimension": "Injuries/Musculoskeletal \u00d7 Acute Care",
+      "dimension_type": "cross_tab",
+      "current_rate": 0.636,
+      "target_rate": 0.7,
+      "item_count": 11,
+      "recoverable_items": 0.7,
+      "priority_score": 1.05
+    },
+    {
+      "dimension": "Psychiatric/Behavioral",
+      "dimension_type": "body_system",
+      "current_rate": 0.667,
+      "target_rate": 0.7,
+      "item_count": 9,
+      "recoverable_items": 0.3,
+      "sem": 179,
+      "statistically_meaningful": true,
+      "priority_score": 0.6
+    },
+    {
+      "dimension": "Sexual and Reproductive",
+      "dimension_type": "body_system",
+      "current_rate": 0.667,
+      "target_rate": 0.7,
+      "item_count": 9,
+      "recoverable_items": 0.3,
+      "sem": 190,
+      "statistically_meaningful": true,
+      "priority_score": 0.6
+    },
+    {
+      "dimension": "Preventive",
+      "dimension_type": "blueprint",
+      "current_rate": 0.69,
+      "target_rate": 0.7,
+      "item_count": 29,
+      "recoverable_items": 0.3,
+      "exam_weight_pct": 15,
+      "priority_score": 0.45
+    },
+    {
+      "dimension": "Foundations",
+      "dimension_type": "blueprint",
+      "current_rate": 0.667,
+      "target_rate": 0.7,
+      "item_count": 9,
+      "recoverable_items": 0.3,
+      "exam_weight_pct": 5,
+      "priority_score": 0.15
+    },
+    {
+      "dimension": "Respiratory \u00d7 Chronic Care",
+      "dimension_type": "cross_tab",
+      "current_rate": 0.667,
+      "target_rate": 0.7,
+      "item_count": 3,
+      "recoverable_items": 0.1,
+      "priority_score": 0.15
+    }
+  ],
+  "icd10_weakness_map": {
+    "icd10_clusters": [
+      {
+        "code": "R19.7",
+        "miss_count": 2,
+        "description": "Diarrhea, unspecified",
+        "relevance": "secondary",
+        "chapter": "XVIII",
+        "chapter_desc": "Symptoms and signs"
+      },
+      {
+        "code": "no_match",
+        "miss_count": 2,
+        "description": "No results found",
+        "relevance": "secondary",
+        "chapter": "XIV",
+        "chapter_desc": "Diseases of the genitourinary system"
+      },
+      {
+        "code": "N39.498",
+        "miss_count": 2,
+        "description": "Other specified urinary incontinence",
+        "relevance": "primary",
+        "chapter": "XIV",
+        "chapter_desc": "Diseases of the genitourinary system"
+      },
+      {
+        "code": "I10",
+        "miss_count": 2,
+        "description": "Essential (primary) hypertension",
+        "relevance": "secondary",
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system"
+      },
+      {
+        "code": "N18.9",
+        "miss_count": 2,
+        "description": "Chronic kidney disease, unspecified",
+        "relevance": "secondary",
+        "chapter": "XIV",
+        "chapter_desc": "Diseases of the genitourinary system"
+      },
+      {
+        "code": "E11.9",
+        "miss_count": 2,
+        "description": "Type 2 diabetes mellitus without complications",
+        "relevance": "primary",
+        "chapter": "IV",
+        "chapter_desc": "Endocrine, nutritional and metabolic diseases"
+      },
+      {
+        "code": "J20.9",
+        "miss_count": 2,
+        "description": "Acute bronchitis, unspecified",
+        "relevance": "primary",
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system"
+      },
+      {
+        "code": "J18.9",
+        "miss_count": 1,
+        "description": "Pneumonia, unspecified organism",
+        "relevance": "secondary",
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system"
+      },
+      {
+        "code": "R65.11",
+        "miss_count": 1,
+        "description": "Systemic inflammatory response syndrome (SIRS) of non-infectious origin with acute organ dysfunction",
+        "relevance": "secondary",
+        "chapter": "XVIII",
+        "chapter_desc": "Symptoms and signs"
+      },
+      {
+        "code": "R65.21",
+        "miss_count": 1,
+        "description": "Severe sepsis with septic shock",
+        "relevance": "primary",
+        "chapter": "XVIII",
+        "chapter_desc": "Symptoms and signs"
+      },
+      {
+        "code": "K58.0",
+        "miss_count": 1,
+        "description": "Irritable bowel syndrome with diarrhea",
+        "relevance": "primary",
+        "chapter": "XI",
+        "chapter_desc": "Diseases of the digestive system"
+      },
+      {
+        "code": "K58.8",
+        "miss_count": 1,
+        "description": "Other irritable bowel syndrome",
+        "relevance": "primary",
+        "chapter": "XI",
+        "chapter_desc": "Diseases of the digestive system"
+      },
+      {
+        "code": "N39.3",
+        "miss_count": 1,
+        "description": "Stress incontinence (female) (male)",
+        "relevance": "secondary",
+        "chapter": "XIV",
+        "chapter_desc": "Diseases of the genitourinary system"
+      },
+      {
+        "code": "N39.46",
+        "miss_count": 1,
+        "description": "Mixed incontinence",
+        "relevance": "secondary",
+        "chapter": "XIV",
+        "chapter_desc": "Diseases of the genitourinary system"
+      },
+      {
+        "code": "I21.3",
+        "miss_count": 1,
+        "description": "ST elevation (STEMI) myocardial infarction of unspecified site",
+        "relevance": "secondary",
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system"
+      },
+      {
+        "code": "I24.0",
+        "miss_count": 1,
+        "description": "Acute coronary thrombosis not resulting in myocardial infarction",
+        "relevance": "primary",
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system"
+      },
+      {
+        "code": "I44.7",
+        "miss_count": 1,
+        "description": "Left bundle-branch block, unspecified",
+        "relevance": "secondary",
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system"
+      },
+      {
+        "code": "K20.80",
+        "miss_count": 1,
+        "description": "Other esophagitis without bleeding",
+        "relevance": "secondary",
+        "chapter": "XI",
+        "chapter_desc": "Diseases of the digestive system"
+      },
+      {
+        "code": "K92.0",
+        "miss_count": 1,
+        "description": "Hematemesis",
+        "relevance": "primary",
+        "chapter": "XI",
+        "chapter_desc": "Diseases of the digestive system"
+      },
+      {
+        "code": "K02.3",
+        "miss_count": 1,
+        "description": "Arrested dental caries",
+        "relevance": "primary",
+        "chapter": "XI",
+        "chapter_desc": "Diseases of the digestive system"
+      }
+    ],
+    "chapter_summary": {
+      "XIV": 15,
+      "XI": 14,
+      "IX": 14,
+      "X": 10,
+      "XXI": 9,
+      "XIII": 8,
+      "XIX": 8,
+      "XVIII": 7,
+      "I": 7,
+      "VII-VIII": 5,
+      "IV": 5,
+      "VI": 4,
+      "XV": 4,
+      "XVI": 4,
+      "V": 3,
+      "XII": 3,
+      "II-III": 2
+    },
+    "total_codes_found": 117,
+    "questions_mapped": 66
+  },
+  "pathway_gap_map": {
+    "pathway_gaps": [
+      {
+        "icd10_code": "R19.7",
+        "description": "Diarrhea, unspecified",
+        "miss_count": 2,
+        "chapter": "XVIII",
+        "chapter_desc": "Symptoms and signs",
+        "pathway_roles": {
+          "second_line": 8,
+          "referral": 1,
+          "first_line": 1
+        },
+        "dominant_role": "second_line",
+        "interpretation": "escalation therapy gap",
+        "summary": "2 missed questions \u2014 second_line (8 guidelines) \u2014 escalation therapy gap"
+      },
+      {
+        "icd10_code": "no_match",
+        "description": "No results found",
+        "miss_count": 2,
+        "chapter": "XIV",
+        "chapter_desc": "Diseases of the genitourinary system",
+        "pathway_roles": {
+          "second_line": 21,
+          "first_line": 21,
+          "referral": 4,
+          "monitoring": 2,
+          "special_pops": 1
+        },
+        "dominant_role": "second_line",
+        "interpretation": "escalation therapy gap",
+        "summary": "2 missed questions \u2014 second_line (21 guidelines) \u2014 escalation therapy gap"
+      },
+      {
+        "icd10_code": "N39.498",
+        "description": "Other specified urinary incontinence",
+        "miss_count": 2,
+        "chapter": "XIV",
+        "chapter_desc": "Diseases of the genitourinary system",
+        "pathway_roles": {
+          "first_line": 2,
+          "second_line": 1,
+          "monitoring": 1
+        },
+        "dominant_role": "first_line",
+        "interpretation": "treatment selection gap",
+        "summary": "2 missed questions \u2014 first_line (2 guidelines) \u2014 treatment selection gap"
+      },
+      {
+        "icd10_code": "I10",
+        "description": "Essential (primary) hypertension",
+        "miss_count": 2,
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system",
+        "pathway_roles": {
+          "first_line": 22,
+          "monitoring": 16,
+          "second_line": 14,
+          "screening_prevention": 10,
+          "special_pops": 1,
+          "referral": 1,
+          "diagnosis": 1
+        },
+        "dominant_role": "first_line",
+        "interpretation": "treatment selection gap",
+        "summary": "2 missed questions \u2014 first_line (22 guidelines) \u2014 treatment selection gap"
+      },
+      {
+        "icd10_code": "N18.9",
+        "description": "Chronic kidney disease, unspecified",
+        "miss_count": 2,
+        "chapter": "XIV",
+        "chapter_desc": "Diseases of the genitourinary system",
+        "pathway_roles": {
+          "monitoring": 16,
+          "first_line": 5,
+          "special_pops": 4,
+          "second_line": 4,
+          "screening_prevention": 3,
+          "referral": 1
+        },
+        "dominant_role": "monitoring",
+        "interpretation": "follow-up and titration gap",
+        "summary": "2 missed questions \u2014 monitoring (16 guidelines) \u2014 follow-up and titration gap"
+      },
+      {
+        "icd10_code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "miss_count": 2,
+        "chapter": "IV",
+        "chapter_desc": "Endocrine, nutritional and metabolic diseases",
+        "pathway_roles": {
+          "first_line": 34,
+          "monitoring": 29,
+          "second_line": 11,
+          "special_pops": 6,
+          "screening_prevention": 6,
+          "referral": 4,
+          "diagnosis": 2
+        },
+        "dominant_role": "first_line",
+        "interpretation": "treatment selection gap",
+        "summary": "2 missed questions \u2014 first_line (34 guidelines) \u2014 treatment selection gap"
+      },
+      {
+        "icd10_code": "J20.9",
+        "description": "Acute bronchitis, unspecified",
+        "miss_count": 2,
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system",
+        "pathway_roles": {
+          "first_line": 3,
+          "monitoring": 1
+        },
+        "dominant_role": "first_line",
+        "interpretation": "treatment selection gap",
+        "summary": "2 missed questions \u2014 first_line (3 guidelines) \u2014 treatment selection gap"
+      },
+      {
+        "icd10_code": "J18.9",
+        "description": "Pneumonia, unspecified organism",
+        "miss_count": 1,
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system",
+        "pathway_roles": {
+          "first_line": 9,
+          "second_line": 5,
+          "diagnosis": 1
+        },
+        "dominant_role": "first_line",
+        "interpretation": "treatment selection gap",
+        "summary": "1 missed question \u2014 first_line (9 guidelines) \u2014 treatment selection gap"
+      }
+    ],
+    "codes_mapped": 8,
+    "status": "complete"
+  },
+  "practice_questions": [
+    {
+      "qid": "QID-2025-0190",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Gastrointestinal",
+      "body_system_merged": "Gastrointestinal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 53-year-old male without a significant past medical history presents to the emergency department for evaluation of abdominal pain, nausea, and vomiting. Pertinent findings on presentation include notable tenderness in the epigastrium and a lipase level >3 times the upper limit of normal. He is admitted for acute pancreatitis. Intravenous lactated Ringer solution, antiemetics, and pain control are initiated. At the time of your evaluation he has normal vital signs and reports improved symptoms, although you still note abdominal tenderness. When entering admission orders for this patient, which one of the following diets would be most appropriate?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Full liquids\"}, {\"letter\": \"B\", \"text\": \"Low-carbohydrate\"}, {\"letter\": \"C\", \"text\": \"Low-fat\"}, {\"letter\": \"D\", \"text\": \"NPO\"}]",
+      "correct_letter": "C",
+      "correct_text": "Low-fat",
+      "explanation": "Pancreatitis is associated with an intense inflammatory response that increases caloric needs, and nutrition management is a key component of care. Acute pancreatitis is also associated with reduced perfusion of the intestinal mucosa, leading to tissue damage and increased intestinal permeability. Enteral feeding provides calories and increases splanchnic blood flow, leading to improved integrity of the bowel wall and improved gut motility. Patients with acute pancreatitis benefit from early enteral feeding within 24 hours of admission. A Cochrane review found that enteral nutrition has been associated with lower mortality, less multiple organ failure, and less systemic infection compared with parenteral nutrition. In severe acute pancreatitis, the benefits of enteral nutrition appear to be even more notable with a relative risk of death of 0.18 (95% CI 0.06 to 0.58). Liquid and soft diets have no evidence of benefit over a low-fat solid diet, and some studies found a shorter length of stay in patients started on solid diets rather than liquid diets. If patients cannot tolerate an oral diet within 72 hours, enteral nutrition should be provided via nasogastric or nasojejunal tube. Parenteral nutrition should be administered in patients who cannot tolerate tube feeding. Low-carbohydrate diets are not recommended because they are often high in fat and may worsen pancreatic inflammation.",
+      "reference": "Ellis R, Ellis C. Dog and cat bites. Am Fam Physician. 2014;90(4):239-243. | Ortiz DD, Lezcano FO. Dog and cat bites: rapid evidence review. Am Fam Physician. 2023;108(5):501-505.",
+      "concept_tags": "{\"diagnoses\": [\"acute pancreatitis\"], \"drugs\": [\"lactated Ringer solution\", \"antiemetics\"], \"guidelines\": [], \"thresholds\": [\"lipase >3 times upper limit of normal\"], \"concept_summary\": \"Acute pancreatitis patients benefit from early enteral nutrition with a low-fat diet rather than NPO status to maintain gut integrity and provide needed calories.\"}",
+      "linked_articles": 5,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0006",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Gastrointestinal",
+      "body_system_merged": "Gastrointestinal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "According to guidelines from the American Gastroenterological Association, which one of the following is recommended as the best pharmacologic treatment of typical symptoms in diarrhea-predominant irritable bowel syndrome?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Amitriptyline\"}, {\"letter\": \"B\", \"text\": \"Dicyclomine\"}, {\"letter\": \"C\", \"text\": \"Linaclotide (Linzess)\"}, {\"letter\": \"D\", \"text\": \"Lubiprostone (Amitiza)\"}, {\"letter\": \"E\", \"text\": \"Rifaximin (Xifaxan)\"}]",
+      "correct_letter": "E",
+      "correct_text": "Rifaximin (Xifaxan)",
+      "explanation": "According to the 2022 American Gastroenterological Association guidelines for diarrhea- predominant irritable bowel syndrome (IBS-D), the nonabsorbable antibiotic rifaximin has the best evidence for controlling diarrhea, discomfort, bloating, and abdominal pain. It has a broad spectrum with activity against gram-positive, gram-negative (including Clostridioides difficile), and anaerobic bacteria. It is thought to work by reducing bacterial byproducts and altering the gut flora. It is prescribed as a 14-day course for acute and recurrent symptoms. Rifaximin does not have any significant adverse effects, but it is a high-cost medication. Low-dose amitriptyline and dicyclomine are often effective in reducing symptoms, but the evidence is not as strong as that of rifaximin. Linaclotide is used for constipation- predominant IBS (IBS-C), but its chief side effect of diarrhea results in many patients discontinuing the medication. Lubiprostone is another medication used for IBS-C and for opioid-induced constipation, not IBS-D.",
+      "reference": "Karuppiah S, Pomianowski K. Rifaximin (Xifaxan) for irritable bowel syndrome. Am Fam Physician. 2017;95(4):258-259. | Chang L, Sultan S, Lembo A, Verne GN, Smalley W, Heidelbaugh JJ. AGA clinical practice guideline on the pharmacologic management of irritable bowel syndrome with constipation. Gastroenterology. 2022;163(1):118-136. | Arnold MJ. Medications for irritable bowel syndrome: guidelines from the AGA. Am Fam Physician. 2023;108(5):527-529. | Lembo A, Sultan S, Chang L, Heidelbaugh JJ, Smalley W, Verne GN. AGA clinical practice guideline on the pharmacological management of irritable bowel syndrome with diarrhea. Gastroenterology. 2022;163(1)137-151.",
+      "concept_tags": "{\"diagnoses\": [\"diarrhea-predominant irritable bowel syndrome\", \"IBS-D\"], \"drugs\": [\"rifaximin\", \"amitriptyline\", \"dicyclomine\", \"linaclotide\", \"lubiprostone\"], \"guidelines\": [\"AGA 2022\"], \"thresholds\": [], \"concept_summary\": \"Tests knowledge that rifaximin is the best evidence-based pharmacologic treatment for diarrhea-predominant IBS according to AGA guidelines.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0040",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Special Sensory",
+      "body_system_merged": "Special Sensory",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "An otherwise healthy 26-year-old female presents to your clinic with a history of 3 episodes of vertigo occurring over the last week. Each episode lasts for several hours. During the episodes, she notes fullness in the right ear with tinnitus and hearing loss. She has not noticed anything specific that triggers the episodes, and reports consuming 1 glass of wine per night. She does not report headache, visual changes, fever, or upper respiratory symptoms. She is currently asymptomatic and a physical examination is unremarkable. Which one of the following would be the most appropriate next step?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Recommending a reduction in alcohol intake\"}, {\"letter\": \"B\", \"text\": \"Performing the Epley maneuver\"}, {\"letter\": \"C\", \"text\": \"Ordering audiometry\"}, {\"letter\": \"D\", \"text\": \"Initiating oral hydrochlorothiazide, 25 mg daily\"}, {\"letter\": \"E\", \"text\": \"Initiating oral prednisone, 20 mg daily for 5 days\"}]",
+      "correct_letter": "C",
+      "correct_text": "Ordering audiometry",
+      "explanation": "Meniere disease is characterized by spontaneous recurring episodes of vertigo with associated unilateral hearing loss, tinnitus, and nystagmus. Even though there are no specific diagnostic tests, audiometry should be performed in patients suspected of having this condition. Sensorineural hearing loss may or may not be present on audiometric evaluation. Acute attacks should be treated with medication such as promethazine, diazepam, or prochlorperazine to suppress vestibular function. Lifestyle interventions, including salt restriction and reduction in alcohol and caffeine intake, have traditionally been recommended. However, there is no sufficient evidence to support these recommendations. The Epley maneuver is a repositioning treatment used for benign paroxysmal positional vertigo and not Meniere disease. There is no good-quality evidence that diuretics, antivirals, or corticosteroids treat or prevent Meniere disease.",
+      "reference": "Basura GJ, Adams ME, Monfared A, et al. Clinical practice guideline: Meniere's Disease Executive Summary. Otolaryngol Head Neck Surg. 2020;162(4):415-434. | Webster KE, Galbraith K, Harrington-Benton NA, et al. Systemic pharmacological interventions for Meniere's disease. Cochrane Database Syst Rev. 2023;2(2):CD015171. | Rogers TS, Noel MA, Garcia B. Dizziness: evaluation and management. Am Fam Physician. 2023;107(5):514-523. | Webster KE, George B, Lee A, et al. Lifestyle and dietary interventions for Meniere's disease. Cochrane Database Syst Rev. 2023;(2):CD015244.",
+      "concept_tags": "{\"diagnoses\": [\"Meniere disease\"], \"drugs\": [\"promethazine\", \"diazepam\", \"prochlorperazine\"], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"This question tests diagnosis of Meniere disease through its classic triad of episodic vertigo, unilateral hearing loss, and tinnitus, with audiometry being the appropriate initial diagnostic test.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0112",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Reproductive: Female",
+      "body_system_merged": "Reproductive: Female",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 32-year-old gravida 2 para 2 female who is 3 weeks post partum presents to the local urgent care center for left breast pain, swelling, and redness that started a few hours ago. She does not have fever or chills. A breast examination is significant for warm, tender, and mildly erythematous nodules localized to the upper outer quadrant of the left breast. In addition to initiating NSAIDs, which one of the following would be the most appropriate next step in management?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Applying cold compresses to the affected breast\"}, {\"letter\": \"B\", \"text\": \"Applying warm compresses to the affected breast\"}, {\"letter\": \"C\", \"text\": \"Using a manual breast pump on the affected breast for complete breast emptying\"}, {\"letter\": \"D\", \"text\": \"Obtaining a CBC and C-reactive protein levels\"}, {\"letter\": \"E\", \"text\": \"Obtaining a breast milk culture\"}]",
+      "correct_letter": "A",
+      "correct_text": "Applying cold compresses to the affected breast",
+      "explanation": "Mastitis is a spectrum of inflammatory breast conditions, which includes lactational or inflammatory mastitis, bacterial mastitis, breast abscess, postpartum breast engorgement, and more. Patients with inflammatory mastitis exhibit unilateral breast erythema, swelling, and pain and may experience systemic inflammatory responses such as fever, malaise, or headache. The initial steps in managing inflammatory mastitis are supportive care with NSAIDs, cold compresses, and watchful waiting. Inflammatory mastitis is diagnosed clinically and does not require laboratory testing or imaging. If a patient's symptoms worsen or do not improve within 24\u201d\u201c48 hours with conservative measures, narrow-spectrum antibiotics targeting the most common organisms (Staphylococcus species and Streptococcus species) should be empirically initiated for bacterial mastitis. Warm compresses and frequent breast pumping for complete breast emptying to avoid milk stasis are no longer recommended. CBC and C-reactive protein testing are not helpful as these levels can be elevated in both inflammatory and bacterial mastitis. Breast milk cultures are seldom necessary because they may produce false- positive results caused by normal skin bacteria colonization.",
+      "reference": "Mitchell KB, Johnson HM, Rodr\ufffdguez JM, et al. Academy of Breastfeeding Medicine Clinical Protocol #36: the mastitis spectrum, revised 2022.Breastfeed Med. 2022;17(5):360-376. | Lawrence KV. Supporting the paradigm shift: watchful waiting for lactational mastitis. Am Fam Physician. 2024;110(2):118-119. | Morcomb EF, Dargel CM, Anderson SA. Mastitis: rapid evidence review. Am Fam Physician. 2024;110(2):174-182.",
+      "concept_tags": "{\"diagnoses\": [\"mastitis\", \"inflammatory mastitis\", \"postpartum breast engorgement\"], \"drugs\": [\"NSAIDs\"], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"Tests knowledge of appropriate supportive care for early inflammatory mastitis, specifically that cold compresses are preferred over warm compresses in the initial management.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0123",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Nonspecific",
+      "body_system_merged": "Nonspecific",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A previously healthy 70-year-old yoga instructor is brought to the emergency department (ED) by her students after falling while practicing yoga. Her students report that she struck her head on the floor and was unresponsive for a few seconds, but recovered quickly. She was slightly confused after the injury, but was able to stand and describe the incident. On initial assessment in the ED, she is holding her head in obvious discomfort and a hematoma is developing on her forehead. She is alert and oriented, with a Glasgow Coma Scale score of",
+      "choices": "[]",
+      "correct_letter": "D",
+      "correct_text": "",
+      "explanation": "In an older adult, head trauma with a loss of consciousness, vomiting, anterograde amnesia, or a previous history of head trauma requires CT of the head. Being older than 65 years is considered an independent risk factor for head trauma. Older adults with a traumatic brain injury experience higher morbidity and mortality due to age-related changes in vasculature that leave vessels more vulnerable to rupture and changes in white matter that render white matter tracts more susceptible to shear injury. As a result of these physiological changes, older patients are more susceptible to injury, and even those with minor mechanisms of injury and no abnormalities on a neurologic examination may still have subdural or epidural bleeding. NSAIDs carry a risk of bleeding and should be avoided following a traumatic brain injury.",
+      "reference": "Pyzocha N. Accidental hypothermia: guidelines from the Wilderness Medical Society. Am Fam Physician. 2020;102(9):571-572. | Dow J, Giesbrecht GG, Danzl DF, et al. Wilderness Medical Society clinical practice guidelines for the out-of-hospital evaluation and treatment of accidental hypothermia: 2019 update. Wilderness Environ Med. 2019;30(4_suppl):S47-S69.",
+      "concept_tags": "{\"diagnoses\": [\"traumatic brain injury\", \"head trauma\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [\"age >65 years\"], \"concept_summary\": \"Tests knowledge that head trauma with loss of consciousness in patients >65 years requires CT imaging due to increased risk of intracranial injury.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0162",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Gastrointestinal",
+      "body_system_merged": "Gastrointestinal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A generally healthy 15-year-old female presents to your office with a history of frequent, generalized abdominal pain and loose stools daily for the last few months. She has not noted any relationship to food or a specific frequency. She has not had any previous surgeries and is up to date on routine vaccinations. At her 14-year-old well child visit, her height was at the 50th percentile and her weight was at the 60th percentile. Today, her height is at the 35th percentile and her weight at the 20th percentile. She has had a weight loss of 1 kg (2 lb). Her vital signs are normal. Which one of the following would be the most appropriate next step?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Reassurance and dietary monitoring to evaluate for a relationship to symptoms\"}, {\"letter\": \"B\", \"text\": \"Fecal fat testing\"}, {\"letter\": \"C\", \"text\": \"An IgA tissue transglutaminase level\"}, {\"letter\": \"D\", \"text\": \"Carbohydrate breath testing\"}, {\"letter\": \"E\", \"text\": \"A referral for esophagogastroduodenoscopy\"}]",
+      "correct_letter": "C",
+      "correct_text": "An IgA tissue transglutaminase level",
+      "explanation": "Patients with classic symptoms of diarrhea, abdominal pain, weight loss, bloating, malabsorption, and failure to thrive should undergo evaluation for celiac disease. Serologic testing for IgA tissue transglutaminase (tTG) is the preferred initial screening in all age groups due to its high sensitivity (95%) and specificity (95%). When celiac disease is strongly suspected, total IgA levels should also be obtained because 2%\u201d\u201c3% of these patients will have IgA deficiency. If IgA tTG serology is positive, most patients will require esophagogastroduodenoscopy with small-bowel biopsy for confirmation, but it is not used as an initial test and some organizations state that a no-biopsy technique is safe for children with very high IgA tTG levels. This patient has classic signs of malabsorption and unexplained weight loss, indicating need for further evaluation. Reassurance would be inappropriate at this time. Fecal fat testing may be useful in the workup of suspected malabsorption symptoms, but the initial test is usually a qualitative assessment of fat in a single specimen because it is less expensive and easier to perform than 72-hour testing. If high suspicion remains after negative initial testing, a 72-hour fecal fat test should be performed. Carbohydrate breath testing can be used to evaluate for suspected small intestinal bacterial overgrowth (SIBO). SIBO generally occurs in individuals with abnormal anatomy or other risk factors for abnormal intestinal mobility, including diabetes mellitus or scleroderma. The majority of patients with SIBO present with bloating and flatulence.",
+      "reference": "Pimentel M, Saad RJ, Long MD, Rao SSC. ACG clinical guideline: small intestinal bacterial overgrowth. Am J Gastroenterol. 2020;115(2):165-178. | Burgers K, Lindberg B, Bevis ZJ. Chronic diarrhea in adults: evaluation and differential diagnosis. Am Fam Physician. 2020;101(8):472-480. | Williams PM, Harris LM DO, Odom MR. Celiac disease: common questions and answers. Am Fam Physician. 2022;106(1):36-43.",
+      "concept_tags": "{\"diagnoses\": [\"celiac disease\", \"malabsorption\", \"failure to thrive\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [\"IgA tTG sensitivity 95%\", \"IgA tTG specificity 95%\", \"IgA deficiency 2-3%\"], \"concept_summary\": \"Tests when to screen for celiac disease using IgA tissue transglutaminase in adolescents with chronic diarrhea, abdominal pain, and failure to thrive.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0174",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Musculoskeletal",
+      "body_system_merged": "Musculoskeletal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 25-year-old male presents with shoulder pain after having fallen on his arm in an outstretched position. He reports a sensation of catching and popping in the shoulder. With the patient seated and hands placed on his hips, you apply force to the elbow and direct the humerus anteriorly and superiorly, while asking the patient to resist your motion, which produces pain in the affected shoulder. Which one of the following is the most likely diagnosis?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Acromioclavicular joint arthritis\"}, {\"letter\": \"B\", \"text\": \"Adhesive capsulitis\"}, {\"letter\": \"C\", \"text\": \"Glenohumeral osteoarthritis\"}, {\"letter\": \"D\", \"text\": \"A glenoid labral tear\"}, {\"letter\": \"E\", \"text\": \"A rotator cuff tear\"}]",
+      "correct_letter": "D",
+      "correct_text": "A glenoid labral tear",
+      "explanation": "This patient's history of a catching or popping sensation combined with a positive anterior slide test, as described in the physical examination, is highly suggestive of a glenoid labral tear. This combination of history and the positive anterior slide test has a positive likelihood ratio of 6.0 in diagnosing a glenoid labral tear. Acromioclavicular joint arthritis presents with superior shoulder pain and tenderness over the acromioclavicular joint, often with a positive cross-body adduction test. Adhesive capsulitis is characterized by diffuse shoulder pain and restricted passive range of motion. Glenohumeral osteoarthritis usually presents with a gradual onset of pain and loss of motion, particularly in older patients. A rotator cuff tear typically presents with pain and weakness, especially with overhead activities, and positive findings on the empty can and external rotation tests. Acromioclavicular joint arthritis, adhesive capsulitis, glenohumeral osteoarthritis, and rotator cuff tears are not associated with catching or popping sensations, and the crank and anterior slide tests are not specific for these conditions.",
+      "reference": "Burbank KM, Stevenson JH, Czarnecki GR, Dorfman J. Chronic shoulder pain: part I. Evaluation and diagnosis. Am Fam Physician. 2008;77(4):453-460. | Michener LA, Doukas WC, Murphy KP, Walsworth MK. Diagnostic accuracy of history and physical examination of superior labrum anterior-posterior lesions. J Athl Train. 2011;46(4):343-348. | Walsworth MK, Doukas WC, Murphy KP, Mielcarek BJ, Michener LA. Reliability and diagnostic accuracy of history and physical examination for diagnosing glenoid labral tears. Am J Sports Med. 2008;36(1):162-168.",
+      "concept_tags": "{\"diagnoses\": [\"glenoid labral tear\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [\"positive likelihood ratio 6.0\"], \"concept_summary\": \"Diagnoses glenoid labral tear using positive anterior slide test combined with characteristic catching/popping symptoms, which has a positive likelihood ratio of 6.0.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0195",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Psychogenic",
+      "body_system_merged": "Psychogenic",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "An 85-year-old male on the third day of hospitalization for the treatment of pneumonia develops symptoms of altered mental status. Evaluation of his medications does not identify a reason for his altered mental status. The nursing staff has been unable to successfully redirect him to keep him calm. Which one of the following medications would be appropriate for the management of the patient's delirium?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Haloperidol\"}, {\"letter\": \"B\", \"text\": \"Lithium\"}, {\"letter\": \"C\", \"text\": \"Lorazepam (Ativan)\"}, {\"letter\": \"D\", \"text\": \"Olanzapine (Zyprexa)\"}, {\"letter\": \"E\", \"text\": \"Oxycodone\"}]",
+      "correct_letter": "D",
+      "correct_text": "Olanzapine (Zyprexa)",
+      "explanation": "Delirium is a syndrome characterized by an acute, fluctuating disturbance of attention, awareness, and cognition. Initial efforts should focus on identifying and addressing any underlying causes while providing redirection. However, if no reversible cause is found, managing delirium using medications becomes the most appropriate next step to ensure the patient's safety. While there are no FDA-approved medications for the management of delirium, second-generation antipsychotics such as olanzapine are preferred for this indication. Haloperidol is a less preferred option, compared to a second-generation antipsychotic. It is known to cause QT prolongation and other concerning side effects in older patients. Lithium is indicated for chronic management of bipolar disorder and does not have a role in the acute management of this patient's delirium. The side effects of benzodiazepines such as lorazepam make them undesirable for managing delirium, particularly in an older adult. Oxycodone is an opioid analgesic that would likely provide some degree of sedation but would not be appropriate for managing this patient's delirium.",
+      "reference": "Jaqua EE, Nguyen VTN, Chin E. Delirium in older persons: prevention, evaluation, and management. Am Fam Physician. 2023;108(3):278-287. | Jones HT, Davis DH. What you need to know about: delirium in older adults in hospital. Br J Hosp Med (Lond). 2021;82(12):1-10. | American Psychiatric Association, ed. Diagnostic and Statistical Manual of Mental Disorders: DSM-5-TR. 5th edition, text revision. American Psychiatric Association Publishing; 2022.",
+      "concept_tags": "{\"diagnoses\": [\"delirium\"], \"drugs\": [\"olanzapine\", \"haloperidol\", \"lithium\", \"lorazepam\", \"oxycodone\"], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"Hospital delirium unresponsive to redirection should be managed with second-generation antipsychotics like olanzapine rather than first-generation or benzodiazepines.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0013",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Integumentary",
+      "body_system_merged": "Integumentary",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 15-year-old male presents to your office with an intensely pruritic rash 2 days after returning from a camping trip in the woods. On examination you observe a rash on the hands, arms, face, and genitals with vesicles and a few bullae. Which one of the following would be the most appropriate treatment option?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Topical clobetasol, applied twice daily to affected areas until symptoms resolve\"}, {\"letter\": \"B\", \"text\": \"Oral methylprednisolone, starting at 1 mg/kg and tapering over 5 days\"}, {\"letter\": \"C\", \"text\": \"Oral prednisone, starting at 1 mg/kg and tapering over 15 days\"}, {\"letter\": \"D\", \"text\": \"Subcutaneous triamcinolone, 80 mg once\"}, {\"letter\": \"E\", \"text\": \"Draining the bullae and large vesicles\"}]",
+      "correct_letter": "C",
+      "correct_text": "Oral prednisone, starting at 1 mg/kg and tapering over 15 days",
+      "explanation": "Poison ivy is perhaps the most common cause of allergic contact dermatitis in the United States, causing up to 10 million persons annually to seek medical care. Caused by the oleoresin urushiol that is present in Toxicodendron species (poison ivy, sumac, oak), allergic contact dermatitis is a type IV delayed hypersensitivity reaction. Symptoms develop 12\u201d\u201c72 hours after exposure. Prior sensitization is necessary. The rash has varying presentations, including irregular erythematous patches, linear streaks of vesicles, and larger fluid-filled bullae. The blister fluid does not cause the rash to spread. This illusion of spreading is due to the time variability in when the rash develops (hours to days) based on how much resin was in contact with the skin. Systemic corticosteroids are indicated for facial, genital, or significant vesiculobullous involvement. In type IV hypersensitivity reactions, rebound inflammation occurs if treatment with corticosteroids is insufficient in dose or duration. The most effective treatment in this patient would be a 15-day prednisone taper, starting with 1 mg/kg (60 mg at maximum). A single injection of triamcinolone has variable efficacy and often does not take effect as quickly as oral prednisone; however, if used, it should be administered intramuscularly, never subcutaneously, due to the likelihood of lipoatrophy. Topical corticosteroids, even the most potent formulations, do not work on bullous lesions and are contraindicated on the face and genitals. A common prescription for poison ivy dermatitis is a 5-day dose pack of methylprednisolone. This provides temporary improvement but is frequently followed by a rebound in rash, which indicates an insufficient dose and duration of the corticosteroid. There is no indication for draining the bullae or vesicles in this patient.",
+      "reference": "Dinulos JGH. Habif\u2019s Clinical Dermatology: A Color Guide to Diagnosis and Therapy. 7th ed. Elsevier; 2021:483-524.e1.",
+      "concept_tags": "{\"diagnoses\": [\"allergic contact dermatitis\", \"poison ivy dermatitis\"], \"drugs\": [\"clobetasol\", \"methylprednisolone\", \"prednisone\", \"triamcinolone\"], \"guidelines\": [], \"thresholds\": [\"1 mg/kg dosing\", \"15 day taper\"], \"concept_summary\": \"Tests management of severe allergic contact dermatitis from poison ivy, requiring recognition that extensive involvement with vesicles and bullae necessitates systemic corticosteroids with appropriate dosing and duration.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0030",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Reproductive: Female",
+      "body_system_merged": "Reproductive: Female",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 27-year-old gravida 1 para 0 at 38 weeks' estimated gestation based on a first-trimester ultrasound presents for routine prenatal care. Her pregnancy has been uncomplicated. You discuss the potential risks and benefits of inducing labor at 39 weeks compared to expectant management. In this discussion, you should tell the patient that inducing labor at 39 weeks reduces",
+      "choices": "[{\"letter\": \"A\", \"text\": \"the risk of low birth weight\"}, {\"letter\": \"B\", \"text\": \"length of stay in the labor and delivery unit\"}, {\"letter\": \"C\", \"text\": \"risk for neonatal ICU admission\"}, {\"letter\": \"D\", \"text\": \"the rate of cesarean delivery\"}, {\"letter\": \"E\", \"text\": \"the risk of postpartum hemorrhage\"}]",
+      "correct_letter": "D",
+      "correct_text": "the rate of cesarean delivery",
+      "explanation": "The 2018 ARRIVE (A Randomized Trial of Induction Versus Expectant Management) trial was a randomized, controlled trial that included more than 6000 low-risk nulliparous patients at 41 sites across the United States who were assigned to either induction of labor (IOL) between 39 weeks 0/7 days and 39 weeks 4/7 days or expectant management. The results showed no significant differences in a neonatal composite outcome, including perinatal mortality and severe perinatal morbidity between the intervention and control groups (4.3% compared to 5.4%, relative risk [RR] 0.80, 95% CI 0.64 to 1.00). A significantly lower rate of cesarean delivery was found in the intervention group than the control group (18.6% compared to 22.2%, RR 0.84, 95% CI 0.76 to 0.93). Other findings included: lower rates of gestational hypertension and preeclampsia (9.1% compared to 14.1%, RR 0.64, 95% CI 0.56 to 0.74), increased length of stay in the labor and delivery unit (a median duration of 20 hours with an interquartile range [IQR] of 13 to 28 compared to a median duration of 14 hours with an IQR of 9 to 20), and reduced need for neonatal respiratory support within the first 72 hours of life (3.0% compared to 4.2%, RR 0.71, 95% CI 0.55 to 0.93). The intervention group had significantly lower median birth weights than the control group (3300 g compared to 3380 g; P value <0.001); it did not reduce the risk of low infant birth weight. There were no significant differences in neonatal ICU admission and maternal risk of postpartum hemorrhage. This information should be shared with patients as part of a shared decision-making conversation regarding timing of delivery. Not all labor and delivery units can accommodate elective IOL at 39 weeks' gestation for all patients. It is important that clinicians and hospital systems assess their policies and procedures on a regular basis to ensure equitable access to IOL for those who choose this approach.",
+      "reference": "Wheeler V, Hoffman A, Bybel M. Cervical ripening and induction of labor. Am Fam Physician. 2022;105(2):177-186. | Grobman WA, Rice MM, Reddy UM, et al. Labor induction versus expectant management in low-risk nulliparous women. N Engl J Med. 2018;379(6):513-523. | American College of Obstetricians and Gynecologists; Torbenson VE, Caughey AB, Hoang M, Saposnik SR. Management of full-term nulliparous individuals without a medical indication for delivery: ACOG clinical practice update. Obstet Gynecol. 2025;145(1):e45\ufffde50.",
+      "concept_tags": "{\"diagnoses\": [\"labor induction\", \"term pregnancy\"], \"drugs\": [], \"guidelines\": [\"ARRIVE trial 2018\"], \"thresholds\": [\"39 weeks gestation\"], \"concept_summary\": \"Tests knowledge of ARRIVE trial results regarding elective induction at 39 weeks, specifically that induction reduces cesarean delivery rates compared to expectant management in nulliparous women.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0038",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Respiratory",
+      "body_system_merged": "Respiratory",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 25-year-old male presents to the emergency department with a sudden onset of right-sided chest pain that started about 2 hours ago while he was resting and playing video games. He reports feeling slightly short of breath. He has no history of lung disease, and he smokes 1 pack of cigarettes per day. On examination he has a blood pressure of 120/80 mm Hg, a heart rate of 115 beats/min, a respiratory rate of 20/min, and an oxygen saturation of 90% on room air. A chest x-ray reveals a pneumothorax involving <10% of the lung space. Which one of the following would be the most appropriate next step in management?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Reassurance and discharge home with return precautions for worsening symptoms\"}, {\"letter\": \"B\", \"text\": \"Initiation of oxygen via nasal cannula, and a repeat chest x-ray in 6 hours\"}, {\"letter\": \"C\", \"text\": \"CT of the chest to verify x-ray findings\"}, {\"letter\": \"D\", \"text\": \"Emergent needle decompression at the right second intercostal space in the anterior midclavicular line\"}, {\"letter\": \"E\", \"text\": \"Placement of a chest tube at the right fourth or fifth intercostal space in the midaxillary to anterior axillary line\"}]",
+      "correct_letter": "B",
+      "correct_text": "Initiation of oxygen via nasal cannula, and a repeat chest x-ray in 6 hours",
+      "explanation": "For patients who are stable with a small (<15% of the hemithoracic cavity) primary pneumothorax, conservative management with initiation of oxygen via nasal cannula and observation for at least 6 hours is recommended, followed by a repeat chest x-ray to assess for stability in size of the pneumothorax. If stable at 6 hours, patients can return home with a repeat follow-up in 24 hours. CT imaging can aid in diagnosis if the initial chest x-ray is nondiagnostic or equivocal; however, it is not needed to confirm definitive findings of pneumothorax on chest x-ray. Patients who are clinically unstable with a large pneumothorax or severe symptoms should receive emergent needle decompression, followed by an ipsilateral tube thoracostomy.",
+      "reference": "Kosowsky JM, Harbison Kimberly H. Pleural disease. In: Walls RM, Hockberger RS, Gausche-Hill M, et al, eds. Rosen\ufffds Emergency Medicine: Concepts and Clinical Practice. Vol 1. 9th ed. Elsevier; 2018:881-885. | Brown SGA, Ball EL, Perrin K, et al. Conservative versus interventional treatment for spontaneous pneumothorax. N Engl J Med. 2020;382(5):405-415.",
+      "concept_tags": "{\"diagnoses\": [\"primary pneumothorax\"], \"drugs\": [\"oxygen\"], \"guidelines\": [], \"thresholds\": [\"<15% of hemithoracic cavity\"], \"concept_summary\": \"This question tests management of small primary pneumothorax in stable patients, requiring knowledge that conservative management with oxygen and 6-hour observation is appropriate for pneumothorax <15% size.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0042",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Cardiovascular",
+      "body_system_merged": "Cardiovascular",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 75-year-old female presents to your office with a 3-month history of episodes of lightheadedness on standing. Orthostatic blood pressure testing in your office reveals an initial blood pressure of 134/76 mm Hg that drops to 104/46 mm Hg on standing. A laboratory evaluation is unremarkable and review of her medications does not show an obvious cause for her symptoms. Echocardiography and tilt table testing are unremarkable. You diagnose orthostatic hypotension. Monotherapy with which one of the following would be indicated for the management of this patient's neurogenic orthostatic hypotension?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Atomoxetine (Strattera)\"}, {\"letter\": \"B\", \"text\": \"Fludrocortisone\"}, {\"letter\": \"C\", \"text\": \"Methylphenidate (Ritalin)\"}, {\"letter\": \"D\", \"text\": \"Midodrine\"}, {\"letter\": \"E\", \"text\": \"Sodium bicarbonate\"}]",
+      "correct_letter": "D",
+      "correct_text": "Midodrine",
+      "explanation": "Midodrine has been found to be the safest and best-tolerated medication for the management of neurogenic orthostatic hypotension (SOR B). Atomoxetine is an adjunctive treatment for neurogenic orthostatic hypotension that is generally successful when added to medication such as midodrine, but it is not effective as monotherapy. Although fludrocortisone is sometimes used off-label for this indication, it should be used with caution because of the risk of left ventricular hypertrophy, renal failure, and hypokalemia. Methylphenidate has not been shown to have a role in the successful treatment of neurogenic orthostatic hypotension. Treatment with sodium tablets is usually inadequate, does not correct the neurogenic issue, and substantially increases the risk of hypernatremia and resultant renal injury.",
+      "reference": "Kim MJ, Farrell J. Orthostatic hypotension: a practical approach. Am Fam Physician. 2022;105(1):39-49. | Palma JA, Kaufmann H. Management of orthostatic hypotension. Continuum. 2020;26(1):154-177.",
+      "concept_tags": "{\"diagnoses\": [\"neurogenic orthostatic hypotension\"], \"drugs\": [\"midodrine\", \"atomoxetine\", \"fludrocortisone\", \"methylphenidate\", \"sodium bicarbonate\"], \"guidelines\": [], \"thresholds\": [\"134/76 to 104/46 mm Hg\"], \"concept_summary\": \"This question tests first-line treatment for neurogenic orthostatic hypotension, requiring knowledge that midodrine is the safest and best-tolerated medication for this condition.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0046",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Musculoskeletal",
+      "body_system_merged": "Musculoskeletal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 76-year-old female with a past medical history of hypertension and major depressive disorder presents because of acute right knee pain that began after she sustained a mechanical fall and landed on her knee while taking a walk near her house yesterday. She was able to walk home without difficulty. She applied ice to the area after the fall, but her knee was more painful this morning. When asked to point to the pain, she points to an area lateral to the inferior patella. Examination of the knee reveals no redness or swelling but minor warmth over the anterior knee. Lower extremity sensation is intact. The patient has full range of motion with pain. There is no tenderness of the patella or the fibular head with palpation. Provocative testing including an Apley grind test, a McMurray test, a Lachman test, and anterior and posterior drawer tests is negative. Which one of the following would be the most appropriate next step to aid in diagnosis?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"No further testing or imaging\"}, {\"letter\": \"B\", \"text\": \"Ultrasonography\"}, {\"letter\": \"C\", \"text\": \"Radiography\"}, {\"letter\": \"D\", \"text\": \"MRI\"}, {\"letter\": \"E\", \"text\": \"Arthrocentesis with culture and Gram stain\"}]",
+      "correct_letter": "C",
+      "correct_text": "Radiography",
+      "explanation": "According to the Ottawa knee rules, a well-validated tool used to limit unnecessary radiography, a knee x-ray is indicated in this patient to rule out fracture because she is \u00e2\u2030\u00a555 years of age. Radiography is currently the preferred modality over ultrasonography for diagnosing a fracture in an adult. Because ligament and meniscal testing is negative, MRI is not indicated. Arthrocentesis with culture and Gram stain would be indicated if the history and physical examination suggest an infection of the joint space.",
+      "reference": "Taljanovic MS, Chang EY, Ha AS, et al. ACR appropriateness criteria acute trauma to the knee. Journal of the American College of Radiology. 2020;17(5):S12-S25. | Sims JI, Chau MT, Davies JR. Diagnostic accuracy of the Ottawa Knee Rule in adult acute knee injuries: a systematic review and meta-analysis. Eur Radiol. 2020;30(8):4438-4446.",
+      "concept_tags": "{\"diagnoses\": [\"knee fracture\"], \"drugs\": [], \"guidelines\": [\"Ottawa knee rules\"], \"thresholds\": [\"\\u226555 years of age\"], \"concept_summary\": \"This question tests application of Ottawa knee rules, requiring knowledge that patients \\u226555 years old with knee trauma require radiography to rule out fracture.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0048",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Gastrointestinal",
+      "body_system_merged": "Gastrointestinal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 53-year-old female with no significant past medical history presents to the emergency department with fatigue, pruritus, and right upper quadrant discomfort. A physical examination reveals mild hepatomegaly. Laboratory Findings Alkaline phosphatase 450 U/L (N 44\u201d\u201c147) AST 70 U/L (N 10\u201d\u201c40) Total bilirubin 1.5 mg/dL (N 0.1\u201d\u201c1.2) Antimitochondrial antibodies positive Which one of the following is the most likely diagnosis?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Autoimmune hepatitis\"}, {\"letter\": \"B\", \"text\": \"Drug-induced liver injury\"}, {\"letter\": \"C\", \"text\": \"Metabolic dysfunction\\u201d\\u201cassociated steatotic liver disease (MASLD) (nonalcoholic fatty liver disease)\"}, {\"letter\": \"D\", \"text\": \"Primary biliary cholangitis\"}, {\"letter\": \"E\", \"text\": \"Primary sclerosing cholangitis\"}]",
+      "correct_letter": "D",
+      "correct_text": "Primary biliary cholangitis",
+      "explanation": "Primary biliary cholangitis is characterized by chronic cholestasis, positive antimitochondrial antibodies (AMA), and elevated alkaline phosphatase (ALP). The American Association for the Study of Liver Diseases (AASLD) guidelines state that the diagnosis of primary biliary cholangitis can be established with the presence of at least 2 of the following: biochemical evidence of cholestasis (elevated ALP), presence of AMA, and histopathologic evidence of nonsuppurative destructive cholangitis. Elevated AMA is particularly helpful as it is found in >95% of cases of primary biliary cholangitis. Autoimmune hepatitis usually presents with elevated aminotransferases and positive autoantibodies such as antinuclear antibodies or anti\u201d\u201csmooth muscle antibodies, rather than AMA. It is not primarily a cholestatic disease and elevated ALP is typically not the predominant finding. Depending on the instigating agent, drug-induced liver injury can present with a variety of liver enzyme abnormalities; however, the presence of positive AMA and the chronicity of symptoms make it less likely in this patient scenario. Metabolic dysfunction\u201d\u201cassociated steatotic liver disease (MASLD) (formerly known as nonalcoholic fatty liver disease) typically presents with elevated aminotransferases and is associated with metabolic syndrome. It is not characterized by cholestasis or positive AMA. Primary sclerosing cholangitis typically presents with cholestatic liver enzyme abnormalities and is often associated with inflammatory bowel disease. It is diagnosed based on characteristic imaging findings of bile duct strictures using MRI cholangiography or endoscopic retrograde cholangiopancreatography. Positive AMA is rarely found in primary sclerosing cholangitis.",
+      "reference": "Lindor KD, Bowlus CL, Boyer J, Levy C, Mayo M. Primary biliary cholangitis: 2021 practice guidance update from the American Association for the Study of Liver Diseases. Hepatology. 2022;75(4):1012-1013. | Bowlus CL, Arriv\ufffd L, Bergquist A, et al. AASLD practice guidance on primary sclerosing cholangitis and cholangiocarcinoma. Hepatology. 2023;77(2):659-702.",
+      "concept_tags": "{\"diagnoses\": [\"primary biliary cholangitis\", \"autoimmune hepatitis\", \"primary sclerosing cholangitis\"], \"drugs\": [], \"guidelines\": [\"AASLD\"], \"thresholds\": [\"alkaline phosphatase 450 U/L\", \"AST 70 U/L\", \"bilirubin 1.5 mg/dL\"], \"concept_summary\": \"This question tests diagnosis of primary biliary cholangitis, requiring recognition that positive antimitochondrial antibodies plus elevated alkaline phosphatase and cholestasis establishes the diagnosis.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0074",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Endocrine",
+      "body_system_merged": "Endocrine",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 19-year-old college student with a recent history of sinusitis and a past medical history of depression, adrenal insufficiency, and hypothyroidism is brought to the urgent care clinic by her roommates after she experienced a syncopal episode. The patient reports progressive weakness and fatigue, increasingly severe abdominal pain, and repeated episodes of nausea and vomiting over the last few days. A review of her electronic health record shows the following medications: Amoxicillin/clavulanate (Augmentin) Escitalopram (Lexapro) Fludrocortisone Levothyroxine (Synthroid) Prednisolone Her vital signs at presentation include a blood pressure of 97/58 mm Hg, a pulse rate of 116 beats/min, and a temperature of 37.2 \u00b0C (99.0 \u00b0F). A basic metabolic panel is notable for the following results: Sodium 133 mEq/L (N 136\u201d\u201c145) Potassium 5.8 mEq/L (N 3.4\u201d\u201c4.4) Creatinine 1.0 mg/dL (N 0.6\u201d\u201c1.1) Glucose 60 mg/dL Which one of the following therapies should be started as soon as possible to prevent further worsening of this patient's acute condition?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Intramuscular glucagon, 1 mg\"}, {\"letter\": \"B\", \"text\": \"Intravenous dexamethasone, 1 mg\"}, {\"letter\": \"C\", \"text\": \"Intravenous hydrocortisone (Solu-Cortef), 100 mg\"}, {\"letter\": \"D\", \"text\": \"Intravenous levofloxacin, 500 mg\"}, {\"letter\": \"E\", \"text\": \"Intravenous ondansetron, 4 mg\"}]",
+      "correct_letter": "C",
+      "correct_text": "Intravenous hydrocortisone (Solu-Cortef), 100 mg",
+      "explanation": "This patient's chronic corticosteroid use, symptoms, and electrolyte abnormalities suggest she is experiencing an adrenal crisis; the correct initial treatment of this is intravenous hydrocortisone. Acute illness, dehydration, severe physical stress, or nonadherence to treatment are all possible causes of acute adrenal crisis in patients with chronic adrenal insufficiency. These patients may present with weakness, severe fatigue, abdominal pain, tachycardia, and hypotension. Laboratory abnormalities can include hyponatremia, hyperkalemia, and, in some cases, hypoglycemia. If left untreated, adrenal crisis can be fatal. Glucagon is primarily used to treat hypoglycemia in patients with insulin-dependent diabetes, but it will not correct the cardiovascular abnormalities of adrenal crisis. Dexamethasone is a corticosteroid that can be used to treat adrenal crisis, but it is not the preferred therapy according to Endocrine Society practice guidelines. Additionally, a 1-mg dose is subtherapeutic for adrenal crisis. Dexamethasone is sometimes used at this dose to test for primary hyperadrenalism. Levofloxacin is not appropriate for treatment of this patient's adrenal crisis. Although ondansetron may help reduce vomiting, it will not correct the underlying cause of this patient's illness.",
+      "reference": "Michels A, Michels N: Addison disease: Early detection and treatment principles. Am Fam Physician 2014;89(7):563-568. | Bornstein SR, Allolio B, Arlt W, et al: Diagnosis and treatment of primary adrenal insufficiency: An Endocrine Society clinical practice guideline. J Clin Endocrinol Metab 2016;101(2):364-389. | Runser LA, Gauer RL, Houser A: Syncope: Evaluation and differential diagnosis. Am Fam Physician 2017;95(5):303-312. | Westerfield KL, Koenig K, Oh R: Breastfeeding: Common questions and answers. Am Fam Physician 2018;98(6):368-373.",
+      "concept_tags": "{\"diagnoses\": [\"adrenal crisis\", \"adrenal insufficiency\", \"depression\", \"hypothyroidism\"], \"drugs\": [\"hydrocortisone\", \"glucagon\", \"dexamethasone\", \"levofloxacin\", \"ondansetron\"], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"Tests recognition of adrenal crisis in patient with known adrenal insufficiency presenting with classic symptoms and electrolyte abnormalities, requiring immediate IV hydrocortisone.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0076",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Nephrologic",
+      "body_system_merged": "Nephrologic",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 64-year-old male presents with urinary frequency. His symptoms have been ongoing for months, but he says they have acutely worsened in the last 6\u201d\u201c8 weeks. His symptoms are predominantly storage-related with daytime frequency, nocturia, urgency, and even infrequent incontinence. He also reports difficulty voiding, noting a weak stream and hesitancy. He does not have erectile dysfunction. Urinalysis is negative. In addition to behavioral and lifestyle alterations, which one of the following medications should you recommend for initial therapy?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"A 5-\\u03b1-reductase inhibitor\"}, {\"letter\": \"B\", \"text\": \"An \\u03b1-antagonist\"}, {\"letter\": \"C\", \"text\": \"An anticholinergic\"}, {\"letter\": \"D\", \"text\": \"A \\u03b2 -agonist 3\"}, {\"letter\": \"E\", \"text\": \"A phosphodiesterase-5 inhibitor\"}]",
+      "correct_letter": "B",
+      "correct_text": "An \u03b1-antagonist",
+      "explanation": "Men with lower urinary tract symptoms may have overactive bladder, bladder outlet obstruction, or both. Differentiating overactive bladder and bladder outlet obstruction can be difficult due to significant symptom overlap. Overactive bladder is most often due to detrusor overactivity, and bladder outlet obstruction is most often secondary to benign prostatic hyperplasia. The most appropriate initial treatment for these symptoms is an \u03b1- blocker, such as tamsulosin, alfuzosin, or terazosin (Evidence Level A), regardless of the predominance of storage symptoms (eg, daytime frequency, nocturia, urgency, incontinence) or voiding symptoms (eg, weak stream, hesitancy, straining, dribbling). The American Urological Association recommends 5-\u03b1-reductase inhibitors if prostate volume is \u00e2\u2030\u00a530 mL on imaging, the prostate is enlarged on examination, or PSA levels exceed 1.5 ng/mL. 5-\u03b1-Reductase inhibitors can take up to a year to take full effect. Anticholinergics (oxybutynin) and \u03b2 -agonists (mirabegron) may be used alone or in 3 combination with \u03b1-blockers for patients with predominantly storage-related symptoms if \u03b1-blockers are not adequately effective. Some guidelines recommend assessing postvoid residual volume before initiating these agents. A daily phosphodiesterase-5 inhibitor (typically tadalafil) can be used as initial monotherapy or as combination therapy in patients with erectile dysfunction, although it is not generally recommended as first-line treatment. The mechanism of action is not fully understood.",
+      "reference": "Sandhu JS, Bixler BR, Dahm P, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia (BPH): AUA guideline amendment 2023. J Urol. 2024;211(1):11-19. | Lerner LB, McVary KT, Barry MJ, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia: AUA guideline part I-initial work-up and medical management. J Urol. 2021;206(4):806-817.",
+      "concept_tags": "{\"diagnoses\": [\"benign prostatic hyperplasia\", \"bladder outlet obstruction\", \"overactive bladder\"], \"drugs\": [\"alpha-antagonist\", \"5-alpha-reductase inhibitor\", \"anticholinergic\", \"beta-3 agonist\", \"phosphodiesterase-5 inhibitor\"], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"Tests understanding that alpha-blockers are first-line treatment for lower urinary tract symptoms in men, addressing both storage and voiding symptoms effectively.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0080",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Population-Based Care",
+      "body_system_merged": "Population-Based Care",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 76-year-old female with hypertension sees you for a routine follow-up visit. She fell about 2 weeks ago while hurrying to answer her home telephone, and sustained bruising and swelling of the left lower leg. She does not recall feeling dizzy or lightheaded before the fall, and she did not hit her head or lose consciousness. She was able to get up and walk afterward without any limitations but developed a large bruise over the lateral hip. She has not had any previous falls and she feels well today. She lives alone and performs activities of daily living independently. Which one of the following has the best evidence to prevent future falls and associated serious injury?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Patient education on fall harms and prevention\"}, {\"letter\": \"B\", \"text\": \"Use of a cane while walking\"}, {\"letter\": \"C\", \"text\": \"Referral to a group exercise program, including gait, balance, and functional training\"}, {\"letter\": \"D\", \"text\": \"Referral to an ophthalmologist for a comprehensive vision assessment\"}, {\"letter\": \"E\", \"text\": \"Referral to a podiatrist for footwear assessment\"}]",
+      "correct_letter": "C",
+      "correct_text": "Referral to a group exercise program, including gait, balance, and functional training",
+      "explanation": "Falls are a common cause of serious injury and death in older adults in the United States. A 2018 study found that 27.5% of adults \u00e2\u2030\u00a565 years of age had fallen at least once in the past year (714 falls per 1000 community-dwelling older adults). More than 300,000 older adults are hospitalized each year for hip fracture, which is one of the most serious potential complications from falls in older adults. Falls are also the leading cause of injury-related death in older adults. A history of a fall is a key risk factor for future falls. Other risks include sensory and cognitive deficits, acute and chronic health conditions, alcohol and drug use, and certain other medication use. In community-dwelling older adults who are identified as being at higher risk of falls, the U.S. Preventive Services Task Force found that exercise interventions lower the risk of falls and should be recommended. Both individual and group exercise programs are beneficial and there is no data to recommend any single type of exercise over others. Multifactorial interventions to reduce falls typically include an assessment of modifiable risk factors followed by a customized approach to reducing risk. Evaluations may include balance, gait, vision, cognition, postural blood pressure, medication use, and the home environment. This assessment differs from a focused diagnostic assessment of a patient with a specific concern such as vision change, dizziness, or numbness in the feet. Interventions to address risk factors identified in a multifactorial screening program may offer benefit to high-risk individuals, although studies have found a small net benefit on average. A 2023 Cochrane review comprising 22 studies on environmental interventions found evidence of benefit for reducing fall hazards at home by using a validated tool to identify and address hazards, usually via a home visit. Patient education, assistive devices, vision impairment correction, and footwear selection were not found to be beneficial.",
+      "reference": "Final recommendation statement: falls prevention in community-dwelling older adults: interventions. US Preventive Services Task Force. Updated June 4, 2024. | Herness J, Sanders J, James J. Environmental interventions for preventing falls in older people living in the community. Am Fam Physician. 2023;108(5):450-451. | Older adult falls data. Centers for Disease Control and Prevention. Reviewed September 6, 2023.",
+      "concept_tags": "{\"diagnoses\": [\"fall risk\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [\"age \\u226565 years\", \"27.5% fall rate annually\"], \"concept_summary\": \"Tests knowledge that group exercise programs focusing on gait, balance, and functional training are most effective intervention for fall prevention in older adults with fall history.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0081",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Gastrointestinal",
+      "body_system_merged": "Gastrointestinal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "Which one of the following would be most appropriate for initial treatment of Helicobacter pylori infection?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Dual therapy with vonoprazan (Voquezna) and amoxicillin\"}, {\"letter\": \"B\", \"text\": \"Triple therapy with omeprazole, amoxicillin, and clarithromycin\"}, {\"letter\": \"C\", \"text\": \"Triple therapy with omeprazole, amoxicillin, and levofloxacin\"}, {\"letter\": \"D\", \"text\": \"Quadruple therapy with bismuth, omeprazole, metronidazole, and tetracycline\"}]",
+      "correct_letter": "D",
+      "correct_text": "Quadruple therapy with bismuth, omeprazole, metronidazole, and tetracycline",
+      "explanation": "Infection with Helicobacter pylori should be treated when it causes symptoms. Several regimens exist for the treatment of H pylori infection. Guidelines currently recommend optimized quadruple therapy with bismuth, metronidazole, omeprazole, and tetracycline. This combination is approximately 91% effective at eradicating H pylori infection. Dual therapy with vonoprazan and amoxicillin is an option for patients who are unable or unwilling to take quadruple therapy, but its eradiation rates only range from 70% to 80%. Regimens containing clarithromycin or levofloxacin should be limited to infections with documented susceptibility to macrolides or fluoroquinolones, respectively.",
+      "reference": "Malfertheiner P, Megraud F, Rokkas T, et al. Management of Helicobacter pylori infection: the Maastricht VI/Florence consensus report. Gut. Published online August 8, 2022. | Chey WD, Howden CW, Moss SF, et al. ACG clinical guideline: treatment of Helicobacter pylori infection. Am J Gastroenterol. 2024;119(9):1730-1753.",
+      "concept_tags": "{\"diagnoses\": [\"Helicobacter pylori infection\"], \"drugs\": [\"bismuth\", \"omeprazole\", \"metronidazole\", \"tetracycline\", \"vonoprazan\", \"amoxicillin\", \"clarithromycin\", \"levofloxacin\"], \"guidelines\": [], \"thresholds\": [\"91% eradication rate\"], \"concept_summary\": \"Tests current guideline recommendation for optimized bismuth quadruple therapy as first-line H. pylori treatment due to superior eradication rates.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0099",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Nephrologic",
+      "body_system_merged": "Nephrologic",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 46-year-old female sees you for an annual well woman visit. Her only concern is pelvic pressure that becomes more bothersome throughout the day. She notes occasional urinary incontinence of small amounts when coughing or running. She says these symptoms mildly bother her, and mostly wants to make sure there is not a more serious problem. On physical examination, using the lower half of a bivalve speculum, you note a prolapse of the anterior wall, 0.5 cm proximal to the hymenal ring. Which one of the following would be the most appropriate next step for this patient?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Reassurance only\"}, {\"letter\": \"B\", \"text\": \"Pelvic floor muscle training\"}, {\"letter\": \"C\", \"text\": \"Topical estrogen\"}, {\"letter\": \"D\", \"text\": \"Surgical consultation\"}]",
+      "correct_letter": "B",
+      "correct_text": "Pelvic floor muscle training",
+      "explanation": "Pelvic organ prolapse is a common problem, and can be described as apical, of the anterior wall, or of the posterior wall. The Pelvic Organ Prolapse Quantification system can be used to evaluate the prolapse and determine grading. A grade 2 prolapse indicates a prolapse that extends within 1 cm above or below the hymenal ring. Pelvic floor muscle training can reduce prolapse by 1\u201d\u201c2 cm and provide subjective improvement in symptoms. There is no clear evidence of the benefit of estrogen alone for pelvic organ prolapse. Surgical management is often the ultimate treatment for pelvic organ prolapse, but it is important to note that urinary incontinence can worsen after repair. This patient is minimally bothered by her symptoms; therefore, surgical treatment would not be recommended at this time but may be indicated in the future. Pelvic organ prolapse is generally progressive until menopause, after which it can alternate between regression and progression.",
+      "reference": "Iglesia CB, Smithling KR. Pelvic organ prolapse. Am Fam Physician. 2017;96(3):179-185. | Taithongchai A, Johnson EE, Ismail SI, Barron-Millar E, Kernohan A, Thakar R. Oestrogen therapy for treating pelvic organ prolapse in postmenopausal women. Cochrane Database Syst Rev. 2023;7(7):CD014592. | Qiu J, Jiang D. Pessaries for managing pelvic organ prolapse in women. Am Fam Physician. 2021;103(11):660-661.",
+      "concept_tags": "{\"diagnoses\": [\"pelvic organ prolapse\", \"stress urinary incontinence\"], \"drugs\": [], \"guidelines\": [\"Pelvic Organ Prolapse Quantification system\"], \"thresholds\": [\"grade 2 prolapse\"], \"concept_summary\": \"Tests first-line treatment for symptomatic pelvic organ prolapse, emphasizing that pelvic floor muscle training can reduce prolapse by 1-2 cm and provide symptom improvement.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    },
+    {
+      "qid": "QID-2025-0105",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Reproductive: Male",
+      "body_system_merged": "Reproductive: Male",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 25-year-old male presents with a 5-day history of dysuria and mucopurulent penile discharge. On examination the urethral meatus is erythematous and a small amount of discharge is noted. A urine dipstick is positive for leukocyte esterase and a nucleic acid amplification test is negative for Neisseria gonorrhoeae and Chlamydia trachomatis. Which one of the following would be the most appropriate treatment?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Azithromycin (Zithromax), 1 g orally once\"}, {\"letter\": \"B\", \"text\": \"Levofloxacin, 500 mg orally for 7 days\"}, {\"letter\": \"C\", \"text\": \"Ceftriaxone, 500 mg intramuscularly once\"}, {\"letter\": \"D\", \"text\": \"Gentamicin, 240 mg intramuscularly once, plus azithromycin, 2 g orally once\"}, {\"letter\": \"E\", \"text\": \"Metronidazole, 2 g orally once, plus doxycycline, 100 mg orally twice daily for 7 days\"}]",
+      "correct_letter": "A",
+      "correct_text": "Azithromycin (Zithromax), 1 g orally once",
+      "explanation": "This patient has nongonococcal urethritis, which should be treated with azithromycin. Symptoms of urethritis include dysuria, purulent or mucopurulent urethral discharge, and urethral discomfort and/or erythema. Diagnostic criteria include typical signs and symptoms or a history of exposure along with \u00e2\u2030\u00a510 WBCs/hpf on a first-void urinalysis, \u00e2\u2030\u00a52 WBCs/oil immersion field found on Gram stain of the discharge, or a positive leukocyte esterase with first-void urine. At least half of nongonococcal urethritis cases have no known etiologic agent. Of the cases with known etiologies, Mycoplasma genitalium is responsible for 15%\u201d\u201c20%. Treatment options for M genitalium include azithromycin, 1 g orally; doxycycline, 100 mg twice daily for 1 week; or moxifloxacin, 400 mg orally for 7\u201d\u201c14 days. If the results of nucleic acid amplification testing for gonorrhea and chlamydia are unavailable, then intramuscular ceftriaxone plus a 7-day course of oral doxycycline would be appropriate and can be used for empiric therapy while awaiting results. Intramuscular gentamicin plus oral azithromycin is used as an alternative treatment regimen for Neisseria gonorrhoeae. Metronidazole is used to treat Trichomonas, which represents 1%\u201d\u201c 8% of cases in men and should be diagnosed using a molecular-based test. Levofloxacin is a treatment option for chlamydia and is not first line.",
+      "reference": "Sell J, Nasir M, Courchesne C: Urethritis: Rapid evidence review. Am Fam Physician 2021;103(9):553-558.",
+      "concept_tags": "{\"diagnoses\": [\"nongonococcal urethritis\"], \"drugs\": [\"azithromycin\", \"levofloxacin\", \"ceftriaxone\", \"gentamicin\", \"metronidazole\", \"doxycycline\"], \"guidelines\": [], \"thresholds\": [\"\\u226510 WBCs/hpf\", \"\\u22652 WBCs/oil immersion field\"], \"concept_summary\": \"Tests treatment of nongonococcal urethritis when gonorrhea and chlamydia are ruled out, requiring knowledge that azithromycin 1g orally once is appropriate first-line treatment.\"}",
+      "linked_articles": 2,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 101.8
+    }
+  ],
+  "top_articles": [
+    {
+      "article_id": "ART-1559",
+      "title": "Harrison\u2019s Principles of Internal Medicine, ed 19",
+      "author1": "Kasper",
+      "year": "2015",
+      "source_type": "Other Journal",
+      "citation_count": 13,
+      "unique_years": 1,
+      "exam_years": "[2018]",
+      "clean_ref": "Kasper DL, Fauci AS, Hauser SL, et al (eds): Harrison\u2019s Principles of Internal Medicine, ed 19. McGraw-Hill, 2015, pp 628-629.",
+      "weak_area_links": 12
+    },
+    {
+      "article_id": "ART-0633",
+      "title": "Harrison\u2019s Principles of Internal Medicine, ed 20",
+      "author1": "Jameson",
+      "year": "2018",
+      "source_type": "Other Journal",
+      "citation_count": 13,
+      "unique_years": 2,
+      "exam_years": "[2019, 2020]",
+      "clean_ref": "Jameson JL, Fauci AS, Kasper DL, et al (eds): Harrison\u2019s Principles of Internal Medicine, ed 20. McGraw-Hill, 2018, p 2647.",
+      "weak_area_links": 10
+    },
+    {
+      "article_id": "ART-1263",
+      "title": "testicular cancer: screening",
+      "author1": "US Preventive Services Task Force. Final recommendation statement",
+      "year": "2011",
+      "source_type": "Guideline/Org",
+      "citation_count": 9,
+      "unique_years": 2,
+      "exam_years": "[2023, 2024]",
+      "clean_ref": "US Preventive Services Task Force. Final recommendation statement: testicular cancer: screening. Updated April 15, 2011.",
+      "weak_area_links": 9
+    },
+    {
+      "article_id": "ART-0230",
+      "title": "discovering the underlying cause",
+      "author1": "Charles",
+      "year": "2017",
+      "source_type": "AFP",
+      "citation_count": 9,
+      "unique_years": 5,
+      "exam_years": "[2018, 2019, 2020, 2022, 2023]",
+      "clean_ref": "Charles L, Triscott J, Dobbs B. Secondary hypertension: discovering the underlying cause. Am Fam Physician. 2017;96(7):453-461.",
+      "weak_area_links": 7
+    },
+    {
+      "article_id": "ART-0412",
+      "title": "Depression in Adults: Screening",
+      "author1": "Final",
+      "year": "2016",
+      "source_type": "Guideline/Org",
+      "citation_count": 8,
+      "unique_years": 4,
+      "exam_years": "[2018, 2019, 2020, 2022]",
+      "clean_ref": "Final Recommendation Statement: Depression in Adults: Screening. US Preventive Services Task Force, 2016.",
+      "weak_area_links": 8
+    }
+  ],
+  "body_systems_available": [
+    "Cardiovascular",
+    "Injuries/Musculoskeletal",
+    "Psychiatric/Behavioral",
+    "Respiratory",
+    "Sexual and Reproductive"
+  ]
+}

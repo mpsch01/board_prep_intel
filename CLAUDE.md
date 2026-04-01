@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_029_20260331_clinical_pathways_v2.md` |
+| Active BATON | `BATON_active_030_20260401_analyzer_v3_smoke_test.md` |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -59,8 +59,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | aafp_question_icd10 | 4,753 rows — relevance normalized, related cap applied |
 | pubmed_pmid_cache | 344 rows — Layer 2 seed (citation_id → PMID) |
 | icd10_vec | 2,219 rows — OpenAI text-embedding-3-small (1536d) |
-| article_icd10_vec | 1,674 rows — ⚠️ stale, needs rebuild |
-| question_icd10_vec | 2,733 rows — ⚠️ stale, needs rebuild |
+| article_icd10_vec | 1,674 rows — ✅ rebuilt 2026-04-01 |
+| question_icd10_vec | 2,733 rows — ✅ rebuilt 2026-04-01 |
 | clinical_pathways | 4,020 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 |
 | PDFs | 404 across 4 tiers (49 new articles awaiting PDF download) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
@@ -107,10 +107,11 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 029, 2026-03-31)
-1. **ICD-10 vector rebuild** — `python 02_module.2_processor\scripts\build_icd10_embeddings.py --derive` — refreshes `question_icd10_vec` + `article_icd10_vec` (both stale). Zero API cost. You run this.
-2. **PDF download (DEFERRED-A)** — `download_aafp_acquisitions.py` → `backfill_new_article_metadata.py --art-id-min 1938`; then re-run `build_icd10_embeddings.py --derive` for new articles
-3. **Citation trends (DEFERRED-B)** — `update_citation_trends.py` — run after PDF download
-4. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed; 344 PMIDs in `pubmed_pmid_cache` (seed ready)
-5. **Fill question vector gaps (Q-VEC-GAP)** — embed 440 ITE (2018–2019) + 1,221 AAFP questions → `question_vec`
-6. **229 citation gap articles** — 88 AFP batch-downloadable from `null_clean_ref_missing_articles_20260326.csv`
+## Next Steps (as of BATON 030, 2026-04-01)
+1. **Fix QUESTION-DIST-001** — practice questions all target "Acute Care" only; body system dimensions return 0 candidates. Debug `BODYSYSTEM_PDF_TO_DB` map in `ite_analyzer_v3.py` vs actual `questions.body_system_merged` values. Fix before demo.
+2. **Git commit** — `ite_analyzer_v3.py`, `ite_analyze_v2.py`, `ite_analyzer_v2.py` (deprecated header), `ite_report_builder_v2.js` (subcatAnalysis fix)
+3. **Faculty meeting presentation** — PPTX + one-pager — after QUESTION-DIST-001 resolved
+4. **PDF download (DEFERRED-A)** — `download_aafp_acquisitions.py` → `backfill_new_article_metadata.py --art-id-min 1938`
+5. **Citation trends (DEFERRED-B)** — `update_citation_trends.py` — run after PDF download
+6. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed; 344 PMIDs in `pubmed_pmid_cache` (seed ready)
+7. **Fill question vector gaps (Q-VEC-GAP)** — embed 440 ITE (2018–2019) + 1,221 AAFP questions → `question_vec`
