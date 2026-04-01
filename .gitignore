@@ -69,6 +69,9 @@ Thumbs.db
 # --- MAC ARTIFACTS (just in case) ---
 .DS_Store
 
+# --- CHAT ARCHIVE (Cowork session transcripts — not version-controlled) ---
+chat_archive/
+
 # ============================================================
 # WHAT IS TRACKED (for reference):
 #   All .py scripts (M1/build, M1/maintain, M2, M3, agents)
