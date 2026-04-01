@@ -209,9 +209,12 @@ const t2     = data.thresholds.tier2_relative;
 const t3     = data.thresholds.tier3_sem;
 const diff   = data.difficulty_profile;
 const yields = data.yield_priorities;
-const concept = data.plugins?.concept_fingerprint;
-const icd    = data.plugins?.icd10_map;
-const subcatAnalysis = data.subcategory_analysis;
+// v3: concept_clustering + icd10_weakness_map + pathway_gap_map are top-level
+// v2 fallback: plugins.concept_fingerprint + plugins.icd10_map
+const concept  = data.concept_clustering || data.plugins?.concept_fingerprint;
+const icd      = data.icd10_weakness_map  || data.plugins?.icd10_map;
+const pathways = data.pathway_gap_map;
+const analysisVer = data.analysis_version || "2.0";
 const allQuestions = data.practice_questions || [];
 const articles  = data.top_articles || [];
 
@@ -230,8 +233,9 @@ function extractSafeName(fullName) {
 const safeName = extractSafeName(res.name);
 
 // ── Build output filenames ──────────────────────────────────────────
-const analysisFileName = `ITE_${data.exam_year}_v2_Analysis_${safeName}.docx`;
-const examFileName = `ITE_${data.exam_year}_v2_Exam_${safeName}.docx`;
+const ver = analysisVer.startsWith("3") ? "v3" : "v2";
+const analysisFileName = `ITE_${data.exam_year}_${ver}_Analysis_${safeName}.docx`;
+const examFileName = `ITE_${data.exam_year}_${ver}_Exam_${safeName}.docx`;
 const analysisPath = path.join(outputDir, analysisFileName);
 const examPath = path.join(outputDir, examFileName);
 
@@ -430,6 +434,8 @@ children.push(new Paragraph({ spacing: { before: 40, after: 100 }, children: [
   new TextRun({ text: " at or above 70%.", font: FONT, size: 18, color: MGRAY, italics: true }),
 ]}));
 
+// subcatAnalysis: v2-era plugin; undefined in v3 -- default to null so optional chaining is safe
+const subcatAnalysis = data.plugins?.subcategory_decomposition || data.subcategory_analysis || null;
 // Named subcategory data (from v2 analyzer with DB lookup)
 const bpSubcat = subcatAnalysis?.by_blueprint_subcategory || subcatAnalysis?.by_blueprint_subcol || {};
 if (Object.keys(bpSubcat).length > 0) {
@@ -590,10 +596,11 @@ children.push(spacer(80));
 
 if (concept) {
   // Build concept tables from diagnoses, drugs, guidelines dicts
+  // v3: top_diagnoses/top_drugs/top_guidelines; v2 fallback: diagnoses/drugs/guidelines
   const conceptSections = [
-    { label: "Top Diagnoses in Missed Items", data: concept.diagnoses || {} },
-    { label: "Top Drugs in Missed Items", data: concept.drugs || {} },
-    { label: "Top Guidelines in Missed Items", data: concept.guidelines || {} },
+    { label: "Top Diagnoses in Missed Items", data: concept.top_diagnoses || concept.diagnoses || {} },
+    { label: "Top Drugs in Missed Items",     data: concept.top_drugs     || concept.drugs     || {} },
+    { label: "Top Guidelines in Missed Items",data: concept.top_guidelines|| concept.guidelines|| {} },
   ];
 
   for (const sec of conceptSections) {
@@ -614,9 +621,27 @@ if (concept) {
     children.push(spacer(80));
   }
 
-  // Subcategory distribution of misses
-  const subcatDist = concept.subcategory_distribution || {};
-  if (Object.keys(subcatDist).length > 0) {
+  // Recurring themes (v3: recurring_diagnoses + recurring_drugs; v2: subcategory_distribution)
+  const recurringDx    = concept.recurring_diagnoses || {};
+  const recurringDrugs = concept.recurring_drugs     || {};
+  const subcatDist     = concept.subcategory_distribution || {};  // v2 compat
+
+  if (Object.keys(recurringDx).length > 0) {
+    children.push(spacer(40));
+    children.push(new Paragraph({ spacing: { before: 80, after: 80 }, children: [
+      new TextRun({ text: "Recurring Diagnoses (2+ misses)", font: FONT, size: 22, bold: true, color: BLUE }),
+    ]}));
+    const rColW = [6500, 2860];
+    const rRows = [row(["Diagnosis", "Miss Count"].map((h, i) => headerCell(h, rColW[i])))];
+    Object.entries(recurringDx).forEach(([name, count]) => {
+      rRows.push(row([
+        dataCell(name, rColW[0], DGRAY, false, AlignmentType.LEFT),
+        dataCell(`${count}\u00D7`, rColW[1], count >= 4 ? RED : count >= 2 ? AMBER : NAVY, count >= 4),
+      ]));
+    });
+    children.push(makeTable(rColW, rRows));
+  } else if (Object.keys(subcatDist).length > 0) {
+    // v2 fallback
     children.push(spacer(40));
     children.push(new Paragraph({ spacing: { before: 80, after: 80 }, children: [
       new TextRun({ text: "Subcategory Distribution of Misses", font: FONT, size: 22, bold: true, color: BLUE }),
@@ -632,19 +657,17 @@ if (concept) {
     children.push(makeTable(sColW, sRows));
   }
 
-  // Dynamic study note from actual data
-  const topSubcats = Object.entries(subcatDist).sort((a, b) => b[1] - a[1]);
-  const topDrugs = Object.entries(concept.drugs || {}).sort((a, b) => b[1] - a[1]);
-  const subcatNote = topSubcats.length >= 2
-    ? `${topSubcats[0][0]} (${topSubcats[0][1]} misses) and ${topSubcats[1][0]} (${topSubcats[1][1]} misses) ` +
-      `account for the majority of incorrect answers.`
+  // Dynamic study note
+  const topDrugsAll = Object.entries(concept.top_drugs || concept.drugs || {}).sort((a, b) => b[1] - a[1]);
+  const topDxAll    = Object.entries(concept.top_diagnoses || concept.diagnoses || {}).sort((a, b) => b[1] - a[1]);
+  const dxNote = topDxAll.length >= 2
+    ? `${topDxAll[0][0]} (${topDxAll[0][1]}\u00D7) and ${topDxAll[1][0]} (${topDxAll[1][1]}\u00D7) are the top recurring diagnoses in missed items.`
     : "";
-  const drugNote = topDrugs.length >= 1 && topDrugs[0][1] >= 3
-    ? ` The recurring drug cluster (${topDrugs.slice(0, 3).map(d => `${d[0]} ${d[1]}\u00D7`).join(", ")}) ` +
-      `may represent a single reviewable skill.`
+  const drugNote = topDrugsAll.length >= 1 && topDrugsAll[0][1] >= 2
+    ? ` Recurring drug cluster: ${topDrugsAll.slice(0, 3).map(d => `${d[0]} (${d[1]}\u00D7)`).join(", ")} — may represent a single reviewable pharmacology skill.`
     : "";
-  if (subcatNote) {
-    children.push(studyNote(subcatNote + drugNote));
+  if (dxNote) {
+    children.push(studyNote(dxNote + drugNote));
   }
 }
 
@@ -698,7 +721,8 @@ if (icd) {
   }
 
   // Top individual codes
-  const topCodes = (icd.icd10_clusters || []).filter(c => c.count >= 2);
+  // v3: miss_count; v2: count
+  const topCodes = (icd.icd10_clusters || []).filter(c => (c.miss_count || c.count || 0) >= 2);
   if (topCodes.length > 0) {
     children.push(spacer(120));
     children.push(new Paragraph({ spacing: { before: 80, after: 80 }, children: [
@@ -711,7 +735,7 @@ if (icd) {
       icRows.push(row([
         dataCell(c.code, icColW[0], NAVY, true, AlignmentType.LEFT),
         dataCell(c.description, icColW[1], DGRAY, false, AlignmentType.LEFT),
-        dataCell(`${c.count}\u00D7`, icColW[2], RED, true),
+        dataCell(`${c.miss_count || c.count}\u00D7`, icColW[2], RED, true),
         dataCell(c.chapter, icColW[3]),
       ]));
     });
@@ -736,6 +760,68 @@ if (icd) {
     (topCodesNote ? ` Top recurring codes: ${topCodesNote}.` : "") +
     ` Cross-reference these codes with the High-Yield Reading List for targeted review.`
   ));
+}
+
+
+// ════════════════════════════════════════════════════════════════════
+// 10. CLINICAL PATHWAY GAP MAP (v3 only)
+// ════════════════════════════════════════════════════════════════════
+if (pathways && pathways.status === "complete" && (pathways.pathway_gaps || []).length > 0) {
+  children.push(spacer(200));
+  children.push(sectionBar("🧬 CLINICAL PATHWAY GAP MAP"));
+  children.push(spacer(80));
+
+  children.push(new Paragraph({ spacing: { before: 40, after: 100 }, children: [
+    new TextRun({
+      text: "Missed questions mapped to clinical pathway roles via ICD-10. " +
+        "Shows not just WHERE you struggled but WHAT KIND of gap — " +
+        "treatment selection, monitoring, screening, or escalation.",
+      font: FONT, size: 18, color: MGRAY, italics: true }),
+  ]}));
+
+  const ROLE_COLORS = {
+    "first_line":           "1F3864",
+    "second_line":          "2E75B6",
+    "monitoring":           "276749",
+    "screening_prevention": "975A16",
+    "referral":             "595959",
+    "special_pops":         "553C9A",
+    "diagnosis":            "9B2C2C",
+  };
+
+  for (const gap of pathways.pathway_gaps) {
+    children.push(new Paragraph({ spacing: { before: 140, after: 20 }, children: [
+      new TextRun({ text: `${gap.icd10_code}`, font: FONT, size: 22, bold: true, color: NAVY }),
+      new TextRun({ text: `  ${gap.description || ""}`, font: FONT, size: 22, color: DGRAY }),
+      new TextRun({ text: `  •  ${gap.miss_count} missed question${gap.miss_count !== 1 ? "s" : ""}`, font: FONT, size: 18, color: RED, italics: true }),
+    ]}));
+
+    const roles = Object.entries(gap.pathway_roles || {});
+    if (roles.length > 0) {
+      const pColW = [2400, 1600, 4360];
+      const pRows = [row(["Pathway Role", "Guidelines", "Gap Type"].map((h, i) => headerCell(h, pColW[i])))];
+      roles.forEach(([role, count]) => {
+        const isDominant = role === gap.dominant_role;
+        const roleColor = ROLE_COLORS[role] || MGRAY;
+        const interp = isDominant ? `▶ ${gap.interpretation}` : "";
+        pRows.push(row([
+          dataCell(role.replace(/_/g, " "), pColW[0], roleColor, isDominant, AlignmentType.LEFT),
+          dataCell(`${count} articles`, pColW[1], isDominant ? RED : MGRAY, isDominant),
+          dataCell(interp, pColW[2], isDominant ? NAVY : LGRAY, false, AlignmentType.LEFT),
+        ]));
+      });
+      children.push(makeTable(pColW, pRows));
+    }
+  }
+
+  const topGap = pathways.pathway_gaps[0];
+  if (topGap) {
+    children.push(studyNote(
+      `Your most concentrated gap: ${topGap.icd10_code} (${topGap.description || ""}) — ` +
+      `${topGap.miss_count} missed questions pointing to a ${topGap.interpretation}. ` +
+      `Focus on ${(topGap.dominant_role || "").replace(/_/g, " ")} guidelines for this condition first.`
+    ));
+  }
 }
 
 // ────────────────────────────────────────────────────────────────────
@@ -797,14 +883,14 @@ children.push(sectionBar("\u270F TARGETED PRACTICE QUESTIONS \u2014 BY WEAK AREA
 children.push(spacer(60));
 
 children.push(new Paragraph({ spacing: { before: 40, after: 120 }, children: [
-  new TextRun({ text: "Questions drawn from the ITE Intelligence database, ranked by fit to each weak area. " +
+  new TextRun({ text: "Questions drawn from the ITE Intelligence database (ITE + AAFP BRQ), globally ranked by relevance to each weak area. " +
     "Minimum 5 per weak section. Correct answers highlighted with full explanations. " +
     "A separate exam version (no answers) is provided as a companion document.",
     font: FONT, size: 18, color: MGRAY, italics: true }),
 ]}));
 
 // Match tier labels for question provenance
-const TIER_LABELS = { 1: "Direct Match", 2: "Subcategory Match", 3: "ICD-10 Sibling" };
+const TIER_LABELS = { 1: "Direct Match", 2: "ICD-10 Sibling", 3: "Vector Match" };
 const TIER_COLORS = { 1: GREEN, 2: BLUE, 3: MGRAY };
 
 let qNum = 0;
@@ -831,13 +917,15 @@ for (const target of targetOrder) {
       new TextRun({ text: `  ${q.qid}`, font: FONT, size: 18, color: MGRAY }),
     ]}));
 
-    const meta = [q.body_system_merged, q.blueprint, q.subcategory].filter(Boolean).join("  |  ");
+    const meta = [q.body_system_merged, q.blueprint].filter(Boolean).join("  |  ");
+    const sourceLabel = q.source_label || (q.source_bank === "AAFP" ? "AAFP BRQ" : `ITE ${q.exam_year || ""}`.trim());
     const tierLabel = TIER_LABELS[q.match_tier] || "";
     const tierColor = TIER_COLORS[q.match_tier] || MGRAY;
     children.push(new Paragraph({ spacing: { before: 0, after: 60 },
       border: { bottom: { style: BorderStyle.SINGLE, size: 1, color: "D6E4F7", space: 4 } },
       children: [
         new TextRun({ text: meta, font: FONT, size: 16, color: BLUE }),
+        ...(sourceLabel ? [new TextRun({ text: `  \u2022  ${sourceLabel}`, font: FONT, size: 16, color: BLUE, bold: true })] : []),
         ...(tierLabel ? [new TextRun({ text: `  \u2022  ${tierLabel}`, font: FONT, size: 16, color: tierColor, italics: true })] : []),
       ],
     }));

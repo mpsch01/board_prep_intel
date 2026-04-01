@@ -44,11 +44,32 @@ sys.path.insert(0, str(pipeline_dir))
 sys.path.insert(0, str(pipeline_dir / "v1"))
 
 from ite_parser import load_config, parse_blueprint, parse_bodysystem, merge_results, export_json
-from ite_analyzer import analyze, export_analysis
-from ite_report_builder import build_html_report, build_full_docx, build_questions_docx
 
-# Import v2 analyzer
-from ite_analyzer_v2 import analyze_v2
+# Import v3 analyzer (default) and v2 (legacy --v2-only flag)
+from ite_analyzer_v3 import analyze_v3
+
+# v2 analyzer (DEPRECATED — kept for --v2-only flag)
+try:
+    from ite_analyzer_v2 import analyze_v2
+except ImportError:
+    analyze_v2 = None
+
+# v1 modules may not exist — safe fallbacks
+try:
+    from ite_analyzer import analyze, export_analysis
+except ImportError:
+    analyze = None
+    def export_analysis(data: dict, path: str):
+        import json
+        with open(path, "w", encoding="utf-8") as _f:
+            json.dump(data, _f, indent=2, default=str)
+
+try:
+    from ite_report_builder import build_html_report, build_full_docx, build_questions_docx
+except ImportError:
+    def build_html_report(analysis, path): raise RuntimeError("v1 report builder not found — use v3 path")
+    def build_full_docx(analysis, path): raise RuntimeError("v1 report builder not found — use v3 path")
+    def build_questions_docx(analysis, path): raise RuntimeError("v1 report builder not found — use v3 path")
 
 
 def parse_plugins_arg(plugins_arg: str) -> list:
@@ -91,7 +112,7 @@ def build_v2_reports(analysis: dict, output_dir: Path, analysis_json_path: str):
             if result.stderr:
                 print(f"  stderr: {result.stderr}")
         else:
-            print(f"  ✓ Report builder completed successfully")
+            print(f"  [OK] Report builder completed successfully")
             if result.stdout:
                 print(f"  {result.stdout}")
     except FileNotFoundError:
@@ -131,6 +152,11 @@ def main():
         "--v1-only",
         action="store_true",
         help="Fall back to v1 analyzer + v1 report builder (backward compat)"
+    )
+    parser.add_argument(
+        "--v2-only",
+        action="store_true",
+        help="Use deprecated v2 analyzer (subcategory crash risk — for reference only)"
     )
     args = parser.parse_args()
 
@@ -185,20 +211,18 @@ def main():
     print("STAGE 2: Performance Analysis + Question Matching")
     print("=" * 60)
 
+    pgy_level_map = {1: "PGY1", 2: "PGY2", 3: "PGY3", 4: "All"}
+    pgy_str = pgy_level_map[args.pgy_level]
+
     if args.v1_only:
         print("\n--v1-only flag set, using v1 analyzer...")
         analysis = analyze(merged, args.db)
         print("(v1 analyzer used)")
-    else:
-        print("\nUsing v2 analyzer with:")
+    elif args.v2_only:
+        print("\n--v2-only flag set, using v2 analyzer (DEPRECATED)...")
         plugins = parse_plugins_arg(args.plugins)
-        print(f"  PGY Level: {args.pgy_level}")
+        print(f"  PGY Level: {pgy_str}")
         print(f"  Plugins: {plugins if plugins else 'none'}")
-
-        # Convert PGY level to string for v2
-        pgy_level_map = {1: "PGY1", 2: "PGY2", 3: "PGY3", 4: "All"}
-        pgy_str = pgy_level_map[args.pgy_level]
-
         analysis = analyze_v2(
             merged,
             args.db,
@@ -206,7 +230,19 @@ def main():
             plugins=plugins,
             question_count=10
         )
-        print("(v2 analyzer used)")
+        print("(v2 analyzer used — DEPRECATED)")
+    else:
+        print("\nUsing v3 analyzer:")
+        print(f"  PGY Level: {pgy_str}")
+        print(f"  Practice questions: {20}")
+        print(f"  Banks: ITE + AAFP BRQ")
+        analysis = analyze_v3(
+            merged,
+            args.db,
+            pgy_level=pgy_str,
+            question_count=20,
+        )
+        print("(v3 analyzer used)")
 
     perf = analysis.get("performance", {})
     overall = perf.get("overall", {})
@@ -281,34 +317,34 @@ def main():
     print("\n[Report 1/3] Building HTML interactive report (v1)...")
     try:
         build_html_report(analysis, str(html_path))
-        print(f"  ✓ {html_path}")
+        print(f"  [OK] {html_path}")
     except Exception as e:
-        print(f"  ⚠ v1 HTML report skipped: {e}")
+        print(f"  WARNING v1 HTML report skipped: {e}")
         print(f"    (v2 DOCX reports are the primary output — v1 HTML is supplementary)")
 
     if args.v1_only:
         # Fall back to v1 DOCX builders
         print("\n[Report 2/3] Building full DOCX report (v1)...")
         build_full_docx(analysis, str(docx_path))
-        print(f"  ✓ {docx_path}")
+        print(f"  [OK] {docx_path}")
 
         print("\n[Report 3/3] Building questions-only DOCX (v1)...")
         build_questions_docx(analysis, str(questions_path))
-        print(f"  ✓ {questions_path}")
+        print(f"  [OK] {questions_path}")
     else:
         # Call v2 Node.js report builder
         print("\n[Report 2/3 & 3/3] Building v2 DOCX reports via Node.js...")
         try:
             build_v2_reports(analysis, output_dir, str(json_v2_path))
-            print(f"  ✓ {docx_path}")
-            print(f"  ✓ {questions_path}")
+            print(f"  [OK] {docx_path}")
+            print(f"  [OK] {questions_path}")
         except Exception as e:
             print(f"  WARNING: v2 report generation failed: {e}")
             print("  Falling back to v1 DOCX builders...")
             build_full_docx(analysis, str(docx_path))
             build_questions_docx(analysis, str(questions_path))
-            print(f"  ✓ {docx_path} (v1 fallback)")
-            print(f"  ✓ {questions_path} (v1 fallback)")
+            print(f"  [OK] {docx_path} (v1 fallback)")
+            print(f"  [OK] {questions_path} (v1 fallback)")
 
     # ========================================================================
     # SUMMARY

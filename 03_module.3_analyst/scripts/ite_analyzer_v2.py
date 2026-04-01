@@ -1,5 +1,19 @@
 #!/usr/bin/env python3
 """
+##############################################################################
+# DEPRECATED — superseded by ite_analyzer_v3.py
+#
+# Do not use for new analysis. Kept for reference and v1-fallback compatibility.
+# Key issues in this file:
+#   - subcategory column was dropped from questions table — Layer 2 will crash
+#   - exam year hardcoded to 2025 in multiple places
+#   - AAFP question bank not connected
+#   - Practice question Tier 2 uses dropped subcategory fingerprint
+#   - ICD-10 map uses indirect qid_art_xref chain (slower, less coverage)
+#
+# Use ite_analyzer_v3.py + ite_analyze_v2.py (entry point) instead.
+##############################################################################
+
 ITE Score Analyzer v2 — Turbocharged Edition
 
 Multi-layer analysis engine with plugin architecture.
