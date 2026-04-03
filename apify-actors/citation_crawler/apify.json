@@ -1,0 +1,1 @@
+{ "name": "Citation Crawler", "version": "0.1.0", "description": "A crawler for citations.", "main": "src/main.js", "scripts": { "start": "node src/main.js" }, "dependencies": { "apify": "^0.0.0" }, "license": "MIT" }
