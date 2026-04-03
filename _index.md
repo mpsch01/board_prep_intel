@@ -1,6 +1,6 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-03-29 (BATON 024)
+**Last Updated:** 2026-04-03 (BATON 034)
 **Status:** Current — blueprint 100% filled (1,629/1,629); aafp_question_icd10 relevance normalized; unified_keyword_extractor.py; blueprint_emergent_pass.py
 
 > This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
@@ -20,7 +20,7 @@
 ├── .gitattributes / .gitignore
 │
 ├── 00_database/                           ← source of truth (DB + supporting data)
-├── 01_module.1_warehouse/                 ← M1 PDF library (4 tiers, 404 PDFs) + AAFP BRQ warehouse + build/maintain scripts
+├── 01_module.1_warehouse/                 ← M1 PDF library (4 tiers, ~414 PDFs) + AAFP BRQ warehouse + build/maintain scripts
 ├── 02_module.2_processor/                 ← M2 pipeline scripts + source inputs
 ├── 03_module.3_analyst/                   ← M3 score analysis + ICD-10 + pathways
 ├── 04_module.4_sandbox/                   ← M4 experiments (_DELETE_THESE_FROM_WINDOWS.txt — cleanup checklist)
@@ -100,7 +100,7 @@
 ### `01_module.1_warehouse/` — PDF Library (404 total) + AAFP BRQ Data + Scripts
 ```
 01_module.1_warehouse/
-├── VC_fail/          ← 146 PDFs (VC gate failed — destined for local_lite)
+├── VC_fail/          ← ~156 PDFs (VC gate failed — destined for local_lite; 37 AAFP acquisition PDFs still manual pending)
 ├── 01_local_lite/    ← 117 PDFs (VC_fail + fully enriched)
 ├── VC_pass/          ← 94 PDFs (VC gate passed — destined for right_click)
 ├── 03_right_click/   ← 71 PDFs (VC_pass + fully enriched)
@@ -142,12 +142,14 @@
 │       ├── preprocess_concept_tags.py     ← concept_tags via API (moved from M2 2026-03-27)
 │       ├── rebuild_acquisition_list.py
 │       ├── rename_tier_labels_in_db.py
-│       └── rename_to_codon.py
+│       ├── rename_to_codon.py
+│       ├── download_aafp_acquisitions.py  ← AAFP acquisition PDF downloader (OA API + E-Fetch fallback)
+│       └── download_pmc_actor_batch.py    ← NEW (BATON 034) — one-off PMC batch downloader (actor-discovered URLs)
 ├── has_extraction_audit.txt
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
 ```
-*M1 scripts: build/ = 9 scripts, maintain/ = 16 scripts*
+*M1 scripts: build/ = 9 scripts, maintain/ = 17 scripts*
 
 ---
 

@@ -62,14 +62,14 @@ SELECT * FROM questions WHERE exam_years = '[2020, 2022]';
 ### 4. No foreign key enforcement
 SQLite FK constraints are OFF by default and not enforced in this DB. Orphaned references in `question_ref_pairs` can exist. Always use explicit JOINs and check for NULLs.
 
-### 5. extraction_status has mixed values
-The `articles.extraction_status` field has two states: `extracted` (337 articles, backfilled 2026-03-14 via `backfill_extraction_status.py`) and `pending` (1,060 articles). However, this field tracks whether the article has been *extracted to JSON*, not whether it has been *enriched*. Actual enrichment status is tracked in the JSON files themselves (presence of `ite_intelligence{}` block). Do not rely on this field alone for enrichment coverage — cross-reference with the enriched JSON directory.
+### 5. extraction_status tracks extraction, not enrichment
+The `articles.extraction_status` field has two states: `extracted` or `pending`. This tracks whether the article has been *extracted to JSON*, not whether it has been *enriched* (Claude API). Actual enrichment status is tracked in the JSON files themselves (presence of `ite_intelligence{}` block). Do not rely on this field alone for enrichment coverage — cross-reference with the enriched JSON directory.
 
 ### 6. Codon filename convention isn't universal
-Only 146 PDFs use the `#@#ART-NNNN@#@` codon format. 70 PDFs retain their original filenames and have no DB match via codon. The enricher v4 will fall back to Strategy 1 (clean_ref) for these, but most will be `no_match` unless their JSON has a `clean_ref` field populated.
+The majority of PDFs now use the `#@#ART-NNNN@#@` codon format. Some PDFs retain original filenames (pre-project library) and have no DB match via codon. The enricher v4 will fall back to Strategy 1 (clean_ref) for these, but most will be `no_match` unless their JSON has a `clean_ref` field populated. Check `articles.codon_filename` column to see which articles have a codon-formatted filename.
 
 ### 7. concept_tags is 100% populated but quality varies
-All 1,189 questions have `concept_tags` populated by Claude, but:
+All 1,629 ITE questions and all 1,221 AAFP questions have `concept_tags` populated by Claude, but:
 - Some `diagnoses` arrays may include very broad terms ("infection")
 - Some `drugs` entries mix brand names, generics, and drug classes
 - `thresholds` may be empty for non-numeric questions
@@ -111,10 +111,11 @@ SELECT exam_year, body_system_merged, COUNT(*) FROM questions GROUP BY exam_year
 ```
 
 ### 12. qid_art_xref row count differs from question_ref_pairs
-`qid_art_xref` has 1,818 rows vs. `question_ref_pairs` with 2,069. The xref table excludes unmatched/partial pairs and joins on `article_id` rather than `clean_ref`. Use the appropriate table for your query — xref for clean joins by article_id, pairs for full match metadata.
+`qid_art_xref` has 2,470 rows vs. `question_ref_pairs` with 2,673. The xref table excludes unmatched/partial pairs and joins on `article_id` rather than `clean_ref`. Use the appropriate table for your query — xref for clean joins by article_id, pairs for full match metadata.
 
 ## Performance Notes
 
-- The DB is small (1,397 articles, 1,189 questions) — no indexes are defined and none are needed. Full table scans are instant.
-- Vector queries require the `sqlite-vec` extension and are the only potentially slow operations.
+- The DB is moderate-sized (1,985 articles, 1,629 ITE + 1,221 AAFP questions, ~30 tables) — no indexes are defined and none are currently needed. Full table scans on all core tables are fast.
+- sqlite-vec virtual table queries require the `sqlite-vec` extension loaded and are the only potentially slow operations.
 - `LIKE '%term%'` on `concept_tags` is fine at this scale — no need for FTS.
+- BLOB embedding comparisons (icd10_vec, article_icd10_vec, question_icd10_vec) require fetching and decoding in Python — not SQL-native. Use numpy for cosine similarity.

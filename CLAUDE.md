@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_033_20260403_citation_crawler_scaffold.md` |
+| Active BATON | `BATON_active_034_20260403_playwright_upgrade_deferred_a_partial.md` |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -62,15 +62,15 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_icd10_vec | 1,674 rows — ✅ rebuilt 2026-04-01 |
 | question_icd10_vec | 2,733 rows — ✅ rebuilt 2026-04-01 |
 | clinical_pathways | 4,020 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 |
-| PDFs | 404 across 4 tiers (49 new articles awaiting PDF download) |
+| PDFs | ~414 across 4 tiers (VC_fail ~156; 37 AAFP articles still awaiting manual PDF download) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
-| M1 scripts | 9 build + 16 maintain + aafp_brq/scraper (self-contained build sequence) |
+| M1 scripts | 9 build + 17 maintain + aafp_brq/scraper (self-contained build sequence) |
 | M2 scripts | 66 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
 | M3 scripts | 9 Python + 2 JS + 2 JSON config |
-| Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch01~citation-crawler`), build 0.1.1 |
+| Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest `e26a748` — clean |
+| Git branch | `main`, latest `e26a748` → GIT-PENDING (playwright upgrade + download scripts) |
 | GitHub remote | `https://github.com/mpsch01/project-overhaul` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -108,9 +108,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 033, 2026-04-03)
-1. **DEFERRED-A** — use citation_crawler (deterministic mode, `articleUrls`) to source PDF links for ART-1938–1986; download → codon rename → VC gate. Actor ID: `rh50nQRP7BupbUF64`
-2. **DEFERRED-B** — `update_citation_trends.py` after DEFERRED-A
-3. **DEFERRED-B** — `update_citation_trends.py` after DEFERRED-A
+## Next Steps (as of BATON 034, 2026-04-03)
+1. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → VC_fail
+2. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled
+3. **DEFERRED-B** — `update_citation_trends.py` after backfill complete
 4. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`)
 5. **DEFERRED-D** — 229 citation gap articles (88 AFP batch-downloadable)

@@ -12,12 +12,15 @@ Maps each (article, ICD-10 code) pair to a clinical pathway role, defining what 
 | `icd10_code` | TEXT | Specific ICD-10 code (e.g., E11.9) |
 | `icd10_desc` | TEXT | Human-readable description |
 | `pathway_role` | TEXT | Clinical function (7 values — see below) |
-| `engine_type` | TEXT | Article's engine classification |
+| `blueprint` | TEXT | ABFM blueprint category from linked questions |
+| `source_bank` | TEXT | `ITE` (2,179), `both` (1,630), `AAFP` (211) — which question bank(s) drive this pathway |
 | `relevance` | TEXT | primary / secondary / related (from article_icd10) |
-| `confidence` | TEXT | Match confidence level |
+| `confidence` | TEXT | All rows currently `high` |
 
-**Row count**: 4,528
+**Row count**: 4,020 (rebuilt 2026-03-31 — both ITE and AAFP banks, articles ART-0002–ART-1985)
 **Built by**: `build_clinical_pathways.py` (zero API calls)
+
+**Note**: The `engine_type` column is on the `articles` table, not on `clinical_pathways`. To get engine_type for pathway queries, JOIN to `articles` on `article_id`.
 
 ## Pathway Roles
 
@@ -31,19 +34,19 @@ Maps each (article, ICD-10 code) pair to a clinical pathway role, defining what 
 | `referral` | diagnostic_guideline (related) | When to refer, specialist thresholds, interdisciplinary handoff criteria |
 | `special_pops` | chronic/acute/rct (related) | Pediatric, geriatric, pregnant, renal-adjusted dosing, comorbidity modifications |
 
-## Articles.engine_type Column
+## articles.engine_type (Join from articles table)
 
-Added in Layer 3 build. Classifies each article into one of 5 engine types:
+Classifies each article's clinical function. Lives in the `articles` table — join `cp → articles` to access:
 
 | Engine Type | Count | Classification Source |
 |-------------|-------|---------------------|
-| `preventive_guideline` | ~200 | Screening/Prevention subcategories |
-| `diagnostic_guideline` | ~250 | Diagnosis/Workup/Interpretation/Pathophysiology subcategories |
-| `chronic_guideline` | ~350 | Prognosis/Counseling + Pharmacology/Management with chronic categories |
-| `acute_protocol` | ~300 | Treatment + Pharmacology/Management with acute categories |
-| `rct` | ~250 | RCT source types (NEJM, JAMA, Lancet, BMJ, etc.) |
+| `acute_protocol` | 1,169 | Treatment + Pharmacology/Management + acute categories |
+| `chronic_guideline` | 284 | Prognosis/Counseling + Pharmacology/Management + chronic categories |
+| `preventive_guideline` | 268 | Screening/Prevention subcategories |
+| `diagnostic_guideline` | 237 | Diagnosis/Workup/Interpretation/Pathophysiology subcategories |
+| `rct` | 27 | RCT source types (NEJM, JAMA, Lancet, BMJ, etc.) |
 
-1,366 articles classified, 31 NULL (non-cited stubs with no linked questions).
+All 1,985 articles have engine_type populated. Classified deterministically from ABFM subcategories + source_type — zero API cost.
 
 ## ENGINE_ROLE_MAP
 
@@ -97,12 +100,22 @@ ORDER BY roles_covered DESC, n_articles DESC
 LIMIT 20;
 ```
 
-### Pathway role distribution by engine type
+### Pathway role distribution by engine type (via articles join)
 ```sql
-SELECT engine_type, pathway_role, COUNT(*) AS n
-FROM clinical_pathways
-GROUP BY engine_type, pathway_role
-ORDER BY engine_type, n DESC;
+SELECT a.engine_type, cp.pathway_role, COUNT(*) AS n
+FROM clinical_pathways cp
+JOIN articles a ON cp.article_id = a.article_id
+GROUP BY a.engine_type, cp.pathway_role
+ORDER BY a.engine_type, n DESC;
+```
+
+### Source bank distribution for a condition
+```sql
+SELECT cp.source_bank, cp.pathway_role, COUNT(*) AS n_articles
+FROM clinical_pathways cp
+WHERE cp.icd10_code LIKE 'I10%'
+GROUP BY cp.source_bank, cp.pathway_role
+ORDER BY cp.pathway_role, cp.source_bank;
 ```
 
 ## Readable CSV Files

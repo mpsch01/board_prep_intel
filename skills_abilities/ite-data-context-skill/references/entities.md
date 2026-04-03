@@ -91,13 +91,20 @@ articles (1,985)
     │
     ├── article_id ── aafp_qid_art_xref (864) ──── aafp_qid ─── aafp_questions (1,221)
     │
-    ├── article_id ── article_icd10 (3,855) ──────── icd10_code ─── icd10_code_xref (1,006) ─── icd10_rollup (614)
+    ├── article_id ── article_icd10 (4,020) ──────── icd10_code ─── icd10_code_xref (1,006) ─── icd10_rollup (614)
     │
-    └── article_id ── clinical_pathways (3,093) ──── (pathway_role + icd10_code)
+    └── article_id ── clinical_pathways (4,020) ──── (pathway_role + source_bank + icd10_code)
+
+questions / ITE (1,629)
+    └── qid ── question_icd10 (5,284) ── icd10_code ─── icd10_code_xref ─── icd10_rollup
 
 aafp_questions (1,221)  ← self-contained: stem, choices, correct_letter, correct_text, explanation, concept_tags
-    ├── aafp_qid ── aafp_question_icd10 (4,240) ── icd10_code ─── icd10_code_xref ─── icd10_rollup
+    ├── aafp_qid ── aafp_question_icd10 (4,753) ── icd10_code ─── icd10_code_xref ─── icd10_rollup
     └── aafp_qid ── aafp_citations (1,600) ──────── article_id ─── articles
+
+Vector/embedding tables (no sqlite-vec extension needed for icd10_vec family):
+    article_vec (1,985) · question_vec (1,629) · aafp_question_vec (1,221)  ← require sqlite-vec
+    icd10_vec (2,219) · article_icd10_vec (1,757) · question_icd10_vec (2,747)  ← plain BLOB tables
 ```
 
 ## Article ICD-10 Tags
@@ -105,8 +112,17 @@ aafp_questions (1,221)  ← self-contained: stem, choices, correct_letter, corre
 **What it represents**: ICD-10 diagnostic codes assigned to each article via Anthropic Batch API (Layer 1). Each article can have primary, secondary, and related codes.
 
 **Primary table**: `article_icd10`
-**Row count**: 3,855
+**Row count**: 4,020
 **Key columns**: `article_id` (FK → articles), `icd10_code`, `icd10_desc`, `relevance` (primary/secondary/related)
+
+## ITE Question ICD-10 Tags
+
+**What it represents**: ICD-10 codes assigned to each ITE question — parallel to article_icd10 but for the question bank.
+
+**Primary table**: `question_icd10`
+**Row count**: 5,284 (covers 1,512/1,629 ITE questions = 92.8%)
+**Key columns**: `qid` (PK1), `icd10_code` (PK2), `icd10_desc`, `relevance` (primary/secondary/related)
+**Relevance distribution**: primary=2,725 / secondary=1,627 / related=932
 
 ## ICD-10 Condensation Crosswalk
 
@@ -123,7 +139,7 @@ aafp_questions (1,221)  ← self-contained: stem, choices, correct_letter, corre
 **What it represents**: Maps each (article, ICD-10 code) pair to a clinical pathway role — what function the article serves for that condition (screening, diagnosis, first-line treatment, etc.). Built at zero cost from ABFM subcategory data + engine-type classification.
 
 **Primary table**: `clinical_pathways`
-**Row count**: 3,093
+**Row count**: 4,020
 **Key columns**:
 
 | Column | Type | Description |
@@ -132,9 +148,10 @@ aafp_questions (1,221)  ← self-contained: stem, choices, correct_letter, corre
 | `icd10_code` | TEXT | Specific ICD-10 code |
 | `icd10_desc` | TEXT | Code description |
 | `pathway_role` | TEXT | One of 7 roles (see below) |
-| `engine_type` | TEXT | Article's engine classification |
+| `blueprint` | TEXT | ABFM blueprint category from linked questions |
+| `source_bank` | TEXT | `ITE`, `AAFP`, or `both` — which question bank drives this pathway |
 | `relevance` | TEXT | primary/secondary/related (from article_icd10) |
-| `confidence` | TEXT | Match confidence level |
+| `confidence` | TEXT | All rows currently `high` |
 
 **Pathway roles**:
 - `screening_prevention`: Screening criteria, risk assessment tools, prevention protocols
@@ -145,10 +162,11 @@ aafp_questions (1,221)  ← self-contained: stem, choices, correct_letter, corre
 - `referral`: When to refer out, specialist criteria
 - `special_pops`: Pediatric, geriatric, pregnant, renal-adjusted dosing, comorbidity modifications
 
-**Articles.engine_type column** (added in Layer 3):
-- `preventive_guideline`, `diagnostic_guideline`, `chronic_guideline`, `acute_protocol`, `rct`
-- 1,366 articles classified, 31 NULL (non-cited stubs)
+**articles.engine_type column** (classifies each article's clinical function):
+- `acute_protocol` (1,169), `chronic_guideline` (284), `preventive_guideline` (268), `diagnostic_guideline` (237), `rct` (27)
+- All 1,985 articles have engine_type populated
 - Classified deterministically from ABFM subcategories + source_type + categories — zero API cost
+- Note: engine_type lives in the `articles` table, not in `clinical_pathways`
 
 **Join patterns**:
 ```sql
@@ -204,7 +222,7 @@ ORDER BY cp.pathway_role, q.exam_year;
 
 **AAFP Question ICD-10 Tags**:
 - **Table**: `aafp_question_icd10`
-- **Row count**: 4,240 rows
+- **Row count**: 4,753 rows (covers 1,210/1,221 AAFP questions)
 - **Key columns**: `aafp_qid`, `icd10_code`, `icd10_desc`, `relevance` (primary/secondary/related)
 
 **Key query — find ITE + AAFP questions covering the same article**:
@@ -220,6 +238,15 @@ GROUP BY a.article_id
 ORDER BY (ite_citations + aafp_citations) DESC
 LIMIT 20;
 ```
+
+## PubMed PMID Cache
+
+**What it represents**: Seed table for Intelligence 2.0 Layer 2 (article currency). Maps citation_id strings from AAFP citation data to PubMed PMIDs for freshness checking.
+
+**Primary table**: `pubmed_pmid_cache`
+**Row count**: 344
+**Key columns**: `citation_id` (PK, e.g., `AAFP-49863-C1`), `pmid` (TEXT), `lookup_date`, `mesh_count`
+**Use**: Join to `aafp_citations.citation_id` to find the PubMed record for any matched article.
 
 ## Citation Trend Tracking
 

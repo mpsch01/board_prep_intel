@@ -12,9 +12,8 @@
 |--------|------|-------------|-------|
 | `qid` | TEXT | Question ID: `QID-2020-0001` | PK. Per-year numbering (resets each year). |
 | `exam_year` | INTEGER | Exam year: 2018–2025 | 8 years of ITE data. |
-| `body_system` | TEXT | ABFM body system category | e.g., Cardiovascular, Respiratory, Musculoskeletal. |
-| `subcategory` | TEXT | Clinical subcategory | e.g., Pharmacology, Prevention, Diagnosis. |
-| `blueprint` | TEXT | ABFM blueprint category | 1,629/1,629 (100%) populated. Gold Standard for 2024-2025; v2 classifier (batched, few-shot) for 2020-2023; v1 classifier for 2018-2019. Values: "Acute Care and Diagnosis", "Chronic Care Management", "Emergent and Urgent Care", "Foundations of Care", "Preventive Care". |
+| `body_system` | TEXT | ABFM body system category | e.g., Cardiovascular, Respiratory, Musculoskeletal. Original as-released by ABFM. |
+| `blueprint` | TEXT | ABFM blueprint category | 1,629/1,629 (100%) populated. Gold Standard for 2024-2025; v2 classifier (batched, few-shot) for 2020-2023; v1 classifier for 2018-2019. Values: "Acute Care and Diagnosis" (43.5%), "Chronic Care Management" (24.7%), "Emergent and Urgent Care" (13.1%), "Preventive Care" (12.6%), "Foundations of Care" (6.0%). |
 | `question_text` | TEXT | Full question stem | Can be long (500+ chars). Includes clinical vignette. |
 | `choices` | TEXT | JSON array of answer choices | `[{"letter": "A", "text": "..."}, ...]`. Usually 4-5 choices. |
 | `correct_letter` | TEXT | Correct answer letter | "A", "B", "C", "D", or "E". |

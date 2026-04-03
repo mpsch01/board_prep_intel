@@ -3,7 +3,7 @@
 **Location**: `ite_intelligence.db` → `articles`
 **Description**: One row per unique clinical reference. Contains parsed metadata, tier classification, citation stats, and preprocessed filename components. All fields are populated at DB build time.
 **Primary Key**: `clean_ref` (TEXT)
-**Row Count**: 1,397
+**Row Count**: 1,985
 **Update Frequency**: Rebuilt via `rebuild_ite_db_v2.py` when source data changes.
 
 ## Columns
@@ -28,30 +28,37 @@
 | `canonical_filename` | TEXT | Clean filename stem | `Smith_Moore_2019`. Apostrophes stripped. |
 | `codon_filename` | TEXT | Full codon filename | `Smith_Moore_2019#@#ART-0470@#@.pdf` |
 | `citation_display` | TEXT | Formatted citation for DOCX | Truncated to ~180 chars with ellipsis if needed. |
-| `extraction_status` | TEXT | Pipeline status | Mixed: 337 `extracted` (backfilled 2026-03-14), 1,060 `pending`. Tracks JSON extraction, not enrichment. |
+| `extraction_status` | TEXT | Pipeline status | `extracted` or `pending`. Tracks JSON extraction, not enrichment completion. |
+| `engine_type` | TEXT | Article's clinical function | `acute_protocol` (1,169), `chronic_guideline` (284), `preventive_guideline` (268), `diagnostic_guideline` (237), `rct` (27). Classified at DB build time from subcategories + source_type. |
 
 ## source_type Distribution
 
 | source_type | Count |
 |-------------|-------|
-| AFP | 443 |
-| Guideline/Org | 274 |
-| Other Journal | 263 |
-| Other | 131 |
-| NEJM | 71 |
-| Guideline | 38 |
-| stub | 30 |
-| JAMA | 22 |
-| Annals | 21 |
-| Pediatrics | 19 |
+| AFP | 700 |
+| Other Journal | 649 |
+| Guideline/Org | 233 |
+| NEJM | 91 |
+| JAMA | 76 |
+| Pediatrics | 48 |
+| Annals | 43 |
+| Circulation | 38 |
+| Textbook | 34 |
+| BMJ | 32 |
+| Chest | 18 |
+| Lancet | 14 |
+| Cochrane | 9 |
 
-## tier Distribution
+## tier Distribution (Pipeline Staging Tiers)
 
-| tier | Count |
-|------|-------|
-| Supplementary | 727 |
-| Core | 650 |
-| Must-Read | 20 |
+| tier | Count | Meaning |
+|------|-------|---------|
+| VC_fail | 1,448 | Failed VC gate — not in the 352 high-yield AAFP VC citations |
+| VC_pass | 362 | Passed VC gate — in the 352 VC citations, awaiting full enrichment |
+| local_lite | 117 | Completed (VC_fail + DOCX exists) |
+| right_click | 58 | Completed (VC_pass + DOCX exists) — highest priority tier |
+
+**Note**: These are pipeline staging tiers, not priority rankings. The VC gate (`key_data_files/session_hy_inserts_v7.json`, 352 citations) is the sole criterion for VC_pass vs. VC_fail. `right_click` and `local_lite` are the two "M2 completed" tiers — article has been fully extracted, enriched, and has a DOCX output.
 
 ## Sample Queries
 

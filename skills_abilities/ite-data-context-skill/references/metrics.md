@@ -17,16 +17,21 @@
 
 ## Tier Classification
 
-**Definition**: Priority ranking of an article for board preparation.
+**Definition**: Pipeline staging tier for each article — reflects both VC gate status and whether the article has completed the full enrichment pipeline.
 **Source**: `articles.tier` (TEXT)
 **Values**:
 | Tier | Count | Meaning |
 |------|-------|---------|
-| Must-Read | 20 | Highest-yield — cited frequently across multiple years |
-| Core | 650 | Important — cited at least once, strong exam signal |
-| Supplementary | 727 | Lower priority — single citation or auto-assigned |
+| VC_fail | 1,448 | Failed VC gate — not in the 352 high-yield AAFP VC citations; awaiting pipeline |
+| VC_pass | 362 | Passed VC gate — in the 352 VC citations; awaiting full pipeline |
+| local_lite | 117 | Pipeline complete: VC_fail + DOCX exists |
+| right_click | 58 | Pipeline complete: VC_pass + DOCX exists — highest priority tier |
 
-**Assignment**: Mix of manual curation and auto-assignment (see `articles.auto_assigned`).
+**VC gate**: `key_data_files/session_hy_inserts_v7.json` (352 citations from the AAFP Board Prep Video Course). Passing the VC gate is the **sole criterion** for VC_pass vs. VC_fail. DB membership alone is not sufficient for right_click status.
+
+**Completed tiers**: `right_click` and `local_lite` mean the article has been extracted, enriched (Claude API), and has a DOCX output in the DOCX library. These are "M2 complete" articles.
+
+**Note**: These tiers replaced the old Must-Read/Core/Supplementary system during the Project Overhaul.
 
 ## TF-IDF Concept Scoring
 
@@ -79,7 +84,9 @@
 **Values**:
 | Status | Count | Meaning |
 |--------|-------|---------|
-| matched | 1,316 | Clean exact match between question citation and article |
-| fuzzy_matched | 409 | Fuzzy string matching resolved the link |
-| partial | 196 | Partial match — some ambiguity remains |
-| unmatched | 148 | Could not confidently link — may be noise |
+| matched | 1,698 | Clean exact match between question citation and article |
+| new | 389 | New pair added in most recent rebuild cycle |
+| unmatched | 246 | Could not confidently link — may be noise |
+| fuzzy_matched | 154 | Fuzzy string matching resolved the link |
+| fuzzy | 120 | Fuzzy match (legacy label from earlier build) |
+| partial | 66 | Partial match — some ambiguity remains |
