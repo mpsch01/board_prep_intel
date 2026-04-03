@@ -68,7 +68,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | M1 scripts | 9 build + 16 maintain + aafp_brq/scraper (self-contained build sequence) |
 | M2 scripts | 66 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
 | M3 scripts | 9 Python + 2 JS + 2 JSON config |
-| Apify actor | `apify-actors/citation_crawler/` — scaffold built (SDK v3 + Crawlee); needs `apify push` |
+| Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch01~citation-crawler`), build 0.1.1 |
 | Next ART-ID | ART-1987 |
 | Git branch | `main`, latest `e26a748` — clean |
 | GitHub remote | `https://github.com/mpsch01/project-overhaul` (private) |
@@ -109,8 +109,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 ---
 
 ## Next Steps (as of BATON 033, 2026-04-03)
-1. **Deploy citation_crawler** — `apify push` from `apify-actors/citation_crawler/` → actor ID `mpsch01~citation-crawler`
-2. **DEFERRED-A** — use citation_crawler (deterministic mode) to source PDF links for ART-1938–1986; download → codon rename → VC gate
+1. **DEFERRED-A** — use citation_crawler (deterministic mode, `articleUrls`) to source PDF links for ART-1938–1986; download → codon rename → VC gate. Actor ID: `rh50nQRP7BupbUF64`
+2. **DEFERRED-B** — `update_citation_trends.py` after DEFERRED-A
 3. **DEFERRED-B** — `update_citation_trends.py` after DEFERRED-A
 4. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`)
 5. **DEFERRED-D** — 229 citation gap articles (88 AFP batch-downloadable)
