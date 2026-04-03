@@ -1,639 +1,206 @@
-{
-  "openapi": "3.0.1",
-  "info": {
-    "title": "Smart Article Extractor",
-    "description": "📰 Smart Article Extractor extracts articles from any scientific, academic, or news website with just one click. The extractor crawls the whole website and automatically distinguishes articles from other web pages. Download your data as HTML table, JSON, Excel, RSS feed, and more.",
-    "version": "1.0",
-    "x-build-id": "CEjSuzFP2f2spLgiq"
-  },
-  "servers": [
-    {
-      "url": "https://api.apify.com/v2"
-    }
-  ],
-  "paths": {
-    "/acts/lukaskrivka~article-extractor-smart/run-sync-get-dataset-items": {
-      "post": {
-        "operationId": "run-sync-get-dataset-items-lukaskrivka-article-extractor-smart",
-        "x-openai-isConsequential": false,
-        "summary": "Executes an Actor, waits for its completion, and returns Actor's dataset items in response.",
-        "tags": [
-          "Run Actor"
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/inputSchema"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "token",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Enter your Apify token here"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/acts/lukaskrivka~article-extractor-smart/runs": {
-      "post": {
-        "operationId": "runs-sync-lukaskrivka-article-extractor-smart",
-        "x-openai-isConsequential": false,
-        "summary": "Executes an Actor and returns information about the initiated run in response.",
-        "tags": [
-          "Run Actor"
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/inputSchema"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "token",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Enter your Apify token here"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/runsResponseSchema"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/acts/lukaskrivka~article-extractor-smart/run-sync": {
-      "post": {
-        "operationId": "run-sync-lukaskrivka-article-extractor-smart",
-        "x-openai-isConsequential": false,
-        "summary": "Executes an Actor, waits for completion, and returns the OUTPUT from Key-value store in response.",
-        "tags": [
-          "Run Actor"
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/inputSchema"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "token",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Enter your Apify token here"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "startUrls": {
-            "title": "Website/category URLs",
-            "type": "array",
-            "description": "These could be the main page URL or any category/subpage URL, e.g. https://www.bbc.com/. Article pages are detected and crawled from these. If you prefer to use direct article URLs, use `articleUrls` input instead",
-            "items": {
-              "type": "object",
-              "required": [
-                "url"
-              ],
-              "properties": {
-                "url": {
-                  "type": "string",
-                  "title": "URL of a web page",
-                  "format": "uri"
-                }
-              }
-            }
-          },
-          "articleUrls": {
-            "title": "Article URLs",
-            "type": "array",
-            "description": "These are direct URLs for the articles to be extracted, e.g. https://www.bbc.com/news/uk-62836057. No extra pages are crawled from article pages.",
-            "items": {
-              "type": "object",
-              "required": [
-                "url"
-              ],
-              "properties": {
-                "url": {
-                  "type": "string",
-                  "title": "URL of a web page",
-                  "format": "uri"
-                }
-              }
-            }
-          },
-          "onlyNewArticles": {
-            "title": "Only new articles (only for small runs)",
-            "type": "boolean",
-            "description": "This option is only viable for smaller runs. If you plan to use this on a large scale, use the 'Only new articles (saved per domain)' option below instead. If this function is selected, the extractor will only scrape new articles each time you run it. (Scraped URLs are saved in a dataset named `articles-state`, and are compared with new ones.)",
-            "default": false
-          },
-          "onlyNewArticlesPerDomain": {
-            "title": "Only new articles (saved per domain, preferable)",
-            "type": "boolean",
-            "description": "If this function is selected, the extractor will only scrape only new articles each time you run it. (Scraped articles are saved in one dataset, named 'ARTICLES-SCRAPED-domain', per each domain, and compared with new ones.)",
-            "default": false
-          },
-          "onlyInsideArticles": {
-            "title": "Only inside domain articles",
-            "type": "boolean",
-            "description": "If this function is selected, the extractor will only scrape articles that are on the domain from where they are linked. If the domain presents links to articles on different domains, those articles will not be scraped, e.g. https://www.bbc.com/ vs. https://www.bbc.co.uk/.",
-            "default": true
-          },
-          "enqueueFromArticles": {
-            "title": "Enqueue articles from articles",
-            "type": "boolean",
-            "description": "Normally, the scraper only extracts articles from category pages. This option allows the scraper to also extract articles linked within articles.",
-            "default": false
-          },
-          "crawlWholeSubdomain": {
-            "title": "Crawl whole subdomain (same base as Start URL)",
-            "type": "boolean",
-            "description": "Automatically enqueue categories and articles from whole subdomain with the same path. E.g. if Start URL is https://apify.com/store, it will enqueue all pages starting with https://apify.com/store",
-            "default": false
-          },
-          "onlySubdomainArticles": {
-            "title": "Limit articles to only from subdomain",
-            "type": "boolean",
-            "description": "Only loads articles which URL begins with the same path as Start URL. E.g. if Start URL is https://apify.com/store, it will only load articles starting with https://apify.com/store",
-            "default": false
-          },
-          "scanSitemaps": {
-            "title": "Find articles in sitemaps (caution)",
-            "type": "boolean",
-            "description": "We recommend using `Sitemap URLs` instead. \n If this function is selected, the extractor will scan different sitemaps from the initial article URL. Keep in mind that this option can lead to the loading of a huge amount of (sometimes old) articles, in which case the time and cost of the scrape will increase.",
-            "default": false
-          },
-          "sitemapUrls": {
-            "title": "Sitemap URLs (safer)",
-            "type": "array",
-            "description": "You can provide selected sitemap URLs that include the articles you need to extract.",
-            "items": {
-              "type": "object",
-              "required": [
-                "url"
-              ],
-              "properties": {
-                "url": {
-                  "type": "string",
-                  "title": "URL of a web page",
-                  "format": "uri"
-                }
-              }
-            }
-          },
-          "saveHtml": {
-            "title": "Save full HTML",
-            "type": "boolean",
-            "description": "If this function is selected, the scraper will save the full HTML of the article page, but this will make the data less readable."
-          },
-          "saveHtmlAsLink": {
-            "title": "Save full HTML (only as link to it)",
-            "type": "boolean",
-            "description": "If this function is selected, the scraper will save the full HTML of the article page as a URL to keep the dataset clean and small."
-          },
-          "saveSnapshots": {
-            "title": "Save screenshots of article pages (browser only)",
-            "type": "boolean",
-            "description": "Stores a screenshot for each article page to Key-Value Store and provides that as screenshotUrl. Useful for debugging.",
-            "default": false
-          },
-          "useGoogleBotHeaders": {
-            "title": "Use Googlebot headers",
-            "type": "boolean",
-            "description": "This option will allow you to bypass protection and paywalls on some websites. Use with caution as it might lead to getting blocked.",
-            "default": false
-          },
-          "minWords": {
-            "title": "Minimum words",
-            "type": "integer",
-            "description": "The article needs to contain at least this number of words to be extracted",
-            "default": 150
-          },
-          "dateFrom": {
-            "title": "Extract articles from [date]",
-            "type": "string",
-            "description": "Only articles from this day on will be scraped. If empty, all articles will be scraped. Format is YYYY-MM-DD, e.g. 2019-12-31, or number type e.g. 1 week or 20 days"
-          },
-          "onlyArticlesForLastDays": {
-            "title": "Only articles for last X days",
-            "type": "integer",
-            "description": "Only get posts that were published in the last X days from time the scraping starts. Use either this or the absolute date."
-          },
-          "mustHaveDate": {
-            "title": "Must have date",
-            "type": "boolean",
-            "description": "If checked, the article must have a date of release to be extracted.",
-            "default": true
-          },
-          "isUrlArticleDefinition": {
-            "title": "Is the URL an article?",
-            "type": "object",
-            "description": "Here you can input JSON settings to define what URLs should be considered articles by the scraper. If any of them is `true`, then the link will be opened and the article extracted."
-          },
-          "pseudoUrls": {
-            "title": "Pseudo URLs",
-            "type": "array",
-            "description": "This function can be used to enqueue more pages, i.e. include more links like pagination or categories. This doesn't work for articles, as they are recognized by the recognition system.",
-            "items": {
-              "type": "object",
-              "required": [
-                "url"
-              ],
-              "properties": {
-                "url": {
-                  "type": "string",
-                  "title": "URL of a web page",
-                  "format": "uri"
-                }
-              }
-            }
-          },
-          "linkSelector": {
-            "title": "Link selector",
-            "type": "string",
-            "description": "You can limit the <a> tags whose links will be enqueued. This field is empty by default. Add `a.some-class` to activate it"
-          },
-          "maxDepth": {
-            "title": "Max depth",
-            "type": "integer",
-            "description": "Maximum depth of crawling, i.e. how many times the scraper picks up a link to other webpages. Level 0 refers to the start URLs, 1 are the first level links, and so on. This is only valid for pseudo URLs"
-          },
-          "maxPagesPerCrawl": {
-            "title": "Max pages per crawl",
-            "type": "integer",
-            "description": "Maximum number of total pages crawled. It includes the home page, pagination pages, invalid articles, and so on. The crawler will stop automatically after reaching this number."
-          },
-          "maxArticlesPerCrawl": {
-            "title": "Max articles per crawl",
-            "type": "integer",
-            "description": "Maximum number of valid articles scraped. The crawler will stop automatically after reaching this number."
-          },
-          "maxArticlesPerStartUrl": {
-            "title": "Max articles per start URL",
-            "type": "integer",
-            "description": "Maximum number of articles scraped per start URL."
-          },
-          "maxConcurrency": {
-            "title": "Max concurrency",
-            "type": "integer",
-            "description": "You can limit the speed of the scraper to avoid getting blocked."
-          },
-          "proxyConfiguration": {
-            "title": "Proxy configuration",
-            "type": "object",
-            "description": "Proxy configuration"
-          },
-          "overrideProxyGroup": {
-            "title": "Override proxy group",
-            "type": "string",
-            "description": "If you want to override the default proxy group, you can specify it here. This is useful if you want to use a different proxy group for each crawler."
-          },
-          "useBrowser": {
-            "title": "Use browser (Puppeteer)",
-            "type": "boolean",
-            "description": "This option is more expensive, but it allows you to evaluate JavaScript and wait for dynamically loaded data.",
-            "default": false
-          },
-          "pageWaitMs": {
-            "title": "Wait on each page (ms)",
-            "type": "integer",
-            "description": "How many milliseconds to wait on each page before extracting data"
-          },
-          "navigationWaitUntil": {
-            "title": "Wait until navigation event is finished",
-            "enum": [
-              "load",
-              "domcontentloaded",
-              "networkidle0",
-              "networkidle2"
-            ],
-            "type": "string",
-            "description": "What to wait until the navigation is finished. `domcontentloaded` happens when initial HTML loads and is fastest. `load` happens when JS is executed and it is default. `networkidle0`, `networkidle2` wait for background network but cannot cause infinite loading.",
-            "default": "load"
-          },
-          "pageWaitSelectorCategory": {
-            "title": "Wait for selector on each category page",
-            "type": "string",
-            "description": "For what selector to wait on each page before extracting data"
-          },
-          "pageWaitSelectorArticle": {
-            "title": "Wait for selector on each article page",
-            "type": "string",
-            "description": "For what selector to wait on each page before extracting data"
-          },
-          "scrollToBottom": {
-            "title": "Scroll to bottom of the page (infinite scroll)",
-            "type": "boolean",
-            "description": "Scroll to the botton of the page, loading dynamic articles."
-          },
-          "scrollToBottomButtonSelector": {
-            "title": "Scroll to bottom button selector",
-            "type": "string",
-            "description": "CSS selector for a button to load more articles"
-          },
-          "scrollToBottomMaxSecs": {
-            "title": "Scroll to bottom max seconds",
-            "type": "integer",
-            "description": "Limit for how long the scrolling can run so it does no go infinite."
-          },
-          "extendOutputFunction": {
-            "title": "Extend output function",
-            "type": "string",
-            "description": "This function allows you to merge your custom extraction with the default one. You can only return an object from this function. This object will be merged/overwritten with the default output for each article."
-          },
-          "stopAfterCUs": {
-            "title": "Limit CU consumption",
-            "type": "integer",
-            "description": "The scraper will stop running after reaching this number of compute units."
-          },
-          "notificationEmails": {
-            "title": "Emails address for notifications",
-            "type": "array",
-            "description": "Notifications will be sent to these email addresses.",
-            "items": {
-              "type": "string"
-            }
-          },
-          "notifyAfterCUs": {
-            "title": "Notify after [number] CUs",
-            "type": "integer",
-            "description": "The scraper will send notifications to the provided email when it reaches this number of CUs."
-          },
-          "notifyAfterCUsPeriodically": {
-            "title": "Notify every [number] CUs",
-            "type": "integer",
-            "description": "The scraper will send notifications to the provided email every time this number of CUs is reached since the last notification."
-          }
-        }
-      },
-      "runsResponseSchema": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "actId": {
-                "type": "string"
-              },
-              "userId": {
-                "type": "string"
-              },
-              "startedAt": {
-                "type": "string",
-                "format": "date-time",
-                "example": "2025-01-08T00:00:00.000Z"
-              },
-              "finishedAt": {
-                "type": "string",
-                "format": "date-time",
-                "example": "2025-01-08T00:00:00.000Z"
-              },
-              "status": {
-                "type": "string",
-                "example": "READY"
-              },
-              "meta": {
-                "type": "object",
-                "properties": {
-                  "origin": {
-                    "type": "string",
-                    "example": "API"
-                  },
-                  "userAgent": {
-                    "type": "string"
-                  }
-                }
-              },
-              "stats": {
-                "type": "object",
-                "properties": {
-                  "inputBodyLen": {
-                    "type": "integer",
-                    "example": 2000
-                  },
-                  "rebootCount": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "restartCount": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "resurrectCount": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "computeUnits": {
-                    "type": "integer",
-                    "example": 0
-                  }
-                }
-              },
-              "options": {
-                "type": "object",
-                "properties": {
-                  "build": {
-                    "type": "string",
-                    "example": "latest"
-                  },
-                  "timeoutSecs": {
-                    "type": "integer",
-                    "example": 300
-                  },
-                  "memoryMbytes": {
-                    "type": "integer",
-                    "example": 1024
-                  },
-                  "diskMbytes": {
-                    "type": "integer",
-                    "example": 2048
-                  }
-                }
-              },
-              "buildId": {
-                "type": "string"
-              },
-              "defaultKeyValueStoreId": {
-                "type": "string"
-              },
-              "defaultDatasetId": {
-                "type": "string"
-              },
-              "defaultRequestQueueId": {
-                "type": "string"
-              },
-              "buildNumber": {
-                "type": "string",
-                "example": "1.0.0"
-              },
-              "containerUrl": {
-                "type": "string"
-              },
-              "usage": {
-                "type": "object",
-                "properties": {
-                  "ACTOR_COMPUTE_UNITS": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "DATASET_READS": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "DATASET_WRITES": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "KEY_VALUE_STORE_READS": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "KEY_VALUE_STORE_WRITES": {
-                    "type": "integer",
-                    "example": 1
-                  },
-                  "KEY_VALUE_STORE_LISTS": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "REQUEST_QUEUE_READS": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "REQUEST_QUEUE_WRITES": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "DATA_TRANSFER_INTERNAL_GBYTES": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "DATA_TRANSFER_EXTERNAL_GBYTES": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "PROXY_RESIDENTIAL_TRANSFER_GBYTES": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "PROXY_SERPS": {
-                    "type": "integer",
-                    "example": 0
-                  }
-                }
-              },
-              "usageTotalUsd": {
-                "type": "number",
-                "example": 0.00005
-              },
-              "usageUsd": {
-                "type": "object",
-                "properties": {
-                  "ACTOR_COMPUTE_UNITS": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "DATASET_READS": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "DATASET_WRITES": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "KEY_VALUE_STORE_READS": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "KEY_VALUE_STORE_WRITES": {
-                    "type": "number",
-                    "example": 0.00005
-                  },
-                  "KEY_VALUE_STORE_LISTS": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "REQUEST_QUEUE_READS": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "REQUEST_QUEUE_WRITES": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "DATA_TRANSFER_INTERNAL_GBYTES": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "DATA_TRANSFER_EXTERNAL_GBYTES": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "PROXY_RESIDENTIAL_TRANSFER_GBYTES": {
-                    "type": "integer",
-                    "example": 0
-                  },
-                  "PROXY_SERPS": {
-                    "type": "integer",
-                    "example": 0
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+const Apify = require('apify');
+const extractor = require('unfluff');
+const chrono = require('chrono-node');
+const urlLib = require('url');
+
+const { log } = Apify.utils;
+
+const MAX_DATASET_ITEMS_LOADED = 3 * 1000 * 1000;
+
+const MINIMUM_WORDS_COUNT = 150;
+
+const loadAllDataset = async (dataset, items, offset) => {
+    const limit = 250000;
+    const newItems = await dataset.getData({ offset, limit }).then((res) => res.items);
+    items = items.concat(newItems);
+    console.log(`Loaded ${newItems.length} items, totally ${items.length}`);
+    if (newItems.length === 0) return items;
+    return loadAllDataset(dataset, items, offset + limit).catch((e) => items)
 }
+
+const countWords = (text) => {
+    if (typeof text !== 'string') return false
+    return text.split(' ').length;
+}
+
+const escape = (str) => str ? `'${str.replace(/'/g, "\\'")}'` : "NULL"
+
+const parseDate = (date) => new Date(date).toISOString() 
+
+const isUrlArticle = (url) => {
+    const matches = ['article', 'storyid', '2019', '?p=', 'id=', '/fpss/track', '.html', '/content/'];
+    for (const string of matches) {
+        if(url.toLowerCase().includes(string)) {
+            return true;
+        }
+    }
+    const dashes = url.split('').reduce((acc, char) => char === '-' ? acc + 1 : acc, 0);
+    if (dashes >= 4) {
+        return true;
+    }
+    return false;
+}
+
+const isInWeekRange = (publicationDateISO) => {
+    const weekInMs = 7 * 24 * 60 * 60 * 1000;
+    const publicationDateUnix = new Date(publicationDateISO).getTime();
+    const now = Date.now();
+    return publicationDateUnix >= now - weekInMs &&  publicationDateUnix <= now + weekInMs
+};
+
+const parseDomain = (url) => {
+    if (!url) return null;
+    const parsed = urlLib.parse(url);
+    if (parsed && parsed.host) {
+        return parsed.host.replace('www.', '')
+    }
+};
+
+Apify.main(async () => {
+	const input = await Apify.getValue('INPUT')
+	console.log('input')
+    console.dir(input)
+
+    const {
+        startUrls,
+        maxPagesPerDomain = 99999,
+        maxConcurrency,
+        maxRequestRetries = 3,
+        saveHtml = false,
+        debug = false,
+        onlyInside = false,
+        onlyNew = false,
+        proxy,
+    } = input;
+
+    console.log('loading state dataset...')
+    const datasetToOpen = 'articles-state';
+    const stateDataset = await Apify.openDataset(datasetToOpen);
+    const { itemCount } = await stateDataset.getInfo();
+    const rawOffset = itemCount - MAX_DATASET_ITEMS_LOADED;
+    const offset = rawOffset < 0 ? 0 : rawOffset;
+    console.log(`State dataset contains ${itemCount} items, max dataset load is ${MAX_DATASET_ITEMS_LOADED}, offset: ${offset}`);
+    let state = {}
+    const stateData = await loadAllDataset(stateDataset, [], offset);
+    stateData.forEach((item) => {
+        state[item.url] = true;
+    });
+    console.log('state prepared')
+    
+    console.log(`We got ${startUrls.length} from the list`)
+
+    const requestQueue = await Apify.openRequestQueue()
+
+    for(const request of startUrls) {
+        const { url } = request;
+        console.log(`enquing start URL: ${url}`)
+        await requestQueue.addRequest({url, userData: {label: 'FRONT-PAGE', url, index: 0}})
+    }
+    
+    const handlePageFunction = async ({request, $, html, response}) => {  
+        const title = $('title').text();
+
+        const { loadedUrl } = request;
+        
+        if (title.includes('Attention Required!')) {
+                throw new Error('We got captcha on:', request.url)
+            }
+
+        if(request.userData.label === 'FRONT-PAGE'){
+            
+            const loadedDomain = parseDomain(loadedUrl);
+            console.log(`WE ARE ON THE FROM PAGE - requested URL: ${request.url}, loaded URL: ${loadedUrl}`)
+
+            // all links
+            let allHrefs = [];
+            let aTagsCount = 0;
+            $('a').each(function() {
+                aTagsCount++;
+                const relativeOrAbsoluteLink = $(this).attr('href');
+                if (relativeOrAbsoluteLink) {
+                    const absoluteLink = urlLib.resolve(loadedUrl, relativeOrAbsoluteLink);
+                    allHrefs.push(absoluteLink);
+                }   
+            })
+            console.log(`total number of a tags: ${aTagsCount}`)
+            console.log(`total number of links: ${allHrefs.length}`)
+
+            let links = allHrefs;
+            await Apify.setValue('LINKS', links)
+
+            // filtered only inside links
+            if (onlyInside) {
+                const links = allHrefs.filter((link) => loadedDomain === parseDomain(link));
+                console.log(`number of inside links: ${links.length}`)
+            }
+
+            // filtered only new urls
+            if (onlyNew) {
+                links = links.filter((href) => !state[href])
+                console.log(`number of inside links after state filter: ${links.length}`)
+            }
+
+            // filtered only proper article urls
+            const articleUrlHrefs = links.filter(isUrlArticle)
+            console.log(`number of article url links: ${articleUrlHrefs.length}`)
+
+            let index = 0
+            for(const url of articleUrlHrefs.slice(0, maxPagesPerDomain)){
+                index++
+                await requestQueue.addRequest({
+                    url,
+                    userData: {domain: request.userData.domain, label: 'ARTICLE', index, loadedDomain}
+                })
+            }
+            if (debug) {
+                await Apify.setValue(Math.random().toString(), html, { contentType: 'text/html' });
+            }
+        }
+
+        if(request.userData.label === 'ARTICLE'){         
+            const metadata = extractor(html)
+            
+            metadata.date = chrono.parseDate(metadata.date)
+
+
+            const isInWeekRangeVar = isInWeekRange(metadata.date);
+            if (!isInWeekRangeVar && !!metadata.date && countWords(metadata.text)) {
+                console.log(`ARTICLE - ${request.userData.index} - DATE NOT IN RANGE: ${metadata.date}`)
+            }
+            const wordsCount = countWords(metadata.text);
+
+            const result = {
+                url: request.url,
+                loadedUrl,
+                domain: request.userData.domain,
+                loadedDomain: request.userData.loadedDomain,
+                isArticle: !!metadata.date && !!metadata.title && wordsCount > MINIMUM_WORDS_COUNT && isInWeekRangeVar,
+                metadata,
+                html: saveHtml ? html: undefined,
+            }
+            
+            state[result.url] = true;
+            await stateDataset.pushData({ url:request.url });
+            
+            if (result.isArticle) {
+                console.log(`IS VALID ARTICLE --- ${request.url}`)
+                await Apify.pushData(result);
+            } else {
+                console.log(`IS NOT VALID ARTICLE --- date: ${!!metadata.date}, title: ${!!metadata.title}, words: ${wordsCount}, dateRange: ${isInWeekRangeVar} --- ${request.url}`)
+            }
+        }
+    }
+
+    const crawler = new Apify.CheerioCrawler({
+        requestQueue,
+        handlePageFunction,
+        maxConcurrency,
+        maxRequestRetries,
+        useApifyProxy: proxy.useApifyProxy,
+        apifyProxyGroups: proxy.apifyProxyGroups && proxy.apifyProxyGroups.length < 0 ? proxy.apifyProxyGroups : null,
+    })
+
+    console.log('starting crawler...')
+    await crawler.run()
+    console.log('crawler finished...')	
+})
