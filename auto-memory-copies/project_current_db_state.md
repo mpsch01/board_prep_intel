@@ -1,10 +1,10 @@
 ---
 name: project_current_db_state
-description: DB state as of BATON 031 (2026-04-01) — AAFP Q&A docs delivered, export CSVs generated, 9 M3 scripts
+description: DB state as of BATON 032 (2026-04-02) — DB unchanged; QUESTION-DIST-001 fixed; M3 now 9P+2JS; faculty PPTX built
 type: project
 ---
 
-## DB State (as of BATON 031, 2026-04-01)
+## DB State (as of BATON 032, 2026-04-02 — unchanged from BATON 031)
 
 | Table | Rows | Notes |
 |-------|------|-------|

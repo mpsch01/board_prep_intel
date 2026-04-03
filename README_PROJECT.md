@@ -1,8 +1,8 @@
 # ABFM ITE Intelligence System — PROJECT_OVERHAUL
 
-**Last updated:** 2026-03-29 (BATON 022)
+**Last updated:** 2026-04-02 (BATON 032)
 **Status:** Active development
-**Active BATON:** `BATON_active_022_20260329_aafp_concept_tags_complete.md`
+**Active BATON:** `BATON_active_032_20260402_question_dist_fix_faculty_pptx.md`
 
 ---
 
@@ -37,7 +37,7 @@ Extraction, enrichment, and DOCX build pipeline.
 
 ### 03_module.3_analyst/
 ICD-10 tagging, clinical pathways, trend analysis, score analysis, AAFP-ITE reuse investigation.
-- `scripts/` — 5 Python + 1 JS + 2 JSON config
+- `scripts/` — 9 Python + 2 JS + 2 JSON config
 
 ### 04_module.4_sandbox/
 Experiments and agent prototypes (placeholder).

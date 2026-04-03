@@ -95,7 +95,7 @@ git add 03_module.3_analyst/scripts/build_faculty_pptx.js
 | pubmed_pmid_cache | 344 | Layer 2 seed |
 | PDFs | 404 | 49 AAFP articles awaiting download |
 | Next ART-ID | ART-1987 | |
-| Git | main, `279049a` | partial — 8 files still unstaged (see above) |
+| Git | main, `1a6b048` | partial — 8 scripts from BATON 029-031 still unstaged (GIT-PENDING) |
 
 ---
 
