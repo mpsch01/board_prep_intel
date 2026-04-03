@@ -2,10 +2,10 @@
   "project_name": "ABFM ITE Intelligence System",
   "description": "Family medicine board exam knowledge base: queryable question bank (1,629 ITE questions, 2018-2025; 1,221 AAFP BRQ questions) linked to a clinical guideline library (1,985 articles, 404 PDFs) via a structured SQLite pipeline. Both ITE and AAFP corpora are schema-parallel with full enrichment (body_system, concept_tags, subcategory, ICD-10). Extends beyond exam prep into clinical decision support.",
   "location": "C:\\Users\\mpsch\\Desktop\\claude_knowledge\\00_#PROJECT_OVERHAUL\\",
-  "last_updated": "2026-03-31 (BATON 029)",
+  "last_updated": "2026-04-02 (BATON 032)",
   "architecture": "4-module rebuild (PROJECT_OVERHAUL)",
-  "active_baton": "BATON_active_029_20260331_clinical_pathways_v2.md",
-  "git_status": "main branch. Latest committed: 9817449. Clean.",
+  "active_baton": "BATON_active_032_20260402_question_dist_fix_faculty_pptx.md",
+  "git_status": "main branch. Latest committed: 279049a. 8 files unstaged (see BATON 032).",
   "database": {
     "path": "00_database/db/ite_intelligence.db",
     "articles": 1985,
@@ -57,7 +57,7 @@
     "00_database": "Source of truth (DB + supporting data, schemas, logs)",
     "01_module.1_warehouse": "PDF library (4 tiers, 404 PDFs) + M1 scripts (build/9, maintain/16) + aafp_brq/scraper+staging",
     "02_module.2_processor": "Extraction + enrichment pipeline (53 Python + 6 JS + 1 JSON + 4 Windows, all paths dynamic)",
-    "03_module.3_analyst": "Analysis scripts (5 Python + 1 JS + 2 JSON config)",
+    "03_module.3_analyst": "Analysis scripts (9 Python + 2 JS + 2 JSON config)",
     "04_module.4_sandbox": "Experiments placeholder (cleanup pending)"
   },
   "supporting_folders": {
@@ -115,9 +115,8 @@
   },
   "deferred_flags": {
     "HIGH": [
-      "49 PDF download — download_aafp_acquisitions.py ready to run; then backfill_new_article_metadata.py --art-id-min 1938",
-      "Rebuild ICD-10 vector layers — build_icd10_embeddings.py --derive (question_icd10_vec + article_icd10_vec both stale)",
-      "229 citation gap articles — 88 AFP batch-downloadable from null_clean_ref_missing_articles_20260326.csv"
+      "GIT-PENDING — 8 scripts from BATON 029-031 still unstaged: ite_analyze_v2.py, ite_analyzer_v2.py, ite_report_builder_v2.js, export_aafp_ite_relationships.py, word_doc_defaults.py, build_aafp_qa.py, build_aafp_qa_file1.py, build_faculty_pptx.js",
+      "49 PDF download — download_aafp_acquisitions.py ready to run; then backfill_new_article_metadata.py --art-id-min 1938"
     ],
     "MEDIUM": [
       "Intelligence 2.0 Layer 2 — article_currency table; 344 PMIDs already in pubmed_pmid_cache (seed ready)",
