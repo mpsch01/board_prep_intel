@@ -12,9 +12,10 @@
  */
 
 import { Actor } from 'apify';
-import { CheerioCrawler } from 'crawlee';
+import { PlaywrightCrawler, log } from 'crawlee';
 import { parse as parseDate } from 'chrono-node';
 import { URL } from 'url';
+import * as cheerio from 'cheerio';
 
 // ---------------------------------------------------------------------------
 // CONFIG
@@ -248,7 +249,7 @@ await Actor.main(async () => {
         if (itemCount > 0) {
             const { items } = await stateDataset.getData({ limit: 500000 });
             items.forEach(item => seenUrls.add(item.url));
-            Actor.log.info(`Dedup state: ${seenUrls.size} previously seen URLs loaded`);
+            log.info(`Dedup state: ${seenUrls.size} previously seen URLs loaded`);
         }
     }
 
@@ -278,15 +279,18 @@ await Actor.main(async () => {
           })
         : undefined;
 
-    const crawler = new CheerioCrawler({
+    const crawler = new PlaywrightCrawler({
         requestQueue,
         maxConcurrency,
         maxRequestRetries,
         proxyConfiguration,
 
-        async requestHandler({ request, $, body, response }) {
-            const loadedUrl = response?.url ?? request.url;
-            const html      = typeof body === 'string' ? body : body.toString('utf-8');
+        async requestHandler({ request, page }) {
+            // Wait for JS to render (timeout gracefully — some pages never go fully idle)
+            await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
+            const loadedUrl = page.url();
+            const html      = await page.content();
+            const $         = cheerio.load(html);
 
             // CAPTCHA guard
             if ($('title').text().includes('Attention Required!')) {
@@ -334,7 +338,7 @@ await Actor.main(async () => {
                 }
                 domainEnqueueCount[loadedDomain] = capSoFar + added;
 
-                Actor.log.info(
+                log.info(
                     `FRONT-PAGE ${loadedUrl}: ${allLinks.length} links → ${articleLinks.length} article candidates → ${added} enqueued`
                 );
             }
@@ -353,14 +357,14 @@ await Actor.main(async () => {
                 if (dateFromMs && publishedAt) {
                     const pubMs = new Date(publishedAt).getTime();
                     if (!isNaN(pubMs) && pubMs < dateFromMs) {
-                        Actor.log.info(`SKIP (pre-dateFrom ${dateFrom}): ${loadedUrl}`);
+                        log.info(`SKIP (pre-dateFrom ${dateFrom}): ${loadedUrl}`);
                         return;
                     }
                 }
 
                 // Skip near-empty pages that also have no PDFs
                 if (wordCount < minWords && pdfUrls.length === 0) {
-                    Actor.log.info(`SKIP (${wordCount} words, no PDFs): ${loadedUrl}`);
+                    log.info(`SKIP (${wordCount} words, no PDFs): ${loadedUrl}`);
                     return;
                 }
 
@@ -385,7 +389,7 @@ await Actor.main(async () => {
                     ...(saveHtml ? { html } : {}),
                 };
 
-                Actor.log.info(
+                log.info(
                     `ARTICLE: "${title ?? '(no title)'}" | PDFs: ${pdfUrls.length} | DOI: ${doi ?? 'none'}`
                 );
                 await Actor.pushData(result);
@@ -393,12 +397,12 @@ await Actor.main(async () => {
         },
 
         failedRequestHandler({ request, error }) {
-            Actor.log.error(`Failed (${request.retryCount} retries): ${request.url} — ${error.message}`);
+            log.error(`Failed (${request.retryCount} retries): ${request.url} — ${error.message}`);
         },
     });
 
     await crawler.run();
 
     const { itemCount: outCount } = await (await Actor.openDataset()).getInfo();
-    Actor.log.info(`Finished. ${outCount} articles saved to dataset.`);
+    log.info(`Finished. ${outCount} articles saved to dataset.`);
 });

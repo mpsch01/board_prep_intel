@@ -162,18 +162,43 @@ def get_pmc_pdf_url(pmcid: str) -> str | None:
     return None
 
 
+# ── Fallback: NCBI E-Fetch PDF endpoint ───────────────────────────────────────
+EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+
+def get_pmc_viewer_pdf_url(pmcid: str) -> str:
+    """
+    Fallback strategy when the OA API returns no PDF URL.
+    Constructs the NCBI E-Fetch PDF endpoint URL directly — no pre-flight
+    network call needed.  Whether the endpoint actually serves a PDF depends
+    on the article's access status; the %PDF sanity check in download_pmc_pdf
+    handles validation cleanly.
+    Covers articles in PMC that are readable but outside the strict OA FTP subset.
+    """
+    return (
+        f"{EFETCH_URL}?db=pmc&id={pmcid}&rettype=pdf"
+        f"&tool=ITE-Intelligence&email=scholl.michael.p%40gmail.com"
+    )
+
+
 # ── Download PDF from PMC ─────────────────────────────────────────────────────
 def download_pmc_pdf(pmcid: str, dest_path: Path) -> bool:
     """
-    Downloads the PDF for a PMC article via the OA API.
-    1. Queries PMC OA API to get the direct FTP/HTTPS PDF URL
-    2. Downloads from that URL
+    Downloads the PDF for a PMC article.
+    Strategy 1: PMC OA API  → FTP/HTTPS URL (strict OA subset)
+    Strategy 2: PMC viewer scrape → direct PDF link (broader coverage)
     Returns True on success.
     """
+    # Strategy 1: OA API
     pdf_url = get_pmc_pdf_url(pmcid)
+
+    # Strategy 2: viewer page scrape
     if not pdf_url:
-        print(f"    ✗ No OA PDF URL found for {pmcid} (may require subscription)")
-        return False
+        pdf_url = get_pmc_viewer_pdf_url(pmcid)
+        if pdf_url:
+            print(f"    → PDF URL via viewer scrape")
+        else:
+            print(f"    ✗ No PDF URL found for {pmcid} (may require subscription)")
+            return False
     try:
         resp = requests.get(pdf_url, headers=HEADERS, timeout=60, allow_redirects=True)
         if resp.status_code == 200 and len(resp.content) > 10_000:

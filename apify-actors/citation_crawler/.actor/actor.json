@@ -3,11 +3,11 @@
     "name": "citation-crawler",
     "title": "Citation Crawler",
     "description": "Crawls academic and clinical article pages to extract metadata (title, DOI, authors, journal, date) and discover PDF links. Supports deterministic mode (direct article URLs) and crawl mode (publisher landing pages).",
-    "version": "0.1",
+    "version": "0.3",
     "buildTag": "latest",
     "defaultRunOptions": {
         "build": "latest",
         "timeoutSecs": 3600,
-        "memoryMbytes": 1024
+        "memoryMbytes": 2048
     }
 }
