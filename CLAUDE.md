@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_032_20260402_question_dist_fix_faculty_pptx.md` |
+| Active BATON | `BATON_active_033_20260403_citation_crawler_scaffold.md` |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -68,8 +68,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | M1 scripts | 9 build + 16 maintain + aafp_brq/scraper (self-contained build sequence) |
 | M2 scripts | 66 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
 | M3 scripts | 9 Python + 2 JS + 2 JSON config |
+| Apify actor | `apify-actors/citation_crawler/` — scaffold built (SDK v3 + Crawlee); needs `apify push` |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest `279049a` — 8 files unstaged (GIT-PENDING) |
+| Git branch | `main`, latest `e26a748` — clean |
 | GitHub remote | `https://github.com/mpsch01/project-overhaul` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -107,9 +108,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 032, 2026-04-02)
-1. **Git commit (GIT-PENDING)** — stage 8 scripts from BATON 029–031: `ite_analyze_v2.py`, `ite_analyzer_v2.py`, `ite_report_builder_v2.js`, `export_aafp_ite_relationships.py`, `word_doc_defaults.py`, `build_aafp_qa.py`, `build_aafp_qa_file1.py`, `build_faculty_pptx.js`
-2. **PDF download (DEFERRED-A)** — `download_aafp_acquisitions.py` → `backfill_new_article_metadata.py --art-id-min 1938`
-3. **Citation trends (DEFERRED-B)** — `update_citation_trends.py` — run after PDF download
-4. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed; 344 PMIDs in `pubmed_pmid_cache` (seed ready)
-5. **Fill question vector gaps (Q-VEC-GAP)** — embed 440 ITE (2018–2019) + 1,221 AAFP questions → `question_vec`
+## Next Steps (as of BATON 033, 2026-04-03)
+1. **Deploy citation_crawler** — `apify push` from `apify-actors/citation_crawler/` → actor ID `mpsch01~citation-crawler`
+2. **DEFERRED-A** — use citation_crawler (deterministic mode) to source PDF links for ART-1938–1986; download → codon rename → VC gate
+3. **DEFERRED-B** — `update_citation_trends.py` after DEFERRED-A
+4. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`)
+5. **DEFERRED-D** — 229 citation gap articles (88 AFP batch-downloadable)
