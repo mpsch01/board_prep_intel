@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_030_20260401_analyzer_v3_smoke_test.md` |
+| Active BATON | `BATON_active_031_20260401_aafp_qa_docs.md` |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -67,7 +67,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 9 build + 16 maintain + aafp_brq/scraper (self-contained build sequence) |
 | M2 scripts | 66 Python + 6 JS + 1 JSON + 4 Windows (all paths dynamic) |
-| M3 scripts | 5 Python + 1 JS + 2 JSON config |
+| M3 scripts | 9 Python + 1 JS + 2 JSON config |
 | Next ART-ID | ART-1987 |
 | Git branch | `main`, latest `9817449` — clean |
 | GitHub remote | `https://github.com/mpsch01/project-overhaul` (private) |
@@ -107,9 +107,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 030, 2026-04-01)
+## Next Steps (as of BATON 031, 2026-04-01)
 1. **Fix QUESTION-DIST-001** — practice questions all target "Acute Care" only; body system dimensions return 0 candidates. Debug `BODYSYSTEM_PDF_TO_DB` map in `ite_analyzer_v3.py` vs actual `questions.body_system_merged` values. Fix before demo.
-2. **Git commit** — `ite_analyzer_v3.py`, `ite_analyze_v2.py`, `ite_analyzer_v2.py` (deprecated header), `ite_report_builder_v2.js` (subcatAnalysis fix)
+2. **Git commit** — `ite_analyzer_v3.py`, `ite_analyze_v2.py`, `ite_analyzer_v2.py`, `ite_report_builder_v2.js`, `export_aafp_ite_relationships.py`, `word_doc_defaults.py`, `build_aafp_qa.py`, `build_aafp_qa_file1.py`
 3. **Faculty meeting presentation** — PPTX + one-pager — after QUESTION-DIST-001 resolved
 4. **PDF download (DEFERRED-A)** — `download_aafp_acquisitions.py` → `backfill_new_article_metadata.py --art-id-min 1938`
 5. **Citation trends (DEFERRED-B)** — `update_citation_trends.py` — run after PDF download

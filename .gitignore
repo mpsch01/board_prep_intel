@@ -61,6 +61,9 @@ tagging_bundle/*.json
 # --- M2 BATCH LOGS (auto-generated, high churn — same rule as 00_database/logs/) ---
 02_module.2_processor/logs/
 
+# --- COWORK SESSION ARTIFACTS (ghost folder created by Cowork app on session init) ---
+\#PROJECT_OVERHAUL/
+
 # --- WINDOWS ARTIFACTS ---
 desktop.ini
 Thumbs.db

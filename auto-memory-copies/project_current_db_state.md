@@ -1,56 +1,35 @@
 ---
 name: project_current_db_state
-description: DB state as of BATON 028 (2026-03-31) — ICD-10 symmetry complete, question_icd10 and pubmed_pmid_cache added
+description: DB state as of BATON 031 (2026-04-01) — AAFP Q&A docs delivered, export CSVs generated, 9 M3 scripts
 type: project
 ---
 
-## DB State (as of BATON 028, 2026-03-31)
+## DB State (as of BATON 031, 2026-04-01)
 
 | Table | Rows | Notes |
 |-------|------|-------|
-| articles | 1,985 | ART-0001 → ART-1986; next = ART-1987 |
-| questions | 1,629 | ITE only — 2018–2025; blueprint 100%, subcategory DROPPED |
+| articles | 1,985 | ART-0001 → ART-1986; next = ART-1987; +49 AAFP acquisition (PDFs pending) |
+| questions | 1,629 | ITE only — 2018–2025; blueprint 100%; subcategory + topic_label DROPPED |
+| aafp_questions | 1,221 | Flattened: correct_letter, correct_text, explanation merged in; subcategory DROPPED; blueprint 100% |
+| aafp_explanations | DROPPED | Merged into aafp_questions |
+| question_ref_pairs | 2,722 | 222 NULL clean_ref |
 | qid_art_xref | 2,470 | All 8 years (2018–2025) |
-| question_ref_pairs | 2,722 | |
-| article_icd10 | **4,137** | +282 AAFP backfill this session (was 3,855) |
-| **question_icd10** | **5,284** | NEW 2026-03-31 — ITE questions → ICD-10 via propagation. 1,512/1,629 (92.8%) coverage. Relevance: 51.6%/30.8%/17.6% |
-| aafp_question_icd10 | **4,753** | Updated 2026-03-31: +921 PubMed rows, -408 cap = 4,753. Coverage: ~99% (1,210/1,221). Relevance: 42.1%/34.0%/23.8% |
-| **pubmed_pmid_cache** | **344** | NEW 2026-03-31 — Layer 2 seed: citation_id → PMID for JOURNAL_MISSING citations |
-| icd10_vec | 2,219 | OpenAI text-embedding-3-small, 1536d |
-| article_icd10_vec | 1,674 | Stale — needs rebuild (article_icd10 +282 rows) |
-| question_icd10_vec | 2,733 | Stale — needs rebuild (ITE question_icd10 now populated) |
-| clinical_pathways | 3,093 | Legacy — ART-0002–ART-1397 only. Rebuild pending (v2 blueprint-based). |
+| aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
+| article_icd10 | 4,137 | Full coverage — ITE chain + AAFP backfill (2026-03-31) |
+| question_icd10 | 5,284 | 1,512/1,629 ITE questions (92.8%) |
+| aafp_question_icd10 | 4,753 | Relevance normalized, related cap applied (2026-03-31) |
+| clinical_pathways | 4,020 | REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 |
 | icd10_rollup | 614 | |
 | icd10_code_xref | 1,006 | |
-| article_vec | 1,936 | sqlite-vec virtual table |
-| question_vec | 1,629 | sqlite-vec virtual table |
-| aafp_questions | 1,221 | AAFP BRQ; blueprint 100%, concept_tags 100% |
-| aafp_citations | 1,600 | match_status: matched(724) unmatched(717) fuzzy(73) other(86) |
-| aafp_citation_raw | 1,600 | |
-| aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
-| aafp_question_vec | 1,221 | |
-
----
-
-## ICD-10 Symmetry Summary (complete as of 2026-03-31)
-
-| Layer | Table | Rows | Coverage |
-|-------|-------|------|----------|
-| ITE article-level | article_icd10 | 4,137 | ART-0002–ART-1397 (ITE tags) + 86 AAFP articles |
-| ITE question-level | question_icd10 | 5,284 | 1,512/1,629 (92.8%) |
-| AAFP question-level | aafp_question_icd10 | 4,753 | 1,210/1,221 (~99%) |
-| PubMed PMID cache | pubmed_pmid_cache | 344 | Layer 2 seed |
-
----
-
-## New Scripts This Session (BATON 028)
-
-| Script | Location | What it does |
-|--------|----------|--------------|
-| build_ite_question_icd10.py | M2/scripts/ | Propagates article_icd10 → qid_art_xref → question_icd10. Textbook filter. Tier-aware cap. |
-| backfill_aafp_article_icd10.py | M2/scripts/ | Reverse propagates aafp_question_icd10 → aafp_qid_art_xref → article_icd10 (INSERT OR IGNORE) |
-| build_pubmed_citation_icd10.py | M2/scripts/ | JOURNAL_MISSING citations → NCBI eutils → PMID → MeSH → ICD-10 → aafp_question_icd10. Idempotent (resume-safe). |
-| apply_aafp_related_cap.py | M2/scripts/ | Trims related codes in aafp_question_icd10 to top 3 per question by global frequency |
+| pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) — ready for article_currency build |
+| icd10_vec | 2,219 | OpenAI text-embedding-3-small (1536d) per unique ICD-10 code |
+| article_icd10_vec | 1,674 | Weighted-avg ICD-10 feature per article — REBUILT 2026-04-01 |
+| question_icd10_vec | 2,733 | 1,525 ITE + 1,208 AAFP — REBUILT 2026-04-01 |
+| article_vec | 1,936 | sqlite-vec virtual table; 49 new articles pending embeddings |
+| question_vec | 1,629 | sqlite-vec virtual table, 100% ITE coverage |
+| article_citation_trend | 1,740 | Pre-computed longitudinal data ART-0002–ART-1937 |
+| aafp_citations | 1,600 | One parsed citation per row |
+| aafp_citation_raw | 1,600 | Full text archive |
 
 ---
 
@@ -60,24 +39,86 @@ type: project
 |---------|-------------|-------|
 | Pre-project | ART-0001 – ART-1397 | 1,397 |
 | Mar 20 S1 | ART-1398 – ART-1425 | 28 |
-| Mar 20 S2 | ART-1426 – ART-1548 | 123 (includes ART-0404 deleted) |
-| Mar 24 | ART-1549 – ART-1937 | 389 |
-| Mar 28 | ART-1938 – ART-1986 | 49 (AAFP acquisition; PDFs pending download) |
+| Mar 20 S2 | ART-1426 – ART-1548 | 123 |
+| Mar 24 (2018-2019 integration) | ART-1549 – ART-1937 | 389 |
+| Mar 28 (AAFP acquisition) | ART-1938 – ART-1986 | 49 |
 | **Next** | ART-1987 | — |
 
 ---
 
-## Key Table Notes
+## Questions Table Column Coverage (ITE, 1,629 rows)
 
-**question_icd10** (NEW):
-- Propagated from article_icd10 via qid_art_xref
-- Textbook filter (source_type != 'Textbook') prevents broad code bleed
-- Tier-aware cap: all primary + secondary kept; related capped at top 3 by contributing article frequency
-- 117 questions (7.2%) have no ICD-10 path (no linked articles or all links are textbooks)
+| Column | Coverage | Notes |
+|--------|----------|-------|
+| body_system_merged | 100% | |
+| stem_keywords | 100% | TF-IDF unigrams |
+| concept_tags | 100% | JSON: diagnoses, drugs, guidelines, thresholds, concept_summary |
+| blueprint | 100% | 2024/2025 Gold Standard; 2018–2023 API pseudo-label (Sonnet 4.6) |
+| subcategory | DROPPED | |
+| topic_label | DROPPED | |
 
-**pubmed_pmid_cache** (NEW):
-- Stores citation_id (TEXT PK) → pmid for JOURNAL_MISSING citations
-- 91.2% resolution rate on first run (344/377)
-- Layer 2 seed: article_currency can use these PMIDs without re-querying PubMed
+## aafp_questions Column Coverage (1,221 rows)
 
-**article_icd10_vec + question_icd10_vec**: Both stale. Run `build_icd10_embeddings.py --derive` to refresh.
+| Column | Coverage | Notes |
+|--------|----------|-------|
+| stem, choices | 100% | |
+| correct_letter, correct_text | 100% | Merged from aafp_explanations |
+| explanation | 100% | Merged from aafp_explanations |
+| explanation_keywords | 100% | |
+| concept_tags | 100% | Same schema as ITE |
+| body_system | 100% | Note: no body_system_merged (ITE only) |
+| blueprint | 100% | Same rubric + 19 gold-standard examples as ITE v2 — Batch API |
+| subcategory | DROPPED | |
+
+## Blueprint Distributions
+
+### ITE (1,629 questions)
+| Blueprint | Count | % |
+|---|---|---|
+| Acute Care and Diagnosis | 709 | 43.5% |
+| Chronic Care Management | 403 | 24.7% |
+| Emergent and Urgent Care | 214 | 13.1% |
+| Preventive Care | 206 | 12.6% |
+| Foundations of Care | 97 | 6.0% |
+
+### AAFP (1,221 questions)
+| Blueprint | Count | % |
+|---|---|---|
+| Acute Care and Diagnosis | 588 | 48.2% |
+| Chronic Care Management | 253 | 20.7% |
+| Emergent and Urgent Care | 166 | 13.6% |
+| Preventive Care | 140 | 11.5% |
+| Foundations of Care | 74 | 6.1% |
+
+---
+
+## ICD-10 Vector Layer (rebuilt 2026-04-01)
+
+| Table | Rows | Description |
+|---|---|---|
+| icd10_vec | 2,219 | One embedding per unique code |
+| article_icd10_vec | 1,674 | Weighted avg of tagged code vectors (primary=3, secondary=2, related=1) |
+| question_icd10_vec | 2,733 | Same weighting; ITE via qid_art_xref→article_icd10; AAFP direct from aafp_question_icd10 |
+
+Model: OpenAI text-embedding-3-small, 1536d. Script: `build_icd10_embeddings.py` (--embed / --derive / --report / --all / --dry-run).
+
+---
+
+## M3 Analyst Scripts (as of BATON 030)
+
+| Script | Status | Notes |
+|--------|--------|-------|
+| `ite_parser.py` | Stable | PDF extraction, blueprint + body system |
+| `ite_analyzer_v3.py` | NEW 2026-04-01 | 9 layers, 3-tier question cascade, dual bank |
+| `ite_analyzer_v2.py` | DEPRECATED | subcategory crash risk; kept for --v2-only flag |
+| `ite_analyze_v2.py` | Updated 2026-04-01 | Entry point; routes to v3 by default |
+| `ite_report_builder_v2.js` | Updated 2026-04-01 | subcatAnalysis fix, pathway gap section |
+| `build_icd10_tags.py` | Stable | ICD-10 tagging pipeline |
+
+---
+
+## Backup Checkpoints
+
+- `ite_intelligence_pre2018_backup_20260324_001256.db` — pre-2018/2019 integration rollback
+- `ite_intelligence_pre_flag15_backup.db` — earlier rollback point
+- `ite_intelligence_v1_backup_20260310_095728.db` — v1 snapshot

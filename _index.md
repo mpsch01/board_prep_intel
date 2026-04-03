@@ -60,7 +60,11 @@
 │   ├── layer1_icd10_*.csv (3 files)
 │   ├── layer3_pathways_*.csv (4 files)
 │   ├── null_clean_ref_missing_articles_20260326.csv  ← 212 missing article refs (88 AFP + others)
-│   └── sample_pathway_E11_type2dm.json
+│   ├── sample_pathway_E11_type2dm.json
+│   ├── aafp_ite_semantic_similarity.csv              ← NEW (BATON 031) — 34 AAFP near-duplicates (dist < 0.30)
+│   ├── aafp_ite_question_level_citation_overlap_detail.csv  ← NEW (BATON 031) — 1,555 rows; research layer
+│   ├── aafp_ite_question_level_citation_overlap_summary.csv ← NEW (BATON 031) — 595 rows; distributable overlap list
+│   └── aafp_ite_semantic_and_citation_intersection.csv      ← NEW (BATON 031) — 0 rows; redundant (File 1 IS the intersection)
 └── schemas/
     ├── clinical_synonym_map.json          ← 151 clinical term → ICD-10 translations
     ├── icd10_mcp_lookup.json              ← 1,406 MCP-verified ICD-10 codes
@@ -274,17 +278,26 @@
 ```
 03_module.3_analyst/
 ├── scripts/
-│   ├── ite_analyze_v2.py
-│   ├── ite_analyzer_v2.py
+│   ├── ite_analyze_v2.py                  ← entry point; routes to v3 by default; --v2-only flag
+│   ├── ite_analyzer_v3.py                 ← PRIMARY — 9 analysis layers, dual bank, 3-tier Q cascade (BATON 030)
+│   ├── ite_analyzer_v2.py                 ← DEPRECATED — subcategory dropped; header added (BATON 030)
 │   ├── ite_parser.py
-│   ├── ite_report_builder_v2.js
+│   ├── ite_report_builder_v2.js           ← patched: subcatAnalysis, TIER_LABELS, pathway sections (BATON 030)
 │   ├── build_icd10_tags.py
-│   ├── aafp_question_reuse_investigation.py  ← AAFP-ITE shared vignette finder; --full, --csv flags; 38 pairs found (BATON 020)
+│   ├── aafp_question_reuse_investigation.py  ← AAFP-ITE shared vignette finder; 38 pairs found (BATON 020)
+│   ├── export_aafp_ite_relationships.py   ← NEW (BATON 031) — 4-CSV AAFP↔ITE relationship export
+│   ├── word_doc_defaults.py               ← NEW (BATON 031) — St. Luke's style template; import in ALL python-docx scripts
+│   ├── build_aafp_qa.py                   ← NEW (BATON 031) — File 3 Q&A builder (595 AAFP citation-overlap questions)
+│   ├── build_aafp_qa_file1.py             ← NEW (BATON 031) — File 1 Q&A builder (34 near-duplicate questions + ITE companion)
 │   ├── abfm_reference_2025.json
 │   └── ite_parser_config.json
 ├── docs/
 │   ├── ITE_SCORE_ANALYSIS_PIPELINE.md
 │   └── README_ite_score_analysis.json
+├── reports/                               ← gitignored (derived)
+│   ├── test_v3/ (ITE_2025_v3_Analysis_Oceana_Hopkins.docx, ITE_2025_v3_Exam_Oceana_Hopkins.docx, analysis_v2.json)
+│   ├── AAFP_BRQ_ITE_Overlap_QA_v2.docx   ← NEW (BATON 031) — 595 AAFP questions, sorted by ITE overlap
+│   └── AAFP_BRQ_NearDuplicate_QA.docx    ← NEW (BATON 031) — 34 near-duplicate questions with ITE companion
 ├── outputs/                               ← gitignored (derived)
 │   ├── hopkins_2025/ (analysis_v2.json, score_analysis.json)
 │   └── sarkar_2025/  (analysis_v2.json, score_analysis.json)
@@ -293,7 +306,7 @@
     ├── sarkar_2025_blueprint.pdf / bodysystem.pdf
     └── scholl_2025_ENCRYPTED_22/23/24.pdf ← FLAG 30 (needs password)
 ```
-*4 Python + 1 JS + 2 JSON configs*
+*9 Python + 1 JS + 2 JSON configs*
 
 ### `04_module.4_sandbox/` — Experiments
 ```
@@ -469,6 +482,7 @@ Uses M1/build/ scripts 3-6 as template, adapted for year-specific PDF format.
 
 | Date | Action |
 |------|--------|
+| 2026-04-01 | BATON 030–031: ite_analyzer_v3.py built + smoke tested (PASS). ICD-10 vec layers rebuilt. 5 bugs fixed (entry point imports, _not_in() col param, unicode, subcatAnalysis). QUESTION-DIST-001 flagged. export_aafp_ite_relationships.py run → 4 CSVs in readable_db_files/. word_doc_defaults.py committed to auto-memory. build_aafp_qa.py + build_aafp_qa_file1.py built → 2 AAFP Q&A docs delivered. M3: 5→9 Python. |
 | 2026-03-29 | BATON 023–024: Blueprint labeling complete (1,629/1,629). blueprint_api_classifier.py (Sonnet, 70.4% Gold Standard accuracy) wrote 1,234 pseudo-labels for 2018-2023. blueprint_emergent_pass.py: 16 Acute→Emergent flips. Pre-2024 Emergent at 11.7% (vs 20% target) — accepted as known limitation (blueprint targets are 2024+ design spec). aafp_question_icd10.relevance normalized (74→3 values). unified_keyword_extractor.py: TF-IDF unigrams for all 1,629 ITE + 1,221 AAFP questions. aafp_vs_ite_comparison_dashboard.html built + patched. M2: 55→57 Python. |
 | 2026-03-29 | BATON 021–022: AAFP full enrichment pipeline complete. aafp_merge_keywords.py: all_keywords 1221/1221. aafp_assign_body_system.py v2: 3-tier classifier, all 16 body systems 1221/1221, body_system_method audit trail. aafp_enrich_concept_tags.py: concept_tags + subcategory 1221/1221 (Haiku 4.5); aafp_question_icd10 ~4,065 rows (98.9% coverage). aafp_model_comparison.py: Haiku vs Sonnet 10-Q eval (Haiku selected, ~3× cost savings). M2: 51→55 Python. |
 | 2026-03-28 | BATON 020: AAFP question reuse investigation complete. 38 shared AAFP-ITE vignettes found (verbatim identical stems, all dist 0.23–0.30). aafp_question_reuse_investigation.py built (M3/scripts/). 49 new articles inserted (ART-1938–ART-1986); aafp_qid_art_xref: 864 rows (643 unique Q linked, 52.7%). aafp_ref_match_v2.py (S2-S5 strategies, 12 new links). batch_insert_aafp_articles.py built. M2: 49→51 Python. M3: 4→5 Python. |
