@@ -1122,7 +1122,31 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
     # Global rank by relevance_score
     ranked = sorted(all_candidates.values(),
                     key=lambda x: x["relevance_score"], reverse=True)
-    return ranked[:target_count]
+
+    # Dimension diversity cap — prevent a single high-priority dimension
+    # (e.g. Acute Care with priority_score >> others) from monopolizing all
+    # slots.  Cap = ceil(target / n_active_dims), floor of 2.
+    # Questions exceeding the cap fall into overflow and fill remaining slots.
+    n_active  = max(len(active), 1)
+    dim_cap   = max(2, -(-target_count // n_active))   # ceiling division
+    dim_counts: dict = {}
+    diverse: list    = []
+    overflow: list   = []
+    for cand in ranked:
+        t = cand.get("targeting", "__unset__")
+        if dim_counts.get(t, 0) < dim_cap:
+            diverse.append(cand)
+            dim_counts[t] = dim_counts.get(t, 0) + 1
+        else:
+            overflow.append(cand)
+        if len(diverse) >= target_count:
+            break
+    # Fill remaining slots from overflow (already sorted by relevance_score)
+    for cand in overflow:
+        if len(diverse) >= target_count:
+            break
+        diverse.append(cand)
+    return diverse[:target_count]
 
 
 # ---------------------------------------------------------------------------
