@@ -107,9 +107,8 @@ def build_question_text(row: dict) -> str:
 
     # Body system + subcategory
     body = (row.get("body_system") or "").strip()
-    subcat = (row.get("subcategory") or "").strip()
-    if body or subcat:
-        parts.append(f"System: {body} / {subcat}")
+    if body:
+        parts.append(f"System: {body}")
 
     # Concept tags (structured clinical concepts)
     tags_raw = (row.get("concept_tags") or "").strip()
@@ -267,7 +266,7 @@ def embed_questions(conn, client, dry_run=False, new_only=False):
     """Compute and store embeddings for all questions (or only new ones)."""
     if new_only:
         questions = conn.execute("""
-            SELECT q.qid, q.question_text, q.correct_text, q.body_system, q.subcategory, q.concept_tags
+            SELECT q.qid, q.question_text, q.correct_text, q.body_system, q.concept_tags
             FROM questions q
             LEFT JOIN question_vec v ON q.qid = v.qid
             WHERE v.qid IS NULL
@@ -276,7 +275,7 @@ def embed_questions(conn, client, dry_run=False, new_only=False):
         print(f"  [new-only mode] {len(questions)} questions without embeddings")
     else:
         questions = conn.execute("""
-            SELECT qid, question_text, correct_text, body_system, subcategory, concept_tags
+            SELECT qid, question_text, correct_text, body_system, concept_tags
             FROM questions
             ORDER BY qid
         """).fetchall()
@@ -323,9 +322,8 @@ def embed_aafp_questions(conn, client, dry_run=False, new_only=False):
     """Compute and store embeddings for AAFP BRQ questions (or only new ones)."""
     if new_only:
         questions = conn.execute("""
-            SELECT q.aafp_qid, q.stem, e.correct_text, e.explanation
+            SELECT q.aafp_qid, q.stem, q.correct_text, q.explanation
             FROM aafp_questions q
-            JOIN aafp_explanations e ON q.aafp_qid = e.aafp_qid
             LEFT JOIN aafp_question_vec v ON q.aafp_qid = v.aafp_qid
             WHERE v.aafp_qid IS NULL
             ORDER BY q.aafp_qid
@@ -333,10 +331,9 @@ def embed_aafp_questions(conn, client, dry_run=False, new_only=False):
         print(f"  [new-only mode] {len(questions)} AAFP questions without embeddings")
     else:
         questions = conn.execute("""
-            SELECT q.aafp_qid, q.stem, e.correct_text, e.explanation
-            FROM aafp_questions q
-            JOIN aafp_explanations e ON q.aafp_qid = e.aafp_qid
-            ORDER BY q.aafp_qid
+            SELECT aafp_qid, stem, correct_text, explanation
+            FROM aafp_questions
+            ORDER BY aafp_qid
         """).fetchall()
 
     print(f"\n{'='*60}")

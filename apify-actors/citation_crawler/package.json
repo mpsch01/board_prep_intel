@@ -1,0 +1,19 @@
+{
+    "name": "citation-crawler",
+    "version": "0.1.0",
+    "description": "Crawls academic and clinical article pages to extract metadata and discover PDF links.",
+    "type": "module",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "node src/main.js"
+    },
+    "dependencies": {
+        "apify": "^3.2.0",
+        "crawlee": "^3.9.0",
+        "chrono-node": "^2.7.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "license": "MIT"
+}

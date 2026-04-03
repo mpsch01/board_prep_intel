@@ -1,0 +1,81 @@
+{
+    "title": "Citation Crawler Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs (crawl mode)",
+            "type": "array",
+            "description": "Publisher landing pages to crawl for article links. The crawler will discover article URLs from these pages.",
+            "editor": "requestListSources",
+            "example": [{ "url": "https://www.aafp.org/clinical/guidelines.html" }]
+        },
+        "articleUrls": {
+            "title": "Article URLs (deterministic mode)",
+            "type": "array",
+            "description": "Direct article page URLs to fetch without crawling. Use this when you already know the exact article pages. Skips link discovery entirely.",
+            "editor": "requestListSources",
+            "example": [{ "url": "https://www.aafp.org/pubs/afp/issues/2024/0101/hypertension-guidelines.html" }]
+        },
+        "maxPagesPerDomain": {
+            "title": "Max pages per domain (crawl mode)",
+            "type": "integer",
+            "description": "Maximum number of article pages to enqueue per domain during crawl mode.",
+            "default": 100,
+            "minimum": 1
+        },
+        "maxConcurrency": {
+            "title": "Max concurrency",
+            "type": "integer",
+            "description": "Maximum number of parallel browser pages.",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 50
+        },
+        "maxRequestRetries": {
+            "title": "Max request retries",
+            "type": "integer",
+            "description": "How many times to retry a failed request before giving up.",
+            "default": 3,
+            "minimum": 0
+        },
+        "minWords": {
+            "title": "Minimum word count",
+            "type": "integer",
+            "description": "Pages with fewer words than this threshold are skipped — unless they contain PDF links.",
+            "default": 100,
+            "minimum": 0
+        },
+        "dateFrom": {
+            "title": "Date from (optional)",
+            "type": "string",
+            "description": "Skip articles published before this date (YYYY-MM-DD). Leave blank for no date gating — recommended for clinical guidelines which are evergreen.",
+            "editor": "textfield",
+            "example": "2020-01-01"
+        },
+        "onlyInside": {
+            "title": "Only follow same-domain links",
+            "type": "boolean",
+            "description": "In crawl mode, restrict link-following to the same domain as the start URL.",
+            "default": true
+        },
+        "onlyNew": {
+            "title": "Skip previously seen URLs",
+            "type": "boolean",
+            "description": "Skip URLs that were seen in a previous run (uses citation-crawler-state dataset for deduplication).",
+            "default": false
+        },
+        "saveHtml": {
+            "title": "Save raw HTML",
+            "type": "boolean",
+            "description": "Include the raw HTML of each page in the output. Increases storage usage significantly.",
+            "default": false
+        },
+        "proxy": {
+            "title": "Proxy configuration",
+            "type": "object",
+            "description": "Apify proxy settings. Use for publisher sites that block direct requests.",
+            "editor": "proxy"
+        }
+    }
+}
