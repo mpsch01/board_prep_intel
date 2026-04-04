@@ -43,7 +43,7 @@ PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent   # scripts/ → agents/ → skil
 
 DB_PATH      = str(PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db")
 PDF_LIBRARY  = str(PROJECT_ROOT / "01_module.1_warehouse")
-STAGING_DIR  = str(PROJECT_ROOT / "01_module.1_warehouse" / "VC_fail" / "_sourced_staging")
+STAGING_DIR  = str(PROJECT_ROOT / "01_module.1_warehouse" / "citation_files" / "ITE" / "VC_fail" / "_sourced_staging")
 AGENTS_DIR   = str(SCRIPT_DIR.parent)
 RESULTS_LOG  = str(SCRIPT_DIR.parent / "pdf_sourcer_results.json")
 
