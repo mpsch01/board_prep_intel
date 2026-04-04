@@ -7,7 +7,7 @@ type: project
 
 **Project:** ABFM ITE Intelligence System (Family Medicine board exam knowledge base)
 **Root (Windows):** `C:\Users\mpsch\Desktop\board_prep_intel\`
-**Active BATON:** `BATON_active_038_20260404_code_review_fixes.md`
+**Active BATON:** `BATON_active_039_20260404_schema_docs_cleanup.md`
 **Git:** `main`, latest committed → GIT-COMMITTED (code review: 14 defects fixed — 4 critical hop count/path bugs + 10 others)
 
 ---
@@ -33,9 +33,9 @@ type: project
 
 | Module | Location | Scripts | Status |
 |--------|----------|---------|--------|
-| M1 Warehouse | `01_module.1_warehouse/` | 9 build (3 deprecated) + 17 maintain (2 deprecated) + aafp_brq_scraper.py at scripts/ root | Path-updated; deprecated originals pending Windows delete |
-| M2 Processor | `02_module.2_processor/scripts/` | ~64 Python + 6 JS + 1 config JSON + 4 Windows | Stable; +extract_ite_year.py +classify_ite_year.py |
-| M3 Analyst | `03_module.3_analyst/scripts/` | 14 Python + 2 JS + 2 JSON config | +build_aafp_qa_deliverables.py +build_ite_qa_deliverables.py |
+| M1 Warehouse | `01_module.1_warehouse/` | 6 build + 18 maintain + aafp_brq_scraper.py at scripts/ root | Cleanup complete; deprecated originals deleted ✓ |
+| M2 Processor | `02_module.2_processor/scripts/` | 75 Python + 6 JS + 1 config JSON; +core(4py) +engines(7py) +utils(6py) packages; source/ outputs/ prompts/ subdirs | Stable |
+| M3 Analyst | `03_module.3_analyst/scripts/` | 13 Python + 2 JS + 2 JSON config | Stable |
 | DB | `00_database/db/ite_intelligence.db` | Source of truth | 1,985 articles, 1,629 ITE Q, 1,221 AAFP Q |
 | Apify | `skills_abilities/apify-actors/citation_crawler/` | 1 actor (PlaywrightCrawler) | DEPLOYED ✅ build 0.3.1 (`mpsch1~citation-crawler`, ID `rh50nQRP7BupbUF64`) |
 
