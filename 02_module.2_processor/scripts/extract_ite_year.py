@@ -10,7 +10,7 @@ Replaces the CSV-intermediate pipeline (01_ite_extractor → 02_ite_categorizer 
 03_ite_merger). CSVs are now generated on demand as derived exports.
 
 Source PDFs expected in:
-    01_module.1_warehouse/ite_source/
+    01_module.1_warehouse/ite_exams/
         {YEAR}_ITE_Questions.pdf
         {YEAR}_ITE_Critique.pdf
 
@@ -49,7 +49,7 @@ from datetime import datetime, timezone
 # ── Paths ────────────────────────────────────────────────────────────────────
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
-ITE_SOURCE   = PROJECT_ROOT / "01_module.1_warehouse" / "ite_source"
+ITE_SOURCE   = PROJECT_ROOT / "01_module.1_warehouse" / "ite_exams"
 DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR      = PROJECT_ROOT / "00_database" / "logs"
 

@@ -17,12 +17,13 @@ SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
 DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 WAREHOUSE    = PROJECT_ROOT / "01_module.1_warehouse"
+CITATION_ITE = WAREHOUSE / "citation_files" / "ITE"
 
 TIER_FOLDERS = {
-    "VC_fail":        "VC_fail",
-    "01_local_lite":  "local_lite",
-    "VC_pass":        "VC_pass",
-    "03_right_click": "right_click",
+    "VC_fail":     "VC_fail",
+    "local_lite":  "local_lite",
+    "VC_pass":     "VC_pass",
+    "right_click": "right_click",
 }
 
 CODON_RE = re.compile(r"#@#(ART-\d+)@#@")
@@ -45,7 +46,7 @@ def classify_engine(ref):
 # ── Build warehouse tier map ──
 tier_map = {}
 for folder, label in TIER_FOLDERS.items():
-    path = WAREHOUSE / folder
+    path = CITATION_ITE / folder
     for f in os.listdir(path):
         m = CODON_RE.search(f)
         if m: tier_map[m.group(1)] = label

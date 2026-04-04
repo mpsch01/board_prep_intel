@@ -1,10 +1,10 @@
 ---
 name: project_current_db_state
-description: DB state as of BATON 034 (2026-04-03) — DB unchanged; citation_crawler upgraded to PlaywrightCrawler; 12/49 AAFP PDFs in VC_fail; 37 manual remain
+description: DB state as of BATON 037 (2026-04-04) — DB unchanged from BATON 034; M1 restructure complete; 42 practice Q&A deliverables generated; ite_exams archive confirmed
 type: project
 ---
 
-## DB State (as of BATON 034, 2026-04-03 — unchanged from BATON 032)
+## DB State (as of BATON 037, 2026-04-04 — unchanged from BATON 034)
 
 | Table | Rows | Notes |
 |-------|------|-------|
@@ -104,16 +104,34 @@ Model: OpenAI text-embedding-3-small, 1536d. Script: `build_icd10_embeddings.py`
 
 ---
 
-## M3 Analyst Scripts (as of BATON 030)
+## Practice Questions Deliverables (as of BATON 037)
+
+All stored in `01_module.1_warehouse/practice_questions/` (gitignored — regenerable from DB).
+
+| Set | DOCX | XLSX | Script |
+|-----|------|------|--------|
+| ITE (per year, 2018–2025) | 8 files | 8 files | `build_ite_qa_deliverables.py` |
+| AAFP (per quiz chunk, 13 chunks) | 13 files | 13 files | `build_aafp_qa_deliverables.py` |
+
+**Design rules locked:**
+- MC answer choices are uniform (dark text, no bold) — correct answer NOT shown in choices list
+- Only `✓ Answer:` banner (light blue shaded) reveals the correct answer
+- ITE XLSX: 13 columns (`#, QID, Year, Stem, A, B, C, D, E, Correct, Correct Answer, Explanation, Reference`) — no body_system/blueprint
+- AAFP XLSX: 12 columns (no body_system/blueprint — never had them)
+
+---
+
+## M3 Analyst Scripts (as of BATON 037)
 
 | Script | Status | Notes |
 |--------|--------|-------|
 | `ite_parser.py` | Stable | PDF extraction, blueprint + body system |
-| `ite_analyzer_v3.py` | NEW 2026-04-01 | 9 layers, 3-tier question cascade, dual bank |
-| `ite_analyzer_v2.py` | DEPRECATED | subcategory crash risk; kept for --v2-only flag |
-| `ite_analyze_v2.py` | Updated 2026-04-01 | Entry point; routes to v3 by default |
-| `ite_report_builder_v2.js` | Updated 2026-04-01 | subcatAnalysis fix, pathway gap section |
+| `ite_analyzer_v3.py` | Stable | 9 layers, 3-tier question cascade, dual bank |
+| `ite_analyze_v2.py` | Stable | Entry point; routes to v3 by default |
+| `ite_report_builder_v2.js` | Stable | subcatAnalysis fix, pathway gap section |
 | `build_icd10_tags.py` | Stable | ICD-10 tagging pipeline |
+| `build_aafp_qa_deliverables.py` | NEW (BATON 036) | 26 AAFP Q&A files; answer choice fix applied (BATON 037) |
+| `build_ite_qa_deliverables.py` | NEW (BATON 037) | 16 ITE Q&A files (8 DOCX + 8 XLSX) |
 
 ---
 

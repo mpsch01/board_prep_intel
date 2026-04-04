@@ -15,10 +15,10 @@ MODES:
 TIER LOGIC (Mikey directive, 2026-03-25; nomenclature updated 2026-03-26):
   VC gate (session_hy_inserts_v7.json) = SOLE criterion.
   Priority: warehouse physical location first, VC gate fallback for no-PDF articles.
-    1. Article has PDF in 03_right_click/ → 'right_click'
-    2. Article has PDF in VC_pass/        → 'VC_pass'
-    3. Article has PDF in 01_local_lite/  → 'local_lite'
-    4. Article has PDF in VC_fail/        → 'VC_fail'
+    1. Article has PDF in citation_files/ITE/right_click/ → 'right_click'
+    2. Article has PDF in citation_files/ITE/VC_pass/    → 'VC_pass'
+    3. Article has PDF in citation_files/ITE/local_lite/  → 'local_lite'
+    4. Article has PDF in citation_files/ITE/VC_fail/     → 'VC_fail'
     5. No PDF + VC-cited                  → 'VC_pass'  (pending PDF acquisition)
     6. No PDF + not VC-cited              → 'VC_fail'
   Legacy labels Core/Supplementary/Must-Read are retired.
@@ -42,12 +42,13 @@ PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
 DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 VC_GATE_PATH = PROJECT_ROOT / "key_data_files" / "session_hy_inserts_v7.json"
 WAREHOUSE    = PROJECT_ROOT / "01_module.1_warehouse"
+CITATION_ITE = WAREHOUSE / "citation_files" / "ITE"
 
 TIER_FOLDERS = {
-    "VC_fail":        "VC_fail",
-    "01_local_lite":  "local_lite",
-    "VC_pass":        "VC_pass",
-    "03_right_click": "right_click",
+    "VC_fail":     "VC_fail",
+    "local_lite":  "local_lite",
+    "VC_pass":     "VC_pass",
+    "right_click": "right_click",
 }
 
 # Vague source_type labels that the classifier should replace
@@ -163,8 +164,9 @@ CODON_RE = re.compile(r"#@#(ART-\d+)@#@")
 def build_warehouse_tier_map(warehouse_path: Path) -> dict:
     """Scan all 4 warehouse tiers. Returns {art_id: tier_label}."""
     tier_map = {}
+    citation_ite = warehouse_path / "citation_files" / "ITE"
     for folder, label in TIER_FOLDERS.items():
-        folder_path = warehouse_path / folder
+        folder_path = citation_ite / folder
         if not folder_path.exists():
             continue
         for fname in os.listdir(folder_path):

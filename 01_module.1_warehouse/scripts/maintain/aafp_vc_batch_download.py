@@ -38,8 +38,9 @@ from pathlib import Path
 SCRIPT_DIR    = Path(__file__).resolve().parent
 PROJECT_ROOT  = SCRIPT_DIR.parent.parent.parent   # maintain/ → scripts/ → 01_module.1_warehouse/ → root
 WAREHOUSE     = PROJECT_ROOT / "01_module.1_warehouse"
-CODON_DIR     = WAREHOUSE / "VC_pass"
-EXTRACT_DIR   = WAREHOUSE / "VC_fail"
+CITATION_ITE  = WAREHOUSE / "citation_files" / "ITE"
+CODON_DIR     = CITATION_ITE / "VC_pass"
+EXTRACT_DIR   = CITATION_ITE / "VC_fail"
 MANIFEST_PATH = SCRIPT_DIR / "aafp_download_manifest.json"
 LOG_PATH      = SCRIPT_DIR / "_download_log.json"
 DELAY         = 2.0   # seconds between downloads (be polite to AAFP servers)
@@ -61,7 +62,7 @@ print(f"Manifest loaded: {len(manifest)} total, {len(downloadable)} downloadable
 
 # ─── CHECK EXISTING ───────────────────────────────────────────────────────────
 existing = set()
-for d in [CODON_DIR, LIBRARY_BASE / "pdf_non-codon", EXTRACT_DIR]:
+for d in [CODON_DIR, EXTRACT_DIR]:
     if d.is_dir():
         existing.update(f.name for f in d.iterdir() if f.suffix.lower() == ".pdf")
 

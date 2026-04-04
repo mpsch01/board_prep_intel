@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_036_20260404_aafp_qa_deliverables_ite_pipeline.md` |
+| Active BATON | `BATON_active_037_20260404_practice_questions_deliverables_m1_restructure.md` |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -62,12 +62,14 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_icd10_vec | 1,674 rows — ✅ rebuilt 2026-04-01 |
 | question_icd10_vec | 2,733 rows — ✅ rebuilt 2026-04-01 |
 | clinical_pathways | 4,020 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 |
-| PDFs | ~414 across 4 tiers (VC_fail ~156; 37 AAFP articles still awaiting manual PDF download) |
+| PDFs (citation tiers) | ~414 across 4 tiers in citation_files/ITE/ (VC_fail ~156; 37 AAFP articles still awaiting manual PDF download) |
+| PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
+| practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
-| M1 scripts | 9 build (3 deprecated) + 17 maintain (2 deprecated) + aafp_brq/scraper — originals pending Windows delete |
-| M2 scripts | 68 Python + 6 JS + 1 JSON + 4 Windows (+extract_ite_year.py +classify_ite_year.py) |
-| M3 scripts | 12 Python + 2 JS + 2 JSON config (+build_aafp_qa_deliverables.py) |
+| M1 scripts | 9 build (3 deprecated) + 17 maintain (2 deprecated) + aafp_brq_scraper.py at scripts/ root — originals pending Windows delete |
+| M2 scripts | ~64 Python + 6 JS + 1 JSON + 4 Windows (+extract_ite_year.py +classify_ite_year.py) |
+| M3 scripts | 14 Python + 2 JS + 2 JSON config (+build_aafp_qa_deliverables.py +build_ite_qa_deliverables.py) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
 | Git branch | `main`, latest → GIT-COMMITTED (sweep + mapping + ITE pipeline + AAFP Q&A deliverables) |
@@ -108,10 +110,11 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 035, 2026-04-04)
+## Next Steps (as of BATON 037, 2026-04-04)
 1. **Windows cleanup** — Delete 5 deprecated script originals from `M1/build/` and `M1/maintain/` (see BATON 035 for list)
-2. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → VC_fail
-3. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled
-4. **DEFERRED-B** — `update_citation_trends.py` after backfill complete
-5. **Option B** — Flatten `00_#PROJECT_OVERHAUL/` → `claude_knowledge/` root (path-safe per `repo_pre_severance.md`)
-6. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`)
+2. **`extract_ite_year.py` filename fix** — update expected filenames from `{YEAR}_ITE_Questions.pdf` → `{YEAR}_MC.pdf` and `{YEAR}_ITE_Critique.pdf` → `{YEAR}_critique.pdf` (matches ite_exams/ archive)
+3. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → `citation_files/ITE/VC_fail/`
+4. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled
+5. **DEFERRED-B** — `update_citation_trends.py` after backfill complete
+6. **Option B** — Flatten `00_#PROJECT_OVERHAUL/` → `claude_knowledge/` root (path-safe per `repo_pre_severance.md`)
+7. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`)

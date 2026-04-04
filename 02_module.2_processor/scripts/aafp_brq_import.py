@@ -2,7 +2,7 @@
 """
 AAFP Board Review Questions — DB Import (v3)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Reads:   01_module.1_warehouse/aafp_brq/staging/aafp_brq_staging.json
+Reads:   _archive_/02_question_bank/aafp_initial_staging/aafp_brq_staging.json
 Writes:  00_database/db/ite_intelligence.db → 4 tables + xref
 
 Tables:
@@ -42,7 +42,7 @@ SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 
 DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
-STAGING_FILE = PROJECT_ROOT / "01_module.1_warehouse" / "aafp_brq" / "staging" / "aafp_brq_staging.json"
+STAGING_FILE = PROJECT_ROOT / "_archive_" / "02_question_bank" / "aafp_initial_staging" / "aafp_brq_staging.json"
 # ══════════════════════════════════════════════════════════════════════
 
 DRY_RUN = "--dry-run" in sys.argv

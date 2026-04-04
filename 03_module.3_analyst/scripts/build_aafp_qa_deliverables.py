@@ -251,14 +251,14 @@ def build_docx(chunk: list, q_data: dict, out_path: Path) -> int:
             r_ltr = p_ch.add_run(f"{letter})  ")
             r_ltr.font.name      = DEFAULT_FONT
             r_ltr.font.size      = Pt(FONT_BODY)
-            r_ltr.font.bold      = is_correct
-            r_ltr.font.color.rgb = RGB_GREEN if is_correct else RGB_DARK_TEXT
+            r_ltr.font.bold      = False
+            r_ltr.font.color.rgb = RGB_DARK_TEXT
 
             r_cht = p_ch.add_run(ch_text)
             r_cht.font.name      = DEFAULT_FONT
             r_cht.font.size      = Pt(FONT_BODY)
-            r_cht.font.bold      = is_correct
-            r_cht.font.color.rgb = RGB_GREEN if is_correct else RGB_DARK_TEXT
+            r_cht.font.bold      = False
+            r_cht.font.color.rgb = RGB_DARK_TEXT
 
         # ── Correct answer banner ─────────────────────────────────────────────
         p_ans = doc.add_paragraph()

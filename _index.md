@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-04-04 (BATON 035)
-**Status:** Current — blueprint 100% filled (1,629/1,629); aafp_question_icd10 relevance normalized; unified_keyword_extractor.py; blueprint_emergent_pass.py; repo_pre_severance.md added; 5 legacy scripts deprecated
+**Last Updated:** 2026-04-04 (BATON 037)
+**Status:** Current — M1 3-domain restructure complete (citation_files/ + practice_questions/ + ite_exams/); 42 Q&A deliverables generated; all M1 scripts path-updated; answer choice formatting fixed in both DOCX builders
 
 > This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 00_#PROJECT_OVERHAUL/
-├── BATON_active_035_20260404_repo_sweep_mapping.md  ← active BATON
+├── BATON_active_037_20260404_practice_questions_deliverables_m1_restructure.md  ← active BATON
 ├── CLAUDE.md                              ← project memory + conventions
 ├── README.md                              ← project overview (human-readable)
 ├── README_PROJECT.md                      ← extended project documentation
@@ -22,7 +22,7 @@
 ├── .gitattributes / .gitignore
 │
 ├── 00_database/                           ← source of truth (DB + supporting data)
-├── 01_module.1_warehouse/                 ← M1 PDF library (4 tiers, ~414 PDFs) + AAFP BRQ warehouse + build/maintain scripts
+├── 01_module.1_warehouse/                 ← M1 3-domain: citation_files/ (~414 PDFs, 4 tiers) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
 ├── 02_module.2_processor/                 ← M2 pipeline scripts + source inputs
 ├── 03_module.3_analyst/                   ← M3 score analysis + ICD-10 + pathways
 ├── 04_module.4_sandbox/                   ← M4 experiments and agent prototypes
@@ -38,6 +38,7 @@
 **Removed/relocated (2026-03-27):** `sectional_READMEs/`, `tagging_bundle/`, `re-org_guidance/`, `master_map.JSON`, `MASTER_MAP_V.1.html`, `TEMP_MIGRATION_MANIFEST.md`
 **Swept (2026-04-03, BATON 034):** `docx_guideline_library/` → `_archive_/`; `archive_canonical/` → renamed `_archive_/`; `apify-actors/` → `skills_abilities/`; `apify_smart_article_extractor` → deleted; BATON 032/033 duplicates → deleted from root
 **Swept (2026-04-04, BATON 035):** 5 legacy scripts deprecated (headers applied) + staged in `_legacy/` → moved to offsite archive by user; originals pending Windows delete; `build_faculty_pptx.js` verified clean (no path deps)
+**Swept (2026-04-04, BATON 036/037):** M1 restructured to 3-domain layout (citation_files/ + practice_questions/ + ite_exams/); all 11 M1 maintain scripts path-updated; build_ite_qa_deliverables.py + build_aafp_qa_deliverables.py built + 42 deliverables generated; ite_exams/ archive confirmed (2018–2025)
 
 ---
 
@@ -103,22 +104,25 @@
 
 ---
 
-### `01_module.1_warehouse/` — PDF Library (404 total) + AAFP BRQ Data + Scripts
+### `01_module.1_warehouse/` — 3-Domain PDF Warehouse + Scripts
 ```
 01_module.1_warehouse/
-├── VC_fail/          ← ~156 PDFs (VC gate failed — destined for local_lite; 37 AAFP acquisition PDFs still manual pending)
-├── 01_local_lite/    ← 117 PDFs (VC_fail + fully enriched)
-├── VC_pass/          ← 94 PDFs (VC gate passed — destined for right_click)
-├── 03_right_click/   ← 71 PDFs (VC_pass + fully enriched)
-├── aafp_brq/                              ← AAFP Board Review Questions (scraper + staging)
-│   ├── scraper/
-│   │   ├── aafp_brq_scraper.py            ← v3 + resume/salvage logic (Windows-only: VM proxy blocks HTTPS)
-│   │   ├── aafp_cookies.json              ← 38 auth cookies (refresh before each scrape run)
-│   │   ├── aafp_quiz_map.json             ← 135 quiz sets (assessment_id → quiz_title)
-│   │   └── aafp_explore_dump.txt          ← Q49733 reference (explore mode output)
-│   └── staging/
-│       └── aafp_brq_staging.json          ← 1,221 scraped questions (4MB); import script in M2
+├── citation_files/                        ← PDF guideline library (~414 PDFs across 4 tiers)
+│   ├── ITE/
+│   │   ├── VC_fail/      ← ~156 PDFs (VC gate failed; 37 AAFP acquisition still pending manual download)
+│   │   ├── local_lite/   ← 117 PDFs (VC_fail + fully enriched)
+│   │   ├── VC_pass/      ← 94 PDFs (VC gate passed — destined for right_click)
+│   │   └── right_click/  ← 71 PDFs (VC_pass + fully enriched; highest-value tier)
+│   └── AAFP/             ← AAFP citation PDFs
+├── practice_questions/                    ← Q&A study deliverables (gitignored; regenerable from DB)
+│   ├── word_docs/        ← 8 ITE_YYYY_QA.docx + 13 AAFP_quiz_NNN-NNN.docx = 21 DOCX
+│   └── excel/            ← 8 ITE_YYYY_QA.xlsx + 13 AAFP_quiz_NNN-NNN.xlsx = 21 XLSX
+├── ite_exams/                             ← Raw ABFM ITE exam PDFs (YYYY_MC.pdf + YYYY_critique.pdf)
+│   ├── 2018_MC.pdf … 2025_MC.pdf         ← 8 question PDFs
+│   ├── 2018_critique.pdf … 2025_critique.pdf  ← 8 critique PDFs
+│   └── README.txt
 ├── scripts/
+│   ├── aafp_brq_scraper.py                ← v3 scraper (moved from aafp_brq/scraper/); OUTPUT_DIR=scripts/_aafp_staging/
 │   ├── build/                             ← full DB build sequence (run in order)
 │   │   ├── README.md
 │   │   ├── build_clean_question_bank.py   ← Step 1: Excel → ite_questions_clean.json
@@ -298,6 +302,8 @@
 │   ├── word_doc_defaults.py               ← NEW (BATON 031) — St. Luke's style template; import in ALL python-docx scripts
 │   ├── build_aafp_qa.py                   ← NEW (BATON 031) — File 3 Q&A builder (595 AAFP citation-overlap questions)
 │   ├── build_aafp_qa_file1.py             ← NEW (BATON 031) — File 1 Q&A builder (34 near-duplicate questions + ITE companion)
+│   ├── build_aafp_qa_deliverables.py      ← NEW (BATON 036) — 26 AAFP Q&A deliverables (13 DOCX + 13 XLSX); answer fix BATON 037
+│   ├── build_ite_qa_deliverables.py       ← NEW (BATON 037) — 16 ITE Q&A deliverables (8 DOCX + 8 XLSX); uniform MC choices
 │   ├── abfm_reference_2025.json
 │   └── ite_parser_config.json
 ├── docs/
@@ -315,7 +321,7 @@
     ├── sarkar_2025_blueprint.pdf / bodysystem.pdf
     └── scholl_2025_ENCRYPTED_22/23/24.pdf ← FLAG 30 (needs password)
 ```
-*9 Python + 1 JS + 2 JSON configs*
+*14 Python + 2 JS + 2 JSON configs*
 
 ### `04_module.4_sandbox/` — Experiments
 ```

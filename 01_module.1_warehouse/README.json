@@ -1,65 +1,79 @@
 {
   "folder": "00_#PROJECT_OVERHAUL/01_module.1_warehouse",
-  "description": "M1 Warehouse — PDF guideline library (4 tiers, 404 PDFs), AAFP Board Review Questions data (scraper + staging), and warehouse build/maintain scripts. Stores source PDFs and all acquisition/operational scripts that keep the library current.",
-  "last_updated": "2026-03-27",
-  "baton": "015",
-  "structure_version": "6.0",
-  "total_pdfs": 404,
-  "pdf_tiers": {
-    "VC_fail": {
-      "description": "PDFs that have NOT passed the VC gate (session_hy_inserts_v7.json). Destined for local_lite tier after enrichment.",
-      "count": 146
+  "description": "M1 Warehouse — 3-domain layout: citation_files/ (PDF guideline library, 4 tiers), practice_questions/ (Q&A study deliverables), ite_exams/ (raw exam PDF archive). Build/maintain scripts in scripts/.",
+  "last_updated": "2026-04-04",
+  "baton": "037",
+  "structure_version": "7.0",
+  "domains": {
+    "citation_files": {
+      "description": "PDF guideline library. ITE subtree has 4 enrichment tiers; AAFP subtree holds AAFP citation PDFs.",
+      "path": "citation_files/",
+      "subtrees": {
+        "ITE": {
+          "VC_fail": {
+            "description": "PDFs that have NOT passed the VC gate (session_hy_inserts_v7.json). Destined for local_lite after enrichment.",
+            "approx_count": 156,
+            "note": "37 AAFP acquisition PDFs still awaiting manual download"
+          },
+          "local_lite": {
+            "description": "VC_fail PDFs that are fully enriched (extraction + synthesis + enrichment + DOCX complete).",
+            "approx_count": 117
+          },
+          "VC_pass": {
+            "description": "PDFs that HAVE passed the VC gate. Destined for right_click after enrichment.",
+            "approx_count": 94
+          },
+          "right_click": {
+            "description": "VC_pass PDFs that are fully enriched. The highest-value tier.",
+            "approx_count": 71
+          }
+        },
+        "AAFP": {
+          "description": "AAFP citation PDFs (separate from ITE tiers)."
+        }
+      },
+      "total_pdfs_approx": 414,
+      "naming_convention": "Author_Year#@#ART-XXXX@#@.pdf — ART-ID embedded between #@# (start codon) and @#@ (stop codon)",
+      "vc_gate": "key_data_files/session_hy_inserts_v7.json (352 citations) — sole criterion for right_click vs local_lite"
     },
-    "01_local_lite": {
-      "description": "VC_fail PDFs that are fully enriched (extraction + synthesis + enrichment + DOCX complete).",
-      "count": 117
+    "practice_questions": {
+      "description": "Q&A study deliverables — 1 DOCX + 1 XLSX per ITE year (2018–2025) and 13 DOCX + 13 XLSX for AAFP quizzes. Gitignored; regenerable from DB at any time.",
+      "path": "practice_questions/",
+      "subfolders": {
+        "word_docs": "8 ITE DOCX (ITE_YYYY_QA.docx) + 13 AAFP DOCX (AAFP_quiz_NNN-NNN.docx) = 21 files",
+        "excel": "8 ITE XLSX (ITE_YYYY_QA.xlsx) + 13 AAFP XLSX (AAFP_quiz_NNN-NNN.xlsx) = 21 files"
+      },
+      "total_files": 42,
+      "generators": {
+        "ITE": "03_module.3_analyst/scripts/build_ite_qa_deliverables.py --year YYYY or all 8 years",
+        "AAFP": "03_module.3_analyst/scripts/build_aafp_qa_deliverables.py"
+      },
+      "design_rule": "MC answer choices are uniform (dark text, no bold). Only the ✓ Answer: banner reveals the correct answer. Hybrid exam/study-guide use case.",
+      "ite_xlsx_columns": ["#", "QID", "Year", "Stem", "A", "B", "C", "D", "E", "Correct", "Correct Answer", "Explanation", "Reference"],
+      "aafp_xlsx_columns": ["#", "Quiz", "Stem", "A", "B", "C", "D", "E", "Correct", "Correct Answer", "Explanation", "Citation"]
     },
-    "VC_pass": {
-      "description": "PDFs that HAVE passed the VC gate. Destined for right_click tier after enrichment.",
-      "count": 94
-    },
-    "03_right_click": {
-      "description": "VC_pass PDFs that are fully enriched (complete right-click pipeline). The highest-value tier.",
-      "count": 71
+    "ite_exams": {
+      "description": "Archive of all available ABFM ITE raw exam PDFs. Two files per year: questions and critique.",
+      "path": "ite_exams/",
+      "naming_convention": "YYYY_MC.pdf (questions) + YYYY_critique.pdf (answer key + explanations)",
+      "years_present": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+      "total_files": 16,
+      "note": "2026 exam PDFs will land here first when released. Pipeline entry: extract_ite_year.py --year 2026"
     }
   },
-  "aafp_brq": {
-    "description": "AAFP Board Review Questions — 135 quiz sets × 10 questions = 1,350 total. Scraped via aafp_brq_scraper.py (Windows-only). Enables AAFP-ITE topic lag analysis.",
-    "scraper": {
-      "path": "aafp_brq/scraper/",
-      "scripts": [
-        "aafp_brq_scraper.py — v3 + resume/salvage logic; Windows-only (VM proxy blocks outbound HTTPS)",
-        "aafp_cookies.json — 38 auth cookies; REFRESH BEFORE EACH RUN (session cookies)",
-        "aafp_quiz_map.json — 135 quiz sets (assessment_id → quiz_title mapping)",
-        "aafp_explore_dump.txt — Q49733 explore mode reference output"
-      ],
-      "formula": "first_q = 49733 + (assessment_id - 13882) * 10",
-      "warning": "DO NOT poll staging file from VM while scraper is running — causes FUSE oplock conflict, freezes Windows write"
-    },
-    "staging": {
-      "path": "aafp_brq/staging/",
-      "file": "aafp_brq_staging.json",
-      "records": 1221,
-      "size_approx": "4MB",
-      "note": "1,221 of 1,350 expected (129 missing from ~13 incomplete quizzes — FUSE oplock stall). Gap-fill pass deferred."
-    },
-    "import_script": "02_module.2_processor/scripts/aafp_brq_import.py (in M2, not M1 — processor operation)",
-    "db_table": "aafp_questions (1,221 rows; aafp_qid = 'AAFP-{question_id}'; separate from ITE questions table)"
-  },
-  "naming_convention": "Author_Year#@#ART-XXXX@#@.pdf — ART-ID embedded between #@# start codon and @#@ stop codon",
-  "vc_gate": "key_data_files/session_hy_inserts_v7.json (352 citations) — sole criterion for right_click vs local_lite tier assignment",
   "scripts": {
     "build": {
       "path": "scripts/build/",
       "description": "Full DB rebuild sequence (9 scripts, self-contained). Run in order for a clean build. Assume DB does NOT exist yet.",
       "count": 9,
+      "deprecated_count": 3,
       "scripts": [
         "build_clean_question_bank.py — Step 1: Excel → ite_questions_clean.json",
         "rebuild_ite_db_v2.py — Step 2: core DB from JSON (2020–2025)",
-        "extract_ite_2018_2019.py — Step 3: extract 2018-2019 from split PDFs",
+        "extract_ite_2018_2019.py — Step 3: [DEPRECATED] extract 2018-2019 from split PDFs",
         "enrich_ite_questions.py — Step 4: Claude API enrichment for 2018-2019",
-        "integrate_2018_2019.py — Step 5: merge 2018-2019 into DB",
-        "backfill_keywords_2018_2019.py — Step 6: keyword backfill for 2018-2019 (moved from M2 2026-03-27)",
+        "integrate_2018_2019.py — Step 5: [DEPRECATED] merge 2018-2019 into DB",
+        "backfill_keywords_2018_2019.py — Step 6: [DEPRECATED] keyword backfill for 2018-2019",
         "validate_db_v2.py — Step 7: post-build QC",
         "compute_embeddings.py — Step 8: vector embeddings (--new-only for incremental)",
         "validate_vector_search.py — Step 9: post-embedding QC"
@@ -68,7 +82,8 @@
     "maintain": {
       "path": "scripts/maintain/",
       "description": "Operational / recurring scripts. Assume DB exists and has data. Run as needed.",
-      "count": 16,
+      "count": 17,
+      "deprecated_count": 2,
       "scripts": [
         "aafp_cleanup_filenames.py — fix ALL-CAPS author names",
         "aafp_fill_gaps.py — download missing AAFP PDFs",
@@ -80,42 +95,49 @@
         "backfill_new_article_metadata.py — fill missing metadata for new article records",
         "build_clinical_pathways.py — Layer 3: clinical_pathways table builder",
         "build_crosswalk_index.py — scans codons → crosswalk_index.json",
-        "build_match_staging.py — proposes ART-ID matches for unmatched PDFs",
+        "build_match_staging.py — [DEPRECATED] proposes ART-ID matches for unmatched PDFs",
         "build_topic_trends.py — Layer 4a: trend CSVs",
+        "download_aafp_acquisitions.py — AAFP acquisition PDF downloader (OA API + E-Fetch fallback)",
+        "download_pmc_actor_batch.py — one-off PMC batch downloader (actor-discovered URLs)",
         "match_tiers_to_library.py — scans warehouse PDFs vs ReferenceTiers CSV → match_summary.csv",
-        "preprocess_concept_tags.py — concept_tags via API (moved from M2 2026-03-27)",
+        "preprocess_concept_tags.py — concept_tags via API",
         "rebuild_acquisition_list.py — match_summary → confirmed_present.csv + ranked acquisition XLSX",
         "rename_tier_labels_in_db.py — bulk tier label updates in DB",
-        "rename_to_codon.py — executes approved codon renames"
+        "rename_to_codon.py — [DEPRECATED] executes approved codon renames"
       ],
-      "path_pattern": "SCRIPT_DIR = Path(__file__).resolve().parent; PROJECT_ROOT = SCRIPT_DIR.parent.parent"
+      "path_pattern": "SCRIPT_DIR = Path(__file__).resolve().parent; PROJECT_ROOT = SCRIPT_DIR.parent.parent; WAREHOUSE = PROJECT_ROOT / '01_module.1_warehouse'; CITATION_ITE = WAREHOUSE / 'citation_files' / 'ITE'"
+    },
+    "root_scripts": {
+      "path": "scripts/",
+      "scripts": [
+        "aafp_brq_scraper.py — v3 + resume/salvage logic; Windows-only (VM proxy blocks outbound HTTPS). OUTPUT_DIR = scripts/_aafp_staging/"
+      ]
     }
   },
   "database": {
     "path": "../00_database/db/ite_intelligence.db",
-    "articles": 1936,
+    "articles": 1985,
     "questions_ite": 1629,
     "questions_aafp_brq": 1221,
     "note": "DB lives in 00_database/, not in M1. M1 scripts reach it via PROJECT_ROOT / '00_database' / 'db' / 'ite_intelligence.db'"
   },
   "recent_changes": {
+    "baton_037_20260404": [
+      "RESTRUCTURE COMPLETE: 3-domain layout (citation_files/, practice_questions/, ite_exams/)",
+      "All 11 M1 maintain scripts path-updated: citation_files/ITE/ + tier key fix (local_lite/right_click)",
+      "aafp_vc_batch_download.py: pre-existing NameError (LIBRARY_BASE) fixed",
+      "build_ite_qa_deliverables.py (M3): 16 ITE Q&A files generated, answer choice fix applied",
+      "build_aafp_qa_deliverables.py (M3): answer choice formatting fix applied, 26 files regenerated",
+      "ite_exams/: 16 PDFs confirmed — YYYY_MC.pdf / YYYY_critique.pdf naming (2018–2025)"
+    ],
+    "baton_036_20260404": [
+      "build_aafp_qa_deliverables.py created (M3): 26 AAFP Q&A deliverables",
+      "extract_ite_year.py + classify_ite_year.py created (M2): PDF-native ITE pipeline",
+      "M1 3-domain restructure designed (user-implemented folders)"
+    ],
     "baton_015_20260327": [
       "Added aafp_brq/ directory with scraper/ and staging/ subdirectories",
-      "aafp_brq_scraper.py v3: discover/scrape/explore modes, resume logic with truncated-JSON salvage, FUSE oplock fix documented",
-      "aafp_brq_staging.json: 1,221 records (4MB) — canonical staging location",
-      "aafp_cookies.json, aafp_quiz_map.json, aafp_explore_dump.txt added to scraper/",
-      "Import script stays in M2: 02_module.2_processor/scripts/aafp_brq_import.py"
-    ],
-    "baton_014_20260327": [
-      "M1 build/ is now a self-contained 9-step rebuild sequence",
-      "backfill_keywords_2018_2019.py moved from M2 → M1/build/ (Step 6)",
-      "preprocess_concept_tags.py moved from M2 → M1/maintain/ (recurring operation)",
-      "Script counts updated: build/=9, maintain/=16"
-    ],
-    "baton_006_20260324": [
-      "Added match_tiers_to_library.py to maintain/ (migrated from TEMP_05)",
-      "Added rebuild_acquisition_list.py to maintain/",
-      "Tier naming: VC_fail/VC_pass (staging) + 01_local_lite/03_right_click (completed)"
+      "aafp_brq_scraper.py v3: discover/scrape/explore modes, resume logic"
     ]
   }
 }

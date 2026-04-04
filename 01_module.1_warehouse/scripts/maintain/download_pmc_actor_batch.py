@@ -12,7 +12,7 @@ found the direct PDF URLs by rendering the PMC viewer page.
 Run:
     python download_pmc_actor_batch.py
 
-Output: PDFs saved to 01_module.1_warehouse/VC_fail/ with codon filenames.
+Output: PDFs saved to 01_module.1_warehouse/citation_files/ITE/VC_fail/ with codon filenames.
 """
 
 import sys
@@ -28,7 +28,7 @@ except ImportError:
 # ── Paths ─────────────────────────────────────────────────────────────────────
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
-OUTPUT_DIR   = PROJECT_ROOT / "01_module.1_warehouse" / "VC_fail"
+OUTPUT_DIR   = PROJECT_ROOT / "01_module.1_warehouse" / "citation_files" / "ITE" / "VC_fail"
 
 HEADERS = {
     "User-Agent": "ITE-Intelligence-Downloader/1.0 (educational research; mailto:scholl.michael.p@gmail.com)"

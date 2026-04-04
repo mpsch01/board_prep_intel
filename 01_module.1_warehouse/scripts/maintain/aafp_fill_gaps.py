@@ -2,7 +2,7 @@
 """
 AAFP Top 20 – Gap Filler
 ========================
-Scrapes the top articles page fresh, checks both pdf_codon and pdf_non-codon
+Scrapes the top articles page fresh, checks both VC_pass and VC_fail
 for existing files, and downloads only what's missing using Playwright.
 
 Run this any time files are missing or after a fresh year is added to the page.
@@ -30,9 +30,10 @@ from playwright.sync_api import sync_playwright
 SCRIPT_DIR    = Path(__file__).resolve().parent
 PROJECT_ROOT  = SCRIPT_DIR.parent.parent.parent   # maintain/ → scripts/ → 01_module.1_warehouse/ → root
 WAREHOUSE     = PROJECT_ROOT / "01_module.1_warehouse"
-CODON_DIR     = str(WAREHOUSE / "VC_pass")
-NONCODON_DIR  = str(WAREHOUSE / "VC_fail")
-EXTRACT_DIR   = str(WAREHOUSE / "VC_fail")        # unified with VC_fail in new structure
+CITATION_ITE  = WAREHOUSE / "citation_files" / "ITE"
+CODON_DIR     = str(CITATION_ITE / "VC_pass")
+NONCODON_DIR  = str(CITATION_ITE / "VC_fail")
+EXTRACT_DIR   = str(CITATION_ITE / "VC_fail")        # unified with VC_fail in new structure
 LOG_PATH      = str(SCRIPT_DIR / "_download_log.json")
 DB_PATH       = str(PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db")
 TOP_URL       = "https://www.aafp.org/pubs/afp/content/top-articles.html"

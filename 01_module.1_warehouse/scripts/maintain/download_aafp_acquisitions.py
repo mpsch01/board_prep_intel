@@ -16,7 +16,7 @@ Run from Windows (NCBI is accessible there):
   python download_aafp_acquisitions.py --checklist ← print manual list only
 
 Requirements: requests (pip install requests)
-Output folder: 01_module.1_warehouse/VC_fail/   (all new articles are VC_fail tier)
+Output folder: 01_module.1_warehouse/citation_files/ITE/VC_fail/   (all new articles are VC_fail tier)
 """
 
 import csv
@@ -39,7 +39,7 @@ PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
 DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 QUEUE_CSV    = PROJECT_ROOT / "00_database" / "readable_db_files" / \
                "aafp_pubmed_acquisition_queue_20260328.csv"
-OUTPUT_DIR   = PROJECT_ROOT / "01_module.1_warehouse" / "VC_fail"
+OUTPUT_DIR   = PROJECT_ROOT / "01_module.1_warehouse" / "citation_files" / "ITE" / "VC_fail"
 
 DRY_RUN   = "--dry-run"   in sys.argv
 CHECKLIST = "--checklist" in sys.argv

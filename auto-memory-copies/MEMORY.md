@@ -4,8 +4,8 @@
 - [user_profile.md](user_profile.md) — Mikey: family medicine physician, self-taught data architect, builds clinical knowledge systems
 
 ## Project
-- [project_overhaul_state.md](project_overhaul_state.md) — Current PROJECT_OVERHAUL state: BATON 032, QUESTION-DIST-001 CLOSED, faculty PPTX delivered, GIT-PENDING (8 scripts unstaged)
-- [project_current_db_state.md](project_current_db_state.md) — DB state BATON 032: 1,985 articles, 1,629 ITE Q, 1,221 AAFP Q; M3 now 9P+2JS; faculty PPTX in reports/
+- [project_overhaul_state.md](project_overhaul_state.md) — Current PROJECT_OVERHAUL state: BATON 037, M1 3-domain restructure complete, 42 Q&A deliverables generated, DEFERRED-A next
+- [project_current_db_state.md](project_current_db_state.md) — DB state BATON 037: 1,985 articles, 1,629 ITE Q, 1,221 AAFP Q; all vec tables 100%; 42 practice Q&A deliverables in M1
 - [project_new_architecture.md](project_new_architecture.md) — 4-module rebuild design: Warehouse, Processor, Analyst, Sandbox. AAFP course = external priority filter.
 - [project_architecture_tiered_system.md](project_architecture_tiered_system.md) — Two-tier pipeline ($right_click$ vs local_lite), VC gate, codon system, 5 locked rebuild principles
 
