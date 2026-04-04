@@ -33,9 +33,11 @@ from selenium.webdriver.chrome.service import Service
 import browser_cookie3
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
-DEST_FOLDER     = r"C:\Users\mpsch\Desktop\AAFP pdf articles"
-DB_PATH         = r"C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\db\ite_intelligence.db"
-LOG_PATH        = os.path.join(DEST_FOLDER, "_download_log.json")
+SCRIPT_DIR      = Path(__file__).resolve().parent
+PROJECT_ROOT    = SCRIPT_DIR.parent.parent.parent   # maintain/ → scripts/ → 01_module.1_warehouse/ → root
+DB_PATH         = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
+DEST_FOLDER     = PROJECT_ROOT / "01_module.1_warehouse" / "VC_fail"
+LOG_PATH        = DEST_FOLDER / "_download_log.json"
 DELAY           = 2.0
 MATCH_THRESHOLD = 0.72
 

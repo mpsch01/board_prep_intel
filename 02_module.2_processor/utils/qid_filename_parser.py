@@ -193,7 +193,7 @@ if __name__ == "__main__":
         ("Smith_Jones_2023@#@QID-2023-0042#@#.pdf",
          ["QID-2023-0042"], "reversed codon"),
 
-        (r"C:\Users\mpsch\Desktop\Smith_Jones_2023#@#QID-2023-0042@#@.pdf",
+        (r"C:\Users\test_user\Desktop\Smith_Jones_2023#@#QID-2023-0042@#@.pdf",
          ["QID-2023-0042"], "Windows path"),
 
         ("Smith_Jones_2023#@#INVALID__QID-2023-0042@#@.pdf",

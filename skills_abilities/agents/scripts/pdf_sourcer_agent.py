@@ -29,24 +29,28 @@ import json
 import sqlite3
 import os
 import sys
+from pathlib import Path
 from datetime import datetime
 
 from claude_agent_sdk import query, ClaudeAgentOptions
 
 # ╔══════════════════════════════════════════════════════════════╗
-# ║  CONFIG — Adjust these paths to match your environment      ║
+# ║  CONFIG — Paths derived dynamically from script location    ║
 # ╚══════════════════════════════════════════════════════════════╝
 
-DB_PATH = r"C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\db\ite_intelligence.db"
-PDF_LIBRARY = r"C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\01_pdf_guideline_library"
-STAGING_DIR = os.path.join(PDF_LIBRARY, "00_non-codon", "_sourced_staging")
-AGENTS_DIR = r"C:\Users\mpsch\Desktop\claude_knowledge\agents"
-RESULTS_LOG = os.path.join(AGENTS_DIR, "pdf_sourcer_results.json")
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent   # scripts/ → agents/ → skills_abilities/ → root
+
+DB_PATH      = str(PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db")
+PDF_LIBRARY  = str(PROJECT_ROOT / "01_module.1_warehouse")
+STAGING_DIR  = str(PROJECT_ROOT / "01_module.1_warehouse" / "VC_fail" / "_sourced_staging")
+AGENTS_DIR   = str(SCRIPT_DIR.parent)
+RESULTS_LOG  = str(SCRIPT_DIR.parent / "pdf_sourcer_results.json")
 
 # Authentication — AAFP cookies for paywalled content
 # Export your aafp.org cookies using a browser extension (e.g. "Get cookies.txt LOCALLY")
-# Save the file as agents/aafp_cookies.txt
-COOKIE_FILE = os.path.join(AGENTS_DIR, "aafp_cookies.txt")
+# Save the file as skills_abilities/agents/aafp_cookies.txt
+COOKIE_FILE  = str(SCRIPT_DIR.parent / "aafp_cookies.txt")
 
 # Structured output schema — SDK enforces this format, no prompt-hacking needed
 OUTPUT_SCHEMA = {

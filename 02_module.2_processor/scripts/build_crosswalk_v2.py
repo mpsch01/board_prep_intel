@@ -20,7 +20,7 @@ BATCH_DIRS = [
     (PROJECT_ROOT / "extracted_json" / "neuro_tox_rheum_psych_batch",    "neuro_tox_rheum_psych_batch"),
 ]
 
-OUT_DIR   = PROJECT_ROOT / "archive_canonical" / "04_reference_data"
+OUT_DIR   = PROJECT_ROOT / "_archive_" / "04_reference_data"
 OVERRIDES = SCRIPT_DIR / "crosswalk_overrides.json"
 os.makedirs(OUT_DIR, exist_ok=True)
 

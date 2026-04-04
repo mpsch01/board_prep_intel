@@ -1,6 +1,10 @@
 import sqlite3
+from pathlib import Path
 
-DB_PATH = r'C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\db\ite_intelligence.db'
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent   # scripts/ → agents/ → skills_abilities/ → root
+
+DB_PATH = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 conn = sqlite3.connect(DB_PATH)
 conn.row_factory = sqlite3.Row
 cur = conn.cursor()

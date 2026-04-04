@@ -10,12 +10,12 @@ Usage:
     python 02_ite_categorizer.py --all        # re-classify full master bank
     python 02_ite_categorizer.py --year 2026  # override exam year
 
-Inputs (from archive_canonical/04_reference_data/):
+Inputs (from _archive_/04_reference_data/):
     Updated_QA_Categories.xlsx
     misclassified_manual_review.xlsx
     body_system_labels_2022_2024.csv
 
-I/O from archive_canonical/02_question_bank/:
+I/O from _archive_/02_question_bank/:
     ITE_{YEAR}_Raw.csv  → ITE_{YEAR}_Categorized.csv
     ABFM_ITE_Master.csv → ABFM_ITE_Master.csv (in-place, when --all)
 
@@ -36,8 +36,8 @@ from sklearn.metrics import accuracy_score
 
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
-REF_DATA     = PROJECT_ROOT / "archive_canonical" / "04_reference_data"
-QBANK_DIR    = PROJECT_ROOT / "archive_canonical" / "02_question_bank"
+REF_DATA     = PROJECT_ROOT / "_archive_" / "04_reference_data"
+QBANK_DIR    = PROJECT_ROOT / "_archive_" / "02_question_bank"
 
 # CONFIG — update for each new exam year (or override with --year)
 EXAM_YEAR = "2025"

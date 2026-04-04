@@ -5,10 +5,15 @@ Outputs: board_prep/ite_exam/03_database/ite_questions_clean.json
 """
 import sys, re, json, pandas as pd
 from collections import Counter
+from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8')
 
-SRC  = r"C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_exam\03_database\ABFM_ITE_Master_v2.xlsx"
-OUT  = r"C:\Users\mpsch\Desktop\claude_knowledge\board_prep\ite_exam\03_database\ite_questions_clean.json"
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent   # build/ → scripts/ → 01_module.1_warehouse/ → root
+
+# Source Excel (large binary — not git-tracked; confirm location before running)
+SRC  = PROJECT_ROOT / "key_data_files" / "ABFM_ITE_Master_v2.xlsx"
+OUT  = PROJECT_ROOT / "key_data_files" / "ite_questions_clean.json"
 
 # ── Encoding fix ──────────────────────────────────────────────────────────────
 ENCODING_MAP = {

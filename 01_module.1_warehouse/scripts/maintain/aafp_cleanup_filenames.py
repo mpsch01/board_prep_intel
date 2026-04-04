@@ -15,9 +15,12 @@ Usage:
 import os
 import re
 import json
+from pathlib import Path
 
-DEST_FOLDER = r"C:\Users\mpsch\Desktop\AAFP pdf articles"
-LOG_PATH    = os.path.join(DEST_FOLDER, "_download_log.json")
+SCRIPT_DIR   = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent   # maintain/ → scripts/ → 01_module.1_warehouse/ → root
+DEST_FOLDER  = PROJECT_ROOT / "01_module.1_warehouse" / "VC_fail"
+LOG_PATH     = DEST_FOLDER / "_download_log.json"
 
 renames = []
 

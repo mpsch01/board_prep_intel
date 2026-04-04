@@ -4,10 +4,11 @@ title Guideline Extractor
 chcp 65001 >nul 2>&1
 
 set "SCRIPT_DIR=%~dp0"
-set "PROJECT_ROOT=%SCRIPT_DIR%.."
-set "NODE_MODULES=C:\Users\mpsch\Desktop\claude_knowledge\node_modules"
-set "ENRICHER=C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\scripts\ite_intelligence_enricher.py"
-set "CROSSWALK=C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\scripts\build_crosswalk_index.py"
+set "MODULE2_DIR=%SCRIPT_DIR%..\"
+set "PROJECT_ROOT=%SCRIPT_DIR%..\..\"
+set "NODE_MODULES=%PROJECT_ROOT%node_modules"
+set "ENRICHER=%PROJECT_ROOT%02_module.2_processor\scripts\ite_intelligence_enricher.py"
+set "CROSSWALK=%PROJECT_ROOT%01_module.1_warehouse\scripts\maintain\build_crosswalk_index.py"
 set "NODE_PATH=%NODE_MODULES%"
 set "NODE_OPTIONS=--no-warnings"
 set "INPUT=%~1"
@@ -131,7 +132,7 @@ exit /b 0
 
     echo    [1/!STEPS!] Extracting clinical content...
     echo    [1/!STEPS!] Extracting clinical content... >> "%LOGFILE%"
-    cd /d "%PROJECT_ROOT%"
+    cd /d "%MODULE2_DIR%"
     python -c "import json,sys;sys.path.insert(0,'.');from core.ingestion import ingest_document;r=ingest_document(r'%PDF_PATH%');f=open(r'%JSON_TEMP%','w',encoding='utf-8');json.dump(r,f,indent=2,ensure_ascii=False);f.close();c=r.get('classification',{});print('    Extraction OK: type='+str(c.get('document_type','?'))+' conf='+str(c.get('confidence','?')))" >> "%LOGFILE%" 2>&1
     if errorlevel 1 (
         echo    [ERROR] Python extraction failed
@@ -164,7 +165,7 @@ exit /b 0
         if not exist "%SCRIPT_DIR%.calibrated" echo calibrated> "%SCRIPT_DIR%.calibrated"
     )
 
-    set "JSON_DEST=C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\03_enriched_JSON\%PDF_NAME%_extracted.json"
+    set "JSON_DEST=%PROJECT_ROOT%extracted_json\%PDF_NAME%_extracted.json"
     echo    [!STEPS!/!STEPS!] Persisting enriched JSON...
     echo    [!STEPS!/!STEPS!] Persisting enriched JSON... >> "%LOGFILE%"
     copy "%JSON_TEMP%" "%JSON_DEST%" >> "%LOGFILE%" 2>&1

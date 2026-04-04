@@ -1,6 +1,7 @@
 @echo off
-set PATH=C:\Users\mpsch\AppData\Roaming\npm;C:\Program Files\nodejs;%PATH%
+set "SCRIPT_DIR=%~dp0"
 
-cd /d C:\Users\mpsch\Desktop\claude_knowledge\agents
+set PATH=%APPDATA%\npm;C:\Program Files\nodejs;%PATH%
 
+cd /d "%SCRIPT_DIR%"
 python pdf_sourcer_agent.py

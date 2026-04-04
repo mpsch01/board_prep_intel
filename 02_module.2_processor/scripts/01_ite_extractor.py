@@ -3,7 +3,7 @@
 01_ite_extractor.py
 
 Extracts questions and explanations from ABFM ITE Questions + Critique PDFs
-for a single exam year. Outputs a raw CSV to archive_canonical/02_question_bank/.
+for a single exam year. Outputs a raw CSV to _archive_/02_question_bank/.
 
 Usage:
     python 01_ite_extractor.py                    # uses EXAM_YEAR constant below
@@ -13,7 +13,7 @@ Source PDFs expected in: 02_module.2_processor/source/ite_source/
   {YEAR}_ITE_Questions.pdf
   {YEAR}_ITE_Critique.pdf
 
-Output: archive_canonical/02_question_bank/ITE_{YEAR}_Raw.csv
+Output: _archive_/02_question_bank/ITE_{YEAR}_Raw.csv
 
 Migrated from TEMP_06_ite_pipeline_TEMP (BATON 007)
 """
@@ -28,7 +28,7 @@ from pathlib import Path
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 ITE_SOURCE   = PROJECT_ROOT / "02_module.2_processor" / "source" / "ite_source"
-QBANK_DIR    = PROJECT_ROOT / "archive_canonical" / "02_question_bank"
+QBANK_DIR    = PROJECT_ROOT / "_archive_" / "02_question_bank"
 
 # CONFIG — update for each new exam year (or override with --year)
 EXAM_YEAR = "2025"

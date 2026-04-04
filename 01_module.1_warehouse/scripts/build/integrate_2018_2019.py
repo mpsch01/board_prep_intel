@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 """
+⚠️  ALREADY RUN — DO NOT RE-RUN (2026-04-04)
+    Status: 2018-2019 data is in ite_intelligence.db. This script has served its purpose.
+    Bug: PROJECT_ROOT uses 2 hops (wrong — M1/build/ requires 3). Moot since it won't be run again.
+    Retained for historical reference only. Flag for deletion on next Windows housekeeping pass.
+    Gathered in: 01_module.1_warehouse/scripts/_legacy/
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 integrate_2018_2019.py — Full pipeline to integrate 2018-2019 ITE data into the DB.
 
 Steps:

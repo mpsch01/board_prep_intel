@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-04-03 (BATON 034)
-**Status:** Current — blueprint 100% filled (1,629/1,629); aafp_question_icd10 relevance normalized; unified_keyword_extractor.py; blueprint_emergent_pass.py
+**Last Updated:** 2026-04-04 (BATON 035)
+**Status:** Current — blueprint 100% filled (1,629/1,629); aafp_question_icd10 relevance normalized; unified_keyword_extractor.py; blueprint_emergent_pass.py; repo_pre_severance.md added; 5 legacy scripts deprecated
 
 > This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,28 +12,32 @@
 
 ```
 00_#PROJECT_OVERHAUL/
-├── BATON_active_024_20260329_blueprint_complete.md  ← active BATON
+├── BATON_active_035_20260404_repo_sweep_mapping.md  ← active BATON
 ├── CLAUDE.md                              ← project memory + conventions
-├── README.json                            ← machine-readable project metadata
-├── README_PROJECT.md                      ← human-readable overview
+├── README.md                              ← project overview (human-readable)
+├── README_PROJECT.md                      ← extended project documentation
+├── SEVERANCE_PLAN.md                      ← path severing plan (Phase 1 complete; ceremonial archive pending)
 ├── _index.md                              ← this file
+├── repo_pre_severance.md                  ← full script inventory + dep map (BATON 035; pre-Option B reference)
 ├── .gitattributes / .gitignore
 │
 ├── 00_database/                           ← source of truth (DB + supporting data)
 ├── 01_module.1_warehouse/                 ← M1 PDF library (4 tiers, ~414 PDFs) + AAFP BRQ warehouse + build/maintain scripts
 ├── 02_module.2_processor/                 ← M2 pipeline scripts + source inputs
 ├── 03_module.3_analyst/                   ← M3 score analysis + ICD-10 + pathways
-├── 04_module.4_sandbox/                   ← M4 experiments (_DELETE_THESE_FROM_WINDOWS.txt — cleanup checklist)
+├── 04_module.4_sandbox/                   ← M4 experiments and agent prototypes
 │
-├── archive_canonical/                     ← curated deliverables archive
-├── auto-memory-copies/                    ← durable backup of all auto-memory files (moved from re-org_guidance 2026-03-27)
+├── _archive_/                             ← curated deliverables + retired artifacts (renamed from archive_canonical 2026-04-03; includes docx_guideline_library/)
+├── auto-memory-copies/                    ← git-tracked mirror of .auto-memory/ (durable backup)
 ├── baton_archive/                         ← all archived BATONs (40+)
 ├── extracted_json/                        ← extracted article JSONs (middle-man layer; not git-tracked)
 ├── key_data_files/                        ← critical reference + architecture data files
-└── skills_abilities/                      ← SDK docs, agent toolbox, skill files
+└── skills_abilities/                      ← SDK docs, agent toolbox, skill files (includes apify-actors/)
 ```
 
-**Removed this session (2026-03-27):** `sectional_READMEs/`, `tagging_bundle/`, `re-org_guidance/`, `master_map.JSON`, `MASTER_MAP_V.1.html`, `TEMP_MIGRATION_MANIFEST.md`
+**Removed/relocated (2026-03-27):** `sectional_READMEs/`, `tagging_bundle/`, `re-org_guidance/`, `master_map.JSON`, `MASTER_MAP_V.1.html`, `TEMP_MIGRATION_MANIFEST.md`
+**Swept (2026-04-03, BATON 034):** `docx_guideline_library/` → `_archive_/`; `archive_canonical/` → renamed `_archive_/`; `apify-actors/` → `skills_abilities/`; `apify_smart_article_extractor` → deleted; BATON 032/033 duplicates → deleted from root
+**Swept (2026-04-04, BATON 035):** 5 legacy scripts deprecated (headers applied) + staged in `_legacy/` → moved to offsite archive by user; originals pending Windows delete; `build_faculty_pptx.js` verified clean (no path deps)
 
 ---
 
@@ -71,29 +75,31 @@
     └── ite-data-context-skill/
 ```
 
-**DB Counts (verified live 2026-03-29, BATON 024):**
+**DB Counts (verified live 2026-04-03, BATON 034):**
 | Table | Rows | Notes |
 |-------|------|-------|
 | articles | 1,985 | +49 AAFP acquisition (ART-1938–ART-1986); PDFs pending download |
-| questions | 1,629 (2018–2025) | blueprint 100% filled — 2024/2025 Gold Standard; 2018-2023 API pseudo-label |
+| questions (ITE) | 1,629 | 2018–2025; blueprint 100% filled; subcategory + topic_label DROPPED |
+| aafp_questions | 1,221 | blueprint 100% filled; subcategory + aafp_explanations DROPPED; correct_letter/correct_text/explanation merged in |
 | question_ref_pairs | 2,722 | 222 NULL clean_ref |
 | qid_art_xref | 2,470 | All 8 years (2018–2025) |
-| article_icd10 | 3,855 | |
-| clinical_pathways | 3,093 | |
+| aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
+| article_icd10 | 4,137 | +282 AAFP backfill (2026-03-31) |
+| question_icd10 | 5,284 | 1,512/1,629 ITE questions (92.8%) |
+| aafp_question_icd10 | 4,753 | relevance normalized; related cap applied |
+| clinical_pathways | 4,020 | REBUILT 2026-03-31 — blueprint-based, both banks |
+| article_citation_trend | 1,740 | longitudinal citation tracking + watch_list flag |
+| pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
 | icd10_rollup | 614 | |
 | icd10_code_xref | 1,006 | |
-| article_vec | 1,936 | sqlite-vec — 100% coverage (49 new articles pending embeddings) |
-| question_vec | 1,629 | sqlite-vec — 100% coverage |
-| **aafp_questions** | **1,221** | 11 enrichment cols — concept_tags + subcategory complete 2026-03-29; stem_keywords unified TF-IDF |
-| **aafp_explanations** | **1,221** | explanation_keywords unified TF-IDF |
-| **aafp_citations** | **1,600** | one parsed citation per row |
-| **aafp_citation_raw** | **1,600** | full text archive + coordinates |
-| **aafp_qid_art_xref** | **864** | 643 unique questions linked (52.7%) |
-| **aafp_question_vec** | **1,221** | sqlite-vec — 100% coverage |
-| **aafp_question_icd10** | **4,240** | relevance normalized → 3 canonical values (primary/secondary/related) |
-
-**Planned tables (designed, not yet built):**
-- `article_citation_trend` — companion to articles; tracks years_cited, consecutive_streak, is_watch_list per article
+| icd10_vec | 2,219 | BLOB — OpenAI text-embedding-3-small (1536d) |
+| article_icd10_vec | 1,674 | BLOB — rebuilt 2026-04-01 |
+| question_icd10_vec | 2,733 | BLOB — rebuilt 2026-04-01 |
+| article_vec | 1,985 | sqlite-vec virtual table |
+| question_vec | 1,629 | sqlite-vec virtual table |
+| aafp_question_vec | 1,221 | sqlite-vec virtual table |
+| aafp_citations | 1,600 | one parsed citation per row |
+| aafp_citation_raw | 1,600 | full text archive + coordinates |
 
 ---
 
@@ -149,7 +155,8 @@
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
 ```
-*M1 scripts: build/ = 9 scripts, maintain/ = 17 scripts*
+*M1 scripts: build/ = 9 scripts (3 deprecated, pending Windows delete), maintain/ = 17 scripts (2 deprecated, pending Windows delete)*
+*Deprecated scripts have ⚠️ headers and are staged for offsite archive — delete originals from Windows when ready*
 
 ---
 
@@ -323,18 +330,20 @@
 ### `auto-memory-copies/` — Auto-Memory Backup (moved to root 2026-03-27)
 Durable backup of all `.auto-memory/` files. Updated each housekeeping sweep.
 
-### `archive_canonical/` — Curated Deliverables Archive
+### `_archive_/` — Curated Deliverables + Retired Artifacts
+Renamed from `archive_canonical/` on 2026-04-03. Also houses retired artifacts relocated during Sweep 1.
 ```
-archive_canonical/
-├── 01_curriculum/     ← enriched VC outline, supplement, linked refs DOCX
-├── 02_question_bank/  ← formatted question bank exports (CSV, DOCX)
-├── 03_analysis/       ← ITE analysis workbook, QC report
-├── 04_reference_data/ ← reference tier CSVs, QRP pairs, crosswalk CSVs
-├── 05_acquisition/    ← ranked acquisition list, BATON templates
+_archive_/
+├── 01_curriculum/          ← enriched VC outline, supplement, linked refs DOCX
+├── 02_question_bank/       ← formatted question bank exports (CSV, DOCX)
+├── 03_analysis/            ← ITE analysis workbook, QC report
+├── 04_reference_data/      ← reference tier CSVs, QRP pairs, crosswalk CSVs
+├── 05_acquisition/         ← ranked acquisition list, BATON templates
+├── docx_guideline_library/ ← 1,518 legacy DOCXs (derived data; moved from root 2026-04-03)
 └── README_canonical.json
 ```
 
-**Note on DOCX library:** Pre-overhaul had 1,518 DOCXs in `clinical_guidelines/02_docx_guideline_library/`. Not migrated — metadata-only DOCXs not worth recovering. Right_click DOCXs (71) are regenerable from pipeline (`build_summary.js` + existing PDFs + DB).
+**Note on DOCX library:** 1,518 DOCXs moved from root to `_archive_/docx_guideline_library/` on 2026-04-03. Derived data — all ART-tagged DOCXs regenerable from pipeline (`build_summary.js` + existing PDFs + DB).
 
 ### `extracted_json/` — Extracted Article JSONs (not git-tracked)
 ```
@@ -382,6 +391,7 @@ key_data_files/
 ### `skills_abilities/` — SDK Docs + Agent Toolbox + Skills
 - 17+ SDK reference files + notebooks
 - `agents/` — pdf_sourcer_agent.py + 6 helpers
+- `apify-actors/` — citation_crawler actor source (deployed: actor ID `rh50nQRP7BupbUF64`, build 0.3.1) — moved from root 2026-04-03
 - `ite-data-context-skill/` — domain skill for ITE DB queries
 - `API_primer.md`
 

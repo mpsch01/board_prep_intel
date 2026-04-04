@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 """
+⚠️  ALREADY RUN — DO NOT RE-RUN (2026-04-04)
+    Status: 2018-2019 data is in ite_intelligence.db. This script has served its purpose.
+    Dead path: reads from /sessions/fervent-hopeful-thompson/ — a session that no longer exists.
+    Retained for historical reference only. Flag for deletion on next Windows housekeeping pass.
+    Gathered in: 01_module.1_warehouse/scripts/_legacy/
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 Extract 2018 and 2019 ITE exam questions and answers from separate PDFs.
 Merges Q+A by item number into structured JSON matching ite_questions_clean.json schema.
 

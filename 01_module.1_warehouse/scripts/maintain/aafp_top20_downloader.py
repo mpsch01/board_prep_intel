@@ -27,8 +27,10 @@ from bs4 import BeautifulSoup
 import browser_cookie3
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
-DEST_FOLDER     = r"C:\Users\mpsch\Desktop\AAFP pdf articles"
-DB_PATH         = r"C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\db\ite_intelligence.db"
+SCRIPT_DIR      = Path(__file__).resolve().parent
+PROJECT_ROOT    = SCRIPT_DIR.parent.parent.parent   # maintain/ → scripts/ → 01_module.1_warehouse/ → root
+DB_PATH         = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
+DEST_FOLDER     = PROJECT_ROOT / "01_module.1_warehouse" / "VC_fail"
 TOP_URL         = "https://www.aafp.org/pubs/afp/content/top-articles.html"
 DELAY_SECONDS   = 1.5    # polite delay between requests
 MATCH_THRESHOLD = 0.72   # title similarity score to accept a DB match

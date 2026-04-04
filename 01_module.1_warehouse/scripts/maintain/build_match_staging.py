@@ -1,4 +1,12 @@
 """
+⚠️  PRE-OVERHAUL LEGACY — NON-FUNCTIONAL (2026-04-04)
+    Status: References dead warehouse paths (01_pdf_guideline_library/, 03_enriched_JSON/).
+            These folders do not exist in the current 4-tier warehouse structure.
+            Codon migration was completed via a different path. Do not run.
+    Retained for historical reference only. Flag for deletion on next Windows housekeeping pass.
+    Gathered in: 01_module.1_warehouse/scripts/_legacy/
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 build_match_staging.py — Migration Step 1: Build Match Staging Report
 ======================================================================
 Codon Migration | ITE Intelligence 2.0

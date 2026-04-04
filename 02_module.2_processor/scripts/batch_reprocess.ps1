@@ -20,20 +20,20 @@
 
 .USAGE
     # Batch API mode (recommended for 141 files, ~$4-5):
-    cd C:\Users\mpsch\Desktop\claude_knowledge
-    .\abfm_prep\01_guideline_extractor\oneclick\batch_reprocess.ps1
+    cd <project_root>\02_module.2_processor\scripts
+    .\batch_reprocess.ps1
 
     # Poll batch status:
-    .\abfm_prep\01_guideline_extractor\oneclick\batch_reprocess.ps1 -Poll
+    .\batch_reprocess.ps1 -Poll
 
     # Write results after batch completes:
-    .\abfm_prep\01_guideline_extractor\oneclick\batch_reprocess.ps1 -Write
+    .\batch_reprocess.ps1 -Write
 
     # Sequential mode (for small batches or testing):
-    .\abfm_prep\01_guideline_extractor\oneclick\batch_reprocess.ps1 -Sequential -Limit 5
+    .\batch_reprocess.ps1 -Sequential -Limit 5
 
     # DOCX generation only (after extraction is done):
-    .\abfm_prep\01_guideline_extractor\oneclick\batch_reprocess.ps1 -DocxOnly
+    .\batch_reprocess.ps1 -DocxOnly
 #>
 
 param(
@@ -49,14 +49,16 @@ param(
 $ErrorActionPreference = "Continue"
 
 # ── Paths ──────────────────────────────────────────────────────────────
-$ROOT        = "C:\Users\mpsch\Desktop\claude_knowledge"
-$SCRIPT_DIR  = "$ROOT\abfm_prep\01_guideline_extractor\oneclick"
-$JSON_DIR    = "$ROOT\clinical_guidelines\03_enriched_JSON"
-$DOCX_DIR    = "$ROOT\clinical_guidelines\02_docx_guideline_library"
-$EXTRACTOR   = "$ROOT\abfm_prep\02_ite_intelligence\scripts\db_guided_extractor.py"
-$BATCH_EXT   = "$ROOT\abfm_prep\02_ite_intelligence\scripts\batch_db_extract.py"
-$CROSSWALK   = "$ROOT\abfm_prep\02_ite_intelligence\scripts\build_crosswalk_index.py"
-$NODE_PATH   = "$ROOT\node_modules"
+$SCRIPT_DIR   = $PSScriptRoot
+$MODULE2      = Split-Path $SCRIPT_DIR -Parent      # 02_module.2_processor/
+$PROJECT_ROOT = Split-Path $MODULE2 -Parent         # project root
+
+$JSON_DIR     = "$PROJECT_ROOT\extracted_json"
+$DOCX_DIR     = "$PROJECT_ROOT\02_module.2_processor\docx_output"
+$EXTRACTOR    = "$PROJECT_ROOT\02_module.2_processor\scripts\db_guided_extractor.py"
+$BATCH_EXT    = "$PROJECT_ROOT\02_module.2_processor\scripts\batch_db_extract.py"
+$CROSSWALK    = "$PROJECT_ROOT\01_module.1_warehouse\scripts\maintain\build_crosswalk_index.py"
+$NODE_PATH    = "$PROJECT_ROOT\node_modules"
 
 # ── API key ────────────────────────────────────────────────────────────
 if (-not $env:ANTHROPIC_API_KEY) {

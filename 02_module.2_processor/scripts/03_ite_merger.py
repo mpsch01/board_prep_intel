@@ -8,9 +8,9 @@ Usage:
     python 03_ite_merger.py --year 2025
     python 03_ite_merger.py --year 2026
 
-Reads:  archive_canonical/02_question_bank/ITE_{YEAR}_Categorized.csv
-        archive_canonical/02_question_bank/ABFM_ITE_Master.csv
-Writes: archive_canonical/02_question_bank/ABFM_ITE_Master.csv (updated)
+Reads:  _archive_/02_question_bank/ITE_{YEAR}_Categorized.csv
+        _archive_/02_question_bank/ABFM_ITE_Master.csv
+Writes: _archive_/02_question_bank/ABFM_ITE_Master.csv (updated)
 
 Migrated from TEMP_06_ite_pipeline_TEMP (BATON 007)
 """
@@ -21,7 +21,7 @@ from pathlib import Path
 
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
-QBANK_DIR    = PROJECT_ROOT / "archive_canonical" / "02_question_bank"
+QBANK_DIR    = PROJECT_ROOT / "_archive_" / "02_question_bank"
 
 # CONFIG
 EXAM_YEAR = "2025"

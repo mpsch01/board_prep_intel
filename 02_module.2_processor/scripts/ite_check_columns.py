@@ -8,7 +8,7 @@ Run after each pipeline step to catch silent gaps.
 Usage:
     python ite_check_columns.py
 
-Reads from: archive_canonical/02_question_bank/
+Reads from: _archive_/02_question_bank/
 
 Migrated from TEMP_06_ite_pipeline_TEMP (BATON 007)
 """
@@ -19,7 +19,7 @@ from pathlib import Path
 
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
-QBANK_DIR    = PROJECT_ROOT / "archive_canonical" / "02_question_bank"
+QBANK_DIR    = PROJECT_ROOT / "_archive_" / "02_question_bank"
 
 # CONFIG — add or remove entries as the pipeline evolves
 # Each entry: (filename, [columns to null-check], preview_column)

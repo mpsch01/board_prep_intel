@@ -7,8 +7,8 @@ SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 
 OVERRIDES_PATH = SCRIPT_DIR / "crosswalk_overrides.json"
-CROSSWALK_PATH = PROJECT_ROOT / "archive_canonical" / "04_reference_data" / "linked_refs_crosswalk_v2.csv"
-OUTPUT_PATH    = PROJECT_ROOT / "archive_canonical" / "04_reference_data" / "linked_refs_crosswalk_final.csv"
+CROSSWALK_PATH = PROJECT_ROOT / "_archive_" / "04_reference_data" / "linked_refs_crosswalk_v2.csv"
+OUTPUT_PATH    = PROJECT_ROOT / "_archive_" / "04_reference_data" / "linked_refs_crosswalk_final.csv"
 
 with open(OVERRIDES_PATH, encoding='utf-8') as f:
     overrides = json.load(f)

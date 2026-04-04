@@ -36,11 +36,11 @@ from pathlib import Path
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
 SCRIPT_DIR    = Path(__file__).resolve().parent
-BASE_DIR      = SCRIPT_DIR.parent  # clinical_guidelines/
-LIBRARY_BASE  = BASE_DIR / "01_pdf_guideline_library"
-CODON_DIR     = LIBRARY_BASE / "pdf_codon"
-EXTRACT_DIR   = BASE_DIR / "04_need_extraction"
-MANIFEST_PATH = Path(r"C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\aafp_download_manifest.json")
+PROJECT_ROOT  = SCRIPT_DIR.parent.parent.parent   # maintain/ → scripts/ → 01_module.1_warehouse/ → root
+WAREHOUSE     = PROJECT_ROOT / "01_module.1_warehouse"
+CODON_DIR     = WAREHOUSE / "VC_pass"
+EXTRACT_DIR   = WAREHOUSE / "VC_fail"
+MANIFEST_PATH = SCRIPT_DIR / "aafp_download_manifest.json"
 LOG_PATH      = SCRIPT_DIR / "_download_log.json"
 DELAY         = 2.0   # seconds between downloads (be polite to AAFP servers)
 

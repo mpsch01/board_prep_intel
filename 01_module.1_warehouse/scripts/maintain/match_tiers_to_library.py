@@ -12,7 +12,7 @@ MATCHING STRATEGY:
   - Guidelines/Org: org keywords + title words
   - NEJM/JAMA/journal: first author + year + 1-2 title keywords
 
-OUTPUTS (→ archive_canonical/05_acquisition/):
+OUTPUTS (→ _archive_/05_acquisition/):
   match_summary.csv    -- full results, every ref with best match
   matched_high.csv     -- confirmed matches (confidence >= 0.60)
   not_found.csv        -- refs with no library match (need sourcing)
@@ -28,9 +28,9 @@ import pdfplumber
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
 
-TIERS_CSV    = PROJECT_ROOT / "archive_canonical" / "04_reference_data" / "ABFM_ITE_ReferenceTiers_Expanded_v1369.csv"
+TIERS_CSV    = PROJECT_ROOT / "_archive_" / "04_reference_data" / "ABFM_ITE_ReferenceTiers_Expanded_v1369.csv"
 LIBRARY_ROOT = PROJECT_ROOT / "01_module.1_warehouse"
-OUT_DIR      = PROJECT_ROOT / "archive_canonical" / "05_acquisition"
+OUT_DIR      = PROJECT_ROOT / "_archive_" / "05_acquisition"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 CONFIDENT_THRESHOLD = 0.60   # call it a match

@@ -42,7 +42,7 @@ ICD-10 tagging, clinical pathways, trend analysis, score analysis, AAFP-ITE reus
 ### 04_module.4_sandbox/
 Experiments and agent prototypes (placeholder).
 
-### archive_canonical/
+### _archive_/
 Curated deliverables: curriculum definitions, question bank, analysis outputs, reference data, acquisition lists.
 
 ### baton_archive/

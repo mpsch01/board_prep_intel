@@ -5,7 +5,7 @@ Rebuilds confirmed_present.csv and Core_Acquisition_List_Ranked.xlsx
 from match_summary.csv produced by match_tiers_to_library.py.
 
 Run after match_tiers_to_library.py completes.
-Outputs land in archive_canonical/05_acquisition/ (canonical acquisition location).
+Outputs land in _archive_/05_acquisition/ (canonical acquisition location).
 """
 import sys, os
 from pathlib import Path
@@ -16,8 +16,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
 
-OUT_DIR   = PROJECT_ROOT / "archive_canonical" / "05_acquisition"
-TIERS_CSV = PROJECT_ROOT / "archive_canonical" / "04_reference_data" / "ABFM_ITE_ReferenceTiers_Expanded_v1369.csv"
+OUT_DIR   = PROJECT_ROOT / "_archive_" / "05_acquisition"
+TIERS_CSV = PROJECT_ROOT / "_archive_" / "04_reference_data" / "ABFM_ITE_ReferenceTiers_Expanded_v1369.csv"
 
 summary  = pd.read_csv(OUT_DIR / "match_summary.csv")
 tiers_df = pd.read_csv(TIERS_CSV)

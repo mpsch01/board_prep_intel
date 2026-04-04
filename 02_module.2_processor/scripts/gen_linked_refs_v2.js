@@ -9,8 +9,8 @@ const path = require("path");
 // PATHS
 const PROJECT_ROOT = path.resolve(__dirname, "../../");
 const LOG      = path.join(PROJECT_ROOT, "gen_log.txt");
-const CROSSWALK = path.join(PROJECT_ROOT, "archive_canonical", "04_reference_data", "linked_refs_crosswalk_final.csv");
-const OUT_PATH  = path.join(PROJECT_ROOT, "archive_canonical", "01_curriculum", "00_RPT_linked_refs_20-25.docx");
+const CROSSWALK = path.join(PROJECT_ROOT, "_archive_", "04_reference_data", "linked_refs_crosswalk_final.csv");
+const OUT_PATH  = path.join(PROJECT_ROOT, "_archive_", "01_curriculum", "00_RPT_linked_refs_20-25.docx");
 
 // FILE LOGGER — PowerShell cannot capture Node stdout
 fs.writeFileSync(LOG, "=== LinkedRefs v2 Generator ===\n" + new Date().toISOString() + "\n\n");

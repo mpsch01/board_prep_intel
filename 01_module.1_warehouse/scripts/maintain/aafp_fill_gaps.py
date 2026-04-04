@@ -18,6 +18,7 @@ import time
 import sqlite3
 import shutil
 import tempfile
+from pathlib import Path
 from difflib import SequenceMatcher
 
 import requests
@@ -26,12 +27,14 @@ import browser_cookie3
 from playwright.sync_api import sync_playwright
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
-LIBRARY_BASE  = r"C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\01_pdf_guideline_library"
-CODON_DIR     = os.path.join(LIBRARY_BASE, "pdf_codon")
-NONCODON_DIR  = os.path.join(LIBRARY_BASE, "pdf_non-codon")
-EXTRACT_DIR   = r"C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\04_need_extraction"
-LOG_PATH      = r"C:\Users\mpsch\Desktop\claude_knowledge\clinical_guidelines\05_scripts\_download_log.json"
-DB_PATH       = r"C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\02_ite_intelligence\db\ite_intelligence.db"
+SCRIPT_DIR    = Path(__file__).resolve().parent
+PROJECT_ROOT  = SCRIPT_DIR.parent.parent.parent   # maintain/ → scripts/ → 01_module.1_warehouse/ → root
+WAREHOUSE     = PROJECT_ROOT / "01_module.1_warehouse"
+CODON_DIR     = str(WAREHOUSE / "VC_pass")
+NONCODON_DIR  = str(WAREHOUSE / "VC_fail")
+EXTRACT_DIR   = str(WAREHOUSE / "VC_fail")        # unified with VC_fail in new structure
+LOG_PATH      = str(SCRIPT_DIR / "_download_log.json")
+DB_PATH       = str(PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db")
 TOP_URL       = "https://www.aafp.org/pubs/afp/content/top-articles.html"
 DELAY         = 1.5
 MATCH_THRESHOLD = 0.72

@@ -23,9 +23,9 @@ Source of truth. Never disposable.
 ### 01_module.1_warehouse/
 PDF library (4 tiers, 404 PDFs) + pipeline build and maintenance scripts + AAFP BRQ data.
 - `VC_fail/` — ~156 PDFs: codon-named, not VC-cited, awaiting full pipeline (37 AAFP acquisition PDFs still manual pending)
-- `local_lite/` — 117 PDFs: enriched, not VC-cited (pipeline complete)
+- `01_local_lite/` — 117 PDFs: enriched, not VC-cited (pipeline complete)
 - `VC_pass/` — 94 PDFs: codon-named, VC-cited, awaiting full pipeline
-- `right_click/` — 71 PDFs: VC-cited, fully enriched (pipeline complete)
+- `03_right_click/` — 71 PDFs: VC-cited, fully enriched (pipeline complete)
 - `build/` — 9 scripts: self-contained full rebuild sequence
 - `maintain/` — 17 scripts: recurring DB population and maintenance operations (includes `download_aafp_acquisitions.py`, `download_pmc_actor_batch.py` — new BATON 034)
 - `aafp_brq/scraper/` — aafp_brq_scraper.py + cookies + quiz map (Windows-only)
@@ -44,8 +44,8 @@ ICD-10 tagging, clinical pathways, trend analysis, score analysis, AAFP-ITE reus
 ### 04_module.4_sandbox/
 Experiments and agent prototypes (placeholder).
 
-### archive_canonical/
-Curated deliverables: curriculum definitions, question bank, analysis outputs, reference data, acquisition lists.
+### _archive_/
+Curated deliverables (renamed from archive_canonical/ 2026-04-03): curriculum definitions, question bank, analysis outputs, reference data, acquisition lists. Also houses retired artifacts from Sweep 1 (docx_guideline_library/).
 
 ### baton_archive/
 All archived BATON session handoff documents.
@@ -157,14 +157,14 @@ python aafp_enrich_concept_tags.py --mode unlinked
 
 ---
 
-## Next Steps (BATON 022)
+## Next Steps (BATON 034)
 
-1. **Windows:** git commit (3 M2 scripts + BATONs 021/022 + CLAUDE.md + _index.md); archive BATONs 020+021; delete temp files
-2. **Windows:** run `download_aafp_acquisitions.py` → 49 PDFs; then `backfill_new_article_metadata.py --art-id-min 1938`
-3. **Windows:** run `update_citation_trends.py` → article_citation_trend table
-4. **AAFP vs ITE trend comparison** — both corpora schema-parallel; side-by-side analysis now unblocked
-5. **88 AFP gap articles** batch download from `null_clean_ref_missing_articles_20260326.csv`
-6. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
+1. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → VC_fail
+2. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled
+3. **DEFERRED-B** — `update_citation_trends.py` after backfill complete
+4. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`)
+5. **DEFERRED-D** — 229 citation gap articles (88 AFP batch-downloadable from `null_clean_ref_missing_articles_20260326.csv`)
+6. **Option B** — flatten `00_#PROJECT_OVERHAUL/` contents to repo root (path severing complete; planning pending)
 
 ---
 
@@ -178,4 +178,4 @@ python aafp_enrich_concept_tags.py --mode unlinked
 ---
 
 **Project Lead:** Michael Scholl, MD
-**Last Reviewed:** 2026-03-29
+**Last Reviewed:** 2026-04-03

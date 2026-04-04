@@ -10,7 +10,7 @@ Processes:
   - 2023_body-system.pdf  (2 pages, 15 official categories, ~198 questions)
   - 2024_body-system.pdf  (1 page,  5 collapsed categories, ~193 questions)
 
-Output: archive_canonical/04_reference_data/body_system_labels_2022_2024.csv
+Output: _archive_/04_reference_data/body_system_labels_2022_2024.csv
   Columns: Year, QuestionNum, BodySystem
 
 Migrated from TEMP_06_ite_pipeline_TEMP (BATON 007)
@@ -23,7 +23,7 @@ from pathlib import Path
 
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
-REF_DATA     = PROJECT_ROOT / "archive_canonical" / "04_reference_data"
+REF_DATA     = PROJECT_ROOT / "_archive_" / "04_reference_data"
 
 # -- Category lists ------------------------------------------------------------
 

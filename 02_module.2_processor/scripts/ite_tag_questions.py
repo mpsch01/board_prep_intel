@@ -12,9 +12,9 @@ Usage:
     python ite_tag_questions.py
     python ite_tag_questions.py --input path/to/custom.csv --output path/to/out.csv
 
-Reads:  archive_canonical/02_question_bank/ABFM_ITE_Master.csv  (default)
-Writes: archive_canonical/02_question_bank/ABFM_ITE_AI_Tagged.csv (default)
-Log:    archive_canonical/02_question_bank/tagging_log.txt
+Reads:  _archive_/02_question_bank/ABFM_ITE_Master.csv  (default)
+Writes: _archive_/02_question_bank/ABFM_ITE_AI_Tagged.csv (default)
+Log:    _archive_/02_question_bank/tagging_log.txt
 
 Migrated from TEMP_06_ite_pipeline_TEMP (BATON 007)
 """
@@ -31,7 +31,7 @@ from pathlib import Path
 
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
-QBANK_DIR    = PROJECT_ROOT / "archive_canonical" / "02_question_bank"
+QBANK_DIR    = PROJECT_ROOT / "_archive_" / "02_question_bank"
 
 # ── Config ───────────────────────────────────────────────────────────────────
 INPUT_CSV        = QBANK_DIR / "ABFM_ITE_Master.csv"

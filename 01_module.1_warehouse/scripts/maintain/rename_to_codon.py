@@ -1,4 +1,12 @@
 """
+⚠️  PRE-OVERHAUL LEGACY — NON-FUNCTIONAL (2026-04-04)
+    Status: References dead warehouse paths (clinical_guidelines/01_pdf_guideline_library/).
+            PROJECT_ROOT uses 4 hops — incorrect for current structure.
+            Codon migration was completed via a different path. Do not run.
+    Retained for historical reference only. Flag for deletion on next Windows housekeeping pass.
+    Gathered in: 01_module.1_warehouse/scripts/_legacy/
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 rename_to_codon.py — Migration Step 4: Rename PDFs to Codon Format
 ===================================================================
 Codon Migration | ITE Intelligence 2.0

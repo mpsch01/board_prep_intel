@@ -27,8 +27,8 @@ used to keep the warehouse current, extend it with new layers, and manage the PD
 ### Reference Tier Matching & Acquisition
 | Script | What It Does | Output |
 |--------|-------------|--------|
-| `match_tiers_to_library.py` | Scans warehouse PDFs against `ABFM_ITE_ReferenceTiers_Expanded_v1369.csv`; classifies each ref as MATCHED/NOT_FOUND | `archive_canonical/05_acquisition/match_summary.csv`, `matched_high.csv`, `not_found.csv`, `match_report.json` |
-| `rebuild_acquisition_list.py` | Reads `match_summary.csv` → builds confirmed present list and ranked acquisition XLSX | `archive_canonical/05_acquisition/confirmed_present.csv`, `ABFM_ITE_ReferenceAcquisitionList_Core_Ranked.xlsx` |
+| `match_tiers_to_library.py` | Scans warehouse PDFs against `ABFM_ITE_ReferenceTiers_Expanded_v1369.csv`; classifies each ref as MATCHED/NOT_FOUND | `_archive_/05_acquisition/match_summary.csv`, `matched_high.csv`, `not_found.csv`, `match_report.json` |
+| `rebuild_acquisition_list.py` | Reads `match_summary.csv` → builds confirmed present list and ranked acquisition XLSX | `_archive_/05_acquisition/confirmed_present.csv`, `ABFM_ITE_ReferenceAcquisitionList_Core_Ranked.xlsx` |
 
 **Typical use:** Run `match_tiers_to_library.py` first, then `rebuild_acquisition_list.py`. Together they answer "what do we have, what do we still need, and what should we prioritize acquiring?"
 
