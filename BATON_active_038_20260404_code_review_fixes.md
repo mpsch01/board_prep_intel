@@ -1,7 +1,7 @@
 # BATON 038 — Third-Party Code Review Fixes
 **Date:** 2026-04-04
 **Session:** Code review received; 14 confirmed defects fixed across 4 severity levels
-**Status:** GIT-COMMITTED (pending) | DEFERRED-A still priority #1
+**Status:** GIT-COMMITTED ✓ | Option B (flatten + rename) COMPLETE ✓ | DEFERRED-A still priority #1
 **Replaces:** BATON_active_037_20260404_practice_questions_deliverables_m1_restructure.md
 
 ---
@@ -147,14 +147,19 @@ No DB writes. All tables same as BATON 037/038.
 
 ---
 
+## Completed This Session (late addition)
+
+- **Option B** ✓ — `00_#PROJECT_OVERHAUL/` flattened; modules now live directly at `board_prep_intel/` root on Desktop. GitHub repo renamed to `board_prep_intel`. Remote URL updated. `option_b_patch.py` executed: CLAUDE.md, _index.md, auto-memory-copies/project_overhaul_state.md all patched to reflect new paths/naming.
+
+---
+
 ## Pending (next session)
 
-1. **Windows cleanup** — Delete 5 deprecated script originals from M1 build/ and maintain/
+1. **Windows cleanup** — Delete 5 deprecated script originals from M1 build/ and maintain/; delete `claude_knowledge/` folder from Desktop (old container, superseded)
 2. **DEFERRED-A** — 37 manual PDFs; once assembled → `backfill_new_article_metadata.py --art-id-min 1938`
 3. **DEFERRED-B** — `update_citation_trends.py` after backfill
-4. **Option B** — Flatten `00_#PROJECT_OVERHAUL/` → `claude_knowledge/` root
-5. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed
-6. **Schema docs** — Update `00_database/schemas/ite-data-context-skill/references/tables/` (questions.md still lists subcategory; articles.md has old tier labels and stale row counts)
+4. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed
+5. **Schema docs** — Update `00_database/schemas/ite-data-context-skill/references/tables/` (questions.md still lists subcategory; articles.md has old tier labels and stale row counts)
 
 ---
 
@@ -176,3 +181,7 @@ No DB writes. All tables same as BATON 037/038.
 | `01_module.1_warehouse/scripts/maintain/backfill_new_article_metadata.py` | MODIFIED — VC gate cross-check + mismatch counter |
 | `01_module.1_warehouse/scripts/maintain/build_topic_trends.py` | MODIFIED — docstring escape fix |
 | `02_module.2_processor/scripts/clear_and_reenrich.py` | MODIFIED — docstring escape fix |
+| `CLAUDE.md` | MODIFIED — BATON pointer → 038, GitHub remote → board_prep_intel, Windows root path, Option B status |
+| `_index.md` | MODIFIED — status line + Option B completion note |
+| `auto-memory-copies/project_overhaul_state.md` | MODIFIED — BATON + path references updated for board_prep_intel |
+| `option_b_patch.py` | ADDED — one-shot doc patcher script (executed and complete) |

@@ -1,11 +1,12 @@
+
 ---
 name: project_overhaul_state
-description: Current PROJECT_OVERHAUL state: BATON 038, code review fixes complete (14 defects), DEFERRED-A still priority
+description: BATON 038, Option B complete — board_prep_intel is flat project root, code review fixes done, DEFERRED-A priority
 type: project
 ---
 
 **Project:** ABFM ITE Intelligence System (Family Medicine board exam knowledge base)
-**Root (Windows):** `C:\Users\mpsch\Desktop\claude_knowledge\00_#PROJECT_OVERHAUL\`
+**Root (Windows):** `C:\Users\mpsch\Desktop\board_prep_intel\`
 **Active BATON:** `BATON_active_038_20260404_code_review_fixes.md`
 **Git:** `main`, latest committed → GIT-COMMITTED (code review: 14 defects fixed — 4 critical hop count/path bugs + 10 others)
 

@@ -1,9 +1,9 @@
 # _index.md — Ground Truth Directory Map
-**Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-04-04 (BATON 038)
+**Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
+**Last Updated:** 2026-04-04 (BATON 038 — Option B complete)
 **Status:** Current — Code review fixes applied: 14 defects resolved (4 critical hop count/path bugs, 4 high, 4 medium, 2 low). No structural changes to directory layout.
 
-> This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
+> This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
 
 ---

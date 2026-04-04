@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_038_20260404_code_review_fixes.md` |
+| Active BATON | `BATON_active_038_20260404_code_review_fixes.md` — Option B COMPLETE |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -72,8 +72,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | M3 scripts | 14 Python + 2 JS + 2 JSON config (+build_aafp_qa_deliverables.py +build_ite_qa_deliverables.py) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → GIT-COMMITTED (code review fixes: 14 defects — 4 critical, 4 high, 4 medium, 2 low) |
-| GitHub remote | `https://github.com/mpsch01/project-overhaul` (private) |
+| Git branch | `main`, latest → GIT-COMMITTED (code review fixes + Option B flatten + repo rename to board_prep_intel) |
+| GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
 → Full state: `.auto-memory/project_overhaul_state.md` and `.auto-memory/project_current_db_state.md`
@@ -116,5 +116,5 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 3. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → `citation_files/ITE/VC_fail/`
 4. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled (VC gate cross-check now active)
 5. **DEFERRED-B** — `update_citation_trends.py` after backfill complete
-6. **Option B** — Flatten `00_#PROJECT_OVERHAUL/` → `claude_knowledge/` root (path-safe per `repo_pre_severance.md`)
+6. **Option B** — COMPLETE (2026-04-04): `board_prep_intel/` is now the flat project root on desktop
 7. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`)
