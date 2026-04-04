@@ -1,14 +1,14 @@
-# ABFM ITE Intelligence System — PROJECT_OVERHAUL
+# ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-04-02 (BATON 032)
+**Last updated:** 2026-04-04 (BATON 039)
 **Status:** Active development
-**Active BATON:** `BATON_active_032_20260402_question_dist_fix_faculty_pptx.md`
+**Active BATON:** `BATON_active_039_20260404_schema_docs_cleanup.md`
 
 ---
 
 ## Project Overview
 
-A queryable Family Medicine board exam knowledge base: 1,629 ITE questions (2018–2025) and 1,221 AAFP BRQ questions linked to a clinical guideline library of 1,985 articles and 404 PDFs via a structured SQLite pipeline. Both corpora are now schema-parallel with full enrichment across body_system, concept_tags, subcategory, and ICD-10. Intelligence 2.0 layers (ICD-10 diagnostic linkage, clinical pathways, topic trends, vector embeddings, cross-corpus semantic similarity) provide structured clinical navigation across the full corpus. System extends beyond exam prep into clinical decision support.
+A queryable Family Medicine board exam knowledge base: 1,629 ITE questions (2018–2025) and 1,221 AAFP BRQ questions linked to a clinical guideline library of 1,985 articles and 404 PDFs via a structured SQLite pipeline. Both corpora are now schema-parallel with full enrichment across body_system, blueprint, concept_tags, and ICD-10. (Note: subcategory was dropped; blueprint filled to 100% for both banks.) Intelligence 2.0 layers (ICD-10 diagnostic linkage, clinical pathways, topic trends, vector embeddings, cross-corpus semantic similarity) provide structured clinical navigation across the full corpus. System extends beyond exam prep into clinical decision support.
 
 ---
 
@@ -22,22 +22,24 @@ Source of truth. Never disposable.
 
 ### 01_module.1_warehouse/
 PDF library (4 tiers, 404 PDFs) + pipeline build and maintenance scripts + AAFP BRQ data.
-- `VC_fail/` — 146 PDFs: codon-named, not VC-cited, awaiting full pipeline
-- `local_lite/` — 117 PDFs: enriched, not VC-cited (pipeline complete)
-- `VC_pass/` — 94 PDFs: codon-named, VC-cited, awaiting full pipeline
-- `right_click/` — 71 PDFs: VC-cited, fully enriched (pipeline complete)
-- `build/` — 9 scripts: self-contained full rebuild sequence
-- `maintain/` — 16 scripts: recurring DB population and maintenance operations (includes `update_citation_trends.py` and `download_aafp_acquisitions.py` — built and ready to run)
-- `aafp_brq/scraper/` — aafp_brq_scraper.py + cookies + quiz map (Windows-only)
-- `aafp_brq/staging/` — aafp_brq_staging.json (1,221 records, 4MB)
+- `citation_files/ITE/VC_fail/` — ~156 PDFs: codon-named, not VC-cited, awaiting full pipeline (37 manual pending)
+- `citation_files/ITE/local_lite/` — 117 PDFs: enriched, not VC-cited (pipeline complete)
+- `citation_files/ITE/VC_pass/` — 94 PDFs: codon-named, VC-cited, awaiting full pipeline
+- `citation_files/ITE/right_click/` — 71 PDFs: VC-cited, fully enriched (pipeline complete)
+- `citation_files/AAFP/` — AAFP citation PDFs
+- `practice_questions/` — 42 Q&A deliverables: 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored)
+- `ite_exams/` — 16 raw PDFs: YYYY_MC.pdf + YYYY_critique.pdf (2018–2025)
+- `build/` — 6 scripts: self-contained full rebuild sequence (3 deprecated deleted ✓)
+- `maintain/` — 18 scripts: recurring DB population and maintenance operations (2 deprecated deleted ✓)
+- `scripts/aafp_brq_scraper.py` — scraper at scripts/ root (Windows-only)
 
 ### 02_module.2_processor/
 Extraction, enrichment, and DOCX build pipeline.
-- `scripts/` — 53 Python + 6 JS + 1 JSON config + 4 Windows utilities
+- `scripts/` — 75 Python + 6 JS + 1 JSON config + 4 Windows utilities
 
 ### 03_module.3_analyst/
 ICD-10 tagging, clinical pathways, trend analysis, score analysis, AAFP-ITE reuse investigation.
-- `scripts/` — 9 Python + 2 JS + 2 JSON config
+- `scripts/` — 13 Python + 2 JS + 2 JSON config
 
 ### 04_module.4_sandbox/
 Experiments and agent prototypes (placeholder).
@@ -63,27 +65,32 @@ Critical reference data:
 
 ---
 
-## Database State (as of 2026-03-29, BATON 022)
+## Database State (as of 2026-04-04, BATON 039)
 
 | Table | Rows | Notes |
 |-------|------|-------|
-| articles | 1,985 | +49 AAFP acquisition (ART-1938–ART-1986); PDFs pending download |
-| questions (ITE) | 1,629 | 2018–2025 |
+| articles | 1,985 | ART-0001–ART-1986; next = ART-1987; +49 AAFP acquisition |
+| questions (ITE) | 1,629 | 2018–2025; blueprint 100%; subcategory + topic_label DROPPED |
+| aafp_questions | 1,221 | blueprint 100%; flattened; aafp_explanations DROPPED |
 | question_ref_pairs | 2,722 | |
-| qid_art_xref | 2,470 | |
-| article_icd10 | 3,855 | |
-| clinical_pathways | 3,093 | |
-| icd10_rollup | 614 | |
-| icd10_code_xref | 1,006 | |
-| article_vec | 1,936 | 100% coverage (49 new articles pending embeddings) |
-| question_vec | 1,629 | 100% coverage |
-| aafp_questions | 1,221 | 11 enrichment cols — concept_tags + subcategory 100% complete 2026-03-29 |
-| aafp_explanations | 1,221 | explanation_keywords populated |
+| qid_art_xref | 2,470 | all 8 years (2018–2025) |
+| aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
+| article_icd10 | 4,137 | +282 AAFP backfill 2026-03-31 |
+| question_icd10 | 5,284 | 1,512/1,629 ITE questions (92.8%) |
+| aafp_question_icd10 | 4,753 | 1,210/1,221 AAFP questions (99.1%) |
+| clinical_pathways | 4,020 | REBUILT 2026-03-31 — blueprint-based, both banks |
+| article_citation_trend | 1,740 | longitudinal citation tracking |
+| pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
+| icd10_vec | 2,219 | OpenAI text-embedding-3-small (1536d) |
+| article_icd10_vec | 1,674 | REBUILT 2026-04-01 |
+| question_icd10_vec | 2,733 | REBUILT 2026-04-01 |
+| article_vec | 1,985 | sqlite-vec virtual table; 100% coverage |
+| question_vec | 1,629 | sqlite-vec virtual table; 100% coverage |
+| aafp_question_vec | 1,221 | sqlite-vec virtual table; 100% coverage |
 | aafp_citations | 1,600 | one row per parsed citation |
 | aafp_citation_raw | 1,600 | full text archive + coordinates |
-| aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
-| aafp_question_vec | 1,221 | 100% coverage |
-| aafp_question_icd10 | ~4,065 | 1,208 unique questions (98.9%) |
+| icd10_rollup | 614 | |
+| icd10_code_xref | 1,006 | |
 
 **Next ART-ID:** ART-1987
 
@@ -118,18 +125,18 @@ DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 
 | Layer | Status | Table |
 |-------|--------|-------|
-| Layer 1 — ICD-10 diagnostic linkage | ✅ Complete | article_icd10 (3,855 rows) |
-| Layer 2 — PubMed currency | ⬜ Not started | article_currency (planned) |
-| Layer 3 — Clinical pathways | ✅ Complete | clinical_pathways (3,093 rows) |
-| Layer 4a — Topic trends | ✅ Complete | CSVs in M3 outputs |
-| Layer 4b — Alerts | ⬜ Not started | pubmed_alerts (planned) |
-| Citation trend tracking | ⬜ Script built | article_citation_trend (update_citation_trends.py ready) |
+| Layer 1 — ICD-10 diagnostic linkage | ✅ Built | article_icd10 (4,137) + question_icd10 (5,284) + aafp_question_icd10 (4,753) |
+| Layer 2 — PubMed currency | 🟡 Deferred | pubmed_pmid_cache seeded (344 PMIDs); article_currency build pending |
+| Layer 3 — Clinical pathways | ✅ Built | clinical_pathways (4,020 rows) — rebuilt 2026-03-31 |
+| Layer 4 — Trends + alerts | ⬜ Planned | topic_trends + pubmed_alerts (schemas defined) |
+| Citation trend tracking | ✅ Built | article_citation_trend (1,740 rows) |
+| Vector embeddings (ICD-10 layer) | ✅ Built | icd10_vec (2,219) + article_icd10_vec (1,674) + question_icd10_vec (2,733) |
 
 ---
 
 ## AAFP BRQ Pipeline (complete as of BATON 022)
 
-AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and fully enriched. Schema now parallel to ITE questions — both corpora have body_system, concept_tags, subcategory, and ICD-10.
+AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and fully enriched. Schema now parallel to ITE questions — both corpora have body_system, blueprint, concept_tags, and ICD-10. Note: subcategory was dropped; blueprint filled to 100% for both banks.
 
 **Pipeline run order:**
 ```powershell
@@ -150,14 +157,13 @@ python aafp_enrich_concept_tags.py --mode unlinked
 
 ---
 
-## Next Steps (BATON 022)
+## Next Steps (BATON 039)
 
-1. **Windows:** git commit (3 M2 scripts + BATONs 021/022 + CLAUDE.md + _index.md); archive BATONs 020+021; delete temp files
-2. **Windows:** run `download_aafp_acquisitions.py` → 49 PDFs; then `backfill_new_article_metadata.py --art-id-min 1938`
-3. **Windows:** run `update_citation_trends.py` → article_citation_trend table
-4. **AAFP vs ITE trend comparison** — both corpora schema-parallel; side-by-side analysis now unblocked
-5. **88 AFP gap articles** batch download from `null_clean_ref_missing_articles_20260326.csv`
-6. **Intelligence 2.0 Layer 2** — `article_currency` table via PubMed MCP
+1. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → `citation_files/ITE/VC_fail/`
+2. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled (VC gate cross-check active)
+3. **DEFERRED-B** — `update_citation_trends.py` after backfill complete
+4. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`)
+5. **DEFERRED-D** — 229 citation gap articles (88 AFP batch-downloadable from `null_clean_ref_missing_articles_20260326.csv`)
 
 ---
 
@@ -171,4 +177,4 @@ python aafp_enrich_concept_tags.py --mode unlinked
 ---
 
 **Project Lead:** Michael Scholl, MD
-**Last Reviewed:** 2026-03-29
+**Last Reviewed:** 2026-04-04
