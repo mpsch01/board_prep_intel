@@ -5,8 +5,8 @@ Step 1: Strip ite_intelligence block from all JSONs in the target folder.
 Step 2: Run the enricher on the folder.
 
 Usage:
-  python scripts\clear_and_reenrich.py
-  python scripts\clear_and_reenrich.py --dry-run   (preview only, no changes)
+  python scripts\\clear_and_reenrich.py
+  python scripts\\clear_and_reenrich.py --dry-run   (preview only, no changes)
 """
 
 import json, subprocess, sys, argparse

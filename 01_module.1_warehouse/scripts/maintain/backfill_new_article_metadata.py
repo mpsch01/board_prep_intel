@@ -257,6 +257,7 @@ def main():
         "tier_changed":         0,
         "engine_changed":       0,
         "categories_filled":    0,
+        "vc_gate_mismatch":     0,   # warehouse folder says right_click/VC_pass but not in VC gate JSON
     }
 
     for row in articles:
@@ -267,6 +268,13 @@ def main():
         if article_id in tier_map:
             tier = tier_map[article_id]
             stats["tier_source"]["warehouse"] += 1
+            # VC gate cross-check: right_click and VC_pass must have VC gate membership.
+            # Physical folder placement is trusted, but mismatches are flagged for review.
+            if tier in ("right_click", "VC_pass"):
+                ck = citation_key(clean_ref)
+                if not (ck and ck in vc_keys):
+                    stats["vc_gate_mismatch"] += 1
+                    print(f"  ⚠ VC gate mismatch: {article_id} is in {tier}/ folder but NOT in VC gate JSON — verify placement")
         else:
             ck   = citation_key(clean_ref)
             tier = "VC_pass" if (ck and ck in vc_keys) else "VC_fail"

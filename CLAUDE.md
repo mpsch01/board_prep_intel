@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_037_20260404_practice_questions_deliverables_m1_restructure.md` |
+| Active BATON | `BATON_active_038_20260404_code_review_fixes.md` |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -72,7 +72,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | M3 scripts | 14 Python + 2 JS + 2 JSON config (+build_aafp_qa_deliverables.py +build_ite_qa_deliverables.py) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → GIT-COMMITTED (sweep + mapping + ITE pipeline + AAFP Q&A deliverables) |
+| Git branch | `main`, latest → GIT-COMMITTED (code review fixes: 14 defects — 4 critical, 4 high, 4 medium, 2 low) |
 | GitHub remote | `https://github.com/mpsch01/project-overhaul` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -110,11 +110,11 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 037, 2026-04-04)
+## Next Steps (as of BATON 038, 2026-04-04)
 1. **Windows cleanup** — Delete 5 deprecated script originals from `M1/build/` and `M1/maintain/` (see BATON 035 for list)
-2. **`extract_ite_year.py` filename fix** — update expected filenames from `{YEAR}_ITE_Questions.pdf` → `{YEAR}_MC.pdf` and `{YEAR}_ITE_Critique.pdf` → `{YEAR}_critique.pdf` (matches ite_exams/ archive)
+2. **Schema docs** — Update `00_database/schemas/ite-data-context-skill/references/tables/` (questions.md still lists subcategory; articles.md has old tier labels + stale row counts)
 3. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → `citation_files/ITE/VC_fail/`
-4. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled
+4. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled (VC gate cross-check now active)
 5. **DEFERRED-B** — `update_citation_trends.py` after backfill complete
 6. **Option B** — Flatten `00_#PROJECT_OVERHAUL/` → `claude_knowledge/` root (path-safe per `repo_pre_severance.md`)
 7. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`)

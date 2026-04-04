@@ -1,13 +1,13 @@
 ---
 name: project_overhaul_state
-description: Current PROJECT_OVERHAUL state: BATON 037, M1 restructure complete, ITE+AAFP Q&A deliverables generated, DEFERRED-A still priority
+description: Current PROJECT_OVERHAUL state: BATON 038, code review fixes complete (14 defects), DEFERRED-A still priority
 type: project
 ---
 
 **Project:** ABFM ITE Intelligence System (Family Medicine board exam knowledge base)
 **Root (Windows):** `C:\Users\mpsch\Desktop\claude_knowledge\00_#PROJECT_OVERHAUL\`
-**Active BATON:** `BATON_active_037_20260404_practice_questions_deliverables_m1_restructure.md`
-**Git:** `main`, latest committed → GIT-COMMITTED (M1 restructure + deliverables + path fixes)
+**Active BATON:** `BATON_active_038_20260404_code_review_fixes.md`
+**Git:** `main`, latest committed → GIT-COMMITTED (code review: 14 defects fixed — 4 critical hop count/path bugs + 10 others)
 
 ---
 

@@ -195,7 +195,7 @@ def classify_and_update(conn: sqlite3.Connection, year: str,
         X_train, y_train, test_size=0.15, random_state=42, stratify=y_train
     )
     clf = XGBClassifier(n_estimators=200, max_depth=6,
-                        use_label_encoder=False, eval_metric='mlogloss',
+                        eval_metric='mlogloss',
                         verbosity=0)
     clf.fit(X_tr, y_tr)
 

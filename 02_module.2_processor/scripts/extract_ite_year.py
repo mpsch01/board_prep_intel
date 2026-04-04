@@ -11,8 +11,8 @@ Replaces the CSV-intermediate pipeline (01_ite_extractor → 02_ite_categorizer 
 
 Source PDFs expected in:
     01_module.1_warehouse/ite_exams/
-        {YEAR}_ITE_Questions.pdf
-        {YEAR}_ITE_Critique.pdf
+        {YEAR}_MC.pdf
+        {YEAR}_critique.pdf
 
     PDFs land in M1 (warehouse) first — always. M2 reads from M1.
 
@@ -309,8 +309,8 @@ def main():
     args = ap.parse_args()
     year = args.year
 
-    q_pdf = ITE_SOURCE / f"{year}_ITE_Questions.pdf"
-    c_pdf = ITE_SOURCE / f"{year}_ITE_Critique.pdf"
+    q_pdf = ITE_SOURCE / f"{year}_MC.pdf"
+    c_pdf = ITE_SOURCE / f"{year}_critique.pdf"
 
     print(f"\n{'='*60}")
     print(f"  extract_ite_year.py  |  Year: {year}  |  dry-run: {args.dry_run}")

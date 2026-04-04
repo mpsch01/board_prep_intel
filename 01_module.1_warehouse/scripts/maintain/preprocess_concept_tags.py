@@ -25,8 +25,8 @@ RESUME BEHAVIOR:
   Use --reset to clear concept_tags for a specific year and reprocess.
 
 PATH NOTE:
-  This script uses the PROJECT_ROOT pattern (same as integrate_2018_2019.py):
-    SCRIPT_DIR   = 02_module.2_processor/scripts/
+  This script uses the PROJECT_ROOT pattern (3 hops — M1/scripts/maintain/):
+    SCRIPT_DIR   = 01_module.1_warehouse/scripts/maintain/
     PROJECT_ROOT = 00_#PROJECT_OVERHAUL/
     DB_PATH      = 00_database/db/ite_intelligence.db
 
@@ -60,13 +60,13 @@ except ImportError:
     pass
 
 # ── Paths (PROJECT_ROOT pattern) ────────────────────────────────────────────
-SCRIPT_DIR   = Path(__file__).resolve().parent          # 02_module.2_processor/scripts/
-PROJECT_ROOT = SCRIPT_DIR.parent.parent                  # 00_#PROJECT_OVERHAUL/
+SCRIPT_DIR   = Path(__file__).resolve().parent              # 01_module.1_warehouse/scripts/maintain/
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent            # 00_#PROJECT_OVERHAUL/
 DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR      = PROJECT_ROOT / "00_database" / "logs"
 
 # ── Config ──────────────────────────────────────────────────────────────────
-MODEL      = "claude-sonnet-4-6"      # current production model
+MODEL      = "claude-sonnet-4-20250514"   # current production model
 BATCH_SIZE = 20          # reduced from 25 — keeps output comfortably under token ceiling
 MAX_TOKENS = 8192        # 4000 was too tight for 25 questions; 8192 gives ample headroom
 RETRY_MAX  = 3
