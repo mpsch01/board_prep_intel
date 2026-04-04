@@ -127,10 +127,10 @@ No DB writes. All tables same as BATON 037/038.
 
 | Location | Python | JS | Notes |
 |----------|--------|----|-------|
-| M1 build/ | 9 | 0 | 3 deprecated headers applied |
-| M1 maintain/ | 17 | 0 | 2 deprecated headers applied |
-| M2 scripts/ | ~64 | 6 | |
-| M3 scripts/ | 14 | 2 | ite_analyzer_v2.py = deprecated (complete header); 13 active |
+| M1 build/ | 6 | 0 | 3 deprecated scripts deleted (cleanup complete 2026-04-04) |
+| M1 maintain/ | 18 | 0 | 2 deprecated scripts deleted (cleanup complete 2026-04-04) |
+| M2 scripts/ | 75 | 6 | flat scripts/ only; +core/(4py) +engines/(7py) +utils/(6py) packages; source/ inputs; outputs/ staging; prompts/ templates |
+| M3 scripts/ | 13 | 2 | ite_analyzer_v2.py = deprecated (complete header); 12 active |
 
 ---
 
@@ -155,7 +155,7 @@ No DB writes. All tables same as BATON 037/038.
 
 ## Pending (next session)
 
-1. **Windows cleanup** — Delete 5 deprecated script originals from M1 build/ and maintain/; delete `claude_knowledge/` folder from Desktop (old container, superseded)
+1. ~~**Windows cleanup**~~ — COMPLETE ✓ (2026-04-04)
 2. **DEFERRED-A** — 37 manual PDFs; once assembled → `backfill_new_article_metadata.py --art-id-min 1938`
 3. **DEFERRED-B** — `update_citation_trends.py` after backfill
 4. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed

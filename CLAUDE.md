@@ -67,9 +67,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
-| M1 scripts | 9 build (3 deprecated) + 17 maintain (2 deprecated) + aafp_brq_scraper.py at scripts/ root — originals pending Windows delete |
-| M2 scripts | ~64 Python + 6 JS + 1 JSON + 4 Windows (+extract_ite_year.py +classify_ite_year.py) |
-| M3 scripts | 14 Python + 2 JS + 2 JSON config (+build_aafp_qa_deliverables.py +build_ite_qa_deliverables.py) |
+| M1 scripts | 6 build (3 deprecated deleted ✓) + 18 maintain (2 deprecated deleted ✓) + aafp_brq_scraper.py at scripts/ root |
+| M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
+| M3 scripts | 13 Python + 2 JS + 2 JSON config |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
 | Git branch | `main`, latest → GIT-COMMITTED (code review fixes + Option B flatten + repo rename to board_prep_intel) |
@@ -111,7 +111,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 ---
 
 ## Next Steps (as of BATON 038, 2026-04-04)
-1. **Windows cleanup** — Delete 5 deprecated script originals from `M1/build/` and `M1/maintain/` (see BATON 035 for list)
+1. ~~**Windows cleanup**~~ — COMPLETE ✓ (2026-04-04): 5 deprecated scripts deleted from M1/build/ + M1/maintain/
 2. **Schema docs** — Update `00_database/schemas/ite-data-context-skill/references/tables/` (questions.md still lists subcategory; articles.md has old tier labels + stale row counts)
 3. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → `citation_files/ITE/VC_fail/`
 4. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled (VC gate cross-check now active)
