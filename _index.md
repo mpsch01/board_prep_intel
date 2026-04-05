@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_040_20260405_exa_pdf_pipeline.md     ← active BATON
+├── BATON_active_043_20260405_pdf_recovery_skills.md  ← active BATON
 ├── CLAUDE.md                              ← project memory + conventions
 ├── REPO_MAP.md                            ← current-state architectural overview (NEW — BATON 039)
 ├── README.md                              ← project overview (human-readable)

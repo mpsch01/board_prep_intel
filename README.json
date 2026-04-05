@@ -1,0 +1,46 @@
+{
+  "project": "board_prep_intel",
+  "description": "ABFM ITE Intelligence System — Family Medicine board exam knowledge base (1,629 ITE + 1,221 AAFP BRQ questions) linked to a clinical guideline library (1,985 articles, 966 PDFs) via a structured SQLite pipeline.",
+  "last_updated": "2026-04-05",
+  "baton_active": "BATON_active_043_20260405_pdf_recovery_skills.md",
+  "baton_number": 43,
+  "db": {
+    "path": "00_database/db/ite_intelligence.db",
+    "articles": 1985,
+    "ite_questions": 1629,
+    "aafp_questions": 1221,
+    "article_icd10_rows": 4137,
+    "question_icd10_rows": 5284,
+    "aafp_question_icd10_rows": 4753,
+    "clinical_pathways_rows": 4020,
+    "pubmed_pmid_cache_rows": 344
+  },
+  "pdfs": {
+    "total": 966,
+    "VC_fail": 623,
+    "VC_pass": 168,
+    "local_lite": 117,
+    "right_click": 58,
+    "dupe_archive": 14,
+    "note": "Restored via 3-step pipeline (EXA+PMC+Unpaywall) after fix_ghost.py incident 2026-04-05"
+  },
+  "scripts": {
+    "M1_build": 6,
+    "M1_maintain": 23,
+    "M2_python": 75,
+    "M2_js": 6,
+    "M3_python": 13,
+    "M3_js": 2
+  },
+  "next_art_id": "ART-1987",
+  "git": {
+    "branch": "main",
+    "remote": "https://github.com/mpsch01/board_prep_intel"
+  },
+  "intelligence_2_status": {
+    "layer_1_icd10": "complete",
+    "layer_2_pubmed_currency": "deferred (DEFERRED-F)",
+    "layer_3_clinical_pathways": "complete",
+    "layer_4_trends": "partial"
+  }
+}
