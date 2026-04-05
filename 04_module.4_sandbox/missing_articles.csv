@@ -1,0 +1,314 @@
+article_id,author1,year,title,source_type,db_tier
+ART-0002,AAP,2015,578-580,AFP,local_lite
+ART-0018,Achar,2019,Apophysitis and osteochondrosis: Common causes of pain in growing bones,AFP,right_click
+ART-0029,Al,2021,a systematic review and quality assessment study,Guideline/Org,local_lite
+ART-0033,Albert,2017,End-of-life care: Managing common symptoms,AFP,local_lite
+ART-0036,Ali,2018,a primer for family physicians,AFP,local_lite
+ART-0040,Allison,2021,Frailty: Evaluation and management,AFP,local_lite
+ART-0052,American,2004,Management of hyperbilirubinemia in the newborn infant 35 or more weeks of gesta,Pediatrics,right_click
+ART-0072,American,2013,123–154,Textbook,local_lite
+ART-0078,American,2018,The American Psychiatric Association Practice Guideline for the Pharmacological ,Guideline/Org,local_lite
+ART-0090,Armstrong,2019,Influenza vaccination: Updated recommendations from ACIP,AFP,local_lite
+ART-0092,Arnett,2019,2019 ACC/AHA guideline on the primary prevention of cardiovascular disease: A re,Circulation,local_lite
+ART-0095,Arnold,2018,Common running injuries: Evaluation and management,AFP,local_lite
+ART-0097,Aspirin,2022,online,AFP,local_lite
+ART-0124,Barr,2014,Acute diarrhea in adults,AFP,local_lite
+ART-0126,Barstow,2018,Evaluating medical decision-making capacity in practice,AFP,right_click
+ART-0150,Bhattacharya,2023,"AASLD-IDSA recommendations for testing, managing, and treating hepatitis C virus",Guideline/Org,local_lite
+ART-0163,Bowlus,2023,659-702,Other Journal,local_lite
+ART-0166,Bradley,2011,the management of community acquired pneumonia in infants and children older tha,Guideline/Org,right_click
+ART-0169,Braun,2018,Stable coronary artery disease: Treatment,AFP,local_lite
+ART-0187,Buelt,2023,guidelines from the VA/DoD,AFP,local_lite
+ART-0190,Bunt,2018,Knee pain in adults and adolescents: The initial evaluation,AFP,local_lite
+ART-0193,Burgers,2020,Chronic diarrhea in adults: Evaluation and differential diagnosis,AFP,local_lite
+ART-0213,Carpenter,2019,Clinically relevant drug-drug interactions in primary care,AFP,local_lite
+ART-0216,Cary,2024,101858,Other Journal,local_lite
+ART-0223,Chamberlain,2021,Hip pain in adults: Evaluation and differential diagnosis,AFP,right_click
+ART-0228,Chang,2022,118-136,Guideline/Org,local_lite
+ART-0230,Charles,2017,discovering the underlying cause,AFP,right_click
+ART-0232,Chavey,2017,Heart failure due to reduced ejection fraction: Medical management,AFP,right_click
+ART-0234,Chey,2017,treatment of Helicobacter pylori infection,Other Journal,right_click
+ART-0238,Chow,2012,IDSA clinical practice guideline for acute bacterial rhinosinusitis in children ,Guideline/Org,local_lite
+ART-0240,Christian,2015,e1337-e1354,Pediatrics,local_lite
+ART-0248,Cloutier,2020,2020 asthma guideline update from the National Asthma Education and Prevention P,JAMA,right_click
+ART-0270,Croke,2019,HIV prevention and treatment with ART: International Antiviral Society updates r,AFP,local_lite
+ART-0279,Dakkak,2021,update from the American College of Rheumatology,AFP,local_lite
+ART-0282,Dalrymple,2021,Tinnitus: Diagnosis and management,AFP,local_lite
+ART-0287,David,2022,137-143,AFP,local_lite
+ART-0296,DeGeorge,2019,Treatment of the common cold,AFP,local_lite
+ART-0322,Donangelo,2017,Subclinical hyperthyroidism: When to consider treatment,AFP,right_click
+ART-0325,Dooling,2018,103-108,Other Journal,local_lite
+ART-0326,Douketis,2019,1469-1478,JAMA,right_click
+ART-0327,Douketis,2022,an American College of Chest Physicians clinical practice guideline,Chest,right_click
+ART-0346,Dvorin,2020,Short-term systemic corticosteroids: Appropriate use in primary care,AFP,local_lite
+ART-0384,Evans,2021,Executive Summary: Surviving Sepsis Campaign: International guidelines for the m,Other Journal,right_click
+ART-0393,Falk,2018,Evaluation of suspected dementia,AFP,right_click
+ART-0398,Farraye,2017,preventive care in inflammatory bowel disease,Other Journal,local_lite
+ART-0405,Final,2018,Adolescent Idiopathic Scoliosis: Screening,Guideline/Org,local_lite
+ART-0412,Final,2016,Depression in Adults: Screening,Guideline/Org,right_click
+ART-0415,Final,2020,Hepatitis C Virus Infection in Adolescents and Adults: Screening,Guideline/Org,local_lite
+ART-0420,Final,2021,Lung Cancer: Screening,Guideline/Org,right_click
+ART-0433,Finkelstein,2024,CD013823,Other Journal,right_click
+ART-0435,Fishbane,2017,Effects of ferric citrate in patients with nondialysis-dependent CKD and iron de,Other Journal,right_click
+ART-0437,FitzGerald,2020,2020 American College of Rheumatology guideline for the management of gout,Other Journal,right_click
+ART-0441,Flynn,2017,Clinical practice guideline for screening and management of high blood pressure ,Pediatrics,right_click
+ART-0442,Fontenelle,2019,treatment and prevention,AFP,right_click
+ART-0449,Foster,2015,694-699,AFP,local_lite
+ART-0455,Frazier,2020,Atopic dermatitis: Diagnosis and treatment,AFP,local_lite
+ART-0470,Gaitonde,2019,Influenza: Diagnosis and treatment,AFP,local_lite
+ART-0471,Galima,2020,Seasonal affective disorder: Common questions and answers,AFP,local_lite
+ART-0474,Garcia-Tsao,2016,"Portal hypertensive bleeding in cirrhosis: Risk stratification, diagnosis, and m",Other Journal,right_click
+ART-0479,Gauer,2020,Sepsis: Diagnosis and management,AFP,right_click
+ART-0483,Gauer,2013,Early recognition and management of sepsis in adults: The first six hours,AFP,local_lite
+ART-0487,Gentry,2017,Chronic obstructive pulmonary disease: Diagnosis and management,AFP,right_click
+ART-0488,Gerhard-Herman,2016,a report of the American College of Cardiology/American Heart Association Task F,Circulation,local_lite
+ART-0498,Global,2020,Global Strategy for Asthma Management and Prevention. Global Initiative for Asth,Other Journal,local_lite
+ART-0501,Gmez-Aldana,2019,current concepts in diagnosis and treatment,Other Journal,local_lite
+ART-0504,Golden,2016,Preventing obesity and eating disorders in adolescents,Pediatrics,local_lite
+ART-0514,Goodbred,2023,"prevention, diagnosis, and treatment",AFP,right_click
+ART-0524,Gregory,2018,The pregnant patient: Managing common acute medical problems,AFP,local_lite
+ART-0534,Grundy,2018,2018 AHA/ACC/AACVPR/AAPA/ABC/ACPM/ADA/AGS/APhA/ ASPC/NLA/PCNA guideline on the m,Circulation,right_click
+ART-0539,Gulati,2021,a report of the American College of Cardiology/American Heart Association Joint ,Chest,local_lite
+ART-0549,Hagan,2017,"Bright Futures: Guidelines for Health Supervision of Infants, Children and Adole",Pediatrics,right_click
+ART-0558,Hampl,2023,e2022060640,Pediatrics,right_click
+ART-0564,Hartman,2019,Gastroenteritis in children,AFP,local_lite
+ART-0568,Hauk,2018,updated guideline from the ACP,AFP,right_click
+ART-0571,Hauk,2018,Treatment of seasonal allergic rhinitis: A guideline from the AAAAI/ACAAI Joint ,AFP,local_lite
+ART-0572,Hauk,2018,"Tuberculosis: Guidelines for diagnosis from the ATS, IDSA, and CDC",AFP,local_lite
+ART-0578,Heidelbaugh,2018,The adult well-male examination,AFP,local_lite
+ART-0579,Heidenreich,2022,a report of the American College of Cardiology/American Heart Association joint ,Circulation,right_click
+ART-0581,Heimbach,2018,358-380,Other Journal,local_lite
+ART-0586,Hennion,2013,Diagnosis and treatment of peripheral arterial disease,AFP,local_lite
+ART-0589,Herrick,2020,Coccidioidomycosis (valley fever) in primary care,AFP,local_lite
+ART-0590,Higdon,2018,Oncologic emergencies: Recognition and initial management,AFP,local_lite
+ART-0595,Hitzeman,2014,Incidentalomas: Initial management,AFP,local_lite
+ART-0605,Howard-Thompson,2018,Type 2 diabetes mellitus: Outpatient insulin management,AFP,local_lite
+ART-0607,Hu,2019,Urinary incontinence in women: Evaluation and management,AFP,local_lite
+ART-0655,Kale,2019,Urine drug tests: Ordering and interpreting results,AFP,right_click
+ART-0662,Kant,2020,Thyroid nodules: Advances in evaluation and management,AFP,local_lite
+ART-0668,Katz,2022,27-56,Other Journal,local_lite
+ART-0682,Kim,2022,a practical approach,AFP,right_click
+ART-0691,Klein,2018,Caring for transgender and gender-diverse persons: What clinicians should know,AFP,local_lite
+ART-0692,Klein,2019,Amenorrhea: A systematic approach to diagnosis and management,AFP,local_lite
+ART-0693,Klein,2021,diagnosis and management,AFP,local_lite
+ART-0701,Kline,2021,common questions and answers,AFP,local_lite
+ART-0718,Kullo,2016,Peripheral artery disease,NEJM,local_lite
+ART-0726,Lacy,2021,ACG clinical guideline: Management of irritable bowel syndrome,Other Journal,right_click
+ART-0729,Lam,2016,Systemic lupus erythematosus: Primary care approach to diagnosis and management,AFP,local_lite
+ART-0735,Langan,2017,recognition and management,AFP,local_lite
+ART-0737,Langan,2020,Office spirometry: Indications and interpretation,AFP,right_click
+ART-0738,Lanham,2020,Outpatient burn care: Prevention and treatment,AFP,local_lite
+ART-0742,Larson,2020,Muscle weakness in adults: Evaluation and differential diagnosis,AFP,local_lite
+ART-0743,Latimer,2023,evaluation and management,AFP,local_lite
+ART-0747,LeFevre,2018,Vitamin D screening and supplementation in community-dwelling adults: Common que,AFP,local_lite
+ART-0762,Lesnewski,2021,Initiating hormonal contraception,AFP,local_lite
+ART-0770,Lillig,2018,Conduct disorder: Recognition and management,AFP,local_lite
+ART-0776,Lip,2018,Antithrombotic therapy for atrial fibrillation: CHEST guideline and expert panel,Chest,right_click
+ART-0779,Lipsky,2019,e3280,Other Journal,local_lite
+ART-0780,Liu,2011,Clinical practice guidelines by the Infectious Diseases Society of America for t,Guideline/Org,local_lite
+ART-0826,Matheson,2019,Hirsutism in women,AFP,local_lite
+ART-0834,Mayans,2018,Acute migraine headache: Treatment strategies,AFP,local_lite
+ART-0841,McDonald,2017,Clinical practice guidelines for Clostridium difficile infection in adults and c,Guideline/Org,local_lite
+ART-0865,Metlay,2019,Diagnosis and treatment of adults with community-acquired pneumonia,Guideline/Org,local_lite
+ART-0867,Michaudet,2017,Chronic cough: Evaluation and management,AFP,local_lite
+ART-0868,Michels,2014,Addison disease: Early detection and treatment principles,AFP,local_lite
+ART-0886,Moayyedi,2017,ACG and CAG clinical guideline: management of dyspepsia,Other Journal,right_click
+ART-0911,National,2020,Hepatitis C information: Testing recommendations for hepatitis C virus infection,Guideline/Org,local_lite
+ART-0919,Nettleton,2021,common questions and answers,AFP,local_lite
+ART-0930,O'Gurek,2022,Hemoptysis: Evaluation and management,AFP,right_click
+ART-0934,Ogé,2019,Acne vulgaris: Diagnosis and treatment,AFP,local_lite
+ART-0935,Oh,2017,Mildly elevated liver transaminase levels: Causes and evaluation,AFP,local_lite
+ART-0936,Oh,2020,Management of hypertriglyceridemia: Common questions and answers,AFP,local_lite
+ART-0954,Paladine,2018,Vaginitis: Diagnosis and treatment,AFP,local_lite
+ART-0965,Patel,2021,Common fractures of the radius and ulna,AFP,right_click
+ART-0970,Paul,2025,139-147,Pediatrics,right_click
+ART-0974,Pelletier,2016,Vision loss in older adults,AFP,right_click
+ART-0983,Petering,2017,Testosterone therapy: Review of clinical applications,AFP,right_click
+ART-1019,Qaseem,2020,"Nonpharmacologic and pharmacologic management of acute pain from non–low back, m",Annals,local_lite
+ART-1033,Ramirez,2019,Adhesive capsulitis: Diagnosis and management,AFP,local_lite
+ART-1034,Randall,2022,369-376,AFP,right_click
+ART-1039,Rathjen,2019,680-686,AFP,local_lite
+ART-1044,Reamy,2017,Pleuritic chest pain: Sorting through the differential diagnosis,AFP,local_lite
+ART-1053,Rerucha,2019,Acute hand infections,AFP,local_lite
+ART-1091,Runser,2017,Syncope: Evaluation and differential diagnosis,AFP,local_lite
+ART-1093,Rupert,2022,Pruritus: Diagnosis and management,AFP,local_lite
+ART-1099,Saguil,2019,Hand-foot-and-mouth disease: Rapid evidence review,AFP,local_lite
+ART-1100,Saguil,2019,Psychological and pharmacologic treatments for adults with PTSD,AFP,local_lite
+ART-1101,Salisbury-Afshar,2020,Adverse events of pharmacologic treatments of major depression in older adults,AFP,right_click
+ART-1118,Schroeder,2016,Treatment of adult obesity with bariatric surgery,AFP,right_click
+ART-1122,Scorza,2019,Current concepts in concussion: Initial evaluation and management,AFP,right_click
+ART-1149,Shehab,2013,Evaluation and diagnosis of wrist pain: A case-based approach,AFP,local_lite
+ART-1155,Shulman,2012,Clinical practical guideline for the diagnosis and management of group A strepto,Guideline/Org,local_lite
+ART-1159,Silver,2021,Peripheral nerve entrapment and injury in the upper extremity,AFP,local_lite
+ART-1170,Smith,2020,Managing hypertension using combination therapy,AFP,right_click
+ART-1171,Smith,2018,Croup: Diagnosis and management,AFP,right_click
+ART-1173,Smith,2019,"Febrile seizures: Risks, evaluation, and prognosis",AFP,right_click
+ART-1174,Smith,2017,Respiratory syncytial virus bronchiolitis in children,AFP,right_click
+ART-1178,Snyder,2018,Acute appendicitis: Efficient diagnosis and management,AFP,local_lite
+ART-1197,Stacey,2021,choice and application,AFP,local_lite
+ART-1200,Steinberg,2019,Type 2 diabetes therapies: A STEPS approach,AFP,right_click
+ART-1203,Stephens,2018,Dental problems in primary care,AFP,right_click
+ART-1204,Stevens,2014,Practice guidelines for the diagnosis and management of skin and soft tissue inf,Guideline/Org,local_lite
+ART-1205,Stevens,2021,second update of the CHEST guideline and expert panel report,Chest,right_click
+ART-1212,Sur,2022,628-636,AFP,right_click
+ART-1225,Tatum,2018,Geriatric assessment: An office-based approach,AFP,local_lite
+ART-1235,Tiglao,2021,outpatient management,AFP,local_lite
+ART-1241,Tran,2021,Care of the patient with abnormal liver test results,Annals,local_lite
+ART-1242,Trayes,2018,Annular lesions: Diagnosis and treatment,AFP,right_click
+ART-1243,Trojian,2019,Plantar fasciitis,AFP,local_lite
+ART-1247,Tu,2018,diagnosis and management,AFP,local_lite
+ART-1259,US Preventive Services Task Force. Final recommendation statement,2021,prediabetes and type 2 diabetes: screening,Guideline/Org,local_lite
+ART-1262,US Preventive Services Task Force. Final recommendation statement,2022,statin use for the primary prevention of cardiovascular disease in adults: preve,Guideline/Org,local_lite
+ART-1263,US Preventive Services Task Force. Final recommendation statement,2011,testicular cancer: screening,Guideline/Org,local_lite
+ART-1275,Uyeki,2018,"2018 update on diagnosis, treatment, chemoprophylaxis, and institutional outbrea",Guideline/Org,local_lite
+ART-1298,Virani,2023,a report of the American Heart Association/American College of Cardiology Joint ,Circulation,local_lite
+ART-1313,Wasserman,2018,Rheumatoid arthritis: Common questions about diagnosis and management,AFP,right_click
+ART-1327,Westfall,2020,common questions and answers on diagnosis and management,AFP,right_click
+ART-1331,Whelton,2017,2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guideline for the preventi,Circulation,local_lite
+ART-1337,Wilkins,2013,Diagnosis and management of acute diverticulitis,AFP,local_lite
+ART-1339,Wilkins,2020,Upper gastrointestinal bleeding in adults: Evaluation and management,AFP,local_lite
+ART-1341,Wilkinson,2019,"Gas, bloating, and belching: Approach to evaluation and management",AFP,local_lite
+ART-1350,Wilson,2021,Hypothyroidism: Diagnosis and treatment,AFP,local_lite
+ART-1352,Winslow,2023,diagnosis and management,AFP,local_lite
+ART-1353,Wipperman,2019,Hidradenitis suppurativa: Rapid evidence review,AFP,right_click
+ART-1367,Wouk,2021,End-stage renal disease: Medical management,AFP,local_lite
+ART-1378,Yew,2023,evaluation and diagnosis,AFP,local_lite
+ART-1389,Zolotor,2014,Update on prenatal care,AFP,right_click
+ART-1398,Rabins,2007,Practice Guideline for the Treatment of Patients With Alzheimer's Disease and Ot,Guideline/Org,VC_fail
+ART-1399,Gelenberg,2010,Practice Guideline for the Treatment of Patients With Major Depressive Disorder,Guideline/Org,VC_fail
+ART-1400,Eikelboom,2017,Rivaroxaban with or without Aspirin in Stable Cardiovascular Disease,Other Journal,VC_fail
+ART-1401,Nicolle,2019,Clinical Practice Guideline for the Management of Asymptomatic Bacteriuria,Guideline/Org,VC_fail
+ART-1402,Baddour,2005,"Infective Endocarditis in Adults: Diagnosis, Antimicrobial Therapy, and Manageme",Other Journal,VC_fail
+ART-1403,Hill,2006,The Practice of Travel Medicine: Guidelines by the Infectious Diseases Society o,Guideline/Org,VC_fail
+ART-1404,Miller,2024,Guide to Utilization of the Microbiology Laboratory for Diagnosis of Infectious ,Other Journal,VC_fail
+ART-1405,AAOS,2019,Periprosthetic Joint Infections Clinical Practice Guideline,Guideline/Org,VC_fail
+ART-1406,VA_DoD,2022,VA/DoD Clinical Practice Guideline for the Management of Major Depressive Disord,Guideline/Org,VC_fail
+ART-1407,Patel,2022,Updates on Age to Start and Stop Colorectal Cancer Screening: Recommendations Fr,Other Journal,VC_fail
+ART-1408,Robertson,2017,Recommendations on Fecal Immunochemical Testing to Screen for Colorectal Neoplas,Other Journal,VC_fail
+ART-1409,Tran,2016,ACG Clinical Guideline: Liver Disease and Pregnancy,Other Journal,VC_fail
+ART-1410,Joglar,2024,2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibri,Guideline/Org,VC_fail
+ART-1411,Messe,2020,Practice Advisory Update: Patent Foramen Ovale and Secondary Stroke Prevention,Other Journal,VC_fail
+ART-1412,AAN,2014,Prevention of Stroke in Nonvalvular Atrial Fibrillation,Guideline/Org,VC_fail
+ART-1413,Iverson,2010,Practice Parameter Update: Evaluation and Management of Driving Risk in Dementia,Other Journal,VC_fail
+ART-1414,AAN,2012,Pharmacologic Treatment for Episodic Migraine Prevention in Adults,Guideline/Org,VC_fail
+ART-1415,Oskoui,2019,Practice Guideline Update: Acute Treatment of Migraine in Children and Adolescen,Guideline/Org,VC_fail
+ART-1416,Oskoui,2019,Practice Guideline Update: Pharmacologic Treatment for Pediatric Migraine Preven,Guideline/Org,VC_fail
+ART-1417,Turan,2017,Stroke Prevention in Symptomatic Large Artery Intracranial Atherosclerosis,Other Journal,VC_fail
+ART-1419,Chang,2017,Chronic Cough Related to Acute Viral Bronchiolitis in Children,Other Journal,VC_fail
+ART-1420,Cobaugh,2007,Atypical Antipsychotic Medication Poisoning: An Evidence-Based Consensus Guideli,Other Journal,VC_fail
+ART-1421,Scharman,2006,Diphenhydramine and Dimenhydrinate Poisoning: An Evidence-Based Consensus Guidel,Other Journal,VC_fail
+ART-1422,Caravati,2007,Long-Acting Anticoagulant Rodenticide Poisoning: An Evidence-Based Consensus Gui,Other Journal,VC_fail
+ART-1423,Nelson,2007,Selective Serotonin Reuptake Inhibitor Poisoning: An Evidence-Based Consensus Gu,Other Journal,VC_fail
+ART-1424,Dart,2006,Acetaminophen Poisoning: An Evidence-Based Consensus Guideline for Out-of-Hospit,Other Journal,VC_fail
+ART-1425,USPSTF,2022,Aspirin Use to Prevent Cardiovascular Disease: USPSTF Recommendation Statement,Guideline/Org,VC_fail
+ART-1426,American Diabetes Association,2025,Standards of Care in Diabetes—2025,Guideline/Org,VC_fail
+ART-1427,Mottl,2022,KDOQI Commentary on the KDIGO 2022 Update to the Clinical Practice Guideline for,Guideline/Org,VC_fail
+ART-1428,Drawz,2021,KDOQI US Commentary on the 2021 KDIGO Clinical Practice Guideline for the Manage,Guideline/Org,VC_fail
+ART-1429,Ikizler,2024,ASN Kidney Health Guidance on the Management of Obesity in Persons Living with K,Other Journal,VC_fail
+ART-1430,Isakova,2017,KDOQI US Commentary on the 2017 KDIGO Clinical Practice Guideline Update for the,Guideline/Org,VC_fail
+ART-1431,Ikizler,2020,KDOQI Clinical Practice Guideline for Nutrition in CKD: 2020 Update,Guideline/Org,VC_fail
+ART-1432,High,2009,Clinical Practice Guideline for the Evaluation of Fever and Infection in Older A,Guideline/Org,VC_fail
+ART-1433,Lantos,2020,"Clinical Practice Guidelines by the Infectious Diseases Society of America, Amer",Guideline/Org,VC_fail
+ART-1434,Freifeld,2010,Clinical Practice Guideline for the Use of Antimicrobial Agents in Neutropenic P,Guideline/Org,VC_fail
+ART-1435,AFP,2023,"Menopause: Diagnosis, Management, and Treatment",Other Journal,VC_fail
+ART-1436,Camilleri,2022,ACG Clinical Guideline: Gastroparesis,Other Journal,VC_fail
+ART-1437,AFP,2023,Allergic Rhinitis: Diagnosis and Management,Other Journal,VC_fail
+ART-1438,AAN,2012,AAN Evidence-Based Guideline Summary: Steroids and Antivirals for Bell Palsy,Guideline/Org,VC_fail
+ART-1439,Knopman,2001,Practice Parameter: Diagnosis of Dementia—An Evidence-Based Review,Other Journal,VC_fail
+ART-1440,AAN,2008,AAN Evidence-Based Guideline Summary: Pharmacologic Treatment for Trigeminal Neu,Guideline/Org,VC_fail
+ART-1441,Criner,2015,Prevention of Acute Exacerbations of COPD: American College of Chest Physicians ,Chest,VC_fail
+ART-1442,Fraenkel,2021,2021 American College of Rheumatology Guideline for the Treatment of Rheumatoid ,Other Journal,VC_fail
+ART-1443,Humphrey,2022,2022 American College of Rheumatology Guideline for the Prevention and Treatment,Other Journal,VC_fail
+ART-1450,Antono,2025,Gastroesophageal Reflux in Infants and Children:​ Diagnosis and Treatment,AFP,VC_fail
+ART-1451,Arnold,2020,"Point-of-care ultrasonography (POCUS) is an evolving outpatient, inpatient, and ",AFP,VC_fail
+ART-1452,Bailey,2022,"A diverticulum is a protrusion through the intestinal wall, and diverticulosis i",AFP,VC_fail
+ART-1453,Baird,2019,Toilet training is a significant developmental milestone in early childhood as a,AFP,VC_fail
+ART-1454,Baird,2025,Lower Extremity Abnormalities in Children,AFP,VC_fail
+ART-1455,Barstow,2017,"Myocardial infarction (MI), a subset of acute coronary syndrome, is damage to th",AFP,VC_fail
+ART-1456,Bayard,2023,"Syncope is an abrupt, transient, and complete loss of consciousness associated w",AFP,VC_fail
+ART-1457,Bryce,2022,Barrett esophagus is a premalignant change of the esophagus in which the normal ,AFP,VC_fail
+ART-1458,Butler,2025,Acute Rhinosinusitis:​ Rapid Evidence Review,AFP,VC_fail
+ART-1459,Caplan,2025,Diagnosis and Management of Tinea Infections,AFP,VC_fail
+ART-1460,Cayley,2024,Noninvasive Cardiac Testing,AFP,VC_fail
+ART-1461,Chang,2023,This is an updated version of the article that appeared in print. The menopausal,AFP,VC_fail
+ART-1462,Cheng,2020,The coronavirus disease 2019 (COVID-19) pandemic is caused by an enveloped singl,AFP,VC_fail
+ART-1463,Childress,2020,"Neck pain is a common presenting symptom in primary care, with an incidence of 1",AFP,VC_fail
+ART-1464,Clarke,2023,Hypertension is the persistent elevation of systolic and/or diastolic blood pres,AFP,VC_fail
+ART-1465,Creech-Organ,2023,Musculoskeletal conditions are reported by 48% of the population and are a signi,AFP,VC_fail
+ART-1466,Dabbs,2024,Asthma is a major public health problem that affects as many as 262 million chil,AFP,VC_fail
+ART-1467,Dakkak,2024,Hair Loss:​ Diagnosis and Treatment,AFP,VC_fail
+ART-1468,David,2022,Fever of unknown origin (FUO) in adults poses one of the greatest diagnostic cha,AFP,VC_fail
+ART-1469,DeGeorge,2022,Anxiety disorders are some of the most common mental health conditions seen in p,AFP,VC_fail
+ART-1470,Earwood,2018,Patients with otalgia (ear pain) commonly present to their primary care physicia,AFP,VC_fail
+ART-1471,Ebell,2018,The volume of studies published annually has expanded greatly in recent decades.,AFP,VC_fail
+ART-1472,Falk,2025,Lymphadenopathy:​ Evaluation and Differential Diagnosis,AFP,VC_fail
+ART-1473,Fargo,2017,Jaundice in adults can be an indicator of significant underlying disease. It is ,AFP,VC_fail
+ART-1474,Firnhaber,2020,"Keratinocyte carcinoma, referred to as nonmelanoma skin cancer, comprises basal ",AFP,VC_fail
+ART-1475,Flynn,2020,A chronic musculoskeletal pain disorder is the underlying diagnosis for 70% to 8,AFP,VC_fail
+ART-1476,Fraser,2025,Sudden Vision Loss:​ A Diagnostic Approach,AFP,VC_fail
+ART-1477,Frazier,2023,Individuals with skin of color make up,AFP,VC_fail
+ART-1478,Gaddey,2021,Weight loss in older adults can be intentional or unintentional. Unintentional w,AFP,VC_fail
+ART-1479,Gaddey,2022,"In the United States, 1 in 5 adults uses tobacco products. Cigarettes and other ",AFP,VC_fail
+ART-1480,Gaitonde,2019,Patellofemoral pain syndrome (PFPS) is a common cause of knee pain in adolescent,AFP,VC_fail
+ART-1481,Garner,2023,Psoriasis is an inflammatory skin and systemic disorder that affects 3.2% of the,AFP,VC_fail
+ART-1482,Gauer,2025,Heart Failure With Reduced Ejection Fraction:​ Medical Management,AFP,VC_fail
+ART-1483,Gawrys,2024,"Disorders, 3rd ed. (Table 1).3 Severity is determined by the apnea-hypopnea inde",AFP,VC_fail
+ART-1484,Grad,2025,Top 20 Research Studies of 2024 for Primary Care Physicians,AFP,VC_fail
+ART-1485,Hamilton,2020,The evaluation of children younger than 36 months presenting with fever has long,AFP,VC_fail
+ART-1486,Herness,2022,"Arthropods, comprised of insects and arachnids, account for up to 1 million emer",AFP,VC_fail
+ART-1487,Hilgefort,2025,Family physicians play a pivotal role in providing timely care for common finger,AFP,VC_fail
+ART-1488,Hitzeman,2022,"Comprehensive urinalysis involves inspection of the urine, dipstick chemical ana",AFP,VC_fail
+ART-1489,Hoffman,2025,Dysuria:​ Evaluation and Differential Diagnosis in Adults,AFP,VC_fail
+ART-1490,Holder,2024,Atrial fibrillation (AF) is a supraventricular arrhythmia characterized by uncoo,AFP,VC_fail
+ART-1491,Keating,2024,"States, the prevalence of obesity has increased markedly since the early 2000s. ",AFP,VC_fail
+ART-1492,Langan,2024,Mildly Elevated Liver Transaminase Levels:​ Causes and Evaluation,AFP,VC_fail
+ART-1493,LeFevre,2025,Seborrheic Dermatitis:​ Diagnosis and Treatment,AFP,VC_fail
+ART-1494,Lesser,2021,Nutrition support therapy is the delivery of formulated enteral or parenteral nu,AFP,VC_fail
+ART-1495,Lintner,2023,"In the United States, 40 million to 60 million children are involved in organize",AFP,VC_fail
+ART-1496,Locke,2018,Although diet is the single most significant risk factor for disability and prem,AFP,VC_fail
+ART-1497,MacDonald,2021,"Approximately 60 million children and adolescents, including 7.9 million high sc",AFP,VC_fail
+ART-1498,Maharty,2024,Low back pain is a common reason for adults to visit their physician. Based on a,AFP,VC_fail
+ART-1499,Matheson,2017,Insomnia accounts for more than 5.5 million visits to family physicians each yea,AFP,VC_fail
+ART-1500,Matheson,2024,"Approximately 30% of the U.S. population reports experiencing insomnia, with 5% ",AFP,VC_fail
+ART-1501,Meisenheimer,2022,Acute diarrheal disease is a common cause of clinic visits and hospitalizations.,AFP,VC_fail
+ART-1502,Meisenheimer,2025,Chronic Pelvic Pain in Women:​ Evaluation and Treatment,AFP,VC_fail
+ART-1503,Miller,2023,Sodium abnormalities are common electrolyte disorders associated with significan,AFP,VC_fail
+ART-1504,Moreland,2025,Migraine Headache Prophylaxis,AFP,VC_fail
+ART-1505,Morikawa,2025,Acid-Base Interpretation:​ A Practical Approach,AFP,VC_fail
+ART-1506,Mott,2018,"Hemorrhoids develop when the venous drainage of the anus is altered, causing the",AFP,VC_fail
+ART-1507,Mounsey,2025,Hyperthyroidism:​ Diagnosis and Treatment,AFP,VC_fail
+ART-1508,Mulhem,2025,Acute Bronchitis:​ Rapid Evidence Review,AFP,VC_fail
+ART-1509,Muncie,2017,Dizziness is a common yet imprecise symptom. It was traditionally divided into f,AFP,VC_fail
+ART-1510,Nelson,2025,Evaluation of Jaundice in Adults,AFP,VC_fail
+ART-1511,Newman,2022,The prevalence of sacroiliac (SI) joint dysfunction is approximately 25% in adul,AFP,VC_fail
+ART-1512,Nohria,2024,"Each year, acute coronary syndrome (ACS) affects more than 7 million people glob",AFP,VC_fail
+ART-1513,Paladine,2021,Health maintenance for women of reproductive age (generally defined as 15 to 44 ,AFP,VC_fail
+ART-1514,Partin,2024,Sarcoidosis is a multisystem granulomatous inflammatory disease that can affect ,AFP,VC_fail
+ART-1515,Patel,2024,"Gallstones, or cholelithiasis, are highly prevalent, affecting an estimated 10% ",AFP,VC_fail
+ART-1516,Plesa,2025,Health Maintenance in Postmenopausal Women,AFP,VC_fail
+ART-1517,Powers,2023,Prenatal care necessitates balancing the benefits and harms of treatment for the,AFP,VC_fail
+ART-1518,Ramírez,2023,Family physicians provide family-centered care for individuals and families befo,AFP,VC_fail
+ART-1519,Randall,2022,Patients with oral disease may present to their family physician before a dentis,AFP,VC_fail
+ART-1520,Raymond,2023,Asthma is one of the most common chronic diseases in primary care. It affects mo,AFP,VC_fail
+ART-1521,Riley,2019,The goals of the health maintenance visit in school-aged children (five to 12 ye,AFP,VC_fail
+ART-1522,Savard,2023,"Disorders of smell and taste affect a person’s quality of life, health, and safe",AFP,VC_fail
+ART-1523,Sehgal,2024,Hearing loss is one of the most prevalent chronic conditions in the United State,AFP,VC_fail
+ART-1524,Shen-Wagner,2023,Pleural effusion is excess fluid accumulation in the pleural space caused by dis,AFP,VC_fail
+ART-1525,Shen-Wagner,2024,Diagnosing Common Benign Skin Tumors,AFP,VC_fail
+ART-1526,Silver,2024,Foot fractures account for approximately one-third of lower extremity fractures ,AFP,VC_fail
+ART-1527,Smith,2023,"Tonsillitis, or inflammation of the tonsils, makes up approximately 0.4% of outp",AFP,VC_fail
+ART-1528,Snyder,2024,Skin findings in newborns can present a diagnostic challenge in distinguishing c,AFP,VC_fail
+ART-1529,Straub,2024,Common Tongue Conditions in Primary Care,AFP,VC_fail
+ART-1530,Sur,2022,Upper respiratory tract infections (URIs) account for millions of physician visi,AFP,VC_fail
+ART-1531,Swisher,2025,Acute Monoarthritis:​ Diagnosis in Adults,AFP,VC_fail
+ART-1532,Switaj,2017,Acute coronary syndrome continues to be a significant cause of morbidity and mor,AFP,VC_fail
+ART-1533,Trayes,2019,"Erythema multiforme is an acute, typically self-limited skin condition with lesi",AFP,VC_fail
+ART-1534,Unwin,2021,Approximately 19 million full- and part-time students were enrolled in U.S. coll,AFP,VC_fail
+ART-1535,Vaughan,2024,More than 38 million people in the United States have diabetes mellitus;​ 90% to,AFP,VC_fail
+ART-1536,Veauthier,2020,Urinary tract infections (UTIs) are common in children and are associated with s,AFP,VC_fail
+ART-1537,Veauthier,2024,Diabetic Ketoacidosis:​ Evaluation and Treatment,AFP,VC_fail
+ART-1538,Viera,2022,A detailed history and physical examination can distinguish between key features,AFP,VC_fail
+ART-1539,Walling,2020,Patients with increasingly frequent headaches can develop disabling symptoms. Bi,AFP,VC_fail
+ART-1540,Weaver-Agostoni,2023,Allergic rhinitis is the most common chronic disease of childhood and the fifth ,AFP,VC_fail
+ART-1541,Weinfeld,2021,The home measurement of blood pressure allows patients with hypertension to beco,AFP,VC_fail
+ART-1542,Wilbur,2017,Pulmonary embolism and deep venous thrombosis are the two most important manifes,AFP,VC_fail

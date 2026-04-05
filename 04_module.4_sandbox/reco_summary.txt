@@ -1,0 +1,15 @@
+  RECO_right_click: 71 PDFs total  (58 codon, 13 legacy)
+  RECO_VC_fail: 148 PDFs total  (147 codon, 1 legacy)
+  RECO_VC_pass: 94 PDFs total  (93 codon, 1 legacy)
+  RECO_local_lite: 117 PDFs total  (117 codon, 0 legacy)
+
+Total unique codon ART-IDs in RECO folders: 415
+ART-IDs currently on disk (citation_files/ITE): 0
+Rows in missing_articles.csv: 313
+
+── Coverage ───────────────────────────────
+  Covered by RECO backup:   313
+  Already back on disk:     0
+  STILL MISSING:            0
+
+Wrote reco_covered.csv  (313 rows)

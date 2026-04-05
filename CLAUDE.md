@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_040_20260405_exa_pdf_pipeline.md` — EXA pdf pipeline built; 3 new scripts (exa_pdf_finder, exa_pdf_downloader, pmc_oa_downloader); PDFs 413→868 |
+| Active BATON | `BATON_active_042_20260405_recovery_complete.md` — fix_ghost.py catastrophic deletion recovered via external HDD backup; 527 PDFs restored to citation_files/ITE/ |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -62,7 +62,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_icd10_vec | 1,674 rows — ✅ rebuilt 2026-04-01 |
 | question_icd10_vec | 2,733 rows — ✅ rebuilt 2026-04-01 |
 | clinical_pathways | 4,020 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 |
-| PDFs (citation tiers) | 868 across 4 tiers in citation_files/ITE/ (exa_pdf_downloader + pmc_oa_downloader complete 2026-04-05; 215 direct + 190 AAFP + 47 PMC OA/tgz = 452 new; 62 not_oa + 872 landing_page remain) |
+| PDFs (citation tiers) | 527 across 4 tiers in citation_files/ITE/ (VC_fail:170, VC_pass:169, local_lite:117, right_click:71) — restored from HDD backup 2026-04-05 after fix_ghost.py deletion |
 | PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
@@ -103,6 +103,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 6. **BATON first.** Read the active BATON before any work. It has deferred flags and current state.
 7. **QC after every integration.** Schema-level column-by-column population comparison, old cohort vs new.
 8. **Git via Desktop Commander.** Claude can now run git commits via Desktop Commander Python subprocess (helper: `claude_knowledge/git_runner.py`). Cannot `rm` NTFS files — deletions still require Windows Explorer/terminal.
+11. **`shutil.rmtree` is BANNED.** Use explicit file-by-file deletion or PowerShell Remove-Item. shutil.rmtree bypasses Recycle Bin and is irreversible — learned from fix_ghost.py incident 2026-04-05.
 9. **Strategy 0 in every enricher.** Codon parse is always the first matching strategy.
 10. **Schemas before scripts.** SQL `CREATE TABLE` defined before build scripts are written.
 

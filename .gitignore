@@ -89,3 +89,6 @@ chat_archive/
 #   re-org_guidance/ docs
 #   skills_abilities/ reference docs
 # ============================================================
+
+# --- BROWSER COOKIES (session credentials --- never commit) ---
+key_data_files/cookies/
