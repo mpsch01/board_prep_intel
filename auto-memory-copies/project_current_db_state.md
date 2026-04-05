@@ -1,10 +1,10 @@
 ---
 name: project_current_db_state
-description: DB state as of BATON 040 (2026-04-05) — DB unchanged; 868 PDFs on disk (was 413); EXA pipeline ran; DEFERRED-G next
+description: DB state as of BATON 043 (2026-04-05) — DB unchanged; 966 active PDFs recovered; PDF recovery complete; housekeeping deployed
 type: project
 ---
 
-## DB State (as of BATON 040, 2026-04-05 — unchanged from BATON 034; no DB writes this session)
+## DB State (as of BATON 043, 2026-04-05 — unchanged; no DB writes; PDF library recovered to 966 active)
 
 | Table | Rows | Notes |
 |-------|------|-------|
@@ -15,7 +15,7 @@ type: project
 | question_ref_pairs | 2,722 | 222 NULL clean_ref |
 | qid_art_xref | 2,470 | All 8 years (2018–2025) |
 | aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
-| article_icd10 | 4,137 | Full coverage — ITE chain + AAFP backfill (2026-03-31) |
+| article_icd10 | 4,020 | Full coverage — ITE chain + AAFP backfill (2026-03-31) |
 | question_icd10 | 5,284 | 1,512/1,629 ITE questions (92.8%) |
 | aafp_question_icd10 | 4,753 | Relevance normalized, related cap applied (2026-03-31) |
 | clinical_pathways | 4,020 | REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 |
@@ -23,8 +23,8 @@ type: project
 | icd10_code_xref | 1,006 | |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) — ready for article_currency build |
 | icd10_vec | 2,219 | OpenAI text-embedding-3-small (1536d) per unique ICD-10 code |
-| article_icd10_vec | 1,674 | Weighted-avg ICD-10 feature per article — REBUILT 2026-04-01 |
-| question_icd10_vec | 2,733 | 1,525 ITE + 1,208 AAFP — REBUILT 2026-04-01 |
+| article_icd10_vec | 1,757 | Weighted-avg ICD-10 feature per article — rebuilt 2026-04-05 |
+| question_icd10_vec | 2,747 | 1,525 ITE + 1,222 AAFP — rebuilt 2026-04-05 |
 | article_vec | 1,985 | sqlite-vec virtual table; 49 new articles embeddings pending |
 | question_vec | 1,629 | sqlite-vec virtual table, 100% ITE coverage |
 | article_citation_trend | 1,740 | Pre-computed longitudinal data ART-0002–ART-1937 |

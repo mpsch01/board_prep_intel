@@ -48,31 +48,31 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_042_20260405_recovery_complete.md` — fix_ghost.py catastrophic deletion recovered via external HDD backup; 527 PDFs restored to citation_files/ITE/ |
+| Active BATON | `BATON_active_043_20260405_pdf_recovery_skills.md` — PDF recovery + skill creation; 966 PDFs across 4 tiers |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
 | aafp_questions.blueprint | 1,221/1,221 (100%) — batch API, same rubric as ITE v2 — complete 2026-03-30 |
 | aafp_questions.concept_tags | 1,221/1,221 (100%) |
-| article_icd10 | 4,137 rows (+282 AAFP backfill — 2026-03-31) |
+| article_icd10 | 4,020 rows — rebuilt with vec (2026-04-05) |
 | question_icd10 | 5,284 rows — 1,512/1,629 ITE questions (92.8%) |
 | aafp_question_icd10 | 4,753 rows — relevance normalized, related cap applied |
 | pubmed_pmid_cache | 344 rows — Layer 2 seed (citation_id → PMID) |
 | icd10_vec | 2,219 rows — OpenAI text-embedding-3-small (1536d) |
-| article_icd10_vec | 1,674 rows — ✅ rebuilt 2026-04-01 |
-| question_icd10_vec | 2,733 rows — ✅ rebuilt 2026-04-01 |
+| article_icd10_vec | 1,757 rows — ✅ rebuilt 2026-04-05 |
+| question_icd10_vec | 2,747 rows — ✅ rebuilt 2026-04-05 |
 | clinical_pathways | 4,020 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 |
-| PDFs (citation tiers) | 527 across 4 tiers in citation_files/ITE/ (VC_fail:170, VC_pass:169, local_lite:117, right_click:71) — restored from HDD backup 2026-04-05 after fix_ghost.py deletion |
+| PDFs (citation tiers) | 966 across 4 tiers in citation_files/ITE/ (VC_fail:623, VC_pass:168, local_lite:117, right_click:58) — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
 | PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
-| M1 scripts | 6 build (3 deprecated deleted ✓) + 21 maintain (2 deprecated deleted ✓) + aafp_brq_scraper.py at scripts/ root |
+| M1 scripts | 6 build (3 deprecated deleted ✓) + 23 maintain (2 deprecated deleted ✓) + aafp_brq_scraper.py at scripts/ root |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
 | M3 scripts | 13 Python + 2 JS + 2 JSON config |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → GIT-COMMITTED (code review fixes + Option B flatten + repo rename to board_prep_intel) |
+| Git branch | `main`, latest → GIT-COMMITTED (PDF recovery + session housekeeping + skill creation) |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -111,10 +111,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 040, 2026-04-05)
-1. **DEFERRED-G** — `unpaywall_scanner.py` — target 872 landing_page + 62 not_oa PMC articles; Unpaywall API (`/v2/{doi}?email=`) + DOI check (articles table or EUtils derivation from PMID)
-2. **~~Schema docs~~** — COMPLETE ✓ (BATON 039): articles.md + questions.md corrected
-3. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → `citation_files/ITE/VC_fail/`
-4. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled (VC gate cross-check now active)
-5. **DEFERRED-B** — `update_citation_trends.py` after backfill complete
-6. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`; NCBI API key set)
+## Next Steps (as of BATON 043, 2026-04-05)
+1. **Clean empty RECO folders** — user housekeeping task post-PDF recovery
+2. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → `citation_files/ITE/VC_fail/`
+3. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`; NCBI API key set)
+4. **exa-research-search Phase 2** — complete download section (URL batch + metadata dedup)

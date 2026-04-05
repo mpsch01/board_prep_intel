@@ -4,8 +4,8 @@
 - [user_profile.md](user_profile.md) — Mikey: family medicine physician, self-taught data architect, builds clinical knowledge systems
 
 ## Project
-- [project_overhaul_state.md](project_overhaul_state.md) — Current PROJECT_OVERHAUL state: BATON 040, EXA PDF pipeline complete, 868 PDFs on disk, DEFERRED-G (Unpaywall) next
-- [project_current_db_state.md](project_current_db_state.md) — DB state BATON 040: 1,985 articles, 1,629 ITE Q, 1,221 AAFP Q; all vec tables 100%; 868 PDFs (was 413); DB unchanged this session
+- [project_overhaul_state.md](project_overhaul_state.md) — Current PROJECT_OVERHAUL state: BATON 043, PDF recovery complete, 966 active PDFs + 14 quarantined, housekeeping skills deployed
+- [project_current_db_state.md](project_current_db_state.md) — DB state BATON 043: 1,985 articles, 1,629 ITE Q, 1,221 AAFP Q; all vec tables rebuilt 2026-04-05; 966 PDFs recovered; DB unchanged
 - [project_new_architecture.md](project_new_architecture.md) — 4-module rebuild design: Warehouse, Processor, Analyst, Sandbox. AAFP course = external priority filter.
 - [project_architecture_tiered_system.md](project_architecture_tiered_system.md) — Two-tier pipeline ($right_click$ vs local_lite), VC gate, codon system, 5 locked rebuild principles
 
@@ -13,7 +13,7 @@
 - [rebuild_structuring_guidelines.md](rebuild_structuring_guidelines.md) — 5 locked rebuild principles: git as version layer, BATON as intent layer, schemas upfront, OUTPUT_SCHEMA for agents, cryptographic hash ART-IDs
 
 ## Reference
-- [reference_skills_abilities_inventory.md](reference_skills_abilities_inventory.md) — skills_abilities/ folder: ITE data context skill (stale — needs AAFP update), PDF sourcer agent, 17 SDK files, API primer, session-available tools map
+- [reference_skills_abilities_inventory.md](reference_skills_abilities_inventory.md) — skills_abilities/ folder: session-housekeeping (agent template + exa-research-search v2), ITE data context skill (stale — needs AAFP update), PDF sourcer agent, 17 SDK files, API primer, session-available tools map
 - [reference_vc_gate.md](reference_vc_gate.md) — VC Gate: session_hy_inserts_v7.json, 352 citations, sole right_click criterion, QID format mismatch warning
 - [reference_baton_protocol.md](reference_baton_protocol.md) — BATON handoff lifecycle (archive → sync → write new), structure, quality standards, naming
 - [reference_sdk_docs.md](reference_sdk_docs.md) — Claude Agent SDK docs locations; pdf_sourcer_agent.py built and validated
@@ -21,7 +21,7 @@
 - [reference_word_doc_defaults.md](reference_word_doc_defaults.md) — word_doc_defaults.py: St. Luke's color scheme (navy/gold/blue), Aptos font, US Letter, helper functions. Import in ALL python-docx scripts.
 
 ## Feedback
-- [feedback_housekeeping.md](feedback_housekeeping.md) — Housekeeping sweeps must always update CLAUDE.md + MEMORY.md (not optional)
+- [feedback_housekeeping.md](feedback_housekeeping.md) — Housekeeping sweeps (Agent B) must always update _index.md, project_overhaul_state.md, project_current_db_state.md, MEMORY.md (not optional)
 
 ## Deep Memory
 - [memory/glossary.md](memory/glossary.md) — Full decoder ring: all acronyms, pipeline terms, tier names, script nicknames, deferred flags, TEMP protocol

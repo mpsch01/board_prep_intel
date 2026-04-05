@@ -1,14 +1,14 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-04-05 (BATON 040)
+**Last updated:** 2026-04-05 (BATON 043)
 **Status:** Active development
-**Active BATON:** `BATON_active_040_20260405_exa_pdf_pipeline.md`
+**Active BATON:** `BATON_active_043_20260405_pdf_recovery_skills.md`
 
 ---
 
 ## Project Overview
 
-A queryable Family Medicine board exam knowledge base: 1,629 ITE questions (2018–2025) and 1,221 AAFP BRQ questions linked to a clinical guideline library of 1,985 articles and 868 PDFs via a structured SQLite pipeline. Both corpora are now schema-parallel with full enrichment across body_system, blueprint, concept_tags, and ICD-10. (Note: subcategory was dropped; blueprint filled to 100% for both banks.) Intelligence 2.0 layers (ICD-10 diagnostic linkage, clinical pathways, topic trends, vector embeddings, cross-corpus semantic similarity) provide structured clinical navigation across the full corpus. System extends beyond exam prep into clinical decision support.
+A queryable Family Medicine board exam knowledge base: 1,629 ITE questions (2018–2025) and 1,221 AAFP BRQ questions linked to a clinical guideline library of 1,985 articles and 966 PDFs (4 tiers) via a structured SQLite pipeline. Both corpora are now schema-parallel with full enrichment across body_system, blueprint, concept_tags, and ICD-10. (Note: subcategory was dropped; blueprint filled to 100% for both banks.) Intelligence 2.0 layers (ICD-10 diagnostic linkage, clinical pathways, topic trends, vector embeddings, cross-corpus semantic similarity) provide structured clinical navigation across the full corpus. System extends beyond exam prep into clinical decision support.
 
 ---
 
@@ -21,16 +21,17 @@ Source of truth. Never disposable.
 - `logs/` — Pipeline run logs
 
 ### 01_module.1_warehouse/
-PDF library (4 tiers, 868 PDFs) + pipeline build and maintenance scripts + AAFP BRQ data.
-- `citation_files/ITE/VC_fail/` — bulk PDFs (EXA pipeline downloads landed here; 37 manual still pending)
+PDF library (4 tiers, 966 PDFs) + pipeline build and maintenance scripts + AAFP BRQ data.
+- `citation_files/ITE/VC_fail/` — 623 PDFs: bulk downloads (EXA pipeline + PMC OA + Unpaywall recovery; 37 manual still pending)
 - `citation_files/ITE/local_lite/` — 117 PDFs: enriched, not VC-cited (pipeline complete)
-- `citation_files/ITE/VC_pass/` — 94 PDFs: codon-named, VC-cited, awaiting full pipeline
-- `citation_files/ITE/right_click/` — 71 PDFs: VC-cited, fully enriched (pipeline complete)
+- `citation_files/ITE/VC_pass/` — 168 PDFs: codon-named, VC-cited, awaiting full pipeline
+- `citation_files/ITE/right_click/` — 58 PDFs: VC-cited, fully enriched (pipeline complete)
+- `_dupe_archive/` — 14 duplicate PDFs quarantined
 - `citation_files/AAFP/` — AAFP citation PDFs
 - `practice_questions/` — 42 Q&A deliverables: 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored)
 - `ite_exams/` — 16 raw PDFs: YYYY_MC.pdf + YYYY_critique.pdf (2018–2025)
 - `build/` — 6 scripts: self-contained full rebuild sequence (3 deprecated deleted ✓)
-- `maintain/` — 21 scripts: recurring DB population and maintenance operations (+3 new: exa_pdf_finder, exa_pdf_downloader, pmc_oa_downloader 2026-04-05)
+- `maintain/` — 23 scripts: recurring DB population and maintenance operations (+3 new: exa_pdf_finder, exa_pdf_downloader, pmc_oa_downloader; +2 new: recover_unpaywall, manage_dupes 2026-04-05)
 - `scripts/aafp_brq_scraper.py` — scraper at scripts/ root (Windows-only)
 
 ### 02_module.2_processor/
@@ -65,7 +66,7 @@ Critical reference data:
 
 ---
 
-## Database State (as of 2026-04-04, BATON 039)
+## Database State (as of 2026-04-05, BATON 043)
 
 | Table | Rows | Notes |
 |-------|------|-------|
@@ -75,15 +76,15 @@ Critical reference data:
 | question_ref_pairs | 2,722 | |
 | qid_art_xref | 2,470 | all 8 years (2018–2025) |
 | aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
-| article_icd10 | 4,137 | +282 AAFP backfill 2026-03-31 |
+| article_icd10 | 4,020 | rebuilt 2026-04-05 with vec |
 | question_icd10 | 5,284 | 1,512/1,629 ITE questions (92.8%) |
 | aafp_question_icd10 | 4,753 | 1,210/1,221 AAFP questions (99.1%) |
 | clinical_pathways | 4,020 | REBUILT 2026-03-31 — blueprint-based, both banks |
 | article_citation_trend | 1,740 | longitudinal citation tracking |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
 | icd10_vec | 2,219 | OpenAI text-embedding-3-small (1536d) |
-| article_icd10_vec | 1,674 | REBUILT 2026-04-01 |
-| question_icd10_vec | 2,733 | REBUILT 2026-04-01 |
+| article_icd10_vec | 1,757 | REBUILT 2026-04-05 |
+| question_icd10_vec | 2,747 | REBUILT 2026-04-05 |
 | article_vec | 1,985 | sqlite-vec virtual table; 100% coverage |
 | question_vec | 1,629 | sqlite-vec virtual table; 100% coverage |
 | aafp_question_vec | 1,221 | sqlite-vec virtual table; 100% coverage |
@@ -126,7 +127,7 @@ DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 | Layer | Status | Table |
 |-------|--------|-------|
 | Layer 1 — ICD-10 diagnostic linkage | ✅ Built | article_icd10 (4,137) + question_icd10 (5,284) + aafp_question_icd10 (4,753) |
-| Layer 2 — PubMed currency | 🟡 Deferred | pubmed_pmid_cache seeded (344 PMIDs); article_currency build pending |
+| Layer 2 — PubMed currency | 🟡 Deferred | pubmed_pmid_cache seeded (344 PMIDs; NCBI API key set); article_currency build pending |
 | Layer 3 — Clinical pathways | ✅ Built | clinical_pathways (4,020 rows) — rebuilt 2026-03-31 |
 | Layer 4 — Trends + alerts | ⬜ Planned | topic_trends + pubmed_alerts (schemas defined) |
 | Citation trend tracking | ✅ Built | article_citation_trend (1,740 rows) |
@@ -157,13 +158,12 @@ python aafp_enrich_concept_tags.py --mode unlinked
 
 ---
 
-## Next Steps (BATON 040)
+## Next Steps (BATON 043)
 
-1. **DEFERRED-G** — `unpaywall_scanner.py`: 872 landing_page + 62 not_oa PMC articles → Unpaywall API legal OA lookup
+1. **Clean empty RECO folders** — user housekeeping task post-PDF recovery
 2. **DEFERRED-A** — 37 manual PDFs (subscription + Cochrane) → codon rename → `citation_files/ITE/VC_fail/`
-3. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled
-4. **DEFERRED-B** — `update_citation_trends.py` after backfill complete
-5. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs; NCBI API key set)
+3. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs; NCBI API key set)
+4. **exa-research-search Phase 2** — complete download section (URL batch + metadata dedup)
 
 ---
 

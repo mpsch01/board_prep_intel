@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 **What this is:** Current-state architectural overview. High-level only — not a file tree (see `_index.md`).
-**Last Updated:** 2026-04-04 (BATON 039)
+**Last Updated:** 2026-04-05 (BATON 043)
 **Root:** `C:\Users\mpsch\Desktop\board_prep_intel\` (Option B complete — flat since 2026-04-04)
 **Git:** `main` → `https://github.com/mpsch01/board_prep_intel` (private) | latest: `fbf6b00`
 
@@ -16,7 +16,7 @@ A queryable Family Medicine board exam knowledge base. Two data banks — **1,62
 
 | Module | Path | Role | Scripts | Status |
 |--------|------|------|---------|--------|
-| **M1 Warehouse** | `01_module.1_warehouse/` | Store PDFs; build/maintain DB | 6 build + 18 maintain + 1 scraper | ✅ Stable — cleanup complete |
+| **M1 Warehouse** | `01_module.1_warehouse/` | Store PDFs; build/maintain DB | 6 build + 23 maintain + 1 scraper | ✅ Stable — PDF recovery complete |
 | **M2 Processor** | `02_module.2_processor/` | Extract, enrich, tag, build DOCXs | 75 py + 6 JS in scripts/; core/engines/utils packages | ✅ Stable — 14 defects fixed BATON 038 |
 | **M3 Analyst** | `03_module.3_analyst/` | Score analysis, ICD-10, pathways, Q&A deliverables | 13 py + 2 JS | ✅ Stable |
 | **M4 Sandbox** | `04_module.4_sandbox/` | Experiments, agent prototypes | ad hoc | 🔵 Idle |
@@ -24,22 +24,22 @@ A queryable Family Medicine board exam knowledge base. Two data banks — **1,62
 
 ---
 
-## DB State (2026-04-04)
+## DB State (2026-04-05)
 
 | Table | Rows | Notes |
 |-------|------|-------|
 | articles | **1,985** | ART-0001–ART-1986; next = ART-1987 |
 | questions (ITE) | **1,629** | 2018–2025; blueprint 100%; subcategory DROPPED |
 | aafp_questions | **1,221** | blueprint 100%; flattened schema |
-| article_icd10 | 4,137 | ITE chain + AAFP backfill |
+| article_icd10 | 4,020 | ITE chain + AAFP backfill; rebuilt 2026-04-05 |
 | question_icd10 | 5,284 | 92.8% ITE coverage |
 | aafp_question_icd10 | 4,753 | relevance normalized |
 | clinical_pathways | 4,020 | blueprint-based, both banks |
 | article_citation_trend | 1,740 | longitudinal tracking |
 | pubmed_pmid_cache | 344 | Layer 2 seed (PMIDs) |
 | icd10_vec | 2,219 | OpenAI text-embedding-3-small (1536d) |
-| article_icd10_vec | 1,674 | rebuilt 2026-04-01 |
-| question_icd10_vec | 2,733 | rebuilt 2026-04-01 |
+| article_icd10_vec | 1,757 | rebuilt 2026-04-05 |
+| question_icd10_vec | 2,747 | rebuilt 2026-04-05 |
 | question_vec | 1,629 | sqlite-vec; 100% ITE |
 | aafp_question_vec | 1,221 | sqlite-vec; 100% AAFP |
 
@@ -83,13 +83,14 @@ Score PDF → `ite_parser.py` → `ite_analyzer_v3.py` → `ite_report_builder_v
 
 | Tier | Folder | Meaning | Count |
 |------|--------|---------|-------|
-| `VC_fail` | `citation_files/ITE/VC_fail/` | Failed VC gate; awaiting enrichment | ~156 |
-| `VC_pass` | `citation_files/ITE/VC_pass/` | Passed VC gate; awaiting enrichment | ~94 |
+| `VC_fail` | `citation_files/ITE/VC_fail/` | Failed VC gate; awaiting enrichment | 623 |
+| `VC_pass` | `citation_files/ITE/VC_pass/` | Passed VC gate; awaiting enrichment | 168 |
 | `local_lite` | `citation_files/ITE/local_lite/` | VC_fail + fully enriched | 117 |
 | `right_click` | `citation_files/ITE/right_click/` | VC_pass + fully enriched (**priority**) | 58 |
 
 **VC Gate:** `key_data_files/session_hy_inserts_v7.json` — 352 citations — sole criterion for right_click tier.
 **Codon filename format:** `Author_Year#@#ART-XXXX@#@.pdf` — ART-ID embedded between start/stop codons.
+**_dupe_archive:** 14 duplicate PDFs quarantined; total active across 4 tiers = 966.
 
 ---
 
@@ -121,7 +122,7 @@ Score PDF → `ite_parser.py` → `ite_analyzer_v3.py` → `ite_report_builder_v
 
 | File | Why It Matters |
 |------|---------------|
-| `BATON_active_039_*.md` | Active session handoff — read first every session |
+| `BATON_active_043_20260405_pdf_recovery_skills.md` | Active session handoff — read first every session |
 | `CLAUDE.md` | Project memory: terminology, locked rules, active state, next steps |
 | `00_database/db/ite_intelligence.db` | Source of truth — never disposable |
 | `key_data_files/session_hy_inserts_v7.json` | VC gate — 352 citations — sole right_click criterion |

@@ -1,0 +1,312 @@
+article_id,tier,pmc_id,oa_status,download_status,bytes,dest_filename,pdf_url,title,author1,year,source_type
+ART-1089,VC_fail,PMC6953397,not_oa (idIsNotOpenAccess),skip,0,,,CD009977,Rud,2019,Other Journal
+ART-0862,VC_fail,PMC3208370,not_oa (idIsNotOpenAccess),skip,0,,,a meta-analysis,Meng,2011,Other Journal
+ART-0949,VC_fail,PMC3404815,not_oa (idIsNotOpenAccess),skip,0,,,Too much sitting: The population health science of sedentary behavior,Owen,2010,Other Journal
+ART-0640,VC_pass,PMC4178284,not_oa (idIsNotOpenAccess),skip,0,,,Croup,Johnson,2014,BMJ
+ART-0493,VC_fail,PMC3354640,not_oa (idIsNotOpenAccess),skip,0,,,Hospital transfers of nursing home residents with advanced dementia,Givens,2012,Other Journal
+ART-0120,VC_fail,PMC8530736,not_oa (idIsNotOpenAccess),skip,0,,,Approach to the patient with adrenal incidentaloma,Bancos,2021,Other Journal
+ART-1357,VC_fail,PMC12194758,no_pdf,skip,0,,,S138-S147,Wolfman,2020,Other Journal
+ART-0021,VC_fail,PMC6755635,found,ok,524281,Adami_2019#@#ART-0021@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/a1/33/10.1177_1759720X19876468.PMC6755635.pdf,Glucocorticoid-induced osteoporosis: From clinical trials to clinical practice,Adami,2019,Other Journal
+ART-0903,VC_fail,PMC7875114,not_oa (idIsNotOpenAccess),skip,0,,,new insights for clinical practice,Murgia,2020,Other Journal
+ART-1600,VC_fail,PMC5557227,not_oa (idIsNotOpenAccess),skip,0,,,Preventing herpes zoster through vaccination: New developments,Le,2017,Other Journal
+ART-0154,VC_fail,PMC5393490,not_oa (idIsNotOpenAccess),skip,0,,,Guidelines for the management of asymptomatic primary hyperparathyroidism: Summary statement from the Fourth International Workshop,Bilezikian,2014,Other Journal
+ART-1915,VC_fail,PMC5378729,no_pdf,skip,0,,,Update on Rome IV criteria for colorectal disorders: Implications for clinical practice,Simren,2017,Other Journal
+ART-1015,VC_fail,PMC7938036,no_pdf,skip,0,,,a practical approach and diagnostic algorithm,Pérez-Garza,2021,Other Journal
+ART-0628,VC_fail,PMC4522991,no_pdf,skip,0,,,1618-1622,Jacob,2006,Other Journal
+ART-1244,VC_fail,PMC3622949,not_oa (idIsNotOpenAccess),skip,0,,,Clinical management of insomnia with brief behavioral treatment (BBTI),Troxel,2012,Other Journal
+ART-1954,VC_fail,PMC1584230,no_pdf,skip,0,,,Lithium treatment and thyroid abnormalities,Bocchetta,2006,Other Journal
+ART-0489,VC_fail,PMC7415030,no_pdf,skip,0,,,317-330,Giddings,2016,Other Journal
+ART-0887,VC_fail,PMC6854261,no_pdf,skip,0,,,current updates,Mohamed,2019,Other Journal
+ART-0020,VC_fail,PMC6724419,not_oa (idIsNotOpenAccess),skip,0,,,Association of use of the neonatal early-onset sepsis calculator with reduction in antibiotic therapy and safety: A systematic review and meta-analysis,Achten,2019,JAMA
+ART-1940,VC_fail,PMC4748908,no_pdf,skip,0,,,Clinical Uses of Probiotics,Islam,2016,Other Journal
+ART-0462,VC_fail,PMC9324596,no_pdf,skip,0,,,"update and clinical advice for prevention, diagnosis and treatment",Friedli,2020,Other Journal
+ART-1318,VC_fail,PMC11060750,not_oa (idIsNotOpenAccess),skip,0,,,AUA/SUO guideline part I: prostate cancer screening,Wei,2023,Other Journal
+ART-0949,VC_fail,PMC3404815,not_oa (idIsNotOpenAccess),skip,0,,,Too much sitting: The population health science of sedentary behavior,Owen,2010,Other Journal
+ART-0466,VC_fail,PMC12880482,no_pdf,skip,0,,,34-40,Gaddey,2021,AFP
+ART-0979,VC_fail,PMC7599351,found,ok,575077,Perisetti_2020#@#ART-0979@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/f3/8e/AnnGastroenterol-33-571.PMC7599351.pdf,an update on the pathophysiology and management,Perisetti,2020,Other Journal
+ART-1180,VC_fail,PMC7173542,no_pdf,skip,0,,,551-566,Sobol,2008,Other Journal
+ART-1675,VC_fail,PMC3645106,not_oa (idIsNotOpenAccess),skip,0,,,Henoch-Schönlein purpura in children,Trnka,2013,Other Journal
+ART-1295,VC_fail,PMC4176800,not_oa (idIsNotOpenAccess),skip,0,,,Management of erectile dysfunction in hypertension: Tips and tricks,Viigimaa,2014,Other Journal
+ART-1913,VC_fail,PMC6883753,no_pdf,skip,0,,,Pregnancy and oral health,Division,2019,Guideline/Org
+ART-1945,VC_fail,PMC6492479,not_oa (idIsNotOpenAccess),skip,0,,,Intranasal ipratropium bromide for the common cold,Albalawi,2011,Cochrane
+ART-0344,VC_fail,PMC5576635,no_pdf,skip,0,,,can the electrocardiogram risk stratify for short-term adverse events? West J Emerg Med,Durfey,2017,Other Journal
+ART-0640,VC_pass,PMC4178284,not_oa (idIsNotOpenAccess),skip,0,,,Croup,Johnson,2014,BMJ
+ART-0176,VC_fail,PMC12579754,no_pdf,skip,0,,,Assessing decision making capacity for do not resuscitate requests in depressed patients: How to apply the “communication” and “appreciation” criteria,Brody,2017,Other Journal
+ART-0630,VC_fail,PMC5218987,not_oa (idIsNotOpenAccess),skip,0,,,the ROW cohort study,Jain,2017,Other Journal
+ART-1286,VC_fail,PMC7071368,no_pdf,skip,0,,,what has time and/or hyperarousal got to do with it? Brain Sci,Vargas,2020,Other Journal
+ART-0084,VC_fail,PMC6769062,not_oa (idIsNotOpenAccess),skip,0,,,CD003462,Andrade-Castellanos,2014,Other Journal
+ART-0119,VC_pass,PMC6754754,not_oa (idIsNotOpenAccess),skip,0,,,30-Year review of pediatric- and adult-onset CVID: Clinical correlates and prognostic indicators,Baloh,2019,Other Journal
+ART-0199,VC_fail,PMC6205759,not_oa (idIsNotOpenAccess),skip,0,,,practical approach to diagnosis and management,Byrd,2018,Circulation
+ART-1231,VC_fail,PMC6222040,found,ok,213961,The_2016#@#ART-1231@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/2a/12/main.PMC6222040.pdf,mosquito-borne diseases,The,2016,Guideline/Org
+ART-0369,VC_fail,PMC9845083,not_oa (idIsNotOpenAccess),skip,0,,,standards of care in diabetes—2023,ElSayed,2023,Other Journal
+ART-1865,VC_fail,PMC6171773,not_oa (idIsNotOpenAccess),skip,0,,,PURL: Time to stop glucosamine and chondroitin for knee OA? J Fam Pract 2018;67(9):566-568,Lyon,2018,Other Journal
+ART-0732,VC_fail,PMC5126802,no_pdf,skip,0,,,overview of evidence-based assessment and treatment,Lancaster,2016,Other Journal
+ART-0352,VC_pass,PMC7708293,not_oa (idIsNotOpenAccess),skip,0,,,"Cancer-specific mortality, all-cause mortality, and overdiagnosis in lung cancer screening trials: A meta-analysis",Ebell,2020,Other Journal
+ART-1027,VC_fail,PMC8966835,not_oa (idIsNotOpenAccess),skip,0,,,a review for general physicians,Raharja,2022,Other Journal
+ART-1082,VC_fail,PMC11944238,no_pdf,skip,0,,,E1383,Rosenberg,2023,Other Journal
+ART-0877,VC_pass,PMC8758582,not_oa (idIsNotOpenAccess),skip,0,,,CD000029,Minhas,2022,Other Journal
+ART-0215,VC_fail,PMC12930988,no_pdf,skip,0,,,926-940,Carter,2024,Other Journal
+ART-0973,VC_fail,PMC3706994,not_oa (idIsNotOpenAccess),skip,0,,,Celiac disease: Diagnosis and management,Pelkowski,2014,AFP
+ART-1089,VC_fail,PMC6953397,not_oa (idIsNotOpenAccess),skip,0,,,CD009977,Rud,2019,Other Journal
+ART-1934,VC_fail,PMC4750836,not_oa (idIsNotOpenAccess),skip,0,,,Taking an antibiotic time-out: Utilization and usability of a self-stewardship time-out program for renewal of vancomycin and piperacillin-tazobactam,Graber,2015,Other Journal
+ART-0222,VC_fail,PMC9746870,not_oa (idIsNotOpenAccess),skip,0,,,1257-1266,Celli,2019,NEJM
+ART-0214,VC_fail,PMC6350898,not_oa (idIsNotOpenAccess),skip,0,,,Prevention of diabetes mellitus in patients with prediabetes,Carris,2019,Other Journal
+ART-0816,VC_fail,PMC4335998,no_pdf,skip,0,,,"Double-blind, randomized, controlled, crossover trial of pregabalin for neurogenic claudication",Markman,2015,Other Journal
+ART-0677,VC_fail,PMC8007206,no_pdf,skip,0,,,e180-e184,Khan,2018,Other Journal
+ART-0493,VC_fail,PMC3354640,not_oa (idIsNotOpenAccess),skip,0,,,Hospital transfers of nursing home residents with advanced dementia,Givens,2012,Other Journal
+ART-0924,VC_pass,PMC7193862,found,ok,687173,Nici_2020#@#ART-0924@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/4e/cd/rccm.202003-0625ST.PMC7193862.pdf,Pharmacologic management of chronic obstructive pulmonary disease,Nici,2020,Guideline/Org
+ART-0722,VC_fail,PMC4372689,found,ok,339999,Kusters_2014#@#ART-0722@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/bf/59/40272_2014_Article_116.PMC4372689.pdf,Ten-year follow-up after initiation of statin therapy in children with familial hypercholesterolemia,Kusters,2014,JAMA
+ART-0145,VC_fail,PMC8567758,not_oa (idIsNotOpenAccess),skip,0,,,a comprehensive review,Bertoli,2020,Other Journal
+ART-0673,VC_fail,PMC10752083,no_pdf,skip,0,,,a systematic review,Kelley-Quon,2021,Other Journal
+ART-1128,VC_fail,PMC9722469,found,ok,1478906,Seay_2020#@#ART-1128@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/85/bd/main.PMC9722469.pdf,core curriculum 2020,Seay,2020,Other Journal
+ART-1659,VC_fail,PMC4427053,not_oa (idIsNotOpenAccess),skip,0,,,Metformin in patients with type 2 diabetes and kidney disease: A systematic review,Inzucchi,2014,JAMA
+ART-1280,VC_fail,PMC8250847,not_oa (idIsNotOpenAccess),skip,0,,,Preventing and managing adverse reactions,Vaccine,2021,Guideline/Org
+ART-1718,VC_fail,PMC5381731,not_oa (idIsNotOpenAccess),skip,0,,,Outpatient emergencies: Anaphylaxis,Commins,2017,Other Journal
+ART-0348,VC_fail,PMC6650108,not_oa (idIsNotOpenAccess),skip,0,,,Anal fissures,Dykstra,2019,Other Journal
+ART-0350,VC_fail,PMC12445750,found,ok,497047,EBM_0000#@#ART-0350@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/bd/21/IJA-69-969.PMC12445750.pdf,number needed to treat,EBM tools,,Other Journal
+ART-1981,VC_fail,PMC3632199,found,ok,134973,Grossman_2011#@#ART-1981@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/f7/14/S313.PMC3632199.pdf,Diuretic treatment of hypertension,Grossman,2011,Other Journal
+ART-1673,VC_fail,PMC3278059,not_oa (idIsNotOpenAccess),skip,0,,,"Perioperative management of antithrombotic therapy: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practice guidelines",Douketis,2012,Chest
+ART-0461,VC_fail,PMC6522264,not_oa (idIsNotOpenAccess),skip,0,,,big data bias masks a true association,Frew,2019,Other Journal
+ART-1907,VC_fail,PMC4896141,not_oa (idIsNotOpenAccess),skip,0,,,Profound hypokalemia associated with severe diabetic ketoacidosis,Davis,2016,Other Journal
+ART-0688,VC_fail,PMC7144816,not_oa (idIsNotOpenAccess),skip,0,,,CD013422,Kirkilesis,2020,Other Journal
+ART-0659,VC_fail,PMC12539128,no_pdf,skip,0,,,recognition and management,Kane,2020,AFP
+ART-0311,VC_pass,PMC4833782,no_pdf,skip,0,,,Vestibular migraine: The most frequent entity of episodic vertigo,Dieterich,2016,Other Journal
+ART-1793,VC_pass,PMC5962971,not_oa (idIsNotOpenAccess),skip,0,,,Deprescribing antipsychotics for behavioral and psychological symptoms of dementia and insomnia,Hauk,2018,AFP
+ART-0557,VC_fail,PMC6319251,no_pdf,skip,0,,,"an open- label, pilot, randomised trial",Halliday,2019,Lancet
+ART-0771,VC_fail,PMC6457868,not_oa (idIsNotOpenAccess),skip,0,,,Patching for corneal abrasion,Lim,2016,Other Journal
+ART-1789,VC_fail,PMC6513425,not_oa (idIsNotOpenAccess),skip,0,,,Osmotic and stimulant laxatives for the management of childhood constipation,Gordon,2016,Other Journal
+ART-0896,VC_fail,PMC6946178,not_oa (idIsNotOpenAccess),skip,0,,,supplemental oxygen for patients without hypoxemia,Moss,2019,Other Journal
+ART-0917,VC_fail,PMC1346962,not_oa (idIsNotOpenAccess),skip,0,,,an emerging disease,Neef,2006,AFP
+ART-1255,VC_pass,PMC7856541,not_oa (idIsNotOpenAccess),skip,0,,,asymptomatic carotid artery stenosis: screening,US Preventive Services Task Force. Final recommendation statement,2021,Guideline/Org
+ART-1677,VC_fail,PMC4694177,not_oa (idIsNotOpenAccess),skip,0,,,An official American Thoracic Society/American College of Chest Physicians policy statement: The Choosing Wisely top five list in adult pulmonary medicine,Wiener,2014,Chest
+ART-0893,VC_fail,PMC8516955,no_pdf,skip,0,,,435-443,Mori,2021,Textbook
+ART-0345,VC_pass,PMC9051698,found,ok,4355945,Dutta_2022#@#ART-0345@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/30/66/JFMPC-11-927.PMC9051698.pdf,a systematic review and quantitative analysis,Dutta,2022,Other Journal
+ART-1880,VC_fail,PMC5119649,not_oa (idIsNotOpenAccess),skip,0,,,Disorders of sexual development in adult women,Gomez-Lobo,2016,Other Journal
+ART-0678,VC_fail,PMC4188648,not_oa (idIsNotOpenAccess),skip,0,,,Arthroscopic surgery for degenerative tears of the meniscus: A systematic review and meta-analysis,Khan,2014,Other Journal
+ART-1348,VC_pass,PMC4017246,not_oa (idIsNotOpenAccess),skip,0,,,Tumor lysis syndrome: New challenges and recent advances,Wilson,2014,Other Journal
+ART-1721,VC_fail,PMC11241842,no_pdf,skip,0,,,"Vital signs: Improvements in maternity care policies and practices that support breastfeeding—United States, 2007–2013",Perrine,2007,Other Journal
+ART-0879,VC_fail,PMC9837849,not_oa (idIsNotOpenAccess),skip,0,,,Baclofen for alcohol use disorder,Minozzi,2018,Other Journal
+ART-0842,VC_fail,PMC4780668,found,ok,2036349,McGovern_2016#@#ART-0842@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/5b/06/oajsm-7-033.PMC4780668.pdf,Managing ankle ligament sprains and tears: Current opinion,McGovern,2016,Other Journal
+ART-0964,VC_fail,PMC12971996,found,ok,493027,Patel_2016#@#ART-0964@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/41/98/jgo-17-01-8.PMC12971996.pdf,Role of steroids in malignant bowel obstruction,Patel,2016,Other Journal
+ART-1186,VC_fail,PMC6522077,no_pdf,skip,0,,,"recommendations from the National Tuberculosis Controllers Association and CDC, 2019",Sosa,2019,Guideline/Org
+ART-1862,VC_fail,PMC6174113,not_oa (idIsNotOpenAccess),skip,0,,,Updated international consensus diagnostic criteria for eosinophilic esophagitis: Proceedings of the AGREE conference,Dellon,2018,Other Journal
+ART-0862,VC_fail,PMC3208370,not_oa (idIsNotOpenAccess),skip,0,,,a meta-analysis,Meng,2011,Other Journal
+ART-1910,VC_fail,PMC4922356,found,ok,51480,Cervellin_2015#@#ART-1910@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/c6/c7/jomb-2015-0003.PMC4922356.pdf,Association of hyponatremia and hypovitaminosis D in ambulatory adults,Cervellin,2015,Other Journal
+ART-1043,VC_fail,PMC6234945,not_oa (idIsNotOpenAccess),skip,0,,,Common tongue conditions in primary care,Reamy,2010,AFP
+ART-0243,VC_fail,PMC8326257,found,ok,10655074,Cianci_2021#@#ART-0243@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/f2/ab/WJG-27-4536.PMC8326257.pdf,endoscopic and surgical approaches,Cianci,2021,Other Journal
+ART-1684,VC_fail,PMC3799221,not_oa (idIsNotOpenAccess),skip,0,,,HbA in the evaluation of diabetes mellitus,O’Keeffe,2016,JAMA
+ART-1102,VC_fail,PMC3585698,no_pdf,skip,0,,,Antibiotic therapy vs appendectomy for treatment of uncomplicated acute appendicitis: The APPAC randomized clinical trial,Salminen,2015,JAMA
+ART-0179,VC_fail,PMC6756654,no_pdf,skip,0,,,"A critical appraisal of adult trigger finger: Pathophysiology, treatment, and future outlook",Brozovich,2019,Other Journal
+ART-1211,VC_fail,PMC12989261,not_oa (idIsNotOpenAccess),skip,0,,,Surgery for obstructive sleep apnea in adults,Sundaram,2005,Other Journal
+ART-0814,VC_fail,PMC4892949,not_oa (idIsNotOpenAccess),skip,0,,,findings from the Health ABC Study,Marcum,2016,Other Journal
+ART-0439,VC_pass,PMC12911370,not_oa (idIsNotOpenAccess),skip,0,,,edging closer to a new paradigm,Flack,2022,Other Journal
+ART-0475,VC_fail,PMC5865621,not_oa (idIsNotOpenAccess),skip,0,,,"epidemiology, outcomes, knowledge gaps, and future directions",Gardner,2018,Other Journal
+ART-0552,VC_pass,PMC7409497,no_pdf,skip,0,,,a systematic review and meta-regression analysis,Halabi,2020,Other Journal
+ART-0536,VC_fail,PMC3699348,no_pdf,skip,0,,,Aldosterone receptor antagonists: Current perspectives and therapies,Guichard,2013,Other Journal
+ART-1951,VC_fail,PMC3103063,not_oa (idIsNotOpenAccess),skip,0,,,Clinical practice: Depression during pregnancy,Stewart,2011,NEJM
+ART-1831,VC_fail,PMC3278056,not_oa (idIsNotOpenAccess),skip,0,,,"Antithrombotic therapy for atrial fibrillation: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practice guidelines",You,2012,Chest
+ART-0527,VC_fail,PMC6599814,not_oa (idIsNotOpenAccess),skip,0,,,CD011050,Griffiths,2016,Other Journal
+ART-0451,VC_fail,PMC11564130,no_pdf,skip,0,,,83-94,Frampton,2023,Other Journal
+ART-1055,VC_fail,PMC6406277,no_pdf,skip,0,,,Treatment of anorexia nervosa—New evidence-based guidelines,Resmark,2019,Other Journal
+ART-1303,VC_fail,PMC3377888,found,ok,1060501,Volochayev_2012#@#ART-1303@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/c2/85/TORJ-6-54.PMC3377888.pdf,Laboratory test abnormalities are common in polymyositis and dermatomyositis and differ among clinical and demographic groups,Volochayev,2012,Other Journal
+ART-0674,VC_fail,PMC8726361,not_oa (idIsNotOpenAccess),skip,0,,,an American Academy of Sleep Medicine clinical practice guideline,Kent,2021,Guideline/Org
+ART-0956,VC_fail,PMC10585425,not_oa (idIsNotOpenAccess),skip,0,,,Anticonvulsants for alcohol dependence,Pani,2014,Other Journal
+ART-1137,VC_fail,PMC8365115,not_oa (idIsNotOpenAccess),skip,0,,,pelvic inflammatory disease (PID),Sexually,2021,Guideline/Org
+ART-1081,VC_fail,PMC5958910,not_oa (idIsNotOpenAccess),skip,0,,,"joint recommendations of the North American Society for Pediatric Gastroenterology, Hepatology, and Nutrition and the European Society for Pediatric Gastroenterology, Hepatology, and Nutrition",Rosen,2018,Guideline/Org
+ART-1934,VC_fail,PMC4750836,not_oa (idIsNotOpenAccess),skip,0,,,Taking an antibiotic time-out: Utilization and usability of a self-stewardship time-out program for renewal of vancomycin and piperacillin-tazobactam,Graber,2015,Other Journal
+ART-0154,VC_fail,PMC5393490,not_oa (idIsNotOpenAccess),skip,0,,,Guidelines for the management of asymptomatic primary hyperparathyroidism: Summary statement from the Fourth International Workshop,Bilezikian,2014,Other Journal
+ART-1186,VC_fail,PMC6522077,tgz_only,ok,177230,Sosa_2019#@#ART-1186@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f5/3a/PMC6522077.tar.gz,"recommendations from the National Tuberculosis Controllers Association and CDC, 2019",Sosa,2019,Guideline/Org
+ART-0814,VC_fail,PMC4892949,not_oa (idIsNotOpenAccess),skip,0,,,findings from the Health ABC Study,Marcum,2016,Other Journal
+ART-0732,VC_fail,PMC5126802,tgz_only,ok,225746,Lancaster_2016#@#ART-0732@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4b/e4/PMC5126802.tar.gz,overview of evidence-based assessment and treatment,Lancaster,2016,Other Journal
+ART-0527,VC_fail,PMC6599814,not_oa (idIsNotOpenAccess),skip,0,,,CD011050,Griffiths,2016,Other Journal
+ART-0956,VC_fail,PMC10585425,not_oa (idIsNotOpenAccess),skip,0,,,Anticonvulsants for alcohol dependence,Pani,2014,Other Journal
+ART-0552,VC_pass,PMC7409497,tgz_only,ok,1019771,Halabi_2020#@#ART-0552@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b2/72/PMC7409497.tar.gz,a systematic review and meta-regression analysis,Halabi,2020,Other Journal
+ART-0949,VC_fail,PMC3404815,not_oa (idIsNotOpenAccess),skip,0,,,Too much sitting: The population health science of sedentary behavior,Owen,2010,Other Journal
+ART-1718,VC_fail,PMC5381731,not_oa (idIsNotOpenAccess),skip,0,,,Outpatient emergencies: Anaphylaxis,Commins,2017,Other Journal
+ART-0179,VC_fail,PMC6756654,tgz_only,ok,181384,Brozovich_2019#@#ART-0179@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f8/6f/PMC6756654.tar.gz,"A critical appraisal of adult trigger finger: Pathophysiology, treatment, and future outlook",Brozovich,2019,Other Journal
+ART-0466,VC_fail,PMC12880482,tgz_only,ok,303907,Gaddey_2021#@#ART-0466@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9d/26/PMC12880482.tar.gz,34-40,Gaddey,2021,AFP
+ART-0536,VC_fail,PMC3699348,tgz_only,ok,856160,Guichard_2013#@#ART-0536@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3c/ae/PMC3699348.tar.gz,Aldosterone receptor antagonists: Current perspectives and therapies,Guichard,2013,Other Journal
+ART-1180,VC_fail,PMC7173542,tgz_only,ok,694077,Sobol_2008#@#ART-1180@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a3/54/PMC7173542.tar.gz,551-566,Sobol,2008,Other Journal
+ART-1677,VC_fail,PMC4694177,not_oa (idIsNotOpenAccess),skip,0,,,An official American Thoracic Society/American College of Chest Physicians policy statement: The Choosing Wisely top five list in adult pulmonary medicine,Wiener,2014,Chest
+ART-0973,VC_fail,PMC3706994,not_oa (idIsNotOpenAccess),skip,0,,,Celiac disease: Diagnosis and management,Pelkowski,2014,AFP
+ART-1721,VC_fail,PMC11241842,tgz_only,ok,1503454,Perrine_2007#@#ART-1721@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0f/6f/PMC11241842.tar.gz,"Vital signs: Improvements in maternity care policies and practices that support breastfeeding—United States, 2007–2013",Perrine,2007,Other Journal
+ART-0674,VC_fail,PMC8726361,not_oa (idIsNotOpenAccess),skip,0,,,an American Academy of Sleep Medicine clinical practice guideline,Kent,2021,Guideline/Org
+ART-0462,VC_fail,PMC9324596,tgz_only,ok,1381023,Friedli_2020#@#ART-0462@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9b/de/PMC9324596.tar.gz,"update and clinical advice for prevention, diagnosis and treatment",Friedli,2020,Other Journal
+ART-0352,VC_pass,PMC7708293,not_oa (idIsNotOpenAccess),skip,0,,,"Cancer-specific mortality, all-cause mortality, and overdiagnosis in lung cancer screening trials: A meta-analysis",Ebell,2020,Other Journal
+ART-1659,VC_fail,PMC4427053,not_oa (idIsNotOpenAccess),skip,0,,,Metformin in patients with type 2 diabetes and kidney disease: A systematic review,Inzucchi,2014,JAMA
+ART-1675,VC_fail,PMC3645106,not_oa (idIsNotOpenAccess),skip,0,,,Henoch-Schönlein purpura in children,Trnka,2013,Other Journal
+ART-0461,VC_fail,PMC6522264,not_oa (idIsNotOpenAccess),skip,0,,,big data bias masks a true association,Frew,2019,Other Journal
+ART-1043,VC_fail,PMC6234945,not_oa (idIsNotOpenAccess),skip,0,,,Common tongue conditions in primary care,Reamy,2010,AFP
+ART-1280,VC_fail,PMC8250847,not_oa (idIsNotOpenAccess),skip,0,,,Preventing and managing adverse reactions,Vaccine,2021,Guideline/Org
+ART-0896,VC_fail,PMC6946178,not_oa (idIsNotOpenAccess),skip,0,,,supplemental oxygen for patients without hypoxemia,Moss,2019,Other Journal
+ART-0119,VC_pass,PMC6754754,not_oa (idIsNotOpenAccess),skip,0,,,30-Year review of pediatric- and adult-onset CVID: Clinical correlates and prognostic indicators,Baloh,2019,Other Journal
+ART-1244,VC_fail,PMC3622949,not_oa (idIsNotOpenAccess),skip,0,,,Clinical management of insomnia with brief behavioral treatment (BBTI),Troxel,2012,Other Journal
+ART-1600,VC_fail,PMC5557227,not_oa (idIsNotOpenAccess),skip,0,,,Preventing herpes zoster through vaccination: New developments,Le,2017,Other Journal
+ART-0877,VC_pass,PMC8758582,not_oa (idIsNotOpenAccess),skip,0,,,CD000029,Minhas,2022,Other Journal
+ART-0862,VC_fail,PMC3208370,not_oa (idIsNotOpenAccess),skip,0,,,a meta-analysis,Meng,2011,Other Journal
+ART-1684,VC_fail,PMC3799221,not_oa (idIsNotOpenAccess),skip,0,,,HbA in the evaluation of diabetes mellitus,O’Keeffe,2016,JAMA
+ART-0348,VC_fail,PMC6650108,not_oa (idIsNotOpenAccess),skip,0,,,Anal fissures,Dykstra,2019,Other Journal
+ART-0214,VC_fail,PMC6350898,not_oa (idIsNotOpenAccess),skip,0,,,Prevention of diabetes mellitus in patients with prediabetes,Carris,2019,Other Journal
+ART-0917,VC_fail,PMC1346962,not_oa (idIsNotOpenAccess),skip,0,,,an emerging disease,Neef,2006,AFP
+ART-1295,VC_fail,PMC4176800,not_oa (idIsNotOpenAccess),skip,0,,,Management of erectile dysfunction in hypertension: Tips and tricks,Viigimaa,2014,Other Journal
+ART-1089,VC_fail,PMC6953397,not_oa (idIsNotOpenAccess),skip,0,,,CD009977,Rud,2019,Other Journal
+ART-0816,VC_fail,PMC4335998,tgz_only,ok,587959,Markman_2015#@#ART-0816@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f6/87/PMC4335998.tar.gz,"Double-blind, randomized, controlled, crossover trial of pregabalin for neurogenic claudication",Markman,2015,Other Journal
+ART-1673,VC_fail,PMC3278059,not_oa (idIsNotOpenAccess),skip,0,,,"Perioperative management of antithrombotic therapy: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practice guidelines",Douketis,2012,Chest
+ART-0145,VC_fail,PMC8567758,not_oa (idIsNotOpenAccess),skip,0,,,a comprehensive review,Bertoli,2020,Other Journal
+ART-1945,VC_fail,PMC6492479,not_oa (idIsNotOpenAccess),skip,0,,,Intranasal ipratropium bromide for the common cold,Albalawi,2011,Cochrane
+ART-0489,VC_fail,PMC7415030,tgz_only,ok,1024416,Giddings_2016#@#ART-0489@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e7/79/PMC7415030.tar.gz,317-330,Giddings,2016,Other Journal
+ART-0439,VC_pass,PMC12911370,not_oa (idIsNotOpenAccess),skip,0,,,edging closer to a new paradigm,Flack,2022,Other Journal
+ART-0887,VC_fail,PMC6854261,tgz_only,ok,1540442,Mohamed_2019#@#ART-0887@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/82/bc/PMC6854261.tar.gz,current updates,Mohamed,2019,Other Journal
+ART-1915,VC_fail,PMC5378729,tgz_only,ok,304275,Simren_2017#@#ART-1915@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0a/58/PMC5378729.tar.gz,Update on Rome IV criteria for colorectal disorders: Implications for clinical practice,Simren,2017,Other Journal
+ART-1082,VC_fail,PMC11944238,tgz_only,ok,181775,Rosenberg_2023#@#ART-1082@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/73/1a/PMC11944238.tar.gz,E1383,Rosenberg,2023,Other Journal
+ART-0222,VC_fail,PMC9746870,not_oa (idIsNotOpenAccess),skip,0,,,1257-1266,Celli,2019,NEJM
+ART-0084,VC_fail,PMC6769062,not_oa (idIsNotOpenAccess),skip,0,,,CD003462,Andrade-Castellanos,2014,Other Journal
+ART-1357,VC_fail,PMC12194758,tgz_only,ok,197413,Wolfman_2020#@#ART-1357@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ca/37/PMC12194758.tar.gz,S138-S147,Wolfman,2020,Other Journal
+ART-1940,VC_fail,PMC4748908,tgz_only,ok,189987,Islam_2016#@#ART-1940@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0a/a2/PMC4748908.tar.gz,Clinical Uses of Probiotics,Islam,2016,Other Journal
+ART-1081,VC_fail,PMC5958910,not_oa (idIsNotOpenAccess),skip,0,,,"joint recommendations of the North American Society for Pediatric Gastroenterology, Hepatology, and Nutrition and the European Society for Pediatric Gastroenterology, Hepatology, and Nutrition",Rosen,2018,Guideline/Org
+ART-1102,VC_fail,PMC3585698,tgz_only,ok,206054,Salminen_2015#@#ART-1102@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4f/fe/PMC3585698.tar.gz,Antibiotic therapy vs appendectomy for treatment of uncomplicated acute appendicitis: The APPAC randomized clinical trial,Salminen,2015,JAMA
+ART-0688,VC_fail,PMC7144816,not_oa (idIsNotOpenAccess),skip,0,,,CD013422,Kirkilesis,2020,Other Journal
+ART-0879,VC_fail,PMC9837849,not_oa (idIsNotOpenAccess),skip,0,,,Baclofen for alcohol use disorder,Minozzi,2018,Other Journal
+ART-1348,VC_pass,PMC4017246,not_oa (idIsNotOpenAccess),skip,0,,,Tumor lysis syndrome: New challenges and recent advances,Wilson,2014,Other Journal
+ART-1789,VC_fail,PMC6513425,not_oa (idIsNotOpenAccess),skip,0,,,Osmotic and stimulant laxatives for the management of childhood constipation,Gordon,2016,Other Journal
+ART-0493,VC_fail,PMC3354640,not_oa (idIsNotOpenAccess),skip,0,,,Hospital transfers of nursing home residents with advanced dementia,Givens,2012,Other Journal
+ART-1027,VC_fail,PMC8966835,not_oa (idIsNotOpenAccess),skip,0,,,a review for general physicians,Raharja,2022,Other Journal
+ART-0344,VC_fail,PMC5576635,tgz_only,ok,787523,Durfey_2017#@#ART-0344@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/71/8f/PMC5576635.tar.gz,can the electrocardiogram risk stratify for short-term adverse events? West J Emerg Med,Durfey,2017,Other Journal
+ART-0659,VC_fail,PMC12539128,tgz_only,ok,1073625,Kane_2020#@#ART-0659@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/1d/8e/PMC12539128.tar.gz,recognition and management,Kane,2020,AFP
+ART-1211,VC_fail,PMC12989261,not_oa (idIsNotOpenAccess),skip,0,,,Surgery for obstructive sleep apnea in adults,Sundaram,2005,Other Journal
+ART-0311,VC_pass,PMC4833782,tgz_only,ok,1001687,Dieterich_2016#@#ART-0311@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/7e/77/PMC4833782.tar.gz,Vestibular migraine: The most frequent entity of episodic vertigo,Dieterich,2016,Other Journal
+ART-0903,VC_fail,PMC7875114,not_oa (idIsNotOpenAccess),skip,0,,,new insights for clinical practice,Murgia,2020,Other Journal
+ART-0020,VC_fail,PMC6724419,not_oa (idIsNotOpenAccess),skip,0,,,Association of use of the neonatal early-onset sepsis calculator with reduction in antibiotic therapy and safety: A systematic review and meta-analysis,Achten,2019,JAMA
+ART-0451,VC_fail,PMC11564130,tgz_only,ok,500515,Frampton_2023#@#ART-0451@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3c/60/PMC11564130.tar.gz,83-94,Frampton,2023,Other Journal
+ART-0678,VC_fail,PMC4188648,not_oa (idIsNotOpenAccess),skip,0,,,Arthroscopic surgery for degenerative tears of the meniscus: A systematic review and meta-analysis,Khan,2014,Other Journal
+ART-1255,VC_pass,PMC7856541,not_oa (idIsNotOpenAccess),skip,0,,,asymptomatic carotid artery stenosis: screening,US Preventive Services Task Force. Final recommendation statement,2021,Guideline/Org
+ART-0557,VC_fail,PMC6319251,tgz_only,ok,1841412,Halliday_2019#@#ART-0557@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4c/b8/PMC6319251.tar.gz,"an open- label, pilot, randomised trial",Halliday,2019,Lancet
+ART-1286,VC_fail,PMC7071368,tgz_only,ok,319328,Vargas_2020#@#ART-1286@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/41/39/PMC7071368.tar.gz,what has time and/or hyperarousal got to do with it? Brain Sci,Vargas,2020,Other Journal
+ART-1831,VC_fail,PMC3278056,not_oa (idIsNotOpenAccess),skip,0,,,"Antithrombotic therapy for atrial fibrillation: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practice guidelines",You,2012,Chest
+ART-1318,VC_fail,PMC11060750,not_oa (idIsNotOpenAccess),skip,0,,,AUA/SUO guideline part I: prostate cancer screening,Wei,2023,Other Journal
+ART-1954,VC_fail,PMC1584230,tgz_only,ok,257008,Bocchetta_2006#@#ART-1954@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c8/d0/PMC1584230.tar.gz,Lithium treatment and thyroid abnormalities,Bocchetta,2006,Other Journal
+ART-1055,VC_fail,PMC6406277,tgz_only,ok,325878,Resmark_2019#@#ART-1055@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3a/97/PMC6406277.tar.gz,Treatment of anorexia nervosa—New evidence-based guidelines,Resmark,2019,Other Journal
+ART-1015,VC_fail,PMC7938036,tgz_only,ok,1489348,Pérez-Garza_2021#@#ART-1015@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ad/4a/PMC7938036.tar.gz,a practical approach and diagnostic algorithm,Pérez-Garza,2021,Other Journal
+ART-1951,VC_fail,PMC3103063,not_oa (idIsNotOpenAccess),skip,0,,,Clinical practice: Depression during pregnancy,Stewart,2011,NEJM
+ART-1907,VC_fail,PMC4896141,not_oa (idIsNotOpenAccess),skip,0,,,Profound hypokalemia associated with severe diabetic ketoacidosis,Davis,2016,Other Journal
+ART-0176,VC_fail,PMC12579754,tgz_only,ok,655914,Brody_2017#@#ART-0176@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d1/af/PMC12579754.tar.gz,Assessing decision making capacity for do not resuscitate requests in depressed patients: How to apply the “communication” and “appreciation” criteria,Brody,2017,Other Journal
+ART-0369,VC_fail,PMC9845083,not_oa (idIsNotOpenAccess),skip,0,,,standards of care in diabetes—2023,ElSayed,2023,Other Journal
+ART-1862,VC_fail,PMC6174113,not_oa (idIsNotOpenAccess),skip,0,,,Updated international consensus diagnostic criteria for eosinophilic esophagitis: Proceedings of the AGREE conference,Dellon,2018,Other Journal
+ART-1880,VC_fail,PMC5119649,not_oa (idIsNotOpenAccess),skip,0,,,Disorders of sexual development in adult women,Gomez-Lobo,2016,Other Journal
+ART-0640,VC_pass,PMC4178284,not_oa (idIsNotOpenAccess),skip,0,,,Croup,Johnson,2014,BMJ
+ART-0673,VC_fail,PMC10752083,tgz_only,ok,251543,Kelley-Quon_2021#@#ART-0673@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8c/c5/PMC10752083.tar.gz,a systematic review,Kelley-Quon,2021,Other Journal
+ART-1865,VC_fail,PMC6171773,not_oa (idIsNotOpenAccess),skip,0,,,PURL: Time to stop glucosamine and chondroitin for knee OA? J Fam Pract 2018;67(9):566-568,Lyon,2018,Other Journal
+ART-0215,VC_fail,PMC12930988,tgz_only,ok,1191922,Carter_2024#@#ART-0215@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b2/b9/PMC12930988.tar.gz,926-940,Carter,2024,Other Journal
+ART-1137,VC_fail,PMC8365115,not_oa (idIsNotOpenAccess),skip,0,,,pelvic inflammatory disease (PID),Sexually,2021,Guideline/Org
+ART-0630,VC_fail,PMC5218987,not_oa (idIsNotOpenAccess),skip,0,,,the ROW cohort study,Jain,2017,Other Journal
+ART-1913,VC_fail,PMC6883753,tgz_only,ok,204326,Division_2019#@#ART-1913@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/70/db/PMC6883753.tar.gz,Pregnancy and oral health,Division,2019,Guideline/Org
+ART-1793,VC_pass,PMC5962971,not_oa (idIsNotOpenAccess),skip,0,,,Deprescribing antipsychotics for behavioral and psychological symptoms of dementia and insomnia,Hauk,2018,AFP
+ART-0771,VC_fail,PMC6457868,not_oa (idIsNotOpenAccess),skip,0,,,Patching for corneal abrasion,Lim,2016,Other Journal
+ART-0893,VC_fail,PMC8516955,tgz_only,ok,2481121,Mori_2021#@#ART-0893@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d3/18/PMC8516955.tar.gz,435-443,Mori,2021,Textbook
+ART-0120,VC_fail,PMC8530736,not_oa (idIsNotOpenAccess),skip,0,,,Approach to the patient with adrenal incidentaloma,Bancos,2021,Other Journal
+ART-0475,VC_fail,PMC5865621,not_oa (idIsNotOpenAccess),skip,0,,,"epidemiology, outcomes, knowledge gaps, and future directions",Gardner,2018,Other Journal
+ART-0199,VC_fail,PMC6205759,not_oa (idIsNotOpenAccess),skip,0,,,practical approach to diagnosis and management,Byrd,2018,Circulation
+ART-0628,VC_fail,PMC4522991,tgz_only,ok,340429,Jacob_2006#@#ART-0628@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ad/11/PMC4522991.tar.gz,1618-1622,Jacob,2006,Other Journal
+ART-0677,VC_fail,PMC8007206,tgz_only,ok,419064,Khan_2018#@#ART-0677@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f4/66/PMC8007206.tar.gz,e180-e184,Khan,2018,Other Journal
+ART-0119,VC_pass,PMC6754754,not_oa (idIsNotOpenAccess),skip,0,,,30-Year review of pediatric- and adult-onset CVID: Clinical correlates and prognostic indicators,Baloh,2019,Other Journal
+ART-0439,VC_pass,PMC12911370,not_oa (idIsNotOpenAccess),skip,0,,,edging closer to a new paradigm,Flack,2022,Other Journal
+ART-0640,VC_pass,PMC4178284,not_oa (idIsNotOpenAccess),skip,0,,,Croup,Johnson,2014,BMJ
+ART-0877,VC_pass,PMC8758582,not_oa (idIsNotOpenAccess),skip,0,,,CD000029,Minhas,2022,Other Journal
+ART-1255,VC_pass,PMC7856541,not_oa (idIsNotOpenAccess),skip,0,,,asymptomatic carotid artery stenosis: screening,US Preventive Services Task Force. Final recommendation statement,2021,Guideline/Org
+ART-1348,VC_pass,PMC4017246,not_oa (idIsNotOpenAccess),skip,0,,,Tumor lysis syndrome: New challenges and recent advances,Wilson,2014,Other Journal
+ART-1793,VC_pass,PMC5962971,not_oa (idIsNotOpenAccess),skip,0,,,Deprescribing antipsychotics for behavioral and psychological symptoms of dementia and insomnia,Hauk,2018,AFP
+ART-0020,VC_fail,PMC6724419,not_oa (idIsNotOpenAccess),skip,0,,,Association of use of the neonatal early-onset sepsis calculator with reduction in antibiotic therapy and safety: A systematic review and meta-analysis,Achten,2019,JAMA
+ART-0021,VC_fail,PMC6755635,found,ok,524281,Adami_2019#@#ART-0021@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/a1/33/10.1177_1759720X19876468.PMC6755635.pdf,Glucocorticoid-induced osteoporosis: From clinical trials to clinical practice,Adami,2019,Other Journal
+ART-0084,VC_fail,PMC6769062,not_oa (idIsNotOpenAccess),skip,0,,,CD003462,Andrade-Castellanos,2014,Other Journal
+ART-0120,VC_fail,PMC8530736,not_oa (idIsNotOpenAccess),skip,0,,,Approach to the patient with adrenal incidentaloma,Bancos,2021,Other Journal
+ART-0145,VC_fail,PMC8567758,not_oa (idIsNotOpenAccess),skip,0,,,a comprehensive review,Bertoli,2020,Other Journal
+ART-0154,VC_fail,PMC5393490,not_oa (idIsNotOpenAccess),skip,0,,,Guidelines for the management of asymptomatic primary hyperparathyroidism: Summary statement from the Fourth International Workshop,Bilezikian,2014,Other Journal
+ART-0176,VC_fail,PMC12579754,tgz_only,ok,655914,Brody_2017#@#ART-0176@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d1/af/PMC12579754.tar.gz,Assessing decision making capacity for do not resuscitate requests in depressed patients: How to apply the “communication” and “appreciation” criteria,Brody,2017,Other Journal
+ART-0179,VC_fail,PMC6756654,tgz_only,ok,181384,Brozovich_2019#@#ART-0179@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f8/6f/PMC6756654.tar.gz,"A critical appraisal of adult trigger finger: Pathophysiology, treatment, and future outlook",Brozovich,2019,Other Journal
+ART-0199,VC_fail,PMC6205759,not_oa (idIsNotOpenAccess),skip,0,,,practical approach to diagnosis and management,Byrd,2018,Circulation
+ART-0214,VC_fail,PMC6350898,not_oa (idIsNotOpenAccess),skip,0,,,Prevention of diabetes mellitus in patients with prediabetes,Carris,2019,Other Journal
+ART-0215,VC_fail,PMC12930988,tgz_only,ok,1191922,Carter_2024#@#ART-0215@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b2/b9/PMC12930988.tar.gz,926-940,Carter,2024,Other Journal
+ART-0222,VC_fail,PMC9746870,not_oa (idIsNotOpenAccess),skip,0,,,1257-1266,Celli,2019,NEJM
+ART-0243,VC_fail,PMC8326257,found,ok,10655074,Cianci_2021#@#ART-0243@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/f2/ab/WJG-27-4536.PMC8326257.pdf,endoscopic and surgical approaches,Cianci,2021,Other Journal
+ART-0344,VC_fail,PMC5576635,tgz_only,ok,787523,Durfey_2017#@#ART-0344@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/71/8f/PMC5576635.tar.gz,can the electrocardiogram risk stratify for short-term adverse events? West J Emerg Med,Durfey,2017,Other Journal
+ART-0348,VC_fail,PMC6650108,not_oa (idIsNotOpenAccess),skip,0,,,Anal fissures,Dykstra,2019,Other Journal
+ART-0350,VC_fail,PMC12445750,found,ok,497047,EBM_0000#@#ART-0350@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/bd/21/IJA-69-969.PMC12445750.pdf,number needed to treat,EBM tools,,Other Journal
+ART-0369,VC_fail,PMC9845083,not_oa (idIsNotOpenAccess),skip,0,,,standards of care in diabetes—2023,ElSayed,2023,Other Journal
+ART-0451,VC_fail,PMC11564130,tgz_only,ok,500515,Frampton_2023#@#ART-0451@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3c/60/PMC11564130.tar.gz,83-94,Frampton,2023,Other Journal
+ART-0461,VC_fail,PMC6522264,not_oa (idIsNotOpenAccess),skip,0,,,big data bias masks a true association,Frew,2019,Other Journal
+ART-0462,VC_fail,PMC9324596,tgz_only,ok,1381023,Friedli_2020#@#ART-0462@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9b/de/PMC9324596.tar.gz,"update and clinical advice for prevention, diagnosis and treatment",Friedli,2020,Other Journal
+ART-0466,VC_fail,PMC12880482,tgz_only,ok,303907,Gaddey_2021#@#ART-0466@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9d/26/PMC12880482.tar.gz,34-40,Gaddey,2021,AFP
+ART-0475,VC_fail,PMC5865621,not_oa (idIsNotOpenAccess),skip,0,,,"epidemiology, outcomes, knowledge gaps, and future directions",Gardner,2018,Other Journal
+ART-0489,VC_fail,PMC7415030,tgz_only,ok,1024416,Giddings_2016#@#ART-0489@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e7/79/PMC7415030.tar.gz,317-330,Giddings,2016,Other Journal
+ART-0493,VC_fail,PMC3354640,not_oa (idIsNotOpenAccess),skip,0,,,Hospital transfers of nursing home residents with advanced dementia,Givens,2012,Other Journal
+ART-0527,VC_fail,PMC6599814,not_oa (idIsNotOpenAccess),skip,0,,,CD011050,Griffiths,2016,Other Journal
+ART-0536,VC_fail,PMC3699348,tgz_only,ok,856160,Guichard_2013#@#ART-0536@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3c/ae/PMC3699348.tar.gz,Aldosterone receptor antagonists: Current perspectives and therapies,Guichard,2013,Other Journal
+ART-0557,VC_fail,PMC6319251,tgz_only,ok,1841412,Halliday_2019#@#ART-0557@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4c/b8/PMC6319251.tar.gz,"an open- label, pilot, randomised trial",Halliday,2019,Lancet
+ART-0628,VC_fail,PMC4522991,tgz_only,ok,340429,Jacob_2006#@#ART-0628@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ad/11/PMC4522991.tar.gz,1618-1622,Jacob,2006,Other Journal
+ART-0630,VC_fail,PMC5218987,not_oa (idIsNotOpenAccess),skip,0,,,the ROW cohort study,Jain,2017,Other Journal
+ART-0659,VC_fail,PMC12539128,tgz_only,ok,1073625,Kane_2020#@#ART-0659@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/1d/8e/PMC12539128.tar.gz,recognition and management,Kane,2020,AFP
+ART-0673,VC_fail,PMC10752083,tgz_only,ok,251543,Kelley-Quon_2021#@#ART-0673@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8c/c5/PMC10752083.tar.gz,a systematic review,Kelley-Quon,2021,Other Journal
+ART-0674,VC_fail,PMC8726361,not_oa (idIsNotOpenAccess),skip,0,,,an American Academy of Sleep Medicine clinical practice guideline,Kent,2021,Guideline/Org
+ART-0677,VC_fail,PMC8007206,tgz_only,ok,419064,Khan_2018#@#ART-0677@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f4/66/PMC8007206.tar.gz,e180-e184,Khan,2018,Other Journal
+ART-0678,VC_fail,PMC4188648,not_oa (idIsNotOpenAccess),skip,0,,,Arthroscopic surgery for degenerative tears of the meniscus: A systematic review and meta-analysis,Khan,2014,Other Journal
+ART-0688,VC_fail,PMC7144816,not_oa (idIsNotOpenAccess),skip,0,,,CD013422,Kirkilesis,2020,Other Journal
+ART-0722,VC_fail,PMC4372689,found,ok,339999,Kusters_2014#@#ART-0722@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/bf/59/40272_2014_Article_116.PMC4372689.pdf,Ten-year follow-up after initiation of statin therapy in children with familial hypercholesterolemia,Kusters,2014,JAMA
+ART-0732,VC_fail,PMC5126802,tgz_only,ok,225746,Lancaster_2016#@#ART-0732@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4b/e4/PMC5126802.tar.gz,overview of evidence-based assessment and treatment,Lancaster,2016,Other Journal
+ART-0771,VC_fail,PMC6457868,not_oa (idIsNotOpenAccess),skip,0,,,Patching for corneal abrasion,Lim,2016,Other Journal
+ART-0814,VC_fail,PMC4892949,not_oa (idIsNotOpenAccess),skip,0,,,findings from the Health ABC Study,Marcum,2016,Other Journal
+ART-0816,VC_fail,PMC4335998,tgz_only,ok,587959,Markman_2015#@#ART-0816@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f6/87/PMC4335998.tar.gz,"Double-blind, randomized, controlled, crossover trial of pregabalin for neurogenic claudication",Markman,2015,Other Journal
+ART-0842,VC_fail,PMC4780668,found,ok,2036349,McGovern_2016#@#ART-0842@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/5b/06/oajsm-7-033.PMC4780668.pdf,Managing ankle ligament sprains and tears: Current opinion,McGovern,2016,Other Journal
+ART-0862,VC_fail,PMC3208370,not_oa (idIsNotOpenAccess),skip,0,,,a meta-analysis,Meng,2011,Other Journal
+ART-0879,VC_fail,PMC9837849,not_oa (idIsNotOpenAccess),skip,0,,,Baclofen for alcohol use disorder,Minozzi,2018,Other Journal
+ART-0887,VC_fail,PMC6854261,tgz_only,ok,1540442,Mohamed_2019#@#ART-0887@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/82/bc/PMC6854261.tar.gz,current updates,Mohamed,2019,Other Journal
+ART-0893,VC_fail,PMC8516955,tgz_only,ok,2481121,Mori_2021#@#ART-0893@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d3/18/PMC8516955.tar.gz,435-443,Mori,2021,Textbook
+ART-0896,VC_fail,PMC6946178,not_oa (idIsNotOpenAccess),skip,0,,,supplemental oxygen for patients without hypoxemia,Moss,2019,Other Journal
+ART-0903,VC_fail,PMC7875114,not_oa (idIsNotOpenAccess),skip,0,,,new insights for clinical practice,Murgia,2020,Other Journal
+ART-0917,VC_fail,PMC1346962,not_oa (idIsNotOpenAccess),skip,0,,,an emerging disease,Neef,2006,AFP
+ART-0949,VC_fail,PMC3404815,not_oa (idIsNotOpenAccess),skip,0,,,Too much sitting: The population health science of sedentary behavior,Owen,2010,Other Journal
+ART-0956,VC_fail,PMC10585425,not_oa (idIsNotOpenAccess),skip,0,,,Anticonvulsants for alcohol dependence,Pani,2014,Other Journal
+ART-0964,VC_fail,PMC12971996,found,ok,493027,Patel_2016#@#ART-0964@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/41/98/jgo-17-01-8.PMC12971996.pdf,Role of steroids in malignant bowel obstruction,Patel,2016,Other Journal
+ART-0973,VC_fail,PMC3706994,not_oa (idIsNotOpenAccess),skip,0,,,Celiac disease: Diagnosis and management,Pelkowski,2014,AFP
+ART-0979,VC_fail,PMC7599351,found,ok,575077,Perisetti_2020#@#ART-0979@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/f3/8e/AnnGastroenterol-33-571.PMC7599351.pdf,an update on the pathophysiology and management,Perisetti,2020,Other Journal
+ART-1015,VC_fail,PMC7938036,tgz_only,ok,1489348,Pérez-Garza_2021#@#ART-1015@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ad/4a/PMC7938036.tar.gz,a practical approach and diagnostic algorithm,Pérez-Garza,2021,Other Journal
+ART-1027,VC_fail,PMC8966835,not_oa (idIsNotOpenAccess),skip,0,,,a review for general physicians,Raharja,2022,Other Journal
+ART-1043,VC_fail,PMC6234945,not_oa (idIsNotOpenAccess),skip,0,,,Common tongue conditions in primary care,Reamy,2010,AFP
+ART-1055,VC_fail,PMC6406277,tgz_only,ok,325878,Resmark_2019#@#ART-1055@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3a/97/PMC6406277.tar.gz,Treatment of anorexia nervosa—New evidence-based guidelines,Resmark,2019,Other Journal
+ART-1081,VC_fail,PMC5958910,not_oa (idIsNotOpenAccess),skip,0,,,"joint recommendations of the North American Society for Pediatric Gastroenterology, Hepatology, and Nutrition and the European Society for Pediatric Gastroenterology, Hepatology, and Nutrition",Rosen,2018,Guideline/Org
+ART-1082,VC_fail,PMC11944238,tgz_only,ok,181775,Rosenberg_2023#@#ART-1082@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/73/1a/PMC11944238.tar.gz,E1383,Rosenberg,2023,Other Journal
+ART-1089,VC_fail,PMC6953397,not_oa (idIsNotOpenAccess),skip,0,,,CD009977,Rud,2019,Other Journal
+ART-1102,VC_fail,PMC3585698,tgz_only,ok,206054,Salminen_2015#@#ART-1102@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4f/fe/PMC3585698.tar.gz,Antibiotic therapy vs appendectomy for treatment of uncomplicated acute appendicitis: The APPAC randomized clinical trial,Salminen,2015,JAMA
+ART-1128,VC_fail,PMC9722469,found,ok,1478906,Seay_2020#@#ART-1128@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/85/bd/main.PMC9722469.pdf,core curriculum 2020,Seay,2020,Other Journal
+ART-1137,VC_fail,PMC8365115,not_oa (idIsNotOpenAccess),skip,0,,,pelvic inflammatory disease (PID),Sexually,2021,Guideline/Org
+ART-1180,VC_fail,PMC7173542,tgz_only,ok,694077,Sobol_2008#@#ART-1180@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a3/54/PMC7173542.tar.gz,551-566,Sobol,2008,Other Journal
+ART-1186,VC_fail,PMC6522077,tgz_only,ok,177230,Sosa_2019#@#ART-1186@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f5/3a/PMC6522077.tar.gz,"recommendations from the National Tuberculosis Controllers Association and CDC, 2019",Sosa,2019,Guideline/Org
+ART-1211,VC_fail,PMC12989261,not_oa (idIsNotOpenAccess),skip,0,,,Surgery for obstructive sleep apnea in adults,Sundaram,2005,Other Journal
+ART-1231,VC_fail,PMC6222040,found,ok,213961,The_2016#@#ART-1231@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/2a/12/main.PMC6222040.pdf,mosquito-borne diseases,The,2016,Guideline/Org
+ART-1244,VC_fail,PMC3622949,not_oa (idIsNotOpenAccess),skip,0,,,Clinical management of insomnia with brief behavioral treatment (BBTI),Troxel,2012,Other Journal
+ART-1280,VC_fail,PMC8250847,not_oa (idIsNotOpenAccess),skip,0,,,Preventing and managing adverse reactions,Vaccine,2021,Guideline/Org
+ART-1286,VC_fail,PMC7071368,tgz_only,ok,319328,Vargas_2020#@#ART-1286@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/41/39/PMC7071368.tar.gz,what has time and/or hyperarousal got to do with it? Brain Sci,Vargas,2020,Other Journal
+ART-1295,VC_fail,PMC4176800,not_oa (idIsNotOpenAccess),skip,0,,,Management of erectile dysfunction in hypertension: Tips and tricks,Viigimaa,2014,Other Journal
+ART-1303,VC_fail,PMC3377888,found,ok,1060501,Volochayev_2012#@#ART-1303@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/c2/85/TORJ-6-54.PMC3377888.pdf,Laboratory test abnormalities are common in polymyositis and dermatomyositis and differ among clinical and demographic groups,Volochayev,2012,Other Journal
+ART-1318,VC_fail,PMC11060750,not_oa (idIsNotOpenAccess),skip,0,,,AUA/SUO guideline part I: prostate cancer screening,Wei,2023,Other Journal
+ART-1600,VC_fail,PMC5557227,not_oa (idIsNotOpenAccess),skip,0,,,Preventing herpes zoster through vaccination: New developments,Le,2017,Other Journal
+ART-1659,VC_fail,PMC4427053,not_oa (idIsNotOpenAccess),skip,0,,,Metformin in patients with type 2 diabetes and kidney disease: A systematic review,Inzucchi,2014,JAMA
+ART-1673,VC_fail,PMC3278059,not_oa (idIsNotOpenAccess),skip,0,,,"Perioperative management of antithrombotic therapy: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practice guidelines",Douketis,2012,Chest
+ART-1675,VC_fail,PMC3645106,not_oa (idIsNotOpenAccess),skip,0,,,Henoch-Schönlein purpura in children,Trnka,2013,Other Journal
+ART-1677,VC_fail,PMC4694177,not_oa (idIsNotOpenAccess),skip,0,,,An official American Thoracic Society/American College of Chest Physicians policy statement: The Choosing Wisely top five list in adult pulmonary medicine,Wiener,2014,Chest
+ART-1684,VC_fail,PMC3799221,not_oa (idIsNotOpenAccess),skip,0,,,HbA in the evaluation of diabetes mellitus,O’Keeffe,2016,JAMA
+ART-1718,VC_fail,PMC5381731,not_oa (idIsNotOpenAccess),skip,0,,,Outpatient emergencies: Anaphylaxis,Commins,2017,Other Journal
+ART-1721,VC_fail,PMC11241842,tgz_only,ok,1503454,Perrine_2007#@#ART-1721@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0f/6f/PMC11241842.tar.gz,"Vital signs: Improvements in maternity care policies and practices that support breastfeeding—United States, 2007–2013",Perrine,2007,Other Journal
+ART-1789,VC_fail,PMC6513425,not_oa (idIsNotOpenAccess),skip,0,,,Osmotic and stimulant laxatives for the management of childhood constipation,Gordon,2016,Other Journal
+ART-1831,VC_fail,PMC3278056,not_oa (idIsNotOpenAccess),skip,0,,,"Antithrombotic therapy for atrial fibrillation: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practice guidelines",You,2012,Chest
+ART-1862,VC_fail,PMC6174113,not_oa (idIsNotOpenAccess),skip,0,,,Updated international consensus diagnostic criteria for eosinophilic esophagitis: Proceedings of the AGREE conference,Dellon,2018,Other Journal
+ART-1865,VC_fail,PMC6171773,not_oa (idIsNotOpenAccess),skip,0,,,PURL: Time to stop glucosamine and chondroitin for knee OA? J Fam Pract 2018;67(9):566-568,Lyon,2018,Other Journal
+ART-1880,VC_fail,PMC5119649,not_oa (idIsNotOpenAccess),skip,0,,,Disorders of sexual development in adult women,Gomez-Lobo,2016,Other Journal
+ART-1907,VC_fail,PMC4896141,not_oa (idIsNotOpenAccess),skip,0,,,Profound hypokalemia associated with severe diabetic ketoacidosis,Davis,2016,Other Journal
+ART-1910,VC_fail,PMC4922356,found,ok,51480,Cervellin_2015#@#ART-1910@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/c6/c7/jomb-2015-0003.PMC4922356.pdf,Association of hyponatremia and hypovitaminosis D in ambulatory adults,Cervellin,2015,Other Journal
+ART-1913,VC_fail,PMC6883753,tgz_only,ok,204326,Division_2019#@#ART-1913@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/70/db/PMC6883753.tar.gz,Pregnancy and oral health,Division,2019,Guideline/Org
+ART-1915,VC_fail,PMC5378729,tgz_only,ok,304275,Simren_2017#@#ART-1915@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0a/58/PMC5378729.tar.gz,Update on Rome IV criteria for colorectal disorders: Implications for clinical practice,Simren,2017,Other Journal
+ART-1934,VC_fail,PMC4750836,not_oa (idIsNotOpenAccess),skip,0,,,Taking an antibiotic time-out: Utilization and usability of a self-stewardship time-out program for renewal of vancomycin and piperacillin-tazobactam,Graber,2015,Other Journal
+ART-1940,VC_fail,PMC4748908,tgz_only,ok,189987,Islam_2016#@#ART-1940@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0a/a2/PMC4748908.tar.gz,Clinical Uses of Probiotics,Islam,2016,Other Journal
+ART-1945,VC_fail,PMC6492479,not_oa (idIsNotOpenAccess),skip,0,,,Intranasal ipratropium bromide for the common cold,Albalawi,2011,Cochrane
+ART-1951,VC_fail,PMC3103063,not_oa (idIsNotOpenAccess),skip,0,,,Clinical practice: Depression during pregnancy,Stewart,2011,NEJM
+ART-1954,VC_fail,PMC1584230,tgz_only,ok,257008,Bocchetta_2006#@#ART-1954@#@.pdf,https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c8/d0/PMC1584230.tar.gz,Lithium treatment and thyroid abnormalities,Bocchetta,2006,Other Journal

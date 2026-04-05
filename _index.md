@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-04-05 (BATON 040 — EXA pdf pipeline built; PDFs 413→868; 3 new M1 maintain scripts)
-**Status:** Current — exa_pdf_finder.py + exa_pdf_downloader.py + pmc_oa_downloader.py added; 868 PDFs on disk; M1 maintain = 21 scripts.
+**Last Updated:** 2026-04-05 (BATON 043 — PDF recovery complete; 966 active PDFs + 14 quarantined; session housekeeping skills deployed)
+**Status:** Current — PDFs recovered from HDD backup; _dupe_archive/ folder created; M1 maintain = 23 scripts; session-housekeeping skill live.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -86,7 +86,7 @@ board_prep_intel/
 | question_ref_pairs | 2,722 | 222 NULL clean_ref |
 | qid_art_xref | 2,470 | All 8 years (2018–2025) |
 | aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
-| article_icd10 | 4,137 | +282 AAFP backfill (2026-03-31) |
+| article_icd10 | 4,020 | +282 AAFP backfill (revised from live DB) (2026-03-31) |
 | question_icd10 | 5,284 | 1,512/1,629 ITE questions (92.8%) |
 | aafp_question_icd10 | 4,753 | relevance normalized; related cap applied |
 | clinical_pathways | 4,020 | REBUILT 2026-03-31 — blueprint-based, both banks |
@@ -95,8 +95,8 @@ board_prep_intel/
 | icd10_rollup | 614 | |
 | icd10_code_xref | 1,006 | |
 | icd10_vec | 2,219 | BLOB — OpenAI text-embedding-3-small (1536d) |
-| article_icd10_vec | 1,674 | BLOB — rebuilt 2026-04-01 |
-| question_icd10_vec | 2,733 | BLOB — rebuilt 2026-04-01 |
+| article_icd10_vec | 1,757 | BLOB — rebuilt 2026-04-01 (updated 2026-04-05) |
+| question_icd10_vec | 2,747 | BLOB — rebuilt 2026-04-01 (updated 2026-04-05) |
 | article_vec | 1,985 | sqlite-vec virtual table |
 | question_vec | 1,629 | sqlite-vec virtual table |
 | aafp_question_vec | 1,221 | sqlite-vec virtual table |
@@ -108,7 +108,7 @@ board_prep_intel/
 ### `01_module.1_warehouse/` — 3-Domain PDF Warehouse + Scripts
 ```
 01_module.1_warehouse/
-├── citation_files/                        ← PDF guideline library (~414 PDFs across 4 tiers)
+├── citation_files/                        ← PDF guideline library (966 PDFs across 4 tiers + _dupe_archive/)
 │   ├── ITE/
 │   │   ├── VC_fail/      ← bulk PDFs (exa downloads landed here; 37 AAFP articles still awaiting manual download)
 │   │   ├── local_lite/   ← 117 PDFs (VC_fail + fully enriched)
@@ -159,7 +159,7 @@ board_prep_intel/
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
 ```
-*M1 scripts: build/ = 6 scripts, maintain/ = 21 scripts — 3 new scripts added 2026-04-05 (exa_pdf_finder, exa_pdf_downloader, pmc_oa_downloader)*
+*M1 scripts: build/ = 6 scripts, maintain/ = 23 scripts (recovered_unpaywall.py + pmc_oa_downloader.py added) (exa_pdf_finder, exa_pdf_downloader, pmc_oa_downloader)*
 
 ---
 
