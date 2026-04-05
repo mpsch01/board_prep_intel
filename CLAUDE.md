@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_043_20260405_pdf_recovery_skills.md` — PDF recovery + skill creation; 966 PDFs across 4 tiers |
+| Active BATON | `BATON_active_044_20260405_aafp_pdf_recovery.md` — AAFP PDF recovery (15 PDFs); deferred flags H/J closed, A archived; 2 new M1 scripts |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -62,12 +62,13 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_icd10_vec | 1,757 rows — ✅ rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 rows — ✅ rebuilt 2026-04-05 |
 | clinical_pathways | 4,020 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 |
-| PDFs (citation tiers) | 966 across 4 tiers in citation_files/ITE/ (VC_fail:623, VC_pass:168, local_lite:117, right_click:58) — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
+| PDFs (ITE citation tiers) | 966 across 4 tiers in citation_files/ITE/ (VC_fail:623, VC_pass:168, local_lite:117, right_click:58) — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
+| PDFs (AAFP) | 15 in citation_files/AAFP/ — recovered 2026-04-05 |
 | PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
-| M1 scripts | 6 build (3 deprecated deleted ✓) + 23 maintain (2 deprecated deleted ✓) + aafp_brq_scraper.py at scripts/ root |
+| M1 scripts | 6 build + 25 maintain + aafp_brq_scraper.py at scripts/ root |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
 | M3 scripts | 13 Python + 2 JS + 2 JSON config |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
@@ -111,8 +112,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 043, 2026-04-05)
+## Next Steps (as of BATON 044, 2026-04-05)
 1. **Clean empty RECO folders** — user housekeeping task post-PDF recovery
-2. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → `citation_files/ITE/VC_fail/`
+2. **DEFERRED-AAFP-PAYWALL** — 3 articles (ART-1959, ART-1972, ART-1967) via institutional/interlibrary loan
 3. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`; NCBI API key set)
-4. **exa-research-search Phase 2** — complete download section (URL batch + metadata dedup)
+4. **Resume normal roadmap** — exa-research-search Phase 2 + clinical pathways refinement

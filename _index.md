@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-04-05 (BATON 043 — PDF recovery complete; 966 active PDFs + 14 quarantined; session housekeeping skills deployed)
-**Status:** Current — PDFs recovered from HDD backup; _dupe_archive/ folder created; M1 maintain = 23 scripts; session-housekeeping skill live.
+**Last Updated:** 2026-04-05 (BATON 044 — AAFP PDF recovery; 966 ITE PDFs + 15 AAFP PDFs recovered; M1 maintain scripts expanded)
+**Status:** Current — AAFP recovery complete; 966 ITE + 15 AAFP PDFs; M1 maintain = 25 scripts; session-housekeeping skill live.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_043_20260405_pdf_recovery_skills.md  ← active BATON
+├── BATON_active_044_20260405_aafp_pdf_recovery.md  ← active BATON
 ├── CLAUDE.md                              ← project memory + conventions
 ├── REPO_MAP.md                            ← current-state architectural overview (NEW — BATON 039)
 ├── README.md                              ← project overview (human-readable)
@@ -21,7 +21,7 @@ board_prep_intel/
 ├── .gitattributes / .gitignore
 │
 ├── 00_database/                           ← source of truth (DB + supporting data)
-├── 01_module.1_warehouse/                 ← M1 3-domain: citation_files/ (868 PDFs, 4 tiers) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
+├── 01_module.1_warehouse/                 ← M1 3-domain: citation_files/ (966 ITE PDFs across 4 tiers + 15 AAFP PDFs) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
 ├── 02_module.2_processor/                 ← M2 pipeline scripts + source inputs
 ├── 03_module.3_analyst/                   ← M3 score analysis + ICD-10 + pathways
 ├── 04_module.4_sandbox/                   ← M4 experiments and agent prototypes

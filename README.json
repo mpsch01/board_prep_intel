@@ -1,9 +1,9 @@
 {
   "project": "board_prep_intel",
-  "description": "ABFM ITE Intelligence System — Family Medicine board exam knowledge base (1,629 ITE + 1,221 AAFP BRQ questions) linked to a clinical guideline library (1,985 articles, 966 PDFs) via a structured SQLite pipeline.",
+  "description": "ABFM ITE Intelligence System — Family Medicine board exam knowledge base (1,629 ITE + 1,221 AAFP BRQ questions) linked to a clinical guideline library (1,985 articles, 966 ITE PDFs + 15 AAFP PDFs) via a structured SQLite pipeline.",
   "last_updated": "2026-04-05",
-  "baton_active": "BATON_active_043_20260405_pdf_recovery_skills.md",
-  "baton_number": 43,
+  "baton_active": "BATON_active_044_20260405_aafp_pdf_recovery.md",
+  "baton_number": 44,
   "db": {
     "path": "00_database/db/ite_intelligence.db",
     "articles": 1985,
@@ -22,11 +22,12 @@
     "local_lite": 117,
     "right_click": 58,
     "dupe_archive": 14,
-    "note": "Restored via 3-step pipeline (EXA+PMC+Unpaywall) after fix_ghost.py incident 2026-04-05"
+    "AAFP": 15,
+    "note": "ITE PDFs restored via 3-step pipeline (EXA+PMC+Unpaywall) after fix_ghost.py incident 2026-04-05; AAFP PDFs recovered 2026-04-05"
   },
   "scripts": {
     "M1_build": 6,
-    "M1_maintain": 23,
+    "M1_maintain": 25,
     "M2_python": 75,
     "M2_js": 6,
     "M3_python": 13,

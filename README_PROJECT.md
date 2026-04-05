@@ -1,14 +1,14 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-04-05 (BATON 043)
+**Last updated:** 2026-04-05 (BATON 044)
 **Status:** Active development
-**Active BATON:** `BATON_active_043_20260405_pdf_recovery_skills.md`
+**Active BATON:** `BATON_active_044_20260405_aafp_pdf_recovery.md`
 
 ---
 
 ## Project Overview
 
-A queryable Family Medicine board exam knowledge base: 1,629 ITE questions (2018–2025) and 1,221 AAFP BRQ questions linked to a clinical guideline library of 1,985 articles and 966 PDFs (4 tiers) via a structured SQLite pipeline. Both corpora are now schema-parallel with full enrichment across body_system, blueprint, concept_tags, and ICD-10. (Note: subcategory was dropped; blueprint filled to 100% for both banks.) Intelligence 2.0 layers (ICD-10 diagnostic linkage, clinical pathways, topic trends, vector embeddings, cross-corpus semantic similarity) provide structured clinical navigation across the full corpus. System extends beyond exam prep into clinical decision support.
+A queryable Family Medicine board exam knowledge base: 1,629 ITE questions (2018–2025) and 1,221 AAFP BRQ questions linked to a clinical guideline library of 1,985 articles and 981 PDFs (966 ITE across 4 tiers + 15 AAFP) via a structured SQLite pipeline. Both corpora are now schema-parallel with full enrichment across body_system, blueprint, concept_tags, and ICD-10. (Note: subcategory was dropped; blueprint filled to 100% for both banks.) Intelligence 2.0 layers (ICD-10 diagnostic linkage, clinical pathways, topic trends, vector embeddings, cross-corpus semantic similarity) provide structured clinical navigation across the full corpus. System extends beyond exam prep into clinical decision support.
 
 ---
 
@@ -27,11 +27,11 @@ PDF library (4 tiers, 966 PDFs) + pipeline build and maintenance scripts + AAFP 
 - `citation_files/ITE/VC_pass/` — 168 PDFs: codon-named, VC-cited, awaiting full pipeline
 - `citation_files/ITE/right_click/` — 58 PDFs: VC-cited, fully enriched (pipeline complete)
 - `_dupe_archive/` — 14 duplicate PDFs quarantined
-- `citation_files/AAFP/` — AAFP citation PDFs
+- `citation_files/AAFP/` — 15 AAFP citation PDFs (recovered 2026-04-05)
 - `practice_questions/` — 42 Q&A deliverables: 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored)
 - `ite_exams/` — 16 raw PDFs: YYYY_MC.pdf + YYYY_critique.pdf (2018–2025)
 - `build/` — 6 scripts: self-contained full rebuild sequence (3 deprecated deleted ✓)
-- `maintain/` — 23 scripts: recurring DB population and maintenance operations (+3 new: exa_pdf_finder, exa_pdf_downloader, pmc_oa_downloader; +2 new: recover_unpaywall, manage_dupes 2026-04-05)
+- `maintain/` — 25 scripts: recurring DB population and maintenance operations (+2 new: exa_pdf_finder, exa_pdf_downloader, recover_unpaywall, manage_dupes, aafp_pdf_recovery 2026-04-05)
 - `scripts/aafp_brq_scraper.py` — scraper at scripts/ root (Windows-only)
 
 ### 02_module.2_processor/
@@ -66,7 +66,7 @@ Critical reference data:
 
 ---
 
-## Database State (as of 2026-04-05, BATON 043)
+## Database State (as of 2026-04-05, BATON 044)
 
 | Table | Rows | Notes |
 |-------|------|-------|
@@ -158,12 +158,12 @@ python aafp_enrich_concept_tags.py --mode unlinked
 
 ---
 
-## Next Steps (BATON 043)
+## Next Steps (BATON 044)
 
 1. **Clean empty RECO folders** — user housekeeping task post-PDF recovery
-2. **DEFERRED-A** — 37 manual PDFs (subscription + Cochrane) → codon rename → `citation_files/ITE/VC_fail/`
+2. **DEFERRED-AAFP-PAYWALL** — 3 articles (ART-1959, ART-1972, ART-1967) via institutional/interlibrary loan
 3. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs; NCBI API key set)
-4. **exa-research-search Phase 2** — complete download section (URL batch + metadata dedup)
+4. **Resume normal roadmap** — exa-research-search Phase 2 + clinical pathways refinement
 
 ---
 
