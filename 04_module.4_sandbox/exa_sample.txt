@@ -1,0 +1,47 @@
+=== BY SOURCE TYPE ===
+ID:ART-0013 | AFP | Ables 2010
+  Title: Prevention, recognition, and management of serotonin syndrome
+  Citation: Ables AZ, Nagubilli R: Prevention, recognition, and management of serotonin syndrome. Am Fam Physician 2010;81(9):1139-1142.
+
+ID:ART-0003 | Guideline/Org | ACC/AHA 2014
+  Title: ACC/AHA release recommendations for congenital and genetic heart disease screeni
+  Citation: ACC/AHA release recommendations for congenital and genetic heart disease screenings in youth. American College of Cardiology. September 15, 2014.
+
+ID:ART-0012 | Other Journal | Abhishek 2017
+  Title: 54-59
+  Citation: Abhishek A, Roddy E, Doherty M. Gout-a guide for the general and acute physicians. Clin Med (Lond). 2017;17(1):54-59.
+
+
+=== RANDOM SAMPLE ===
+ID:ART-0552 | Other Journal | Halabi 2020
+  Title: a systematic review and meta-regression analysis
+  Citation: Halabi A, Sen J, Huynh Q, Marwick TH. Metformin treatment in heart failure with preserved ejection fraction: a systematic review and meta-regression analysis. Cardiovasc Diabeto...
+
+ID:ART-0482 | AFP | Gauer 2015
+  Title: Diagnosis and treatment of temporomandibular disorders
+  Citation: Gauer RL, Semidey MJ: Diagnosis and treatment of temporomandibular disorders. Am Fam Physician 2015;91(6):378-386.
+
+ID:ART-1117 | AFP | Schroeder 2022
+  Title: diagnosis and management
+  Citation: Schroeder JD, Turner SP, Buck E. Hip fractures: diagnosis and management. Am Fam Physician. 2022;106(6):675-683.
+
+ID:ART-0577 | Other Journal | Heath 2022
+  Title: tinea capitis
+  Citation: Heath CR, Usatine RP. Dx across the skin color spectrum: tinea capitis. J Fam Pract. 2022;71(8):370-371.
+
+ID:ART-1449 | AFP | Harris 2023
+  Title: Osteoporosis: Common Questions and Answers
+  Citation: None
+
+ID:ART-0495 | Other Journal | Global 2022
+  Title: Global Initiative for Asthma. Global Strategy for Asthma Management and Preventi
+  Citation: Global Initiative for Asthma. Global Strategy for Asthma Management and Prevention. Updated 2022.
+
+ID:ART-0608 | Other Journal | Hu 2010
+  Title: Pityriasis versicolor: A systematic review of interventions
+  Citation: Hu SW, Bigby M: Pityriasis versicolor: A systematic review of interventions. Arch Dermatol 2010;146(10):1132-1140.
+
+ID:ART-0503 | Pediatrics | Golden 2014
+  Title: Optimizing bone health in children and adolescents
+  Citation: Golden NH, Abrams SA; Committee on Nutrition: Optimizing bone health in children and adolescents. Pediatrics 2014;134(4):e1229-1243.
+
