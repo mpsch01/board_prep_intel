@@ -1,10 +1,10 @@
 ---
 name: project_current_db_state
-description: DB state as of BATON 037 (2026-04-04) — DB unchanged from BATON 034; M1 restructure complete; 42 practice Q&A deliverables generated; ite_exams archive confirmed
+description: DB state as of BATON 040 (2026-04-05) — DB unchanged; 868 PDFs on disk (was 413); EXA pipeline ran; DEFERRED-G next
 type: project
 ---
 
-## DB State (as of BATON 037, 2026-04-04 — unchanged from BATON 034)
+## DB State (as of BATON 040, 2026-04-05 — unchanged from BATON 034; no DB writes this session)
 
 | Table | Rows | Notes |
 |-------|------|-------|

@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-04-04 (BATON 039 — schema docs refreshed; script counts corrected; cleanup complete)
-**Status:** Current — all Option B artifacts deleted; deprecated scripts removed; schema docs corrected; REPO_MAP.md added.
+**Last Updated:** 2026-04-05 (BATON 040 — EXA pdf pipeline built; PDFs 413→868; 3 new M1 maintain scripts)
+**Status:** Current — exa_pdf_finder.py + exa_pdf_downloader.py + pmc_oa_downloader.py added; 868 PDFs on disk; M1 maintain = 21 scripts.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_039_20260404_schema_docs_cleanup.md  ← active BATON
+├── BATON_active_040_20260405_exa_pdf_pipeline.md     ← active BATON
 ├── CLAUDE.md                              ← project memory + conventions
 ├── REPO_MAP.md                            ← current-state architectural overview (NEW — BATON 039)
 ├── README.md                              ← project overview (human-readable)
@@ -21,7 +21,7 @@ board_prep_intel/
 ├── .gitattributes / .gitignore
 │
 ├── 00_database/                           ← source of truth (DB + supporting data)
-├── 01_module.1_warehouse/                 ← M1 3-domain: citation_files/ (~414 PDFs, 4 tiers) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
+├── 01_module.1_warehouse/                 ← M1 3-domain: citation_files/ (868 PDFs, 4 tiers) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
 ├── 02_module.2_processor/                 ← M2 pipeline scripts + source inputs
 ├── 03_module.3_analyst/                   ← M3 score analysis + ICD-10 + pathways
 ├── 04_module.4_sandbox/                   ← M4 experiments and agent prototypes
@@ -110,10 +110,11 @@ board_prep_intel/
 01_module.1_warehouse/
 ├── citation_files/                        ← PDF guideline library (~414 PDFs across 4 tiers)
 │   ├── ITE/
-│   │   ├── VC_fail/      ← ~156 PDFs (VC gate failed; 37 AAFP acquisition still pending manual download)
+│   │   ├── VC_fail/      ← bulk PDFs (exa downloads landed here; 37 AAFP articles still awaiting manual download)
 │   │   ├── local_lite/   ← 117 PDFs (VC_fail + fully enriched)
 │   │   ├── VC_pass/      ← 94 PDFs (VC gate passed — destined for right_click)
 │   │   └── right_click/  ← 71 PDFs (VC_pass + fully enriched; highest-value tier)
+│   │   [Total: 868 PDFs across 4 tiers — exa_pdf_downloader + pmc_oa_downloader complete 2026-04-05]
 │   └── AAFP/             ← AAFP citation PDFs
 ├── practice_questions/                    ← Q&A study deliverables (gitignored; regenerable from DB)
 │   ├── word_docs/        ← 8 ITE_YYYY_QA.docx + 13 AAFP_quiz_NNN-NNN.docx = 21 DOCX
@@ -150,12 +151,15 @@ board_prep_intel/
 │       ├── rebuild_acquisition_list.py
 │       ├── rename_tier_labels_in_db.py
 │       ├── download_aafp_acquisitions.py  ← AAFP acquisition PDF downloader (OA API + E-Fetch fallback)
-│       └── download_pmc_actor_batch.py    ← one-off PMC batch downloader (actor-discovered URLs)
+│       ├── download_pmc_actor_batch.py    ← one-off PMC batch downloader (actor-discovered URLs)
+│       ├── exa_pdf_finder.py              ← NEW (BATON 040) — EXA semantic search; classifies 1,572 missing articles; outputs exa_pdf_queue.csv
+│       ├── exa_pdf_downloader.py          ← NEW (BATON 040) — downloads direct_pdf + AAFP open_access + pmc_fulltext; 397/558 downloaded
+│       └── pmc_oa_downloader.py           ← NEW (BATON 040) — NCBI OA API; direct PDF + tgz extraction; 47/95 downloaded (33 tgz)
 ├── has_extraction_audit.txt
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
 ```
-*M1 scripts: build/ = 6 scripts, maintain/ = 18 scripts — cleanup complete 2026-04-04 (5 deprecated originals deleted)*
+*M1 scripts: build/ = 6 scripts, maintain/ = 21 scripts — 3 new scripts added 2026-04-05 (exa_pdf_finder, exa_pdf_downloader, pmc_oa_downloader)*
 
 ---
 
@@ -404,7 +408,7 @@ External Sources (ITE exams 2018-2025, AAFP course, guidelines, score reports)
         ↓
 M1 Warehouse — store
   00_database/        (DB: 1,985 articles, 1,629 ITE questions, 1,221 AAFP BRQ questions)
-  01_module.1_warehouse/  (PDF library: 404 PDFs, 4 tiers)
+  01_module.1_warehouse/  (PDF library: 868 PDFs, 4 tiers)
   key_data_files/     (VC gate, exam CSVs, architecture docs)
         ↓
 M2 Processor — transform
@@ -493,6 +497,7 @@ Uses M1/build/ scripts 3-6 as template, adapted for year-specific PDF format.
 
 | Date | Action |
 |------|--------|
+| 2026-04-05 | BATON 040: EXA PDF pipeline built. 3 new M1 maintain scripts: exa_pdf_finder.py (1,572 articles searched; 259 direct_pdf + 332 open_access + 109 pmc_fulltext + 872 landing_page), exa_pdf_downloader.py (397/558 downloaded: 215 direct + 190 AAFP), pmc_oa_downloader.py (47/95 downloaded: 14 direct OA + 33 tgz extracted). PDFs 413→868. M1 maintain 18→21. DEFERRED-G: unpaywall_scanner.py (next round). |
 | 2026-04-04 | BATON 035–039: Option B flatten complete (board_prep_intel/ is now flat project root). M1 restructured to 3-domain layout (citation_files/ + practice_questions/ + ite_exams/). 42 Q&A deliverables built (16 ITE + 26 AAFP). 14 code review defects fixed. 5 deprecated scripts deleted. Schema docs corrected (articles.md tier column rewritten — VC_fail/pass/local_lite/right_click; row count 1985; source_type refreshed). REPO_MAP.md added. Git: remote renamed board_prep_intel. M1 build 6py, maintain 18py, M2 75py, M3 13py. |
 | 2026-04-01 | BATON 030–031: ite_analyzer_v3.py built + smoke tested (PASS). ICD-10 vec layers rebuilt. 5 bugs fixed (entry point imports, _not_in() col param, unicode, subcatAnalysis). QUESTION-DIST-001 flagged. export_aafp_ite_relationships.py run → 4 CSVs in readable_db_files/. word_doc_defaults.py committed to auto-memory. build_aafp_qa.py + build_aafp_qa_file1.py built → 2 AAFP Q&A docs delivered. M3: 5→9 Python. |
 | 2026-03-29 | BATON 023–024: Blueprint labeling complete (1,629/1,629). blueprint_api_classifier.py (Sonnet, 70.4% Gold Standard accuracy) wrote 1,234 pseudo-labels for 2018-2023. blueprint_emergent_pass.py: 16 Acute→Emergent flips. Pre-2024 Emergent at 11.7% (vs 20% target) — accepted as known limitation (blueprint targets are 2024+ design spec). aafp_question_icd10.relevance normalized (74→3 values). unified_keyword_extractor.py: TF-IDF unigrams for all 1,629 ITE + 1,221 AAFP questions. aafp_vs_ite_comparison_dashboard.html built + patched. M2: 55→57 Python. |
