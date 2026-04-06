@@ -13,6 +13,7 @@ board_prep_intel/
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable.
+│   ├── DATABASE_GUIDE.md              DB contents, linkages, current uses, and future applications
 │   ├── db/
 │   │   └── ite_intelligence.db        Production SQLite DB (gitignored — stays local/Drive)
 │   ├── readable_db_files/             CSV exports and human-readable snapshots (gitignored)
