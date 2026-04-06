@@ -1,145 +1,93 @@
 # REPO MAP — board_prep_intel
-**What this is:** Current-state architectural overview. High-level only — not a file tree (see `_index.md`).
-**Last Updated:** 2026-04-05 (BATON 043)
-**Root:** `C:\Users\mpsch\Desktop\board_prep_intel\` (Option B complete — flat since 2026-04-04)
-**Git:** `main` → `https://github.com/mpsch01/board_prep_intel` (private) | latest: `fbf6b00`
 
----
-
-## What This System Is
-
-A queryable Family Medicine board exam knowledge base. Two data banks — **1,629 ITE questions** (ABFM, 2018–2025) and **1,221 AAFP BRQ questions** — linked to a clinical guideline library of **1,985 articles** and **~414 PDFs** via a structured SQLite pipeline. Used for resident study tools, ITE score analysis, and clinical decision support development.
-
----
-
-## Module Status
-
-| Module | Path | Role | Scripts | Status |
-|--------|------|------|---------|--------|
-| **M1 Warehouse** | `01_module.1_warehouse/` | Store PDFs; build/maintain DB | 6 build + 23 maintain + 1 scraper | ✅ Stable — PDF recovery complete |
-| **M2 Processor** | `02_module.2_processor/` | Extract, enrich, tag, build DOCXs | 75 py + 6 JS in scripts/; core/engines/utils packages | ✅ Stable — 14 defects fixed BATON 038 |
-| **M3 Analyst** | `03_module.3_analyst/` | Score analysis, ICD-10, pathways, Q&A deliverables | 13 py + 2 JS | ✅ Stable |
-| **M4 Sandbox** | `04_module.4_sandbox/` | Experiments, agent prototypes | ad hoc | 🔵 Idle |
-| **DB** | `00_database/db/ite_intelligence.db` | Source of truth | — | ✅ Current |
-
----
-
-## DB State (2026-04-05)
-
-| Table | Rows | Notes |
-|-------|------|-------|
-| articles | **1,985** | ART-0001–ART-1986; next = ART-1987 |
-| questions (ITE) | **1,629** | 2018–2025; blueprint 100%; subcategory DROPPED |
-| aafp_questions | **1,221** | blueprint 100%; flattened schema |
-| article_icd10 | 4,020 | ITE chain + AAFP backfill; rebuilt 2026-04-05 |
-| question_icd10 | 5,284 | 92.8% ITE coverage |
-| aafp_question_icd10 | 4,753 | relevance normalized |
-| clinical_pathways | 4,020 | blueprint-based, both banks |
-| article_citation_trend | 1,740 | longitudinal tracking |
-| pubmed_pmid_cache | 344 | Layer 2 seed (PMIDs) |
-| icd10_vec | 2,219 | OpenAI text-embedding-3-small (1536d) |
-| article_icd10_vec | 1,757 | rebuilt 2026-04-05 |
-| question_icd10_vec | 2,747 | rebuilt 2026-04-05 |
-| question_vec | 1,629 | sqlite-vec; 100% ITE |
-| aafp_question_vec | 1,221 | sqlite-vec; 100% AAFP |
-
----
-
-## Data Pipeline
+File tree with short descriptions. For full project context see `README.md`.
 
 ```
-INPUTS
-  ITE exam PDFs (ite_exams/)        →  M2 extraction scripts
-  Guideline PDFs (citation_files/)  →  M2 enricher + DOCX builders
-  AAFP BRQ scraped data             →  M2 AAFP pipeline
-  Score report PDFs                 →  M3 parser
-        ↓
-  ite_intelligence.db  ←  source of truth for everything downstream
-        ↓
-OUTPUTS
-  practice_questions/   (42 Q&A DOCX + XLSX — regenerable)
-  enriched DOCX library (_archive_/docx_guideline_library/ — 1,518 files)
-  ITE score reports     (M3/reports/)
-  Intelligence layers   (00_database/readable_db_files/)
+board_prep_intel/
+│
+├── README.md                          Project overview, DB state, conventions, next steps
+├── REPO_MAP.md                        This file — directory tree with descriptions
+├── CLAUDE.md                          Project memory: terminology, locked rules, active state
+├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
+├── BATON_active_*.md                  Active session handoff — read first every session
+├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
+│
+├── 00_database/                       Source of truth. Never disposable.
+│   ├── db/
+│   │   └── ite_intelligence.db        Production SQLite DB (gitignored — stays local/Drive)
+│   ├── readable_db_files/             CSV exports and human-readable snapshots (gitignored)
+│   ├── logs/                          Pipeline run logs
+│   ├── crosswalk/
+│   │   ├── crosswalk_index.json       Article crosswalk index
+│   │   └── crosswalk_report.txt       Crosswalk audit report
+│   └── schemas/
+│       ├── clinical_synonym_map.json  Clinical term synonyms for ICD-10 matching
+│       ├── icd10_mcp_lookup.json      ICD-10 MCP tool lookup table
+│       └── ite-data-context-skill/    ITE domain skill for DB queries (SKILL.md + references/)
+│
+├── 01_module.1_warehouse/             M1 — PDF library + build/maintain DB scripts
+│   ├── citation_files/
+│   │   └── ITE/
+│   │       ├── VC_fail/               623 PDFs: failed VC gate; awaiting enrichment (gitignored)
+│   │       ├── VC_pass/               168 PDFs: passed VC gate; awaiting enrichment (gitignored)
+│   │       ├── local_lite/            117 PDFs: VC_fail + fully enriched (gitignored)
+│   │       ├── right_click/           58 PDFs: VC_pass + fully enriched — priority tier (gitignored)
+│   │       └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored)
+│   ├── ite_exams/                     16 raw ITE exam PDFs: YYYY_MC.pdf + YYYY_critique.pdf (gitignored)
+│   └── scripts/
+│       ├── aafp_brq_scraper.py        AAFP BRQ scraper (Windows-only)
+│       ├── build/                     6 scripts: full DB rebuild sequence
+│       └── maintain/                  23 scripts: recurring DB population and maintenance
+│
+├── 02_module.2_processor/             M2 — Extraction, enrichment, DOCX build pipeline
+│   ├── main.py                        Pipeline entry point
+│   ├── requirements.txt               Python dependencies
+│   ├── PIPELINE_README.md             Pipeline usage docs
+│   ├── INTEGRATION_PROMPT.md          Integration context for AI-assisted runs
+│   ├── core/                          ingestion.py, routing.py, screening.py
+│   ├── engines/                       acute, chronic, diagnostic, preventive, rct engines + base
+│   ├── utils/                         Shared utility modules
+│   ├── scripts/                       75 py + 6 JS + 1 JSON config; all enrichment/build scripts
+│   ├── source/
+│   │   └── aafp_video_course_transcripts/   VTT transcripts for VC pipeline
+│   ├── outputs/                       Staging JSONs + citation gap list (gitignored)
+│   └── prompts/
+│       └── candidates/                Prompt templates for enrichment
+│
+├── 03_module.3_analyst/               M3 — Score analysis, ICD-10, pathways, Q&A deliverables
+│   ├── scripts/                       13 py + 2 JS + 2 JSON; ite_parser, ite_analyzer_v3, report builders
+│   ├── docs/                          ITE score analysis pipeline docs
+│   └── reports/                       Per-resident DOCX reports + faculty PPTX (gitignored)
+│
+├── 04_module.4_sandbox/               M4 — Experiments and agent prototypes (placeholder)
+│
+├── _archive_/                         Curated deliverables (not disposable)
+│   ├── 01_curriculum/                 Curriculum definitions
+│   ├── 02_question_bank/              Question bank exports
+│   ├── 03_analysis/                   Analysis outputs
+│   ├── 04_reference_data/             Reference data
+│   └── 05_acquisition/                Acquisition lists
+│
+├── auto-memory-copies/                Auto-generated memory snapshots
+│
+├── baton_archive/                     All archived BATON session handoff documents
+│   └── templates+guides/              BATON templates and writing guides
+│
+├── extracted_json/                    Middle-man layer (gitignored — regenerable)
+│   ├── synthesis_library/             242 legacy pre-pipeline flat JSONs
+│   ├── VC_pass_batch/                 Enriched JSONs for VC_pass tier
+│   └── VC_fail_batch/                 Enriched JSONs for VC_fail tier
+│
+├── key_data_files/                    Critical reference data (protected)
+│   ├── session_hy_inserts_v7.json     VC gate — 352 citations — sole right_click criterion
+│   ├── FILE_NAMING_SPEC.md            Codon filename format spec
+│   ├── ITE_Intelligence_2.0_Architecture.md   Intelligence 2.0 design doc
+│   ├── data_exams/                    ITE_YYYY_raw.csv source files (2020–2025)
+│   └── [supporting CSVs + JSONs]      Body system map, keyword library, poll inserts, etc.
+│
+└── skills_abilities/                  Agent skills, SDK references, Apify actor
+    ├── agents/                        PDF sourcer agent + docs/logs
+    ├── apify-actors/
+    │   └── citation_crawler/          Deployed Apify actor (build 0.3.1, PlaywrightCrawler)
+    └── ite-data-context-skill/        ITE domain skill (SKILL.md, plugin, references/)
 ```
-
-### Key Pipeline Sequences
-
-**New guideline PDF → enriched DOCX:**
-`codon rename` → `ite_intelligence_enricher.py` (Strategy 0) → `synthesize.js` → `build_summary.js` → `right_click/` or `local_lite/`
-
-**New ITE exam year:**
-`01_ite_extractor.py --year` → `02_ite_categorizer.py` → `03_ite_merger.py` → `preprocess_concept_tags.py` → `compute_embeddings.py --new-only`
-
-**New article batch → DB:**
-PDFs codon-named → `VC_fail/` → `backfill_new_article_metadata.py --art-id-min XXXX`
-
-**Score analysis:**
-Score PDF → `ite_parser.py` → `ite_analyzer_v3.py` → `ite_report_builder_v2.js` → DOCX report
-
----
-
-## PDF Warehouse Tiers
-
-| Tier | Folder | Meaning | Count |
-|------|--------|---------|-------|
-| `VC_fail` | `citation_files/ITE/VC_fail/` | Failed VC gate; awaiting enrichment | 623 |
-| `VC_pass` | `citation_files/ITE/VC_pass/` | Passed VC gate; awaiting enrichment | 168 |
-| `local_lite` | `citation_files/ITE/local_lite/` | VC_fail + fully enriched | 117 |
-| `right_click` | `citation_files/ITE/right_click/` | VC_pass + fully enriched (**priority**) | 58 |
-
-**VC Gate:** `key_data_files/session_hy_inserts_v7.json` — 352 citations — sole criterion for right_click tier.
-**Codon filename format:** `Author_Year#@#ART-XXXX@#@.pdf` — ART-ID embedded between start/stop codons.
-**_dupe_archive:** 14 duplicate PDFs quarantined; total active across 4 tiers = 966.
-
----
-
-## Intelligence 2.0 Layers
-
-| Layer | Table | Status |
-|-------|-------|--------|
-| Layer 1 — ICD-10 crosswalk | `article_icd10`, `question_icd10`, `aafp_question_icd10` | ✅ Complete |
-| Layer 2 — Article currency (PubMed) | `pubmed_pmid_cache` (344 PMIDs) | 🟡 Seed ready; `article_currency` table not yet built |
-| Layer 3 — Clinical pathways | `clinical_pathways` (4,020 rows) | ✅ Complete |
-| Layer 4 — Topic trends | `article_citation_trend` (1,740 rows) | ✅ Built; `update_citation_trends.py` pending (DEFERRED-B) |
-
----
-
-## Active Deferred Flags
-
-| Flag | Description | Priority |
-|------|-------------|----------|
-| **DEFERRED-A** | 37 manual PDFs (34 subscription + 3 Cochrane) → download → codon rename → `VC_fail/` → `backfill_new_article_metadata.py --art-id-min 1938` | 🔴 HIGH |
-| DEFERRED-B | `update_citation_trends.py` — run after DEFERRED-A backfill | 🟡 MEDIUM |
-| DEFERRED-C | AAFP vs ITE trend comparison | 🟡 MEDIUM |
-| DEFERRED-D | 229 citation gap articles (88 AFP batch-downloadable) | 🟡 MEDIUM |
-| DEFERRED-E | Interactive vector dashboard | 🟢 LOW |
-| DEFERRED-F | Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs cached) | 🟡 MEDIUM |
-
----
-
-## Key Files (most important to know)
-
-| File | Why It Matters |
-|------|---------------|
-| `BATON_active_043_20260405_pdf_recovery_skills.md` | Active session handoff — read first every session |
-| `CLAUDE.md` | Project memory: terminology, locked rules, active state, next steps |
-| `00_database/db/ite_intelligence.db` | Source of truth — never disposable |
-| `key_data_files/session_hy_inserts_v7.json` | VC gate — 352 citations — sole right_click criterion |
-| `01_module.1_warehouse/scripts/maintain/backfill_new_article_metadata.py` | Primary article onboarding script |
-| `02_module.2_processor/scripts/ite_intelligence_enricher.py` | Primary v4 enricher (Strategy 0 first) |
-| `03_module.3_analyst/scripts/word_doc_defaults.py` | Import in ALL python-docx scripts |
-| `00_database/schemas/ite-data-context-skill/` | ITE domain skill for DB queries |
-
----
-
-## What Is and Isn't Git-Tracked
-
-**Tracked:** all `.py`, `.js`, `.json`, `.md`, `.bat`, `.ps1`, `.txt` — code and docs.
-**Not tracked:** `*.db`, `*.pdf`, `extracted_json/`, `resident_data/`, `__pycache__/`, `outputs/` — binaries and derived data stay local / Google Drive.
-
----
-
-## Deprecation Note on _index.md
-
-`_index.md` is the ground-truth file tree but has drifted as of this session (still lists deleted deprecated scripts, old Git remote, old BATON). A sweep of `_index.md` is recommended before the next structural change.
