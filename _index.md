@@ -1,9 +1,9 @@
 # _index.md — Ground Truth Directory Map
-**Scope:** `00_#PROJECT_OVERHAUL/` only
-**Last Updated:** 2026-04-04 (BATON 037)
-**Status:** Current — M1 3-domain restructure complete (citation_files/ + practice_questions/ + ite_exams/); 42 Q&A deliverables generated; all M1 scripts path-updated; answer choice formatting fixed in both DOCX builders
+**Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
+**Last Updated:** 2026-04-06 (BATON 045 — ite_analyzer_v3.py AAFP quota fix; ite_report_builder_v2.js overhaul; question_icd10 cleanup)
+**Status:** Current — 966 ITE + 15 AAFP PDFs; M1 maintain = 25 scripts; M2 updated (75py + 6js); DB cleaned (no_match rows removed).
 
-> This file maps only the `00_#PROJECT_OVERHAUL` workspace. It does not map the broader `claude_knowledge` tree.
+> This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
 
 ---
@@ -11,18 +11,17 @@
 ## Top-Level Structure
 
 ```
-00_#PROJECT_OVERHAUL/
-├── BATON_active_037_20260404_practice_questions_deliverables_m1_restructure.md  ← active BATON
+board_prep_intel/
+├── BATON_active_045_20260406_analyzer_report_builder_cleanup.md  ← active BATON
 ├── CLAUDE.md                              ← project memory + conventions
+├── REPO_MAP.md                            ← current-state architectural overview (NEW — BATON 039)
 ├── README.md                              ← project overview (human-readable)
 ├── README_PROJECT.md                      ← extended project documentation
-├── SEVERANCE_PLAN.md                      ← path severing plan (Phase 1 complete; ceremonial archive pending)
 ├── _index.md                              ← this file
-├── repo_pre_severance.md                  ← full script inventory + dep map (BATON 035; pre-Option B reference)
 ├── .gitattributes / .gitignore
 │
 ├── 00_database/                           ← source of truth (DB + supporting data)
-├── 01_module.1_warehouse/                 ← M1 3-domain: citation_files/ (~414 PDFs, 4 tiers) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
+├── 01_module.1_warehouse/                 ← M1 3-domain: citation_files/ (966 ITE PDFs across 4 tiers + 15 AAFP PDFs) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
 ├── 02_module.2_processor/                 ← M2 pipeline scripts + source inputs
 ├── 03_module.3_analyst/                   ← M3 score analysis + ICD-10 + pathways
 ├── 04_module.4_sandbox/                   ← M4 experiments and agent prototypes
@@ -39,6 +38,8 @@
 **Swept (2026-04-03, BATON 034):** `docx_guideline_library/` → `_archive_/`; `archive_canonical/` → renamed `_archive_/`; `apify-actors/` → `skills_abilities/`; `apify_smart_article_extractor` → deleted; BATON 032/033 duplicates → deleted from root
 **Swept (2026-04-04, BATON 035):** 5 legacy scripts deprecated (headers applied) + staged in `_legacy/` → moved to offsite archive by user; originals pending Windows delete; `build_faculty_pptx.js` verified clean (no path deps)
 **Swept (2026-04-04, BATON 036/037):** M1 restructured to 3-domain layout (citation_files/ + practice_questions/ + ite_exams/); all 11 M1 maintain scripts path-updated; build_ite_qa_deliverables.py + build_aafp_qa_deliverables.py built + 42 deliverables generated; ite_exams/ archive confirmed (2018–2025)
+**Cleaned (2026-04-04, BATON 039):** Windows cleanup complete — 5 deprecated M1 scripts deleted; Option B artifacts deleted (SEVERANCE_PLAN.md, option_b_patch.py, repo_pre_severance.md); schema docs refreshed (articles.md: row count, tier column, source_type dist; questions.md: subcategory removed); script counts corrected (M1 build 6, maintain 18, M2 75py, M3 13py); REPO_MAP.md added to root
+**Fixed (2026-04-04, BATON 038):** 14 code review defects resolved — hop count bugs (preprocess_concept_tags, batch_db_extract, db_guided_extractor), SCHEMAS_DIR/OUTPUT_DIR (build_icd10_tags), filename pattern (extract_ite_year), exists() guard (audit_engine_type_changes), crosswalk output paths + multi-tier scan (build_crosswalk_index), XGBoost param (classify_ite_year), JSON_DIR/LOG_DIR/OUTPUT_DIR path fixes (4 scripts), VC gate cross-check (backfill), docstring escapes (2 scripts)
 
 ---
 
@@ -48,7 +49,7 @@
 ```
 00_database/
 ├── db/
-│   ├── ite_intelligence.db                ← PRODUCTION (1,936 articles, 1,629 questions)
+│   ├── ite_intelligence.db                ← PRODUCTION (1,985 articles, 1,629 questions)
 │   ├── ite_intelligence.db-wal            ← write-ahead log
 │   ├── ite_intelligence_pre2018_backup_20260324_001256.db
 │   ├── ite_intelligence_pre_flag15_backup.db
@@ -85,17 +86,17 @@
 | question_ref_pairs | 2,722 | 222 NULL clean_ref |
 | qid_art_xref | 2,470 | All 8 years (2018–2025) |
 | aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
-| article_icd10 | 4,137 | +282 AAFP backfill (2026-03-31) |
-| question_icd10 | 5,284 | 1,512/1,629 ITE questions (92.8%) |
+| article_icd10 | 4,020 | +282 AAFP backfill (revised from live DB) (2026-03-31) |
+| question_icd10 | 5,218 | 1,512/1,629 ITE questions (92.8%) — cleaned -66 no_match rows (2026-04-06) |
 | aafp_question_icd10 | 4,753 | relevance normalized; related cap applied |
-| clinical_pathways | 4,020 | REBUILT 2026-03-31 — blueprint-based, both banks |
+| clinical_pathways | 3,971 | REBUILT 2026-03-31 — blueprint-based, both banks; cleaned -49 no_match rows (2026-04-06) |
 | article_citation_trend | 1,740 | longitudinal citation tracking + watch_list flag |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
 | icd10_rollup | 614 | |
 | icd10_code_xref | 1,006 | |
 | icd10_vec | 2,219 | BLOB — OpenAI text-embedding-3-small (1536d) |
-| article_icd10_vec | 1,674 | BLOB — rebuilt 2026-04-01 |
-| question_icd10_vec | 2,733 | BLOB — rebuilt 2026-04-01 |
+| article_icd10_vec | 1,757 | BLOB — rebuilt 2026-04-01 (updated 2026-04-05) |
+| question_icd10_vec | 2,747 | BLOB — rebuilt 2026-04-01 (updated 2026-04-05) |
 | article_vec | 1,985 | sqlite-vec virtual table |
 | question_vec | 1,629 | sqlite-vec virtual table |
 | aafp_question_vec | 1,221 | sqlite-vec virtual table |
@@ -107,12 +108,13 @@
 ### `01_module.1_warehouse/` — 3-Domain PDF Warehouse + Scripts
 ```
 01_module.1_warehouse/
-├── citation_files/                        ← PDF guideline library (~414 PDFs across 4 tiers)
+├── citation_files/                        ← PDF guideline library (966 PDFs across 4 tiers + _dupe_archive/)
 │   ├── ITE/
-│   │   ├── VC_fail/      ← ~156 PDFs (VC gate failed; 37 AAFP acquisition still pending manual download)
+│   │   ├── VC_fail/      ← bulk PDFs (exa downloads landed here; 37 AAFP articles still awaiting manual download)
 │   │   ├── local_lite/   ← 117 PDFs (VC_fail + fully enriched)
 │   │   ├── VC_pass/      ← 94 PDFs (VC gate passed — destined for right_click)
 │   │   └── right_click/  ← 71 PDFs (VC_pass + fully enriched; highest-value tier)
+│   │   [Total: 868 PDFs across 4 tiers — exa_pdf_downloader + pmc_oa_downloader complete 2026-04-05]
 │   └── AAFP/             ← AAFP citation PDFs
 ├── practice_questions/                    ← Q&A study deliverables (gitignored; regenerable from DB)
 │   ├── word_docs/        ← 8 ITE_YYYY_QA.docx + 13 AAFP_quiz_NNN-NNN.docx = 21 DOCX
@@ -127,13 +129,10 @@
 │   │   ├── README.md
 │   │   ├── build_clean_question_bank.py   ← Step 1: Excel → ite_questions_clean.json
 │   │   ├── rebuild_ite_db_v2.py           ← Step 2: core DB from JSON (2020–2025)
-│   │   ├── extract_ite_2018_2019.py       ← Step 3: extract 2018-2019 from split PDFs
-│   │   ├── enrich_ite_questions.py        ← Step 4: Claude API enrichment for 2018-2019
-│   │   ├── integrate_2018_2019.py         ← Step 5: merge 2018-2019 into DB
-│   │   ├── backfill_keywords_2018_2019.py ← Step 6: keyword backfill for 2018-2019 (moved from M2 2026-03-27)
-│   │   ├── validate_db_v2.py              ← Step 7: post-build QC
-│   │   ├── compute_embeddings.py          ← Step 8: vector embeddings (--new-only for incremental)
-│   │   └── validate_vector_search.py      ← Step 9: post-embedding QC
+│   │   ├── enrich_ite_questions.py        ← Step 3: Claude API enrichment (2018-2019 historical; already run)
+│   │   ├── validate_db_v2.py              ← Step 4: post-build QC
+│   │   ├── compute_embeddings.py          ← Step 5: vector embeddings (--new-only for incremental)
+│   │   └── validate_vector_search.py      ← Step 6: post-embedding QC
 │   └── maintain/                          ← operational/recurring (assume DB exists)
 │       ├── README.md
 │       ├── aafp_cleanup_filenames.py
@@ -146,21 +145,21 @@
 │       ├── backfill_new_article_metadata.py
 │       ├── build_clinical_pathways.py     ← Layer 3
 │       ├── build_crosswalk_index.py
-│       ├── build_match_staging.py
 │       ├── build_topic_trends.py          ← Layer 4a
 │       ├── match_tiers_to_library.py
 │       ├── preprocess_concept_tags.py     ← concept_tags via API (moved from M2 2026-03-27)
 │       ├── rebuild_acquisition_list.py
 │       ├── rename_tier_labels_in_db.py
-│       ├── rename_to_codon.py
 │       ├── download_aafp_acquisitions.py  ← AAFP acquisition PDF downloader (OA API + E-Fetch fallback)
-│       └── download_pmc_actor_batch.py    ← NEW (BATON 034) — one-off PMC batch downloader (actor-discovered URLs)
+│       ├── download_pmc_actor_batch.py    ← one-off PMC batch downloader (actor-discovered URLs)
+│       ├── exa_pdf_finder.py              ← NEW (BATON 040) — EXA semantic search; classifies 1,572 missing articles; outputs exa_pdf_queue.csv
+│       ├── exa_pdf_downloader.py          ← NEW (BATON 040) — downloads direct_pdf + AAFP open_access + pmc_fulltext; 397/558 downloaded
+│       └── pmc_oa_downloader.py           ← NEW (BATON 040) — NCBI OA API; direct PDF + tgz extraction; 47/95 downloaded (33 tgz)
 ├── has_extraction_audit.txt
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
 ```
-*M1 scripts: build/ = 9 scripts (3 deprecated, pending Windows delete), maintain/ = 17 scripts (2 deprecated, pending Windows delete)*
-*Deprecated scripts have ⚠️ headers and are staged for offsite archive — delete originals from Windows when ready*
+*M1 scripts: build/ = 6 scripts, maintain/ = 23 scripts (recovered_unpaywall.py + pmc_oa_downloader.py added) (exa_pdf_finder, exa_pdf_downloader, pmc_oa_downloader)*
 
 ---
 
@@ -185,7 +184,7 @@
 │   ├── 00_EX_content_outline_w_q.docx
 │   ├── aafp_transcripts/                 ← 50 cleaned .txt files
 │   └── ite_source/                       ← 2025_ITE_Questions.docx + 2025_ITE_Critique.docx
-└── scripts/                               ← 45 Python + 6 JS + 1 JSON + 4 Windows files
+└── scripts/                               ← 75 Python + 6 JS + 1 JSON + 4 Windows files
     │
     │── MODULE F — VC OUTLINE PIPELINE (run order: 01→02b→03→04→07→08→09→build_v6)
     ├── 01_build_crosswalk.py
@@ -321,7 +320,7 @@
     ├── sarkar_2025_blueprint.pdf / bodysystem.pdf
     └── scholl_2025_ENCRYPTED_22/23/24.pdf ← FLAG 30 (needs password)
 ```
-*14 Python + 2 JS + 2 JSON configs*
+*13 Python + 2 JS + 2 JSON configs*
 
 ### `04_module.4_sandbox/` — Experiments
 ```
@@ -409,7 +408,7 @@ External Sources (ITE exams 2018-2025, AAFP course, guidelines, score reports)
         ↓
 M1 Warehouse — store
   00_database/        (DB: 1,985 articles, 1,629 ITE questions, 1,221 AAFP BRQ questions)
-  01_module.1_warehouse/  (PDF library: 404 PDFs, 4 tiers)
+  01_module.1_warehouse/  (PDF library: 868 PDFs, 4 tiers)
   key_data_files/     (VC gate, exam CSVs, architecture docs)
         ↓
 M2 Processor — transform
@@ -454,7 +453,6 @@ Uses M1/build/ scripts 3-6 as template, adapted for year-specific PDF format.
 | explanation_keywords | 100% |
 | all_keywords | 100% |
 | concept_tags | 100% |
-| subcategory | 100% |
 | blueprint | **100%** — 2024/2025 Gold Standard; 2018-2023 API pseudo-label (Sonnet, 70.4% accuracy vs Gold Standard) |
 
 ### aafp_questions table (1,221 rows)
@@ -466,7 +464,6 @@ Uses M1/build/ scripts 3-6 as template, adapted for year-specific PDF format.
 | source_type | 100% | propagated from article xref |
 | ite_nearest_qid / dist | 100% | KNN match to ITE corpus |
 | concept_tags | **100%** | Haiku 4.5 API — complete 2026-03-29 |
-| subcategory | **100%** | Haiku 4.5 API — complete 2026-03-29 |
 
 ### articles table (1,985 rows)
 | Column | Coverage |
@@ -483,9 +480,9 @@ Uses M1/build/ scripts 3-6 as template, adapted for year-specific PDF format.
 
 | Item | Value |
 |------|-------|
-| Remote | `https://github.com/mpsch01/project-overhaul` (private) |
+| Remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | Branch | `main` |
-| Latest commit | `066a94f` (2026-03-28, commit pending for 2026-03-29 session) |
+| Latest commit | `6fb312c` (2026-04-04, BATON 039 — REPO_MAP.md added) |
 | .gitignore strategy | **Code + docs on GitHub. Binaries on local disk / Google Drive.** |
 
 **What IS tracked:** all Python, JS, JSON, Markdown, `.md`, `.bat`, `.ps1`, `.reg`, `.txt` files. Basically: anything readable and diffable.
@@ -500,6 +497,8 @@ Uses M1/build/ scripts 3-6 as template, adapted for year-specific PDF format.
 
 | Date | Action |
 |------|--------|
+| 2026-04-05 | BATON 040: EXA PDF pipeline built. 3 new M1 maintain scripts: exa_pdf_finder.py (1,572 articles searched; 259 direct_pdf + 332 open_access + 109 pmc_fulltext + 872 landing_page), exa_pdf_downloader.py (397/558 downloaded: 215 direct + 190 AAFP), pmc_oa_downloader.py (47/95 downloaded: 14 direct OA + 33 tgz extracted). PDFs 413→868. M1 maintain 18→21. DEFERRED-G: unpaywall_scanner.py (next round). |
+| 2026-04-04 | BATON 035–039: Option B flatten complete (board_prep_intel/ is now flat project root). M1 restructured to 3-domain layout (citation_files/ + practice_questions/ + ite_exams/). 42 Q&A deliverables built (16 ITE + 26 AAFP). 14 code review defects fixed. 5 deprecated scripts deleted. Schema docs corrected (articles.md tier column rewritten — VC_fail/pass/local_lite/right_click; row count 1985; source_type refreshed). REPO_MAP.md added. Git: remote renamed board_prep_intel. M1 build 6py, maintain 18py, M2 75py, M3 13py. |
 | 2026-04-01 | BATON 030–031: ite_analyzer_v3.py built + smoke tested (PASS). ICD-10 vec layers rebuilt. 5 bugs fixed (entry point imports, _not_in() col param, unicode, subcatAnalysis). QUESTION-DIST-001 flagged. export_aafp_ite_relationships.py run → 4 CSVs in readable_db_files/. word_doc_defaults.py committed to auto-memory. build_aafp_qa.py + build_aafp_qa_file1.py built → 2 AAFP Q&A docs delivered. M3: 5→9 Python. |
 | 2026-03-29 | BATON 023–024: Blueprint labeling complete (1,629/1,629). blueprint_api_classifier.py (Sonnet, 70.4% Gold Standard accuracy) wrote 1,234 pseudo-labels for 2018-2023. blueprint_emergent_pass.py: 16 Acute→Emergent flips. Pre-2024 Emergent at 11.7% (vs 20% target) — accepted as known limitation (blueprint targets are 2024+ design spec). aafp_question_icd10.relevance normalized (74→3 values). unified_keyword_extractor.py: TF-IDF unigrams for all 1,629 ITE + 1,221 AAFP questions. aafp_vs_ite_comparison_dashboard.html built + patched. M2: 55→57 Python. |
 | 2026-03-29 | BATON 021–022: AAFP full enrichment pipeline complete. aafp_merge_keywords.py: all_keywords 1221/1221. aafp_assign_body_system.py v2: 3-tier classifier, all 16 body systems 1221/1221, body_system_method audit trail. aafp_enrich_concept_tags.py: concept_tags + subcategory 1221/1221 (Haiku 4.5); aafp_question_icd10 ~4,065 rows (98.9% coverage). aafp_model_comparison.py: Haiku vs Sonnet 10-Q eval (Haiku selected, ~3× cost savings). M2: 51→55 Python. |

@@ -4,7 +4,7 @@
 **Description**: One row per ABFM ITE exam question. Contains full question content (stem, choices, answer, explanation) plus preprocessed keyword and concept tag fields.
 **Primary Key**: `qid` (TEXT)
 **Row Count**: 1,629
-**Update Frequency**: Rebuilt via `rebuild_ite_db_v2.py`. Concept tags populated by `preprocess_keywords_v2.py`.
+**Update Frequency**: Rebuilt via `rebuild_ite_db_v2.py`. Concept tags populated by `preprocess_concept_tags.py` (M1/scripts/maintain/).
 
 ## Columns
 
@@ -13,7 +13,6 @@
 | `qid` | TEXT | Question ID: `QID-2020-0001` | PK. Per-year numbering (resets each year). |
 | `exam_year` | INTEGER | Exam year: 2018–2025 | 8 years of ITE data. |
 | `body_system` | TEXT | ABFM body system category | e.g., Cardiovascular, Respiratory, Musculoskeletal. |
-| `subcategory` | TEXT | Clinical subcategory | e.g., Pharmacology, Prevention, Diagnosis. |
 | `blueprint` | TEXT | ABFM blueprint category | 1,629/1,629 (100%) populated. Gold Standard for 2024-2025; v2 classifier (batched, few-shot) for 2020-2023; v1 classifier for 2018-2019. Values: "Acute Care and Diagnosis", "Chronic Care Management", "Emergent and Urgent Care", "Foundations of Care", "Preventive Care". |
 | `question_text` | TEXT | Full question stem | Can be long (500+ chars). Includes clinical vignette. |
 | `choices` | TEXT | JSON array of answer choices | `[{"letter": "A", "text": "..."}, ...]`. Usually 4-5 choices. |

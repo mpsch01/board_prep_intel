@@ -19,15 +19,21 @@ from datetime import datetime
 sys.stdout.reconfigure(encoding='utf-8')
 
 # ── Paths (relative to script location — no hardcoded Windows paths) ─────
-BASE_DIR     = Path(__file__).resolve().parent.parent
-DB_PATH      = BASE_DIR.parent.parent / "00_database" / "db" / "ite_intelligence.db"
-ROOT         = BASE_DIR.parent.parent
-PDF_DIR      = ROOT / "clinical_guidelines" / "01_pdf_guideline_library" / "pdf_codon"
-OUT_JSON     = BASE_DIR / "crosswalk_index.json"
-OUT_REPORT   = BASE_DIR / "crosswalk_report.txt"
+BASE_DIR     = Path(__file__).resolve().parent.parent          # M1/scripts/
+ROOT         = BASE_DIR.parent.parent                          # 00_#PROJECT_OVERHAUL/
+DB_PATH      = ROOT / "00_database" / "db" / "ite_intelligence.db"
+CITATION_ITE = ROOT / "01_module.1_warehouse" / "citation_files" / "ITE"
+TIER_DIRS    = ["VC_fail", "local_lite", "VC_pass", "right_click"]
+OUT_JSON     = ROOT / "00_database" / "crosswalk" / "crosswalk_index.json"
+OUT_REPORT   = ROOT / "00_database" / "crosswalk" / "crosswalk_report.txt"
 
 # ── Build crosswalk ──────────────────────────────────────────────────────
-pdfs = sorted(f for f in PDF_DIR.iterdir() if f.suffix.lower() == '.pdf')
+pdfs = sorted(
+    f
+    for tier in TIER_DIRS
+    for f in ((CITATION_ITE / tier).iterdir() if (CITATION_ITE / tier).exists() else [])
+    if f.suffix.lower() == '.pdf'
+)
 conn = sqlite3.connect(DB_PATH)
 cur  = conn.cursor()
 

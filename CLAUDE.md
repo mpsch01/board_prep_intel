@@ -48,32 +48,33 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_037_20260404_practice_questions_deliverables_m1_restructure.md` |
+| Active BATON | `BATON_active_045_20260406_ite_report_builder_overhaul.md` — ITE report builder overhaul; ite_analyzer_v3.py AAFP quota fixed, no_match cleanup; ite_report_builder_v2.js major overhaul |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
 | aafp_questions.blueprint | 1,221/1,221 (100%) — batch API, same rubric as ITE v2 — complete 2026-03-30 |
 | aafp_questions.concept_tags | 1,221/1,221 (100%) |
-| article_icd10 | 4,137 rows (+282 AAFP backfill — 2026-03-31) |
-| question_icd10 | 5,284 rows — 1,512/1,629 ITE questions (92.8%) |
+| article_icd10 | 4,020 rows — rebuilt with vec (2026-04-05) |
+| question_icd10 | 5,218 rows — 1,512/1,629 ITE questions (92.8%) — 66 no_match rows deleted |
 | aafp_question_icd10 | 4,753 rows — relevance normalized, related cap applied |
 | pubmed_pmid_cache | 344 rows — Layer 2 seed (citation_id → PMID) |
 | icd10_vec | 2,219 rows — OpenAI text-embedding-3-small (1536d) |
-| article_icd10_vec | 1,674 rows — ✅ rebuilt 2026-04-01 |
-| question_icd10_vec | 2,733 rows — ✅ rebuilt 2026-04-01 |
-| clinical_pathways | 4,020 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 |
-| PDFs (citation tiers) | ~414 across 4 tiers in citation_files/ITE/ (VC_fail ~156; 37 AAFP articles still awaiting manual PDF download) |
+| article_icd10_vec | 1,757 rows — ✅ rebuilt 2026-04-05 |
+| question_icd10_vec | 2,747 rows — ✅ rebuilt 2026-04-05 |
+| clinical_pathways | 3,971 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 — 49 no_match rows deleted |
+| PDFs (ITE citation tiers) | 966 across 4 tiers in citation_files/ITE/ (VC_fail:623, VC_pass:168, local_lite:117, right_click:58) — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
+| PDFs (AAFP) | 15 in citation_files/AAFP/ — recovered 2026-04-05 |
 | PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
-| M1 scripts | 9 build (3 deprecated) + 17 maintain (2 deprecated) + aafp_brq_scraper.py at scripts/ root — originals pending Windows delete |
-| M2 scripts | ~64 Python + 6 JS + 1 JSON + 4 Windows (+extract_ite_year.py +classify_ite_year.py) |
-| M3 scripts | 14 Python + 2 JS + 2 JSON config (+build_aafp_qa_deliverables.py +build_ite_qa_deliverables.py) |
+| M1 scripts | 6 build + 25 maintain + aafp_brq_scraper.py at scripts/ root |
+| M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
+| M3 scripts | 13 Python + 2 JS + 2 JSON config (M3 JS count corrected: 2, not 147) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → GIT-COMMITTED (sweep + mapping + ITE pipeline + AAFP Q&A deliverables) |
-| GitHub remote | `https://github.com/mpsch01/project-overhaul` (private) |
+| Git branch | `main`, latest → GIT-COMMITTED (PDF recovery + session housekeeping + skill creation) |
+| GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
 → Full state: `.auto-memory/project_overhaul_state.md` and `.auto-memory/project_current_db_state.md`
@@ -103,6 +104,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 6. **BATON first.** Read the active BATON before any work. It has deferred flags and current state.
 7. **QC after every integration.** Schema-level column-by-column population comparison, old cohort vs new.
 8. **Git via Desktop Commander.** Claude can now run git commits via Desktop Commander Python subprocess (helper: `claude_knowledge/git_runner.py`). Cannot `rm` NTFS files — deletions still require Windows Explorer/terminal.
+11. **`shutil.rmtree` is BANNED.** Use explicit file-by-file deletion or PowerShell Remove-Item. shutil.rmtree bypasses Recycle Bin and is irreversible — learned from fix_ghost.py incident 2026-04-05.
 9. **Strategy 0 in every enricher.** Codon parse is always the first matching strategy.
 10. **Schemas before scripts.** SQL `CREATE TABLE` defined before build scripts are written.
 
@@ -110,11 +112,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 037, 2026-04-04)
-1. **Windows cleanup** — Delete 5 deprecated script originals from `M1/build/` and `M1/maintain/` (see BATON 035 for list)
-2. **`extract_ite_year.py` filename fix** — update expected filenames from `{YEAR}_ITE_Questions.pdf` → `{YEAR}_MC.pdf` and `{YEAR}_ITE_Critique.pdf` → `{YEAR}_critique.pdf` (matches ite_exams/ archive)
-3. **DEFERRED-A** — 37 manual PDFs remaining (34 subscription + 3 Cochrane) → download → codon rename → `citation_files/ITE/VC_fail/`
-4. **`backfill_new_article_metadata.py --art-id-min 1938`** — run once PDF batch assembled
-5. **DEFERRED-B** — `update_citation_trends.py` after backfill complete
-6. **Option B** — Flatten `00_#PROJECT_OVERHAUL/` → `claude_knowledge/` root (path-safe per `repo_pre_severance.md`)
-7. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`)
+## Next Steps (as of BATON 045, 2026-04-06)
+1. **Resume normal roadmap** — exa-research-search Phase 2 + clinical pathways pipeline
+2. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`; NCBI API key set)
+3. **DEFERRED-RECO-CLEANUP** — Clean empty RECO folders (user housekeeping task)
+4. **DEFERRED-AAFP-PAYWALL** — 3 articles (ART-1959, ART-1972, ART-1967) via institutional/interlibrary loan
+5. **When resident-facing report needed** — re-enable full question rendering in ite_report_builder_v2.js (currently compact reference table mode)

@@ -1,0 +1,7 @@
+VC_fail=29
+VC_pass=169
+local_lite=0
+right_click=0
+TOTAL=198
+scripts_exists=True
+ite_exams_pdf_count=16

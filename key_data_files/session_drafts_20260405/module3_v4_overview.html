@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 3 — Current State & V4 Vision</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #F0F4F8; color: #1A2E3B; }
+
+  .header { background: #0D2137; color: white; padding: 36px 48px; }
+  .header h1 { font-size: 28px; font-weight: 700; }
+  .header p  { font-size: 15px; color: #7EB8C5; margin-top: 6px; }
+
+  .content { max-width: 1200px; margin: 0 auto; padding: 40px 32px; }
+
+  h2 { font-size: 20px; font-weight: 700; color: #0D2137; margin-bottom: 20px; }
+  h3 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #4A6070; margin-bottom: 14px; }
+
+  /* ── Section label ── */
+  .section { margin-bottom: 48px; }
+  .section-label {
+    display: inline-block;
+    background: #028090;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    border-radius: 3px;
+    margin-bottom: 14px;
+  }
+  .section-label.future { background: #6D28D9; }
+  .section-label.gap    { background: #B45309; }
+
+  /* ── Pipeline flow ── */
+  .pipeline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: white;
+    border-radius: 10px;
+    padding: 28px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .pipe-step {
+    flex: 1; min-width: 130px;
+    background: #F0F4F8;
+    border-radius: 8px;
+    padding: 16px 14px;
+    text-align: center;
+  }
+  .pipe-step .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #4A6070; margin-bottom: 6px; }
+  .pipe-step .name  { font-size: 14px; font-weight: 700; color: #0D2137; }
+  .pipe-step .sub   { font-size: 11px; color: #6B8899; margin-top: 4px; }
+  .pipe-arrow { font-size: 20px; color: #028090; padding: 0 6px; flex-shrink: 0; }
+
+  /* ── Stat grid ── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    border-left: 4px solid #028090;
+  }
+  .stat-card .num  { font-size: 32px; font-weight: 800; color: #028090; line-height: 1; }
+  .stat-card .lbl  { font-size: 13px; font-weight: 700; color: #0D2137; margin-top: 6px; }
+  .stat-card .desc { font-size: 11.5px; color: #6B8899; margin-top: 4px; line-height: 1.4; }
+  .stat-card.blue  { border-color: #0369A1; } .stat-card.blue .num  { color: #0369A1; }
+  .stat-card.purple{ border-color: #6D28D9; } .stat-card.purple .num{ color: #6D28D9; }
+  .stat-card.amber { border-color: #B45309; } .stat-card.amber .num { color: #B45309; }
+
+  /* ── Output cards ── */
+  .output-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .output-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  }
+  .output-card .title { font-size: 14px; font-weight: 700; color: #0D2137; margin-bottom: 8px; }
+  .output-card .items { list-style: none; }
+  .output-card .items li { font-size: 12.5px; color: #4A6070; padding: 4px 0; border-bottom: 1px solid #F0F4F8; display: flex; align-items: flex-start; gap: 8px; }
+  .output-card .items li:last-child { border: none; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+  .dot-teal   { background: #028090; }
+  .dot-blue   { background: #0369A1; }
+  .dot-purple { background: #6D28D9; }
+  .dot-amber  { background: #B45309; }
+  .dot-green  { background: #16A34A; }
+  .dot-gray   { background: #94A3B8; }
+
+  /* ── Gap table ── */
+  .gap-table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    margin-bottom: 16px;
+  }
+  .gap-table table { width: 100%; border-collapse: collapse; }
+  .gap-table th { background: #F8FAFC; font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #4A6070; padding: 12px 16px; text-align: left; border-bottom: 2px solid #E2E8F0; }
+  .gap-table td { font-size: 13px; padding: 12px 16px; border-bottom: 1px solid #F0F4F8; vertical-align: top; }
+  .gap-table tr:last-child td { border: none; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+  .badge-red    { background: #FEE2E2; color: #B91C1C; }
+  .badge-amber  { background: #FEF3C7; color: #92400E; }
+  .badge-green  { background: #DCFCE7; color: #166534; }
+
+  /* ── V4 ideas ── */
+  .idea-list { display: flex; flex-direction: column; gap: 14px; }
+  .idea-card {
+    background: white;
+    border-radius: 10px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    gap: 16px;
+    align-items: start;
+  }
+  .idea-num {
+    width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 800; flex-shrink: 0;
+  }
+  .idea-num.n1 { background: #E0F6FA; color: #028090; }
+  .idea-num.n2 { background: #DBEAFE; color: #0369A1; }
+  .idea-num.n3 { background: #EDE9FE; color: #6D28D9; }
+  .idea-num.n4 { background: #FEF3C7; color: #B45309; }
+  .idea-num.n5 { background: #DCFCE7; color: #16A34A; }
+  .idea-body .title { font-size: 15px; font-weight: 700; color: #0D2137; margin-bottom: 5px; }
+  .idea-body .desc  { font-size: 13px; color: #4A6070; line-height: 1.5; }
+  .idea-body .detail { font-size: 12px; color: #6B8899; margin-top: 8px; font-style: italic; }
+  .effort-badge { align-self: center; white-space: nowrap; }
+
+  /* ── Residents ── */
+  .resident-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .resident-card {
+    background: white; border-radius: 10px; padding: 22px 22px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    border-top: 4px solid #028090;
+  }
+  .resident-card.r2 { border-color: #6D28D9; }
+  .resident-card .name { font-size: 16px; font-weight: 700; color: #0D2137; }
+  .resident-card .score { font-size: 32px; font-weight: 800; margin: 10px 0 4px; }
+  .resident-card .score span { font-size: 14px; font-weight: 400; color: #4A6070; }
+  .resident-card .meta { font-size: 12px; color: #6B8899; margin-bottom: 14px; }
+  .resident-card .priorities { font-size: 12.5px; }
+  .resident-card .priorities li { padding: 5px 0; border-bottom: 1px solid #F0F4F8; color: #4A6070; list-style: none; display: flex; justify-content: space-between; }
+  .resident-card .priorities li:last-child { border: none; }
+  .pct-low  { color: #B91C1C; font-weight: 700; }
+  .pct-mid  { color: #B45309; font-weight: 700; }
+  .pct-ok   { color: #16A34A; font-weight: 700; }
+
+  .ver-badge { background: #FEF3C7; color: #92400E; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; display: inline-block; margin-left: 8px; }
+  .ver-badge.new { background: #DCFCE7; color: #166534; }
+
+  .divider { height: 1px; background: #E2E8F0; margin: 40px 0; }
+
+  .note { background: #FFF8EC; border-left: 4px solid #F59E0B; border-radius: 0 8px 8px 0; padding: 14px 18px; font-size: 13px; color: #78350F; line-height: 1.5; margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Module 3 — Current State &amp; V4 Vision</h1>
+  <p>ITE Intelligence · Score Analysis · 2026-04-05</p>
+</div>
+
+<div class="content">
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 1: DB ASSETS                            -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">What We're Working With</div>
+    <h2>Matured Database — Ready for V3 Analysis</h2>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="num">2,850</div>
+        <div class="lbl">Practice Questions</div>
+        <div class="desc">1,629 ITE (2018–2025) + 1,221 AAFP BRQ — both banks fully tagged</div>
+      </div>
+      <div class="stat-card blue">
+        <div class="num">9,037</div>
+        <div class="lbl">ICD-10 Tag Rows</div>
+        <div class="desc">5,284 question_icd10 + 4,753 aafp_question_icd10 — 92.8% coverage on ITE</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="num">4,020</div>
+        <div class="lbl">Clinical Pathway Rows</div>
+        <div class="desc">Articles mapped by role: screening → diagnosis → first-line → monitoring</div>
+      </div>
+      <div class="stat-card amber">
+        <div class="num">1,985</div>
+        <div class="lbl">Linked Articles</div>
+        <div class="desc">2,470 ITE xref pairs + 864 AAFP xref pairs — tiered by citation frequency</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 2: CURRENT PIPELINE                     -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">Current</div>
+    <h2>Analysis Pipeline — V3 Engine</h2>
+
+    <div class="pipeline">
+      <div class="pipe-step">
+        <div class="label">Input</div>
+        <div class="name">2 PDFs</div>
+        <div class="sub">Blueprint + Body System score reports</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="label">Parse</div>
+        <div class="name">ite_parser.py</div>
+        <div class="sub">Color-coded item extraction</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="label">Analyze</div>
+        <div class="name">ite_analyzer_v3.py</div>
+        <div class="sub">9 layers · both banks · ICD-10 + pathways</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="label">Build</div>
+        <div class="name">ite_report_builder_v2.js</div>
+        <div class="sub">DOCX report + practice exam</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="label">Output</div>
+        <div class="name">2 DOCX files</div>
+        <div class="sub">Analysis report + exam set</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 24px;">
+      <h3>9 Analysis Layers</h3>
+      <div class="output-grid">
+        <div class="output-card">
+          <div class="title">Performance Layers (1–3)</div>
+          <ul class="items">
+            <li><span class="dot dot-teal"></span>Blueprint × body system cross-tab</li>
+            <li><span class="dot dot-teal"></span>Easy / mid / hard miss tiers by item score</li>
+            <li><span class="dot dot-teal"></span>Concept clustering from concept_tags JSON</li>
+          </ul>
+        </div>
+        <div class="output-card">
+          <div class="title">Pattern Layers (4–6)</div>
+          <ul class="items">
+            <li><span class="dot dot-blue"></span>Spatial clustering — consecutive miss runs</li>
+            <li><span class="dot dot-blue"></span>Cross-dimensional gaps + difficulty inversion</li>
+            <li><span class="dot dot-blue"></span>Yield-weighted priority ranking</li>
+          </ul>
+        </div>
+        <div class="output-card">
+          <div class="title">Clinical Layers (7–9)</div>
+          <ul class="items">
+            <li><span class="dot dot-purple"></span>ICD-10 weakness map (direct + AAFP)</li>
+            <li><span class="dot dot-purple"></span>Pathway gap map — role coverage by code</li>
+            <li><span class="dot dot-purple"></span>Pass probability + percentile thresholds</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 3: RESIDENTS READY TO RUN               -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label gap">Stale — Ready to Rerun</div>
+    <h2>Current Resident Analyses <span class="ver-badge">V2.0 — Pre-AAFP, Pre-Pathways</span></h2>
+
+    <div class="resident-grid">
+      <div class="resident-card">
+        <div class="name">Oceana Hopkins, M.D.</div>
+        <div class="meta">ABFM #210357 · St. Luke's · 2025</div>
+        <div class="score" style="color:#B45309">65.4% <span>correct (125/191)</span></div>
+        <div class="priorities">
+          <li><span>Acute Care</span> <span class="pct-low">55.9%</span></li>
+          <li><span>Injuries / Musculoskeletal</span> <span class="pct-low">54.5%</span></li>
+          <li><span>Emergent / Urgent</span> <span class="pct-mid">61.1%</span></li>
+        </div>
+      </div>
+      <div class="resident-card r2">
+        <div class="name">Arghyadeep Sarkar, D.O.</div>
+        <div class="meta">ABFM #221051 · St. Luke's · 2025</div>
+        <div class="score" style="color:#B91C1C">57.1% <span>correct (109/191)</span></div>
+        <div class="priorities">
+          <li><span>Acute Care</span> <span class="pct-low">57.4%</span></li>
+          <li><span>Chronic Care</span> <span class="pct-low">51.0%</span></li>
+          <li><span>Injuries / Musculoskeletal</span> <span class="pct-low">45.5%</span></li>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      Both analyses are <strong>V2.0</strong> — run before the AAFP question bank was integrated, before ICD-10 tagging was complete, and before clinical pathways were built. Rerunning now gives V3 output: 9 layers, both question banks, ICD-10 weakness map, clinical pathway gaps, and 3-tier question matching. Materially richer.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 4: GAPS IN CURRENT OUTPUT               -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label gap">Gaps</div>
+    <h2>What the Current Output Is Missing</h2>
+
+    <div class="gap-table">
+      <table>
+        <thead><tr><th>Gap</th><th>Impact</th><th>Effort to Fix</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>No longitudinal memory</strong><br><span style="font-size:12px;color:#6B8899">Each analysis is a snapshot — no July→October→January comparison</span></td>
+            <td>Can't show improvement or regression over time — the whole adaptive curriculum concept depends on this</td>
+            <td><span class="badge badge-green">Low</span></td>
+          </tr>
+          <tr>
+            <td><strong>Clinical pathways not surfaced</strong><br><span style="font-size:12px;color:#6B8899">4,020 pathway rows in DB, barely visible in report</span></td>
+            <td>Resident gets a list of articles — not a clinical roadmap (screening → diagnosis → treatment → monitoring)</td>
+            <td><span class="badge badge-green">Low</span></td>
+          </tr>
+          <tr>
+            <td><strong>No one-page summary</strong><br><span style="font-size:12px;color:#6B8899">Full report is 20+ pages — most residents don't read it all</span></td>
+            <td>The most actionable content is buried. Residents need a one-pager they'll actually use</td>
+            <td><span class="badge badge-green">Low</span></td>
+          </tr>
+          <tr>
+            <td><strong>No video course bridge</strong><br><span style="font-size:12px;color:#6B8899">Analysis tells you what's weak — doesn't point to which VC sessions cover it</span></td>
+            <td>Missing the direct connection between score gaps and the 48-session curriculum</td>
+            <td><span class="badge badge-amber">Medium</span></td>
+          </tr>
+          <tr>
+            <td><strong>DOCX-only output</strong><br><span style="font-size:12px;color:#6B8899">Cohort view and per-resident summary are static Word docs</span></td>
+            <td>No filterable, interactive view for faculty. No easy year-over-year comparison across the cohort</td>
+            <td><span class="badge badge-amber">Medium</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 5: V4 IDEAS                             -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label future">V4 Ideas</div>
+    <h2>Where Module 3 Could Go</h2>
+
+    <div class="idea-list">
+
+      <div class="idea-card">
+        <div class="idea-num n1">1</div>
+        <div class="idea-body">
+          <div class="title">Longitudinal Resident Record</div>
+          <div class="desc">A per-resident JSON profile that accumulates each checkpoint's analysis. Run it in July, save it. Run it in October — the output shows delta: what improved, what's new, what's still stuck. This is the infrastructure everything else depends on.</div>
+          <div class="detail">Implementation: resident_profiles/ folder + profile schema (resident_id, checkpoints[], improvement_vectors). Small addition, massive value.</div>
+        </div>
+        <div class="effort-badge"><span class="badge badge-green">Low effort · Highest value</span></div>
+      </div>
+
+      <div class="idea-card">
+        <div class="idea-num n2">2</div>
+        <div class="idea-body">
+          <div class="title">One-Page Action Summary</div>
+          <div class="desc">Alongside the full DOCX, generate a clean single-page output: overall score, 3 priority weak areas, 5 must-read articles, 10 practice questions. Something a resident can tape to a wall and actually use. No jargon, no 20-page document.</div>
+          <div class="detail">Implementation: new template in ite_report_builder — same data, different slice. Or a standalone Python script that reads analysis_v2.json and outputs a 1-page PDF/DOCX.</div>
+        </div>
+        <div class="effort-badge"><span class="badge badge-green">Low effort · High value</span></div>
+      </div>
+
+      <div class="idea-card">
+        <div class="idea-num n3">3</div>
+        <div class="idea-body">
+          <div class="title">Clinical Pathway Output</div>
+          <div class="desc">Surface the Layer 3 data properly. For each top weak area, show the clinical pathway: what to screen for → how to diagnose → first-line treatment → second-line → monitoring. Articles organized by clinical role, not just citation count. Completely different reading experience.</div>
+          <div class="detail">Data is all there — 4,020 clinical_pathways rows. Just needs a new output section in the report builder.</div>
+        </div>
+        <div class="effort-badge"><span class="badge badge-green">Low effort · High value</span></div>
+      </div>
+
+      <div class="idea-card">
+        <div class="idea-num n4">4</div>
+        <div class="idea-body">
+          <div class="title">Video Course Bridge</div>
+          <div class="desc">Build a mapping table: body system + blueprint category → VC session numbers. When a resident is weak in cardiovascular, the analysis says "Sessions 3, 7, 12 cover this — watch these first." The direct connection between score gaps and the structured curriculum that doesn't exist yet.</div>
+          <div class="detail">Requires: vc_session_map table (48 rows: session_number, title, body_system[], blueprint_category[]). Could be built manually from the video course outline — one-time data entry.</div>
+        </div>
+        <div class="effort-badge"><span class="badge badge-amber">Medium effort · High value</span></div>
+      </div>
+
+      <div class="idea-card">
+        <div class="idea-num n5">5</div>
+        <div class="idea-body">
+          <div class="title">Cohort HTML Dashboard</div>
+          <div class="desc">Replace the static cohort DOCX with an interactive self-contained HTML file. Filter by body system, sort by resident, see year-over-year trends across the class. Faculty can open it in any browser — no software needed. Color-coded heatmap of the whole cohort at a glance.</div>
+          <div class="detail">Implementation: data:interactive-dashboard-builder skill + existing analysis_v2.json files as source. Could be generated automatically after each cohort run.</div>
+        </div>
+        <div class="effort-badge"><span class="badge badge-amber">Medium effort · High value</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <p style="font-size:12px;color:#94A3B8;text-align:center;padding-bottom:32px;">ITE Intelligence · Module 3 Review · 2026-04-05</p>
+
+</div>
+</body>
+</html>

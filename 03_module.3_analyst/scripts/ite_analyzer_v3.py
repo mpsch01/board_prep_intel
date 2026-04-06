@@ -60,6 +60,11 @@ DIFFICULTY_TIERS = {
 # Tier weights for practice question relevance scoring
 TIER_WEIGHT = {1: 3.0, 2: 2.0, 3: 1.0}
 
+# Minimum AAFP BRQ questions guaranteed in every practice set.
+# ITE 2025 recency bonus (+0.2) would otherwise shut AAFP out entirely.
+# Set to 0 to disable the quota.
+AAFP_MIN_QUESTIONS = 4
+
 # Pathway role → plain-English gap description
 PATHWAY_ROLE_INTERP = {
     "first_line":            "treatment selection gap",
@@ -213,7 +218,7 @@ def basic_performance(items: list) -> dict:
 # LAYER 2: Difficulty Profiling
 # ---------------------------------------------------------------------------
 
-def difficulty_profile(items: list) -> dict:
+def difficulty_profile(items: list, qid_map: dict = None) -> dict:
     missed = [i for i in items if not i["correct"]]
 
     def _tier(score):
@@ -240,6 +245,7 @@ def difficulty_profile(items: list) -> dict:
         "by_blueprint":   {k: dict(v) for k, v in by_blueprint.items()},
         "by_bodysystem":  {k: dict(v) for k, v in by_bodysystem.items()},
         "easy_misses":    [{"item": i["item"], "score": i["score"],
+                            "qid": qid_map.get(i["item"]) if qid_map else None,
                             "blueprint": i.get("blueprint"),
                             "body_system": i.get("body_system")} for i in easy_misses],
         "easy_miss_count":  len(easy_misses),
@@ -266,6 +272,11 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
     guidelines = Counter()
     items_matched = 0
 
+    # QID tracking per concept — for report appendix/fingerprint reference
+    dx_qids    = defaultdict(list)
+    drug_qids  = defaultdict(list)
+    guide_qids = defaultdict(list)
+
     if missed_qids and db_path:
         db = sqlite3.connect(db_path)
         db.row_factory = sqlite3.Row
@@ -278,16 +289,20 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
                 f"SELECT qid, concept_tags FROM questions WHERE qid IN ({ph})", batch
             ).fetchall()
             for row in rows:
-                raw = row["concept_tags"]
+                raw  = row["concept_tags"]
+                qid  = row["qid"]
                 if raw:
                     try:
                         tags = json.loads(raw)
                         for d in tags.get("diagnoses", []):
                             diagnoses[d] += 1
+                            dx_qids[d].append(qid)
                         for d in tags.get("drugs", []):
                             drugs[d] += 1
+                            drug_qids[d].append(qid)
                         for g in tags.get("guidelines", []):
                             guidelines[g] += 1
+                            guide_qids[g].append(qid)
                         items_matched += 1
                     except (json.JSONDecodeError, TypeError):
                         pass
@@ -303,6 +318,12 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
         "top_guidelines":    dict(guidelines.most_common(10)),
         "recurring_diagnoses": dict(sorted(recurring_diagnoses.items(), key=lambda x: x[1], reverse=True)),
         "recurring_drugs":   dict(sorted(recurring_drugs.items(), key=lambda x: x[1], reverse=True)),
+        # QID maps — lets the report builder show which question IDs drove each concept
+        "concept_qid_map": {
+            "diagnoses":  dict(dx_qids),
+            "drugs":      dict(drug_qids),
+            "guidelines": dict(guide_qids),
+        },
         "items_matched":     items_matched,
         "items_queried":     len(missed_qids),
         "coverage_pct":      round(items_matched / len(missed_qids) * 100, 1) if missed_qids else 0,
@@ -523,6 +544,7 @@ def icd10_weakness_map(items: list, qid_map: dict, db_path: str) -> dict:
                    ON SUBSTR(qi.icd10_code, 1, 3) = ir.parent_code
             WHERE qi.qid IN ({ph})
               AND qi.relevance IN ('primary', 'secondary')
+              AND qi.icd10_code != 'no_match'
         """, batch).fetchall()
 
         for row in rows:
@@ -1119,34 +1141,48 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
 
     db.close()
 
-    # Global rank by relevance_score
-    ranked = sorted(all_candidates.values(),
-                    key=lambda x: x["relevance_score"], reverse=True)
+    # Separate candidates by bank — each bank sorted by relevance_score desc
+    ite_ranked  = sorted([c for c in all_candidates.values() if c["source_bank"] == "ITE"],
+                         key=lambda x: x["relevance_score"], reverse=True)
+    aafp_ranked = sorted([c for c in all_candidates.values() if c["source_bank"] == "AAFP"],
+                         key=lambda x: x["relevance_score"], reverse=True)
 
-    # Dimension diversity cap — prevent a single high-priority dimension
-    # (e.g. Acute Care with priority_score >> others) from monopolizing all
-    # slots.  Cap = ceil(target / n_active_dims), floor of 2.
-    # Questions exceeding the cap fall into overflow and fill remaining slots.
-    n_active  = max(len(active), 1)
-    dim_cap   = max(2, -(-target_count // n_active))   # ceiling division
-    dim_counts: dict = {}
-    diverse: list    = []
-    overflow: list   = []
-    for cand in ranked:
-        t = cand.get("targeting", "__unset__")
-        if dim_counts.get(t, 0) < dim_cap:
-            diverse.append(cand)
-            dim_counts[t] = dim_counts.get(t, 0) + 1
-        else:
-            overflow.append(cand)
-        if len(diverse) >= target_count:
-            break
-    # Fill remaining slots from overflow (already sorted by relevance_score)
-    for cand in overflow:
-        if len(diverse) >= target_count:
-            break
-        diverse.append(cand)
-    return diverse[:target_count]
+    # Dimension diversity cap — ceil(target / n_active_dims), floor of 2.
+    n_active = max(len(active), 1)
+    dim_cap  = max(2, -(-target_count // n_active))   # ceiling division
+
+    def _select_with_dim_cap(pool: list, slots: int, cap: int) -> list:
+        """Fill up to `slots` questions from `pool`, max `cap` per targeting dim."""
+        counts: dict   = {}
+        selected: list = []
+        overflow: list = []
+        for cand in pool:
+            t = cand.get("targeting", "__unset__")
+            if counts.get(t, 0) < cap:
+                selected.append(cand)
+                counts[t] = counts.get(t, 0) + 1
+            else:
+                overflow.append(cand)
+            if len(selected) >= slots:
+                break
+        for cand in overflow:
+            if len(selected) >= slots:
+                break
+            selected.append(cand)
+        return selected[:slots]
+
+    # AAFP quota — ITE 2025 recency bonus (+0.2) would shut AAFP out entirely
+    # without an explicit reservation.  Reserve AAFP_MIN_QUESTIONS slots first,
+    # then fill the rest from ITE.
+    aafp_quota    = min(AAFP_MIN_QUESTIONS, len(aafp_ranked))
+    aafp_selected = _select_with_dim_cap(aafp_ranked, aafp_quota, dim_cap)
+    ite_slots     = target_count - len(aafp_selected)
+    ite_selected  = _select_with_dim_cap(ite_ranked,  ite_slots,  dim_cap)
+
+    # Merge and re-sort by relevance so the output reads naturally
+    combined = aafp_selected + ite_selected
+    combined.sort(key=lambda x: x["relevance_score"], reverse=True)
+    return combined[:target_count]
 
 
 # ---------------------------------------------------------------------------
@@ -1208,6 +1244,87 @@ def match_top_articles(perf: dict, db_path: str, count: int = 5) -> list:
 # MASTER: analyze_v3
 # ---------------------------------------------------------------------------
 
+def fetch_missed_items_detail(items: list, qid_map: dict, db_path: str) -> list:
+    """
+    Pull full question detail for every missed item from the ITE questions table.
+    Returned list is ordered by item number and saved as missed_items_detail in
+    the analysis JSON so the report builder can render an appendix.
+
+    Fields per entry:
+        item_number, qid, blueprint, body_system, exam_year,
+        question_text, choices, correct_letter, correct_text, explanation, reference
+    """
+    if not db_path:
+        return []
+
+    missed = sorted(
+        [i for i in items if not i["correct"]],
+        key=lambda x: x["item"]
+    )
+    if not missed:
+        return []
+
+    missed_qids = [qid_map[i["item"]] for i in missed if i["item"] in qid_map]
+    if not missed_qids:
+        return []
+
+    db = sqlite3.connect(db_path)
+    db.row_factory = sqlite3.Row
+    ph  = ",".join(["?"] * len(missed_qids))
+    rows = db.execute(f"""
+        SELECT qid, blueprint, body_system, exam_year,
+               question_text, choices, correct_letter, correct_text,
+               explanation, reference
+        FROM questions
+        WHERE qid IN ({ph})
+        ORDER BY exam_year, qid
+    """, missed_qids).fetchall()
+    db.close()
+
+    # Build a lookup so we can attach item_number
+    qid_to_row = {row["qid"]: dict(row) for row in rows}
+
+    result = []
+    for i in missed:
+        item_num = i["item"]
+        qid = qid_map.get(item_num)
+        if not qid or qid not in qid_to_row:
+            # QID not found in DB (deleted item or year mismatch) — include stub
+            result.append({
+                "item_number":   item_num,
+                "qid":           qid or "unknown",
+                "blueprint":     i.get("blueprint"),
+                "body_system":   i.get("body_system"),
+                "exam_year":     None,
+                "question_text": None,
+                "choices":       None,
+                "correct_letter": None,
+                "correct_text":  None,
+                "explanation":   None,
+                "reference":     None,
+                "db_found":      False,
+            })
+            continue
+
+        row = qid_to_row[qid]
+        result.append({
+            "item_number":    item_num,
+            "qid":            qid,
+            "blueprint":      row.get("blueprint"),
+            "body_system":    row.get("body_system"),
+            "exam_year":      row.get("exam_year"),
+            "question_text":  row.get("question_text"),
+            "choices":        row.get("choices"),
+            "correct_letter": row.get("correct_letter"),
+            "correct_text":   row.get("correct_text"),
+            "explanation":    row.get("explanation"),
+            "reference":      row.get("reference"),
+            "db_found":       True,
+        })
+
+    return result
+
+
 def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
                pgy_level: str = "All", question_count: int = 20) -> dict:
     """
@@ -1228,7 +1345,7 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
     # --- Core analysis layers ---
     perf        = basic_performance(items)
     thresholds  = compute_thresholds(perf, ref, pgy_level)
-    difficulty  = difficulty_profile(items)
+    difficulty  = difficulty_profile(items, qid_map)
     concepts    = concept_clustering(items, qid_map, db_path)
     clustering  = spatial_clustering(items)
     patterns    = cross_dimensional_patterns(items, perf)
@@ -1239,9 +1356,12 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
     pathway_map = pathway_gap_map(icd10_map, db_path)
 
     # --- Practice questions + top articles ---
-    practice_qs = match_practice_questions_v3(perf, priorities, qid_map,
-                                               items, db_path, question_count)
+    practice_qs  = match_practice_questions_v3(perf, priorities, qid_map,
+                                                items, db_path, question_count)
     top_articles = match_top_articles(perf, db_path)
+
+    # --- Missed item reference (for report appendix) ---
+    missed_detail = fetch_missed_items_detail(items, qid_map, db_path)
 
     return {
         # Identity
@@ -1266,6 +1386,7 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
         # Output
         "practice_questions":   practice_qs,     # REBUILT (both banks, globally ranked)
         "top_articles":         top_articles,
+        "missed_items_detail":  missed_detail,   # NEW: full question data for appendix
 
         # Legacy compatibility keys (for v1 HTML report builder)
         "body_systems_available": parsed_data.get("body_systems_found", []),

@@ -58,7 +58,7 @@ BASE_DIR  = Path(__file__).resolve().parent.parent.parent
 DB_PATH   = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR   = BASE_DIR / "00_database" / "logs"
 # Default JSON dir — relative to project root, no hardcoded Windows paths
-JSON_DIR  = BASE_DIR.parent.parent / "clinical_guidelines" / "03_enriched_JSON"
+JSON_DIR  = BASE_DIR / "extracted_json"                     # override with --dir in practice
 MODEL     = "claude-sonnet-4-20250514"
 
 

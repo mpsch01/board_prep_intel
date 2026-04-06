@@ -10,7 +10,7 @@ No API calls — pure local SQL/Python over existing DB data.
 
 Usage:
   python build_topic_trends.py
-  python build_topic_trends.py --output-dir "C:\path\to\output"
+  python build_topic_trends.py --output-dir "C:\\path\\to\\output"
 
 Output:  Three CSVs in the same directory as this script (or --output-dir).
 """

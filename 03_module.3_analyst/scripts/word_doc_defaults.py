@@ -190,6 +190,46 @@ def add_body_text(doc, text, indent=0.25):
     run.font.color.rgb = RGB_DARK_TEXT
     return p
 
+def add_answer_choice(doc, letter, text, indent=0.25):
+    """
+    Single answer choice — 11pt dark text, regular color (no green).
+    letter: e.g. 'A', 'B', 'C', 'D', 'E'
+    text:   the answer option text
+    Format: "A.  Some answer text here"
+    """
+    p = doc.add_paragraph()
+    p.paragraph_format.left_indent  = Inches(indent)
+    p.paragraph_format.space_after  = Pt(2)
+    set_paragraph_format(p, widow_control=True)
+    label_run = p.add_run(f"{letter}.  ")
+    label_run.font.name      = DEFAULT_FONT
+    label_run.font.size      = Pt(FONT_BODY)
+    label_run.font.bold      = True
+    label_run.font.color.rgb = RGB_DARK_TEXT
+    text_run = p.add_run(text)
+    text_run.font.name      = DEFAULT_FONT
+    text_run.font.size      = Pt(FONT_BODY)
+    text_run.font.color.rgb = RGB_DARK_TEXT
+    return p
+
+def add_correct_answer_label(doc, letter, indent=0.25):
+    """
+    'CORRECT ANSWER: X' label — 11pt bold green (RGB 62, 141, 39).
+    Use as the first line of the explanation block, before body text.
+    letter: e.g. 'A', 'B', 'C', 'D', 'E'
+    """
+    p = doc.add_paragraph()
+    p.paragraph_format.left_indent  = Inches(indent)
+    p.paragraph_format.space_before = Pt(8)
+    p.paragraph_format.space_after  = Pt(2)
+    set_paragraph_format(p, keep_with_next=True)
+    run = p.add_run(f"CORRECT ANSWER: {letter}")
+    run.font.name      = DEFAULT_FONT
+    run.font.size      = Pt(FONT_BODY)
+    run.font.bold      = True
+    run.font.color.rgb = RGB_GREEN
+    return p
+
 def add_divider(doc):
     """Thin gray horizontal rule between sections."""
     p = doc.add_paragraph()

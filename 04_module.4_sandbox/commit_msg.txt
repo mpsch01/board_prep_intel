@@ -1,0 +1,15 @@
+Recovery complete: fix_ghost.py incident + HDD backup restore (527 PDFs)
+
+- identify_missing.py: found 313 articles not covered by download scripts
+- reconcile_reco.py: confirmed 313/313 covered by RECO HDD backup
+- reco_covered.csv / still_missing.csv / reco_summary.txt: reconciliation outputs
+- missing_articles.csv: 313-row analysis artifact
+- Moved RECO PDFs to correct citation_files/ITE/ tiers (527 total restored)
+- unpaywall_scanner.py: DOI resolution + Unpaywall OA downloader (DEFERRED-G)
+- recover_unpaywall.py: re-download from saved unpaywall_results.csv pdf_url column
+- fix_ghost.py: kept as lesson-learned artifact (shutil.rmtree path bug)
+- CLAUDE.md: BATON 042 pointer, PDF count updated, shutil.rmtree ban added
+- BATON 042 written, BATON 041 archived
+- .gitignore: added cookies/ exclusion
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>

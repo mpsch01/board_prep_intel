@@ -42,9 +42,9 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
 # ── Config ────────────────────────────────────────────────────────────────
-BASE_DIR    = Path(__file__).resolve().parent.parent
+BASE_DIR    = Path(__file__).resolve().parent.parent.parent   # 00_#PROJECT_OVERHAUL/
 DB_PATH     = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
-LOG_DIR     = BASE_DIR / "logs"
+LOG_DIR     = BASE_DIR / "00_database" / "logs"
 MODEL       = "claude-sonnet-4-20250514"
 MAX_RAW_CHARS = 120_000   # ~30K tokens; truncate raw text beyond this
 MAX_RETRIES = 2
@@ -114,7 +114,7 @@ def get_linked_questions(conn, clean_ref):
     """Pull all linked questions with full detail."""
     cur = conn.cursor()
     cur.execute("""
-        SELECT q.qid, q.exam_year, q.body_system, q.subcategory, q.blueprint,
+        SELECT q.qid, q.exam_year, q.body_system, q.blueprint,
                q.question_text, q.choices, q.correct_letter, q.correct_text,
                q.explanation, q.concept_tags, q.stem_keywords,
                q.explanation_keywords, q.all_keywords
@@ -124,7 +124,7 @@ def get_linked_questions(conn, clean_ref):
         ORDER BY q.exam_year, p.qid
     """, (clean_ref,))
     rows = cur.fetchall()
-    cols = ["qid", "exam_year", "body_system", "subcategory", "blueprint",
+    cols = ["qid", "exam_year", "body_system", "blueprint",
             "question_text", "choices", "correct_letter", "correct_text",
             "explanation", "concept_tags", "stem_keywords",
             "explanation_keywords", "all_keywords"]

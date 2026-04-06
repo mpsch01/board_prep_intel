@@ -47,6 +47,8 @@ def classify_engine(ref):
 tier_map = {}
 for folder, label in TIER_FOLDERS.items():
     path = CITATION_ITE / folder
+    if not path.exists():
+        continue
     for f in os.listdir(path):
         m = CODON_RE.search(f)
         if m: tier_map[m.group(1)] = label

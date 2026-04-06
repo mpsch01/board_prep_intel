@@ -1,0 +1,5 @@
+VC_fail=29
+VC_pass=169
+local_lite=0
+right_click=0
+TOTAL=198

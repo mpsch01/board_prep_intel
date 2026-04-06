@@ -3,8 +3,8 @@
 **Location**: `ite_intelligence.db` → `articles`
 **Description**: One row per unique clinical reference. Contains parsed metadata, tier classification, citation stats, and preprocessed filename components. All fields are populated at DB build time.
 **Primary Key**: `clean_ref` (TEXT)
-**Row Count**: 1,397
-**Update Frequency**: Rebuilt via `rebuild_ite_db_v2.py` when source data changes.
+**Row Count**: 1,985
+**Update Frequency**: Rebuilt via `rebuild_ite_db_v2.py`. New articles backfilled via `backfill_new_article_metadata.py`.
 
 ## Columns
 
@@ -19,8 +19,8 @@
 | `source_type` | TEXT | Journal/source classification | See distribution below. |
 | `categories` | TEXT | Body system categories | From tiers CSV. Comma-separated when multiple. |
 | `blueprint_cats` | TEXT | ABFM blueprint categories | Often empty. |
-| `tier` | TEXT | Must-Read / Core / Supplementary | See metrics.md for definitions. |
-| `auto_assigned` | TEXT | "Yes" or "No" | Whether tier was auto-assigned vs. manually curated. |
+| `tier` | TEXT | PDF warehouse tier | Values: `VC_fail`, `VC_pass`, `local_lite`, `right_click`. Reflects physical PDF folder placement. VC_pass/right_click = passed VC gate (session_hy_inserts_v7.json). local_lite/right_click = fully enriched (DOCX exists). Updated by `rename_tier_labels_in_db.py` (run once). |
+| `auto_assigned` | TEXT | Legacy field | Was "Yes"/"No" for old Must-Read/Core/Supplementary tier auto-assignment. Retained for schema compatibility. |
 | `citation_count` | INTEGER | Number of linked questions | 0 for orphan articles. |
 | `unique_years` | INTEGER | Distinct exam years cited | 0–6. |
 | `exam_years` | TEXT | JSON array of years | e.g., `[2020, 2022, 2024]`. Use `json_extract()`. |
@@ -28,38 +28,42 @@
 | `canonical_filename` | TEXT | Clean filename stem | `Smith_Moore_2019`. Apostrophes stripped. |
 | `codon_filename` | TEXT | Full codon filename | `Smith_Moore_2019#@#ART-0470@#@.pdf` |
 | `citation_display` | TEXT | Formatted citation for DOCX | Truncated to ~180 chars with ellipsis if needed. |
-| `extraction_status` | TEXT | Pipeline status | Mixed: 337 `extracted` (backfilled 2026-03-14), 1,060 `pending`. Tracks JSON extraction, not enrichment. |
+| `extraction_status` | TEXT | Pipeline status | 336 `extracted`, 1,649 `pending` (as of 2026-04-04). Tracks JSON extraction, not enrichment. |
 
 ## source_type Distribution
 
 | source_type | Count |
 |-------------|-------|
-| AFP | 443 |
-| Guideline/Org | 274 |
-| Other Journal | 263 |
-| Other | 131 |
-| NEJM | 71 |
-| Guideline | 38 |
-| stub | 30 |
-| JAMA | 22 |
-| Annals | 21 |
-| Pediatrics | 19 |
+| AFP | 700 |
+| Other Journal | 649 |
+| Guideline/Org | 233 |
+| NEJM | 91 |
+| JAMA | 76 |
+| Pediatrics | 48 |
+| Annals | 43 |
+| Circulation | 38 |
+| Textbook | 34 |
+| BMJ | 32 |
+| Chest | 18 |
+| Lancet | 14 |
+| Cochrane | 9 |
 
 ## tier Distribution
 
-| tier | Count |
-|------|-------|
-| Supplementary | 727 |
-| Core | 650 |
-| Must-Read | 20 |
+| tier | Count | Meaning |
+|------|-------|---------|
+| VC_fail | 1,448 | Failed VC gate — lower priority; may or may not have PDF |
+| VC_pass | 362 | Passed VC gate — awaiting full enrichment |
+| local_lite | 117 | VC_fail + fully enriched (DOCX exists) |
+| right_click | 58 | VC_pass + fully enriched (DOCX exists) — highest priority |
 
 ## Sample Queries
 
-### Top Must-Read articles by citation count
+### Top right_click articles by citation count (highest priority tier)
 ```sql
 SELECT article_id, canonical_filename, citation_count, unique_years, exam_years
 FROM articles
-WHERE tier = 'Must-Read'
+WHERE tier = 'right_click'
 ORDER BY citation_count DESC;
 ```
 

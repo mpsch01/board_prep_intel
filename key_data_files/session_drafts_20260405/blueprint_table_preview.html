@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blueprint Table Preview — Option A</title>
+<style>
+  body { font-family: Aptos, 'Segoe UI', sans-serif; background: #f4f6f8; padding: 40px; color: #1A1A2E; }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 6px; padding-left: 2px; }
+  .section-label.rubric { color: #6B7280; }
+  .section-label.official { color: #1B3564; }
+
+  table { border-collapse: collapse; width: 100%; margin-bottom: 28px; font-size: 12px; }
+
+  /* ── Rubric table (2018–2023) ── */
+  .rubric-hdr th { background: #6B7280; color: #fff; padding: 7px 10px; text-align: center; font-size: 11px; font-weight: 700; border: 1px solid #fff; }
+  .rubric-hdr th.cat { text-align: left; }
+  .rubric-hdr .year-band { background: #4B5563; font-size: 10px; font-weight: 400; font-style: italic; color: #D1D5DB; }
+
+  /* ── Official table (2024–2025) ── */
+  .official-hdr th { background: #1B3564; color: #fff; padding: 7px 10px; text-align: center; font-size: 11px; font-weight: 700; border: 1px solid #fff; }
+  .official-hdr th.cat { text-align: left; }
+  .official-hdr .year-band { background: #152a4e; font-size: 10px; font-weight: 400; color: #A5B4D4; }
+
+  /* ── Shared data rows ── */
+  td { padding: 7px 10px; border: 1px solid #D1D5DB; }
+  td.cat { font-weight: 600; color: #1B3564; }
+  td.num { text-align: center; }
+  tr:nth-child(even) td { background: #F8FAFC; }
+  tr:nth-child(odd) td { background: #fff; }
+
+  /* Emergent row highlight */
+  tr.emg td { background: #FFF8E7 !important; }
+  tr.emg td.cat { color: #C8922A; }
+  tr.emg td.num { color: #C8922A; font-weight: 700; }
+
+  /* Totals row */
+  tr.totals td { background: #EBF0F7 !important; font-weight: 700; color: #1B3564; border-top: 2px solid #2E5F9C; }
+
+  /* Official table: share column */
+  td.share { background: #EBF0F7 !important; font-weight: 700; color: #1B3564; text-align: center; }
+  tr.emg td.share { background: #FFF0C8 !important; color: #C8922A; }
+  tr.totals td.share { background: #dce6f5 !important; }
+
+  /* Year avg column in rubric table */
+  td.avg { background: #F1F5F9 !important; color: #374151; text-align: center; font-style: italic; }
+  tr.emg td.avg { background: #FFF3D0 !important; }
+
+  .methodology-tag {
+    display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 3px; margin-left: 8px; font-weight: 600; vertical-align: middle;
+  }
+  .tag-rubric { background: #E5E7EB; color: #4B5563; }
+  .tag-official { background: #C8922A22; color: #92600A; border: 1px solid #C8922A66; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════ TABLE 1 ══════════════════════════ -->
+<div class="section-label rubric">
+  Blueprint Category Data — 2018–2023 &nbsp;
+  <span class="methodology-tag tag-rubric">ABFM-Based Rubric Classification</span>
+</div>
+
+<table>
+  <thead>
+    <tr class="rubric-hdr">
+      <th class="cat" rowspan="1">Category</th>
+      <th>2018</th>
+      <th>2019</th>
+      <th>2020</th>
+      <th>2021</th>
+      <th>2022</th>
+      <th>2023</th>
+      <th class="avg">6-yr Avg</th>
+    </tr>
+    <tr class="rubric-hdr">
+      <th class="cat year-band" colspan="8" style="text-align:left; padding: 4px 10px;">
+        Classified using validated ABFM rubric · calibrated against official 2024–2025 distributions
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="cat">Acute Care &amp; Diagnosis</td>
+      <td class="num">99</td><td class="num">86</td><td class="num">90</td>
+      <td class="num">101</td><td class="num">100</td><td class="num">95</td>
+      <td class="avg">95</td>
+    </tr>
+    <tr>
+      <td class="cat">Chronic Care Management</td>
+      <td class="num">78</td><td class="num">54</td><td class="num">41</td>
+      <td class="num">43</td><td class="num">47</td><td class="num">41</td>
+      <td class="avg">51</td>
+    </tr>
+    <tr class="emg">
+      <td class="cat">Emergent &amp; Urgent Care</td>
+      <td class="num">28</td><td class="num">24</td><td class="num">20</td>
+      <td class="num">21</td><td class="num">14</td><td class="num">27</td>
+      <td class="avg">22</td>
+    </tr>
+    <tr>
+      <td class="cat">Preventive Care</td>
+      <td class="num">24</td><td class="num">22</td><td class="num">33</td>
+      <td class="num">22</td><td class="num">24</td><td class="num">22</td>
+      <td class="avg">25</td>
+    </tr>
+    <tr>
+      <td class="cat">Foundations of Care</td>
+      <td class="num">11</td><td class="num">14</td><td class="num">14</td>
+      <td class="num">11</td><td class="num">14</td><td class="num">14</td>
+      <td class="avg">13</td>
+    </tr>
+    <tr class="totals">
+      <td>TOTAL</td>
+      <td class="num">240</td><td class="num">200</td><td class="num">198</td>
+      <td class="num">198</td><td class="num">199</td><td class="num">199</td>
+      <td class="avg">206</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- ══════════════════════════ TABLE 2 ══════════════════════════ -->
+<div class="section-label official">
+  Blueprint Category Data — 2024–2025 &nbsp;
+  <span class="methodology-tag tag-official">✓ Official ABFM Report</span>
+</div>
+
+<table>
+  <thead>
+    <tr class="official-hdr">
+      <th class="cat" rowspan="1">Category</th>
+      <th>2024</th>
+      <th>2025</th>
+      <th>1-yr Δ</th>
+      <th class="share">2025 Weight</th>
+    </tr>
+    <tr class="official-hdr">
+      <th class="cat year-band" colspan="5" style="text-align:left; padding: 4px 10px;">
+        Source: Official ABFM score report blueprint categories · ground truth
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="cat">Acute Care &amp; Diagnosis</td>
+      <td class="num">68</td><td class="num">70</td>
+      <td class="num" style="color:#6B7280">+2</td>
+      <td class="share">35%</td>
+    </tr>
+    <tr>
+      <td class="cat">Chronic Care Management</td>
+      <td class="num">49</td><td class="num">50</td>
+      <td class="num" style="color:#6B7280">+1</td>
+      <td class="share">25%</td>
+    </tr>
+    <tr class="emg">
+      <td class="cat">Emergent &amp; Urgent Care</td>
+      <td class="num">40</td><td class="num">40</td>
+      <td class="num" style="color:#6B7280">0</td>
+      <td class="share">20%</td>
+    </tr>
+    <tr>
+      <td class="cat">Preventive Care</td>
+      <td class="num">29</td><td class="num">30</td>
+      <td class="num" style="color:#22863a">+1</td>
+      <td class="share">15%</td>
+    </tr>
+    <tr>
+      <td class="cat">Foundations of Care</td>
+      <td class="num">9</td><td class="num">10</td>
+      <td class="num" style="color:#6B7280">+1</td>
+      <td class="share">5%</td>
+    </tr>
+    <tr class="totals">
+      <td>TOTAL</td>
+      <td class="num">195</td><td class="num">200</td>
+      <td class="num">+5</td>
+      <td class="share">100%</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

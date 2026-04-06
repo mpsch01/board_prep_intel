@@ -1,8 +1,8 @@
 {
   "folder": "00_#PROJECT_OVERHAUL/01_module.1_warehouse",
   "description": "M1 Warehouse — 3-domain layout: citation_files/ (PDF guideline library, 4 tiers), practice_questions/ (Q&A study deliverables), ite_exams/ (raw exam PDF archive). Build/maintain scripts in scripts/.",
-  "last_updated": "2026-04-04",
-  "baton": "037",
+  "last_updated": "2026-04-05",
+  "baton": "043",
   "structure_version": "7.0",
   "domains": {
     "citation_files": {
@@ -12,8 +12,8 @@
         "ITE": {
           "VC_fail": {
             "description": "PDFs that have NOT passed the VC gate (session_hy_inserts_v7.json). Destined for local_lite after enrichment.",
-            "approx_count": 156,
-            "note": "37 AAFP acquisition PDFs still awaiting manual download"
+            "approx_count": 623,
+            "note": "EXA pipeline (336) + PMC OA (41) + Unpaywall recovery (73) + 37 manual still pending"
           },
           "local_lite": {
             "description": "VC_fail PDFs that are fully enriched (extraction + synthesis + enrichment + DOCX complete).",
@@ -21,18 +21,19 @@
           },
           "VC_pass": {
             "description": "PDFs that HAVE passed the VC gate. Destined for right_click after enrichment.",
-            "approx_count": 94
+            "approx_count": 168
           },
           "right_click": {
             "description": "VC_pass PDFs that are fully enriched. The highest-value tier.",
-            "approx_count": 71
+            "approx_count": 58
           }
         },
         "AAFP": {
           "description": "AAFP citation PDFs (separate from ITE tiers)."
         }
       },
-      "total_pdfs_approx": 414,
+      "total_pdfs_active": 966,
+      "note_dupes": "_dupe_archive contains 14 duplicate PDFs quarantined during recovery",
       "naming_convention": "Author_Year#@#ART-XXXX@#@.pdf — ART-ID embedded between #@# (start codon) and @#@ (stop codon)",
       "vc_gate": "key_data_files/session_hy_inserts_v7.json (352 citations) — sole criterion for right_click vs local_lite"
     },
@@ -82,7 +83,7 @@
     "maintain": {
       "path": "scripts/maintain/",
       "description": "Operational / recurring scripts. Assume DB exists and has data. Run as needed.",
-      "count": 17,
+      "count": 23,
       "deprecated_count": 2,
       "scripts": [
         "aafp_cleanup_filenames.py — fix ALL-CAPS author names",
@@ -103,7 +104,12 @@
         "preprocess_concept_tags.py — concept_tags via API",
         "rebuild_acquisition_list.py — match_summary → confirmed_present.csv + ranked acquisition XLSX",
         "rename_tier_labels_in_db.py — bulk tier label updates in DB",
-        "rename_to_codon.py — [DEPRECATED] executes approved codon renames"
+        "rename_to_codon.py — [DEPRECATED] executes approved codon renames",
+        "exa_pdf_finder.py — EXA advanced search for citation gaps (2026-04-05)",
+        "exa_pdf_downloader.py — EXA bulk PDF download + codon rename (2026-04-05)",
+        "pmc_oa_downloader.py — PMC OA PDF download + codon rename (2026-04-05)",
+        "recover_unpaywall.py — Unpaywall API legal OA lookup + download (2026-04-05)",
+        "manage_dupes.py — duplicate PDF detection and _dupe_archive/ quarantine (2026-04-05)"
       ],
       "path_pattern": "SCRIPT_DIR = Path(__file__).resolve().parent; PROJECT_ROOT = SCRIPT_DIR.parent.parent; WAREHOUSE = PROJECT_ROOT / '01_module.1_warehouse'; CITATION_ITE = WAREHOUSE / 'citation_files' / 'ITE'"
     },
@@ -122,6 +128,16 @@
     "note": "DB lives in 00_database/, not in M1. M1 scripts reach it via PROJECT_ROOT / '00_database' / 'db' / 'ite_intelligence.db'"
   },
   "recent_changes": {
+    "baton_043_20260405": [
+      "PDF RECOVERY COMPLETE: 527 → 966 PDFs (exceeded pre-incident 868 by 98)",
+      "3-step recovery: exa_pdf_downloader (336) + pmc_oa_downloader (41) + recover_unpaywall (73)",
+      "14 duplicate PDFs quarantined to _dupe_archive/",
+      "M1 maintain: 21 → 23 scripts (+2 new: recover_unpaywall, manage_dupes)",
+      "VC_fail: 170 → 623; VC_pass: 169 → 168 (re-tiered); local_lite: 117; right_click: 58 → 58",
+      "session-housekeeping skill created (C:\\Users\\mpsch\\.claude\\skills\\)",
+      "exa-research-search skill updated (tool name fixed + download mode added)",
+      "shutil.rmtree confirmed BANNED locked rule"
+    ],
     "baton_037_20260404": [
       "RESTRUCTURE COMPLETE: 3-domain layout (citation_files/, practice_questions/, ite_exams/)",
       "All 11 M1 maintain scripts path-updated: citation_files/ITE/ + tier key fix (local_lite/right_click)",
