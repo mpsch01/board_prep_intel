@@ -9,7 +9,7 @@
     "articles": 1985,
     "ite_questions": 1629,
     "aafp_questions": 1221,
-    "article_icd10_rows": 4137,
+    "article_icd10_rows": 4020,
     "question_icd10_rows": 5218,
     "aafp_question_icd10_rows": 4753,
     "clinical_pathways_rows": 3971,
@@ -41,4 +41,7 @@
   "intelligence_2_status": {
     "layer_1_icd10": "complete",
     "layer_2_pubmed_currency": "deferred (DEFERRED-F)",
-    "laye
+    "layer_3_clinical_pathways": "complete",
+    "layer_4_trends": "partial"
+  }
+}
