@@ -48,6 +48,7 @@ board_prep_intel/
 ### `00_database/` — Source of Truth
 ```
 00_database/
+├── DATABASE_GUIDE.md                  ← DB contents, linkages, current uses, future applications (NEW — BATON 045)
 ├── db/
 │   ├── ite_intelligence.db                ← PRODUCTION (1,985 articles, 1,629 questions)
 │   ├── ite_intelligence.db-wal            ← write-ahead log
