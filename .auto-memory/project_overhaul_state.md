@@ -1,5 +1,5 @@
 # project_overhaul_state.md
-Last updated: 2026-04-05 (BATON 044)
+Last updated: 2026-04-06 (BATON 045)
 
 ## Module State
 
@@ -42,9 +42,9 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 | DEFERRED-J | CLOSED | exa-research-search Phase 2 completed |
 
 ## Intelligence 2.0 Status
-- Layer 1 (ICD-10): Complete — 4,020 rows article_icd10
+- Layer 1 (ICD-10): Complete — 4,020 rows article_icd10; question_icd10 5,218 rows (cleaned -66 no_match)
 - Layer 2 (PubMed currency): DEFERRED-F — 344 PMIDs seeded; build article_currency table next
-- Layer 3 (Clinical pathways): Complete — 4,020 rows
+- Layer 3 (Clinical pathways): Complete — 3,971 rows (cleaned -49 no_match)
 - Layer 4 (Trends): Partial — trend CSV files in readable_db_files/
 
 ## Key Artifacts

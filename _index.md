@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-04-05 (BATON 044 — AAFP PDF recovery; 966 ITE PDFs + 15 AAFP PDFs recovered; M1 maintain scripts expanded)
-**Status:** Current — AAFP recovery complete; 966 ITE + 15 AAFP PDFs; M1 maintain = 25 scripts; session-housekeeping skill live.
+**Last Updated:** 2026-04-06 (BATON 045 — ite_analyzer_v3.py AAFP quota fix; ite_report_builder_v2.js overhaul; question_icd10 cleanup)
+**Status:** Current — 966 ITE + 15 AAFP PDFs; M1 maintain = 25 scripts; M2 updated (75py + 6js); DB cleaned (no_match rows removed).
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_044_20260405_aafp_pdf_recovery.md  ← active BATON
+├── BATON_active_045_20260406_analyzer_report_builder_cleanup.md  ← active BATON
 ├── CLAUDE.md                              ← project memory + conventions
 ├── REPO_MAP.md                            ← current-state architectural overview (NEW — BATON 039)
 ├── README.md                              ← project overview (human-readable)
@@ -87,9 +87,9 @@ board_prep_intel/
 | qid_art_xref | 2,470 | All 8 years (2018–2025) |
 | aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
 | article_icd10 | 4,020 | +282 AAFP backfill (revised from live DB) (2026-03-31) |
-| question_icd10 | 5,284 | 1,512/1,629 ITE questions (92.8%) |
+| question_icd10 | 5,218 | 1,512/1,629 ITE questions (92.8%) — cleaned -66 no_match rows (2026-04-06) |
 | aafp_question_icd10 | 4,753 | relevance normalized; related cap applied |
-| clinical_pathways | 4,020 | REBUILT 2026-03-31 — blueprint-based, both banks |
+| clinical_pathways | 3,971 | REBUILT 2026-03-31 — blueprint-based, both banks; cleaned -49 no_match rows (2026-04-06) |
 | article_citation_trend | 1,740 | longitudinal citation tracking + watch_list flag |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
 | icd10_rollup | 614 | |

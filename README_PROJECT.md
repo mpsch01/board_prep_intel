@@ -1,8 +1,8 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-04-05 (BATON 044)
+**Last updated:** 2026-04-06 (BATON 045)
 **Status:** Active development
-**Active BATON:** `BATON_active_044_20260405_aafp_pdf_recovery.md`
+**Active BATON:** `BATON_active_045_20260406_ite_report_builder_overhaul.md`
 
 ---
 
@@ -77,9 +77,9 @@ Critical reference data:
 | qid_art_xref | 2,470 | all 8 years (2018–2025) |
 | aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
 | article_icd10 | 4,020 | rebuilt 2026-04-05 with vec |
-| question_icd10 | 5,284 | 1,512/1,629 ITE questions (92.8%) |
+| question_icd10 | 5,218 | 1,512/1,629 ITE questions (92.8%) |
 | aafp_question_icd10 | 4,753 | 1,210/1,221 AAFP questions (99.1%) |
-| clinical_pathways | 4,020 | REBUILT 2026-03-31 — blueprint-based, both banks |
+| clinical_pathways | 3,971 | REBUILT 2026-03-31 — blueprint-based, both banks |
 | article_citation_trend | 1,740 | longitudinal citation tracking |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
 | icd10_vec | 2,219 | OpenAI text-embedding-3-small (1536d) |
@@ -158,12 +158,13 @@ python aafp_enrich_concept_tags.py --mode unlinked
 
 ---
 
-## Next Steps (BATON 044)
+## Next Steps (BATON 045)
 
-1. **Clean empty RECO folders** — user housekeeping task post-PDF recovery
-2. **DEFERRED-AAFP-PAYWALL** — 3 articles (ART-1959, ART-1972, ART-1967) via institutional/interlibrary loan
-3. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs; NCBI API key set)
-4. **Resume normal roadmap** — exa-research-search Phase 2 + clinical pathways refinement
+1. **Resume normal roadmap** — exa-research-search Phase 2 + clinical pathways pipeline
+2. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs; NCBI API key set)
+3. **DEFERRED-RECO-CLEANUP** — Clean empty RECO folders (user housekeeping task)
+4. **DEFERRED-AAFP-PAYWALL** — 3 articles (ART-1959, ART-1972, ART-1967) via institutional/interlibrary loan
+5. **When resident-facing report needed** — re-enable full question rendering in ite_report_builder_v2.js (currently compact reference table mode)
 
 ---
 
@@ -176,5 +177,4 @@ python aafp_enrich_concept_tags.py --mode unlinked
 
 ---
 
-**Project Lead:** Michael Scholl, MD
-**Last Reviewed:** 2026-04-05
+**Project Lead:** Michael Schol

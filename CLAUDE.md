@@ -48,20 +48,20 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_044_20260405_aafp_pdf_recovery.md` — AAFP PDF recovery (15 PDFs); deferred flags H/J closed, A archived; 2 new M1 scripts |
+| Active BATON | `BATON_active_045_20260406_ite_report_builder_overhaul.md` — ITE report builder overhaul; ite_analyzer_v3.py AAFP quota fixed, no_match cleanup; ite_report_builder_v2.js major overhaul |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
 | aafp_questions.blueprint | 1,221/1,221 (100%) — batch API, same rubric as ITE v2 — complete 2026-03-30 |
 | aafp_questions.concept_tags | 1,221/1,221 (100%) |
 | article_icd10 | 4,020 rows — rebuilt with vec (2026-04-05) |
-| question_icd10 | 5,284 rows — 1,512/1,629 ITE questions (92.8%) |
+| question_icd10 | 5,218 rows — 1,512/1,629 ITE questions (92.8%) — 66 no_match rows deleted |
 | aafp_question_icd10 | 4,753 rows — relevance normalized, related cap applied |
 | pubmed_pmid_cache | 344 rows — Layer 2 seed (citation_id → PMID) |
 | icd10_vec | 2,219 rows — OpenAI text-embedding-3-small (1536d) |
 | article_icd10_vec | 1,757 rows — ✅ rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 rows — ✅ rebuilt 2026-04-05 |
-| clinical_pathways | 4,020 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 |
+| clinical_pathways | 3,971 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 — 49 no_match rows deleted |
 | PDFs (ITE citation tiers) | 966 across 4 tiers in citation_files/ITE/ (VC_fail:623, VC_pass:168, local_lite:117, right_click:58) — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
 | PDFs (AAFP) | 15 in citation_files/AAFP/ — recovered 2026-04-05 |
 | PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
@@ -70,7 +70,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 6 build + 25 maintain + aafp_brq_scraper.py at scripts/ root |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
-| M3 scripts | 13 Python + 2 JS + 2 JSON config |
+| M3 scripts | 13 Python + 2 JS + 2 JSON config (M3 JS count corrected: 2, not 147) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
 | Git branch | `main`, latest → GIT-COMMITTED (PDF recovery + session housekeeping + skill creation) |
@@ -112,8 +112,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 044, 2026-04-05)
-1. **Clean empty RECO folders** — user housekeeping task post-PDF recovery
-2. **DEFERRED-AAFP-PAYWALL** — 3 articles (ART-1959, ART-1972, ART-1967) via institutional/interlibrary loan
-3. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`; NCBI API key set)
-4. **Resume normal roadmap** — exa-research-search Phase 2 + clinical pathways refinement
+## Next Steps (as of BATON 045, 2026-04-06)
+1. **Resume normal roadmap** — exa-research-search Phase 2 + clinical pathways pipeline
+2. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`; NCBI API key set)
+3. **DEFERRED-RECO-CLEANUP** — Clean empty RECO folders (user housekeeping task)
+4. **DEFERRED-AAFP-PAYWALL** — 3 articles (ART-1959, ART-1972, ART-1967) via institutional/interlibrary loan
+5. **When resident-facing report needed** — re-enable full question rendering in ite_report_builder_v2.js (currently compact reference table mode)

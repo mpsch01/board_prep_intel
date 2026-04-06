@@ -71,7 +71,7 @@ const REPORT_VOICE = {
     "B) Provide at least 5 additional practice questions from the ITE database for each section marked 'weak', ranked by fit to weak areas",
     "C) Provide the same practice questions without answers/explanations as an 'exam' version with correct QID tags"
   ],
-  tone: "clinical precision with actionable clarity — every finding leads to a recommendation, every weakness maps to a recovery path",
+  tone: "clinical precision with actionable clarity — every finding leads to a recommendation, every weakness maps to an improvement path",
 };
 
 // ── Style constants ─────────────────────────────────────────────────
@@ -107,7 +107,7 @@ function sectionBar(text) {
         borders: noBorders(),
         margins: { top: 60, bottom: 60, left: 140, right: 140 },
         verticalAlign: VerticalAlign.CENTER,
-        children: [new Paragraph({ spacing: { before: 0, after: 0 }, children: [
+        children: [new Paragraph({ spacing: { before: 0, after: 0 }, keepNext: true, children: [
           new TextRun({ text, font: FONT, size: 22, bold: true, color: WHITE }),
         ]})],
       }),
@@ -126,7 +126,7 @@ function subBar(text, fill = BLUE) {
         shading: { fill, type: ShadingType.CLEAR },
         borders: noBorders(),
         margins: { top: 50, bottom: 50, left: 140, right: 140 },
-        children: [new Paragraph({ children: [
+        children: [new Paragraph({ keepNext: true, children: [
           new TextRun({ text, font: FONT, size: 20, bold: true, color: WHITE }),
         ]})],
       }),
@@ -160,8 +160,8 @@ function classIcon(cls) {
   if (cls === "relative_strength") return "\u2605";
   return "\u2014";
 }
-function spacer(pts = 100) {
-  return new Paragraph({ spacing: { before: pts, after: 0 }, children: [] });
+function spacer(pts = 100, keepNext = false) {
+  return new Paragraph({ spacing: { before: pts, after: 0 }, keepNext, children: [] });
 }
 function row(cells) {
   return new TableRow({ cantSplit: true, children: cells });
@@ -277,15 +277,9 @@ const weakList = weakBlueprints.length > 0 ? weakBlueprints.join(", ") : "none i
 children.push(new Paragraph({ spacing: { before: 600, after: 0 }, alignment: AlignmentType.CENTER, children: [
   new TextRun({ text: `ITE ${data.exam_year} SCORE ANALYSIS`, font: FONT, size: 36, bold: true, color: NAVY }),
 ]}));
-children.push(new Paragraph({ spacing: { before: 80, after: 0 }, alignment: AlignmentType.CENTER, children: [
-  new TextRun({ text: res.name, font: FONT, size: 26, color: BLUE }),
-]}));
-children.push(new Paragraph({ spacing: { before: 40, after: 0 }, alignment: AlignmentType.CENTER, children: [
-  new TextRun({ text: `ABFM ID: ${res.abfm_id}  |  ${res.program}`, font: FONT, size: 18, color: MGRAY }),
-]}));
 children.push(spacer(300));
 
-// Score display
+// Score display — de-identified: no name, no ABFM ID, no tier badge (percentile only)
 children.push(makeTable([3120, 3120, 3120], [row([
   new TableCell({ borders: noBorders(), width: { size: 3120, type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER, children: [
     new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: `${perf.overall.pct}%`, font: FONT, size: 56, bold: true, color: NAVY })] }),
@@ -297,8 +291,8 @@ children.push(makeTable([3120, 3120, 3120], [row([
   ]}),
   new TableCell({ borders: noBorders(), width: { size: 3120, type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER,
     shading: { fill: NAVY, type: ShadingType.CLEAR }, margins: { top: 100, bottom: 100, left: 100, right: 100 }, children: [
-    new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: tierBadge(t1.pass_tier.tier), font: FONT, size: 28, bold: true, color: WHITE })] }),
-    new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: `${t1.percentile_estimate}th percentile`, font: FONT, size: 18, color: WHITE })] }),
+    new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: `${t1.percentile_estimate}th`, font: FONT, size: 44, bold: true, color: WHITE })] }),
+    new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Percentile", font: FONT, size: 18, color: WHITE })] }),
   ]}),
 ])]));
 children.push(spacer(100));
@@ -311,7 +305,7 @@ children.push(new Paragraph({ spacing: { before: 80, after: 0 }, alignment: Alig
 // ────────────────────────────────────────────────────────────────────
 children.push(spacer(200));
 children.push(sectionBar("\u2605 EXECUTIVE SUMMARY"));
-children.push(spacer(60));
+children.push(spacer(60, true));
 // Dynamic executive summary
 const personalMean = t2.thresholds?.personal_mean || 0;
 const personalMeanPct = (personalMean * 100).toFixed(1);
@@ -321,68 +315,83 @@ const bestBp = bpEntries[bpEntries.length - 1];
 const worstSem = t3?.[worstBp[0]]?.sem ? ` (SEM \u00B1${t3[worstBp[0]].sem})` : "";
 const topYield = yields?.[0];
 const topYieldText = topYield
-  ? `Highest-yield recovery: ${topYield.dimension} = ${topYield.recoverable_items?.toFixed(1) || "?"} recoverable items at ${topYield.exam_weight_pct || "?"}% exam weight.`
+  ? `Highest-yield improvement: ${topYield.dimension} = ${topYield.recoverable_items?.toFixed(1) || "?"} improvable items at ${topYield.exam_weight_pct || "?"}% exam weight.`
   : "";
 
 children.push(studyNote(
-  `Dr. ${safeName} scored ${t1.scaled_score} (${t1.percentile_estimate}th percentile), ` +
+  `Scaled score ${t1.scaled_score} (${t1.percentile_estimate}th percentile), ` +
   `placing in the "${tierBadge(t1.pass_tier.tier)}" tier. ` +
   `Weak areas identified: ${weakList}. ` +
   `${worstBp[0]} is the lowest-performing category at ${(worstBp[1].rate * 100).toFixed(1)}% ` +
   `(vs personal mean ${personalMeanPct}%)${worstSem}, ` +
   `while ${bestBp[0]} is the strongest at ${(bestBp[1].rate * 100).toFixed(1)}%. ` +
-  `${diff.easy_miss_count || 0} easy misses (\u2265700 difficulty) represent the most recoverable knowledge gaps. ` +
+  `${diff.easy_miss_count || 0} easy misses (\u2265700 difficulty) represent the most improvable knowledge gaps. ` +
   `${topYieldText} ` +
   `This report provides targeted practice questions for each weak area (min. 5 per section), ranked by fit, ` +
   `plus a separate exam version for timed self-assessment.`
 ));
 
 // ────────────────────────────────────────────────────────────────────
-// 3. TERM KEY
-// ────────────────────────────────────────────────────────────────────
-children.push(spacer(200));
-children.push(sectionBar("\uD83D\uDCD6 TERM KEY"));
-children.push(spacer(80));
-
-const termDefs = [
-  // ITE Subcategories
-  ["Management", "Clinical decision-making: what is the most appropriate next step? May include observation, referral, monitoring \u2014 not necessarily a prescription."],
-  ["Pharmacology", "Drug-specific knowledge: which medication, dose, mechanism, contraindication, or side effect? Always a pharmacologic answer."],
-  ["Diagnosis", "Pattern recognition: given the clinical data presented, what condition does this patient have? The evidence is already in front of you."],
-  ["Workup", "Evaluation sequence: what test, lab, or imaging do you order next? The diagnosis is not yet established \u2014 you are gathering data."],
-  ["Screening", "Population-level detection: which test do you perform in an asymptomatic patient based on age, sex, or risk factors?"],
-  ["Prevention", "Risk reduction: what intervention prevents disease onset or progression? Includes vaccines, lifestyle counseling, chemoprophylaxis."],
-  ["Counseling", "Patient communication: what do you tell the patient about their condition, prognosis, or treatment plan?"],
-  ["Prognosis/Risk", "Outcome prediction: what is the expected clinical course, complication risk, or mortality for this condition?"],
-  ["Pathophysiology", "Mechanism of disease: what biological process explains the patient\u2019s symptoms, lab findings, or imaging?"],
-  // Scoring Terms
-  ["Scaled Score", "Equated score (200\u2013800) derived from raw score via Rasch model. Allows comparison across exam years. MPS = 380."],
-  ["MPS", "Minimum Passing Standard. Scaled score of 380 = threshold for FMCE pass probability. Set by ABFM annually."],
-  ["SEM", "Standard Error of Measurement. Quantifies score precision per dimension. Large SEM (\u2265100) = interpret as hypothesis only."],
-  ["Pass Probability Tier", "FMCE pass likelihood bucket: Critical Risk (<380), At Risk (380\u2013419), On Track (420\u2013479), Strong (480+)."],
-  ["Relative Weakness", "Blueprint category performing >1 SD below the resident\u2019s personal mean. Statistically anchored, not an arbitrary cutoff."],
-  ["Relative Strength", "Blueprint category performing >1 SD above the resident\u2019s personal mean."],
-  ["Difficulty Score", "ABFM item difficulty (0\u20131000). Easy (\u2265700) = most examinees correct. Mid (300\u2013699) = discriminating. Hard (<300) = most miss."],
-  ["Yield-Weighted Priority", "Weakness rank ordered by (recoverable items) \u00D7 (exam weight). Higher rank = more scaled score points per study hour."],
-  ["ICD-10", "International Classification of Diseases, 10th Revision. Used here to map missed items to clinical disease categories."],
-];
-
-const tkColW = [2200, 7160];
-const tkRows = [row([headerCell("Term", tkColW[0]), headerCell("Definition", tkColW[1])])];
-termDefs.forEach(([term, def]) => {
-  tkRows.push(row([
-    dataCell(term, tkColW[0], NAVY, true, AlignmentType.LEFT),
-    dataCell(def, tkColW[1], DGRAY, false, AlignmentType.LEFT),
-  ]));
-});
-children.push(makeTable(tkColW, tkRows));
-
-// ────────────────────────────────────────────────────────────────────
-// 4. BLUEPRINT PERFORMANCE
+// 4a. ITE OVERVIEW TABLE (blueprint + body system at a glance)
 // ────────────────────────────────────────────────────────────────────
 children.push(new Paragraph({ children: [new PageBreak()] }));
+children.push(sectionBar("📊 ITE PERFORMANCE OVERVIEW"));
+children.push(spacer(80, true));
+
+children.push(new Paragraph({ keepNext: true, spacing: { before: 0, after: 80 }, children: [
+  new TextRun({ text: "Summary of performance across all blueprint categories and body systems. " +
+    "Color-coded by performance: green (strong), amber (developing), red (priority focus).",
+    font: FONT, size: 18, color: MGRAY, italics: true }),
+]}));
+
+// Blueprint summary
+children.push(new Paragraph({ spacing: { before: 80, after: 60 }, children: [
+  new TextRun({ text: "Blueprint Categories", font: FONT, size: 22, bold: true, color: NAVY }),
+]}));
+{
+  const ovColW = [4200, 1800, 1800, 1560];
+  const ovRows = [row(["Category", "Correct", "Total", "Rate"].map((h, i) => headerCell(h, ovColW[i])))];
+  for (const [cat, vals] of Object.entries(perf.blueprint)) {
+    const rate = vals.rate;
+    const pct  = (rate * 100).toFixed(1) + "%";
+    ovRows.push(row([
+      dataCell(cat, ovColW[0], DGRAY, true, AlignmentType.LEFT),
+      dataCell(vals.correct, ovColW[1]),
+      dataCell(vals.total,   ovColW[2]),
+      dataCell(pct, ovColW[3], rateColor(rate), true),
+    ]));
+  }
+  children.push(makeTable(ovColW, ovRows));
+}
+
+// Body system summary
+children.push(spacer(120));
+children.push(new Paragraph({ spacing: { before: 80, after: 60 }, children: [
+  new TextRun({ text: "Body Systems", font: FONT, size: 22, bold: true, color: NAVY }),
+]}));
+{
+  const bsColW = [4200, 1800, 1800, 1560];
+  const bsRows = [row(["Body System", "Correct", "Total", "Rate"].map((h, i) => headerCell(h, bsColW[i])))];
+  const bsSorted = Object.entries(perf.body_system || {}).sort((a, b) => a[1].rate - b[1].rate);
+  for (const [cat, vals] of bsSorted) {
+    const rate = vals.rate;
+    const pct  = (rate * 100).toFixed(1) + "%";
+    bsRows.push(row([
+      dataCell(cat, bsColW[0], DGRAY, true, AlignmentType.LEFT),
+      dataCell(vals.correct, bsColW[1]),
+      dataCell(vals.total,   bsColW[2]),
+      dataCell(pct, bsColW[3], rateColor(rate), true),
+    ]));
+  }
+  children.push(makeTable(bsColW, bsRows));
+}
+
+// ────────────────────────────────────────────────────────────────────
+// 4b. BLUEPRINT PERFORMANCE (detailed with SEM/classification)
+// ────────────────────────────────────────────────────────────────────
+children.push(spacer(200));
 children.push(sectionBar("\u2606 BLUEPRINT CATEGORY PERFORMANCE"));
-children.push(spacer(80));
+children.push(spacer(80, true));
 
 const bpColW = [2200, 900, 900, 900, 1400, 900, 2160];
 const bpRows = [row(["Category", "Correct", "Total", "Rate", "Relative", "SEM", "Confidence"].map((h, i) => headerCell(h, bpColW[i])))];
@@ -404,101 +413,13 @@ for (const [cat, vals] of Object.entries(perf.blueprint)) {
   ]));
 }
 children.push(makeTable(bpColW, bpRows));
-// Dynamic SEM commentary
-const semNotes = Object.entries(t3 || {}).map(([cat, s]) => {
-  const label = s.reliable ? "reliable" : "hypothesis only";
-  return `${cat} (\u00B1${s.sem} SEM = ${label})`;
-});
-children.push(studyNote(
-  `ABFM caution: sub-scores are NOT sufficiently precise to confirm knowledge deficiencies. ` +
-  `${semNotes.join(". ")}. ` +
-  `Weak areas (${weakList}) receive \u22655 targeted practice questions in Part B.`
-));
-
-// ────────────────────────────────────────────────────────────────────
-// 5. SUBCATEGORY DECOMPOSITION
-// ────────────────────────────────────────────────────────────────────
-children.push(spacer(200));
-children.push(sectionBar("\uD83D\uDD2C SUBCATEGORY DECOMPOSITION"));
-children.push(spacer(80));
-
-children.push(new Paragraph({ spacing: { before: 40, after: 100 }, children: [
-  new TextRun({ text: "Performance by clinical skill type (Management, Pharmacology, Diagnosis, etc.) within each blueprint category. " +
-    "Color coding: ",
-    font: FONT, size: 18, color: MGRAY, italics: true }),
-  new TextRun({ text: "red", font: FONT, size: 18, color: RED, italics: true, bold: true }),
-  new TextRun({ text: " below 50%, ", font: FONT, size: 18, color: MGRAY, italics: true }),
-  new TextRun({ text: "amber", font: FONT, size: 18, color: AMBER, italics: true, bold: true }),
-  new TextRun({ text: " below 70%, ", font: FONT, size: 18, color: MGRAY, italics: true }),
-  new TextRun({ text: "green", font: FONT, size: 18, color: GREEN, italics: true, bold: true }),
-  new TextRun({ text: " at or above 70%.", font: FONT, size: 18, color: MGRAY, italics: true }),
-]}));
-
-// subcatAnalysis: v2-era plugin; undefined in v3 -- default to null so optional chaining is safe
-const subcatAnalysis = data.plugins?.subcategory_decomposition || data.subcategory_analysis || null;
-// Named subcategory data (from v2 analyzer with DB lookup)
-const bpSubcat = subcatAnalysis?.by_blueprint_subcategory || subcatAnalysis?.by_blueprint_subcol || {};
-if (Object.keys(bpSubcat).length > 0) {
-  for (const [bp, subcats] of Object.entries(bpSubcat)) {
-    const isWeak = weakBlueprints.includes(bp);
-    children.push(spacer(80));
-    children.push(new Paragraph({ spacing: { before: 60, after: 60 }, children: [
-      new TextRun({ text: bp, font: FONT, size: 22, bold: true, color: isWeak ? RED : BLUE }),
-    ]}));
-
-    // Build table: Subcategory | Correct | Rate
-    const scColW = [3200, 2080, 2080, 2000];
-    const entries = Object.entries(subcats).sort((a, b) => b[1].total - a[1].total);
-    const scRows = [row(["Subcategory", "Correct", "Total", "Rate"].map((h, i) => headerCell(h, scColW[i])))];
-
-    for (const [subcat, vals] of entries) {
-      const r = vals.rate;
-      scRows.push(row([
-        dataCell(subcat, scColW[0], DGRAY, false, AlignmentType.LEFT),
-        dataCell(`${vals.correct}`, scColW[1]),
-        dataCell(`${vals.total}`, scColW[2]),
-        dataCell((r * 100).toFixed(0) + "%", scColW[3], rateColor(r), true),
-      ]));
-    }
-
-    children.push(makeTable(scColW, scRows));
-  }
-
-  // Overall subcategory performance
-  const overallSubcat = subcatAnalysis?.overall_subcategory || {};
-  if (Object.keys(overallSubcat).length > 0) {
-    children.push(spacer(100));
-    children.push(new Paragraph({ spacing: { before: 60, after: 60 }, children: [
-      new TextRun({ text: "Overall Subcategory Performance (All Blueprints)", font: FONT, size: 22, bold: true, color: NAVY }),
-    ]}));
-
-    const oColW = [3200, 2080, 2080, 2000];
-    const oRows = [row(["Subcategory", "Correct", "Total", "Rate"].map((h, i) => headerCell(h, oColW[i])))];
-    for (const [subcat, vals] of Object.entries(overallSubcat)) {
-      const r = vals.rate;
-      oRows.push(row([
-        dataCell(subcat, oColW[0], DGRAY, false, AlignmentType.LEFT),
-        dataCell(`${vals.correct}`, oColW[1]),
-        dataCell(`${vals.total}`, oColW[2]),
-        dataCell((r * 100).toFixed(0) + "%", oColW[3], rateColor(r), true),
-      ]));
-    }
-    children.push(makeTable(oColW, oRows));
-  }
-
-  children.push(studyNote(
-    `The subcategory breakdown reveals WHAT TYPE of clinical reasoning drives your misses within each blueprint. ` +
-    `For example, low Pharmacology rates suggest medication knowledge gaps, while low Diagnosis rates point to ` +
-    `pattern recognition deficits. Cross-reference with the Concept Fingerprint to identify specific clinical topics.`
-  ));
-}
 
 // ────────────────────────────────────────────────────────────────────
 // 6. DIFFICULTY PROFILE
 // ────────────────────────────────────────────────────────────────────
 children.push(new Paragraph({ children: [new PageBreak()] }));
 children.push(sectionBar("\u26A1 DIFFICULTY PROFILE"));
-children.push(spacer(80));
+children.push(spacer(80, true));
 
 const diffColW = [2400, 2320, 2320, 2320];
 const diffRows = [
@@ -519,14 +440,29 @@ for (const [cat, vals] of Object.entries(diff.by_blueprint)) {
   ]));
 }
 children.push(makeTable(diffColW, diffRows));
-children.push(studyNote(
-  `${diff.easy_miss_count || 23} easy misses = genuine knowledge gaps on items most examinees answer correctly. ` +
-  `These are the highest-yield recovery targets. ` +
-  `${diff.mid_range_count || 34} mid-range misses = the volume play for score improvement. ` +
-  `${diff.hard_miss_count || 9} hard misses = low-yield to chase.`
-));
 
-// Easy misses detail table
+// Explanation of the difficulty score and tiers
+children.push(new Paragraph({ spacing: { before: 120, after: 60 }, children: [
+  new TextRun({ text: "How to read this table: ", font: FONT, size: 20, bold: true, color: NAVY }),
+]}));
+children.push(new Paragraph({ spacing: { before: 0, after: 60 }, children: [
+  new TextRun({ text: "Each ITE question has an ABFM-assigned item difficulty ", font: FONT, size: 18, color: DGRAY }),
+  new TextRun({ text: "score (0–999)", font: FONT, size: 18, bold: true, color: NAVY }),
+  new TextRun({ text: " based on how often examinees nationally answered it correctly. " +
+    "A score of 999 means nearly everyone got it right; a score near 0 means almost no one did.",
+    font: FONT, size: 18, color: DGRAY }),
+]}));
+children.push(makeTable([3120, 6240], [
+  row([headerCell("Tier", 3120), headerCell("What it means for your study plan", 6240)]),
+  row([dataCell("Easy Miss (≥700)", 3120, RED, true, AlignmentType.LEFT),
+       dataCell("Most examinees answered these correctly — genuine knowledge gap. Highest-priority improvement targets.", 6240, DGRAY, false, AlignmentType.LEFT)]),
+  row([dataCell("Mid-Range (300–699)", 3120, AMBER, true, AlignmentType.LEFT),
+       dataCell("High-yield study targets — meaningful score improvement per hour of review.", 6240, DGRAY, false, AlignmentType.LEFT)]),
+  row([dataCell("Hard Miss (<300)", 3120, MGRAY, true, AlignmentType.LEFT),
+       dataCell("Most examinees miss these too — low-yield to chase. Focus elsewhere unless time permits.", 6240, DGRAY, false, AlignmentType.LEFT)]),
+]));
+
+// Easy misses detail table — no Subcategory column
 const easyMisses = diff.easy_misses || [];
 if (easyMisses.length > 0) {
   children.push(spacer(120));
@@ -534,53 +470,68 @@ if (easyMisses.length > 0) {
     new TextRun({ text: `Easy Misses \u2014 ${easyMisses.length} Items (Score \u2265 700)`, font: FONT, size: 22, bold: true, color: RED }),
   ]}));
   children.push(new Paragraph({ spacing: { before: 0, after: 80 }, children: [
-    new TextRun({ text: "Most examinees answered these correctly. Each one is a recoverable point.",
+    new TextRun({ text: "Most examinees answered these correctly. Each one is a directly improvable point.",
       font: FONT, size: 18, color: MGRAY, italics: true }),
   ]}));
 
-  const emColW = [1600, 900, 2200, 2200, 2460];
-  const emRows = [row(["QID", "Score", "Body System", "Blueprint", "Subcategory"].map((h, i) => headerCell(h, emColW[i])))];
+  const emColW = [2000, 900, 2800, 3660];
+  const emRows = [row(["QID", "Score", "Body System", "Blueprint"].map((h, i) => headerCell(h, emColW[i])))];
   for (const m of easyMisses) {
     emRows.push(row([
       dataCell(m.qid || `Item ${m.item}`, emColW[0], DGRAY, false, AlignmentType.LEFT),
       dataCell(m.score, emColW[1], m.score >= 900 ? RED : AMBER, true),
       dataCell(m.body_system_merged || m.body_system || "\u2014", emColW[2], DGRAY, false, AlignmentType.LEFT),
       dataCell(m.blueprint || "\u2014", emColW[3], DGRAY, false, AlignmentType.LEFT),
-      dataCell(m.subcategory || "\u2014", emColW[4], DGRAY, false, AlignmentType.LEFT),
     ]));
   }
   children.push(makeTable(emColW, emRows));
 }
 
 // ────────────────────────────────────────────────────────────────────
-// 7. YIELD-WEIGHTED PRIORITIES
+// 7. LOW-HANGING FRUIT (yield-weighted priorities split by type)
 // ────────────────────────────────────────────────────────────────────
 children.push(spacer(200));
-children.push(sectionBar("\u2B06 YIELD-WEIGHTED PRIORITIES"));
-children.push(spacer(80));
+children.push(sectionBar("🍎 LOW-HANGING FRUIT — HIGHEST-YIELD IMPROVEMENT AREAS"));
+children.push(spacer(80, true));
+
+children.push(new Paragraph({ keepNext: true, spacing: { before: 0, after: 100 }, children: [
+  new TextRun({
+    text: "Ranked by (improvable items) × (exam weight). The top entry gives the most scaled score improvement per hour of study. " +
+      "Blueprint and body system categories are listed separately so you can attack both dimensions.",
+    font: FONT, size: 18, color: MGRAY, italics: true }),
+]}));
 
 if (yields && yields.length > 0) {
-  const yColW = [900, 2800, 1900, 1900, 1860];
-  const yRows = [row(["Priority", "Category", "Recoverable Items", "Exam Weight", "Scaled Pts"].map((h, i) => headerCell(h, yColW[i])))];
-  yields.forEach((y, i) => {
-    const name = y.dimension || y.category || y.blueprint || "";
-    const recov = y.recoverable_items != null ? y.recoverable_items.toFixed(1) : "\u2014";
-    const weightPct = y.exam_weight_pct != null ? `${y.exam_weight_pct}%` : (y.exam_weight ? (y.exam_weight * 100).toFixed(0) + "%" : "\u2014");
-    const scaledPts = y.priority_score != null ? `~${y.priority_score.toFixed(1)}` : (y.scaled_point_value ? `~${y.scaled_point_value.toFixed(0)}` : "\u2014");
-    yRows.push(row([
-      dataCell(`#${i + 1}`, yColW[0], NAVY, true),
-      dataCell(name, yColW[1], DGRAY, true, AlignmentType.LEFT),
-      dataCell(recov, yColW[2]),
-      dataCell(weightPct, yColW[3]),
-      dataCell(scaledPts, yColW[4], BLUE, true),
-    ]));
-  });
-  children.push(makeTable(yColW, yRows));
-  children.push(studyNote(
-    `Priorities ranked by (recoverable items) \u00D7 (exam weight). ` +
-    `The #1 priority yields the most scaled score improvement per study hour. ` +
-    `Allocate study time proportionally to this ranking.`
-  ));
+  const bpYields  = yields.filter(y => y.dimension_type === "blueprint");
+  const bsYields  = yields.filter(y => y.dimension_type === "body_system");
+
+  function yieldTable(rows_data, label) {
+    if (rows_data.length === 0) return;
+    children.push(new Paragraph({ spacing: { before: 80, after: 60 }, children: [
+      new TextRun({ text: label, font: FONT, size: 22, bold: true, color: NAVY }),
+    ]}));
+    const yColW = [900, 3200, 1700, 1700, 1860];
+    const yRows = [row(["Rank", "Category", "Improvable Items", "Exam Weight", "Priority Score"].map((h, i) => headerCell(h, yColW[i])))];
+    rows_data.forEach((y, i) => {
+      const name     = y.dimension || "";
+      const recov    = y.recoverable_items != null ? y.recoverable_items.toFixed(1) : "\u2014";
+      const weightPct = y.exam_weight_pct != null ? `${y.exam_weight_pct}%` : (y.exam_weight ? (y.exam_weight * 100).toFixed(0) + "%" : "\u2014");
+      const score    = y.priority_score != null ? y.priority_score.toFixed(1) : "\u2014";
+      const isTop    = i === 0;
+      yRows.push(row([
+        dataCell(`#${i + 1}`, yColW[0], NAVY, true),
+        dataCell(name, yColW[1], isTop ? RED : DGRAY, true, AlignmentType.LEFT),
+        dataCell(recov, yColW[2], isTop ? RED : DGRAY, isTop),
+        dataCell(weightPct, yColW[3]),
+        dataCell(score, yColW[4], BLUE, true),
+      ]));
+    });
+    children.push(makeTable(yColW, yRows));
+    children.push(spacer(80));
+  }
+
+  yieldTable(bpYields, "Blueprint Category — Improvement Priorities");
+  yieldTable(bsYields, "Body System — Improvement Priorities");
 } else {
   children.push(new Paragraph({ children: [
     new TextRun({ text: "Yield priorities not computed for this analysis run.", font: FONT, size: 20, color: MGRAY }),
@@ -588,19 +539,74 @@ if (yields && yields.length > 0) {
 }
 
 // ────────────────────────────────────────────────────────────────────
+// 7b. CATEGORY CROSSOVER WEAKNESSES
+// ────────────────────────────────────────────────────────────────────
+{
+  const crossYields = (yields || []).filter(y => y.dimension_type === "cross_tab");
+  const patterns    = data.cross_dimensional_patterns?.patterns || [];
+
+  if (crossYields.length > 0 || patterns.length > 0) {
+    children.push(spacer(180));
+    children.push(sectionBar("⚡ CATEGORY CROSSOVER WEAKNESSES"));
+    children.push(spacer(80, true));
+
+    children.push(new Paragraph({ spacing: { before: 0, after: 100 }, children: [
+      new TextRun({
+        text: "Weaknesses that appear at the intersection of a blueprint category AND a body system. " +
+          "These represent double-exposure gaps — areas where both the clinical domain and the exam competency are below threshold.",
+        font: FONT, size: 18, color: MGRAY, italics: true }),
+    ]}));
+
+    // Cross-tab yield table
+    if (crossYields.length > 0) {
+      const cxColW = [900, 4200, 1500, 1400, 1360];
+      const cxRows = [row(["Rank", "Intersection", "Improvable Items", "Exam Weight", "Priority"].map((h, i) => headerCell(h, cxColW[i])))];
+      crossYields.slice(0, 8).forEach((y, i) => {
+        const recov     = y.recoverable_items != null ? y.recoverable_items.toFixed(1) : "\u2014";
+        const weightPct = y.exam_weight_pct != null ? `${y.exam_weight_pct}%` : "\u2014";
+        const score     = y.priority_score != null ? y.priority_score.toFixed(1) : "\u2014";
+        cxRows.push(row([
+          dataCell(`#${i + 1}`, cxColW[0], NAVY, true),
+          dataCell(y.dimension || "", cxColW[1], DGRAY, true, AlignmentType.LEFT),
+          dataCell(recov, cxColW[2]),
+          dataCell(weightPct, cxColW[3]),
+          dataCell(score, cxColW[4], BLUE, true),
+        ]));
+      });
+      children.push(makeTable(cxColW, cxRows));
+      children.push(spacer(100));
+    }
+
+    // Narrative patterns
+    if (patterns.length > 0) {
+      children.push(new Paragraph({ spacing: { before: 60, after: 60 }, children: [
+        new TextRun({ text: "Pattern Analysis", font: FONT, size: 22, bold: true, color: NAVY }),
+      ]}));
+      for (const p of patterns) {
+        children.push(new Paragraph({ spacing: { before: 60, after: 60 }, indent: { left: 200 }, children: [
+          new TextRun({ text: `\u2022  ${p.description || ""}`, font: FONT, size: 18, color: DGRAY }),
+        ]}));
+      }
+    }
+  }
+}
+
+// ────────────────────────────────────────────────────────────────────
 // 8. CONCEPT FINGERPRINT
 // ────────────────────────────────────────────────────────────────────
 children.push(new Paragraph({ children: [new PageBreak()] }));
 children.push(sectionBar("\uD83D\uDCA1 CONCEPT FINGERPRINT"));
-children.push(spacer(80));
+children.push(spacer(80, true));
 
 if (concept) {
+  // QID map per concept (added in v3.1 Python analyzer)
+  const cqMap = concept.concept_qid_map || {};
+
   // Build concept tables from diagnoses, drugs, guidelines dicts
-  // v3: top_diagnoses/top_drugs/top_guidelines; v2 fallback: diagnoses/drugs/guidelines
   const conceptSections = [
-    { label: "Top Diagnoses in Missed Items", data: concept.top_diagnoses || concept.diagnoses || {} },
-    { label: "Top Drugs in Missed Items",     data: concept.top_drugs     || concept.drugs     || {} },
-    { label: "Top Guidelines in Missed Items",data: concept.top_guidelines|| concept.guidelines|| {} },
+    { label: "Top Diagnoses in Missed Items", data: concept.top_diagnoses || concept.diagnoses || {}, qids: cqMap.diagnoses  || {} },
+    { label: "Top Drugs in Missed Items",     data: concept.top_drugs     || concept.drugs     || {}, qids: cqMap.drugs      || {} },
+    { label: "Top Guidelines in Missed Items",data: concept.top_guidelines|| concept.guidelines|| {}, qids: cqMap.guidelines || {} },
   ];
 
   for (const sec of conceptSections) {
@@ -609,13 +615,24 @@ if (concept) {
     children.push(new Paragraph({ spacing: { before: 80, after: 80 }, children: [
       new TextRun({ text: sec.label, font: FONT, size: 22, bold: true, color: BLUE }),
     ]}));
-    const cColW = [6500, 2860];
-    const cRows = [row(["Concept", "Frequency"].map((h, i) => headerCell(h, cColW[i])))];
+    const hasQids = Object.keys(sec.qids).length > 0;
+    const cColW = hasQids ? [3800, 1200, 4360] : [6500, 2860];
+    const headers = hasQids ? ["Concept", "Frequency", "Question IDs"] : ["Concept", "Frequency"];
+    const cRows = [row(headers.map((h, i) => headerCell(h, cColW[i])))];
     entries.slice(0, 10).forEach(([name, count]) => {
-      cRows.push(row([
-        dataCell(name, cColW[0], DGRAY, false, AlignmentType.LEFT),
-        dataCell(`${count}\u00D7`, cColW[1], count >= 3 ? RED : count >= 2 ? AMBER : NAVY, count >= 3),
-      ]));
+      const qidList = (sec.qids[name] || []).join(", ") || "\u2014";
+      if (hasQids) {
+        cRows.push(row([
+          dataCell(name, cColW[0], DGRAY, false, AlignmentType.LEFT),
+          dataCell(`${count}\u00D7`, cColW[1], count >= 3 ? RED : count >= 2 ? AMBER : NAVY, count >= 3),
+          dataCell(qidList, cColW[2], MGRAY, false, AlignmentType.LEFT),
+        ]));
+      } else {
+        cRows.push(row([
+          dataCell(name, cColW[0], DGRAY, false, AlignmentType.LEFT),
+          dataCell(`${count}\u00D7`, cColW[1], count >= 3 ? RED : count >= 2 ? AMBER : NAVY, count >= 3),
+        ]));
+      }
     });
     children.push(makeTable(cColW, cRows));
     children.push(spacer(80));
@@ -676,9 +693,9 @@ if (concept) {
 // ────────────────────────────────────────────────────────────────────
 children.push(spacer(200));
 children.push(sectionBar("\uD83C\uDFE5 ICD-10 WEAKNESS MAP"));
-children.push(spacer(80));
+children.push(spacer(80, true));
 
-children.push(new Paragraph({ spacing: { before: 40, after: 100 }, children: [
+children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 100 }, children: [
   new TextRun({ text: "Missed items mapped to ICD-10 codes via linked articles in the ITE Intelligence database. " +
     "Chapter rollup shows which clinical domains concentrate the most misses. " +
     "Individual codes identify specific conditions to review.",
@@ -686,141 +703,29 @@ children.push(new Paragraph({ spacing: { before: 40, after: 100 }, children: [
 ]}));
 
 if (icd) {
-  // Chapter summary table
-  const chapterSummary = icd.chapter_summary || {};
-  if (Object.keys(chapterSummary).length > 0) {
-    children.push(new Paragraph({ spacing: { before: 80, after: 80 }, children: [
-      new TextRun({ text: "ICD-10 Chapter Rollup", font: FONT, size: 22, bold: true, color: BLUE }),
-    ]}));
-
-    const chColW = [1200, 5800, 1180, 1180];
-    const chRows = [row(["Chapter", "Description", "Codes", "% of Total"].map((h, i) => headerCell(h, chColW[i])))];
-
-    const chapterDescs = {
+  // All ICD-10 codes ranked by miss count — clean single table
+  const allCodes = (icd.icd10_clusters || []).slice(0, 15);
+  if (allCodes.length > 0) {
+    const icColW = [1400, 5200, 900, 1860];
+    const icRows = [row(["ICD-10 Code", "Condition", "Misses", "Clinical Domain"].map((h, i) => headerCell(h, icColW[i])))];
+    const chDesc = {
       "I": "Infectious/Parasitic", "II": "Neoplasms", "III": "Blood/Immune",
       "IV": "Endocrine/Metabolic", "V": "Mental/Behavioral", "VI": "Nervous System",
-      "VII-VIII": "Eye and Ear", "IX": "Circulatory", "X": "Respiratory",
-      "XI": "Digestive", "XII": "Skin/Subcutaneous", "XIII": "Musculoskeletal",
-      "XIV": "Genitourinary", "XV": "Pregnancy/Childbirth", "XVI": "Perinatal",
-      "XVII": "Congenital", "XVIII": "Symptoms/Signs", "XIX": "Injury/Poisoning",
-      "XX": "External Causes", "XXI": "Factors/Health Status",
+      "IX": "Circulatory", "X": "Respiratory", "XI": "Digestive",
+      "XII": "Skin", "XIII": "Musculoskeletal", "XIV": "Genitourinary",
+      "XV": "OB/GYN", "XVIII": "Symptoms/Signs", "XIX": "Injury/Poisoning",
     };
-
-    const totalCodes = icd.total_codes_found || Object.values(chapterSummary).reduce((a, b) => a + b, 0);
-    const sorted = Object.entries(chapterSummary).sort((a, b) => b[1] - a[1]);
-    sorted.forEach(([ch, count]) => {
-      const pct = ((count / totalCodes) * 100).toFixed(1) + "%";
-      chRows.push(row([
-        dataCell(ch, chColW[0], NAVY, true),
-        dataCell(chapterDescs[ch] || ch, chColW[1], DGRAY, false, AlignmentType.LEFT),
-        dataCell(count, chColW[2], count >= 7 ? RED : count >= 4 ? AMBER : DGRAY, count >= 7),
-        dataCell(pct, chColW[3]),
-      ]));
-    });
-    children.push(makeTable(chColW, chRows));
-  }
-
-  // Top individual codes
-  // v3: miss_count; v2: count
-  const topCodes = (icd.icd10_clusters || []).filter(c => (c.miss_count || c.count || 0) >= 2);
-  if (topCodes.length > 0) {
-    children.push(spacer(120));
-    children.push(new Paragraph({ spacing: { before: 80, after: 80 }, children: [
-      new TextRun({ text: "High-Frequency ICD-10 Codes (appearing 2+ times)", font: FONT, size: 22, bold: true, color: BLUE }),
-    ]}));
-
-    const icColW = [1200, 5200, 1480, 1480];
-    const icRows = [row(["Code", "Description", "Count", "Chapter"].map((h, i) => headerCell(h, icColW[i])))];
-    topCodes.forEach(c => {
+    allCodes.forEach(c => {
+      const domain = chDesc[c.chapter] || c.chapter_desc || c.chapter || "\u2014";
+      const cnt = c.miss_count || c.count || 0;
       icRows.push(row([
-        dataCell(c.code, icColW[0], NAVY, true, AlignmentType.LEFT),
+        dataCell(c.code,        icColW[0], NAVY, true, AlignmentType.LEFT),
         dataCell(c.description, icColW[1], DGRAY, false, AlignmentType.LEFT),
-        dataCell(`${c.miss_count || c.count}\u00D7`, icColW[2], RED, true),
-        dataCell(c.chapter, icColW[3]),
+        dataCell(`${cnt}\u00D7`, icColW[2], cnt >= 3 ? RED : cnt >= 2 ? AMBER : DGRAY, cnt >= 2),
+        dataCell(domain,        icColW[3], MGRAY, false, AlignmentType.LEFT),
       ]));
     });
     children.push(makeTable(icColW, icRows));
-  }
-
-  // Dynamic ICD-10 study note from chapter summary
-  const chapterDescsNote = {
-    "I": "Infectious/Parasitic", "II": "Neoplasms", "III": "Blood/Immune",
-    "IV": "Endocrine/Metabolic", "V": "Mental/Behavioral", "VI": "Nervous System",
-    "VII-VIII": "Eye and Ear", "IX": "Circulatory", "X": "Respiratory",
-    "XI": "Digestive", "XII": "Skin/Subcutaneous", "XIII": "Musculoskeletal",
-    "XIV": "Genitourinary", "XV": "Pregnancy/Childbirth", "XVI": "Perinatal",
-    "XVII": "Congenital", "XVIII": "Symptoms/Signs", "XIX": "Injury/Poisoning",
-    "XX": "External Causes", "XXI": "Factors/Health Status",
-  };
-  const sortedChapters = Object.entries(chapterSummary).sort((a, b) => b[1] - a[1]);
-  const top3 = sortedChapters.slice(0, 3).map(([ch, cnt]) => `${chapterDescsNote[ch] || ch} (Ch ${ch}: ${cnt} codes)`);
-  const topCodesNote = topCodes.slice(0, 3).map(c => `${c.code} (${c.description})`).join(", ");
-  children.push(studyNote(
-    (top3.length >= 2 ? `${top3[0]} and ${top3[1]} dominate the ICD-10 map` + (top3[2] ? `. ${top3[2]} rounds out the top 3.` : ".") : "") +
-    (topCodesNote ? ` Top recurring codes: ${topCodesNote}.` : "") +
-    ` Cross-reference these codes with the High-Yield Reading List for targeted review.`
-  ));
-}
-
-
-// ════════════════════════════════════════════════════════════════════
-// 10. CLINICAL PATHWAY GAP MAP (v3 only)
-// ════════════════════════════════════════════════════════════════════
-if (pathways && pathways.status === "complete" && (pathways.pathway_gaps || []).length > 0) {
-  children.push(spacer(200));
-  children.push(sectionBar("🧬 CLINICAL PATHWAY GAP MAP"));
-  children.push(spacer(80));
-
-  children.push(new Paragraph({ spacing: { before: 40, after: 100 }, children: [
-    new TextRun({
-      text: "Missed questions mapped to clinical pathway roles via ICD-10. " +
-        "Shows not just WHERE you struggled but WHAT KIND of gap — " +
-        "treatment selection, monitoring, screening, or escalation.",
-      font: FONT, size: 18, color: MGRAY, italics: true }),
-  ]}));
-
-  const ROLE_COLORS = {
-    "first_line":           "1F3864",
-    "second_line":          "2E75B6",
-    "monitoring":           "276749",
-    "screening_prevention": "975A16",
-    "referral":             "595959",
-    "special_pops":         "553C9A",
-    "diagnosis":            "9B2C2C",
-  };
-
-  for (const gap of pathways.pathway_gaps) {
-    children.push(new Paragraph({ spacing: { before: 140, after: 20 }, children: [
-      new TextRun({ text: `${gap.icd10_code}`, font: FONT, size: 22, bold: true, color: NAVY }),
-      new TextRun({ text: `  ${gap.description || ""}`, font: FONT, size: 22, color: DGRAY }),
-      new TextRun({ text: `  •  ${gap.miss_count} missed question${gap.miss_count !== 1 ? "s" : ""}`, font: FONT, size: 18, color: RED, italics: true }),
-    ]}));
-
-    const roles = Object.entries(gap.pathway_roles || {});
-    if (roles.length > 0) {
-      const pColW = [2400, 1600, 4360];
-      const pRows = [row(["Pathway Role", "Guidelines", "Gap Type"].map((h, i) => headerCell(h, pColW[i])))];
-      roles.forEach(([role, count]) => {
-        const isDominant = role === gap.dominant_role;
-        const roleColor = ROLE_COLORS[role] || MGRAY;
-        const interp = isDominant ? `▶ ${gap.interpretation}` : "";
-        pRows.push(row([
-          dataCell(role.replace(/_/g, " "), pColW[0], roleColor, isDominant, AlignmentType.LEFT),
-          dataCell(`${count} articles`, pColW[1], isDominant ? RED : MGRAY, isDominant),
-          dataCell(interp, pColW[2], isDominant ? NAVY : LGRAY, false, AlignmentType.LEFT),
-        ]));
-      });
-      children.push(makeTable(pColW, pRows));
-    }
-  }
-
-  const topGap = pathways.pathway_gaps[0];
-  if (topGap) {
-    children.push(studyNote(
-      `Your most concentrated gap: ${topGap.icd10_code} (${topGap.description || ""}) — ` +
-      `${topGap.miss_count} missed questions pointing to a ${topGap.interpretation}. ` +
-      `Focus on ${(topGap.dominant_role || "").replace(/_/g, " ")} guidelines for this condition first.`
-    ));
   }
 }
 
@@ -829,9 +734,9 @@ if (pathways && pathways.status === "complete" && (pathways.pathway_gaps || []).
 // ────────────────────────────────────────────────────────────────────
 children.push(new Paragraph({ children: [new PageBreak()] }));
 children.push(sectionBar("\uD83D\uDCDA HIGH-YIELD READING LIST"));
-children.push(spacer(80));
+children.push(spacer(80, true));
 
-children.push(new Paragraph({ spacing: { before: 40, after: 120 }, children: [
+children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 120 }, children: [
   new TextRun({ text: "Articles selected from the ITE Intelligence database by citation frequency, exam year span, " +
     "and direct relevance to identified weak areas. Prioritize in order listed.",
     font: FONT, size: 18, color: MGRAY, italics: true }),
@@ -880,12 +785,12 @@ if (articles.length > 0) {
 // ────────────────────────────────────────────────────────────────────
 children.push(new Paragraph({ children: [new PageBreak()] }));
 children.push(sectionBar("\u270F TARGETED PRACTICE QUESTIONS \u2014 BY WEAK AREA"));
-children.push(spacer(60));
+children.push(spacer(60, true));
 
-children.push(new Paragraph({ spacing: { before: 40, after: 120 }, children: [
-  new TextRun({ text: "Questions drawn from the ITE Intelligence database (ITE + AAFP BRQ), globally ranked by relevance to each weak area. " +
-    "Minimum 5 per weak section. Correct answers highlighted with full explanations. " +
-    "A separate exam version (no answers) is provided as a companion document.",
+children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 120 }, children: [
+  new TextRun({ text: "Questions selected from the ITE Intelligence database (ITE + AAFP BRQ), ranked by relevance to each weak area. " +
+    "In the resident-facing report, full question text, answer choices, and explanations populate here. " +
+    "This version displays the selection reference table only.",
     font: FONT, size: 18, color: MGRAY, italics: true }),
 ]}));
 
@@ -893,12 +798,12 @@ children.push(new Paragraph({ spacing: { before: 40, after: 120 }, children: [
 const TIER_LABELS = { 1: "Direct Match", 2: "ICD-10 Sibling", 3: "Vector Match" };
 const TIER_COLORS = { 1: GREEN, 2: BLUE, 3: MGRAY };
 
-let qNum = 0;
 const targetOrder = [...weakBlueprints];
 for (const t of Object.keys(qByTarget)) {
   if (!targetOrder.includes(t)) targetOrder.push(t);
 }
 
+let globalQNum = 0;
 for (const target of targetOrder) {
   const tQuestions = qByTarget[target] || [];
   if (tQuestions.length === 0) continue;
@@ -910,51 +815,55 @@ for (const target of targetOrder) {
     isWeak ? BLUE : "4A5568"
   ));
 
-  for (const q of tQuestions) {
-    qNum++;
-    children.push(new Paragraph({ spacing: { before: 180, after: 40 }, children: [
-      new TextRun({ text: `Question ${qNum}`, font: FONT, size: 22, bold: true, color: NAVY }),
-      new TextRun({ text: `  ${q.qid}`, font: FONT, size: 18, color: MGRAY }),
-    ]}));
-
-    const meta = [q.body_system_merged, q.blueprint].filter(Boolean).join("  |  ");
-    const sourceLabel = q.source_label || (q.source_bank === "AAFP" ? "AAFP BRQ" : `ITE ${q.exam_year || ""}`.trim());
-    const tierLabel = TIER_LABELS[q.match_tier] || "";
+  const pqColW = [600, 1800, 2600, 2200, 1200, 960];
+  const pqRows = [row(["#", "QID", "Blueprint", "Body System", "Source", "Match"].map((h, i) => headerCell(h, pqColW[i])))];
+  tQuestions.forEach(q => {
+    globalQNum++;
+    const sourceLabel = q.source_bank === "AAFP" ? "AAFP BRQ" : `ITE ${q.exam_year || ""}`.trim();
+    const tierLabel = TIER_LABELS[q.match_tier] || "\u2014";
     const tierColor = TIER_COLORS[q.match_tier] || MGRAY;
-    children.push(new Paragraph({ spacing: { before: 0, after: 60 },
-      border: { bottom: { style: BorderStyle.SINGLE, size: 1, color: "D6E4F7", space: 4 } },
-      children: [
-        new TextRun({ text: meta, font: FONT, size: 16, color: BLUE }),
-        ...(sourceLabel ? [new TextRun({ text: `  \u2022  ${sourceLabel}`, font: FONT, size: 16, color: BLUE, bold: true })] : []),
-        ...(tierLabel ? [new TextRun({ text: `  \u2022  ${tierLabel}`, font: FONT, size: 16, color: tierColor, italics: true })] : []),
-      ],
-    }));
+    pqRows.push(row([
+      dataCell(String(globalQNum), pqColW[0], NAVY, true),
+      dataCell(q.qid || "\u2014", pqColW[1], BLUE, false, AlignmentType.LEFT),
+      dataCell(q.blueprint || "\u2014", pqColW[2], DGRAY, false, AlignmentType.LEFT),
+      dataCell(q.body_system_merged || "\u2014", pqColW[3], DGRAY, false, AlignmentType.LEFT),
+      dataCell(sourceLabel, pqColW[4], MGRAY, false, AlignmentType.LEFT),
+      dataCell(tierLabel, pqColW[5], tierColor, false, AlignmentType.LEFT),
+    ]));
+  });
+  children.push(makeTable(pqColW, pqRows));
+}
 
-    children.push(new Paragraph({ spacing: { before: 80, after: 80 }, children: [
-      new TextRun({ text: q.question_text || "", font: FONT, size: 20, color: DGRAY }),
-    ]}));
+// ────────────────────────────────────────────────────────────────────
+// APPENDIX: MISSED EXAM ITEMS (reference — full question text + answer)
+// ────────────────────────────────────────────────────────────────────
+const missedItems = data.missed_items_detail || [];
+if (missedItems.length > 0) {
+  children.push(new Paragraph({ children: [new PageBreak()] }));
+  children.push(sectionBar("📋 APPENDIX — MISSED EXAM ITEMS"));
+  children.push(spacer(60, true));
 
-    let choices = q.choices || [];
-    if (typeof choices === "string") { try { choices = JSON.parse(choices); } catch { choices = []; } }
-    choices.forEach(c => {
-      const isCorrect = c.letter === q.correct_letter;
-      children.push(new Paragraph({ spacing: { before: 30, after: 30 }, indent: { left: 360 }, children: [
-        new TextRun({ text: `${c.letter}. ${c.text}`, font: FONT, size: 20, color: isCorrect ? GREEN : DGRAY, bold: isCorrect }),
-        ...(isCorrect ? [new TextRun({ text: "  \u2713", font: FONT, size: 20, color: GREEN, bold: true })] : []),
-      ]}));
-    });
+  children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 120 }, children: [
+    new TextRun({
+      text: `${missedItems.length} items answered incorrectly. ` +
+            "Reference table — use QIDs to locate questions in the practice section above.",
+      font: FONT, size: 18, color: MGRAY, italics: true,
+    }),
+  ]}));
 
-    children.push(new Paragraph({ spacing: { before: 80, after: 40 }, children: [
-      new TextRun({ text: `Answer: ${q.correct_letter}`, font: FONT, size: 20, bold: true, color: GREEN }),
-      new TextRun({ text: q.correct_text ? ` \u2014 ${q.correct_text}` : "", font: FONT, size: 20, color: GREEN }),
-    ]}));
-
-    if (q.explanation) {
-      children.push(new Paragraph({ spacing: { before: 40, after: 100 }, indent: { left: 200 }, children: [
-        new TextRun({ text: q.explanation, font: FONT, size: 18, color: MGRAY, italics: true }),
-      ]}));
-    }
+  const appColW = [900, 1900, 2800, 2800, 960];
+  const appRows = [row(["Item #", "QID", "Blueprint", "Body System", "Status"].map((h, i) => headerCell(h, appColW[i])))];
+  for (const m of missedItems) {
+    const status = m.db_found ? "Linked" : "No record";
+    appRows.push(row([
+      dataCell(String(m.item_number), appColW[0], DGRAY, true),
+      dataCell(m.qid || "\u2014", appColW[1], BLUE, false, AlignmentType.LEFT),
+      dataCell(m.blueprint || "\u2014", appColW[2], DGRAY, false, AlignmentType.LEFT),
+      dataCell(m.body_system || "\u2014", appColW[3], DGRAY, false, AlignmentType.LEFT),
+      dataCell(status, appColW[4], m.db_found ? MGRAY : RED, false),
+    ]));
   }
+  children.push(makeTable(appColW, appRows));
 }
 
 // ═══════════════════════════════════════════════════════════════════
@@ -982,10 +891,9 @@ function makeDocShell(docChildren, headerText, footerText) {
       ]}) },
       footers: { default: new Footer({ children: [
         new Paragraph({
-          border: { top: { style: BorderStyle.SINGLE, size: 1, color: "D0D0D0", space: 4 } },
-          spacing: { before: 100 },
+          alignment: AlignmentType.RIGHT,
+          spacing: { before: 60 },
           children: [
-            new TextRun({ text: `${footerText}  |  `, font: FONT, size: 14, color: LGRAY }),
             new TextRun({ text: "Page ", font: FONT, size: 14, color: LGRAY }),
             new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 14, color: LGRAY }),
           ],
@@ -996,7 +904,7 @@ function makeDocShell(docChildren, headerText, footerText) {
   });
 }
 
-const analysisDoc = makeDocShell(children, `ITE ${data.exam_year} Score Analysis  |  ${res.name}`, "Generated by ITE Score Analysis Pipeline v2");
+const analysisDoc = makeDocShell(children, `ITE ${data.exam_year} Score Analysis`, "");
 
 // ═══════════════════════════════════════════════════════════════════
 // PART C: EXAM VERSION
@@ -1008,7 +916,7 @@ examChildren.push(new Paragraph({ spacing: { before: 600, after: 0 }, alignment:
   new TextRun({ text: `ITE ${data.exam_year} PRACTICE EXAM`, font: FONT, size: 36, bold: true, color: NAVY }),
 ]}));
 examChildren.push(new Paragraph({ spacing: { before: 80, after: 0 }, alignment: AlignmentType.CENTER, children: [
-  new TextRun({ text: `Personalized for ${res.name}`, font: FONT, size: 22, color: BLUE }),
+  new TextRun({ text: `ITE ${data.exam_year} — Targeted Practice`, font: FONT, size: 22, color: BLUE }),
 ]}));
 examChildren.push(new Paragraph({ spacing: { before: 60, after: 0 }, alignment: AlignmentType.CENTER, children: [
   new TextRun({ text: `${allQuestions.length} questions targeted to weak areas  |  Answer key at end`, font: FONT, size: 18, color: MGRAY }),
@@ -1068,7 +976,7 @@ answerKey.forEach(a => {
 });
 examChildren.push(makeTable(akColW, akRows));
 
-const examDoc = makeDocShell(examChildren, `ITE ${data.exam_year} Practice Exam  |  ${res.name}`, "ITE Practice Exam");
+const examDoc = makeDocShell(examChildren, `ITE ${data.exam_year} Practice Exam`, "ITE Practice Exam");
 
 // ═══════════════════════════════════════════════════════════════════
 // WRITE BOTH FILES AND PRINT SUMMARY
