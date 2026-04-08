@@ -28,17 +28,18 @@ board_prep_intel/
 │
 ├── 01_module.1_warehouse/             M1 — PDF library + build/maintain DB scripts
 │   ├── citation_files/
-│   │   └── ITE/
-│   │       ├── VC_fail/               623 PDFs: failed VC gate; awaiting enrichment (gitignored)
-│   │       ├── VC_pass/               168 PDFs: passed VC gate; awaiting enrichment (gitignored)
-│   │       ├── local_lite/            117 PDFs: VC_fail + fully enriched (gitignored)
-│   │       ├── right_click/           58 PDFs: VC_pass + fully enriched — priority tier (gitignored)
-│   │       └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored)
+│   │   ├── ITE/
+│   │   │   ├── VC_fail/               623 PDFs: failed VC gate; awaiting enrichment (gitignored)
+│   │   │   ├── VC_pass/               168 PDFs: passed VC gate; awaiting enrichment (gitignored)
+│   │   │   ├── local_lite/            117 PDFs: VC_fail + fully enriched (gitignored)
+│   │   │   ├── right_click/           58 PDFs: VC_pass + fully enriched — priority tier (gitignored)
+│   │   │   └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored)
+│   │   └── AAFP/                      15 PDFs: AAFP citation library (gitignored)
 │   ├── ite_exams/                     16 raw ITE exam PDFs: YYYY_MC.pdf + YYYY_critique.pdf (gitignored)
 │   └── scripts/
 │       ├── aafp_brq_scraper.py        AAFP BRQ scraper (Windows-only)
 │       ├── build/                     6 scripts: full DB rebuild sequence
-│       └── maintain/                  23 scripts: recurring DB population and maintenance
+│       └── maintain/                  25 scripts: recurring DB population and maintenance
 │
 ├── 02_module.2_processor/             M2 — Extraction, enrichment, DOCX build pipeline
 │   ├── main.py                        Pipeline entry point
@@ -56,7 +57,7 @@ board_prep_intel/
 │       └── candidates/                Prompt templates for enrichment
 │
 ├── 03_module.3_analyst/               M3 — Score analysis, ICD-10, pathways, Q&A deliverables
-│   ├── scripts/                       13 py + 2 JS + 2 JSON; ite_parser, ite_analyzer_v3, report builders
+│   ├── scripts/                       14 py + 2 JS + 2 JSON; ite_parser, ite_analyzer_v3, build_article_currency, report builders
 │   ├── docs/                          ITE score analysis pipeline docs
 │   └── reports/                       Per-resident DOCX reports + faculty PPTX (gitignored)
 │

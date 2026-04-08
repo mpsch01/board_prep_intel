@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-04-06 (BATON 045 — ite_analyzer_v3.py AAFP quota fix; ite_report_builder_v2.js overhaul; question_icd10 cleanup)
-**Status:** Current — 966 ITE + 15 AAFP PDFs; M1 maintain = 25 scripts; M2 updated (75py + 6js); DB cleaned (no_match rows removed).
+**Last Updated:** 2026-04-07 (BATON 046 — build_article_currency.py (M3); article_currency table complete; Layer 2 DEFERRED-F closed)
+**Status:** Current — 997 total PDFs (966 ITE + 15 AAFP + 16 exams); M1 maintain = 25 scripts; M2 = 75py + 6js; M3 = 14py + 2js; DB stable (1,985 articles).
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -78,7 +78,7 @@ board_prep_intel/
     └── ite-data-context-skill/
 ```
 
-**DB Counts (verified live 2026-04-03, BATON 034):**
+**DB Counts (verified live 2026-04-07, BATON 046):**
 | Table | Rows | Notes |
 |-------|------|-------|
 | articles | 1,985 | +49 AAFP acquisition (ART-1938–ART-1986); PDFs pending download |
@@ -92,6 +92,7 @@ board_prep_intel/
 | aafp_question_icd10 | 4,753 | relevance normalized; related cap applied |
 | clinical_pathways | 3,971 | REBUILT 2026-03-31 — blueprint-based, both banks; cleaned -49 no_match rows (2026-04-06) |
 | article_citation_trend | 1,740 | longitudinal citation tracking + watch_list flag |
+| article_currency | 1,985 | ✅ NEW — Layer 2 complete; current:1100, updated:169, check_needed:106, not_indexed:610; title_signals column (JSON array) |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
 | icd10_rollup | 614 | |
 | icd10_code_xref | 1,006 | |
@@ -297,6 +298,7 @@ board_prep_intel/
 │   ├── ite_parser.py
 │   ├── ite_report_builder_v2.js           ← patched: subcatAnalysis, TIER_LABELS, pathway sections (BATON 030)
 │   ├── build_icd10_tags.py
+│   ├── build_article_currency.py             ← NEW (BATON 046) — Layer 2 complete; status enum (current/updated/check_needed/not_indexed); title_signals
 │   ├── aafp_question_reuse_investigation.py  ← AAFP-ITE shared vignette finder; 38 pairs found (BATON 020)
 │   ├── export_aafp_ite_relationships.py   ← NEW (BATON 031) — 4-CSV AAFP↔ITE relationship export
 │   ├── word_doc_defaults.py               ← NEW (BATON 031) — St. Luke's style template; import in ALL python-docx scripts
@@ -321,7 +323,7 @@ board_prep_intel/
     ├── sarkar_2025_blueprint.pdf / bodysystem.pdf
     └── scholl_2025_ENCRYPTED_22/23/24.pdf ← FLAG 30 (needs password)
 ```
-*13 Python + 2 JS + 2 JSON configs*
+*14 Python + 2 JS + 2 JSON configs*
 
 ### `04_module.4_sandbox/` — Experiments
 ```

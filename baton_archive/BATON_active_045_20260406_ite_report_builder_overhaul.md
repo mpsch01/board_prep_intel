@@ -161,7 +161,7 @@ This session completed a targeted overhaul of the ITE score analysis pipeline (M
 |------|-------------|--------|-----------|
 | DEFERRED-AAFP-PAYWALL | 3 articles (ART-1959, ART-1972, ART-1967) — paywalled; obtain via institutional/interlibrary loan | OPEN | BATON 044 |
 | DEFERRED-F | Intelligence 2.0 Layer 2 — `article_currency` via PubMed (344 PMIDs in pubmed_pmid_cache; NCBI API key set) | OPEN | BATON 044 |
-| DEFERRED-RECO-CLEANUP | Clean empty RECO folders — user housekeeping task post-PDF recovery | OPEN | BATON 044 |
+| DEFERRED-RECO-CLEANUP | Clean empty RECO folders — user housekeeping task post-PDF recovery | ✅ CLOSED — completed by user prior to BATON 045 | BATON 044 |
 
 ---
 
@@ -170,7 +170,7 @@ This session completed a targeted overhaul of the ITE score analysis pipeline (M
 ### Immediate (next session)
 1. **Resume normal roadmap:** exa-research-search Phase 2 expansion + clinical pathways pipeline Phase 3.
 2. **DEFERRED-F Priority:** Intelligence 2.0 Layer 2 (`article_currency` via PubMed NCBI API; 344 PMIDs ready in `pubmed_pmid_cache`).
-3. **User housekeeping:** DEFERRED-RECO-CLEANUP — remove empty RECO folders post-PDF recovery.
+3. ~~**User housekeeping:** DEFERRED-RECO-CLEANUP~~ — ✅ DONE. Do not carry forward.
 
 ### Medium-term
 4. **Resident-facing report toggle:** When needed for resident-facing report version, re-enable full question rendering in ite_report_builder_v2.js practice questions section (currently shows compact reference table only).

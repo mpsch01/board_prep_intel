@@ -1,5 +1,5 @@
 # project_overhaul_state.md
-Last updated: 2026-04-06 (BATON 045)
+Last updated: 2026-04-07 (BATON 046)
 
 ## Module State
 
@@ -7,7 +7,7 @@ Last updated: 2026-04-06 (BATON 045)
 |--------|--------|----------|
 | M1 Warehouse | Active | 966 ITE PDFs (4 tiers) + 15 AAFP PDFs; 6 build + 25 maintain scripts |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
-| M3 Analyst | Active | 13 py + 2 js; ICD-10, pathways, score analysis |
+| M3 Analyst | Active | 14 py + 2 js; ICD-10, pathways, score analysis, article_currency (Layer 2) |
 | M4 Sandbox | Active | Experiments + agent prototypes |
 | DB | Stable | 1,985 articles, 1,629 ITE Qs, 1,221 AAFP Qs |
 
@@ -36,14 +36,15 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 |------|--------|-------------|
 | DEFERRED-A | ARCHIVED | 37 ITE manual PDFs — permanent ceiling (subscription-only) |
 | DEFERRED-AAFP-PAYWALL | ACTIVE | 3 AAFP articles paywalled (PMC not_oa): ART-1959 Binic_2011, ART-1972 Byington_2012, ART-1967 Verbalis_2007 |
-| DEFERRED-F | ACTIVE | Intelligence 2.0 Layer 2 — article_currency via PubMed |
+| DEFERRED-F | ✅ CLOSED | Intelligence 2.0 Layer 2 complete — article_currency built (1,985 rows) |
 | DEFERRED-H | CLOSED | Legacy non-codon PDFs confirmed duplicates |
 | DEFERRED-I | LOW PRI | unpaywall_scanner --from-csv extension |
 | DEFERRED-J | CLOSED | exa-research-search Phase 2 completed |
+| DEFERRED-L2-REVIEW | LOW PRI | Optional human review of 169 updated + 106 check_needed article_currency rows (use title_signals cross-reference) |
 
 ## Intelligence 2.0 Status
 - Layer 1 (ICD-10): Complete — 4,020 rows article_icd10; question_icd10 5,218 rows (cleaned -66 no_match)
-- Layer 2 (PubMed currency): DEFERRED-F — 344 PMIDs seeded; build article_currency table next
+- Layer 2 (PubMed currency): ✅ COMPLETE — article_currency 1,985 rows; status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals column (JSON array)
 - Layer 3 (Clinical pathways): Complete — 3,971 rows (cleaned -49 no_match)
 - Layer 4 (Trends): Partial — trend CSV files in readable_db_files/
 

@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_045_20260406_ite_report_builder_overhaul.md` — ITE report builder overhaul; ite_analyzer_v3.py AAFP quota fixed, no_match cleanup; ite_report_builder_v2.js major overhaul |
+| Active BATON | `BATON_active_046_20260407_layer2_article_currency.md` — Intelligence 2.0 Layer 2 complete; article_currency 1,985 rows; title_signals column for blueprint cross-reference |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -70,7 +70,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 6 build + 25 maintain + aafp_brq_scraper.py at scripts/ root |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
-| M3 scripts | 13 Python + 2 JS + 2 JSON config (M3 JS count corrected: 2, not 147) |
+| M3 scripts | 14 Python + 2 JS + 2 JSON config (build_article_currency.py added 2026-04-07) |
+| article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
 | Git branch | `main`, latest → GIT-COMMITTED (PDF recovery + session housekeeping + skill creation) |
@@ -112,9 +113,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 045, 2026-04-06)
-1. **Resume normal roadmap** — exa-research-search Phase 2 + clinical pathways pipeline
-2. **DEFERRED-F** — Intelligence 2.0 Layer 2: `article_currency` via PubMed (344 PMIDs in `pubmed_pmid_cache`; NCBI API key set)
-3. **DEFERRED-RECO-CLEANUP** — Clean empty RECO folders (user housekeeping task)
+## Next Steps (as of BATON 046, 2026-04-07)
+1. **exa-research-search Phase 2** — expansion of guideline library + clinical pathways pipeline
+2. ~~**DEFERRED-F**~~ — ✅ CLOSED. Intelligence 2.0 Layer 2 (`article_currency`) complete — 1,985 rows built 2026-04-07.
+3. **Optional article_currency review** — 169 updated + 106 check_needed rows available for manual audit
 4. **DEFERRED-AAFP-PAYWALL** — 3 articles (ART-1959, ART-1972, ART-1967) via institutional/interlibrary loan
 5. **When resident-facing report needed** — re-enable full question rendering in ite_report_builder_v2.js (currently compact reference table mode)
