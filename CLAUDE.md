@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_049_20260408_bug_fixes_ite_pipeline.md` — BUG-047-01/02/03 fixed in ITE pipeline; test runs complete |
+| Active BATON | `BATON_active_050_20260408_practice_q_yoy_fixes.md` — practice Q year bias fixed; YOY section added; two-table layout; Pjetergjoka runs complete |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -62,7 +62,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_icd10_vec | 1,757 rows — ✅ rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 rows — ✅ rebuilt 2026-04-05 |
 | clinical_pathways | 3,971 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 — 49 no_match rows deleted |
-| PDFs (ITE citation tiers) | 981 across 4 tiers in citation_files/ITE/ (VC_fail:630, VC_pass:168, local_lite:117, right_click:58) — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; +7 VC_fail 2026-04-08; 14 dupes in _dupe_archive/ |
+| PDFs (ITE citation tiers) | 980 across 4 tiers in citation_files/ITE/ (VC_fail:637, VC_pass:168, local_lite:117, right_click:58) — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
 | PDFs (AAFP) | 15 in citation_files/AAFP/ — recovered 2026-04-05 |
 | PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
@@ -74,7 +74,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → f2728d9 |
+| Git branch | `main`, latest → 03334d0 |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -113,15 +113,14 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 049, 2026-04-08)
+## Next Steps (as of BATON 050, 2026-04-08)
 
 ### Immediate
-1. **Git commit** — Stage and commit ite_parser.py, ite_analyzer_v3.py, ite_analyze_v2.py, ite_report_builder_v2.js
-2. **DOCX review** — Mikey to open Scholl_2024, Sarkar_2025, Hopkins_2025 DOCXs: verify score display (official vs estimated) and ⚠ WEAK AREA headers
+1. **DOCX review** — Mikey to open Pjetergjoka_2024, Pjetergjoka_2025 DOCXs: verify score display and year-over-year table
+2. **DEFERRED-YOY-ROBUSTNESS** — Make longitudinal section robust: handle missing scaled scores, partial year data, multi-year gaps
 3. **DEFERRED-PRACTICE-Q-COVERAGE** — Investigate 0-question warnings for Foundations/Preventive/Cardiovascular/Respiratory/Sexual and Reproductive/Psychiatric/Behavioral in practice question engine
 
 ### Short-term
 4. **DATABASE_GUIDE.md relocation** — Finalize git add/rm to register as rename (carry from 048)
-5. **Test Agents B & C** — Next housekeeping run should validate agent templates
-6. **DEFERRED-PGY-BENCHMARKS** — Mikey to provide PGY 1–4 expected % ranges; add pgy_benchmarks.md
-7. **AAFP PDF retry** — Monitor AAFP site recovery; re-run exa_pdf_downloader
+5. **DEFERRED-PGY-BENCHMARKS** — Mikey to provide PGY 1–4 expected % ranges; add pgy_benchmarks.md
+6. **AAFP PDF retry** — Monitor AAFP site recovery; re-run exa_pdf_downloader

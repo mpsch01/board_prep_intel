@@ -1,7 +1,7 @@
 # _index.md â€” Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root â€” Option B complete 2026-04-04)
-**Last Updated:** 2026-04-08 (BATON 049 – bug fixes in ITE score analysis pipeline; BUG-047-01/02/03 resolved)
-**Status:** Current – 1,004 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 maintain = 26 scripts; M2 = 75py + 6js; M3 = 14py + 2js + report_config.json; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
+**Last Updated:** 2026-04-08 (BATON 050 – practice Q year-over-year fixes; YOY section added; two-table layout in ite_report_builder_v2.js)
+**Status:** Current – 1,004 total PDFs (637 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 maintain = 26 scripts; M2 = 75py + 6js; M3 = 14py + 2js + report_config.json; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-â”œâ”€â”€ BATON_active_049_20260408_bug_fixes_ite_pipeline.md  â† active BATON
+â”œâ”€â”€ BATON_active_050_20260408_practice_q_yoy_fixes.md  â† active BATON
 â”œâ”€â”€ CLAUDE.md                              â† project memory + conventions
 â”œâ”€â”€ REPO_MAP.md                            â† current-state architectural overview (NEW â€” BATON 039)
 â”œâ”€â”€ README.md                              â† project overview (human-readable)
@@ -40,6 +40,8 @@ board_prep_intel/
 **Swept (2026-04-04, BATON 036/037):** M1 restructured to 3-domain layout (citation_files/ + practice_questions/ + ite_exams/); all 11 M1 maintain scripts path-updated; build_ite_qa_deliverables.py + build_aafp_qa_deliverables.py built + 42 deliverables generated; ite_exams/ archive confirmed (2018â€“2025)
 
 **Fixed (2026-04-08, BATON 049):** Three ITE score analysis bugs fixed — BUG-047-01: ite_parser.py exam_year now extracted from PDF text (not hardcoded 2025); BUG-047-02: ite_analyzer_v3.py added BODYSYSTEM_PDF_NORM alias map + _normalize_body_system() function for body system name normalization; BUG-047-03: ite_analyze_v2.py imports normalize function, applies it to body_system_scaled dict, uses official score when available. Test reports validated: Scholl_2022/23/24, Sarkar_2025, Hopkins_2025. New finding: practice question 0-question warnings detected in qid_art_xref tagging (deferred flag: DEFERRED-PRACTICE-Q-COVERAGE).
+
+**Improved (2026-04-08, BATON 050):** Practice Q year-over-year analysis refined — removed recency bonus from ite_analyzer_v3.py; updated SQL ORDER BY exam_year DESC queries; increased result limits from 20 to 60; added current_exam_year exclusion with int cast; ite_report_builder_v2.js implements two-table layout (single-dimension + cross-dimension); longitudinal year-over-year section 3b added with month-by-month trend data; --skip-reading-list and --question-count CLI flags added to ite_analyze_v2.py; SKIP_READING_LIST env var passed to Node. Ran Pjetergjoka 2024+2025 analysis with 35 questions.
 
 **Swept (2026-04-08, BATON 048):** DATABASE_GUIDE.md relocated from 00_database/ to project root; session-housekeeping agent templates created in .claude/skills/session-housekeeping/agents/
 

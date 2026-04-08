@@ -1,11 +1,11 @@
 ---
-name: DEFERRED-RECO-CLEANUP permanently closed
-description: RECO folder cleanup is done and complete — never carry this deferred flag forward in any BATON or Next Steps list
+name: DEFERRED-RECO-CLEANUP is permanently closed
+description: RECO folder cleanup was completed by Mikey; never carry this flag forward in any BATON or Next Steps list
 type: feedback
 ---
 
-DEFERRED-RECO-CLEANUP is permanently closed. The RECO folder cleanup task was completed by the user prior to BATON 045 (2026-04-06).
+DEFERRED-RECO-CLEANUP — the cleanup of empty RECO folders after the PDF recovery (2026-04-05) — was completed by Mikey prior to BATON 045. It has been carried forward incorrectly across multiple sessions and flagged multiple times by the user.
 
-**Why:** This deferred flag was being incorrectly carried forward in BATONs even after completion, creating noise in Next Steps sections.
+**Why:** Mikey cleaned the RECO folders himself. This is done. It is not a deferred task. Do not resurrect it.
 
-**How to apply:** If this flag appears in any BATON's Deferred Flags or Next Steps, remove it immediately. Do not re-open it. The task is done.
+**How to apply:** Never include DEFERRED-RECO-CLEANUP in any BATON deferred flags table or Next Steps list. If you see it anywhere, remove it.

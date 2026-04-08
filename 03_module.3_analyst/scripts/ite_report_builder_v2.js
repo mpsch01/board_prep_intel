@@ -274,11 +274,11 @@ for (const q of allQuestions) {
   qByTarget[target].push(q);
 }
 
-// Collect warnings for 5+ per weak area
+// Collect warnings for weak areas with zero practice question coverage
 const warnings = [];
 for (const wb of weakBlueprints) {
   const count = (qByTarget[wb] || []).length;
-  if (count < 5) {
+  if (count === 0) {
     warnings.push(`"${wb}" (${count} questions)`);
   }
 }
@@ -349,6 +349,56 @@ children.push(studyNote(
   `This report provides targeted practice questions for each weak area (min. 5 per section), ranked by fit, ` +
   `plus a separate exam version for timed self-assessment.`
 ));
+
+// ────────────────────────────────────────────────────────────────────
+// 3b. LONGITUDINAL DELTA (only rendered when prior-year data exists)
+// ────────────────────────────────────────────────────────────────────
+const lng = data.longitudinal_delta || {};
+if (lng.n1 || lng.n2) {
+  children.push(new Paragraph({ children: [new PageBreak()] }));
+  children.push(sectionBar("\uD83D\uDCC8 YEAR-OVER-YEAR PROGRESS"));
+  children.push(spacer(80, true));
+
+  const lngColW = [1400, 1400, 1400, 1400, 3760];  // 9360 twips total
+
+  for (const [key, delta] of [["n1", lng.n1], ["n2", lng.n2]]) {
+    if (!delta) continue;
+    const label = key === "n1" ? "vs Last Year" : "vs Two Years Ago";
+    children.push(new Paragraph({ keepNext: true, spacing: { before: 120, after: 60 }, children: [
+      new TextRun({ text: `${label} (${delta.prior_year} \u2192 ${data.exam_year})`, font: FONT, size: 22, bold: true, color: NAVY }),
+    ]}));
+
+    // Score row
+    const scoreDelta = delta.scaled_delta != null ? delta.scaled_delta : delta.overall_delta_pct;
+    const scorePrior = delta.scaled_delta != null ? delta.prior_scaled   : delta.prior_overall_pct + "%";
+    const scoreCurr  = delta.scaled_delta != null ? delta.current_scaled : delta.current_overall_pct + "%";
+    const scoreType  = delta.scaled_delta != null
+      ? (delta.scaled_source === "official" ? "Scaled score (official)" : "Scaled score (est.)")
+      : "Raw score %";
+    const sign = scoreDelta >= 0 ? "+" : "";
+    const deltaColor = scoreDelta > 0 ? GREEN : scoreDelta < 0 ? RED : DGRAY;
+
+    const lngRows = [
+      row(["Metric", "Prior", "Current", "Change", "Weak Area Trajectory"].map((h, i) => headerCell(h, lngColW[i]))),
+      row([
+        dataCell(scoreType,          lngColW[0], DGRAY, false, AlignmentType.LEFT),
+        dataCell(String(scorePrior), lngColW[1], MGRAY, false),
+        dataCell(String(scoreCurr),  lngColW[2], NAVY,  true),
+        dataCell(`${sign}${scoreDelta}`, lngColW[3], deltaColor, true),
+        (() => {
+          const traj = delta.weak_area_trajectory || {};
+          const lines = [];
+          if (traj.closed?.length)      lines.push({ text: `\u2714 Closed: ${traj.closed.join(", ")}`,       bold: false, color: GREEN, size: 16 });
+          if (traj.persistent?.length)  lines.push({ text: `\u26A0 Persistent: ${traj.persistent.join(", ")}`, bold: false, color: AMBER, size: 16 });
+          if (traj.new?.length)         lines.push({ text: `\u25B6 New gap: ${traj.new.join(", ")}`,          bold: false, color: RED,   size: 16 });
+          return lines.length ? multiLineCell(lines, lngColW[4]) : dataCell("\u2014", lngColW[4], MGRAY, false);
+        })(),
+      ]),
+    ];
+    children.push(makeTable(lngColW, lngRows));
+    children.push(spacer(60));
+  }
+}
 
 // ────────────────────────────────────────────────────────────────────
 // 4a. ITE OVERVIEW TABLE (blueprint + body system at a glance)
@@ -751,6 +801,9 @@ if (icd) {
 // ────────────────────────────────────────────────────────────────────
 // 10. HIGH-YIELD READING LIST
 // ────────────────────────────────────────────────────────────────────
+// Set SKIP_READING_LIST=1 in env to omit this section from the report.
+const SKIP_READING_LIST = process.env.SKIP_READING_LIST === "1";
+if (!SKIP_READING_LIST) {
 children.push(new Paragraph({ children: [new PageBreak()] }));
 children.push(sectionBar("\uD83D\uDCDA HIGH-YIELD READING LIST"));
 children.push(spacer(80, true));
@@ -798,6 +851,7 @@ if (articles.length > 0) {
     `if the ABFM has cited it ${articles[0]?.citation_count || 5}\u00D7, it will appear again.`
   ));
 }
+} // end SKIP_READING_LIST guard
 
 // ────────────────────────────────────────────────────────────────────
 // PART B: PRACTICE QUESTIONS (with answers, grouped by weak area)
@@ -817,40 +871,54 @@ children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 120 
 const TIER_LABELS = { 1: "Direct Match", 2: "ICD-10 Sibling", 3: "Vector Match" };
 const TIER_COLORS = { 1: GREEN, 2: BLUE, 3: MGRAY };
 
-const targetOrder = [...weakBlueprints];
-for (const t of Object.keys(qByTarget)) {
-  if (!targetOrder.includes(t)) targetOrder.push(t);
-}
+// Split into single-category and cross-category, sorted by targeting within each group
+const singleQs = allQuestions
+  .filter(q => !(q.targeting || "").includes(" \u00D7 "))
+  .sort((a, b) => (a.targeting || "").localeCompare(b.targeting || ""));
+const crossQs = allQuestions
+  .filter(q => (q.targeting || "").includes(" \u00D7 "))
+  .sort((a, b) => (a.targeting || "").localeCompare(b.targeting || ""));
 
-let globalQNum = 0;
-for (const target of targetOrder) {
-  const tQuestions = qByTarget[target] || [];
-  if (tQuestions.length === 0) continue;
-  const isWeak = weakBlueprints.includes(target);
+// Shared column layout — adds "Targeting" column, replaces per-dim subBar headers
+// Cols: #, Targeting, QID, Blueprint, Body System, Source, Match  → total 9360 twips
+const pqColW = [500, 2000, 1300, 1800, 1800, 1000, 960];
+const PQ_HEADERS = ["#", "Targeting", "QID", "Blueprint", "Body System", "Source", "Match"];
 
-  children.push(spacer(120));
-  children.push(subBar(
-    isWeak ? `\u26A0 WEAK AREA: ${target.toUpperCase()}  (${tQuestions.length} questions)` : `${target.toUpperCase()}  (${tQuestions.length} questions)`,
-    isWeak ? BLUE : "4A5568"
-  ));
-
-  const pqColW = [600, 1800, 2600, 2200, 1200, 960];
-  const pqRows = [row(["#", "QID", "Blueprint", "Body System", "Source", "Match"].map((h, i) => headerCell(h, pqColW[i])))];
-  tQuestions.forEach(q => {
-    globalQNum++;
+function buildPqTable(questions, startNum) {
+  const pqRows = [row(PQ_HEADERS.map((h, i) => headerCell(h, pqColW[i])))];
+  questions.forEach((q, idx) => {
+    const num = startNum + idx;
     const sourceLabel = q.source_bank === "AAFP" ? "AAFP BRQ" : `ITE ${q.exam_year || ""}`.trim();
-    const tierLabel = TIER_LABELS[q.match_tier] || "\u2014";
-    const tierColor = TIER_COLORS[q.match_tier] || MGRAY;
+    const tierLabel   = TIER_LABELS[q.match_tier] || "\u2014";
+    const tierColor   = TIER_COLORS[q.match_tier] || MGRAY;
     pqRows.push(row([
-      dataCell(String(globalQNum), pqColW[0], NAVY, true),
-      dataCell(q.qid || "\u2014", pqColW[1], BLUE, false, AlignmentType.LEFT),
-      dataCell(q.blueprint || "\u2014", pqColW[2], DGRAY, false, AlignmentType.LEFT),
-      dataCell(q.body_system_merged || "\u2014", pqColW[3], DGRAY, false, AlignmentType.LEFT),
-      dataCell(sourceLabel, pqColW[4], MGRAY, false, AlignmentType.LEFT),
-      dataCell(tierLabel, pqColW[5], tierColor, false, AlignmentType.LEFT),
+      dataCell(String(num),                      pqColW[0], NAVY, true),
+      dataCell(q.targeting || "\u2014",           pqColW[1], BLUE, false, AlignmentType.LEFT),
+      dataCell(q.qid || "\u2014",                 pqColW[2], DGRAY, false, AlignmentType.LEFT),
+      dataCell(q.blueprint || "\u2014",           pqColW[3], DGRAY, false, AlignmentType.LEFT),
+      dataCell(q.body_system_merged || "\u2014",  pqColW[4], DGRAY, false, AlignmentType.LEFT),
+      dataCell(sourceLabel,                       pqColW[5], MGRAY, false, AlignmentType.LEFT),
+      dataCell(tierLabel,                         pqColW[6], tierColor, false, AlignmentType.LEFT),
     ]));
   });
-  children.push(makeTable(pqColW, pqRows));
+  return makeTable(pqColW, pqRows);
+}
+
+let globalQNum = 1;
+
+// Table 1: Single weak-area questions
+if (singleQs.length > 0) {
+  children.push(spacer(120));
+  children.push(subBar(`\u26A0 SINGLE WEAK AREA QUESTIONS  (${singleQs.length})`, BLUE));
+  children.push(buildPqTable(singleQs, globalQNum));
+  globalQNum += singleQs.length;
+}
+
+// Table 2: Cross-category questions
+if (crossQs.length > 0) {
+  children.push(spacer(120));
+  children.push(subBar(`CROSS-CATEGORY INTERSECTIONS  (${crossQs.length})`, "4A5568"));
+  children.push(buildPqTable(crossQs, globalQNum));
 }
 
 // ────────────────────────────────────────────────────────────────────
@@ -943,24 +1011,19 @@ examChildren.push(new Paragraph({ spacing: { before: 60, after: 0 }, alignment: 
 examChildren.push(spacer(200));
 
 let examNum = 0;
-for (const target of targetOrder) {
-  const tQuestions = qByTarget[target] || [];
-  if (tQuestions.length === 0) continue;
-  const isWeak = weakBlueprints.includes(target);
 
+function renderExamSection(questions, sectionLabel, sectionColor) {
+  if (questions.length === 0) return;
   examChildren.push(spacer(100));
-  examChildren.push(subBar(
-    isWeak ? `\u26A0 ${target.toUpperCase()}` : target.toUpperCase(),
-    isWeak ? BLUE : "4A5568"
-  ));
-
-  for (const q of tQuestions) {
+  examChildren.push(subBar(sectionLabel, sectionColor));
+  for (const q of questions) {
     examNum++;
-    answerKey.push({ num: examNum, qid: q.qid, letter: q.correct_letter, text: q.correct_text || "", target, body: q.body_system_merged || "" });
+    answerKey.push({ num: examNum, qid: q.qid, letter: q.correct_letter, text: q.correct_text || "", target: q.targeting || "", body: q.body_system_merged || "" });
 
     examChildren.push(new Paragraph({ spacing: { before: 180, after: 40 }, children: [
       new TextRun({ text: `Question ${examNum}`, font: FONT, size: 22, bold: true, color: NAVY }),
       new TextRun({ text: `  ${q.qid}`, font: FONT, size: 18, color: MGRAY }),
+      new TextRun({ text: `  \u2014  ${q.targeting || ""}`, font: FONT, size: 16, color: LGRAY, italics: true }),
     ]}));
 
     examChildren.push(new Paragraph({ spacing: { before: 80, after: 80 }, children: [
@@ -976,6 +1039,9 @@ for (const target of targetOrder) {
     });
   }
 }
+
+renderExamSection(singleQs, `\u26A0 SINGLE WEAK AREA QUESTIONS  (${singleQs.length})`, BLUE);
+renderExamSection(crossQs,  `CROSS-CATEGORY INTERSECTIONS  (${crossQs.length})`, "4A5568");
 
 // Answer key
 examChildren.push(new Paragraph({ children: [new PageBreak()] }));

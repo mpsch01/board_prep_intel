@@ -35,6 +35,7 @@ Produces:
 import argparse
 import sys
 import json
+import os
 import subprocess
 from pathlib import Path
 
@@ -241,7 +242,8 @@ def compute_longitudinal_delta(current: dict, prior: dict) -> dict:
     }
 
 
-def build_v2_reports(analysis: dict, output_dir: Path, analysis_json_path: str):
+def build_v2_reports(analysis: dict, output_dir: Path, analysis_json_path: str,
+                     skip_reading_list: bool = False):
     """
     Build v2 reports via Node.js ite_report_builder_v2.js.
 
@@ -265,7 +267,8 @@ def build_v2_reports(analysis: dict, output_dir: Path, analysis_json_path: str):
     print(f"\nCalling Node.js report builder: {report_builder_js}")
     try:
         cmd = ["node", str(report_builder_js), str(analysis_json_path), str(output_dir)]
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        env = {**os.environ, "SKIP_READING_LIST": "1"} if skip_reading_list else None
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120, env=env)
 
         if result.returncode != 0:
             print(f"  WARNING: Node.js report builder exited with code {result.returncode}")
@@ -297,6 +300,8 @@ def main():
     parser.add_argument("--config", help="Path to ite_parser_config.json (default: auto-detect)")
     parser.add_argument("--output-dir", default=".", help="Output directory for reports")
     parser.add_argument("--json-only", action="store_true", help="Only output JSON, skip reports")
+    parser.add_argument("--skip-reading-list", action="store_true", help="Omit the High-Yield Reading List section from the report")
+    parser.add_argument("--question-count", type=int, default=20, help="Number of practice questions to select (default: 20)")
     parser.add_argument(
         "--pgy-level",
         type=int,
@@ -433,7 +438,7 @@ def main():
             merged,
             args.db,
             pgy_level=pgy_str,
-            question_count=20,
+            question_count=args.question_count,
         )
         print("(v3 analyzer used)")
 
@@ -601,7 +606,8 @@ def main():
         # Call v2 Node.js report builder
         print("\n[Report 2/3 & 3/3] Building v2 DOCX reports via Node.js...")
         try:
-            build_v2_reports(analysis, output_dir, str(json_v2_path))
+            build_v2_reports(analysis, output_dir, str(json_v2_path),
+                             skip_reading_list=args.skip_reading_list)
             print(f"  [OK] {docx_path}")
             print(f"  [OK] {questions_path}")
         except Exception as e:

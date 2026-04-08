@@ -1,5 +1,5 @@
 # project_overhaul_state.md
-Last updated: 2026-04-08 (BATON 049)
+Last updated: 2026-04-08 (BATON 050)
 
 ## Module State
 
@@ -16,12 +16,12 @@ Last updated: 2026-04-08 (BATON 049)
 ### ITE (citation_files/ITE/)
 | Tier | Count | Notes |
 |------|-------|-------|
-| VC_fail | 630 | Failed VC gate; awaiting enrichment |
+| VC_fail | 637 | Failed VC gate; awaiting enrichment |
 | VC_pass | 168 | Passed VC gate; awaiting enrichment |
 | local_lite | 117 | Enriched; not VC-cited |
 | right_click | 58 | Enriched + VC-cited (top tier) |
 | _dupe_archive | 14 | Legacy single-author duplicates; not pipeline |
-| **TOTAL active** | **981** | Recovered via EXA+PMC+Unpaywall; +7 PDFs added (2026-04-08) |
+| **TOTAL active** | **980** | Recovered via EXA+PMC+Unpaywall; +7 VC_fail added 2026-04-08 |
 
 ### AAFP (citation_files/AAFP/)
 | Count | Status |
@@ -34,9 +34,10 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 
 | Flag | Status | Description |
 |------|--------|-------------|
+| DEFERRED-YOY-ROBUSTNESS | ACTIVE | Year-over-year section 3b needs more robust implementation; month-by-month trend aggregation logic (BATON 050) |
 | DEFERRED-A | ARCHIVED | 37 ITE manual PDFs — permanent ceiling (subscription-only) |
 | DEFERRED-AAFP-PAYWALL | ACTIVE | 3 AAFP articles paywalled (PMC not_oa): ART-1959 Binic_2011, ART-1972 Byington_2012, ART-1967 Verbalis_2007 |
-| DEFERRED-PRACTICE-Q-COVERAGE | ACTIVE | Practice question 0-question warnings for some body systems (Foundations, Preventive, Cardiovascular, Respiratory, Sexual-Reproductive, Psychiatric, Behavioral) — qid_art_xref tagging coverage gap (BATON 049) |
+| DEFERRED-PRACTICE-Q-COVERAGE | ACTIVE | Practice question 0-question warnings for some body systems (Foundations, Preventive, Cardiovascular, Respiratory, Sexual-Reproductive, Psychiatric, Behavioral) — qid_art_xref tagging coverage gap (BATON 050) |
 | DEFERRED-F | ✅ CLOSED | Intelligence 2.0 Layer 2 complete — article_currency built (1,985 rows) |
 | DEFERRED-H | CLOSED | Legacy non-codon PDFs confirmed duplicates |
 | DEFERRED-I | LOW PRI | unpaywall_scanner --from-csv extension |
@@ -61,5 +62,12 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
   - ✅ BUG-047-02: ite_analyzer_v3.py — added BODYSYSTEM_PDF_NORM alias dict + _normalize_body_system() function for body system name normalization (handles PDF capitalization vs blueprint inconsistencies)
   - ✅ BUG-047-03: ite_analyze_v2.py — imports _normalize_body_system, applies it to body_system_scaled dict, uses official score from score report when available
   - Test reports validated: Scholl_2022, Scholl_2023, Scholl_2024, Sarkar_2025, Hopkins_2025
+- **BATON 050 improvements (2026-04-08):**
+  - ite_analyzer_v3.py: removed recency bonus, removed ORDER BY exam_year DESC from 3 tier SQL queries, changed limits 20→60, added current_exam_year exclusion with int cast
+  - ite_analyze_v2.py: added --skip-reading-list and --question-count CLI flags; SKIP_READING_LIST env var passed to Node
+  - ite_report_builder_v2.js: two-table practice Q layout (single-dim + cross-dim), longitudinal year-over-year section 3b, SKIP_READING_LIST guard on Section 10
+  - Git index corruption fixed (del .git\index + git read-tree HEAD via CMD)
+  - Ran Pjetergjoka 2024+2025 analysis with 35 questions
+  - New deferred flag: DEFERRED-YOY-ROBUSTNESS (year-over-year section robustness)
 - **New deferred flag (BATON 049):**
   - DEFERRED-PRACTICE-Q-COVERAGE — Practice question 0-question warnings detected for Foundations/Preventive/Cardiovascular/Respiratory/Sexual-Reproductive/Psychiatric/Behavioral body systems; indicates qid_art_xref tagging coverage gap in some blueprint cells
