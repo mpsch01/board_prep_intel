@@ -149,8 +149,12 @@ BATCH_SIZE = 500   # Supabase REST upsert batch size
 
 def sqlite_rows_as_dicts(conn: sqlite3.Connection, table: str) -> list[dict]:
     """Read all rows from a SQLite table as a list of dicts."""
+    allowed_tables = {t["sqlite"] for t in SYNC_TABLES}
+    if table not in allowed_tables:
+        raise ValueError(f"Table '{table}' is not in the sync allowlist.")
+    # Table name validated against allowlist — safe to interpolate.
     conn.row_factory = sqlite3.Row
-    cursor = conn.execute(f"SELECT * FROM {table}")
+    cursor = conn.execute(f"SELECT * FROM {table}")  # noqa: S608
     return [dict(row) for row in cursor.fetchall()]
 
 

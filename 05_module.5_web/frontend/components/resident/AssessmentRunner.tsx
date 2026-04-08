@@ -9,6 +9,8 @@
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
+const PASSING_THRESHOLD = 70; // % correct to display green score color
+
 interface Choice {
   letter: string;
   text: string;
@@ -99,7 +101,7 @@ export default function AssessmentRunner({ sessionId, questions, initialResponse
       <div style={{ textAlign: "center", padding: "3rem 1rem" }}>
         <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>🎉</div>
         <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>Assessment Complete!</h2>
-        <p style={{ fontSize: "1.25rem", color: pct >= 70 ? "var(--color-success)" : "var(--color-danger)" }}>
+        <p style={{ fontSize: "1.25rem", color: pct >= PASSING_THRESHOLD ? "var(--color-success)" : "var(--color-danger)" }}>
           {correct} / {questions.length} correct ({pct}%)
         </p>
         <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", justifyContent: "center" }}>

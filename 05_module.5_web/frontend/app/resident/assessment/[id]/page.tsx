@@ -86,7 +86,7 @@ export default async function AssessmentPage({ params }: PageProps) {
     sessionId = existingSession.id;
     sessionResponses = existingSession.responses ?? {};
   } else {
-    const { data: newSession } = await supabase
+    const { data: newSession, error: sessionError } = await supabase
       .from("assessment_sessions")
       .insert({
         resident_id: user.id,
@@ -96,7 +96,13 @@ export default async function AssessmentPage({ params }: PageProps) {
       })
       .select("id")
       .single();
-    sessionId = newSession!.id;
+
+    if (sessionError || !newSession) {
+      console.error("Failed to create assessment session:", sessionError);
+      throw new Error("Could not create a new assessment session. Please try again.");
+    }
+
+    sessionId = newSession.id;
   }
 
   // Fetch question details for the resolved QIDs

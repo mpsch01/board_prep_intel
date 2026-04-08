@@ -54,9 +54,17 @@ app = FastAPI(
     docs_url="/docs",
 )
 
+_FRONTEND_URL = os.environ.get("FRONTEND_URL", "")
+_allowed_origins = [_FRONTEND_URL] if _FRONTEND_URL else ["*"]
+if not _FRONTEND_URL:
+    log.warning(
+        "FRONTEND_URL is not set — CORS is open to all origins. "
+        "Set FRONTEND_URL in production (e.g. https://your-app.netlify.app)."
+    )
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Netlify will call this; restrict in production
+    allow_origins=_allowed_origins,
     allow_methods=["POST", "GET"],
     allow_headers=["*"],
 )
@@ -86,7 +94,10 @@ class ParseResponse(BaseModel):
 def verify_secret(x_parser_secret: str) -> None:
     """Constant-time comparison of the shared secret."""
     if not PARSER_SECRET:
-        return  # secret not configured — allow all (development only)
+        if os.environ.get("ENV") == "development":
+            log.warning("PARSER_SECRET is not set — authentication is disabled (development mode only).")
+            return
+        raise HTTPException(status_code=500, detail="PARSER_SECRET is not configured on this server.")
     if not hmac.compare_digest(x_parser_secret or "", PARSER_SECRET):
         raise HTTPException(status_code=401, detail="Invalid parser secret")
 
