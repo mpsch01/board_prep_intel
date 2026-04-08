@@ -1,296 +1,137 @@
-=== pmc_oa_downloader.py - 2026-04-05T05:33:35.685083 ===
+=== pmc_oa_downloader.py - 2026-04-07T21:45:39.473295 ===
 NCBI API key: loaded (850bd537...)
 
 PMC targets loaded: 109
-Skipped 7 already on disk
+Skipped 51 already on disk
 
-Processing 102 PMC articles...
+Processing 58 PMC articles...
 
-[1/102] ART-0119 [PMC6754754] 30-Year review of pediatric- and adult-onset CVID:
+[1/58] ART-1945 [PMC6492479] Intranasal ipratropium bromide for the common cold
   OA API  not_oa (idIsNotOpenAccess)
-[2/102] ART-0439 [PMC12911370] edging closer to a new paradigm
+[2/58] ART-1211 [PMC12989261] Surgery for obstructive sleep apnea in adults
   OA API  not_oa (idIsNotOpenAccess)
-[3/102] ART-0640 [PMC4178284] Croup
+[3/58] ART-0199 [PMC6205759] practical approach to diagnosis and management
   OA API  not_oa (idIsNotOpenAccess)
-[4/102] ART-0877 [PMC8758582] CD000029
+[4/58] ART-1718 [PMC5381731] Outpatient emergencies: Anaphylaxis
   OA API  not_oa (idIsNotOpenAccess)
-[5/102] ART-1255 [PMC7856541] asymptomatic carotid artery stenosis: screening
+[5/58] ART-1677 [PMC4694177] An official American Thoracic Society/American Col
   OA API  not_oa (idIsNotOpenAccess)
-[6/102] ART-1348 [PMC4017246] Tumor lysis syndrome: New challenges and recent ad
+[6/58] ART-0771 [PMC6457868] Patching for corneal abrasion
   OA API  not_oa (idIsNotOpenAccess)
-[7/102] ART-1793 [PMC5962971] Deprescribing antipsychotics for behavioral and ps
+[7/58] ART-1318 [PMC11060750] AUA/SUO guideline part I: prostate cancer screenin
   OA API  not_oa (idIsNotOpenAccess)
-[8/102] ART-0020 [PMC6724419] Association of use of the neonatal early-onset sep
+[8/58] ART-1348 [PMC4017246] Tumor lysis syndrome: New challenges and recent ad
   OA API  not_oa (idIsNotOpenAccess)
-[9/102] ART-0021 [PMC6755635] Glucocorticoid-induced osteoporosis: From clinical
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/a1/33/10.1177_1759720X1987
-  ✓ saved (511 KB) → Adami_2019#@#ART-0021@#@.pdf
-[10/102] ART-0084 [PMC6769062] CD003462
+[9/58] ART-0020 [PMC6724419] Association of use of the neonatal early-onset sep
   OA API  not_oa (idIsNotOpenAccess)
-[11/102] ART-0120 [PMC8530736] Approach to the patient with adrenal incidentaloma
+[10/58] ART-1862 [PMC6174113] Updated international consensus diagnostic criteri
   OA API  not_oa (idIsNotOpenAccess)
-[12/102] ART-0145 [PMC8567758] a comprehensive review
+[11/58] ART-0222 [PMC9746870] 1257-1266
   OA API  not_oa (idIsNotOpenAccess)
-[13/102] ART-0154 [PMC5393490] Guidelines for the management of asymptomatic prim
+[12/58] ART-0461 [PMC6522264] big data bias masks a true association
   OA API  not_oa (idIsNotOpenAccess)
-[14/102] ART-0176 [PMC12579754] Assessing decision making capacity for do not resu
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d1/af/PMC12579754.tar.
-  → extracting PDF from tgz package...
-  ✓ saved (640 KB) → Brody_2017#@#ART-0176@#@.pdf
-[15/102] ART-0179 [PMC6756654] A critical appraisal of adult trigger finger: Path
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f8/6f/PMC6756654.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (177 KB) → Brozovich_2019#@#ART-0179@#@.pdf
-[16/102] ART-0199 [PMC6205759] practical approach to diagnosis and management
+[13/58] ART-1865 [PMC6171773] PURL: Time to stop glucosamine and chondroitin for
   OA API  not_oa (idIsNotOpenAccess)
-[17/102] ART-0214 [PMC6350898] Prevention of diabetes mellitus in patients with p
+[14/58] ART-0475 [PMC5865621] epidemiology, outcomes, knowledge gaps, and future
   OA API  not_oa (idIsNotOpenAccess)
-[18/102] ART-0215 [PMC12930988] 926-940
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b2/b9/PMC12930988.tar.
-  → extracting PDF from tgz package...
-  ✓ saved (1163 KB) → Carter_2024#@#ART-0215@#@.pdf
-[19/102] ART-0222 [PMC9746870] 1257-1266
+[15/58] ART-1600 [PMC5557227] Preventing herpes zoster through vaccination: New 
   OA API  not_oa (idIsNotOpenAccess)
-[20/102] ART-0243 [PMC8326257] endoscopic and surgical approaches
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/f2/ab/WJG-27-4536.PMC83262
-  ✓ saved (10405 KB) → Cianci_2021#@#ART-0243@#@.pdf
-[21/102] ART-0344 [PMC5576635] can the electrocardiogram risk stratify for short-
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/71/8f/PMC5576635.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (769 KB) → Durfey_2017#@#ART-0344@#@.pdf
-[22/102] ART-0348 [PMC6650108] Anal fissures
+[16/58] ART-1137 [PMC8365115] pelvic inflammatory disease (PID)
   OA API  not_oa (idIsNotOpenAccess)
-[23/102] ART-0350 [PMC12445750] number needed to treat
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/bd/21/IJA-69-969.PMC124457
-  ✓ saved (485 KB) → EBM_0000#@#ART-0350@#@.pdf
-[24/102] ART-0369 [PMC9845083] standards of care in diabetes—2023
+[17/58] ART-0814 [PMC4892949] findings from the Health ABC Study
   OA API  not_oa (idIsNotOpenAccess)
-[25/102] ART-0451 [PMC11564130] 83-94
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3c/60/PMC11564130.tar.
-  → extracting PDF from tgz package...
-  ✓ saved (488 KB) → Frampton_2023#@#ART-0451@#@.pdf
-[26/102] ART-0461 [PMC6522264] big data bias masks a true association
+[18/58] ART-1951 [PMC3103063] Clinical practice: Depression during pregnancy
   OA API  not_oa (idIsNotOpenAccess)
-[27/102] ART-0462 [PMC9324596] update and clinical advice for prevention, diagnos
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9b/de/PMC9324596.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (1348 KB) → Friedli_2020#@#ART-0462@#@.pdf
-[28/102] ART-0466 [PMC12880482] 34-40
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/9d/26/PMC12880482.tar.
-  → extracting PDF from tgz package...
-  ✓ saved (296 KB) → Gaddey_2021#@#ART-0466@#@.pdf
-[29/102] ART-0475 [PMC5865621] epidemiology, outcomes, knowledge gaps, and future
+[19/58] ART-1793 [PMC5962971] Deprescribing antipsychotics for behavioral and ps
   OA API  not_oa (idIsNotOpenAccess)
-[30/102] ART-0489 [PMC7415030] 317-330
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/e7/79/PMC7415030.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (1000 KB) → Giddings_2016#@#ART-0489@#@.pdf
-[31/102] ART-0493 [PMC3354640] Hospital transfers of nursing home residents with 
+[20/58] ART-0956 [PMC10585425] Anticonvulsants for alcohol dependence
   OA API  not_oa (idIsNotOpenAccess)
-[32/102] ART-0527 [PMC6599814] CD011050
+[21/58] ART-0493 [PMC3354640] Hospital transfers of nursing home residents with 
   OA API  not_oa (idIsNotOpenAccess)
-[33/102] ART-0536 [PMC3699348] Aldosterone receptor antagonists: Current perspect
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3c/ae/PMC3699348.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (836 KB) → Guichard_2013#@#ART-0536@#@.pdf
-[34/102] ART-0557 [PMC6319251] an open- label, pilot, randomised trial
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4c/b8/PMC6319251.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (1798 KB) → Halliday_2019#@#ART-0557@#@.pdf
-[35/102] ART-0628 [PMC4522991] 1618-1622
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ad/11/PMC4522991.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (332 KB) → Jacob_2006#@#ART-0628@#@.pdf
-[36/102] ART-0630 [PMC5218987] the ROW cohort study
+[22/58] ART-1907 [PMC4896141] Profound hypokalemia associated with severe diabet
   OA API  not_oa (idIsNotOpenAccess)
-[37/102] ART-0659 [PMC12539128] recognition and management
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/1d/8e/PMC12539128.tar.
-  → extracting PDF from tgz package...
-  ✓ saved (1048 KB) → Kane_2020#@#ART-0659@#@.pdf
-[38/102] ART-0673 [PMC10752083] a systematic review
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/8c/c5/PMC10752083.tar.
-  → extracting PDF from tgz package...
-  ✓ saved (245 KB) → Kelley-Quon_2021#@#ART-0673@#@.pdf
-[39/102] ART-0674 [PMC8726361] an American Academy of Sleep Medicine clinical pra
+[23/58] ART-1081 [PMC5958910] joint recommendations of the North American Societ
   OA API  not_oa (idIsNotOpenAccess)
-[40/102] ART-0677 [PMC8007206] e180-e184
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f4/66/PMC8007206.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (409 KB) → Khan_2018#@#ART-0677@#@.pdf
-[41/102] ART-0678 [PMC4188648] Arthroscopic surgery for degenerative tears of the
+[24/58] ART-0896 [PMC6946178] supplemental oxygen for patients without hypoxemia
   OA API  not_oa (idIsNotOpenAccess)
-[42/102] ART-0688 [PMC7144816] CD013422
+[25/58] ART-1027 [PMC8966835] a review for general physicians
   OA API  not_oa (idIsNotOpenAccess)
-[43/102] ART-0722 [PMC4372689] Ten-year follow-up after initiation of statin ther
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/bf/59/40272_2014_Article_1
-  ✓ saved (332 KB) → Kusters_2014#@#ART-0722@#@.pdf
-[44/102] ART-0732 [PMC5126802] overview of evidence-based assessment and treatmen
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4b/e4/PMC5126802.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (220 KB) → Lancaster_2016#@#ART-0732@#@.pdf
-[45/102] ART-0771 [PMC6457868] Patching for corneal abrasion
+[26/58] ART-1043 [PMC6234945] Common tongue conditions in primary care
   OA API  not_oa (idIsNotOpenAccess)
-[46/102] ART-0814 [PMC4892949] findings from the Health ABC Study
+[27/58] ART-0214 [PMC6350898] Prevention of diabetes mellitus in patients with p
   OA API  not_oa (idIsNotOpenAccess)
-[47/102] ART-0816 [PMC4335998] Double-blind, randomized, controlled, crossover tr
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f6/87/PMC4335998.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (574 KB) → Markman_2015#@#ART-0816@#@.pdf
-[48/102] ART-0842 [PMC4780668] Managing ankle ligament sprains and tears: Current
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/5b/06/oajsm-7-033.PMC47806
-  ✓ saved (1988 KB) → McGovern_2016#@#ART-0842@#@.pdf
-[49/102] ART-0862 [PMC3208370] a meta-analysis
+[28/58] ART-0973 [PMC3706994] Celiac disease: Diagnosis and management
   OA API  not_oa (idIsNotOpenAccess)
-[50/102] ART-0879 [PMC9837849] Baclofen for alcohol use disorder
+[29/58] ART-1831 [PMC3278056] Antithrombotic therapy for atrial fibrillation: An
   OA API  not_oa (idIsNotOpenAccess)
-[51/102] ART-0887 [PMC6854261] current updates
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/82/bc/PMC6854261.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (1504 KB) → Mohamed_2019#@#ART-0887@#@.pdf
-[52/102] ART-0893 [PMC8516955] 435-443
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d3/18/PMC8516955.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (2422 KB) → Mori_2021#@#ART-0893@#@.pdf
-[53/102] ART-0896 [PMC6946178] supplemental oxygen for patients without hypoxemia
+[30/58] ART-0862 [PMC3208370] a meta-analysis
   OA API  not_oa (idIsNotOpenAccess)
-[54/102] ART-0903 [PMC7875114] new insights for clinical practice
+[31/58] ART-0439 [PMC12911370] edging closer to a new paradigm
   OA API  not_oa (idIsNotOpenAccess)
-[55/102] ART-0917 [PMC1346962] an emerging disease
+[32/58] ART-1089 [PMC6953397] CD009977
   OA API  not_oa (idIsNotOpenAccess)
-[56/102] ART-0949 [PMC3404815] Too much sitting: The population health science of
+[33/58] ART-0630 [PMC5218987] the ROW cohort study
   OA API  not_oa (idIsNotOpenAccess)
-[57/102] ART-0956 [PMC10585425] Anticonvulsants for alcohol dependence
+[34/58] ART-0120 [PMC8530736] Approach to the patient with adrenal incidentaloma
   OA API  not_oa (idIsNotOpenAccess)
-[58/102] ART-0964 [PMC12971996] Role of steroids in malignant bowel obstruction
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/41/98/jgo-17-01-8.PMC12971
-  ✓ saved (481 KB) → Patel_2016#@#ART-0964@#@.pdf
-[59/102] ART-0973 [PMC3706994] Celiac disease: Diagnosis and management
+[35/58] ART-1659 [PMC4427053] Metformin in patients with type 2 diabetes and kid
   OA API  not_oa (idIsNotOpenAccess)
-[60/102] ART-0979 [PMC7599351] an update on the pathophysiology and management
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/f3/8e/AnnGastroenterol-33-
-  ✓ saved (561 KB) → Perisetti_2020#@#ART-0979@#@.pdf
-[61/102] ART-1015 [PMC7938036] a practical approach and diagnostic algorithm
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ad/4a/PMC7938036.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (1454 KB) → Pérez-Garza_2021#@#ART-1015@#@.pdf
-[62/102] ART-1027 [PMC8966835] a review for general physicians
+[36/58] ART-0678 [PMC4188648] Arthroscopic surgery for degenerative tears of the
   OA API  not_oa (idIsNotOpenAccess)
-[63/102] ART-1043 [PMC6234945] Common tongue conditions in primary care
+[37/58] ART-0084 [PMC6769062] CD003462
   OA API  not_oa (idIsNotOpenAccess)
-[64/102] ART-1055 [PMC6406277] Treatment of anorexia nervosa—New evidence-based g
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/3a/97/PMC6406277.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (318 KB) → Resmark_2019#@#ART-1055@#@.pdf
-[65/102] ART-1081 [PMC5958910] joint recommendations of the North American Societ
+[38/58] ART-0154 [PMC5393490] Guidelines for the management of asymptomatic prim
   OA API  not_oa (idIsNotOpenAccess)
-[66/102] ART-1082 [PMC11944238] E1383
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/73/1a/PMC11944238.tar.
-  → extracting PDF from tgz package...
-  ✓ saved (177 KB) → Rosenberg_2023#@#ART-1082@#@.pdf
-[67/102] ART-1089 [PMC6953397] CD009977
+[39/58] ART-0903 [PMC7875114] new insights for clinical practice
   OA API  not_oa (idIsNotOpenAccess)
-[68/102] ART-1102 [PMC3585698] Antibiotic therapy vs appendectomy for treatment o
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4f/fe/PMC3585698.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (201 KB) → Salminen_2015#@#ART-1102@#@.pdf
-[69/102] ART-1128 [PMC9722469] core curriculum 2020
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/85/bd/main.PMC9722469.pdf
-  ✓ saved (1444 KB) → Seay_2020#@#ART-1128@#@.pdf
-[70/102] ART-1137 [PMC8365115] pelvic inflammatory disease (PID)
+[40/58] ART-0674 [PMC8726361] an American Academy of Sleep Medicine clinical pra
   OA API  not_oa (idIsNotOpenAccess)
-[71/102] ART-1180 [PMC7173542] 551-566
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/a3/54/PMC7173542.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (677 KB) → Sobol_2008#@#ART-1180@#@.pdf
-[72/102] ART-1186 [PMC6522077] recommendations from the National Tuberculosis Con
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f5/3a/PMC6522077.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (173 KB) → Sosa_2019#@#ART-1186@#@.pdf
-[73/102] ART-1211 [PMC12989261] Surgery for obstructive sleep apnea in adults
+[41/58] ART-0879 [PMC9837849] Baclofen for alcohol use disorder
   OA API  not_oa (idIsNotOpenAccess)
-[74/102] ART-1231 [PMC6222040] mosquito-borne diseases
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/2a/12/main.PMC6222040.pdf
-  ✓ saved (208 KB) → The_2016#@#ART-1231@#@.pdf
-[75/102] ART-1244 [PMC3622949] Clinical management of insomnia with brief behavio
+[42/58] ART-0949 [PMC3404815] Too much sitting: The population health science of
   OA API  not_oa (idIsNotOpenAccess)
-[76/102] ART-1280 [PMC8250847] Preventing and managing adverse reactions
+[43/58] ART-0877 [PMC8758582] CD000029
   OA API  not_oa (idIsNotOpenAccess)
-[77/102] ART-1286 [PMC7071368] what has time and/or hyperarousal got to do with i
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/41/39/PMC7071368.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (311 KB) → Vargas_2020#@#ART-1286@#@.pdf
-[78/102] ART-1295 [PMC4176800] Management of erectile dysfunction in hypertension
+[44/58] ART-1673 [PMC3278059] Perioperative management of antithrombotic therapy
   OA API  not_oa (idIsNotOpenAccess)
-[79/102] ART-1303 [PMC3377888] Laboratory test abnormalities are common in polymy
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/c2/85/TORJ-6-54.PMC3377888
-  ✓ saved (1035 KB) → Volochayev_2012#@#ART-1303@#@.pdf
-[80/102] ART-1318 [PMC11060750] AUA/SUO guideline part I: prostate cancer screenin
+[45/58] ART-1880 [PMC5119649] Disorders of sexual development in adult women
   OA API  not_oa (idIsNotOpenAccess)
-[81/102] ART-1600 [PMC5557227] Preventing herpes zoster through vaccination: New 
+[46/58] ART-1789 [PMC6513425] Osmotic and stimulant laxatives for the management
   OA API  not_oa (idIsNotOpenAccess)
-[82/102] ART-1659 [PMC4427053] Metformin in patients with type 2 diabetes and kid
+[47/58] ART-0917 [PMC1346962] an emerging disease
   OA API  not_oa (idIsNotOpenAccess)
-[83/102] ART-1673 [PMC3278059] Perioperative management of antithrombotic therapy
+[48/58] ART-0369 [PMC9845083] standards of care in diabetes—2023
   OA API  not_oa (idIsNotOpenAccess)
-[84/102] ART-1675 [PMC3645106] Henoch-Schönlein purpura in children
+[49/58] ART-0527 [PMC6599814] CD011050
   OA API  not_oa (idIsNotOpenAccess)
-[85/102] ART-1677 [PMC4694177] An official American Thoracic Society/American Col
+[50/58] ART-0640 [PMC4178284] Croup
   OA API  not_oa (idIsNotOpenAccess)
-[86/102] ART-1684 [PMC3799221] HbA in the evaluation of diabetes mellitus
+[51/58] ART-1934 [PMC4750836] Taking an antibiotic time-out: Utilization and usa
   OA API  not_oa (idIsNotOpenAccess)
-[87/102] ART-1718 [PMC5381731] Outpatient emergencies: Anaphylaxis
+[52/58] ART-1280 [PMC8250847] Preventing and managing adverse reactions
   OA API  not_oa (idIsNotOpenAccess)
-[88/102] ART-1721 [PMC11241842] Vital signs: Improvements in maternity care polici
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0f/6f/PMC11241842.tar.
-  → extracting PDF from tgz package...
-  ✓ saved (1468 KB) → Perrine_2007#@#ART-1721@#@.pdf
-[89/102] ART-1789 [PMC6513425] Osmotic and stimulant laxatives for the management
+[53/58] ART-1244 [PMC3622949] Clinical management of insomnia with brief behavio
   OA API  not_oa (idIsNotOpenAccess)
-[90/102] ART-1831 [PMC3278056] Antithrombotic therapy for atrial fibrillation: An
+[54/58] ART-1684 [PMC3799221] HbA in the evaluation of diabetes mellitus
   OA API  not_oa (idIsNotOpenAccess)
-[91/102] ART-1862 [PMC6174113] Updated international consensus diagnostic criteri
+[55/58] ART-0119 [PMC6754754] 30-Year review of pediatric- and adult-onset CVID:
   OA API  not_oa (idIsNotOpenAccess)
-[92/102] ART-1865 [PMC6171773] PURL: Time to stop glucosamine and chondroitin for
+[56/58] ART-0688 [PMC7144816] CD013422
   OA API  not_oa (idIsNotOpenAccess)
-[93/102] ART-1880 [PMC5119649] Disorders of sexual development in adult women
+[57/58] ART-1295 [PMC4176800] Management of erectile dysfunction in hypertension
   OA API  not_oa (idIsNotOpenAccess)
-[94/102] ART-1907 [PMC4896141] Profound hypokalemia associated with severe diabet
+[58/58] ART-1255 [PMC7856541] asymptomatic carotid artery stenosis: screening
   OA API  not_oa (idIsNotOpenAccess)
-[95/102] ART-1910 [PMC4922356] Association of hyponatremia and hypovitaminosis D 
-  OA API  found: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/c6/c7/jomb-2015-0003.PMC49
-  ✓ saved (50 KB) → Cervellin_2015#@#ART-1910@#@.pdf
-[96/102] ART-1913 [PMC6883753] Pregnancy and oral health
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/70/db/PMC6883753.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (199 KB) → Division_2019#@#ART-1913@#@.pdf
-[97/102] ART-1915 [PMC5378729] Update on Rome IV criteria for colorectal disorder
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0a/58/PMC5378729.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (297 KB) → Simren_2017#@#ART-1915@#@.pdf
-[98/102] ART-1934 [PMC4750836] Taking an antibiotic time-out: Utilization and usa
-  OA API  not_oa (idIsNotOpenAccess)
-[99/102] ART-1940 [PMC4748908] Clinical Uses of Probiotics
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0a/a2/PMC4748908.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (185 KB) → Islam_2016#@#ART-1940@#@.pdf
-[100/102] ART-1945 [PMC6492479] Intranasal ipratropium bromide for the common cold
-  OA API  not_oa (idIsNotOpenAccess)
-[101/102] ART-1951 [PMC3103063] Clinical practice: Depression during pregnancy
-  OA API  not_oa (idIsNotOpenAccess)
-[102/102] ART-1954 [PMC1584230] Lithium treatment and thyroid abnormalities
-  OA API  tgz_only: https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c8/d0/PMC1584230.tar.g
-  → extracting PDF from tgz package...
-  ✓ saved (250 KB) → Bocchetta_2006#@#ART-1954@#@.pdf
 
 ══════════════════════════════════════════════════
 📦 PMC OA Download Summary
 ══════════════════════════════════════════════════
-  ✓ downloaded:    41  / 102
-  ✗ not_oa:        61  (paywalled even in PMC)
+  ✓ downloaded:     0  / 58
+  ✗ not_oa:        58  (paywalled even in PMC)
   ✗ no_pdf:         0  (OA but no PDF or tgz)
   ✗ tgz_fail:       0  (tgz found but PDF not inside)
   ✗ api_error:      0
   ✗ other:          0
 
-  PDFs on disk now: 892
+  PDFs on disk now: 965
   Results: C:\Users\mpsch\Desktop\board_prep_intel\01_module.1_warehouse\scripts\maintain\pmc_oa_results.csv

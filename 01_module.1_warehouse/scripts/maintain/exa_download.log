@@ -1,2242 +1,509 @@
-=== exa_pdf_downloader.py - 2026-04-05T05:06:29.537552 ===
-tier=None class=None limit=0 resume=False dry_run=False
+=== exa_pdf_downloader.py - 2026-04-07T22:00:53.613202 ===
+tier=VC_fail class=None limit=0 resume=False dry_run=False
   AAFP session cookie: not set (open AFP articles only)
 
-Queue loaded: 1572 rows
-Actionable: 566  |  Skipped (non-downloadable class): 1006
-Resume: skipped 76 already on disk
+Queue loaded: 1303 rows
+Actionable: 492  |  Skipped (non-downloadable class): 811
+Resume: skipped 404 already on disk
 
-Starting downloads: 490 files
+Starting downloads: 88 files
 
-[1/490] ART-0054 [direct] Breastfeeding and the use of human milk: Section o
-  → American_2012#@#ART-0054@#@.pdf
-    https://www.aeped.es/sites/default/files/1-breastfeeding_and_the_use_of_hm_aap20
-    HTTP 404 → https://www.aeped.es/sites/default/files/1-breastfeeding_and_the_use_o
-    ✗ failed
-[2/490] ART-0058 [direct] Don’t repeat a confirmed positive ANA in patients 
-  → American_2013#@#ART-0058@#@.pdf
-    https://ep.bmj.com/content/98/2/64.full.pdf
-    HTTP 403 → https://ep.bmj.com/content/98/2/64.full.pdf
-    ✗ failed
-[3/490] ART-0331 [direct] CDC guideline for prescribing opioids for chronic 
-  → Dowell_2016#@#ART-0331@#@.pdf
-    https://stacks.cdc.gov/view/cdc/122248/cdc_122248_DS1.pdf
-    HTTP 403 → https://stacks.cdc.gov/view/cdc/122248/cdc_122248_DS1.pdf
-    ✗ failed
-[4/490] ART-0381 [direct] Oral bisphosphonates are associated with increased
-  → Erviti_2013#@#ART-0381@#@.pdf
-    https://bmjopen.bmj.com/content/bmjopen/3/1/e002091.full.pdf
-    HTTP 403 → https://bmjopen.bmj.com/content/bmjopen/3/1/e002091.full.pdf
-    ✗ failed
-[5/490] ART-0499 [direct] 2022 Report
-  → Global_2022#@#ART-0499@#@.pdf
-    https://www.unhcr.org/sites/default/files/2023-07/2305336E_UNHCR-AR-2022_web_V3.
-    HTTP 403 → https://www.unhcr.org/sites/default/files/2023-07/2305336E_UNHCR-AR-20
-    ✗ failed
-[6/490] ART-0648 [direct] 82-84, 86-92
-  → Jordahl-Iafrato_2019#@#ART-0648@#@.pdf
-    https://www.dnb.nl/media/ur5ha21n/paper_jorda_singh_taylor.pdf
-    HTTP 403 → https://www.dnb.nl/media/ur5ha21n/paper_jorda_singh_taylor.pdf
-    ✗ failed
-[7/490] ART-0761 [direct] AUA guideline part I-initial work-up and medical m
-  → Lerner_2021#@#ART-0761@#@.pdf
-    https://auau.auanet.org/sites/default/files/media/2022-02/01%20BPH%20Guideline%2
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    ✗ failed
-[8/490] ART-0977 [direct] an overview
-  → Perez-Lopez_2020#@#ART-0977@#@.pdf
-    https://bmjopen.bmj.com/content/bmjopen/10/1/e032626.full.pdf
-    HTTP 403 → https://bmjopen.bmj.com/content/bmjopen/10/1/e032626.full.pdf
-    ✗ failed
-[9/490] ART-1261 [direct] primary open-angle glaucoma: screening
-  → US_2022#@#ART-1261@#@.pdf
-    https://scispace.com/pdf/screening-for-glaucoma-in-adults-3i8mt4hf.pdf
-    HTTP 405 → https://scispace.com/pdf/screening-for-glaucoma-in-adults-3i8mt4hf.pdf
-    ✗ failed
-[10/490] ART-0016 [direct] a systematic review and meta-analysis
-  → Abuelgasim_2021#@#ART-0016@#@.pdf
-    https://parasitesandvectors.biomedcentral.com/counter/pdf/10.1186/s13071-021-046
-    ✓ saved (2646 KB)
-[11/490] ART-0023 [direct] a review
-  → Adrogué_2022#@#ART-0023@#@.pdf
-    https://emergencymed.org.il/wp-content/uploads/2022/08/jama_adrogu_2022_rv_22001
-    ✓ saved (335 KB)
-[12/490] ART-0025 [direct] Advice about eating fish for women who are or migh
-  → Advice_2019#@#ART-0025@#@.pdf
-    https://deq.nd.gov/publications/WQ/3_WM/Fish/FDA_EPA_Fish_Advice_2019.pdf
-    ✓ saved (693 KB)
-[13/490] ART-0027 [direct] Overuse injuries in sport: A comprehensive overvie
-  → Aicale_2018#@#ART-0027@#@.pdf
-    https://josr-online.biomedcentral.com/counter/pdf/10.1186/s13018-018-1017-5.pdf
-    ✓ saved (644 KB)
-[14/490] ART-0034 [direct] 325-337
+[1/88] ART-0034 [direct] 325-337
   → Alexander_2024#@#ART-0034@#@.pdf
     https://www.cambridge.org/core/services/aop-cambridge-core/content/view/74F2824C
     Not a PDF (Content-Type: text/html; charset=utf-8)
     ✗ failed
-[15/490] ART-0060 [direct] 9
-  → American_2022#@#ART-0060@#@.pdf
-    https://www.irs.gov/pub/irs-pdf/fw9.pdf
-    ✓ saved (137 KB)
-[16/490] ART-0061 [direct] 9
-  → American_2022#@#ART-0061@#@.pdf
-    https://www.irs.gov/pub/irs-pdf/fw9.pdf
-    ✓ saved (137 KB)
-[17/490] ART-0064 [direct] 14
-  → American_2020#@#ART-0064@#@.pdf
-    https://www.govinfo.gov/content/pkg/GPO-CONAN-2002/pdf/GPO-CONAN-2002-9-15.pdf
-    ✓ saved (1260 KB)
-[18/490] ART-0065 [direct] 15
+[2/88] ART-0065 [direct] 15
   → American_2020#@#ART-0065@#@.pdf
     https://www.dietaryguidelines.gov/sites/default/files/2020-12/Dietary_Guidelines
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[19/490] ART-0069 [direct] ten things clinicians and patients should question
-  → American_0000#@#ART-0069@#@.pdf
-    https://www.healthinaging.org/sites/default/files/pdf/Choosing.Wisely.Ten_.Thing
-    ✓ saved (261 KB)
-[20/490] ART-0079 [direct] Five things physicians and patients should questio
-  → American_2017#@#ART-0079@#@.pdf
-    https://www.choosingwisely.org/files/Choosing-Wisely-at-Five.pdf
-    ✓ saved (5100 KB)
-[21/490] ART-0094 [direct] a path to success
-  → Arnold_2022#@#ART-0094@#@.pdf
-    https://cdn.bookey.app/files/pdf/book/en/be-useful.pdf
-    ✓ saved (1990 KB)
-[22/490] ART-0130 [direct] antithrombotic therapy and prevention of thrombosi
-  → Bates_2012#@#ART-0130@#@.pdf
-    https://roberttayloronline.com/content/docs/medical/anticoagulation/antithrombot
-    ✓ saved (485 KB)
-[23/490] ART-0140 [direct] Benicar (olmesartan) prescribing information. US F
-  → Benicar_2019#@#ART-0140@#@.pdf
-    https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021532s038lbl.pdf
-    ✓ saved (413 KB)
-[24/490] ART-0142 [direct] Evaluation and treatment of minors
-  → Benjamin_2018#@#ART-0142@#@.pdf
-    https://2024.sci-hub.box/7292/c6b61de9950f12f9eec81c35e6d0cfd3/benjamin2018.pdf
-    HTTP 501 → https://2024.sci-hub.box/7292/c6b61de9950f12f9eec81c35e6d0cfd3/benjami
-    ✗ failed
-[25/490] ART-0148 [direct] an Endocrine Society clinical practice guideline
-  → Bhasin_2018#@#ART-0148@#@.pdf
-    https://medquest.ro/docs/bhasin2018.pdf
-    ✓ saved (866 KB)
-[26/490] ART-0153 [direct] Hyperparathyroidism
-  → Bilezikian_2018#@#ART-0153@#@.pdf
-    https://www.endocrinology.org/media/boodt50x/bilezikian-et-al-guidelines.pdf
-    ✓ saved (589 KB)
-[27/490] ART-0155 [direct] Subclinical hypothyroidism: A review
-  → Biondi_2019#@#ART-0155@#@.pdf
-    https://www.anp3sm.com/wp-content/uploads/2019/07/MISE-AU-POINT-HYPOTHYROIDIE-IN
-    ✓ saved (317 KB)
-[28/490] ART-0157 [direct] specific birth defects
+    ✓ saved (31403 KB)
+[3/88] ART-0157 [direct] specific birth defects
   → Birth_2023#@#ART-0157@#@.pdf
     https://stacks.cdc.gov/view/cdc/131789/cdc_131789_DS1.pdf
-    HTTP 403 → https://stacks.cdc.gov/view/cdc/131789/cdc_131789_DS1.pdf
-    ✗ failed
-[29/490] ART-0162 [direct] Diagnosis and treatment of primary adrenal insuffi
-  → Bornstein_2016#@#ART-0162@#@.pdf
-    https://medquest.ro/docs/bornstein2016.pdf
-    ✓ saved (351 KB)
-[30/490] ART-0164 [direct] Chalazia and stye treatment
-  → Boyd_2019#@#ART-0164@#@.pdf
-    https://ebi.aomrc.org.uk/wp-content/uploads/2024/01/EBI_list_1_Statutory_Guidanc
-    ✓ saved (3263 KB)
-[31/490] ART-0170 [direct] Why it matters
+    ✓ saved (133 KB)
+[4/88] ART-0170 [direct] Why it matters
   → Breastfeeding_2021#@#ART-0170@#@.pdf
     https://iris.who.int/bitstream/handle/10665/348546/WHO-HEP-NFS-21.45-eng.pdf
     Not a PDF (Content-Type: text/html; charset=utf-8)
     ✗ failed
-[32/490] ART-0172 [direct] Drugs in Pregnancy and Lactation, ed 11
+[5/88] ART-0172 [direct] Drugs in Pregnancy and Lactation, ed 11
   → Briggs_2017#@#ART-0172@#@.pdf
     https://dl.icdst.org/pdfs/files3/3997cb34b4619c4c7d47a4f0120f3b49.pdf
     Timeout: https://dl.icdst.org/pdfs/files3/3997cb34b4619c4c7d47a4f0120f3b49.pdf
     ✗ failed
-[33/490] ART-0200 [direct] Interim clinical guidance for management of patien
+[6/88] ART-0200 [direct] Interim clinical guidance for management of patien
   → COVID-19_2021#@#ART-0200@#@.pdf
     https://iris.who.int/bitstream/handle/10665/349321/WHO-2019-nCoV-clinical-2021.2
     Not a PDF (Content-Type: text/html; charset=utf-8)
     ✗ failed
-[34/490] ART-0204 [direct] 8 USPSTF recommendations FPs need to know about
-  → Campos-Outcalt_2016#@#ART-0204@#@.pdf
-    https://cdn.mdedge.com/files/s3fs-public/issues/articles/content_e44ea506fd90774
-    ✓ saved (95 KB)
-[35/490] ART-0250 [direct] Clozaril drug label. US Food and Drug Administrati
-  → Clozaril_2016#@#ART-0250@#@.pdf
-    https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/019758s073lbl.pdf
-    ✓ saved (1368 KB)
-[36/490] ART-0256 [direct] Crisis Standards of Care: A Systems Framework for 
-  → Committee_2012#@#ART-0256@#@.pdf
-    https://commed.vcu.edu/IntroPH/2012/crisisManagement_IOM.pdf
-    ✓ saved (7391 KB)
-[37/490] ART-0258 [direct] Common Terminology Criteria for Adverse Events (CT
-  → Common_2017#@#ART-0258@#@.pdf
-    https://dctd.cancer.gov/research/ctep-trials/for-sites/adverse-events/ctcae-v5-5
-    ✓ saved (2916 KB)
-[38/490] ART-0263 [direct] Countermeasures Injury Compensation Program (CICP)
+[7/88] ART-0263 [direct] Countermeasures Injury Compensation Program (CICP)
   → Countermeasures_2020#@#ART-0263@#@.pdf
     https://www.hrsa.gov/sites/default/files/hrsa/cicp/cicpfactsheet.pdf
-    HTTP 403 → https://www.hrsa.gov/sites/default/files/hrsa/cicp/cicpfactsheet.pdf
-    ✗ failed
-[39/490] ART-0277 [direct] causes
-  → Cystic_2024#@#ART-0277@#@.pdf
-    https://www.cysticfibrosis.org.uk/sites/default/files/2024-08/Standards%20for%20
-    ✓ saved (271 KB)
-[40/490] ART-0284 [direct] Expert Panel on Integrated Guidelines for Cardiova
-  → Daniels_2012#@#ART-0284@#@.pdf
-    https://www.nhlbi.nih.gov/files/docs/guidelines/peds_guidelines_full.pdf
-    ✓ saved (3713 KB)
-[41/490] ART-0288 [direct] Acquired triggering of the fingers and thumb in ad
+    ✓ saved (127 KB)
+[8/88] ART-0288 [direct] Acquired triggering of the fingers and thumb in ad
   → David_2017#@#ART-0288@#@.pdf
     https://www.bmj.com/content/bmj/359/bmj.j5285.full.pdf
     HTTP 403 → https://www.bmj.com/content/bmj/359/bmj.j5285.full.pdf
     ✗ failed
-[42/490] ART-0300 [direct] 343-353
-  → Dean_2023#@#ART-0300@#@.pdf
-    https://www.clarksoncollege.edu/assets/files/academics-files/catalog-archive/Aca
-    ✓ saved (2038 KB)
-[43/490] ART-0312 [direct] CD013705
-  → Dinnes_2021#@#ART-0312@#@.pdf
-    https://2024.sci-hub.se/8537/b4920a0415d14bd37fe5450017c1f69b/dinnes2021.pdf
-    Connection error: HTTPSConnectionPool(host='2024.sci-hub.se', port=443): Max retries exceeded with url: /8537/b4920a0415d14bd37fe5450017c1f69b/dinnes2021.pdf (Caused by NameResolutionError("HTTPSConnection(host='2024.sci-hub.se', port=443): Failed to resolve '2024.sci-hub.se' ([Errno 11001] getaddrinfo failed)"))
-    ✗ failed
-[44/490] ART-0329 [direct] 2019 update
-  → Dow_2019#@#ART-0329@#@.pdf
-    https://s23.q4cdn.com/981382065/files/doc_financials/2019/ar/DowAnnualReport2019
-    ✓ saved (3414 KB)
-[45/490] ART-0335 [direct] Well testing
-  → Drinking_2009#@#ART-0335@#@.pdf
-    https://bottledwater.org/wp-content/uploads/2021/02/EPA-Water-on-Tap-2009-1.pdf
-    ✓ saved (2149 KB)
-[46/490] ART-0347 [direct] Rhinitis 2020: A practice parameter update
-  → Dykewicz_2020#@#ART-0347@#@.pdf
-    https://www.aaaai.org/Aaaai/media/Media-Library-PDFs/Allergist%20Resources/State
-    ✓ saved (2198 KB)
-[47/490] ART-0375 [direct] Chapter 21: Tetanus
-  → Epidemiology_2021#@#ART-0375@#@.pdf
-    https://www.ecdc.europa.eu/sites/default/files/documents/AER%20Tetanus%202021.pd
-    ✓ saved (1002 KB)
-[48/490] ART-0380 [direct] intravenous magnesium sulphate should be the first
+[9/88] ART-0380 [direct] intravenous magnesium sulphate should be the first
   → Erumbala_2021#@#ART-0380@#@.pdf
     https://breathe.ersjournals.com/content/breathe/17/4/210113.full.pdf
     HTTP 403 → https://breathe.ersjournals.com/content/breathe/17/4/210113.full.pdf
     ✗ failed
-[49/490] ART-0386 [direct] Guidelines for the Diagnosis and Management of Ast
-  → Expert_2007#@#ART-0386@#@.pdf
-    https://www.nhlbi.nih.gov/sites/default/files/media/docs/EPR-3_Asthma_Full_Repor
-    ✓ saved (3737 KB)
-[50/490] ART-0389 [direct] FDA approves new nasal spray medication for treatm
-  → FDA_2019#@#ART-0389@#@.pdf
-    https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/211243lbl.pdf
-    ✓ saved (1325 KB)
-[51/490] ART-0395 [direct] Update on the diagnosis and management of systemic
+[10/88] ART-0395 [direct] Update on the diagnosis and management of systemic
   → Fanouriakis_2021#@#ART-0395@#@.pdf
     https://ard.bmj.com/content/annrheumdis/80/1/14.full.pdf
     HTTP 403 → https://ard.bmj.com/content/annrheumdis/80/1/14.full.pdf
     ✗ failed
-[52/490] ART-0397 [direct] Evaluation and management of common anorectal cond
-  → Fargo_2012#@#ART-0397@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2012/0315/p624.pdf
-    ✓ saved (1337 KB)
-[53/490] ART-0401 [direct] Obsessive-compulsive disorder: Diagnosis and manag
-  → Fenske_2015#@#ART-0401@#@.pdf
-    https://www.aafp.org/dam/brand/aafp/pubs/afp/issues/2015/1115/p896.pdf
-    ✓ saved (239 KB)
-[54/490] ART-0438 [direct] Papadakis MA, McPhee SJ, Rabow MW, McQuiad KR, eds
-  → Fitzgerald_2023#@#ART-0438@#@.pdf
-    https://helix-ph.com/wp-content/uploads/2023/09/CMDT-2023.pdf
-    File exceeds 50MB limit — aborting
-    Error: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\mpsch\\Desktop\\board_prep_intel\\01_module.1_warehouse\\citation_files\\ITE\\VC_fail\\Fitzgerald_2023#@#ART-0438@#@.pdf'
-    ✗ failed
-[55/490] ART-0450 [direct] rapid evidence review
-  → Fox_2021#@#ART-0450@#@.pdf
-    https://gwern.net/doc/psychology/2020-fox.pdf
-    ✓ saved (333 KB)
-[56/490] ART-0490 [direct] Current concepts in the management of trigger fing
-  → Gil_2020#@#ART-0490@#@.pdf
-    https://2024.sci-hub.box/8284/86f9c8cc2d593c5848de9f9997609e28/gil2020.pdf
-    HTTP 501 → https://2024.sci-hub.box/8284/86f9c8cc2d593c5848de9f9997609e28/gil2020
-    ✗ failed
-[57/490] ART-0494 [direct] Physical abuse of children
-  → Glick_2016#@#ART-0494@#@.pdf
-    https://files.eric.ed.gov/fulltext/EJ1188853.pdf
-    ✓ saved (258 KB)
-[58/490] ART-0496 [direct] Global Initiative for Chronic Obstructive Lung Dis
-  → Global_2010#@#ART-0496@#@.pdf
-    https://goldcopd.org/wp-content/uploads/2016/04/GOLD_Spirometry_2010.pdf
-    ✓ saved (185 KB)
-[59/490] ART-0532 [direct] recommendations of the Advisory Committee on Immun
-  → Grohskopf_2022#@#ART-0532@#@.pdf
-    https://www.cdc.gov/mmwr/volumes/71/rr/pdfs/rr7101a1-H.pdf
-    ✓ saved (522 KB)
-[60/490] ART-0540 [direct] a report of the American College of Cardiology/Ame
-  → Gulati_2021#@#ART-0540@#@.pdf
-    https://medquest.ro/docs/CIR.0000000000001029.pdf
-    ✓ saved (11968 KB)
-[61/490] ART-0559 [direct] how hand, foot, and mouth disease spreads
-  → Hand_2023#@#ART-0559@#@.pdf
-    https://dchealth.dc.gov/sites/default/files/dc/sites/doh/publication/attachments
-    ✓ saved (146 KB)
-[62/490] ART-0576 [direct] Screening and diagnosis of hearing loss
-  → Hearing_2020#@#ART-0576@#@.pdf
-    https://archive.cdc.gov/www_cdc_gov/ncbddd/hearingloss/2020-data/documents/12_20
-    ✓ saved (335 KB)
-[63/490] ART-0583 [direct] Endocrine treatment of gender-dysphoric/gender-inc
-  → Hembree_2017#@#ART-0583@#@.pdf
-    https://medquest.ro/docs/hembree2017.pdf
-    ✓ saved (479 KB)
-[64/490] ART-0596 [direct] Psychological and pharmacological treatments for a
-  → Hoffman_2018#@#ART-0596@#@.pdf
-    https://effectivehealthcare.ahrq.gov/sites/default/files/related_files/cer-207-p
-    ✓ saved (6879 KB)
-[65/490] ART-0599 [direct] Encouraging health behavior change: Eight evidence
-  → Hooker_2018#@#ART-0599@#@.pdf
-    https://www.aafp.org/pubs/fpm/issues/2018/0300/p31.pdf
-    ✓ saved (2050 KB)
-[66/490] ART-0612 [direct] For healthcare professionals
-  → Human_2019#@#ART-0612@#@.pdf
-    https://gwern.net/doc/ai/nn/2019-topol.pdf
-    ✓ saved (6268 KB)
-[67/490] ART-0616 [direct] Adult immunization schedule: Recommendations for a
-  → Immunization_2022#@#ART-0616@#@.pdf
-    https://www.cdc.gov/vaccines/hcp/imz-schedules/downloads/adult/adult-combined-sc
-    ✓ saved (353 KB)
-[68/490] ART-0618 [direct] Catheter-associated urinary tract infections (CAUT
-  → Infection_2015#@#ART-0618@#@.pdf
-    https://picnet.ca/wp-content/uploads/CDC_CAUTIupdate2015.pdf
-    ✓ saved (332 KB)
-[69/490] ART-0620 [direct] Flu and people with asthma
-  → Influenza_2019#@#ART-0620@#@.pdf
-    https://www.lung.org/getmedia/0130ac10-bc7f-4278-8665-c5cb82b363c5/Asthma,-Flu-a
-    ✓ saved (235 KB)
-[70/490] ART-0621 [direct] Interim guidance for influenza outbreak management
-  → Influenza_2019#@#ART-0621@#@.pdf
-    https://www.health.state.mn.us/diseases/flu/ltc/intguide.pdf
-    ✓ saved (240 KB)
-[71/490] ART-0624 [direct] Initial preventive physical examination. Medical L
-  → Initial_2018#@#ART-0624@#@.pdf
-    https://www.cms.gov/outreach-and-education/medicare-learning-network-mln/mlnprod
-    ✓ saved (54 KB)
-[72/490] ART-0626 [direct] Interpretation of hepatitis B serologic test resul
-  → Interpretation_2019#@#ART-0626@#@.pdf
-    https://dph.sc.gov/sites/scdph/files/Library/CR-009838.pdf
-    ✓ saved (249 KB)
-[73/490] ART-0645 [direct] 747-757
-  → Jones_2012#@#ART-0645@#@.pdf
-    https://sqgne.org/presentations/2012-13/Jones-Sep-2012.pdf
-    ✓ saved (271 KB)
-[74/490] ART-0653 [direct] The Chicago classification of esophageal motility 
-  → Kahrilas_2015#@#ART-0653@#@.pdf
-    https://www.naspghan.org/files/documents/pdfs/training/curriculum-resources/moti
-    ✓ saved (2005 KB)
-[75/490] ART-0664 [direct] Medical malpractice reform—Historical approaches, 
-  → Kass_2016#@#ART-0664@#@.pdf
-    https://pdfs.semanticscholar.org/70f8/fbe13f830c8bbef98b5d197b8e99c557b170.pdf
-    ✓ saved (284 KB)
-[76/490] ART-0702 [direct] 2018 Update of the EULAR recommendations for the m
+[11/88] ART-0702 [direct] 2018 Update of the EULAR recommendations for the m
   → Kloppenburg_2018#@#ART-0702@#@.pdf
     https://ard.bmj.com/content/annrheumdis/78/1/16.full.pdf
     HTTP 403 → https://ard.bmj.com/content/annrheumdis/78/1/16.full.pdf
     ✗ failed
-[77/490] ART-0704 [direct] updated recommendations of the Advisory Committee 
-  → Kobayashi_2022#@#ART-0704@#@.pdf
-    https://www.cdc.gov/mmwr/volumes/71/wr/pdfs/mm7113a1-H.pdf
-    ✓ saved (908 KB)
-[78/490] ART-0711 [direct] 190-194
-  → Kostoglou-Athanassiou_2020#@#ART-0711@#@.pdf
-    https://journal.pan.olsztyn.pl/pdf-195435-116593?filename=Seasonal-Changes-in-Fa
-    ✓ saved (410 KB)
-[79/490] ART-0759 [direct] 785-800
-  → Lekoubou_2023#@#ART-0759@#@.pdf
-    https://www.wiadomoscilekarskie.pl/pdf-203834-125364?filename=125364.pdf
-    ✓ saved (128 KB)
-[80/490] ART-0760 [direct] Lembo A, Sultan S, Chang L, Heidelbaugh JJ, Smalle
-  → Lembo_2022#@#ART-0760@#@.pdf
-    https://www.ventegra.com/medpolicies/Medication%20Policy_Chronic%20Constipation%
-    ✓ saved (420 KB)
-[81/490] ART-0767 [direct] Official American Thoracic Society/Infectious Dise
-  → Lewisohn_2017#@#ART-0767@#@.pdf
-    https://www.idsociety.org/globalassets/idsa/practice-guidelines/official-america
-    ✓ saved (4002 KB)
-[82/490] ART-0768 [direct] Lexapro. Highlights of prescribing information. US
-  → Lexapro_2023#@#ART-0768@#@.pdf
-    https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021323s055,021365s039l
-    ✓ saved (1535 KB)
-[83/490] ART-0777 [direct] 17-24
-  → Lipid-lowering_2019#@#ART-0777@#@.pdf
-    https://eas-society.org/wp-content/uploads/2022/11/2019_dyslipidaemias_guidelin.
-    ✓ saved (4634 KB)
-[84/490] ART-0792 [direct] 2019 update
-  → Luks_2019#@#ART-0792@#@.pdf
-    https://cdimage.debian.org/pub/debian-meetings/2019/miniconf-hamburg/slides/luks
-    ✓ saved (420 KB)
-[85/490] ART-0799 [direct] Trigeminal neuralgia–diagnosis and treatment
-  → Maarbjerg_2017#@#ART-0799@#@.pdf
-    https://www.binasss.sa.cr/bibliotecas/bhm/feb23/58.pdf
-    ✓ saved (314 KB)
-[86/490] ART-0804 [direct] the Maastricht VI/Florence consensus report
+[12/88] ART-0804 [direct] the Maastricht VI/Florence consensus report
   → Malfertheiner_2022#@#ART-0804@#@.pdf
     https://gut.bmj.com/content/gutjnl/early/2022/08/08/gutjnl-2022-327745.full.pdf
     HTTP 403 → https://gut.bmj.com/content/gutjnl/early/2022/08/08/gutjnl-2022-327745
     ✗ failed
-[87/490] ART-0832 [direct] trends in gabapentin detection and involvement in 
-  → Mattson_2019#@#ART-0832@#@.pdf
-    https://www.cdc.gov/mmwr/volumes/71/wr/pdfs/mm7119a3-H.pdf
-    ✓ saved (105 KB)
-[88/490] ART-0835 [direct] Management of incidental adrenal masses: A white p
-  → Mayo-Smith_2017#@#ART-0835@#@.pdf
-    https://wiki.radiology.wisc.edu/images/f/f1/Management_of_Incidental_Adrenal_Mas
-    ✓ saved (717 KB)
-[89/490] ART-0844 [direct] fourth consensus report of the DLB Consortium
-  → McKeith_2017#@#ART-0844@#@.pdf
-    https://www.med.upenn.edu/digitalneuropathologylab/assets/user-content/documents
-    ✓ saved (833 KB)
-[90/490] ART-0883 [direct] the mastitis spectrum, revised 2022
-  → Mitchell_2022#@#ART-0883@#@.pdf
-    https://abm.memberclicks.net/assets/DOCUMENTS/PROTOCOLS/36-mitchell-et-al-2022-a
-    ✓ saved (1940 KB)
-[91/490] ART-0890 [direct] rapid evidence review
+[13/88] ART-0890 [direct] rapid evidence review
   → Morcomb_2024#@#ART-0890@#@.pdf
     https://www.aafp.org/pubs/afp/issues/2024/0800/mastitis.pdf
     Not a PDF (Content-Type: text/html; charset=utf-8)
     ✗ failed
-[92/490] ART-0904 [direct] NASS Evidence-Based Clinical Guidelines Committee;
-  → NASS_0000#@#ART-0904@#@.pdf
-    https://www.spine.org/Documents/ResearchClinicalCare/Guidelines/Spondylolisthesi
-    ✓ saved (1254 KB)
-[93/490] ART-0907 [direct] case studies
-  → Nandi_2023#@#ART-0907@#@.pdf
-    https://maarifa.cog.go.ke/sites/default/files/2024-06/NANDI%20PCRA%20REPORT%20FI
-    ✓ saved (3185 KB)
-[94/490] ART-0910 [direct] Is an underlying cardiac condition causing your pa
-  → Narducci_2021#@#ART-0910@#@.pdf
-    https://cdn.mdedge.com/files/s3fs-public/JFP07003060.PDF
-    ✓ saved (253 KB)
-[95/490] ART-0913 [direct] National Heart, Lung, and Blood Institute Expert P
-  → National_2014#@#ART-0913@#@.pdf
-    https://www.nhlbi.nih.gov/sites/default/files/media/docs/Evd-Bsd_SickleCellDis_R
-    ✓ saved (325 KB)
-[96/490] ART-0915 [direct] Deaths, percent total deaths, and death rates for 
-  → National_2015#@#ART-0915@#@.pdf
-    https://www.cdc.gov/nchs/data/dvs/lcwk1_2015.pdf
-    ✓ saved (1694 KB)
-[97/490] ART-0916 [direct] birth defects
-  → National_2020#@#ART-0916@#@.pdf
-    https://archive.cdc.gov/www_cdc_gov/ncbddd/birthdefects/surveillancemanual/resou
-    ✓ saved (4483 KB)
-[98/490] ART-0926 [direct] Colchicine in patients with chronic coronary disea
-  → Nidorf_2020#@#ART-0926@#@.pdf
-    https://natap.org/2023/HIV/nejmoa2021372.pdf
-    ✓ saved (637 KB)
-[99/490] ART-0931 [direct] US Department of Health and Human Services; 2015
+[14/88] ART-0931 [direct] US Department of Health and Human Services; 2015
   → Office_2015#@#ART-0931@#@.pdf
     https://www.hhs.gov/sites/default/files/afr/fy-2015-hhs-agency-financial-report.
-    HTTP 403 → https://www.hhs.gov/sites/default/files/afr/fy-2015-hhs-agency-financi
-    ✗ failed
-[100/490] ART-0948 [direct] treatment of deep vein thrombosis and pulmonary em
-  → Ortel_2020#@#ART-0948@#@.pdf
-    https://www.hematology.org/-/media/hematology/files/clinicians/guidelines/vte/as
-    ✓ saved (953 KB)
-[101/490] ART-0950 [direct] Compression for venous leg ulcers
-  → OMeara_2012#@#ART-0950@#@.pdf
-    https://cdn2.podiatry.com/eZineImages/PracticePerfect/869/OMeara_et_al-2012-Coch
-    ✓ saved (2007 KB)
-[102/490] ART-0957 [direct] Current Medical Diagnosis & Treatment 2022, ed 61
-  → Papadakis_2022#@#ART-0957@#@.pdf
-    https://s1cc232ef9981fc8b.jimcontent.com/download/version/1647428914/module/8094
-    File exceeds 50MB limit — aborting
-    Error: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\mpsch\\Desktop\\board_prep_intel\\01_module.1_warehouse\\citation_files\\ITE\\VC_fail\\Papadakis_2022#@#ART-0957@#@.pdf'
-    ✗ failed
-[103/490] ART-0958 [direct] 952-977
-  → Papadakis_2022#@#ART-0958@#@.pdf
-    https://library.oapen.org/bitstream/20.500.12657/108636/1/9783031953651.pdf
-    ✓ saved (34653 KB)
-[104/490] ART-0961 [direct] 556-567
-  → Park_2020#@#ART-0961@#@.pdf
-    https://sogacot.org/wp-content/uploads/Deep-gluteal-syndrome-as-a-cause-of-poste
-    ✓ saved (1190 KB)
-[105/490] ART-0967 [direct] Management of incidental adnexal findings on CT an
-  → Patel_2020#@#ART-0967@#@.pdf
-    https://geiselmed.dartmouth.edu/templates/wordpress/wp-content/uploads/2020/05/J
-    ✓ saved (671 KB)
-[106/490] ART-0971 [direct] AUA guideline
-  → Pearle_2014#@#ART-0971@#@.pdf
-    https://www.auanet.org/documents/education/clinical-guidance/Medical-Management-
-    ✓ saved (928 KB)
-[107/490] ART-0975 [direct] 485-495
-  → Pepe_2020#@#ART-0975@#@.pdf
-    https://arupconsult.com/sites/default/files/Hypocalcemia%20Testing%20algorithm.p
-    ✓ saved (99 KB)
-[108/490] ART-0978 [direct] Perinatal and infant oral health care. American Ac
-  → Perinatal_2016#@#ART-0978@#@.pdf
-    https://www.aapd.org/globalassets/media/policies_guidelines/bp_perinataloralheal
-    ✓ saved (138 KB)
-[109/490] ART-0990 [direct] Sleep apnea, aldosterone, and resistant hypertensi
+    ✓ saved (7485 KB)
+[15/88] ART-0990 [direct] Sleep apnea, aldosterone, and resistant hypertensi
   → Pimenta_2009#@#ART-0990@#@.pdf
     https://www.nature.com/articles/jhh201147.pdf
     Not a PDF (Content-Type: text/html; charset="utf-8")
     ✗ failed
-[110/490] ART-0991 [direct] small intestinal bacterial overgrowth
-  → Pimentel_2020#@#ART-0991@#@.pdf
-    https://medquest.ro/docs/pimentel2020.pdf
-    ✓ saved (403 KB)
-[111/490] ART-1005 [direct] Gestational diabetes mellitus
-  → Practice_2017#@#ART-1005@#@.pdf
-    https://www.accp.com/docs/bookstore/psap/p2017b1_sample.pdf
-    ✓ saved (510 KB)
-[112/490] ART-1006 [direct] Guidelines for vaccinating pregnant women
-  → Pregnancy_2016#@#ART-1006@#@.pdf
-    https://www.bumc.bu.edu/obgyn/files/2016/04/BMC_OBGYN_Prenatal-and-Postpartum-va
-    ✓ saved (353 KB)
-[113/490] ART-1008 [direct] A technical package of programs, policies, and pra
-  → Preventing_2017#@#ART-1008@#@.pdf
-    https://www.naspa.org/images/uploads/events/2017_CDC_Preventing_IPV_Across_the_L
-    ✓ saved (4635 KB)
-[114/490] ART-1022 [direct] 1139-1147
-  → Qi_2018#@#ART-1022@#@.pdf
-    https://qiuchili.github.io/files/ictir18-short.pdf
-    ✓ saved (963 KB)
-[115/490] ART-1025 [direct] what are the risks for infection and has the 'gold
+[16/88] ART-1025 [direct] what are the risks for infection and has the 'gold
   → Quinn_2014#@#ART-1025@#@.pdf
     https://emj.bmj.com/content/emermed/31/2/96.full.pdf
     HTTP 403 → https://emj.bmj.com/content/emermed/31/2/96.full.pdf
     ✗ failed
-[116/490] ART-1028 [direct] Textbook of Family Medicine, ed 9
-  → Rakel_2016#@#ART-1028@#@.pdf
-    https://belajarsehat756.id/wp-content/uploads/2017/11/textbook_of_family_medicin
-    File exceeds 50MB limit — aborting
-    Error: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\mpsch\\Desktop\\board_prep_intel\\01_module.1_warehouse\\citation_files\\ITE\\VC_fail\\Rakel_2016#@#ART-1028@#@.pdf'
-    ✗ failed
-[117/490] ART-1056 [direct] CPR & ECC guidelines: algorithms
-  → Resuscitation_2020#@#ART-1056@#@.pdf
-    https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/Highlights/Hghlghts
-    ✓ saved (9919 KB)
-[118/490] ART-1061 [direct] recommendations from the American Diabetes Associa
-  → Rey_2022#@#ART-1061@#@.pdf
-    https://diabetes.org/sites/default/files/2023-09/dc22s007.pdf
-    ✓ saved (745 KB)
-[119/490] ART-1075 [direct] Misconceptions and facts about Takotsubo syndrome
-  → Rodríguez_2019#@#ART-1075@#@.pdf
-    https://annales.sum.edu.pl/pdf-207117-129218?filename=Takotsubo+syndrome+_+A.pdf
-    ✓ saved (659 KB)
-[120/490] ART-1078 [direct] Painful foot or ankle? Don’t overlook these 5 inju
-  → Roman_2020#@#ART-1078@#@.pdf
-    https://cdn.mdedge.com/files/s3fs-public/JFP06906228.PDF
-    ✓ saved (590 KB)
-[121/490] ART-1087 [direct] diagnosis and management of celiac disease
-  → Rubio-Tapia_2013#@#ART-1087@#@.pdf
-    https://medquest.ro/docs/rubio-tapia2013.pdf
-    ✓ saved (394 KB)
-[122/490] ART-1090 [direct] American Cancer Society/American Society of Clinic
-  → Runowicz_2016#@#ART-1090@#@.pdf
-    https://bpno.dk/wp-content/uploads/2023/10/ASCO-guidelines-breast-cancer-survivo
-    ✓ saved (753 KB)
-[123/490] ART-1115 [direct] Diagnosis and treatment of infertility in men: AUA
-  → Schlegel_2020#@#ART-1115@#@.pdf
-    https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/Male%20Inferti
-    ✓ saved (1926 KB)
-[124/490] ART-1127 [direct] Seasonal flu shot. Centers for Disease Control and
-  → Seasonal_2020#@#ART-1127@#@.pdf
-    https://www.cdc.gov/mmwr/volumes/69/rr/pdfs/rr6908a1-H.pdf
-    ✓ saved (437 KB)
-[125/490] ART-1154 [direct] 227-234
-  → Shrivastava_2023#@#ART-1154@#@.pdf
-    https://joshrule.com/files/srivastava2023beyond.pdf
-    ✓ saved (2669 KB)
-[126/490] ART-1164 [direct] Six domains of health care quality. Agency for Hea
+[17/88] ART-1164 [direct] Six domains of health care quality. Agency for Hea
   → Six_2018#@#ART-1164@#@.pdf
     https://www.ahrq.gov/sites/default/files/wysiwyg/research/findings/nhqrdr/2018qd
     HTTP 202 → https://www.ahrq.gov/sites/default/files/wysiwyg/research/findings/nhq
     ✗ failed
-[127/490] ART-1165 [direct] stridor
-  → Skirko_2022#@#ART-1165@#@.pdf
-    https://assets.cureus.com/uploads/review_article/pdf/108519/20221026-1426-1u8zy5
-    ✓ saved (176 KB)
-[128/490] ART-1220 [direct] S12-S25
-  → Taljanovic_2020#@#ART-1220@#@.pdf
-    https://www.appliedradiology.org/courses/4629%2FPDF%2FAR_01-23_DavisCME01_all.pd
-    ✓ saved (2434 KB)
-[129/490] ART-1221 [direct] Talking with parents about vaccines for infants. C
-  → Talking_2018#@#ART-1221@#@.pdf
-    https://lalinks.org/linksweb/docs/vfc/Talking%20with%20Parents%20about%20Vaccine
-    ✓ saved (144 KB)
-[130/490] ART-1222 [direct] Curve progression in idiopathic scoliosis: Follow-
-  → Tan_0000#@#ART-1222@#@.pdf
-    https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2034787.pdf
-    ✓ saved (323 KB)
-[131/490] ART-1223 [direct] Outpatient management of fever and neutropenia in 
-  → Taplitz_2018#@#ART-1223@#@.pdf
-    https://medquest.ro/docs/taplitz2018.pdf
-    ✓ saved (664 KB)
-[132/490] ART-1232 [direct] Communicating numbers to your patients: A referenc
-  → The_2014#@#ART-1232@#@.pdf
-    https://medschool.cuanschutz.edu/docs/librariesprovider294/default-document-libr
-    ✓ saved (757 KB)
-[133/490] ART-1251 [direct] Pharmacotherapy for adults with alcohol use disord
-  → US_2016#@#ART-1251@#@.pdf
-    https://effectivehealthcare.ahrq.gov/sites/default/files/pdf/alcohol-misuse-drug
-    ✓ saved (263 KB)
-[134/490] ART-1268 [direct] Published Recommendations
-  → US_0000#@#ART-1268@#@.pdf
-    https://chlpi.org/wp-content/uploads/2025/01/USPSTF-A-B-Recommendations-V3.pdf
-    ✓ saved (410 KB)
-[135/490] ART-1269 [direct] a consensus report
-  → Umpierrez_2024#@#ART-1269@#@.pdf
-    https://profketandhatariya.com/wp-content/uploads/2024/08/Diabetes-Care-2024.pdf
-    ✓ saved (709 KB)
-[136/490] ART-1277 [direct] VA/DoD clinical practice guideline for the managem
+[18/88] ART-1277 [direct] VA/DoD clinical practice guideline for the managem
   → VA_2017#@#ART-1277@#@.pdf
     https://healthquality.va.gov/guidelines/MH/ptsd/VADoDPTSDCPGFinal.pdf
     HTTP 404 → https://healthquality.va.gov/guidelines/MH/ptsd/VADoDPTSDCPGFinal.pdf
     ✗ failed
-[137/490] ART-1278 [direct] Guidelines from the American Society of Clinical O
-  → VTE_2020#@#ART-1278@#@.pdf
-    https://medquest.ro/docs/jco.19.01461.pdf
-    ✓ saved (695 KB)
-[138/490] ART-1279 [direct] Educate the parent and patient
+[19/88] ART-1279 [direct] Educate the parent and patient
   → Vaccine_2019#@#ART-1279@#@.pdf
     https://www.cdc.gov/hpv/hcp/for-hcp-tipsheet-hpv.pdf
     HTTP 404 → https://www.cdc.gov/hpv/hcp/for-hcp-tipsheet-hpv.pdf
     ✗ failed
-[139/490] ART-1283 [direct] 178-192
-  → Vaidya_2019#@#ART-1283@#@.pdf
-    https://www.cortisolmatters.com/pdfs/evaluating-adrenal-adenomas-article-summary
-    ✓ saved (235 KB)
-[140/490] ART-1319 [direct] AUA/SUO guideline part II: considerations for a pr
-  → Wei_2023#@#ART-1319@#@.pdf
-    https://www.auanet.org/documents/Guidelines/PDF/2023%20Guidelines/EDPC%20Unabrid
-    ✓ saved (1194 KB)
-[141/490] ART-1325 [direct] Wesp L. Prostate and testicular cancer considerati
-  → Wesp_2016#@#ART-1325@#@.pdf
-    https://moqc.org/wp-content/uploads/2017/10/Guidelines-for-Primary-and-Gender-Af
-    ✓ saved (1516 KB)
-[142/490] ART-1347 [direct] Intrahepatic cholestasis of pregnancy
+[20/88] ART-1347 [direct] Intrahepatic cholestasis of pregnancy
   → Williamson_2014#@#ART-1347@#@.pdf
     https://journals.lww.com/greenjournal/Documents/July2014_AtE_Williamson.pdf
     HTTP 403 → https://journals.lww.com/greenjournal/Documents/July2014_AtE_Williamso
     ✗ failed
-[143/490] ART-1550 [direct] Legionella (Legionnaires’ disease and Pontiac feve
-  → National_2017#@#ART-1550@#@.pdf
-    https://wwwnc.cdc.gov/eid/article/23/11/pdfs/17-1429.pdf
-    ✓ saved (2611 KB)
-[144/490] ART-1555 [direct] Clinical practice guideline: Sudden hearing loss
-  → Stachler_2012#@#ART-1555@#@.pdf
-    https://michiganear.com/wp-content/uploads/2022/02/Sudden-SNHL.pdf
-    ✓ saved (94 KB)
-[145/490] ART-1562 [direct] Official American Thoracic Society/Infectious Dise
-  → Lewinsohn_2017#@#ART-1562@#@.pdf
-    https://www.idsociety.org/globalassets/idsa/practice-guidelines/official-america
-    ✓ saved (4002 KB)
-[146/490] ART-1569 [direct] Medicare Hospice Benefits. Centers for Medicare & 
-  → Medicare_2018#@#ART-1569@#@.pdf
-    https://www.medicare.gov/publications/02154-medicare-hospice-benefits.pdf
-    ✓ saved (486 KB)
-[147/490] ART-1583 [direct] CCSMH national guidelines for seniors’ mental heal
-  → CCSMH_0000#@#ART-1583@#@.pdf
-    https://ccsmh.ca/wp-content/uploads/2021/06/CCSMH_Depression_Guidelines_FINAL_EN
-    ✓ saved (924 KB)
-[148/490] ART-1584 [direct] American Geriatrics Society 2015 updated Beers Cri
-  → By_2015#@#ART-1584@#@.pdf
-    https://www.sigot.org/allegato_docs/1057_Beers-Criteria.pdf
-    ✓ saved (149 KB)
-[149/490] ART-1589 [direct] Global strategy for asthma management and preventi
-  → Global_2018#@#ART-1589@#@.pdf
-    https://ginasthma.org/wp-content/uploads/2019/01/2018-GINA.pdf
-    ✓ saved (5387 KB)
-[150/490] ART-1596 [direct] Clinical practice guidelines for the perioperative
-  → Mechanick_2013#@#ART-1596@#@.pdf
-    https://clinicalnutrition.science/cms/upload/dateien/NutriBib/4_Nutritional_Ther
-    ✓ saved (756 KB)
-[151/490] ART-1601 [direct] A new herpes zoster vaccine
-  → Shingrix_2017#@#ART-1601@#@.pdf
-    https://www.fda.gov/files/vaccines%2C%20blood%20&%20biologics/published/October-
-    ✓ saved (357 KB)
-[152/490] ART-1620 [direct] An official American Thoracic Society clinical pra
-  → Parsons_2013#@#ART-1620@#@.pdf
-    https://www.thoracic.org/statements/resources/allergy-asthma/exercise-induced-br
-    ✓ saved (287 KB)
-[153/490] ART-1621 [direct] Hereditary hemochromatosis
-  → Crownover_2013#@#ART-1621@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2013/0201/p183.pdf
-    ✓ saved (261 KB)
-[154/490] ART-1623 [direct] Maps and statistics
-  → Plague_2018#@#ART-1623@#@.pdf
-    https://www.ecdc.europa.eu/sites/default/files/documents/plague-annual-epidemiol
-    ✓ saved (198 KB)
-[155/490] ART-1628 [direct] US medical eligibility criteria for contraceptive 
-  → Curtis_2016#@#ART-1628@#@.pdf
-    https://www.cdc.gov/mmwr/volumes/65/rr/pdfs/rr6503.pdf
-    ✓ saved (1183 KB)
-[156/490] ART-1631 [direct] Preoperative evaluation: A time-saving algorithm
-  → Arnold_2016#@#ART-1631@#@.pdf
-    https://cdn.mdedge.com/files/s3fs-public/JFP06510702.PDF
-    ✓ saved (241 KB)
-[157/490] ART-1648 [direct] Diagnosis, evaluation and follow-up of asymptomati
-  → Davis_2012#@#ART-1648@#@.pdf
-    https://medquest.ro/docs/j.juro.2012.09.078.pdf
-    ✓ saved (373 KB)
-[158/490] ART-1654 [direct] ACOG Practice Bulletin: Clinical management guidel
-  → American_2017#@#ART-1654@#@.pdf
-    https://tjodistanbul.org/uploads/postpartum-hemorrhage-number-183-october-2017.p
-    ✓ saved (410 KB)
-[159/490] ART-1667 [direct] Anorexia, bulimia, and the female athlete triad: E
-  → Mendelsohn_2010#@#ART-1667@#@.pdf
-    https://orthojournalhms.org/22/pdfs/volume22_26_32.pdf
-    ✓ saved (136 KB)
-[160/490] ART-1671 [direct] American Geriatrics Society 2015 updated Beers Cri
-  → American_2015#@#ART-1671@#@.pdf
-    https://www.sigot.org/allegato_docs/1057_Beers-Criteria.pdf
-    ✓ saved (149 KB)
-[161/490] ART-1679 [direct] Leser Trelat sign
-  → Bernett_2017#@#ART-1679@#@.pdf
-    https://escholarship.org/content/qt0w01b1t3/qt0w01b1t3_noSplash_494f008832950687
-    ✓ saved (4156 KB)
-[162/490] ART-1680 [direct] Diagnosis and management of tickborne rickettsial 
-  → Biggs_2016#@#ART-1680@#@.pdf
-    https://www.cdc.gov/rocky-mountain-spotted-fever/media/pdfs/2026/01/Diagnosis-an
-    ✓ saved (5619 KB)
-[163/490] ART-1685 [direct] Basic and Clinical Pharmacology, ed 11
-  → Katzung_2009#@#ART-1685@#@.pdf
-    https://resource.odmu.edu.ua/chair/download/111546/Od8wRxmRtj4H0ClCeHcxXg/Katzun
-    ✓ saved (16419 KB)
-[164/490] ART-1700 [direct] Diagnosis of deep venous thrombosis and pulmonary 
-  → Wilbur_2012#@#ART-1700@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2012/1115/p913.pdf
-    ✓ saved (604 KB)
-[165/490] ART-1705 [direct] Core elements of outpatient antibiotic stewardship
-  → Sanchez_2016#@#ART-1705@#@.pdf
-    https://www.cdc.gov/antibiotic-use/media/pdfs/Core-Elements-Outpatient-508.pdf
-    ✓ saved (2784 KB)
-[166/490] ART-1722 [direct] Guidelines and evaluation criteria for facilities 
-  → Guidelines_2016#@#ART-1722@#@.pdf
-    https://babyfriendlyusa.org/wp-content/uploads/2018/10/GEC2016_v2-180716.pdf
-    ✓ saved (550 KB)
-[167/490] ART-1725 [direct] Medication reconciliation
+[21/88] ART-1725 [direct] Medication reconciliation
   → AHRQ_2017#@#ART-1725@#@.pdf
     https://www.ahrq.gov/sites/default/files/wysiwyg/professionals/quality-patient-s
     HTTP 202 → https://www.ahrq.gov/sites/default/files/wysiwyg/professionals/quality
     ✗ failed
-[168/490] ART-1740 [direct] Acute bacterial prostatitis: Diagnosis and managem
+[22/88] ART-1740 [direct] Acute bacterial prostatitis: Diagnosis and managem
   → Coker_2016#@#ART-1740@#@.pdf
     https://www.chi.gov.sa/Style%20Library/IDF_Branding/Indication/81%20-%20Acute%20
     Connection error: HTTPSConnectionPool(host='www.chi.gov.sa', port=443): Max retries exceeded with url: /Style%20Library/IDF_Branding/Indication/81%20-%20Acute%20Bacterial%20Prostatitis-Indication%20Update.pdf (Caused by NewConnectionError("HTTPSConnection(host='www.chi.gov.sa', port=443): Failed to establish a new connection: [WinError 10051] A socket operation was attempted to an unreachable network"))
     ✗ failed
-[169/490] ART-1759 [direct] Dietary Reference Intakes for Calcium and Vitamin 
-  → Insititute_2011#@#ART-1759@#@.pdf
-    https://nap.nationalacademies.org/resource/13050/Vitamin-D-and-Calcium-2010-Repo
-    ✓ saved (320 KB)
-[170/490] ART-1760 [direct] Clinical inquiry
+[23/88] ART-1760 [direct] Clinical inquiry
   → Bly_2013#@#ART-1760@#@.pdf
     https://bmjopen.bmj.com/content/bmjopen/3/5/e002714.full.pdf
     HTTP 403 → https://bmjopen.bmj.com/content/bmjopen/3/5/e002714.full.pdf
     ✗ failed
-[171/490] ART-1761 [direct] Global consensus recommendations on prevention and
-  → Munns_2016#@#ART-1761@#@.pdf
-    https://media.anzsped.org/2015/11/17125416/Consensus-Munns-2016.pdf
-    ✓ saved (1085 KB)
-[172/490] ART-1765 [direct] A guide for health care professionals
-  → Pocket_2017#@#ART-1765@#@.pdf
-    https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf
-    ✓ saved (8389 KB)
-[173/490] ART-1776 [direct] Colorectal cancer screening and surveillance
+[24/88] ART-1776 [direct] Colorectal cancer screening and surveillance
   → Short_2015#@#ART-1776@#@.pdf
     https://fascrs.org/ascrs/media/files/downloads/Clinical%20Practice%20Guidelines/
     HTTP 404 → https://fascrs.org/ascrs/media/files/downloads/Clinical%20Practice%20G
     ✗ failed
-[174/490] ART-1777 [direct] Colorectal cancer screening: Recommendations for p
-  → Rex_2017#@#ART-1777@#@.pdf
-    https://acgcdn.gi.org/wp-content/uploads/2018/04/Multi-Society-Task-Force-Colore
-    ✓ saved (141 KB)
-[175/490] ART-1782 [direct] Evaluation and management of the patient with susp
+[25/88] ART-1782 [direct] Evaluation and management of the patient with susp
   → Strand_2017#@#ART-1782@#@.pdf
     https://portsmouth.tricare.mil/Portals/130/Rheumatology%20SRG%20Inflammatory%20B
-    HTTP 403 → https://portsmouth.tricare.mil/Portals/130/Rheumatology%20SRG%20Inflam
-    ✗ failed
-[176/490] ART-1783 [direct] Aricept (donepezil hydrochloride) label. US Food a
-  → Aricept_2012#@#ART-1783@#@.pdf
-    https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/020690s035,021720s008,
-    ✓ saved (1178 KB)
-[177/490] ART-1786 [direct] Consensus on a multidisciplinary treatment guideli
-  → Huisstede_2014#@#ART-1786@#@.pdf
-    https://www.termedia.pl/Journal/-99/pdf-40714-10?filename=HPC+4+2020_Art_9_Zawor
-    ✓ saved (301 KB)
-[178/490] ART-1792 [direct] Deprescribing antipsychotics for behavioural and p
-  → Bjerre_2018#@#ART-1792@#@.pdf
-    https://www.nswtag.org.au/wp-content/uploads/2018/06/1.2-Deprescribing-Guide-for
-    ✓ saved (143 KB)
-[179/490] ART-1795 [direct] A guide for health care providers: Treatment regim
-  → Latent_2016#@#ART-1795@#@.pdf
-    https://www.cdc.gov/tb/media/pdfs/Latent-TB-Infection-A-Guide-for-Primary-Health
-    ✓ saved (4181 KB)
-[180/490] ART-1809 [direct] Epidemiology and Prevention of Vaccine-Preventable
-  → National_2015#@#ART-1809@#@.pdf
-    https://medicalscratchs.wordpress.com/wp-content/uploads/2015/08/00-intro-pink-b
-    ✓ saved (82 KB)
-[181/490] ART-1818 [direct] ACOG Practice Bulletin No
-  → Committee_2018#@#ART-1818@#@.pdf
-    https://medquest.ro/docs/acog-practice-bulletin-no-200-2018.pdf
-    ✓ saved (178 KB)
-[182/490] ART-1828 [direct] Syphilis pocket guide for providers. Centers for D
-  → Syphilis_2017#@#ART-1828@#@.pdf
-    https://www.cdc.gov/std/syphilis/syphilis-pocket-guide-final-508.pdf
-    ✓ saved (45119 KB)
-[183/490] ART-1834 [direct] Topiramate induced metabolic acidosis and kidney s
-  → Salek_2017#@#ART-1834@#@.pdf
-    https://biochemia-medica.com/assets/images/upload/xml_tif/27_2_T_Salek_et_al__To
-    ✓ saved (691 KB)
-[184/490] ART-1836 [direct] Recommended immunization schedule for children and
-  → Immunization_2018#@#ART-1836@#@.pdf
-    https://www.cdc.gov/vaccines/hcp/imz-schedules/downloads/past/2018-child.pdf
-    ✓ saved (203 KB)
-[185/490] ART-1840 [direct] Testosterone for peri- and postmenopausal women
-  → Somboonporn_2005#@#ART-1840@#@.pdf
-    https://hormonebalance.org/images/documents/Somboonporn%2005%20Testosterone%20pe
-    ✓ saved (756 KB)
-[186/490] ART-1841 [direct] Androgen therapy in women: A reappraisal: An Endoc
-  → Wierman_2014#@#ART-1841@#@.pdf
-    https://www.albme.gov/uploads/pdfs/Androgen_Therapy_in_Women_A_Reappraisal_An_En
-    ✓ saved (215 KB)
-[187/490] ART-1842 [direct] The 2017 hormone therapy position statement of The
-  → The_2017#@#ART-1842@#@.pdf
-    https://contenthub-aem.optumrx.com/content/dam/contenthub/onboarding/assets/Tenn
-    ✓ saved (465 KB)
-[188/490] ART-1863 [direct] Guidance
+    ✓ saved (208 KB)
+[26/88] ART-1863 [direct] Guidance
   → Post-traumatic_2018#@#ART-1863@#@.pdf
     https://www.healthquality.va.gov/guidelines/MH/ptsd/VADoDPTSDCPGFinal012418.pdf
     Connection error: HTTPSConnectionPool(host='www.healthquality.va.gov', port=443): Max retries exceeded with url: /guidelines/MH/ptsd/VADoDPTSDCPGFinal012418.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
     ✗ failed
-[189/490] ART-1864 [direct] Evaluation and management of penicillin allergy: A
+[27/88] ART-1864 [direct] Evaluation and management of penicillin allergy: A
   → Shenoy_2019#@#ART-1864@#@.pdf
     https://2024.sci-hub.se/7289/caa3bed27d5feb10e3c6a9aadaf9b4a1/shenoy2019.pdf
     Connection error: HTTPSConnectionPool(host='2024.sci-hub.se', port=443): Max retries exceeded with url: /7289/caa3bed27d5feb10e3c6a9aadaf9b4a1/shenoy2019.pdf (Caused by NameResolutionError("HTTPSConnection(host='2024.sci-hub.se', port=443): Failed to resolve '2024.sci-hub.se' ([Errno 11001] getaddrinfo failed)"))
     ✗ failed
-[190/490] ART-1869 [direct] The Society for Vascular Surgery practice guidelin
-  → Chaikof_2018#@#ART-1869@#@.pdf
-    https://vascular.org/sites/files/2022-02/SVS_Guideline_AAA_Slides_0.pdf
-    ✓ saved (222 KB)
-[191/490] ART-1870 [direct] Head lice: Resources for health professionals
-  → Division_2015#@#ART-1870@#@.pdf
-    https://www.epa.gov/sites/default/files/2015-10/documents/managing-head-lice.pdf
-    ✓ saved (4133 KB)
-[192/490] ART-1879 [direct] Hypothyroidism: An update
-  → Gaitonde_2012#@#ART-1879@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2012/0801/p244.pdf
-    ✓ saved (507 KB)
-[193/490] ART-1885 [direct] Illicit drug use, illicit drug use disorders, and 
-  → Mack_2017#@#ART-1885@#@.pdf
-    https://www.cdc.gov/mmwr/volumes/66/ss/pdfs/ss6619.pdf
-    ✓ saved (296 KB)
-[194/490] ART-1886 [direct] Rural-urban differences
-  → Chart_2019#@#ART-1886@#@.pdf
-    https://ers.usda.gov/sites/default/files/_laserfiche/publications/95341/EIB-212.
-    ✓ saved (807 KB)
-[195/490] ART-1897 [direct] Mini-Mental State Examination (MMSE) for the detec
-  → Creavin_2016#@#ART-1897@#@.pdf
-    https://research-information.bris.ac.uk/ws/files/81702242/Creavin_et_al_2016_The
-    ✓ saved (1797 KB)
-[196/490] ART-1900 [direct] Celiac disease
-  → Global_2016#@#ART-1900@#@.pdf
-    https://www.worldgastroenterology.org/UserFiles/file/guidelines/celiac-disease-e
-    ✓ saved (1114 KB)
-[197/490] ART-1902 [direct] Steps to a healthier me and baby-to-be
-  → National_0000#@#ART-1902@#@.pdf
-    https://www.cdc.gov/pregnancy/media/pdfs/Pregnancy_Planner_508.pdf
-    ✓ saved (764 KB)
-[198/490] ART-1903 [direct] Preconception care: Frequently asked questions: Pr
-  → Good_2017#@#ART-1903@#@.pdf
-    https://nawcare.com/assets/docs/good-health-before-pregnancy.pdf
-    ✓ saved (71 KB)
-[199/490] ART-1904 [direct] For healthcare professionals
-  → Measles_2018#@#ART-1904@#@.pdf
-    https://open.alberta.ca/dataset/cddcf8b0-9193-4fd7-aa49-def3fded69cf/resource/8f
-    ✓ saved (1709 KB)
-[200/490] ART-1905 [direct] Profound hypokalemia in diabetic ketoacidosis: A t
-  → Murthy_2005#@#ART-1905@#@.pdf
-    https://pdfs.semanticscholar.org/3947/02b27a88bdbe7ef4f44f2cd7abcdb4e9a033.pdf
-    ✓ saved (128 KB)
-[201/490] ART-1908 [direct] Goldberger’s Clinical Electrocardiography: A Simpl
-  → Goldberger_2018#@#ART-1908@#@.pdf
-    https://drive.uqu.edu.sa/_/nursing/files/Goldberger%E2%80%99s%20Clinical%20elect
-    ✓ saved (18168 KB)
-[202/490] ART-1909 [direct] Thiazide-induced hyponatremia
+[28/88] ART-1909 [direct] Thiazide-induced hyponatremia
   → Hwang_2010#@#ART-1909@#@.pdf
     https://ncbi.nlm.nih.gov/pmc/articles/PMC3041494/pdf/ebp-8-51.pdf
-    HTTP 403 → https://ncbi.nlm.nih.gov/pmc/articles/PMC3041494/pdf/ebp-8-51.pdf
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     ✗ failed
-[203/490] ART-1914 [direct] Rome IV–Functional GI disorders: Disorders of gut-
-  → Drossman_2016#@#ART-1914@#@.pdf
-    https://theromefoundation.org/wp-content/uploads/functional-gastrointestinal-dis
-    ✓ saved (553 KB)
-[204/490] ART-1920 [direct] 57-58
-  → Treatment_2016#@#ART-1920@#@.pdf
-    https://www.cdc.gov/tb/publications/guidelines/pdf/clin-infect-dis.-2016-nahid-c
-    ✓ saved (1031 KB)
-[205/490] ART-1927 [direct] Clinical guideline: Management of gastroparesis
-  → Camilleri_2013#@#ART-1927@#@.pdf
-    https://jhuccs1.us/gpcrc/open/links/ACG_Clinical_Guideline__Gastroparesis.Jun202
-    ✓ saved (669 KB)
-[206/490] ART-1928 [direct] Prokinetics in gastroparesis
-  → Acosta_2015#@#ART-1928@#@.pdf
-    https://digamot.com/pdf/Farmacognosia/1.%20Farmacognosia%20Itoprida%20Camilleri.
-    ✓ saved (1407 KB)
-[207/490] ART-1932 [direct] Antibiotic stewardship driver diagram and change p
-  → Antibiotic_2012#@#ART-1932@#@.pdf
-    https://www.floridahealth.gov/wp-content/uploads/2025/07/florida-ar-toolkit.pdf
-    ✓ saved (310 KB)
-[208/490] ART-1941 [direct] Feeding problems of infants and toddlers
-  → Bernard-Bonnin_2006#@#ART-1941@#@.pdf
-    https://www.cfp.ca/content/cfp/52/10/1247.full.pdf
-    ✓ saved (223 KB)
-[209/490] ART-1946 [direct] Psychological therapies for borderline personality
-  → Binks_2006#@#ART-1946@#@.pdf
-    https://levylab.la.psu.edu/wp-content/uploads/sites/9/2022/01/Levyetal.2018Psych
-    ✓ saved (291 KB)
-[210/490] ART-1958 [direct] Clinical practice guideline: hoarseness (dysphonia
-  → Schwartz_2009#@#ART-1958@#@.pdf
-    https://sborl.es/wp-content/uploads/2016/02/AmAc-GPC-disfonia.pdf
-    ✓ saved (385 KB)
-[211/490] ART-1963 [direct] Diagnosis and management of Raynaud's phenomenon
+[29/88] ART-1963 [direct] Diagnosis and management of Raynaud's phenomenon
   → Goundry_2012#@#ART-1963@#@.pdf
     http://www.nature.com/articles/nrrheum.2012.96.pdf
     Not a PDF (Content-Type: text/html; charset="utf-8")
     ✗ failed
-[212/490] ART-1965 [direct] Official ATS/CDC/IDSA CPG: Treatment of Drug-Susce
-  → Nahid_2016#@#ART-1965@#@.pdf
-    https://www.cdc.gov/tb/publications/guidelines/pdf/clin-infect-dis.-2016-nahid-c
-    ✓ saved (1031 KB)
-[213/490] ART-1980 [direct] The effects of Implanon on menstrual bleeding patt
-  → Mansour_2008#@#ART-1980@#@.pdf
-    https://www.cosrh.org/Common/Uploaded%20files/documents/ceuguidanceproblematicbl
-    ✓ saved (659 KB)
-[214/490] ART-0119 [pmc] 30-Year review of pediatric- and adult-onset CVID:
-  → Baloh_2019#@#ART-0119@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6754754/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6754754/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[215/490] ART-0439 [pmc] edging closer to a new paradigm
-  → Flack_2022#@#ART-0439@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC12911370/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC12911370/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[216/490] ART-0640 [pmc] Croup
-  → Johnson_2014#@#ART-0640@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4178284/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4178284/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[217/490] ART-0877 [pmc] CD000029
-  → Minhas_2022#@#ART-0877@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC8758582/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC8758582/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[218/490] ART-1255 [pmc] asymptomatic carotid artery stenosis: screening
-  → US_2021#@#ART-1255@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC7856541/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC7856541/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[219/490] ART-1348 [pmc] Tumor lysis syndrome: New challenges and recent ad
-  → Wilson_2014#@#ART-1348@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4017246/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4017246/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[220/490] ART-1793 [pmc] Deprescribing antipsychotics for behavioral and ps
-  → Hauk_2018#@#ART-1793@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5962971/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5962971/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[221/490] ART-0020 [pmc] Association of use of the neonatal early-onset sep
+[30/88] ART-0020 [pmc] Association of use of the neonatal early-onset sep
   → Achten_2019#@#ART-0020@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6724419/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6724419/pdf/
+    HTTP 404 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6724419/pdf/
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[222/490] ART-0021 [pmc] Glucocorticoid-induced osteoporosis: From clinical
-  → Adami_2019#@#ART-0021@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6755635/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6755635/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[223/490] ART-0084 [pmc] CD003462
+[31/88] ART-0084 [pmc] CD003462
   → Andrade-Castellanos_2014#@#ART-0084@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6769062/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6769062/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[224/490] ART-0120 [pmc] Approach to the patient with adrenal incidentaloma
+[32/88] ART-0120 [pmc] Approach to the patient with adrenal incidentaloma
   → Bancos_2021#@#ART-0120@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC8530736/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC8530736/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[225/490] ART-0145 [pmc] a comprehensive review
-  → Bertoli_2020#@#ART-0145@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC8567758/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC8567758/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[226/490] ART-0154 [pmc] Guidelines for the management of asymptomatic prim
+[33/88] ART-0154 [pmc] Guidelines for the management of asymptomatic prim
   → Bilezikian_2014#@#ART-0154@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC5393490/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5393490/pdf/
+    HTTP 404 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5393490/pdf/
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[227/490] ART-0176 [pmc] Assessing decision making capacity for do not resu
-  → Brody_2017#@#ART-0176@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC12579754/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC12579754/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[228/490] ART-0179 [pmc] A critical appraisal of adult trigger finger: Path
-  → Brozovich_2019#@#ART-0179@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6756654/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6756654/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[229/490] ART-0199 [pmc] practical approach to diagnosis and management
+[34/88] ART-0199 [pmc] practical approach to diagnosis and management
   → Byrd_2018#@#ART-0199@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6205759/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6205759/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[230/490] ART-0214 [pmc] Prevention of diabetes mellitus in patients with p
+[35/88] ART-0214 [pmc] Prevention of diabetes mellitus in patients with p
   → Carris_2019#@#ART-0214@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6350898/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6350898/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[231/490] ART-0215 [pmc] 926-940
-  → Carter_2024#@#ART-0215@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC12930988/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC12930988/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[232/490] ART-0222 [pmc] 1257-1266
+[36/88] ART-0222 [pmc] 1257-1266
   → Celli_2019#@#ART-0222@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC9746870/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC9746870/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[233/490] ART-0243 [pmc] endoscopic and surgical approaches
-  → Cianci_2021#@#ART-0243@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC8326257/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC8326257/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[234/490] ART-0344 [pmc] can the electrocardiogram risk stratify for short-
-  → Durfey_2017#@#ART-0344@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5576635/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5576635/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[235/490] ART-0348 [pmc] Anal fissures
-  → Dykstra_2019#@#ART-0348@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6650108/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6650108/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[236/490] ART-0350 [pmc] number needed to treat
-  → EBM_0000#@#ART-0350@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC12445750/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC12445750/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[237/490] ART-0369 [pmc] standards of care in diabetes—2023
+[37/88] ART-0369 [pmc] standards of care in diabetes—2023
   → ElSayed_2023#@#ART-0369@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC9845083/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC9845083/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[238/490] ART-0451 [pmc] 83-94
-  → Frampton_2023#@#ART-0451@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC11564130/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC11564130/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[239/490] ART-0461 [pmc] big data bias masks a true association
+[38/88] ART-0461 [pmc] big data bias masks a true association
   → Frew_2019#@#ART-0461@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6522264/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6522264/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[240/490] ART-0462 [pmc] update and clinical advice for prevention, diagnos
-  → Friedli_2020#@#ART-0462@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC9324596/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC9324596/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[241/490] ART-0466 [pmc] 34-40
-  → Gaddey_2021#@#ART-0466@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC12880482/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC12880482/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[242/490] ART-0475 [pmc] epidemiology, outcomes, knowledge gaps, and future
+[39/88] ART-0475 [pmc] epidemiology, outcomes, knowledge gaps, and future
   → Gardner_2018#@#ART-0475@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC5865621/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5865621/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[243/490] ART-0489 [pmc] 317-330
-  → Giddings_2016#@#ART-0489@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC7415030/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC7415030/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[244/490] ART-0493 [pmc] Hospital transfers of nursing home residents with 
+[40/88] ART-0493 [pmc] Hospital transfers of nursing home residents with 
   → Givens_2012#@#ART-0493@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC3354640/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3354640/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[245/490] ART-0527 [pmc] CD011050
+[41/88] ART-0527 [pmc] CD011050
   → Griffiths_2016#@#ART-0527@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6599814/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6599814/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[246/490] ART-0536 [pmc] Aldosterone receptor antagonists: Current perspect
-  → Guichard_2013#@#ART-0536@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3699348/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3699348/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[247/490] ART-0557 [pmc] an open- label, pilot, randomised trial
-  → Halliday_2019#@#ART-0557@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6319251/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6319251/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[248/490] ART-0628 [pmc] 1618-1622
-  → Jacob_2006#@#ART-0628@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4522991/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4522991/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[249/490] ART-0630 [pmc] the ROW cohort study
+[42/88] ART-0630 [pmc] the ROW cohort study
   → Jain_2017#@#ART-0630@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC5218987/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5218987/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[250/490] ART-0659 [pmc] recognition and management
-  → Kane_2020#@#ART-0659@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC12539128/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC12539128/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[251/490] ART-0673 [pmc] a systematic review
-  → Kelley-Quon_2021#@#ART-0673@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC10752083/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC10752083/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[252/490] ART-0674 [pmc] an American Academy of Sleep Medicine clinical pra
+[43/88] ART-0674 [pmc] an American Academy of Sleep Medicine clinical pra
   → Kent_2021#@#ART-0674@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC8726361/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC8726361/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[253/490] ART-0677 [pmc] e180-e184
-  → Khan_2018#@#ART-0677@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC8007206/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC8007206/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[254/490] ART-0678 [pmc] Arthroscopic surgery for degenerative tears of the
+[44/88] ART-0678 [pmc] Arthroscopic surgery for degenerative tears of the
   → Khan_2014#@#ART-0678@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC4188648/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4188648/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[255/490] ART-0688 [pmc] CD013422
+[45/88] ART-0688 [pmc] CD013422
   → Kirkilesis_2020#@#ART-0688@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC7144816/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC7144816/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[256/490] ART-0722 [pmc] Ten-year follow-up after initiation of statin ther
-  → Kusters_2014#@#ART-0722@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4372689/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4372689/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[257/490] ART-0732 [pmc] overview of evidence-based assessment and treatmen
-  → Lancaster_2016#@#ART-0732@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5126802/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5126802/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[258/490] ART-0771 [pmc] Patching for corneal abrasion
+[46/88] ART-0771 [pmc] Patching for corneal abrasion
   → Lim_2016#@#ART-0771@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6457868/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6457868/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[259/490] ART-0814 [pmc] findings from the Health ABC Study
+[47/88] ART-0814 [pmc] findings from the Health ABC Study
   → Marcum_2016#@#ART-0814@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC4892949/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4892949/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[260/490] ART-0816 [pmc] Double-blind, randomized, controlled, crossover tr
-  → Markman_2015#@#ART-0816@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4335998/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4335998/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[261/490] ART-0842 [pmc] Managing ankle ligament sprains and tears: Current
-  → McGovern_2016#@#ART-0842@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4780668/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4780668/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[262/490] ART-0862 [pmc] a meta-analysis
+[48/88] ART-0862 [pmc] a meta-analysis
   → Meng_2011#@#ART-0862@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC3208370/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3208370/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[263/490] ART-0879 [pmc] Baclofen for alcohol use disorder
+[49/88] ART-0879 [pmc] Baclofen for alcohol use disorder
   → Minozzi_2018#@#ART-0879@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC9837849/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC9837849/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[264/490] ART-0887 [pmc] current updates
-  → Mohamed_2019#@#ART-0887@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6854261/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6854261/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[265/490] ART-0893 [pmc] 435-443
-  → Mori_2021#@#ART-0893@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC8516955/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC8516955/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[266/490] ART-0896 [pmc] supplemental oxygen for patients without hypoxemia
+[50/88] ART-0896 [pmc] supplemental oxygen for patients without hypoxemia
   → Moss_2019#@#ART-0896@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6946178/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6946178/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[267/490] ART-0903 [pmc] new insights for clinical practice
+[51/88] ART-0903 [pmc] new insights for clinical practice
   → Murgia_2020#@#ART-0903@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC7875114/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC7875114/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[268/490] ART-0917 [pmc] an emerging disease
+[52/88] ART-0917 [pmc] an emerging disease
   → Neef_2006#@#ART-0917@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC1346962/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC1346962/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[269/490] ART-0949 [pmc] Too much sitting: The population health science of
+[53/88] ART-0949 [pmc] Too much sitting: The population health science of
   → Owen_2010#@#ART-0949@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC3404815/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3404815/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[270/490] ART-0956 [pmc] Anticonvulsants for alcohol dependence
+[54/88] ART-0956 [pmc] Anticonvulsants for alcohol dependence
   → Pani_2014#@#ART-0956@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC10585425/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC10585425/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[271/490] ART-0964 [pmc] Role of steroids in malignant bowel obstruction
-  → Patel_2016#@#ART-0964@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC12971996/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC12971996/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[272/490] ART-0973 [pmc] Celiac disease: Diagnosis and management
+[55/88] ART-0973 [pmc] Celiac disease: Diagnosis and management
   → Pelkowski_2014#@#ART-0973@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC3706994/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3706994/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[273/490] ART-0979 [pmc] an update on the pathophysiology and management
-  → Perisetti_2020#@#ART-0979@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC7599351/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC7599351/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[274/490] ART-1015 [pmc] a practical approach and diagnostic algorithm
-  → Pérez-Garza_2021#@#ART-1015@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC7938036/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC7938036/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[275/490] ART-1027 [pmc] a review for general physicians
+[56/88] ART-1027 [pmc] a review for general physicians
   → Raharja_2022#@#ART-1027@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC8966835/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC8966835/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[276/490] ART-1043 [pmc] Common tongue conditions in primary care
+[57/88] ART-1043 [pmc] Common tongue conditions in primary care
   → Reamy_2010#@#ART-1043@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6234945/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6234945/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[277/490] ART-1055 [pmc] Treatment of anorexia nervosa—New evidence-based g
-  → Resmark_2019#@#ART-1055@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6406277/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6406277/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[278/490] ART-1081 [pmc] joint recommendations of the North American Societ
+[58/88] ART-1081 [pmc] joint recommendations of the North American Societ
   → Rosen_2018#@#ART-1081@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC5958910/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5958910/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[279/490] ART-1082 [pmc] E1383
-  → Rosenberg_2023#@#ART-1082@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC11944238/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC11944238/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[280/490] ART-1089 [pmc] CD009977
+[59/88] ART-1089 [pmc] CD009977
   → Rud_2019#@#ART-1089@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6953397/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6953397/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[281/490] ART-1102 [pmc] Antibiotic therapy vs appendectomy for treatment o
-  → Salminen_2015#@#ART-1102@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3585698/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3585698/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[282/490] ART-1128 [pmc] core curriculum 2020
-  → Seay_2020#@#ART-1128@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC9722469/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC9722469/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[283/490] ART-1137 [pmc] pelvic inflammatory disease (PID)
+[60/88] ART-1137 [pmc] pelvic inflammatory disease (PID)
   → Sexually_2021#@#ART-1137@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC8365115/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC8365115/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[284/490] ART-1180 [pmc] 551-566
-  → Sobol_2008#@#ART-1180@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC7173542/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC7173542/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[285/490] ART-1186 [pmc] recommendations from the National Tuberculosis Con
-  → Sosa_2019#@#ART-1186@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6522077/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6522077/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[286/490] ART-1211 [pmc] Surgery for obstructive sleep apnea in adults
+[61/88] ART-1211 [pmc] Surgery for obstructive sleep apnea in adults
   → Sundaram_2005#@#ART-1211@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC12989261/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC12989261/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[287/490] ART-1231 [pmc] mosquito-borne diseases
-  → The_2016#@#ART-1231@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6222040/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6222040/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[288/490] ART-1244 [pmc] Clinical management of insomnia with brief behavio
+[62/88] ART-1244 [pmc] Clinical management of insomnia with brief behavio
   → Troxel_2012#@#ART-1244@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC3622949/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3622949/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[289/490] ART-1280 [pmc] Preventing and managing adverse reactions
+[63/88] ART-1280 [pmc] Preventing and managing adverse reactions
   → Vaccine_2021#@#ART-1280@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC8250847/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC8250847/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[290/490] ART-1286 [pmc] what has time and/or hyperarousal got to do with i
-  → Vargas_2020#@#ART-1286@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC7071368/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC7071368/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[291/490] ART-1295 [pmc] Management of erectile dysfunction in hypertension
+[64/88] ART-1295 [pmc] Management of erectile dysfunction in hypertension
   → Viigimaa_2014#@#ART-1295@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC4176800/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4176800/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[292/490] ART-1303 [pmc] Laboratory test abnormalities are common in polymy
-  → Volochayev_2012#@#ART-1303@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3377888/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3377888/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[293/490] ART-1318 [pmc] AUA/SUO guideline part I: prostate cancer screenin
+[65/88] ART-1318 [pmc] AUA/SUO guideline part I: prostate cancer screenin
   → Wei_2023#@#ART-1318@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC11060750/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC11060750/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[294/490] ART-1600 [pmc] Preventing herpes zoster through vaccination: New 
+[66/88] ART-1600 [pmc] Preventing herpes zoster through vaccination: New 
   → Le_2017#@#ART-1600@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC5557227/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5557227/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[295/490] ART-1659 [pmc] Metformin in patients with type 2 diabetes and kid
+[67/88] ART-1659 [pmc] Metformin in patients with type 2 diabetes and kid
   → Inzucchi_2014#@#ART-1659@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC4427053/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4427053/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[296/490] ART-1673 [pmc] Perioperative management of antithrombotic therapy
+[68/88] ART-1673 [pmc] Perioperative management of antithrombotic therapy
   → Douketis_2012#@#ART-1673@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC3278059/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3278059/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[297/490] ART-1675 [pmc] Henoch-Schönlein purpura in children
-  → Trnka_2013#@#ART-1675@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3645106/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3645106/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[298/490] ART-1677 [pmc] An official American Thoracic Society/American Col
+[69/88] ART-1677 [pmc] An official American Thoracic Society/American Col
   → Wiener_2014#@#ART-1677@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC4694177/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4694177/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[299/490] ART-1684 [pmc] HbA in the evaluation of diabetes mellitus
+[70/88] ART-1684 [pmc] HbA in the evaluation of diabetes mellitus
   → OKeeffe_2016#@#ART-1684@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC3799221/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3799221/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[300/490] ART-1718 [pmc] Outpatient emergencies: Anaphylaxis
+[71/88] ART-1718 [pmc] Outpatient emergencies: Anaphylaxis
   → Commins_2017#@#ART-1718@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC5381731/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5381731/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[301/490] ART-1721 [pmc] Vital signs: Improvements in maternity care polici
-  → Perrine_2007#@#ART-1721@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC11241842/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC11241842/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[302/490] ART-1789 [pmc] Osmotic and stimulant laxatives for the management
+[72/88] ART-1789 [pmc] Osmotic and stimulant laxatives for the management
   → Gordon_2016#@#ART-1789@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6513425/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6513425/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[303/490] ART-1831 [pmc] Antithrombotic therapy for atrial fibrillation: An
+[73/88] ART-1831 [pmc] Antithrombotic therapy for atrial fibrillation: An
   → You_2012#@#ART-1831@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC3278056/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3278056/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[304/490] ART-1862 [pmc] Updated international consensus diagnostic criteri
+[74/88] ART-1862 [pmc] Updated international consensus diagnostic criteri
   → Dellon_2018#@#ART-1862@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6174113/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6174113/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[305/490] ART-1865 [pmc] PURL: Time to stop glucosamine and chondroitin for
+[75/88] ART-1865 [pmc] PURL: Time to stop glucosamine and chondroitin for
   → Lyon_2018#@#ART-1865@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6171773/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6171773/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[306/490] ART-1880 [pmc] Disorders of sexual development in adult women
+[76/88] ART-1880 [pmc] Disorders of sexual development in adult women
   → Gomez-Lobo_2016#@#ART-1880@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC5119649/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5119649/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[307/490] ART-1907 [pmc] Profound hypokalemia associated with severe diabet
+[77/88] ART-1907 [pmc] Profound hypokalemia associated with severe diabet
   → Davis_2016#@#ART-1907@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC4896141/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4896141/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[308/490] ART-1910 [pmc] Association of hyponatremia and hypovitaminosis D 
-  → Cervellin_2015#@#ART-1910@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4922356/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4922356/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[309/490] ART-1913 [pmc] Pregnancy and oral health
-  → Division_2019#@#ART-1913@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6883753/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6883753/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[310/490] ART-1915 [pmc] Update on Rome IV criteria for colorectal disorder
-  → Simren_2017#@#ART-1915@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5378729/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5378729/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[311/490] ART-1934 [pmc] Taking an antibiotic time-out: Utilization and usa
+[78/88] ART-1934 [pmc] Taking an antibiotic time-out: Utilization and usa
   → Graber_2015#@#ART-1934@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC4750836/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4750836/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[312/490] ART-1940 [pmc] Clinical Uses of Probiotics
-  → Islam_2016#@#ART-1940@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4748908/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC4748908/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[313/490] ART-1945 [pmc] Intranasal ipratropium bromide for the common cold
+[79/88] ART-1945 [pmc] Intranasal ipratropium bromide for the common cold
   → Albalawi_2011#@#ART-1945@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC6492479/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6492479/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[314/490] ART-1951 [pmc] Clinical practice: Depression during pregnancy
+[80/88] ART-1951 [pmc] Clinical practice: Depression during pregnancy
   → Stewart_2011#@#ART-1951@#@.pdf
     https://pmc.ncbi.nlm.nih.gov/articles/PMC3103063/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC3103063/pdf/
+    Not a PDF (Content-Type: text/html; charset=utf-8)
     Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
     ✗ failed
-[315/490] ART-1954 [pmc] Lithium treatment and thyroid abnormalities
-  → Bocchetta_2006#@#ART-1954@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC1584230/pdf/
-    HTTP 403 → https://pmc.ncbi.nlm.nih.gov/articles/PMC1584230/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[316/490] ART-0017 [aafp] evaluation and treatment
-  → Achar_2022#@#ART-0017@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/0600/p602.pdf
-    ✓ saved (2211 KB)
-[317/490] ART-0091 [aafp] Lung cancer screening recommendations from the ACC
-  → Armstrong_2018#@#ART-0091@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/1201/p688.pdf
-    ✓ saved (80 KB)
-[318/490] ART-0137 [aafp] Common foot problems: Over-the-counter treatments 
-  → Becker_2018#@#ART-0137@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0901/p298.pdf
-    ✓ saved (1191 KB)
-[319/490] ART-0152 [aafp] Diagnosis and management of common foot fractures
-  → Bica_2016#@#ART-0152@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0201/p183.pdf
-    ✓ saved (2894 KB)
-[320/490] ART-0159 [aafp] diagnosis and treatment
-  → Bonkemeyer_2019#@#ART-0159@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0901/p298.pdf
-    ✓ saved (805 KB)
-[321/490] ART-0171 [aafp] Cardiomyopathy: An overview
-  → Brieler_2017#@#ART-0171@#@.pdf
-    https://aafp.org/pubs/afp/issues/2017/1115/p640.pdf
-    ✓ saved (272 KB)
-[322/490] ART-0173 [aafp] diagnosis, treatment, and prevention
-  → Bright_2023#@#ART-0173@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2023/0800/food-allergies.pdf
-    ✓ saved (200 KB)
-[323/490] ART-0180 [aafp] rapid evidence review
-  → Bruehlman_2022#@#ART-0180@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/1200/galactorrhea.pdf
-    ✓ saved (169 KB)
-[324/490] ART-0191 [aafp] Chronic shoulder pain: Part I
+[81/88] ART-0191 [aafp] Chronic shoulder pain: Part I
   → Burbank_2008#@#ART-0191@#@.pdf
     https://www.aafp.org/pubs/afp/issues/2008/0215.pdf
     Not a PDF (Content-Type: text/html; charset=utf-8)
     ✗ failed
-[325/490] ART-0192 [aafp] Chronic shoulder pain: Part II
-  → Burbank_2008#@#ART-0192@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2008/0215/p493.pdf
-    ✓ saved (149 KB)
-[326/490] ART-0194 [aafp] Care of the colorectal cancer survivor
-  → Burgers_2018#@#ART-0194@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0301/p331.pdf
-    ✓ saved (162 KB)
-[327/490] ART-0197 [aafp] 571-572
-  → Butani_2022#@#ART-0197@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/1100/photo-quiz-scrotal-mass.pdf
-    ✓ saved (341 KB)
-[328/490] ART-0206 [aafp] Managing difficult encounters: Understanding physi
-  → Cannarella_2013#@#ART-0206@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2013/0315/p419.pdf
-    ✓ saved (205 KB)
-[329/490] ART-0211 [aafp] Differential diagnosis of the swollen red eyelid
-  → Carlisle_2015#@#ART-0211@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0715/p106.pdf
-    ✓ saved (2126 KB)
-[330/490] ART-0217 [aafp] Childhood and adolescent sports-related overuse in
-  → Cassas_2006#@#ART-0217@#@.pdf
-    https://aafp.org/pubs/afp/issues/2006/0315/p1014.pdf
-    ✓ saved (328 KB)
-[331/490] ART-0220 [aafp] Vaccines for preventing influenza in healthy child
-  → Cayley_2019#@#ART-0220@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0801/p143.pdf
-    ✓ saved (204 KB)
-[332/490] ART-0227 [aafp] Allergy testing: Common questions and answers
-  → Chang_2018#@#ART-0227@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0701/p34.pdf
-    ✓ saved (194 KB)
-[333/490] ART-0266 [aafp] Tremor: Sorting through the differential diagnosis
-  → Crawford_2018#@#ART-0266@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0201/p180.pdf
-    ✓ saved (189 KB)
-[334/490] ART-0285 [aafp] Digital clues
-  → Danoff_2018#@#ART-0285@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0401/p465.pdf
-    ✓ saved (375 KB)
-[335/490] ART-0291 [aafp] Uterine fibroids: Diagnosis and treatment
-  → De_2017#@#ART-0291@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0115/p100.pdf
-    ✓ saved (250 KB)
-[336/490] ART-0298 [aafp] Generalized anxiety disorder
-  → DeMartini_2019#@#ART-0298@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/0800/generalized-anxiety-disorder-pani
-    ✓ saved (229 KB)
-[337/490] ART-0309 [aafp] Gynecomastia
+[82/88] ART-0309 [aafp] Gynecomastia
   → Dickson_2012#@#ART-0309@#@.pdf
     https://www.aafp.org/pubs/afp/issues/2012/0401.pdf
     Not a PDF (Content-Type: text/html; charset=utf-8)
     ✗ failed
-[338/490] ART-0342 [aafp] Diagnosis and initial management of acute colonic 
-  → DuBose_2021#@#ART-0342@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2021/0800/p195.pdf
-    ✓ saved (2314 KB)
-[339/490] ART-0353 [aafp] Bariatric surgery improves quality of life and res
-  → Ebell_2017#@#ART-0353@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0615/p805.pdf
-    ✓ saved (59 KB)
-[340/490] ART-0355 [aafp] No long-term benefit of arthroscopic surgery for m
-  → Ebell_2015#@#ART-0355@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0501/p643.pdf
-    ✓ saved (79 KB)
-[341/490] ART-0356 [aafp] Osteoarthritis: Rapid evidence review
-  → Ebell_2018#@#ART-0356@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0415/p523.pdf
-    ✓ saved (184 KB)
-[342/490] ART-0357 [aafp] Treatment of subclinical hypothyroidism ineffectiv
-  → Ebell_2017#@#ART-0357@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/1015/od3.pdf
-    ✓ saved (81 KB)
-[343/490] ART-0359 [aafp] Common conditions in the overhead athlete
-  → Edmonds_2014#@#ART-0359@#@.pdf
-    https://aafp.org/pubs/afp/issues/2014/0401/p537.pdf
-    ✓ saved (1565 KB)
-[344/490] ART-0371 [aafp] 702-710
-  → Ely_2014#@#ART-0371@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2014/1115/p702.pdf
-    ✓ saved (2373 KB)
-[345/490] ART-0373 [aafp] 456-458
-  → Endsley_2019#@#ART-0373@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0401/p456.pdf
-    ✓ saved (116 KB)
-[346/490] ART-0379 [aafp] Baloxavir marboxil (Xofluza) for influenza
-  → Erlich_2019#@#ART-0379@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/1215/od4.pdf
-    ✓ saved (98 KB)
-[347/490] ART-0400 [aafp] Nail abnormalities: Clues to systemic disease
-  → Fawcett_2004#@#ART-0400@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2004/0315/p1417.pdf
-    ✓ saved (196 KB)
-[348/490] ART-0432 [aafp] 437
-  → Finck_2019#@#ART-0432@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/1001/p437.pdf
-    ✓ saved (67 KB)
-[349/490] ART-0434 [aafp] Arterial atherosclerosis: Vascular surgery interve
-  → Firnhaber_2022#@#ART-0434@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/0100/p65.pdf
-    ✓ saved (1736 KB)
-[350/490] ART-0454 [aafp] an update
-  → Frassetto_2011#@#ART-0454@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2011/1201/p1234.pdf
-    ✓ saved (628 KB)
-[351/490] ART-0468 [aafp] Chronic kidney disease: Detection and evaluation
-  → Gaitonde_2017#@#ART-0468@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/1215/p776.pdf
-    ✓ saved (291 KB)
-[352/490] ART-0484 [aafp] Heart failure with preserved ejection fraction: Di
-  → Gazewood_2017#@#ART-0484@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/1101/p582.pdf
-    ✓ saved (289 KB)
-[353/490] ART-0491 [aafp] Considerations for safe use of statins: Liver enzy
-  → Gillett_2011#@#ART-0491@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2011/0315/p711.pdf
-    ✓ saved (229 KB)
-[354/490] ART-0515 [aafp] potential unintended consequences
-  → Goodman_2019#@#ART-0515@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/1201/p672.pdf
-    ✓ saved (1679 KB)
-[355/490] ART-0530 [aafp] Recognition and differential diagnosis of psychosi
-  → Griswold_2015#@#ART-0530@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0615/p856.pdf
-    ✓ saved (229 KB)
-[356/490] ART-0541 [aafp] Lice and scabies: Treatment update
-  → Gunning_2019#@#ART-0541@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0515/p635.pdf
-    ✓ saved (1282 KB)
-[357/490] ART-0562 [aafp] Initial evaluation, diagnosis, and treatment of an
-  → Harrington_2015#@#ART-0562@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0101/p46.pdf
-    ✓ saved (255 KB)
-[358/490] ART-0565 [aafp] Impetigo: Diagnosis and treatment
-  → Hartman-Adams_2014#@#ART-0565@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2014/0815/p229.pdf
-    ✓ saved (1459 KB)
-[359/490] ART-0588 [aafp] Medical clearance for common dental procedures
-  → Herrick_2021#@#ART-0588@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2021/1100/p476.pdf
-    ✓ saved (220 KB)
-[360/490] ART-0604 [aafp] Hoarseness in adults
-  → House_2017#@#ART-0604@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/1201/p720.pdf
-    ✓ saved (1524 KB)
-[361/490] ART-0643 [aafp] Procalcitonin to guide antibiotic therapy in acute
-  → Jonas_2018#@#ART-0643@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0701/p20.pdf
-    ✓ saved (107 KB)
-[362/490] ART-0652 [aafp] Evaluation of macrocytosis
-  → Kaferle_2009#@#ART-0652@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2009/0201/p203.pdf
-    ✓ saved (275 KB)
-[363/490] ART-0707 [aafp] Diagnosis and management of physical abuse in chil
-  → Kodner_2013#@#ART-0707@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2013/1115/p669.pdf
-    ✓ saved (248 KB)
-[364/490] ART-0708 [aafp] Diabetes self-management: Facilitating lifestyle c
-  → Koenigsberg_2017#@#ART-0708@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0915/p362.pdf
-    ✓ saved (344 KB)
-[365/490] ART-0714 [aafp] -Blockers for nephrolithiasis
-  → Krishnan_2019#@#ART-0714@#@.pdf
-    https://aafp.org/pubs/afp/issues/2019/1201/p710.pdf
-    ✓ saved (1113 KB)
-[366/490] ART-0717 [aafp] Adolescent substance use and misuse: Recognition a
-  → Kulak_2019#@#ART-0717@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0601/p689.pdf
-    ✓ saved (213 KB)
-[367/490] ART-0719 [aafp] 177-178
-  → Kumetz_2020#@#ART-0719@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2020/0201/p177.pdf
-    ✓ saved (272 KB)
-[368/490] ART-0724 [aafp] 245-246
-  → Kwofie_2021#@#ART-0724@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2021/0215/p245.pdf
-    ✓ saved (96 KB)
-[369/490] ART-0734 [aafp] Out-of-hospital birth
-  → Lang_2021#@#ART-0734@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2021/0601/p672.pdf
-    ✓ saved (311 KB)
-[370/490] ART-0739 [aafp] Diet and physical activity for cardiovascular dise
-  → Lanier_2016#@#ART-0739@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0601/p919.pdf
-    ✓ saved (623 KB)
-[371/490] ART-0741 [aafp] Best practices in transgender health: A clinician’
-  → Lapinski_2018#@#ART-0741@#@.pdf
-    https://aafp.org/pubs/afp/issues/2018/1201/p645.pdf
-    ✓ saved (567 KB)
-[372/490] ART-0746 [aafp] watchful waiting for lactational mastitis
-  → Lawrence_2024#@#ART-0746@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2024/0800/editorial-lactational-mastitis.pd
-    ✓ saved (109 KB)
-[373/490] ART-0766 [aafp] Lymphoma: Diagnosis and treatment
-  → Lewis_2020#@#ART-0766@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2020/0101/p34.pdf
-    ✓ saved (215 KB)
-[374/490] ART-0773 [aafp] Rethinking aspirin for the primary prevention of c
-  → Lin_2019#@#ART-0773@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0601/p670.pdf
-    ✓ saved (91 KB)
-[375/490] ART-0774 [aafp] Treatment of knee osteoarthritis
-  → Lin_2018#@#ART-0774@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/1101/p603.pdf
-    ✓ saved (135 KB)
-[376/490] ART-0781 [aafp] treatment options
-  → Liu_2017#@#ART-0781@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0715/p87.pdf
-    ✓ saved (271 KB)
-[377/490] ART-0786 [aafp] Diets for health: Goals and guidelines
-  → Locke_2018#@#ART-0786@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0601/p721.pdf
-    ✓ saved (399 KB)
-[378/490] ART-0797 [aafp] Diabetes education and glycemic control
-  → Lyon_2018#@#ART-0797@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0215/p269.pdf
-    ✓ saved (83 KB)
-[379/490] ART-0803 [aafp] rapid evidence review
-  → Malaty_2021#@#ART-0803@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2021/1100/p471.pdf
-    ✓ saved (150 KB)
-[380/490] ART-0809 [aafp] Poststreptococcal illness: Recognition and managem
-  → Maness_2018#@#ART-0809@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0415/p517.pdf
-    ✓ saved (293 KB)
-[381/490] ART-0810 [aafp] Hepatitis C: Diagnosis and management
-  → Maness_2021#@#ART-0810@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2021/1200/p626.pdf
-    ✓ saved (320 KB)
-[382/490] ART-0817 [aafp] Charcot foot: Clinical clues, diagnostic strategie
-  → Marmolejo_2018#@#ART-0817@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0501/p594.pdf
-    ✓ saved (1231 KB)
-[383/490] ART-0833 [aafp] Depression: Screening and diagnosis
-  → Maurer_2018#@#ART-0833@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/1015/p508.pdf
-    ✓ saved (209 KB)
-[384/490] ART-0869 [aafp] differential diagnosis and treatment
-  → Michels_2019#@#ART-0869@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0715/p98.pdf
-    ✓ saved (417 KB)
-[385/490] ART-0870 [aafp] diagnosis and treatment
-  → Michels_2017#@#ART-0870@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0315/p373.pdf
-    ✓ saved (924 KB)
-[386/490] ART-0876 [aafp] Risk assessment for cardiovascular disease with no
-  → Mills_2019#@#ART-0876@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0115/p123.pdf
-    ✓ saved (659 KB)
-[387/490] ART-0881 [aafp] The older driver
-  → Mishori_2020#@#ART-0881@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2020/0515/p625.pdf
-    ✓ saved (154 KB)
-[388/490] ART-0902 [aafp] Telemedicine in diabetes care
-  → Mullur_2022#@#ART-0902@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/0300/p281.pdf
-    ✓ saved (201 KB)
-[389/490] ART-0928 [aafp] The suicidal patient: Evaluation and management
-  → Norris_2021#@#ART-0928@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2021/0401/p417.pdf
-    ✓ saved (156 KB)
-[390/490] ART-0938 [aafp] Acute asthma and other recurrent wheezing disorder
-  → Okpapi_2013#@#ART-0938@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2013/0715/p130.pdf
-    ✓ saved (182 KB)
-[391/490] ART-0945 [aafp] Bartholin duct cyst and gland abscess: Office mana
-  → Omole_2019#@#ART-0945@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0615/p760.pdf
-    ✓ saved (3274 KB)
-[392/490] ART-0962 [aafp] The changing climate: Managing health impacts
-  → Parker_2019#@#ART-0962@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/1115/p618.pdf
-    ✓ saved (240 KB)
-[393/490] ART-0985 [aafp] Evaluation of the painful eye
-  → Pflipsen_2016#@#ART-0985@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0615/p991.pdf
-    ✓ saved (1783 KB)
-[394/490] ART-0986 [aafp] recognition and management
-  → Pflipsen_2020#@#ART-0986@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2020/0915/p355.pdf
-    ✓ saved (232 KB)
-[395/490] ART-0988 [aafp] common causes and treatment
-  → Phillips_2017#@#ART-0988@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0915/p371.pdf
-    ✓ saved (4443 KB)
-[396/490] ART-0993 [aafp] Diabetes mellitus: Screening and diagnosis
-  → Pippitt_2016#@#ART-0993@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0115/p103.pdf
-    ✓ saved (567 KB)
-[397/490] ART-1023 [aafp] 273-277
-  → Quencer_2023#@#ART-1023@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2024/0700/letter-primary-aldosteronism-test
-    ✓ saved (119 KB)
-[398/490] ART-1029 [aafp] rapid evidence review
+[83/88] ART-1029 [aafp] rapid evidence review
   → Raleigh_2022#@#ART-1029@#@.pdf
     https://www.aafp.org/pubs/afp/issues/2022/0800.pdf
     Not a PDF (Content-Type: text/html; charset=utf-8)
     ✗ failed
-[399/490] ART-1032 [aafp] Management of common sleep disorders
-  → Ramar_2013#@#ART-1032@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/0400/p397.pdf
-    ✓ saved (221 KB)
-[400/490] ART-1036 [aafp] Diagnosing VTE: Guidelines from the American Socie
-  → Randel_2019#@#ART-1036@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/1201/p716.pdf
-    ✓ saved (80 KB)
-[401/490] ART-1041 [aafp] Asthma management: Updated guidelines from the Nat
-  → Raymond_2021#@#ART-1041@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2021/1100/p531.pdf
-    ✓ saved (80 KB)
-[402/490] ART-1048 [aafp] Behavioral disorders in dementia: Appropriate nond
-  → Reese_2016#@#ART-1048@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0815/p276.pdf
-    ✓ saved (204 KB)
-[403/490] ART-1052 [aafp] Lower extremity abnormalities in children
-  → Rerucha_2017#@#ART-1052@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0815/p226.pdf
-    ✓ saved (1770 KB)
-[404/490] ART-1054 [aafp] 211-220
-  → Rerucha_2020#@#ART-1054@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2020/0815/p211.pdf
-    ✓ saved (609 KB)
-[405/490] ART-1069 [aafp] Common questions about oppositional defiant disord
-  → Riley_2016#@#ART-1069@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0401/p586.pdf
-    ✓ saved (196 KB)
-[406/490] ART-1076 [aafp] Management of uterine fibroids
-  → Rogers_2019#@#ART-1076@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0301/p330.pdf
-    ✓ saved (514 KB)
-[407/490] ART-1085 [aafp] Overuse of cardiac testing
-  → Roth_2018#@#ART-1085@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/1115/p561.pdf
-    ✓ saved (106 KB)
-[408/490] ART-1092 [aafp] Foreign bodies in the skin: Evaluation and managem
-  → Rupert_2020#@#ART-1092@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2020/0615/p740.pdf
-    ✓ saved (923 KB)
-[409/490] ART-1108 [aafp] 240-248
-  → Savard_2023#@#ART-1108@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2023/0900/smell-and-taste-disorders.pdf
-    ✓ saved (510 KB)
-[410/490] ART-1111 [aafp] Cannabis essentials: Tools for clinical practice
-  → Sazegar_2021#@#ART-1111@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2021/1200/p598.pdf
-    ✓ saved (1295 KB)
-[411/490] ART-1119 [aafp] Erythema nodosum: A sign of systemic disease
-  → Schwartz_2007#@#ART-1119@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2007/0301/p695.pdf
-    ✓ saved (419 KB)
-[412/490] ART-1130 [aafp] Comparative accuracy of diagnostic tests for celia
-  → Seehusen_2017#@#ART-1130@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0601/p726.pdf
-    ✓ saved (590 KB)
-[413/490] ART-1135 [aafp] 355-360
-  → Semelka_2016#@#ART-1135@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0901/p355.pdf
-    ✓ saved (250 KB)
-[414/490] ART-1145 [aafp] Low-carbohydrate diet better than low-fat diet to 
-  → Shaughnessy_2015#@#ART-1145@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0215/p262.pdf
-    ✓ saved (601 KB)
-[415/490] ART-1153 [aafp] evaluation and management
-  → Short_2013#@#ART-1153@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2013/0115/p98.pdf
-    ✓ saved (263 KB)
-[416/490] ART-1177 [aafp] Acute pericarditis: Diagnosis and management
-  → Snyder_2014#@#ART-1177@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2014/0401/p553.pdf
-    ✓ saved (1250 KB)
-[417/490] ART-1187 [aafp] Diagnosis and management of sarcoidosis
-  → Soto-Gomez_2016#@#ART-1187@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0515/p840.pdf
-    ✓ saved (1497 KB)
-[418/490] ART-1188 [aafp] a synthesis of systematic reviews and meta-analyse
-  → Southwell_2020#@#ART-1188@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/0500/p469.pdf
-    ✓ saved (397 KB)
-[419/490] ART-1191 [aafp] Vaccine adverse events: Separating myth from reali
-  → Spencer_2017#@#ART-1191@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0615/p786.pdf
-    ✓ saved (349 KB)
-[420/490] ART-1192 [aafp] Hyperpronation method for reduction of nursemaid’s
-  → Spiegel_2018#@#ART-1192@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0515/od2.pdf
-    ✓ saved (90 KB)
-[421/490] ART-1193 [aafp] Braces and splints for common musculoskeletal cond
-  → Sprouse_2018#@#ART-1193@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/1115/p570.pdf
-    ✓ saved (2307 KB)
-[422/490] ART-1227 [aafp] Noninfectious penile lesions
-  → Teichman_2018#@#ART-1227@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0115/p102.pdf
-    ✓ saved (3017 KB)
-[423/490] ART-1250 [aafp] ACP releases updated guidance statement on A1C tar
-  → Type_2018#@#ART-1250@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/1101/p613.pdf
-    ✓ saved (767 KB)
-[424/490] ART-1272 [aafp] 714-717
-  → Unwin_2022#@#ART-1272@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/1200/curbside-transitioning-older-adul
-    ✓ saved (131 KB)
-[425/490] ART-1274 [aafp] 543-548
-  → Usman_2022#@#ART-1274@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/1100/head-neck-injuries.pdf
-    ✓ saved (525 KB)
-[426/490] ART-1288 [aafp] Update on immunizations in adults
-  → Vaughn_2011#@#ART-1288@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2011/1101/p1015.pdf
-    ✓ saved (168 KB)
-[427/490] ART-1299 [aafp] Caring for patients after bariatric surgery
-  → Virji_2006#@#ART-1299@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2006/0415/p1403.pdf
-    ✓ saved (232 KB)
-[428/490] ART-1300 [aafp] Primary care for persons who inject drugs
-  → Visconti_2019#@#ART-1300@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2019/0115/p109.pdf
-    ✓ saved (223 KB)
-[429/490] ART-1323 [aafp] 450-452
-  → Weiss_2022#@#ART-1323@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/1000/curbside-incompetent-physicians.p
-    ✓ saved (110 KB)
-[430/490] ART-1328 [aafp] Palpitations: Evaluation in the primary care setti
-  → Wexler_2017#@#ART-1328@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/1215/p784.pdf
-    ✓ saved (446 KB)
-[431/490] ART-1564 [aafp] The painful shoulder: Part I
+[84/88] ART-1564 [aafp] The painful shoulder: Part I
   → Woodward_2000#@#ART-1564@#@.pdf
     https://www.aafp.org/pubs/afp/issues/2000/0515/p3079.pdf
     HTTP 500 → https://www.aafp.org/pubs/afp/issues/2000/0515/p3079.pdf
     ✗ failed
-[432/490] ART-1565 [aafp] Rotator cuff disease: Diagnostic tests
-  → Verry_2016#@#ART-1565@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/1201/p925.pdf
-    ✓ saved (443 KB)
-[433/490] ART-1577 [aafp] Oral rehydration solutions for the treatment of ac
-  → Chang_2017#@#ART-1577@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/1201/p700.pdf
-    ✓ saved (123 KB)
-[434/490] ART-1578 [aafp] Evaluation and management of abnormal uterine blee
+[85/88] ART-1578 [aafp] Evaluation and management of abnormal uterine blee
   → Sweet_2012#@#ART-1578@#@.pdf
     https://www.aafp.org/pubs/afp/issues/2012/0101/p35.html/1000.pdf
     Not a PDF (Content-Type: text/html;charset=utf-8)
     ✗ failed
-[435/490] ART-1582 [aafp] Common questions about the pharmacologic managemen
-  → Kovich_2015#@#ART-1582@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0715/p94.pdf
-    ✓ saved (221 KB)
-[436/490] ART-1590 [aafp] Human papillomavirus: Clinical manifestations and 
-  → Juckett_2010#@#ART-1590@#@.pdf
-    https://aafp.org/pubs/afp/issues/2010/1115/p1209.pdf
-    ✓ saved (724 KB)
-[437/490] ART-1592 [aafp] 776-777
-  → ACOG_2013#@#ART-1592@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2013/1201/p776.pdf
-    ✓ saved (146 KB)
-[438/490] ART-1593 [aafp] Nonpharmacologic management of hypertension: What 
-  → Oza_2015#@#ART-1593@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0601/p772.pdf
-    ✓ saved (183 KB)
-[439/490] ART-1594 [aafp] Severe asymptomatic hypertension: Evaluation and t
-  → Gauer_2017#@#ART-1594@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0415/p492.pdf
-    ✓ saved (452 KB)
-[440/490] ART-1595 [aafp] Thrombocytopenia
-  → Gauer_2012#@#ART-1595@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2012/0315/p612.pdf
-    ✓ saved (294 KB)
-[441/490] ART-1604 [aafp] CDC develops guideline for opioid prescribing
-  → Bredemeyer_2016#@#ART-1604@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0615/p1042.pdf
-    ✓ saved (86 KB)
-[442/490] ART-1606 [aafp] Weighing the risks and benefits of chronic opioid 
-  → Lembke_2016#@#ART-1606@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0615/p982.pdf
-    ✓ saved (239 KB)
-[443/490] ART-1608 [aafp] Evaluation of elbow pain in adults
-  → Kane_2014#@#ART-1608@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2014/0415/p649.pdf
-    ✓ saved (2032 KB)
-[444/490] ART-1611 [aafp] Pharmacologic management of pain at the end of lif
-  → Groninger_2014#@#ART-1611@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2014/0701/p26.pdf
-    ✓ saved (257 KB)
-[445/490] ART-1613 [aafp] Pulmonary hypertension: Diagnosis and treatment
-  → Dunlap_2016#@#ART-1613@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0915/p463.pdf
-    ✓ saved (216 KB)
-[446/490] ART-1624 [aafp] Treatment of knee osteoarthritis
-  → Ringdahl_2011#@#ART-1624@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/1101/p603.pdf
-    ✓ saved (135 KB)
-[447/490] ART-1625 [aafp] Treatment of knee osteoarthritis: A clinical pract
-  → Hauk_2014#@#ART-1625@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2014/0601/p918.pdf
-    ✓ saved (444 KB)
-[448/490] ART-1629 [aafp] Diagnosis and treatment of basal cell and squamous
-  → Firnhaber_2012#@#ART-1629@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2012/0715/p161.pdf
-    ✓ saved (3489 KB)
-[449/490] ART-1633 [aafp] Diagnosis and treatment of atrial fibrillation
+[86/88] ART-1633 [aafp] Diagnosis and treatment of atrial fibrillation
   → Gutierrez_2016#@#ART-1633@#@.pdf
     https://www.aafp.org/pubs/afp/issues/2016/0915.pdf
     Not a PDF (Content-Type: text/html; charset=utf-8)
     ✗ failed
-[450/490] ART-1642 [aafp] Management of blood glucose with noninsulin therap
-  → George_2015#@#ART-1642@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0701/p27.pdf
-    ✓ saved (305 KB)
-[451/490] ART-1646 [aafp] Identification and management of peripartum depres
-  → Langan_2016#@#ART-1646@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0515/p852.pdf
-    ✓ saved (225 KB)
-[452/490] ART-1647 [aafp] Perioperative cardiovascular medication management
-  → Mikhail_2017#@#ART-1647@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0515/p645.pdf
-    ✓ saved (202 KB)
-[453/490] ART-1650 [aafp] ADA updates standards of medical care for patients
-  → Armstrong_2017#@#ART-1650@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0101/p40.pdf
-    ✓ saved (151 KB)
-[454/490] ART-1651 [aafp] Treatment of allergic rhinitis
-  → Sur_2015#@#ART-1651@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/1201/p985.pdf
-    ✓ saved (239 KB)
-[455/490] ART-1653 [aafp] Update on the management of chronic kidney disease
-  → Rivera_2012#@#ART-1653@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2012/1015/p749.pdf
-    ✓ saved (225 KB)
-[456/490] ART-1672 [aafp] Primary care for refugees: Challenges and opportun
-  → Mishori_2017#@#ART-1672@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0715/p112.pdf
-    ✓ saved (447 KB)
-[457/490] ART-1692 [aafp] Noninfectious penile lesions
-  → Teichman_2010#@#ART-1692@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2010/0115/p167.pdf
-    ✓ saved (784 KB)
-[458/490] ART-1697 [aafp] Top 20 research studies of 2016 for primary care p
-  → Ebell_2016#@#ART-1697@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0501/p572.pdf
-    ✓ saved (214 KB)
-[459/490] ART-1699 [aafp] Diagnosis and management of community-acquired pne
-  → Watkins_2011#@#ART-1699@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2011/0601/p1299.pdf
-    ✓ saved (263 KB)
-[460/490] ART-1714 [aafp] No benefit to prolonged dual antiplatelet therapy 
-  → Ebell_2014#@#ART-1714@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2014/1001/p502.pdf
-    ✓ saved (78 KB)
-[461/490] ART-1717 [aafp] Anaphylaxis: Recognition and management
-  → Arnold_2011#@#ART-1717@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2011/1115/p1111.pdf
-    ✓ saved (1997 KB)
-[462/490] ART-1719 [aafp] Aspirin Use to Prevent Cardiovascular Disease and 
-  → Final_2017#@#ART-1719@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0215/p222.pdf
-    ✓ saved (522 KB)
-[463/490] ART-1729 [aafp] Common questions about the management of gastroeso
-  → Anderson_2015#@#ART-1729@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0515/p692.pdf
-    ✓ saved (206 KB)
-[464/490] ART-1733 [aafp] Current concepts in adult acute rhinosinusitis
-  → Aring_2016#@#ART-1733@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0715/p97.pdf
-    ✓ saved (263 KB)
-[465/490] ART-1735 [aafp] Cancer screening in older patients
-  → Salzman_2016#@#ART-1735@#@.pdf
-    https://aafp.org/pubs/afp/issues/2016/0415/p659.pdf
-    ✓ saved (540 KB)
-[466/490] ART-1736 [aafp] Recognition and management of motor delay and musc
-  → Lurio_2015#@#ART-1736@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0101/p38.pdf
-    ✓ saved (254 KB)
-[467/490] ART-1747 [aafp] Acute shoulder injuries in adults
-  → Monica_2016#@#ART-1747@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0715/p119.pdf
-    ✓ saved (2433 KB)
-[468/490] ART-1748 [aafp] Insomnia: Pharmacologic therapy
-  → Matheson_2017#@#ART-1748@#@.pdf
-    https://aafp.org/pubs/afp/issues/2017/0701/p29.pdf
-    ✓ saved (238 KB)
-[469/490] ART-1758 [aafp] Vitamin D supplementation in infants, children, an
-  → Casey_2010#@#ART-1758@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2010/0315/p745.pdf
-    ✓ saved (505 KB)
-[470/490] ART-1763 [aafp] Slipped capital femoral epiphysis: Diagnosis and m
-  → Peck_2017#@#ART-1763@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0615/p779.pdf
-    ✓ saved (1357 KB)
-[471/490] ART-1769 [aafp] Hyperlipidemia: Drugs for cardiovascular risk redu
-  → Last_2017#@#ART-1769@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/0115/p78.pdf
-    ✓ saved (351 KB)
-[472/490] ART-1771 [aafp] Identifying and managing posttraumatic stress diso
-  → Warner_2013#@#ART-1771@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2013/1215/p827.pdf
-    ✓ saved (591 KB)
-[473/490] ART-1785 [aafp] Diagnostic and therapeutic injection of the wrist 
-  → Tallia_2003#@#ART-1785@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2003/0215/p745.pdf
-    ✓ saved (690 KB)
-[474/490] ART-1790 [aafp] Laxatives for the management of childhood constipa
-  → Lauters_2017#@#ART-1790@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2017/1001/p433.pdf
-    ✓ saved (132 KB)
-[475/490] ART-1803 [aafp] AACE releases guidelines for menopausal hormone th
-  → Randel_2012#@#ART-1803@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2012/1101/p864.pdf
-    ✓ saved (2179 KB)
-[476/490] ART-1810 [aafp] A comprehensive newborn exam: Part II
-  → Lewis_2014#@#ART-1810@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2014/0901/p297.pdf
-    ✓ saved (547 KB)
-[477/490] ART-1822 [aafp] Diagnosis of gastroesophageal reflux disease
+[87/88] ART-1822 [aafp] Diagnosis of gastroesophageal reflux disease
   → Ebell_2010#@#ART-1822@#@.pdf
     https://www.aafp.org/pubs/afp/issues/2010/0515/p1278.pdf
     HTTP 500 → https://www.aafp.org/pubs/afp/issues/2010/0515/p1278.pdf
     ✗ failed
-[478/490] ART-1824 [aafp] Henoch-Schönlein purpura
-  → Reamy_2009#@#ART-1824@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2009/1001/p697.pdf
-    ✓ saved (194 KB)
-[479/490] ART-1846 [aafp] Hyperhidrosis: Management options
-  → McConaghy_2018#@#ART-1846@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0601/p729.pdf
-    ✓ saved (153 KB)
-[480/490] ART-1852 [aafp] Steroids beneficial as adjunctive treatment for co
-  → Shrikant_2016#@#ART-1852@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0201/p227.pdf
-    ✓ saved (58 KB)
-[481/490] ART-1856 [aafp] Acute migraine treatment in emergency settings
-  → Saguil_2014#@#ART-1856@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2014/0501/p742.pdf
-    ✓ saved (323 KB)
-[482/490] ART-1858 [aafp] Evaluation of nail abnormalities
+[88/88] ART-1858 [aafp] Evaluation of nail abnormalities
   → Tully_2012#@#ART-1858@#@.pdf
     https://www.aafp.org/pubs/afp/issues/2012/0415.pdf
     Not a PDF (Content-Type: text/html; charset=utf-8)
     ✗ failed
-[483/490] ART-1861 [aafp] Eosinophilic esophagitis: A mimic of gastroesophag
-  → Clayton_2018#@#ART-1861@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0515/p628.pdf
-    ✓ saved (251 KB)
-[484/490] ART-1866 [aafp] Options for women with unintended pregnancy
-  → Moss_2015#@#ART-1866@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0415/p544.pdf
-    ✓ saved (193 KB)
-[485/490] ART-1875 [aafp] Common questions about pneumonia in nursing home r
-  → Casey_2015#@#ART-1875@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/1001/p612.pdf
-    ✓ saved (228 KB)
-[486/490] ART-1889 [aafp] Improving quality by doing less: Overscreening
-  → Ebell_2015#@#ART-1889@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2015/0101/p22.pdf
-    ✓ saved (143 KB)
-[487/490] ART-1890 [aafp] Screening and surveillance for colorectal cancer: 
-  → Siwek_2015#@#ART-1890@#@.pdf
-    https://aafp.org/pubs/afp/issues/2015/0115/p82.pdf
-    ✓ saved (1294 KB)
-[488/490] ART-1898 [aafp] The mental status examination
-  → Norris_2016#@#ART-1898@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/1015/p635.pdf
-    ✓ saved (212 KB)
-[489/490] ART-1924 [aafp] Hemorrhoids: Diagnosis and treatment options
-  → Mott_2018#@#ART-1924@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2018/0201/p172.pdf
-    ✓ saved (1660 KB)
-[490/490] ART-1935 [aafp] Epididymitis: An overview
-  → McConaghy_2016#@#ART-1935@#@.pdf
-    https://aafp.org/pubs/afp/issues/2016/1101/p723.pdf
-    ✓ saved (398 KB)
 
 ══════════════════════════════════════════════════
 📦 Download Summary
 ══════════════════════════════════════════════════
-  ✓ downloaded:   336  /  490
-  ✗ failed:       154
+  ✓ downloaded:     5  /  88
+  ✗ failed:        83
   ✗ too_small:      0
   ✗ too_large:      0
   ✗ other:          0
 
-  PDFs on disk (total): 851
+  PDFs on disk (total): 970
   Results log: C:\Users\mpsch\Desktop\board_prep_intel\01_module.1_warehouse\scripts\maintain\exa_download_results.csv
   Download log: C:\Users\mpsch\Desktop\board_prep_intel\01_module.1_warehouse\scripts\maintain\exa_download.log

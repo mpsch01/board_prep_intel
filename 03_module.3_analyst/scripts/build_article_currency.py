@@ -18,12 +18,13 @@ Creates and populates the article_currency table by:
       3. Set currency_status: current | updated | check_needed | not_indexed
 
 Run:
-    python scripts/build_article_currency.py                       # full run (A then B)
-    python scripts/build_article_currency.py --phase-a             # PMID resolution only
-    python scripts/build_article_currency.py --phase-b             # currency check only (A must run first)
-    python scripts/build_article_currency.py --phase-b --recheck   # re-check 'updated' rows with new logic
-    python scripts/build_article_currency.py --dry-run             # report without DB writes
-    python scripts/build_article_currency.py --limit 20            # process first N articles (testing)
+    python scripts/build_article_currency.py                            # full run (A then B)
+    python scripts/build_article_currency.py --phase-a                  # PMID resolution only
+    python scripts/build_article_currency.py --phase-b                  # currency check only (A must run first)
+    python scripts/build_article_currency.py --phase-b --recheck        # re-check 'updated' rows with new logic
+    python scripts/build_article_currency.py --dry-run                  # report without DB writes
+    python scripts/build_article_currency.py --limit 20                 # process first N articles (testing)
+    python scripts/build_article_currency.py --phase-b --stale-days 90  # refresh rows older than 90 days (scheduled use)
 
 Env:
     NCBI_API_KEY  — optional; unlocks 10 req/s vs 3 req/s without key
@@ -829,6 +830,7 @@ def run_phase_b(
     dry_run: bool,
     limit: int | None,
     recheck: bool = False,
+    stale_days: int | None = None,
 ) -> dict:
     """
     Phase B: Currency check for articles with a resolved pubmed_id.
@@ -840,6 +842,12 @@ def run_phase_b(
       Also re-processes 'updated' rows — useful after logic changes (e.g., adding
       the title-relevance filter) to re-evaluate previously flagged articles.
       Does NOT re-check 'current' rows (no newer was found; logic is identical).
+
+    Stale mode (stale_days=N, --stale-days flag):
+      Only re-checks rows where last_checked is older than N days (or NULL).
+      Intended for scheduled/automated runs — processes all statuses that have
+      a PMID, but skips any row that was already checked within the window.
+      Safe to combine with --recheck.
     """
     cur = conn.cursor()
 
@@ -853,9 +861,23 @@ def run_phase_b(
         log.info("[B] article_currency table not found — skipping (dry-run or Phase A not yet run)")
         return {"total": 0, "current": 0, "updated": 0, "check_needed": 0, "not_indexed": 0}
 
-    status_filter = "('pending', 'check_needed', 'updated')" if recheck else "('pending', 'check_needed')"
-    if recheck:
-        log.info("[B] RECHECK mode — also re-processing 'updated' rows with new relevance filter")
+    if stale_days is not None:
+        # Stale mode: re-check ANY status that has a PMID, but skip recently-checked rows.
+        # This covers 'current' rows too — important for scheduled refreshes, since a
+        # 'current' article from 6 months ago may now have a newer version.
+        stale_clause = (
+            f"AND (ac.last_checked IS NULL "
+            f"OR date(ac.last_checked) < date('now', '-{stale_days} days'))"
+        )
+        log.info(f"[B] STALE mode — re-checking rows older than {stale_days} days (or never checked)")
+        status_filter = "('pending', 'check_needed', 'updated', 'current')"
+        if recheck:
+            log.info("[B] RECHECK flag ignored in stale mode (all statuses already included)")
+    else:
+        stale_clause = ""
+        status_filter = "('pending', 'check_needed', 'updated')" if recheck else "('pending', 'check_needed')"
+        if recheck:
+            log.info("[B] RECHECK mode — also re-processing 'updated' rows with new relevance filter")
 
     query = f"""
         SELECT  ac.article_id, ac.pubmed_id, a.year
@@ -863,6 +885,7 @@ def run_phase_b(
         JOIN    articles a ON ac.article_id = a.article_id
         WHERE   ac.pubmed_id IS NOT NULL
           AND   ac.currency_status IN {status_filter}
+          {stale_clause}
         ORDER BY a.citation_count DESC
     """
     if limit:
@@ -962,12 +985,16 @@ def main():
                         help="Re-run Phase A on existing not_indexed rows only (UPDATE, not INSERT)")
     parser.add_argument("--recheck", action="store_true",
                         help="Phase B: also re-process 'updated' rows (use after logic changes)")
+    parser.add_argument("--stale-days", type=int, default=None, metavar="N",
+                        help="Phase B: only re-check rows where last_checked is older than N days "
+                             "(or never checked). Safe for scheduled/automated runs.")
     args = parser.parse_args()
 
-    run_a   = not args.phase_b   # run A unless --phase-b explicitly set
-    run_b   = not args.phase_a   # run B unless --phase-a explicitly set
-    retry   = args.retry_not_indexed
-    recheck = args.recheck
+    run_a      = not args.phase_b   # run A unless --phase-b explicitly set
+    run_b      = not args.phase_a   # run B unless --phase-a explicitly set
+    retry      = args.retry_not_indexed
+    recheck    = args.recheck
+    stale_days = args.stale_days
 
     log.info("══════════════════════════════════════════")
     log.info(f"  build_article_currency.py  {'[DRY RUN]' if args.dry_run else ''}")
@@ -977,9 +1004,12 @@ def main():
         f"  Phases:   {'A ' if run_a else ''}{'B' if run_b else ''}"
         f"{' [RETRY not_indexed]' if retry else ''}"
         f"{' [RECHECK updated]' if recheck else ''}"
+        f"{f' [STALE >{stale_days}d]' if stale_days else ''}"
     )
     if args.limit:
         log.info(f"  Limit:    {args.limit} articles")
+    if stale_days:
+        log.info(f"  Stale:    re-check rows older than {stale_days} days")
     log.info("══════════════════════════════════════════")
 
     conn = sqlite3.connect(DB_PATH)
@@ -1017,7 +1047,7 @@ def main():
     if run_b:
         log.info("")
         log.info("── Phase B: Currency Check ───────────────")
-        b_stats = run_phase_b(conn, args.dry_run, args.limit, recheck=recheck)
+        b_stats = run_phase_b(conn, args.dry_run, args.limit, recheck=recheck, stale_days=stale_days)
         log.info(
             f"Phase B complete: {b_stats.get('current', 0)} current, "
             f"{b_stats.get('updated', 0)} updated, "

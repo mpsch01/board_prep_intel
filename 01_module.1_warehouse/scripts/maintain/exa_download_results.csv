@@ -1058,3 +1058,195 @@ ART-1890,VC_fail,open_access,aafp,ok,1325667,Siwek_2015#@#ART-1890@#@.pdf,https:
 ART-1898,VC_fail,open_access,aafp,ok,217101,Norris_2016#@#ART-1898@#@.pdf,https://www.aafp.org/pubs/afp/issues/2016/1015/p635.pdf,The mental status examination,Norris,2016,AFP
 ART-1924,VC_fail,open_access,aafp,ok,1700111,Mott_2018#@#ART-1924@#@.pdf,https://www.aafp.org/pubs/afp/issues/2018/0201/p172.pdf,Hemorrhoids: Diagnosis and treatment options,Mott,2018,AFP
 ART-1935,VC_fail,open_access,aafp,ok,407802,McConaghy_2016#@#ART-1935@#@.pdf,https://aafp.org/pubs/afp/issues/2016/1101/p723.pdf,Epididymitis: An overview,McConaghy,2016,AFP
+ART-0054,VC_pass,direct_pdf,direct,failed,0,,https://www.aeped.es/sites/default/files/1-breastfeeding_and_the_use_of_hm_aap2012.pdf,Breastfeeding and the use of human milk: Section on Breastfeeding,American,2012,Pediatrics
+ART-0058,VC_pass,direct_pdf,direct,failed,0,,https://ep.bmj.com/content/98/2/64.full.pdf,Don’t repeat a confirmed positive ANA in patients with established JIA or systemic lupus erythematosus (SLE),American,2013,Other Journal
+ART-0331,VC_pass,direct_pdf,direct,failed,0,,https://stacks.cdc.gov/view/cdc/122248/cdc_122248_DS1.pdf,"CDC guideline for prescribing opioids for chronic pain—United States, 2016",Dowell,2016,Guideline/Org
+ART-0381,VC_pass,direct_pdf,direct,failed,0,,https://bmjopen.bmj.com/content/bmjopen/3/1/e002091.full.pdf,Oral bisphosphonates are associated with increased risk of subtrochanteric and diaphyseal fractures in elderly women: A nested case-control study,Erviti,2013,BMJ
+ART-0499,VC_pass,direct_pdf,direct,failed,0,,https://www.unhcr.org/sites/default/files/2023-07/2305336E_UNHCR-AR-2022_web_V3.pdf,2022 Report,Global,2022,Other Journal
+ART-0648,VC_pass,direct_pdf,direct,failed,0,,https://www.dnb.nl/media/ur5ha21n/paper_jorda_singh_taylor.pdf,"82-84, 86-92",Jordahl-Iafrato,2019,Other Journal
+ART-0761,VC_pass,direct_pdf,direct,failed,0,,https://auau.auanet.org/sites/default/files/media/2022-02/01%20BPH%20Guideline%20part%201.pdf,AUA guideline part I-initial work-up and medical management,Lerner,2021,Other Journal
+ART-0977,VC_pass,direct_pdf,direct,failed,0,,https://bmjopen.bmj.com/content/bmjopen/10/1/e032626.full.pdf,an overview,Perez-Lopez,2020,Other Journal
+ART-1261,VC_pass,direct_pdf,direct,failed,0,,https://scispace.com/pdf/screening-for-glaucoma-in-adults-3i8mt4hf.pdf,primary open-angle glaucoma: screening,US Preventive Services Task Force. Final recommendation statement,2022,Guideline/Org
+ART-0119,VC_pass,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6754754/pdf/,30-Year review of pediatric- and adult-onset CVID: Clinical correlates and prognostic indicators,Baloh,2019,Other Journal
+ART-0439,VC_pass,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC12911370/pdf/,edging closer to a new paradigm,Flack,2022,Other Journal
+ART-0640,VC_pass,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4178284/pdf/,Croup,Johnson,2014,BMJ
+ART-0877,VC_pass,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8758582/pdf/,CD000029,Minhas,2022,Other Journal
+ART-1255,VC_pass,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC7856541/pdf/,asymptomatic carotid artery stenosis: screening,US Preventive Services Task Force. Final recommendation statement,2021,Guideline/Org
+ART-1348,VC_pass,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4017246/pdf/,Tumor lysis syndrome: New challenges and recent advances,Wilson,2014,Other Journal
+ART-1793,VC_pass,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5962971/pdf/,Deprescribing antipsychotics for behavioral and psychological symptoms of dementia and insomnia,Hauk,2018,AFP
+ART-0034,VC_fail,direct_pdf,direct,failed,0,,https://www.cambridge.org/core/services/aop-cambridge-core/content/view/74F2824C8078A57B6DFEC627772ADB76/9781108840996mem1_518-522.pdf/alexanders_timeline_356321_bc.pdf,325-337,Alexander,2024,Other Journal
+ART-0065,VC_fail,direct_pdf,direct,failed,0,,https://www.dietaryguidelines.gov/sites/default/files/2020-12/Dietary_Guidelines_for_Americans_2020-2025.pdf,15,American,2020,Guideline/Org
+ART-0157,VC_fail,direct_pdf,direct,failed,0,,https://stacks.cdc.gov/view/cdc/131789/cdc_131789_DS1.pdf,specific birth defects,Birth,2023,Guideline/Org
+ART-0170,VC_fail,direct_pdf,direct,failed,0,,https://iris.who.int/bitstream/handle/10665/348546/WHO-HEP-NFS-21.45-eng.pdf,Why it matters,Breastfeeding,2021,Guideline/Org
+ART-0172,VC_fail,direct_pdf,direct,failed,0,,https://dl.icdst.org/pdfs/files3/3997cb34b4619c4c7d47a4f0120f3b49.pdf,"Drugs in Pregnancy and Lactation, ed 11",Briggs,2017,Other Journal
+ART-0200,VC_fail,direct_pdf,direct,failed,0,,https://iris.who.int/bitstream/handle/10665/349321/WHO-2019-nCoV-clinical-2021.2-eng.pdf,Interim clinical guidance for management of patients with confirmed coronavirus disease (COVID-19),COVID-19,2021,Guideline/Org
+ART-0263,VC_fail,direct_pdf,direct,failed,0,,https://www.hrsa.gov/sites/default/files/hrsa/cicp/cicpfactsheet.pdf,Countermeasures Injury Compensation Program (CICP). Health Resources & Services,Countermeasures,2020,Other Journal
+ART-0288,VC_fail,direct_pdf,direct,failed,0,,https://www.bmj.com/content/bmj/359/bmj.j5285.full.pdf,Acquired triggering of the fingers and thumb in adults,David,2017,BMJ
+ART-0380,VC_fail,direct_pdf,direct,failed,0,,https://breathe.ersjournals.com/content/breathe/17/4/210113.full.pdf,intravenous magnesium sulphate should be the first parenteral bronchodilator in paediatric asthma exacerbations unresponsive to first-line therapy,Erumbala,2021,Other Journal
+ART-0395,VC_fail,direct_pdf,direct,failed,0,,https://ard.bmj.com/content/annrheumdis/80/1/14.full.pdf,Update on the diagnosis and management of systemic lupus erythematosus,Fanouriakis,2021,Other Journal
+ART-0702,VC_fail,direct_pdf,direct,failed,0,,https://ard.bmj.com/content/annrheumdis/78/1/16.full.pdf,2018 Update of the EULAR recommendations for the management of hand osteoarthritis,Kloppenburg,2018,Other Journal
+ART-0804,VC_fail,direct_pdf,direct,failed,0,,https://gut.bmj.com/content/gutjnl/early/2022/08/08/gutjnl-2022-327745.full.pdf,the Maastricht VI/Florence consensus report,Malfertheiner,2022,Other Journal
+ART-0890,VC_fail,direct_pdf,direct,failed,0,,https://www.aafp.org/pubs/afp/issues/2024/0800/mastitis.pdf,rapid evidence review,Morcomb,2024,AFP
+ART-0931,VC_fail,direct_pdf,direct,failed,0,,https://www.hhs.gov/sites/default/files/afr/fy-2015-hhs-agency-financial-report.pdf,US Department of Health and Human Services; 2015,Office,2015,Other Journal
+ART-0990,VC_fail,direct_pdf,direct,failed,0,,https://www.nature.com/articles/jhh201147.pdf,"Sleep apnea, aldosterone, and resistant hypertension",Pimenta,2009,Other Journal
+ART-1025,VC_fail,direct_pdf,direct,failed,0,,https://emj.bmj.com/content/emermed/31/2/96.full.pdf,what are the risks for infection and has the 'golden period' of laceration care disappeared? Emerg Med J,Quinn,2014,Other Journal
+ART-1164,VC_fail,direct_pdf,direct,failed,0,,https://www.ahrq.gov/sites/default/files/wysiwyg/research/findings/nhqrdr/2018qdr.pdf,"Six domains of health care quality. Agency for Healthcare Research and Quality,",Six,2018,Other Journal
+ART-1277,VC_fail,direct_pdf,direct,failed,0,,https://healthquality.va.gov/guidelines/MH/ptsd/VADoDPTSDCPGFinal.pdf,VA/DoD clinical practice guideline for the management of posttraumatic stress di,VA/DoD,2017,Guideline/Org
+ART-1279,VC_fail,direct_pdf,direct,failed,0,,https://www.cdc.gov/hpv/hcp/for-hcp-tipsheet-hpv.pdf,Educate the parent and patient,Vaccine,2019,Guideline/Org
+ART-1347,VC_fail,direct_pdf,direct,failed,0,,https://journals.lww.com/greenjournal/Documents/July2014_AtE_Williamson.pdf,Intrahepatic cholestasis of pregnancy,Williamson,2014,Other Journal
+ART-1725,VC_fail,direct_pdf,direct,failed,0,,https://www.ahrq.gov/sites/default/files/wysiwyg/professionals/quality-patient-safety/patient-family-engagement/pfeprimarycare/medmanage_quickstartfull.pdf,Medication reconciliation,AHRQ patient safety primer,2017,Other Journal
+ART-1740,VC_fail,direct_pdf,direct,failed,0,,https://www.chi.gov.sa/Style%20Library/IDF_Branding/Indication/81%20-%20Acute%20Bacterial%20Prostatitis-Indication%20Update.pdf,Acute bacterial prostatitis: Diagnosis and management,Coker,2016,AFP
+ART-1760,VC_fail,direct_pdf,direct,failed,0,,https://bmjopen.bmj.com/content/bmjopen/3/5/e002714.full.pdf,Clinical inquiry,Bly,2013,Guideline/Org
+ART-1776,VC_fail,direct_pdf,direct,failed,0,,https://fascrs.org/ascrs/media/files/downloads/Clinical%20Practice%20Guidelines/practice_guideline_for_the_surveillance_of-1.pdf,Colorectal cancer screening and surveillance,Short,2015,AFP
+ART-1782,VC_fail,direct_pdf,direct,failed,0,,https://portsmouth.tricare.mil/Portals/130/Rheumatology%20SRG%20Inflammatory%20Back%20Pain.pdf,Evaluation and management of the patient with suspected inflammatory spine disease,Strand,2017,Other Journal
+ART-1863,VC_fail,direct_pdf,direct,failed,0,,https://www.healthquality.va.gov/guidelines/MH/ptsd/VADoDPTSDCPGFinal012418.pdf,Guidance,Post-traumatic,2018,Other Journal
+ART-1864,VC_fail,direct_pdf,direct,failed,0,,https://2024.sci-hub.se/7289/caa3bed27d5feb10e3c6a9aadaf9b4a1/shenoy2019.pdf,Evaluation and management of penicillin allergy: A review,Shenoy,2019,JAMA
+ART-1909,VC_fail,direct_pdf,direct,failed,0,,https://ncbi.nlm.nih.gov/pmc/articles/PMC3041494/pdf/ebp-8-51.pdf,Thiazide-induced hyponatremia,Hwang,2010,Other Journal
+ART-1963,VC_fail,direct_pdf,direct,failed,0,,http://www.nature.com/articles/nrrheum.2012.96.pdf,Diagnosis and management of Raynaud's phenomenon,Goundry,2012,BMJ
+ART-0020,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6724419/pdf/,Association of use of the neonatal early-onset sepsis calculator with reduction in antibiotic therapy and safety: A systematic review and meta-analysis,Achten,2019,JAMA
+ART-0084,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6769062/pdf/,CD003462,Andrade-Castellanos,2014,Other Journal
+ART-0120,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8530736/pdf/,Approach to the patient with adrenal incidentaloma,Bancos,2021,Other Journal
+ART-0154,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5393490/pdf/,Guidelines for the management of asymptomatic primary hyperparathyroidism: Summary statement from the Fourth International Workshop,Bilezikian,2014,Other Journal
+ART-0199,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6205759/pdf/,practical approach to diagnosis and management,Byrd,2018,Circulation
+ART-0214,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6350898/pdf/,Prevention of diabetes mellitus in patients with prediabetes,Carris,2019,Other Journal
+ART-0222,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC9746870/pdf/,1257-1266,Celli,2019,NEJM
+ART-0369,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC9845083/pdf/,standards of care in diabetes—2023,ElSayed,2023,Other Journal
+ART-0461,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6522264/pdf/,big data bias masks a true association,Frew,2019,Other Journal
+ART-0475,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5865621/pdf/,"epidemiology, outcomes, knowledge gaps, and future directions",Gardner,2018,Other Journal
+ART-0493,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3354640/pdf/,Hospital transfers of nursing home residents with advanced dementia,Givens,2012,Other Journal
+ART-0527,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6599814/pdf/,CD011050,Griffiths,2016,Other Journal
+ART-0630,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5218987/pdf/,the ROW cohort study,Jain,2017,Other Journal
+ART-0674,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8726361/pdf/,an American Academy of Sleep Medicine clinical practice guideline,Kent,2021,Guideline/Org
+ART-0678,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4188648/pdf/,Arthroscopic surgery for degenerative tears of the meniscus: A systematic review and meta-analysis,Khan,2014,Other Journal
+ART-0688,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC7144816/pdf/,CD013422,Kirkilesis,2020,Other Journal
+ART-0771,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6457868/pdf/,Patching for corneal abrasion,Lim,2016,Other Journal
+ART-0814,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4892949/pdf/,findings from the Health ABC Study,Marcum,2016,Other Journal
+ART-0862,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3208370/pdf/,a meta-analysis,Meng,2011,Other Journal
+ART-0879,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC9837849/pdf/,Baclofen for alcohol use disorder,Minozzi,2018,Other Journal
+ART-0896,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6946178/pdf/,supplemental oxygen for patients without hypoxemia,Moss,2019,Other Journal
+ART-0903,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC7875114/pdf/,new insights for clinical practice,Murgia,2020,Other Journal
+ART-0917,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC1346962/pdf/,an emerging disease,Neef,2006,AFP
+ART-0949,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3404815/pdf/,Too much sitting: The population health science of sedentary behavior,Owen,2010,Other Journal
+ART-0956,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC10585425/pdf/,Anticonvulsants for alcohol dependence,Pani,2014,Other Journal
+ART-0973,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3706994/pdf/,Celiac disease: Diagnosis and management,Pelkowski,2014,AFP
+ART-1027,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8966835/pdf/,a review for general physicians,Raharja,2022,Other Journal
+ART-1043,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6234945/pdf/,Common tongue conditions in primary care,Reamy,2010,AFP
+ART-1081,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5958910/pdf/,"joint recommendations of the North American Society for Pediatric Gastroenterology, Hepatology, and Nutrition and the European Society for Pediatric Gastroenterology, Hepatology, and Nutrition",Rosen,2018,Guideline/Org
+ART-1089,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6953397/pdf/,CD009977,Rud,2019,Other Journal
+ART-1137,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8365115/pdf/,pelvic inflammatory disease (PID),Sexually,2021,Guideline/Org
+ART-1211,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC12989261/pdf/,Surgery for obstructive sleep apnea in adults,Sundaram,2005,Other Journal
+ART-1244,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3622949/pdf/,Clinical management of insomnia with brief behavioral treatment (BBTI),Troxel,2012,Other Journal
+ART-1280,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8250847/pdf/,Preventing and managing adverse reactions,Vaccine,2021,Guideline/Org
+ART-1295,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4176800/pdf/,Management of erectile dysfunction in hypertension: Tips and tricks,Viigimaa,2014,Other Journal
+ART-1318,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC11060750/pdf/,AUA/SUO guideline part I: prostate cancer screening,Wei,2023,Other Journal
+ART-1600,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5557227/pdf/,Preventing herpes zoster through vaccination: New developments,Le,2017,Other Journal
+ART-1659,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4427053/pdf/,Metformin in patients with type 2 diabetes and kidney disease: A systematic review,Inzucchi,2014,JAMA
+ART-1673,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3278059/pdf/,"Perioperative management of antithrombotic therapy: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practice guidelines",Douketis,2012,Chest
+ART-1677,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4694177/pdf/,An official American Thoracic Society/American College of Chest Physicians policy statement: The Choosing Wisely top five list in adult pulmonary medicine,Wiener,2014,Chest
+ART-1684,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3799221/pdf/,HbA in the evaluation of diabetes mellitus,O’Keeffe,2016,JAMA
+ART-1718,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5381731/pdf/,Outpatient emergencies: Anaphylaxis,Commins,2017,Other Journal
+ART-1789,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6513425/pdf/,Osmotic and stimulant laxatives for the management of childhood constipation,Gordon,2016,Other Journal
+ART-1831,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3278056/pdf/,"Antithrombotic therapy for atrial fibrillation: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practice guidelines",You,2012,Chest
+ART-1862,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6174113/pdf/,Updated international consensus diagnostic criteria for eosinophilic esophagitis: Proceedings of the AGREE conference,Dellon,2018,Other Journal
+ART-1865,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6171773/pdf/,PURL: Time to stop glucosamine and chondroitin for knee OA? J Fam Pract 2018;67(9):566-568,Lyon,2018,Other Journal
+ART-1880,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5119649/pdf/,Disorders of sexual development in adult women,Gomez-Lobo,2016,Other Journal
+ART-1907,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4896141/pdf/,Profound hypokalemia associated with severe diabetic ketoacidosis,Davis,2016,Other Journal
+ART-1934,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4750836/pdf/,Taking an antibiotic time-out: Utilization and usability of a self-stewardship time-out program for renewal of vancomycin and piperacillin-tazobactam,Graber,2015,Other Journal
+ART-1945,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6492479/pdf/,Intranasal ipratropium bromide for the common cold,Albalawi,2011,Cochrane
+ART-1951,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3103063/pdf/,Clinical practice: Depression during pregnancy,Stewart,2011,NEJM
+ART-0191,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2008/0215.pdf,Chronic shoulder pain: Part I,Burbank,2008,AFP
+ART-0309,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2012/0401.pdf,Gynecomastia,Dickson,2012,AFP
+ART-1029,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2022/0800.pdf,rapid evidence review,Raleigh,2022,AFP
+ART-1564,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2000/0515/p3079.pdf,The painful shoulder: Part I,Woodward,2000,AFP
+ART-1578,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2012/0101/p35.html/1000.pdf,Evaluation and management of abnormal uterine bleeding in premenopausal women,Sweet,2012,AFP
+ART-1633,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2016/0915.pdf,Diagnosis and treatment of atrial fibrillation,Gutierrez,2016,AFP
+ART-1822,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2010/0515/p1278.pdf,Diagnosis of gastroesophageal reflux disease,Ebell,2010,AFP
+ART-1858,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2012/0415.pdf,Evaluation of nail abnormalities,Tully,2012,AFP
+ART-0034,VC_fail,direct_pdf,direct,failed,0,,https://www.cambridge.org/core/services/aop-cambridge-core/content/view/74F2824C8078A57B6DFEC627772ADB76/9781108840996mem1_518-522.pdf/alexanders_timeline_356321_bc.pdf,325-337,Alexander,2024,Other Journal
+ART-0065,VC_fail,direct_pdf,direct,ok,32157287,American_2020#@#ART-0065@#@.pdf,https://www.dietaryguidelines.gov/sites/default/files/2020-12/Dietary_Guidelines_for_Americans_2020-2025.pdf,15,American,2020,Guideline/Org
+ART-0157,VC_fail,direct_pdf,direct,ok,136336,Birth_2023#@#ART-0157@#@.pdf,https://stacks.cdc.gov/view/cdc/131789/cdc_131789_DS1.pdf,specific birth defects,Birth,2023,Guideline/Org
+ART-0170,VC_fail,direct_pdf,direct,failed,0,,https://iris.who.int/bitstream/handle/10665/348546/WHO-HEP-NFS-21.45-eng.pdf,Why it matters,Breastfeeding,2021,Guideline/Org
+ART-0172,VC_fail,direct_pdf,direct,failed,0,,https://dl.icdst.org/pdfs/files3/3997cb34b4619c4c7d47a4f0120f3b49.pdf,"Drugs in Pregnancy and Lactation, ed 11",Briggs,2017,Other Journal
+ART-0200,VC_fail,direct_pdf,direct,failed,0,,https://iris.who.int/bitstream/handle/10665/349321/WHO-2019-nCoV-clinical-2021.2-eng.pdf,Interim clinical guidance for management of patients with confirmed coronavirus disease (COVID-19),COVID-19,2021,Guideline/Org
+ART-0263,VC_fail,direct_pdf,direct,ok,130860,Countermeasures_2020#@#ART-0263@#@.pdf,https://www.hrsa.gov/sites/default/files/hrsa/cicp/cicpfactsheet.pdf,Countermeasures Injury Compensation Program (CICP). Health Resources & Services,Countermeasures,2020,Other Journal
+ART-0288,VC_fail,direct_pdf,direct,failed,0,,https://www.bmj.com/content/bmj/359/bmj.j5285.full.pdf,Acquired triggering of the fingers and thumb in adults,David,2017,BMJ
+ART-0380,VC_fail,direct_pdf,direct,failed,0,,https://breathe.ersjournals.com/content/breathe/17/4/210113.full.pdf,intravenous magnesium sulphate should be the first parenteral bronchodilator in paediatric asthma exacerbations unresponsive to first-line therapy,Erumbala,2021,Other Journal
+ART-0395,VC_fail,direct_pdf,direct,failed,0,,https://ard.bmj.com/content/annrheumdis/80/1/14.full.pdf,Update on the diagnosis and management of systemic lupus erythematosus,Fanouriakis,2021,Other Journal
+ART-0702,VC_fail,direct_pdf,direct,failed,0,,https://ard.bmj.com/content/annrheumdis/78/1/16.full.pdf,2018 Update of the EULAR recommendations for the management of hand osteoarthritis,Kloppenburg,2018,Other Journal
+ART-0804,VC_fail,direct_pdf,direct,failed,0,,https://gut.bmj.com/content/gutjnl/early/2022/08/08/gutjnl-2022-327745.full.pdf,the Maastricht VI/Florence consensus report,Malfertheiner,2022,Other Journal
+ART-0890,VC_fail,direct_pdf,direct,failed,0,,https://www.aafp.org/pubs/afp/issues/2024/0800/mastitis.pdf,rapid evidence review,Morcomb,2024,AFP
+ART-0931,VC_fail,direct_pdf,direct,ok,7664976,Office_2015#@#ART-0931@#@.pdf,https://www.hhs.gov/sites/default/files/afr/fy-2015-hhs-agency-financial-report.pdf,US Department of Health and Human Services; 2015,Office,2015,Other Journal
+ART-0990,VC_fail,direct_pdf,direct,failed,0,,https://www.nature.com/articles/jhh201147.pdf,"Sleep apnea, aldosterone, and resistant hypertension",Pimenta,2009,Other Journal
+ART-1025,VC_fail,direct_pdf,direct,failed,0,,https://emj.bmj.com/content/emermed/31/2/96.full.pdf,what are the risks for infection and has the 'golden period' of laceration care disappeared? Emerg Med J,Quinn,2014,Other Journal
+ART-1164,VC_fail,direct_pdf,direct,failed,0,,https://www.ahrq.gov/sites/default/files/wysiwyg/research/findings/nhqrdr/2018qdr.pdf,"Six domains of health care quality. Agency for Healthcare Research and Quality,",Six,2018,Other Journal
+ART-1277,VC_fail,direct_pdf,direct,failed,0,,https://healthquality.va.gov/guidelines/MH/ptsd/VADoDPTSDCPGFinal.pdf,VA/DoD clinical practice guideline for the management of posttraumatic stress di,VA/DoD,2017,Guideline/Org
+ART-1279,VC_fail,direct_pdf,direct,failed,0,,https://www.cdc.gov/hpv/hcp/for-hcp-tipsheet-hpv.pdf,Educate the parent and patient,Vaccine,2019,Guideline/Org
+ART-1347,VC_fail,direct_pdf,direct,failed,0,,https://journals.lww.com/greenjournal/Documents/July2014_AtE_Williamson.pdf,Intrahepatic cholestasis of pregnancy,Williamson,2014,Other Journal
+ART-1725,VC_fail,direct_pdf,direct,failed,0,,https://www.ahrq.gov/sites/default/files/wysiwyg/professionals/quality-patient-safety/patient-family-engagement/pfeprimarycare/medmanage_quickstartfull.pdf,Medication reconciliation,AHRQ patient safety primer,2017,Other Journal
+ART-1740,VC_fail,direct_pdf,direct,failed,0,,https://www.chi.gov.sa/Style%20Library/IDF_Branding/Indication/81%20-%20Acute%20Bacterial%20Prostatitis-Indication%20Update.pdf,Acute bacterial prostatitis: Diagnosis and management,Coker,2016,AFP
+ART-1760,VC_fail,direct_pdf,direct,failed,0,,https://bmjopen.bmj.com/content/bmjopen/3/5/e002714.full.pdf,Clinical inquiry,Bly,2013,Guideline/Org
+ART-1776,VC_fail,direct_pdf,direct,failed,0,,https://fascrs.org/ascrs/media/files/downloads/Clinical%20Practice%20Guidelines/practice_guideline_for_the_surveillance_of-1.pdf,Colorectal cancer screening and surveillance,Short,2015,AFP
+ART-1782,VC_fail,direct_pdf,direct,ok,213157,Strand_2017#@#ART-1782@#@.pdf,https://portsmouth.tricare.mil/Portals/130/Rheumatology%20SRG%20Inflammatory%20Back%20Pain.pdf,Evaluation and management of the patient with suspected inflammatory spine disease,Strand,2017,Other Journal
+ART-1863,VC_fail,direct_pdf,direct,failed,0,,https://www.healthquality.va.gov/guidelines/MH/ptsd/VADoDPTSDCPGFinal012418.pdf,Guidance,Post-traumatic,2018,Other Journal
+ART-1864,VC_fail,direct_pdf,direct,failed,0,,https://2024.sci-hub.se/7289/caa3bed27d5feb10e3c6a9aadaf9b4a1/shenoy2019.pdf,Evaluation and management of penicillin allergy: A review,Shenoy,2019,JAMA
+ART-1909,VC_fail,direct_pdf,direct,failed,0,,https://ncbi.nlm.nih.gov/pmc/articles/PMC3041494/pdf/ebp-8-51.pdf,Thiazide-induced hyponatremia,Hwang,2010,Other Journal
+ART-1963,VC_fail,direct_pdf,direct,failed,0,,http://www.nature.com/articles/nrrheum.2012.96.pdf,Diagnosis and management of Raynaud's phenomenon,Goundry,2012,BMJ
+ART-0020,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6724419/pdf/,Association of use of the neonatal early-onset sepsis calculator with reduction in antibiotic therapy and safety: A systematic review and meta-analysis,Achten,2019,JAMA
+ART-0084,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6769062/pdf/,CD003462,Andrade-Castellanos,2014,Other Journal
+ART-0120,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8530736/pdf/,Approach to the patient with adrenal incidentaloma,Bancos,2021,Other Journal
+ART-0154,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5393490/pdf/,Guidelines for the management of asymptomatic primary hyperparathyroidism: Summary statement from the Fourth International Workshop,Bilezikian,2014,Other Journal
+ART-0199,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6205759/pdf/,practical approach to diagnosis and management,Byrd,2018,Circulation
+ART-0214,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6350898/pdf/,Prevention of diabetes mellitus in patients with prediabetes,Carris,2019,Other Journal
+ART-0222,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC9746870/pdf/,1257-1266,Celli,2019,NEJM
+ART-0369,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC9845083/pdf/,standards of care in diabetes—2023,ElSayed,2023,Other Journal
+ART-0461,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6522264/pdf/,big data bias masks a true association,Frew,2019,Other Journal
+ART-0475,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5865621/pdf/,"epidemiology, outcomes, knowledge gaps, and future directions",Gardner,2018,Other Journal
+ART-0493,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3354640/pdf/,Hospital transfers of nursing home residents with advanced dementia,Givens,2012,Other Journal
+ART-0527,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6599814/pdf/,CD011050,Griffiths,2016,Other Journal
+ART-0630,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5218987/pdf/,the ROW cohort study,Jain,2017,Other Journal
+ART-0674,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8726361/pdf/,an American Academy of Sleep Medicine clinical practice guideline,Kent,2021,Guideline/Org
+ART-0678,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4188648/pdf/,Arthroscopic surgery for degenerative tears of the meniscus: A systematic review and meta-analysis,Khan,2014,Other Journal
+ART-0688,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC7144816/pdf/,CD013422,Kirkilesis,2020,Other Journal
+ART-0771,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6457868/pdf/,Patching for corneal abrasion,Lim,2016,Other Journal
+ART-0814,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4892949/pdf/,findings from the Health ABC Study,Marcum,2016,Other Journal
+ART-0862,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3208370/pdf/,a meta-analysis,Meng,2011,Other Journal
+ART-0879,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC9837849/pdf/,Baclofen for alcohol use disorder,Minozzi,2018,Other Journal
+ART-0896,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6946178/pdf/,supplemental oxygen for patients without hypoxemia,Moss,2019,Other Journal
+ART-0903,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC7875114/pdf/,new insights for clinical practice,Murgia,2020,Other Journal
+ART-0917,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC1346962/pdf/,an emerging disease,Neef,2006,AFP
+ART-0949,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3404815/pdf/,Too much sitting: The population health science of sedentary behavior,Owen,2010,Other Journal
+ART-0956,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC10585425/pdf/,Anticonvulsants for alcohol dependence,Pani,2014,Other Journal
+ART-0973,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3706994/pdf/,Celiac disease: Diagnosis and management,Pelkowski,2014,AFP
+ART-1027,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8966835/pdf/,a review for general physicians,Raharja,2022,Other Journal
+ART-1043,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6234945/pdf/,Common tongue conditions in primary care,Reamy,2010,AFP
+ART-1081,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5958910/pdf/,"joint recommendations of the North American Society for Pediatric Gastroenterology, Hepatology, and Nutrition and the European Society for Pediatric Gastroenterology, Hepatology, and Nutrition",Rosen,2018,Guideline/Org
+ART-1089,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6953397/pdf/,CD009977,Rud,2019,Other Journal
+ART-1137,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8365115/pdf/,pelvic inflammatory disease (PID),Sexually,2021,Guideline/Org
+ART-1211,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC12989261/pdf/,Surgery for obstructive sleep apnea in adults,Sundaram,2005,Other Journal
+ART-1244,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3622949/pdf/,Clinical management of insomnia with brief behavioral treatment (BBTI),Troxel,2012,Other Journal
+ART-1280,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC8250847/pdf/,Preventing and managing adverse reactions,Vaccine,2021,Guideline/Org
+ART-1295,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4176800/pdf/,Management of erectile dysfunction in hypertension: Tips and tricks,Viigimaa,2014,Other Journal
+ART-1318,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC11060750/pdf/,AUA/SUO guideline part I: prostate cancer screening,Wei,2023,Other Journal
+ART-1600,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5557227/pdf/,Preventing herpes zoster through vaccination: New developments,Le,2017,Other Journal
+ART-1659,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4427053/pdf/,Metformin in patients with type 2 diabetes and kidney disease: A systematic review,Inzucchi,2014,JAMA
+ART-1673,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3278059/pdf/,"Perioperative management of antithrombotic therapy: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practice guidelines",Douketis,2012,Chest
+ART-1677,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4694177/pdf/,An official American Thoracic Society/American College of Chest Physicians policy statement: The Choosing Wisely top five list in adult pulmonary medicine,Wiener,2014,Chest
+ART-1684,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3799221/pdf/,HbA in the evaluation of diabetes mellitus,O’Keeffe,2016,JAMA
+ART-1718,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5381731/pdf/,Outpatient emergencies: Anaphylaxis,Commins,2017,Other Journal
+ART-1789,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6513425/pdf/,Osmotic and stimulant laxatives for the management of childhood constipation,Gordon,2016,Other Journal
+ART-1831,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3278056/pdf/,"Antithrombotic therapy for atrial fibrillation: Antithrombotic therapy and prevention of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practice guidelines",You,2012,Chest
+ART-1862,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6174113/pdf/,Updated international consensus diagnostic criteria for eosinophilic esophagitis: Proceedings of the AGREE conference,Dellon,2018,Other Journal
+ART-1865,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6171773/pdf/,PURL: Time to stop glucosamine and chondroitin for knee OA? J Fam Pract 2018;67(9):566-568,Lyon,2018,Other Journal
+ART-1880,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC5119649/pdf/,Disorders of sexual development in adult women,Gomez-Lobo,2016,Other Journal
+ART-1907,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4896141/pdf/,Profound hypokalemia associated with severe diabetic ketoacidosis,Davis,2016,Other Journal
+ART-1934,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC4750836/pdf/,Taking an antibiotic time-out: Utilization and usability of a self-stewardship time-out program for renewal of vancomycin and piperacillin-tazobactam,Graber,2015,Other Journal
+ART-1945,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC6492479/pdf/,Intranasal ipratropium bromide for the common cold,Albalawi,2011,Cochrane
+ART-1951,VC_fail,pmc_fulltext,pmc,failed,0,,https://pmc.ncbi.nlm.nih.gov/articles/PMC3103063/pdf/,Clinical practice: Depression during pregnancy,Stewart,2011,NEJM
+ART-0191,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2008/0215.pdf,Chronic shoulder pain: Part I,Burbank,2008,AFP
+ART-0309,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2012/0401.pdf,Gynecomastia,Dickson,2012,AFP
+ART-1029,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2022/0800.pdf,rapid evidence review,Raleigh,2022,AFP
+ART-1564,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2000/0515/p3079.pdf,The painful shoulder: Part I,Woodward,2000,AFP
+ART-1578,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2012/0101/p35.html/1000.pdf,Evaluation and management of abnormal uterine bleeding in premenopausal women,Sweet,2012,AFP
+ART-1633,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2016/0915.pdf,Diagnosis and treatment of atrial fibrillation,Gutierrez,2016,AFP
+ART-1822,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2010/0515/p1278.pdf,Diagnosis of gastroesophageal reflux disease,Ebell,2010,AFP
+ART-1858,VC_fail,open_access,aafp,failed,0,,https://www.aafp.org/pubs/afp/issues/2012/0415.pdf,Evaluation of nail abnormalities,Tully,2012,AFP
