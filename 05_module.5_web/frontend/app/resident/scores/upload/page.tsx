@@ -5,11 +5,15 @@
 
 import { useState, FormEvent, ChangeEvent } from "react";
 
-const EXAM_YEARS = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
+const CURRENT_YEAR = new Date().getFullYear();
+const EXAM_YEARS = Array.from(
+  { length: CURRENT_YEAR - 2018 + 1 },
+  (_, i) => 2018 + i
+).reverse();
 
 export default function ScoreUploadPage() {
   const [file, setFile] = useState<File | null>(null);
-  const [examYear, setExamYear] = useState<number>(2025);
+  const [examYear, setExamYear] = useState<number>(CURRENT_YEAR);
   const [status, setStatus] = useState<"idle" | "uploading" | "success" | "error">("idle");
   const [message, setMessage] = useState<string | null>(null);
 

@@ -13,6 +13,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/server";
 
+const SCORE_REPORT_MIN_YEAR = 2018;
+const SCORE_REPORT_MAX_YEAR = new Date().getFullYear() + 1; // allow current + next year
+
 export async function POST(request: NextRequest) {
   const supabase = await createClient();
   const {
@@ -49,8 +52,8 @@ export async function POST(request: NextRequest) {
   }
 
   const examYear = Number(examYearRaw);
-  if (!examYear || examYear < 2018 || examYear > 2030) {
-    return NextResponse.json({ error: "Valid examYear (2018–2030) is required" }, { status: 400 });
+  if (!examYear || examYear < SCORE_REPORT_MIN_YEAR || examYear > SCORE_REPORT_MAX_YEAR) {
+    return NextResponse.json({ error: `Valid examYear (${SCORE_REPORT_MIN_YEAR}–${SCORE_REPORT_MAX_YEAR}) is required` }, { status: 400 });
   }
 
   // Upload to Supabase Storage

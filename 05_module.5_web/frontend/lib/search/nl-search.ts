@@ -142,8 +142,9 @@ export async function nlSearch(
       )
       .in("article_id", [...allArticleIds])
       .gt("citation_count", 0)          // exclude orphans
-      .neq("source_type", "stub")       // exclude stubs
-      .neq("article_id", "ART-0001");   // standard exclusion
+      .neq("source_type", "stub");      // exclude stubs
+    // ART-0001 is the canonical "placeholder/unknown" article record in the DB
+    // and is excluded from all search results by convention.
 
     articles = artData ?? [];
   }

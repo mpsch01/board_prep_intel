@@ -65,10 +65,14 @@ VECTOR_SYNC_DEFS = [
 
 def load_sqlite_vectors(sqlite_table: str, extra_cols: list = None) -> list[dict]:
     """Read all rows from a SQLite vector table."""
+    allowed_tables = {d["sqlite_table"] for d in VECTOR_SYNC_DEFS}
+    if sqlite_table not in allowed_tables:
+        raise ValueError(f"Table '{sqlite_table}' is not in the vector sync allowlist.")
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
     try:
-        rows = conn.execute(f"SELECT * FROM {sqlite_table}").fetchall()
+        # Table name validated against allowlist — safe to interpolate.
+        rows = conn.execute(f"SELECT * FROM {sqlite_table}").fetchall()  # noqa: S608
         return [dict(r) for r in rows]
     finally:
         conn.close()
