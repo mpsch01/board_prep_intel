@@ -50,8 +50,13 @@ DB_PATH      = PROJECT_ROOT / '00_database' / 'db' / 'ite_intelligence.db'
 
 # --- Config ---
 NCBI_API_KEY       = os.environ.get('NCBI_API_KEY', '')
-UNPAYWALL_EMAIL    = 'scholl.michael.p@gmail.com'
-CROSSREF_EMAIL     = 'scholl.michael.p@gmail.com'
+CONTACT_EMAIL      = os.environ.get('ITE_CONTACT_EMAIL', '')
+UNPAYWALL_EMAIL    = CONTACT_EMAIL
+CROSSREF_EMAIL     = CONTACT_EMAIL
+
+if not CONTACT_EMAIL:
+    print("[WARN] ITE_CONTACT_EMAIL not set. Unpaywall/CrossRef requests may be throttled.")
+    print("       Set it:  [System.Environment]::SetEnvironmentVariable('ITE_CONTACT_EMAIL', 'you@example.com', 'User')")
 
 NCBI_RATE          = 0.11   # seconds between NCBI calls (10/sec with key)
 CROSSREF_RATE      = 0.15   # seconds between CrossRef calls
@@ -81,7 +86,7 @@ def http_get(url, timeout=15):
     try:
         req = urllib.request.Request(
             url,
-            headers={'User-Agent': f'ITE-Intelligence/1.0 (mailto:{UNPAYWALL_EMAIL})'}
+            headers={'User-Agent': f'ITE-Intelligence/1.0 (mailto:{UNPAYWALL_EMAIL})' if UNPAYWALL_EMAIL else 'ITE-Intelligence/1.0'}
         )
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return json.loads(resp.read().decode('utf-8', errors='replace'))

@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_046_20260407_layer2_article_currency.md` — Intelligence 2.0 Layer 2 complete; article_currency 1,985 rows; title_signals column for blueprint cross-reference |
+| Active BATON | `BATON_active_047_20260407_ite_score_analyzer_plugin.md` — ite-score-analyzer plugin v1.0.0 built; parse_score_report() added to ite_parser.py; Stage 1.5 + Stage 2.5 in ite_analyze_v2.py |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -68,9 +68,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
 | qid_art_xref | 2,470 (all 8 years: 2018–2025) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
-| M1 scripts | 6 build + 25 maintain + aafp_brq_scraper.py at scripts/ root |
+| M1 scripts | 6 build + 26 maintain + aafp_brq_scraper.py at scripts/ root (download_targeted.py added 2026-04-07) |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
-| M3 scripts | 14 Python + 2 JS + 2 JSON config (build_article_currency.py added 2026-04-07) |
+| M3 scripts | 14 Python + 2 JS + 1 JSON config (report_config.json added 2026-04-07) |
 | article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
@@ -113,9 +113,10 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 046, 2026-04-07)
-1. **exa-research-search Phase 2** — expansion of guideline library + clinical pathways pipeline
-2. ~~**DEFERRED-F**~~ — ✅ CLOSED. Intelligence 2.0 Layer 2 (`article_currency`) complete — 1,985 rows built 2026-04-07.
-3. **Optional article_currency review** — 169 updated + 106 check_needed rows available for manual audit
-4. **DEFERRED-AAFP-PAYWALL** — 3 articles (ART-1959, ART-1972, ART-1967) via institutional/interlibrary loan
-5. **When resident-facing report needed** — re-enable full question rendering in ite_report_builder_v2.js (currently compact reference table mode)
+## Next Steps (as of BATON 047, 2026-04-07)
+1. **Confirm exam year fix** — re-run pipeline, confirm 2024 shows correctly
+2. **DOCX content review** — personalization check vs Hopkins reference
+3. **2024 body system name normalization** — in v3 analyzer
+4. **DEFERRED-PGY-BENCHMARKS** — Mikey to provide; add pgy_benchmarks.md
+5. **exa-research-search Phase 2** — expansion of guideline library + clinical pathways pipeline
+6. **Install and test plugin v1.0.0** — in Cowork

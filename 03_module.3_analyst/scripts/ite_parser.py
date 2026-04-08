@@ -419,6 +419,148 @@ def merge_results(blueprint: dict, bodysystem: dict) -> dict:
     }
 
 
+def parse_score_report(pdf_path: str) -> dict:
+    """
+    Parse the ABFM ITE Overall Score Report PDF (the summary report, not the item grids).
+
+    The score report is a 2-page PDF:
+        - Page 1: Instructions text (skipped)
+        - Page 2: Data table with header + blueprint + body system sections
+
+    Returns dict with:
+        abfm_id, name, exam_year,
+        scaled_score (actual ABFM value),
+        standard_error, mps (380), vs_mps,
+        pgy_level, pgy_mean_scaled, vs_pgy_mean,
+        unanswered_items,
+        blueprint_scaled: {category: {scaled, se, blueprint_pct}},
+        body_system_scaled: {system: {scaled, se}}
+
+    Raises ValueError if the PDF is not a recognizable score report.
+    """
+    doc = fitz.open(pdf_path)
+
+    if len(doc) < 2:
+        raise ValueError(
+            f"Score report should be 2 pages (instructions + data), found {len(doc)}. "
+            f"Make sure you're passing the Score Report PDF, not the Blueprint or Body System PDF."
+        )
+
+    page = doc[1]  # page index 1 = page 2 (data page)
+    text = page.get_text("text")
+    doc.close()
+
+    # Sanity check — score report has "Scaled Score:" in the header
+    if "Scaled Score:" not in text:
+        raise ValueError(
+            "This PDF doesn't look like an ITE Score Report (no 'Scaled Score:' found on page 2). "
+            "Check that you're passing the correct file."
+        )
+
+    MPS = 380  # constant — ABFM minimum passing standard
+
+    result = {
+        "abfm_id":           None,
+        "name":              None,
+        "exam_year":         None,
+        "scaled_score":      None,
+        "standard_error":    None,
+        "mps":               MPS,
+        "vs_mps":            None,
+        "pgy_level":         None,
+        "pgy_mean_scaled":   None,
+        "vs_pgy_mean":       None,
+        "unanswered_items":  0,
+        "blueprint_scaled":  {},
+        "body_system_scaled": {},
+    }
+
+    # --- Header fields ---
+    m = re.search(r'ABFM ID:\s*(\d+)', text)
+    if m:
+        result["abfm_id"] = m.group(1)
+
+    m = re.search(r'Scaled Score:\s*(\d+)', text)
+    if m:
+        result["scaled_score"] = int(m.group(1))
+
+    m = re.search(r'Mean Scaled Score for PGY(\d+):\s*(\d+)', text)
+    if m:
+        result["pgy_level"]       = int(m.group(1))
+        result["pgy_mean_scaled"] = int(m.group(2))
+
+    m = re.search(r'Number of Unanswered Items:\s*(\d+)', text)
+    if m:
+        result["unanswered_items"] = int(m.group(1))
+
+    # Exam year from page header ("2024 In-Training Examination")
+    m = re.search(r'(\d{4})\s+In-Training Examination', text)
+    if m:
+        result["exam_year"] = m.group(1)
+
+    # Resident name — "Firstname Lastname, M.D." pattern
+    m = re.search(r'\n([A-Z][^,\n]+,\s*M\.D\.)', text)
+    if m:
+        result["name"] = m.group(1).strip()
+
+    # Overall SE — "Overall Performance 100% 500 ±38" or "Overall Performance 500 ±38"
+    m = re.search(r'Overall Performance\s+(?:\d+%\s+)?\d+\s+[±+](\d+)', text)
+    if m:
+        result["standard_error"] = int(m.group(1))
+
+    # Derived fields
+    if result["scaled_score"] is not None:
+        result["vs_mps"] = result["scaled_score"] - MPS
+    if result["scaled_score"] is not None and result["pgy_mean_scaled"] is not None:
+        result["vs_pgy_mean"] = result["scaled_score"] - result["pgy_mean_scaled"]
+
+    # --- Blueprint category rows ---
+    # Format: "Category Name    35%    490    ±61"
+    # Anchored to the canonical 5 category strings (avoids false matches)
+    BP_CATEGORIES = (
+        "Acute Care and Diagnosis",
+        "Chronic Care Management",
+        "Emergent and Urgent Care",
+        "Preventive Care",
+        "Foundations of Care",
+    )
+    bp_pat = re.compile(
+        r'(' + '|'.join(re.escape(c) for c in BP_CATEGORIES) + r')'
+        r'\s+(\d+)%\s+(\d+)\s+[±+](\d+)',
+        re.IGNORECASE
+    )
+    for m in bp_pat.finditer(text):
+        result["blueprint_scaled"][m.group(1)] = {
+            "blueprint_pct": int(m.group(2)),
+            "scaled":        int(m.group(3)),
+            "se":            int(m.group(4)),
+        }
+
+    # --- Body system rows ---
+    # Format: "System Name    560    ±137" (no blueprint % column)
+    # Covers all known system names including 2024 variants
+    BS_SYSTEMS = (
+        "Cardiovascular", "Injuries/Musculoskeletal", "Musculoskeletal",
+        "Respiratory", "Psychiatric/Behavioral", "Psychogenic",
+        "Sexual and Reproductive", "Reproductive: Female", "Reproductive: Male",
+        "Endocrine", "Gastrointestinal", "Population-Based Care", "Nonspecific",
+        "Integumentary", "Patient-Based Systems", "Neurologic", "Nephrologic",
+        "Hematologic/ Immune", "Hematologic/Immune", "Special Sensory",
+    )
+    bs_pat = re.compile(
+        r'(' + '|'.join(re.escape(s) for s in BS_SYSTEMS) + r')'
+        r'\s+(\d+)\s+[±+](\d+)',
+        re.IGNORECASE
+    )
+    for m in bs_pat.finditer(text):
+        result["body_system_scaled"][m.group(1)] = {
+            "scaled": int(m.group(2)),
+            "se":     int(m.group(3)),
+        }
+
+    return result
+
+
 def export_json(data: dict, output_path: str):
     """Write parsed results to JSON file."""
     with open(output_path, "w", encoding="utf-8") as f:

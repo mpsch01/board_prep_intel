@@ -1,0 +1,9 @@
+{
+  "name": "ite-score-analyzer",
+  "version": "1.0.0",
+  "description": "ABFM ITE score analysis pipeline — single resident and cohort. Right-click score PDFs to run.",
+  "author": {
+    "name": "Michael Scholl MD"
+  },
+  "keywords": ["ite", "abfm", "family-medicine", "board-prep", "score-analysis"]
+}

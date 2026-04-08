@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-04-07 (BATON 046 — build_article_currency.py (M3); article_currency table complete; Layer 2 DEFERRED-F closed)
-**Status:** Current — 997 total PDFs (966 ITE + 15 AAFP + 16 exams); M1 maintain = 25 scripts; M2 = 75py + 6js; M3 = 14py + 2js; DB stable (1,985 articles).
+**Last Updated:** 2026-04-07 (BATON 047 — ite-score-analyzer plugin v1.0.0; parse_score_report() added; longitudinal delta pipeline complete)
+**Status:** Current — 997 total PDFs (966 ITE + 15 AAFP + 16 exams); M1 maintain = 26 scripts; M2 = 75py + 6js; M3 = 14py + 2js + report_config.json; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_045_20260406_analyzer_report_builder_cleanup.md  ← active BATON
+├── BATON_active_047_20260407_ite_score_analyzer_plugin.md  ← active BATON
 ├── CLAUDE.md                              ← project memory + conventions
 ├── REPO_MAP.md                            ← current-state architectural overview (NEW — BATON 039)
 ├── README.md                              ← project overview (human-readable)
@@ -156,12 +156,13 @@ board_prep_intel/
 │       ├── download_pmc_actor_batch.py    ← one-off PMC batch downloader (actor-discovered URLs)
 │       ├── exa_pdf_finder.py              ← NEW (BATON 040) — EXA semantic search; classifies 1,572 missing articles; outputs exa_pdf_queue.csv
 │       ├── exa_pdf_downloader.py          ← NEW (BATON 040) — downloads direct_pdf + AAFP open_access + pmc_fulltext; 397/558 downloaded
-│       └── pmc_oa_downloader.py           ← NEW (BATON 040) — NCBI OA API; direct PDF + tgz extraction; 47/95 downloaded (33 tgz)
+│       ├── pmc_oa_downloader.py           ← NEW (BATON 040) — NCBI OA API; direct PDF + tgz extraction; 47/95 downloaded (33 tgz)
+│       └── download_targeted.py           ← NEW (BATON 047) — targeted PDF downloader for specific article list
 ├── has_extraction_audit.txt
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
 ```
-*M1 scripts: build/ = 6 scripts, maintain/ = 23 scripts (recovered_unpaywall.py + pmc_oa_downloader.py added) (exa_pdf_finder, exa_pdf_downloader, pmc_oa_downloader)*
+*M1 scripts: build/ = 6 scripts, maintain/ = 26 scripts (recovered_unpaywall.py + pmc_oa_downloader.py + download_targeted.py added) (exa_pdf_finder, exa_pdf_downloader, pmc_oa_downloader)*
 
 ---
 
@@ -295,10 +296,11 @@ board_prep_intel/
 │   ├── ite_analyze_v2.py                  ← entry point; routes to v3 by default; --v2-only flag
 │   ├── ite_analyzer_v3.py                 ← PRIMARY — 9 analysis layers, dual bank, 3-tier Q cascade (BATON 030)
 │   ├── ite_analyzer_v2.py                 ← DEPRECATED — subcategory dropped; header added (BATON 030)
-│   ├── ite_parser.py
+│   ├── ite_parser.py                      ← updated (BATON 047): parse_score_report() added; longitudinal delta support
 │   ├── ite_report_builder_v2.js           ← patched: subcatAnalysis, TIER_LABELS, pathway sections (BATON 030)
 │   ├── build_icd10_tags.py
 │   ├── build_article_currency.py             ← NEW (BATON 046) — Layer 2 complete; status enum (current/updated/check_needed/not_indexed); title_signals
+│   ├── report_config.json                  ← NEW (BATON 047) — analytics configuration
 │   ├── aafp_question_reuse_investigation.py  ← AAFP-ITE shared vignette finder; 38 pairs found (BATON 020)
 │   ├── export_aafp_ite_relationships.py   ← NEW (BATON 031) — 4-CSV AAFP↔ITE relationship export
 │   ├── word_doc_defaults.py               ← NEW (BATON 031) — St. Luke's style template; import in ALL python-docx scripts
@@ -313,6 +315,7 @@ board_prep_intel/
 │   └── README_ite_score_analysis.json
 ├── reports/                               ← gitignored (derived)
 │   ├── test_v3/ (ITE_2025_v3_Analysis_Oceana_Hopkins.docx, ITE_2025_v3_Exam_Oceana_Hopkins.docx, analysis_v2.json)
+│   ├── Scholl_2024/ (NEW — BATON 047 — resident analysis output)
 │   ├── AAFP_BRQ_ITE_Overlap_QA_v2.docx   ← NEW (BATON 031) — 595 AAFP questions, sorted by ITE overlap
 │   └── AAFP_BRQ_NearDuplicate_QA.docx    ← NEW (BATON 031) — 34 near-duplicate questions with ITE companion
 ├── outputs/                               ← gitignored (derived)
@@ -323,7 +326,7 @@ board_prep_intel/
     ├── sarkar_2025_blueprint.pdf / bodysystem.pdf
     └── scholl_2025_ENCRYPTED_22/23/24.pdf ← FLAG 30 (needs password)
 ```
-*14 Python + 2 JS + 2 JSON configs*
+*14 Python + 2 JS + 1 JSON config (report_config.json)*
 
 ### `04_module.4_sandbox/` — Experiments
 ```
@@ -401,6 +404,7 @@ key_data_files/
 - `agents/` — pdf_sourcer_agent.py + 6 helpers
 - `apify-actors/` — citation_crawler actor source (deployed: actor ID `rh50nQRP7BupbUF64`, build 0.3.1) — moved from root 2026-04-03
 - `ite-data-context-skill/` — domain skill for ITE DB queries
+- `ite-score-analyzer-v2/` — NEW (BATON 047) — ITE score analysis plugin v1.0.0 (score report analysis, cohort comparison, study plan generation)
 - `API_primer.md`
 
 ---

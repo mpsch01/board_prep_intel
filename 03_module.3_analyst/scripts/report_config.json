@@ -1,0 +1,33 @@
+{
+  "_comment": "ITE Score Analysis — Report Configuration. Edit this file to change analytics output. Do NOT modify ite_analyze_v2.py pipeline steps.",
+  "_version": "1.0.0",
+  "_last_updated": "2026-04-07",
+
+  "weakness_threshold": 0.70,
+  "easy_miss_threshold": 0.80,
+  "priority_top_n": 5,
+  "question_count_per_area": 5,
+
+  "pgy_default": 3,
+  "plugins_default": ["concept", "icd10"],
+
+  "sections": {
+    "score_overview":       true,
+    "blueprint_analysis":   true,
+    "body_system_analysis": true,
+    "priority_matrix":      true,
+    "easy_misses":          true,
+    "practice_questions":   true,
+    "study_plan":           true,
+    "icd10_crosswalk":      true,
+    "concept_tags":         true
+  },
+
+  "output_formats": ["docx", "json"],
+
+  "styling": {
+    "theme": "st_lukes",
+    "font": "Aptos",
+    "page_size": "letter"
+  }
+}

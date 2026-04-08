@@ -43,7 +43,7 @@ pipeline_dir = Path(__file__).parent
 sys.path.insert(0, str(pipeline_dir))
 sys.path.insert(0, str(pipeline_dir / "v1"))
 
-from ite_parser import load_config, parse_blueprint, parse_bodysystem, merge_results, export_json
+from ite_parser import load_config, parse_blueprint, parse_bodysystem, merge_results, export_json, parse_score_report
 
 # Import v3 analyzer (default) and v2 (legacy --v2-only flag)
 from ite_analyzer_v3 import analyze_v3
@@ -79,6 +79,166 @@ def parse_plugins_arg(plugins_arg: str) -> list:
     if not plugins_arg:
         return []
     return [p.strip() for p in plugins_arg.split(",")]
+
+
+def find_prior_analyses(output_dir: Path) -> dict:
+    """
+    Look for n-1 and n-2 year analyses for the same resident in the same reports root.
+
+    Expects output_dir named {ResidentName}_{Year} (last underscore-separated token = year).
+    E.g., reports/Smith_2025 → looks for reports/Smith_2024 and reports/Smith_2023.
+
+    Returns dict with keys 'n1' and 'n2', each a loaded analysis dict or None.
+    """
+    dir_name = output_dir.name
+    parts = dir_name.rsplit("_", 1)          # split on LAST underscore only
+    if len(parts) != 2 or not parts[1].isdigit():
+        print(f"  [SKIP] Cannot parse year from output dir name: {dir_name}")
+        return {"n1": None, "n2": None}
+
+    name_part = parts[0]
+    current_year = int(parts[1])
+    reports_root = output_dir.parent
+
+    result = {}
+    for offset, key in [(1, "n1"), (2, "n2")]:
+        prior_year = current_year - offset
+        prior_dir = reports_root / f"{name_part}_{prior_year}"
+        prior_json = prior_dir / "analysis_v2.json"
+        if prior_json.exists():
+            try:
+                with open(prior_json, encoding="utf-8") as f:
+                    result[key] = json.load(f)
+                print(f"  [FOUND] {prior_json}")
+            except Exception as e:
+                print(f"  [WARN] Could not load {prior_json}: {e}")
+                result[key] = None
+        else:
+            result[key] = None
+            print(f"  [SKIP] No prior analysis at {prior_dir}")
+
+    return result
+
+
+def compute_longitudinal_delta(current: dict, prior: dict) -> dict:
+    """
+    Compute year-over-year performance delta between two analysis dicts.
+
+    Prefers official scaled score (from --score-report) for the primary delta metric.
+    Falls back to raw % when official scores aren't available in both years.
+
+    Returns a delta dict containing:
+        - scaled score delta (official when available, estimated otherwise)
+        - PGY mean delta (how much above/below the class mean, year-over-year)
+        - overall raw % change
+        - per-blueprint and per-body-system rate deltas
+        - weak area trajectory (closed / persistent / new)
+    """
+    THRESHOLD = 0.70  # matches report_config.json default
+
+    def safe_perf(a, key):
+        return a.get("performance", {}).get(key, {})
+
+    curr_overall = current.get("performance", {}).get("overall", {})
+    prior_overall = prior.get("performance", {}).get("overall", {})
+
+    # --- Scaled score delta (prefer official, fall back to estimated) ---
+    curr_scaled = curr_overall.get("scaled_score_actual")
+    prior_scaled = prior_overall.get("scaled_score_actual")
+    curr_scaled_src = curr_overall.get("scaled_score_source", "estimated")
+    prior_scaled_src = prior_overall.get("scaled_score_source", "estimated")
+
+    if curr_scaled is not None and prior_scaled is not None:
+        scaled_delta = curr_scaled - prior_scaled
+        scaled_source = "official"
+    else:
+        # Fall back to v3 analyzer estimated scaled score
+        curr_scaled = curr_overall.get("scaled_score")
+        prior_scaled = prior_overall.get("scaled_score")
+        scaled_delta = (curr_scaled - prior_scaled) if (curr_scaled and prior_scaled) else None
+        scaled_source = "estimated"
+
+    # --- PGY mean delta (how much above/below class mean, year over year) ---
+    curr_vs_pgy  = curr_overall.get("vs_pgy_mean")
+    prior_vs_pgy = prior_overall.get("vs_pgy_mean")
+    vs_pgy_delta = None
+    if curr_vs_pgy is not None and prior_vs_pgy is not None:
+        vs_pgy_delta = curr_vs_pgy - prior_vs_pgy  # positive = improving relative to peers
+
+    # --- Raw % delta ---
+    curr_pct  = curr_overall.get("pct", 0)
+    prior_pct = prior_overall.get("pct", 0)
+    pct_delta = round(curr_pct - prior_pct, 1)
+
+    # --- vs MPS delta ---
+    curr_vs_mps  = curr_overall.get("vs_mps")
+    prior_vs_mps = prior_overall.get("vs_mps")
+    vs_mps_delta = None
+    if curr_vs_mps is not None and prior_vs_mps is not None:
+        vs_mps_delta = curr_vs_mps - prior_vs_mps
+
+    # --- Blueprint delta (raw rates) ---
+    curr_bp  = safe_perf(current, "blueprint")
+    prior_bp = safe_perf(prior, "blueprint")
+    blueprint_delta = {}
+    for cat in set(list(curr_bp) + list(prior_bp)):
+        c = curr_bp.get(cat, {}).get("rate")
+        p = prior_bp.get(cat, {}).get("rate")
+        if c is not None and p is not None:
+            blueprint_delta[cat] = round((c - p) * 100, 1)
+
+    # --- Blueprint scaled score delta (when official scores available in both years) ---
+    curr_bp_scaled  = safe_perf(current, "blueprint_scaled")
+    prior_bp_scaled = safe_perf(prior, "blueprint_scaled")
+    blueprint_scaled_delta = {}
+    for cat in set(list(curr_bp_scaled) + list(prior_bp_scaled)):
+        c = curr_bp_scaled.get(cat, {}).get("scaled")
+        p = prior_bp_scaled.get(cat, {}).get("scaled")
+        if c is not None and p is not None:
+            blueprint_scaled_delta[cat] = c - p
+
+    # --- Body system delta (raw rates) ---
+    curr_bs  = safe_perf(current, "body_system")
+    prior_bs = safe_perf(prior, "body_system")
+    body_system_delta = {}
+    for sys in set(list(curr_bs) + list(prior_bs)):
+        c = curr_bs.get(sys, {}).get("rate")
+        p = prior_bs.get(sys, {}).get("rate")
+        if c is not None and p is not None:
+            body_system_delta[sys] = round((c - p) * 100, 1)
+
+    # --- Weak area trajectory ---
+    curr_weak = {k for k, v in curr_bp.items() if v.get("rate", 1) < THRESHOLD} | \
+                {k for k, v in curr_bs.items() if v.get("rate", 1) < THRESHOLD}
+    prior_weak = {k for k, v in prior_bp.items() if v.get("rate", 1) < THRESHOLD} | \
+                 {k for k, v in prior_bs.items() if v.get("rate", 1) < THRESHOLD}
+
+    return {
+        "prior_year":           prior.get("exam_year"),
+        # Primary metrics
+        "scaled_delta":         scaled_delta,
+        "scaled_source":        scaled_source,        # "official" or "estimated"
+        "prior_scaled":         prior_scaled,
+        "current_scaled":       curr_scaled,
+        "vs_pgy_delta":         vs_pgy_delta,         # improving vs peers (+ = better)
+        "prior_vs_pgy":         prior_vs_pgy,
+        "current_vs_pgy":       curr_vs_pgy,
+        "vs_mps_delta":         vs_mps_delta,
+        # Raw % (always available)
+        "prior_overall_pct":    prior_pct,
+        "current_overall_pct":  curr_pct,
+        "overall_delta_pct":    pct_delta,
+        # Category deltas
+        "blueprint_delta":          blueprint_delta,
+        "blueprint_scaled_delta":   blueprint_scaled_delta,
+        "body_system_delta":        body_system_delta,
+        # Weak area trajectory
+        "weak_area_trajectory": {
+            "closed":     sorted(prior_weak - curr_weak),   # was weak, now strong
+            "persistent": sorted(prior_weak & curr_weak),   # still weak
+            "new":        sorted(curr_weak - prior_weak),   # newly weak
+        },
+    }
 
 
 def build_v2_reports(analysis: dict, output_dir: Path, analysis_json_path: str):
@@ -132,6 +292,7 @@ def main():
     )
     parser.add_argument("--blueprint", required=True, help="Path to Blueprint Performance PDF")
     parser.add_argument("--bodysystem", help="Path to Body System Performance PDF")
+    parser.add_argument("--score-report", dest="score_report", help="Path to Overall Score Report PDF (provides actual scaled score, PGY mean, SE)")
     parser.add_argument("--db", required=True, help="Path to ite_intelligence.db")
     parser.add_argument("--config", help="Path to ite_parser_config.json (default: auto-detect)")
     parser.add_argument("--output-dir", default=".", help="Output directory for reports")
@@ -205,6 +366,38 @@ def main():
         }
 
     # ========================================================================
+    # STAGE 1.5: Score Report Enrichment (optional — no-op if not provided)
+    # ========================================================================
+    score_report_data = None
+    if args.score_report:
+        print("\n" + "=" * 60)
+        print("STAGE 1.5: Overall Score Report")
+        print("=" * 60)
+        try:
+            score_report_data = parse_score_report(args.score_report)
+            print(f"\n  Resident:          {score_report_data.get('name', 'unknown')}")
+            print(f"  Actual scaled:     {score_report_data['scaled_score']}  (±{score_report_data['standard_error']})")
+            print(f"  vs MPS (380):      {'+' if score_report_data['vs_mps'] >= 0 else ''}{score_report_data['vs_mps']}")
+            pgy = score_report_data.get("pgy_level")
+            mean = score_report_data.get("pgy_mean_scaled")
+            diff = score_report_data.get("vs_pgy_mean")
+            if pgy and mean:
+                sign = "+" if diff >= 0 else ""
+                print(f"  PGY{pgy} class mean: {mean}  (resident {sign}{diff} vs mean)")
+            if score_report_data.get("unanswered_items"):
+                print(f"  Unanswered items:  {score_report_data['unanswered_items']}")
+        except Exception as e:
+            print(f"  WARNING: Could not parse score report: {e}")
+            print("  Continuing without official scaled score data.")
+            score_report_data = None
+    else:
+        print("\n[Note] No --score-report provided — scaled score will be estimated from raw counts.")
+
+    # Push exam year from score report into merged BEFORE analyzer runs
+    if score_report_data and score_report_data.get("exam_year"):
+        merged["exam_year"] = score_report_data["exam_year"]
+
+    # ========================================================================
     # STAGE 2: Analysis (v2 or v1 based on --v1-only flag)
     # ========================================================================
     print("\n" + "=" * 60)
@@ -269,6 +462,25 @@ def main():
     question_count = len(analysis.get('practice_questions', []))
     print(f"\nPractice questions selected: {question_count}")
 
+    # Enrich analysis with official score report data (when --score-report provided)
+    if score_report_data:
+        sr = score_report_data
+        overall = analysis.setdefault("performance", {}).setdefault("overall", {})
+        overall["scaled_score_actual"]   = sr["scaled_score"]
+        overall["scaled_score_source"]   = "official"
+        overall["scaled_score_se"]       = sr["standard_error"]
+        overall["mps"]                   = sr["mps"]
+        overall["vs_mps"]                = sr["vs_mps"]
+        overall["pgy_level"]             = sr["pgy_level"]
+        overall["pgy_mean_scaled"]       = sr["pgy_mean_scaled"]
+        overall["vs_pgy_mean"]           = sr["vs_pgy_mean"]
+        overall["unanswered_items"]      = sr["unanswered_items"]
+        # Official per-category scaled scores (supplement the raw-rate analysis)
+        analysis["performance"]["blueprint_scaled"]    = sr["blueprint_scaled"]
+        analysis["performance"]["body_system_scaled"]  = sr["body_system_scaled"]
+    else:
+        analysis.setdefault("performance", {}).setdefault("overall", {})["scaled_score_source"] = "estimated"
+
     # Export JSON — v2 saves as analysis_v2.json (used by report builder v2)
     # Also saves score_analysis.json for v1 compatibility
     json_v2_path = output_dir / "analysis_v2.json"
@@ -285,6 +497,50 @@ def main():
         analysis.setdefault("performance", {})["weak_areas"] = {
             "blueprints": weak_bp, "body_systems": weak_bs, "cross_tab": weak_xt
         }
+
+    # ========================================================================
+    # STAGE 2.5: Longitudinal Delta (automatic — no user input required)
+    # ========================================================================
+    print("\n" + "=" * 60)
+    print("STAGE 2.5: Longitudinal Delta Check")
+    print("=" * 60)
+
+    prior_analyses = find_prior_analyses(output_dir)
+    longitudinal = {}
+
+    for key, prior_analysis in [("n1", prior_analyses["n1"]), ("n2", prior_analyses["n2"])]:
+        if prior_analysis:
+            delta = compute_longitudinal_delta(analysis, prior_analysis)
+            longitudinal[key] = delta
+            label = "n-1 (last year)" if key == "n1" else "n-2 (two years ago)"
+            print(f"\n  [{label}] vs {delta['prior_year']}:")
+            # Prefer scaled score delta; fall back to raw %
+            if delta.get("scaled_delta") is not None:
+                sign = "+" if delta["scaled_delta"] >= 0 else ""
+                src_tag = " (official)" if delta["scaled_source"] == "official" else " (est.)"
+                print(f"    Scaled score: {delta['prior_scaled']} → {delta['current_scaled']}  ({sign}{delta['scaled_delta']}){src_tag}")
+                if delta.get("vs_pgy_delta") is not None:
+                    sign2 = "+" if delta["vs_pgy_delta"] >= 0 else ""
+                    print(f"    vs PGY mean:  {'+' if delta['prior_vs_pgy'] >= 0 else ''}{delta['prior_vs_pgy']} → {'+' if delta['current_vs_pgy'] >= 0 else ''}{delta['current_vs_pgy']}  ({sign2}{delta['vs_pgy_delta']} vs peers)")
+            else:
+                sign = "+" if delta["overall_delta_pct"] >= 0 else ""
+                print(f"    Score: {delta['prior_overall_pct']}% → {delta['current_overall_pct']}%  ({sign}{delta['overall_delta_pct']}%)")
+            traj = delta["weak_area_trajectory"]
+            if traj["closed"]:
+                print(f"    Closed gaps:     {', '.join(traj['closed'])}")
+            if traj["persistent"]:
+                print(f"    Persistent gaps: {', '.join(traj['persistent'])}")
+            if traj["new"]:
+                print(f"    New gaps:        {', '.join(traj['new'])}")
+
+    if longitudinal:
+        analysis["longitudinal_delta"] = longitudinal
+        # Re-export JSON so the report builder picks up the delta
+        export_analysis(analysis, str(json_v2_path))
+        export_analysis(analysis, str(json_path))
+        print(f"\n  [OK] Longitudinal delta written to analysis JSON")
+    else:
+        print("  No prior analyses found — first-year baseline established")
 
     if args.json_only:
         print("\n--json-only flag set, skipping report generation.")
