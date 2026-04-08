@@ -3,7 +3,7 @@
 **Database:** `00_database/db/ite_intelligence.db`
 **Engine:** SQLite 3 (with optional `sqlite-vec` extension for vector search)
 **Schema version:** v2 (rebuilt 2026-03-10; AAFP corpus added 2026-03-29)
-**Last updated:** 2026-04-06 (BATON 045)
+**Last updated:** 2026-04-08 (BATON 048)
 
 ---
 

@@ -376,7 +376,7 @@ This session was entirely focused on building and refining the **Master Pipeline
 
 **File location:** `C:\Users\mpsch\Desktop\claude_knowledge\abfm_prep\PIPELINE_MAP.html`
 **Size:** ~84KB · Open in Chrome or Edge for full interactive render.
-**Email draft:** Sent to scholl.michael.p@gmail.com (draft ID: r4910036009322679137) with summary + file path.
+**Email draft:** Sent to project contact email (draft ID: r4910036009322679137) with summary + file path.
 
 **Final structure — 7 modules:**
 

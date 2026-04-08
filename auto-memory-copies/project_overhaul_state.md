@@ -1,5 +1,5 @@
 # project_overhaul_state.md
-Last updated: 2026-04-07 (BATON 047)
+Last updated: 2026-04-08 (BATON 048)
 
 ## Module State
 
@@ -16,12 +16,12 @@ Last updated: 2026-04-07 (BATON 047)
 ### ITE (citation_files/ITE/)
 | Tier | Count | Notes |
 |------|-------|-------|
-| VC_fail | 623 | Failed VC gate; awaiting enrichment |
+| VC_fail | 630 | Failed VC gate; awaiting enrichment |
 | VC_pass | 168 | Passed VC gate; awaiting enrichment |
 | local_lite | 117 | Enriched; not VC-cited |
 | right_click | 58 | Enriched + VC-cited (top tier) |
 | _dupe_archive | 14 | Legacy single-author duplicates; not pipeline |
-| **TOTAL active** | **966** | Recovered via EXA+PMC+Unpaywall after fix_ghost.py incident |
+| **TOTAL active** | **981** | Recovered via EXA+PMC+Unpaywall; +7 PDFs added (2026-04-08) |
 
 ### AAFP (citation_files/AAFP/)
 | Count | Status |
@@ -49,16 +49,12 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 - Layer 3 (Clinical pathways): Complete — 3,971 rows (cleaned -49 no_match)
 - Layer 4 (Trends): Partial — trend CSV files in readable_db_files/
 
-## Plugins & New Capabilities (BATON 047)
+## Plugins & New Capabilities (BATON 048)
 - **ite-score-analyzer v1.0.0** — ITE score analysis plugin built in `skills_abilities/ite-score-analyzer-v2/`
   - Four skills: analyze-ite (core report parsing), cohort-compare, ite-lookup, study-plan
   - parse_score_report() added to ite_parser.py (longitudinal delta support, Stage 2.5 pipeline)
   - report_config.json analytics configuration created
+- **session-housekeeping agent templates** – Agents for baton-writer, index-memory-writer, manifest-writer created in .claude/skills/session-housekeeping/agents/; facilitate repeatable BATON and memory updates
 - **Open bugs (tracked for v1.1 release):**
   - Exam year 2025 fallback handling in v3 analyzer (edge case when 2025 year label not found)
-  - 2024 body system name normalization needed (capitalization inconsistency vs blueprint)
-
-## Key Artifacts
-- VC gate: key_data_files/session_hy_inserts_v7.json (352 citations)
-- Codon format: Author_Year#@#ART-XXXX@#@.pdf
-- DB: 00_database/db/ite_intelligence.db (source of truth, never disposable)
+  - 2024 body system name normalization needed (capitalization inconsistency vs blueprint

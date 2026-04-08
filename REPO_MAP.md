@@ -1,5 +1,7 @@
 # REPO MAP — board_prep_intel
 
+**Last Updated:** 2026-04-08 (BATON 048)
+
 File tree with short descriptions. For full project context see `README.md`.
 
 ```
@@ -8,12 +10,12 @@ board_prep_intel/
 ├── README.md                          Project overview, DB state, conventions, next steps
 ├── REPO_MAP.md                        This file — directory tree with descriptions
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
+├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_*.md                  Active session handoff — read first every session
+├── BATON_active_048_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
-├── 00_database/                       Source of truth. Never disposable.
-│   ├── DATABASE_GUIDE.md              DB contents, linkages, current uses, and future applications
+├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
 │   ├── db/
 │   │   └── ite_intelligence.db        Production SQLite DB (gitignored — stays local/Drive)
 │   ├── readable_db_files/             CSV exports and human-readable snapshots (gitignored)
@@ -29,7 +31,7 @@ board_prep_intel/
 ├── 01_module.1_warehouse/             M1 — PDF library + build/maintain DB scripts
 │   ├── citation_files/
 │   │   ├── ITE/
-│   │   │   ├── VC_fail/               623 PDFs: failed VC gate; awaiting enrichment (gitignored)
+│   │   │   ├── VC_fail/               630 PDFs: failed VC gate; awaiting enrichment (gitignored)
 │   │   │   ├── VC_pass/               168 PDFs: passed VC gate; awaiting enrichment (gitignored)
 │   │   │   ├── local_lite/            117 PDFs: VC_fail + fully enriched (gitignored)
 │   │   │   ├── right_click/           58 PDFs: VC_pass + fully enriched — priority tier (gitignored)

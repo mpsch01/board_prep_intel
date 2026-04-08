@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_047_20260407_ite_score_analyzer_plugin.md` — ite-score-analyzer plugin v1.0.0 built; parse_score_report() added to ite_parser.py; Stage 1.5 + Stage 2.5 in ite_analyze_v2.py |
+| Active BATON | `BATON_active_048_20260408_skill_templates_housekeeping.md` — session-housekeeping agent templates created; DATABASE_GUIDE.md moved to project root |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -62,7 +62,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_icd10_vec | 1,757 rows — ✅ rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 rows — ✅ rebuilt 2026-04-05 |
 | clinical_pathways | 3,971 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 — 49 no_match rows deleted |
-| PDFs (ITE citation tiers) | 966 across 4 tiers in citation_files/ITE/ (VC_fail:623, VC_pass:168, local_lite:117, right_click:58) — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
+| PDFs (ITE citation tiers) | 981 across 4 tiers in citation_files/ITE/ (VC_fail:630, VC_pass:168, local_lite:117, right_click:58) — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; +7 VC_fail 2026-04-08; 14 dupes in _dupe_archive/ |
 | PDFs (AAFP) | 15 in citation_files/AAFP/ — recovered 2026-04-05 |
 | PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
@@ -74,7 +74,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → GIT-COMMITTED (PDF recovery + session housekeeping + skill creation) |
+| Git branch | `main`, latest → c43f88c |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -113,10 +113,20 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 047, 2026-04-07)
-1. **Confirm exam year fix** — re-run pipeline, confirm 2024 shows correctly
-2. **DOCX content review** — personalization check vs Hopkins reference
-3. **2024 body system name normalization** — in v3 analyzer
-4. **DEFERRED-PGY-BENCHMARKS** — Mikey to provide; add pgy_benchmarks.md
-5. **exa-research-search Phase 2** — expansion of guideline library + clinical pathways pipeline
-6. **Install and test plugin v1.0.0** — in Cowork
+## Next Steps (as of BATON 048, 2026-04-08)
+
+### Immediate (Before Next Session)
+1. **Confirm exam year fix** — re-run ite_analyze_v2.py against Scholl_2024; confirm output shows "Exam Year: 2024"
+2. **DOCX content review** — open Scholl_2024 DOCX; validate question-specific personalization appears in recommendations
+3. **2024 body system normalization** — add name map in ite_analyze_v3.py
+4. **Plugin install + test** — install ite-score-analyzer.plugin in Cowork; validate right-click PDF trigger
+
+### Short-term (This Week)
+5. **DEFERRED-PGY-BENCHMARKS** — Mikey to provide expected % ranges by PGY level; add pgy_benchmarks.md
+6. **AAFP PDF retry** — monitor AAFP site recovery; re-run exa_pdf_downloader
+7. **Resolve git working tree** — stage DATABASE_GUIDE.md move, commit check_no_emails.py if keeping
+
+### Medium-term (Next 2 Weeks)
+8. **exa-research-search Phase 2** — expand guideline library + clinical pathways pipeline
+9. **DEFERRED-L2-REVIEW** — optional audit of 169 updated + 106 check_needed article_currency rows
+10. **Resident-facing report** — re-enable full question rendering in ite_report_builder_v2.js when DOCX validation complete
