@@ -1,0 +1,2205 @@
+{
+  "resident": {
+    "name": "Michael Scholl, M.D.",
+    "abfm_id": "204999",
+    "program": "St Luke's Hospital"
+  },
+  "exam_year": "2023",
+  "deleted_items": [
+    67,
+    129
+  ],
+  "analysis_version": "3.0",
+  "performance": {
+    "overall": {
+      "total": 125,
+      "correct": 86,
+      "incorrect": 39,
+      "pct": 68.8,
+      "scaled_score_source": "estimated"
+    },
+    "blueprint": {
+      "Acute Care": {
+        "correct": 30,
+        "total": 49,
+        "rate": 0.612
+      },
+      "Chronic Care": {
+        "correct": 28,
+        "total": 36,
+        "rate": 0.778
+      },
+      "Emergent/Urgent": {
+        "correct": 4,
+        "total": 6,
+        "rate": 0.667
+      },
+      "Foundations": {
+        "correct": 3,
+        "total": 6,
+        "rate": 0.5
+      },
+      "Preventive": {
+        "correct": 21,
+        "total": 28,
+        "rate": 0.75
+      }
+    },
+    "body_system": {},
+    "cross_tab": {},
+    "weak_areas": {
+      "blueprints": {
+        "Acute Care": {
+          "correct": 30,
+          "total": 49,
+          "rate": 0.612
+        },
+        "Emergent/Urgent": {
+          "correct": 4,
+          "total": 6,
+          "rate": 0.667
+        },
+        "Foundations": {
+          "correct": 3,
+          "total": 6,
+          "rate": 0.5
+        }
+      },
+      "body_systems": {},
+      "cross_tab": {}
+    }
+  },
+  "thresholds": {
+    "tier1_pass_probability": {
+      "scaled_score": 250,
+      "pass_tier": {
+        "tier": "critical_risk",
+        "description": "Below MPS, <50% FMCE pass probability",
+        "scaled": 250
+      },
+      "national_mean": 443,
+      "national_sd": 77,
+      "percentile_estimate": 0.6,
+      "vs_mps": -130
+    },
+    "tier2_relative": {
+      "thresholds": {
+        "personal_mean": 0.661,
+        "personal_sd": 0.1,
+        "relative_weakness": 0.561,
+        "relative_strength": 0.761
+      },
+      "classifications": {
+        "Acute Care": {
+          "rate": 0.612,
+          "classification": "within_range",
+          "items": 49
+        },
+        "Chronic Care": {
+          "rate": 0.778,
+          "classification": "relative_strength",
+          "items": 36
+        },
+        "Emergent/Urgent": {
+          "rate": 0.667,
+          "classification": "within_range",
+          "items": 6
+        },
+        "Foundations": {
+          "rate": 0.5,
+          "classification": "relative_weakness",
+          "items": 6
+        },
+        "Preventive": {
+          "rate": 0.75,
+          "classification": "within_range",
+          "items": 28
+        }
+      }
+    },
+    "tier3_sem": {
+      "Acute Care": {
+        "sem": 69,
+        "reliable": true,
+        "note": "Statistically reliable"
+      },
+      "Chronic Care": {
+        "sem": 82,
+        "reliable": true,
+        "note": "Statistically reliable"
+      },
+      "Emergent/Urgent": {
+        "sem": 97,
+        "reliable": true,
+        "note": "Statistically reliable"
+      },
+      "Foundations": {
+        "sem": 187,
+        "reliable": false,
+        "note": "Large SEM \u2014 interpret as hypothesis only"
+      },
+      "Preventive": {
+        "sem": 109,
+        "reliable": false,
+        "note": "Large SEM \u2014 interpret as hypothesis only"
+      }
+    }
+  },
+  "difficulty_profile": {
+    "overall": {
+      "mid_range": 16,
+      "hard_miss": 15,
+      "easy_miss": 8
+    },
+    "by_blueprint": {
+      "Acute Care": {
+        "mid_range": 9,
+        "hard_miss": 8,
+        "easy_miss": 2
+      },
+      "Chronic Care": {
+        "mid_range": 2,
+        "easy_miss": 3,
+        "hard_miss": 3
+      },
+      "Foundations": {
+        "easy_miss": 1,
+        "hard_miss": 1,
+        "mid_range": 1
+      },
+      "Preventive": {
+        "mid_range": 4,
+        "hard_miss": 2,
+        "easy_miss": 1
+      },
+      "Emergent/Urgent": {
+        "hard_miss": 1,
+        "easy_miss": 1
+      }
+    },
+    "by_bodysystem": {},
+    "easy_misses": [
+      {
+        "item": 16,
+        "score": 1000,
+        "qid": "QID-2023-0016",
+        "blueprint": "Chronic Care",
+        "body_system": null
+      },
+      {
+        "item": 140,
+        "score": 1000,
+        "qid": "QID-2023-0140",
+        "blueprint": "Acute Care",
+        "body_system": null
+      },
+      {
+        "item": 156,
+        "score": 1000,
+        "qid": "QID-2023-0156",
+        "blueprint": "Acute Care",
+        "body_system": null
+      },
+      {
+        "item": 190,
+        "score": 1000,
+        "qid": "QID-2023-0190",
+        "blueprint": "Emergent/Urgent",
+        "body_system": null
+      },
+      {
+        "item": 27,
+        "score": 901,
+        "qid": "QID-2023-0027",
+        "blueprint": "Chronic Care",
+        "body_system": null
+      },
+      {
+        "item": 20,
+        "score": 851,
+        "qid": "QID-2023-0020",
+        "blueprint": "Foundations",
+        "body_system": null
+      },
+      {
+        "item": 111,
+        "score": 851,
+        "qid": "QID-2023-0111",
+        "blueprint": "Preventive",
+        "body_system": null
+      },
+      {
+        "item": 131,
+        "score": 801,
+        "qid": "QID-2023-0131",
+        "blueprint": "Chronic Care",
+        "body_system": null
+      }
+    ],
+    "easy_miss_count": 8,
+    "mid_range_count": 16,
+    "hard_miss_count": 15,
+    "tier_definitions": {
+      "easy_miss": {
+        "min_score": 700,
+        "label": "Easy Miss (\u2265700)",
+        "interpretation": "Most examinees get these right \u2014 genuine knowledge gap, highest priority"
+      },
+      "mid_range": {
+        "min_score": 300,
+        "max_score": 699,
+        "label": "Mid-Range (300\u2013699)",
+        "interpretation": "High-yield study targets \u2014 greatest ROI"
+      },
+      "hard_miss": {
+        "max_score": 299,
+        "label": "Hard Miss (<300)",
+        "interpretation": "Most examinees miss these \u2014 low-yield to chase"
+      }
+    }
+  },
+  "concept_clustering": {
+    "top_diagnoses": {
+      "COPD": 4,
+      "hypertension": 2,
+      "superior vena cava syndrome": 1,
+      "non-Hodgkin lymphoma": 1,
+      "moderate persistent asthma": 1,
+      "Helicobacter pylori": 1,
+      "NSAID-related gastric ulcer": 1,
+      "Mallory-Weiss tear": 1,
+      "esophageal varices": 1,
+      "acute myocardial infarction": 1,
+      "acute coronary syndrome": 1,
+      "celiac disease": 1,
+      "ischemic stroke": 1,
+      "left middle cerebral artery stroke": 1,
+      "critical congenital heart disease": 1
+    },
+    "top_drugs": {
+      "budesonide/formoterol": 2,
+      "aspirin": 2,
+      "budesonide": 1,
+      "fluticasone/salmeterol": 1,
+      "fluticasone/vilanterol": 1,
+      "tiotropium/olodaterol": 1,
+      "proton pump inhibitors": 1,
+      "NSAIDs": 1,
+      "metoprolol": 1,
+      "morphine": 1,
+      "nitroglycerin": 1,
+      "clopidogrel": 1,
+      "alteplase": 1,
+      "tenecteplase": 1,
+      "albuterol": 1
+    },
+    "top_guidelines": {
+      "National Asthma Education and Prevention Program 2020": 1,
+      "American Gastroenterological Association 2022": 1,
+      "GOLD 2023": 1,
+      "CDC 2023": 1,
+      "AAFP 2022 hypertension guideline": 1,
+      "FAA oxygen requirements": 1,
+      "American College of Gastroenterology": 1,
+      "Modified Centor Criteria": 1,
+      "Light's criteria": 1,
+      "2017 ACC/AHA": 1
+    },
+    "recurring_diagnoses": {
+      "COPD": 4,
+      "hypertension": 2
+    },
+    "recurring_drugs": {
+      "budesonide/formoterol": 2,
+      "aspirin": 2
+    },
+    "concept_qid_map": {
+      "diagnoses": {
+        "superior vena cava syndrome": [
+          "QID-2023-0001"
+        ],
+        "non-Hodgkin lymphoma": [
+          "QID-2023-0001"
+        ],
+        "moderate persistent asthma": [
+          "QID-2023-0002"
+        ],
+        "Helicobacter pylori": [
+          "QID-2023-0003"
+        ],
+        "NSAID-related gastric ulcer": [
+          "QID-2023-0003"
+        ],
+        "Mallory-Weiss tear": [
+          "QID-2023-0003"
+        ],
+        "esophageal varices": [
+          "QID-2023-0003"
+        ],
+        "acute myocardial infarction": [
+          "QID-2023-0013"
+        ],
+        "acute coronary syndrome": [
+          "QID-2023-0013"
+        ],
+        "celiac disease": [
+          "QID-2023-0016"
+        ],
+        "ischemic stroke": [
+          "QID-2023-0020"
+        ],
+        "left middle cerebral artery stroke": [
+          "QID-2023-0020"
+        ],
+        "critical congenital heart disease": [
+          "QID-2023-0023"
+        ],
+        "vocal cord dysfunction": [
+          "QID-2023-0025"
+        ],
+        "exercise-induced asthma": [
+          "QID-2023-0025"
+        ],
+        "anaphylaxis": [
+          "QID-2023-0025"
+        ],
+        "foreign body aspiration": [
+          "QID-2023-0025"
+        ],
+        "laryngeal edema": [
+          "QID-2023-0025"
+        ],
+        "spinal stenosis syndrome": [
+          "QID-2023-0027"
+        ],
+        "lumbar spinal stenosis": [
+          "QID-2023-0027"
+        ],
+        "primary hyperaldosteronism": [
+          "QID-2023-0028"
+        ],
+        "secondary hypertension": [
+          "QID-2023-0028"
+        ],
+        "obesity hypoventilation syndrome": [
+          "QID-2023-0032"
+        ],
+        "obstructive sleep apnea": [
+          "QID-2023-0032"
+        ],
+        "radial nerve injury": [
+          "QID-2023-0045"
+        ],
+        "Saturday night palsy": [
+          "QID-2023-0045"
+        ],
+        "tinea pedis": [
+          "QID-2023-0068"
+        ],
+        "dermatophyte infection": [
+          "QID-2023-0068"
+        ],
+        "hemoptysis": [
+          "QID-2023-0070"
+        ],
+        "lung malignancy": [
+          "QID-2023-0070"
+        ],
+        "COPD": [
+          "QID-2023-0070",
+          "QID-2023-0108",
+          "QID-2023-0141",
+          "QID-2023-0180"
+        ],
+        "bronchiectasis": [
+          "QID-2023-0070"
+        ],
+        "cervical myelopathy": [
+          "QID-2023-0078"
+        ],
+        "epidural abscess": [
+          "QID-2023-0078"
+        ],
+        "Guillain-Barr\u00e9 syndrome": [
+          "QID-2023-0078"
+        ],
+        "multiple sclerosis": [
+          "QID-2023-0078"
+        ],
+        "cervical disc disease": [
+          "QID-2023-0078"
+        ],
+        "opioid use disorder": [
+          "QID-2023-0078"
+        ],
+        "polycystic ovary syndrome": [
+          "QID-2023-0081"
+        ],
+        "PCOS": [
+          "QID-2023-0081"
+        ],
+        "subacute thyroiditis": [
+          "QID-2023-0098"
+        ],
+        "hepatitis C infection": [
+          "QID-2023-0104"
+        ],
+        "cleared hepatitis C": [
+          "QID-2023-0104"
+        ],
+        "orthostatic hypotension": [
+          "QID-2023-0107"
+        ],
+        "syncope": [
+          "QID-2023-0107"
+        ],
+        "hand-foot-and-mouth disease": [
+          "QID-2023-0111"
+        ],
+        "pertussis": [
+          "QID-2023-0117"
+        ],
+        "distal radius buckle fracture": [
+          "QID-2023-0131"
+        ],
+        "torus fracture": [
+          "QID-2023-0131"
+        ],
+        "proliferative diabetic retinopathy": [
+          "QID-2023-0136"
+        ],
+        "nonproliferative diabetic retinopathy": [
+          "QID-2023-0136"
+        ],
+        "topical corticosteroid systemic toxicity": [
+          "QID-2023-0137"
+        ],
+        "hypertension": [
+          "QID-2023-0140",
+          "QID-2023-0166"
+        ],
+        "oxygen-dependent COPD": [
+          "QID-2023-0141"
+        ],
+        "patellofemoral pain syndrome": [
+          "QID-2023-0142"
+        ],
+        "Helicobacter pylori infection": [
+          "QID-2023-0149"
+        ],
+        "epiglottitis": [
+          "QID-2023-0155"
+        ],
+        "pediatric hypertension": [
+          "QID-2023-0156"
+        ],
+        "dermatologic conditions": [
+          "QID-2023-0162"
+        ],
+        "atrial fibrillation": [
+          "QID-2023-0166"
+        ],
+        "type 2 diabetes": [
+          "QID-2023-0166"
+        ],
+        "viral pharyngitis": [
+          "QID-2023-0173"
+        ],
+        "streptococcal pharyngitis": [
+          "QID-2023-0173"
+        ],
+        "cervical spine injury": [
+          "QID-2023-0177"
+        ],
+        "spinal cord injury": [
+          "QID-2023-0177"
+        ],
+        "pleural effusion": [
+          "QID-2023-0180"
+        ],
+        "malignancy": [
+          "QID-2023-0180"
+        ],
+        "cirrhosis": [
+          "QID-2023-0180"
+        ],
+        "congestive heart failure": [
+          "QID-2023-0180"
+        ],
+        "pulmonary embolism": [
+          "QID-2023-0180"
+        ],
+        "hypertensive emergency": [
+          "QID-2023-0181"
+        ],
+        "hypertensive encephalopathy": [
+          "QID-2023-0181"
+        ],
+        "hairy tongue": [
+          "QID-2023-0190"
+        ],
+        "retention hyperkeratosis": [
+          "QID-2023-0190"
+        ],
+        "abdominal aortic aneurysm": [
+          "QID-2023-0199"
+        ]
+      },
+      "drugs": {
+        "budesonide/formoterol": [
+          "QID-2023-0002",
+          "QID-2023-0108"
+        ],
+        "budesonide": [
+          "QID-2023-0002"
+        ],
+        "fluticasone/salmeterol": [
+          "QID-2023-0002"
+        ],
+        "fluticasone/vilanterol": [
+          "QID-2023-0002"
+        ],
+        "tiotropium/olodaterol": [
+          "QID-2023-0002"
+        ],
+        "proton pump inhibitors": [
+          "QID-2023-0003"
+        ],
+        "NSAIDs": [
+          "QID-2023-0003"
+        ],
+        "aspirin": [
+          "QID-2023-0013",
+          "QID-2023-0020"
+        ],
+        "metoprolol": [
+          "QID-2023-0013"
+        ],
+        "morphine": [
+          "QID-2023-0013"
+        ],
+        "nitroglycerin": [
+          "QID-2023-0013"
+        ],
+        "clopidogrel": [
+          "QID-2023-0020"
+        ],
+        "alteplase": [
+          "QID-2023-0020"
+        ],
+        "tenecteplase": [
+          "QID-2023-0020"
+        ],
+        "albuterol": [
+          "QID-2023-0025"
+        ],
+        "clotrimazole/betamethasone": [
+          "QID-2023-0068"
+        ],
+        "mupirocin": [
+          "QID-2023-0068"
+        ],
+        "nystatin": [
+          "QID-2023-0068"
+        ],
+        "terbinafine": [
+          "QID-2023-0068"
+        ],
+        "azithromycin": [
+          "QID-2023-0070"
+        ],
+        "finasteride": [
+          "QID-2023-0081"
+        ],
+        "letrozole": [
+          "QID-2023-0081"
+        ],
+        "metformin": [
+          "QID-2023-0081"
+        ],
+        "norgestimate/ethinyl estradiol": [
+          "QID-2023-0081"
+        ],
+        "spironolactone": [
+          "QID-2023-0081"
+        ],
+        "ibuprofen": [
+          "QID-2023-0098"
+        ],
+        "levothyroxine": [
+          "QID-2023-0098"
+        ],
+        "methimazole": [
+          "QID-2023-0098"
+        ],
+        "prednisone": [
+          "QID-2023-0098"
+        ],
+        "vancomycin": [
+          "QID-2023-0098"
+        ],
+        "tiotropium": [
+          "QID-2023-0108"
+        ],
+        "ipratropium": [
+          "QID-2023-0108"
+        ],
+        "levalbuterol": [
+          "QID-2023-0108"
+        ],
+        "umeclidinium/vilanterol": [
+          "QID-2023-0108"
+        ],
+        "topical corticosteroids": [
+          "QID-2023-0137"
+        ],
+        "proton pump inhibitor": [
+          "QID-2023-0149"
+        ],
+        "clobetasol": [
+          "QID-2023-0162"
+        ],
+        "desonide": [
+          "QID-2023-0162"
+        ],
+        "hydrocortisone": [
+          "QID-2023-0162"
+        ],
+        "triamcinolone": [
+          "QID-2023-0162"
+        ],
+        "apixaban": [
+          "QID-2023-0166"
+        ],
+        "enoxaparin": [
+          "QID-2023-0166"
+        ]
+      },
+      "guidelines": {
+        "National Asthma Education and Prevention Program 2020": [
+          "QID-2023-0002"
+        ],
+        "American Gastroenterological Association 2022": [
+          "QID-2023-0003"
+        ],
+        "GOLD 2023": [
+          "QID-2023-0108"
+        ],
+        "CDC 2023": [
+          "QID-2023-0111"
+        ],
+        "AAFP 2022 hypertension guideline": [
+          "QID-2023-0140"
+        ],
+        "FAA oxygen requirements": [
+          "QID-2023-0141"
+        ],
+        "American College of Gastroenterology": [
+          "QID-2023-0149"
+        ],
+        "Modified Centor Criteria": [
+          "QID-2023-0173"
+        ],
+        "Light's criteria": [
+          "QID-2023-0180"
+        ],
+        "2017 ACC/AHA": [
+          "QID-2023-0181"
+        ],
+        "USPSTF AAA screening recommendations": [
+          "QID-2023-0199"
+        ]
+      }
+    },
+    "items_matched": 39,
+    "items_queried": 39,
+    "coverage_pct": 100.0
+  },
+  "spatial_clustering": {
+    "subcol_concentration": {
+      "Acute Care": {
+        "total_misses": 19,
+        "unique_subcols": 7,
+        "herfindahl": 0.197,
+        "concentrated": false,
+        "dominant_subcol": 5,
+        "dominant_count": 5
+      },
+      "Emergent/Urgent": {
+        "total_misses": 2,
+        "unique_subcols": 1,
+        "herfindahl": 1.0,
+        "concentrated": true,
+        "dominant_subcol": 3,
+        "dominant_count": 2
+      },
+      "Chronic Care": {
+        "total_misses": 8,
+        "unique_subcols": 3,
+        "herfindahl": 0.375,
+        "concentrated": false,
+        "dominant_subcol": 7,
+        "dominant_count": 4
+      },
+      "Foundations": {
+        "total_misses": 3,
+        "unique_subcols": 1,
+        "herfindahl": 1.0,
+        "concentrated": true,
+        "dominant_subcol": 2,
+        "dominant_count": 3
+      },
+      "Preventive": {
+        "total_misses": 7,
+        "unique_subcols": 2,
+        "herfindahl": 0.51,
+        "concentrated": true,
+        "dominant_subcol": 4,
+        "dominant_count": 4
+      }
+    },
+    "consecutive_miss_runs": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        104,
+        107,
+        108
+      ],
+      [
+        140,
+        141,
+        142
+      ]
+    ],
+    "longest_run": 3,
+    "miss_score_mean": 454,
+    "miss_score_sd": 298
+  },
+  "cross_dimensional_patterns": {
+    "patterns": [
+      {
+        "type": "blueprint_gap",
+        "description": "Consistent 28-point gap: Chronic Care (78%) vs Foundations (50%)",
+        "best": "Chronic Care",
+        "worst": "Foundations",
+        "gap": 0.278
+      },
+      {
+        "type": "difficulty_inversion",
+        "description": "Paradoxical: accuracy on easy items (0%) lower than mid-difficulty (52%). Possible second-guessing pattern.",
+        "easy_rate": 0.0,
+        "mid_rate": 0.524
+      }
+    ],
+    "accuracy_by_difficulty_band": {
+      "0": 0.807,
+      "200": 0.75,
+      "400": 0.524,
+      "600": 0.714,
+      "800": 0.0,
+      "1000": 0.0
+    }
+  },
+  "yield_priorities": [
+    {
+      "dimension": "Acute Care",
+      "dimension_type": "blueprint",
+      "current_rate": 0.612,
+      "target_rate": 0.7,
+      "item_count": 49,
+      "recoverable_items": 4.3,
+      "exam_weight_pct": 35,
+      "priority_score": 15.05
+    },
+    {
+      "dimension": "Foundations",
+      "dimension_type": "blueprint",
+      "current_rate": 0.5,
+      "target_rate": 0.7,
+      "item_count": 6,
+      "recoverable_items": 1.2,
+      "exam_weight_pct": 5,
+      "priority_score": 0.6
+    },
+    {
+      "dimension": "Emergent/Urgent",
+      "dimension_type": "blueprint",
+      "current_rate": 0.667,
+      "target_rate": 0.7,
+      "item_count": 6,
+      "recoverable_items": 0.2,
+      "exam_weight_pct": 20,
+      "priority_score": 0.4
+    }
+  ],
+  "icd10_weakness_map": {
+    "icd10_clusters": [
+      {
+        "code": "I10",
+        "miss_count": 5,
+        "description": "Essential hypertension",
+        "relevance": "primary",
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system"
+      },
+      {
+        "code": "J44.1",
+        "miss_count": 3,
+        "description": "Chronic obstructive pulmonary disease with acute exacerbation",
+        "relevance": "secondary",
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system"
+      },
+      {
+        "code": "I16.1",
+        "miss_count": 2,
+        "description": "Hypertensive emergency",
+        "relevance": "secondary",
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system"
+      },
+      {
+        "code": "B96.81",
+        "miss_count": 2,
+        "description": "Helicobacter pylori as the cause of diseases classified elsewhere",
+        "relevance": "primary",
+        "chapter": "I",
+        "chapter_desc": "Certain infectious and parasitic diseases"
+      },
+      {
+        "code": "B17.10",
+        "miss_count": 2,
+        "description": "Acute hepatitis C without hepatic coma",
+        "relevance": "primary",
+        "chapter": "I",
+        "chapter_desc": "Certain infectious and parasitic diseases"
+      },
+      {
+        "code": "L76.21",
+        "miss_count": 2,
+        "description": "Postprocedural hemorrhage of skin and subcutaneous tissue following a dermatologic procedure",
+        "relevance": "primary",
+        "chapter": "XII",
+        "chapter_desc": "Diseases of the skin"
+      },
+      {
+        "code": "J02.9",
+        "miss_count": 2,
+        "description": "Acute pharyngitis, unspecified",
+        "relevance": "secondary",
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system"
+      },
+      {
+        "code": "J04.0",
+        "miss_count": 2,
+        "description": "Acute laryngitis",
+        "relevance": "primary",
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system"
+      },
+      {
+        "code": "J05.10",
+        "miss_count": 2,
+        "description": "Acute epiglottitis without obstruction",
+        "relevance": "primary",
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system"
+      },
+      {
+        "code": "C78.03",
+        "miss_count": 1,
+        "description": "Secondary malignant neoplasm of vertebral column",
+        "relevance": "primary",
+        "chapter": null,
+        "chapter_desc": null
+      },
+      {
+        "code": "C85.97",
+        "miss_count": 1,
+        "description": "Non-Hodgkin lymphoma, unspecified, spleen",
+        "relevance": "secondary",
+        "chapter": "II",
+        "chapter_desc": "Neoplasms"
+      },
+      {
+        "code": "G95.20",
+        "miss_count": 1,
+        "description": "Unspecified cord compression",
+        "relevance": "primary",
+        "chapter": null,
+        "chapter_desc": null
+      },
+      {
+        "code": "I87.1",
+        "miss_count": 1,
+        "description": "Compression of vein",
+        "relevance": "primary",
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system"
+      },
+      {
+        "code": "J45.40",
+        "miss_count": 1,
+        "description": "Moderate persistent asthma, uncomplicated",
+        "relevance": "primary",
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system"
+      },
+      {
+        "code": "K22.6",
+        "miss_count": 1,
+        "description": "Gastro-esophageal laceration-hemorrhage syndrome",
+        "relevance": "secondary",
+        "chapter": "XI",
+        "chapter_desc": "Diseases of the digestive system"
+      },
+      {
+        "code": "K25.0",
+        "miss_count": 1,
+        "description": "Acute gastric ulcer with hemorrhage",
+        "relevance": "secondary",
+        "chapter": "XI",
+        "chapter_desc": "Diseases of the digestive system"
+      },
+      {
+        "code": "I21.9",
+        "miss_count": 1,
+        "description": "Acute myocardial infarction, unspecified",
+        "relevance": "primary",
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system"
+      },
+      {
+        "code": "I24.0",
+        "miss_count": 1,
+        "description": "Acute coronary thrombosis not resulting in myocardial infarction",
+        "relevance": "secondary",
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system"
+      },
+      {
+        "code": "K90.0",
+        "miss_count": 1,
+        "description": "Celiac disease",
+        "relevance": "primary",
+        "chapter": "XI",
+        "chapter_desc": "Diseases of the digestive system"
+      },
+      {
+        "code": "K90.9",
+        "miss_count": 1,
+        "description": "Unspecified malabsorption",
+        "relevance": "secondary",
+        "chapter": "XI",
+        "chapter_desc": "Diseases of the digestive system"
+      }
+    ],
+    "chapter_summary": {
+      "IX": 18,
+      "X": 16,
+      "I": 12,
+      "IV": 9,
+      "XIX": 7,
+      "VI": 6,
+      "XVIII": 6,
+      "XIII": 6,
+      "XI": 5,
+      "XII": 4,
+      "II": 2,
+      "XVI": 2,
+      "XIV": 2,
+      "XXI": 2,
+      "V": 1,
+      "XVII": 1,
+      "II-III": 1,
+      "XX": 1
+    },
+    "total_codes_found": 91,
+    "questions_mapped": 39
+  },
+  "pathway_gap_map": {
+    "pathway_gaps": [
+      {
+        "icd10_code": "I10",
+        "description": "Essential hypertension",
+        "miss_count": 5,
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system",
+        "pathway_roles": {
+          "first_line": 22,
+          "monitoring": 16,
+          "second_line": 14,
+          "screening_prevention": 10,
+          "special_pops": 1,
+          "referral": 1,
+          "diagnosis": 1
+        },
+        "dominant_role": "first_line",
+        "interpretation": "treatment selection gap",
+        "summary": "5 missed questions \u2014 first_line (22 guidelines) \u2014 treatment selection gap"
+      },
+      {
+        "icd10_code": "J44.1",
+        "description": "Chronic obstructive pulmonary disease with acute exacerbation",
+        "miss_count": 3,
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system",
+        "pathway_roles": {
+          "first_line": 21,
+          "second_line": 11,
+          "screening_prevention": 2,
+          "referral": 2
+        },
+        "dominant_role": "first_line",
+        "interpretation": "treatment selection gap",
+        "summary": "3 missed questions \u2014 first_line (21 guidelines) \u2014 treatment selection gap"
+      },
+      {
+        "icd10_code": "I16.1",
+        "description": "Hypertensive emergency",
+        "miss_count": 2,
+        "chapter": "IX",
+        "chapter_desc": "Diseases of the circulatory system",
+        "pathway_roles": {
+          "second_line": 4,
+          "screening_prevention": 1,
+          "first_line": 1
+        },
+        "dominant_role": "second_line",
+        "interpretation": "escalation therapy gap",
+        "summary": "2 missed questions \u2014 second_line (4 guidelines) \u2014 escalation therapy gap"
+      },
+      {
+        "icd10_code": "B96.81",
+        "description": "Helicobacter pylori as the cause of diseases classified elsewhere",
+        "miss_count": 2,
+        "chapter": "I",
+        "chapter_desc": "Certain infectious and parasitic diseases",
+        "pathway_roles": {
+          "first_line": 4,
+          "second_line": 3,
+          "monitoring": 2
+        },
+        "dominant_role": "first_line",
+        "interpretation": "treatment selection gap",
+        "summary": "2 missed questions \u2014 first_line (4 guidelines) \u2014 treatment selection gap"
+      },
+      {
+        "icd10_code": "B17.10",
+        "description": "Acute hepatitis C without hepatic coma",
+        "miss_count": 2,
+        "chapter": "I",
+        "chapter_desc": "Certain infectious and parasitic diseases",
+        "pathway_roles": {
+          "screening_prevention": 4,
+          "first_line": 2,
+          "special_pops": 1,
+          "second_line": 1,
+          "monitoring": 1
+        },
+        "dominant_role": "screening_prevention",
+        "interpretation": "preventive care gap",
+        "summary": "2 missed questions \u2014 screening_prevention (4 guidelines) \u2014 preventive care gap"
+      },
+      {
+        "icd10_code": "L76.21",
+        "description": "Postprocedural hemorrhage of skin and subcutaneous tissue following a dermatologic procedure",
+        "miss_count": 2,
+        "chapter": "XII",
+        "chapter_desc": "Diseases of the skin",
+        "pathway_roles": {
+          "first_line": 1
+        },
+        "dominant_role": "first_line",
+        "interpretation": "treatment selection gap",
+        "summary": "2 missed questions \u2014 first_line (1 guidelines) \u2014 treatment selection gap"
+      },
+      {
+        "icd10_code": "J02.9",
+        "description": "Acute pharyngitis, unspecified",
+        "miss_count": 2,
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system",
+        "pathway_roles": {
+          "second_line": 2,
+          "monitoring": 1,
+          "first_line": 1
+        },
+        "dominant_role": "second_line",
+        "interpretation": "escalation therapy gap",
+        "summary": "2 missed questions \u2014 second_line (2 guidelines) \u2014 escalation therapy gap"
+      },
+      {
+        "icd10_code": "J04.0",
+        "description": "Acute laryngitis",
+        "miss_count": 2,
+        "chapter": "X",
+        "chapter_desc": "Diseases of the respiratory system",
+        "pathway_roles": {
+          "first_line": 4,
+          "referral": 1
+        },
+        "dominant_role": "first_line",
+        "interpretation": "treatment selection gap",
+        "summary": "2 missed questions \u2014 first_line (4 guidelines) \u2014 treatment selection gap"
+      }
+    ],
+    "codes_mapped": 8,
+    "status": "complete"
+  },
+  "practice_questions": [
+    {
+      "qid": "QID-2025-0190",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Gastrointestinal",
+      "body_system_merged": "Gastrointestinal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 53-year-old male without a significant past medical history presents to the emergency department for evaluation of abdominal pain, nausea, and vomiting. Pertinent findings on presentation include notable tenderness in the epigastrium and a lipase level >3 times the upper limit of normal. He is admitted for acute pancreatitis. Intravenous lactated Ringer solution, antiemetics, and pain control are initiated. At the time of your evaluation he has normal vital signs and reports improved symptoms, although you still note abdominal tenderness. When entering admission orders for this patient, which one of the following diets would be most appropriate?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Full liquids\"}, {\"letter\": \"B\", \"text\": \"Low-carbohydrate\"}, {\"letter\": \"C\", \"text\": \"Low-fat\"}, {\"letter\": \"D\", \"text\": \"NPO\"}]",
+      "correct_letter": "C",
+      "correct_text": "Low-fat",
+      "explanation": "Pancreatitis is associated with an intense inflammatory response that increases caloric needs, and nutrition management is a key component of care. Acute pancreatitis is also associated with reduced perfusion of the intestinal mucosa, leading to tissue damage and increased intestinal permeability. Enteral feeding provides calories and increases splanchnic blood flow, leading to improved integrity of the bowel wall and improved gut motility. Patients with acute pancreatitis benefit from early enteral feeding within 24 hours of admission. A Cochrane review found that enteral nutrition has been associated with lower mortality, less multiple organ failure, and less systemic infection compared with parenteral nutrition. In severe acute pancreatitis, the benefits of enteral nutrition appear to be even more notable with a relative risk of death of 0.18 (95% CI 0.06 to 0.58). Liquid and soft diets have no evidence of benefit over a low-fat solid diet, and some studies found a shorter length of stay in patients started on solid diets rather than liquid diets. If patients cannot tolerate an oral diet within 72 hours, enteral nutrition should be provided via nasogastric or nasojejunal tube. Parenteral nutrition should be administered in patients who cannot tolerate tube feeding. Low-carbohydrate diets are not recommended because they are often high in fat and may worsen pancreatic inflammation.",
+      "reference": "Ellis R, Ellis C. Dog and cat bites. Am Fam Physician. 2014;90(4):239-243. | Ortiz DD, Lezcano FO. Dog and cat bites: rapid evidence review. Am Fam Physician. 2023;108(5):501-505.",
+      "concept_tags": "{\"diagnoses\": [\"acute pancreatitis\"], \"drugs\": [\"lactated Ringer solution\", \"antiemetics\"], \"guidelines\": [], \"thresholds\": [\"lipase >3 times upper limit of normal\"], \"concept_summary\": \"Acute pancreatitis patients benefit from early enteral nutrition with a low-fat diet rather than NPO status to maintain gut integrity and provide needed calories.\"}",
+      "linked_articles": 5,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 46.15
+    },
+    {
+      "qid": "QID-2025-0006",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Gastrointestinal",
+      "body_system_merged": "Gastrointestinal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "According to guidelines from the American Gastroenterological Association, which one of the following is recommended as the best pharmacologic treatment of typical symptoms in diarrhea-predominant irritable bowel syndrome?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Amitriptyline\"}, {\"letter\": \"B\", \"text\": \"Dicyclomine\"}, {\"letter\": \"C\", \"text\": \"Linaclotide (Linzess)\"}, {\"letter\": \"D\", \"text\": \"Lubiprostone (Amitiza)\"}, {\"letter\": \"E\", \"text\": \"Rifaximin (Xifaxan)\"}]",
+      "correct_letter": "E",
+      "correct_text": "Rifaximin (Xifaxan)",
+      "explanation": "According to the 2022 American Gastroenterological Association guidelines for diarrhea- predominant irritable bowel syndrome (IBS-D), the nonabsorbable antibiotic rifaximin has the best evidence for controlling diarrhea, discomfort, bloating, and abdominal pain. It has a broad spectrum with activity against gram-positive, gram-negative (including Clostridioides difficile), and anaerobic bacteria. It is thought to work by reducing bacterial byproducts and altering the gut flora. It is prescribed as a 14-day course for acute and recurrent symptoms. Rifaximin does not have any significant adverse effects, but it is a high-cost medication. Low-dose amitriptyline and dicyclomine are often effective in reducing symptoms, but the evidence is not as strong as that of rifaximin. Linaclotide is used for constipation- predominant IBS (IBS-C), but its chief side effect of diarrhea results in many patients discontinuing the medication. Lubiprostone is another medication used for IBS-C and for opioid-induced constipation, not IBS-D.",
+      "reference": "Karuppiah S, Pomianowski K. Rifaximin (Xifaxan) for irritable bowel syndrome. Am Fam Physician. 2017;95(4):258-259. | Chang L, Sultan S, Lembo A, Verne GN, Smalley W, Heidelbaugh JJ. AGA clinical practice guideline on the pharmacologic management of irritable bowel syndrome with constipation. Gastroenterology. 2022;163(1):118-136. | Arnold MJ. Medications for irritable bowel syndrome: guidelines from the AGA. Am Fam Physician. 2023;108(5):527-529. | Lembo A, Sultan S, Chang L, Heidelbaugh JJ, Smalley W, Verne GN. AGA clinical practice guideline on the pharmacological management of irritable bowel syndrome with diarrhea. Gastroenterology. 2022;163(1)137-151.",
+      "concept_tags": "{\"diagnoses\": [\"diarrhea-predominant irritable bowel syndrome\", \"IBS-D\"], \"drugs\": [\"rifaximin\", \"amitriptyline\", \"dicyclomine\", \"linaclotide\", \"lubiprostone\"], \"guidelines\": [\"AGA 2022\"], \"thresholds\": [], \"concept_summary\": \"Tests knowledge that rifaximin is the best evidence-based pharmacologic treatment for diarrhea-predominant IBS according to AGA guidelines.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 46.15
+    },
+    {
+      "qid": "QID-2025-0040",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Special Sensory",
+      "body_system_merged": "Special Sensory",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "An otherwise healthy 26-year-old female presents to your clinic with a history of 3 episodes of vertigo occurring over the last week. Each episode lasts for several hours. During the episodes, she notes fullness in the right ear with tinnitus and hearing loss. She has not noticed anything specific that triggers the episodes, and reports consuming 1 glass of wine per night. She does not report headache, visual changes, fever, or upper respiratory symptoms. She is currently asymptomatic and a physical examination is unremarkable. Which one of the following would be the most appropriate next step?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Recommending a reduction in alcohol intake\"}, {\"letter\": \"B\", \"text\": \"Performing the Epley maneuver\"}, {\"letter\": \"C\", \"text\": \"Ordering audiometry\"}, {\"letter\": \"D\", \"text\": \"Initiating oral hydrochlorothiazide, 25 mg daily\"}, {\"letter\": \"E\", \"text\": \"Initiating oral prednisone, 20 mg daily for 5 days\"}]",
+      "correct_letter": "C",
+      "correct_text": "Ordering audiometry",
+      "explanation": "Meniere disease is characterized by spontaneous recurring episodes of vertigo with associated unilateral hearing loss, tinnitus, and nystagmus. Even though there are no specific diagnostic tests, audiometry should be performed in patients suspected of having this condition. Sensorineural hearing loss may or may not be present on audiometric evaluation. Acute attacks should be treated with medication such as promethazine, diazepam, or prochlorperazine to suppress vestibular function. Lifestyle interventions, including salt restriction and reduction in alcohol and caffeine intake, have traditionally been recommended. However, there is no sufficient evidence to support these recommendations. The Epley maneuver is a repositioning treatment used for benign paroxysmal positional vertigo and not Meniere disease. There is no good-quality evidence that diuretics, antivirals, or corticosteroids treat or prevent Meniere disease.",
+      "reference": "Basura GJ, Adams ME, Monfared A, et al. Clinical practice guideline: Meniere's Disease Executive Summary. Otolaryngol Head Neck Surg. 2020;162(4):415-434. | Webster KE, Galbraith K, Harrington-Benton NA, et al. Systemic pharmacological interventions for Meniere's disease. Cochrane Database Syst Rev. 2023;2(2):CD015171. | Rogers TS, Noel MA, Garcia B. Dizziness: evaluation and management. Am Fam Physician. 2023;107(5):514-523. | Webster KE, George B, Lee A, et al. Lifestyle and dietary interventions for Meniere's disease. Cochrane Database Syst Rev. 2023;(2):CD015244.",
+      "concept_tags": "{\"diagnoses\": [\"Meniere disease\"], \"drugs\": [\"promethazine\", \"diazepam\", \"prochlorperazine\"], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"This question tests diagnosis of Meniere disease through its classic triad of episodic vertigo, unilateral hearing loss, and tinnitus, with audiometry being the appropriate initial diagnostic test.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 46.15
+    },
+    {
+      "qid": "QID-2025-0112",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Reproductive: Female",
+      "body_system_merged": "Reproductive: Female",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 32-year-old gravida 2 para 2 female who is 3 weeks post partum presents to the local urgent care center for left breast pain, swelling, and redness that started a few hours ago. She does not have fever or chills. A breast examination is significant for warm, tender, and mildly erythematous nodules localized to the upper outer quadrant of the left breast. In addition to initiating NSAIDs, which one of the following would be the most appropriate next step in management?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Applying cold compresses to the affected breast\"}, {\"letter\": \"B\", \"text\": \"Applying warm compresses to the affected breast\"}, {\"letter\": \"C\", \"text\": \"Using a manual breast pump on the affected breast for complete breast emptying\"}, {\"letter\": \"D\", \"text\": \"Obtaining a CBC and C-reactive protein levels\"}, {\"letter\": \"E\", \"text\": \"Obtaining a breast milk culture\"}]",
+      "correct_letter": "A",
+      "correct_text": "Applying cold compresses to the affected breast",
+      "explanation": "Mastitis is a spectrum of inflammatory breast conditions, which includes lactational or inflammatory mastitis, bacterial mastitis, breast abscess, postpartum breast engorgement, and more. Patients with inflammatory mastitis exhibit unilateral breast erythema, swelling, and pain and may experience systemic inflammatory responses such as fever, malaise, or headache. The initial steps in managing inflammatory mastitis are supportive care with NSAIDs, cold compresses, and watchful waiting. Inflammatory mastitis is diagnosed clinically and does not require laboratory testing or imaging. If a patient's symptoms worsen or do not improve within 24\u201d\u201c48 hours with conservative measures, narrow-spectrum antibiotics targeting the most common organisms (Staphylococcus species and Streptococcus species) should be empirically initiated for bacterial mastitis. Warm compresses and frequent breast pumping for complete breast emptying to avoid milk stasis are no longer recommended. CBC and C-reactive protein testing are not helpful as these levels can be elevated in both inflammatory and bacterial mastitis. Breast milk cultures are seldom necessary because they may produce false- positive results caused by normal skin bacteria colonization.",
+      "reference": "Mitchell KB, Johnson HM, Rodr\ufffdguez JM, et al. Academy of Breastfeeding Medicine Clinical Protocol #36: the mastitis spectrum, revised 2022.Breastfeed Med. 2022;17(5):360-376. | Lawrence KV. Supporting the paradigm shift: watchful waiting for lactational mastitis. Am Fam Physician. 2024;110(2):118-119. | Morcomb EF, Dargel CM, Anderson SA. Mastitis: rapid evidence review. Am Fam Physician. 2024;110(2):174-182.",
+      "concept_tags": "{\"diagnoses\": [\"mastitis\", \"inflammatory mastitis\", \"postpartum breast engorgement\"], \"drugs\": [\"NSAIDs\"], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"Tests knowledge of appropriate supportive care for early inflammatory mastitis, specifically that cold compresses are preferred over warm compresses in the initial management.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 46.15
+    },
+    {
+      "qid": "QID-2025-0123",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Nonspecific",
+      "body_system_merged": "Nonspecific",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A previously healthy 70-year-old yoga instructor is brought to the emergency department (ED) by her students after falling while practicing yoga. Her students report that she struck her head on the floor and was unresponsive for a few seconds, but recovered quickly. She was slightly confused after the injury, but was able to stand and describe the incident. On initial assessment in the ED, she is holding her head in obvious discomfort and a hematoma is developing on her forehead. She is alert and oriented, with a Glasgow Coma Scale score of",
+      "choices": "[]",
+      "correct_letter": "D",
+      "correct_text": "",
+      "explanation": "In an older adult, head trauma with a loss of consciousness, vomiting, anterograde amnesia, or a previous history of head trauma requires CT of the head. Being older than 65 years is considered an independent risk factor for head trauma. Older adults with a traumatic brain injury experience higher morbidity and mortality due to age-related changes in vasculature that leave vessels more vulnerable to rupture and changes in white matter that render white matter tracts more susceptible to shear injury. As a result of these physiological changes, older patients are more susceptible to injury, and even those with minor mechanisms of injury and no abnormalities on a neurologic examination may still have subdural or epidural bleeding. NSAIDs carry a risk of bleeding and should be avoided following a traumatic brain injury.",
+      "reference": "Pyzocha N. Accidental hypothermia: guidelines from the Wilderness Medical Society. Am Fam Physician. 2020;102(9):571-572. | Dow J, Giesbrecht GG, Danzl DF, et al. Wilderness Medical Society clinical practice guidelines for the out-of-hospital evaluation and treatment of accidental hypothermia: 2019 update. Wilderness Environ Med. 2019;30(4_suppl):S47-S69.",
+      "concept_tags": "{\"diagnoses\": [\"traumatic brain injury\", \"head trauma\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [\"age >65 years\"], \"concept_summary\": \"Tests knowledge that head trauma with loss of consciousness in patients >65 years requires CT imaging due to increased risk of intracranial injury.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 46.15
+    },
+    {
+      "qid": "QID-2025-0162",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Gastrointestinal",
+      "body_system_merged": "Gastrointestinal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A generally healthy 15-year-old female presents to your office with a history of frequent, generalized abdominal pain and loose stools daily for the last few months. She has not noted any relationship to food or a specific frequency. She has not had any previous surgeries and is up to date on routine vaccinations. At her 14-year-old well child visit, her height was at the 50th percentile and her weight was at the 60th percentile. Today, her height is at the 35th percentile and her weight at the 20th percentile. She has had a weight loss of 1 kg (2 lb). Her vital signs are normal. Which one of the following would be the most appropriate next step?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Reassurance and dietary monitoring to evaluate for a relationship to symptoms\"}, {\"letter\": \"B\", \"text\": \"Fecal fat testing\"}, {\"letter\": \"C\", \"text\": \"An IgA tissue transglutaminase level\"}, {\"letter\": \"D\", \"text\": \"Carbohydrate breath testing\"}, {\"letter\": \"E\", \"text\": \"A referral for esophagogastroduodenoscopy\"}]",
+      "correct_letter": "C",
+      "correct_text": "An IgA tissue transglutaminase level",
+      "explanation": "Patients with classic symptoms of diarrhea, abdominal pain, weight loss, bloating, malabsorption, and failure to thrive should undergo evaluation for celiac disease. Serologic testing for IgA tissue transglutaminase (tTG) is the preferred initial screening in all age groups due to its high sensitivity (95%) and specificity (95%). When celiac disease is strongly suspected, total IgA levels should also be obtained because 2%\u201d\u201c3% of these patients will have IgA deficiency. If IgA tTG serology is positive, most patients will require esophagogastroduodenoscopy with small-bowel biopsy for confirmation, but it is not used as an initial test and some organizations state that a no-biopsy technique is safe for children with very high IgA tTG levels. This patient has classic signs of malabsorption and unexplained weight loss, indicating need for further evaluation. Reassurance would be inappropriate at this time. Fecal fat testing may be useful in the workup of suspected malabsorption symptoms, but the initial test is usually a qualitative assessment of fat in a single specimen because it is less expensive and easier to perform than 72-hour testing. If high suspicion remains after negative initial testing, a 72-hour fecal fat test should be performed. Carbohydrate breath testing can be used to evaluate for suspected small intestinal bacterial overgrowth (SIBO). SIBO generally occurs in individuals with abnormal anatomy or other risk factors for abnormal intestinal mobility, including diabetes mellitus or scleroderma. The majority of patients with SIBO present with bloating and flatulence.",
+      "reference": "Pimentel M, Saad RJ, Long MD, Rao SSC. ACG clinical guideline: small intestinal bacterial overgrowth. Am J Gastroenterol. 2020;115(2):165-178. | Burgers K, Lindberg B, Bevis ZJ. Chronic diarrhea in adults: evaluation and differential diagnosis. Am Fam Physician. 2020;101(8):472-480. | Williams PM, Harris LM DO, Odom MR. Celiac disease: common questions and answers. Am Fam Physician. 2022;106(1):36-43.",
+      "concept_tags": "{\"diagnoses\": [\"celiac disease\", \"malabsorption\", \"failure to thrive\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [\"IgA tTG sensitivity 95%\", \"IgA tTG specificity 95%\", \"IgA deficiency 2-3%\"], \"concept_summary\": \"Tests when to screen for celiac disease using IgA tissue transglutaminase in adolescents with chronic diarrhea, abdominal pain, and failure to thrive.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 46.15
+    },
+    {
+      "qid": "QID-2025-0174",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Musculoskeletal",
+      "body_system_merged": "Musculoskeletal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 25-year-old male presents with shoulder pain after having fallen on his arm in an outstretched position. He reports a sensation of catching and popping in the shoulder. With the patient seated and hands placed on his hips, you apply force to the elbow and direct the humerus anteriorly and superiorly, while asking the patient to resist your motion, which produces pain in the affected shoulder. Which one of the following is the most likely diagnosis?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Acromioclavicular joint arthritis\"}, {\"letter\": \"B\", \"text\": \"Adhesive capsulitis\"}, {\"letter\": \"C\", \"text\": \"Glenohumeral osteoarthritis\"}, {\"letter\": \"D\", \"text\": \"A glenoid labral tear\"}, {\"letter\": \"E\", \"text\": \"A rotator cuff tear\"}]",
+      "correct_letter": "D",
+      "correct_text": "A glenoid labral tear",
+      "explanation": "This patient's history of a catching or popping sensation combined with a positive anterior slide test, as described in the physical examination, is highly suggestive of a glenoid labral tear. This combination of history and the positive anterior slide test has a positive likelihood ratio of 6.0 in diagnosing a glenoid labral tear. Acromioclavicular joint arthritis presents with superior shoulder pain and tenderness over the acromioclavicular joint, often with a positive cross-body adduction test. Adhesive capsulitis is characterized by diffuse shoulder pain and restricted passive range of motion. Glenohumeral osteoarthritis usually presents with a gradual onset of pain and loss of motion, particularly in older patients. A rotator cuff tear typically presents with pain and weakness, especially with overhead activities, and positive findings on the empty can and external rotation tests. Acromioclavicular joint arthritis, adhesive capsulitis, glenohumeral osteoarthritis, and rotator cuff tears are not associated with catching or popping sensations, and the crank and anterior slide tests are not specific for these conditions.",
+      "reference": "Burbank KM, Stevenson JH, Czarnecki GR, Dorfman J. Chronic shoulder pain: part I. Evaluation and diagnosis. Am Fam Physician. 2008;77(4):453-460. | Michener LA, Doukas WC, Murphy KP, Walsworth MK. Diagnostic accuracy of history and physical examination of superior labrum anterior-posterior lesions. J Athl Train. 2011;46(4):343-348. | Walsworth MK, Doukas WC, Murphy KP, Mielcarek BJ, Michener LA. Reliability and diagnostic accuracy of history and physical examination for diagnosing glenoid labral tears. Am J Sports Med. 2008;36(1):162-168.",
+      "concept_tags": "{\"diagnoses\": [\"glenoid labral tear\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [\"positive likelihood ratio 6.0\"], \"concept_summary\": \"Diagnoses glenoid labral tear using positive anterior slide test combined with characteristic catching/popping symptoms, which has a positive likelihood ratio of 6.0.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 46.15
+    },
+    {
+      "qid": "AAFP-50516",
+      "source_bank": "AAFP",
+      "source_label": "AAFP BRQ",
+      "exam_year": null,
+      "body_system": "Musculoskeletal",
+      "body_system_merged": "Musculoskeletal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 70-year-old male presents with an acutely painful, swollen right knee that developed over 2\u20133 days without any known cause. There is no other joint pain. He has had similar, less severe episodes off and on in the past. He feels well otherwise and has not had any fever, chills, or rash. Examination of other joints is negative except for some degenerative changes of the distal interphalangeal joints of the fingers. Examination of the right knee is notable for warmth, redness, diffuse tenderness, and swelling. There is no evidence of knee instability, meniscal injury, or trauma. A knee x-ray shows soft-tissue swelling and chondrocalcinosis (calcification of the cartilage). Knee aspiration is performed and a synovial fluid Gram stain is negative for bacteria with other results pending. Which one of the following is the most likely explanation for these knee findings? (check one)",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Calcium pyrophosphate deposition disease (pseudogout)\"}, {\"letter\": \"B\", \"text\": \"Gout\"}, {\"letter\": \"C\", \"text\": \"Osteoarthritis\"}, {\"letter\": \"D\", \"text\": \"Psoriatic arthritis\"}, {\"letter\": \"E\", \"text\": \"Septic arthritis\"}]",
+      "correct_letter": "A",
+      "correct_text": "Calcium pyrophosphate deposition disease (pseudogout)",
+      "explanation": "These symptoms and radiographic findings are most consistent with calcium pyrophosphate deposition (CPPD) disease, also known as pseudogout. CPPD disease is an asymmetric, inflammatory, pauciarticular arthritis most frequently involving the knee, wrist, or first metatarsophalangeal joint. Inflammatory symptoms include erythema, warmth, swelling, and tenderness. The differential diagnosis includes CPPD disease, gout, and septic arthritis. The chondrocalcinosis, or calcification of the cartilage, is characteristic of CPPD disease and not gout. On polarized microscopy of joint fluid, CPPD disease is confirmed by positively birefringent crystals whereas gout is confirmed by negatively birefringent crystals. Osteoarthritis is noninflammatory in nature. There is no history of psoriasis in this patient and the history and physical examination are not suggestive of psoriatic arthritis. Septic arthritis is less likely as this patient\u2019s Gram stain is negative for bacteria and the patient has not had a fever.",
+      "reference": null,
+      "concept_tags": "{\"diagnoses\": [\"Calcium pyrophosphate deposition (CPPD) disease\", \"Pseudogout\", \"Gout\", \"Septic arthritis\", \"Osteoarthritis\"], \"drugs\": [], \"guidelines\": [\"AAFP Board Review\", \"Systematic approach to diagnosis of arthritis\"], \"thresholds\": [\"Acute presentation over 2-3 days\", \"Asymmetric, pauciarticular involvement\", \"Positively birefringent crystals on polarized microscopy\"], \"concept_summary\": \"Distinguishing CPPD disease (pseudogout) from gout and septic arthritis based on clinical presentation, radiographic findings of chondrocalcinosis, and crystal analysis on polarized microscopy.\"}",
+      "linked_articles": 5,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 45.95
+    },
+    {
+      "qid": "AAFP-50211",
+      "source_bank": "AAFP",
+      "source_label": "AAFP BRQ",
+      "exam_year": null,
+      "body_system": "Reproductive: Female",
+      "body_system_merged": "Reproductive: Female",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A healthy 49-year-old female presents to your office for a routine health maintenance visit. Since her last visit a year ago she has had only two menstrual periods. She reports sudden sensations of extreme heat in her face, neck, and chest that last just a few minutes but occur throughout the day. These symptoms are very bothersome and interfere with the quality of her sleep. Which one of the following would you recommend to relieve her symptoms? (check one)",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Black cohosh\"}, {\"letter\": \"B\", \"text\": \"Combined estrogen and progesterone\"}, {\"letter\": \"C\", \"text\": \"Compounded bioidentical hormones\"}, {\"letter\": \"D\", \"text\": \"Micronized progesterone\"}]",
+      "correct_letter": "B",
+      "correct_text": "Combined estrogen and progesterone",
+      "explanation": "This patient presents with typical vasomotor symptoms that can begin in perimenopause and affect sleep quality. Hormone therapy is the gold standard for treatment of vasomotor symptoms. Combination estrogen and progesterone therapy is highly effective for vasomotor symptoms and provides protection against uterine neoplasia. Although micronized progesterone decreases vasomotor symptoms there are no long-term studies to assess the safety of progestin-only treatment for menopausal symptoms. Compounded bioidentical hormone therapy creates safety concerns and is not a first-line therapy due to limited government regulation and monitoring, the potential for overdosing and underdosing, impurities or lack of sterility, and the lack of labeling describing risks. Testosterone alone is not FDA-approved for use in women. Additionally, it has not been shown to be beneficial for treatment of vasomotor symptoms in combination with hormone therapy and is associated with significant side effects. It may be useful for hypoactive sexual desire in postmenopausal women. There is insufficient data to recommend the use of herbal remedies such as black cohosh.",
+      "reference": null,
+      "concept_tags": "{\"diagnoses\": [\"Perimenopause\", \"Vasomotor symptoms (hot flashes)\", \"Menopause-related sleep disturbance\"], \"drugs\": [\"Hormone therapy (estrogen-progesterone combination)\", \"Combination estrogen and progesterone therapy\", \"Micronized progesterone\", \"Progestin-only therapy\", \"Bioidentical hormone therapy\", \"Testosterone\"], \"guidelines\": [\"North American Menopause Society (NAMS) 2017 hormone therapy position statement\", \"Endocrine Society clinical practice guideline - Androgen therapy in women\", \"FDA approval status for hormone therapies\"], \"thresholds\": [\"Two menstrual periods in one year (oligomenorrhea indicating perimenopause)\"], \"concept_summary\": \"Recognition of vasomotor symptoms in perimenopause and selection of hormone therapy as first-line treatment, with understanding of appropriate formulations and safety profiles of different hormone replacement options.\"}",
+      "linked_articles": 4,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 45.95
+    },
+    {
+      "qid": "AAFP-50068",
+      "source_bank": "AAFP",
+      "source_label": "AAFP BRQ",
+      "exam_year": null,
+      "body_system": "Musculoskeletal",
+      "body_system_merged": "Musculoskeletal",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 26-year-old recreational baseball player presents with recurrent right shoulder pain that tends to gradually worsen during play and is relieved by rest. His other daily activities have not been affected and he has no nighttime pain. Examination of the right shoulder reveals a normal appearance, no tenderness to palpation, normal abduction strength, and a positive painful arc at 90\u00b0. The drop-arm rotator cuff test is negative, the Hawkins impingement sign is mildly positive, the empty-can supraspinatus test is moderately positive, and the Gerber liftoff test is negative. Radiographs of the right shoulder are normal. Which one of the following would be appropriate at this time to provide long-term pain relief? (check one)",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Complete shoulder rest with temporary use of a shoulder sling\"}, {\"letter\": \"B\", \"text\": \"Recommending that he permanently stop playing baseball\"}, {\"letter\": \"C\", \"text\": \"A subacromial corticosteroid injection\"}, {\"letter\": \"D\", \"text\": \"Physical therapy\"}, {\"letter\": \"E\", \"text\": \"Referral for arthroscopic surgery\"}]",
+      "correct_letter": "D",
+      "correct_text": "Physical therapy",
+      "explanation": "This patient has shoulder impingement syndrome (with a positive Hawkins impingement sign) and evidence of supraspinatus tendinopathy (with a positive empty-can rotator cuff test). However, the negative drop-arm rotator cuff test is evidence against a complete rotator cuff tear with a negative drop-arm rotator cuff test, and the absence of night pain supports this. Physical therapy, along with pain control using NSAIDs, acetaminophen, or short-term opiate medication, would be most appropriate as initial therapy. Complete shoulder rest is inappropriate since his daily activities are not aggravating the problem, and cessation of play is not necessary since other treatment options are available. A subacromial corticosteroid injection, while commonly done and likely to provide short-term pain relief, is unlikely to provide long-term improvement in pain and function. Surgery is a potential option if other treatments fail and a significant tear is proven, but is not preferable as an initial treatment.",
+      "reference": null,
+      "concept_tags": "{\"diagnoses\": [\"Shoulder impingement syndrome\", \"Supraspinatus tendinopathy\", \"Rotator cuff strain/partial tear\", \"Rotator cuff tear (ruled out)\"], \"drugs\": [\"NSAIDs\", \"Acetaminophen\", \"Opioid medications\", \"Corticosteroids (subacromial injection)\"], \"guidelines\": [\"Chronic shoulder pain: Part I\", \"Chronic shoulder pain: Part II\", \"Common conditions in the overhead athlete\"], \"thresholds\": [\"Positive painful arc at 90 degrees\", \"Positive Hawkins impingement sign (mildly)\", \"Positive empty-can supraspinatus test (moderately)\", \"Negative drop-arm rotator cuff test\", \"Negative Gerber liftoff test\", \"Absence of nighttime pain\"], \"concept_summary\": \"Differentiation of shoulder impingement syndrome with supraspinatus tendinopathy from complete rotator cuff tear using clinical examination findings and appropriate initial conservative management in an overhead athlete.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 45.95
+    },
+    {
+      "qid": "AAFP-50255",
+      "source_bank": "AAFP",
+      "source_label": "AAFP BRQ",
+      "exam_year": null,
+      "body_system": "Special Sensory",
+      "body_system_merged": "Special Sensory",
+      "blueprint": "Acute Care and Diagnosis",
+      "question_text": "A 30-year-old male presents to your office after sustaining a scratch to the eye while playing with his 2-year-old nephew. A penlight examination reveals sensitivity to light and mild conjunctival irritation with no foreign body. Pupillary response, extraocular movements, and visual acuity are all normal. Fluorescein staining reveals a 3-mm corneal abrasion. Which one of the following would be the most appropriate management? (check one)",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Patching the affected eye\"}, {\"letter\": \"B\", \"text\": \"Patching the unaffected eye\"}, {\"letter\": \"C\", \"text\": \"Prednisolone ophthalmic drops\"}, {\"letter\": \"D\", \"text\": \"Tetracaine ophthalmic drops\"}, {\"letter\": \"E\", \"text\": \"Oral naproxen\"}]",
+      "correct_letter": "E",
+      "correct_text": "Oral naproxen",
+      "explanation": "Corneal abrasions are a common cause of acute eye pain and are often evaluated in primary care settings. Small (\uf0a34 mm), uncomplicated abrasions typically heal within 1\u20132 days and usually respond to oral analgesics such as acetaminophen or NSAIDs. A 2013 review reported effective pain relief and earlier return to work with use of topical NSAIDs, although a 2017 Cochrane review subsequently found that evidence may be lacking to support their use, especially considering the higher cost when compared to oral options. Patching has been proven ineffective for pain relief and can delay healing, although ophthalmologists sometimes use patching to treat large abrasions or to provide a protective barrier for patients who may have difficulty avoiding rubbing their eyes, such as children or people with cognitive impairment. Patching of the unaffected eye is done to treat amblyopia but is not appropriate for managing corneal abrasions. Topical corticosteroids such as prednisolone are not appropriate for treatment of corneal abrasions due to increased susceptibility to infection and the risk of delayed healing and should only be used under the guidance of an ophthalmologist. While point-of-care use of topical anesthetics such as tetracaine may be considered, repeated administration is not recommended as continued use may cause damage to the corneal epithelium, delay healing, and mask symptoms. While topical antibiotics are often prescribed in the setting of corneal abrasion to prevent bacterial superinfection, evidence to support this practice in general is lacking. However, contact lens wearers are at increased risk of infection due to Pseudomonas aeruginosa and should be prescribed an antibiotic with antipseudomonal activity.",
+      "reference": null,
+      "concept_tags": "{\"diagnoses\": [\"Corneal abrasion\", \"Conjunctival irritation\", \"Traumatic corneal injury\"], \"drugs\": [\"Acetaminophen\", \"NSAIDs\", \"Topical NSAIDs\"], \"guidelines\": [\"Patching for corneal abrasion\", \"Topical non-steroidal anti-inflammatory drugs for analgesia in traumatic corneal abrasions\", \"Evaluation and management of corneal abrasions\"], \"thresholds\": [\"4 mm corneal abrasion size threshold\", \"1-2 days typical healing time for small uncomplicated abrasions\"], \"concept_summary\": \"Management of uncomplicated corneal abrasions in primary care, comparing efficacy and appropriateness of patching versus pharmacologic pain management with oral and topical agents.\"}",
+      "linked_articles": 3,
+      "targeting": "Acute Care",
+      "match_tier": 1,
+      "relevance_score": 45.95
+    },
+    {
+      "qid": "QID-2025-0118",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Patient-Based Systems",
+      "body_system_merged": "Patient-Based Systems",
+      "blueprint": "Foundations of Care",
+      "question_text": "Of the following cognitive biases, which one best describes the practice of prioritizing data that supports an initial impression, even when the initial impression is incorrect?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Anchoring\"}, {\"letter\": \"B\", \"text\": \"Availability\"}, {\"letter\": \"C\", \"text\": \"Implicit\"}, {\"letter\": \"D\", \"text\": \"Outcomes\"}]",
+      "correct_letter": "A",
+      "correct_text": "Anchoring",
+      "explanation": "Anchoring bias describes the practice of physicians prioritizing information and data that supports their initial impressions, even when these impressions are incorrect. In other words, it is when physicians are biased toward their first impression. Availability bias describes the likelihood of a diagnosis being erroneously linked to how easy it is to think of examples. Implicit bias is defined as attitudes and beliefs about race, ethnicity, age, ability, gender, or other characteristics. Implicit bias operates on an unconscious level and can only be measured indirectly. Outcomes bias refers to the attribution of all results to prior decisions, regardless of whether there is a reason to do so.",
+      "reference": "Doherty TS, Carroll AE. Believing in overcoming cognitive biases. AMA J Ethics. 2020;22(9):E773-E778. | Sabin JA. Tackling implicit bias in health care. N Engl J Med. 2022;387(2):105-107. | Catalogue of Bias Collaboration; Banerjee A, Nunan D. Availability bias. Catalogue of Bias. 2019.",
+      "concept_tags": "{\"diagnoses\": [], \"drugs\": [], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"Tests understanding of cognitive biases in medical decision-making, specifically recognizing anchoring bias as prioritizing data supporting initial impressions.\"}",
+      "linked_articles": 3,
+      "targeting": "Foundations",
+      "match_tier": 1,
+      "relevance_score": 2.8
+    },
+    {
+      "qid": "QID-2025-0001",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Population-Based Care",
+      "body_system_merged": "Population-Based Care",
+      "blueprint": "Foundations of Care",
+      "question_text": "Your practice management team has reviewed the clinic-wide cancer screening rates and found that the frequency of cervical cancer screening appears to have fallen behind other cancer screenings. You are asked to lead a quality improvement project to increase rates of cervical cancer screening for appropriate patients. Which one of the following would be the most appropriate first step?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Establishing a system for reviewing charts and contacting patients who are overdue for cervical cancer screening\"}, {\"letter\": \"B\", \"text\": \"Evaluating barriers to cervical cancer screening and reporting\"}, {\"letter\": \"C\", \"text\": \"Placing posters with information about cervical cancer screening inside the clinic\"}, {\"letter\": \"D\", \"text\": \"Sending generalized reminders to patients who may qualify for cervical cancer screening\"}, {\"letter\": \"E\", \"text\": \"Sending generalized reminders to all clinicians regarding cervical cancer screening guidelines\"}]",
+      "correct_letter": "B",
+      "correct_text": "Evaluating barriers to cervical cancer screening and reporting",
+      "explanation": "Quality improvement is a key area for clinical practice, but initiating these projects can be challenging. Many different methodologies have been used, including the Plan-Do-Study- Act cycle or Plan-Do-Check-Act cycle, but clear identification of the current issues is critical in any framework. In order to plan appropriate interventions, it must first be determined what barriers are responsible for hindering performance in a certain area. If evaluation shows that there is a systemic issue in capturing data, rather than a clinician issue, no other interventions will be beneficial. When used as part of an organizational plan for staffing and clinical procedures, patient-specific reminders and use of the entire health care team are more likely to improve screening uptake than other methods, but the initial step should be delineating any current issues prior to implementing a change. Educating patients about preventive health care and screenings is essential and should be part of routine care. However, general materials such as clinic posters are less likely to increase screening rates than direct physician recommendations or conversations. Sending generalized reminders for preventive care may miss the patients in most critical need of services. General reminders that rely on clinician evaluation of every individual visit may be less effective than patient-specific reminders that can be addressed at the point of care.",
+      "reference": "Stone EG, Morton SC, Hulscher ME, et al. Interventions that increase use of adult immunization and cancer screening services: a meta-analysis. Ann Intern Med. 2002;136(9):641-651. | Alam Z, Cairns JM, Scott M, Dean JA, Janda M. Interventions to increase cervical screening uptake among immigrant women: a systematic review and meta-analysis. PLoS One. 2023;18(6):e0281976.",
+      "concept_tags": "{\"diagnoses\": [\"quality improvement\", \"cervical cancer screening\"], \"drugs\": [], \"guidelines\": [\"Plan-Do-Study-Act cycle\"], \"thresholds\": [], \"concept_summary\": \"Tests understanding that quality improvement projects must begin with barrier assessment to identify root causes before implementing interventions.\"}",
+      "linked_articles": 2,
+      "targeting": "Foundations",
+      "match_tier": 1,
+      "relevance_score": 2.8
+    },
+    {
+      "qid": "QID-2025-0020",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Patient-Based Systems",
+      "body_system_merged": "Patient-Based Systems",
+      "blueprint": "Foundations of Care",
+      "question_text": "A 25-year-old male is brought to the level 1 trauma center with a gunshot wound. He is awake, alert, and oriented, and has full capacity for decision-making. The patient then becomes hemodynamically unstable with a blood pressure of 80/40 mm Hg, a heart rate of 140 beats/min, and a hemoglobin level of 4.0 g/dL (N 14.0\u201d\u201c18.0). Whole blood transfusion is indicated, but the patient refuses blood products as he is a practicing Jehovah's Witness. An advance directive on file at the hospital confirms this. He is aware that not administering blood will most likely cause his death. You disagree with the patient and would like to administer a whole blood transfusion as his condition is life-threatening. Which one of the following would be the most appropriate next step?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Presenting the case to the ethics committee\"}, {\"letter\": \"B\", \"text\": \"Respecting the patient's wishes by avoiding transfusion\"}, {\"letter\": \"C\", \"text\": \"Consulting the patient's family and administering whole blood with their approval\"}, {\"letter\": \"D\", \"text\": \"Administering packed RBCs\"}, {\"letter\": \"E\", \"text\": \"Administering whole blood\"}]",
+      "correct_letter": "B",
+      "correct_text": "Respecting the patient's wishes by avoiding transfusion",
+      "explanation": "When a patient has either an advance directive or demonstrates decision-making capacity, their autonomous refusal of treatment must be respected, even if it leads to adverse medical outcomes or conflicts with the physician's values or ethical beliefs. Blood refusal directives are considered legally binding and physicians have been found liable for violating religious freedom when violating these directives. Transfusion of blood products may be permissible for patients who are Jehovah's Witnesses if they are incapacitated and require transfusion but do not have a blood refusal directive or surrogate decision-maker.",
+      "reference": "Wiser Z, Gauer R. Approaches to a patient with anemia who is refusing a blood transfusion. Am Fam Physician. 2024;109(1):online.",
+      "concept_tags": "{\"diagnoses\": [\"hemorrhagic shock\", \"trauma\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [\"BP 80/40\", \"HR 140\", \"hemoglobin 4.0\"], \"concept_summary\": \"Tests medical ethics regarding patient autonomy and informed refusal of life-saving treatment, specifically that competent adults can refuse blood transfusion even when life-threatening.\"}",
+      "linked_articles": 1,
+      "targeting": "Foundations",
+      "match_tier": 1,
+      "relevance_score": 2.8
+    },
+    {
+      "qid": "QID-2025-0139",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Nonspecific",
+      "body_system_merged": "Nonspecific",
+      "blueprint": "Foundations of Care",
+      "question_text": "How long after intranasal administration does naloxone (Narcan) reach peak plasma concentrations?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Immediately\"}, {\"letter\": \"B\", \"text\": \"30\\u201d\\u201c60 seconds\"}, {\"letter\": \"C\", \"text\": \"3\\u201d\\u201c5 minutes\"}, {\"letter\": \"D\", \"text\": \"15\\u201d\\u201c30 minutes\"}, {\"letter\": \"E\", \"text\": \"1\\u201d\\u201c2 hours\"}]",
+      "correct_letter": "D",
+      "correct_text": "15\u201d\u201c30 minutes",
+      "explanation": "After intranasal administration of naloxone, peak plasma concentrations are attained within 15\u201d\u201c30 minutes, although its effect on the patient may be seen sooner. Absorption may be affected by substances or conditions that impact the nasal mucosa function or its blood flow. The half-life of naloxone is 2 hours, which is shorter than many long-acting opioids. Ongoing monitoring is important even after reversal of opioid respiratory depression is achieved.",
+      "reference": "Ortega R, Nozari A, Baker W, Surani S, Edwards M. Intranasal naloxone administration. N Engl J Med. 2021;384(12):e44.",
+      "concept_tags": "{\"diagnoses\": [\"opioid overdose\"], \"drugs\": [\"naloxone\"], \"guidelines\": [], \"thresholds\": [\"15-30 minutes peak plasma concentration\", \"2 hours half-life\"], \"concept_summary\": \"Testing knowledge of naloxone pharmacokinetics, specifically that intranasal naloxone reaches peak plasma concentrations in 15-30 minutes.\"}",
+      "linked_articles": 1,
+      "targeting": "Foundations",
+      "match_tier": 1,
+      "relevance_score": 2.8
+    },
+    {
+      "qid": "QID-2025-0161",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Patient-Based Systems",
+      "body_system_merged": "Patient-Based Systems",
+      "blueprint": "Foundations of Care",
+      "question_text": "A 45-year-old male with a new diagnosis of type 2 diabetes is anxious about managing his condition and uncertain about his ability to meet the demands of treatment and self-care. Which one of the following would be the most appropriate strategy to help him understand his diagnosis and follow through on lifestyle and/or medication changes?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Emphasizing the seriousness of the condition by showing pictures of patients with complications\"}, {\"letter\": \"B\", \"text\": \"Explaining the diagnosis and treatment plan with medical language to ensure professional communication\"}, {\"letter\": \"C\", \"text\": \"Supplying only detailed written instructions about his condition immediately after the appointment\"}, {\"letter\": \"D\", \"text\": \"Using motivational interviewing to identify what is most important to the patient and create impetus for change\"}]",
+      "correct_letter": "D",
+      "correct_text": "Using motivational interviewing to identify what is most important to the patient and create impetus for change",
+      "explanation": "Motivational interviewing is the communication strategy with the best evidence of leading to a change in behavior. Scare tactics have not been shown to be effective. Physicians should speak in language that the patient can understand rather than use jargon. Supplying too much detail may overwhelm the patient, especially if it is not tailored to the individual's goals.",
+      "reference": "Miller WR, Rollnick S. Motivational Interviewing: Helping People Change and Grow. 4th ed. Guildford Press; 2023.",
+      "concept_tags": "{\"diagnoses\": [\"type 2 diabetes mellitus\", \"diabetes anxiety\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"Testing patient communication strategies for new diabetes diagnosis, where motivational interviewing to identify patient priorities and create change impetus is most effective for anxious patients.\"}",
+      "linked_articles": 1,
+      "targeting": "Foundations",
+      "match_tier": 1,
+      "relevance_score": 2.8
+    },
+    {
+      "qid": "QID-2025-0179",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Psychogenic",
+      "body_system_merged": "Psychogenic",
+      "blueprint": "Foundations of Care",
+      "question_text": "Which one of the following social determinants of health has a protective effective against Alzheimer disease and related types of dementia?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Decreasing BMI with older age\"}, {\"letter\": \"B\", \"text\": \"Early-life adversity\"}, {\"letter\": \"C\", \"text\": \"Low education level\"}, {\"letter\": \"D\", \"text\": \"Social engagement\"}]",
+      "correct_letter": "D",
+      "correct_text": "Social engagement",
+      "explanation": "Social determinants of health (SDOH) are the conditions in which people are born, work, live, and age as well as the wider set of forces and systems that shape the conditions of daily life. Several SDOH affect cognition and risk of Alzheimer disease and related dementias (ADRDs). For example, higher levels of social engagement have a protective effect against ADRDs. Conversely, SDOH such as decreasing BMI with older age, early-life adversity, low education level, food insecurity, midlife obesity, manual labor, and low socioeconomic status are associated with a greater risk of ADRDs.",
+      "reference": "Majoka MA, Schimming C. Effect of social determinants of health on cognition and risk of Alzheimer disease and related dementias. Clin Ther. 2021;43(6):922-929.",
+      "concept_tags": "{\"diagnoses\": [\"Alzheimer disease\", \"dementia\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"Identifies social engagement as a protective social determinant of health against Alzheimer disease and related dementias, while factors like low education and early-life adversity increase risk.\"}",
+      "linked_articles": 1,
+      "targeting": "Foundations",
+      "match_tier": 1,
+      "relevance_score": 2.8
+    },
+    {
+      "qid": "QID-2025-0196",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Patient-Based Systems",
+      "body_system_merged": "Patient-Based Systems",
+      "blueprint": "Foundations of Care",
+      "question_text": "An 84-year-old male with a history of coronary artery disease, mild cognitive impairment, and type 2 diabetes is admitted to your hospital for a hip fracture after a recent fall. On examination the patient has normal speech but is confused. He is clearly unable to articulate his understanding of the risks and benefits of surgery. You should do which one of the following to determine this patient's decision-making capacity regarding surgery?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Administer the Aid to Capacity Evaluation assessment tool\"}, {\"letter\": \"B\", \"text\": \"Administer the Montreal Cognitive Assessment evaluation tool\"}, {\"letter\": \"C\", \"text\": \"Document a lack of capacity and consult his designated durable power of attorney\"}, {\"letter\": \"D\", \"text\": \"Consult with psychiatry\"}, {\"letter\": \"E\", \"text\": \"Defer to the court\"}]",
+      "correct_letter": "C",
+      "correct_text": "Document a lack of capacity and consult his designated durable power of attorney",
+      "explanation": "This patient clearly lacks the capacity to make decisions, and a surrogate decision-maker should be consulted. If designated, a durable power of attorney for health care should make decisions for this patient. Structured assessments for determining decision-making capacity or cognitive function may help in uncertain cases but are not necessary in this situation. Psychiatry consultation is rarely necessary to determine decision-making capacity and would not be appropriate in this situation. Decision-making capacity is determined by the treating clinician, not the court.",
+      "reference": "Barstow C, Shahan B, Roberts M. Evaluating medical decision-making capacity in practice. Am Fam Physician. 2018;98(1):40-46.",
+      "concept_tags": "{\"diagnoses\": [\"decision-making capacity\", \"mild cognitive impairment\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"When a patient clearly lacks decision-making capacity to understand risks/benefits of treatment, consult the designated durable power of attorney rather than using assessment tools.\"}",
+      "linked_articles": 1,
+      "targeting": "Foundations",
+      "match_tier": 1,
+      "relevance_score": 2.8
+    },
+    {
+      "qid": "QID-2025-0071",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Respiratory",
+      "body_system_merged": "Respiratory",
+      "blueprint": "Emergent and Urgent Care",
+      "question_text": "A 27-year-old patient presents to the emergency department with a fever, headache, and stiff neck. You diagnose sepsis and perform a lumbar puncture. The results are consistent with bacterial meningitis. In addition to antibiotics, which one of the following intravenous therapies is most likely to improve mortality?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Acyclovir\"}, {\"letter\": \"B\", \"text\": \"Dexamethasone\"}, {\"letter\": \"C\", \"text\": \"Furosemide\"}, {\"letter\": \"D\", \"text\": \"Glycerol\"}, {\"letter\": \"E\", \"text\": \"Immunoglobulin\"}]",
+      "correct_letter": "B",
+      "correct_text": "Dexamethasone",
+      "explanation": "Despite optimal therapy, the mortality and loss of quality-adjusted life-years from bacterial meningitis is significant. Empiric therapy for adults includes vancomycin and ceftriaxone. Intravenous (IV) dexamethasone, when given shortly before or at the time of administration of IV antibiotics, has been shown to improve mortality (odds ratio 0.90) and neurologic sequelae. Bactericidal antibiotics help to reduce inflammation. Acyclovir would be indicated if there is clinical concern for herpes simplex virus or symptoms of encephalitis. While optimal fluid management for meningitis should be tailored based on clinical evaluation, this patient has also been diagnosed with sepsis and should receive appropriate fluid resuscitation; therefore, IV furosemide would be inappropriate. Glycerol is a hyperosmolar agent intended to reduce intracranial pressure in bacterial meningitis, but it cannot be recommended for treatment due to an increased risk of death according to available data in adults with a high prevalence of HIV. IV immunoglobulin is not a recognized treatment for bacterial meningitis.",
+      "reference": "Hasbun R. Progress and challenges in bacterial meningitis: a review. JAMA. 2022;328(21):2147-2154. | Mount HR, Boyle SD. Aseptic and bacterial meningitis: evaluation, treatment, and prevention. Am Fam Physician. 2017;96(5):314-322. | Ajdukiewicz KM, Cartwright KE, Scarborough M, et al. Glycerol adjuvant therapy in adults with bacterial meningitis in a high HIV seroprevalence setting in Malawi: a double-blind, randomised controlled trial. Lancet Infect Dis. 2011;11(4):293-300. | Brouwer MC, McIntyre P, Prasad K, van de Beek D. Corticosteroids for acute bacterial meningitis. Cochrane Database Syst Rev. 2015;2015(9):CD004405.",
+      "concept_tags": "{\"diagnoses\": [\"bacterial meningitis\", \"sepsis\"], \"drugs\": [\"dexamethasone\", \"vancomycin\", \"ceftriaxone\", \"acyclovir\"], \"guidelines\": [], \"thresholds\": [\"odds ratio 0.90\"], \"concept_summary\": \"Tests knowledge that IV dexamethasone given with or before antibiotics improves mortality and neurologic outcomes in bacterial meningitis.\"}",
+      "linked_articles": 3,
+      "targeting": "Emergent/Urgent",
+      "match_tier": 1,
+      "relevance_score": 2.2
+    },
+    {
+      "qid": "QID-2025-0137",
+      "source_bank": "ITE",
+      "source_label": "ITE 2025",
+      "exam_year": 2025,
+      "body_system": "Special Sensory",
+      "body_system_merged": "Special Sensory",
+      "blueprint": "Emergent and Urgent Care",
+      "question_text": "A 65-year-old male presents to your clinic with symptoms of flashing lights and increased floaters in his left eye. He does not have any pain, and he has no past medical history. His vital signs are normal. His visual acuity is at baseline when wearing his glasses, and you note a visual field defect on the left. Which one of the following is the most likely diagnosis?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Migraine with aura\"}, {\"letter\": \"B\", \"text\": \"Central retinal artery occlusion\"}, {\"letter\": \"C\", \"text\": \"Retinal detachment\"}, {\"letter\": \"D\", \"text\": \"Globe rupture\"}, {\"letter\": \"E\", \"text\": \"Acute ischemic stroke\"}]",
+      "correct_letter": "C",
+      "correct_text": "Retinal detachment",
+      "explanation": "Family physicians frequently evaluate ophthalmologic symptoms and should be familiar with conditions requiring emergent evaluation. Peripheral flashing lights and floaters are common symptoms of retinal detachment. This patient should be referred for urgent ophthalmologic evaluation including a dilated fundoscopic examination. While positive and negative visual features are seen with migraine with aura, these features should be transient and followed by a headache typical of migraine. New-onset migraine in a 65-year-old is also uncommon and would require further evaluation. Central retinal artery occlusion, often ischemic or thromboembolic, typically occurs in those with risk factors such as diabetes mellitus, vascular disease, and tobacco use. Rapid, painless vision loss is often accompanied by afferent pupillary defect and the lesion can be visualized on a dilated fundoscopic examination as a cherry-red spot. Globe rupture is unlikely to occur without a history of trauma. Acute ischemic stroke may cause vision loss but is unlikely to cause ocular symptoms of flashing lights and floaters.",
+      "reference": "Gelston CD, Deitz GA. Eye emergencies. Am Fam Physician. 2020;102(9):539-545. | Raharja A, Whitefield L. Clinical approach to vision loss: a review for general physicians. Clin Med (Lond). 2022;22(2):95-99. | Bagheri N, Mehta S. Acute vision loss. Prim Care. 2015;42(3):347-361.",
+      "concept_tags": "{\"diagnoses\": [\"retinal detachment\", \"migraine with aura\", \"central retinal artery occlusion\", \"globe rupture\", \"acute ischemic stroke\"], \"drugs\": [], \"guidelines\": [], \"thresholds\": [], \"concept_summary\": \"Testing ability to recognize retinal detachment presenting with flashing lights, floaters, and visual field defects in a patient requiring urgent ophthalmologic referral.\"}",
+      "linked_articles": 3,
+      "targeting": "Emergent/Urgent",
+      "match_tier": 1,
+      "relevance_score": 2.2
+    }
+  ],
+  "top_articles": [
+    {
+      "article_id": "ART-1559",
+      "title": "Harrison\u2019s Principles of Internal Medicine, ed 19",
+      "author1": "Kasper",
+      "year": "2015",
+      "source_type": "Other Journal",
+      "citation_count": 13,
+      "unique_years": 1,
+      "exam_years": "[2018]",
+      "clean_ref": "Kasper DL, Fauci AS, Hauser SL, et al (eds): Harrison\u2019s Principles of Internal Medicine, ed 19. McGraw-Hill, 2015, pp 628-629.",
+      "weak_area_links": 11
+    },
+    {
+      "article_id": "ART-0633",
+      "title": "Harrison\u2019s Principles of Internal Medicine, ed 20",
+      "author1": "Jameson",
+      "year": "2018",
+      "source_type": "Other Journal",
+      "citation_count": 13,
+      "unique_years": 2,
+      "exam_years": "[2019, 2020]",
+      "clean_ref": "Jameson JL, Fauci AS, Kasper DL, et al (eds): Harrison\u2019s Principles of Internal Medicine, ed 20. McGraw-Hill, 2018, p 2647.",
+      "weak_area_links": 10
+    },
+    {
+      "article_id": "ART-0230",
+      "title": "discovering the underlying cause",
+      "author1": "Charles",
+      "year": "2017",
+      "source_type": "AFP",
+      "citation_count": 9,
+      "unique_years": 5,
+      "exam_years": "[2018, 2019, 2020, 2022, 2023]",
+      "clean_ref": "Charles L, Triscott J, Dobbs B. Secondary hypertension: discovering the underlying cause. Am Fam Physician. 2017;96(7):453-461.",
+      "weak_area_links": 7
+    },
+    {
+      "article_id": "ART-1263",
+      "title": "testicular cancer: screening",
+      "author1": "US Preventive Services Task Force. Final recommendation statement",
+      "year": "2011",
+      "source_type": "Guideline/Org",
+      "citation_count": 9,
+      "unique_years": 2,
+      "exam_years": "[2023, 2024]",
+      "clean_ref": "US Preventive Services Task Force. Final recommendation statement: testicular cancer: screening. Updated April 15, 2011.",
+      "weak_area_links": 1
+    },
+    {
+      "article_id": "ART-1247",
+      "title": "diagnosis and management",
+      "author1": "Tu",
+      "year": "2018",
+      "source_type": "AFP",
+      "citation_count": 8,
+      "unique_years": 5,
+      "exam_years": "[2018, 2019, 2021, 2023, 2025]",
+      "clean_ref": "Tu P. Heel pain: diagnosis and management. Am Fam Physician. 2018;97(2):86-93.",
+      "weak_area_links": 8
+    }
+  ],
+  "missed_items_detail": [
+    {
+      "item_number": 1,
+      "qid": "QID-2023-0001",
+      "blueprint": "Emergent and Urgent Care",
+      "body_system": "Cardiovascular",
+      "exam_year": 2023,
+      "question_text": "A 45-year-old female presents to the emergency department with a 1-week history of facial\nswelling  and  progressive  dyspnea  with  exertion.  She  was  diagnosed  1  week  ago  with\nnon-Hodgkin lymphoma but her medical history is otherwise unremarkable. A chest radiograph\nis shown below.\nAfter hospital admission, which one of the following would be the most appropriate urgent next\nstep in the management of this condition?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Intravenous antibiotics\"}, {\"letter\": \"B\", \"text\": \"Echocardiography\"}, {\"letter\": \"C\", \"text\": \"Plasmapheresis\"}, {\"letter\": \"D\", \"text\": \"Bronchoscopy\"}, {\"letter\": \"E\", \"text\": \"Radiation\"}]",
+      "correct_letter": "E",
+      "correct_text": "Radiation",
+      "explanation": "Because of the prevalence of cancer in the United States, it is important for family physicians to recognize\noncologic emergencies. This patient presents with signs and symptoms related to superior vena cava\nsyndrome, which is caused by compression of the superior vena cava. This is most often caused by lung\ncancer or lymphoma, but it can also be related to indwelling catheters, lymph nodes, or metastatic tumors.\nAfter ensuring that the patient is hospitalized and stable, the initial treatment options include intravenous\ncorticosteroids, chemotherapy, radiation, and occasionally intravascular stenting.\nThis condition is not the result of an infection, so antibiotics would not be appropriate. Hyperviscosity\nsyndrome is another oncologic emergency associated with leukemia, multiple myeloma, and Waldenstr\u00c3\u00b6m\nmacroglobulinemia.  It  is  treated  with  chemotherapy  and  plasmapheresis.  Echocardiography  and\nbronchoscopy are not indicated in the initial management of superior vena cava syndrome.\nRef: Higdon ML, Atkinson CJ, Lawrence KV. Oncologic emergencies: recognition and initial management. Am Fam Physician.\n2018;97(11):741-748. 2) Zimmerman S, Davis M. Rapid fire: superior vena cava syndrome. Emerg Med Clin North Am.\n2018;36(3):577-584.",
+      "reference": "Higdon ML, Atkinson CJ, Lawrence KV: Oncologic emergencies: Recognition and initial management. Am Fam Physician 2018;97(11):741-748. | Zimmerman S, Davis M. Rapid fire: superior vena cava syndrome. Emerg Med Clin North Am. 2018;36(3):577-584.",
+      "db_found": true
+    },
+    {
+      "item_number": 2,
+      "qid": "QID-2023-0002",
+      "blueprint": "Chronic Care Management",
+      "body_system": "Respiratory",
+      "exam_year": 2023,
+      "question_text": "A 22-year-old male presents for follow-up of moderate persistent asthma. After discussing his\ntreatment options, you decide to use a single maintenance and reliever therapy (SMART)\napproach.\nWhich one of the following daily inhaled therapies is appropriate to prescribe in this setting?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Budesonide (Pulmicort)\"}, {\"letter\": \"B\", \"text\": \"Budesonide/formoterol (Symbicort)\"}, {\"letter\": \"C\", \"text\": \"Fluticasone/salmeterol (Advair Diskus)\"}, {\"letter\": \"D\", \"text\": \"Fluticasone/vilanterol (Breo Ellipta)\"}, {\"letter\": \"E\", \"text\": \"Tiotropium/olodaterol (Stiolto Respimat)\"}]",
+      "correct_letter": "B",
+      "correct_text": "Budesonide/formoterol (Symbicort)",
+      "explanation": "In the single maintenance and reliever therapy (SMART) approach for asthma control, combination therapy\nwith an inhaled corticosteroid and a long-acting bronchodilator is used as both controller and rescue\nmedication. SMART is recommended as the preferred therapeutic approach in steps 3 and 4 in the 2020\nNational Asthma Education and Prevention Program guidelines. Formoterol is the only medication\navailable in the United States recommended for use in SMART therapy due to its rapid onset of action.\nBudesonide monotherapy, fluticasone/salmeterol, fluticasone/vilanterol, and tiotropium/olodaterol are not\nappropriate options for SMART in asthma control.\nRef: Cloutier MM, Dixon AE, Krishnan JA, Lemanske RF Jr, Pace W, Schatz M. Managing asthma in adolescents and adults:\n2020  asthma  guideline  update  from  the  National  Asthma  Education  and  Prevention  Program.  JAMA.\n2020;324(22):2301-2317.",
+      "reference": "Cloutier MM, Dixon AE, Krishnan JA, Lemanske RF Jr, Pace W, Schatz M. Managing asthma in adolescents and adults: 2020 asthma guideline update from the National Asthma Education and Prevention Program. JAMA. 2020;324(22):2301-2317.",
+      "db_found": true
+    },
+    {
+      "item_number": 3,
+      "qid": "QID-2023-0003",
+      "blueprint": "Chronic Care Management",
+      "body_system": "Gastrointestinal",
+      "exam_year": 2023,
+      "question_text": "Which one of the following is an indication for long-term, rather than short-term, proton pump\ninhibitor therapy?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"The eradication of Helicobacter pylori\"}, {\"letter\": \"B\", \"text\": \"Gastroprotection in users of high-dose NSAIDs at high risk for gastrointestinal bleeding\"}, {\"letter\": \"C\", \"text\": \"The prevention of rebleeding from a Mallory-Weiss tear\"}, {\"letter\": \"D\", \"text\": \"The prevention of ulcers after band ligation of esophageal varices\"}, {\"letter\": \"E\", \"text\": \"The treatment of an NSAID-related gastric ulcer\"}]",
+      "correct_letter": "B",
+      "correct_text": "Gastroprotection in users of high-dose NSAIDs at high risk for gastrointestinal bleeding",
+      "explanation": "Proton pump inhibitors (PPIs) are some of the most commonly used prescription or over-the-counter\nmedications. However, many patients do not have a clear indication for their use, leading to situations in\nwhich the risks may outweigh the benefits. In 2022 the American Gastroenterological Association\npublished 10 best practice statements to assist clinicians in addressing this issue. Key recommendations\ninclude regular review and documentation of the indication for any ongoing PPI use, and to consider\ndiscontinuing PPIs for any patient without a clear indication. Strategies for PPI discontinuation include\ntapering or abrupt discontinuation. Rebound acid hypersecretion can lead to a temporary increase in\nsymptoms in either approach. If deprescribing is attempted but not tolerated, patients may reasonably be\ncontinued on the lowest effective dose. Possible risks, mostly reported in retrospective rather than\nprospective studies, include an increased incidence of chronic kidney disease, fractures, dementia, and\nrespiratory infections, including COVID-19.\n 1\nWhile many patients remain on long-term PPI therapy without a clear indication, in some situations the\nbenefits of PPIs do clearly outweigh the risks. Such indications include Barrett esophagus, severe erosive\nesophagitis, eosinophilic esophagitis, and high risk for upper gastrointestinal (GI) bleeding. Risk factors\nfor GI bleeding include prior ulcer, age >65, high-dose NSAID therapy, or concurrent use of aspirin,\ncorticosteroids, or anticoagulants. Such patients should be advised to use PPIs indefinitely. PPIs are\nrecommended for short-term use for eradication of Helicobacter pylori and treatment of NSAID-induced\ngastric ulcers. They may also be considered as adjunctive short-term therapy in Mallory-Weiss tears and\nafter sclerotherapy or band ligation treatment of esophageal varices. None of these are indications for\nlong-term use in the absence of other indications.\nRef: Targownik LE, Fisher DA, Saini SD. AGA clinical practice update on de-prescribing of proton pump inhibitors: expert\nreview. Gastroenterology. 2022;162(4):1334-1342.",
+      "reference": "Targownik LE, Fisher DA, Saini SD. AGA clinical practice update on de-prescribing of proton pump inhibitors: expert review. Gastroenterology. 2022;162(4):1334-1342.",
+      "db_found": true
+    },
+    {
+      "item_number": 13,
+      "qid": "QID-2023-0013",
+      "blueprint": "Emergent and Urgent Care",
+      "body_system": "Cardiovascular",
+      "exam_year": 2023,
+      "question_text": "A 73-year-old female with a history of obesity, essential hypertension, hyperlipidemia, and\nwell-controlled type 2 diabetes presents to the emergency department (ED) with severe, crushing\nchest pain. She has a blood pressure of 115/64 mm Hg, a pulse rate of 90 beats/min, a\nrespiratory rate of 15/min, a temperature of 37.2\u00b0C (99.0\u00b0F), and an oxygen saturation of 95%\non room air. A point-of-care troponin level is 1.0 ng/mL (N <0.04) and an EKG is normal, and\nyou diagnose a non\u201d\u201cST-elevation myocardial infarction.\nWhich one of the following interventions in the ED has the greatest benefit with regard to\ndecreasing mortality in this patient?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Supplemental oxygen\"}, {\"letter\": \"B\", \"text\": \"Aspirin\"}, {\"letter\": \"C\", \"text\": \"Metoprolol\"}, {\"letter\": \"D\", \"text\": \"Morphine\"}, {\"letter\": \"E\", \"text\": \"Nitroglycerin\"}]",
+      "correct_letter": "B",
+      "correct_text": "Aspirin",
+      "explanation": "Based on a large, randomized, multicenter trial with 17,187 participants, the administration of aspirin for\nsuspected acute myocardial infarction (MI) saves one life for every 24 patients. Supplemental oxygen\nappears to have no benefit in patients with an oxygen saturation >94%. Excessive oxygen can be toxic\nto endothelial cells and may decrease coronary blood flow and increase systemic vascular resistance.\n-Blockers given immediately after MI do not decrease mortality, likely due to increased cardiogenic\nshock, although  -blockers administered in the subacute period following the event do have benefit.\nMorphine does not appear to have benefit and may increase mortality. The use of nitroglycerin does not\nlower the risk of mortality.\n 5\nRef: Meine TJ, Roe MT, Chen AY, et al. Association of intravenous morphine use and outcomes in acute coronary syndromes:\nresults from the CRUSADE quality improvement initiative. Am Heart J. 2005;149(6):1043-1049. 2) Perez MI, Musini VM,\nWright JM. Effect of early treatment with anti-hypertensive drugs on short and long-term mortality in patients with an acute\ncardiovascular event. Cochrane Database Syst Rev. 2009;(4):CD006743. 3) Andrade-Castellanos CA, Colunga-Lozano LE,\nDelgado-Figueroa N, Magee K. Heparin versus placebo for non-ST elevation acute coronary syndromes. Cochrane\nDatabase Syst Rev. 2014;(6):CD003462. 4) Moss BJ, Sargsyan Z. Things we do for no reason: supplemental oxygen for\npatients without hypoxemia. J Hosp Med. 2019;14(4):242-244.",
+      "reference": "Meine TJ, Roe MT, Chen AY, et al. Association of intravenous morphine use and outcomes in acute coronary syndromes: results from the CRUSADE quality improvement initiative. Am Heart J. 2005;149(6):1043-1049. | Perez MI, Musini VM, Wright JM. Effect of early treatment with anti-hypertensive drugs on short and long-term mortality in patients with an acute cardiovascular event. Cochrane Database Syst Rev. 2009;(4):CD006743. | Andrade-Castellanos CA, Colunga-Lozano LE, Delgado-Figueroa N, Magee K. Heparin versus placebo for non-ST elevation acute coronary syndromes. Cochrane Database Syst Rev. 2014;(6):CD003462. | Moss BJ, Sargsyan Z. Things we do for no reason: supplemental oxygen for patients without hypoxemia. J Hosp Med. 2019;14(4):242-244.",
+      "db_found": true
+    },
+    {
+      "item_number": 16,
+      "qid": "QID-2023-0016",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Gastrointestinal",
+      "exam_year": 2023,
+      "question_text": "Which one of the following tests has the highest negative predictive value to rule out celiac\ndisease?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"An antigliadin antibody test\"}, {\"letter\": \"B\", \"text\": \"A C-reactive protein level\"}, {\"letter\": \"C\", \"text\": \"A fecal calprotectin level\"}, {\"letter\": \"D\", \"text\": \"Genetic testing for HLA-DQ2 and HLA-DQ8\"}, {\"letter\": \"E\", \"text\": \"An IgA tissue transglutaminase (tTG) antibody test\"}]",
+      "correct_letter": "D",
+      "correct_text": "Genetic testing for HLA-DQ2 and HLA-DQ8",
+      "explanation": "Celiac disease occurs almost exclusively in people with HLA-DQ2 or HLA-DQ8 genotypes. Though not\nroutinely performed, a negative result has more than a 99% negative predictive value for the disease. A\npositive IgA tissue transglutaminase (tTG) antibody test is helpful in making a diagnosis if symptoms are\npresent and has 95% sensitivity and specificity for active disease, but a negative IgA tTG test does not rule\nout future risk. A negative antigliadin antibody test has lower sensitivity and specificity than IgA tTG, and\nis used to diagnose the disease in the presence of symptoms rather than to rule out future risk. Negative\nC-reactive protein and fecal calprotectin levels make active inflammatory bowel disease less likely.\nRef: Pietzak MM, Schofield TC, McGinniss MJ, Nakamura RM. Stratifying risk for celiac disease in a large at-risk United\nStates population by using HLA alleles. Clin Gastroenterol Hepatol. 2009;7(9):966-971. 2) Rubio-Tapia A, Hill ID, Kelly\nCP, Calderwood AH, Murray JA; American College of Gastroenterology. ACG clinical guidelines: diagnosis and\nmanagement of celiac disease. Am J Gastroenterol. 2013;108(5):656-677. 3) Williams PM, Harris LM DO, Odom MR.\nCeliac disease: common questions and answers. Am Fam Physician. 2022;106(1):36-43.",
+      "reference": "Pietzak MM, Schofield TC, McGinniss MJ, Nakamura RM. Stratifying risk for celiac disease in a large at-risk United States population by using HLA alleles. Clin Gastroenterol Hepatol. 2009;7(9):966-971. | Rubio-Tapia A, Hill ID, Kelly CP, Calderwood AH, Murray JA; American College of Gastroenterology. ACG clinical guidelines: diagnosis and management of celiac disease. Am J Gastroenterol. 2013;108(5):656-677. | Williams PM, Harris LM DO, Odom MR. Celiac disease: common questions and answers. Am Fam Physician. 2022;106(1):36-43.",
+      "db_found": true
+    },
+    {
+      "item_number": 20,
+      "qid": "QID-2023-0020",
+      "blueprint": "Emergent and Urgent Care",
+      "body_system": "Neurologic",
+      "exam_year": 2023,
+      "question_text": "A 69-year-old male presents 30 hours after the onset of difficulty speaking, right-sided facial\ndroop, and marked weakness in his right arm and leg, with the arm more affected than the leg.\nYou diagnose an ischemic stroke of the left middle cerebral artery (MCA). Noncontrast CT of\nthe head reveals hypodensity in the area of the brain supplied by that artery, and CT angiography\nreveals occlusion of the left proximal MCA.\nWhich one of the following treatments would be indicated at this time?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Aspirin daily\"}, {\"letter\": \"B\", \"text\": \"Clopidogrel (Plavix) plus aspirin\"}, {\"letter\": \"C\", \"text\": \"Intravenous alteplase (Activase)\"}, {\"letter\": \"D\", \"text\": \"Intravenous tenecteplase (TNKase)\"}, {\"letter\": \"E\", \"text\": \"Thrombectomy of the MCA\"}]",
+      "correct_letter": "A",
+      "correct_text": "Aspirin daily",
+      "explanation": "The benefit of interventions for the treatment of acute ischemic stroke is time dependent. A 21-day course\nof  clopidogrel  plus  aspirin,  followed  by  clopidogrel  alone  is  indicated  for  patients  with  mild,\nnon-debilitating stroke who do not require other interventions. Intravenous alteplase is most beneficial if\ngiven within 4.5 hours after the onset of stroke symptoms. In some selected patients, this time window may\nextend up to 9 hours. Tenecteplase is still experimental. Thrombectomy should be performed within 6\nhours if possible, although select patients may benefit from thrombectomy up to 24 hours after onset of\nsymptoms. This patient meets none of the above criteria, so he should be started on daily aspirin.\nRef: Powers WJ. Acute ischemic stroke. N Engl J Med. 2020;383(3):252-260. 2) Bhatia K, Jain V, Aggarwal D, et al. Dual\nantiplatelet therapy versus aspirin in patients with stroke or transient ischemic attack: meta-analysis of randomized\ncontrolled trials. Stroke. 2021;52(6):e217-e223. 3) Minhas JS, Chithiramohan T, Wang X, et al. Oral antiplatelet therapy\nfor acute ischaemic stroke. Cochrane Database Syst Rev. 2022;1(1):CD000029.",
+      "reference": "Powers WJ. Acute ischemic stroke. N Engl J Med. 2020;383(3):252-260. | Bhatia K, Jain V, Aggarwal D, et al. Dual antiplatelet therapy versus aspirin in patients with stroke or transient ischemic attack: meta-analysis of randomized controlled trials. Stroke. 2021;52(6):e217-e223. | Minhas JS, Chithiramohan T, Wang X, et al. Oral antiplatelet therapy for acute ischaemic stroke. Cochrane Database Syst Rev. 2022;1(1):CD000029.",
+      "db_found": true
+    },
+    {
+      "item_number": 23,
+      "qid": "QID-2023-0023",
+      "blueprint": "Preventive Care",
+      "body_system": "Cardiovascular",
+      "exam_year": 2023,
+      "question_text": "Newborn screening for critical congenital heart disease with pulse oximetry is recommended for",
+      "choices": "[{\"letter\": \"A\", \"text\": \"all infants within the first 6 hours of life\"}, {\"letter\": \"B\", \"text\": \"all infants before 24 hours of life\"}, {\"letter\": \"C\", \"text\": \"all infants 24 hours or more after birth\"}, {\"letter\": \"D\", \"text\": \"only infants with clinical signs of hypoxemia\"}, {\"letter\": \"E\", \"text\": \"only infants with a heart murmur\\n8\"}]",
+      "correct_letter": "C",
+      "correct_text": "all infants 24 hours or more after birth",
+      "explanation": "All infants, regardless of whether heart murmurs are present, should be screened for critical congenital\nheart disease using pulse oximetry in the right upper extremity and either of the lower extremities. The\nideal time frame to conduct pulse oximetry is 24 hours or more after birth. False-positive results are more\nlikely when testing is performed within the first 24 hours of life. All infants should be screened, not only\nthose with clinical signs of hypoxemia.\nRef: Ford B, Lara S, Park J. Heart murmurs in children: evaluation and management. Am Fam Physician. 2022;105(3):250-261.",
+      "reference": "Ford B, Lara S, Park J. Heart murmurs in children: evaluation and management. Am Fam Physician. 2022;105(3):250-261.",
+      "db_found": true
+    },
+    {
+      "item_number": 25,
+      "qid": "QID-2023-0025",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Respiratory",
+      "exam_year": 2023,
+      "question_text": "You are playing in a community league soccer tournament and are asked to evaluate a\n30-year-old female. She was in her usual state of health when she suddenly began having\ndifficulty breathing while playing soccer. She tells you that she has had similar episodes in the\npast. Treatment with an albuterol (Proventil, Ventolin) inhaler does not improve her symptoms.\nOn examination you note dyspnea with audible inspiratory wheezing but no increased work of\nbreathing, and she has an oxygen saturation of 98%.\nWhich one of the following is the most likely diagnosis?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Anaphylaxis\"}, {\"letter\": \"B\", \"text\": \"Exercise-induced asthma\"}, {\"letter\": \"C\", \"text\": \"Foreign body aspiration\"}, {\"letter\": \"D\", \"text\": \"Laryngeal edema\"}, {\"letter\": \"E\", \"text\": \"Vocal cord dysfunction\"}]",
+      "correct_letter": "E",
+      "correct_text": "Vocal cord dysfunction",
+      "explanation": "Vocal cord dysfunction occurs when the vocal cords close when they should be open, particularly during\ninspiration. It should be suspected in patients who develop sudden, severe dyspnea that presents with\ninspiratory stridor or wheezing and is not associated with hypoxia, tachypnea, or increased work of\nbreathing. It is most common in women ages 30\u201d\u201c40. Anaphylaxis and foreign body aspiration would be\nunlikely without an antecedent trigger. Exercise-induced asthma usually presents with expiratory wheezing\nand responds to the use of an albuterol inhaler. Laryngeal edema is usually preceded by signs of illness.\nRef: Malaty J, Wu V. Vocal cord dysfunction: rapid evidence review. Am Fam Physician. 2021;104(5):471-475.",
+      "reference": "Malaty J, Wu V. Vocal cord dysfunction: rapid evidence review. Am Fam Physician. 2021;104(5):471-475.",
+      "db_found": true
+    },
+    {
+      "item_number": 27,
+      "qid": "QID-2023-0027",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Musculoskeletal",
+      "exam_year": 2023,
+      "question_text": "A 68-year-old female presents for evaluation of low back pain. Which one of the following signs\nor symptoms would be most consistent with a diagnosis of spinal stenosis syndrome?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Pain improvement when moving from sitting to standing\"}, {\"letter\": \"B\", \"text\": \"Pain improvement with lumbar extension\"}, {\"letter\": \"C\", \"text\": \"Pain worsened by bending forward at the waist\"}, {\"letter\": \"D\", \"text\": \"Poor balance\"}, {\"letter\": \"E\", \"text\": \"Urinary incontinence\"}]",
+      "correct_letter": "D",
+      "correct_text": "Poor balance",
+      "explanation": "A diagnosis of lumbar spinal stenosis is characterized by the narrowing of a neural foramen or the spinal\ncanal, which causes impingement of the nerve roots. It is most often caused by disc protrusion/herniation\nor degenerative changes. Degenerative changes cause ligamentous hypertrophy and development of\nosteophytes that cause symptoms by impinging on spinal roots. Compression of the posterior columns of\nthe spinal canal can impact the awareness of position sense (proprioception). A report of balance problems\nby patients with low back pain is 70% sensitive for spinal stenosis syndrome, and the patient may exhibit\na positive Romberg test and a wide-based gait. Spinal stenosis pain is increased by movements of lumbar\nextension such as standing upright and improved by forward flexion such as bending over a shopping cart\nor while sitting. Severe impingement as in cauda equina syndrome causes urinary retention and not\nincontinence.\nRef: Katz JN, Zimmerman ZE, Mass H, Makhni MC. Diagnosis and management of lumbar spinal stenosis: a review. JAMA.\n2022;327(17):1688-1699.",
+      "reference": "Katz JN, Zimmerman ZE, Mass H, Makhni MC. Diagnosis and management of lumbar spinal stenosis: a review. JAMA. 2022;327(17):1688-1699.",
+      "db_found": true
+    },
+    {
+      "item_number": 28,
+      "qid": "QID-2023-0028",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Endocrine",
+      "exam_year": 2023,
+      "question_text": "The most common electrolyte abnormality in a patient with primary hyperaldosteronism is",
+      "choices": "[{\"letter\": \"A\", \"text\": \"hypocalcemia\"}, {\"letter\": \"B\", \"text\": \"hypokalemia\"}, {\"letter\": \"C\", \"text\": \"hyponatremia\"}, {\"letter\": \"D\", \"text\": \"hyperkalemia\"}, {\"letter\": \"E\", \"text\": \"hypernatremia\"}]",
+      "correct_letter": "B",
+      "correct_text": "hypokalemia",
+      "explanation": "Primary hyperaldosteronism was previously thought to be rare, but it is now considered one of the more\ncommon causes of secondary hypertension. Hypokalemia is the most common electrolyte abnormality in\npatients with hyperaldosteronism. Excess aldosterone secretion independent of the renin-angiotensin system\ncauses renal potassium wasting, although about half of patients with hyperaldosteronism have normal\npotassium levels. Hypocalcemia is commonly associated with inadequate levels of parathyroid hormone.\nHyponatremia and hyperkalemia are associated with primary hypoaldosteronism. Hypernatremia is not a\ncommon finding in primary hyperaldosteronism.\nRef: Charles L, Triscott J, Dobbs B. Secondary hypertension: discovering the underlying cause. Am Fam Physician.\n2017;96(7):453-461. 2) Byrd JB, Turcu AF, Auchus RJ. Primary aldosteronism: practical approach to diagnosis and\nmanagement. Circulation. 2018;138(8):823-835.",
+      "reference": "Charles L, Triscott J, Dobbs B. Secondary hypertension: discovering the underlying cause. Am Fam Physician. 2017;96(7):453-461. | Byrd JB, Turcu AF, Auchus RJ. Primary aldosteronism: practical approach to diagnosis and management. Circulation. 2018;138(8):823-835.",
+      "db_found": true
+    },
+    {
+      "item_number": 32,
+      "qid": "QID-2023-0032",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Respiratory",
+      "exam_year": 2023,
+      "question_text": "A 62-year-old male presents with daytime fatigue, sleepiness, snoring at night, and a BMI of 41\nkg/m2. You are concerned that he may have obesity hypoventilation syndrome (OHS) in addition\nto possible obstructive sleep apnea.\nWhich one of the following tests is most appropriate for establishing a diagnosis of OHS?\nA) Daytime awake serum HCO \u201d\u201c\n3\nB) Daytime awake PaCO\n2\nC) Daytime awake PaO\n2\nD) Nighttime serial measurement of peripheral oxygen saturation during sleep\nE) Nighttime serum HCO \u201d\u201c within 2 minutes of awakening\n3\n\nA) \nB) \nC) \nD) \nE)",
+      "choices": "[]",
+      "correct_letter": "B",
+      "correct_text": "",
+      "explanation": "Obesity hypoventilation syndrome (OHS) is characterized by obesity and alveolar hypoventilation while\nawake, which is defined by an awake PaCO  level >45 mm Hg. Ninety percent of patients have coexistent\n2\nobstructive sleep apnea (OSA). The pathogenesis is related to the increased physical demands on breathing\ncaused by obesity. While decreased PaO  or oxygen saturation is often present, it is not part of the\n2\ndiagnostic criteria. In obese patients with lower risk (often with lower BMIs), a serum HCO \u201d\u201c level <27\n3\nmmol/L may obviate the need for an arterial blood gas measurement as OHS becomes very unlikely. If\nthe HCO \u201d\u201c level is \u00ef\u201a\u00b327 mmol/L (a renal compensatory mechanism for hypoventilation-induced acidosis),\n3\na PaCO  measurement should be obtained to establish the diagnosis. The first-line treatment for ambulatory\n2\npatients with this condition is CPAP. Nighttime measurement of peripheral oxygen saturation during sleep\nis a key component of sleep studies that are used to diagnose OSA, but it is not used to diagnose OHS.\nRef: Mokhlesi B, Masa JF, Brozek JL, et al. Evaluation and management of obesity hypoventilation syndrome. An official\nAmerican Thoracic Society clinical practice guideline. Am J Respir Crit Care Med. 2019;200(3):e6-e24.\n 12",
+      "reference": "Mokhlesi B, Masa JF, Brozek JL, et al. Evaluation and management of obesity hypoventilation syndrome. An official American Thoracic Society clinical practice guideline. Am J Respir Crit Care Med. 2019;200(3):e6-e24.",
+      "db_found": true
+    },
+    {
+      "item_number": 45,
+      "qid": "QID-2023-0045",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Neurologic",
+      "exam_year": 2023,
+      "question_text": "A 20-year-old college student comes to your office on Monday morning after injuring his right\narm during a rugby match 2 days earlier. He is not certain of the mechanism of injury but was\nstruck forcefully on the lower posterior part of his upper arm above the elbow. He describes\nparesthesias on the extensor side of his forearm and the back of his hand. His upper arm is\nbruised and mildly swollen at the described location.\nIn addition to the paresthesias on the extensor forearm and the back of the hand, which one of\nthe following motor findings would you expect?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"An inability to maintain all fingers fanned out under resistance\"}, {\"letter\": \"B\", \"text\": \"Weakness of elbow flexion with the hand in a prone position\"}, {\"letter\": \"C\", \"text\": \"Weakness of finger and wrist extension under resistance\"}, {\"letter\": \"D\", \"text\": \"Weakness of flexion of the fourth and fifth fingers\"}, {\"letter\": \"E\", \"text\": \"Weakness of thumb apposition\\n16\"}]",
+      "correct_letter": "C",
+      "correct_text": "Weakness of finger and wrist extension under resistance",
+      "explanation": "This student athlete likely has a contusion to the radial nerve in the spiral groove of the distal humerus,\nresulting in the so-called \u201cSaturday night palsy\u201d\u009d after undue pressure on the distal upper arm. This could\nbe the result of significant direct pressure over several hours, or such an injury could happen acutely, as\nin the described scenario. Findings include paresthesias and possible decreased light or sharp touch\nsensation on the back of the hand and extensor forearm. Motor findings include weakness of finger and\nwrist extension, best evaluated by testing while the examiner applies resistance to the actions. Thumb\napposition is controlled by the median nerve and splaying out the fingers (lumbricals) is mainly an ulnar\nnerve function. Unless the nerve has been severed, the sensory loss and motor weakness typically resolve\nwithin days to weeks.\nRef: Silver S, Ledford CC, Vogel KJ, Arnold JJ: Peripheral nerve entrapment and injury in the upper extremity. Am Fam\nPhysician 2021;103(5):275-285.",
+      "reference": "Silver S, Ledford CC, Vogel KJ, Arnold JJ: Peripheral nerve entrapment and injury in the upper extremity. Am Fam Physician 2021;103(5):275-285.",
+      "db_found": true
+    },
+    {
+      "item_number": 68,
+      "qid": "QID-2023-0068",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Integumentary",
+      "exam_year": 2023,
+      "question_text": "A 70-year-old male presents for evaluation of an itchy rash (shown below) that started a few\nweeks ago in the interdigital areas of both feet. The rash has since extended to his dorsal feet\nand ankles. He has tried using a topical moisturizing lotion and hydrocortisone 1% cream\nwithout improvement.\nBased on the extent of skin involvement, you offer him an oral medication to treat the infection.\nHe is concerned about the risk of gastrointestinal side effects and asks if he could use a different\ntopical medication instead.\nOf the following options, which one is most likely to resolve his symptoms?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Clotrimazole/betamethasone dipropionate (Lotrisone) cream\"}, {\"letter\": \"B\", \"text\": \"Mupirocin cream\"}, {\"letter\": \"C\", \"text\": \"Nystatin cream\"}, {\"letter\": \"D\", \"text\": \"Nystatin ointment\"}, {\"letter\": \"E\", \"text\": \"Terbinafine cream\"}]",
+      "correct_letter": "E",
+      "correct_text": "Terbinafine cream",
+      "explanation": "Tinea infections, such as the tinea pedis seen in this patient, are caused by dermatophytes, which include\nthe three genera Trichophyton, Microsporum, and Epidermophyton. The rash of tinea pedis is often limited\nto the webspace between the toes and/or the plantar aspect of the foot but infections may also involve the\ndorsum of the foot, even into the ankle region. This patient\u2019s more proximal involvement displays the\nclassic \u201cringworm\u201d\u009d pattern with an active border that is red, raised, and scaly. Cases in which the\ndiagnosis is in doubt may be confirmed by a potassium hydroxide skin scraping that demonstrates the\npresence of hyphae. Most cases of tinea pedis respond well to topical therapy. Systemic treatment may be\nindicated in cases with widespread skin involvement, immunocompromise, failed topical treatment, or the\nchronic moccasin pattern marked by plantar and lateral foot hyperkeratosis, erythema, and silvery-white\nscale. Of the available oral options, ketoconazole is the most hepatotoxic and therefore should be avoided\nfor the treatment of any tinea infection; however, itraconazole, fluconazole, and terbinafine are all suitable\nalternatives.\nIn this case, the patient has reasonably requested a trial of topical treatment. Newer fungicidal agents, such\nas butenafine and terbinafine, work more effectively and require a shorter treatment course than older\nfungistatic alternatives such as clotrimazole. Combination products that include corticosteroids, such as\nclotrimazole/betamethasone, should be avoided because they can aggravate fungal infections. Mupirocin\nis an antibiotic used for limited skin infections caused by Staphylococcus aureus or Streptococcus pyogenes\nbut does not play a role in treatment of tinea infections without bacterial superinfection. This patient has\na classic appearance of a tinea infection without evidence of superimposed cellulitis or abscess; therefore,\nan antibacterial medication is not indicated. Nystatin is useful for treating cutaneous Candida infections,\nbut is ineffective for dermatophyte infections.\nRef: Ely  JW,  Rosenfeld  S,  Seabury  Stone  M. Diagnosis and  management  of  tinea infections.  Am Fam  Physician.\n2014;90(10):702-710. 2) Trayes KP, Savage K, Studdiford JS. Annular lesions: diagnosis and treatment. Am Fam\nPhysician. 2018;98(5):283-291. 3) Dinulos JGH. Habif\u2019s Clinical Dermatology: A Color Guide to Diagnosis and Therapy.\n7th ed. Elsevier; 2021:483-524.e1.\n 27",
+      "reference": "Ely JW, Rosenfeld S, Seabury Stone M. Diagnosis and management of tinea infections. Am Fam Physician. 2014;90(10):702-710. | Trayes KP, Savage K, Studdiford JS: Annular lesions: Diagnosis and treatment. Am Fam Physician 2018;98(5):283-291. | Dinulos JGH. Habif\u2019s Clinical Dermatology: A Color Guide to Diagnosis and Therapy. 7th ed. Elsevier; 2021:483-524.e1.",
+      "db_found": true
+    },
+    {
+      "item_number": 70,
+      "qid": "QID-2023-0070",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Respiratory",
+      "exam_year": 2023,
+      "question_text": "A 72-year-old male presents with a recent history of cough with bloody sputum. For 3 weeks,\nhe produced dark red to brown sputum with his usual morning cough. The last episode was a\nweek ago. He has a chronic, minimally productive cough that he attributes to allergies. He has\nnot had any fever, chest pain, or dyspnea associated with the bloody sputum. He has never\nsmoked and has no known lung disease. His medications include bupropion (Wellbutrin) and\nfluoxetine (Prozac). His vital signs are unremarkable.\nAn examination including the nasal fossa and oropharynx reveals no evidence of bleeding. A\npulmonary examination is normal. A CBC, comprehensive metabolic panel, and INR are also\nnormal.\nWhich one of the following would be the most appropriate next step for this patient?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Reassurance only, with instructions to return if symptoms recur\"}, {\"letter\": \"B\", \"text\": \"Azithromycin (Zithromax)\"}, {\"letter\": \"C\", \"text\": \"A chest radiograph\"}, {\"letter\": \"D\", \"text\": \"CT of the chest with and without contrast\"}, {\"letter\": \"E\", \"text\": \"Referral for bronchoscopy\\n25\\nItem #68\\n26\"}]",
+      "correct_letter": "C",
+      "correct_text": "A chest radiograph",
+      "explanation": "The most common causes of mild hemoptysis in developed countries include COPD, bronchiectasis, acute\nrespiratory infections, and malignancy. Physicians should first rule out pseudohemoptysis (bleeding\noriginating from above the glottis) with a careful examination of the nose and oral cavity. Laboratory\nstudies should be performed to evaluate for anemia, thrombocytopenia, renal function, and hepatic\nfunction.\nThe most appropriate next step would be posteroanterior and lateral chest radiographs (SOR C). Chest\nradiographs can demonstrate pneumonia, abscess, masses, and cavitary lesions. Since they are quick,\neasily accessible, and provide only a low level of radiation, they are preferred for initial imaging. If the\nchest radiograph is normal, further evaluation is recommended. The preferred follow-up imaging for\nnonmassive hemoptysis is CT angiography of the chest with contrast or CT of the chest with contrast,\naccording to the American College of Radiology (ACR) appropriateness criteria (SOR C). The ACR also\nindicates that CT of the chest with and without contrast is \u201cusually not appropriate.\u201d\u009d\nDeferring further workup unless hemoptysis recurs is not recommended as the underlying cause of\nbleeding should be identified and treated. The risk of missed diagnoses of potentially fatal conditions makes\nwatchful waiting a poor option. Empiric use of antibiotics is not recommended as the initial step given the\nlack of infectious symptoms and signs in this patient. Referral for bronchoscopy would be an appropriate\nstep when the initial chest radiographs are normal and the etiology has not been identified. Up to 10% of\npatients with hemoptysis and a normal chest radiograph have been diagnosed with bronchogenic carcinoma.\nRef: Goldman L, Schafer AI (eds): Goldman-Cecil Medicine, ed 26. Elsevier, 2020, pp 504-510.e2. 2) Olsen KM,\nManouchehr-Pour S, Donnelly EF, et al; Expert Panel on Thoracic Imaging; ACR Appropriateness Criteria: Hemoptysis.\nJ Am Coll Radiol 2020;17(5S):S148-S159. 3) O'Gurek D, Choi HYJ: Hemoptysis: Evaluation and management. Am Fam\nPhysician 2022;105(2):144-151.\n 28",
+      "reference": "Goldman L, Schafer AI (eds): Goldman-Cecil Medicine, ed 26. Elsevier, 2020, p 1840. | Olsen KM, Manouchehr-Pour S, Donnelly EF, et al; Expert Panel on Thoracic Imaging; ACR Appropriateness Criteria: Hemoptysis. J Am Coll Radiol 2020;17(5S):S148-S159. | O'Gurek D, Choi HYJ: Hemoptysis: Evaluation and management. Am Fam Physician 2022;105(2):144-151.",
+      "db_found": true
+    },
+    {
+      "item_number": 78,
+      "qid": "QID-2023-0078",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Neurologic",
+      "exam_year": 2023,
+      "question_text": "A 54-year-old male with cervical disc disease, generalized anxiety disorder, and opioid use\ndisorder on maintenance therapy presents with a 5-day history of pain and numbness in both\nhands and feet. He mentions that he had a COVID-19 booster vaccination 6 weeks ago.\nOn the review of systems, he reports increased urinary frequency and feeling less steady on his\nfeet. A neurologic examination is notable for a slightly wide-based gait, decreased sensation in\nthe upper extremities to the forearms and lower extremities to the calves, and brisk Achilles\nreflexes with clonus. His muscle strength is normal in both the upper and lower extremities, and\nthere is no spinal tenderness. The remainder of the examination, including vital signs, is normal.\nWhich one of the following diagnoses is most consistent with this presentation?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Cervical myelopathy\"}, {\"letter\": \"B\", \"text\": \"Epidural abscess\"}, {\"letter\": \"C\", \"text\": \"Guillain-Barr\\u00c3\\u00a9 syndrome\"}, {\"letter\": \"D\", \"text\": \"Multiple sclerosis\\n29\"}]",
+      "correct_letter": "A",
+      "correct_text": "Cervical myelopathy",
+      "explanation": "This patient presents with findings suggestive of cord compression causing degenerative cervical\nmyelopathy. Cord compression in the cervical spine typically causes ascending loss of sensation in all four\nextremities, hyperreflexia, and gait instability, and it can progress to cause extremity weakness and bladder\nand bowel dysfunction. Patients with active intravenous drug use are at risk for epidural abscess, but this\nwould  typically  cause  localized  tenderness  and  signs  of  systemic  inflammation,  including  fever.\nGuillain-Barr\u00c3\u00a9 syndrome is an autoimmune demyelinating disease that can cause ascending numbness and\nweakness, but is associated with loss of reflexes. Neurologic deficits associated with multiple sclerosis\n(MS) are variable and MS is in the differential in this case, though the history and presentation are much\nmore consistent with degenerative myelopathy.\nRef: Kane SF, Abadie KV, Willson A. Degenerative cervical myelopathy: recognition and management. Am Fam Physician.\n2020;102(12):740-750.",
+      "reference": "Kane SF, Abadie KV, Willson A. Degenerative cervical myelopathy: recognition and management. Am Fam Physician. 2020;102(12):740-750.",
+      "db_found": true
+    },
+    {
+      "item_number": 81,
+      "qid": "QID-2023-0081",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Endocrine",
+      "exam_year": 2023,
+      "question_text": "A 36-year-old female with recently diagnosed polycystic ovary syndrome (PCOS) sees you to\ndiscuss treatment options. Her menses are irregular and she only has 2\u201d\u201c3 cycles per year. She\ndoes  not  wish  to  have  any  more  children.  She  has  no  contraindications  to  hormonal\ncontraceptives. Her BMI is 27 kg/m2.\nWhich one of the following would be the most appropriate medication to initiate as first-line\nPCOS therapy?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Finasteride (Proscar)\"}, {\"letter\": \"B\", \"text\": \"Letrozole (Femara)\"}, {\"letter\": \"C\", \"text\": \"Metformin\"}, {\"letter\": \"D\", \"text\": \"Norgestimate/ethinyl estradiol (Sprintec)\"}, {\"letter\": \"E\", \"text\": \"Spironolactone (Aldactone)\\n30\"}]",
+      "correct_letter": "D",
+      "correct_text": "Norgestimate/ethinyl estradiol (Sprintec)",
+      "explanation": "While the second-line medications for polycystic ovary syndrome (PCOS) continue to shift as the evidence\nis refined, the primary goal of protecting the endometrial lining from unopposed estrogen effects remains\nconsistent. The first-line therapy for PCOS in women who do not desire pregnancy remains combined oral\ncontraception  and/or  progestin-containing  contraceptives.  Finasteride,  letrozole,  metformin,  and\nspironolactone are second-line treatments for specific conditions caused by PCOS such as type 2 diabetes,\nanovulatory oligomenorrhea, infertility, and hirsutism.\nRef: American College of Obstetricians and Gynecologists\u2019 Committee on Practice Bulletins\u201d\u201dGynecology. ACOG Practice\nBulletin No. 194: polycystic ovary syndrome. Obstet Gynecol. 2018;131(6):e157-e171. 2) Al Wattar BH, Fisher M,\nBevington L, et al. Clinical practice guidelines on the diagnosis and management of polycystic ovary syndrome: a systematic\nreview and quality assessment study. J Clin Endocrinol Metab. 2021;106(8):2436-2446. 3) Williams T, Moore JB, Regehr\nJ. Polycystic ovary syndrome: common questions and answers. Am Fam Physician. 2023;107(3):264-272.",
+      "reference": "American College of Obstetricians and Gynecologists\u2019 Committee on Practice Bulletins\u2014Gynecology. ACOG Practice Bulletin No. 194: polycystic ovary syndrome. Obstet Gynecol. 2018;131(6):e157-e171. | Al Wattar BH, Fisher M, Bevington L, et al. Clinical practice guidelines on the diagnosis and management of polycystic ovary syndrome: a systematic review and quality assessment study. J Clin Endocrinol Metab. 2021;106(8):2436-2446. | Williams T, Moore JB, Regehr J. Polycystic ovary syndrome: common questions and answers. Am Fam Physician. 2023;107(3):264-272.",
+      "db_found": true
+    },
+    {
+      "item_number": 98,
+      "qid": "QID-2023-0098",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Endocrine",
+      "exam_year": 2023,
+      "question_text": "A 45-year-old female presents with a 1-week history of pain at the base of her anterior neck\nradiating to her right jaw. Prior to the onset of pain she had a sore throat, fever, and body aches.\nThese symptoms resolved and the neck pain started. She now reports palpitations and excessive\nsweating.\nHer vital signs include a pulse rate of 110 beats/min, a blood pressure of 140/83 mm Hg, and\na normal temperature. On examination she appears uncomfortable and diaphoretic. An HEENT\nexamination is unremarkable and you note no cervical lymphadenopathy. Her thyroid is tender\nand mildly enlarged. A cardiac examination shows tachycardia with no murmurs.\nLaboratory studies reveal a normal CBC, an erythrocyte sedimentation rate of 55 mm/hr (N\n0\u201d\u201c29), and a TSH level of 0.21  U/mL (N 0.5\u201d\u201c5.0). Total T  and free T  levels are within the\n3 4\nnormal range. You order a radioactive iodine uptake scan, which shows diffusely low iodine\nuptake in her thyroid.\nIn addition to a  -blocker, which one of the following would be most appropriate at this point?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Ibuprofen, 800 mg three times daily\"}, {\"letter\": \"B\", \"text\": \"Levothyroxine (Synthroid), 50  g daily\"}, {\"letter\": \"C\", \"text\": \"Methimazole, 5 mg three times daily\"}, {\"letter\": \"D\", \"text\": \"Prednisone, 40 mg daily\"}, {\"letter\": \"E\", \"text\": \"Vancomycin, 20 mg/kg intravenously every 12 hours\"}]",
+      "correct_letter": "A",
+      "correct_text": "Ibuprofen, 800 mg three times daily",
+      "explanation": "This patient has signs and symptoms consistent with subacute thyroiditis, which is confirmed by laboratory\ntesting (an elevated erythrocyte sedimentation rate, a low TSH level, and normal T  and T  levels) and a\n3 4\nradioactive iodine uptake scan with diffusely low iodine uptake. Subacute thyroiditis often follows a viral\ninfection and is most common in women in their fifties, with peak occurrence in the late summer and fall\nmonths. The goal of treatment is to reduce thyroid pain and treat symptoms of thyrotoxicosis. High-dose\nNSAIDs or acetylsalicylic acid are first-line recommendations (SOR C). This patient would also benefit\nfrom the use of a  -blocker to ameliorate her tachycardia and diaphoresis.\nDuring the acute thyroiditis phase, thyroid hormone supplementation is not indicated and will likely worsen\nsymptoms. Levothyroxine would be indicated once the acute thyrotoxic phase resolves and there is\nevidence of hypothyroidism. Since subacute thyroiditis is a self-limited condition, levothyroxine is\nrecommended for 12 months. Antithyroid medications such as methimazole are not indicated in subacute\nthyroiditis, which is a destructive process itself. While glucocorticoids such as prednisone provide faster\npain relief than first-line NSAIDs or aspirin, they should not be used unless first-line treatments have failed\nto resolve symptoms in 4 days. Antibiotics are prescribed in suppurative thyroiditis, which is characterized\nby fever, leukocytosis, and cervical lymphadenopathy in addition to thyroid pain. They should be started\nempirically after negative blood cultures have been obtained.\nRef: Sencar ME, Calapkulu M, Sakiz D, et al. An evaluation of the results of the steroid and non-steroidal anti-inflammatory\ndrug treatments in subacute thyroiditis in relation to persistent hypothyroidism and recurrence. Sci Rep. 2019;9(1):16899.\n2) Quintero BM, Yazbeck C, Sweeney LB. Thyroiditis: evaluation and treatment. Am Fam Physician. 2021;104(6):609-617.\n 39",
+      "reference": "Sencar ME, Calapkulu M, Sakiz D, et al. An evaluation of the results of the steroid and non-steroidal anti-inflammatory drug treatments in subacute thyroiditis in relation to persistent hypothyroidism and recurrence. Sci Rep. 2019;9(1):16899. | Martinez Quintero B, Yazbeck C, Sweeney LB. Thyroiditis: evaluation and treatment. Am Fam Physician. 2021;104(6):609-617.",
+      "db_found": true
+    },
+    {
+      "item_number": 104,
+      "qid": "QID-2023-0104",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Gastrointestinal",
+      "exam_year": 2023,
+      "question_text": "A 45-year-old male sees you for a routine health maintenance examination. You screen him for\nhepatitis C. A hepatitis IgG antibody is positive but on reflex testing there is no detectable viral\nRNA. When discussing the test results with him, he reports past use of injected opioids and\nintermittent use of cocaine. To his knowledge he has never been diagnosed with viral hepatitis.\nRegarding hepatitis C, the patient\u2019s history and test results indicate",
+      "choices": "[{\"letter\": \"A\", \"text\": \"current infection with need for treatment\"}, {\"letter\": \"B\", \"text\": \"exposure less than 2 weeks prior to screening\"}, {\"letter\": \"C\", \"text\": \"a false-positive result\"}, {\"letter\": \"D\", \"text\": \"previous infection with immunity to future infection\"}, {\"letter\": \"E\", \"text\": \"previous infection with susceptibility to future infection\"}]",
+      "correct_letter": "E",
+      "correct_text": "previous infection with susceptibility to future infection",
+      "explanation": "Hepatitis C can be spontaneously cleared but patients with antibodies can still be reinfected. This patient\nhas behaviors that put him at risk for exposure to hepatitis C. There is no viral RNA detected, so he does\nnot have a current infection. Exposure to hepatitis C less than 2 weeks prior to screening would not explain\na positive IgG antibody test. The patient\u2019s test result is not likely to be a false positive, but rather indicates\na previous hepatitis C infection given his history of intravenous drug use.\nRef: Viral hepatitis: Q&As for health professionals. Centers for Disease Control and Prevention. Reviewed August 7, 2020.\n 41",
+      "reference": "Viral hepatitis: Q&As for health professionals. Centers for Disease Control and Prevention. Reviewed August 7, 2020.",
+      "db_found": true
+    },
+    {
+      "item_number": 107,
+      "qid": "QID-2023-0107",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Cardiovascular",
+      "exam_year": 2023,
+      "question_text": "A 70-year-old male with hypertension sees you because of a syncopal episode. During the\nexamination you ask him to move from a supine position to standing.\nWhich one of the following results of this maneuver would confirm a diagnosis of orthostatic\nhypotension?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"He becomes lightheaded\"}, {\"letter\": \"B\", \"text\": \"He feels chest pain\"}, {\"letter\": \"C\", \"text\": \"His systolic blood pressure decreases by at least 10 mm Hg\"}, {\"letter\": \"D\", \"text\": \"His systolic blood pressure decreases by at least 20 mm Hg\"}]",
+      "correct_letter": "D",
+      "correct_text": "His systolic blood pressure decreases by at least 20 mm Hg",
+      "explanation": "Orthostatic hypotension, which is more prevalent in older adults, is defined as a decrease of at least 20 mm\nHg in systolic blood pressure or a drop of at least 10 mm Hg in diastolic blood pressure within 3 minutes\nof standing from the supine position. There are multiple etiologies, both neurogenic and nonneurogenic.\nClinical symptoms are not a preferred method of diagnosing orthostatic hypotension.\nRef: Kim MJ, Farrell J. Orthostatic hypotension: a practical approach. Am Fam Physician. 2022;105(1):39-49.",
+      "reference": "Kim MJ, Farrell J. Orthostatic hypotension: a practical approach. Am Fam Physician. 2022;105(1):39-49.",
+      "db_found": true
+    },
+    {
+      "item_number": 108,
+      "qid": "QID-2023-0108",
+      "blueprint": "Chronic Care Management",
+      "body_system": "Respiratory",
+      "exam_year": 2023,
+      "question_text": "A 55-year-old male presents to your clinic for evaluation of COPD. He has a history of tobacco\nuse and quit smoking 2 years ago. He reports occasional symptoms that limit his activities but\nhas  not had any exacerbations or hospitalizations. Pulmonary function tests indicate an\nFEV /FVC ratio <0.7 and an FEV  of 75%. His vital signs are normal.\n1 1\nWhich one of the following would be the most appropriate initial pharmacotherapy?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Budesonide/formoterol (Symbicort)\"}, {\"letter\": \"B\", \"text\": \"Ipratropium (Atrovent)\"}, {\"letter\": \"C\", \"text\": \"Levalbuterol\"}, {\"letter\": \"D\", \"text\": \"Tiotropium (Spiriva)\"}, {\"letter\": \"E\", \"text\": \"Umeclidinium/vilanterol (Anoro Ellipta)\\n41\"}]",
+      "correct_letter": "D",
+      "correct_text": "Tiotropium (Spiriva)",
+      "explanation": "COPD is a common condition, which led to 3.23 million deaths worldwide in 2019. A variety of treatments\nare available to alleviate symptoms, and family physicians are well suited to manage this condition through\nlifestyle modifications and pharmacotherapy. Guidelines suggest that patients with mild disease, as in this\npatient\u2019s case per the Global Initiative for Chronic Obstructive Lung Disease (GOLD) class 2 findings on\npulmonary function tests and no exacerbations, are best managed through once-daily inhalation of a\nlong-acting  muscarinic  antagonist  (LAMA)  such  as  tiotropium.  Short-acting  medications  such  as\nipratropium and levalbuterol require frequent dosing and lack the mortality benefit seen with LAMAs. The\ncombination of LAMAs and long-acting  -agonists (LABAs) can be initiated in those with persistent\nsymptoms but would not be used as initial therapy. Inhaled corticosteroids may be beneficial in those with\nsignificant asthma and COPD overlap, but in general corticosteroids should be reserved for those with\npersistent symptoms despite LAMA and LABA therapy.\n 42\nRef: Gentry  S,  Gentry  B.  Chronic  obstructive  pulmonary  disease:  diagnosis  and  management.  Am  Fam  Physician.\n2017;95(7):433-441. 2) Celli BR, Wedzicha JA. Update on clinical aspects of chronic obstructive pulmonary disease. N\nEngl J Med. 2019;381(13):1257-1266. 3) Global Initiative for Chronic Obstructive Lung Disease. 2023 Report: global\nstrategy for the diagnosis, management, and prevention of chronic obstructive pulmonary disease. Updated 2023.",
+      "reference": "Gentry S, Gentry B: Chronic obstructive pulmonary disease: Diagnosis and management. Am Fam Physician 2017;95(7):433-441. | Celli BR, Wedzicha JA. Update on clinical aspects of chronic obstructive pulmonary disease. N Engl J Med. 2019;381(13):1257-1266. | Global Initiative for Chronic Obstructive Lung Disease. 2023 Report: global strategy for the diagnosis, management, and prevention of chronic obstructive pulmonary disease. Updated 2023.",
+      "db_found": true
+    },
+    {
+      "item_number": 111,
+      "qid": "QID-2023-0111",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Integumentary",
+      "exam_year": 2023,
+      "question_text": "You diagnose hand-foot-and-mouth disease in a 5-year-old male. His parents ask when he can\nreturn to kindergarten.\nYou advise that if he feels well enough to participate, he may return",
+      "choices": "[{\"letter\": \"A\", \"text\": \"5 days after the onset of symptoms\"}, {\"letter\": \"B\", \"text\": \"when afebrile and there are no mouth sores causing drooling\"}, {\"letter\": \"C\", \"text\": \"when afebrile as long as all skin lesions can be covered with a dressing\"}, {\"letter\": \"D\", \"text\": \"when afebrile and all skin lesions have crusted over\\n42\"}]",
+      "correct_letter": "B",
+      "correct_text": "when afebrile and there are no mouth sores causing drooling",
+      "explanation": "Hand-foot-and-mouth disease (HFMD) is very common among children younger than 10 years of age, and\nis very easily spread by fecal-oral, oral-oral, and respiratory droplet routes. As the disease is ubiquitous\nand has a very low complication rate, the CDC recommends allowing children to return to school or day\ncare when they are afebrile, feel well enough to participate, and are not actively drooling with mouth\nlesions. There is no specific time course that must be followed, and the status of skin lesions does not\naffect return to school.\nRef: Saguil A, Kane SF, Lauters R, Mercado MG. Hand-foot-and-mouth disease: rapid evidence review. Am Fam Physician.\n2019;100(7):408-414. 2) Hand, foot, and mouth disease (HFMD): how hand, foot, and mouth disease spreads. Centers for\nDisease Control and Prevention. Reviewed May 11, 2023.",
+      "reference": "Saguil A, Kane SF, Lauters R, Mercado MG: Hand-foot-and-mouth disease: Rapid evidence review. Am Fam Physician 2019;100(7):408-414. | Hand, foot, and mouth disease (HFMD): how hand, foot, and mouth disease spreads. Centers for Disease Control and Prevention. Reviewed May 11, 2023.",
+      "db_found": true
+    },
+    {
+      "item_number": 117,
+      "qid": "QID-2023-0117",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Respiratory",
+      "exam_year": 2023,
+      "question_text": "A 42-year-old male presents for evaluation of a persistent cough. Three weeks ago, he developed\na runny nose, dry cough, and generalized malaise without fever. One week later, he began to\ndevelop persistent fits of coughing followed by bouts of posttussive emesis. You suspect\npertussis.\nWhich one of the following laboratory tests should be used to confirm your diagnostic suspicion?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Culture\"}, {\"letter\": \"B\", \"text\": \"Direct fluorescent antibody assay\"}, {\"letter\": \"C\", \"text\": \"Polymerase chain reaction (PCR)\"}, {\"letter\": \"D\", \"text\": \"Serology for IgG\\n44\"}]",
+      "correct_letter": "C",
+      "correct_text": "Polymerase chain reaction (PCR)",
+      "explanation": "Polymerase chain reaction (PCR) is the most rapid and accurate test to confirm pertussis and is the\ndiagnostic test of choice (evidence rating B). Cultures are challenging to grow and results take 7\u201d\u201c10 days.\nDirect fluorescent antibody assays have low sensitivity and specificity and are no longer used. Serology\nfor  IgG  does  not peak until  the  paroxysmal  and  convalescent  stages, and  is used  primarily  for\nepidemiologic purposes.\nRef: Kline JM, Smith EA, Zavala A. Pertussis: common questions and answers. Am Fam Physician. 2021;104(2):186-192.",
+      "reference": "Kline JM, Smith EA, Zavala A. Pertussis: common questions and answers. Am Fam Physician. 2021;104(2):186-192.",
+      "db_found": true
+    },
+    {
+      "item_number": 131,
+      "qid": "QID-2023-0131",
+      "blueprint": "Emergent and Urgent Care",
+      "body_system": "Musculoskeletal",
+      "exam_year": 2023,
+      "question_text": "A 9-year-old child is brought to your office for evaluation of right wrist pain after a fall from\na swing at recess this morning. On examination you note tenderness and swelling over the lateral\naspect of the distal radius. Radiographs are shown below.\nWhich one of the following would be most appropriate for this injury?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"A cock-up wrist splint\"}, {\"letter\": \"B\", \"text\": \"A double sugar-tong splint\"}, {\"letter\": \"C\", \"text\": \"A figure-of-8 sling\"}, {\"letter\": \"D\", \"text\": \"A short arm cast\"}, {\"letter\": \"E\", \"text\": \"A long arm cast\"}]",
+      "correct_letter": "A",
+      "correct_text": "A cock-up wrist splint",
+      "explanation": "This patient has a distal radius buckle fracture (or torus fracture) and a cock-up wrist splint is appropriate.\nBuckle fractures are stable because they only involve the bony cortex (outer layer), and the goal of\ntreatment is the alleviation of pain and protecting the bone from further injury. A double sugar-tong splint\nmore completely immobilizes the humerus, radius, and ulna and is not necessary for this type of fracture.\nA figure-of-8 sling is an option in the treatment of clavicle fractures and is not appropriate for radius\nfractures. A 2016 systematic review and meta-analysis found that patients treated with splint immobilization\nhad better recovery of wrist motion, quicker return to normal activity, and less overall disability while also\nexperiencing fewer complications than those immobilized with a cast. Patients and their families also\npreferred splint immobilization and stated they would choose splints over casts if needed in the future.\n 51\nRef: Jiang N, Cao ZH, Ma YF, Lin Z, Yu B. Management of pediatric forearm torus fractures: a systematic review and\nmeta-analysis. Pediatr Emerg Care. 2016;32(11):773-778. 2) National Clinical Guideline Centre (UK): fractures\n(non-complex): assessment and management. National Institute for Health and Care Excellence, 2016. 3) Zwillenberg M,\nKwak E. Splint vs. cast for forearm buckle fracture in children. Am Fam Physician. 2022;105(4):Online. 4) Distal radius\nand Galeazzi fractures. Pediatric Orthopaedic Society of North America.",
+      "reference": "Jiang N, Cao ZH, Ma YF, Lin Z, Yu B. Management of pediatric forearm torus fractures: a systematic review and meta-analysis. Pediatr Emerg Care. 2016;32(11):773-778. | National Clinical Guideline Centre (UK): fractures (non-complex): assessment and management. National Institute for Health and Care Excellence, 2016. | Zwillenberg M, Kwak E. Splint vs. cast for forearm buckle fracture in children. Am Fam Physician. 2022;105(4):Online. | Distal radius and Galeazzi fractures. Pediatric Orthopaedic Society of North America.",
+      "db_found": true
+    },
+    {
+      "item_number": 136,
+      "qid": "QID-2023-0136",
+      "blueprint": "Chronic Care Management",
+      "body_system": "Special Sensory",
+      "exam_year": 2023,
+      "question_text": "Which one of the following is the hallmark of proliferative diabetic retinopathy?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Blot hemorrhages\"}, {\"letter\": \"B\", \"text\": \"Cotton-wool spots\"}, {\"letter\": \"C\", \"text\": \"Drusen\"}, {\"letter\": \"D\", \"text\": \"Macular edema\"}, {\"letter\": \"E\", \"text\": \"Neovascularization\"}]",
+      "correct_letter": "E",
+      "correct_text": "Neovascularization",
+      "explanation": "Diabetic retinopathy is caused by chronic hyperglycemia and is the leading cause of blindness in adults in\nthe United States. Routine screening with a dilated eye examination or retinal imaging performed and\ninterpreted by a skilled clinician shortly after the diagnosis of diabetes mellitus is recommended. Diabetic\nretinopathy is classified in two stages. Nonproliferative diabetic retinopathy may occur within the first\ndecade following hyperglycemia and is characterized by blot hemorrhages, cotton-wool spots, and retinal\nvascular microaneurysms. As the number of hemorrhages and microaneurysms increases, normal blood\nflow is interrupted. Proliferative diabetic retinopathy is the second stage and is characterized by\nneovascularization, which occurs in response to poor blood flow and retinal ischemia. These new blood\nvessels are fragile and rupture easily leading to vitreous hemorrhage, fibrosis, and retinal detachment.\nDrusen are extracellular deposits that accumulate within the macula in macular degeneration, which is\nunrelated to diabetic retinopathy. Macular edema can occur in both stages of diabetic retinopathy.\nRef: Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, eds. Harrison\u2019s Principles of Internal Medicine.\n21st ed. McGraw Hill; 2022:3120-3128.\n 53",
+      "reference": "Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, eds. Harrison\u2019s Principles of Internal Medicine. 21st ed. McGraw Hill; 2022:3120-3128.",
+      "db_found": true
+    },
+    {
+      "item_number": 137,
+      "qid": "QID-2023-0137",
+      "blueprint": "Chronic Care Management",
+      "body_system": "Integumentary",
+      "exam_year": 2023,
+      "question_text": "You have recently acquired several patients from a retiring colleague. These patients have been\nusing topical corticosteroids over a prolonged period of time.\nWhich one of the following patient groups is at highest risk for adverse systemic reactions to\nprolonged topical corticosteroid use?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Children\"}, {\"letter\": \"B\", \"text\": \"Young adults\"}, {\"letter\": \"C\", \"text\": \"Middle-aged adults\"}, {\"letter\": \"D\", \"text\": \"Pregnant women\"}, {\"letter\": \"E\", \"text\": \"Breastfeeding women\"}]",
+      "correct_letter": "A",
+      "correct_text": "Children",
+      "explanation": "All patients using topical corticosteroids chronically should be monitored for adverse systemic effects, such\nas adrenal suppression, cataracts, decreased growth rate, and hypertension. Patients at highest risk for\nadverse systemic reactions to prolonged topical corticosteroid use are children and the elderly. There has\nbeen no evidence that maternal use of topical corticosteroids causes adverse pregnancy outcomes or that\ntheir use while breastfeeding is problematic.\nRef: Stacey SK, McEleney M. Topical corticosteroids: choice and application. Am Fam Physician. 2021;103(6):337-343.",
+      "reference": "Stacey SK, McEleney M. Topical corticosteroids: choice and application. Am Fam Physician. 2021;103(6):337-343.",
+      "db_found": true
+    },
+    {
+      "item_number": 140,
+      "qid": "QID-2023-0140",
+      "blueprint": "Foundations of Care",
+      "body_system": "Cardiovascular",
+      "exam_year": 2023,
+      "question_text": "According to the 2022 American Academy of Family Physicians clinical practice guideline,\ntreatment to a blood pressure target of <135/85 mm Hg in adults who have hypertension\nreduces which one of the following?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"All-cause mortality\"}, {\"letter\": \"B\", \"text\": \"Cardiovascular mortality\"}, {\"letter\": \"C\", \"text\": \"Risk of myocardial infarction\"}, {\"letter\": \"D\", \"text\": \"Risk of stroke\"}]",
+      "correct_letter": "C",
+      "correct_text": "Risk of myocardial infarction",
+      "explanation": "The 2022 American Academy of Family Physicians clinical practice guideline recommends treating adults\nwho have hypertension to a standard target of <140/90 mm Hg based on high-quality evidence.\nModerate-quality evidence showed that treating adults to a lower blood pressure target of <135/85 mm\nHg further reduced the risk of myocardial infarction compared to the standard target, with a number\nneeded to treat of 137 over 3.7 years. There was no benefit in mortality or stroke risk. Of note, treating\nto a lower target blood pressure does increase the absolute risk of serious adverse events by 3%, with a\nnumber needed to harm of 33 over 3.7 years.\n 54\nRef: Coles S, Fisher L, Lin KW, Lyon C, Vosooney AA, Bird MD. Blood pressure targets in adults with hypertension: a clinical\npractice guideline from the AAFP. Am Fam Physician. Published online November 14, 2022.",
+      "reference": "Coles S, Fisher L, Lin KW, Lyon C, Vosooney AA, Bird MD. Blood pressure targets in adults with hypertension: a clinical practice guideline from the AAFP. Am Fam Physician. Published online November 14, 2022.",
+      "db_found": true
+    },
+    {
+      "item_number": 141,
+      "qid": "QID-2023-0141",
+      "blueprint": "Chronic Care Management",
+      "body_system": "Respiratory",
+      "exam_year": 2023,
+      "question_text": "A 55-year-old male with oxygen-dependent COPD plans to visit family 2000 miles away. For\nthe last year, his COPD has been well controlled on medications and oxygen at 2 L/min. He\nwants to travel by commercial airline.\nWhich one of the following would be the most appropriate advice for this patient regarding air\ntravel?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Choosing another mode of transit\"}, {\"letter\": \"B\", \"text\": \"Flying first class only\"}, {\"letter\": \"C\", \"text\": \"Continuing his oxygen flow rate at 2 L/min during the flight\"}, {\"letter\": \"D\", \"text\": \"Lowering his oxygen flow rate to 1 L/min during the flight\"}, {\"letter\": \"E\", \"text\": \"Doubling his oxygen flow rate to 4 L/min during the flight\"}]",
+      "correct_letter": "E",
+      "correct_text": "Doubling his oxygen flow rate to 4 L/min during the flight",
+      "explanation": "Commercial airline carriers typically permit Federal Aviation Administration\u201d\u201capproved portable oxygen\ncompressors. Patients whose usual oxygen requirements are <4 L/min are advised to double the flow rate\nduring the flight. Conditions such as bullous lung disease, cystic fibrosis, and severe COPD may require\nthe Hypoxia Altitude Simulation Test to determine in-flight oxygen requirements prior to air travel. It\nwould not be appropriate to recommend this patient choose another mode of transit, fly first class only,\ncontinue his current oxygen flow rate, or lower his oxygen flow rate.\nRef: Powell-Dunford  N,  Adams  JR,  Grace  C.  Medical  advice  for  commercial  air  travel.  Am  Fam  Physician.\n2021;104(4):403-410.",
+      "reference": "Powell-Dunford N, Adams JR, Grace C. Medical advice for commercial air travel. Am Fam Physician. 2021;104(4):403-410.",
+      "db_found": true
+    },
+    {
+      "item_number": 142,
+      "qid": "QID-2023-0142",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Musculoskeletal",
+      "exam_year": 2023,
+      "question_text": "Which one of the following is the most appropriate initial management for patients with\npatellofemoral pain syndrome?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"A medial unloading knee brace\"}, {\"letter\": \"B\", \"text\": \"Exercise therapy\"}, {\"letter\": \"C\", \"text\": \"Intra-articular corticosteroid injection\"}, {\"letter\": \"D\", \"text\": \"Confirmation of the diagnosis with MRI\"}, {\"letter\": \"E\", \"text\": \"Referral for knee arthroscopy\"}]",
+      "correct_letter": "B",
+      "correct_text": "Exercise therapy",
+      "explanation": "Patellofemoral pain syndrome (PFPS) involves pain around the patella during weight bearing on a flexed\nknee. PFPS is a clinical diagnosis and does not require imaging to make the diagnosis, although imaging\nmay be indicated if other pathology is suspected. Exercise therapy is the mainstay of treatment. A medial\nunloading knee brace may be beneficial for symptomatic pain relief in knee osteoarthritis, but knee braces\nin general have poor evidence of benefit in PFPS. Intra-articular corticosteroids may be beneficial for pain\nrelief in refractory cases but are not generally appropriate for initial treatment. Surgery may be indicated\nfor refractory cases to correct patellar maltracking.\nRef: Armstrong AD, Hubbard MC, eds. Essentials of Musculoskeletal Care. 5th ed. American Academy of Orthopaedic\nSurgeons; 2018:739-745. 2) Gaitonde DY, Ericksen A, Robbins RC. Patellofemoral pain syndrome. Am Fam Physician.\n2019;99(2):88-94.",
+      "reference": "Armstrong AD, Hubbard MC (eds): Essentials of Musculoskeletal Care, ed 5. American Academy of Orthopaedic Surgeons, 2015, pp 510-516. | Gaitonde DY, Ericksen A, Robbins RC. Patellofemoral pain syndrome. Am Fam Physician. 2019;99(2):88-94.",
+      "db_found": true
+    },
+    {
+      "item_number": 149,
+      "qid": "QID-2023-0149",
+      "blueprint": "Chronic Care Management",
+      "body_system": "Gastrointestinal",
+      "exam_year": 2023,
+      "question_text": "A 42-year-old female sees you for follow-up 6 weeks after starting treatment for Helicobacter\npylori. She was diagnosed with the urea breath test. She completed her antibiotic regimen as\nprescribed and stopped her proton pump inhibitor (PPI) 2 weeks ago. She is symptom free.\nWhich one of the following is the recommended next step?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Repeating the H. pylori urea breath test\"}, {\"letter\": \"B\", \"text\": \"Ordering H. pylori serology\"}, {\"letter\": \"C\", \"text\": \"Resuming PPI therapy\"}, {\"letter\": \"D\", \"text\": \"Screening for colon cancer\"}, {\"letter\": \"E\", \"text\": \"Screening for a peptic ulcer\"}]",
+      "correct_letter": "A",
+      "correct_text": "Repeating the H. pylori urea breath test",
+      "explanation": "According to current American College of Gastroenterology guidelines, whenever Helicobacter pylori is\nidentified and treated, testing to prove eradication should be performed at least 4 weeks after completing\nantibiotic therapy and 2 weeks after discontinuing the proton pump inhibitor (PPI). With increasing\nresistance and thus declining success in treatment, many patients will be persistently infected after\ntreatment and remain at risk for complications, including gastric malignancy. There is no role for H. pylori\nserology in testing for treatment success. This patient does not need further PPI therapy since she is\nsymptom free. She is not at the age threshold to begin colon cancer screening, and without further familial\nrisk information there is no indication to begin screening earlier. There is no evidence that she needs to\nbe screened for a peptic ulcer.\nRef: Chey WD, Leontiadis GI, Howden CW, Moss SF. ACG clinical guideline: treatment of Helicobacter pylori infection. Am\nJ Gastroenterol. 2017;112(2):212-239.",
+      "reference": "Chey WD, Leontiadis GI, Howden CW, Moss SF. ACG clinical guideline: treatment of Helicobacter pylori infection. Am J Gastroenterol. 2017;112(2):212-239.",
+      "db_found": true
+    },
+    {
+      "item_number": 155,
+      "qid": "QID-2023-0155",
+      "blueprint": "Emergent and Urgent Care",
+      "body_system": "Respiratory",
+      "exam_year": 2023,
+      "question_text": "A 5-year-old female is brought to the emergency department by her parents after her temperature\nincreases to 104\u00b0F. On examination she has noticeable inspiratory stridor. She is restless and\ndrooling, and her voice is muffled. In spite of the nurse\u2019s repeated efforts to get the child to lie\nback, the patient continues to sit forward in a sniffing position. Her parents indicate that they\nhave declined vaccinations for the patient since leaving the hospital after delivery.\nWhich one of the following is the most important next step in management?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Supplemental oxygen by nasal cannula\"}, {\"letter\": \"B\", \"text\": \"Intravenous fluids\"}, {\"letter\": \"C\", \"text\": \"Arterial blood gas measurement\"}, {\"letter\": \"D\", \"text\": \"A CBC\"}, {\"letter\": \"E\", \"text\": \"Direct visualization of the epiglottis in the operating room\"}]",
+      "correct_letter": "E",
+      "correct_text": "Direct visualization of the epiglottis in the operating room",
+      "explanation": "The most likely diagnosis is epiglottitis. Inflammatory edema of the epiglottis and surrounding tissues is\npotentially life-threatening, as this edema can lead to complete airway obstruction. The epiglottis must be\nvisualized in the operating room in case of life-threatening spasms that can lead to airway obstruction. The\nsurgeon must be prepared to perform tracheostomy if airway obstruction develops.\nSupplemental oxygen, intravenous fluids, and laboratory studies are reasonable supportive and diagnostic\noptions. However, immediate intervention in the operating room is the most important next step to prevent\nairway obstruction.\nRef: Sobol SE, Zapata S. Epiglottitis and croup. Otolaryngol Clin North Am. 2008;41(3):551-566. 2) Kliegman RM, St Geme\nJW III, Blum NJ, et al, eds. Nelson Textbook of Pediatrics. 21st ed. Elsevier Saunders; 2020:2203-2204. 3) Sur DKC, Plesa\nML. Antibiotic use in acute upper respiratory tract infections. Am Fam Physician. 2022;106(6):628-636.\n 60",
+      "reference": "Sobol SE, Zapata S. Epiglottitis and croup. Otolaryngol Clin North Am. 2008;41(3):551-566. | Kliegman RM, St Geme JW III, Blum NJ, et al (eds): Nelson Textbook of Pediatrics, ed 21. Elsevier Saunders, 2020, pp 2188-2191. | Sur DKC, Plesa ML. Antibiotic use in acute upper respiratory tract infections. Am Fam Physician. 2022;106(6):628-636.",
+      "db_found": true
+    },
+    {
+      "item_number": 156,
+      "qid": "QID-2023-0156",
+      "blueprint": "Chronic Care Management",
+      "body_system": "Cardiovascular",
+      "exam_year": 2023,
+      "question_text": "An 8-year-old female is brought to your office by her parents for follow-up 6 months after you\nrecommended a DASH diet and 1 hour of physical play daily to address her BMI and blood\npressure, which were both greater than the 95th percentile for her age and height. Her mother\nalso has a history of obesity and hypertension. The patient otherwise has an unremarkable past\nmedical history. Although she has lost 1.4 kg (3 lb) her blood pressure remains at 125/77 mm\nHg. You diagnose stage 1 hypertension and recommend management with medication.\nIn addition to a CBC; electrolyte, BUN, and creatinine levels; a urinalysis; and a lipid panel,\nyou recommend",
+      "choices": "[{\"letter\": \"A\", \"text\": \"no further testing\"}, {\"letter\": \"B\", \"text\": \"serum or urine catecholamine measurement\"}, {\"letter\": \"C\", \"text\": \"renal Doppler ultrasonography\"}, {\"letter\": \"D\", \"text\": \"CT angiography of the kidneys\"}, {\"letter\": \"E\", \"text\": \"echocardiography\"}]",
+      "correct_letter": "E",
+      "correct_text": "echocardiography",
+      "explanation": "Echocardiography should be performed to assess for cardiac target end-organ damage, such as left\nventricular hypertrophy, when medication is being considered in children with hypertension. Evaluation\nfor secondary causes of hypertension is not needed in children >6 years of age with stage 1 hypertension\nif they are overweight or have a positive family history of hypertension and there are no physical\nexamination findings indicative of a secondary cause. Renal imaging, catecholamine and steroid levels,\nand renin activity are indicated in children <6 years of age or patients with stage 2 hypertension (\u00ef\u201a\u00b395th\npercentile plus 12 mm Hg systolic or diastolic blood pressure or \u00ef\u201a\u00b3140/90 mm Hg, whichever is lower).\nRef: Flynn JT, Kaelber DC, Baker-Smith CM, et al. Clinical practice guideline for screening and management of high blood\npressure in children and adolescents. Pediatrics. 2017;140(3):e20171904. 2) Smith DK, McMullan SM, Martin MJ. Getting\nhypertension under control in the youngest of patients. J Fam Pract. 2021;70(5):220-228.",
+      "reference": "Flynn JT, Kaelber DC, Baker-Smith CM, et al: Clinical practice guideline for screening and management of high blood pressure in children and adolescents. Pediatrics 2017;140(3):e20171904. | Smith DK, McMullan SM, Martin MJ. Getting hypertension under control in the youngest of patients. J Fam Pract. 2021;70(5):220-228.",
+      "db_found": true
+    },
+    {
+      "item_number": 162,
+      "qid": "QID-2023-0162",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Integumentary",
+      "exam_year": 2023,
+      "question_text": "Which one of the following topical corticosteroids should be AVOIDED for long-term use on\nthe face?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Clobetasol 0.05% lotion (Clobex)\"}, {\"letter\": \"B\", \"text\": \"Desonide 0.05% ointment (Desowen)\"}, {\"letter\": \"C\", \"text\": \"Hydrocortisone 1% lotion\"}, {\"letter\": \"D\", \"text\": \"Hydrocortisone 2.5% cream\"}, {\"letter\": \"E\", \"text\": \"Triamcinolone 0.025% cream\"}]",
+      "correct_letter": "A",
+      "correct_text": "Clobetasol 0.05% lotion (Clobex)",
+      "explanation": "Topical corticosteroids are extremely common agents prescribed by family physicians and it is important\nto understand the safe and appropriate use of these agents. Many common dermatologic conditions are best\ntreated with mid- or low-potency corticosteroids, but some conditions will only improve with high-potency\nagents. High-potency agents should typically be avoided on the face and eyelids, and on infants. These\nagents should be used as sparingly as possible when indicated and tapered off (SOR B). Of the agents\nlisted, clobetasol 0.05% lotion is a very high-potency corticosteroid and should be avoided for long-term\nuse on the face. Desonide 0.05% ointment, hydrocortisone 1% lotion, hydrocortisone 2.5% cream, and\ntriamcinolone 0.025% cream are low-potency corticosteroids.\nRef: Stacey SK, McEleney M. Topical corticosteroids: choice and application. Am Fam Physician. 2021;103(6):337-343.\n 63",
+      "reference": "Stacey SK, McEleney M. Topical corticosteroids: choice and application. Am Fam Physician. 2021;103(6):337-343.",
+      "db_found": true
+    },
+    {
+      "item_number": 166,
+      "qid": "QID-2023-0166",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Cardiovascular",
+      "exam_year": 2023,
+      "question_text": "A 67-year-old male presents for a preoperative evaluation before a knee replacement. His past\nmedical history is significant for well-controlled type 2 diabetes, hypertension, and atrial\nfibrillation, for which he is taking apixaban (Eliquis).\nWhich one of the following would be the most appropriate approach to managing anticoagulation\nprior to surgery?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Continuing apixaban therapy during the perioperative period\"}, {\"letter\": \"B\", \"text\": \"Discontinuing apixaban for 2 days prior to the procedure without bridging\"}, {\"letter\": \"C\", \"text\": \"Discontinuing apixaban for 2 days prior to the procedure, and bridging with enoxaparin\\n(Lovenox)\"}, {\"letter\": \"D\", \"text\": \"Discontinuing apixaban for 5 days prior to the procedure without bridging\"}, {\"letter\": \"E\", \"text\": \"Discontinuing apixaban for 5 days prior to the procedure, and bridging with enoxaparin\\n61\"}]",
+      "correct_letter": "B",
+      "correct_text": "Discontinuing apixaban for 2 days prior to the procedure without bridging",
+      "explanation": "Patients taking apixaban for stroke prevention in atrial fibrillation should discontinue the medication for\n1\u201d\u201c2 days prior to the procedure without bridging. This approach is associated with a low risk of bleeding\ncomplications without increasing the incidence of thromboembolism. The choice between 1 and 2 days\ndepends on the bleeding risk associated with the procedure.\nRef: Douketis JD, Spyropoulos AC, Duncan J, et al. Perioperative management of patients with atrial fibrillation receiving a\ndirect oral anticoagulant. JAMA Intern Med. 2019;179(11):1469-1478. 2) Douketis JD, Spyropoulos AC, Murad MH, et\nal. Perioperative management of antithrombotic therapy: an American College of Chest Physicians clinical practice\nguideline. Chest. 2022;162(5):e207-e243.",
+      "reference": "Douketis JD, Spyropoulos AC, Duncan J, et al. Perioperative management of patients with atrial fibrillation receiving a direct oral anticoagulant. JAMA Intern Med. 2019;179(11):1469-1478. | Douketis JD, Spyropoulos AC, Murad MH, et al. Perioperative management of antithrombotic therapy: an American College of Chest Physicians clinical practice guideline. Chest. 2022;162(5):e207-e243.",
+      "db_found": true
+    },
+    {
+      "item_number": 173,
+      "qid": "QID-2023-0173",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Respiratory",
+      "exam_year": 2023,
+      "question_text": "A 47-year-old female presents to your office with a 3-day history of sore throat, a fever of\n\nA) \nB) \nC) \nD) \nE)",
+      "choices": "[]",
+      "correct_letter": "A",
+      "correct_text": "",
+      "explanation": "This patient presents with symptoms of pharyngitis that are most likely attributed to a viral infection.\nHowever, many patients expect to receive prescriptions for antibiotics when evaluated for common\nrespiratory infections. Use of the Modified Centor Criteria can assist with determining the likelihood of\na group A streptococcal infection before prescribing antibiotics. The Modified Centor Criteria gives points\nfor age, absence of cough, fever, tender anterior cervical lymphadenopathy, and tonsillar exudates or\nswelling. This patient would receive 0 points because she has a cough, \u201d\u201c1 point because she is older than\n45, 1 point because she has a fever \u00ef\u201a\u00b3100.4\u00b0F, 1 point because she has tender anterior cervical\nlymphadenopathy, and 1 point because she has tonsillar swelling. Therefore, her total Modified Centor\nCriteria score is 2, and she should be additionally evaluated with a rapid antigen detection test for group\nA Streptococcus (GAS).\nRapid streptococcal antigen tests can reduce inappropriate antibiotic prescriptions for adults at the point\nof care without adverse consequences (SOR A). Since this adult patient\u2019s test is negative she does not\nrequire treatment with antibiotics, and supportive care is recommended. There is no role for repeating a\nrapid streptococcal antigen test due to the high specificity of these tests. A confirmatory throat culture is\nnot required in adults due to the low incidence of GAS pharyngitis and rheumatic fever in this age group.\nIn contrast, children and adolescents with negative rapid streptococcal antigen test results should have\nconfirmatory throat cultures because of the high prevalence of GAS. An order for laryngoscopy is not\nappropriate in this patient without symptoms of epiglottis.\nRef: Kim HN, Kim J, Jang WS, Nam J, Lim CS. Performance evaluation of three rapid antigen tests for the diagnosis of group\nA Streptococci. BMJ Open. 2019;9(8):e025438. 2) Sur DKC, Plesa ML. Antibiotic use in acute upper respiratory tract\ninfections. Am Fam Physician. 2022;106(6):628-636.\n 67",
+      "reference": "Kim HN, Kim J, Jang WS, Nam J, Lim CS. Performance evaluation of three rapid antigen tests for the diagnosis of group A Streptococci. BMJ Open. 2019;9(8):e025438. | Sur DKC, Plesa ML. Antibiotic use in acute upper respiratory tract infections. Am Fam Physician. 2022;106(6):628-636.",
+      "db_found": true
+    },
+    {
+      "item_number": 177,
+      "qid": "QID-2023-0177",
+      "blueprint": "Emergent and Urgent Care",
+      "body_system": "Musculoskeletal",
+      "exam_year": 2023,
+      "question_text": "A 20-year-old college football player is struck by another athlete and is lying still in the supine\nposition on the field. On examination on the field, the athlete reports bilateral numbness,\ntingling, and pain radiating to his fingertips but does not appear to be confused. He is alert and\napprehensive of cervical range of motion but does not exhibit weakness of the upper extremities.\nWhich one of the following would be the most appropriate management for this athlete?\nA) Immediate examination for neurologic compromise and return to play if the examination\nis unremarkable\nB) Return to play if symptoms resolve in less than 15 minutes and a repeat neurologic\nexamination is normal\nC) Serial neurologic examinations; if there is no progression of neurologic symptoms, he\nmay remain on the sideline but may not re-enter the same game\nD) Immediate  removal  of  his  helmet  and  pads  sequentially,  log-rolling  him,  and\ntransporting him to the emergency department (ED) via EMS if symptoms continue for\nmore than 15 minutes\nE) Keeping his helmet and pads intact, log-rolling him, and transporting him to the ED via\nEMS\n\nA) \nB) \nC) \nD) \nE)",
+      "choices": "[]",
+      "correct_letter": "E",
+      "correct_text": "",
+      "explanation": "According to consensus recommendations, athletes with suspected neck injuries and red flags such as\nbilateral symptoms of pain, numbness, tingling, and apprehension of cervical range of motion should be\nassumed to have a cervical spine injury and should be log-rolled without removal of helmet and pads, and\ntransported via EMS to the emergency department (SOR C). Due to red flags concerning neck injury in\nthis athlete, it is not safe for him to return to the field and he should be emergently transported for further\nassessment and diagnostic imaging. This athlete reported bilateral symptoms, and 15 minutes of resolution\nis not considered acceptable for release and return to play. In the case of a cervical spine injury with\nassociated altered mental status and/or airway compromise, the helmet and pads may be removed but only\nsimultaneously to avoid further cervical injury. Resolution of symptoms within 5 minutes, lack of\nbilaterality, and a normal neurologic examination may allow for return to play at the physician\u2019s discretion.\nRef: Usman S. Management of head and neck injuries by the sideline physician. Am Fam Physician. 2022;106(5):543-548.",
+      "reference": "Usman S. Management of head and neck injuries by the sideline physician. Am Fam Physician. 2022;106(5):543-548.",
+      "db_found": true
+    },
+    {
+      "item_number": 180,
+      "qid": "QID-2023-0180",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Respiratory",
+      "exam_year": 2023,
+      "question_text": "A 58-year-old female with coronary artery disease and alcohol use disorder presents with\nprogressive shortness of breath over the past 3 weeks. A chest radiograph demonstrates bilateral\npleural effusions that are greater on the right side. Laboratory studies, including pleural fluid\nanalysis, show the following:\nSerum protein\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae 5.5 g/dL (N 6.0\u201d\u201c8.0)\nSerum LDH \u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae 305 IU/L (N 105\u201d\u201c333)\nPlasma glucose\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae 88 mg/dL (N 70\u201d\u201c100)\nPleural fluid protein \u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae 2.9 g/dL\nPleural fluid LDH\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae 295 IU/L\nPleural fluid glucose\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae\u00ef\u20ac\u00ae 51 mg/dL\nWhich one of the following is the most likely cause of the effusion?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Cirrhosis of the liver\"}, {\"letter\": \"B\", \"text\": \"Congestive heart failure\"}, {\"letter\": \"C\", \"text\": \"COPD\"}, {\"letter\": \"D\", \"text\": \"Malignancy\"}, {\"letter\": \"E\", \"text\": \"Pulmonary embolism\"}]",
+      "correct_letter": "D",
+      "correct_text": "Malignancy",
+      "explanation": "The modified Light\u2019s criteria are used to determine whether pleural effusions are transudative or exudative.\nThis fluid is exudative as defined by a pleural fluid protein to serum protein ratio >0.5, a pleural fluid\nLDH to serum LDH ratio >0.6, and a pleural fluid LDH greater than two-thirds the upper limit of normal\nfor serum. Lung malignancy is a cause of exudative pleural effusions. Cirrhosis and congestive heart\nfailure cause transudative rather than exudative effusions. COPD does not cause pleural effusions. This\nfluid also has low glucose, which suggests malignancy or infection rather than pulmonary embolism.\nRef: Light RW. Disorders of the pleura. In: Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, eds.\nHarrison\u2019s Principles of Internal Medicine. 21st ed. McGraw Hill; 2022:2197-2200.",
+      "reference": "Light RW. Disorders of the pleura. In: Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, eds. Harrison\u2019s Principles of Internal Medicine. 21st ed. McGraw Hill; 2022:2197-2200.",
+      "db_found": true
+    },
+    {
+      "item_number": 181,
+      "qid": "QID-2023-0181",
+      "blueprint": "Emergent and Urgent Care",
+      "body_system": "Cardiovascular",
+      "exam_year": 2023,
+      "question_text": "A 60-year-old female presents to the emergency department after developing confusion with\nsevere headache and nausea. Shortly after arrival she has a generalized tonic-clonic seizure\nlasting less than 30 seconds. She has a blood pressure of 220/130 mm Hg, a pulse rate of 85\nbeats/min, and an oxygen saturation of 98% on room air. Cardiac enzymes are negative.\nNoncontrast CT of the head is negative for hemorrhage and contrast CT of the chest and\nabdomen reveals no aortic dissection. Based on guidelines from the American Heart Association,\nthe patient\u2019s blood pressure is lowered by approximately 20% during the first hour of treatment.\nAssuming the patient remains clinically stable, the goal over the next 2\u201d\u201c6 hours is to lower her\nblood pressure to",
+      "choices": "[{\"letter\": \"A\", \"text\": \"130/90 mm Hg\"}, {\"letter\": \"B\", \"text\": \"140/90 mm Hg\"}, {\"letter\": \"C\", \"text\": \"150/100 mm Hg\"}, {\"letter\": \"D\", \"text\": \"160/100 mm Hg\"}, {\"letter\": \"E\", \"text\": \"170/100 mm Hg\\n66\"}]",
+      "correct_letter": "D",
+      "correct_text": "160/100 mm Hg",
+      "explanation": "This patient is having a hypertensive emergency with encephalopathy and the goal is to lower her blood\npressure by no more than 25% in the first hour. Over the next 2\u201d\u201c6 hours, her blood pressure should be\nlowered to 160/100 mm Hg. After that level is achieved, her blood pressure may be cautiously lowered\nto normal over the ensuing 24\u201d\u201c48 hours. Lowering blood pressure too aggressively can lead to cerebral\nischemia and should be avoided.\nRef: Whelton PK, Carey RM, Aronow WS, et al. 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA\nguideline for the prevention, detection, evaluation, and management of high blood pressure in adults: executive summary:\na report of the American College of Cardiology/American Heart Association task force on clinical practice guidelines.\nCirculation. 2018;138(17):e426-e483.\n 70",
+      "reference": "Whelton PK, Carey RM, Aronow WS, et al. 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA guideline for the prevention, detection, evaluation, and management of high blood pressure in adults: executive summary: a report of the American College of Cardiology/American Heart Association task force on clinical practice guidelines. Circulation. 2018;138(17):e426-e483.",
+      "db_found": true
+    },
+    {
+      "item_number": 190,
+      "qid": "QID-2023-0190",
+      "blueprint": "Acute Care and Diagnosis",
+      "body_system": "Special Sensory",
+      "exam_year": 2023,
+      "question_text": "A 68-year-old male with a past medical history of tobacco use and alcohol abuse presents with\nhalitosis. On physical examination you note that he has thick white hyperkeratosis with a furry\nappearance on the anterior two-thirds of his tongue.\nWhich one of the following should you recommend?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"Serial observations with close follow-up\"}, {\"letter\": \"B\", \"text\": \"Increased fiber intake and regular tongue brushing\"}, {\"letter\": \"C\", \"text\": \"Oral fluconazole (Diflucan)\"}, {\"letter\": \"D\", \"text\": \"Topical corticosteroids\"}, {\"letter\": \"E\", \"text\": \"Referral for biopsy of the tongue\"}]",
+      "correct_letter": "B",
+      "correct_text": "Increased fiber intake and regular tongue brushing",
+      "explanation": "This description is typical for a patient with retention hyperkeratosis of the filiform papillae, or \u201chairy\ntongue,\u201d\u009d on the anterior two-thirds of the tongue. It causes a furry appearance with hair-like projections\nthat become colonized with bacteria and can take on a dark pigmentation. This condition occurs in up to\n11% of the population and is more common in older patients, with a 3:1 predilection for males. Tobacco\nand  alcohol  use,  poor  oral  hygiene,  a  low-fiber  diet,  hyposalivation,  mouth  breathing,  and\nimmunosuppression are associated with hairy tongue. It can cause halitosis but otherwise lacks symptoms.\nOf the options listed, the most effective treatment is increased fiber intake and regular tongue brushing with\ntoothpaste or hydrogen peroxide. Serial observations with close follow-up, oral fluconazole, topical\ncorticosteroids, and referral for biopsy of the tongue should not be recommended for this patient.\nRef: Randall DA, Wilson Westmark NL, Neville BW: Common oral lesions. Am Fam Physician. 2022;105(4):369-376.\n 73",
+      "reference": "Randall DA, Wilson Westmark NL, Neville BW. Common oral lesions. Am Fam Physician. 2022;105(4):369-376.",
+      "db_found": true
+    },
+    {
+      "item_number": 199,
+      "qid": "QID-2023-0199",
+      "blueprint": "Chronic Care Management",
+      "body_system": "Cardiovascular",
+      "exam_year": 2023,
+      "question_text": "A 66-year-old male with a current history of tobacco use, hypertension, and gout presents for\nan annual health maintenance examination. He does not have any concerns today. A physical\nexamination is unremarkable except for an elevated blood pressure of 149/90 mm Hg and a bruit\nheard over his abdomen. Abdominal duplex ultrasonography shows an abdominal aortic\naneurysm with a diameter of 4.5 cm.\nIn addition to encouraging smoking cessation, which one of the following would be the most\nappropriate next step?",
+      "choices": "[{\"letter\": \"A\", \"text\": \"No further surveillance\"}, {\"letter\": \"B\", \"text\": \"Repeating abdominal duplex ultrasonography in 6\\u201d\\u201c12 months\"}, {\"letter\": \"C\", \"text\": \"Repeating abdominal duplex ultrasonography in 2 years\"}, {\"letter\": \"D\", \"text\": \"Referral to a vascular surgeon for elective surgical repair\"}, {\"letter\": \"E\", \"text\": \"Referral to a vascular surgeon for emergent surgical repair\\n72\"}]",
+      "correct_letter": "B",
+      "correct_text": "Repeating abdominal duplex ultrasonography in 6\u201d\u201c12 months",
+      "explanation": "The U.S. Preventive Services Task Force recommends a one-time ultrasonography screening for\nabdominal aortic aneurysm (AAA) for men ages 65\u201d\u201c75 who have ever smoked. The major risk factors for\nAAA include male sex, age 65 and older, and tobacco use. Smoking history is responsible for about 75%\nof cases, and smoking cessation should be recommended in all patients diagnosed with AAA.\nAn aneurysm diameter of 2.5\u201d\u201c3.0 cm requires no surveillance, while a 6- to 12-month surveillance is\nrequired for a diameter of 4.0\u201d\u201c5.0 cm. In males, elective surgical repair may be considered in patients with\nan aneurysm of 5.0\u201d\u201c5.4 cm. However, surgical repair is required in men for asymptomatic aneurysms \u00ef\u201a\u00b35.5\ncm and for rapidly expanding aneurysms. In women, surgical repair is indicated when the aneurysm is\n\u00ef\u201a\u00b35.0 cm.\nRef: US Preventive Services Task Force. Final recommendation statement: abdominal aortic aneurysm: screening. Updated\nDecember 10, 2019. 2) Haque K, Bhargava P. Abdominal aortic aneurysm. Am Fam Physician. 2022;106(2):165-172.",
+      "reference": "US Preventive Services Task Force. Final recommendation statement: abdominal aortic aneurysm: screening. Updated December 10, 2019. | Haque K, Bhargava P. Abdominal aortic aneurysm. Am Fam Physician. 2022;106(2):165-172.",
+      "db_found": true
+    }
+  ],
+  "body_systems_available": [],
+  "longitudinal_delta": {
+    "n1": {
+      "prior_year": "2022",
+      "scaled_delta": null,
+      "scaled_source": "estimated",
+      "prior_scaled": null,
+      "current_scaled": null,
+      "vs_pgy_delta": null,
+      "prior_vs_pgy": null,
+      "current_vs_pgy": null,
+      "vs_mps_delta": null,
+      "prior_overall_pct": 64.2,
+      "current_overall_pct": 68.8,
+      "overall_delta_pct": 4.6,
+      "blueprint_delta": {
+        "Acute Care": 1.6,
+        "Emergent/Urgent": 23.8,
+        "Chronic Care": 13.9,
+        "Foundations": -21.4,
+        "Preventive": -1.9
+      },
+      "blueprint_scaled_delta": {},
+      "body_system_delta": {},
+      "weak_area_trajectory": {
+        "closed": [
+          "Chronic Care"
+        ],
+        "persistent": [
+          "Acute Care",
+          "Emergent/Urgent"
+        ],
+        "new": [
+          "Foundations"
+        ]
+      }
+    }
+  }
+}
