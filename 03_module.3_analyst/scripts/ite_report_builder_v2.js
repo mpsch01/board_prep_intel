@@ -232,6 +232,20 @@ function extractSafeName(fullName) {
 
 const safeName = extractSafeName(res.name);
 
+// ── Prefer official score report values over analyzer estimates ──────
+// When a --score-report PDF was parsed, scaled_score_source === "official"
+// and performance.overall carries the actual ABFM values (scaled_score_actual,
+// vs_mps, pgy_level, pgy_mean_scaled, vs_pgy_mean). Fall back to thresholds
+// estimates when no score report was provided.
+const hasOfficialScore = perf.overall.scaled_score_source === "official";
+const displayScaled    = hasOfficialScore ? perf.overall.scaled_score_actual : t1.scaled_score;
+const displayVsMps     = hasOfficialScore ? perf.overall.vs_mps              : t1.vs_mps;
+const displayPgyLevel  = (hasOfficialScore && perf.overall.pgy_level)
+                           ? `PGY${perf.overall.pgy_level}` : "National";
+const displayPgyMean   = hasOfficialScore ? perf.overall.pgy_mean_scaled     : t1.national_mean;
+const displayVsPgy     = hasOfficialScore ? perf.overall.vs_pgy_mean
+                           : (t1.scaled_score - t1.national_mean);
+
 // ── Build output filenames ──────────────────────────────────────────
 const ver = analysisVer.startsWith("3") ? "v3" : "v2";
 const analysisFileName = `ITE_${data.exam_year}_${ver}_Analysis_${safeName}.docx`;
@@ -239,13 +253,17 @@ const examFileName = `ITE_${data.exam_year}_${ver}_Exam_${safeName}.docx`;
 const analysisPath = path.join(outputDir, analysisFileName);
 const examPath = path.join(outputDir, examFileName);
 
-// ── Identify weak areas ─────────────────────────────────────────────
+// ── Identify weak areas (blueprint + body system) ───────────────────
 const weakBlueprints = [];
 for (const [cat, cls] of Object.entries(t2.classifications || {})) {
   if (cls.classification === "relative_weakness") weakBlueprints.push(cat);
 }
 for (const [cat, vals] of Object.entries(perf.blueprint)) {
   if (vals.rate < 0.70 && !weakBlueprints.includes(cat)) weakBlueprints.push(cat);
+}
+// Include body systems below 70% so their targeted questions get ⚠ WEAK AREA treatment
+for (const [sys, vals] of Object.entries(perf.body_system || {})) {
+  if (vals.rate < 0.70 && !weakBlueprints.includes(sys)) weakBlueprints.push(sys);
 }
 
 // ── Group questions by targeting (weak area) ────────────────────────
@@ -286,7 +304,7 @@ children.push(makeTable([3120, 3120, 3120], [row([
     new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: `${perf.overall.correct}/${perf.overall.total} correct`, font: FONT, size: 18, color: MGRAY })] }),
   ]}),
   new TableCell({ borders: noBorders(), width: { size: 3120, type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER, children: [
-    new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: `${t1.scaled_score}`, font: FONT, size: 56, bold: true, color: BLUE })] }),
+    new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: `${displayScaled}`, font: FONT, size: 56, bold: true, color: BLUE })] }),
     new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Scaled Score", font: FONT, size: 18, color: MGRAY })] }),
   ]}),
   new TableCell({ borders: noBorders(), width: { size: 3120, type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER,
@@ -297,7 +315,7 @@ children.push(makeTable([3120, 3120, 3120], [row([
 ])]));
 children.push(spacer(100));
 children.push(new Paragraph({ spacing: { before: 80, after: 0 }, alignment: AlignmentType.CENTER, children: [
-  new TextRun({ text: `vs MPS (380): +${t1.vs_mps}  |  vs PGY2 National Mean (${t1.national_mean}): +${t1.scaled_score - t1.national_mean}  |  N = 15,382`, font: FONT, size: 18, color: MGRAY }),
+  new TextRun({ text: `vs MPS (380): +${displayVsMps}  |  vs ${displayPgyLevel} Mean (${displayPgyMean}): +${displayVsPgy}  |  N = 15,382`, font: FONT, size: 18, color: MGRAY }),
 ]}));
 
 // ────────────────────────────────────────────────────────────────────
@@ -319,7 +337,8 @@ const topYieldText = topYield
   : "";
 
 children.push(studyNote(
-  `Scaled score ${t1.scaled_score} (${t1.percentile_estimate}th percentile), ` +
+  `Scaled score ${displayScaled}${hasOfficialScore ? " (official)" : " (est.)"}` +
+  ` (${t1.percentile_estimate}th percentile est.), ` +
   `placing in the "${tierBadge(t1.pass_tier.tier)}" tier. ` +
   `Weak areas identified: ${weakList}. ` +
   `${worstBp[0]} is the lowest-performing category at ${(worstBp[1].rate * 100).toFixed(1)}% ` +

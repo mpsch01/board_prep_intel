@@ -1,6 +1,6 @@
 # _index.md â€” Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root â€” Option B complete 2026-04-04)
-**Last Updated:** 2026-04-08 (BATON 048 – session-housekeeping agent templates created; DATABASE_GUIDE.md moved to root; VC_fail +7 PDFs)
+**Last Updated:** 2026-04-08 (BATON 049 – bug fixes in ITE score analysis pipeline; BUG-047-01/02/03 resolved)
 **Status:** Current – 1,004 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 maintain = 26 scripts; M2 = 75py + 6js; M3 = 14py + 2js + report_config.json; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-â”œâ”€â”€ BATON_active_047_20260407_ite_score_analyzer_plugin.md  â† active BATON
+â”œâ”€â”€ BATON_active_049_20260408_bug_fixes_ite_pipeline.md  â† active BATON
 â”œâ”€â”€ CLAUDE.md                              â† project memory + conventions
 â”œâ”€â”€ REPO_MAP.md                            â† current-state architectural overview (NEW â€” BATON 039)
 â”œâ”€â”€ README.md                              â† project overview (human-readable)
@@ -39,7 +39,11 @@ board_prep_intel/
 **Swept (2026-04-04, BATON 035):** 5 legacy scripts deprecated (headers applied) + staged in `_legacy/` â†’ moved to offsite archive by user; originals pending Windows delete; `build_faculty_pptx.js` verified clean (no path deps)
 **Swept (2026-04-04, BATON 036/037):** M1 restructured to 3-domain layout (citation_files/ + practice_questions/ + ite_exams/); all 11 M1 maintain scripts path-updated; build_ite_qa_deliverables.py + build_aafp_qa_deliverables.py built + 42 deliverables generated; ite_exams/ archive confirmed (2018â€“2025)
 
-**Swept (2026-04-08, BATON 048):** DATABASE_GUIDE.md relocated from 00_database/ to project root; session-housekeeping agent templates created in .claude/skills/session-housekeeping/agents/**Cleaned (2026-04-04, BATON 039):** Windows cleanup complete â€” 5 deprecated M1 scripts deleted; Option B artifacts deleted (SEVERANCE_PLAN.md, option_b_patch.py, repo_pre_severance.md); schema docs refreshed (articles.md: row count, tier column, source_type dist; questions.md: subcategory removed); script counts corrected (M1 build 6, maintain 18, M2 75py, M3 13py); REPO_MAP.md added to root
+**Fixed (2026-04-08, BATON 049):** Three ITE score analysis bugs fixed — BUG-047-01: ite_parser.py exam_year now extracted from PDF text (not hardcoded 2025); BUG-047-02: ite_analyzer_v3.py added BODYSYSTEM_PDF_NORM alias map + _normalize_body_system() function for body system name normalization; BUG-047-03: ite_analyze_v2.py imports normalize function, applies it to body_system_scaled dict, uses official score when available. Test reports validated: Scholl_2022/23/24, Sarkar_2025, Hopkins_2025. New finding: practice question 0-question warnings detected in qid_art_xref tagging (deferred flag: DEFERRED-PRACTICE-Q-COVERAGE).
+
+**Swept (2026-04-08, BATON 048):** DATABASE_GUIDE.md relocated from 00_database/ to project root; session-housekeeping agent templates created in .claude/skills/session-housekeeping/agents/
+
+**Cleaned (2026-04-04, BATON 039):** Windows cleanup complete â€” 5 deprecated M1 scripts deleted; Option B artifacts deleted (SEVERANCE_PLAN.md, option_b_patch.py, repo_pre_severance.md); schema docs refreshed (articles.md: row count, tier column, source_type dist; questions.md: subcategory removed); script counts corrected (M1 build 6, maintain 18, M2 75py, M3 13py); REPO_MAP.md added to root
 **Fixed (2026-04-04, BATON 038):** 14 code review defects resolved â€” hop count bugs (preprocess_concept_tags, batch_db_extract, db_guided_extractor), SCHEMAS_DIR/OUTPUT_DIR (build_icd10_tags), filename pattern (extract_ite_year), exists() guard (audit_engine_type_changes), crosswalk output paths + multi-tier scan (build_crosswalk_index), XGBoost param (classify_ite_year), JSON_DIR/LOG_DIR/OUTPUT_DIR path fixes (4 scripts), VC gate cross-check (backfill), docstring escapes (2 scripts)
 
 ---
@@ -497,24 +501,4 @@ Uses M1/build/ scripts 3-6 as template, adapted for year-specific PDF format.
 
 **What is NOT tracked (gitignored):** `*.db`, `*.pdf`, `extracted_json/`, `resident_data/`, `__pycache__/`, `*.pyc`, `*.log`, `node_modules/`, `outputs/` (derived). The DB and PDFs are source data â€” too large for GitHub; kept on local disk and mirrored to Google Drive.
 
-**Why this split:** DB is ~50MB+ and changes with every session â€” wrong tool for binary tracking. PDFs are immutable source files. GitHub tracks intent and logic; Google Drive / local disk tracks the data.
-
----
-
-## Housekeeping Log
-
-| Date | Action |
-|------|--------|
-| 2026-04-05 | BATON 040: EXA PDF pipeline built. 3 new M1 maintain scripts: exa_pdf_finder.py (1,572 articles searched; 259 direct_pdf + 332 open_access + 109 pmc_fulltext + 872 landing_page), exa_pdf_downloader.py (397/558 downloaded: 215 direct + 190 AAFP), pmc_oa_downloader.py (47/95 downloaded: 14 direct OA + 33 tgz extracted). PDFs 413â†’868. M1 maintain 18â†’21. DEFERRED-G: unpaywall_scanner.py (next round). |
-| 2026-04-04 | BATON 035â€“039: Option B flatten complete (board_prep_intel/ is now flat project root). M1 restructured to 3-domain layout (citation_files/ + practice_questions/ + ite_exams/). 42 Q&A deliverables built (16 ITE + 26 AAFP). 14 code review defects fixed. 5 deprecated scripts deleted. Schema docs corrected (articles.md tier column rewritten â€” VC_fail/pass/local_lite/right_click; row count 1985; source_type refreshed). REPO_MAP.md added. Git: remote renamed board_prep_intel. M1 build 6py, maintain 18py, M2 75py, M3 13py. |
-| 2026-04-01 | BATON 030â€“031: ite_analyzer_v3.py built + smoke tested (PASS). ICD-10 vec layers rebuilt. 5 bugs fixed (entry point imports, _not_in() col param, unicode, subcatAnalysis). QUESTION-DIST-001 flagged. export_aafp_ite_relationships.py run â†’ 4 CSVs in readable_db_files/. word_doc_defaults.py committed to auto-memory. build_aafp_qa.py + build_aafp_qa_file1.py built â†’ 2 AAFP Q&A docs delivered. M3: 5â†’9 Python. |
-| 2026-03-29 | BATON 023â€“024: Blueprint labeling complete (1,629/1,629). blueprint_api_classifier.py (Sonnet, 70.4% Gold Standard accuracy) wrote 1,234 pseudo-labels for 2018-2023. blueprint_emergent_pass.py: 16 Acuteâ†’Emergent flips. Pre-2024 Emergent at 11.7% (vs 20% target) â€” accepted as known limitation (blueprint targets are 2024+ design spec). aafp_question_icd10.relevance normalized (74â†’3 values). unified_keyword_extractor.py: TF-IDF unigrams for all 1,629 ITE + 1,221 AAFP questions. aafp_vs_ite_comparison_dashboard.html built + patched. M2: 55â†’57 Python. |
-| 2026-03-29 | BATON 021â€“022: AAFP full enrichment pipeline complete. aafp_merge_keywords.py: all_keywords 1221/1221. aafp_assign_body_system.py v2: 3-tier classifier, all 16 body systems 1221/1221, body_system_method audit trail. aafp_enrich_concept_tags.py: concept_tags + subcategory 1221/1221 (Haiku 4.5); aafp_question_icd10 ~4,065 rows (98.9% coverage). aafp_model_comparison.py: Haiku vs Sonnet 10-Q eval (Haiku selected, ~3Ã— cost savings). M2: 51â†’55 Python. |
-| 2026-03-28 | BATON 020: AAFP question reuse investigation complete. 38 shared AAFP-ITE vignettes found (verbatim identical stems, all dist 0.23â€“0.30). aafp_question_reuse_investigation.py built (M3/scripts/). 49 new articles inserted (ART-1938â€“ART-1986); aafp_qid_art_xref: 864 rows (643 unique Q linked, 52.7%). aafp_ref_match_v2.py (S2-S5 strategies, 12 new links). batch_insert_aafp_articles.py built. M2: 49â†’51 Python. M3: 4â†’5 Python. |
-| 2026-03-27 | BATON 016: AAFP enrichment pipeline complete. aafp_brq_import.py v3: 5-table schema (aafp_questions, aafp_explanations, aafp_citations, aafp_citation_raw, aafp_qid_art_xref â€” 797 rows, 586Q linked). aafp_question_vec: 1221/1221 vectors. aafp_keyword_extractor.py: stem+explanation TF-IDF keywords 100%. aafp_context_propagator.py: body_system/source_type propagated + aafp_question_icd10 (1,876 rows). aafp_vector_explorer.py: AAFP-ITE KNN analysis + --save; ite_nearest_dist on all 1221 rows. Key finding: near-identical AAFP-ITE question pairs (dist<0.27); linked/unlinked dist gap = 0.25. M2 scripts: 45â†’49 Python. |
-| 2026-03-27 | BATON 015: AAFP BRQ scraper built (v3 + resume/salvage). 1,221 Q scraped across 135 quizzes. aafp_questions table created + populated (1,221 rows, 51.1% article-linked). M1 reorganized: aafp_brq/ as proper warehouse source (scraper/ + staging/). aafp_brq_import.py added to M2/scripts/ (+1 â†’ 45 Python). citation_gap_list_2024_2025.txt built (229 unmatched ITE Critique refs). FUSE oplock conflict documented. Option B+C confirmed. **Git: cd32816 â€” pushed to GitHub (github.com/mpsch01/project-overhaul, private). .gitignore strategy: code + docs on GitHub; binaries (*.db, *.pdf, extracted_json/) on local disk / Google Drive.** |
-| 2026-03-27 | BATON 014: Full inventory sweep + M2 cleanup. Deleted: sectional_READMEs/, tagging_bundle/, re-org_guidance/, master_map.JSON, MASTER_MAP_V.1.html, TEMP_MIGRATION_MANIFEST.md, 3 one-time M2 scripts (backfill_merge_source_fields, build_xref_2018_2019, batch_retrieve_enrichment). Moved: backfill_keywords_2018_2019.py â†’ M1/build/; preprocess_concept_tags.py â†’ M1/maintain/; auto-memory-copies/ â†’ root; re-org_guidance keep files â†’ key_data_files/. M1 build sequence now self-contained (9 scripts). synthesis_library confirmed at 242 files (all legacy flat JSONs). qid_art_xref corrected to 2,470 (build_xref_2018_2019.py ran post-BATON 013). Designed: article_citation_trend table + extract_ite_critique_refs.py + update_citation_trends.py (not yet built). |
-| 2026-03-26 | BATON 012: Nomenclature sweep complete â€” VC_pass/VC_fail naming. VC_fail 146 PDFs enriched. rematch_unmatched.py (8 new links). classify_null_refs.py added. rename_tier_labels_in_db.py added. Git: 609ef99, 10d8208. |
-| 2026-03-25 | FLAG 33 closed â€” vec tables at 100%. Articles table fully standardized. TEMP migrations complete. |
-| 2026-03-24 | 2018-2019 integration: 440 questions, 389 articles, 653 QRP. Module structure fully populated. All scripts de-hardcoded. |
-| 2026-03-23 | _index.md rebuilt. 4-module structure created. BATON protocol v2.0. |
+**Why this split:** DB is ~50MB+ and changes with every session

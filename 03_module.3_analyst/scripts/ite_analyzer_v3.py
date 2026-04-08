@@ -86,6 +86,41 @@ BLUEPRINT_PDF_TO_DB = {
 }
 BLUEPRINT_DB_TO_PDF = {v: k for k, v in BLUEPRINT_PDF_TO_DB.items()}
 
+# Body system name normalization — maps known PDF/score-report variants to the
+# canonical keys used in BODYSYSTEM_PDF_TO_DB. Applied to item body_system fields
+# and to body_system_scaled keys from the score report before any analysis runs.
+# Extend this when ABFM introduces new naming conventions in future years.
+BODYSYSTEM_PDF_NORM = {
+    # 2024+ canonical names (identity — already correct)
+    "Cardiovascular":            "Cardiovascular",
+    "Injuries/Musculoskeletal":  "Injuries/Musculoskeletal",
+    "Respiratory":               "Respiratory",
+    "Psychiatric/Behavioral":    "Psychiatric/Behavioral",
+    "Sexual and Reproductive":   "Sexual and Reproductive",
+    "Endocrine":                 "Endocrine",
+    "Gastrointestinal":          "Gastrointestinal",
+    "Hematologic/Immune":        "Hematologic/Immune",
+    "Integumentary":             "Integumentary",
+    "Nephrologic":               "Nephrologic",
+    "Neurologic":                "Neurologic",
+    "Nonspecific":               "Nonspecific",
+    "Patient-Based Systems":     "Patient-Based Systems",
+    "Population-Based Care":     "Population-Based Care",
+    "Special Sensory":           "Special Sensory",
+    # Score-report aliases that differ from grid PDF names
+    "Musculoskeletal":           "Injuries/Musculoskeletal",  # score report drops "Injuries/"
+    "Hematologic/ Immune":       "Hematologic/Immune",        # space variant
+    "Psychogenic":               "Psychiatric/Behavioral",    # DB-side name in older reports
+    "Reproductive: Female":      "Sexual and Reproductive",   # score report split form
+    "Reproductive: Male":        "Sexual and Reproductive",   # score report split form
+}
+
+
+def _normalize_body_system(name: str) -> str:
+    """Return the canonical BODYSYSTEM_PDF_TO_DB key for any known body system variant."""
+    return BODYSYSTEM_PDF_NORM.get(name, name)
+
+
 # Body system mappings (PDF label → DB names, one-to-many for merged systems)
 BODYSYSTEM_PDF_TO_DB = {
     "Cardiovascular":          ["Cardiovascular"],
@@ -1341,6 +1376,13 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
     items      = parsed_data["items"]
     exam_year  = parsed_data.get("exam_year") or 2025
     qid_map    = build_qid_map(items, exam_year)
+
+    # Normalize body system names on every item to canonical BODYSYSTEM_PDF_TO_DB keys.
+    # Handles score-report aliases (e.g. "Musculoskeletal" → "Injuries/Musculoskeletal")
+    # and whitespace variants so all downstream analysis uses consistent names.
+    for item in items:
+        if item.get("body_system"):
+            item["body_system"] = _normalize_body_system(item["body_system"])
 
     # --- Core analysis layers ---
     perf        = basic_performance(items)

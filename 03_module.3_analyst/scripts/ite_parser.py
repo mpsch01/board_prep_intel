@@ -200,6 +200,7 @@ def parse_blueprint(pdf_path: str, config: dict) -> dict:
 
     Returns dict with:
         - resident: {name, abfm_id, program}
+        - exam_year: str (extracted from PDF text, e.g. "2024")
         - deleted_items: [int, ...]
         - items: [{item, correct, blueprint, score, sub_col_index, x, y, excluded_p}, ...]
         - summary: {total, correct, incorrect, pct}
@@ -209,6 +210,18 @@ def parse_blueprint(pdf_path: str, config: dict) -> dict:
 
     color_correct = config["color_signatures"]["correct"]["rgb"]
     color_incorrect = config["color_signatures"]["incorrect"]["rgb"]
+
+    # Extract exam year directly from PDF page text — reliable across all years.
+    # Pattern matches "2024 Item Performance Report" in the page header.
+    # Falls back to config["source_report"] (e.g. "ABFM ITE 2024") if regex misses.
+    page_text = page.get_text("text")
+    year_match = re.search(r'(20\d{2})\s+Item Performance Report', page_text)
+    if year_match:
+        exam_year = year_match.group(1)
+    else:
+        src = config.get("source_report", "")
+        year_fallback = re.search(r'(20\d{2})', src)
+        exam_year = year_fallback.group(1) if year_fallback else ""
 
     # Extract metadata
     resident = _extract_resident_info(page)
@@ -246,7 +259,7 @@ def parse_blueprint(pdf_path: str, config: dict) -> dict:
 
     return {
         "resident": resident,
-        "exam_year": config.get("source_report", "").split()[-1] if config.get("source_report") else "",
+        "exam_year": exam_year,
         "deleted_items": sorted(deleted),
         "items": items,
         "summary": {

@@ -46,7 +46,7 @@ sys.path.insert(0, str(pipeline_dir / "v1"))
 from ite_parser import load_config, parse_blueprint, parse_bodysystem, merge_results, export_json, parse_score_report
 
 # Import v3 analyzer (default) and v2 (legacy --v2-only flag)
-from ite_analyzer_v3 import analyze_v3
+from ite_analyzer_v3 import analyze_v3, _normalize_body_system
 
 # v2 analyzer (DEPRECATED — kept for --v2-only flag)
 try:
@@ -476,8 +476,18 @@ def main():
         overall["vs_pgy_mean"]           = sr["vs_pgy_mean"]
         overall["unanswered_items"]      = sr["unanswered_items"]
         # Official per-category scaled scores (supplement the raw-rate analysis)
-        analysis["performance"]["blueprint_scaled"]    = sr["blueprint_scaled"]
-        analysis["performance"]["body_system_scaled"]  = sr["body_system_scaled"]
+        analysis["performance"]["blueprint_scaled"] = sr["blueprint_scaled"]
+
+        # Normalize body_system_scaled keys to match the canonical grid PDF names
+        # used in BODYSYSTEM_PDF_TO_DB (e.g. "Musculoskeletal" → "Injuries/Musculoskeletal").
+        # When two score-report names collapse to the same canonical key (e.g.
+        # "Reproductive: Female" + "Reproductive: Male" → "Sexual and Reproductive"),
+        # the second value overwrites — both are reasonable proxies for the merged system.
+        normalized_bs_scaled = {}
+        for bs_name, bs_data in sr["body_system_scaled"].items():
+            canonical = _normalize_body_system(bs_name)
+            normalized_bs_scaled[canonical] = bs_data
+        analysis["performance"]["body_system_scaled"] = normalized_bs_scaled
     else:
         analysis.setdefault("performance", {}).setdefault("overall", {})["scaled_score_source"] = "estimated"
 

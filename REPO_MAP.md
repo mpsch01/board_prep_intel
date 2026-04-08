@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-04-08 (BATON 048)
+**Last Updated:** 2026-04-08 (BATON 049) — Bug fix session: BUG-047-01/02/03 fixed
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -12,7 +12,7 @@ board_prep_intel/
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
 ├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_048_*.md              Active session handoff — read first every session
+├── BATON_active_049_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
@@ -59,7 +59,7 @@ board_prep_intel/
 │       └── candidates/                Prompt templates for enrichment
 │
 ├── 03_module.3_analyst/               M3 — Score analysis, ICD-10, pathways, Q&A deliverables
-│   ├── scripts/                       14 py + 2 JS + 2 JSON; ite_parser, ite_analyzer_v3, build_article_currency, report builders
+│   ├── scripts/                       14 py + 2 JS + 1 JSON config; ite_parser, ite_analyzer_v3, build_article_currency, report builders
 │   ├── docs/                          ITE score analysis pipeline docs
 │   └── reports/                       Per-resident DOCX reports + faculty PPTX (gitignored)
 │
@@ -92,6 +92,4 @@ board_prep_intel/
 └── skills_abilities/                  Agent skills, SDK references, Apify actor
     ├── agents/                        PDF sourcer agent + docs/logs
     ├── apify-actors/
-    │   └── citation_crawler/          Deployed Apify actor (build 0.3.1, PlaywrightCrawler)
-    └── ite-data-context-skill/        ITE domain skill (SKILL.md, plugin, references/)
-```
+    │   └── citation_crawler/          Deployed Apify actor (build 0.3.1, Playwrigh
