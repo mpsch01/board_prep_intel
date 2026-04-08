@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Preview deploys for every branch
+[context.deploy-preview]
+  command = "npm run build"
+
+# Edge function for auth middleware
+[[edge_functions]]
+  function = "auth"
+  path = "/*"
