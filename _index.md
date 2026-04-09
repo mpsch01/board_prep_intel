@@ -1,7 +1,7 @@
 # _index.md â€” Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root â€” Option B complete 2026-04-04)
-**Last Updated:** 2026-04-08 (BATON 050 – practice Q year-over-year fixes; YOY section added; two-table layout in ite_report_builder_v2.js)
-**Status:** Current – 1,004 total PDFs (637 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 maintain = 26 scripts; M2 = 75py + 6js; M3 = 14py + 2js + report_config.json; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
+**Last Updated:** 2026-04-09 (BATON 051 – Module 5 web platform scaffold added; housekeeping sweep; M3 count corrected to 15py)
+**Status:** Current – 1,004 total PDFs (637 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 maintain = 26 scripts; M2 = 75py + 6js; M3 = 15py + 2js + report_config.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -25,6 +25,7 @@ board_prep_intel/
 â”œâ”€â”€ 02_module.2_processor/                 â† M2 pipeline scripts + source inputs
 â”œâ”€â”€ 03_module.3_analyst/                   â† M3 score analysis + ICD-10 + pathways
 â”œâ”€â”€ 04_module.4_sandbox/                   â† M4 experiments and agent prototypes
+├── 05_module.5_web/                       † M5 web platform (Next.js + Supabase + Sanity + Railway)
 â”‚
 â”œâ”€â”€ _archive_/                             â† curated deliverables + retired artifacts (renamed from archive_canonical 2026-04-03; includes docx_guideline_library/)
 â”œâ”€â”€ auto-memory-copies/                    â† git-tracked mirror of .auto-memory/ (durable backup)
@@ -44,6 +45,8 @@ board_prep_intel/
 **Improved (2026-04-08, BATON 050):** Practice Q year-over-year analysis refined — removed recency bonus from ite_analyzer_v3.py; updated SQL ORDER BY exam_year DESC queries; increased result limits from 20 to 60; added current_exam_year exclusion with int cast; ite_report_builder_v2.js implements two-table layout (single-dimension + cross-dimension); longitudinal year-over-year section 3b added with month-by-month trend data; --skip-reading-list and --question-count CLI flags added to ite_analyze_v2.py; SKIP_READING_LIST env var passed to Node. Ran Pjetergjoka 2024+2025 analysis with 35 questions.
 
 **Swept (2026-04-08, BATON 048):** DATABASE_GUIDE.md relocated from 00_database/ to project root; session-housekeeping agent templates created in .claude/skills/session-housekeeping/agents/
+
+**Added (2026-04-09, BATON 051):** 05_module.5_web/ scaffold (54 files — Next.js, Supabase, Sanity, Railway, OpenAI NL search) committed to GitHub by Copilot on 2026-04-08; nl_search_validation.py added to M4 sandbox; M3 script count corrected to 15py; housekeeping sweep complete.
 
 **Cleaned (2026-04-04, BATON 039):** Windows cleanup complete â€” 5 deprecated M1 scripts deleted; Option B artifacts deleted (SEVERANCE_PLAN.md, option_b_patch.py, repo_pre_severance.md); schema docs refreshed (articles.md: row count, tier column, source_type dist; questions.md: subcategory removed); script counts corrected (M1 build 6, maintain 18, M2 75py, M3 13py); REPO_MAP.md added to root
 **Fixed (2026-04-04, BATON 038):** 14 code review defects resolved â€” hop count bugs (preprocess_concept_tags, batch_db_extract, db_guided_extractor), SCHEMAS_DIR/OUTPUT_DIR (build_icd10_tags), filename pattern (extract_ite_year), exists() guard (audit_engine_type_changes), crosswalk output paths + multi-tier scan (build_crosswalk_index), XGBoost param (classify_ite_year), JSON_DIR/LOG_DIR/OUTPUT_DIR path fixes (4 scripts), VC gate cross-check (backfill), docstring escapes (2 scripts)
@@ -342,6 +345,28 @@ board_prep_intel/
 ```
 
 ---
+
+### `05_module.5_web/` – Interactive Web Platform (NEW – BATON 051)
+```
+05_module.5_web/
+├── frontend/            ← Next.js 15 app (TypeScript, App Router) — Netlify deploy
+│   ├── app/
+│   │   ├── resident/    ← dashboard, assessment, scores upload, analytics, library
+│   │   ├── faculty/     ← NL search, question-sets, articles, curriculum
+│   │   ├── admin/       ← users, sync
+│   │   └── api/         ← auth/callback, search (NL embed), scores/upload
+│   ├── components/      ← AssessmentRunner, AnalyticsDashboard
+│   └── lib/             ← supabase/, sanity/, search/ (nl-search pipeline)
+├── supabase/
+│   ├── migrations/      ← 001-005 SQL (core schema, pgvector, resident tables, RLS, functions)
+│   └── sync/            ← sqlite_to_supabase.py, vector_sync.py
+├── sanity/              ← CMS schemas (cohort, curriculum, readings, assignments, announcements)
+└── api/                 ← Railway FastAPI: /health + /parse-score-report
+```
+Stack: Next.js 15 → Netlify | Supabase (PostgreSQL + pgvector + RLS) | Sanity CMS | Railway FastAPI | OpenAI text-embedding-3-small
+Added: 2026-04-08 (Copilot commits 081bdf7 + 45065a1); 10 code-review fixes applied in same session.
+
+*M5 scripts: 3 Python + 35 TypeScript/TSX + 5 SQL migrations*
 
 ## Supporting Folders
 

@@ -1,5 +1,5 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-04-08 (BATON 049)
+Last updated: 2026-04-09 (BATON 051)
 
 ## Active Memory Files
 - [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status
@@ -16,6 +16,9 @@ Last updated: 2026-04-08 (BATON 049)
 - **BUG-047-02 FIXED** — ite_analyzer_v3.py body system normalization: added BODYSYSTEM_PDF_NORM dict + _normalize_body_system() function to handle PDF vs blueprint capitalization inconsistencies
 - **BUG-047-03 FIXED** — ite_analyze_v2.py: imports normalize function, applies to body_system_scaled dict, prefers official score from score report when available
 - Test validation: Scholl_2022, 2023, 2024, Sarkar_2025, Hopkins_2025 all passing
+
+## Deployments (BATON 051)
+- [Module 5 web platform scaffold added](project_overhaul_state.md) — 05_module.5_web/ (Next.js+Supabase+Sanity+Railway) committed by Copilot 2026-04-08; docs updated BATON 051
 
 ## Open Items (BATON 049)
 - **DEFERRED-PRACTICE-Q-COVERAGE** — Practice question 0-question warnings detected for Foundations, Preventive, Cardiovascular, Respiratory, Sexual-Reproductive, Psychiatric, Behavioral body systems; indicates qid_art_xref tagging coverage gap in blueprint cells

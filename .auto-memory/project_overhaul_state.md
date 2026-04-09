@@ -1,14 +1,15 @@
 # project_overhaul_state.md
-Last updated: 2026-04-08 (BATON 050)
+Last updated: 2026-04-09 (BATON 051)
 
 ## Module State
 
 | Module | Status | Key Info |
 |--------|--------|----------|
-| M1 Warehouse | Active | 966 ITE PDFs (4 tiers) + 15 AAFP PDFs; 6 build + 26 maintain scripts |
+| M1 Warehouse | Active | 973 ITE PDFs (4 tiers) + 15 AAFP PDFs; 6 build + 26 maintain scripts |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
-| M3 Analyst | Active | 14 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta |
-| M4 Sandbox | Active | Experiments + agent prototypes |
+| M3 Analyst | Active | 15 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta |
+| M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
+| M5 Web Platform | Active | 3 py + 35 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
 | DB | Stable | 1,985 articles, 1,629 ITE Qs, 1,221 AAFP Qs |
 
 ## PDF Library State
@@ -16,12 +17,12 @@ Last updated: 2026-04-08 (BATON 050)
 ### ITE (citation_files/ITE/)
 | Tier | Count | Notes |
 |------|-------|-------|
-| VC_fail | 637 | Failed VC gate; awaiting enrichment |
+| VC_fail | 630 | Failed VC gate; awaiting enrichment |
 | VC_pass | 168 | Passed VC gate; awaiting enrichment |
 | local_lite | 117 | Enriched; not VC-cited |
 | right_click | 58 | Enriched + VC-cited (top tier) |
 | _dupe_archive | 14 | Legacy single-author duplicates; not pipeline |
-| **TOTAL active** | **980** | Recovered via EXA+PMC+Unpaywall; +7 VC_fail added 2026-04-08 |
+| **TOTAL active** | **973** | Recovered via EXA+PMC+Unpaywall; updated 2026-04-09 |
 
 ### AAFP (citation_files/AAFP/)
 | Count | Status |

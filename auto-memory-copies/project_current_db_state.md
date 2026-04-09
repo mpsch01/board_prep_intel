@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last updated: 2026-04-08 (BATON 049)
+Last verified: 2026-04-09 (BATON 051)
 
 ## DB: ite_intelligence.db
 
@@ -14,6 +14,7 @@ Last updated: 2026-04-08 (BATON 049)
 | question_icd10 | 5,218 | 92.8% ITE coverage — cleaned -66 no_match rows |
 | aafp_question_icd10 | 4,753 | Relevance normalized |
 | clinical_pathways | 3,971 | Blueprint-based, rebuilt 2026-03-31; cleaned -49 no_match rows |
+| article_citation_trend | 1,740 | Longitudinal citation tracking + watch_list flag |
 | article_currency | 1,985 | ✅ NEW — Layer 2 Intelligence complete; status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals JSON array column |
 | pubmed_pmid_cache | 344 | Layer 2 seed |
 | article_icd10_vec | 1,757 | Rebuilt 2026-04-05 |

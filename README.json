@@ -1,12 +1,12 @@
 {
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,629 questions, 2018–2025) linked to a clinical guideline library (1,985 articles, 404 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_050_20260408_practice_q_yoy_fixes.md",
-  "baton_description": "practice Q year bias fixed; YOY section added; two-table layout; Pjetergjoka runs complete",
-  "git_hash": "cf169bb",
+  "baton": "BATON_active_051_20260409_module5_housekeeping.md",
+  "baton_description": "Module 5 web platform scaffold documented; housekeeping sweep complete",
+  "git_hash": "45065a1",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
-  "last_updated": "2026-04-08",
+  "last_updated": "2026-04-09",
   "database": {
     "file": "00_database/db/ite_intelligence.db",
     "articles": 1985,
@@ -25,8 +25,8 @@
     "article_currency": 1985
   },
   "pdfs": {
-    "ite_total": 980,
-    "ite_vc_fail": 637,
+    "ite_total": 973,
+    "ite_vc_fail": 630,
     "ite_vc_pass": 168,
     "ite_local_lite": 117,
     "ite_right_click": 58,
@@ -39,9 +39,13 @@
     "m2_python": 75,
     "m2_js": 6,
     "m2_json": 1,
-    "m3_python": 14,
+    "m3_python": 15,
     "m3_js": 2,
-    "m3_json": 1
+    "m3_json": 1,
+    "m4_python": 1,
+    "m5_python": 3,
+    "m5_typescript": 35,
+    "m5_sql": 5
   },
   "next_art_id": "ART-1987",
   "vc_gate_citations": 352,
@@ -50,6 +54,7 @@
     "m2_processor": "02_module.2_processor/",
     "m3_analyst": "03_module.3_analyst/",
     "m4_sandbox": "04_module.4_sandbox/",
+    "m5_web": "05_module.5_web/",
     "database": "00_database/"
   }
 }

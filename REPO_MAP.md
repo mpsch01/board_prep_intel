@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-04-08 (BATON 049) — Bug fix session: BUG-047-01/02/03 fixed
+**Last Updated:** 2026-04-09 (BATON 051 — Git hash: 45065a1) — Module 5 web platform scaffold added; housekeeping sweep complete
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -12,7 +12,7 @@ board_prep_intel/
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
 ├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_049_*.md              Active session handoff — read first every session
+├── BATON_active_051_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
@@ -35,7 +35,7 @@ board_prep_intel/
 │   │   │   ├── VC_pass/               168 PDFs: passed VC gate; awaiting enrichment (gitignored)
 │   │   │   ├── local_lite/            117 PDFs: VC_fail + fully enriched (gitignored)
 │   │   │   ├── right_click/           58 PDFs: VC_pass + fully enriched — priority tier (gitignored)
-│   │   │   └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored)
+│   │   │   └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored) — ite_total: 973
 │   │   └── AAFP/                      15 PDFs: AAFP citation library (gitignored)
 │   ├── ite_exams/                     16 raw ITE exam PDFs: YYYY_MC.pdf + YYYY_critique.pdf (gitignored)
 │   └── scripts/
@@ -59,11 +59,19 @@ board_prep_intel/
 │       └── candidates/                Prompt templates for enrichment
 │
 ├── 03_module.3_analyst/               M3 — Score analysis, ICD-10, pathways, Q&A deliverables
-│   ├── scripts/                       14 py + 2 JS + 1 JSON config; ite_parser, ite_analyzer_v3, build_article_currency, report builders
+│   ├── scripts/                       15 py + 2 JS + 1 JSON config; ite_parser, ite_analyzer_v3, build_article_currency, report builders
 │   ├── docs/                          ITE score analysis pipeline docs
 │   └── reports/                       Per-resident DOCX reports + faculty PPTX (gitignored)
 │
-├── 04_module.4_sandbox/               M4 — Experiments and agent prototypes (placeholder)
+├── 04_module.4_sandbox/               M4 — Experiments and agent prototypes
+│   ├── scripts/                       1 py (nl_search_validation.py — validates pgvector NL search pipeline)
+│
+├── 05_module.5_web/                   M5 — Interactive web platform (Next.js + Supabase + Sanity + Railway FastAPI)
+│   ├── frontend/                      Next.js 15 app (Netlify deployment)
+│   ├── supabase/                      PostgreSQL + pgvector migrations + sync scripts
+│   ├── sanity/                        CMS schemas (curriculum content)
+│   ├── api/                           Railway FastAPI (PDF score parser)
+│   ├── scripts/                       3 py sync + 35 TypeScript/TSX + 5 SQL migrations
 │
 ├── _archive_/                         Curated deliverables (not disposable)
 │   ├── 01_curriculum/                 Curriculum definitions
