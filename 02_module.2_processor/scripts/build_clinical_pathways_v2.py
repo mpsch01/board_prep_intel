@@ -119,7 +119,7 @@ PATHWAY_ROLES = [
 RCT_SOURCE_TYPES = {"NEJM", "JAMA", "Lancet", "BMJ", "Annals", "Circulation", "Chest"}
 
 CHRONIC_CATEGORIES = {
-    "Cardiovascular", "Endocrine", "Nephrologic", "Psychogenic",
+    "Cardiovascular", "Endocrine", "Nephrologic", "Psychiatric/Behavioral",
     "Neurologic", "Hematologic/Immune",
 }
 ACUTE_CATEGORIES = {

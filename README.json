@@ -1,12 +1,12 @@
 {
   "project": "ABFM ITE Intelligence System",
-  "description": "A queryable Family Medicine board exam knowledge base (1,629 questions, 2018–2025) linked to a clinical guideline library (1,985 articles, 404 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_051_20260409_module5_housekeeping.md",
-  "baton_description": "Module 5 web platform scaffold documented; housekeeping sweep complete",
-  "git_hash": "45065a1",
+  "description": "A queryable Family Medicine board exam knowledge base (1,629 questions, 2018\u20132025) linked to a clinical guideline library (1,985 articles, 404 PDFs) via a structured SQLite pipeline.",
+  "baton": "BATON_active_052_20260410_psychogenic_retirement.md",
+  "baton_description": "Psychogenic retired across 12 scripts + DB; practice Q coverage fixed (RC1+RC2+RC3)",
+  "git_hash": "8fb7549",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
-  "last_updated": "2026-04-09",
+  "last_updated": "2026-04-10",
   "database": {
     "file": "00_database/db/ite_intelligence.db",
     "articles": 1985,

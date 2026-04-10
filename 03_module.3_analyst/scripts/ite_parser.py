@@ -331,7 +331,27 @@ def _detect_bodysystem_columns(page, config: dict) -> dict:
     """
     Detect body system columns on a page by finding white text headers.
     Returns dict mapping system_name -> {x_min, x_max, header_x}.
+
+    Compound header handling: ABFM PDFs sometimes render a single column
+    label as two adjacent white text spans (e.g. "Psychiatric/" + "Behavioral"
+    instead of "Psychiatric/Behavioral"). This function merges adjacent spans
+    whose concatenated text matches a known canonical system name so the column
+    map stays correct and no phantom "Psychiatric" / "Behavioral" columns appear.
     """
+    # Known compound headers: first part → (canonical name, expected second part)
+    # Extend if ABFM introduces additional multi-word column labels.
+    COMPOUND_HEADERS = {
+        "Psychiatric":          ("Psychiatric/Behavioral",    "Behavioral"),
+        "Psychiatric/":         ("Psychiatric/Behavioral",    "Behavioral"),
+        "Injuries":             ("Injuries/Musculoskeletal",  "Musculoskeletal"),
+        "Injuries/":            ("Injuries/Musculoskeletal",  "Musculoskeletal"),
+        "Sexual and":           ("Sexual and Reproductive",   "Reproductive"),
+        "Sexual":               ("Sexual and Reproductive",   "and Reproductive"),
+        "Population-Based":     ("Population-Based Care",     "Care"),
+        "Patient-Based":        ("Patient-Based Systems",     "Systems"),
+        "Hematologic/":         ("Hematologic/ Immune",       "Immune"),
+    }
+
     blocks = page.get_text("dict")["blocks"]
     headers = []
 
@@ -353,6 +373,24 @@ def _detect_bodysystem_columns(page, config: dict) -> dict:
 
     # Sort headers by x position
     headers.sort(key=lambda h: h["x"])
+
+    # Merge adjacent spans that together form a known compound column name.
+    merged = []
+    i = 0
+    while i < len(headers):
+        h = headers[i]
+        match = COMPOUND_HEADERS.get(h["name"])
+        if match and i + 1 < len(headers):
+            canonical_name, expected_next = match
+            next_h = headers[i + 1]
+            if next_h["name"] == expected_next or next_h["name"].startswith(expected_next.split()[0]):
+                # Merge: use first span's x as the header anchor
+                merged.append({"name": canonical_name, "x": h["x"]})
+                i += 2
+                continue
+        merged.append(h)
+        i += 1
+    headers = merged
 
     # Build column boundaries: midpoint between adjacent headers, with margins
     columns = {}
@@ -554,7 +592,7 @@ def parse_score_report(pdf_path: str) -> dict:
     # Covers all known system names including 2024 variants
     BS_SYSTEMS = (
         "Cardiovascular", "Injuries/Musculoskeletal", "Musculoskeletal",
-        "Respiratory", "Psychiatric/Behavioral", "Psychogenic",
+        "Respiratory", "Psychiatric/Behavioral", "Psychogenic",  # Psychogenic kept as alias for pre-2024 PDFs
         "Sexual and Reproductive", "Reproductive: Female", "Reproductive: Male",
         "Endocrine", "Gastrointestinal", "Population-Based Care", "Nonspecific",
         "Integumentary", "Patient-Based Systems", "Neurologic", "Nephrologic",

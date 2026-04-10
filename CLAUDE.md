@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_051_20260409_module5_housekeeping.md` — Module 5 web scaffold documented; housekeeping sweep complete |
+| Active BATON | `BATON_active_052_20260410_psychogenic_retirement.md` — Psychogenic retired; practice Q coverage fixed (RC1+RC2+RC3) |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -75,7 +75,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → 45065a1 |
+| Git branch | `main`, latest → 8fb7549 |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -115,15 +115,14 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 051, 2026-04-09)
+## Next Steps (as of BATON 052, 2026-04-10)
 
 ### Immediate
 1. **DEFERRED-YOY-ROBUSTNESS** — Expand longitudinal_delta edge-case handling in ite_analyzer_v3.py
-2. **DEFERRED-PRACTICE-Q-COVERAGE** — Query qid_art_xref for 0-question dims; investigate root cause
-3. **DOCX review** — Mikey to verify Pjetergjoka_2024/2025 output
+2. **DOCX review** — Mikey to verify Pjetergjoka_2024/2025 DOCX output (YoY table, practice Q spread now fixed)
 
 ### Short-term
-4. **Module 5 setup** — Provision Supabase project, run migrations, sync SQLite → Supabase, deploy Railway parser + Netlify frontend
-5. **DEFERRED-PGY-BENCHMARKS** — Receive PGY baseline ranges from Mikey; integrate into Executive Summary
-6. **DATABASE_GUIDE.md relocation** — Finalize git rename registration
-7. **DEFERRED-AAFP-PDF-RETRY** — Re-run when AAFP site stabilizes
+3. **Module 5 setup** — Provision Supabase project, run migrations, sync SQLite → Supabase, deploy Railway FastAPI + Netlify
+4. **DEFERRED-PGY-BENCHMARKS** — Receive PGY 1–4 data from Mikey; integrate into report
+5. **DATABASE_GUIDE.md relocation** — git rm old + git add new; commit
+6. **DEFERRED-AAFP-PDF-RETRY** — Re-run when AAFP site stabilizes

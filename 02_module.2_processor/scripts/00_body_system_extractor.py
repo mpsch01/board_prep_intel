@@ -36,7 +36,7 @@ P1_CATS = [
 # 2022 / 2023 – Page 2 (left->right order)
 P2_CATS = [
     'Reproductive:Female', 'Reproductive:Male', 'Hematologic/Immune',
-    'Psychogenic', 'Nephrologic', 'Population-Based Care', 'Patient-Based Systems',
+    'Psychiatric/Behavioral', 'Nephrologic', 'Population-Based Care', 'Patient-Based Systems',
 ]
 
 # 2024 – Page 1 only (5 collapsed categories)
@@ -50,7 +50,7 @@ REMAP_2024 = {
     'Cardiovascular':           'Cardiovascular',
     'Injuries/Musculoskeletal': 'Musculoskeletal',
     'Respiratory':              'Respiratory',
-    'Psychiatric/Behavioral':   'Psychogenic',
+    'Psychiatric/Behavioral':   'Psychiatric/Behavioral',
     'Sexual and Reproductive':  'Reproductive:Female',
 }
 
@@ -67,7 +67,7 @@ ANCHOR = {
     'Reproductive:Female':   'female',
     'Reproductive:Male':     'male',
     'Hematologic/Immune':    'hematologic',
-    'Psychogenic':           'psychogenic',
+    'Psychiatric/Behavioral': 'psychiatric',  # canonical anchor (was 'Psychogenic')
     'Nephrologic':           'nephrologic',
     'Population-Based Care': 'population',
     'Patient-Based Systems': 'patient',

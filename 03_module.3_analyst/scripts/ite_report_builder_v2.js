@@ -274,11 +274,20 @@ for (const q of allQuestions) {
   qByTarget[target].push(q);
 }
 
-// Collect warnings for weak areas with zero practice question coverage
+// Collect warnings for weak areas with zero practice question coverage.
+// Only warn for dims that are genuinely below the 70% threshold — dims that are
+// "relatively weak" (below personal mean) but still passing (rate >= 0.70) are
+// intentionally excluded from practice question generation in Python and should
+// not produce a warning here.
+const allPerfRates = {
+  ...Object.fromEntries(Object.entries(perf.blueprint || {}).map(([k, v]) => [k, v.rate])),
+  ...Object.fromEntries(Object.entries(perf.body_system || {}).map(([k, v]) => [k, v.rate])),
+};
 const warnings = [];
 for (const wb of weakBlueprints) {
   const count = (qByTarget[wb] || []).length;
-  if (count === 0) {
+  const rate  = allPerfRates[wb] ?? 0;
+  if (count === 0 && rate < 0.70) {
     warnings.push(`"${wb}" (${count} questions)`);
   }
 }

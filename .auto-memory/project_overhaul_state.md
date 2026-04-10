@@ -1,5 +1,5 @@
 # project_overhaul_state.md
-Last updated: 2026-04-09 (BATON 051)
+Last updated: 2026-04-10 (BATON 052)
 
 ## Module State
 
@@ -38,7 +38,7 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 | DEFERRED-YOY-ROBUSTNESS | ACTIVE | Year-over-year section 3b needs more robust implementation; month-by-month trend aggregation logic (BATON 050) |
 | DEFERRED-A | ARCHIVED | 37 ITE manual PDFs — permanent ceiling (subscription-only) |
 | DEFERRED-AAFP-PAYWALL | ACTIVE | 3 AAFP articles paywalled (PMC not_oa): ART-1959 Binic_2011, ART-1972 Byington_2012, ART-1967 Verbalis_2007 |
-| DEFERRED-PRACTICE-Q-COVERAGE | ACTIVE | Practice question 0-question warnings for some body systems (Foundations, Preventive, Cardiovascular, Respiratory, Sexual-Reproductive, Psychiatric, Behavioral) — qid_art_xref tagging coverage gap (BATON 050) |
+| DEFERRED-PRACTICE-Q-COVERAGE | ✅ CLOSED | Practice question 0-question warnings for some body systems (Foundations, Preventive, Cardiovascular, Respiratory, Sexual-Reproductive, Psychiatric, Behavioral) — qid_art_xref tagging coverage gap (BATON 050) |
 | DEFERRED-F | ✅ CLOSED | Intelligence 2.0 Layer 2 complete — article_currency built (1,985 rows) |
 | DEFERRED-H | CLOSED | Legacy non-codon PDFs confirmed duplicates |
 | DEFERRED-I | LOW PRI | unpaywall_scanner --from-csv extension |

@@ -1,5 +1,5 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-04-09 (BATON 051)
+Last updated: 2026-04-10 (BATON 052)
 
 ## Active Memory Files
 - [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status
@@ -10,6 +10,9 @@ Last updated: 2026-04-09 (BATON 051)
 ## Session Feedback + Policy Updates
 - [feedback_reco_cleanup_closed.md](feedback_reco_cleanup_closed.md) — RECO folder cleanup DONE; never carry forward
 - [feedback_js_rule_update.md](feedback_js_rule_update.md) — JS rule relaxed: "Build in whatever language fits; flag if multilingual clutter accumulates"
+
+## Practice Q Coverage Fix (BATON 052)
+- [DEFERRED-PRACTICE-Q-COVERAGE: Root causes found and fixed](memory/feedback_psychogenic_retired.md) — Psychogenic body system fully retired; 3 root causes resolved
 
 ## Bug Fixes (BATON 049)
 - **BUG-047-01 FIXED** — ite_parser.py exam_year extraction: now parses from PDF text instead of hardcoded 2025 fallback

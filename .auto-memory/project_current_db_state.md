@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last verified: 2026-04-09 (BATON 051)
+Last verified: 2026-04-10 (BATON 052)
 
 ## DB: ite_intelligence.db
 
@@ -37,3 +37,8 @@ Last verified: 2026-04-09 (BATON 051)
 ## DB Changes (BATON 046)
 - article_currency: NEW — 1,985 rows — Layer 2 Intelligence complete
 - Scripts added: build_article_currency.py (M3)
+
+## DB Changes (BATON 052)
+- questions.body_system_merged: Psychogenic → Psychiatric/Behavioral (120 rows updated, confirmed 2026-04-10 via retire_psychogenic.py)
+- aafp_questions.body_system: Psychogenic → Psychiatric/Behavioral (82 rows updated)
+- All row counts unchanged from BATON 051

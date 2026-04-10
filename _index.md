@@ -1,6 +1,6 @@
 # _index.md â€” Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root â€” Option B complete 2026-04-04)
-**Last Updated:** 2026-04-09 (BATON 051 – Module 5 web platform scaffold added; housekeeping sweep; M3 count corrected to 15py)
+**Last Updated:** 2026-04-10 (BATON 052 – Psychogenic body system fully retired; practice Q coverage root causes resolved)
 **Status:** Current – 1,004 total PDFs (637 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 maintain = 26 scripts; M2 = 75py + 6js; M3 = 15py + 2js + report_config.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-â”œâ”€â”€ BATON_active_050_20260408_practice_q_yoy_fixes.md  â† active BATON
+â”œâ”€â”€ BATON_active_052_20260410_psychogenic_retirement.md  â† active BATON
 â”œâ”€â”€ CLAUDE.md                              â† project memory + conventions
 â”œâ”€â”€ REPO_MAP.md                            â† current-state architectural overview (NEW â€” BATON 039)
 â”œâ”€â”€ README.md                              â† project overview (human-readable)

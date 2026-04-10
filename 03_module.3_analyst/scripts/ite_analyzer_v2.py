@@ -94,7 +94,7 @@ BODYSYSTEM_PDF_TO_DB = {
     "Cardiovascular": ["Cardiovascular"],
     "Injuries/Musculoskeletal": ["Musculoskeletal"],
     "Respiratory": ["Respiratory"],
-    "Psychiatric/Behavioral": ["Psychogenic"],
+    "Psychiatric/Behavioral": ["Psychiatric/Behavioral"],
     "Sexual and Reproductive": ["Reproductive: Female", "Reproductive: Male"],
     "Endocrine": ["Endocrine"],
     "Gastrointestinal": ["Gastrointestinal"],

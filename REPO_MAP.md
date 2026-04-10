@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-04-09 (BATON 051 — Git hash: 45065a1) — Module 5 web platform scaffold added; housekeeping sweep complete
+**Last Updated:** 2026-04-10 (BATON 052 — Git hash: 8fb7549) — Psychogenic retired; practice Q coverage fixed
 
 File tree with short descriptions. For full project context see `README.md`.
 

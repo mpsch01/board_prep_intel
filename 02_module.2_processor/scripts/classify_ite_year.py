@@ -56,7 +56,7 @@ STANDARD_CATEGORIES = {
     'Respiratory', 'Cardiovascular', 'Musculoskeletal', 'Gastrointestinal',
     'Special Sensory', 'Endocrine', 'Integumentary', 'Neurologic',
     'Reproductive:Female', 'Reproductive:Male', 'Hematologic/Immune',
-    'Psychogenic', 'Nephrologic', 'Population-Based Care', 'Patient-Based Systems'
+    'Psychiatric/Behavioral', 'Nephrologic', 'Population-Based Care', 'Patient-Based Systems'
 }
 
 CATEGORY_MAP = {
@@ -77,8 +77,8 @@ CATEGORY_MAP = {
     'reproductive:male':    'Reproductive:Male',
     'population health':    'Population-Based Care',
     'population-based care':'Population-Based Care',
-    'psychiatry':           'Psychogenic',
-    'psychogenic':          'Psychogenic',
+    'psychiatry':           'Psychiatric/Behavioral',
+    'psychogenic':          'Psychiatric/Behavioral',
     'urology':              'Nephrologic',
     'renal':                'Nephrologic',
     'nephrologic':          'Nephrologic',

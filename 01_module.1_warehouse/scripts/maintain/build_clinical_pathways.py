@@ -119,7 +119,7 @@ RCT_SOURCE_TYPES = {
 
 # Categories that lean chronic (long-term management conditions)
 CHRONIC_CATEGORIES = {
-    "Cardiovascular", "Endocrine", "Nephrologic", "Psychogenic",
+    "Cardiovascular", "Endocrine", "Nephrologic", "Psychiatric/Behavioral",
     "Neurologic", "Hematologic/Immune",
 }
 
