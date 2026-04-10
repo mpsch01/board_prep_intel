@@ -93,7 +93,7 @@ CREATE INDEX IF NOT EXISTS idx_assessment_sessions_status   ON assessment_sessio
 CREATE TABLE IF NOT EXISTS reading_completions (
     resident_id  UUID NOT NULL REFERENCES user_profiles(id) ON DELETE CASCADE,
     article_id   TEXT NOT NULL REFERENCES articles(article_id),
-    session_id   TEXT,          -- Sanity curriculumSession._id
+    session_id   TEXT NOT NULL DEFAULT '',  -- Sanity curriculumSession._id; '' = not session-specific
     completed_at TIMESTAMPTZ DEFAULT NOW(),
     PRIMARY KEY (resident_id, article_id, session_id)
 );

@@ -2,8 +2,8 @@
 """
 vector_sync.py — Sync SQLite vector embeddings → Supabase pgvector
 
-Uses psycopg2 COPY for bulk insert of 1536-dimensional float arrays.
-The Supabase REST API is too slow for bulk vector upserts.
+Inserts rows one at a time via psycopg2 (row-by-row INSERT inside a transaction).
+Rows whose raw_embedding is NULL are skipped and counted separately.
 
 Usage:
     python vector_sync.py                          # sync all three vector tables
@@ -118,12 +118,15 @@ def sync_vector_table(defn: dict) -> None:
     all_cols = [pk_col] + extra_col_names + [vec_col]
     col_list = ", ".join(all_cols)
 
+    inserted_count = 0
+    skipped_count = 0
     for row in tqdm(rows, desc=f"  {pg_table}", leave=False):
         pk_val = row[pk_col]
         extra_vals = [row.get(c[0]) for c in extra_cols]
         raw_embedding = row[vec_col]
 
         if raw_embedding is None:
+            skipped_count += 1
             continue
 
         vec_literal = embedding_to_pg_literal(raw_embedding)
@@ -134,16 +137,19 @@ def sync_vector_table(defn: dict) -> None:
                 f"INSERT INTO {pg_table} ({col_list}) VALUES (%s, {placeholders}, %s::vector)",
                 [pk_val] + extra_vals + [vec_literal],
             )
+            inserted_count += 1
         else:
             cur.execute(
                 f"INSERT INTO {pg_table} ({col_list}) VALUES (%s, %s::vector)",
                 [pk_val, vec_literal],
             )
+            inserted_count += 1
 
     conn.commit()
     cur.close()
     conn.close()
-    print(f"  ✓ {total:,} vectors loaded into {pg_table}")
+    skip_note = f" ({skipped_count:,} skipped — null embedding)" if skipped_count else ""
+    print(f"  ✓ {inserted_count:,} vectors loaded into {pg_table}{skip_note}")
 
 
 def main() -> None:

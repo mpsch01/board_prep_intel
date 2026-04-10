@@ -13,10 +13,12 @@ ALTER TABLE reading_completions   ENABLE ROW LEVEL SECURITY;
 ALTER TABLE question_sets         ENABLE ROW LEVEL SECURITY;
 
 -- Helper: get the role of the authenticated user
+-- SET search_path prevents object-shadowing attacks on SECURITY DEFINER functions.
 CREATE OR REPLACE FUNCTION auth_role()
 RETURNS TEXT
 LANGUAGE sql
 STABLE SECURITY DEFINER
+SET search_path = public
 AS $$
     SELECT role FROM user_profiles WHERE id = auth.uid();
 $$;
@@ -29,10 +31,15 @@ CREATE POLICY "users_read_own_profile"
     ON user_profiles FOR SELECT
     USING (id = auth.uid());
 
--- Users can update their own profile (non-role fields)
+-- Users can update their own profile (non-role fields only).
+-- WITH CHECK prevents a resident from escalating their own role.
 CREATE POLICY "users_update_own_profile"
     ON user_profiles FOR UPDATE
-    USING (id = auth.uid());
+    USING (id = auth.uid())
+    WITH CHECK (
+        id = auth.uid()
+        AND role = (SELECT role FROM user_profiles WHERE id = auth.uid())
+    );
 
 -- Admins can read all profiles
 CREATE POLICY "admins_read_all_profiles"

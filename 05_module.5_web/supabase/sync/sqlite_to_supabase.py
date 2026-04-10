@@ -185,7 +185,10 @@ def upsert_batch(client: Client, table: str, rows: list[dict]) -> int:
     """Upsert a batch of rows into Supabase.  Returns number of rows upserted."""
     if not rows:
         return 0
-    client.table(table).upsert(rows).execute()
+    try:
+        client.table(table).upsert(rows).execute()
+    except Exception as exc:
+        raise RuntimeError(f"Supabase upsert failed for table '{table}': {exc}") from exc
     return len(rows)
 
 

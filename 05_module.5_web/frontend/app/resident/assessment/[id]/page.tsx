@@ -14,6 +14,10 @@ import { createClient } from "@/lib/supabase/server";
 import { sanityClient } from "@/lib/sanity/client";
 import AssessmentRunner from "@/components/resident/AssessmentRunner";
 
+const TABLE_ITE  = "questions";
+const TABLE_AAFP = "aafp_questions";
+const SELECT_COLS = "qid, exam_year, question_text, choices, correct_answer, explanation, blueprint, body_system_merged";
+
 interface PageProps {
   params: Promise<{ id: string }>;
 }
@@ -39,12 +43,11 @@ export default async function AssessmentPage({ params }: PageProps) {
   // Resolve QIDs
   let qids: string[] = [];
 
-  if (assignment.selectionMode === "static" && assignment.resolvedQids?.length) {
-    qids = assignment.resolvedQids;
-  } else {
-    // Dynamic: query Supabase with filters
-    let query = supabase.from("questions").select("qid");
+  const sourceBank: string = assignment.sourceBank ?? "ite";
 
+  // Helper: build a filtered query against a specific Supabase table
+  async function fetchQidsFromBank(tableName: string, limit: number): Promise<string[]> {
+    let query = supabase.from(tableName).select("qid");
     if (assignment.examYears?.length) {
       query = query.in("exam_year", assignment.examYears);
     }
@@ -54,9 +57,27 @@ export default async function AssessmentPage({ params }: PageProps) {
     if (assignment.bodySystems?.length) {
       query = query.in("body_system_merged", assignment.bodySystems);
     }
+    const { data } = await query.limit(limit);
+    return (data ?? []).map((r: { qid: string }) => r.qid);
+  }
 
-    const { data: qRows } = await query.limit(assignment.questionCount ?? 20);
-    qids = (qRows ?? []).map((r: { qid: string }) => r.qid);
+  if (assignment.selectionMode === "static" && assignment.resolvedQids?.length) {
+    qids = assignment.resolvedQids;
+  } else {
+    const totalLimit = assignment.questionCount ?? 20;
+    if (sourceBank === "both") {
+      const half = Math.floor(totalLimit / 2);
+      const [iteQids, aafpQids] = await Promise.all([
+        fetchQidsFromBank(TABLE_ITE, half),
+        fetchQidsFromBank(TABLE_AAFP, totalLimit - half),
+      ]);
+      qids = [...iteQids, ...aafpQids];
+    } else if (sourceBank === "aafp") {
+      qids = await fetchQidsFromBank(TABLE_AAFP, totalLimit);
+    } else {
+      // Default: ITE questions table
+      qids = await fetchQidsFromBank(TABLE_ITE, totalLimit);
+    }
   }
 
   if (qids.length === 0) {
@@ -105,14 +126,21 @@ export default async function AssessmentPage({ params }: PageProps) {
     sessionId = newSession.id;
   }
 
-  // Fetch question details for the resolved QIDs
-  const { data: questionRows } = await supabase
-    .from("questions")
-    .select("qid, exam_year, question_text, choices, correct_answer, explanation, blueprint, body_system_merged")
-    .in("qid", qids);
+  // Fetch question details — partition by bank (AAFP QIDs are prefixed "AAFP-")
+  const iteQids  = qids.filter((q) => !q.startsWith("AAFP-"));
+  const aafpQids = qids.filter((q) => q.startsWith("AAFP-"));
+
+  const [iteRows, aafpRows] = await Promise.all([
+    iteQids.length
+      ? supabase.from(TABLE_ITE).select(SELECT_COLS).in("qid", iteQids).then(({ data }) => data ?? [])
+      : Promise.resolve([]),
+    aafpQids.length
+      ? supabase.from(TABLE_AAFP).select(SELECT_COLS).in("qid", aafpQids).then(({ data }) => data ?? [])
+      : Promise.resolve([]),
+  ]);
 
   const questionMap = new Map(
-    (questionRows ?? []).map((q: { qid: string }) => [q.qid, q])
+    [...iteRows, ...aafpRows].map((q: { qid: string }) => [q.qid, q])
   );
   const orderedQuestions = qids
     .map((qid) => questionMap.get(qid))
