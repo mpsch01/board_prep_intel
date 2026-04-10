@@ -202,11 +202,12 @@ Run them in this order:
    - **service_role secret** key → this is `SUPABASE_SERVICE_ROLE_KEY`
 
 4. Now click **"Database"** in the settings sidebar
-5. Under **"Connection string"**, choose the **"URI"** tab
-6. Copy that string — it looks like:
-   `postgresql://postgres.abcdefghij:[YOUR_PASSWORD]@aws-0-us-east-1.pooler.supabase.com:5432/postgres`
+5. Under **"Connection string"**, select the **direct / primary database host** connection string (NOT the pooler / transaction pooler)
+6. Copy that string — it should look like:
+   `postgresql://postgres:[YOUR_PASSWORD]@db.abcdefghij.supabase.co:5432/postgres`
    Replace `[YOUR_PASSWORD]` with the password you saved in Step 1.1
    → This is `SUPABASE_DB_URL`
+   Do **not** use a `*.pooler.supabase.com` host here — `SUPABASE_DB_URL` must be the direct Postgres connection string for the vector sync (`vector_sync.py` uses `psycopg2.connect()` which requires a direct connection)
 
 ### Step 1.5: Enable Supabase Storage
 
@@ -333,11 +334,12 @@ Railway may try to auto-deploy everything. You only want it to deploy the `api/`
 ### Step 3.4: Set Environment Variables in Railway
 
 1. In your Railway service, click **"Variables"** tab
-2. Add these four variables (click **"+ New Variable"** for each):
+2. Add these five variables (click **"+ New Variable"** for each):
    - `SUPABASE_URL` = your Supabase project URL
    - `SUPABASE_SERVICE_KEY` = your Supabase service_role key
    - `PARSER_SECRET` = pick any long random string (e.g., open Terminal and run `python3 -c "import secrets; print(secrets.token_hex(32))"` — copy the output). **Save this value — you'll need it again in Phase 5.**
    - `ENV` = `production`
+   - `FRONTEND_URL` = your deployed frontend URL (for example, your Netlify site URL or `https://slbfm.com`) so the API restricts CORS to your production frontend
 
 3. Click **"Deploy"** (Railway may do this automatically after you save vars)
 
@@ -428,11 +430,11 @@ This downloads all the JavaScript libraries listed in `package.json`. The `node_
 
 ### Step 5.2: Create Your Local Environment File
 
-> ⚠️ **Security warning — read before proceeding:** `.env.local` contains real API keys and secrets. It is **not** currently in `.gitignore` for this repo. Before creating this file, run the following command from inside the `frontend/` directory to protect it:
+> ⚠️ **Security note:** `.env.local` contains real API keys and secrets. It is already covered by the root `.gitignore` for this repo (both `.env` and `.env.local` are ignored), so it will not be committed accidentally. If you are working in a fork or a separately cloned frontend repo, confirm the protection is in place by running the following from inside the `frontend/` directory:
 > ```bash
-> echo ".env.local" >> .gitignore
+> cat ../../.gitignore | grep env.local
 > ```
-> Then confirm: `cat .gitignore | grep env.local` — you should see `.env.local` in the output. Never skip this step. Accidentally committing API keys is a serious security incident.
+> You should see `.env.local` in the output. If not, add it: `echo ".env.local" >> .gitignore`. Never skip this check.
 
 ```bash
 cp .env.example .env.local
@@ -593,32 +595,31 @@ Users are created by you (admin) — this is **not** open registration. Resident
 
 ### Step 8.1: Create Your Admin Account
 
+> **Important — how roles work:** When Supabase creates a new user (at invite time), a database trigger (`handle_new_user()`) immediately creates a `user_profiles` row using whatever metadata exists at that moment. Because the Supabase UI does not support setting metadata *during* an invite, the row is created with the default role (`resident`) and the email as the display name. You must update `user_profiles` directly via the SQL Editor after the invite is sent.
+
 1. Go to your Supabase project → **"Authentication"** → **"Users"**
 2. Click **"Invite user"**
-3. Enter your email address
-4. Check your email for the invite link — click it to set your password
-5. After you've set your password, go back to Supabase → Authentication → Users
-6. Click on your user row
-7. Scroll down to **"User Metadata"** and click **"Edit"**
-8. Replace the metadata with:
-   ```json
-   {
-     "role": "admin",
-     "display_name": "Dr. Michael Scholl"
-   }
+3. Enter your email address and click **"Send invite"**
+4. Your `user_profiles` row has now been created automatically (with role `resident` as default)
+5. Go to **"SQL Editor"** (left sidebar) and run the following, replacing the values with your own:
+   ```sql
+   UPDATE user_profiles
+   SET role = 'admin',
+       display_name = 'Dr. Michael Scholl'
+   WHERE id = (SELECT id FROM auth.users WHERE email = 'your@email.com');
    ```
-9. Click **"Save"**
+6. Check your email for the invite link — click it to set your password
 
 Now go to https://slbfm.com and log in. You should land on `/admin/users`.
 
 ### Step 8.2: Add Faculty Users
 
-Repeat Step 8.1 for each faculty member. Set role to `"faculty"` in the metadata:
-```json
-{
-  "role": "faculty",
-  "display_name": "Dr. Colleague Name"
-}
+Repeat Step 8.1 for each faculty member, using `role = 'faculty'` in the SQL update:
+```sql
+UPDATE user_profiles
+SET role = 'faculty',
+    display_name = 'Dr. Colleague Name'
+WHERE id = (SELECT id FROM auth.users WHERE email = 'colleague@email.com');
 ```
 
 Faculty users land on `/faculty/search` after login.
@@ -626,17 +627,15 @@ Faculty users land on `/faculty/search` after login.
 ### Step 8.3: Add Resident Users
 
 For each resident:
-1. Supabase → Authentication → Invite user → their email
-2. After they accept the invite, set their metadata:
-   ```json
-   {
-     "role": "resident",
-     "display_name": "Dr. Resident Name"
-   }
+1. Supabase → Authentication → **"Invite user"** → their email
+2. Their `user_profiles` row is created automatically with role `resident` (the default) — no SQL update needed for role
+3. Update their `display_name` if desired:
+   ```sql
+   UPDATE user_profiles
+   SET display_name = 'Dr. Resident Name'
+   WHERE id = (SELECT id FROM auth.users WHERE email = 'resident@email.com');
    ```
-3. In your Netlify site → Admin panel (`/admin/users`), set their `cohort_year` and `abfm_id`
-
-> **A trigger runs automatically:** When a new user is created via the Supabase invite flow, a database trigger (`handle_new_user()` defined in `005_functions.sql`) automatically creates a `user_profiles` row for them. You don't need to do this manually.
+4. In your Netlify site → Admin panel (`/admin/users`), set their `cohort_year` and `abfm_id`
 
 ---
 
