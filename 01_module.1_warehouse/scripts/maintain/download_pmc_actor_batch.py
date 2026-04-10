@@ -15,6 +15,7 @@ Run:
 Output: PDFs saved to 01_module.1_warehouse/citation_files/ITE/VC_fail/ with codon filenames.
 """
 
+import os
 import sys
 import time
 from pathlib import Path
@@ -30,8 +31,9 @@ SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
 OUTPUT_DIR   = PROJECT_ROOT / "01_module.1_warehouse" / "citation_files" / "ITE" / "VC_fail"
 
+CONTACT_EMAIL = os.environ.get("ITE_CONTACT_EMAIL", "")
 HEADERS = {
-    "User-Agent": "ITE-Intelligence-Downloader/1.0 (educational research; mailto:scholl.michael.p@gmail.com)"
+    "User-Agent": f"ITE-Intelligence-Downloader/1.0 (educational research; mailto:{CONTACT_EMAIL})" if CONTACT_EMAIL else "ITE-Intelligence-Downloader/1.0 (educational research)"
 }
 
 # ── Actor-discovered PDF URLs (run PW1zeM9Sr6VmgHVYV, 2026-04-03) ────────────

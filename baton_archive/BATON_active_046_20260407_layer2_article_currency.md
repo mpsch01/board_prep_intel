@@ -138,17 +138,20 @@ CREATE TABLE article_currency (
 | DEFERRED-AAFP-PAYWALL | 3 articles (ART-1959, ART-1972, ART-1967) via interlibrary loan | OPEN | Requires institutional access |
 | DEFERRED-F | Intelligence 2.0 Layer 2: article_currency via PubMed | **✅ CLOSED** | **COMPLETE 2026-04-07** |
 | DEFERRED-L2-REVIEW | Optional: human review pass on 169 updated + 106 check_needed articles | NEW | Low priority; spot-check if needed |
+| DEFERRED-PGY-BENCHMARKS | Add PGY-level expected performance benchmarks to ite-domain skill | OPEN | Mikey to provide data; add to `skills/ite-domain/references/pgy_benchmarks.md` — expected overall % ranges and weak-area patterns by PGY level (1–4); makes score summaries far more clinically meaningful |
 
 ---
 
 ## Next Steps
 
-1. **exa-research-search Phase 2** — Resume normal roadmap: literature search expansion + clinical pathways pipeline
-2. **Intelligence 2.0 Layer 3 planning** — Clinical pathways enrichment (Layer 3 = `clinical_pathways` with `pathway_role`)
-3. **DEFERRED-AAFP-PAYWALL** — Pursue 3 paywalled articles via institutional/interlibrary loan
-4. **Optional: article_currency review** — Spot-check 169 `updated` + 106 `check_needed` rows; build query report if needed
-5. **When resident-facing report needed** — Re-enable full question rendering in `ite_report_builder_v2.js` (currently compact reference table mode)
-6. **title_signals forward use** — When blueprint enrichment resumes, query `article_currency.title_signals` to cross-reference article-level category signals vs. existing blueprint assignments
+1. **ite-score-analyzer plugin v1.0.0** — Built this session; install via `skills_abilities/ite-score-analyzer-v2/ite-score-analyzer.plugin`
+2. **DEFERRED-PGY-BENCHMARKS** — Add PGY-level performance benchmark data to ite-domain skill once Mikey provides (expected % ranges by PGY level 1–4)
+3. **exa-research-search Phase 2** — Resume normal roadmap: literature search expansion + clinical pathways pipeline
+4. **Intelligence 2.0 Layer 3 planning** — Clinical pathways enrichment (Layer 3 = `clinical_pathways` with `pathway_role`)
+5. **DEFERRED-AAFP-PAYWALL** — Pursue 3 paywalled articles via institutional/interlibrary loan
+6. **Optional: article_currency review** — Spot-check 169 `updated` + 106 `check_needed` rows; build query report if needed
+7. **When resident-facing report needed** — Re-enable full question rendering in `ite_report_builder_v2.js` (currently compact reference table mode)
+8. **title_signals forward use** — When blueprint enrichment resumes, query `article_currency.title_signals` to cross-reference article-level category signals vs. existing blueprint assignments
 
 ---
 
