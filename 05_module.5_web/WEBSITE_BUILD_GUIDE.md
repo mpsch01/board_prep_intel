@@ -333,7 +333,7 @@ Railway may try to auto-deploy everything. You only want it to deploy the `api/`
 ### Step 3.4: Set Environment Variables in Railway
 
 1. In your Railway service, click **"Variables"** tab
-2. Add these four variables (click **"+ New Variable"** for each):
+2. Add these three variables (click **"+ New Variable"** for each):
    - `SUPABASE_URL` = your Supabase project URL
    - `SUPABASE_SERVICE_KEY` = your Supabase service_role key
    - `PARSER_SECRET` = pick any long random string (e.g., open Terminal and run `python3 -c "import secrets; print(secrets.token_hex(32))"` — copy the output). **Save this value — you'll need it again in Phase 5.**
@@ -350,9 +350,9 @@ Railway may try to auto-deploy everything. You only want it to deploy the `api/`
 
 ### Step 3.6: Test It
 
-Open a browser and go to (use the exact URL you saved in Step 3.5):
+Open a browser and go to:
 ```
-https://board-prep-intel-api-production.up.railway.app/health
+https://YOUR_RAILWAY_URL.railway.app/health
 ```
 
 You should see:
@@ -427,12 +427,6 @@ npm install
 This downloads all the JavaScript libraries listed in `package.json`. The `node_modules` folder will be ~500MB — that's normal and gitignored.
 
 ### Step 5.2: Create Your Local Environment File
-
-> ⚠️ **Security warning — read before proceeding:** `.env.local` contains real API keys and secrets. It is **not** currently in `.gitignore` for this repo. Before creating this file, run the following command from inside the `frontend/` directory to protect it:
-> ```bash
-> echo ".env.local" >> .gitignore
-> ```
-> Then confirm: `cat .gitignore | grep env.local` — you should see `.env.local` in the output. Never skip this step. Accidentally committing API keys is a serious security incident.
 
 ```bash
 cp .env.example .env.local
@@ -512,7 +506,7 @@ Netlify will show you build settings. Fill them in:
 | **Branch to deploy** | `main` |
 | **Base directory** | `05_module.5_web/frontend` |
 | **Build command** | `npm run build` |
-| **Publish directory** | `.next` |
+| **Publish directory** | `05_module.5_web/frontend/.next` |
 
 > **Why base directory?** Your repo contains the whole `board_prep_intel` project — not just the website. Netlify needs to know to only build the `frontend` subfolder.
 
