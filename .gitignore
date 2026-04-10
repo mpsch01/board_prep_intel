@@ -31,6 +31,7 @@ __pycache__/
 *.pyd
 *.egg-info/
 .env
+.env.local
 
 # --- PIPELINE RUN LOGS (auto-generated, high churn) ---
 00_database/logs/
