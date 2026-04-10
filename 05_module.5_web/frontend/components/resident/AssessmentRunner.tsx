@@ -194,7 +194,7 @@ export default function AssessmentRunner({ sessionId, questions, initialResponse
           </button>
         )}
         {(revealed || savedResponse) && current === questions.length - 1 && !completed && (
-           <button onClick={() => setCompleted(true)} style={{ padding: "0.75rem 1.5rem", background: "var(--color-success)", color: "white", border: "none", borderRadius: "6px", cursor: "pointer", fontWeight: 600 }}>
+          <button onClick={() => setCompleted(true)} style={{ padding: "0.75rem 1.5rem", background: "var(--color-success)", color: "white", border: "none", borderRadius: "6px", cursor: "pointer", fontWeight: 600 }}>
             Finish Assessment
           </button>
         )}
