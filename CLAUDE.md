@@ -75,7 +75,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → (pending housekeeping commit) |
+| Git branch | `main`, latest → 7a58e0a |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -125,4 +125,4 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 3. **Module 5 setup** — Provision Supabase project, run migrations, sync SQLite → Supabase, deploy Railway FastAPI + Netlify
 4. **DEFERRED-PGY-BENCHMARKS** — Receive PGY 1–4 data from Mikey; integrate into report
 5. **DATABASE_GUIDE.md relocation** — git rm old + git add new; commit
-6. **DEFERRED-AAFP-PDF-RETRY** — Re-run when AAFP site stabilizes
+6. **DEFERRED-AAFP-
