@@ -63,26 +63,6 @@ board_prep_intel/
 │
 ├── 04_module.4_sandbox/               M4 — Experiments and agent prototypes (placeholder)
 │
-├── 05_module.5_web/                   M5 — Interactive web platform (slbfm.com)
-│   ├── WEBSITE_BUILD_GUIDE.md         Step-by-step deployment guide for first-time setup
-│   ├── README.md                      Architecture overview, setup order, env vars, data flows
-│   ├── frontend/                      Next.js 15 app (TypeScript, App Router) → Netlify
-│   │   ├── app/                       Page routes: login, resident/, faculty/, admin/, api/
-│   │   ├── components/                AssessmentRunner, AnalyticsDashboard (Recharts)
-│   │   ├── lib/                       supabase/, sanity/, search/ clients + NL search pipeline
-│   │   ├── middleware.ts               Auth guard + role-based routing
-│   │   └── netlify.toml               Netlify build config + edge function for auth
-│   ├── sanity/                        Sanity Studio — curriculum CMS (sessions, readings, assignments)
-│   │   └── schemas/                   residentCohort, curriculumSession, prescribedReading, etc.
-│   ├── supabase/                      Cloud DB setup + data sync
-│   │   ├── migrations/                001–005 SQL migrations (run in order, once)
-│   │   └── sync/                      sqlite_to_supabase.py + vector_sync.py
-│   └── api/                           FastAPI microservice → Railway (PDF score parser)
-│       ├── main.py                    /health + /parse-score-report routes
-│       ├── requirements.txt           fastapi, uvicorn, supabase, PyMuPDF, httpx
-│       ├── Procfile / railway.json    Railway deploy config
-│       └── parser/                    Copy ite_parser.py + ite_parser_config.json here before deploy
-│
 ├── _archive_/                         Curated deliverables (not disposable)
 │   ├── 01_curriculum/                 Curriculum definitions
 │   ├── 02_question_bank/              Question bank exports
