@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_052_20260410_psychogenic_retirement.md` — Psychogenic retired; practice Q coverage fixed (RC1+RC2+RC3) |
+| Active BATON | `BATON_active_053_20260410_github_sync_housekeeping.md` — GitHub sync; Copilot PRs #11-14 captured; REPO_MAP.md + .gitignore corruptions fixed |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -75,7 +75,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → 8fb7549 |
+| Git branch | `main`, latest → (pending housekeeping commit) |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
