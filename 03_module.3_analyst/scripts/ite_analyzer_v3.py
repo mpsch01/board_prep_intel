@@ -61,8 +61,8 @@ DIFFICULTY_TIERS = {
 TIER_WEIGHT = {1: 3.0, 2: 2.0, 3: 1.0}
 
 # Minimum AAFP BRQ questions guaranteed in every practice set.
-# ITE 2025 recency bonus (+0.2) would otherwise shut AAFP out entirely.
-# Set to 0 to disable the quota.
+# ITE questions dominate by volume (1,629 vs 1,221), so a floor ensures
+# AAFP content is always represented.  Set to 0 to disable the quota.
 AAFP_MIN_QUESTIONS = 4
 
 # Pathway role → plain-English gap description
@@ -85,6 +85,41 @@ BLUEPRINT_PDF_TO_DB = {
     "Foundations":      "Foundations of Care",
 }
 BLUEPRINT_DB_TO_PDF = {v: k for k, v in BLUEPRINT_PDF_TO_DB.items()}
+
+# Body system name normalization — maps known PDF/score-report variants to the
+# canonical keys used in BODYSYSTEM_PDF_TO_DB. Applied to item body_system fields
+# and to body_system_scaled keys from the score report before any analysis runs.
+# Extend this when ABFM introduces new naming conventions in future years.
+BODYSYSTEM_PDF_NORM = {
+    # 2024+ canonical names (identity — already correct)
+    "Cardiovascular":            "Cardiovascular",
+    "Injuries/Musculoskeletal":  "Injuries/Musculoskeletal",
+    "Respiratory":               "Respiratory",
+    "Psychiatric/Behavioral":    "Psychiatric/Behavioral",
+    "Sexual and Reproductive":   "Sexual and Reproductive",
+    "Endocrine":                 "Endocrine",
+    "Gastrointestinal":          "Gastrointestinal",
+    "Hematologic/Immune":        "Hematologic/Immune",
+    "Integumentary":             "Integumentary",
+    "Nephrologic":               "Nephrologic",
+    "Neurologic":                "Neurologic",
+    "Nonspecific":               "Nonspecific",
+    "Patient-Based Systems":     "Patient-Based Systems",
+    "Population-Based Care":     "Population-Based Care",
+    "Special Sensory":           "Special Sensory",
+    # Score-report aliases that differ from grid PDF names
+    "Musculoskeletal":           "Injuries/Musculoskeletal",  # score report drops "Injuries/"
+    "Hematologic/ Immune":       "Hematologic/Immune",        # space variant
+    "Psychogenic":               "Psychiatric/Behavioral",    # DB-side name in older reports
+    "Reproductive: Female":      "Sexual and Reproductive",   # score report split form
+    "Reproductive: Male":        "Sexual and Reproductive",   # score report split form
+}
+
+
+def _normalize_body_system(name: str) -> str:
+    """Return the canonical BODYSYSTEM_PDF_TO_DB key for any known body system variant."""
+    return BODYSYSTEM_PDF_NORM.get(name, name)
+
 
 # Body system mappings (PDF label → DB names, one-to-many for merged systems)
 BODYSYSTEM_PDF_TO_DB = {
@@ -818,15 +853,11 @@ def _compute_relevance(match_tier: int, priority_score: float,
     if has_concept_tags:
         score += 0.3
 
-    # Recency bonus for ITE questions (2018=0, 2025=1.0)
-    if exam_year and isinstance(exam_year, int) and exam_year >= 2018:
-        score += 0.2 * min((exam_year - 2018) / 7.0, 1.0)
-
     return score
 
 
 def _tier1_direct(db, dim: str, dim_type: str, priority_score: float,
-                  selected_qids: set, limit: int = 20) -> list:
+                  selected_qids: set, limit: int = 60) -> list:
     """Direct blueprint + body_system match from both banks."""
     candidates = []
 
@@ -874,7 +905,7 @@ def _tier1_direct(db, dim: str, dim_type: str, priority_score: float,
         LEFT JOIN qid_art_xref xa ON q.qid = xa.qid AND xa.article_id != 'ART-0001'
         WHERE {" AND ".join(ite_where)} {excl_sql}
         GROUP BY q.qid
-        ORDER BY q.exam_year DESC, linked_articles DESC
+        ORDER BY linked_articles DESC
         LIMIT ?
     """
     for row in db.execute(sql_ite, ite_params + excl_params + [limit]).fetchall():
@@ -905,11 +936,116 @@ def _tier1_direct(db, dim: str, dim_type: str, priority_score: float,
     return candidates
 
 
+def _get_wrong_qid_metadata(db, wrong_qids: list) -> dict:
+    """
+    Pull ICD-10 codes, concept tags, and linked article IDs for a specific
+    set of wrong-answer QIDs.  Used to seed the enriched practice question
+    matching from the resident's actual missed items rather than broad
+    dimension categories.
+    Returns: {"icd10_codes": [...], "concept_tags": set(...), "article_ids": [...]}
+    """
+    if not wrong_qids:
+        return {"icd10_codes": [], "concept_tags": set(), "article_ids": []}
+
+    ph = ",".join(["?"] * len(wrong_qids))
+
+    # ICD-10 codes (primary + secondary) from wrong QIDs
+    icd_rows = db.execute(f"""
+        SELECT DISTINCT icd10_code FROM question_icd10
+        WHERE qid IN ({ph}) AND relevance IN ('primary', 'secondary')
+    """, wrong_qids).fetchall()
+    icd10_codes = [r["icd10_code"] for r in icd_rows]
+
+    # Concept tags — parse JSON arrays stored on the questions
+    tag_rows = db.execute(f"""
+        SELECT concept_tags FROM questions
+        WHERE qid IN ({ph}) AND concept_tags IS NOT NULL AND concept_tags != ''
+    """, wrong_qids).fetchall()
+    concept_tags: set = set()
+    for row in tag_rows:
+        try:
+            tags = json.loads(row["concept_tags"])
+            if isinstance(tags, list):
+                concept_tags.update(str(t).strip() for t in tags if t)
+        except (json.JSONDecodeError, TypeError):
+            pass
+
+    # Linked article IDs from wrong QIDs
+    art_rows = db.execute(f"""
+        SELECT DISTINCT article_id FROM qid_art_xref
+        WHERE qid IN ({ph}) AND article_id != 'ART-0001'
+    """, wrong_qids).fetchall()
+    article_ids = [r["article_id"] for r in art_rows]
+
+    return {"icd10_codes": icd10_codes, "concept_tags": concept_tags, "article_ids": article_ids}
+
+
+def _tier1b_richseed(db, meta: dict, dim: str, priority_score: float,
+                     selected_qids: set, limit: int = 60) -> list:
+    """
+    Article co-link matching anchored to wrong-QID metadata.
+    Finds practice questions that are linked to the same guideline articles
+    as the resident's specific wrong answers in this dimension — more
+    topically precise than the broad category query in Tier 1.
+    Scored at Tier 1 weight; concept-tag overlap bonus applied downstream.
+    """
+    candidates = []
+    article_ids = list(meta.get("article_ids") or [])
+    if not article_ids:
+        return []
+
+    art_ph = ",".join(["?"] * len(article_ids))
+    excl_sql,      excl_params      = _not_in(selected_qids)
+    aafp_excl_sql, aafp_excl_params = _not_in(selected_qids, "q.aafp_qid")
+
+    # ITE: questions sharing articles with wrong QIDs
+    sql_ite = f"""
+        SELECT {_ITE_Q_COLS},
+               COUNT(DISTINCT xa.article_id) AS linked_articles
+        FROM questions q
+        JOIN qid_art_xref link ON q.qid = link.qid AND link.article_id IN ({art_ph})
+        LEFT JOIN qid_art_xref xa  ON q.qid = xa.qid  AND xa.article_id  != 'ART-0001'
+        WHERE q.question_text IS NOT NULL AND q.question_text != ''
+          {excl_sql}
+        GROUP BY q.qid
+        ORDER BY COUNT(DISTINCT link.article_id) DESC
+        LIMIT ?
+    """
+    for row in db.execute(sql_ite, article_ids + excl_params + [limit]).fetchall():
+        rs = _compute_relevance(1, priority_score, row["linked_articles"],
+                                row["exam_year"], bool(row["concept_tags"]))
+        candidates.append(_row_to_dict(row, dim, 1, row["linked_articles"] or 0, rs))
+
+    # AAFP: same article co-link
+    sql_aafp = f"""
+        SELECT {_AAFP_Q_COLS},
+               COUNT(DISTINCT xa.article_id) AS linked_articles
+        FROM aafp_questions q
+        JOIN aafp_qid_art_xref link ON q.aafp_qid = link.aafp_qid AND link.article_id IN ({art_ph})
+        LEFT JOIN aafp_qid_art_xref xa  ON q.aafp_qid = xa.aafp_qid
+        WHERE q.stem IS NOT NULL AND q.stem != ''
+          {aafp_excl_sql}
+        GROUP BY q.aafp_qid
+        ORDER BY COUNT(DISTINCT link.article_id) DESC
+        LIMIT ?
+    """
+    for row in db.execute(sql_aafp, article_ids + aafp_excl_params + [limit]).fetchall():
+        rs = _compute_relevance(1, priority_score, row["linked_articles"],
+                                None, bool(row["concept_tags"]))
+        candidates.append(_row_to_dict(row, dim, 1, row["linked_articles"] or 0, rs))
+
+    return candidates
+
+
 def _tier2_icd10_sibling(db, dim: str, dim_type: str, priority_score: float,
-                          selected_qids: set, limit: int = 20) -> list:
+                          selected_qids: set, limit: int = 60,
+                          seed_icd10: list = None) -> list:
     """
     ICD-10 sibling match — find questions sharing ICD-10 codes with
     the weak dimension, via question_icd10 and aafp_question_icd10 directly.
+    When seed_icd10 is provided (ICD-10 codes from the resident's specific
+    wrong answers), those codes are used directly — more precise than
+    deriving codes from all questions in the dimension.
     """
     candidates = []
 
@@ -938,16 +1074,20 @@ def _tier2_icd10_sibling(db, dim: str, dim_type: str, priority_score: float,
     if not where_parts:
         return []
 
-    # Collect ICD-10 codes from this dimension's questions (primary only)
-    icd_rows = db.execute(f"""
-        SELECT DISTINCT qi.icd10_code
-        FROM questions q
-        JOIN question_icd10 qi ON q.qid = qi.qid
-        WHERE {" AND ".join(where_parts)}
-          AND qi.relevance = 'primary'
-    """, params).fetchall()
+    # Derive ICD-10 codes: prefer wrong-QID seeds (precise) over full-dimension sweep
+    if seed_icd10:
+        icd_codes = seed_icd10
+    else:
+        # Fallback: collect ICD-10 codes from ALL questions in this dimension
+        icd_rows = db.execute(f"""
+            SELECT DISTINCT qi.icd10_code
+            FROM questions q
+            JOIN question_icd10 qi ON q.qid = qi.qid
+            WHERE {" AND ".join(where_parts)}
+              AND qi.relevance = 'primary'
+        """, params).fetchall()
+        icd_codes = [r["icd10_code"] for r in icd_rows]
 
-    icd_codes = [r["icd10_code"] for r in icd_rows]
     if not icd_codes:
         return []
 
@@ -965,7 +1105,7 @@ def _tier2_icd10_sibling(db, dim: str, dim_type: str, priority_score: float,
           AND q.question_text IS NOT NULL AND q.question_text != ''
           {excl_sql}
         GROUP BY q.qid
-        ORDER BY q.exam_year DESC, linked_articles DESC
+        ORDER BY linked_articles DESC
         LIMIT ?
     """
     for row in db.execute(sql_ite, icd_codes + excl_params + [limit]).fetchall():
@@ -1093,7 +1233,8 @@ def _tier3_vector_sim(db, missed_qids: list, selected_qids: set,
 
 def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
                                  items: list, db_path: str,
-                                 target_count: int = 20) -> list:
+                                 target_count: int = 20,
+                                 current_exam_year: int = None) -> list:
     """
     Select and globally rank practice questions from both ITE + AAFP banks.
 
@@ -1112,22 +1253,84 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
 
     all_candidates = {}   # qid → best candidate dict (by relevance_score)
     selected_qids  = set()
-    active         = priorities[:8]  # top 8 weak dimensions
+    active         = priorities  # ALL weak dimensions — no cap; every weak area gets coverage
 
-    # Tier 1 + 2 for each priority dimension
+    # Pre-compute wrong QIDs and their rich metadata for each active dimension.
+    # This anchors Tier 1b + Tier 2 to the resident's specific missed items
+    # rather than the full population of questions in that category.
+    wrong_qids_by_dim: dict = {}
+    wrong_meta_by_dim: dict = {}
+    for priority in active:
+        dim      = priority["dimension"]
+        dim_type = priority["dimension_type"]
+        wqids: list = []
+        for item in items:
+            if item.get("correct"):
+                continue
+            num = item.get("item")
+            if num not in qid_map:
+                continue
+            if dim_type == "blueprint" and item.get("blueprint") == dim:
+                wqids.append(qid_map[num])
+            elif dim_type == "body_system" and item.get("body_system") == dim:
+                wqids.append(qid_map[num])
+            elif dim_type == "cross_tab":
+                parts = dim.split(" × ", 1)
+                if len(parts) == 2 and item.get("body_system") == parts[0] and item.get("blueprint") == parts[1]:
+                    wqids.append(qid_map[num])
+        wrong_qids_by_dim[dim] = wqids
+        wrong_meta_by_dim[dim] = _get_wrong_qid_metadata(db, wqids) if wqids else {}
+
+    # Tier 1 + Tier 1b (article co-link) + Tier 2 (ICD-10 seeded) per dimension
     for priority in active:
         dim            = priority["dimension"]
         dim_type       = priority["dimension_type"]
         priority_score = priority["priority_score"]
 
-        t1 = _tier1_direct(db, dim, dim_type, priority_score, selected_qids)
-        t2 = _tier2_icd10_sibling(db, dim, dim_type, priority_score, selected_qids)
+        meta       = wrong_meta_by_dim.get(dim, {})
+        seed_icd10 = meta.get("icd10_codes") or None
 
-        for cand in t1 + t2:
+        t1  = _tier1_direct(db, dim, dim_type, priority_score, selected_qids)
+        t1b = _tier1b_richseed(db, meta, dim, priority_score, selected_qids) if meta else []
+        t2  = _tier2_icd10_sibling(db, dim, dim_type, priority_score, selected_qids,
+                                    seed_icd10=seed_icd10)
+
+        for cand in t1 + t1b + t2:
             qid = cand["qid"]
             if qid not in all_candidates or cand["relevance_score"] > all_candidates[qid]["relevance_score"]:
                 all_candidates[qid] = cand
             selected_qids.add(qid)
+
+    # Concept-tag overlap bonus — applied in Python to avoid SQLite json_each
+    # version dependency.  Candidates sharing concept tags with the resident's
+    # specific wrong answers in their targeting dimension score higher.
+    for qid, cand in all_candidates.items():
+        try:
+            raw_tags = cand.get("concept_tags")
+            if not raw_tags:
+                continue
+            cand_tags = set(json.loads(raw_tags)) if isinstance(raw_tags, str) else set(raw_tags)
+            dim_tags  = wrong_meta_by_dim.get(cand.get("targeting"), {}).get("concept_tags", set())
+            overlap   = len(cand_tags & dim_tags)
+            if overlap:
+                cand["relevance_score"] = round(cand["relevance_score"] + 0.4 * min(overlap, 3), 3)
+        except (json.JSONDecodeError, TypeError, AttributeError):
+            pass
+
+    # Exclude current exam year from ITE practice questions.
+    # A resident who just sat the 2025 ITE shouldn't receive their own exam
+    # questions back as "practice" — exclude them so older content covers the gaps.
+    # Cast to int: parser returns exam_year as str; DB candidates store it as int.
+    if current_exam_year:
+        try:
+            _excl_year = int(current_exam_year)
+        except (TypeError, ValueError):
+            _excl_year = None
+        if _excl_year:
+            all_candidates = {
+                qid: c for qid, c in all_candidates.items()
+                if not (c.get("source_bank") == "ITE" and c.get("exam_year") == _excl_year)
+            }
 
     # Tier 3: vector fallback if still below target
     if len(all_candidates) < target_count:
@@ -1141,15 +1344,19 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
 
     db.close()
 
-    # Separate candidates by bank — each bank sorted by relevance_score desc
-    ite_ranked  = sorted([c for c in all_candidates.values() if c["source_bank"] == "ITE"],
-                         key=lambda x: x["relevance_score"], reverse=True)
-    aafp_ranked = sorted([c for c in all_candidates.values() if c["source_bank"] == "AAFP"],
-                         key=lambda x: x["relevance_score"], reverse=True)
+    # Global pool — all banks merged and sorted by relevance_score.
+    # Merging before dim_cap selection ensures every active weak dimension
+    # competes for slots equally, regardless of bank.  Per-bank splitting
+    # previously starved low-priority dimensions when higher-volume banks
+    # consumed all slots before low-priority dims got representation.
+    all_ranked = sorted(all_candidates.values(),
+                        key=lambda x: x["relevance_score"], reverse=True)
+    aafp_ranked = [c for c in all_ranked if c["source_bank"] == "AAFP"]
 
-    # Dimension diversity cap — ceil(target / n_active_dims), floor of 2.
+    # Dimension diversity cap — ceil(target / n_active_dims), floor of 1.
+    # Floor is 1: if only one good question exists for a weak area, use it.
     n_active = max(len(active), 1)
-    dim_cap  = max(2, -(-target_count // n_active))   # ceiling division
+    dim_cap  = max(1, -(-target_count // n_active))   # ceiling division
 
     def _select_with_dim_cap(pool: list, slots: int, cap: int) -> list:
         """Fill up to `slots` questions from `pool`, max `cap` per targeting dim."""
@@ -1171,16 +1378,51 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
             selected.append(cand)
         return selected[:slots]
 
-    # AAFP quota — ITE 2025 recency bonus (+0.2) would shut AAFP out entirely
-    # without an explicit reservation.  Reserve AAFP_MIN_QUESTIONS slots first,
-    # then fill the rest from ITE.
-    aafp_quota    = min(AAFP_MIN_QUESTIONS, len(aafp_ranked))
-    aafp_selected = _select_with_dim_cap(aafp_ranked, aafp_quota, dim_cap)
-    ite_slots     = target_count - len(aafp_selected)
-    ite_selected  = _select_with_dim_cap(ite_ranked,  ite_slots,  dim_cap)
+    # Two-pass selection — ensures every active weak dimension gets coverage
+    # before higher-priority dimensions consume all slots via overflow.
+    #
+    # Pass 1 (coverage): pick the single best candidate for each active dim.
+    #   This reserves N_active slots upfront — one per weak area.
+    # Pass 2 (fill): remaining slots filled by global relevance ranking with
+    #   dim_cap, so high-priority dims get their extra representation.
 
-    # Merge and re-sort by relevance so the output reads naturally
-    combined = aafp_selected + ite_selected
+    # Pass 1: best-per-dim coverage guarantee
+    covered_qids: set = set()
+    coverage_selected: list = []
+    for priority in active:
+        dim_name = priority["dimension"]
+        for cand in all_ranked:
+            if cand["targeting"] == dim_name and cand["qid"] not in covered_qids:
+                coverage_selected.append(cand)
+                covered_qids.add(cand["qid"])
+                break  # one per dim for now
+
+    # Pass 2: fill remaining slots from global pool (excluding already covered)
+    fill_slots    = max(0, target_count - len(coverage_selected))
+    remaining_pool = [c for c in all_ranked if c["qid"] not in covered_qids]
+    fill_selected  = _select_with_dim_cap(remaining_pool, fill_slots, dim_cap)
+
+    combined = coverage_selected + fill_selected
+
+    # AAFP minimum guarantee — ITE volume advantage can crowd out AAFP.
+    # If AAFP count falls below AAFP_MIN_QUESTIONS, swap in best remaining AAFP
+    # candidates for the weakest ITE selections that have >1 question for their dim.
+    aafp_count = sum(1 for c in combined if c["source_bank"] == "AAFP")
+    if aafp_count < AAFP_MIN_QUESTIONS and aafp_ranked:
+        combined_qids = {c["qid"] for c in combined}
+        aafp_spare    = [c for c in aafp_ranked if c["qid"] not in combined_qids]
+        needed        = AAFP_MIN_QUESTIONS - aafp_count
+        for cand in aafp_spare[:needed]:
+            # Replace lowest-relevance ITE question that isn't sole dim coverage
+            combined.sort(key=lambda x: x["relevance_score"])
+            for i, c in enumerate(combined):
+                dim_count = sum(1 for x in combined if x["targeting"] == c["targeting"])
+                if c["source_bank"] == "ITE" and dim_count > 1:
+                    combined.pop(i)
+                    combined.append(cand)
+                    break
+
+    # Re-sort by relevance so the output reads naturally
     combined.sort(key=lambda x: x["relevance_score"], reverse=True)
     return combined[:target_count]
 
@@ -1342,6 +1584,13 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
     exam_year  = parsed_data.get("exam_year") or 2025
     qid_map    = build_qid_map(items, exam_year)
 
+    # Normalize body system names on every item to canonical BODYSYSTEM_PDF_TO_DB keys.
+    # Handles score-report aliases (e.g. "Musculoskeletal" → "Injuries/Musculoskeletal")
+    # and whitespace variants so all downstream analysis uses consistent names.
+    for item in items:
+        if item.get("body_system"):
+            item["body_system"] = _normalize_body_system(item["body_system"])
+
     # --- Core analysis layers ---
     perf        = basic_performance(items)
     thresholds  = compute_thresholds(perf, ref, pgy_level)
@@ -1357,7 +1606,8 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
 
     # --- Practice questions + top articles ---
     practice_qs  = match_practice_questions_v3(perf, priorities, qid_map,
-                                                items, db_path, question_count)
+                                                items, db_path, question_count,
+                                                current_exam_year=exam_year)
     top_articles = match_top_articles(perf, db_path)
 
     # --- Missed item reference (for report appendix) ---

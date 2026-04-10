@@ -194,26 +194,7 @@ export default function AssessmentRunner({ sessionId, questions, initialResponse
           </button>
         )}
         {(revealed || savedResponse) && current === questions.length - 1 && !completed && (
-          <button
-            onClick={async () => {
-              setSubmitting(true);
-              try {
-                const { error } = await supabase
-                  .from("assessment_sessions")
-                  .update({ status: "completed", completed_at: new Date().toISOString() })
-                  .eq("id", sessionId);
-                if (error) {
-                  console.error("Failed to persist session completion:", error);
-                  return;
-                }
-                setCompleted(true);
-              } finally {
-                setSubmitting(false);
-              }
-            }}
-            disabled={submitting}
-            style={{ padding: "0.75rem 1.5rem", background: "var(--color-success)", color: "white", border: "none", borderRadius: "6px", cursor: submitting ? "not-allowed" : "pointer", fontWeight: 600 }}
-          >
+           <button onClick={() => setCompleted(true)} style={{ padding: "0.75rem 1.5rem", background: "var(--color-success)", color: "white", border: "none", borderRadius: "6px", cursor: "pointer", fontWeight: 600 }}>
             Finish Assessment
           </button>
         )}

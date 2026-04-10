@@ -19,8 +19,7 @@ BEGIN
         NEW.id,
         COALESCE(NEW.raw_user_meta_data->>'role', 'resident'),
         COALESCE(NEW.raw_user_meta_data->>'display_name', NEW.email)
-    )
-    ON CONFLICT (id) DO NOTHING;
+    );
     RETURN NEW;
 END;
 $$;

@@ -11,3 +11,8 @@
 # Preview deploys for every branch
 [context.deploy-preview]
   command = "npm run build"
+
+# Edge function for auth middleware
+[[edge_functions]]
+  function = "auth"
+  path = "/*"

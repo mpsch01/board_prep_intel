@@ -20,8 +20,8 @@ All four keys now live in Windows user-level env vars (persist across sessions, 
 |----------|---------|
 | `EXA_API_KEY` | EXA semantic search API (ef5361f6...) |
 | `NCBI_API_KEY` | PubMed / NCBI E-utilities (850bd537...) |
-| `AAFP_USERNAME` | AAFP login email (scholl.michael.p@gmail.com) |
-| `AAFP_PASSWORD` | AAFP login password |
+| `AAFP_USERNAME` | AAFP login email (set as Windows user env var) |
+| `AAFP_PASSWORD` | AAFP login password (set as Windows user env var) |
 
 Set with: `[System.Environment]::SetEnvironmentVariable("KEY", "value", "User")`
 

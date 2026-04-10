@@ -21,10 +21,12 @@ Output folder: 01_module.1_warehouse/citation_files/ITE/VC_fail/   (all new arti
 
 import csv
 import json
+import os
 import re
 import sqlite3
 import sys
 import time
+import urllib.parse
 from pathlib import Path
 
 try:
@@ -44,12 +46,17 @@ OUTPUT_DIR   = PROJECT_ROOT / "01_module.1_warehouse" / "citation_files" / "ITE"
 DRY_RUN   = "--dry-run"   in sys.argv
 CHECKLIST = "--checklist" in sys.argv
 
+# ── Contact email (from env) ─────────────────────────────────────────────────
+CONTACT_EMAIL = os.environ.get("ITE_CONTACT_EMAIL", "")
+if not CONTACT_EMAIL:
+    print("[WARN] ITE_CONTACT_EMAIL not set. NCBI requests may be throttled.")
+
 # ── NCBI endpoints ────────────────────────────────────────────────────────────
 IDCONV_URL  = "https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/"
 PMC_OA_URL  = "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi"   # returns FTP href
 
 HEADERS = {
-    "User-Agent": "ITE-Intelligence-Downloader/1.0 (educational research; mailto:scholl.michael.p@gmail.com)"
+    "User-Agent": f"ITE-Intelligence-Downloader/1.0 (educational research; mailto:{CONTACT_EMAIL})" if CONTACT_EMAIL else "ITE-Intelligence-Downloader/1.0 (educational research)"
 }
 
 # ── Load queue + codon map from DB ───────────────────────────────────────────
@@ -109,7 +116,7 @@ def get_pmcids(pmids: list[str]) -> dict[str, str]:
         batch = pmids[i:i + batch_size]
         params = {
             "tool":   "ITE-Intelligence",
-            "email":  "scholl.michael.p@gmail.com",
+            "email":  CONTACT_EMAIL,
             "ids":    ",".join(batch),
             "idtype": "pmid",
             "format": "json",
@@ -174,10 +181,8 @@ def get_pmc_viewer_pdf_url(pmcid: str) -> str:
     handles validation cleanly.
     Covers articles in PMC that are readable but outside the strict OA FTP subset.
     """
-    return (
-        f"{EFETCH_URL}?db=pmc&id={pmcid}&rettype=pdf"
-        f"&tool=ITE-Intelligence&email=scholl.michael.p%40gmail.com"
-    )
+    email_param = f"&email={urllib.parse.quote(CONTACT_EMAIL, safe='')}" if CONTACT_EMAIL else ""
+    return f"{EFETCH_URL}?db=pmc&id={pmcid}&rettype=pdf&tool=ITE-Intelligence{email_param}"
 
 
 # ── Download PDF from PMC ─────────────────────────────────────────────────────
