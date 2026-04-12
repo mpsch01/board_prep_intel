@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-04-10 (BATON 052 — Git hash: 8fb7549) — Psychogenic retired; practice Q coverage fixed
+**Last Updated:** 2026-04-12 (BATON 054 — Git hash: 8e4fbbf) — Report builder redesign; YoY pipeline fixes
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -12,7 +12,7 @@ board_prep_intel/
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
 ├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_051_*.md              Active session handoff — read first every session
+├── BATON_active_054_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
@@ -35,7 +35,7 @@ board_prep_intel/
 │   │   │   ├── VC_pass/               168 PDFs: passed VC gate; awaiting enrichment (gitignored)
 │   │   │   ├── local_lite/            117 PDFs: VC_fail + fully enriched (gitignored)
 │   │   │   ├── right_click/           58 PDFs: VC_pass + fully enriched — priority tier (gitignored)
-│   │   │   └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored) — ite_total: 973
+│   │   │   └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored) — ite_total: 988
 │   │   └── AAFP/                      15 PDFs: AAFP citation library (gitignored)
 │   ├── ite_exams/                     16 raw ITE exam PDFs: YYYY_MC.pdf + YYYY_critique.pdf (gitignored)
 │   └── scripts/
@@ -59,7 +59,7 @@ board_prep_intel/
 │       └── candidates/                Prompt templates for enrichment
 │
 ├── 03_module.3_analyst/               M3 — Score analysis, ICD-10, pathways, Q&A deliverables
-│   ├── scripts/                       15 py + 2 JS + 1 JSON config; ite_parser, ite_analyzer_v3, build_article_currency, report builders
+│   ├── scripts/                       15 py + 2 JS + 3 JSON config; ite_parser, ite_analyzer_v3, build_article_currency, report builders
 │   ├── docs/                          ITE score analysis pipeline docs
 │   └── reports/                       Per-resident DOCX reports + faculty PPTX (gitignored)
 │

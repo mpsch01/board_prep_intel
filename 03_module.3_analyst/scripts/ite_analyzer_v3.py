@@ -296,8 +296,14 @@ def difficulty_profile(items: list, qid_map: dict = None) -> dict:
 def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
     """
     Cluster missed questions by clinical concept: diagnoses, drugs, guidelines.
-    Uses concept_tags JSON from both question banks via the QID map.
-    Also queries aafp_questions for any AAFP-side matches (future-proofing).
+
+    Two sources of concept signal:
+      1. ITE bank (primary):  concept_tags from the specific ITE questions missed
+      2. AAFP bank (additive): concept_tags from AAFP questions in the same weak
+         blueprint/body_system areas — broadens the concept landscape beyond
+         what happened to appear on this year's ITE.
+
+    Both banks are 100% concept_tags filled (1,629 ITE + 1,221 AAFP as of 2026-04).
     """
     missed_items  = [i for i in items if not i["correct"]]
     missed_qids   = [qid_map[i["item"]] for i in missed_items if i["item"] in qid_map]
@@ -306,6 +312,7 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
     drugs      = Counter()
     guidelines = Counter()
     items_matched = 0
+    aafp_items_matched = 0
 
     # QID tracking per concept — for report appendix/fingerprint reference
     dx_qids    = defaultdict(list)
@@ -316,6 +323,7 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
         db = sqlite3.connect(db_path)
         db.row_factory = sqlite3.Row
 
+        # --- Source 1: ITE questions missed (specific items) ---
         batch_size = 100
         for start in range(0, len(missed_qids), batch_size):
             batch = missed_qids[start:start + batch_size]
@@ -341,6 +349,55 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
                         items_matched += 1
                     except (json.JSONDecodeError, TypeError):
                         pass
+
+        # --- Source 2: AAFP questions in weak areas (topical enrichment) ---
+        # Collect weak blueprint/body_system DB names from missed items
+        weak_blueprints_db = set()
+        weak_bs_db = set()
+        for i in missed_items:
+            if i.get("blueprint"):
+                weak_blueprints_db.add(BLUEPRINT_PDF_TO_DB.get(i["blueprint"], i["blueprint"]))
+            if i.get("body_system"):
+                for db_name in BODYSYSTEM_PDF_TO_DB.get(i["body_system"], [i["body_system"]]):
+                    weak_bs_db.add(db_name)
+
+        if weak_blueprints_db or weak_bs_db:
+            where_parts, params = [], []
+            if weak_blueprints_db:
+                ph = ",".join(["?"] * len(weak_blueprints_db))
+                where_parts.append(f"blueprint IN ({ph})")
+                params.extend(sorted(weak_blueprints_db))
+            if weak_bs_db:
+                ph = ",".join(["?"] * len(weak_bs_db))
+                where_parts.append(f"body_system IN ({ph})")
+                params.extend(sorted(weak_bs_db))
+
+            where_sql = " OR ".join(where_parts)
+            aafp_rows = db.execute(f"""
+                SELECT aafp_qid, concept_tags FROM aafp_questions
+                WHERE ({where_sql}) AND concept_tags IS NOT NULL AND concept_tags != ''
+                LIMIT 500
+            """, params).fetchall()
+
+            for row in aafp_rows:
+                raw = row["concept_tags"]
+                qid = row["aafp_qid"]
+                if raw:
+                    try:
+                        tags = json.loads(raw)
+                        for d in tags.get("diagnoses", []):
+                            diagnoses[d] += 1
+                            dx_qids[d].append(qid)
+                        for d in tags.get("drugs", []):
+                            drugs[d] += 1
+                            drug_qids[d].append(qid)
+                        for g in tags.get("guidelines", []):
+                            guidelines[g] += 1
+                            guide_qids[g].append(qid)
+                        aafp_items_matched += 1
+                    except (json.JSONDecodeError, TypeError):
+                        pass
+
         db.close()
 
     # Recurring themes = appears ≥2 times
@@ -359,9 +416,10 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
             "drugs":      dict(drug_qids),
             "guidelines": dict(guide_qids),
         },
-        "items_matched":     items_matched,
-        "items_queried":     len(missed_qids),
-        "coverage_pct":      round(items_matched / len(missed_qids) * 100, 1) if missed_qids else 0,
+        "items_matched":        items_matched,
+        "aafp_items_matched":   aafp_items_matched,
+        "items_queried":        len(missed_qids),
+        "coverage_pct":         round(items_matched / len(missed_qids) * 100, 1) if missed_qids else 0,
     }
 
 # ---------------------------------------------------------------------------
@@ -1460,14 +1518,16 @@ def match_top_articles(perf: dict, db_path: str, count: int = 5) -> list:
     db = sqlite3.connect(db_path)
     db.row_factory = sqlite3.Row
 
-    # ITE-linked articles
+    # ITE-linked articles — includes article_currency status for reading list badges
     sql = f"""
         SELECT a.article_id, a.title, a.author1, a.year, a.source_type,
                a.citation_count, a.unique_years, a.exam_years, a.clean_ref,
-               COUNT(DISTINCT q.qid) AS weak_area_links
+               COUNT(DISTINCT q.qid) AS weak_area_links,
+               COALESCE(ac.currency_status, 'unknown') AS currency_status
         FROM articles a
         JOIN qid_art_xref qa ON a.article_id = qa.article_id
         JOIN questions q     ON qa.qid = q.qid
+        LEFT JOIN article_currency ac ON a.article_id = ac.article_id
         WHERE ({where})
           AND a.source_type != 'stub'
           AND a.article_id  != 'ART-0001'
@@ -1480,6 +1540,101 @@ def match_top_articles(perf: dict, db_path: str, count: int = 5) -> list:
     db.close()
 
     return [dict(r) for r in rows]
+
+
+# ---------------------------------------------------------------------------
+# Score Interpretation — plain-language framing for program directors
+# ---------------------------------------------------------------------------
+
+SCORE_BANDS = [
+    {"min": 480,  "label": "Strong",          "color": "green",  "fmce_prob": ">95%"},
+    {"min": 420,  "label": "On Track",         "color": "blue",   "fmce_prob": ">85%"},
+    {"min": 380,  "label": "Monitoring Zone",  "color": "amber",  "fmce_prob": "50–85%"},
+    {"min":   0,  "label": "Below MPS",        "color": "red",    "fmce_prob": "<50%"},
+]
+
+TYPICAL_GAINS = {
+    "PGY1": {"to_next": "40–60", "label": "PGY1→PGY2"},
+    "PGY2": {"to_next": "25–35", "label": "PGY2→PGY3"},
+    "PGY3": {"to_next": None,    "label": "PGY3 (certification year)"},
+    "All":  {"to_next": None,    "label": ""},
+}
+
+
+def build_score_interpretation(thresholds: dict, ref: dict, pgy_level: str = "All") -> dict:
+    """
+    Assemble a plain-language score interpretation block for the report header.
+
+    Draws from already-computed thresholds. Adds:
+      - score_band: human-readable tier label + color hint
+      - confidence_range_68: [low, high] based on SEM ±38
+      - trajectory_note: gap to 440 threshold + expected gain
+      - sub_score_caution: ABFM's own warning language
+
+    This is a read-only assembly — no new DB queries.
+    """
+    t1 = thresholds.get("tier1_pass_probability", {})
+    scaled    = t1.get("scaled_score", 0)
+    perc      = t1.get("percentile_estimate")
+    vs_mps    = t1.get("vs_mps", scaled - 380)
+    nat_mean  = t1.get("national_mean", 434)
+    nat_sd    = t1.get("national_sd", 85)
+    sem       = ref.get("exam_specs", {}).get("sem_overall", 38)
+
+    # Score band
+    band = SCORE_BANDS[-1]
+    for b in SCORE_BANDS:
+        if scaled >= b["min"]:
+            band = b
+            break
+
+    # Confidence range (±1 SEM = 68%)
+    conf_low  = max(200, scaled - sem)
+    conf_high = min(800, scaled + sem)
+
+    # Gap to the "very reassuring" 440 threshold
+    gap_to_440 = max(0, 440 - scaled)
+
+    # Trajectory note
+    gain_info = TYPICAL_GAINS.get(pgy_level, TYPICAL_GAINS["All"])
+    if gain_info["to_next"] and gap_to_440 > 0:
+        trajectory_note = (
+            f"Gap to 440 threshold: {gap_to_440} points. "
+            f"Typical {gain_info['label']} gain is {gain_info['to_next']} points."
+        )
+    elif gap_to_440 == 0:
+        trajectory_note = "Score is at or above the 440 'very reassuring' threshold for FMCE passage."
+    else:
+        trajectory_note = gain_info.get("label", "")
+
+    # National context
+    if nat_sd and nat_sd > 0:
+        vs_nat = scaled - nat_mean
+        sign   = "+" if vs_nat >= 0 else ""
+        nat_context = f"{sign}{vs_nat} vs. national mean ({nat_mean}) for {pgy_level}"
+    else:
+        nat_context = ""
+
+    return {
+        "scaled_score":       scaled,
+        "score_band":         band["label"],
+        "score_band_color":   band["color"],
+        "fmce_probability":   band["fmce_prob"],
+        "percentile_estimate": perc,
+        "vs_mps":             vs_mps,
+        "sem":                sem,
+        "confidence_range_68": [conf_low, conf_high],
+        "gap_to_440":         gap_to_440,
+        "national_context":   nat_context,
+        "trajectory_note":    trajectory_note,
+        "sub_score_caution":  (
+            "ABFM guidance: sub-scores are NOT sufficiently precise to confirm "
+            "knowledge deficits — use to generate hypotheses only. "
+            f"Typical sub-score SEM: Foundations ±187, Preventive ±109, Emergent ±97."
+        ),
+        "bsp_url": ref.get("notes", {}).get("bayesian_predictor_url",
+                                            "https://rtm.theabfm.org/bayesian/predictor"),
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -1579,6 +1734,17 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
         pgy_level:      PGY1/PGY2/PGY3/All for national benchmarking
         question_count: practice questions to select (default 20)
     """
+    # Dynamic reference file — match to exam year; fall back to 2025 if not found.
+    # This ensures national benchmarks and raw→scaled lookup use the correct year.
+    if ref_path is None:
+        year_str  = str(parsed_data.get("exam_year") or 2025)
+        candidate = Path(__file__).parent / f"abfm_reference_{year_str}.json"
+        ref_path  = str(candidate) if candidate.exists() else str(
+            Path(__file__).parent / "abfm_reference_2025.json"
+        )
+        if not candidate.exists():
+            print(f"  [WARN] No reference file for {year_str}, using abfm_reference_2025.json", flush=True)
+
     ref        = load_abfm_reference(ref_path)
     items      = parsed_data["items"]
     exam_year  = parsed_data.get("exam_year") or 2025
@@ -1594,6 +1760,7 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
     # --- Core analysis layers ---
     perf        = basic_performance(items)
     thresholds  = compute_thresholds(perf, ref, pgy_level)
+    score_interp = build_score_interpretation(thresholds, ref, pgy_level)
     difficulty  = difficulty_profile(items, qid_map)
     concepts    = concept_clustering(items, qid_map, db_path)
     clustering  = spatial_clustering(items)
@@ -1618,7 +1785,10 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
         "resident":             parsed_data["resident"],
         "exam_year":            exam_year,
         "deleted_items":        parsed_data.get("deleted_items", []),
-        "analysis_version":     "3.0",
+        "analysis_version":     "3.1",
+
+        # Score interpretation (plain-language framing — NEW v3.1)
+        "score_interpretation": score_interp,
 
         # Core layers
         "performance":          perf,

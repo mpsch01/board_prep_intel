@@ -1,11 +1,11 @@
 # project_overhaul_state.md
-Last updated: 2026-04-10 (BATON 053)
+Last updated: 2026-04-12 (BATON 054)
 
 ## Module State
 
 | Module | Status | Key Info |
 |--------|--------|----------|
-| M1 Warehouse | Active | 973 ITE PDFs (4 tiers) + 15 AAFP PDFs; 6 build + 26 maintain scripts |
+| M1 Warehouse | Active | 988 ITE/AAFP PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 6 build + 26 maintain scripts |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
 | M3 Analyst | Active | 15 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
@@ -17,7 +17,7 @@ Last updated: 2026-04-10 (BATON 053)
 ### ITE (citation_files/ITE/)
 | Tier | Count | Notes |
 |------|-------|-------|
-| VC_fail | 630 | Failed VC gate; awaiting enrichment |
+| VC_fail | 630 | Failed VC gate; awaiting enrichment (cleaned -7 from 637, BATON 053) |
 | VC_pass | 168 | Passed VC gate; awaiting enrichment |
 | local_lite | 117 | Enriched; not VC-cited |
 | right_click | 58 | Enriched + VC-cited (top tier) |
@@ -36,6 +36,8 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 | Flag | Status | Description |
 |------|--------|-------------|
 | DEFERRED-YOY-ROBUSTNESS | ACTIVE | Year-over-year section 3b needs more robust implementation; month-by-month trend aggregation logic (BATON 050) |
+| DEFERRED-PROGRAM-TREND | NEW | Require program-level trend analysis across multiple residents; benchmark against 2024 ABFM national reference (abfm_reference_2024.json) |
+| DEFERRED-RESIDENT-FOLDER-MIGRATION | NEW | Investigate resident_data/ folder state and migration strategy to M5 platform |
 | DEFERRED-A | ARCHIVED | 37 ITE manual PDFs — permanent ceiling (subscription-only) |
 | DEFERRED-AAFP-PAYWALL | ACTIVE | 3 AAFP articles paywalled (PMC not_oa): ART-1959 Binic_2011, ART-1972 Byington_2012, ART-1967 Verbalis_2007 |
 | DEFERRED-PRACTICE-Q-COVERAGE | ✅ CLOSED | Practice question 0-question warnings for some body systems (Foundations, Preventive, Cardiovascular, Respiratory, Sexual-Reproductive, Psychiatric, Behavioral) — qid_art_xref tagging coverage gap (BATON 050) |
@@ -70,5 +72,10 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
   - Git index corruption fixed (del .git\index + git read-tree HEAD via CMD)
   - Ran Pjetergjoka 2024+2025 analysis with 35 questions
   - New deferred flag: DEFERRED-YOY-ROBUSTNESS (year-over-year section robustness)
+- **BATON 054 script refinements (2026-04-12):**
+  - ite_analyze_v2.py: performance tuning and query optimization
+  - ite_analyzer_v3.py: cohort-level aggregation improvements
+  - ite_report_builder_v2.js: 18-edit redesign for multi-year resident reporting; improved section 3b year-over-year rendering; added ABFM reference benchmark comparison
+  - New file: abfm_reference_2024.json (ABFM 2024 national benchmarks for PGY 1-4 comparison)
 - **New deferred flag (BATON 049):**
   - DEFERRED-PRACTICE-Q-COVERAGE — Practice question 0-question warnings detected for Foundations/Preventive/Cardiovascular/Respiratory/Sexual-Reproductive/Psychiatric/Behavioral body systems; indicates qid_art_xref tagging coverage gap in some blueprint cells

@@ -1,0 +1,115 @@
+{
+  "exam_year": 2024,
+  "source": "2024 ITE Score Result Handbook (ABFM)",
+  "last_updated": "2026-04-12",
+
+  "exam_specs": {
+    "total_items": 200,
+    "scored_items": 194,
+    "deleted_items": null,
+    "deletion_reasons": "6 deleted: 5 content, 1 psychometric",
+    "minimum_passing_standard": 380,
+    "scaled_score_range": [200, 800],
+    "sem_overall": 38,
+    "administration_count": null,
+    "program_count": null
+  },
+
+  "blueprint_weights": {
+    "Acute Care and Diagnosis":  {"pct": 35, "item_count": 68},
+    "Chronic Care Management":   {"pct": 25, "item_count": 49},
+    "Emergent and Urgent Care":  {"pct": 20, "item_count": 39},
+    "Preventive Care":           {"pct": 15, "item_count": 29},
+    "Foundations of Care":       {"pct": 5,  "item_count": 10}
+  },
+
+  "blueprint_sem": {
+    "Acute Care and Diagnosis": 69,
+    "Chronic Care Management":  82,
+    "Emergent and Urgent Care": 97,
+    "Preventive Care":          109,
+    "Foundations of Care":      187
+  },
+
+  "bodysystem_sem_page1": {
+    "Cardiovascular":           132,
+    "Injuries/Musculoskeletal": 121,
+    "Respiratory":              183,
+    "Psychiatric/Behavioral":   179,
+    "Sexual and Reproductive":  190
+  },
+
+  "national_benchmarks": {
+    "PGY1": {"mean_pct": null, "mean_scaled": 414, "sd": 78,   "n": null},
+    "PGY2": {"mean_pct": null, "mean_scaled": 462, "sd": 76,   "n": null},
+    "PGY3": {"mean_pct": null, "mean_scaled": 494, "sd": 78,   "n": null},
+    "PGY4": {"mean_pct": null, "mean_scaled": null, "sd": null, "n": null},
+    "All":  {"mean_pct": null, "mean_scaled": 456, "sd": 84,   "n": null}
+  },
+
+  "program_benchmarks_2024": {
+    "PGY1": null,
+    "PGY2": null,
+    "PGY3": null,
+    "PGY4": null,
+    "Total": 537
+  },
+
+  "program_trend": {
+    "2018": {"program": 520, "national": 447},
+    "2019": {"program": 503, "national": 454},
+    "2020": {"program": 510, "national": 440},
+    "2021": {"program": 477, "national": 411},
+    "2022": {"program": 450, "national": 388},
+    "2023": {"program": 437, "national": 389},
+    "2024": {"program": 537, "national": 456}
+  },
+
+  "pass_probability_tiers": {
+    "critical_risk": {"scaled_max": 379, "description": "Below MPS, <50% FMCE pass probability"},
+    "at_risk":       {"scaled_min": 380, "scaled_max": 419, "description": "Marginal, ~50-75% pass probability"},
+    "on_track":      {"scaled_min": 420, "scaled_max": 479, "description": "Near/above PGY mean, >85% pass"},
+    "strong":        {"scaled_min": 480, "description": "Well above mean, >95% pass probability"}
+  },
+
+  "raw_to_scaled": {
+    "_note": "APPROXIMATE — 2024 Rasch equating table not extracted. Interpolated from 2025 conversion (194 scored items). Use as estimate only; official scaled score from score report PDF supersedes this.",
+    "106-107": 380,
+    "108-110": 390,
+    "111-112": 400,
+    "113-114": 410,
+    "115-116": 420,
+    "117-118": 430,
+    "119-120": 440,
+    "121-122": 450,
+    "123":     460,
+    "124-125": 470,
+    "126":     480,
+    "127-128": 490,
+    "129":     500
+  },
+
+  "raw_to_scaled_lookup": [
+    200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,
+    200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,
+    200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,
+    200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,
+    210,210,220,230,230,240,250,250,260,270,270,280,290,290,300,310,310,320,330,330,
+    340,350,350,360,370,370,380,390,390,400,410,410,420,430,430,440,450,450,460,470,
+    470,480,490,490,500,510,520,520,530,540,540,550,560,570,570,580,590,600,610,610,
+    620,630,640,650,660,660,670,680,690,700,710,720,730,740,750,760,770,780,790,800,
+    800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,
+    800,800,800,800,800,800,800,800,800,800,800,800,800,800
+  ],
+
+  "notes": {
+    "scaled_score_interpretation": "ITE scaled score represents predicted FMCE performance at that point in time. Equated via Rasch model + common-item design.",
+    "sub_score_caution": "ABFM explicitly warns: sub-scores are NOT sufficiently precise to reliably confirm knowledge deficiencies. Useful for hypothesis generation only. See large SEM values.",
+    "typical_growth": "PGY1→PGY2: +40-60 points. PGY2→PGY3: +25-35 points.",
+    "pass_threshold": "PGY3 score ≥440 = very good probability of passing FMCE. MPS = 380.",
+    "bayesian_predictor_url": "https://rtm.theabfm.org/bayesian/predictor",
+    "national_means_source": "2024 ITE Score Result Handbook: PGY1=414.1 (SD 77.8), PGY2=462.2 (SD 76.3), PGY3=494.0 (SD 77.5), Total=455.5 (SD 84.0)",
+    "exam_difficulty_note": "2025 exam was ~20 points harder across all PGY levels vs 2024. A resident scoring 440 in 2025 is performing better relative to peers than a 440 in 2024.",
+    "raw_to_scaled_note": "raw_to_scaled_lookup is APPROXIMATE for 2024. Official scaled score from score report PDF always supersedes lookup estimates."
+  }
+}

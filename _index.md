@@ -1,7 +1,7 @@
 # _index.md â€” Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root â€” Option B complete 2026-04-04)
-**Last Updated:** 2026-04-10 (BATON 053 – GitHub sync housekeeping; Copilot PRs #11-14 captured; REPO_MAP.md and .gitignore corruptions fixed)
-**Status:** Current – 1,004 total PDFs (637 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 maintain = 26 scripts; M2 = 75py + 6js; M3 = 15py + 2js + report_config.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
+**Last Updated:** 2026-04-12 (BATON 054 – ITE report builder v2 redesign; ABFM 2024 benchmarks integrated; script refinements in ite_analyze_v2.py, ite_analyzer_v3.py, ite_report_builder_v2.js)
+**Status:** Current – 1,020 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 maintain = 26 scripts; M2 = 75py + 6js; M3 = 15py + 2js + 1 json config + abfm_reference_2024.json (NEW); M5 scaffold = 3py + 35ts/tsx + 5sql; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -47,6 +47,10 @@ board_prep_intel/
 **Swept (2026-04-08, BATON 048):** DATABASE_GUIDE.md relocated from 00_database/ to project root; session-housekeeping agent templates created in .claude/skills/session-housekeeping/agents/
 
 **Added (2026-04-09, BATON 051):** 05_module.5_web/ scaffold (54 files — Next.js, Supabase, Sanity, Railway, OpenAI NL search) committed to GitHub by Copilot on 2026-04-08; nl_search_validation.py added to M4 sandbox; M3 script count corrected to 15py; housekeeping sweep complete.
+
+**Refined (2026-04-12, BATON 054):** ite_report_builder_v2.js underwent 18-edit redesign for multi-year resident reporting; improved year-over-year section 3b rendering; added ABFM 2024 national benchmark comparison (PGY 1-4); abfm_reference_2024.json created in M3 scripts/; ite_analyze_v2.py and ite_analyzer_v3.py optimized for cohort-level aggregation.
+
+**Refined (2026-04-12, BATON 054):** ite_report_builder_v2.js underwent 18-edit redesign for multi-year resident reporting; improved year-over-year section 3b rendering; added ABFM 2024 national benchmark comparison (PGY 1-4); abfm_reference_2024.json created in M3 scripts/; ite_analyze_v2.py and ite_analyzer_v3.py optimized for cohort-level aggregation.
 
 **Cleaned (2026-04-04, BATON 039):** Windows cleanup complete â€” 5 deprecated M1 scripts deleted; Option B artifacts deleted (SEVERANCE_PLAN.md, option_b_patch.py, repo_pre_severance.md); schema docs refreshed (articles.md: row count, tier column, source_type dist; questions.md: subcategory removed); script counts corrected (M1 build 6, maintain 18, M2 75py, M3 13py); REPO_MAP.md added to root
 **Fixed (2026-04-04, BATON 038):** 14 code review defects resolved â€” hop count bugs (preprocess_concept_tags, batch_db_extract, db_guided_extractor), SCHEMAS_DIR/OUTPUT_DIR (build_icd10_tags), filename pattern (extract_ite_year), exists() guard (audit_engine_type_changes), crosswalk output paths + multi-tier scan (build_crosswalk_index), XGBoost param (classify_ite_year), JSON_DIR/LOG_DIR/OUTPUT_DIR path fixes (4 scripts), VC gate cross-check (backfill), docstring escapes (2 scripts)

@@ -217,6 +217,19 @@ const pathways = data.pathway_gap_map;
 const analysisVer = data.analysis_version || "2.0";
 const allQuestions = data.practice_questions || [];
 const articles  = data.top_articles || [];
+// v3.1: score_interpretation block (plain-language framing for program directors)
+const scoreInterp = data.score_interpretation || {};
+
+// v3.2: load ABFM reference data for Exam at a Glance section
+let abfmRef = null;
+{
+  const refPath = path.join(__dirname, `abfm_reference_${data.exam_year}.json`);
+  const fallbackPath = path.join(__dirname, "abfm_reference_2025.json");
+  const rp = fs.existsSync(refPath) ? refPath : (fs.existsSync(fallbackPath) ? fallbackPath : null);
+  if (rp) {
+    try { abfmRef = JSON.parse(fs.readFileSync(rp, "utf-8")); } catch (_) {}
+  }
+}
 
 // Extract safe name: last name, spaces→underscores, remove periods
 function extractSafeName(fullName) {
@@ -298,13 +311,130 @@ for (const wb of weakBlueprints) {
 const children = [];
 const weakList = weakBlueprints.length > 0 ? weakBlueprints.join(", ") : "none identified";
 
+// examGlanceSection is built first but injected AFTER the title page
+const examGlanceSection = [];
+
+// ────────────────────────────────────────────────────────────────────
+// 0. EXAM AT A GLANCE (national context — no resident data)
+//    Injected after the title page; built into examGlanceSection
+// ────────────────────────────────────────────────────────────────────
+if (abfmRef) {
+  const specs   = abfmRef.exam_specs || {};
+  const natBmk  = abfmRef.national_benchmarks || {};
+  const trend   = abfmRef.program_trend || {};
+  const notes   = abfmRef.notes || {};
+
+  examGlanceSection.push(sectionBar(`\uD83D\uDCCB  ITE ${data.exam_year} — EXAM AT A GLANCE`));
+  examGlanceSection.push(spacer(100, true));
+
+  // Two-column layout: specs left, national benchmarks right
+  const gColW = [4560, 4800];
+  examGlanceSection.push(makeTable(gColW, [row([
+    // LEFT — exam specs
+    new TableCell({
+      borders: { top: thinBorder, bottom: thinBorder, left: thinBorder, right: thinBorder },
+      margins: { top: 120, bottom: 120, left: 180, right: 180 },
+      children: [
+        new Paragraph({ children: [new TextRun({ text: "Exam Specifications", font: FONT, size: 22, bold: true, color: NAVY })] }),
+        new Paragraph({ spacing: { before: 80 }, children: [new TextRun({ text: `Total items:       200`, font: FONT, size: 18, color: DGRAY })] }),
+        new Paragraph({ children: [new TextRun({ text: `Scored items:      ${specs.scored_items ?? "—"}`, font: FONT, size: 18, color: DGRAY })] }),
+        new Paragraph({ children: [new TextRun({ text: `Deleted items:     ${specs.deletion_reasons ?? (Array.isArray(specs.deleted_items) ? specs.deleted_items.length : "—")}`, font: FONT, size: 18, color: DGRAY })] }),
+        new Paragraph({ children: [new TextRun({ text: `Min passing score: ${specs.minimum_passing_standard ?? 380}`, font: FONT, size: 18, color: DGRAY })] }),
+        new Paragraph({ children: [new TextRun({ text: `Overall SEM:       ±${specs.sem_overall ?? 38} points`, font: FONT, size: 18, color: DGRAY })] }),
+        ...(specs.administration_count ? [new Paragraph({ children: [new TextRun({ text: `Administrations:   ${specs.administration_count?.toLocaleString()}`, font: FONT, size: 18, color: DGRAY })] })] : []),
+        ...(notes.sub_score_caution ? [
+          new Paragraph({ spacing: { before: 120 }, children: [new TextRun({ text: "⚠ Sub-score caution:", font: FONT, size: 17, bold: true, color: AMBER })] }),
+          new Paragraph({ children: [new TextRun({ text: "Sub-scores have large SEM values and should generate hypotheses only — not confirm deficits.", font: FONT, size: 17, color: MGRAY, italics: true })] }),
+        ] : []),
+      ],
+    }),
+    // RIGHT — national benchmarks
+    new TableCell({
+      borders: { top: thinBorder, bottom: thinBorder, left: thinBorder, right: thinBorder },
+      margins: { top: 120, bottom: 120, left: 180, right: 180 },
+      children: [
+        new Paragraph({ children: [new TextRun({ text: `${data.exam_year} National Benchmarks`, font: FONT, size: 22, bold: true, color: NAVY })] }),
+        new Paragraph({ spacing: { before: 80 }, children: [new TextRun({ text: "PGY Level   Mean Score   SD", font: FONT, size: 18, bold: true, color: DGRAY })] }),
+        ...["PGY1", "PGY2", "PGY3", "All"].map(pgy => {
+          const b = natBmk[pgy] || {};
+          const mean = b.mean_scaled ?? "—";
+          const sd   = b.sd != null ? `±${b.sd}` : "—";
+          const n    = b.n   != null ? `  (n=${b.n.toLocaleString()})` : "";
+          return new Paragraph({ children: [new TextRun({ text: `${pgy.padEnd(8)}  ${String(mean).padEnd(13)}${sd}${n}`, font: FONT, size: 18, color: DGRAY })] });
+        }),
+        new Paragraph({ spacing: { before: 120 }, children: [new TextRun({ text: "Pass thresholds:", font: FONT, size: 18, bold: true, color: NAVY })] }),
+        new Paragraph({ children: [new TextRun({ text: `MPS (minimum passing): ${specs.minimum_passing_standard ?? 380}`, font: FONT, size: 18, color: DGRAY })] }),
+        new Paragraph({ children: [new TextRun({ text: "FMCE signal threshold: 440  (>85% pass probability)", font: FONT, size: 18, color: GREEN })] }),
+      ],
+    }),
+  ])]));
+
+  examGlanceSection.push(spacer(120));
+
+  // National + program trend table (last 5 years)
+  const trendYears = Object.keys(trend).sort().slice(-6);
+  if (trendYears.length >= 2) {
+    examGlanceSection.push(new Paragraph({ spacing: { before: 60, after: 60 }, children: [
+      new TextRun({ text: "Historical National vs. Program Trend", font: FONT, size: 20, bold: true, color: NAVY }),
+    ]}));
+
+    // Check if this year was harder/easier than last year
+    const thisYearStr = String(data.exam_year);
+    const lastYearStr = String(data.exam_year - 1);
+    const thisNat  = trend[thisYearStr]?.national;
+    const priorNat = trend[lastYearStr]?.national;
+    const natDelta = (thisNat != null && priorNat != null) ? (thisNat - priorNat) : null;
+    const diffNote = natDelta != null
+      ? (natDelta < -10
+          ? `▼ ${data.exam_year} exam was harder nationally (national mean ${natDelta} vs ${lastYearStr}). Scores lower than ${lastYearStr} may still reflect strong performance.`
+          : natDelta > 10
+          ? `▲ ${data.exam_year} exam was easier nationally (national mean +${natDelta} vs ${lastYearStr}).`
+          : `→ ${data.exam_year} exam difficulty similar to ${lastYearStr} (national mean ${natDelta >= 0 ? "+" : ""}${natDelta}).`)
+      : null;
+
+    // Distribute remaining width evenly among year columns, absorbing rounding remainder in last col
+    const labelW = 1800;
+    const remaining = 9360 - labelW;
+    const baseYearW = Math.floor(remaining / trendYears.length);
+    const lastYearW = remaining - baseYearW * (trendYears.length - 1);
+    const tColW = [labelW, ...trendYears.map((_, i) => i === trendYears.length - 1 ? lastYearW : baseYearW)];
+    const tRows = [
+      row([""].concat(trendYears).map((h, i) => headerCell(h, tColW[i]))),
+      row(["National Mean"].concat(trendYears.map((y, i) => {
+        const val = trend[y]?.national;
+        return dataCell(val != null ? String(val) : "—", tColW[i + 1], MGRAY, false);
+      }))),
+      row(["Program Mean"].concat(trendYears.map((y, i) => {
+        const val = trend[y]?.program;
+        return dataCell(val != null ? String(val) : "—", tColW[i + 1], BLUE, true);
+      }))),
+    ];
+    examGlanceSection.push(makeTable(tColW, tRows));
+    examGlanceSection.push(new Paragraph({ spacing: { before: 60, after: 40 }, children: [
+      new TextRun({ text: "National Mean: average scaled score of all FM residents nationwide that year. Program Mean: your program's average (if recorded).", font: FONT, size: 16, color: MGRAY, italics: true }),
+    ]}));
+
+    if (diffNote) {
+      examGlanceSection.push(spacer(40));
+      examGlanceSection.push(new Paragraph({ children: [
+        new TextRun({ text: diffNote, font: FONT, size: 17, color: natDelta < -5 ? AMBER : MGRAY, italics: true }),
+      ]}));
+    }
+  }
+
+  // No page break here — Exam at a Glance is injected after the title page
+} // end Exam at a Glance
+
 // ────────────────────────────────────────────────────────────────────
 // 1. TITLE BLOCK
 // ────────────────────────────────────────────────────────────────────
 children.push(new Paragraph({ spacing: { before: 600, after: 0 }, alignment: AlignmentType.CENTER, children: [
   new TextRun({ text: `ITE ${data.exam_year} SCORE ANALYSIS`, font: FONT, size: 36, bold: true, color: NAVY }),
 ]}));
-children.push(spacer(300));
+children.push(new Paragraph({ spacing: { before: 80, after: 0 }, alignment: AlignmentType.CENTER, children: [
+  new TextRun({ text: res.name, font: FONT, size: 24, bold: false, color: BLUE }),
+]}));
+children.push(spacer(220));
 
 // Score display — de-identified: no name, no ABFM ID, no tier badge (percentile only)
 children.push(makeTable([3120, 3120, 3120], [row([
@@ -324,14 +454,62 @@ children.push(makeTable([3120, 3120, 3120], [row([
 ])]));
 children.push(spacer(100));
 children.push(new Paragraph({ spacing: { before: 80, after: 0 }, alignment: AlignmentType.CENTER, children: [
-  new TextRun({ text: `vs MPS (380): +${displayVsMps}  |  vs ${displayPgyLevel} Mean (${displayPgyMean}): +${displayVsPgy}  |  N = 15,382`, font: FONT, size: 18, color: MGRAY }),
+  new TextRun({ text: `vs MPS (380): ${displayVsMps >= 0 ? "+" : ""}${displayVsMps}  |  vs ${displayPgyLevel} Mean (${displayPgyMean}): ${displayVsPgy >= 0 ? "+" : ""}${displayVsPgy}  |  N = 15,382`, font: FONT, size: 18, color: MGRAY }),
 ]}));
 
+// Score interpretation band (v3.1) — plain-language zone + confidence range + trajectory
+{
+  const band      = scoreInterp.score_band || tierBadge(t1.pass_tier?.tier || "");
+  // Edit 4+5: Only apply color for passing bands (green/blue). Amber and red get neutral border-only style.
+  const bandColor = scoreInterp.score_band_color === "green" ? GREEN
+                  : scoreInterp.score_band_color === "blue"  ? BLUE
+                  : null;  // amber/red get no fill — neutral presentation
+  const conf      = scoreInterp.confidence_range_68;
+  const confText  = conf ? `True ability range (68%): ${conf[0]}–${conf[1]}` : "";
+  const trajText  = scoreInterp.trajectory_note || "";
+  const fmceText  = scoreInterp.fmce_probability ? `FMCE probability: ${scoreInterp.fmce_probability}` : "";
+  const bandTextColor = bandColor ? WHITE : NAVY;
+  const bandFill = bandColor || "F0F4F8";  // light neutral gray when no color
+
+  children.push(spacer(80));
+  children.push(makeTable([2000, 7360], [row([
+    new TableCell({
+      shading: { fill: bandFill, type: ShadingType.CLEAR },
+      borders: cellBorders,
+      verticalAlign: VerticalAlign.CENTER,
+      margins: { top: 80, bottom: 80, left: 120, right: 120 },
+      children: [
+        new Paragraph({ alignment: AlignmentType.CENTER, children: [
+          new TextRun({ text: band, font: FONT, size: 24, bold: true, color: bandTextColor }),
+        ]}),
+        new Paragraph({ alignment: AlignmentType.CENTER, children: [
+          new TextRun({ text: fmceText, font: FONT, size: 16, color: bandTextColor }),
+        ]}),
+      ],
+    }),
+    new TableCell({
+      borders: cellBorders,
+      margins: { top: 60, bottom: 60, left: 180, right: 120 },
+      children: [
+        new Paragraph({ children: [new TextRun({ text: confText, font: FONT, size: 17, color: MGRAY })] }),
+        new Paragraph({ children: [new TextRun({ text: trajText, font: FONT, size: 17, color: DGRAY })] }),
+      ],
+    }),
+  ])]));
+} // end score interpretation band block
+
+// ── Inject Exam at a Glance after title page (Edit 1) ──────────────
+if (examGlanceSection.length > 0) {
+  children.push(new Paragraph({ children: [new PageBreak()] }));
+  children.push(...examGlanceSection);
+  children.push(new Paragraph({ children: [new PageBreak()] }));
+}
+
 // ────────────────────────────────────────────────────────────────────
-// 2. EXECUTIVE SUMMARY
+// 2. EXAM SUMMARY
 // ────────────────────────────────────────────────────────────────────
 children.push(spacer(200));
-children.push(sectionBar("\u2605 EXECUTIVE SUMMARY"));
+children.push(sectionBar("\u2605 EXAM SUMMARY"));
 children.push(spacer(60, true));
 // Dynamic executive summary
 const personalMean = t2.thresholds?.personal_mean || 0;
@@ -345,19 +523,38 @@ const topYieldText = topYield
   ? `Highest-yield improvement: ${topYield.dimension} = ${topYield.recoverable_items?.toFixed(1) || "?"} improvable items at ${topYield.exam_weight_pct || "?"}% exam weight.`
   : "";
 
-children.push(studyNote(
-  `Scaled score ${displayScaled}${hasOfficialScore ? " (official)" : " (est.)"}` +
-  ` (${t1.percentile_estimate}th percentile est.), ` +
-  `placing in the "${tierBadge(t1.pass_tier.tier)}" tier. ` +
-  `Weak areas identified: ${weakList}. ` +
-  `${worstBp[0]} is the lowest-performing category at ${(worstBp[1].rate * 100).toFixed(1)}% ` +
-  `(vs personal mean ${personalMeanPct}%)${worstSem}, ` +
-  `while ${bestBp[0]} is the strongest at ${(bestBp[1].rate * 100).toFixed(1)}%. ` +
-  `${diff.easy_miss_count || 0} easy misses (\u2265700 difficulty) represent the most improvable knowledge gaps. ` +
-  `${topYieldText} ` +
-  `This report provides targeted practice questions for each weak area (min. 5 per section), ranked by fit, ` +
-  `plus a separate exam version for timed self-assessment.`
-));
+// Edit 7+8: Converted from prose studyNote to bulleted list; removed tier placement text
+// MPS question estimate: linear approximation — ceil((380/scaledScore - 1) × correct_count)
+// Assumes roughly linear raw→scaled mapping (accurate within ±2 Qs in the 330–480 range)
+const mpsDeficit = 380 - displayScaled;
+const mpsQsNeeded = mpsDeficit > 0
+  ? Math.ceil((380 / displayScaled - 1) * perf.overall.correct)
+  : null;
+const mpsBullet = mpsQsNeeded !== null
+  ? `${mpsQsNeeded} additional correct answer${mpsQsNeeded === 1 ? "" : "s"} needed to reach MPS (380) — est., assumes linear scoring`
+  : `Above MPS (380) by ${Math.abs(mpsDeficit)} scaled points`;
+
+const summaryBullets = [
+  `Scaled score: ${displayScaled}${hasOfficialScore ? " (official)" : " (est.)"} — ${t1.percentile_estimate}th percentile`,
+  mpsBullet,
+  `Weak areas: ${weakList}`,
+  `Lowest blueprint category: ${worstBp[0]} at ${(worstBp[1].rate * 100).toFixed(1)}% (personal mean: ${personalMeanPct}%)${worstSem}`,
+  `Strongest category: ${bestBp[0]} at ${(bestBp[1].rate * 100).toFixed(1)}%`,
+  `${diff.easy_miss_count || 0} easy misses (\u2265700 difficulty) — highest-priority improvable gaps`,
+  ...(topYieldText ? [topYieldText] : []),
+];
+children.push(spacer(80));
+for (const bullet of summaryBullets) {
+  children.push(new Paragraph({
+    spacing: { before: 80, after: 40 },
+    indent: { left: 360, hanging: 260 },
+    children: [
+      new TextRun({ text: "\u2022  ", font: FONT, size: 20, bold: true, color: NAVY }),
+      new TextRun({ text: bullet, font: FONT, size: 20, color: DGRAY }),
+    ],
+  }));
+}
+children.push(spacer(60));
 
 // ────────────────────────────────────────────────────────────────────
 // 3b. LONGITUDINAL DELTA (only rendered when prior-year data exists)
@@ -405,46 +602,105 @@ if (lng.n1 || lng.n2) {
       ]),
     ];
     children.push(makeTable(lngColW, lngRows));
-    children.push(spacer(60));
+    children.push(spacer(80));
+
+    // Per-blueprint breakdown
+    const bpDelta = delta.blueprint_delta || {};
+    const bsDelta = delta.body_system_delta || {};
+    const hasBpDelta = Object.keys(bpDelta).length > 0;
+    const hasBsDelta = Object.keys(bsDelta).length > 0;
+
+    if (hasBpDelta) {
+      children.push(new Paragraph({ keepNext: true, spacing: { before: 60, after: 40 }, children: [
+        new TextRun({ text: "Blueprint Performance", font: FONT, size: 19, bold: true, color: DGRAY }),
+      ]}));
+      const catColW = [3600, 1560, 1560, 1400, 1240];
+      const catRows = [row(["Category", `${delta.prior_year} %`, `${data.exam_year} %`, "Δ", ""].map((h, i) => headerCell(h, catColW[i])))];
+      for (const [cat, deltaVal] of Object.entries(bpDelta).sort((a, b) => a[1] - b[1])) {
+        const currRate  = perf.blueprint?.[cat]?.rate;
+        const currPct   = currRate != null ? (currRate * 100).toFixed(1) + "%" : "—";
+        const priorPct  = currRate != null ? ((currRate * 100) - deltaVal).toFixed(1) + "%" : "—";
+        const dSign     = deltaVal >= 0 ? "+" : "";
+        const dColor    = deltaVal > 1 ? GREEN : deltaVal < -1 ? RED : MGRAY;
+        const arrow     = deltaVal > 1 ? "▲" : deltaVal < -1 ? "▼" : "→";
+        const isWeak    = (currRate ?? 1) < 0.70;
+        catRows.push(row([
+          dataCell(cat,                                catColW[0], DGRAY, isWeak, AlignmentType.LEFT),
+          dataCell(priorPct,                           catColW[1], MGRAY, false),
+          dataCell(currPct,                            catColW[2], isWeak ? AMBER : DGRAY, true),
+          dataCell(`${dSign}${deltaVal.toFixed(1)}%`,  catColW[3], dColor, true),
+          dataCell(arrow,                              catColW[4], dColor, true),
+        ]));
+      }
+      children.push(makeTable(catColW, catRows));
+      children.push(spacer(80));
+    }
+
+    if (hasBsDelta) {
+      children.push(new Paragraph({ keepNext: true, spacing: { before: 60, after: 40 }, children: [
+        new TextRun({ text: "Body System Performance", font: FONT, size: 19, bold: true, color: DGRAY }),
+      ]}));
+      const bsColW2 = [3600, 1560, 1560, 1400, 1240];
+      const bsRows2 = [row(["Body System", `${delta.prior_year} %`, `${data.exam_year} %`, "Δ", ""].map((h, i) => headerCell(h, bsColW2[i])))];
+      for (const [sys, deltaVal] of Object.entries(bsDelta).sort((a, b) => a[1] - b[1])) {
+        const currRate  = perf.body_system?.[sys]?.rate;
+        const currPct   = currRate != null ? (currRate * 100).toFixed(1) + "%" : "—";
+        const priorPct  = currRate != null ? ((currRate * 100) - deltaVal).toFixed(1) + "%" : "—";
+        const dSign     = deltaVal >= 0 ? "+" : "";
+        const dColor    = deltaVal > 1 ? GREEN : deltaVal < -1 ? RED : MGRAY;
+        const arrow     = deltaVal > 1 ? "▲" : deltaVal < -1 ? "▼" : "→";
+        const isWeak    = (currRate ?? 1) < 0.70;
+        bsRows2.push(row([
+          dataCell(sys,                                bsColW2[0], DGRAY, isWeak, AlignmentType.LEFT),
+          dataCell(priorPct,                           bsColW2[1], MGRAY, false),
+          dataCell(currPct,                            bsColW2[2], isWeak ? AMBER : DGRAY, true),
+          dataCell(`${dSign}${deltaVal.toFixed(1)}%`,  bsColW2[3], dColor, true),
+          dataCell(arrow,                              bsColW2[4], dColor, true),
+        ]));
+      }
+      children.push(makeTable(bsColW2, bsRows2));
+      children.push(spacer(60));
+    }
   }
 }
 
 // ────────────────────────────────────────────────────────────────────
-// 4a. ITE OVERVIEW TABLE (blueprint + body system at a glance)
+// 4. BLUEPRINT & BODY SYSTEM PERFORMANCE (Edit 10: consolidated — 4a removed)
 // ────────────────────────────────────────────────────────────────────
 children.push(new Paragraph({ children: [new PageBreak()] }));
-children.push(sectionBar("📊 ITE PERFORMANCE OVERVIEW"));
+children.push(sectionBar("\u2606 BLUEPRINT & BODY SYSTEM PERFORMANCE"));
 children.push(spacer(80, true));
 
 children.push(new Paragraph({ keepNext: true, spacing: { before: 0, after: 80 }, children: [
-  new TextRun({ text: "Summary of performance across all blueprint categories and body systems. " +
-    "Color-coded by performance: green (strong), amber (developing), red (priority focus).",
+  new TextRun({ text: "Performance across all ABFM blueprint categories with relative standing (vs. personal mean) and measurement reliability (SEM). " +
+    "Body system breakdown follows. Color-coded: green \u2265 70%, amber 50–70%, red < 50%.",
     font: FONT, size: 18, color: MGRAY, italics: true }),
 ]}));
 
-// Blueprint summary
-children.push(new Paragraph({ spacing: { before: 80, after: 60 }, children: [
+// Blueprint table (Category, Correct, Total, Rate, SEM — Relative and Confidence removed per Edit 1)
+children.push(new Paragraph({ spacing: { before: 60, after: 60 }, children: [
   new TextRun({ text: "Blueprint Categories", font: FONT, size: 22, bold: true, color: NAVY }),
 ]}));
-{
-  const ovColW = [4200, 1800, 1800, 1560];
-  const ovRows = [row(["Category", "Correct", "Total", "Rate"].map((h, i) => headerCell(h, ovColW[i])))];
-  for (const [cat, vals] of Object.entries(perf.blueprint)) {
-    const rate = vals.rate;
-    const pct  = (rate * 100).toFixed(1) + "%";
-    ovRows.push(row([
-      dataCell(cat, ovColW[0], DGRAY, true, AlignmentType.LEFT),
-      dataCell(vals.correct, ovColW[1]),
-      dataCell(vals.total,   ovColW[2]),
-      dataCell(pct, ovColW[3], rateColor(rate), true),
-    ]));
-  }
-  children.push(makeTable(ovColW, ovRows));
-}
+const bpColW = [3800, 1400, 1400, 1400, 1360];
+const bpRows = [row(["Category", "Correct", "Total", "Rate", "SEM"].map((h, i) => headerCell(h, bpColW[i])))];
 
-// Body system summary
-children.push(spacer(120));
-children.push(new Paragraph({ spacing: { before: 80, after: 60 }, children: [
+for (const [cat, vals] of Object.entries(perf.blueprint)) {
+  const rate = vals.rate;
+  const pct = (rate * 100).toFixed(1) + "%";
+  const sem = t3?.[cat];
+  bpRows.push(row([
+    dataCell(cat, bpColW[0], DGRAY, true, AlignmentType.LEFT),
+    dataCell(vals.correct, bpColW[1]),
+    dataCell(vals.total,   bpColW[2]),
+    dataCell(pct,          bpColW[3], rateColor(rate), true),
+    dataCell(sem ? `\u00B1${sem.sem}` : "\u2014", bpColW[4], MGRAY),
+  ]));
+}
+children.push(makeTable(bpColW, bpRows));
+
+// Body system table (consolidated from former 4a)
+children.push(spacer(160));
+children.push(new Paragraph({ spacing: { before: 60, after: 60 }, children: [
   new TextRun({ text: "Body Systems", font: FONT, size: 22, bold: true, color: NAVY }),
 ]}));
 {
@@ -465,63 +721,15 @@ children.push(new Paragraph({ spacing: { before: 80, after: 60 }, children: [
 }
 
 // ────────────────────────────────────────────────────────────────────
-// 4b. BLUEPRINT PERFORMANCE (detailed with SEM/classification)
-// ────────────────────────────────────────────────────────────────────
-children.push(spacer(200));
-children.push(sectionBar("\u2606 BLUEPRINT CATEGORY PERFORMANCE"));
-children.push(spacer(80, true));
-
-const bpColW = [2200, 900, 900, 900, 1400, 900, 2160];
-const bpRows = [row(["Category", "Correct", "Total", "Rate", "Relative", "SEM", "Confidence"].map((h, i) => headerCell(h, bpColW[i])))];
-
-for (const [cat, vals] of Object.entries(perf.blueprint)) {
-  const rate = vals.rate;
-  const pct = (rate * 100).toFixed(1) + "%";
-  const cls = t2.classifications?.[cat];
-  const sem = t3?.[cat];
-  const relLabel = cls ? `${classIcon(cls.classification)} ${cls.classification.replace(/_/g, " ")}` : "\u2014";
-  const semLabel = sem ? (sem.reliable ? "\u2705 Reliable" : "\u26A0 Hypothesis") : "\u2014";
-  bpRows.push(row([
-    dataCell(cat, bpColW[0], DGRAY, true, AlignmentType.LEFT),
-    dataCell(vals.correct, bpColW[1]), dataCell(vals.total, bpColW[2]),
-    dataCell(pct, bpColW[3], rateColor(rate), true),
-    dataCell(relLabel, bpColW[4]),
-    dataCell(sem ? `\u00B1${sem.sem}` : "\u2014", bpColW[5], MGRAY),
-    dataCell(semLabel, bpColW[6]),
-  ]));
-}
-children.push(makeTable(bpColW, bpRows));
-
-// ────────────────────────────────────────────────────────────────────
 // 6. DIFFICULTY PROFILE
 // ────────────────────────────────────────────────────────────────────
 children.push(new Paragraph({ children: [new PageBreak()] }));
 children.push(sectionBar("\u26A1 DIFFICULTY PROFILE"));
 children.push(spacer(80, true));
 
-const diffColW = [2400, 2320, 2320, 2320];
-const diffRows = [
-  row(["Category", "Easy Miss (\u2265700)", "Mid-Range (300\u2013699)", "Hard Miss (<300)"].map((h, i) => headerCell(h, diffColW[i]))),
-  row([
-    dataCell("OVERALL", diffColW[0], NAVY, true, AlignmentType.LEFT),
-    dataCell(diff.overall.easy_miss || 0, diffColW[1], RED, true),
-    dataCell(diff.overall.mid_range || 0, diffColW[2], AMBER, true),
-    dataCell(diff.overall.hard_miss || 0, diffColW[3], MGRAY),
-  ]),
-];
-for (const [cat, vals] of Object.entries(diff.by_blueprint)) {
-  diffRows.push(row([
-    dataCell(cat, diffColW[0], DGRAY, false, AlignmentType.LEFT),
-    dataCell(vals.easy_miss || 0, diffColW[1], RED),
-    dataCell(vals.mid_range || 0, diffColW[2], AMBER),
-    dataCell(vals.hard_miss || 0, diffColW[3], MGRAY),
-  ]));
-}
-children.push(makeTable(diffColW, diffRows));
-
-// Explanation of the difficulty score and tiers
-children.push(new Paragraph({ spacing: { before: 120, after: 60 }, children: [
-  new TextRun({ text: "How to read this table: ", font: FONT, size: 20, bold: true, color: NAVY }),
+// Edit 11: "How to read this section" moved BEFORE the summary table
+children.push(new Paragraph({ spacing: { before: 0, after: 60 }, children: [
+  new TextRun({ text: "How to read this section: ", font: FONT, size: 20, bold: true, color: NAVY }),
 ]}));
 children.push(new Paragraph({ spacing: { before: 0, after: 60 }, children: [
   new TextRun({ text: "Each ITE question has an ABFM-assigned item difficulty ", font: FONT, size: 18, color: DGRAY }),
@@ -530,15 +738,39 @@ children.push(new Paragraph({ spacing: { before: 0, after: 60 }, children: [
     "A score of 999 means nearly everyone got it right; a score near 0 means almost no one did.",
     font: FONT, size: 18, color: DGRAY }),
 ]}));
+// Edit 12: Easy miss → GREEN (high priority, improvable), Hard miss → RED (most people also missed)
 children.push(makeTable([3120, 6240], [
   row([headerCell("Tier", 3120), headerCell("What it means for your study plan", 6240)]),
-  row([dataCell("Easy Miss (≥700)", 3120, RED, true, AlignmentType.LEFT),
+  row([dataCell("Easy Miss (\u2265700)", 3120, GREEN, true, AlignmentType.LEFT),
        dataCell("Most examinees answered these correctly — genuine knowledge gap. Highest-priority improvement targets.", 6240, DGRAY, false, AlignmentType.LEFT)]),
-  row([dataCell("Mid-Range (300–699)", 3120, AMBER, true, AlignmentType.LEFT),
+  row([dataCell("Mid-Range (300\u2013699)", 3120, AMBER, true, AlignmentType.LEFT),
        dataCell("High-yield study targets — meaningful score improvement per hour of review.", 6240, DGRAY, false, AlignmentType.LEFT)]),
-  row([dataCell("Hard Miss (<300)", 3120, MGRAY, true, AlignmentType.LEFT),
+  row([dataCell("Hard Miss (<300)", 3120, RED, true, AlignmentType.LEFT),
        dataCell("Most examinees miss these too — low-yield to chase. Focus elsewhere unless time permits.", 6240, DGRAY, false, AlignmentType.LEFT)]),
 ]));
+
+children.push(spacer(120));
+
+// Difficulty summary table (after how-to explanation per Edit 11 ordering)
+const diffColW = [2400, 2320, 2320, 2320];
+const diffRows = [
+  row(["Category", "Easy Miss (\u2265700)", "Mid-Range (300\u2013699)", "Hard Miss (<300)"].map((h, i) => headerCell(h, diffColW[i]))),
+  row([
+    dataCell("OVERALL", diffColW[0], NAVY, true, AlignmentType.LEFT),
+    dataCell(diff.overall.easy_miss || 0, diffColW[1], GREEN, true),
+    dataCell(diff.overall.mid_range || 0, diffColW[2], AMBER, true),
+    dataCell(diff.overall.hard_miss || 0, diffColW[3], RED),
+  ]),
+];
+for (const [cat, vals] of Object.entries(diff.by_blueprint)) {
+  diffRows.push(row([
+    dataCell(cat, diffColW[0], DGRAY, false, AlignmentType.LEFT),
+    dataCell(vals.easy_miss || 0, diffColW[1], GREEN),
+    dataCell(vals.mid_range || 0, diffColW[2], AMBER),
+    dataCell(vals.hard_miss || 0, diffColW[3], RED),
+  ]));
+}
+children.push(makeTable(diffColW, diffRows));
 
 // Easy misses detail table — no Subcategory column
 const easyMisses = diff.easy_misses || [];
@@ -552,12 +784,14 @@ if (easyMisses.length > 0) {
       font: FONT, size: 18, color: MGRAY, italics: true }),
   ]}));
 
+  // Edit 2: Score column uses GREEN (all rows are easy misses — highest-priority improvable items)
+  // ≥900 = bold GREEN (nearly universal correct), 700–899 = regular GREEN
   const emColW = [2000, 900, 2800, 3660];
   const emRows = [row(["QID", "Score", "Body System", "Blueprint"].map((h, i) => headerCell(h, emColW[i])))];
   for (const m of easyMisses) {
     emRows.push(row([
       dataCell(m.qid || `Item ${m.item}`, emColW[0], DGRAY, false, AlignmentType.LEFT),
-      dataCell(m.score, emColW[1], m.score >= 900 ? RED : AMBER, true),
+      dataCell(m.score, emColW[1], GREEN, m.score >= 900),
       dataCell(m.body_system_merged || m.body_system || "\u2014", emColW[2], DGRAY, false, AlignmentType.LEFT),
       dataCell(m.blueprint || "\u2014", emColW[3], DGRAY, false, AlignmentType.LEFT),
     ]));
@@ -572,18 +806,28 @@ children.push(spacer(200));
 children.push(sectionBar("🍎 LOW-HANGING FRUIT — HIGHEST-YIELD IMPROVEMENT AREAS"));
 children.push(spacer(80, true));
 
-children.push(new Paragraph({ keepNext: true, spacing: { before: 0, after: 100 }, children: [
+children.push(new Paragraph({ keepNext: true, spacing: { before: 0, after: 80 }, children: [
   new TextRun({
-    text: "Ranked by (improvable items) × (exam weight). The top entry gives the most scaled score improvement per hour of study. " +
-      "Blueprint and body system categories are listed separately so you can attack both dimensions.",
+    text: "Blueprint and body system categories ranked by study ROI. The top entry gives the most scaled score improvement per hour of review.",
     font: FONT, size: 18, color: MGRAY, italics: true }),
 ]}));
+// Edit 13: Methodology explanation for Improvable Items and Priority Score
+children.push(makeTable([3120, 6240], [
+  row([headerCell("Metric", 3120), headerCell("How it's calculated", 6240)]),
+  row([dataCell("Improvable Items", 3120, NAVY, true, AlignmentType.LEFT),
+       dataCell("Questions in this category where: (1) your answer was wrong, AND (2) most examinees nationally answered correctly (difficulty \u2265 500). These are the questions where improvement is most achievable — not random hard items, but genuine knowledge gaps.", 6240, DGRAY, false, AlignmentType.LEFT)]),
+  row([dataCell("Priority Score", 3120, NAVY, true, AlignmentType.LEFT),
+       dataCell("Improvable items \u00D7 exam weight. A category with 3 improvable items at 15% exam weight scores higher than one with 5 improvable items at 5% exam weight. This ranks where each study hour translates to the most points.", 6240, DGRAY, false, AlignmentType.LEFT)]),
+]));
+children.push(spacer(100));
 
 if (yields && yields.length > 0) {
   const bpYields  = yields.filter(y => y.dimension_type === "blueprint");
   const bsYields  = yields.filter(y => y.dimension_type === "body_system");
 
-  function yieldTable(rows_data, label) {
+  // Blueprint table: Rank, Category, Improvable Items, Exam Weight, Priority Score
+  // Edit 3: Math.round() for whole numbers
+  function yieldTableBlueprint(rows_data, label) {
     if (rows_data.length === 0) return;
     children.push(new Paragraph({ spacing: { before: 80, after: 60 }, children: [
       new TextRun({ text: label, font: FONT, size: 22, bold: true, color: NAVY }),
@@ -591,25 +835,47 @@ if (yields && yields.length > 0) {
     const yColW = [900, 3200, 1700, 1700, 1860];
     const yRows = [row(["Rank", "Category", "Improvable Items", "Exam Weight", "Priority Score"].map((h, i) => headerCell(h, yColW[i])))];
     rows_data.forEach((y, i) => {
-      const name     = y.dimension || "";
-      const recov    = y.recoverable_items != null ? y.recoverable_items.toFixed(1) : "\u2014";
+      const name      = y.dimension || "";
+      const recov     = y.recoverable_items != null ? String(Math.round(y.recoverable_items)) : "\u2014";
       const weightPct = y.exam_weight_pct != null ? `${y.exam_weight_pct}%` : (y.exam_weight ? (y.exam_weight * 100).toFixed(0) + "%" : "\u2014");
-      const score    = y.priority_score != null ? y.priority_score.toFixed(1) : "\u2014";
-      const isTop    = i === 0;
+      const score     = y.priority_score != null ? String(Math.round(y.priority_score)) : "\u2014";
+      const isTop     = i === 0;
       yRows.push(row([
         dataCell(`#${i + 1}`, yColW[0], NAVY, true),
-        dataCell(name, yColW[1], isTop ? RED : DGRAY, true, AlignmentType.LEFT),
-        dataCell(recov, yColW[2], isTop ? RED : DGRAY, isTop),
-        dataCell(weightPct, yColW[3]),
-        dataCell(score, yColW[4], BLUE, true),
+        dataCell(name,     yColW[1], isTop ? RED : DGRAY, true, AlignmentType.LEFT),
+        dataCell(recov,    yColW[2], isTop ? RED : DGRAY, isTop),
+        dataCell(weightPct,yColW[3]),
+        dataCell(score,    yColW[4], BLUE, true),
       ]));
     });
     children.push(makeTable(yColW, yRows));
     children.push(spacer(80));
   }
 
-  yieldTable(bpYields, "Blueprint Category — Improvement Priorities");
-  yieldTable(bsYields, "Body System — Improvement Priorities");
+  // Edit 4: Body system table — Rank + Category + Improvable Items only (no exam weight/priority score — no defined weighting)
+  function yieldTableBodySystem(rows_data, label) {
+    if (rows_data.length === 0) return;
+    children.push(new Paragraph({ spacing: { before: 80, after: 60 }, children: [
+      new TextRun({ text: label, font: FONT, size: 22, bold: true, color: NAVY }),
+    ]}));
+    const yColW = [900, 5700, 2760];
+    const yRows = [row(["Rank", "Body System", "Improvable Items"].map((h, i) => headerCell(h, yColW[i])))];
+    rows_data.forEach((y, i) => {
+      const name  = y.dimension || "";
+      const recov = y.recoverable_items != null ? String(Math.round(y.recoverable_items)) : "\u2014";
+      const isTop = i === 0;
+      yRows.push(row([
+        dataCell(`#${i + 1}`, yColW[0], NAVY, true),
+        dataCell(name,  yColW[1], isTop ? RED : DGRAY, true, AlignmentType.LEFT),
+        dataCell(recov, yColW[2], isTop ? RED : DGRAY, isTop),
+      ]));
+    });
+    children.push(makeTable(yColW, yRows));
+    children.push(spacer(80));
+  }
+
+  yieldTableBlueprint(bpYields, "Blueprint Category — Improvement Priorities");
+  yieldTableBodySystem(bsYields, "Body System — Improvement Priorities");
 } else {
   children.push(new Paragraph({ children: [
     new TextRun({ text: "Yield priorities not computed for this analysis run.", font: FONT, size: 20, color: MGRAY }),
@@ -628,12 +894,20 @@ if (yields && yields.length > 0) {
     children.push(sectionBar("⚡ CATEGORY CROSSOVER WEAKNESSES"));
     children.push(spacer(80, true));
 
-    children.push(new Paragraph({ spacing: { before: 0, after: 100 }, children: [
+    children.push(new Paragraph({ spacing: { before: 0, after: 80 }, children: [
       new TextRun({
-        text: "Weaknesses that appear at the intersection of a blueprint category AND a body system. " +
-          "These represent double-exposure gaps — areas where both the clinical domain and the exam competency are below threshold.",
+        text: "Weaknesses that appear at the intersection of a blueprint category AND a body system — double-exposure gaps where both dimensions are below threshold.",
         font: FONT, size: 18, color: MGRAY, italics: true }),
     ]}));
+    // Edit 14: Same methodology explanation as Low-Hanging Fruit
+    children.push(makeTable([3120, 6240], [
+      row([headerCell("Metric", 3120), headerCell("How it's calculated", 6240)]),
+      row([dataCell("Improvable Items", 3120, NAVY, true, AlignmentType.LEFT),
+           dataCell("Missed questions that fall within BOTH the listed blueprint category AND body system, where the item difficulty \u2265 500 (most examinees answered correctly). The intersection narrows focus to a specific clinical scenario type.", 6240, DGRAY, false, AlignmentType.LEFT)]),
+      row([dataCell("Priority Score", 3120, NAVY, true, AlignmentType.LEFT),
+           dataCell("Improvable items \u00D7 combined exam weight of the intersection. Higher score = more recoverable points per study hour within this specific overlap.", 6240, DGRAY, false, AlignmentType.LEFT)]),
+    ]));
+    children.push(spacer(100));
 
     // Cross-tab yield table
     if (crossYields.length > 0) {
@@ -680,11 +954,31 @@ if (concept) {
   // QID map per concept (added in v3.1 Python analyzer)
   const cqMap = concept.concept_qid_map || {};
 
+  // YoY concept context — prior-year top concepts from longitudinal_delta
+  const lngN1 = (data.longitudinal_delta || {}).n1 || {};
+  const priorConcepts = lngN1.concept_delta || {};
+  const priorDx    = new Set(priorConcepts.prior_top_diagnoses  || []);
+  const priorDrugs = new Set(priorConcepts.prior_top_drugs      || []);
+  const priorGuide = new Set(priorConcepts.prior_top_guidelines || []);
+  const hasYoYConcepts = priorDx.size > 0 || priorDrugs.size > 0 || priorGuide.size > 0;
+
+  // Badge helper: 🔁 Persistent | 🆕 New (only show when prior data available)
+  function conceptBadge(name, priorSet) {
+    if (!hasYoYConcepts) return "";
+    return priorSet.has(name) ? " \uD83D\uDD01" : " \uD83C\uDD95";  // 🔁 or 🆕
+  }
+
+  if (hasYoYConcepts) {
+    children.push(new Paragraph({ spacing: { before: 0, after: 80 }, children: [
+      new TextRun({ text: `\uD83D\uDD01 = Persistent from ${lngN1.prior_year}   \uD83C\uDD95 = Newly surfaced in ${data.exam_year}`, font: FONT, size: 17, color: MGRAY, italics: true }),
+    ]}));
+  }
+
   // Build concept tables from diagnoses, drugs, guidelines dicts
   const conceptSections = [
-    { label: "Top Diagnoses in Missed Items", data: concept.top_diagnoses || concept.diagnoses || {}, qids: cqMap.diagnoses  || {} },
-    { label: "Top Drugs in Missed Items",     data: concept.top_drugs     || concept.drugs     || {}, qids: cqMap.drugs      || {} },
-    { label: "Top Guidelines in Missed Items",data: concept.top_guidelines|| concept.guidelines|| {}, qids: cqMap.guidelines || {} },
+    { label: "Top Diagnoses in Missed Items", data: concept.top_diagnoses || concept.diagnoses || {}, qids: cqMap.diagnoses  || {}, priorSet: priorDx    },
+    { label: "Top Drugs in Missed Items",     data: concept.top_drugs     || concept.drugs     || {}, qids: cqMap.drugs      || {}, priorSet: priorDrugs },
+    { label: "Top Guidelines in Missed Items",data: concept.top_guidelines|| concept.guidelines|| {}, qids: cqMap.guidelines || {}, priorSet: priorGuide },
   ];
 
   for (const sec of conceptSections) {
@@ -698,17 +992,22 @@ if (concept) {
     const headers = hasQids ? ["Concept", "Frequency", "Question IDs"] : ["Concept", "Frequency"];
     const cRows = [row(headers.map((h, i) => headerCell(h, cColW[i])))];
     entries.slice(0, 10).forEach(([name, count]) => {
+      const badge   = conceptBadge(name, sec.priorSet);
+      const isPersist = sec.priorSet.has(name);
+      const dispName = name + badge;
+      const freqColor = count >= 3 ? RED : count >= 2 ? AMBER : NAVY;
+      const nameColor = isPersist && hasYoYConcepts ? AMBER : DGRAY;  // amber = persistent gap
       const qidList = (sec.qids[name] || []).join(", ") || "\u2014";
       if (hasQids) {
         cRows.push(row([
-          dataCell(name, cColW[0], DGRAY, false, AlignmentType.LEFT),
-          dataCell(`${count}\u00D7`, cColW[1], count >= 3 ? RED : count >= 2 ? AMBER : NAVY, count >= 3),
+          dataCell(dispName, cColW[0], nameColor, isPersist, AlignmentType.LEFT),
+          dataCell(`${count}\u00D7`, cColW[1], freqColor, count >= 3),
           dataCell(qidList, cColW[2], MGRAY, false, AlignmentType.LEFT),
         ]));
       } else {
         cRows.push(row([
-          dataCell(name, cColW[0], DGRAY, false, AlignmentType.LEFT),
-          dataCell(`${count}\u00D7`, cColW[1], count >= 3 ? RED : count >= 2 ? AMBER : NAVY, count >= 3),
+          dataCell(dispName, cColW[0], nameColor, isPersist, AlignmentType.LEFT),
+          dataCell(`${count}\u00D7`, cColW[1], freqColor, count >= 3),
         ]));
       }
     });
@@ -823,10 +1122,23 @@ children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 120 
     font: FONT, size: 18, color: MGRAY, italics: true }),
 ]}));
 
+// Currency status helpers (v3.1)
+// Maps article_currency.currency_status → display badge text + color
+function currencyBadge(status) {
+  switch ((status || "").toLowerCase()) {
+    case "current":      return { text: "✓ Current",       color: GREEN };
+    case "updated":      return { text: "⚠ Updated",       color: AMBER };
+    case "check_needed": return { text: "? Check needed",  color: AMBER };
+    case "not_indexed":  return { text: "— Not indexed",   color: LGRAY };
+    default:             return { text: "",                 color: LGRAY };
+  }
+}
+
 if (articles.length > 0) {
-  const aColW = [400, 5360, 1100, 1200, 1300];
-  const aRows = [row(["#", "Article", "Citations", "Exam Yrs", "Weak Links"].map((h, i) => headerCell(h, aColW[i])))];
+  const aColW = [400, 4960, 1000, 1000, 1000, 1000];
+  const aRows = [row(["#", "Article", "Citations", "Exam Yrs", "Weak Links", "Status"].map((h, i) => headerCell(h, aColW[i])))];
   articles.forEach((a, i) => {
+    const cb = currencyBadge(a.currency_status);
     aRows.push(row([
       dataCell(i + 1, aColW[0], NAVY, true),
       multiLineCell([
@@ -837,19 +1149,24 @@ if (articles.length > 0) {
       dataCell(`${a.citation_count}\u00D7`, aColW[2], NAVY, true),
       dataCell(a.unique_years, aColW[3]),
       dataCell(a.weak_area_links, aColW[4], a.weak_area_links >= 3 ? RED : a.weak_area_links >= 1 ? AMBER : DGRAY, a.weak_area_links >= 3),
+      dataCell(cb.text || "—", aColW[5], cb.color, false, AlignmentType.LEFT),
     ]));
   });
   children.push(makeTable(aColW, aRows));
 
   children.push(spacer(120));
   articles.forEach((a, i) => {
+    const cb = currencyBadge(a.currency_status);
     children.push(new Paragraph({ spacing: { before: 60, after: 40 }, children: [
       new TextRun({ text: `${i + 1}. ${a.title}`, font: FONT, size: 20, bold: true, color: NAVY }),
     ]}));
+    const currencyNote = cb.text
+      ? ` Currency: ${cb.text}.${a.currency_status === "updated" ? " A newer version may exist — verify before using as primary study source." : a.currency_status === "check_needed" ? " Currency uncertain." : ""}`
+      : "";
     children.push(new Paragraph({ spacing: { before: 0, after: 60 }, indent: { left: 300 }, children: [
       new TextRun({ text: `Why read this: cited ${a.citation_count}\u00D7 across ${a.unique_years} exam year(s)` +
         (a.weak_area_links > 0 ? `, links to ${a.weak_area_links} weak area(s)` : "") +
-        `. High-frequency citation = high probability of appearing on future exams.`,
+        `.${currencyNote} High-frequency citation = high probability of appearing on future exams.`,
         font: FONT, size: 18, color: MGRAY }),
     ]}));
   });

@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_053_20260410_github_sync_housekeeping.md` — GitHub sync; Copilot PRs #11-14 captured; REPO_MAP.md + .gitignore corruptions fixed |
+| Active BATON | `BATON_active_054_20260412_report_builder_redesign.md` — 18-edit report builder redesign; pipeline YoY fixes; abfm_reference_2024.json |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -62,7 +62,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_icd10_vec | 1,757 rows — ✅ rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 rows — ✅ rebuilt 2026-04-05 |
 | clinical_pathways | 3,971 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 — 49 no_match rows deleted |
-| PDFs (ITE citation tiers) | 980 across 4 tiers in citation_files/ITE/ (VC_fail:637, VC_pass:168, local_lite:117, right_click:58) — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
+| PDFs (ITE citation tiers) | 988 across 4 tiers in citation_files/ITE/ (VC_fail:630, VC_pass:168, local_lite:117, right_click:58) + 15 AAFP — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
 | PDFs (AAFP) | 15 in citation_files/AAFP/ — recovered 2026-04-05 |
 | PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
@@ -70,12 +70,12 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 6 build + 26 maintain + aafp_brq_scraper.py at scripts/ root (download_targeted.py added 2026-04-07) |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
-| M3 scripts | 15 Python + 2 JS + 1 JSON config |
+| M3 scripts | 15 Python + 2 JS + 3 JSON config |
 | M5 scripts | 3 Python sync + 35 TypeScript/TSX + 5 SQL migrations — 05_module.5_web/ scaffold |
 | article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → 7a58e0a |
+| Git branch | `main`, latest → 8e4fbbf |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -115,11 +115,12 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 052, 2026-04-10)
+## Next Steps (as of BATON 054, 2026-04-12)
 
 ### Immediate
-1. **DEFERRED-YOY-ROBUSTNESS** — Expand longitudinal_delta edge-case handling in ite_analyzer_v3.py
-2. **DOCX review** — Mikey to verify Pjetergjoka_2024/2025 DOCX output (YoY table, practice Q spread now fixed)
+1. Mikey to review updated Pjetergjoka 2025 DOCX — confirm design before continuing
+2. Program trend data — Mikey to supply historical program aggregate scores for abfm_reference JSON
+3. **DEFERRED-YOY-ROBUSTNESS** — edge-case testing in ite_analyzer_v3.py
 
 ### Short-term
 3. **Module 5 setup** — Provision Supabase project, run migrations, sync SQLite → Supabase, deploy Railway FastAPI + Netlify

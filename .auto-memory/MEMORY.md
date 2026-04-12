@@ -1,5 +1,5 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-04-10 (BATON 052)
+Last updated: 2026-04-12 (BATON 054)
 
 ## Active Memory Files
 - [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status
@@ -23,5 +23,9 @@ Last updated: 2026-04-10 (BATON 052)
 ## Deployments (BATON 051)
 - [Module 5 web platform scaffold added](project_overhaul_state.md) — 05_module.5_web/ (Next.js+Supabase+Sanity+Railway) committed by Copilot 2026-04-08; docs updated BATON 051
 
-## Open Items (BATON 049)
-- **DEFERRED-PRACTICE-Q-COVERAGE** — Practice question 0-question warnings detected for Foundations, Preventive, Cardiovascular, Respiratory, Sexual-Reproductive, Psychiatric, Behavioral body systems; indicates qid_art_xref tagging coverage gap in blueprint cells
+## Script Refactoring (BATON 054)
+- [ite_report_builder_v2.js: 18-edit multi-year resident redesign](feedback_report_builder_redesign_054.md) — Major revision for improved year-over-year rendering; ABFM reference benchmark integration; section 3b temporal aggregation hardened
+
+## Open Items (BATON 054)
+- **DEFERRED-PROGRAM-TREND** — Multi-resident program-level trends; benchmark against 2024 ABFM national reference
+- **DEFERRED-RESIDENT-FOLDER-MIGRATION** — Investigate resident_data/ folder state and M5 integration pathway
