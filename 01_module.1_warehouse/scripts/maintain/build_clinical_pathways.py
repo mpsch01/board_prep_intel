@@ -1,8 +1,8 @@
 """
 build_clinical_pathways.py — Intelligence 2.0 Layer 3: Clinical Pathways ("Clinical Blending Engine")
 
-Zero API calls. Routes articles to engine types using in-house DB data (subcategories,
-source_type, categories, ICD-10 codes), then maps engine_type × ICD-10 → pathway_role.
+Zero API calls. Routes articles to engine types using in-house DB data (source_type,
+categories, ICD-10 codes), then maps engine_type × ICD-10 → pathway_role.
 
 Three phases:
   Phase 1: classify  — Assign engine_type to every article from DB signals
@@ -16,7 +16,7 @@ Usage:
   python build_clinical_pathways.py all               # → runs all three phases
 
 Data flow:
-  articles.categories + questions.subcategory + articles.source_type
+  articles.categories + articles.source_type
     → engine_type (5 classes)
     → engine_type × article_icd10.relevance → pathway_role (7 roles)
     → clinical_pathways table
@@ -27,7 +27,7 @@ import json
 import csv
 import os
 import sys
-from collections import Counter, defaultdict
+from collections import Counter
 from datetime import date
 
 # ── Config ──────────────────────────────────────────────────────────────────
@@ -203,15 +203,8 @@ def classify_articles(db_path):
         ORDER BY article_id
     """).fetchall()
 
-    # Pre-load subcategory profiles per article
-    subcat_profiles = defaultdict(list)
-    for r in c.execute("""
-        SELECT x.article_id, q.subcategory
-        FROM qid_art_xref x
-        JOIN questions q ON x.qid = q.qid
-        WHERE q.subcategory IS NOT NULL AND q.subcategory != ''
-    """):
-        subcat_profiles[r['article_id']].append(r['subcategory'])
+    # subcategory column was dropped from questions table — routing relies on
+    # source_type (Rule 1) and category/ICD-10 fallback (Rule 4) only.
 
     stats = Counter()
     method_stats = Counter()
@@ -220,7 +213,6 @@ def classify_articles(db_path):
         aid = art['article_id']
         source_type = art['source_type'] or ''
         categories = art['categories'] or ''
-        subs = subcat_profiles.get(aid, [])
 
         engine_type = None
         method = None
@@ -230,34 +222,11 @@ def classify_articles(db_path):
             engine_type = "rct"
             method = "source_type_rct"
 
-        # ── Rule 2-3: Subcategory-based routing ─────────────────────
-        elif subs:
-            dominant = Counter(subs).most_common(1)[0][0]
-
-            if dominant in SUBCAT_TO_ENGINE:
-                # Pure mapping — no ambiguity
-                engine_type = SUBCAT_TO_ENGINE[dominant]
-                method = f"subcat_pure:{dominant}"
-
-            elif dominant == "Pharmacology":
-                # Disambiguate: chronic vs acute by category
-                engine_type = _resolve_pharmacology(categories)
-                method = f"subcat_pharm:{categories[:30]}"
-
-            elif dominant == "Management":
-                # Disambiguate: chronic vs acute by category
-                engine_type = _resolve_management(categories)
-                method = f"subcat_mgmt:{categories[:30]}"
-
-            else:
-                # Unexpected subcategory — default to chronic
-                engine_type = "chronic_guideline"
-                method = f"subcat_fallback:{dominant}"
-
-        # ── Rule 4: No subcategory data — fallback ──────────────────
+        # ── Rule 2: Category/ICD-10 fallback ────────────────────────
+        # (subcategory column dropped from DB; Rule 2 now primary fallback)
         else:
             engine_type = _resolve_no_subcategory(source_type, categories)
-            method = f"no_subcat:{source_type}|{categories[:20]}"
+            method = f"category_fallback:{source_type}|{categories[:20]}"
 
         # Write to DB
         c.execute("UPDATE articles SET engine_type = ? WHERE article_id = ?",

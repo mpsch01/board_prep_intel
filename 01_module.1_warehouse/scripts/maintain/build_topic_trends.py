@@ -245,14 +245,16 @@ def main():
 
     # Build all three layers
     a_path = build_layer_a(cursor, all_years, output_dir)
-    b_path = build_layer_b(cursor, all_years, output_dir)
+    # Layer B (body_system × subcategory) skipped — subcategory column dropped from DB
+    b_path = None
+    print("\n[Layer B] SKIPPED — subcategory column no longer exists in questions table.")
     c_path = build_layer_c(cursor, all_years, output_dir, min_mentions=args.min_mentions)
 
     conn.close()
 
     print("\n── Summary ──────────────────────────────────────")
     print(f"  Layer A: {os.path.basename(a_path)}")
-    print(f"  Layer B: {os.path.basename(b_path)}")
+    print(f"  Layer B: SKIPPED (subcategory dropped)")
     print(f"  Layer C: {os.path.basename(c_path)}")
     print("  Done.")
 

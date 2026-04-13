@@ -42,10 +42,11 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
 # ── Config ────────────────────────────────────────────────────────────────
-BASE_DIR    = Path(__file__).resolve().parent.parent.parent   # 00_#PROJECT_OVERHAUL/
+BASE_DIR    = Path(__file__).resolve().parent.parent.parent   # board_prep_intel/ (3 hops: scripts/ → M2 → root)
 DB_PATH     = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR     = BASE_DIR / "00_database" / "logs"
-MODEL       = "claude-sonnet-4-20250514"
+# Legacy fallback extractor — superseded by ite_intelligence_enricher.py for new runs
+MODEL       = "claude-sonnet-4-6"
 MAX_RAW_CHARS = 120_000   # ~30K tokens; truncate raw text beyond this
 MAX_RETRIES = 2
 RETRY_DELAY = 5

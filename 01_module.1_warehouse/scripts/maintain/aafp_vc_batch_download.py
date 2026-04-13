@@ -30,6 +30,7 @@ import re
 import json
 import time
 import shutil
+import subprocess
 import tempfile
 import argparse
 from pathlib import Path
@@ -231,8 +232,12 @@ with sync_playwright() as p:
 
     browser.close()
 
-# Cleanup temp dir
-shutil.rmtree(tmp_dl_dir, ignore_errors=True)
+# Cleanup temp dir — shutil.rmtree banned (NTFS); use PowerShell Remove-Item
+subprocess.run(
+    ["powershell", "-Command",
+     f"Remove-Item -Recurse -Force '{tmp_dl_dir}' -ErrorAction SilentlyContinue"],
+    capture_output=True
+)
 
 # ─── UPDATE LOG ───────────────────────────────────────────────────────────────
 try:

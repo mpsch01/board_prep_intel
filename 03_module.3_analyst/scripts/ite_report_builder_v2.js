@@ -997,7 +997,12 @@ if (concept) {
       const dispName = name + badge;
       const freqColor = count >= 3 ? RED : count >= 2 ? AMBER : NAVY;
       const nameColor = isPersist && hasYoYConcepts ? AMBER : DGRAY;  // amber = persistent gap
-      const qidList = (sec.qids[name] || []).join(", ") || "\u2014";
+      // Cap at 5 QIDs — concept_qid_map stores up to 10 (ITE only), but
+      // showing all makes cells unreadable.  5 gives enough context for lookup.
+      const rawQids = sec.qids[name] || [];
+      const qidList = rawQids.length > 0
+        ? rawQids.slice(0, 5).join(", ") + (rawQids.length > 5 ? ` +${rawQids.length - 5}` : "")
+        : "\u2014";
       if (hasQids) {
         cRows.push(row([
           dataCell(dispName, cColW[0], nameColor, isPersist, AlignmentType.LEFT),
@@ -1015,41 +1020,13 @@ if (concept) {
     children.push(spacer(80));
   }
 
-  // Recurring themes (v3: recurring_diagnoses + recurring_drugs; v2: subcategory_distribution)
-  const recurringDx    = concept.recurring_diagnoses || {};
-  const recurringDrugs = concept.recurring_drugs     || {};
-  const subcatDist     = concept.subcategory_distribution || {};  // v2 compat
-
-  if (Object.keys(recurringDx).length > 0) {
-    children.push(spacer(40));
-    children.push(new Paragraph({ spacing: { before: 80, after: 80 }, children: [
-      new TextRun({ text: "Recurring Diagnoses (2+ misses)", font: FONT, size: 22, bold: true, color: BLUE }),
-    ]}));
-    const rColW = [6500, 2860];
-    const rRows = [row(["Diagnosis", "Miss Count"].map((h, i) => headerCell(h, rColW[i])))];
-    Object.entries(recurringDx).forEach(([name, count]) => {
-      rRows.push(row([
-        dataCell(name, rColW[0], DGRAY, false, AlignmentType.LEFT),
-        dataCell(`${count}\u00D7`, rColW[1], count >= 4 ? RED : count >= 2 ? AMBER : NAVY, count >= 4),
-      ]));
-    });
-    children.push(makeTable(rColW, rRows));
-  } else if (Object.keys(subcatDist).length > 0) {
-    // v2 fallback
-    children.push(spacer(40));
-    children.push(new Paragraph({ spacing: { before: 80, after: 80 }, children: [
-      new TextRun({ text: "Subcategory Distribution of Misses", font: FONT, size: 22, bold: true, color: BLUE }),
-    ]}));
-    const sColW = [6500, 2860];
-    const sRows = [row(["Subcategory", "Misses"].map((h, i) => headerCell(h, sColW[i])))];
-    Object.entries(subcatDist).sort((a, b) => b[1] - a[1]).forEach(([sub, count]) => {
-      sRows.push(row([
-        dataCell(sub, sColW[0], DGRAY, false, AlignmentType.LEFT),
-        dataCell(count, sColW[1], count >= 15 ? RED : count >= 10 ? AMBER : DGRAY, count >= 10),
-      ]));
-    });
-    children.push(makeTable(sColW, sRows));
-  }
+  // NOTE: "Recurring Diagnoses (2+ misses)" table removed.
+  // Python-side threshold is now 4+ (not 2+), and even at 4+ this table was
+  // redundant with "Top Diagnoses in Missed Items" which already shows counts.
+  // Removing it saves 5–8 pages per report.
+  //
+  // v2 subcategory_distribution compat block also removed — subcategory column
+  // was dropped from the DB; this path is permanently dead.
 
   // Dynamic study note
   const topDrugsAll = Object.entries(concept.top_drugs || concept.drugs || {}).sort((a, b) => b[1] - a[1]);
@@ -1205,10 +1182,18 @@ const crossQs = allQuestions
   .filter(q => (q.targeting || "").includes(" \u00D7 "))
   .sort((a, b) => (a.targeting || "").localeCompare(b.targeting || ""));
 
+// Check if any practice question has fingerprint_concepts annotation
+const hasFingerprintConcepts = allQuestions.some(q => (q.fingerprint_concepts || []).length > 0);
+
 // Shared column layout — adds "Targeting" column, replaces per-dim subBar headers
-// Cols: #, Targeting, QID, Blueprint, Body System, Source, Match  → total 9360 twips
-const pqColW = [500, 2000, 1300, 1800, 1800, 1000, 960];
-const PQ_HEADERS = ["#", "Targeting", "QID", "Blueprint", "Body System", "Source", "Match"];
+// With fingerprint concepts: #, Targeting, QID, Blueprint, Body System, Source, Match, Concepts
+// Without:                   #, Targeting, QID, Blueprint, Body System, Source, Match
+const pqColW = hasFingerprintConcepts
+  ? [400, 1500, 1200, 1500, 1500, 900, 860, 1600]  // 8 cols, 9460 twips total
+  : [500, 2000, 1300, 1800, 1800, 1000, 960];        // 7 cols, 9360 twips total
+const PQ_HEADERS = hasFingerprintConcepts
+  ? ["#", "Targeting", "QID", "Blueprint", "Body System", "Source", "Match", "Fingerprint"]
+  : ["#", "Targeting", "QID", "Blueprint", "Body System", "Source", "Match"];
 
 function buildPqTable(questions, startNum) {
   const pqRows = [row(PQ_HEADERS.map((h, i) => headerCell(h, pqColW[i])))];
@@ -1217,7 +1202,7 @@ function buildPqTable(questions, startNum) {
     const sourceLabel = q.source_bank === "AAFP" ? "AAFP BRQ" : `ITE ${q.exam_year || ""}`.trim();
     const tierLabel   = TIER_LABELS[q.match_tier] || "\u2014";
     const tierColor   = TIER_COLORS[q.match_tier] || MGRAY;
-    pqRows.push(row([
+    const baseCells = [
       dataCell(String(num),                      pqColW[0], NAVY, true),
       dataCell(q.targeting || "\u2014",           pqColW[1], BLUE, false, AlignmentType.LEFT),
       dataCell(q.qid || "\u2014",                 pqColW[2], DGRAY, false, AlignmentType.LEFT),
@@ -1225,7 +1210,15 @@ function buildPqTable(questions, startNum) {
       dataCell(q.body_system_merged || "\u2014",  pqColW[4], DGRAY, false, AlignmentType.LEFT),
       dataCell(sourceLabel,                       pqColW[5], MGRAY, false, AlignmentType.LEFT),
       dataCell(tierLabel,                         pqColW[6], tierColor, false, AlignmentType.LEFT),
-    ]));
+    ];
+    if (hasFingerprintConcepts) {
+      // Show which concept fingerprint topics this practice question tests.
+      // Gives residents the clinical "why" behind each selected question.
+      const fps = (q.fingerprint_concepts || []).slice(0, 2).join(", ") || "\u2014";
+      const fpColor = (q.fingerprint_concepts || []).length > 0 ? AMBER : MGRAY;
+      baseCells.push(dataCell(fps, pqColW[7], fpColor, false, AlignmentType.LEFT));
+    }
+    pqRows.push(row(baseCells));
   });
   return makeTable(pqColW, pqRows);
 }

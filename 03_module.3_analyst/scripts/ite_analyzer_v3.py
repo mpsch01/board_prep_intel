@@ -76,6 +76,114 @@ PATHWAY_ROLE_INTERP = {
     "diagnosis":             "diagnostic workup gap",
 }
 
+# ---------------------------------------------------------------------------
+# Concept normalization — deduplicates synonym/case variants before counting
+# ---------------------------------------------------------------------------
+
+# Lowercase key → canonical display-form value.
+# Extend as new API-generated variants are observed in concept_tags.
+CONCEPT_SYNONYMS: dict = {
+    # Diabetes — T2
+    "type 2 dm":                             "Type 2 Diabetes Mellitus",
+    "type 2 diabetes":                       "Type 2 Diabetes Mellitus",
+    "type 2 diabetes mellitus":              "Type 2 Diabetes Mellitus",
+    "t2dm":                                  "Type 2 Diabetes Mellitus",
+    "diabetes mellitus type 2":              "Type 2 Diabetes Mellitus",
+    "dm type 2":                             "Type 2 Diabetes Mellitus",
+    "dm2":                                   "Type 2 Diabetes Mellitus",
+    # Diabetes — T1
+    "type 1 dm":                             "Type 1 Diabetes Mellitus",
+    "type 1 diabetes":                       "Type 1 Diabetes Mellitus",
+    "type 1 diabetes mellitus":              "Type 1 Diabetes Mellitus",
+    "t1dm":                                  "Type 1 Diabetes Mellitus",
+    # Hypertension
+    "htn":                                   "Hypertension",
+    "hypertension":                          "Hypertension",
+    "high blood pressure":                   "Hypertension",
+    "arterial hypertension":                 "Hypertension",
+    # Heart failure
+    "chf":                                   "Heart Failure",
+    "congestive heart failure":              "Heart Failure",
+    "heart failure":                         "Heart Failure",
+    # COPD
+    "chronic obstructive pulmonary disease": "COPD",
+    "copd":                                  "COPD",
+    # CKD
+    "ckd":                                   "Chronic Kidney Disease",
+    "chronic renal disease":                 "Chronic Kidney Disease",
+    "chronic renal failure":                 "Chronic Kidney Disease",
+    "renal insufficiency":                   "Chronic Kidney Disease",
+    "chronic kidney disease":                "Chronic Kidney Disease",
+    # CAD / IHD
+    "coronary artery disease":               "Coronary Artery Disease",
+    "cad":                                   "Coronary Artery Disease",
+    "ischemic heart disease":                "Coronary Artery Disease",
+    "ihd":                                   "Coronary Artery Disease",
+    # Atrial fibrillation
+    "a-fib":                                 "Atrial Fibrillation",
+    "afib":                                  "Atrial Fibrillation",
+    "atrial fibrillation":                   "Atrial Fibrillation",
+    # Asthma
+    "asthma":                                "Asthma",
+    "reactive airway disease":               "Asthma",
+    # Obesity
+    "obesity":                               "Obesity",
+    "overweight/obesity":                    "Obesity",
+    # Hypothyroid
+    "hypothyroid":                           "Hypothyroidism",
+    "hypothyroidism":                        "Hypothyroidism",
+    # GERD
+    "gerd":                                  "GERD",
+    "gastroesophageal reflux disease":       "GERD",
+    "acid reflux":                           "GERD",
+    # Depression
+    "mdd":                                   "Major Depressive Disorder",
+    "major depression":                      "Major Depressive Disorder",
+    "major depressive disorder":             "Major Depressive Disorder",
+    "depression":                            "Major Depressive Disorder",
+    # Dyslipidemia
+    "dyslipidemia":                          "Dyslipidemia",
+    "hyperlipidemia":                        "Dyslipidemia",
+    "hypercholesterolemia":                  "Dyslipidemia",
+    # -- Guidelines noise --
+    # AAFP variants (Claude frequently generates these as "guidelines")
+    "aafp":                                  "AAFP",
+    "aafp board review":                     "AAFP",
+    "aafp family medicine board review":     "AAFP",
+    "american academy of family physicians": "AAFP",
+    "aafp guidelines":                       "AAFP",
+    "aafp 2023":                             "AAFP",
+    "aafp 2022":                             "AAFP",
+    "aafp 2021":                             "AAFP",
+    "aafp 2020":                             "AAFP",
+    "aafp 2019":                             "AAFP",
+    # ACC/AHA ordering
+    "aha/acc":                               "ACC/AHA",
+    "aha/acc 2017":                          "ACC/AHA 2017",
+    "aha/acc 2018":                          "ACC/AHA 2018",
+    "aha/acc 2019":                          "ACC/AHA 2019",
+    "aha/acc 2021":                          "ACC/AHA 2021",
+    "aha/acc 2022":                          "ACC/AHA 2022",
+    "aha/acc 2023":                          "ACC/AHA 2023",
+}
+
+
+def _normalize_concept(name: str) -> str:
+    """
+    Return canonical display form of a concept tag name.
+    - Strips whitespace
+    - Resolves known synonym/case variants to a single canonical form
+    - Falls back to .title() for unrecognized names so display is consistent
+    """
+    stripped = name.strip()
+    canonical = CONCEPT_SYNONYMS.get(stripped.lower())
+    if canonical:
+        return canonical
+    # No synonym hit — capitalize first letter only (preserves acronyms like HIV, IBS-D)
+    # so "prediabetes" and "Prediabetes" land on the same key, while "HIV" stays "HIV".
+    return stripped[0].upper() + stripped[1:] if stripped else stripped
+
+
 # Blueprint name mappings (PDF label ↔ DB label)
 BLUEPRINT_PDF_TO_DB = {
     "Acute Care":       "Acute Care and Diagnosis",
@@ -228,8 +336,10 @@ def basic_performance(items: list) -> dict:
 
     cross_tab = defaultdict(lambda: {"correct": 0, "total": 0})
     for i in items:
-        if i.get("body_system") and i.get("blueprint"):
-            key = f"{i['body_system']} × {i['blueprint']}"
+        # Use body_system_merged (normalized) for consistent keys across ITE + AAFP
+        bsm = i.get("body_system_merged") or i.get("body_system")
+        if bsm and i.get("blueprint"):
+            key = f"{bsm} × {i['blueprint']}"
             cross_tab[key]["total"] += 1
             if i["correct"]:
                 cross_tab[key]["correct"] += 1
@@ -298,10 +408,18 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
     Cluster missed questions by clinical concept: diagnoses, drugs, guidelines.
 
     Two sources of concept signal:
-      1. ITE bank (primary):  concept_tags from the specific ITE questions missed
+      1. ITE bank (primary):  concept_tags from the specific ITE questions missed.
+         These are the ONLY QIDs stored in concept_qid_map — they point directly
+         to the resident's actual exam mistakes.
       2. AAFP bank (additive): concept_tags from AAFP questions in the same weak
-         blueprint/body_system areas — broadens the concept landscape beyond
-         what happened to appear on this year's ITE.
+         blueprint/body_system areas — broadens the concept frequency counts to
+         surface themes the ITE happened not to test this year.  AAFP QIDs are
+         NOT added to concept_qid_map (avoids flooding the fingerprint display
+         with non-ITE QIDs).
+
+    Normalization: all concept names are passed through _normalize_concept()
+    before counting, collapsing common synonym/case variants into a single
+    canonical form (e.g. "T2DM", "type 2 diabetes", "DM type 2" → one entry).
 
     Both banks are 100% concept_tags filled (1,629 ITE + 1,221 AAFP as of 2026-04).
     """
@@ -314,10 +432,11 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
     items_matched = 0
     aafp_items_matched = 0
 
-    # QID tracking per concept — for report appendix/fingerprint reference
-    dx_qids    = defaultdict(list)
-    drug_qids  = defaultdict(list)
-    guide_qids = defaultdict(list)
+    # QID tracking per concept — ITE missed questions ONLY.
+    # These feed the fingerprint reference column; capped at 10 per concept.
+    ite_dx_qids    = defaultdict(list)
+    ite_drug_qids  = defaultdict(list)
+    ite_guide_qids = defaultdict(list)
 
     if missed_qids and db_path:
         db = sqlite3.connect(db_path)
@@ -338,19 +457,26 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
                     try:
                         tags = json.loads(raw)
                         for d in tags.get("diagnoses", []):
-                            diagnoses[d] += 1
-                            dx_qids[d].append(qid)
+                            norm = _normalize_concept(d)
+                            diagnoses[norm] += 1
+                            if len(ite_dx_qids[norm]) < 10:
+                                ite_dx_qids[norm].append(qid)
                         for d in tags.get("drugs", []):
-                            drugs[d] += 1
-                            drug_qids[d].append(qid)
+                            norm = _normalize_concept(d)
+                            drugs[norm] += 1
+                            if len(ite_drug_qids[norm]) < 10:
+                                ite_drug_qids[norm].append(qid)
                         for g in tags.get("guidelines", []):
-                            guidelines[g] += 1
-                            guide_qids[g].append(qid)
+                            norm = _normalize_concept(g)
+                            guidelines[norm] += 1
+                            if len(ite_guide_qids[norm]) < 10:
+                                ite_guide_qids[norm].append(qid)
                         items_matched += 1
                     except (json.JSONDecodeError, TypeError):
                         pass
 
         # --- Source 2: AAFP questions in weak areas (topical enrichment) ---
+        # Enriches concept COUNTS only — QIDs not added to the tracking maps.
         # Collect weak blueprint/body_system DB names from missed items
         weak_blueprints_db = set()
         weak_bs_db = set()
@@ -381,28 +507,25 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
 
             for row in aafp_rows:
                 raw = row["concept_tags"]
-                qid = row["aafp_qid"]
                 if raw:
                     try:
                         tags = json.loads(raw)
+                        # Count only — no QID tracking for Source 2
                         for d in tags.get("diagnoses", []):
-                            diagnoses[d] += 1
-                            dx_qids[d].append(qid)
+                            diagnoses[_normalize_concept(d)] += 1
                         for d in tags.get("drugs", []):
-                            drugs[d] += 1
-                            drug_qids[d].append(qid)
+                            drugs[_normalize_concept(d)] += 1
                         for g in tags.get("guidelines", []):
-                            guidelines[g] += 1
-                            guide_qids[g].append(qid)
+                            guidelines[_normalize_concept(g)] += 1
                         aafp_items_matched += 1
                     except (json.JSONDecodeError, TypeError):
                         pass
 
         db.close()
 
-    # Recurring themes = appears ≥2 times
-    recurring_diagnoses  = {k: v for k, v in diagnoses.items()  if v >= 2}
-    recurring_drugs      = {k: v for k, v in drugs.items()      if v >= 2}
+    # Recurring themes = appears ≥4 times (lower threshold generated ~170 rows)
+    recurring_diagnoses  = {k: v for k, v in diagnoses.items()  if v >= 4}
+    recurring_drugs      = {k: v for k, v in drugs.items()      if v >= 4}
 
     return {
         "top_diagnoses":     dict(diagnoses.most_common(15)),
@@ -410,11 +533,11 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
         "top_guidelines":    dict(guidelines.most_common(10)),
         "recurring_diagnoses": dict(sorted(recurring_diagnoses.items(), key=lambda x: x[1], reverse=True)),
         "recurring_drugs":   dict(sorted(recurring_drugs.items(), key=lambda x: x[1], reverse=True)),
-        # QID maps — lets the report builder show which question IDs drove each concept
+        # QID maps — ITE missed questions only; drives fingerprint reference column
         "concept_qid_map": {
-            "diagnoses":  dict(dx_qids),
-            "drugs":      dict(drug_qids),
-            "guidelines": dict(guide_qids),
+            "diagnoses":  dict(ite_dx_qids),
+            "drugs":      dict(ite_drug_qids),
+            "guidelines": dict(ite_guide_qids),
         },
         "items_matched":        items_matched,
         "aafp_items_matched":   aafp_items_matched,
@@ -476,27 +599,95 @@ def spatial_clustering(items: list) -> dict:
 # ---------------------------------------------------------------------------
 
 def cross_dimensional_patterns(items: list, perf: dict) -> dict:
+    """
+    Detect structural patterns within the cross_tab matrix.
+    All patterns are derived from the resident's actual cross_tab data,
+    not generic thresholds — each observation should differ meaningfully
+    between residents.
+    """
     patterns     = []
     overall_rate = perf["overall"]["pct"] / 100
+    TARGET_RATE  = 0.70
 
-    # Blueprint consistency gap
-    bp_rates = {k: v["rate"] for k, v in perf["blueprint"].items()}
-    if bp_rates:
-        best_bp  = max(bp_rates, key=bp_rates.get)
-        worst_bp = min(bp_rates, key=bp_rates.get)
-        gap      = bp_rates[best_bp] - bp_rates[worst_bp]
-        if gap > 0.15:
+    cross_tab = perf.get("cross_tab", {})
+    if not cross_tab:
+        return {"patterns": [], "accuracy_by_difficulty_band": {}}
+
+    # Build per-axis weak-intersection maps
+    # weak = rate < TARGET_RATE and at least 3 questions at that intersection
+    weak_cells = {
+        k: v for k, v in cross_tab.items()
+        if v["rate"] < TARGET_RATE and v["total"] >= 3
+    }
+
+    # ── Pattern 1: Body system axis collapse ───────────────────────────────
+    # A body system appearing weak in 2+ blueprint categories = systemic content gap
+    bs_weak_blueprints = defaultdict(list)
+    for key in weak_cells:
+        parts = key.split(" × ", 1)
+        if len(parts) == 2:
+            bs, bp = parts
+            bs_weak_blueprints[bs].append(bp)
+
+    for bs, blueprints in sorted(bs_weak_blueprints.items(), key=lambda x: -len(x[1])):
+        if len(blueprints) >= 2:
+            bp_list = ", ".join(sorted(blueprints))
             patterns.append({
-                "type": "blueprint_gap",
+                "type":        "body_system_axis_collapse",
+                "body_system": bs,
+                "blueprints":  blueprints,
                 "description": (
-                    f"Consistent {gap*100:.0f}-point gap: "
-                    f"{best_bp} ({bp_rates[best_bp]*100:.0f}%) vs "
-                    f"{worst_bp} ({bp_rates[worst_bp]*100:.0f}%)"
+                    f"{bs}: weak across {len(blueprints)} blueprint categories "
+                    f"({bp_list}). Gap is systemic to this content area, "
+                    f"not specific to one care context."
                 ),
-                "best": best_bp, "worst": worst_bp, "gap": round(gap, 3),
             })
 
-    # Difficulty calibration by score band
+    # ── Pattern 2: Blueprint axis collapse ─────────────────────────────────
+    # A blueprint category appearing weak across 3+ body systems = care-type deficit
+    bp_weak_systems = defaultdict(list)
+    for key in weak_cells:
+        parts = key.split(" × ", 1)
+        if len(parts) == 2:
+            bs, bp = parts
+            bp_weak_systems[bp].append(bs)
+
+    for bp, systems in sorted(bp_weak_systems.items(), key=lambda x: -len(x[1])):
+        if len(systems) >= 3:
+            sys_list = ", ".join(sorted(systems))
+            patterns.append({
+                "type":      "blueprint_axis_collapse",
+                "blueprint": bp,
+                "systems":   systems,
+                "description": (
+                    f"{bp}: weak in {len(systems)} body systems "
+                    f"({sys_list}). Deficit is tied to this care type "
+                    f"across multiple content areas."
+                ),
+            })
+
+    # ── Pattern 3: Concentration ───────────────────────────────────────────
+    # Single intersection accounts for disproportionate share of weak cross_tab volume
+    if weak_cells:
+        total_weak_items = sum(v["total"] for v in weak_cells.values())
+        top_key   = max(weak_cells, key=lambda k: weak_cells[k]["total"])
+        top_count = weak_cells[top_key]["total"]
+        top_share = top_count / total_weak_items if total_weak_items else 0
+        if top_share >= 0.30 and len(weak_cells) >= 3:
+            top_rate = weak_cells[top_key]["rate"]
+            patterns.append({
+                "type":        "concentration",
+                "intersection": top_key,
+                "share_pct":   round(top_share * 100, 0),
+                "description": (
+                    f"{top_key}: accounts for {top_share*100:.0f}% of all weak "
+                    f"cross-intersection volume ({top_count} items, "
+                    f"{top_rate*100:.0f}% accuracy). "
+                    f"Concentrated gap — high-leverage study target."
+                ),
+            })
+
+    # ── Difficulty calibration (kept — uses individual item scores) ────────
     bands = defaultdict(lambda: {"correct": 0, "total": 0})
     for i in items:
         band = (i["score"] // 200) * 200
@@ -512,28 +703,17 @@ def cross_dimensional_patterns(items: list, perf: dict) -> dict:
 
     easy_rate = band_rates.get(800, band_rates.get(1000, None))
     mid_rate  = band_rates.get(400, band_rates.get(600, None))
-    if easy_rate is not None and mid_rate is not None and easy_rate < mid_rate:
+    # Only flag if inversion is substantial (>10 pts) to avoid noise
+    if easy_rate is not None and mid_rate is not None and (mid_rate - easy_rate) > 0.10:
         patterns.append({
-            "type": "difficulty_inversion",
+            "type":        "difficulty_inversion",
+            "easy_rate":   easy_rate,
+            "mid_rate":    mid_rate,
             "description": (
-                f"Paradoxical: accuracy on easy items ({easy_rate*100:.0f}%) "
-                f"lower than mid-difficulty ({mid_rate*100:.0f}%). "
-                f"Possible second-guessing pattern."
+                f"Easy items ({easy_rate*100:.0f}%) answered less accurately than "
+                f"mid-difficulty ({mid_rate*100:.0f}%). "
+                f"Possible second-guessing or over-reading on straightforward presentations."
             ),
-            "easy_rate": easy_rate, "mid_rate": mid_rate,
-        })
-
-    # Diffuse weakness
-    bs_rates    = {k: v["rate"] for k, v in perf.get("body_system", {}).items()}
-    weak_systems = [k for k, v in bs_rates.items() if v < overall_rate - 0.10]
-    if len(weak_systems) >= 3:
-        patterns.append({
-            "type": "diffuse_weakness",
-            "description": (
-                f"Weakness spread across {len(weak_systems)} body systems. "
-                f"Broad knowledge gaps rather than isolated deficits."
-            ),
-            "weak_systems": weak_systems,
         })
 
     return {
@@ -584,18 +764,26 @@ def yield_weighted_priorities(perf: dict, ref: dict) -> list:
                 "priority_score":   round(recoverable * (2 if meaningful else 0.5), 2),
             })
 
+    # cross_tab: use empirical qbank intersection weights from reference JSON
+    # Keys match body_system_merged × blueprint (normalized, consistent across banks)
+    ite_ct_ref  = ref.get("ite_crosstab_weights", {})
+    aafp_ct_ref = ref.get("aafp_crosstab_weights", {})
     for key, p in perf.get("cross_tab", {}).items():
         if p["rate"] < TARGET_RATE and p["total"] >= 3:
             gap         = TARGET_RATE - p["rate"]
             recoverable = round(gap * p["total"], 1)
+            # Prefer ITE weight; fall back to AAFP weight; fall back to 2.0 default
+            ct_entry    = ite_ct_ref.get(key) or aafp_ct_ref.get(key) or {}
+            weight_pct  = ct_entry.get("pct", 2.0)
             priorities.append({
-                "dimension":        key,
-                "dimension_type":   "cross_tab",
-                "current_rate":     p["rate"],
-                "target_rate":      TARGET_RATE,
-                "item_count":       p["total"],
+                "dimension":         key,
+                "dimension_type":    "cross_tab",
+                "current_rate":      p["rate"],
+                "target_rate":       TARGET_RATE,
+                "item_count":        p["total"],
                 "recoverable_items": recoverable,
-                "priority_score":   round(recoverable * 1.5, 2),
+                "exam_weight_pct":   round(weight_pct, 1),
+                "priority_score":    round(recoverable * (weight_pct / 10), 2),
             })
 
     priorities.sort(key=lambda x: x["priority_score"], reverse=True)
@@ -915,8 +1103,16 @@ def _compute_relevance(match_tier: int, priority_score: float,
 
 
 def _tier1_direct(db, dim: str, dim_type: str, priority_score: float,
-                  selected_qids: set, limit: int = 60) -> list:
-    """Direct blueprint + body_system match from both banks."""
+                  selected_qids: set, limit: int = 200) -> list:
+    """
+    Direct blueprint + body_system match from both banks.
+
+    Candidate pool: 200 per bank (was 60), ordered by exam_year DESC (most recent
+    content first — neutral with respect to article counts).  Concept-fingerprint
+    relevance boosting happens in match_practice_questions_v3() as a Python-side
+    post-processing step so that article count does not gate which questions enter
+    the candidate pool at all.
+    """
     candidates = []
 
     def _build_where(table_prefix, use_merged):
@@ -954,7 +1150,8 @@ def _tier1_direct(db, dim: str, dim_type: str, priority_score: float,
 
     excl_sql, excl_params = _not_in(selected_qids)
 
-    # ITE bank
+    # ITE bank — ordered by exam_year DESC (neutral; concept/fingerprint scoring
+    # applied in Python post-processing, not at the SQL fetch layer)
     ite_where, ite_params = _build_where("q", use_merged=True)
     sql_ite = f"""
         SELECT {_ITE_Q_COLS},
@@ -963,7 +1160,7 @@ def _tier1_direct(db, dim: str, dim_type: str, priority_score: float,
         LEFT JOIN qid_art_xref xa ON q.qid = xa.qid AND xa.article_id != 'ART-0001'
         WHERE {" AND ".join(ite_where)} {excl_sql}
         GROUP BY q.qid
-        ORDER BY linked_articles DESC
+        ORDER BY q.exam_year DESC
         LIMIT ?
     """
     for row in db.execute(sql_ite, ite_params + excl_params + [limit]).fetchall():
@@ -1289,19 +1486,153 @@ def _tier3_vector_sim(db, missed_qids: list, selected_qids: set,
     return candidates
 
 
+def _concept_selection(db, top_concepts_dict: dict, selected_qids: set,
+                        base_priority: float = 2.5, limit: int = 60) -> list:
+    """
+    Find questions from BOTH banks (ITE + AAFP) whose concept_tags match the
+    resident's top missed diagnoses or drugs.
+
+    This is the bridge between the Concept Fingerprint analysis and the
+    practice question engine.  Without this, the fingerprint tells you the
+    resident missed Hypertension 33× but the practice set selects by
+    Cardiovascular × Chronic Care with no guarantee of Hypertension coverage.
+
+    Scoring: questions matching more top concepts AND higher-frequency concepts
+    score higher.  Results compete in the global practice question pool and are
+    labeled as "Concept Match" in the match tier column.
+
+    Both banks are returned and labeled correctly:
+      ITE bank  → source_label "ITE {year}"
+      AAFP bank → source_label "AAFP BRQ"
+    """
+    if not top_concepts_dict:
+        return []
+
+    # Normalize top concepts to lowercase for comparison
+    norm_top_set  = {k.lower() for k in top_concepts_dict}
+    # Also normalize the display names → for targeting label
+    norm_freq_map = {k.lower(): v for k, v in top_concepts_dict.items()}
+    # Map: normalized key → canonical display name (from the concept_clustering output)
+    norm_to_display = {k.lower(): k for k in top_concepts_dict}
+
+    candidates = []
+
+    # --- ITE bank ---
+    excl_sql, excl_params = _not_in(selected_qids)
+    ite_rows = db.execute(f"""
+        SELECT {_ITE_Q_COLS},
+               COUNT(DISTINCT xa.article_id) AS linked_articles
+        FROM questions q
+        LEFT JOIN qid_art_xref xa ON q.qid = xa.qid AND xa.article_id != 'ART-0001'
+        WHERE q.concept_tags IS NOT NULL AND q.concept_tags != '' {excl_sql}
+        GROUP BY q.qid
+        ORDER BY linked_articles DESC
+        LIMIT 600
+    """, excl_params).fetchall()
+
+    for row in ite_rows:
+        try:
+            tags = json.loads(row["concept_tags"])
+        except (json.JSONDecodeError, TypeError):
+            continue
+
+        q_norms = set()
+        for d in tags.get("diagnoses", []):
+            q_norms.add(_normalize_concept(d).lower())
+        for d in tags.get("drugs", []):
+            q_norms.add(_normalize_concept(d).lower())
+
+        matched = norm_top_set & q_norms
+        if not matched:
+            continue
+
+        # Score = base + weighted frequency contribution of matched concepts
+        concept_score = sum(norm_freq_map.get(m, 1) for m in matched)
+        relevance = min(base_priority + (concept_score / 15.0), 5.0)
+        if row["linked_articles"]:
+            relevance += 0.5
+        relevance += 0.3  # concept_tags bonus
+
+        # Targeting label = highest-frequency concept matched
+        top_match_key = max(matched, key=lambda m: norm_freq_map.get(m, 1))
+        targeting = f"Concept: {norm_to_display.get(top_match_key, top_match_key)}"
+
+        candidates.append(_row_to_dict(row, targeting, 1,
+                                       row["linked_articles"] or 0, round(relevance, 3)))
+
+    # --- AAFP bank ---
+    aafp_excl_sql, aafp_excl_params = _not_in(selected_qids, "q.aafp_qid")
+    aafp_rows = db.execute(f"""
+        SELECT {_AAFP_Q_COLS},
+               COUNT(DISTINCT xa.article_id) AS linked_articles
+        FROM aafp_questions q
+        LEFT JOIN aafp_qid_art_xref xa ON q.aafp_qid = xa.aafp_qid
+        WHERE q.concept_tags IS NOT NULL AND q.concept_tags != '' {aafp_excl_sql}
+        GROUP BY q.aafp_qid
+        ORDER BY linked_articles DESC
+        LIMIT 600
+    """, aafp_excl_params).fetchall()
+
+    for row in aafp_rows:
+        try:
+            tags = json.loads(row["concept_tags"])
+        except (json.JSONDecodeError, TypeError):
+            continue
+
+        q_norms = set()
+        for d in tags.get("diagnoses", []):
+            q_norms.add(_normalize_concept(d).lower())
+        for d in tags.get("drugs", []):
+            q_norms.add(_normalize_concept(d).lower())
+
+        matched = norm_top_set & q_norms
+        if not matched:
+            continue
+
+        concept_score = sum(norm_freq_map.get(m, 1) for m in matched)
+        relevance = min(base_priority + (concept_score / 15.0), 5.0)
+        if row["linked_articles"]:
+            relevance += 0.5
+        relevance += 0.3
+
+        top_match_key = max(matched, key=lambda m: norm_freq_map.get(m, 1))
+        targeting = f"Concept: {norm_to_display.get(top_match_key, top_match_key)}"
+
+        candidates.append(_row_to_dict(row, targeting, 1,
+                                       row["linked_articles"] or 0, round(relevance, 3)))
+
+    # Sort by relevance; return top N (global mix of ITE + AAFP)
+    candidates.sort(key=lambda x: x["relevance_score"], reverse=True)
+    return candidates[:limit]
+
+
 def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
                                  items: list, db_path: str,
                                  target_count: int = 20,
-                                 current_exam_year: int = None) -> list:
+                                 current_exam_year: int = None,
+                                 concepts: dict = None,
+                                 icd10_profile: dict = None) -> list:
     """
     Select and globally rank practice questions from both ITE + AAFP banks.
 
     Strategy:
       1. For each top priority dimension, gather candidates from Tier 1 + 2
-      2. If total candidates < target, invoke Tier 3 (vector similarity)
-      3. Score all candidates globally with relevance_score
-      4. Deduplicate, sort by relevance_score, return top target_count
-      5. Every question labeled with source_bank + source_label
+         (blueprint/body_system/cross_tab match)
+      2. Concept-driven selection: questions from both banks whose concept_tags
+         match the resident's top missed diagnoses + drugs — bridges the gap
+         between the Concept Fingerprint findings and the practice set
+      3. If total candidates < target, invoke Tier 3 (vector similarity)
+      4. Score all candidates globally with relevance_score
+         — Fingerprint freq-weighted bonus: concept_tags matching top missed concepts
+         — ICD-10 proximity bonus: question_icd10 matching the resident's ICD-10
+           weakness profile (derived from actual missed ITE questions, not enrichment)
+      5. Deduplicate, sort by relevance_score, return top target_count
+      6. Every question labeled with source_bank + source_label (ITE/AAFP BRQ)
+
+    icd10_profile: {icd10_code: miss_count} built from icd10_weakness_map().
+    Used as an invisible scoring layer — never displayed in the report.
+    ICD-10 codes are taxonomy-stable (I10 = HTN regardless of text label variant),
+    so this fixes the "stage 2 hypertension" ≠ "Hypertension" concept-tag mismatch.
     """
     if not db_path:
         return []
@@ -1359,21 +1690,114 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
                 all_candidates[qid] = cand
             selected_qids.add(qid)
 
-    # Concept-tag overlap bonus — applied in Python to avoid SQLite json_each
-    # version dependency.  Candidates sharing concept tags with the resident's
-    # specific wrong answers in their targeting dimension score higher.
-    for qid, cand in all_candidates.items():
-        try:
-            raw_tags = cand.get("concept_tags")
-            if not raw_tags:
+    # --- Concept-driven selection (Tier 1c) ---
+    # Uses the Concept Fingerprint findings (top missed diagnoses + drugs) to seed
+    # practice question selection from BOTH banks.  This ensures the concept
+    # fingerprint analysis DRIVES what questions the resident studies — not just
+    # the blueprint/body_system dimension breakdown.
+    #
+    # IMPORTANT: we pass set() here (not selected_qids) so that concept selection
+    # can RE-TAG questions already claimed by T1/T2 if concept matching scores them
+    # higher.  T1 order-by-linked-articles tends to grab the best Hypertension/T2DM
+    # questions already; without re-tagging they'd show up labeled "Chronic Care"
+    # instead of "Concept: Hypertension".  Deduplication in the loop below ensures
+    # higher-scoring labels win — the global pool handles the rest.
+    if concepts:
+        top_dx    = dict(list((concepts.get("top_diagnoses") or {}).items())[:8])
+        top_drugs = dict(list((concepts.get("top_drugs")     or {}).items())[:5])
+        concept_pool = {**top_dx, **top_drugs}   # merged dict, diagnoses take precedence
+        if concept_pool:
+            concept_cands = _concept_selection(db, concept_pool, set())   # no exclusion
+            for cand in concept_cands:
+                qid = cand["qid"]
+                if qid not in all_candidates or cand["relevance_score"] > all_candidates[qid]["relevance_score"]:
+                    all_candidates[qid] = cand
+                selected_qids.add(qid)
+
+    # Fingerprint frequency-weighted bonus — replaces the old concept-tag overlap bonus.
+    # Questions whose concept_tags match the resident's top missed concepts receive a
+    # bonus proportional to how often that concept appeared in their missed answers.
+    # Hypertension missed 33× → +3.3 bonus; T2DM missed 28× → +2.8 bonus.
+    # This ensures commonly-missed conditions score competitively against niche topics
+    # that happen to have many linked guideline articles (the old linked_articles bias).
+    if concepts:
+        _fp_top_dx    = dict(list((concepts.get("top_diagnoses") or {}).items())[:10])
+        _fp_top_drugs = dict(list((concepts.get("top_drugs")     or {}).items())[:5])
+        _fp_map = {_normalize_concept(k).lower(): v
+                   for k, v in {**_fp_top_dx, **_fp_top_drugs}.items()}
+        _fp_set = set(_fp_map.keys())
+        for qid, cand in all_candidates.items():
+            try:
+                raw_tags = cand.get("concept_tags")
+                if not raw_tags:
+                    continue
+                tags = json.loads(raw_tags) if isinstance(raw_tags, str) else raw_tags
+                q_norms: set = set()
+                if isinstance(tags, dict):
+                    for d in tags.get("diagnoses", []):  q_norms.add(_normalize_concept(str(d)).lower())
+                    for d in tags.get("drugs",      []):  q_norms.add(_normalize_concept(str(d)).lower())
+                elif isinstance(tags, list):
+                    for d in tags: q_norms.add(_normalize_concept(str(d)).lower())
+                matched = _fp_set & q_norms
+                if matched:
+                    concept_score = sum(_fp_map.get(m, 0) for m in matched)
+                    bonus = concept_score / 10.0  # freq=33 → +3.3, freq=5 → +0.5
+                    cand["relevance_score"] = round(cand["relevance_score"] + bonus, 3)
+            except (json.JSONDecodeError, TypeError, AttributeError):
+                pass
+
+    # ICD-10 proximity bonus — invisible scoring layer, never shown in report.
+    # Batch-loads ICD-10 codes for every candidate from question_icd10 /
+    # aafp_question_icd10, then scores overlap against the resident's ICD-10
+    # weakness profile (codes from actual missed ITE questions, taxonomy-stable).
+    #
+    # ICD-10 codes bypass the concept-tag label-variant problem: "stage 2
+    # hypertension", "essential hypertension", "hypertensive emergency" all
+    # map to I10 — so a practice question on any HTN variant gets the same
+    # boost, regardless of how its concept_tags were written.
+    #
+    # Bonus scale: miss_count=7 (E11.9 T2DM, primary match) → 7*2/15 = +0.93
+    #              miss_count=5 (I10 HTN,  primary match) → 5*2/15 = +0.67
+    #              two-code match (E11.9+I10, both primary) → +1.6
+    # Complementary to fingerprint bonus — ICD-10 signal is pure-ITE missed Qs.
+    if icd10_profile:
+        _ite_cand_qids  = [qid for qid, c in all_candidates.items()
+                           if c.get("source_bank") == "ITE"]
+        _aafp_cand_qids = [qid for qid, c in all_candidates.items()
+                           if c.get("source_bank") == "AAFP"]
+
+        _cand_icd10: dict = {}   # {qid: {icd10_code: relevance_str}}
+
+        if _ite_cand_qids:
+            _ph = ",".join(["?"] * len(_ite_cand_qids))
+            for _r in db.execute(
+                f"SELECT qid, icd10_code, relevance FROM question_icd10 "
+                f"WHERE qid IN ({_ph}) AND icd10_code != 'no_match'",
+                _ite_cand_qids
+            ).fetchall():
+                _cand_icd10.setdefault(_r["qid"], {})[_r["icd10_code"]] = _r["relevance"]
+
+        if _aafp_cand_qids:
+            _ph = ",".join(["?"] * len(_aafp_cand_qids))
+            for _r in db.execute(
+                f"SELECT aafp_qid AS qid, icd10_code, relevance FROM aafp_question_icd10 "
+                f"WHERE aafp_qid IN ({_ph}) AND icd10_code != 'no_match'",
+                _aafp_cand_qids
+            ).fetchall():
+                _cand_icd10.setdefault(_r["qid"], {})[_r["icd10_code"]] = _r["relevance"]
+
+        for qid, cand in all_candidates.items():
+            _q_codes = _cand_icd10.get(qid)
+            if not _q_codes:
                 continue
-            cand_tags = set(json.loads(raw_tags)) if isinstance(raw_tags, str) else set(raw_tags)
-            dim_tags  = wrong_meta_by_dim.get(cand.get("targeting"), {}).get("concept_tags", set())
-            overlap   = len(cand_tags & dim_tags)
-            if overlap:
-                cand["relevance_score"] = round(cand["relevance_score"] + 0.4 * min(overlap, 3), 3)
-        except (json.JSONDecodeError, TypeError, AttributeError):
-            pass
+            _icd_bonus = 0.0
+            for _code, _rel in _q_codes.items():
+                _pw = icd10_profile.get(_code, 0)
+                if _pw:
+                    _rel_mult = 2.0 if _rel == "primary" else 1.0
+                    _icd_bonus += _pw * _rel_mult / 15.0
+            if _icd_bonus:
+                cand["relevance_score"] = round(cand["relevance_score"] + _icd_bonus, 3)
 
     # Exclude current exam year from ITE practice questions.
     # A resident who just sat the 2025 ITE shouldn't receive their own exam
@@ -1771,10 +2195,61 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
     icd10_map   = icd10_weakness_map(items, qid_map, db_path)
     pathway_map = pathway_gap_map(icd10_map, db_path)
 
+    # Build ICD-10 weakness profile for invisible scoring enrichment.
+    # {icd10_code: miss_count} derived from actual missed ITE questions.
+    # Passed to match_practice_questions_v3 as a scoring signal — never displayed.
+    icd10_profile = {
+        c["code"]: c["miss_count"]
+        for c in (icd10_map or {}).get("icd10_clusters", [])
+        if c.get("miss_count", 0) > 0
+    }
+
     # --- Practice questions + top articles ---
     practice_qs  = match_practice_questions_v3(perf, priorities, qid_map,
                                                 items, db_path, question_count,
-                                                current_exam_year=exam_year)
+                                                current_exam_year=exam_year,
+                                                concepts=concepts,
+                                                icd10_profile=icd10_profile)
+
+    # --- Concept fingerprint annotation on practice questions ---
+    # After T1/T2 selection, annotate each practice question with which
+    # top-missed fingerprint concepts it tests.  T1 already grabs the right
+    # clinical questions; this adds the "Concept: Hypertension" label so the
+    # resident can see WHY each practice question is clinically relevant.
+    #
+    # Uses post-selection annotation (not score competition) because T1
+    # priority_scores (range 13–90) dwarf concept relevance (~5).  Annotation
+    # preserves the proven T1/T2 ranking while adding fingerprint traceability.
+    if concepts and practice_qs:
+        top_dx_keys    = list((concepts.get("top_diagnoses") or {}).keys())[:10]
+        top_drug_keys  = list((concepts.get("top_drugs")     or {}).keys())[:5]
+        # Normalized lowercase → canonical display name lookup
+        fp_norm_map = {_normalize_concept(k).lower(): k
+                       for k in top_dx_keys + top_drug_keys}
+        fp_norm_set = set(fp_norm_map.keys())
+        for q in practice_qs:
+            try:
+                raw = q.get("concept_tags")
+                if not raw:
+                    continue
+                tags = json.loads(raw) if isinstance(raw, str) else {}
+                q_norms: set = set()
+                for d in tags.get("diagnoses", []):
+                    q_norms.add(_normalize_concept(str(d)).lower())
+                for d in tags.get("drugs", []):
+                    q_norms.add(_normalize_concept(str(d)).lower())
+                matched = fp_norm_set & q_norms
+                if matched:
+                    # Return canonical display names ordered by frequency
+                    freq = concepts.get("top_diagnoses", {})
+                    freq.update(concepts.get("top_drugs", {}))
+                    q["fingerprint_concepts"] = sorted(
+                        [fp_norm_map[m] for m in matched],
+                        key=lambda c: freq.get(c, 0), reverse=True
+                    )
+            except (json.JSONDecodeError, TypeError, AttributeError):
+                pass
+
     top_articles = match_top_articles(perf, db_path)
 
     # --- Missed item reference (for report appendix) ---

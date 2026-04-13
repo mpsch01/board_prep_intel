@@ -209,7 +209,12 @@ def build_pearl_block(session_id, session_title, refs_for_session):
 # ── Step 1: Unpack v5 ──────────────────────────────────────────────────────
 print("Unpacking v5...")
 if os.path.exists(UNPACK_DIR):
-    shutil.rmtree(UNPACK_DIR)
+    # shutil.rmtree banned (NTFS); use PowerShell Remove-Item
+    subprocess.run(
+        ["powershell", "-Command",
+         f"Remove-Item -Recurse -Force '{UNPACK_DIR}' -ErrorAction SilentlyContinue"],
+        capture_output=True
+    )
 result = subprocess.run(
     ["python", UNPACK_PY, V5_PATH, UNPACK_DIR],
     capture_output=True, text=True

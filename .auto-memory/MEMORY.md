@@ -1,5 +1,5 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-04-12 (BATON 054)
+Last updated: 2026-04-13 (BATON 055)
 
 ## Active Memory Files
 - [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status
@@ -25,6 +25,9 @@ Last updated: 2026-04-12 (BATON 054)
 
 ## Script Refactoring (BATON 054)
 - [ite_report_builder_v2.js: 18-edit multi-year resident redesign](feedback_report_builder_redesign_054.md) — Major revision for improved year-over-year rendering; ABFM reference benchmark integration; section 3b temporal aggregation hardened
+
+## Architecture Decisions (BATON 055)
+- [ICD-10 Hidden Enrichment Layer](architecture_icd10_hidden_enrichment.md) — ICD-10 codes used as taxonomy-stable scoring layer in practice question matching; invisible to resident reports; taxonomy-stable precision without concept-tag label variance
 
 ## Open Items (BATON 054)
 - **DEFERRED-PROGRAM-TREND** — Multi-resident program-level trends; benchmark against 2024 ABFM national reference

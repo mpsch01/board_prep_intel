@@ -1,52 +1,89 @@
 {
   "exam_year": 2024,
   "source": "2024 ITE Score Result Handbook (ABFM)",
-  "last_updated": "2026-04-12",
-
+  "last_updated": "2026-04-13",
   "exam_specs": {
     "total_items": 200,
     "scored_items": 194,
     "deleted_items": null,
     "deletion_reasons": "6 deleted: 5 content, 1 psychometric",
     "minimum_passing_standard": 380,
-    "scaled_score_range": [200, 800],
+    "scaled_score_range": [
+      200,
+      800
+    ],
     "sem_overall": 38,
     "administration_count": null,
     "program_count": null
   },
-
   "blueprint_weights": {
-    "Acute Care and Diagnosis":  {"pct": 35, "item_count": 68},
-    "Chronic Care Management":   {"pct": 25, "item_count": 49},
-    "Emergent and Urgent Care":  {"pct": 20, "item_count": 39},
-    "Preventive Care":           {"pct": 15, "item_count": 29},
-    "Foundations of Care":       {"pct": 5,  "item_count": 10}
+    "Acute Care and Diagnosis": {
+      "pct": 35,
+      "item_count": 68
+    },
+    "Chronic Care Management": {
+      "pct": 25,
+      "item_count": 49
+    },
+    "Emergent and Urgent Care": {
+      "pct": 20,
+      "item_count": 39
+    },
+    "Preventive Care": {
+      "pct": 15,
+      "item_count": 29
+    },
+    "Foundations of Care": {
+      "pct": 5,
+      "item_count": 10
+    }
   },
-
   "blueprint_sem": {
     "Acute Care and Diagnosis": 69,
-    "Chronic Care Management":  82,
+    "Chronic Care Management": 82,
     "Emergent and Urgent Care": 97,
-    "Preventive Care":          109,
-    "Foundations of Care":      187
+    "Preventive Care": 109,
+    "Foundations of Care": 187
   },
-
   "bodysystem_sem_page1": {
-    "Cardiovascular":           132,
+    "Cardiovascular": 132,
     "Injuries/Musculoskeletal": 121,
-    "Respiratory":              183,
-    "Psychiatric/Behavioral":   179,
-    "Sexual and Reproductive":  190
+    "Respiratory": 183,
+    "Psychiatric/Behavioral": 179,
+    "Sexual and Reproductive": 190
   },
-
   "national_benchmarks": {
-    "PGY1": {"mean_pct": null, "mean_scaled": 414, "sd": 78,   "n": null},
-    "PGY2": {"mean_pct": null, "mean_scaled": 462, "sd": 76,   "n": null},
-    "PGY3": {"mean_pct": null, "mean_scaled": 494, "sd": 78,   "n": null},
-    "PGY4": {"mean_pct": null, "mean_scaled": null, "sd": null, "n": null},
-    "All":  {"mean_pct": null, "mean_scaled": 456, "sd": 84,   "n": null}
+    "PGY1": {
+      "mean_pct": null,
+      "mean_scaled": 414,
+      "sd": 78,
+      "n": null
+    },
+    "PGY2": {
+      "mean_pct": null,
+      "mean_scaled": 462,
+      "sd": 76,
+      "n": null
+    },
+    "PGY3": {
+      "mean_pct": null,
+      "mean_scaled": 494,
+      "sd": 78,
+      "n": null
+    },
+    "PGY4": {
+      "mean_pct": null,
+      "mean_scaled": null,
+      "sd": null,
+      "n": null
+    },
+    "All": {
+      "mean_pct": null,
+      "mean_scaled": 456,
+      "sd": 84,
+      "n": null
+    }
   },
-
   "program_benchmarks_2024": {
     "PGY1": null,
     "PGY2": null,
@@ -54,26 +91,58 @@
     "PGY4": null,
     "Total": 537
   },
-
   "program_trend": {
-    "2018": {"program": 520, "national": 447},
-    "2019": {"program": 503, "national": 454},
-    "2020": {"program": 510, "national": 440},
-    "2021": {"program": 477, "national": 411},
-    "2022": {"program": 450, "national": 388},
-    "2023": {"program": 437, "national": 389},
-    "2024": {"program": 537, "national": 456}
+    "2018": {
+      "program": 520,
+      "national": 447
+    },
+    "2019": {
+      "program": 503,
+      "national": 454
+    },
+    "2020": {
+      "program": 510,
+      "national": 440
+    },
+    "2021": {
+      "program": 477,
+      "national": 411
+    },
+    "2022": {
+      "program": 450,
+      "national": 388
+    },
+    "2023": {
+      "program": 437,
+      "national": 389
+    },
+    "2024": {
+      "program": 537,
+      "national": 456
+    }
   },
-
   "pass_probability_tiers": {
-    "critical_risk": {"scaled_max": 379, "description": "Below MPS, <50% FMCE pass probability"},
-    "at_risk":       {"scaled_min": 380, "scaled_max": 419, "description": "Marginal, ~50-75% pass probability"},
-    "on_track":      {"scaled_min": 420, "scaled_max": 479, "description": "Near/above PGY mean, >85% pass"},
-    "strong":        {"scaled_min": 480, "description": "Well above mean, >95% pass probability"}
+    "critical_risk": {
+      "scaled_max": 379,
+      "description": "Below MPS, <50% FMCE pass probability"
+    },
+    "at_risk": {
+      "scaled_min": 380,
+      "scaled_max": 419,
+      "description": "Marginal, ~50-75% pass probability"
+    },
+    "on_track": {
+      "scaled_min": 420,
+      "scaled_max": 479,
+      "description": "Near/above PGY mean, >85% pass"
+    },
+    "strong": {
+      "scaled_min": 480,
+      "description": "Well above mean, >95% pass probability"
+    }
   },
-
   "raw_to_scaled": {
-    "_note": "APPROXIMATE — 2024 Rasch equating table not extracted. Interpolated from 2025 conversion (194 scored items). Use as estimate only; official scaled score from score report PDF supersedes this.",
+    "_note": "APPROXIMATE \u2014 2024 Rasch equating table not extracted. Interpolated from 2025 conversion (194 scored items). Use as estimate only; official scaled score from score report PDF supersedes this.",
     "106-107": 380,
     "108-110": 390,
     "111-112": 400,
@@ -82,34 +151,1103 @@
     "117-118": 430,
     "119-120": 440,
     "121-122": 450,
-    "123":     460,
+    "123": 460,
     "124-125": 470,
-    "126":     480,
+    "126": 480,
     "127-128": 490,
-    "129":     500
+    "129": 500
   },
-
   "raw_to_scaled_lookup": [
-    200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,
-    200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,
-    200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,
-    200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,
-    210,210,220,230,230,240,250,250,260,270,270,280,290,290,300,310,310,320,330,330,
-    340,350,350,360,370,370,380,390,390,400,410,410,420,430,430,440,450,450,460,470,
-    470,480,490,490,500,510,520,520,530,540,540,550,560,570,570,580,590,600,610,610,
-    620,630,640,650,660,660,670,680,690,700,710,720,730,740,750,760,770,780,790,800,
-    800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,800,
-    800,800,800,800,800,800,800,800,800,800,800,800,800,800
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    210,
+    210,
+    220,
+    230,
+    230,
+    240,
+    250,
+    250,
+    260,
+    270,
+    270,
+    280,
+    290,
+    290,
+    300,
+    310,
+    310,
+    320,
+    330,
+    330,
+    340,
+    350,
+    350,
+    360,
+    370,
+    370,
+    380,
+    390,
+    390,
+    400,
+    410,
+    410,
+    420,
+    430,
+    430,
+    440,
+    450,
+    450,
+    460,
+    470,
+    470,
+    480,
+    490,
+    490,
+    500,
+    510,
+    520,
+    520,
+    530,
+    540,
+    540,
+    550,
+    560,
+    570,
+    570,
+    580,
+    590,
+    600,
+    610,
+    610,
+    620,
+    630,
+    640,
+    650,
+    660,
+    660,
+    670,
+    680,
+    690,
+    700,
+    710,
+    720,
+    730,
+    740,
+    750,
+    760,
+    770,
+    780,
+    790,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800
   ],
-
   "notes": {
     "scaled_score_interpretation": "ITE scaled score represents predicted FMCE performance at that point in time. Equated via Rasch model + common-item design.",
     "sub_score_caution": "ABFM explicitly warns: sub-scores are NOT sufficiently precise to reliably confirm knowledge deficiencies. Useful for hypothesis generation only. See large SEM values.",
-    "typical_growth": "PGY1→PGY2: +40-60 points. PGY2→PGY3: +25-35 points.",
-    "pass_threshold": "PGY3 score ≥440 = very good probability of passing FMCE. MPS = 380.",
+    "typical_growth": "PGY1\u2192PGY2: +40-60 points. PGY2\u2192PGY3: +25-35 points.",
+    "pass_threshold": "PGY3 score \u2265440 = very good probability of passing FMCE. MPS = 380.",
     "bayesian_predictor_url": "https://rtm.theabfm.org/bayesian/predictor",
     "national_means_source": "2024 ITE Score Result Handbook: PGY1=414.1 (SD 77.8), PGY2=462.2 (SD 76.3), PGY3=494.0 (SD 77.5), Total=455.5 (SD 84.0)",
     "exam_difficulty_note": "2025 exam was ~20 points harder across all PGY levels vs 2024. A resident scoring 440 in 2025 is performing better relative to peers than a 440 in 2024.",
-    "raw_to_scaled_note": "raw_to_scaled_lookup is APPROXIMATE for 2024. Official scaled score from score report PDF always supersedes lookup estimates."
+    "raw_to_scaled_note": "raw_to_scaled_lookup is APPROXIMATE for 2024. Official scaled score from score report PDF always supersedes lookup estimates.",
+    "crosstab_weights": "Empirical question frequency at each body_system_merged x blueprint intersection. ITE: 1629 questions (2018-2025), AAFP: 1221 questions. Generated 2026-04-13 from ite_intelligence.db. Keys use body_system_merged (normalized) for consistency across both banks."
+  },
+  "ite_crosstab_weights": {
+    "Cardiovascular \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Cardiovascular",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 51,
+      "pct": 3.13
+    },
+    "Cardiovascular \u00d7 Chronic Care Management": {
+      "body_system": "Cardiovascular",
+      "blueprint": "Chronic Care Management",
+      "count": 92,
+      "pct": 5.65
+    },
+    "Cardiovascular \u00d7 Emergent and Urgent Care": {
+      "body_system": "Cardiovascular",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 47,
+      "pct": 2.89
+    },
+    "Cardiovascular \u00d7 Foundations of Care": {
+      "body_system": "Cardiovascular",
+      "blueprint": "Foundations of Care",
+      "count": 2,
+      "pct": 0.12
+    },
+    "Cardiovascular \u00d7 Preventive Care": {
+      "body_system": "Cardiovascular",
+      "blueprint": "Preventive Care",
+      "count": 25,
+      "pct": 1.53
+    },
+    "Endocrine \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Endocrine",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 53,
+      "pct": 3.25
+    },
+    "Endocrine \u00d7 Chronic Care Management": {
+      "body_system": "Endocrine",
+      "blueprint": "Chronic Care Management",
+      "count": 54,
+      "pct": 3.31
+    },
+    "Endocrine \u00d7 Emergent and Urgent Care": {
+      "body_system": "Endocrine",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 7,
+      "pct": 0.43
+    },
+    "Endocrine \u00d7 Foundations of Care": {
+      "body_system": "Endocrine",
+      "blueprint": "Foundations of Care",
+      "count": 3,
+      "pct": 0.18
+    },
+    "Endocrine \u00d7 Preventive Care": {
+      "body_system": "Endocrine",
+      "blueprint": "Preventive Care",
+      "count": 7,
+      "pct": 0.43
+    },
+    "Gastrointestinal \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Gastrointestinal",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 57,
+      "pct": 3.5
+    },
+    "Gastrointestinal \u00d7 Chronic Care Management": {
+      "body_system": "Gastrointestinal",
+      "blueprint": "Chronic Care Management",
+      "count": 27,
+      "pct": 1.66
+    },
+    "Gastrointestinal \u00d7 Emergent and Urgent Care": {
+      "body_system": "Gastrointestinal",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 19,
+      "pct": 1.17
+    },
+    "Gastrointestinal \u00d7 Foundations of Care": {
+      "body_system": "Gastrointestinal",
+      "blueprint": "Foundations of Care",
+      "count": 3,
+      "pct": 0.18
+    },
+    "Gastrointestinal \u00d7 Preventive Care": {
+      "body_system": "Gastrointestinal",
+      "blueprint": "Preventive Care",
+      "count": 13,
+      "pct": 0.8
+    },
+    "Hematologic/ Immune \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Hematologic/ Immune",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 27,
+      "pct": 1.66
+    },
+    "Hematologic/ Immune \u00d7 Chronic Care Management": {
+      "body_system": "Hematologic/ Immune",
+      "blueprint": "Chronic Care Management",
+      "count": 8,
+      "pct": 0.49
+    },
+    "Hematologic/ Immune \u00d7 Emergent and Urgent Care": {
+      "body_system": "Hematologic/ Immune",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 6,
+      "pct": 0.37
+    },
+    "Hematologic/ Immune \u00d7 Preventive Care": {
+      "body_system": "Hematologic/ Immune",
+      "blueprint": "Preventive Care",
+      "count": 2,
+      "pct": 0.12
+    },
+    "Integumentary \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Integumentary",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 78,
+      "pct": 4.79
+    },
+    "Integumentary \u00d7 Chronic Care Management": {
+      "body_system": "Integumentary",
+      "blueprint": "Chronic Care Management",
+      "count": 6,
+      "pct": 0.37
+    },
+    "Integumentary \u00d7 Emergent and Urgent Care": {
+      "body_system": "Integumentary",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 7,
+      "pct": 0.43
+    },
+    "Musculoskeletal \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Musculoskeletal",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 131,
+      "pct": 8.04
+    },
+    "Musculoskeletal \u00d7 Chronic Care Management": {
+      "body_system": "Musculoskeletal",
+      "blueprint": "Chronic Care Management",
+      "count": 34,
+      "pct": 2.09
+    },
+    "Musculoskeletal \u00d7 Emergent and Urgent Care": {
+      "body_system": "Musculoskeletal",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 35,
+      "pct": 2.15
+    },
+    "Musculoskeletal \u00d7 Preventive Care": {
+      "body_system": "Musculoskeletal",
+      "blueprint": "Preventive Care",
+      "count": 11,
+      "pct": 0.68
+    },
+    "Nephrologic \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Nephrologic",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 23,
+      "pct": 1.41
+    },
+    "Nephrologic \u00d7 Chronic Care Management": {
+      "body_system": "Nephrologic",
+      "blueprint": "Chronic Care Management",
+      "count": 20,
+      "pct": 1.23
+    },
+    "Nephrologic \u00d7 Emergent and Urgent Care": {
+      "body_system": "Nephrologic",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 4,
+      "pct": 0.25
+    },
+    "Nephrologic \u00d7 Foundations of Care": {
+      "body_system": "Nephrologic",
+      "blueprint": "Foundations of Care",
+      "count": 1,
+      "pct": 0.06
+    },
+    "Neurologic \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Neurologic",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 25,
+      "pct": 1.53
+    },
+    "Neurologic \u00d7 Chronic Care Management": {
+      "body_system": "Neurologic",
+      "blueprint": "Chronic Care Management",
+      "count": 11,
+      "pct": 0.68
+    },
+    "Neurologic \u00d7 Emergent and Urgent Care": {
+      "body_system": "Neurologic",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 10,
+      "pct": 0.61
+    },
+    "Neurologic \u00d7 Foundations of Care": {
+      "body_system": "Neurologic",
+      "blueprint": "Foundations of Care",
+      "count": 4,
+      "pct": 0.25
+    },
+    "Nonspecific \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Nonspecific",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 33,
+      "pct": 2.03
+    },
+    "Nonspecific \u00d7 Chronic Care Management": {
+      "body_system": "Nonspecific",
+      "blueprint": "Chronic Care Management",
+      "count": 15,
+      "pct": 0.92
+    },
+    "Nonspecific \u00d7 Emergent and Urgent Care": {
+      "body_system": "Nonspecific",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 28,
+      "pct": 1.72
+    },
+    "Nonspecific \u00d7 Foundations of Care": {
+      "body_system": "Nonspecific",
+      "blueprint": "Foundations of Care",
+      "count": 9,
+      "pct": 0.55
+    },
+    "Nonspecific \u00d7 Preventive Care": {
+      "body_system": "Nonspecific",
+      "blueprint": "Preventive Care",
+      "count": 15,
+      "pct": 0.92
+    },
+    "Patient-Based Systems \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Patient-Based Systems",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 1,
+      "pct": 0.06
+    },
+    "Patient-Based Systems \u00d7 Chronic Care Management": {
+      "body_system": "Patient-Based Systems",
+      "blueprint": "Chronic Care Management",
+      "count": 11,
+      "pct": 0.68
+    },
+    "Patient-Based Systems \u00d7 Foundations of Care": {
+      "body_system": "Patient-Based Systems",
+      "blueprint": "Foundations of Care",
+      "count": 33,
+      "pct": 2.03
+    },
+    "Patient-Based Systems \u00d7 Preventive Care": {
+      "body_system": "Patient-Based Systems",
+      "blueprint": "Preventive Care",
+      "count": 7,
+      "pct": 0.43
+    },
+    "Population-Based Care \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Population-Based Care",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 6,
+      "pct": 0.37
+    },
+    "Population-Based Care \u00d7 Chronic Care Management": {
+      "body_system": "Population-Based Care",
+      "blueprint": "Chronic Care Management",
+      "count": 3,
+      "pct": 0.18
+    },
+    "Population-Based Care \u00d7 Foundations of Care": {
+      "body_system": "Population-Based Care",
+      "blueprint": "Foundations of Care",
+      "count": 27,
+      "pct": 1.66
+    },
+    "Population-Based Care \u00d7 Preventive Care": {
+      "body_system": "Population-Based Care",
+      "blueprint": "Preventive Care",
+      "count": 70,
+      "pct": 4.3
+    },
+    "Psychiatric/Behavioral \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Psychiatric/Behavioral",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 46,
+      "pct": 2.82
+    },
+    "Psychiatric/Behavioral \u00d7 Chronic Care Management": {
+      "body_system": "Psychiatric/Behavioral",
+      "blueprint": "Chronic Care Management",
+      "count": 55,
+      "pct": 3.38
+    },
+    "Psychiatric/Behavioral \u00d7 Emergent and Urgent Care": {
+      "body_system": "Psychiatric/Behavioral",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 6,
+      "pct": 0.37
+    },
+    "Psychiatric/Behavioral \u00d7 Foundations of Care": {
+      "body_system": "Psychiatric/Behavioral",
+      "blueprint": "Foundations of Care",
+      "count": 6,
+      "pct": 0.37
+    },
+    "Psychiatric/Behavioral \u00d7 Preventive Care": {
+      "body_system": "Psychiatric/Behavioral",
+      "blueprint": "Preventive Care",
+      "count": 7,
+      "pct": 0.43
+    },
+    "Reproductive: Female \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Reproductive: Female",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 40,
+      "pct": 2.46
+    },
+    "Reproductive: Female \u00d7 Chronic Care Management": {
+      "body_system": "Reproductive: Female",
+      "blueprint": "Chronic Care Management",
+      "count": 21,
+      "pct": 1.29
+    },
+    "Reproductive: Female \u00d7 Emergent and Urgent Care": {
+      "body_system": "Reproductive: Female",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 8,
+      "pct": 0.49
+    },
+    "Reproductive: Female \u00d7 Foundations of Care": {
+      "body_system": "Reproductive: Female",
+      "blueprint": "Foundations of Care",
+      "count": 3,
+      "pct": 0.18
+    },
+    "Reproductive: Female \u00d7 Preventive Care": {
+      "body_system": "Reproductive: Female",
+      "blueprint": "Preventive Care",
+      "count": 17,
+      "pct": 1.04
+    },
+    "Reproductive: Male \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Reproductive: Male",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 8,
+      "pct": 0.49
+    },
+    "Reproductive: Male \u00d7 Chronic Care Management": {
+      "body_system": "Reproductive: Male",
+      "blueprint": "Chronic Care Management",
+      "count": 2,
+      "pct": 0.12
+    },
+    "Reproductive: Male \u00d7 Emergent and Urgent Care": {
+      "body_system": "Reproductive: Male",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 1,
+      "pct": 0.06
+    },
+    "Reproductive: Male \u00d7 Foundations of Care": {
+      "body_system": "Reproductive: Male",
+      "blueprint": "Foundations of Care",
+      "count": 1,
+      "pct": 0.06
+    },
+    "Reproductive: Male \u00d7 Preventive Care": {
+      "body_system": "Reproductive: Male",
+      "blueprint": "Preventive Care",
+      "count": 3,
+      "pct": 0.18
+    },
+    "Respiratory \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Respiratory",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 109,
+      "pct": 6.69
+    },
+    "Respiratory \u00d7 Chronic Care Management": {
+      "body_system": "Respiratory",
+      "blueprint": "Chronic Care Management",
+      "count": 39,
+      "pct": 2.39
+    },
+    "Respiratory \u00d7 Emergent and Urgent Care": {
+      "body_system": "Respiratory",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 33,
+      "pct": 2.03
+    },
+    "Respiratory \u00d7 Foundations of Care": {
+      "body_system": "Respiratory",
+      "blueprint": "Foundations of Care",
+      "count": 5,
+      "pct": 0.31
+    },
+    "Respiratory \u00d7 Preventive Care": {
+      "body_system": "Respiratory",
+      "blueprint": "Preventive Care",
+      "count": 20,
+      "pct": 1.23
+    },
+    "Special Sensory \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Special Sensory",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 21,
+      "pct": 1.29
+    },
+    "Special Sensory \u00d7 Chronic Care Management": {
+      "body_system": "Special Sensory",
+      "blueprint": "Chronic Care Management",
+      "count": 5,
+      "pct": 0.31
+    },
+    "Special Sensory \u00d7 Emergent and Urgent Care": {
+      "body_system": "Special Sensory",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 3,
+      "pct": 0.18
+    },
+    "Special Sensory \u00d7 Preventive Care": {
+      "body_system": "Special Sensory",
+      "blueprint": "Preventive Care",
+      "count": 9,
+      "pct": 0.55
+    }
+  },
+  "aafp_crosstab_weights": {
+    "Cardiovascular \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Cardiovascular",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 36,
+      "pct": 2.95
+    },
+    "Cardiovascular \u00d7 Chronic Care Management": {
+      "body_system": "Cardiovascular",
+      "blueprint": "Chronic Care Management",
+      "count": 67,
+      "pct": 5.49
+    },
+    "Cardiovascular \u00d7 Emergent and Urgent Care": {
+      "body_system": "Cardiovascular",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 27,
+      "pct": 2.21
+    },
+    "Cardiovascular \u00d7 Foundations of Care": {
+      "body_system": "Cardiovascular",
+      "blueprint": "Foundations of Care",
+      "count": 5,
+      "pct": 0.41
+    },
+    "Cardiovascular \u00d7 Preventive Care": {
+      "body_system": "Cardiovascular",
+      "blueprint": "Preventive Care",
+      "count": 21,
+      "pct": 1.72
+    },
+    "Endocrine \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Endocrine",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 25,
+      "pct": 2.05
+    },
+    "Endocrine \u00d7 Chronic Care Management": {
+      "body_system": "Endocrine",
+      "blueprint": "Chronic Care Management",
+      "count": 33,
+      "pct": 2.7
+    },
+    "Endocrine \u00d7 Emergent and Urgent Care": {
+      "body_system": "Endocrine",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 4,
+      "pct": 0.33
+    },
+    "Endocrine \u00d7 Foundations of Care": {
+      "body_system": "Endocrine",
+      "blueprint": "Foundations of Care",
+      "count": 1,
+      "pct": 0.08
+    },
+    "Endocrine \u00d7 Preventive Care": {
+      "body_system": "Endocrine",
+      "blueprint": "Preventive Care",
+      "count": 7,
+      "pct": 0.57
+    },
+    "Gastrointestinal \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Gastrointestinal",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 53,
+      "pct": 4.34
+    },
+    "Gastrointestinal \u00d7 Chronic Care Management": {
+      "body_system": "Gastrointestinal",
+      "blueprint": "Chronic Care Management",
+      "count": 23,
+      "pct": 1.88
+    },
+    "Gastrointestinal \u00d7 Emergent and Urgent Care": {
+      "body_system": "Gastrointestinal",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 21,
+      "pct": 1.72
+    },
+    "Gastrointestinal \u00d7 Foundations of Care": {
+      "body_system": "Gastrointestinal",
+      "blueprint": "Foundations of Care",
+      "count": 2,
+      "pct": 0.16
+    },
+    "Gastrointestinal \u00d7 Preventive Care": {
+      "body_system": "Gastrointestinal",
+      "blueprint": "Preventive Care",
+      "count": 11,
+      "pct": 0.9
+    },
+    "Hematologic/ Immune \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Hematologic/ Immune",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 33,
+      "pct": 2.7
+    },
+    "Hematologic/ Immune \u00d7 Chronic Care Management": {
+      "body_system": "Hematologic/ Immune",
+      "blueprint": "Chronic Care Management",
+      "count": 13,
+      "pct": 1.06
+    },
+    "Hematologic/ Immune \u00d7 Emergent and Urgent Care": {
+      "body_system": "Hematologic/ Immune",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 13,
+      "pct": 1.06
+    },
+    "Hematologic/ Immune \u00d7 Foundations of Care": {
+      "body_system": "Hematologic/ Immune",
+      "blueprint": "Foundations of Care",
+      "count": 5,
+      "pct": 0.41
+    },
+    "Hematologic/ Immune \u00d7 Preventive Care": {
+      "body_system": "Hematologic/ Immune",
+      "blueprint": "Preventive Care",
+      "count": 3,
+      "pct": 0.25
+    },
+    "Integumentary \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Integumentary",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 70,
+      "pct": 5.73
+    },
+    "Integumentary \u00d7 Chronic Care Management": {
+      "body_system": "Integumentary",
+      "blueprint": "Chronic Care Management",
+      "count": 2,
+      "pct": 0.16
+    },
+    "Integumentary \u00d7 Emergent and Urgent Care": {
+      "body_system": "Integumentary",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 5,
+      "pct": 0.41
+    },
+    "Integumentary \u00d7 Preventive Care": {
+      "body_system": "Integumentary",
+      "blueprint": "Preventive Care",
+      "count": 1,
+      "pct": 0.08
+    },
+    "Musculoskeletal \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Musculoskeletal",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 98,
+      "pct": 8.03
+    },
+    "Musculoskeletal \u00d7 Chronic Care Management": {
+      "body_system": "Musculoskeletal",
+      "blueprint": "Chronic Care Management",
+      "count": 17,
+      "pct": 1.39
+    },
+    "Musculoskeletal \u00d7 Emergent and Urgent Care": {
+      "body_system": "Musculoskeletal",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 16,
+      "pct": 1.31
+    },
+    "Musculoskeletal \u00d7 Preventive Care": {
+      "body_system": "Musculoskeletal",
+      "blueprint": "Preventive Care",
+      "count": 8,
+      "pct": 0.66
+    },
+    "Nephrologic \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Nephrologic",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 19,
+      "pct": 1.56
+    },
+    "Nephrologic \u00d7 Chronic Care Management": {
+      "body_system": "Nephrologic",
+      "blueprint": "Chronic Care Management",
+      "count": 11,
+      "pct": 0.9
+    },
+    "Nephrologic \u00d7 Emergent and Urgent Care": {
+      "body_system": "Nephrologic",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 12,
+      "pct": 0.98
+    },
+    "Nephrologic \u00d7 Foundations of Care": {
+      "body_system": "Nephrologic",
+      "blueprint": "Foundations of Care",
+      "count": 3,
+      "pct": 0.25
+    },
+    "Neurologic \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Neurologic",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 27,
+      "pct": 2.21
+    },
+    "Neurologic \u00d7 Chronic Care Management": {
+      "body_system": "Neurologic",
+      "blueprint": "Chronic Care Management",
+      "count": 6,
+      "pct": 0.49
+    },
+    "Neurologic \u00d7 Emergent and Urgent Care": {
+      "body_system": "Neurologic",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 5,
+      "pct": 0.41
+    },
+    "Neurologic \u00d7 Foundations of Care": {
+      "body_system": "Neurologic",
+      "blueprint": "Foundations of Care",
+      "count": 2,
+      "pct": 0.16
+    },
+    "Neurologic \u00d7 Preventive Care": {
+      "body_system": "Neurologic",
+      "blueprint": "Preventive Care",
+      "count": 3,
+      "pct": 0.25
+    },
+    "Nonspecific \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Nonspecific",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 9,
+      "pct": 0.74
+    },
+    "Nonspecific \u00d7 Chronic Care Management": {
+      "body_system": "Nonspecific",
+      "blueprint": "Chronic Care Management",
+      "count": 2,
+      "pct": 0.16
+    },
+    "Nonspecific \u00d7 Emergent and Urgent Care": {
+      "body_system": "Nonspecific",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 8,
+      "pct": 0.66
+    },
+    "Nonspecific \u00d7 Foundations of Care": {
+      "body_system": "Nonspecific",
+      "blueprint": "Foundations of Care",
+      "count": 2,
+      "pct": 0.16
+    },
+    "Nonspecific \u00d7 Preventive Care": {
+      "body_system": "Nonspecific",
+      "blueprint": "Preventive Care",
+      "count": 6,
+      "pct": 0.49
+    },
+    "Patient-Based Systems \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Patient-Based Systems",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 3,
+      "pct": 0.25
+    },
+    "Patient-Based Systems \u00d7 Chronic Care Management": {
+      "body_system": "Patient-Based Systems",
+      "blueprint": "Chronic Care Management",
+      "count": 6,
+      "pct": 0.49
+    },
+    "Patient-Based Systems \u00d7 Emergent and Urgent Care": {
+      "body_system": "Patient-Based Systems",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 3,
+      "pct": 0.25
+    },
+    "Patient-Based Systems \u00d7 Foundations of Care": {
+      "body_system": "Patient-Based Systems",
+      "blueprint": "Foundations of Care",
+      "count": 16,
+      "pct": 1.31
+    },
+    "Patient-Based Systems \u00d7 Preventive Care": {
+      "body_system": "Patient-Based Systems",
+      "blueprint": "Preventive Care",
+      "count": 4,
+      "pct": 0.33
+    },
+    "Population-Based Care \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Population-Based Care",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 17,
+      "pct": 1.39
+    },
+    "Population-Based Care \u00d7 Chronic Care Management": {
+      "body_system": "Population-Based Care",
+      "blueprint": "Chronic Care Management",
+      "count": 10,
+      "pct": 0.82
+    },
+    "Population-Based Care \u00d7 Emergent and Urgent Care": {
+      "body_system": "Population-Based Care",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 3,
+      "pct": 0.25
+    },
+    "Population-Based Care \u00d7 Foundations of Care": {
+      "body_system": "Population-Based Care",
+      "blueprint": "Foundations of Care",
+      "count": 27,
+      "pct": 2.21
+    },
+    "Population-Based Care \u00d7 Preventive Care": {
+      "body_system": "Population-Based Care",
+      "blueprint": "Preventive Care",
+      "count": 40,
+      "pct": 3.28
+    },
+    "Psychiatric/Behavioral \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Psychiatric/Behavioral",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 49,
+      "pct": 4.01
+    },
+    "Psychiatric/Behavioral \u00d7 Chronic Care Management": {
+      "body_system": "Psychiatric/Behavioral",
+      "blueprint": "Chronic Care Management",
+      "count": 25,
+      "pct": 2.05
+    },
+    "Psychiatric/Behavioral \u00d7 Emergent and Urgent Care": {
+      "body_system": "Psychiatric/Behavioral",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 2,
+      "pct": 0.16
+    },
+    "Psychiatric/Behavioral \u00d7 Preventive Care": {
+      "body_system": "Psychiatric/Behavioral",
+      "blueprint": "Preventive Care",
+      "count": 6,
+      "pct": 0.49
+    },
+    "Reproductive: Female \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Reproductive: Female",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 51,
+      "pct": 4.18
+    },
+    "Reproductive: Female \u00d7 Chronic Care Management": {
+      "body_system": "Reproductive: Female",
+      "blueprint": "Chronic Care Management",
+      "count": 9,
+      "pct": 0.74
+    },
+    "Reproductive: Female \u00d7 Emergent and Urgent Care": {
+      "body_system": "Reproductive: Female",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 6,
+      "pct": 0.49
+    },
+    "Reproductive: Female \u00d7 Foundations of Care": {
+      "body_system": "Reproductive: Female",
+      "blueprint": "Foundations of Care",
+      "count": 3,
+      "pct": 0.25
+    },
+    "Reproductive: Female \u00d7 Preventive Care": {
+      "body_system": "Reproductive: Female",
+      "blueprint": "Preventive Care",
+      "count": 15,
+      "pct": 1.23
+    },
+    "Reproductive: Male \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Reproductive: Male",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 14,
+      "pct": 1.15
+    },
+    "Reproductive: Male \u00d7 Chronic Care Management": {
+      "body_system": "Reproductive: Male",
+      "blueprint": "Chronic Care Management",
+      "count": 2,
+      "pct": 0.16
+    },
+    "Reproductive: Male \u00d7 Emergent and Urgent Care": {
+      "body_system": "Reproductive: Male",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 9,
+      "pct": 0.74
+    },
+    "Reproductive: Male \u00d7 Foundations of Care": {
+      "body_system": "Reproductive: Male",
+      "blueprint": "Foundations of Care",
+      "count": 1,
+      "pct": 0.08
+    },
+    "Reproductive: Male \u00d7 Preventive Care": {
+      "body_system": "Reproductive: Male",
+      "blueprint": "Preventive Care",
+      "count": 1,
+      "pct": 0.08
+    },
+    "Respiratory \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Respiratory",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 58,
+      "pct": 4.75
+    },
+    "Respiratory \u00d7 Chronic Care Management": {
+      "body_system": "Respiratory",
+      "blueprint": "Chronic Care Management",
+      "count": 22,
+      "pct": 1.8
+    },
+    "Respiratory \u00d7 Emergent and Urgent Care": {
+      "body_system": "Respiratory",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 30,
+      "pct": 2.46
+    },
+    "Respiratory \u00d7 Foundations of Care": {
+      "body_system": "Respiratory",
+      "blueprint": "Foundations of Care",
+      "count": 4,
+      "pct": 0.33
+    },
+    "Respiratory \u00d7 Preventive Care": {
+      "body_system": "Respiratory",
+      "blueprint": "Preventive Care",
+      "count": 6,
+      "pct": 0.49
+    },
+    "Special Sensory \u00d7 Acute Care and Diagnosis": {
+      "body_system": "Special Sensory",
+      "blueprint": "Acute Care and Diagnosis",
+      "count": 26,
+      "pct": 2.13
+    },
+    "Special Sensory \u00d7 Chronic Care Management": {
+      "body_system": "Special Sensory",
+      "blueprint": "Chronic Care Management",
+      "count": 5,
+      "pct": 0.41
+    },
+    "Special Sensory \u00d7 Emergent and Urgent Care": {
+      "body_system": "Special Sensory",
+      "blueprint": "Emergent and Urgent Care",
+      "count": 2,
+      "pct": 0.16
+    },
+    "Special Sensory \u00d7 Foundations of Care": {
+      "body_system": "Special Sensory",
+      "blueprint": "Foundations of Care",
+      "count": 3,
+      "pct": 0.25
+    },
+    "Special Sensory \u00d7 Preventive Care": {
+      "body_system": "Special Sensory",
+      "blueprint": "Preventive Care",
+      "count": 8,
+      "pct": 0.66
+    }
   }
 }

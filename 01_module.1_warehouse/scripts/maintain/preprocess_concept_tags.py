@@ -61,7 +61,7 @@ except ImportError:
 
 # ── Paths (PROJECT_ROOT pattern) ────────────────────────────────────────────
 SCRIPT_DIR   = Path(__file__).resolve().parent              # 01_module.1_warehouse/scripts/maintain/
-PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent            # 00_#PROJECT_OVERHAUL/
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent            # board_prep_intel/ (3 hops: maintain/ → scripts/ → M1 → root)
 DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR      = PROJECT_ROOT / "00_database" / "logs"
 
@@ -76,6 +76,23 @@ RETRY_WAIT = 5   # seconds between retries
 SYSTEM_PROMPT = """You are a medical education expert specializing in ABFM board exam preparation.
 
 Your task: analyze ITE (In-Training Examination) questions and extract structured clinical concept tags.
+
+Each question is labeled with an ABFM blueprint content area. Use the definitions below to orient
+your tag extraction — they define the clinical frame the question is operating in.
+
+ABFM ITE CONTENT AREAS (official definitions):
+- Acute Care and Diagnosis (35%): Questions from scenarios encountered in normal ambulatory clinic
+  practice where you are asked to provide next steps in diagnosis, provide the correct diagnosis,
+  or provide the initial treatment.
+- Chronic Care Management (25%): Questions from scenarios encountered in normal ambulatory clinic
+  practice or other long-term care settings where you are asked to provide ongoing management of
+  a chronic disease.
+- Emergent and Urgent Care (20%): Questions from hospital, emergency department, urgent care, or
+  ambulatory settings where you are asked patient management decisions needed in a matter of hours.
+- Preventive Care (15%): Questions from any issue encountered in the ambulatory clinic setting
+  where preventive care services are being provided.
+- Foundations of Care (5%): Questions regarding other topics important in the provision of care,
+  including statistics, health policy, legal issues, health equity, and other topics.
 
 For each question you receive, return ONLY a JSON object — no preamble, no explanation, no markdown fences.
 
@@ -104,8 +121,8 @@ def format_question(q: dict) -> str:
     lines = []
     lines.append(
         f"QID: {q['qid']} | {q['exam_year']} | "
-        f"{q.get('body_system_merged') or q.get('body_system') or '?'} / "
-        f"{q.get('subcategory') or '?'}"
+        f"{q.get('body_system_merged') or q.get('body_system') or '?'} | "
+        f"blueprint: {q.get('blueprint') or '?'}"
     )
 
     stem = (q.get("question_text") or "").strip().replace("\n", " ")
@@ -234,7 +251,7 @@ def run(dry_run=False, limit=None, reset=False, year=None):
     # Load pending questions
     if year:
         c.execute("""
-            SELECT qid, exam_year, body_system, body_system_merged, subcategory,
+            SELECT qid, exam_year, body_system, body_system_merged, blueprint,
                    question_text, choices, correct_letter, correct_text, explanation
             FROM questions
             WHERE concept_tags IS NULL
@@ -243,7 +260,7 @@ def run(dry_run=False, limit=None, reset=False, year=None):
         """, (year,))
     else:
         c.execute("""
-            SELECT qid, exam_year, body_system, body_system_merged, subcategory,
+            SELECT qid, exam_year, body_system, body_system_merged, blueprint,
                    question_text, choices, correct_letter, correct_text, explanation
             FROM questions
             WHERE concept_tags IS NULL

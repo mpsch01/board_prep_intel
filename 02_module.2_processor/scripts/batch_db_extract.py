@@ -54,7 +54,7 @@ BASE_DIR  = Path(__file__).resolve().parent.parent.parent   # 00_#PROJECT_OVERHA
 DB_PATH   = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR   = BASE_DIR / "00_database" / "logs"
 JSON_DIR  = BASE_DIR / "extracted_json"                     # override with --dir in practice
-MODEL     = "claude-sonnet-4-20250514"
+MODEL     = "claude-sonnet-4-6"
 MAX_RAW_CHARS = 120_000
 
 # ── Import core logic from db_guided_extractor ───────────────────────────

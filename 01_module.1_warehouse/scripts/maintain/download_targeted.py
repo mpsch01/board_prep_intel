@@ -1,9 +1,9 @@
 # download_targeted.py — one-off script to grab specific failing URLs
-# with domain-specific Referer headers. Downloads to C:\\Users\\mpsch\\Downloads.
+# with domain-specific Referer headers. Downloads to user's Downloads folder.
 import requests, time
 from pathlib import Path
 
-DEST = Path(r'C:\Users\mpsch\Downloads')
+DEST = Path.home() / "Downloads"  # resolves to current user's Downloads folder
 
 # Remaining fixable failures only
 targets = [

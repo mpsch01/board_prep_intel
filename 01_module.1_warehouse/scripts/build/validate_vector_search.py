@@ -125,7 +125,7 @@ def validate(conn, max_k=10, verbose=False):
         else:
             # Track misses for analysis
             q_row = conn.execute(
-                "SELECT body_system, subcategory FROM questions WHERE qid=?", (qid,)
+                "SELECT body_system FROM questions WHERE qid=?", (qid,)
             ).fetchone()
             misses.append({
                 "qid": qid,

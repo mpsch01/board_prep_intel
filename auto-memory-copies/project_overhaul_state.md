@@ -1,5 +1,5 @@
 # project_overhaul_state.md
-Last updated: 2026-04-12 (BATON 054)
+Last updated: 2026-04-13 (BATON 055)
 
 ## Module State
 
@@ -7,7 +7,7 @@ Last updated: 2026-04-12 (BATON 054)
 |--------|--------|----------|
 | M1 Warehouse | Active | 988 ITE/AAFP PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 6 build + 26 maintain scripts |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
-| M3 Analyst | Active | 15 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta |
+| M3 Analyst | Active | 16 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 35 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
 | DB | Stable | 1,985 articles, 1,629 ITE Qs, 1,221 AAFP Qs |
@@ -79,3 +79,9 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
   - New file: abfm_reference_2024.json (ABFM 2024 national benchmarks for PGY 1-4 comparison)
 - **New deferred flag (BATON 049):**
   - DEFERRED-PRACTICE-Q-COVERAGE — Practice question 0-question warnings detected for Foundations/Preventive/Cardiovascular/Respiratory/Sexual-Reproductive/Psychiatric/Behavioral body systems; indicates qid_art_xref tagging coverage gap in some blueprint cells
+- **BATON 055 concept fingerprint overhaul (2026-04-13):**
+  - ite_analyzer_v3.py: Concept fingerprint architecture redesigned; ICD-10 codes now used as hidden enrichment layer for practice question selection (taxonomy-stable precision)
+  - icd10_profile passed to match_practice_questions_v3(); hidden from resident reports (visible only in analyst context)
+  - test_v3_changes.py: 5-test suite added for ite_analyzer_v3.py validation
+  - M3 script count: 15 py → 16 py (+test file)
+  - No DB changes this session
