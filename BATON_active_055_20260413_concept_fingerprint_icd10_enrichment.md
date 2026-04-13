@@ -10,7 +10,7 @@
 |------|-------|
 | **Date** | 2026-04-13 |
 | **Previous BATON** | BATON_active_054_20260412_report_builder_redesign.md |
-| **Git Hash (pre-commit)** | 3116d68 |
+| **Git Hash (pre-commit)** | db2c099 |
 | **Branch** | main |
 | **Primary Goal** | Fix Concept Fingerprint synonym explosion + add ICD-10 hidden enrichment layer for practice question selection |
 | **Status** | ✅ Complete |
@@ -251,7 +251,7 @@ nnn_XXXX ART-ID rename scheme designed in earlier BATON but not implemented. Low
 ## FOR THE REPO (Git Notes)
 
 - **Branch:** main
-- **Latest commit hash (pre-BATON):** 3116d68
+- **Latest commit hash (pre-BATON):** db2c099
 - **Unpushed changes:** ite_analyzer_v3.py, ite_report_builder_v2.js, test_v3_changes.py (new) — ready to commit
 - **Next action:** Mikey to review report output; commit changes once design approved
 
