@@ -369,58 +369,8 @@ if (abfmRef) {
     }),
   ])]));
 
-  examGlanceSection.push(spacer(120));
-
-  // National + program trend table (last 5 years)
-  const trendYears = Object.keys(trend).sort().slice(-6);
-  if (trendYears.length >= 2) {
-    examGlanceSection.push(new Paragraph({ spacing: { before: 60, after: 60 }, children: [
-      new TextRun({ text: "Historical National vs. Program Trend", font: FONT, size: 20, bold: true, color: NAVY }),
-    ]}));
-
-    // Check if this year was harder/easier than last year
-    const thisYearStr = String(data.exam_year);
-    const lastYearStr = String(data.exam_year - 1);
-    const thisNat  = trend[thisYearStr]?.national;
-    const priorNat = trend[lastYearStr]?.national;
-    const natDelta = (thisNat != null && priorNat != null) ? (thisNat - priorNat) : null;
-    const diffNote = natDelta != null
-      ? (natDelta < -10
-          ? `▼ ${data.exam_year} exam was harder nationally (national mean ${natDelta} vs ${lastYearStr}). Scores lower than ${lastYearStr} may still reflect strong performance.`
-          : natDelta > 10
-          ? `▲ ${data.exam_year} exam was easier nationally (national mean +${natDelta} vs ${lastYearStr}).`
-          : `→ ${data.exam_year} exam difficulty similar to ${lastYearStr} (national mean ${natDelta >= 0 ? "+" : ""}${natDelta}).`)
-      : null;
-
-    // Distribute remaining width evenly among year columns, absorbing rounding remainder in last col
-    const labelW = 1800;
-    const remaining = 9360 - labelW;
-    const baseYearW = Math.floor(remaining / trendYears.length);
-    const lastYearW = remaining - baseYearW * (trendYears.length - 1);
-    const tColW = [labelW, ...trendYears.map((_, i) => i === trendYears.length - 1 ? lastYearW : baseYearW)];
-    const tRows = [
-      row([""].concat(trendYears).map((h, i) => headerCell(h, tColW[i]))),
-      row(["National Mean"].concat(trendYears.map((y, i) => {
-        const val = trend[y]?.national;
-        return dataCell(val != null ? String(val) : "—", tColW[i + 1], MGRAY, false);
-      }))),
-      row(["Program Mean"].concat(trendYears.map((y, i) => {
-        const val = trend[y]?.program;
-        return dataCell(val != null ? String(val) : "—", tColW[i + 1], BLUE, true);
-      }))),
-    ];
-    examGlanceSection.push(makeTable(tColW, tRows));
-    examGlanceSection.push(new Paragraph({ spacing: { before: 60, after: 40 }, children: [
-      new TextRun({ text: "National Mean: average scaled score of all FM residents nationwide that year. Program Mean: your program's average (if recorded).", font: FONT, size: 16, color: MGRAY, italics: true }),
-    ]}));
-
-    if (diffNote) {
-      examGlanceSection.push(spacer(40));
-      examGlanceSection.push(new Paragraph({ children: [
-        new TextRun({ text: diffNote, font: FONT, size: 17, color: natDelta < -5 ? AMBER : MGRAY, italics: true }),
-      ]}));
-    }
-  }
+  // Historical National vs. Program Trend table removed — will re-enable when
+  // program trend data is available (DEFERRED-PROGRAM-TREND).
 
   // No page break here — Exam at a Glance is injected after the title page
 } // end Exam at a Glance
@@ -480,10 +430,7 @@ children.push(new Paragraph({ spacing: { before: 80, after: 0 }, alignment: Alig
       margins: { top: 80, bottom: 80, left: 120, right: 120 },
       children: [
         new Paragraph({ alignment: AlignmentType.CENTER, children: [
-          new TextRun({ text: band, font: FONT, size: 24, bold: true, color: bandTextColor }),
-        ]}),
-        new Paragraph({ alignment: AlignmentType.CENTER, children: [
-          new TextRun({ text: fmceText, font: FONT, size: 16, color: bandTextColor }),
+          new TextRun({ text: fmceText || "FMCE prob: —", font: FONT, size: 22, bold: true, color: bandTextColor }),
         ]}),
       ],
     }),
@@ -498,11 +445,10 @@ children.push(new Paragraph({ spacing: { before: 80, after: 0 }, alignment: Alig
   ])]));
 } // end score interpretation band block
 
-// ── Inject Exam at a Glance after title page (Edit 1) ──────────────
+// ── Inject Exam at a Glance — no page breaks, consolidated onto page 1 ──
 if (examGlanceSection.length > 0) {
-  children.push(new Paragraph({ children: [new PageBreak()] }));
+  children.push(spacer(80));
   children.push(...examGlanceSection);
-  children.push(new Paragraph({ children: [new PageBreak()] }));
 }
 
 // ────────────────────────────────────────────────────────────────────
@@ -792,7 +738,7 @@ if (easyMisses.length > 0) {
     emRows.push(row([
       dataCell(m.qid || `Item ${m.item}`, emColW[0], DGRAY, false, AlignmentType.LEFT),
       dataCell(m.score, emColW[1], GREEN, m.score >= 900),
-      dataCell(m.body_system_merged || m.body_system || "\u2014", emColW[2], DGRAY, false, AlignmentType.LEFT),
+      dataCell(m.body_system_merged || m.body_system || m.blueprint || "\u2014", emColW[2], DGRAY, false, AlignmentType.LEFT),
       dataCell(m.blueprint || "\u2014", emColW[3], DGRAY, false, AlignmentType.LEFT),
     ]));
   }
@@ -978,7 +924,9 @@ if (concept) {
   const conceptSections = [
     { label: "Top Diagnoses in Missed Items", data: concept.top_diagnoses || concept.diagnoses || {}, qids: cqMap.diagnoses  || {}, priorSet: priorDx    },
     { label: "Top Drugs in Missed Items",     data: concept.top_drugs     || concept.drugs     || {}, qids: cqMap.drugs      || {}, priorSet: priorDrugs },
-    { label: "Top Guidelines in Missed Items",data: concept.top_guidelines|| concept.guidelines|| {}, qids: cqMap.guidelines || {}, priorSet: priorGuide },
+    // Guidelines table removed — too broad to be actionable; will revisit when
+    // concept_tags guideline entries are better normalized.
+    // { label: "Top Guidelines in Missed Items",data: concept.top_guidelines|| concept.guidelines|| {}, qids: cqMap.guidelines || {}, priorSet: priorGuide },
   ];
 
   for (const sec of conceptSections) {
@@ -1142,7 +1090,7 @@ if (articles.length > 0) {
       : "";
     children.push(new Paragraph({ spacing: { before: 0, after: 60 }, indent: { left: 300 }, children: [
       new TextRun({ text: `Why read this: cited ${a.citation_count}\u00D7 across ${a.unique_years} exam year(s)` +
-        (a.weak_area_links > 0 ? `, links to ${a.weak_area_links} weak area(s)` : "") +
+        (a.weak_area_links > 0 ? `, linked to ${a.weak_area_links} of your missed question${a.weak_area_links !== 1 ? "s" : ""}` : "") +
         `.${currencyNote} High-frequency citation = high probability of appearing on future exams.`,
         font: FONT, size: 18, color: MGRAY }),
     ]}));

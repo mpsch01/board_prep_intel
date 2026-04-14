@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last verified: 2026-04-13 (BATON 055)
+Last verified: 2026-04-14 (BATON 056)
 
 ## DB: ite_intelligence.db
 
@@ -20,6 +20,12 @@ Last verified: 2026-04-13 (BATON 055)
 | article_icd10_vec | 1,757 | Rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 | Rebuilt 2026-04-05 |
 | icd10_vec | 2,219 | text-embedding-3-small (1536d) |
+| question_full_vec | 1,629 | BLOB – full question embedding with blueprint (NEW – BATON 056) |
+| aafp_question_full_vec | 1,221 | BLOB – full AAFP embedding with blueprint+body_system+concept_tags (NEW – BATON 056) |
+| blueprint_label_vec | 5 | BLOB – 5 canonical blueprint category label embeddings (NEW – BATON 056) |
+| bodysystem_label_vec | 5 | BLOB – 5 canonical body system label embeddings (NEW – BATON 056) |
+| question_concepttag_vec | 2,850 | BLOB – concept_tags embedding per question (NEW – BATON 056) |
+| intersection_centroid_vec | 135 | BLOB – 71 ITE + 64 AAFP blueprint×body_system centroids (NEW – BATON 056) |
 
 ## Schema Notes
 - subcategory + topic_label DROPPED from questions (ITE)
@@ -47,3 +53,16 @@ Last verified: 2026-04-13 (BATON 055)
 - No DB modifications this session (2026-04-12)
 - Script development: ite_analyze_v2.py, ite_analyzer_v3.py, ite_report_builder_v2.js refined
 - New reference file: abfm_reference_2024.json (ABFM 2024 national benchmarks)
+
+
+## DB Changes (BATON 056)
+- 6 new modular vector BLOB tables added (2026-04-14):
+  - question_full_vec (1,629 rows) — full question embedding with blueprint
+  - aafp_question_full_vec (1,221 rows) — full AAFP embedding with blueprint+body_system+concept_tags
+  - blueprint_label_vec (5 rows) — 5 canonical blueprint category label embeddings
+  - bodysystem_label_vec (5 rows) — 5 canonical body system label embeddings
+  - question_concepttag_vec (2,850 rows) — concept_tags embedding per question
+  - intersection_centroid_vec (135 rows) — 71 ITE + 64 AAFP blueprint×body_system centroids
+- All new tables populated and verified via build_modular_vectors.py + build_intersection_centroids.py
+- Schema note: BATON 056 — Added 6 modular vector BLOB tables (question_full_vec, aafp_question_full_vec, blueprint_label_vec, bodysystem_label_vec, question_concepttag_vec, intersection_centroid_vec)
+- No row count changes to existing tables; no modifications to article, question, or reference integrity

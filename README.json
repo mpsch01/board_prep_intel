@@ -1,12 +1,12 @@
 {
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,629 questions, 2018\u20132025) linked to a clinical guideline library (1,985 articles, 404 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_055_20260413_concept_fingerprint_icd10_enrichment.md",
-  "baton_description": "Concept Fingerprint overhaul (ITE-only QIDs, synonym normalization) + ICD-10 hidden enrichment layer for practice question scoring",
-  "git_hash": "db2c099",
+  "baton": "BATON_active_056_20260414_resident_reorg_report_fixes_modular_vectors.md",
+  "baton_description": "Resident folder reorg (inputs/outputs), 12 report fixes, modular vector build (6 new tables)",
+  "git_hash": "(pending)",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
-  "last_updated": "2026-04-13",
+  "last_updated": "2026-04-14",
   "database": {
     "file": "00_database/db/ite_intelligence.db",
     "articles": 1985,
@@ -34,7 +34,7 @@
     "ite_exams": 16
   },
   "scripts": {
-    "m1_build": 6,
+    "m1_build": 8,
     "m1_maintain": 26,
     "m2_python": 75,
     "m2_js": 6,

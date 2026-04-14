@@ -1,7 +1,7 @@
 # _index.md â€” Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root â€” Option B complete 2026-04-04)
-**Last Updated:** 2026-04-13 (BATON 055 – Concept Fingerprint ICD-10 enrichment; ite_analyzer_v3.py hidden layer + test suite)
-**Status:** Current – 1,020 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 maintain = 26 scripts; M2 = 75py + 6js; M3 = 16py + 2js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
+**Last Updated:** 2026-04-14 (BATON 056 – resident folder reorg, 12 report fixes, modular vector build)
+**Status:** Current – 1,020 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 build = 8 + maintain = 26; M2 = 75py + 6js; M3 = 16py + 2js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB stable (1,985 articles); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -118,6 +118,12 @@ board_prep_intel/
 | aafp_question_vec | 1,221 | sqlite-vec virtual table |
 | aafp_citations | 1,600 | one parsed citation per row |
 | aafp_citation_raw | 1,600 | full text archive + coordinates |
+| question_full_vec | 1,629 | BLOB – full question embedding with blueprint (NEW – BATON 056) |
+| aafp_question_full_vec | 1,221 | BLOB – full AAFP embedding with blueprint+body_system+concept_tags (NEW – BATON 056) |
+| blueprint_label_vec | 5 | BLOB – 5 canonical blueprint category label embeddings (NEW – BATON 056) |
+| bodysystem_label_vec | 5 | BLOB – 5 canonical body system label embeddings (NEW – BATON 056) |
+| question_concepttag_vec | 2,850 | BLOB – concept_tags embedding per question (NEW – BATON 056) |
+| intersection_centroid_vec | 135 | BLOB – 71 ITE + 64 AAFP blueprint×body_system centroids (NEW – BATON 056) |
 
 ---
 
@@ -149,6 +155,8 @@ board_prep_intel/
 â”‚   â”‚   â”œâ”€â”€ validate_db_v2.py              â† Step 4: post-build QC
 â”‚   â”‚   â”œâ”€â”€ compute_embeddings.py          â† Step 5: vector embeddings (--new-only for incremental)
 â”‚   â”‚   â””â”€â”€ validate_vector_search.py      â† Step 6: post-embedding QC
+		│   ├── build_modular_vectors.py        † Step 7: blueprint/body_system label embeddings + concept_tag embeddings (NEW – BATON 056)
+		│   └── build_intersection_centroids.py  † Step 8: local centroid computation for Tier 1 matching (NEW – BATON 056)
 â”‚   â””â”€â”€ maintain/                          â† operational/recurring (assume DB exists)
 â”‚       â”œâ”€â”€ README.md
 â”‚       â”œâ”€â”€ aafp_cleanup_filenames.py

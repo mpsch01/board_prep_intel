@@ -1,5 +1,5 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-04-13 (BATON 055)
+Last updated: 2026-04-14 (BATON 056)
 
 ## Active Memory Files
 - [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status
@@ -28,6 +28,9 @@ Last updated: 2026-04-13 (BATON 055)
 
 ## Architecture Decisions (BATON 055)
 - [ICD-10 Hidden Enrichment Layer](architecture_icd10_hidden_enrichment.md) — ICD-10 codes used as taxonomy-stable scoring layer in practice question matching; invisible to resident reports; taxonomy-stable precision without concept-tag label variance
+
+## Architecture Decisions (BATON 056)
+- [Modular Vector Architecture](memory/modular_vector_architecture.md) — 5-dimensional embedding scheme (blueprint labels, body system labels, concept tags, full question, intersection centroids) for semantic+structural matching in Tier 1 practice question retrieval; enables learner ICD-10 profile integration and future ablation studies
 
 ## Open Items (BATON 054)
 - **DEFERRED-PROGRAM-TREND** — Multi-resident program-level trends; benchmark against 2024 ABFM national reference

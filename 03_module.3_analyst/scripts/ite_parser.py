@@ -23,6 +23,46 @@ import fitz  # PyMuPDF
 
 
 # ---------------------------------------------------------------------------
+# PDF password helper
+# ---------------------------------------------------------------------------
+
+def _find_pdf_password(pdf_path: str) -> str | None:
+    """
+    Look for a resident password file in the same directory as the PDF.
+    Convention: XY_PDF_PASSWORD.txt  (e.g. AP_PDF_PASSWORD.txt for Adona Pjetergjoka)
+    Returns the password string (whitespace-stripped), or None if no file is found.
+    """
+    pdf_dir = Path(pdf_path).resolve().parent
+    matches = list(pdf_dir.glob("*_PDF_PASSWORD.txt"))
+    if matches:
+        return matches[0].read_text(encoding="utf-8").strip()
+    return None
+
+
+def _open_pdf(pdf_path: str) -> fitz.Document:
+    """
+    Open a PDF with PyMuPDF, automatically applying a resident password if the
+    document is encrypted and a *_PDF_PASSWORD.txt file exists in the same folder.
+    Emits a console warning if the PDF needs a password but none is found, or if
+    authentication fails.
+    """
+    doc = fitz.open(pdf_path)
+    if doc.needs_pass:
+        pw = _find_pdf_password(pdf_path)
+        if pw:
+            if doc.authenticate(pw):
+                print(f"  [OK] Password applied: {Path(pdf_path).name}")
+            else:
+                print(f"  WARNING: Password found but authentication failed for {Path(pdf_path).name}")
+        else:
+            print(
+                f"  WARNING: {Path(pdf_path).name} is password-protected "
+                f"but no *_PDF_PASSWORD.txt found in {Path(pdf_path).resolve().parent.name}/"
+            )
+    return doc
+
+
+# ---------------------------------------------------------------------------
 # Config loader
 # ---------------------------------------------------------------------------
 
@@ -205,7 +245,7 @@ def parse_blueprint(pdf_path: str, config: dict) -> dict:
         - items: [{item, correct, blueprint, score, sub_col_index, x, y, excluded_p}, ...]
         - summary: {total, correct, incorrect, pct}
     """
-    doc = fitz.open(pdf_path)
+    doc = _open_pdf(pdf_path)
     page = doc[0]  # Blueprint is always single-page
 
     color_correct = config["color_signatures"]["correct"]["rgb"]
@@ -279,7 +319,7 @@ def parse_bodysystem(pdf_path: str, config: dict) -> dict:
         - items: [{item, correct, body_system, score, x, y}, ...]
         - systems_found: [str, ...]
     """
-    doc = fitz.open(pdf_path)
+    doc = _open_pdf(pdf_path)
 
     color_correct = config["color_signatures"]["correct"]["rgb"]
     color_incorrect = config["color_signatures"]["incorrect"]["rgb"]
@@ -489,7 +529,7 @@ def parse_score_report(pdf_path: str) -> dict:
 
     Raises ValueError if the PDF is not a recognizable score report.
     """
-    doc = fitz.open(pdf_path)
+    doc = _open_pdf(pdf_path)
 
     if len(doc) < 2:
         raise ValueError(

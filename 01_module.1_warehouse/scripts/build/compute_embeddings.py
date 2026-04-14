@@ -110,6 +110,11 @@ def build_question_text(row: dict) -> str:
     if body:
         parts.append(f"System: {body}")
 
+    # Blueprint category
+    blueprint = (row.get("blueprint") or "").strip()
+    if blueprint:
+        parts.append(f"Blueprint: {blueprint}")
+
     # Concept tags (structured clinical concepts)
     tags_raw = (row.get("concept_tags") or "").strip()
     if tags_raw:
@@ -169,6 +174,24 @@ def create_vec_tables(conn):
             embedding  float[{EMBED_DIM}]
         )
     """)
+    # BLOB parallel tables — accessible without sqlite-vec extension
+    # Used for centroid computation and sandbox environments
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS question_full_vec (
+            qid       TEXT PRIMARY KEY,
+            embedding BLOB NOT NULL,
+            model     TEXT,
+            built_at  TEXT DEFAULT (datetime('now'))
+        )
+    """)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS aafp_question_full_vec (
+            aafp_qid  TEXT PRIMARY KEY,
+            embedding BLOB NOT NULL,
+            model     TEXT,
+            built_at  TEXT DEFAULT (datetime('now'))
+        )
+    """)
     conn.commit()
 
 
@@ -177,7 +200,7 @@ def build_aafp_question_text(row: dict) -> str:
     Build a text representation of an AAFP BRQ question for embedding.
     Joins aafp_questions + aafp_explanations fields.
     Combines stem, correct answer, and explanation into a rich semantic representation.
-    No concept_tags yet — those come in the API enrichment pass later.
+    concept_tags, blueprint, and body_system are all now fully populated (as of 2026-04).
     """
     parts = []
 
@@ -195,6 +218,33 @@ def build_aafp_question_text(row: dict) -> str:
     explanation = (row.get("explanation") or "").strip()
     if explanation:
         parts.append(f"Explanation: {explanation[:800]}")
+
+    # Blueprint category
+    blueprint = (row.get("blueprint") or "").strip()
+    if blueprint:
+        parts.append(f"Blueprint: {blueprint}")
+
+    # Body system
+    body = (row.get("body_system") or "").strip()
+    if body:
+        parts.append(f"System: {body}")
+
+    # Concept tags (now fully populated for AAFP questions)
+    tags_raw = (row.get("concept_tags") or "").strip()
+    if tags_raw:
+        try:
+            tags = json.loads(tags_raw)
+            summary = tags.get("concept_summary", "")
+            if summary:
+                parts.append(f"Concept: {summary}")
+            diagnoses = tags.get("diagnoses", [])
+            if diagnoses:
+                parts.append(f"Diagnoses: {', '.join(diagnoses)}")
+            drugs = tags.get("drugs", [])
+            if drugs:
+                parts.append(f"Drugs: {', '.join(drugs)}")
+        except json.JSONDecodeError:
+            pass
 
     text = " | ".join(parts)
 
@@ -266,7 +316,7 @@ def embed_questions(conn, client, dry_run=False, new_only=False):
     """Compute and store embeddings for all questions (or only new ones)."""
     if new_only:
         questions = conn.execute("""
-            SELECT q.qid, q.question_text, q.correct_text, q.body_system, q.concept_tags
+            SELECT q.qid, q.question_text, q.correct_text, q.body_system, q.concept_tags, q.blueprint
             FROM questions q
             LEFT JOIN question_vec v ON q.qid = v.qid
             WHERE v.qid IS NULL
@@ -275,7 +325,7 @@ def embed_questions(conn, client, dry_run=False, new_only=False):
         print(f"  [new-only mode] {len(questions)} questions without embeddings")
     else:
         questions = conn.execute("""
-            SELECT qid, question_text, correct_text, body_system, concept_tags
+            SELECT qid, question_text, correct_text, body_system, concept_tags, blueprint
             FROM questions
             ORDER BY qid
         """).fetchall()
@@ -309,6 +359,10 @@ def embed_questions(conn, client, dry_run=False, new_only=False):
                 "INSERT OR REPLACE INTO question_vec(qid, embedding) VALUES (?, ?)",
                 (qid, blob)
             )
+            conn.execute(
+                "INSERT OR REPLACE INTO question_full_vec(qid, embedding, model) VALUES (?, ?, ?)",
+                (qid, blob, EMBED_MODEL)
+            )
 
         embedded += len(batch)
         print(f"  Batch {i//BATCH_SIZE + 1}: embedded {len(batch)} questions "
@@ -322,7 +376,8 @@ def embed_aafp_questions(conn, client, dry_run=False, new_only=False):
     """Compute and store embeddings for AAFP BRQ questions (or only new ones)."""
     if new_only:
         questions = conn.execute("""
-            SELECT q.aafp_qid, q.stem, q.correct_text, q.explanation
+            SELECT q.aafp_qid, q.stem, q.correct_text, q.explanation,
+                   q.blueprint, q.body_system, q.concept_tags
             FROM aafp_questions q
             LEFT JOIN aafp_question_vec v ON q.aafp_qid = v.aafp_qid
             WHERE v.aafp_qid IS NULL
@@ -331,7 +386,8 @@ def embed_aafp_questions(conn, client, dry_run=False, new_only=False):
         print(f"  [new-only mode] {len(questions)} AAFP questions without embeddings")
     else:
         questions = conn.execute("""
-            SELECT aafp_qid, stem, correct_text, explanation
+            SELECT aafp_qid, stem, correct_text, explanation,
+                   blueprint, body_system, concept_tags
             FROM aafp_questions
             ORDER BY aafp_qid
         """).fetchall()
@@ -364,6 +420,10 @@ def embed_aafp_questions(conn, client, dry_run=False, new_only=False):
             conn.execute(
                 "INSERT OR REPLACE INTO aafp_question_vec(aafp_qid, embedding) VALUES (?, ?)",
                 (aafp_qid, blob)
+            )
+            conn.execute(
+                "INSERT OR REPLACE INTO aafp_question_full_vec(aafp_qid, embedding, model) VALUES (?, ?, ?)",
+                (aafp_qid, blob, EMBED_MODEL)
             )
 
         embedded += len(batch)
@@ -442,6 +502,8 @@ def main():
     parser.add_argument("--articles-only",  action="store_true", help="Only embed articles")
     parser.add_argument("--questions-only", action="store_true", help="Only embed ITE questions")
     parser.add_argument("--aafp-only",      action="store_true", help="Only embed AAFP BRQ questions")
+    parser.add_argument("--rebuild", action="store_true",
+                        help="Force re-embed all items, replacing existing vectors (use with --questions-only or --aafp-only)")
     parser.add_argument("--db", type=str, default=str(DB_PATH), help="Path to SQLite DB")
     args = parser.parse_args()
 
@@ -468,6 +530,18 @@ def main():
 
     # Create virtual tables
     create_vec_tables(conn)
+
+    # --rebuild: wipe existing vectors so INSERT OR REPLACE re-embeds everything
+    if args.rebuild:
+        if not args.articles_only and not args.aafp_only:
+            conn.execute("DELETE FROM question_vec")
+            conn.execute("DELETE FROM question_full_vec")
+            print("  [rebuild] Cleared question_vec + question_full_vec")
+        if not args.articles_only and not args.questions_only:
+            conn.execute("DELETE FROM aafp_question_vec")
+            conn.execute("DELETE FROM aafp_question_full_vec")
+            print("  [rebuild] Cleared aafp_question_vec + aafp_question_full_vec")
+        conn.commit()
 
     # Initialize OpenAI client
     client = None

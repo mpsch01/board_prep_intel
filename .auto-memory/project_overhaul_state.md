@@ -1,11 +1,11 @@
 # project_overhaul_state.md
-Last updated: 2026-04-13 (BATON 055)
+Last updated: 2026-04-14 (BATON 056)
 
 ## Module State
 
 | Module | Status | Key Info |
 |--------|--------|----------|
-| M1 Warehouse | Active | 988 ITE/AAFP PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 6 build + 26 maintain scripts |
+| M1 Warehouse | Active | 988 ITE/AAFP PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 26 maintain scripts |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
 | M3 Analyst | Active | 16 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
@@ -31,6 +31,22 @@ Last updated: 2026-04-13 (BATON 055)
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 
+## Session Notes (BATON 056)
+
+**2026-04-14 – Resident Reorg & Modular Vector Build**
+- **Resident data reorganization:** inputs/outputs folder structure created for all 4 residents; stale docs moved to delete_me/
+- **ite_parser.py enhancements:** password support added (_find_pdf_password + _open_pdf methods)
+- **ite_analyzer_v3.py fixes (12 total):** reading list personalization refinements, KNOWN_DRUGS constant added, prednisone synonym mapping
+- **ite_report_builder_v2.js fixes (6 total):** trend table removed, zone label removed, guidelines table removed
+- **compute_embeddings.py updates:** text builders updated (blueprint added to ITE, blueprint+body_system+concept_tags to AAFP), --rebuild flag added, BLOB parallel tables introduced
+- **New M1 build scripts:** 
+  - build_modular_vectors.py — blueprint/body_system label embeddings + concept_tag embeddings
+  - build_intersection_centroids.py — local centroid computation for Tier 1 matching
+- **New DB tables (6 total):** question_full_vec, aafp_question_full_vec, blueprint_label_vec, bodysystem_label_vec, question_concepttag_vec, intersection_centroid_vec
+- **All 6 new vector tables populated and verified**
+- M1 build script count: 6 → 8 (+2 new)
+
+
 ## Deferred Flags
 
 | Flag | Status | Description |
@@ -38,6 +54,9 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 | DEFERRED-YOY-ROBUSTNESS | ACTIVE | Year-over-year section 3b needs more robust implementation; month-by-month trend aggregation logic (BATON 050) |
 | DEFERRED-PROGRAM-TREND | NEW | Require program-level trend analysis across multiple residents; benchmark against 2024 ABFM national reference (abfm_reference_2024.json) |
 | DEFERRED-RESIDENT-FOLDER-MIGRATION | NEW | Investigate resident_data/ folder state and migration strategy to M5 platform |
+| DEFERRED-VECTOR-TIER1-REWRITE | NEW | Wire modular vectors (5D scheme) into Tier 1 matching pipeline; replace keyword-based retrieval with semantic+structural matching |
+| DEFERRED-PRACTICE-Q-TWO-TABLE | NEW | Split practice_questions schema into ITE body system + Non-ITE; separate learner model training for each body system |
+| DEFERRED-SCHOLL-OLD-FORMAT | NEW | Scholl 2022/2023 use old ABFM taxonomy (no canonical mapping); requires manual Psychogenic→Psychiatric/Behavioral remapping |
 | DEFERRED-A | ARCHIVED | 37 ITE manual PDFs — permanent ceiling (subscription-only) |
 | DEFERRED-AAFP-PAYWALL | ACTIVE | 3 AAFP articles paywalled (PMC not_oa): ART-1959 Binic_2011, ART-1972 Byington_2012, ART-1967 Verbalis_2007 |
 | DEFERRED-PRACTICE-Q-COVERAGE | ✅ CLOSED | Practice question 0-question warnings for some body systems (Foundations, Preventive, Cardiovascular, Respiratory, Sexual-Reproductive, Psychiatric, Behavioral) — qid_art_xref tagging coverage gap (BATON 050) |

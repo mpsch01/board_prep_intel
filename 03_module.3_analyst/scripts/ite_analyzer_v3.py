@@ -145,6 +145,17 @@ CONCEPT_SYNONYMS: dict = {
     "dyslipidemia":                          "Dyslipidemia",
     "hyperlipidemia":                        "Dyslipidemia",
     "hypercholesterolemia":                  "Dyslipidemia",
+    # Corticosteroids — prednisone, dexamethasone, methylprednisolone etc.
+    "prednisone":                            "Corticosteroids",
+    "prednisolone":                          "Corticosteroids",
+    "methylprednisolone":                    "Corticosteroids",
+    "dexamethasone":                         "Corticosteroids",
+    "budesonide":                            "Corticosteroids",
+    "fluticasone":                           "Corticosteroids",
+    "corticosteroid":                        "Corticosteroids",
+    "corticosteroids":                       "Corticosteroids",
+    "oral corticosteroids":                  "Corticosteroids",
+    "systemic corticosteroids":              "Corticosteroids",
     # -- Guidelines noise --
     # AAFP variants (Claude frequently generates these as "guidelines")
     "aafp":                                  "AAFP",
@@ -182,6 +193,27 @@ def _normalize_concept(name: str) -> str:
     # No synonym hit — capitalize first letter only (preserves acronyms like HIV, IBS-D)
     # so "prediabetes" and "Prediabetes" land on the same key, while "HIV" stays "HIV".
     return stripped[0].upper() + stripped[1:] if stripped else stripped
+
+
+# Drug names that may appear in concept_tag "diagnoses" arrays due to tagging
+# errors. Any normalized concept key found in this set is reclassified into the
+# drugs counter at aggregation time.
+KNOWN_DRUGS: set = {
+    "metformin", "nsaids", "nsaid", "lisinopril", "corticosteroids",
+    "aspirin", "statins", "atorvastatin", "rosuvastatin", "simvastatin",
+    "beta blockers", "beta-blockers", "ace inhibitors", "ace inhibitor",
+    "angiotensin", "losartan", "amlodipine", "levothyroxine",
+    "insulin", "glp-1", "glp1", "sglt2", "sglt-2",
+    "warfarin", "apixaban", "rivaroxaban", "clopidogrel",
+    "omeprazole", "pantoprazole", "ppis", "ppi",
+    "albuterol", "fluticasone",
+    "ssri", "ssris", "snri", "snris", "sertraline", "fluoxetine", "escitalopram",
+    "antibiotics", "amoxicillin", "azithromycin", "doxycycline",
+    "ibuprofen", "naproxen",
+    "opioids", "opioid", "naloxone", "buprenorphine",
+    "benzodiazepines", "lorazepam", "diazepam",
+    "colchicine", "allopurinol", "febuxostat",
+}
 
 
 # Blueprint name mappings (PDF label ↔ DB label)
@@ -426,9 +458,12 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
     missed_items  = [i for i in items if not i["correct"]]
     missed_qids   = [qid_map[i["item"]] for i in missed_items if i["item"] in qid_map]
 
-    diagnoses  = Counter()
+    diagnoses  = Counter()  # combined (Source 1 + Source 2) — used for fingerprint scoring
     drugs      = Counter()
     guidelines = Counter()
+    ite_diagnoses  = Counter()  # Source 1 ITE-only — used for display tables
+    ite_drugs      = Counter()
+    ite_guidelines = Counter()
     items_matched = 0
     aafp_items_matched = 0
 
@@ -458,17 +493,27 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
                         tags = json.loads(raw)
                         for d in tags.get("diagnoses", []):
                             norm = _normalize_concept(d)
-                            diagnoses[norm] += 1
-                            if len(ite_dx_qids[norm]) < 10:
-                                ite_dx_qids[norm].append(qid)
+                            # Reclassify mistagged drugs into the drugs counter
+                            if norm.lower() in KNOWN_DRUGS:
+                                drugs[norm] += 1
+                                ite_drugs[norm] += 1
+                                if len(ite_drug_qids[norm]) < 10:
+                                    ite_drug_qids[norm].append(qid)
+                            else:
+                                diagnoses[norm] += 1
+                                ite_diagnoses[norm] += 1
+                                if len(ite_dx_qids[norm]) < 10:
+                                    ite_dx_qids[norm].append(qid)
                         for d in tags.get("drugs", []):
                             norm = _normalize_concept(d)
                             drugs[norm] += 1
+                            ite_drugs[norm] += 1
                             if len(ite_drug_qids[norm]) < 10:
                                 ite_drug_qids[norm].append(qid)
                         for g in tags.get("guidelines", []):
                             norm = _normalize_concept(g)
                             guidelines[norm] += 1
+                            ite_guidelines[norm] += 1
                             if len(ite_guide_qids[norm]) < 10:
                                 ite_guide_qids[norm].append(qid)
                         items_matched += 1
@@ -512,7 +557,12 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
                         tags = json.loads(raw)
                         # Count only — no QID tracking for Source 2
                         for d in tags.get("diagnoses", []):
-                            diagnoses[_normalize_concept(d)] += 1
+                            norm = _normalize_concept(d)
+                            # Reclassify mistagged drugs
+                            if norm.lower() in KNOWN_DRUGS:
+                                drugs[norm] += 1
+                            else:
+                                diagnoses[norm] += 1
                         for d in tags.get("drugs", []):
                             drugs[_normalize_concept(d)] += 1
                         for g in tags.get("guidelines", []):
@@ -528,9 +578,15 @@ def concept_clustering(items: list, qid_map: dict, db_path: str) -> dict:
     recurring_drugs      = {k: v for k, v in drugs.items()      if v >= 4}
 
     return {
-        "top_diagnoses":     dict(diagnoses.most_common(15)),
-        "top_drugs":         dict(drugs.most_common(15)),
-        "top_guidelines":    dict(guidelines.most_common(10)),
+        # ITE-only counts (Source 1 only) — used for display tables so frequencies
+        # reflect actual questions this resident missed, not AAFP enrichment noise.
+        "top_diagnoses":     dict(ite_diagnoses.most_common(15)),
+        "top_drugs":         dict(ite_drugs.most_common(15)),
+        "top_guidelines":    dict(ite_guidelines.most_common(10)),
+        # Combined counts (Source 1 + Source 2 AAFP enrichment) — used internally
+        # by match_practice_questions_v3 for fingerprint-weighted scoring.
+        "top_diagnoses_combined": dict(diagnoses.most_common(15)),
+        "top_drugs_combined":     dict(drugs.most_common(15)),
         "recurring_diagnoses": dict(sorted(recurring_diagnoses.items(), key=lambda x: x[1], reverse=True)),
         "recurring_drugs":   dict(sorted(recurring_drugs.items(), key=lambda x: x[1], reverse=True)),
         # QID maps — ITE missed questions only; drives fingerprint reference column
@@ -847,6 +903,7 @@ def icd10_weakness_map(items: list, qid_map: dict, db_path: str) -> dict:
         "icd10_clusters": [
             {"code": code, "miss_count": count, **code_details.get(code, {})}
             for code, count in icd10_counts.most_common(20)
+            if count >= 2  # suppress single-miss noise
         ],
         "chapter_summary":   dict(chapter_counts.most_common()),
         "total_codes_found": len(icd10_counts),
@@ -1703,8 +1760,10 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
     # instead of "Concept: Hypertension".  Deduplication in the loop below ensures
     # higher-scoring labels win — the global pool handles the rest.
     if concepts:
-        top_dx    = dict(list((concepts.get("top_diagnoses") or {}).items())[:8])
-        top_drugs = dict(list((concepts.get("top_drugs")     or {}).items())[:5])
+        # Use combined counts (ITE + AAFP enrichment) for scoring so AAFP context
+        # broadens concept coverage; ITE-only counts are used for display only.
+        top_dx    = dict(list((concepts.get("top_diagnoses_combined") or concepts.get("top_diagnoses") or {}).items())[:8])
+        top_drugs = dict(list((concepts.get("top_drugs_combined")     or concepts.get("top_drugs")     or {}).items())[:5])
         concept_pool = {**top_dx, **top_drugs}   # merged dict, diagnoses take precedence
         if concept_pool:
             concept_cands = _concept_selection(db, concept_pool, set())   # no exclusion
@@ -1714,15 +1773,12 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
                     all_candidates[qid] = cand
                 selected_qids.add(qid)
 
-    # Fingerprint frequency-weighted bonus — replaces the old concept-tag overlap bonus.
-    # Questions whose concept_tags match the resident's top missed concepts receive a
-    # bonus proportional to how often that concept appeared in their missed answers.
-    # Hypertension missed 33× → +3.3 bonus; T2DM missed 28× → +2.8 bonus.
-    # This ensures commonly-missed conditions score competitively against niche topics
-    # that happen to have many linked guideline articles (the old linked_articles bias).
+    # Fingerprint frequency-weighted bonus — uses combined counts for scoring weight.
+    # Combined counts include AAFP enrichment which broadens signal strength.
+    # Display tables use ITE-only counts so displayed frequencies are honest.
     if concepts:
-        _fp_top_dx    = dict(list((concepts.get("top_diagnoses") or {}).items())[:10])
-        _fp_top_drugs = dict(list((concepts.get("top_drugs")     or {}).items())[:5])
+        _fp_top_dx    = dict(list((concepts.get("top_diagnoses_combined") or concepts.get("top_diagnoses") or {}).items())[:10])
+        _fp_top_drugs = dict(list((concepts.get("top_drugs_combined")     or concepts.get("top_drugs")     or {}).items())[:5])
         _fp_map = {_normalize_concept(k).lower(): v
                    for k, v in {**_fp_top_dx, **_fp_top_drugs}.items()}
         _fp_set = set(_fp_map.keys())
@@ -1913,56 +1969,90 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
 # Top Articles (updated: includes AAFP xref links)
 # ---------------------------------------------------------------------------
 
-def match_top_articles(perf: dict, db_path: str, count: int = 5) -> list:
-    """Highest-citation articles linked to weak dimensions. Both banks."""
+def match_top_articles(perf: dict, db_path: str, count: int = 5,
+                        items: list = None, qid_map: dict = None) -> list:
+    """
+    Articles most linked to THIS RESIDENT's missed questions.
+
+    Personalization: counts only the questions this specific resident got wrong,
+    not all questions in weak categories. This ensures the reading list reflects
+    the resident's actual gaps rather than a popularity ranking of all articles.
+    """
     if not db_path:
         return []
 
-    weak_systems    = [name for name, p in perf.get("body_system", {}).items() if p["rate"] < 0.70]
-    weak_blueprints = [BLUEPRINT_PDF_TO_DB.get(name, name)
-                       for name, p in perf.get("blueprint", {}).items() if p["rate"] < 0.70]
-
-    db_system_names = []
-    for ws in weak_systems:
-        db_system_names.extend(BODYSYSTEM_PDF_TO_DB.get(ws, [ws]))
-
-    params    = []
-    clauses   = []
-    if db_system_names:
-        bs_ph = ",".join(["?"] * len(db_system_names))
-        clauses.append(f"(q.body_system_merged IN ({bs_ph}) OR q.body_system IN ({bs_ph}))")
-        params.extend(db_system_names * 2)
-    if weak_blueprints:
-        bp_ph = ",".join(["?"] * len(weak_blueprints))
-        clauses.append(f"q.blueprint IN ({bp_ph})")
-        params.extend(weak_blueprints)
-
-    where = " OR ".join(clauses) if clauses else "1=1"
+    # Build the set of QIDs this resident actually missed
+    missed_qids: list = []
+    if items and qid_map:
+        missed_qids = [
+            qid_map[i["item"]]
+            for i in items
+            if not i.get("correct") and i["item"] in qid_map
+        ]
 
     db = sqlite3.connect(db_path)
     db.row_factory = sqlite3.Row
 
-    # ITE-linked articles — includes article_currency status for reading list badges
-    sql = f"""
-        SELECT a.article_id, a.title, a.author1, a.year, a.source_type,
-               a.citation_count, a.unique_years, a.exam_years, a.clean_ref,
-               COUNT(DISTINCT q.qid) AS weak_area_links,
-               COALESCE(ac.currency_status, 'unknown') AS currency_status
-        FROM articles a
-        JOIN qid_art_xref qa ON a.article_id = qa.article_id
-        JOIN questions q     ON qa.qid = q.qid
-        LEFT JOIN article_currency ac ON a.article_id = ac.article_id
-        WHERE ({where})
-          AND a.source_type != 'stub'
-          AND a.article_id  != 'ART-0001'
-          AND a.citation_count >= 2
-        GROUP BY a.article_id
-        ORDER BY a.citation_count DESC, weak_area_links DESC
-        LIMIT ?
-    """
-    rows = db.execute(sql, params + [count]).fetchall()
-    db.close()
+    if missed_qids:
+        # Personalized path: count links to THIS resident's missed questions only
+        ph = ",".join(["?"] * len(missed_qids))
+        sql = f"""
+            SELECT a.article_id, a.title, a.author1, a.year, a.source_type,
+                   a.citation_count, a.unique_years, a.exam_years, a.clean_ref,
+                   COUNT(DISTINCT qa.qid) AS weak_area_links,
+                   COALESCE(ac.currency_status, 'unknown') AS currency_status
+            FROM articles a
+            JOIN qid_art_xref qa ON a.article_id = qa.article_id
+            LEFT JOIN article_currency ac ON a.article_id = ac.article_id
+            WHERE qa.qid IN ({ph})
+              AND a.source_type != 'stub'
+              AND a.article_id  != 'ART-0001'
+              AND a.citation_count >= 2
+            GROUP BY a.article_id
+            ORDER BY weak_area_links DESC, a.citation_count DESC
+            LIMIT ?
+        """
+        rows = db.execute(sql, missed_qids + [count]).fetchall()
+    else:
+        # Fallback: weak-area categories (no personalization, used when items unavailable)
+        weak_systems    = [name for name, p in perf.get("body_system", {}).items() if p["rate"] < 0.70]
+        weak_blueprints = [BLUEPRINT_PDF_TO_DB.get(name, name)
+                           for name, p in perf.get("blueprint", {}).items() if p["rate"] < 0.70]
+        db_system_names = []
+        for ws in weak_systems:
+            db_system_names.extend(BODYSYSTEM_PDF_TO_DB.get(ws, [ws]))
 
+        params, clauses = [], []
+        if db_system_names:
+            bs_ph = ",".join(["?"] * len(db_system_names))
+            clauses.append(f"(q.body_system_merged IN ({bs_ph}) OR q.body_system IN ({bs_ph}))")
+            params.extend(db_system_names * 2)
+        if weak_blueprints:
+            bp_ph = ",".join(["?"] * len(weak_blueprints))
+            clauses.append(f"q.blueprint IN ({bp_ph})")
+            params.extend(weak_blueprints)
+        where = " OR ".join(clauses) if clauses else "1=1"
+
+        sql = f"""
+            SELECT a.article_id, a.title, a.author1, a.year, a.source_type,
+                   a.citation_count, a.unique_years, a.exam_years, a.clean_ref,
+                   COUNT(DISTINCT q.qid) AS weak_area_links,
+                   COALESCE(ac.currency_status, 'unknown') AS currency_status
+            FROM articles a
+            JOIN qid_art_xref qa ON a.article_id = qa.article_id
+            JOIN questions q     ON qa.qid = q.qid
+            LEFT JOIN article_currency ac ON a.article_id = ac.article_id
+            WHERE ({where})
+              AND a.source_type != 'stub'
+              AND a.article_id  != 'ART-0001'
+              AND a.citation_count >= 2
+            GROUP BY a.article_id
+            ORDER BY weak_area_links DESC, a.citation_count DESC
+            LIMIT ?
+        """
+        rows = db.execute(sql, params + [count]).fetchall()
+
+    db.close()
     return [dict(r) for r in rows]
 
 
@@ -1972,7 +2062,7 @@ def match_top_articles(perf: dict, db_path: str, count: int = 5) -> list:
 
 SCORE_BANDS = [
     {"min": 480,  "label": "Strong",          "color": "green",  "fmce_prob": ">95%"},
-    {"min": 420,  "label": "On Track",         "color": "blue",   "fmce_prob": ">85%"},
+    {"min": 440,  "label": "On Track",         "color": "blue",   "fmce_prob": ">85%"},
     {"min": 380,  "label": "Monitoring Zone",  "color": "amber",  "fmce_prob": "50–85%"},
     {"min":   0,  "label": "Below MPS",        "color": "red",    "fmce_prob": "<50%"},
 ]
@@ -2250,7 +2340,7 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
             except (json.JSONDecodeError, TypeError, AttributeError):
                 pass
 
-    top_articles = match_top_articles(perf, db_path)
+    top_articles = match_top_articles(perf, db_path, count=15, items=items, qid_map=qid_map)
 
     # --- Missed item reference (for report appendix) ---
     missed_detail = fetch_missed_items_detail(items, qid_map, db_path)
