@@ -1,14 +1,14 @@
 # project_current_db_state.md
-Last verified: 2026-04-15 (BATON 057)
+Last verified: 2026-04-15 (BATON 058)
 
 ## DB: ite_intelligence.db
 
 | Table | Rows | Notes |
 |-------|------|-------|
-| articles | 1,985 | +49 AAFP in BATON 042 |
+| articles | 1,998 | +13 new (ART-1987–ART-1999) from BATON 058 QC rebuild; +49 AAFP in BATON 042 |
 | questions (ITE) | 1,629 | 2018–2025, blueprint 100% |
 | aafp_questions | 1,221 | BRQ, blueprint 100% |
-| qid_art_xref | 2,470 | All 8 years (2018–2025) |
+| qid_art_xref | 2,485 | All 8 years (2018–2025); rebuilt from critique ground truth in BATON 058 |
 | aafp_qid_art_xref | 864 | 643 unique Qs linked |
 | article_icd10 | 4,020 | Rebuilt 2026-04-05 with vec |
 | question_icd10 | 5,218 | 92.8% ITE coverage — cleaned -66 no_match rows |
@@ -54,6 +54,12 @@ Last verified: 2026-04-15 (BATON 057)
 - Script development: ite_analyze_v2.py, ite_analyzer_v3.py, ite_report_builder_v2.js refined
 - New reference file: abfm_reference_2024.json (ABFM 2024 national benchmarks)
 
+
+## DB Changes (BATON 058)
+- articles: 1,985 → 1,998 (+13 new: ART-1987–ART-1999 from critique QC rebuild)
+- qid_art_xref: 2,470 → 2,485 (rebuilt from 2018–2025 ITE critique ground truth; replaces parser-inferred xrefs with direct PDF citations)
+- No schema changes; no modifications to other tables
+- Scripts added: generate_citation_sql.py, pdf_lookup_patch.py, add_missing_articles.py (M3)
 
 ## DB Changes (BATON 056)
 - 6 new modular vector BLOB tables added (2026-04-14):

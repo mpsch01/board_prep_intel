@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-04-12 (BATON 054 — Git hash: 8e4fbbf) — Report builder redesign; YoY pipeline fixes
+**Last Updated:** 2026-04-15 (BATON 058 — Git hash: c9dc2ec) — Citation QC rebuild; article additions (ART-1987–ART-1999)
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -12,7 +12,7 @@ board_prep_intel/
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
 ├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_054_*.md              Active session handoff — read first every session
+├── BATON_active_058_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
@@ -36,7 +36,7 @@ board_prep_intel/
 │   │   │   ├── local_lite/            117 PDFs: VC_fail + fully enriched (gitignored)
 │   │   │   ├── right_click/           58 PDFs: VC_pass + fully enriched — priority tier (gitignored)
 │   │   │   └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored) — ite_total: 988
-│   │   └── AAFP/                      15 PDFs: AAFP citation library (gitignored)
+│   │   └── AAFP/                      15 PDFs: AAFP citation library (gitignored) — ite_total: 988 (VC_fail:630, VC_pass:168, local_lite:117, right_click:58)
 │   ├── ite_exams/                     16 raw ITE exam PDFs: YYYY_MC.pdf + YYYY_critique.pdf (gitignored)
 │   └── scripts/
 │       ├── aafp_brq_scraper.py        AAFP BRQ scraper (Windows-only)
@@ -51,7 +51,7 @@ board_prep_intel/
 │   ├── core/                          ingestion.py, routing.py, screening.py
 │   ├── engines/                       acute, chronic, diagnostic, preventive, rct engines + base
 │   ├── utils/                         Shared utility modules
-│   ├── scripts/                       75 py + 6 JS + 1 JSON config; all enrichment/build scripts
+│   ├── scripts/                       75 py + 6 JS + 1 JSON config; all enrichment/build scripts; extract_ite_critique_refs.py MODIFIED (parse_legacy, fallback_citation_scan)
 │   ├── source/
 │   │   └── aafp_video_course_transcripts/   VTT transcripts for VC pipeline
 │   ├── outputs/                       Staging JSONs + citation gap list (gitignored)
@@ -59,7 +59,8 @@ board_prep_intel/
 │       └── candidates/                Prompt templates for enrichment
 │
 ├── 03_module.3_analyst/               M3 — Score analysis, ICD-10, pathways, Q&A deliverables
-│   ├── scripts/                       15 py + 2 JS + 3 JSON config; ite_parser, ite_analyzer_v3, build_article_currency, report builders
+│   ├── scripts/                       20 py + 2 JS + 6 JSON config; ite_parser, ite_analyzer_v3, build_article_currency, report builders; NEW: generate_citation_sql.py, pdf_lookup_patch.py, add_missing_articles.py
+│   ├── outputs/                       article_qc/ — citation QC audit results and rebuild statistics
 │   ├── docs/                          ITE score analysis pipeline docs
 │   └── reports/                       Per-resident DOCX reports + faculty PPTX (gitignored)
 │
@@ -116,6 +117,8 @@ board_prep_intel/
 │   ├── ITE_Intelligence_2.0_Architecture.md   Intelligence 2.0 design doc
 │   ├── data_exams/                    ITE_YYYY_raw.csv source files (2020–2025)
 │   └── [supporting CSVs + JSONs]      Body system map, keyword library, poll inserts, etc.
+│
+├── article-citation-qc.skill          Installable skill — QC audit of articles table against ITE critique PDFs (2018–2025)
 │
 └── skills_abilities/                  Agent skills, SDK references, Apify actor
     ├── agents/                        PDF sourcer agent + docs/logs

@@ -60,6 +60,68 @@ OUT_DIR      = SCRIPT_DIR.parent / "outputs"
 FUZZY_THRESHOLD = 0.80   # min score for a fuzzy match to count
 MIN_REF_LEN     = 20     # ignore citation fragments shorter than this
 
+
+# ── Fallback citation scanner ──────────────────────────────────────────────────
+# When the primary parser finds no reference section for a question block,
+# this function does a secondary sweep of the raw block text looking for
+# citation-like patterns. It is intentionally broad — better to flag a
+# possible citation for manual review than to silently drop it.
+
+# Signals that a line is likely part of a medical citation
+_JOURNAL_YEAR   = re.compile(r'\b(19|20)\d{2};?\d*[\(\[]?\d*[\)\]]?:')  # year;vol or year;vol(issue):
+_YEAR_AT_END    = re.compile(r'\b(19|20)\d{2}\.?\s*$')                   # ends with a year
+_KNOWN_JOURNALS = re.compile(
+    r'\b(Am Fam Physician|N Engl J Med|JAMA|Lancet|Ann Intern Med|'
+    r'BMJ|Pediatrics|Circulation|Chest|J Clin|Cochrane|Obstet Gynecol|'
+    r'J Am|Clin|Med|Health|Fam Pract|Acad Emerg|Emerg Med)\b',
+    re.IGNORECASE
+)
+_USPSTF_SIGNAL  = re.compile(r'preventive services task force|uspstf|recommendation statement', re.IGNORECASE)
+_AUTHOR_PATTERN = re.compile(r'^[A-Z][a-z]+(?: [A-Z][A-Za-z]*,?)+')     # "Smith AB," style opener
+
+
+def fallback_citation_scan(block_text: str, qid: str) -> list[str]:
+    """
+    Secondary sweep for citation text when the primary parser found no reference section.
+    Looks for lines that exhibit citation hallmarks: journal+year patterns, USPSTF signals,
+    or known journal name substrings. Returns a list of candidate citation strings.
+
+    These are logged with match_status='fallback_scan' so they can be reviewed manually
+    rather than being automatically trusted.
+    """
+    lines     = [l.strip() for l in block_text.split('\n') if l.strip()]
+    found     = []
+    buffer    = []
+
+    def flush():
+        if buffer:
+            candidate = ' '.join(buffer).strip()
+            if len(candidate) >= MIN_REF_LEN:
+                found.append(candidate)
+            buffer.clear()
+
+    for line in lines:
+        is_citation_line = (
+            _JOURNAL_YEAR.search(line) or
+            _YEAR_AT_END.search(line) or
+            _KNOWN_JOURNALS.search(line) or
+            _USPSTF_SIGNAL.search(line)
+        )
+        is_new_block = re.match(r'^Item\s+\d+', line) or re.match(r'^ANSWER:', line)
+
+        if is_new_block:
+            flush()
+        elif is_citation_line:
+            buffer.append(line)
+        elif buffer and line:
+            # Possible continuation of a wrapped citation
+            buffer.append(line)
+        else:
+            flush()
+
+    flush()
+    return found
+
 # ── Dispatcher ─────────────────────────────────────────────────────────────────
 # Add year-specific parser overrides here if ABFM changes their format.
 # Key = int year, value = callable(pdf_path, year) -> list[dict]
@@ -171,7 +233,16 @@ def parse_modern(pdf_path: Path, year: int) -> list[dict]:
                     break
 
             if ref_start_idx is None:
-                # Item exists but no References section (rare)
+                # No 'References' section found — run fallback scan on this block
+                candidates = fallback_citation_scan(block, qid)
+                for ref_idx, raw_ref in enumerate(candidates, start=1):
+                    records.append({
+                        'qid'         : qid,
+                        'ref_raw'     : raw_ref,
+                        'ref_index'   : ref_idx,
+                        'exam_year'   : year,
+                        'match_status': 'fallback_scan',
+                    })
                 continue
 
             ref_lines = [l for l in lines[ref_start_idx + 1:] if l.strip()]
@@ -239,6 +310,17 @@ def parse_stream(pdf_path: Path, year: int) -> list[dict]:
                 break
 
         if ref_start_idx is None:
+            # No section header found — fallback scan on the full block
+            qid = f'QID-{year}-{item_num:04d}'
+            candidates = fallback_citation_scan(block, qid)
+            for ref_idx, raw_ref in enumerate(candidates, start=1):
+                records.append({
+                    'qid'         : qid,
+                    'ref_raw'     : raw_ref,
+                    'ref_index'   : ref_idx,
+                    'exam_year'   : year,
+                    'match_status': 'fallback_scan',
+                })
             continue
 
         ref_lines = [l.strip() for l in lines[ref_start_idx + 1:] if l.strip()]
@@ -255,14 +337,119 @@ def parse_stream(pdf_path: Path, year: int) -> list[dict]:
     return records
 
 
+def parse_legacy(pdf_path: Path, year: int) -> list[dict]:
+    """
+    Parser for ITE critique PDFs (2018–2023) where references use 'Ref:' inline
+    prefix rather than a 'References' section header.
+
+    Format observed in 2018–2023:
+        Item N
+        ANSWER: X
+        [rationale text, possibly multi-line]
+        Ref: Author A, Author B: Title. Journal Year;Vol(Issue):Pages.
+        2) Author C: Second citation. Journal Year;Vol(Issue):Pages.
+        Item N+1
+        ANSWER: Y
+        ...
+
+    Strategy:
+      1. Extract full text stream (skip cover page).
+      2. Find item boundaries: 'Item N\\nANSWER: [A-E]'.
+      3. Within each block, scan for lines starting with 'Ref:'.
+      4. Collect continuation lines (wrapped citations) until next Item or EOF.
+      5. Split numbered sub-citations (2), 3), etc.) into individual records.
+    """
+    records = []
+
+    # Step 1: full text stream
+    pages_text = []
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages[1:]:
+            text = page.extract_text()
+            if text:
+                pages_text.append(text)
+    full_text = '\n'.join(pages_text)
+
+    # Step 2: item boundaries (same pattern as parse_stream)
+    item_boundary = re.compile(
+        r'\nItem\s+(\d+)\nANSWER:\s*[A-E]', re.IGNORECASE
+    )
+    matches = list(item_boundary.finditer(full_text))
+
+    if not matches:
+        print(f"  WARNING: No item boundaries found in {pdf_path.name}")
+        return records
+
+    # Step 3-5: per-item extraction
+    for i, m in enumerate(matches):
+        item_num  = int(m.group(1))
+        block_end = matches[i + 1].start() if i + 1 < len(matches) else len(full_text)
+        block     = full_text[m.start():block_end]
+        lines     = block.split('\n')
+        qid       = f'QID-{year}-{item_num:04d}'
+
+        # Find the Ref: line within this block
+        ref_lines = []
+        in_ref    = False
+        for line in lines:
+            stripped = line.strip()
+            if re.match(r'^Ref:\s+', stripped, re.IGNORECASE):
+                in_ref = True
+                # Strip the 'Ref: ' prefix
+                ref_lines.append(stripped[5:].strip())
+            elif in_ref:
+                # Continuation line: keep if non-empty and not a new Item
+                if re.match(r'^Item\s+\d+', stripped, re.IGNORECASE):
+                    break
+                if stripped:
+                    ref_lines.append(stripped)
+            # else: still in rationale, skip
+
+        if not ref_lines:
+            # No 'Ref:' line found — run fallback scan on the full block
+            candidates = fallback_citation_scan(block, qid)
+            for ref_idx, raw_ref in enumerate(candidates, start=1):
+                records.append({
+                    'qid'         : qid,
+                    'ref_raw'     : raw_ref,
+                    'ref_index'   : ref_idx,
+                    'exam_year'   : year,
+                    'match_status': 'fallback_scan',
+                })
+            continue
+
+        # Reassemble the full Ref block as one string, then split numbered citations
+        ref_block = ' '.join(ref_lines)
+
+        # Split on numbered sub-citations: ' 2) ', ' 3) ', etc.
+        # These appear inline within the Ref block
+        sub_refs = re.split(r'\s+\d+\)\s+', ref_block)
+
+        for ref_idx, raw_ref in enumerate(sub_refs, start=1):
+            raw_ref = raw_ref.strip()
+            if len(raw_ref) < 20:
+                continue
+            records.append({
+                'qid'      : qid,
+                'ref_raw'  : raw_ref,
+                'ref_index': ref_idx,
+                'exam_year': year,
+            })
+
+    return records
+
+
 # ── Parser registry (populated after all parsers are defined) ──────────────────
 PARSERS = {
-    # 2024 and earlier: multi-item-per-page, continuous stream, USPSTF web citations
+    # 2024: multi-item-per-page stream, 'References' section header
     2024: parse_stream,
-    2023: parse_stream,
-    2022: parse_stream,
-    2021: parse_stream,
-    2020: parse_stream,
+    # 2018–2023: multi-item-per-page, 'Ref:' inline prefix format
+    2023: parse_legacy,
+    2022: parse_legacy,
+    2021: parse_legacy,
+    2020: parse_legacy,
+    2019: parse_legacy,
+    2018: parse_legacy,
     # 2025+: one item per page → parse_modern (default, no entry needed)
 }
 
@@ -358,6 +545,8 @@ def build_qrp_rows(records: list[dict], article_refs: list[dict]) -> list[dict]:
 def write_staging(rows: list[dict], year: int) -> Path:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     out_path = OUT_DIR / f"{year}_critique_refs_staging.json"
+    if out_path.exists():
+        print(f"  Overwriting existing staging file: {out_path.name}")
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(rows, f, indent=2, ensure_ascii=False)
     return out_path

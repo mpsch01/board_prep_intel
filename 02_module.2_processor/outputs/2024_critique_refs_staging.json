@@ -3414,7 +3414,7 @@
     "clean_ref": null,
     "ref_raw": "Wilkinson LD, Brady PH, Gin GT, Rosenblum E. Female pelvic conditions: polycystic ovary syndrome. FP Essent. 2022;515:26-31.",
     "tier": "Unmatched",
-    "match_score": 0.5053,
+    "match_score": 0.5333,
     "ref_index": 4,
     "match_status": "unmatched",
     "exam_year": 2024,
@@ -3782,104 +3782,5 @@
     "match_status": "unmatched",
     "exam_year": 2024,
     "_article_id": null
-  },
-  {
-    "qid": "QID-2024-0196",
-    "clean_ref": "Soyka M. Treatment of benzodiazepine dependence. N Engl J Med. 2017;376(12):1147- 1157.",
-    "ref_raw": "Soyka M. Treatment of benzodiazepine dependence. N Engl J Med. 2017;376(12):1147- 1157.",
-    "tier": "VC_fail",
-    "match_score": 1.0,
-    "ref_index": 4,
-    "match_status": "matched",
-    "exam_year": 2024,
-    "_article_id": "ART-1189"
-  },
-  {
-    "qid": "QID-2024-0197",
-    "clean_ref": "Savard DJ, Ursua FG, Gaddey HL. Smell and taste disorders in primary care. Am Fam Physician. 2023;108(3):240-248.",
-    "ref_raw": "Savard DJ, Ursua FG, Gaddey HL. Smell and taste disorders in primary care. Am Fam Physician. 2023;108(3):240-248.",
-    "tier": "VC_fail",
-    "match_score": 1.0,
-    "ref_index": 1,
-    "match_status": "matched",
-    "exam_year": 2024,
-    "_article_id": "ART-1108"
-  },
-  {
-    "qid": "QID-2024-0197",
-    "clean_ref": "Siddiqui ZA, Walker A, Pirwani MM, Tahiri M, Syed I. Allergic rhinitis: diagnosis and management. Br J Hosp Med (Lond). 2022;83(2):1-9.",
-    "ref_raw": "Siddiqui ZA, Walker A, Pirwani MM, Tahiri M, Syed I. Allergic rhinitis: diagnosis and management. Br J Hosp Med (Lond). 2022;83(2):1-9.",
-    "tier": "VC_fail",
-    "match_score": 1.0,
-    "ref_index": 2,
-    "match_status": "matched",
-    "exam_year": 2024,
-    "_article_id": "ART-1156"
-  },
-  {
-    "qid": "QID-2024-0197",
-    "clean_ref": null,
-    "ref_raw": "Weaver-Agostoni J, Kosak Z, Bartlett S. Allergic rhinitis: rapid evidence review. Am Fam Physician. 2023;107(5):466-473.",
-    "tier": "Unmatched",
-    "match_score": 0.6458,
-    "ref_index": 3,
-    "match_status": "unmatched",
-    "exam_year": 2024,
-    "_article_id": null
-  },
-  {
-    "qid": "QID-2024-0198",
-    "clean_ref": "Abdel Jalil AA, Katzka DA, Castell DO. Approach to the patient with dysphagia. Am J Med. 2015;128(10):1138.e17-1138.e23.",
-    "ref_raw": "Abdel Jalil AA, Katzka DA, Castell DO. Approach to the patient with dysphagia. Am J Med. 2015;128(10):1138.e17-1138.e23.",
-    "tier": "VC_fail",
-    "match_score": 1.0,
-    "ref_index": 1,
-    "match_status": "matched",
-    "exam_year": 2024,
-    "_article_id": "ART-0009"
-  },
-  {
-    "qid": "QID-2024-0199",
-    "clean_ref": null,
-    "ref_raw": "Bhavsar AK, Gelner EJ, Shorma T. Common questions about the evaluation of acute pelvic pain. Am Fam Physician. 2016;93(1):41-48.",
-    "tier": "Unmatched",
-    "match_score": 0.623,
-    "ref_index": 1,
-    "match_status": "unmatched",
-    "exam_year": 2024,
-    "_article_id": null
-  },
-  {
-    "qid": "QID-2024-0199",
-    "clean_ref": "Morley EJ, Bracey A, Reiter M, Thode HC Jr, Singer AJ. Association of pain location with computed tomography abnormalities in emergency department patients with abdominal pain. J Emerg Med. 2020;59(4):485-490.",
-    "ref_raw": "Morley EJ, Bracey A, Reiter M, Thode HC Jr, Singer AJ. Association of pain location with computed tomography abnormalities in emergency department patients with abdominal pain. J Emerg Med. 2020;59(4):485-490.",
-    "tier": "VC_fail",
-    "match_score": 1.0,
-    "ref_index": 2,
-    "match_status": "matched",
-    "exam_year": 2024,
-    "_article_id": "ART-0894"
-  },
-  {
-    "qid": "QID-2024-0199",
-    "clean_ref": "Yew KS, George MK, Allred HB. Acute abdominal pain in adults: evaluation and diagnosis. Am Fam Physician. 2023;107(6):585-596.",
-    "ref_raw": "Yew KS, George MK, Allred HB. Acute abdominal pain in adults: evaluation and diagnosis. Am Fam Physician. 2023;107(6):585-596.",
-    "tier": "local_lite",
-    "match_score": 1.0,
-    "ref_index": 3,
-    "match_status": "matched",
-    "exam_year": 2024,
-    "_article_id": "ART-1378"
-  },
-  {
-    "qid": "QID-2024-0200",
-    "clean_ref": "Bauer CA: Tinnitus. N Engl J Med 2018;378(13):1224-1231.",
-    "ref_raw": "Bauer CA. Tinnitus. N Engl J Med. 2018;378(13):1224-1231.",
-    "tier": "VC_fail",
-    "match_score": 1.0,
-    "ref_index": 1,
-    "match_status": "fuzzy_matched",
-    "exam_year": 2024,
-    "_article_id": "ART-1802"
   }
 ]

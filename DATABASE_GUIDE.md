@@ -2,8 +2,8 @@
 
 **Database:** `00_database/db/ite_intelligence.db`
 **Engine:** SQLite 3 (with optional `sqlite-vec` extension for vector search)
-**Schema version:** v2 (rebuilt 2026-03-10; AAFP corpus added 2026-03-29)
-**Last updated:** 2026-04-08 (BATON 048)
+**Schema version:** v2 (rebuilt 2026-03-10; AAFP corpus added 2026-03-29; qid_art_xref rebuilt 2026-04-15)
+**Last updated:** 2026-04-15 (BATON 058)
 
 ---
 
@@ -21,9 +21,9 @@ The database is organized into five functional groups:
 
 ### 1.1 Core Content Tables
 
-#### `articles` — 1,985 rows
+#### `articles` — 1,998 rows
 
-The central reference library. One row per unique clinical guideline, journal article, or other source that has been cited in the explanation of at least one ABFM ITE or AAFP BRQ question (plus 30 legitimate "orphans" imported from tier lists but never directly cited).
+The central reference library. One row per unique clinical guideline, journal article, or other source that has been cited in the explanation of at least one ABFM ITE or AAFP BRQ question (plus 30 legitimate "orphans" imported from tier lists but never directly cited). Updated 2026-04-15 with 13 new articles (ART-1987–ART-1999) extracted from 2024–2025 ITE critique PDFs.
 
 **Primary key:** `clean_ref` (TEXT) — the original cleaned citation string. Stable and used as the FK throughout legacy join paths.
 **Secondary key:** `article_id` (TEXT, UNIQUE) — short ID in format `ART-NNNN` (zero-padded, e.g. `ART-0470`).
@@ -117,22 +117,23 @@ The canonical junction table. One row per question-article citation: "question Q
 | `tier` | TEXT | Article tier at time of import |
 | `exam_year` | INTEGER | Denormalized exam year |
 
-**match_status distribution:**
+**match_status distribution (after 2026-04-15 rebuild):**
 
 | Status | Count | Meaning |
 |---|---|---|
-| `matched` | 1,698 | Clean exact match |
-| `new` | 389 | Added in most recent rebuild cycle |
-| `unmatched` | 246 | Could not confidently link |
-| `fuzzy_matched` | 154 | Fuzzy string matching resolved the link |
-| `fuzzy` | 120 | Legacy label from earlier build |
-| `partial` | 66 | Some ambiguity remains |
+| `matched` | 2,424 | Clean exact match (includes multi-references per question) |
+| `unmatched` | 249 | Could not confidently link — logged as acquisition candidates |
+| (legacy statuses deprecated) | — | Rebuild eliminated `fuzzy`, `fuzzy_matched`, `partial`, `new` categories |
+
+**Note:** The 2026-04-15 rebuild of `qid_art_xref` standardized `match_status` to binary: either an article appears in the critique PDF text or it doesn't. All legacy fuzzy-match categories were resolved or logged as unmatched for manual acquisition.
 
 ---
 
-#### `qid_art_xref` — 2,470 rows
+#### `qid_art_xref` — 2,485 rows
 
-Ergonomic crossref table. Mirrors `question_ref_pairs` but uses `article_id` (short, readable) instead of `clean_ref` (long citation text). Excludes unmatched/partial pairs — row count (2,470) is lower than `question_ref_pairs` (2,673) for this reason.
+Ergonomic crossref table. Mirrors `question_ref_pairs` but uses `article_id` (short, readable) instead of `clean_ref` (long citation text). Rebuilt 2026-04-15 as faithful multi-reference transcript of all 8 ITE critique PDFs (2018–2025): uses DELETE+INSERT per QID to capture all article citations within each question's explanation. Excludes unmatched/partial pairs — row count (2,485) is higher than legacy 2,470 because multi-cited questions now appear once per reference.
+
+**Multi-reference coverage:** 2018-2023: 100% linked; 2024: 90% (180/200 questions); 2025: 83.5% (167/200 questions). 249 unmatched citations logged as acquisition candidates.
 
 **Primary key:** `(qid, article_id)` composite
 

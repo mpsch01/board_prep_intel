@@ -48,8 +48,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_057_20260415_vector_integration_pq_table_db_utils.md` — Vector integration live (DEFERRED-VECTOR-TIER1-REWRITE closed), unified PQ table, db_connect utility, Python PATH fix |
-| DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
+| Active BATON | `BATON_active_058_20260415_citation_qc_db_rebuild_article_additions.md` — Citation QC and article rebuild: qid_art_xref rebuilt faithful multi-reference xref (2,485 rows, avg 1.6 refs/q), 13 new articles (ART-1987–ART-1999), 635 article titles corrected, 101 author fields corrected |
+| DB articles | 1,998 (+13 from critique PDFs: ART-1987–ART-1999) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
 | aafp_questions.blueprint | 1,221/1,221 (100%) — batch API, same rubric as ITE v2 — complete 2026-03-30 |
@@ -66,16 +66,16 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | PDFs (AAFP) | 15 in citation_files/AAFP/ — recovered 2026-04-05 |
 | PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
-| qid_art_xref | 2,470 (all 8 years: 2018–2025) |
+| qid_art_xref | 2,485 (rebuilt faithful multi-reference xref: 2018-2023 100% linked, 2024 90%, 2025 83.5%) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 8 build + 26 maintain + aafp_brq_scraper.py at scripts/ root (build_modular_vectors.py + build_intersection_centroids.py added 2026-04-14) |
-| M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
-| M3 scripts | 17 Python + 2 JS + 6 JSON config |
+| M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root; extract_ite_critique_refs.py MODIFIED |
+| M3 scripts | 20 Python + 2 JS + 6 JSON config (NEW: generate_citation_sql.py, pdf_lookup_patch.py, add_missing_articles.py) |
 | M5 scripts | 3 Python sync + 35 TypeScript/TSX + 5 SQL migrations — 05_module.5_web/ scaffold |
 | article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
-| Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → 7256305 |
+| Next ART-ID | ART-2000 |
+| Git branch | `main`, latest → c9dc2ec |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -117,16 +117,20 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 057, 2026-04-15)
+## Next Steps (as of BATON 058, 2026-04-15)
 
 ### Immediate
-1. **DEFERRED-AAFP-BODY-SYSTEM-AUDIT** — Sweep AAFP body_system fields for mislabeling; fix confirmed errors
-2. **DEFERRED-KNOWN-DRUGS-EXPANSION** — Identify drugs appearing in top diagnoses; decide on fix approach
-3. Re-run all 7 resident analyses with new vector integration + unified PQ table
-4. Program trend data — Mikey to supply historical program aggregate scores for abfm_reference JSON
-5. **DEFERRED-YOY-ROBUSTNESS** — edge-case testing in ite_analyzer_v3.py
+1. Re-run all 7 resident analyses (Sarkar 2025, Hopkins 2025, Pjetergjoka 2024/2025, Scholl 2022/2023/2024) with clean article data
+2. **DEFERRED-AAFP-BODY-SYSTEM-AUDIT** — sweep AAFP body_system fields; write targeted SQL fixes
+3. **DEFERRED-KNOWN-DRUGS-EXPANSION** — identify offending drug names; decide fix approach
 
 ### Short-term
-6. **Module 5 setup** — Provision Supabase project, run migrations, sync SQLite → Supabase, deploy Railway FastAPI + Netlify
-7. **DEFERRED-PGY-BENCHMARKS** — Receive PGY 1–4 data from Mikey; integrate into report
-8. **DATABASE_GUIDE.md relocation** — git rm old + git add new; commit
+4. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations need article acquisition
+5. Update article_currency table for 13 new articles (ART-1987–ART-1999)
+6. **Module 5 setup** — Provision Supabase; sync SQLite → Supabase; deploy Railway FastAPI + Netlify
+
+### Medium-term
+7. **DEFERRED-PGY-BENCHMARKS** — await PGY 1-4 data; integrate into resident report Section 4
+8. **DEFERRED-PROGRAM-TREND** — await historical program aggregate scores
+9. **DEFERRED-YOY-ROBUSTNESS** — edge-case tests for temporal rollup logic
+10. Add unmatched citation acquisition trigger to extraction pipeline
