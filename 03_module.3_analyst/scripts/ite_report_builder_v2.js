@@ -85,6 +85,7 @@ const LTBLUE = "D6E4F7";
 const GREEN  = "276749";
 const AMBER  = "975A16";
 const RED    = "9B2C2C";
+const PURPLE = "6B3FA0";   // cross-category targeting
 const FONT   = "Aptos";
 
 // ── Helper functions ────────────────────────────────────────────────
@@ -1122,13 +1123,23 @@ children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 120 
 const TIER_LABELS = { 1: "Direct Match", 2: "ICD-10 Sibling", 3: "Vector Match" };
 const TIER_COLORS = { 1: GREEN, 2: BLUE, 3: MGRAY };
 
-// Split into single-category and cross-category, sorted by targeting within each group
-const singleQs = allQuestions
-  .filter(q => !(q.targeting || "").includes(" \u00D7 "))
-  .sort((a, b) => (a.targeting || "").localeCompare(b.targeting || ""));
-const crossQs = allQuestions
-  .filter(q => (q.targeting || "").includes(" \u00D7 "))
-  .sort((a, b) => (a.targeting || "").localeCompare(b.targeting || ""));
+// Color-code the Targeting cell by what drove the selection:
+//   Blueprint dim  → BLUE     ("Acute Care", "Chronic Care", ...)
+//   Body system dim → GREEN   ("Cardiovascular", "Respiratory", ...)
+//   Cross-category  → PURPLE  ("Cardiovascular × Acute Care")
+//   Concept pick    → AMBER   ("Concept: Hypertension")
+function targetingColor(targeting) {
+  if (!targeting) return DGRAY;
+  if (targeting.includes(" × "))       return PURPLE;
+  if (targeting.startsWith("Concept:")) return AMBER;
+  const BLUEPRINT_DIMS = ["Acute Care", "Chronic Care", "Emergent/Urgent", "Foundations", "Preventive"];
+  if (BLUEPRINT_DIMS.some(b => targeting === b)) return BLUE;
+  return GREEN;   // body system dimension
+}
+
+// All questions sorted by relevance_score descending (highest priority gaps first).
+// Already sorted by the Python engine; explicit sort here guards against JSON reordering.
+const sortedQs = [...allQuestions].sort((a, b) => (b.relevance_score || 0) - (a.relevance_score || 0));
 
 // Check if any practice question has fingerprint_concepts annotation
 const hasFingerprintConcepts = allQuestions.some(q => (q.fingerprint_concepts || []).length > 0);
@@ -1152,7 +1163,7 @@ function buildPqTable(questions, startNum) {
     const tierColor   = TIER_COLORS[q.match_tier] || MGRAY;
     const baseCells = [
       dataCell(String(num),                      pqColW[0], NAVY, true),
-      dataCell(q.targeting || "\u2014",           pqColW[1], BLUE, false, AlignmentType.LEFT),
+      dataCell(q.targeting || "\u2014",           pqColW[1], targetingColor(q.targeting), false, AlignmentType.LEFT),
       dataCell(q.qid || "\u2014",                 pqColW[2], DGRAY, false, AlignmentType.LEFT),
       dataCell(q.blueprint || "\u2014",           pqColW[3], DGRAY, false, AlignmentType.LEFT),
       dataCell(q.body_system_merged || "\u2014",  pqColW[4], DGRAY, false, AlignmentType.LEFT),
@@ -1171,21 +1182,47 @@ function buildPqTable(questions, startNum) {
   return makeTable(pqColW, pqRows);
 }
 
-let globalQNum = 1;
+// ── Description + stats ──────────────────────────────────────────────
+const nITE  = sortedQs.filter(q => q.source_bank === "ITE").length;
+const nAAFP = sortedQs.filter(q => q.source_bank === "AAFP").length;
+const nT1   = sortedQs.filter(q => q.match_tier === 1).length;
+const nT2   = sortedQs.filter(q => q.match_tier === 2).length;
+const nT3   = sortedQs.filter(q => q.match_tier === 3).length;
+// Use yield_priorities (authoritative weak dimension list) for the count,
+// filtered to pure dims only — excludes cross-tabs and concept targets.
+const nWeakAreas = (data.yield_priorities || []).filter(p => !p.dimension.includes(" \u00D7 ")).length;
 
-// Table 1: Single weak-area questions
-if (singleQs.length > 0) {
-  children.push(spacer(120));
-  children.push(subBar(`\u26A0 SINGLE WEAK AREA QUESTIONS  (${singleQs.length})`, BLUE));
-  children.push(buildPqTable(singleQs, globalQNum));
-  globalQNum += singleQs.length;
-}
+children.push(spacer(80));
+children.push(new Paragraph({
+  spacing: { before: 0, after: 120 },
+  children: [
+    new TextRun({
+      text: `These ${sortedQs.length} questions were selected from the ITE Intelligence database ` +
+        `(ITE exam bank + AAFP Board Review Questions) and ranked by how precisely they match ` +
+        `your specific weak areas. Selection uses a multi-signal model: direct category match, ` +
+        `ICD-10 code overlap with your missed questions, and semantic similarity to your concept ` +
+        `fingerprint. Study in order — higher-ranked questions address your highest-priority gaps.`,
+      font: FONT, size: 18, color: MGRAY, italics: true,
+    }),
+  ],
+}));
+children.push(new Paragraph({
+  spacing: { before: 0, after: 120 },
+  children: [
+    new TextRun({ text: `${sortedQs.length} questions  ·  `, font: FONT, size: 18, color: DGRAY, bold: true }),
+    new TextRun({ text: `${nITE} ITE / ${nAAFP} AAFP BRQ`, font: FONT, size: 18, color: BLUE, bold: true }),
+    new TextRun({ text: `  ·  T1: ${nT1}  T2: ${nT2}${nT3 > 0 ? `  T3: ${nT3}` : ""}`, font: FONT, size: 18, color: MGRAY }),
+    new TextRun({ text: `  ·  `, font: FONT, size: 18, color: MGRAY }),
+    new TextRun({ text: `${nWeakAreas} weak areas covered`, font: FONT, size: 18, color: GREEN, bold: true }),
+  ],
+}));
 
-// Table 2: Cross-category questions
-if (crossQs.length > 0) {
-  children.push(spacer(120));
-  children.push(subBar(`CROSS-CATEGORY INTERSECTIONS  (${crossQs.length})`, "4A5568"));
-  children.push(buildPqTable(crossQs, globalQNum));
+// Single unified table — all questions, sorted by relevance_score descending.
+// Targeting cell color encodes what drove selection:
+//   Blue = blueprint dim  |  Green = body system dim
+//   Purple = cross-category (blueprint × body system)  |  Amber = concept fingerprint
+if (sortedQs.length > 0) {
+  children.push(buildPqTable(sortedQs, 1));
 }
 
 // ────────────────────────────────────────────────────────────────────
@@ -1307,8 +1344,7 @@ function renderExamSection(questions, sectionLabel, sectionColor) {
   }
 }
 
-renderExamSection(singleQs, `\u26A0 SINGLE WEAK AREA QUESTIONS  (${singleQs.length})`, BLUE);
-renderExamSection(crossQs,  `CROSS-CATEGORY INTERSECTIONS  (${crossQs.length})`, "4A5568");
+renderExamSection(sortedQs, `\u270F TARGETED PRACTICE QUESTIONS  (${sortedQs.length})`, NAVY);
 
 // Answer key
 examChildren.push(new Paragraph({ children: [new PageBreak()] }));

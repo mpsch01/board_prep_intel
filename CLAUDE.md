@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_056_20260414_resident_reorg_report_fixes_modular_vectors.md` — Resident folder reorg (inputs/outputs), 12 report fixes, modular vector build (6 new tables) |
+| Active BATON | `BATON_active_057_20260415_vector_integration_pq_table_db_utils.md` — Vector integration live (DEFERRED-VECTOR-TIER1-REWRITE closed), unified PQ table, db_connect utility, Python PATH fix |
 | DB articles | 1,985 (+49 AAFP acquisition: ART-1938–ART-1986) |
 | DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -70,12 +70,12 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 8 build + 26 maintain + aafp_brq_scraper.py at scripts/ root (build_modular_vectors.py + build_intersection_centroids.py added 2026-04-14) |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
-| M3 scripts | 16 Python + 2 JS + 6 JSON config |
+| M3 scripts | 17 Python + 2 JS + 6 JSON config |
 | M5 scripts | 3 Python sync + 35 TypeScript/TSX + 5 SQL migrations — 05_module.5_web/ scaffold |
 | article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-1987 |
-| Git branch | `main`, latest → 223d0af (pending commit) |
+| Git branch | `main`, latest → 7256305 |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -117,15 +117,16 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 056, 2026-04-14)
+## Next Steps (as of BATON 057, 2026-04-15)
 
 ### Immediate
-1. **DEFERRED-VECTOR-TIER1-REWRITE** — Wire intersection_centroid_vec + question_concepttag_vec into Tier 1 of match_practice_questions_v3()
-2. **DEFERRED-PRACTICE-Q-TWO-TABLE** — Implement two-table practice question split in report builder
-3. Program trend data — Mikey to supply historical program aggregate scores for abfm_reference JSON
-4. **DEFERRED-YOY-ROBUSTNESS** — edge-case testing in ite_analyzer_v3.py
+1. **DEFERRED-AAFP-BODY-SYSTEM-AUDIT** — Sweep AAFP body_system fields for mislabeling; fix confirmed errors
+2. **DEFERRED-KNOWN-DRUGS-EXPANSION** — Identify drugs appearing in top diagnoses; decide on fix approach
+3. Re-run all 7 resident analyses with new vector integration + unified PQ table
+4. Program trend data — Mikey to supply historical program aggregate scores for abfm_reference JSON
+5. **DEFERRED-YOY-ROBUSTNESS** — edge-case testing in ite_analyzer_v3.py
 
 ### Short-term
-5. **Module 5 setup** — Provision Supabase project, run migrations, sync SQLite → Supabase, deploy Railway FastAPI + Netlify
-6. **DEFERRED-PGY-BENCHMARKS** — Receive PGY 1–4 data from Mikey; integrate into report
-7. **DATABASE_GUIDE.md relocation** — git rm old + git add new; commit
+6. **Module 5 setup** — Provision Supabase project, run migrations, sync SQLite → Supabase, deploy Railway FastAPI + Netlify
+7. **DEFERRED-PGY-BENCHMARKS** — Receive PGY 1–4 data from Mikey; integrate into report
+8. **DATABASE_GUIDE.md relocation** — git rm old + git add new; commit

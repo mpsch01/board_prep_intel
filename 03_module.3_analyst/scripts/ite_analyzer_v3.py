@@ -65,6 +65,13 @@ TIER_WEIGHT = {1: 3.0, 2: 2.0, 3: 1.0}
 # AAFP content is always represented.  Set to 0 to disable the quota.
 AAFP_MIN_QUESTIONS = 4
 
+# Vector bonus weights — additive on top of base relevance_score.
+# Applied after the full candidate pool is assembled.
+# Set CONCEPT_VEC_BONUS_WEIGHT = 0 to disable semantic bonus (e.g., for debugging).
+CONCEPT_VEC_BONUS_WEIGHT = 0.8    # max semantic-sim bonus per candidate (cosine ∈ [0,1] × weight)
+CENTROID_BOOST_MIN       = 0.90   # minimum cross_tab priority multiplier from centroid sim
+CENTROID_BOOST_MAX       = 1.20   # maximum cross_tab priority multiplier from centroid sim
+
 # Pathway role → plain-English gap description
 PATHWAY_ROLE_INTERP = {
     "first_line":            "treatment selection gap",
@@ -1663,6 +1670,146 @@ def _concept_selection(db, top_concepts_dict: dict, selected_qids: set,
     return candidates[:limit]
 
 
+def _build_concept_profile(db, wrong_qids: list):
+    """
+    Build a resident concept profile vector by averaging question_concepttag_vec
+    embeddings for the resident's missed questions (across ALL weak dimensions).
+
+    Returns a numpy float32 array (1536-dim) representing the resident's
+    semantic weakness fingerprint, or None if numpy is unavailable or no
+    vectors are found.
+
+    Used by:
+      - _centroid_dim_boost()  — to weight priority_score per cross_tab cell
+      - _apply_concept_vec_bonus() — to score every candidate by semantic proximity
+    """
+    try:
+        import numpy as np
+    except ImportError:
+        return None
+
+    if not wrong_qids:
+        return None
+
+    ph = ",".join(["?"] * len(wrong_qids))
+    rows = db.execute(
+        f"SELECT embedding FROM question_concepttag_vec WHERE qid IN ({ph})",
+        wrong_qids,
+    ).fetchall()
+
+    vecs = []
+    for row in rows:
+        vec = _blob_to_vec(row["embedding"])
+        if vec is not None:
+            vecs.append(vec)
+
+    if not vecs:
+        return None
+
+    return np.mean(np.stack(vecs), axis=0)
+
+
+def _centroid_dim_boost(db, dim: str, dim_type: str, profile_vec) -> float:
+    """
+    For cross_tab dimensions only: look up intersection_centroid_vec for the
+    matching blueprint × body_system cell.  Compute cosine similarity between
+    the resident's concept profile and the centroid, then return a priority_score
+    multiplier scaled to [CENTROID_BOOST_MIN, CENTROID_BOOST_MAX].
+
+    Returns 1.0 (no-op) when:
+      - dim_type is not 'cross_tab'
+      - profile_vec is None
+      - no matching centroid found in DB
+      - numpy unavailable
+
+    Design intent: a resident who is weak in "Cardiovascular × Chronic Care"
+    and whose missed questions are semantically close to the centroid of that
+    cell should see a higher priority_score for it — ensuring Tier 1 pulls
+    more candidates from that exact intersection rather than distributing
+    slots evenly across all weak dimensions.
+    """
+    if profile_vec is None or dim_type != "cross_tab":
+        return 1.0
+
+    parts = dim.split(" × ", 1)
+    if len(parts) != 2:
+        return 1.0
+
+    bs_part, bp_part = parts
+    db_bp    = BLUEPRINT_PDF_TO_DB.get(bp_part, bp_part)
+    db_names = BODYSYSTEM_PDF_TO_DB.get(bs_part, [bs_part])
+
+    # Collect matching centroid(s) — one per db body_system name, both source banks.
+    centroid_vecs = []
+    for bs_name in db_names:
+        rows = db.execute(
+            "SELECT embedding FROM intersection_centroid_vec "
+            "WHERE blueprint = ? AND body_system = ?",
+            (db_bp, bs_name),
+        ).fetchall()
+        for row in rows:
+            vec = _blob_to_vec(row["embedding"])
+            if vec is not None:
+                centroid_vecs.append(vec)
+
+    if not centroid_vecs:
+        return 1.0
+
+    try:
+        import numpy as np
+        centroid = np.mean(np.stack(centroid_vecs), axis=0) if len(centroid_vecs) > 1 else centroid_vecs[0]
+        sim = _cosine_similarity(profile_vec, centroid)   # [0.0, 1.0]
+        boost = CENTROID_BOOST_MIN + (CENTROID_BOOST_MAX - CENTROID_BOOST_MIN) * sim
+        return boost
+    except Exception:
+        return 1.0
+
+
+def _apply_concept_vec_bonus(db, all_candidates: dict, profile_vec, weight: float) -> None:
+    """
+    Score every candidate in all_candidates by cosine similarity of its
+    question_concepttag_vec to the resident's concept profile.  Adds
+    `sim * weight` as a bonus to each candidate's relevance_score.
+
+    Mutates all_candidates in-place — no return value.
+    Silently skips candidates with no stored embedding.
+
+    Batch-loads all candidate embeddings in two SQL queries (ITE + AAFP)
+    to avoid N+1 round-trips.
+
+    Called AFTER the full candidate pool is assembled and BEFORE the fingerprint
+    frequency bonus, so semantically-aligned questions compete at their correct
+    tier weight before concept-frequency inflation.
+    """
+    if profile_vec is None or not all_candidates or weight == 0:
+        return
+
+    ite_qids  = [qid for qid, c in all_candidates.items() if c.get("source_bank") == "ITE"]
+    aafp_qids = [qid for qid, c in all_candidates.items() if c.get("source_bank") == "AAFP"]
+
+    emb_map: dict = {}   # qid → numpy vector
+
+    for qid_list in (ite_qids, aafp_qids):
+        if not qid_list:
+            continue
+        ph = ",".join(["?"] * len(qid_list))
+        rows = db.execute(
+            f"SELECT qid, embedding FROM question_concepttag_vec WHERE qid IN ({ph})",
+            qid_list,
+        ).fetchall()
+        for row in rows:
+            vec = _blob_to_vec(row["embedding"])
+            if vec is not None:
+                emb_map[row["qid"]] = vec
+
+    for qid, cand in all_candidates.items():
+        vec = emb_map.get(qid)
+        if vec is None:
+            continue
+        sim = _cosine_similarity(profile_vec, vec)
+        cand["relevance_score"] = round(cand["relevance_score"] + sim * weight, 3)
+
+
 def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
                                  items: list, db_path: str,
                                  target_count: int = 20,
@@ -1727,11 +1874,22 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
         wrong_qids_by_dim[dim] = wqids
         wrong_meta_by_dim[dim] = _get_wrong_qid_metadata(db, wqids) if wqids else {}
 
+    # Build resident concept profile — average of question_concepttag_vec embeddings
+    # for ALL missed questions across all dimensions.  Single vector representing the
+    # semantic fingerprint of this resident's weakness space.
+    # Used in: (1) centroid_dim_boost per cross_tab priority, (2) concept_vec_bonus post-pool.
+    all_wrong_qids = list({qid for wqids in wrong_qids_by_dim.values() for qid in wqids})
+    concept_profile = _build_concept_profile(db, all_wrong_qids)
+
     # Tier 1 + Tier 1b (article co-link) + Tier 2 (ICD-10 seeded) per dimension
     for priority in active:
         dim            = priority["dimension"]
         dim_type       = priority["dimension_type"]
-        priority_score = priority["priority_score"]
+        # Centroid boost: for cross_tab dims, scale priority_score by cosine similarity
+        # between resident concept profile and the intersection_centroid_vec for this cell.
+        # More semantically aligned cell → higher priority → more Tier 1 candidates scored higher.
+        centroid_mult  = _centroid_dim_boost(db, dim, dim_type, concept_profile)
+        priority_score = priority["priority_score"] * centroid_mult
 
         meta       = wrong_meta_by_dim.get(dim, {})
         seed_icd10 = meta.get("icd10_codes") or None
@@ -1772,6 +1930,16 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
                 if qid not in all_candidates or cand["relevance_score"] > all_candidates[qid]["relevance_score"]:
                     all_candidates[qid] = cand
                 selected_qids.add(qid)
+
+    # Concept vector bonus — semantic similarity between each candidate's concept
+    # embedding and the resident's missed-question concept profile.
+    # Applied AFTER full candidate gathering (T1/T1b/T2/T1c) and BEFORE fingerprint
+    # bonus, so semantically-aligned questions rise through the global pool at their
+    # correct tier weight before concept-frequency inflation.
+    # Gracefully skips if concept_profile is None (numpy unavailable, no wrong QIDs,
+    # or question_concepttag_vec table empty).
+    _apply_concept_vec_bonus(db, all_candidates, concept_profile,
+                             weight=CONCEPT_VEC_BONUS_WEIGHT)
 
     # Fingerprint frequency-weighted bonus — uses combined counts for scoring weight.
     # Combined counts include AAFP enrichment which broadens signal strength.
