@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last verified: 2026-04-15 (BATON 058)
+Last verified: 2026-04-15 (BATON 059)
 
 ## DB: ite_intelligence.db
 
@@ -60,6 +60,12 @@ Last verified: 2026-04-15 (BATON 058)
 - qid_art_xref: 2,470 → 2,485 (rebuilt from 2018–2025 ITE critique ground truth; replaces parser-inferred xrefs with direct PDF citations)
 - No schema changes; no modifications to other tables
 - Scripts added: generate_citation_sql.py, pdf_lookup_patch.py, add_missing_articles.py (M3)
+
+## DB Changes (BATON 059)
+- No DB row count changes this session (body_system field corrections only, no new rows)
+- body_system field corrected for ITE questions (2018-2021, 2024-2025) and all 1,221 AAFP questions
+- Corrections staged in human_review queue (201 ITE + 129 AAFP); deferred for manual verification before commit
+- Scripts added: extract_score_report_labels.py, condense_taxonomy.py, build_training_set.py, run_svm_baseline.py, run_claude_classifier.py, submit_batch_classification.py, submit_batch_aafp.py, retrieve_batch_results.py, rename_taxonomy_labels.py, fix_taxonomy_names.py, fix_aafp_taxonomy_names.py, generate_body_system_sql.py, svm_review_audit.py, check_aafp_body_system.py, check_aafp_results.py, check_aafp_schema.py, verify_body_system_updates.py, critique_pdf_registry.py, extract_critique_refs_v2.py (M3)
 
 ## DB Changes (BATON 056)
 - 6 new modular vector BLOB tables added (2026-04-14):

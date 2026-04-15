@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last verified: 2026-04-15 (BATON 058)
+Last verified: 2026-04-15 (BATON 059)
 
 ## DB: ite_intelligence.db
 
@@ -61,14 +61,16 @@ Last verified: 2026-04-15 (BATON 058)
 - No schema changes; no modifications to other tables
 - Scripts added: generate_citation_sql.py, pdf_lookup_patch.py, add_missing_articles.py (M3)
 
+## DB Changes (BATON 059)
+- No DB row count changes this session (body_system field corrections only, no new rows)
+- body_system field corrected for ITE questions (2018-2021, 2024-2025) and all 1,221 AAFP questions
+- Corrections staged in human_review queue (201 ITE + 129 AAFP); deferred for manual verification before commit
+- Scripts added: extract_score_report_labels.py, condense_taxonomy.py, build_training_set.py, run_svm_baseline.py, run_claude_classifier.py, submit_batch_classification.py, submit_batch_aafp.py, retrieve_batch_results.py, rename_taxonomy_labels.py, fix_taxonomy_names.py, fix_aafp_taxonomy_names.py, generate_body_system_sql.py, svm_review_audit.py, check_aafp_body_system.py, check_aafp_results.py, check_aafp_schema.py, verify_body_system_updates.py, critique_pdf_registry.py, extract_critique_refs_v2.py (M3)
+
 ## DB Changes (BATON 056)
 - 6 new modular vector BLOB tables added (2026-04-14):
   - question_full_vec (1,629 rows) — full question embedding with blueprint
   - aafp_question_full_vec (1,221 rows) — full AAFP embedding with blueprint+body_system+concept_tags
   - blueprint_label_vec (5 rows) — 5 canonical blueprint category label embeddings
   - bodysystem_label_vec (5 rows) — 5 canonical body system label embeddings
-  - question_concepttag_vec (2,850 rows) — concept_tags embedding per question
-  - intersection_centroid_vec (135 rows) — 71 ITE + 64 AAFP blueprint×body_system centroids
-- All new tables populated and verified via build_modular_vectors.py + build_intersection_centroids.py
-- Schema note: BATON 056 — Added 6 modular vector BLOB tables (question_full_vec, aafp_question_full_vec, blueprint_label_vec, bodysystem_label_vec, question_concepttag_vec, intersection_centroid_vec)
-- No row count changes to existing tables; no modifications to article, question, or reference integrity
+  - question_concepttag_vec (2,850 rows) — concept_tags embedding per questio

@@ -1,5 +1,5 @@
 ﻿# project_overhaul_state.md
-Last updated: 2026-04-15 (BATON 058)
+Last updated: 2026-04-15 (BATON 059)
 
 ## Module State
 
@@ -7,7 +7,7 @@ Last updated: 2026-04-15 (BATON 058)
 |--------|--------|----------|
 | M1 Warehouse | Active | 988 ITE/AAFP PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 26 maintain scripts |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
-| M3 Analyst | Active | 20 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC |
+| M3 Analyst | Active | 39 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 35 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
 | DB | Stable | 1,998 articles, 1,629 ITE Qs, 1,221 AAFP Qs |
@@ -31,6 +31,17 @@ Last updated: 2026-04-15 (BATON 058)
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 
+## Session Notes (BATON 059)
+
+**2026-04-15 – Body System QC Pipeline Complete**
+- **Full pipeline built:** 19 new M3 scripts created (extract_score_report_labels.py, condense_taxonomy.py, build_training_set.py, run_svm_baseline.py, run_claude_classifier.py, submit_batch_classification.py, submit_batch_aafp.py, retrieve_batch_results.py, rename_taxonomy_labels.py, fix_taxonomy_names.py, fix_aafp_taxonomy_names.py, generate_body_system_sql.py, svm_review_audit.py, check_aafp_body_system.py, check_aafp_results.py, check_aafp_schema.py, verify_body_system_updates.py, critique_pdf_registry.py, extract_critique_refs_v2.py)
+- **QC Coverage:** ITE questions 2018-2021, 2024-2025 + all 1,221 AAFP questions
+- **Skills created:** body-system-qc (full audit + correction pipeline), article-citation-qc updated
+- **Methodology directory:** methodology_scout/ created with 1 doc
+- **Human review queue:** 201 ITE + 129 AAFP questions pending manual verification (canonical taxonomy: Psychiatric/Behavioral, Sexual and Reproductive, Injuries/Musculoskeletal)
+- **Deferred flags:** DEFERRED-AAFP-BODY-SYSTEM-AUDIT CLOSED; NEW: DEFERRED-BODY-SYSTEM-MERGED-UPDATE, DEFERRED-CENTROID-REBUILD, DEFERRED-HUMAN-REVIEW-BODY-SYSTEM
+- **M3 py script count:** 20 → 39 (+19 new)
+
 ## Session Notes (BATON 058)
 
 **2026-04-15 – Citation QC Rebuild & Article Additions**
@@ -41,7 +52,7 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 - **Skill created:** article-citation-qc skill (citation QC workflow) tested at 100% pass rate vs 0% baseline in evals
 - **DB updates:** articles 1,985 → 1,998 (+13); qid_art_xref 2,470 → 2,485 (rebuilt from critique ground truth)
 - **M3 py script count:** 17 → 20 (+3 new: generate_citation_sql.py, pdf_lookup_patch.py, add_missing_articles.py)
-- **Deferred flags ACTIVE:** DEFERRED-AAFP-BODY-SYSTEM-AUDIT, DEFERRED-KNOWN-DRUGS-EXPANSION, DEFERRED-QID-XREF-LIBRARY-GAPS (NEW-249 unmatched citations; 2024: 20 QIDs; 2025: 33 QIDs missing)
+- **Deferred flags CLOSED:** DEFERRED-AAFP-BODY-SYSTEM-AUDIT, DEFERRED-KNOWN-DRUGS-EXPANSION, DEFERRED-QID-XREF-LIBRARY-GAPS (NEW-249 unmatched citations; 2024: 20 QIDs; 2025: 33 QIDs missing)
 
 ## Session Notes (BATON 057)
 
@@ -50,6 +61,9 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 - **ite_report_builder_v2.js unification:** removed singleQs/crossQs split, implemented unified practice questions table with PURPLE color coding, added targetingColor() helper, description paragraph rendering, accurate weak area count
 - **db_connect.py NEW UTILITY:** SQLite immutable=1 URI utility for sandbox queries; prevents journal file errors on NTFS mounts; added to M3 scripts/
 - **Deferred flags CLOSED:** DEFERRED-VECTOR-TIER1-REWRITE (implemented), DEFERRED-PRACTICE-Q-TWO-TABLE (superseded by unified table)
+| DEFERRED-BODY-SYSTEM-MERGED-UPDATE | NEW-ACTIVE | body_system_merged mapping must flip to post-2024 canonical (Psychiatric/Behavioral, Sexual and Reproductive, Injuries/Musculoskeletal) for 2018-2021 legacy data |
+| DEFERRED-CENTROID-REBUILD | NEW-ACTIVE | intersection_centroid_vec must be rebuilt after body_system field corrections (affects Tier 1 semantic matching) |
+| DEFERRED-HUMAN-REVIEW-BODY-SYSTEM | NEW-ACTIVE | 201 ITE + 129 AAFP questions in human_review queue (body_system corrections pending review) |
 - **New deferred flags:** DEFERRED-AAFP-BODY-SYSTEM-AUDIT (possible body_system mislabeling in AAFP questions), DEFERRED-KNOWN-DRUGS-EXPANSION (drugs appearing in top diagnoses)
 - M3 py script count: 16 â†’ 17 (db_connect.py added)
 
@@ -78,7 +92,7 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 | DEFERRED-RESIDENT-FOLDER-MIGRATION | NEW | Investigate resident_data/ folder state and migration strategy to M5 platform |
 | DEFERRED-VECTOR-TIER1-REWRITE | âœ… CLOSED | Implemented in BATON 057 â€” 3 new vector functions + 3 integration points in match_practice_questions_v3() |
 | DEFERRED-PRACTICE-Q-TWO-TABLE | âœ… CLOSED | Superseded by unified practice questions table in BATON 057 (removed singleQs/crossQs split) |
-| DEFERRED-AAFP-BODY-SYSTEM-AUDIT | ACTIVE | AAFP body_system fields may be mislabeled; needs sweep to verify alignment with blueprint |
+| DEFERRED-AAFP-BODY-SYSTEM-AUDIT | CLOSED | AAFP body_system fields may be mislabeled; needs sweep to verify alignment with blueprint |
 | DEFERRED-KNOWN-DRUGS-EXPANSION | ACTIVE | Drugs still appearing in top diagnoses table; expand KNOWN_DRUGS constant |
 | DEFERRED-QID-XREF-LIBRARY-GAPS | NEW-ACTIVE | 249 unmatched citations in ITE critique refs; 2024: 20 QIDs missing xrefs; 2025: 33 QIDs missing xrefs |
 | DEFERRED-SCHOLL-OLD-FORMAT | NEW | Scholl 2022/2023 use old ABFM taxonomy (no canonical mapping); requires manual Psychogenicâ†’Psychiatric/Behavioral remapping |
