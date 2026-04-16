@@ -8434,5 +8434,35 @@
     "icd10_desc": "Generalized anxiety disorder",
     "match_quality": "exact",
     "search_term": "generalized anxiety disorder"
+  },
+  "hypokalemia": {
+    "icd10_code": "E87.6",
+    "icd10_desc": "Hypokalemia",
+    "match_quality": "exact",
+    "search_term": "hypokalemia"
+  },
+  "muscle spasm": {
+    "icd10_code": "R25.2",
+    "icd10_desc": "Cramp and spasm",
+    "match_quality": "exact",
+    "search_term": "muscle spasm"
+  },
+  "peripheral neuropathy": {
+    "icd10_code": "G62.9",
+    "icd10_desc": "Polyneuropathy, unspecified",
+    "match_quality": "good",
+    "search_term": "peripheral neuropathy"
+  },
+  "folate deficiency": {
+    "icd10_code": "D52.9",
+    "icd10_desc": "Folate deficiency anaemia, unspecified",
+    "match_quality": "good",
+    "search_term": "folate deficiency anemia"
+  },
+  "nausea and vomiting": {
+    "icd10_code": "R11.2",
+    "icd10_desc": "Nausea with vomiting, unspecified",
+    "match_quality": "exact",
+    "search_term": "nausea and vomiting"
   }
 }

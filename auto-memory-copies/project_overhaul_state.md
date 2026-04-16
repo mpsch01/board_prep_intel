@@ -1,5 +1,5 @@
 # project_overhaul_state.md
-Last updated: 2026-04-16 (BATON 060)
+Last updated: 2026-04-16 (BATON 061)
 
 ## Module State
 
@@ -30,6 +30,17 @@ Last updated: 2026-04-16 (BATON 060)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 061)
+
+**2026-04-16 – Legacy Body System Analyses Complete + All Resident Re-runs**
+- **All 7 resident analyses re-run:** Scholl 2022/2023/2024, Sarkar 2025, Hopkins 2025, Pjetergjoka 2024/2025 — all complete with Stage 1.75 DB body_system backfill
+- **article_currency updated:** 1,985 → 1,998 rows (100% complete; includes ART-1987–ART-1999 from critique rebuild)
+- **ite_analyze_v2.py enhancement:** Stage 1.75 DB body_system backfill new permanent pipeline feature; fetches normalized body_system from DB, applies before score rollup
+- **ite_analyzer_v3.py fix:** pathway_gap_map() LEFT JOIN corrected (icd10_desc column now included; resolves gap analysis rendering)
+- **intersection_centroid_vec verified:** 123 rows complete, 71 ITE + 52 AAFP blueprint×body_system centroids
+- **Deferred flags status:** DEFERRED-HUMAN-REVIEW-BODY-SYSTEM still active (~308 holdouts); DEFERRED-PGY-BENCHMARKS + DEFERRED-PROGRAM-TREND now fully UNBLOCKED
+- **No DB schema changes; resident reports ready for distribution**
 
 ## Session Notes (BATON 060)
 
@@ -100,32 +111,32 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 | Flag | Status | Description |
 |------|--------|-------------|
 | DEFERRED-YOY-ROBUSTNESS | ACTIVE | Year-over-year section 3b needs more robust implementation; month-by-month trend aggregation logic (BATON 050) |
-| DEFERRED-PROGRAM-TREND | UNBLOCKED | Require program-level trend analysis across multiple residents; benchmark against 2024 ABFM national reference (abfm_reference_2024.json); unblocked after centroid rebuild |
+| DEFERRED-PROGRAM-TREND | UNBLOCKED | Require program-level trend analysis across multiple residents; benchmark against 2024 ABFM national reference (abfm_reference_2024.json); all blockers cleared (BATON 061) |
 | DEFERRED-RESIDENT-FOLDER-MIGRATION | NEW | Investigate resident_data/ folder state and migration strategy to M5 platform |
 | DEFERRED-VECTOR-TIER1-REWRITE | ✅ CLOSED | Implemented in BATON 057 — 3 new vector functions + 3 integration points in match_practice_questions_v3() |
 | DEFERRED-PRACTICE-Q-TWO-TABLE | ✅ CLOSED | Superseded by unified practice questions table in BATON 057 (removed singleQs/crossQs split) |
 | DEFERRED-AAFP-BODY-SYSTEM-AUDIT | ✅ CLOSED | AAFP body_system fields corrected (BATON 059) |
 | DEFERRED-BODY-SYSTEM-MERGED-UPDATE | ✅ CLOSED | body_system_merged mapping flipped to post-2024 canonical (Psychiatric/Behavioral, Sexual and Reproductive, Injuries/Musculoskeletal) for 2018-2021 legacy data — completed BATON 060 |
 | DEFERRED-CENTROID-REBUILD | ✅ CLOSED | intersection_centroid_vec rebuilt after body_system field corrections (135 → 123 rows); completed BATON 060 |
-| DEFERRED-HUMAN-REVIEW-BODY-SYSTEM | ACTIVE | 201 ITE + 129 AAFP questions in human_review queue (body_system corrections pending manual verification) |
+| DEFERRED-HUMAN-REVIEW-BODY-SYSTEM | ACTIVE | ~308 holdout questions (179 ITE + 129 AAFP) pending manual verification; applies to 2022-2023 legacy data only (2024-2025 + all AAFP normalized BATON 060) |
 | DEFERRED-KNOWN-DRUGS-EXPANSION | ✅ CLOSED | Drugs still appearing in top diagnoses table — completed BATON 058 |
 | DEFERRED-QID-XREF-LIBRARY-GAPS | ✅ CLOSED | 249 unmatched citations resolved — completed BATON 058 |
-| DEFERRED-SCHOLL-OLD-FORMAT | NEW | Scholl 2022/2023 use old ABFM taxonomy (no canonical mapping); requires manual Psychogenic→Psychiatric/Behavioral remapping |
+| DEFERRED-SCHOLL-OLD-FORMAT | NEW | Scholl 2022/2023 use old ABFM taxonomy (no canonical mapping); Stage 1.75 DB backfill now handles transparently; body_system_merged provides forward mapping |
 | DEFERRED-A | ARCHIVED | 37 ITE manual PDFs — permanent ceiling (subscription-only) |
 | DEFERRED-AAFP-PAYWALL | ACTIVE | 3 AAFP articles paywalled (PMC not_oa): ART-1959 Binic_2011, ART-1972 Byington_2012, ART-1967 Verbalis_2007 |
 | DEFERRED-PRACTICE-Q-COVERAGE | ✅ CLOSED | Practice question 0-question warnings for some body systems (Foundations, Preventive, Cardiovascular, Respiratory, Sexual-Reproductive, Psychiatric, Behavioral) — qid_art_xref tagging coverage gap (BATON 050) |
-| DEFERRED-F | ✅ CLOSED | Intelligence 2.0 Layer 2 complete — article_currency built (1,985 rows) |
+| DEFERRED-F | ✅ CLOSED | Intelligence 2.0 Layer 2 complete — article_currency built (1,998 rows complete BATON 061) |
 | DEFERRED-H | CLOSED | Legacy non-codon PDFs confirmed duplicates |
 | DEFERRED-I | LOW PRI | unpaywall_scanner --from-csv extension |
 | DEFERRED-J | CLOSED | exa-research-search Phase 2 completed |
 | DEFERRED-L2-REVIEW | LOW PRI | Optional human review of 169 updated + 106 check_needed article_currency rows (use title_signals cross-reference) |
-| DEFERRED-PGY-BENCHMARKS | UNBLOCKED | ABFM embeds PGY mean + SD in score report PDF; ite_parser.py parse_score_report() extracts; awaiting multi-year archive for trend analysis; centroid rebuild removes prior blocker |
+| DEFERRED-PGY-BENCHMARKS | UNBLOCKED | ABFM embeds PGY mean + SD in score report PDF; ite_parser.py parse_score_report() extracts; all blockers cleared for multi-year trend analysis (BATON 061) |
 
 ## Intelligence 2.0 Status
 - Layer 1 (ICD-10): Complete — 3,952 rows article_icd10 (rebuilt 2026-04-16); question_icd10 ~5,003 rows (89.9% coverage, ~1,474 ITE questions)
-- Layer 2 (PubMed currency): ✅ COMPLETE — article_currency 1,985 rows; status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals column (JSON array)
-- Layer 3 (Clinical pathways): Complete — 3,971 rows (cleaned −49 no_match)
-- Layer 4 (Trends): Partial — trend CSV files in readable_db_files/
+- Layer 2 (PubMed currency): ✅ COMPLETE — article_currency 1,998 rows (updated 2026-04-16, BATON 061); status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals column (JSON array)
+- Layer 3 (Clinical pathways): Complete — 3,971 rows (cleaned −49 no_match); ite_analyzer_v3.py pathway_gap_map() LEFT JOIN fixed BATON 061
+- Layer 4 (Trends): Partial — trend CSV files in readable_db_files/; DEFERRED-PROGRAM-TREND now unblocked for multi-resident rollup
 
 ## Plugins & New Capabilities (BATON 049)
 - **ite-score-analyzer v1.0.0** — ITE score analysis plugin built in `skills_abilities/ite-score-analyzer-v2/`

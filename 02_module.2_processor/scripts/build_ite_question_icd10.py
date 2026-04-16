@@ -101,7 +101,7 @@ FROM (
     FROM qid_art_xref x
     JOIN article_icd10 a ON x.article_id = a.article_id
     JOIN articles ar ON x.article_id = ar.article_id
-    WHERE ar.source_type != 'Textbook'   -- exclude: broad coverage = noise
+    WHERE ar.citation_only = 0   -- exclude citation-only refs (textbooks, methodology, policy)
 )
 GROUP BY qid, icd10_code
 ORDER BY qid, relevance_rank, icd10_code
@@ -147,9 +147,20 @@ def qc_report(cur, rows_inserted):
     """)
     linked_but_untagged = cur.fetchone()[0]
 
+    # Citation-only articles filtered (textbooks, methodology, policy)
+    cur.execute("""
+        SELECT COUNT(DISTINCT x.qid)
+        FROM qid_art_xref x
+        JOIN articles ar ON x.article_id = ar.article_id
+        WHERE ar.citation_only = 1
+          AND x.qid NOT IN (SELECT DISTINCT qid FROM question_icd10)
+    """)
+    citation_only_filtered = cur.fetchone()[0]
+
     print(f"\nGAP BREAKDOWN")
     print(f"  No article link at all     : {no_link}")
     print(f"  Linked but article untagged: {linked_but_untagged}")
+    print(f"  Citation-only filtered     : {citation_only_filtered}  (textbooks/methodology — by design)")
 
     # Year breakdown of gap
     print(f"\nGAP BY EXAM YEAR")
@@ -249,7 +260,7 @@ def apply_related_cap(cur):
                   FROM qid_art_xref x
                   JOIN article_icd10 a  ON x.article_id = a.article_id
                   JOIN articles ar      ON x.article_id = ar.article_id
-                  WHERE ar.source_type != 'Textbook'
+                  WHERE ar.citation_only = 0
                     AND a.relevance = 'related'
                   GROUP BY x.qid, a.icd10_code
               )

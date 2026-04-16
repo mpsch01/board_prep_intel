@@ -942,12 +942,19 @@ def pathway_gap_map(icd10_map_result: dict, db_path: str, top_n: int = 8) -> dic
 
     ph   = ",".join(["?"] * len(top_codes))
     rows = db.execute(f"""
-        SELECT icd10_code, icd10_desc, pathway_role,
-               COUNT(DISTINCT article_id) as article_count
-        FROM clinical_pathways
-        WHERE icd10_code IN ({ph})
-        GROUP BY icd10_code, pathway_role
-        ORDER BY icd10_code, article_count DESC
+        SELECT cp.icd10_code,
+               COALESCE(q.icd10_desc, cp.icd10_code) AS icd10_desc,
+               cp.pathway_role,
+               COUNT(DISTINCT cp.article_id) AS article_count
+        FROM clinical_pathways cp
+        LEFT JOIN (
+            SELECT DISTINCT icd10_code, icd10_desc
+            FROM question_icd10
+            WHERE icd10_desc IS NOT NULL
+        ) q ON cp.icd10_code = q.icd10_code
+        WHERE cp.icd10_code IN ({ph})
+        GROUP BY cp.icd10_code, cp.pathway_role
+        ORDER BY cp.icd10_code, article_count DESC
     """, top_codes).fetchall()
 
     db.close()

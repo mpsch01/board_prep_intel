@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-04-15 (BATON 060 — Git hash: 1f96976) — Normalization pipeline complete; 10 recovered questions enriched; body_system corrections; centroid rebuild
+**Last Updated:** 2026-04-16 (BATON 061 — Git hash: bc462a3) — Stage 1.75 DB body system backfill; all 7 resident analyses complete; article_currency 1,998 complete
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -12,7 +12,7 @@ board_prep_intel/
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
 ├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_060_*.md              Active session handoff — read first every session
+├── BATON_active_061_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
@@ -59,7 +59,7 @@ board_prep_intel/
 │       └── candidates/                Prompt templates for enrichment
 │
 ├── 03_module.3_analyst/               M3 — Score analysis, ICD-10, pathways, Q&A deliverables
-│   ├── scripts/                       50 py + 2 JS + 6 JSON config; ite_parser, ite_analyzer_v3, build_article_currency, report builders; NEW: 10 normalization/enrichment scripts (body_system corrections, concept_tag enrichment, question_icd10, vector builders, centroid rebuild)
+│   ├── scripts/                       50 py + 2 JS + 6 JSON config; ite_parser, ite_analyzer_v3, build_article_currency, report builders, stage_1_75_db_backfill
 │   ├── outputs/                       article_qc/ — citation QC audit results and rebuild statistics
 │   ├── docs/                          ITE score analysis pipeline docs
 │   └── reports/                       Per-resident DOCX reports + faculty PPTX (gitignored)

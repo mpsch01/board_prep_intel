@@ -37,7 +37,8 @@ DB_PATH = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "..", "00_database", "
 SCHEMAS_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "..", "00_database", "schemas"))
 OUTPUT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "..", "00_database", "readable_db_files"))
 SYNONYM_MAP_PATH = os.path.join(SCHEMAS_DIR, "clinical_synonym_map.json")
-MCP_LOOKUP_PATH = os.path.join(SCHEMAS_DIR, "icd10_mcp_lookup.json")
+DRUG_MAP_PATH    = os.path.join(SCHEMAS_DIR, "drug_synonym_map.json")
+MCP_LOOKUP_PATH  = os.path.join(SCHEMAS_DIR, "icd10_mcp_lookup.json")
 
 # ICD-10 chapter mapping (first letter → chapter)
 ICD10_CHAPTERS = {
@@ -106,7 +107,7 @@ def get_parent_code(icd10_code):
 
 # ── Phase 1: Build ──────────────────────────────────────────────────────────
 
-def build_icd10(db_path, synonym_map, mcp_lookup):
+def build_icd10(db_path, synonym_map, drug_map, mcp_lookup):
     """
     Extract diagnoses from concept_tags, translate via synonym map,
     look up in MCP lookup, and insert into article_icd10.
@@ -138,8 +139,9 @@ def build_icd10(db_path, synonym_map, mcp_lookup):
           AND a.article_id != 'ART-0001'
     """)
 
-    # Aggregate diagnoses per article
+    # Aggregate diagnoses AND drugs per article
     article_diagnoses = defaultdict(list)
+    article_drugs = defaultdict(list)
     for art_id, tags_json in c.fetchall():
         try:
             tags = json.loads(tags_json)
@@ -147,6 +149,8 @@ def build_icd10(db_path, synonym_map, mcp_lookup):
             continue
         for dx in tags.get("diagnoses", []):
             article_diagnoses[art_id].append(dx.lower().strip())
+        for drug in tags.get("drugs", []):
+            article_drugs[art_id].append(drug.lower().strip())
 
     # Build lowercase lookup index from MCP lookup
     lookup_index = {}
@@ -155,6 +159,14 @@ def build_icd10(db_path, synonym_map, mcp_lookup):
 
     # Lowercase synonym map
     syn_map = {k.lower().strip(): v.lower().strip() for k, v in synonym_map.items()}
+
+    # Lowercase drug map (drug name / class → primary indication lookup key)
+    # Exclude _meta key
+    drug_map_lower = {
+        k.lower().strip(): v.lower().strip()
+        for k, v in drug_map.items()
+        if not k.startswith("_")
+    }
 
     # Process each article
     total_codes = 0
@@ -196,18 +208,49 @@ def build_icd10(db_path, synonym_map, mcp_lookup):
             if code not in codes_for_article:
                 codes_for_article[code] = (desc, idx)
 
+        # ── Drug pass: add drug-derived codes at 'related' relevance ──────────
+        # Drug codes never override diagnosis-derived codes. If a code already
+        # exists from the diagnosis pass, the drug entry is silently skipped.
+        drug_no_match = set()
+        for drug in article_drugs.get(art_id, []):
+            # drug_map → indication lookup key → mcp_lookup → ICD-10 code
+            indication = drug_map_lower.get(drug)
+            if not indication:
+                drug_no_match.add(drug)
+                continue
+            entry = lookup_index.get(indication)
+            if not entry:
+                drug_no_match.add(drug)
+                continue
+            code = (entry.get("icd10_code") or "").strip()
+            desc = (entry.get("icd10_desc") or "").strip()
+            if not code:
+                drug_no_match.add(drug)
+                continue
+            # Only add if not already tagged by diagnosis pass (diagnosis wins)
+            if code not in codes_for_article:
+                codes_for_article[code] = (desc, 999)  # idx=999 → sorts after all diagnoses
+        # ───────────────────────────────────────────────────────────────────────
+
         if not codes_for_article:
             continue
 
         # Assign relevance based on order: first=primary, next 1-2=secondary, rest=related
+        # Entries with idx=999 are drug-derived → always forced to 'related'.
         sorted_codes = sorted(codes_for_article.items(), key=lambda x: x[1][1])
-        for rank, (code, (desc, _)) in enumerate(sorted_codes):
-            if rank == 0:
-                relevance = "primary"
-            elif rank <= 2:
-                relevance = "secondary"
-            else:
+        diag_rank = 0  # tracks rank within diagnosis-derived codes only
+        for code, (desc, idx) in sorted_codes:
+            if idx == 999:
+                # Drug-derived — always related; never upgrades to primary/secondary
                 relevance = "related"
+            else:
+                if diag_rank == 0:
+                    relevance = "primary"
+                elif diag_rank <= 2:
+                    relevance = "secondary"
+                else:
+                    relevance = "related"
+                diag_rank += 1
 
             c.execute("""
                 INSERT OR REPLACE INTO article_icd10
@@ -493,14 +536,16 @@ def main():
 
     print(f"Database:    {DB_PATH}")
     print(f"Synonym map: {SYNONYM_MAP_PATH}")
+    print(f"Drug map:    {DRUG_MAP_PATH}")
     print(f"MCP lookup:  {MCP_LOOKUP_PATH}")
     print(f"Output:      {OUTPUT_DIR}")
     print()
 
     if args.phase in ("build", "all"):
         synonym_map = load_json(SYNONYM_MAP_PATH)
-        mcp_lookup = load_json(MCP_LOOKUP_PATH)
-        build_icd10(DB_PATH, synonym_map, mcp_lookup)
+        drug_map    = load_json(DRUG_MAP_PATH)
+        mcp_lookup  = load_json(MCP_LOOKUP_PATH)
+        build_icd10(DB_PATH, synonym_map, drug_map, mcp_lookup)
 
     if args.phase in ("crosswalk", "all"):
         build_crosswalk(DB_PATH)

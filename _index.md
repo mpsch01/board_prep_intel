@@ -1,6 +1,6 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-04-16 (BATON 060 — enrichment pipeline for 10 recovered questions, body_system normalization completed, centroid rebuild complete)
+**Last Updated:** 2026-04-16 (BATON 061 — legacy body_system analyses complete, all 7 resident analyses re-run with DB backfill, article_currency complete, intersect_centroid_vec rebuilt)
 **Status:** Current — 1,004 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 build = 8 + maintain = 26; M2 = 75py + 6js; M3 = 50py + 2js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB stable (1,998 articles, 1,639 ITE questions); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_060_20260416_enrichment_body_system_complete.md  — active BATON
+├── BATON_active_061_20260416_legacy_bodysystem_analyses_complete.md  — active BATON
 ├── CLAUDE.md                              — project memory + conventions
 ├── REPO_MAP.md                            — current-state architectural overview (NEW — BATON 039)
 ├── README.md                              — project overview (human-readable)
@@ -54,6 +54,8 @@ board_prep_intel/
 
 **Completed (2026-04-16, BATON 060):** Enrichment pipeline for 10 recovered ITE questions (Steps 1-6 completed); 22 holdout body_system corrections applied (2024-2025 deprecated labels); apply_body_system_normalization.py fixed Musculoskeletal (48 QIDs), QID-2021-0168, synced 376 body_system_merged records; DEFERRED-BODY-SYSTEM-MERGED-UPDATE (CLOSED); DEFERRED-CENTROID-REBUILD (CLOSED); M3 script count: 39 → 50 (+10 new session scripts: audit_blueprint_by_year.py through apply_recovered_questions.py).
 
+**Completed (2026-04-16, BATON 061):** Legacy body_system analyses complete; all 7 resident analyses re-run with Stage 1.75 DB body_system backfill (Scholl 2022/2023/2024, Hopkins 2025, Sarkar 2025, Pjetergjoka 2024/2025); article_currency updated to 1,998 rows (100% complete); ite_analyze_v2.py: Stage 1.75 new pipeline stage added for DB body system backfill; ite_analyzer_v3.py: pathway_gap_map() LEFT JOIN fixed (icd10_desc column); intersection_centroid_vec verified (123 rows, 71 ITE + 52 AAFP blueprintxbody_system centroids).
+
 **Cleaned (2026-04-04, BATON 039):** Windows cleanup complete — 5 deprecated M1 scripts deleted; Option B artifacts deleted (SEVERANCE_PLAN.md, option_b_patch.py, repo_pre_severance.md); schema docs refreshed (articles.md: row count, tier column, source_type dist; questions.md: subcategory removed); script counts corrected (M1 build 6, maintain 18, M2 75py, M3 13py); REPO_MAP.md added to root
 **Fixed (2026-04-04, BATON 038):** 14 code review defects resolved — hop count bugs (preprocess_concept_tags, batch_db_extract, db_guided_extractor), SCHEMAS_DIR/OUTPUT_DIR (build_icd10_tags), filename pattern (extract_ite_year), exists() guard (audit_engine_type_changes), crosswalk output paths + multi-tier scan (build_crosswalk_index), XGBoost param (classify_ite_year), JSON_DIR/LOG_DIR/OUTPUT_DIR path fixes (4 scripts), VC gate cross-check (backfill), docstring escapes (2 scripts)
 
@@ -94,7 +96,7 @@ board_prep_intel/
     └── ite-data-context-skill/
 ```
 
-**DB Counts (verified live 2026-04-16, BATON 060):**
+**DB Counts (verified live 2026-04-16, BATON 061):**
 | Table | Rows | Notes |
 |-------|------|-------|
 | articles | 1,998 | +13 new from critique rebuild; +49 AAFP acquisition (ART-1938–ART-1986); PDFs pending download |
@@ -108,7 +110,7 @@ board_prep_intel/
 | aafp_question_icd10 | 4,753 | relevance normalized; related cap applied |
 | clinical_pathways | 3,971 | REBUILT 2026-03-31 — blueprint-based, both banks; cleaned −49 no_match rows (2026-04-06) |
 | article_citation_trend | 1,740 | longitudinal citation tracking + watch_list flag |
-| article_currency | 1,985 | Layer 2 complete; current:1100, updated:169, check_needed:106, not_indexed:610; title_signals column (JSON array) |
+| article_currency | 1,998 | ✅ COMPLETE 2026-04-16 — Layer 2 complete; status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals column (JSON array) |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
 | icd10_rollup | 614 | |
 | icd10_code_xref | 1,006 | |
@@ -288,4 +290,4 @@ board_prep_intel/
     └── [resident score report PDFs]
 ```
 
-*M3 scripts: 50 py + 2 js (+10 new session scripts this BATON: audit_blueprint_by_year.py, audit_holdout_body_system.py, audit_holdout_merged.py, audit_holdout_both_axes.py, apply_holdout_body_system_corrections.py, audit_article_icd10_drop.py, apply_body_system_normalization.py, enrich_recovered_questions.py, recover_missing_questions.py, apply_recovered_questions.py)*
+*M3 scripts: 50 py + 2 js (+10 new session scripts BATON 060: audit_blueprint_by_year.py through apply_recovered_questions.py) — Stage 1.75 DB body_system backfill pipeline permanent addition (ite_analyze_v2.py); pathway_gap_map() LEFT JOIN fix (ite_analyzer_v3.py)*

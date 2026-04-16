@@ -483,6 +483,48 @@ def main():
         merged["exam_year"] = score_report_data["exam_year"]
 
     # ========================================================================
+    # STAGE 1.75: DB Body System Backfill
+    # ========================================================================
+    # For legacy years (2018–2023) ABFM did not issue a distinct body system PDF.
+    # Old "clinical category" PDFs should NOT be passed as --bodysystem — they map
+    # to the old blueprint taxonomy, not body system taxonomy.
+    # When items have body_system=None, backfill from the DB using matched QIDs.
+    # This runs automatically whenever body_system is absent — no flag required.
+    _exam_year_for_backfill = merged.get("exam_year", "")
+    _needs_backfill = any(i.get("body_system") is None for i in merged["items"])
+    if _exam_year_for_backfill and _needs_backfill:
+        print("\n" + "=" * 60)
+        print("STAGE 1.75: DB Body System Backfill")
+        print("=" * 60)
+        _qid_lookup = {i["item"]: f"QID-{_exam_year_for_backfill}-{i['item']:04d}"
+                       for i in merged["items"]}
+        _all_qids = list(_qid_lookup.values())
+        try:
+            import sqlite3 as _sqlite3
+            _conn = _sqlite3.connect(args.db)
+            _conn.row_factory = _sqlite3.Row
+            _ph = ",".join(["?"] * len(_all_qids))
+            _rows = _conn.execute(
+                f"SELECT qid, body_system FROM questions WHERE qid IN ({_ph})", _all_qids
+            ).fetchall()
+            _conn.close()
+            _qid_to_bs = {r["qid"]: r["body_system"] for r in _rows if r["body_system"]}
+            _backfilled = 0
+            for _item in merged["items"]:
+                if _item.get("body_system") is None:
+                    _qid = _qid_lookup.get(_item["item"])
+                    if _qid and _qid in _qid_to_bs:
+                        _item["body_system"] = _qid_to_bs[_qid]
+                        _backfilled += 1
+            _coverage = round(_backfilled / len(merged["items"]) * 100, 1) if merged["items"] else 0
+            print(f"  Backfilled body_system from DB: {_backfilled}/{len(merged['items'])} items ({_coverage}%)")
+            if _backfilled < len(merged["items"]) * 0.5:
+                print(f"  WARNING: Low backfill coverage — exam year '{_exam_year_for_backfill}' may not match DB year keys.")
+        except Exception as _e:
+            print(f"  WARNING: DB body system backfill failed: {_e}")
+            print("  Continuing without body system data.")
+
+    # ========================================================================
     # STAGE 2: Analysis (v2 or v1 based on --v1-only flag)
     # ========================================================================
     print("\n" + "=" * 60)

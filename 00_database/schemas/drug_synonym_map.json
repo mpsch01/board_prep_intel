@@ -1,0 +1,177 @@
+{
+  "_meta": {
+    "description": "Drug name / drug class → ICD-10 lookup key for concept_tags.drugs field processing",
+    "purpose": "Maps drug names and drug classes to their primary clinical indication, which then resolves via icd10_mcp_lookup.json. All drug-derived ICD-10 codes are assigned 'related' relevance — they are a supporting signal, never the primary diagnostic axis.",
+    "format": "drug_name_lowercase → exact key in icd10_mcp_lookup.json",
+    "created": "2026-04-16",
+    "baton": "BATON_061",
+    "source_list": "Top 100 most prescribed US drugs + clinical drug class terms"
+  },
+
+  "atorvastatin": "hyperlipidemia",
+  "rosuvastatin": "hyperlipidemia",
+  "simvastatin": "hyperlipidemia",
+  "pravastatin": "hyperlipidemia",
+  "ezetimibe": "hyperlipidemia",
+  "fenofibrate": "hyperlipidemia",
+
+  "metformin": "type 2 diabetes mellitus",
+  "semaglutide": "type 2 diabetes mellitus",
+  "empagliflozin": "type 2 diabetes mellitus",
+  "dapagliflozin": "type 2 diabetes mellitus",
+  "dulaglutide": "type 2 diabetes mellitus",
+  "glipizide": "type 2 diabetes mellitus",
+  "glimepiride": "type 2 diabetes mellitus",
+  "insulin glargine": "type 2 diabetes mellitus",
+  "insulin lispro": "type 2 diabetes mellitus",
+
+  "levothyroxine": "hypothyroidism",
+
+  "lisinopril": "hypertension",
+  "amlodipine": "hypertension",
+  "metoprolol": "hypertension",
+  "losartan": "hypertension",
+  "hydrochlorothiazide": "hypertension",
+  "lisinopril hctz": "hypertension",
+  "lisinopril hydrochlorothiazide": "hypertension",
+  "losartan hctz": "hypertension",
+  "losartan hydrochlorothiazide": "hypertension",
+  "carvedilol": "heart failure",
+  "furosemide": "heart failure",
+  "spironolactone": "heart failure",
+  "valsartan": "heart failure",
+  "propranolol": "hypertension",
+  "atenolol": "hypertension",
+  "olmesartan": "hypertension",
+  "clonidine": "hypertension",
+
+  "albuterol": "asthma",
+  "montelukast": "asthma",
+  "fluticasone": "asthma",
+  "fluticasone salmeterol": "chronic obstructive pulmonary disease",
+  "budesonide formoterol": "chronic obstructive pulmonary disease",
+  "prednisone": "asthma",
+
+  "omeprazole": "gastroesophageal reflux disease",
+  "pantoprazole": "gastroesophageal reflux disease",
+  "famotidine": "gastroesophageal reflux disease",
+
+  "sertraline": "major depressive disorder",
+  "escitalopram": "major depressive disorder",
+  "bupropion": "major depressive disorder",
+  "fluoxetine": "major depressive disorder",
+  "trazodone": "major depressive disorder",
+  "duloxetine": "major depressive disorder",
+  "venlafaxine": "major depressive disorder",
+  "citalopram": "major depressive disorder",
+  "paroxetine": "major depressive disorder",
+  "amitriptyline": "major depressive disorder",
+  "mirtazapine": "major depressive disorder",
+
+  "alprazolam": "generalized anxiety disorder",
+  "hydroxyzine": "generalized anxiety disorder",
+  "buspirone": "generalized anxiety disorder",
+  "clonazepam": "generalized anxiety disorder",
+  "lorazepam": "generalized anxiety disorder",
+
+  "gabapentin": "peripheral neuropathy",
+  "pregabalin": "peripheral neuropathy",
+
+  "lamotrigine": "seizure disorder",
+  "topiramate": "seizure disorder",
+
+  "quetiapine": "bipolar disorder",
+  "aripiprazole": "bipolar disorder",
+
+  "amphetamine salts": "adhd",
+  "adderall": "adhd",
+  "methylphenidate": "adhd",
+  "lisdexamfetamine": "adhd",
+
+  "apixaban": "venous thromboembolism",
+  "rivaroxaban": "venous thromboembolism",
+  "clopidogrel": "coronary artery disease",
+  "aspirin": "coronary artery disease",
+
+  "tamsulosin": "benign prostatic hyperplasia",
+  "finasteride": "benign prostatic hyperplasia",
+
+  "latanoprost": "glaucoma",
+
+  "cetirizine": "allergic rhinitis",
+
+  "estradiol": "menopause",
+  "ethinyl estradiol norethindrone": "contraception",
+  "ethinyl estradiol norgestimate": "contraception",
+
+  "hydrocodone": "chronic pain",
+  "hydrocodone acetaminophen": "chronic pain",
+  "oxycodone": "chronic pain",
+  "oxycodone acetaminophen": "chronic pain",
+  "tramadol": "chronic pain",
+  "ibuprofen": "osteoarthritis",
+  "meloxicam": "osteoarthritis",
+  "diclofenac": "osteoarthritis",
+
+  "cyclobenzaprine": "muscle spasm",
+  "tizanidine": "muscle spasm",
+  "baclofen": "muscle spasm",
+
+  "zolpidem": "insomnia",
+
+  "ondansetron": "nausea and vomiting",
+
+  "allopurinol": "gout",
+
+  "potassium chloride": "hypokalemia",
+
+  "ferrous sulfate": "iron deficiency anemia",
+
+  "amoxicillin": "bacterial infections",
+  "amoxicillin clavulanate": "bacterial infections",
+  "azithromycin": "bacterial infections",
+  "doxycycline": "bacterial infections",
+  "cephalexin": "bacterial infections",
+
+  "ergocalciferol": "vitamin d deficiency",
+  "vitamin d2": "vitamin d deficiency",
+  "cholecalciferol": "vitamin d deficiency",
+  "vitamin d3": "vitamin d deficiency",
+
+  "folic acid": "folate deficiency",
+
+  "valacyclovir": "herpes zoster",
+
+  "statin": "hyperlipidemia",
+  "sglt2 inhibitor": "type 2 diabetes mellitus",
+  "glp-1 agonist": "type 2 diabetes mellitus",
+  "glp-1 receptor agonist": "type 2 diabetes mellitus",
+  "proton pump inhibitor": "gastroesophageal reflux disease",
+  "ppi": "gastroesophageal reflux disease",
+  "ssri": "major depressive disorder",
+  "snri": "major depressive disorder",
+  "beta blocker": "hypertension",
+  "ace inhibitor": "hypertension",
+  "arb": "hypertension",
+  "angiotensin receptor blocker": "hypertension",
+  "thiazide diuretic": "hypertension",
+  "loop diuretic": "heart failure",
+  "calcium channel blocker": "hypertension",
+  "anticoagulant": "venous thromboembolism",
+  "doac": "venous thromboembolism",
+  "noac": "venous thromboembolism",
+  "sulfonylurea": "type 2 diabetes mellitus",
+  "insulin": "type 2 diabetes mellitus",
+  "inhaled corticosteroid": "asthma",
+  "saba": "asthma",
+  "laba": "asthma",
+  "lama": "chronic obstructive pulmonary disease",
+  "benzodiazepine": "generalized anxiety disorder",
+  "stimulant": "adhd",
+  "antipsychotic": "schizophrenia",
+  "mood stabilizer": "bipolar disorder",
+  "anticonvulsant": "seizure disorder",
+  "antibiotic": "bacterial infections",
+  "nsaid": "osteoarthritis",
+  "opioid": "chronic pain"
+}

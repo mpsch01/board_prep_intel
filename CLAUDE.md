@@ -48,9 +48,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_060_20260415_normalization_pipeline_complete.md` — Enrichment pipeline for 10 recovered questions completed (Steps 1–6: body_system corrections, concept tags, question_icd10, vectors, centroids). 22 holdout body_system corrections (2024–2025 deprecated labels). apply_body_system_normalization.py executed; DEFERRED-BODY-SYSTEM-MERGED-UPDATE completed (376 records synced). DEFERRED-CENTROID-REBUILD closed. 10 new M3 scripts added. |
+| Active BATON | `BATON_active_061_20260416_legacy_bodysystem_analyses_complete.md` — Stage 1.75 DB body system backfill added; all 7 resident analyses complete; DEFERRED-HUMAN-REVIEW-BODY-SYSTEM closed; article_currency 1,998/1,998 complete. |
 | DB articles | 1,998 (+13 from critique PDFs: ART-1987–ART-1999) |
-| DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED |
+| DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
 | aafp_questions.blueprint | 1,221/1,221 (100%) — batch API, same rubric as ITE v2 — complete 2026-03-30 |
 | aafp_questions.concept_tags | 1,221/1,221 (100%) |
@@ -61,7 +61,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | icd10_vec | 2,219 rows — OpenAI text-embedding-3-small (1536d) |
 | article_icd10_vec | 1,757 rows — ✅ rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 rows — ✅ rebuilt 2026-04-05 |
-| intersection_centroid_vec | 123 rows — REBUILT 2026-04-15 |
+| intersection_centroid_vec | 123 rows — REBUILT 2026-04-16 after body_system taxonomy fixes |
 | clinical_pathways | 3,971 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 — 49 no_match rows deleted |
 | PDFs (ITE citation tiers) | 988 across 4 tiers in citation_files/ITE/ (VC_fail:630, VC_pass:168, local_lite:117, right_click:58) + 15 AAFP — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
 | PDFs (AAFP) | 15 in citation_files/AAFP/ — recovered 2026-04-05 |
@@ -73,10 +73,10 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root; extract_ite_critique_refs.py MODIFIED |
 | M3 scripts | 50 Python + 2 JS + 6 JSON config (NEW: 19 body system QC scripts + 10 normalization + prior) |
 | M5 scripts | 3 Python sync + 35 TypeScript/TSX + 5 SQL migrations — 05_module.5_web/ scaffold |
-| article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
+| article_currency | 1,998 rows — complete 2026-04-16 (was missing 115 rows) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2000 |
-| Git branch | `main`, latest → 1f96976 |
+| Git branch | main, latest → bc462a3 (pre-commit) |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -118,15 +118,13 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 060, 2026-04-15)
+## Next Steps (as of BATON 061, 2026-04-16)
 
 ### Immediate
-1. Re-run all 7 resident analyses (Sarkar 2025, Hopkins 2025, Pjetergjoka 2024/2025, Scholl 2022/2023/2024) — NOW FULLY UNBLOCKED
-2. Update article_currency for ART-1987–ART-1999 (13 new articles)
-3. **DEFERRED-HUMAN-REVIEW-BODY-SYSTEM** — ~308 holdouts (~179 ITE + 129 AAFP)
+1. Implement PGY benchmark comparison — UNBLOCKED (DEFERRED-PGY-BENCHMARKS)
+2. Implement program-level trend analysis — UNBLOCKED (DEFERRED-PROGRAM-TREND)
+3. Add `--score-report` flag to batch runner for residents with score PDFs
 
 ### Short-term
 4. **DEFERRED-KNOWN-DRUGS-EXPANSION** — identify offending drug names; decide fix approach
 5. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations need article acquisition
-6. **DEFERRED-PGY-BENCHMARKS** — UNBLOCKED (pending resident analyses)
-7. **DEFERRED-PROGRAM-TREND** — UNBLOCKED (pending resident analyses)

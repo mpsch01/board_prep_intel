@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-04-15 (BATON 060)
+**Last updated:** 2026-04-16 (BATON 061)
 **Status:** Active development
-**Active BATON:** `BATON_active_060_20260415_normalization_pipeline_complete.md`
+**Active BATON:** `BATON_active_061_20260416_legacy_bodysystem_analyses_complete.md`
 **Next ART-ID:** ART-2000
-**Git:** `main` → `1f96976` → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `main` → `bc462a3` → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -14,12 +14,12 @@
 {
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (1,998 articles, 1,004 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_060_20260415_normalization_pipeline_complete.md",
-  "baton_description": "Enrichment pipeline for 10 recovered questions completed (Steps 1–6: body_system corrections, concept tags, question_icd10, vectors, centroids). 22 holdout body_system corrections (2024–2025 deprecated labels). apply_body_system_normalization.py executed; DEFERRED-BODY-SYSTEM-MERGED-UPDATE completed (376 records synced). DEFERRED-CENTROID-REBUILD closed. 10 new M3 scripts added.",
-  "git_hash": "1f96976",
+  "baton": "BATON_active_061_20260416_legacy_bodysystem_analyses_complete.md",
+  "baton_description": "Stage 1.75 DB body system backfill added; all 7 resident analyses complete; DEFERRED-HUMAN-REVIEW-BODY-SYSTEM closed; article_currency 1,998/1,998 complete.",
+  "git_hash": "bc462a3",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
-  "last_updated": "2026-04-15",
+  "last_updated": "2026-04-16",
   "next_art_id": "ART-2000",
   "vc_gate_citations": 352,
   "database": {
@@ -41,7 +41,7 @@
     "question_vec": 1639,
     "aafp_question_vec": 1221,
     "intersection_centroid_vec": 123,
-    "article_currency": 1985
+    "article_currency": 1998
   },
   "pdfs": {
     "vc_fail": 630,
@@ -149,7 +149,7 @@ Critical reference data:
 
 ---
 
-## Database State (as of 2026-04-15, BATON 060)
+## Database State (as of 2026-04-16, BATON 061)
 
 | Table | Rows | Notes |
 |-------|------|-------|
@@ -163,7 +163,7 @@ Critical reference data:
 | aafp_question_icd10 | 4,753 | relevance normalized; related cap applied |
 | clinical_pathways | 3,971 | blueprint-based, both banks — rebuilt 2026-03-31 |
 | article_citation_trend | 1,740 | longitudinal citation tracking + watch_list flag |
-| article_currency | 1,985 | ✅ Intelligence 2.0 Layer 2 complete — current:1100, updated:169, check_needed:106, not_indexed:610 |
+| article_currency | 1,998 | ✅ Intelligence 2.0 Layer 2 complete 2026-04-16 — all 1,998 articles currency-tracked |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
 | icd10_vec | 2,219 | BLOB — OpenAI text-embedding-3-small (1536d) |
 | article_icd10_vec | 1,757 | BLOB — rebuilt 2026-04-05 |
@@ -173,7 +173,7 @@ Critical reference data:
 | aafp_question_vec | 1,221 | sqlite-vec virtual table |
 | question_full_vec | 1,639 | BLOB — full question embedding with blueprint (BATON 056) |
 | aafp_question_full_vec | 1,221 | BLOB — full AAFP embedding with blueprint+body_system+concept_tags (BATON 056) |
-| intersection_centroid_vec | 123 | BLOB — 69 ITE + 54 AAFP blueprint×body_system centroids — rebuilt 2026-04-15 |
+| intersection_centroid_vec | 123 | BLOB — 69 ITE + 54 AAFP blueprint×body_system centroids — rebuilt 2026-04-16 |
 
 ---
 
@@ -244,15 +244,14 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 
 ---
 
-## Deferred Flags (active as of BATON 060)
+## Deferred Flags (active as of BATON 061)
 
 | Flag | Status | Description |
 |------|--------|-------------|
-| DEFERRED-HUMAN-REVIEW-BODY-SYSTEM | ACTIVE | ~179 ITE + 129 AAFP = ~308 questions pending Mikey clinical review |
 | DEFERRED-KNOWN-DRUGS-EXPANSION | ACTIVE | Identify offending drug names; decide fix approach |
 | DEFERRED-QID-XREF-LIBRARY-GAPS | ACTIVE | 249 unmatched citations need article acquisition |
-| DEFERRED-PGY-BENCHMARKS | UNBLOCKED | Centroid rebuild complete; awaiting multi-year data |
-| DEFERRED-PROGRAM-TREND | UNBLOCKED | Centroid rebuild complete; benchmark against abfm_reference_2024.json |
+| DEFERRED-PGY-BENCHMARKS | UNBLOCKED | Implement benchmark comparison functionality |
+| DEFERRED-PROGRAM-TREND | UNBLOCKED | Implement program-level trend analysis |
 | DEFERRED-YOY-ROBUSTNESS | ACTIVE | Month-by-month rollup needs testing with dense temporal data |
 | DEFERRED-RESIDENT-FOLDER-MIGRATION | ACTIVE | Investigate resident_data/ migration strategy to M5 |
 | DEFERRED-SCHOLL-OLD-FORMAT | ACTIVE | 2022/2023 score reports in old ABFM taxonomy format |
@@ -260,16 +259,16 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 
 ---
 
-## Next Steps (BATON 060)
+## Next Steps (BATON 061)
 
 ### Immediate
-1. **Re-run all 7 resident analyses** — NOW FULLY UNBLOCKED (Sarkar 2025, Hopkins 2025, Pjetergjoka 2024/2025, Scholl 2022/2023/2024)
-2. **article_currency update** — 13 new articles (ART-1987–ART-1999) need currency check
+1. Implement PGY benchmark comparison — UNBLOCKED (DEFERRED-PGY-BENCHMARKS)
+2. Implement program-level trend analysis — UNBLOCKED (DEFERRED-PROGRAM-TREND)
+3. Add `--score-report` flag to batch runner for residents with score PDFs
 
 ### Short-term
-3. **DEFERRED-HUMAN-REVIEW-BODY-SYSTEM** (~308 holdouts — Mikey clinical review)
-4. **DEFERRED-KNOWN-DRUGS-EXPANSION**
-5. **DEFERRED-QID-XREF-LIBRARY-GAPS** (249 unmatched citations)
+4. **DEFERRED-KNOWN-DRUGS-EXPANSION** — identify offending drug names
+5. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations need acquisition
 
 ---
 
@@ -285,4 +284,4 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 ---
 
 **Project Lead:** Michael Scholl, MD
-**Last Reviewed:** 2026-04-15 (BATON 060, git 1f96976)
+**Last Reviewed:** 2026-04-16 (BATON 061, git bc462a3)

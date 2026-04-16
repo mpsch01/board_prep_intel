@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last verified: 2026-04-16 (BATON 060)
+Last verified: 2026-04-16 (BATON 061)
 
 ## DB: ite_intelligence.db
 
@@ -15,7 +15,7 @@ Last verified: 2026-04-16 (BATON 060)
 | aafp_question_icd10 | 4,753 | Relevance normalized |
 | clinical_pathways | 3,971 | Blueprint-based, rebuilt 2026-03-31; cleaned −49 no_match rows |
 | article_citation_trend | 1,740 | Longitudinal citation tracking + watch_list flag |
-| article_currency | 1,985 | ✅ NEW — Layer 2 Intelligence complete; status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals JSON array column |
+| article_currency | 1,998 | ✅ COMPLETE 2026-04-16 — Layer 2 Intelligence complete; status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals JSON array column |
 | pubmed_pmid_cache | 344 | Layer 2 seed |
 | article_icd10_vec | 1,757 | Rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 | Rebuilt 2026-04-05 |
@@ -44,6 +44,14 @@ Last verified: 2026-04-16 (BATON 060)
 - status breakdown: current:1100, updated:169, check_needed:106, not_indexed:610
 - title_signals: JSON array of clinical category keywords (extracted from blueprint cross-reference; used for future filtering + human review)
 - Populated via build_article_currency.py (M3 script)
+
+## DB Changes (BATON 061)
+- No new rows added; field corrections + analysis completions only
+- article_currency: 1,985 → 1,998 (updated for 13 new articles ART-1987–ART-1999)
+- All 7 resident analyses re-run with Stage 1.75 DB body_system backfill
+- ite_analyze_v2.py: New Stage 1.75 DB body_system backfill pipeline added
+- ite_analyzer_v3.py: pathway_gap_map() LEFT JOIN fixed (icd10_desc column now included)
+- intersection_centroid_vec: verified complete (123 rows, 71 ITE + 52 AAFP)
 
 ## DB Changes (BATON 060)
 - questions (ITE): 1,629 → 1,639 (+10 recovered questions enriched this session)
@@ -93,12 +101,13 @@ Last verified: 2026-04-16 (BATON 060)
 
 ## Key Metric Changes Since BATON 059
 
-| Metric | BATON 059 | BATON 060 | Change | Notes |
-|--------|-----------|-----------|--------|-------|
-| questions (ITE) | 1,629 | 1,639 | +10 | Recovered questions enriched |
-| article_icd10 | 4,020 | 3,952 | −68 | Synonym map normalization variance |
-| question_icd10 | ~5,218 | ~5,003 | −215 approx | 89.9% coverage update |
-| article_vec | stale | 1,998 | rebuilt | Consistent with articles table |
-| question_vec | stale | 1,639 | rebuilt | Consistent with ITE questions table |
-| intersection_centroid_vec | 135 | 123 | −12 | Rebuilt after body_system normalization |
-| M3 scripts | 39 | 50 | +10 py | audit_blueprint_by_year, audit_holdout_*, apply_holdout_*, apply_body_system_normalization, enrich_recovered_questions, recover_missing_questions, apply_recovered_questions |
+| Metric | BATON 059 | BATON 060 | BATON 061 | Change (059→061) | Notes |
+|--------|-----------|-----------|-----------|--------|-------|
+| questions (ITE) | 1,629 | 1,639 | 1,639 | +10 | Recovered questions enriched (BATON 060) |
+| article_icd10 | 4,020 | 3,952 | 3,952 | −68 | Synonym map normalization variance (BATON 060) |
+| question_icd10 | ~5,218 | ~5,003 | ~5,003 | −215 approx | 89.9% coverage update (BATON 060) |
+| article_vec | stale | 1,998 | 1,998 | rebuilt | Consistent with articles table (BATON 060) |
+| question_vec | stale | 1,639 | 1,639 | rebuilt | Consistent with ITE questions table (BATON 060) |
+| article_currency | stale | 1,985 | 1,998 | rebuilt | Layer 2 Intelligence complete (BATON 061) |
+| intersection_centroid_vec | 135 | 123 | 123 | −12 | Rebuilt after body_system normalization (BATON 060) |
+| M3 scripts | 39 | 50 | 50 | +10 py | Stage 1.75 pipeline additions (BATON 060); pathway fix (BATON 061) |
