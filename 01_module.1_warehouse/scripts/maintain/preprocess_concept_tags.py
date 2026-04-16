@@ -66,7 +66,7 @@ DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR      = PROJECT_ROOT / "00_database" / "logs"
 
 # ── Config ──────────────────────────────────────────────────────────────────
-MODEL      = "claude-sonnet-4-20250514"   # current production model
+MODEL      = "claude-sonnet-4-6"           # current production model
 BATCH_SIZE = 20          # reduced from 25 — keeps output comfortably under token ceiling
 MAX_TOKENS = 8192        # 4000 was too tight for 25 questions; 8192 gives ample headroom
 RETRY_MAX  = 3

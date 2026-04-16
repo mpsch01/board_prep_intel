@@ -39,7 +39,7 @@ INPUT_FILE = "ite_2018_2019_extracted.json"
 OUTPUT_FILE = "ite_2018_2019_enriched.json"
 CHECKPOINT_FILE = "ite_enrichment_checkpoint.json"
 
-MODEL = "claude-sonnet-4-20250514"  # Fast + accurate for classification
+MODEL = "claude-sonnet-4-6"  # current production model
 BATCH_SIZE = 10                      # Save checkpoint every N questions
 MAX_RETRIES = 3
 RETRY_DELAY = 5                      # Seconds between retries

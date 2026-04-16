@@ -1,0 +1,391 @@
+{
+  "recovered": [
+    {
+      "qid": "QID-2020-0134",
+      "exam_year": 2020,
+      "question_text": "While serving as team physician at a football game on a hot afternoon you are asked to evaluate an obese 17-year-old player who has begun limping. The player reports that he is very hot. An examination is normal except for a gastrocnemius spasm. You diagnose heat cramps. As you prepare to start treatment with isotonic fluid, stretching, and massage, the coach asks you how soon the athlete can return to play. You inform the coach that the player can resume participation",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "now"
+        },
+        {
+          "letter": "B",
+          "text": "tomorrow"
+        },
+        {
+          "letter": "C",
+          "text": "upon resolution of his symptoms"
+        },
+        {
+          "letter": "D",
+          "text": "when his temperature is <38.3\u00b0C (100.9\u00b0F)"
+        },
+        {
+          "letter": "E",
+          "text": "after acclimating to the heat for 1 week"
+        }
+      ],
+      "choices_json": "[{\"letter\": \"A\", \"text\": \"now\"}, {\"letter\": \"B\", \"text\": \"tomorrow\"}, {\"letter\": \"C\", \"text\": \"upon resolution of his symptoms\"}, {\"letter\": \"D\", \"text\": \"when his temperature is <38.3\\u00b0C (100.9\\u00b0F)\"}, {\"letter\": \"E\", \"text\": \"after acclimating to the heat for 1 week\"}]",
+      "correct_letter": "C",
+      "correct_text": "upon resolution of his symptoms",
+      "explanation": "Family physicians serving as team physicians for school-aged athletes are often asked to evaluate heat-related illnesses. It is important to differentiate mild and serious heat-related conditions to help protect athletes. Heat-related muscle cramps are common and self-limited, and players may resume activity upon resolution of symptoms. Measurement of the patient\u2019s temperature is not indicated in this scenario. Malaise, significant fatigue, and presyncope are symptoms of heat exhaustion, which does require prolonged removal from play, along with monitoring of the patient\u2019s temperature and mental status.",
+      "reference": "Gauer R, Meyers BK: Heat-related illnesses. Am Fam Physician 2019;99(8):482-489.",
+      "body_system": null,
+      "blueprint": null,
+      "stem_keywords": null,
+      "explanation_keywords": null,
+      "all_keywords": null,
+      "concept_tags": null,
+      "body_system_merged": null
+    },
+    {
+      "qid": "QID-2020-0138",
+      "exam_year": 2020,
+      "question_text": "A 36-year-old male sees you for follow-up of progressive fatigue and lightheadedness that has worsened over the past 3 months. He has lost 5 kg (11 lb) during this time. On examination he has a BMI of 21 kg/m2, a blood pressure of 88/48 mm Hg, and a pulse rate of 66 beats/min. A skin examination is notable for patches of nonpigmented skin on the hands. Initial laboratory testing is significant for a sodium level of 132 mEq/L (N 135\u2013145) and a potassium level of 5.3 mEq/L (N 3.5\u20135.0). Which one of the following tests would confirm the most likely diagnosis?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "17-hydroxyprogesterone"
+        },
+        {
+          "letter": "B",
+          "text": "ACTH stimulation"
+        },
+        {
+          "letter": "C",
+          "text": "Dexamethasone suppression"
+        },
+        {
+          "letter": "D",
+          "text": "Late night salivary cortisol"
+        },
+        {
+          "letter": "E",
+          "text": "Plasma renin and aldosterone"
+        }
+      ],
+      "choices_json": "[{\"letter\": \"A\", \"text\": \"17-hydroxyprogesterone\"}, {\"letter\": \"B\", \"text\": \"ACTH stimulation\"}, {\"letter\": \"C\", \"text\": \"Dexamethasone suppression\"}, {\"letter\": \"D\", \"text\": \"Late night salivary cortisol\"}, {\"letter\": \"E\", \"text\": \"Plasma renin and aldosterone\"}]",
+      "correct_letter": "B",
+      "correct_text": "ACTH stimulation",
+      "explanation": "This clinical case is consistent with Addison\u2019s disease, or adrenal insufficiency. This case is most likely the result of autoimmune disease, given the concurrent vitiligo, but it may also be idiopathic or secondary to cancers such as lymphoma or infections such as tuberculosis. Adrenal insufficiency is suggested by a low morning cortisol level, but the test of choice to confirm this diagnosis is the ACTH stimulation test. 17-Hydroxyprogesterone deficiency causes congenital adrenal hyperplasia, which typically presents in childhood. This test is part of newborn screening in the United States. Acquired 17-hydroxyprogesterone deficiency can present in adulthood as adrenal insufficiency but a low 17-hydroxyprogesterone level does not confirm adrenal insufficiency. Late night salivary cortisol is an initial test for corticosteroid excess (Cushing syndrome) and the dexamethasone suppression test is used to confirm that disorder. Renin and aldosterone levels can be helpful to characterize mineralocorticoid deficiency but they are not diagnostic.",
+      "reference": "Michels A, Michels N: Addison disease: Early detection and treatment principles. Am Fam Physician 2014;89(7):563-568. 2) Bornstein SR, Allolio B, Arlt W, et al: Diagnosis and treatment of primary adrenal insufficiency: An Endocrine Society clinical practice guideline. J Clin Endocrinol Metab 2016;101(2):364-389. 3) Ralston SH, Penman ID, Strachan MWJ, Hobson RP (eds): Davidson\u2019s Principles and Practice of Medicine, ed 23. Elsevier, 2018, pp 629-689.",
+      "body_system": null,
+      "blueprint": null,
+      "stem_keywords": null,
+      "explanation_keywords": null,
+      "all_keywords": null,
+      "concept_tags": null,
+      "body_system_merged": null
+    },
+    {
+      "qid": "QID-2021-0050",
+      "exam_year": 2021,
+      "question_text": "A 19-year-old female presents with a 4-year history of intermittent facial acne. She tells you that her acne has never completely resolved, and it worsens during her menstrual period. She has tried various over-the-counter facial cleansers although she does not recall what they contained. On examination she has scattered open and closed comedones, and pustules on her forehead and around her mouth. Which one of the following treatments would you recommend?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Topical adapalene (Differin)"
+        },
+        {
+          "letter": "B",
+          "text": "Topical clindamycin (Cleocin T)"
+        },
+        {
+          "letter": "C",
+          "text": "Oral doxycycline"
+        },
+        {
+          "letter": "D",
+          "text": "Oral isotretinoin (Absorica)"
+        }
+      ],
+      "choices_json": "[{\"letter\": \"A\", \"text\": \"Topical adapalene (Differin)\"}, {\"letter\": \"B\", \"text\": \"Topical clindamycin (Cleocin T)\"}, {\"letter\": \"C\", \"text\": \"Oral doxycycline\"}, {\"letter\": \"D\", \"text\": \"Oral isotretinoin (Absorica)\"}]",
+      "correct_letter": "A",
+      "correct_text": "Topical adapalene (Differin)",
+      "explanation": "This patient has mild inflammatory acne as indicated by her combination of comedones and pustules. She does not have extensive skin involvement and should benefit from the use of a topical agent. Topical retinoids, including adapalene, tretinoin, tazarotene, and trifarotene, are appropriate for the treatment of mild to moderate acne as single agents, although they may be more effective when combined with a topical antibiotic or benzoyl peroxide. Topical antibiotics can lead to bacterial resistance and should not be used as monotherapy. Oral antibiotics are appropriate for the treatment of moderate to severe acne that has failed to respond to topical treatment. Oral isotretinoin is reserved for the treatment of severe nodular acne.",
+      "reference": "Drugs for acne. Med Lett Drugs Ther 2020;62(1612):188-191.",
+      "body_system": null,
+      "blueprint": null,
+      "stem_keywords": null,
+      "explanation_keywords": null,
+      "all_keywords": null,
+      "concept_tags": null,
+      "body_system_merged": null
+    },
+    {
+      "qid": "QID-2021-0168",
+      "exam_year": 2021,
+      "question_text": "You receive a call from the home health nurse who is caring for a bedridden 57-year-old male with progressive multiple sclerosis. She is concerned that he has a weak cough reflex and may not be swallowing safely. She has not witnessed an aspiration event. He was hospitalized for pneumonia 4 months ago. While awaiting the results of a full swallow evaluation, which one of the following is the most appropriate intervention to prevent recurrent pneumonia in this patient?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "The use of chlorhexidine mouthwashes"
+        },
+        {
+          "letter": "B",
+          "text": "A mechanical soft diet with thickened liquids"
+        },
+        {
+          "letter": "C",
+          "text": "Swallowing exercises"
+        },
+        {
+          "letter": "D",
+          "text": "Antibiotic therapy for 24 hours"
+        },
+        {
+          "letter": "E",
+          "text": "Placement of a nasogastric tube"
+        }
+      ],
+      "choices_json": "[{\"letter\": \"A\", \"text\": \"The use of chlorhexidine mouthwashes\"}, {\"letter\": \"B\", \"text\": \"A mechanical soft diet with thickened liquids\"}, {\"letter\": \"C\", \"text\": \"Swallowing exercises\"}, {\"letter\": \"D\", \"text\": \"Antibiotic therapy for 24 hours\"}, {\"letter\": \"E\", \"text\": \"Placement of a nasogastric tube\"}]",
+      "correct_letter": "B",
+      "correct_text": "A mechanical soft diet with thickened liquids",
+      "explanation": "This patient is at risk for aspiration pneumonia due to his neurologic disease and impaired cough reflex. A swallow evaluation is appropriate. A mechanical soft diet with thickened liquids is recommended rather than pureed foods and thin liquids. Addressing oral hygiene has shown no clear benefit, and the use of chlorhexidine mouthwashes is controversial due to the risk of toxicity if aspirated. The effect of swallowing exercises requires more study at this time. Prophylactic antibiotic therapy can be considered in comatose patients following emergency intubation but is not appropriate in this scenario. Antibiotic therapy is appropriate for signs and symptoms of aspiration pneumonia with or without chest radiograph findings and depending on illness severity. The effect of nasogastric tube placement in preventing aspiration is unclear.",
+      "reference": "Mandell LA, Niederman MS: Aspiration pneumonia. N Engl J Med 2019;380(7):651-663.",
+      "body_system": null,
+      "blueprint": null,
+      "stem_keywords": null,
+      "explanation_keywords": null,
+      "all_keywords": null,
+      "concept_tags": null,
+      "body_system_merged": null
+    },
+    {
+      "qid": "QID-2022-0175",
+      "exam_year": 2022,
+      "question_text": "Which one of the following is consistent with best practices for prescribing hormonal contraception?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Delaying initiation until the patient\u2019s next menstrual period to avoid incidental use in early pregnancy"
+        },
+        {
+          "letter": "B",
+          "text": "Limiting prescription refills to 3 months at a time"
+        },
+        {
+          "letter": "C",
+          "text": "Obtaining a thorough medical history to screen for contraindications"
+        },
+        {
+          "letter": "D",
+          "text": "Requiring in-person visits rather than telehealth visits for contraceptive counseling due to the need for a gynecologic examination"
+        },
+        {
+          "letter": "E",
+          "text": "Requiring patients to have an up-to-date Papanicolaou test and sexually transmitted infection screening"
+        }
+      ],
+      "choices_json": "[{\"letter\": \"A\", \"text\": \"Delaying initiation until the patient\\u2019s next menstrual period to avoid incidental use in early pregnancy\"}, {\"letter\": \"B\", \"text\": \"Limiting prescription refills to 3 months at a time\"}, {\"letter\": \"C\", \"text\": \"Obtaining a thorough medical history to screen for contraindications\"}, {\"letter\": \"D\", \"text\": \"Requiring in-person visits rather than telehealth visits for contraceptive counseling due to the need for a gynecologic examination\"}, {\"letter\": \"E\", \"text\": \"Requiring patients to have an up-to-date Papanicolaou test and sexually transmitted infection screening\"}]",
+      "correct_letter": "C",
+      "correct_text": "Obtaining a thorough medical history to screen for contraindications",
+      "explanation": "There are many patient-related historical factors that may affect the safety and choice of hormonal contraception, but very few physical factors are likely to be found on examination that would not otherwise have been identified. Obtaining a thorough medical history is standard practice, but the Choosing Wisely campaign recommends against requiring a pelvic or other physical examination prior to prescribing oral contraceptives. It is unnecessary to wait to begin hormonal contraception until after the next menses, as inadvertent exposure to oral contraception will not harm an early pregnancy. Prescribing a 1-year supply of hormonal contraceptives improves adherence and lowers cost. There is broad consensus that sexually transmitted infection screening and Papanicolaou testing should not be required to prescribe contraception.",
+      "reference": "Lesnewski R: Initiating hormonal contraception. Am Fam Physician 2021;103(5):291-300.",
+      "body_system": null,
+      "blueprint": null,
+      "stem_keywords": null,
+      "explanation_keywords": null,
+      "all_keywords": null,
+      "concept_tags": null,
+      "body_system_merged": null
+    },
+    {
+      "qid": "QID-2023-0004",
+      "exam_year": 2023,
+      "question_text": "An 85-year-old male presents for an annual Medicare examination. His wife tells you that he has been repeating himself in conversations, buying the same item multiple times, and taking longer to complete routine tasks such as balancing the checkbook. He recalls 1 out of 3 items on the Mini-Cognitive Assessment Instrument (Mini-Cog) and is unable to draw a clock. A depression screening is negative. Which one of the following is the greatest risk factor for this patient\u2019s condition?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Advanced age"
+        },
+        {
+          "letter": "B",
+          "text": "Atrial fibrillation"
+        },
+        {
+          "letter": "C",
+          "text": "Diabetes mellitus"
+        },
+        {
+          "letter": "D",
+          "text": "A history of head trauma"
+        },
+        {
+          "letter": "E",
+          "text": "Smoking 1 Item #1 2"
+        }
+      ],
+      "choices_json": "[{\"letter\": \"A\", \"text\": \"Advanced age\"}, {\"letter\": \"B\", \"text\": \"Atrial fibrillation\"}, {\"letter\": \"C\", \"text\": \"Diabetes mellitus\"}, {\"letter\": \"D\", \"text\": \"A history of head trauma\"}, {\"letter\": \"E\", \"text\": \"Smoking 1 Item #1 2\"}]",
+      "correct_letter": "A",
+      "correct_text": "Advanced age",
+      "explanation": "Dementia is a significant condition affecting 5 million adults and that number is likely to expand in the future due to the increasing number of individuals over age 65. The overall prevalence of dementia is around 5%, but it is 37% in those over age 90. Sixty percent to 80% of dementia is due to Alzheimer disease. The greatest risk factor for dementia is older age. Strong risk factors include diabetes mellitus, midlife obesity, a family history of dementia, a personal history of cardiovascular disease, cerebrovascular disease, use of anticholinergic medications, apolipoprotein E4 genotype, and a low education level. Other potential risk factors that lack strong evidence include atrial fibrillation, smoking, head trauma, substance abuse such as alcohol use disorder, and medications such as benzodiazepines and proton pump inhibitors.",
+      "reference": "Falk N, Cole A, Meredith TJ. Evaluation of suspected dementia. Am Fam Physician. 2018;97(6):398-405.",
+      "body_system": null,
+      "blueprint": null,
+      "stem_keywords": null,
+      "explanation_keywords": null,
+      "all_keywords": null,
+      "concept_tags": null,
+      "body_system_merged": null
+    },
+    {
+      "qid": "QID-2024-0017",
+      "exam_year": 2024,
+      "question_text": "A 32-year-old male comes to your office because of a gradual onset of right ankle pain. He works in a warehouse and walks extensively during his 12-hour shifts. The pain is located on the medial side of the ankle and worsens throughout his shift. His medical history is notable for well-controlled hypertension and a BMI of 39 kg/m2. On examination the patient has difficulty performing the single-limb heel raise test. You note a positive \u201ctoo many toes\u201d sign, as well as pes planus. You diagnose posterior tibial tendinopathy. In addition to arch supports, which one of the following should you recommend next?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "A stretching program"
+        },
+        {
+          "letter": "B",
+          "text": "Eccentric exercises"
+        },
+        {
+          "letter": "C",
+          "text": "Oral corticosteroids"
+        },
+        {
+          "letter": "D",
+          "text": "Corticosteroid injection"
+        },
+        {
+          "letter": "E",
+          "text": "Percutaneous needle tenotomy"
+        }
+      ],
+      "choices_json": "[{\"letter\": \"A\", \"text\": \"A stretching program\"}, {\"letter\": \"B\", \"text\": \"Eccentric exercises\"}, {\"letter\": \"C\", \"text\": \"Oral corticosteroids\"}, {\"letter\": \"D\", \"text\": \"Corticosteroid injection\"}, {\"letter\": \"E\", \"text\": \"Percutaneous needle tenotomy\"}]",
+      "correct_letter": "B",
+      "correct_text": "Eccentric exercises",
+      "explanation": "Eccentric exercise is recommended over concentric exercise to treat posterior tibial tendinopathy. Because tendinopathy is not an inflammatory process, oral corticosteroids are not indicated. Corticosteroids injected into the tendon can provide some short-term relief of pain but have the potential to cause tendon rupture. Needle tenotomy is not a recommended treatment for posterior tibial tendinopathy. If the pain persists 3\u20136 months after appropriate conservative management, surgical debridement of the tendon may be considered.",
+      "reference": "Deu RS, Coslick AM, Dreher G. Tendinopathies of the foot and ankle. Am Fam Physician. 2022;105(5):479-486.",
+      "body_system": null,
+      "blueprint": null,
+      "stem_keywords": null,
+      "explanation_keywords": null,
+      "all_keywords": null,
+      "concept_tags": null,
+      "body_system_merged": null
+    },
+    {
+      "qid": "QID-2024-0117",
+      "exam_year": 2024,
+      "question_text": "A 55-year-old female who is hospitalized for acute pancreatitis and alcohol intoxication expresses a desire for discharge against medical advice on day 2 of her admission. Which one of the following additional factors would represent a CONTRAINDICATION to immediate discharge in this case?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "A current manifestation of mild alcohol withdrawal syndrome"
+        },
+        {
+          "letter": "B",
+          "text": "A history of major depression with a past suicide attempt"
+        },
+        {
+          "letter": "C",
+          "text": "An inability to demonstrate appreciation of her medical situation"
+        },
+        {
+          "letter": "D",
+          "text": "A lack of health insurance"
+        },
+        {
+          "letter": "E",
+          "text": "An unstable housing situation"
+        }
+      ],
+      "choices_json": "[{\"letter\": \"A\", \"text\": \"A current manifestation of mild alcohol withdrawal syndrome\"}, {\"letter\": \"B\", \"text\": \"A history of major depression with a past suicide attempt\"}, {\"letter\": \"C\", \"text\": \"An inability to demonstrate appreciation of her medical situation\"}, {\"letter\": \"D\", \"text\": \"A lack of health insurance\"}, {\"letter\": \"E\", \"text\": \"An unstable housing situation\"}]",
+      "correct_letter": "C",
+      "correct_text": "An inability to demonstrate appreciation of her medical situation",
+      "explanation": "Discharges against medical advice comprise approximately 1%\u20132% of all hospital discharges and are challenging encounters to navigate. In such situations, communication, patient safety, and follow-up planning are of paramount importance. In assessing a patient who has requested discharge against medical advice, one of the primary tasks is to determine if the patient has the capacity to make this decision. Decision-making capacity evaluation involves 4 key components. The patient must be able to (1) understand the pertinent medical information, (2) appreciate the medical situation and potential consequences, (3) demonstrate logical reasoning of the various treatment options, and (4) communicate a choice. In this patient scenario, an inability to demonstrate appreciation of the medical situation and possible consequences of being discharged against the advice of the medical team would represent a contraindication to discharging the patient without further evaluation. For a patient who cannot demonstrate decision-making capacity, the next step is to consult an advance directive or surrogate decision-maker. If neither is available, the hospital ethics committee and medicolegal team should be contacted to provide further guidance. While moderate or severe alcohol withdrawal with associated mental status impairment likely would impair decision-making capacity, mild alcohol withdrawal syndrome alone would not contraindicate a discharge against medical advice. Active suicidal ideation may represent temporary impairment of decision-making capacity and psychiatric consultation is advised in such cases. This patient's history of depression with a past suicide attempt is not a contraindication to granting a request for discharge against medical advice. Neither a lack of health insurance nor an unstable housing situation would contraindicate a discharge against medical advice, although these factors should be considered in disposition and follow-up planning, with an effort to optimize the patient\u2019s safety in transitioning care to the outpatient setting. References Barstow C, Shahan B, Roberts M. Evaluating medical decision-making capacity in practice. Am Fam Physician. 2018;98(1):40-46. Merrell B, Gauer R. The challenges of discharge against medical advice: conflict and consequences. Am Fam Physician. 2023;108(2):193-196.",
+      "reference": "Barstow C, Shahan B, Roberts M. Evaluating medical decision-making capacity in practice. Am Fam Physician. 2018;98(1):40-46. Merrell B, Gauer R. The challenges of discharge against medical advice: conflict and consequences. Am Fam Physician. 2023;108(2):193-196.",
+      "body_system": null,
+      "blueprint": null,
+      "stem_keywords": null,
+      "explanation_keywords": null,
+      "all_keywords": null,
+      "concept_tags": null,
+      "body_system_merged": null
+    },
+    {
+      "qid": "QID-2024-0140",
+      "exam_year": 2024,
+      "question_text": "A 40-year-old female presents to the urgent care clinic because of significant fatigue, malaise, nausea, and intermittent vomiting. She is also experiencing recurrent fever and abdominal pain and says that her symptoms started a couple of weeks ago while she was in South America. Now her urine is dark and her spouse has noted a yellow tinge to her skin and the white of her eyes, prompting today\u2019s acute visit. Her vital signs are normal. A physical examination is unremarkable except for hepatomegaly and jaundice. Which one of the following test results would confirm the suspected diagnosis?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Anti\u2013hepatitis A IgG antibodies"
+        },
+        {
+          "letter": "B",
+          "text": "Anti\u2013hepatitis A IgM antibodies"
+        },
+        {
+          "letter": "C",
+          "text": "Anti\u2013hepatitis B surface antibodies"
+        },
+        {
+          "letter": "D",
+          "text": "A serum creatinine level of 2.5 mg/dL (N 0.6\u20131.1)"
+        },
+        {
+          "letter": "E",
+          "text": "Elevated serum transaminase levels"
+        }
+      ],
+      "choices_json": "[{\"letter\": \"A\", \"text\": \"Anti\\u2013hepatitis A IgG antibodies\"}, {\"letter\": \"B\", \"text\": \"Anti\\u2013hepatitis A IgM antibodies\"}, {\"letter\": \"C\", \"text\": \"Anti\\u2013hepatitis B surface antibodies\"}, {\"letter\": \"D\", \"text\": \"A serum creatinine level of 2.5 mg/dL (N 0.6\\u20131.1)\"}, {\"letter\": \"E\", \"text\": \"Elevated serum transaminase levels\"}]",
+      "correct_letter": "B",
+      "correct_text": "Anti\u2013hepatitis A IgM antibodies",
+      "explanation": "Hepatitis A is a common cause of acute hepatic inflammation and jaundice. It was the most commonly reported type of hepatitis in the United States until 2004, when a combination of widespread vaccination and food safety practices decreased its incidence. Hepatitis A is caused by nonenveloped positive-strand RNA hepatitis A virus. Humans are the only natural host. Classified as a picornavirus, it is stable in many environments and is able to survive for multiple weeks on surfaces. It is transmitted through ingestion of infected stool particles. Consumption of contaminated water and food or close interpersonal or sexual contact with a person who is infected are common causes of infection, whereas drug use and blood transfusion are less common causes of infection. Incubation lasts approximately 30 days, followed by infectious symptoms, including nonspecific influenza-like symptoms, malaise, fever, nausea with vomiting, and abdominal pain. The classic findings are jaundice and dark urine. Most cases of acute hepatitis A are self-limited and there is no specific treatment. Supportive and symptomatic care should be utilized and hepatotoxins should be avoided. A liver transplant may be considered if fulminant hepatic failure develops. Serologic testing is required for the diagnosis of hepatitis A. Anti\u2013hepatitis A IgM antibodies become detectable 5\u201310 days before the onset of symptoms, peak within a month, and can persist for >6 months. However, anti\u2013hepatitis A IgG antibodies appear during the convalescent phase and remain elevated throughout the patient's lifetime. Therefore, anti\u2013hepatitis A IgM antibodies would confirm the diagnosis instead of anti- hepatitis A IgG antibodies. Anti\u2212hepatitis B surface antibodies indicate immunity to hepatitis B and would not be present in acute hepatitis B infection. A serum creatinine level >2 mg/dL is a positive predictor of fulminant hepatitis and death, but it is not diagnostic of hepatitis A. Although laboratory findings may include elevations of serum transaminase levels, it is not specific for hepatitis A. References Langan RC, Goodbred AJ. Hepatitis A. Am Fam Physician. 2021;104(4):368-374. Wilkins T, Sams R, Carpenter M. Hepatitis B: screening, prevention, diagnosis, and treatment. Am Fam Physician. 2019;99(5):314-323.",
+      "reference": "Langan RC, Goodbred AJ. Hepatitis A. Am Fam Physician. 2021;104(4):368-374. Wilkins T, Sams R, Carpenter M. Hepatitis B: screening, prevention, diagnosis, and treatment. Am Fam Physician. 2019;99(5):314-323.",
+      "body_system": null,
+      "blueprint": null,
+      "stem_keywords": null,
+      "explanation_keywords": null,
+      "all_keywords": null,
+      "concept_tags": null,
+      "body_system_merged": null
+    },
+    {
+      "qid": "QID-2024-0187",
+      "exam_year": 2024,
+      "question_text": "A 65-year-old female with no chronic medical problems presents for an annual Medicare wellness visit. You initiate a discussion regarding cervical cancer screening. According to current clinical guidelines, which one of the following would be an indication for additional cervical cancer screening in this patient?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "A family history of cervical cancer in a first-degree relative"
+        },
+        {
+          "letter": "B",
+          "text": "Loop excision of a high-grade precancerous lesion 15 years ago, with consecutive normal results since then"
+        },
+        {
+          "letter": "C",
+          "text": "Three consecutive normal cytology results within the past 10 years, most recently 3 years ago"
+        },
+        {
+          "letter": "D",
+          "text": "Two consecutive normal cytology results with negative high-risk HPV co-testing within the past 10 years, most recently 4 years ago"
+        },
+        {
+          "letter": "E",
+          "text": "Unprotected intercourse with a new sex partner"
+        }
+      ],
+      "choices_json": "[{\"letter\": \"A\", \"text\": \"A family history of cervical cancer in a first-degree relative\"}, {\"letter\": \"B\", \"text\": \"Loop excision of a high-grade precancerous lesion 15 years ago, with consecutive normal results since then\"}, {\"letter\": \"C\", \"text\": \"Three consecutive normal cytology results within the past 10 years, most recently 3 years ago\"}, {\"letter\": \"D\", \"text\": \"Two consecutive normal cytology results with negative high-risk HPV co-testing within the past 10 years, most recently 4 years ago\"}, {\"letter\": \"E\", \"text\": \"Unprotected intercourse with a new sex partner\"}]",
+      "correct_letter": "B",
+      "correct_text": "Loop excision of a high-grade precancerous lesion 15 years ago, with consecutive normal results since then",
+      "explanation": "The U.S. Preventive Services Task Force (USPSTF) recommends against cervical cancer screening for women >65 years of age with normal Papanicolaou (Pap) smears, who have had adequate prior screening, and who otherwise are not at increased risk for cervical cancer (D recommendation). The most recent definition of \u201cadequate prior screening\u201d given by the American Cancer Society (ACS) is 3 consecutive negative cytology results, 2 consecutive negative co-testing results, or 2 consecutive negative high-risk HPV tests in the 10 years prior to discontinuation of screening, with the most recent test having occurred within the relevant recommended testing interval. The recommended interval is every 3 years for cytology, and 5 years for both high-risk HPV and co-testing. Importantly, USPSTF guidelines do not apply to individuals who are at increased risk for cervical cancer, including women with a history of high-grade precancerous cervical lesions or cervical cancer. The ACS and the American Society of Colposcopy and Cervical Pathology (ASCCP) guidelines recommend continuation of cervical cancer screening for women with a history of a high-grade precancerous lesion (defined as cervical intraepithelial neoplasia [CIN] grade 2 or higher) for a minimum of 25 years beyond the treatment of the lesion, even if this extends beyond 65 years of age. Thus, if this patient had a history of treatment for a high-grade lesion 15 years ago, this would warrant continued screening for an additional 10 years. The presence of a new sex partner should not impact the decision to discontinue screening for women who otherwise are eligible for cessation of screening. In fact, ACS recommendations apply to all asymptomatic people with a cervix, without regard to their sexual history. In contrast to several other common cancer types, cervical cancer risk is not associated with a familial/genetic inheritance pattern; therefore, a family history of cervical cancer, even in a first-degree relative, should not impact a cervical cancer screening decision. References Fontham ETH, Wolf AMD, Church TR, et al. Cervical cancer screening for individuals at average risk: 2020 guideline update from the American Cancer Society. CA Cancer J Clin. 2020;70(5):321-346. Perkins RB, Guido RS, Castle PE, et al. 2019 ASCCP risk-based management consensus guidelines for abnormal cervical cancer screening tests and cancer precursors. J Low Genit Tract Dis. 2020;24(2):102-131. US Preventive Services Task Force. Final recommendation statement: cervical cancer: screening. Updated August 21, 2018.",
+      "reference": "Fontham ETH, Wolf AMD, Church TR, et al. Cervical cancer screening for individuals at average risk: 2020 guideline update from the American Cancer Society. CA Cancer J Clin. 2020;70(5):321-346. Perkins RB, Guido RS, Castle PE, et al. 2019 ASCCP risk-based management consensus guidelines for abnormal cervical cancer screening tests and cancer precursors. J Low Genit Tract Dis. 2020;24(2):102-131. US Preventive Services Task Force. Final recommendation statement: cervical cancer: screening. Updated August 21, 2018.",
+      "body_system": null,
+      "blueprint": null,
+      "stem_keywords": null,
+      "explanation_keywords": null,
+      "all_keywords": null,
+      "concept_tags": null,
+      "body_system_merged": null
+    }
+  ],
+  "errors": []
+}

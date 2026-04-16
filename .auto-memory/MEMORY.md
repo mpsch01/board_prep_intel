@@ -1,9 +1,9 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-04-15 (BATON 059)
+Last updated: 2026-04-15 (BATON 060)
 
 ## Active Memory Files
 - [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status
-- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (1,985 articles, 1,629 ITE Qs), schema state, article_currency NEW
+- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (1,998 articles, 1,639 ITE Qs), schema state; body_system + body_system_merged fully normalized (BATON 060)
 - [rebuild_structuring_guidelines.md](rebuild_structuring_guidelines.md) — Locked rules and architecture principles
 - [glossary.md](glossary.md) — Project terminology decoder
 
@@ -34,6 +34,13 @@ Last updated: 2026-04-15 (BATON 059)
 
 ## Vector Integration (BATON 057)
 - [db_connect.py — immutable URI DB utility](db_connect_utility.md) — Use open_db() for sandbox SQLite queries; immutable=1 avoids journal file errors on NTFS mount
+
+## Normalization + Enrichment Pipeline (BATON 060)
+- **body_system fully normalized:** Musculoskeletal rename (48 records), QID-2021-0168 → Respiratory, 376 body_system_merged records synced to post-2024 canonical — apply_body_system_normalization.py
+- **DEFERRED-BODY-SYSTEM-MERGED-UPDATE CLOSED** — body_system_merged now correctly mirrors body_system for canonical records; only intentional bridges remain (Psychogenic×38, Patient-Based Systems×4)
+- **DEFERRED-CENTROID-REBUILD CLOSED** — intersection_centroid_vec rebuilt (135→123 rows)
+- **10 questions recovered + fully enriched** — Steps 1–6 complete (blueprint, body_system, concept tags, ICD-10, vectors, centroids)
+- **Resident re-analyses now FULLY UNBLOCKED** — all prior blockers resolved
 
 ## Body System QC Pipeline (BATON 059)
 - [body-system-qc skill — complete audit + correction pipeline](project_overhaul_state.md) — 19 new M3 scripts for ITE 2018-2021, 2024-2025 + AAFP 1,221 questions; SVM baseline + Claude classification + review workflow

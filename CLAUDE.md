@@ -6,7 +6,7 @@
 ---
 
 ## The Project in One Sentence
-ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledge base (1,629 questions, 2018–2025) linked to a clinical guideline library (1,985 articles, 404 PDFs) via a structured SQLite pipeline.
+ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledge base (1,639 questions, 2018–2025) linked to a clinical guideline library (1,998 articles, 404 PDFs) via a structured SQLite pipeline.
 
 ---
 
@@ -48,19 +48,20 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_059_20260415_body_system_qc_ite_aafp_complete.md` — Body system QC pipeline built and executed: ITE + AAFP body_system corrected to post-2024 ABFM canonical taxonomy. 255 ITE + ~400 AAFP SQL updates applied. 19 new M3 scripts. body-system-qc skill created. |
+| Active BATON | `BATON_active_060_20260415_normalization_pipeline_complete.md` — Enrichment pipeline for 10 recovered questions completed (Steps 1–6: body_system corrections, concept tags, question_icd10, vectors, centroids). 22 holdout body_system corrections (2024–2025 deprecated labels). apply_body_system_normalization.py executed; DEFERRED-BODY-SYSTEM-MERGED-UPDATE completed (376 records synced). DEFERRED-CENTROID-REBUILD closed. 10 new M3 scripts added. |
 | DB articles | 1,998 (+13 from critique PDFs: ART-1987–ART-1999) |
-| DB questions (ITE) | 1,629 (2018–2025) — blueprint 100% filled — subcategory + topic_label DROPPED |
+| DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
 | aafp_questions.blueprint | 1,221/1,221 (100%) — batch API, same rubric as ITE v2 — complete 2026-03-30 |
 | aafp_questions.concept_tags | 1,221/1,221 (100%) |
-| article_icd10 | 4,020 rows — rebuilt with vec (2026-04-05) |
-| question_icd10 | 5,218 rows — 1,512/1,629 ITE questions (92.8%) — 66 no_match rows deleted |
+| article_icd10 | 3,952 rows — rebuilt (−68 benign, synonym map variance) |
+| question_icd10 | ~5,003 rows — 1,474/1,639 ITE questions (89.9%) — rebuilt |
 | aafp_question_icd10 | 4,753 rows — relevance normalized, related cap applied |
 | pubmed_pmid_cache | 344 rows — Layer 2 seed (citation_id → PMID) |
 | icd10_vec | 2,219 rows — OpenAI text-embedding-3-small (1536d) |
 | article_icd10_vec | 1,757 rows — ✅ rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 rows — ✅ rebuilt 2026-04-05 |
+| intersection_centroid_vec | 123 rows — REBUILT 2026-04-15 |
 | clinical_pathways | 3,971 rows — REBUILT 2026-03-31 — blueprint-based, both banks, ART-0002–ART-1985 — 49 no_match rows deleted |
 | PDFs (ITE citation tiers) | 988 across 4 tiers in citation_files/ITE/ (VC_fail:630, VC_pass:168, local_lite:117, right_click:58) + 15 AAFP — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
 | PDFs (AAFP) | 15 in citation_files/AAFP/ — recovered 2026-04-05 |
@@ -70,12 +71,12 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 8 build + 26 maintain + aafp_brq_scraper.py at scripts/ root (build_modular_vectors.py + build_intersection_centroids.py added 2026-04-14) |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root; extract_ite_critique_refs.py MODIFIED |
-| M3 scripts | 39 Python + 2 JS + 6 JSON config (NEW: 19 body system QC scripts + 3 prior) |
+| M3 scripts | 50 Python + 2 JS + 6 JSON config (NEW: 19 body system QC scripts + 10 normalization + prior) |
 | M5 scripts | 3 Python sync + 35 TypeScript/TSX + 5 SQL migrations — 05_module.5_web/ scaffold |
 | article_currency | 1,985 rows — built 2026-04-07 (current:1100, updated:169, check_needed:106, not_indexed:610) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2000 |
-| Git branch | `main`, latest → ff36d59 |
+| Git branch | `main`, latest → 1f96976 |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -117,15 +118,15 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 059, 2026-04-15)
+## Next Steps (as of BATON 060, 2026-04-15)
 
 ### Immediate
-1. Re-run all 7 resident analyses (Sarkar 2025, Hopkins 2025, Pjetergjoka 2024/2025, Scholl 2022/2023/2024)
-2. **DEFERRED-BODY-SYSTEM-MERGED-UPDATE** — flip body_system_merged to forward mapping (→ post-2024 canonical)
-3. **DEFERRED-CENTROID-REBUILD** — run build_intersection_centroids.py
-4. Update article_currency for 13 new articles (ART-1987–ART-1999)
+1. Re-run all 7 resident analyses (Sarkar 2025, Hopkins 2025, Pjetergjoka 2024/2025, Scholl 2022/2023/2024) — NOW FULLY UNBLOCKED
+2. Update article_currency for ART-1987–ART-1999 (13 new articles)
+3. **DEFERRED-HUMAN-REVIEW-BODY-SYSTEM** — ~308 holdouts (~179 ITE + 129 AAFP)
 
 ### Short-term
-5. **DEFERRED-HUMAN-REVIEW-BODY-SYSTEM** — review 330 body system holdouts (201 ITE + 129 AAFP)
-6. **DEFERRED-KNOWN-DRUGS-EXPANSION** — identify offending drug names; decide fix approach
-7. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations need article acquisition
+4. **DEFERRED-KNOWN-DRUGS-EXPANSION** — identify offending drug names; decide fix approach
+5. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations need article acquisition
+6. **DEFERRED-PGY-BENCHMARKS** — UNBLOCKED (pending resident analyses)
+7. **DEFERRED-PROGRAM-TREND** — UNBLOCKED (pending resident analyses)

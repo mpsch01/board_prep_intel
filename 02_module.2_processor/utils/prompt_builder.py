@@ -20,7 +20,7 @@ import re
 import concurrent.futures
 import anthropic
 
-MODEL = "claude-sonnet-4-20250514"
+MODEL = "claude-sonnet-4-6"
 _client = None  # lazy-initialized
 
 # Chunking parameters -- tuned for large society guidelines (500k-800k chars)

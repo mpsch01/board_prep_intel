@@ -3,7 +3,7 @@
 
 **Date:** 2026-04-15  
 **Previous BATON:** BATON_active_058_20260415_citation_qc_db_rebuild_article_additions.md  
-**Git (pre-commit):** ff36d59 | **Branch:** main
+**Git (pre-commit):** ff36d59 | **Git (post-commit):** 991a910 | **Branch:** main
 
 ---
 
