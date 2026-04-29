@@ -1,5 +1,5 @@
 # project_overhaul_state.md
-Last updated: 2026-04-29 (BATON 062)
+Last updated: 2026-04-29 (BATON 063)
 
 ## Module State
 
@@ -7,7 +7,7 @@ Last updated: 2026-04-29 (BATON 062)
 |--------|--------|----------|
 | M1 Warehouse | Active | 988 ITE/AAFP PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 26 maintain scripts |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
-| M3 Analyst | Active | 50 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction; report builder improvements (BATON 062) |
+| M3 Analyst | Active | 52 py + 4 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction; report interpretation guides (resident + faculty, BATON 063) |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 35 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
 | DB | Stable | 1,998 articles, 1,639 ITE Qs (+10 recovered), 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 (↑ pre-existing Windows PC enrichment, BATON 062) |
@@ -30,6 +30,19 @@ Last updated: 2026-04-29 (BATON 062)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 063)
+
+**2026-04-29 – ITE Report Interpretation Guides Complete**
+- **Two interpretation guides written (DEFERRED-REPORT-GUIDE CLOSED):**
+  - build_resident_guide.py → ITE_Report_Guide_Resident_v2.docx (action-oriented narrative for trainees; gold ACTION callouts for weak areas; section-by-section guidance)
+  - build_faculty_guide.py → ITE_Report_Guide_Faculty_v2.docx (methodology-focused narrative for advisors; DATA SOURCE + LIMITATION callouts; coaching framework + red flags)
+- **word_doc_defaults.py enhancement:** add_section_header() now differentiates level 1 vs level 2 headers (spacing + shading conditional on level parameter)
+- **Rule 14 added to CLAUDE.md:** All Python .docx generation scripts must `from word_doc_defaults import *` and use provided helpers (St. Luke's palette, Aptos font, header functions)
+- **JS versions created** (build_resident_guide.js, build_faculty_guide.js) but Python canonical per Rule 14
+- **M3 script count:** 50 py + 2 js → 52 py + 4 js
+- **DB state:** All tables stable; no changes this session
+- **Next:** Re-run resident analyses on Mac after git pull to pick up Issues 1-5; DEFERRED-QID-XREF-LIBRARY-GAPS (249 unmatched citations) remains active
 
 ## Session Notes (BATON 062)
 
@@ -123,7 +136,7 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 
 | Flag | Status | Description |
 |------|--------|-------------|
-| DEFERRED-REPORT-GUIDE | NEW | Write resident and faculty advisor interpretation guides for the ITE report (2 DOCX documents); unpacks scoring note, body_system provenance, consolidated table structure; next session |
+| DEFERRED-REPORT-GUIDE | ✅ CLOSED | Write resident and faculty advisor interpretation guides for the ITE report (2 DOCX documents) — completed BATON 063 |
 | DEFERRED-YOY-ROBUSTNESS | ACTIVE | Year-over-year section 3b needs more robust implementation; month-by-month trend aggregation logic (BATON 050) |
 | DEFERRED-PROGRAM-TREND | UNBLOCKED | Require program-level trend analysis across multiple residents; benchmark against 2024 ABFM national reference (abfm_reference_2024.json); all blockers cleared (BATON 061) |
 | DEFERRED-RESIDENT-FOLDER-MIGRATION | ACTIVE | Investigate resident_data/ folder state and migration strategy to M5 platform |

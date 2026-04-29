@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-04-29 (BATON 062 — Git hash: 47d6e8e) — Report builder Issues 1-5 complete; two-tier reading list; Mac migration active
+**Last Updated:** 2026-04-29 (BATON 063 — Git hash: 58589ff) — Two interpretation guides complete (resident + faculty); word_doc_defaults.py level 1/2 headers; Rule 14 locked
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -12,7 +12,7 @@ board_prep_intel/
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
 ├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_062_*.md              Active session handoff — read first every session
+├── BATON_active_063_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
@@ -59,7 +59,7 @@ board_prep_intel/
 │       └── candidates/                Prompt templates for enrichment
 │
 ├── 03_module.3_analyst/               M3 — Score analysis, ICD-10, pathways, Q&A deliverables
-│   ├── scripts/                       50 py + 2 JS + 6 JSON config; ite_analyze_v2, ite_analyzer_v3 (modified 062), ite_report_builder_v2 (modified 062), report builders
+│   ├── scripts/                       52 py + 4 JS + 6 JSON config; build_resident_guide.py + build_faculty_guide.py + build_resident_guide.js + build_faculty_guide.js (added 063), word_doc_defaults.py (modified 063)
 │   ├── outputs/                       article_qc/ — citation QC audit results and rebuild statistics
 │   ├── docs/                          ITE score analysis pipeline docs
 │   └── reports/                       Per-resident DOCX reports + faculty PPTX (gitignored)

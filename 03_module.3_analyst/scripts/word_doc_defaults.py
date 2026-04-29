@@ -6,8 +6,20 @@ St. Luke's / ITE Intelligence color scheme + Aptos font.
 Usage in any python-docx build script:
     from word_doc_defaults import *   # or import specific helpers
 
-CLAUDE: When building any Word document for this project, import and
-apply these defaults. See CLAUDE.md → "Default Word Doc Style" section.
+CLAUDE — LOCKED RULE 14:
+    ALL Python scripts that generate .docx files in this project MUST import
+    and use this file. No exceptions unless Mikey explicitly directs otherwise.
+
+    from word_doc_defaults import *
+
+    This is the canonical Word doc style for the project:
+      - Colors: NAVY (1B3564), GOLD (C8922A), BLUE (2E5F9C)
+      - Font: Aptos
+      - Section headers: gold left border + light blue background
+      - Action callouts: gold left border + light gold background
+      - Footer: "2025 ABFM ITE | St. Luke's Family Medicine Residency" + page number
+
+    See CLAUDE.md → Locked Rules → Rule 14.
 """
 
 from docx import Document
@@ -157,15 +169,16 @@ def add_subtitle(doc, text):
 
 def add_section_header(doc, text, level=1):
     """
-    Section header with gold left border + light blue background.
-    level 1 = 12pt bold navy  (question headers, major sections)
-    level 2 = 11pt bold blue  (subheadings)
+    Section header with gold left border.
+    level 1 = 12pt bold navy + light blue background  (major sections)
+    level 2 = 11pt bold blue, no background fill      (subheadings — gold bar only)
     """
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(18)
-    p.paragraph_format.space_after  = Pt(6)
+    p.paragraph_format.space_before = Pt(18) if level == 1 else Pt(6)
+    p.paragraph_format.space_after  = Pt(6)  if level == 1 else Pt(3)
     add_left_border(p, color=GOLD, size=24)
-    add_shading(p, "EFF3FA")
+    if level == 1:
+        add_shading(p, "EFF3FA")  # light blue background for major section headers only
     set_paragraph_format(p, keep_with_next=True)
     run = p.add_run(text)
     run.font.name = DEFAULT_FONT

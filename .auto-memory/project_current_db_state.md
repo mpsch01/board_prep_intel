@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last verified: 2026-04-29 (BATON 062)
+Last verified: 2026-04-29 (BATON 063)
 
 ## DB: ite_intelligence.db
 
@@ -44,6 +44,11 @@ Last verified: 2026-04-29 (BATON 062)
 - status breakdown: current:1100, updated:169, check_needed:106, not_indexed:610
 - title_signals: JSON array of clinical category keywords (extracted from blueprint cross-reference; used for future filtering + human review)
 - Populated via build_article_currency.py (M3 script)
+
+## DB Changes (BATON 063)
+- **No DB changes this session.** All counts stable from BATON 062. Focus was DOCX guide generation (resident + faculty interpretation guides).
+- **Script additions only:** M3 build_resident_guide.py, build_faculty_guide.py, build_resident_guide.js, build_faculty_guide.js (Python canonical per Rule 14)
+- **word_doc_defaults.py enhanced** with level-aware add_section_header() function
 
 ## DB Changes (BATON 062)
 - Pre-existing Windows PC enrichment discovered and migrated to Mac:

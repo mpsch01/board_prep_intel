@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_062_20260429_report_builder_issues_1to5_complete.md` — Report builder Issues 1-5 complete; two-tier reading list (personalized/general); body system provenance; consolidated tables; Mac migration active. |
+| Active BATON | `BATON_active_063_20260429_report_guides_complete.md` — Two interpretation guides complete (resident + faculty); word_doc_defaults.py level 1/2 headers; Rule 14 locked. |
 | DB articles | 1,998 (+13 from critique PDFs: ART-1987–ART-1999) |
 | DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -71,12 +71,12 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 8 build + 26 maintain + aafp_brq_scraper.py at scripts/ root (build_modular_vectors.py + build_intersection_centroids.py added 2026-04-14) |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root; extract_ite_critique_refs.py MODIFIED |
-| M3 scripts | 50 Python + 2 JS + 6 JSON config (ite_analyze_v2.py + ite_analyzer_v3.py + ite_report_builder_v2.js MODIFIED BATON 062) |
+| M3 scripts | 52 Python + 4 JS + 6 JSON config (build_resident_guide.py + build_faculty_guide.py + build_resident_guide.js + build_faculty_guide.js ADDED BATON 063; word_doc_defaults.py MODIFIED BATON 063) |
 | M5 scripts | 3 Python sync + 35 TypeScript/TSX + 5 SQL migrations — 05_module.5_web/ scaffold |
 | article_currency | 1,998 rows — complete 2026-04-16 (was missing 115 rows) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2000 |
-| Git branch | main, latest → 47d6e8e (push pending from GitHub Desktop) |
+| Git branch | main, latest → 58589ff (push pending from GitHub Desktop) |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -113,21 +113,19 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 10. **Schemas before scripts.** SQL `CREATE TABLE` defined before build scripts are written.
 12. **`_normalize_concept()` fallback = first-letter capitalize only.** Never `.title()` — it mangles acronyms (HIV → Hiv, IBS-D → Ibs-D). Use `stripped[0].upper() + stripped[1:]`. Add new synonym entries for any canonical form that needs resolution; don't change the fallback.
 13. **ICD-10 enrichment is invisible.** `icd10_profile` is passed to `match_practice_questions_v3()` as a hidden scoring signal and must never appear in the resident report. ICD-10 codes are internal precision machinery only — taxonomy-stable variant matching that bypasses concept-tag label differences.
+14. **Word docs use `word_doc_defaults.py`.** All Python scripts that generate `.docx` files must `from word_doc_defaults import *` and apply the St. Luke's color palette, Aptos font, and helper functions defined there. Path: `03_module.3_analyst/scripts/word_doc_defaults.py`. Override only when Mikey explicitly directs otherwise. (Complements Rule 5: new Word doc generation = Python + word_doc_defaults.py, not de novo JS.)
 
 → Full principles: `.auto-memory/rebuild_structuring_guidelines.md`
 
 ---
 
-## Next Steps (as of BATON 062, 2026-04-29)
+## Next Steps (as of BATON 063, 2026-04-29)
 
 ### Immediate
-1. **DEFERRED-REPORT-GUIDE** (NEW) — Write two interpretation guides for the ITE report:
-   - Resident-facing: how to read your report, what sections mean, how to act on weak areas
-   - Faculty-advisor-facing: coaching framework, red flags, how to use the report in advising
-2. **Re-run all 7 resident analyses** on Windows PC after git pull to pick up Issues 1-5
-3. **Push commit** — user pushing 47d6e8e via GitHub Desktop
+1. **Re-run all 7 resident analyses** on Windows PC after git pull to pick up Issues 1-5 + new guide scripts
+2. **Push commit** — user pushing 58589ff via GitHub Desktop
 
 ### Short-term
-4. **DEFERRED-PGY-BENCHMARKS** — UNBLOCKED — PGY-level benchmark comparison in report
-5. **DEFERRED-PROGRAM-TREND** — UNBLOCKED — Cohort-level trend analysis
-6. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations; prioritize by frequency
+3. **DEFERRED-PGY-BENCHMARKS** — UNBLOCKED — PGY-level benchmark comparison in report
+4. **DEFERRED-PROGRAM-TREND** — UNBLOCKED — Cohort-level trend analysis
+5. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations; prioritize by frequency

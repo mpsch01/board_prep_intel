@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-04-29 (BATON 062 — report builder issues 1-5 complete, Mac migration, pre-existing Windows PC ICD-10/pathways enrichment integrated)
-**Status:** Current — 1,004 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 build = 8 + maintain = 26; M2 = 75py + 6js; M3 = 50py + 2js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB enriched (1,998 articles, 1,639 ITE questions, article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
+**Last Updated:** 2026-04-29 (BATON 063 — two ITE interpretation guides complete; word_doc_defaults.py level 1/2 headers; Rule 14 locked)
+**Status:** Current — 1,004 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 build = 8 + maintain = 26; M2 = 75py + 6js; M3 = 52py + 4js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB enriched (1,998 articles, 1,639 ITE questions, article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_062_20260429_report_builder_issues_1to5_complete.md  — active BATON
+├── BATON_active_063_20260429_report_guides_complete.md  — active BATON
 ├── CLAUDE.md                              — project memory + conventions
 ├── REPO_MAP.md                            — current-state architectural overview (NEW — BATON 039)
 ├── README.md                              — project overview (human-readable)
@@ -53,6 +53,8 @@ board_prep_intel/
 **Added (2026-04-15, BATON 059):** Full body_system QC pipeline completed (ITE 2018-2021, 2024-2025 + AAFP); 19 new M3 scripts created; body-system-qc skill + methodology_scout/ directory established; 201 ITE + 129 AAFP questions in human_review queue; deferred flags: DEFERRED-BODY-SYSTEM-MERGED-UPDATE (NEW), DEFERRED-CENTROID-REBUILD (NEW), DEFERRED-HUMAN-REVIEW-BODY-SYSTEM (NEW); DEFERRED-AAFP-BODY-SYSTEM-AUDIT (CLOSED).
 
 **Completed (2026-04-16, BATON 060):** Enrichment pipeline for 10 recovered ITE questions (Steps 1-6 completed); 22 holdout body_system corrections applied (2024-2025 deprecated labels); apply_body_system_normalization.py fixed Musculoskeletal (48 QIDs), QID-2021-0168, synced 376 body_system_merged records; DEFERRED-BODY-SYSTEM-MERGED-UPDATE (CLOSED); DEFERRED-CENTROID-REBUILD (CLOSED); M3 script count: 39 → 50 (+10 new session scripts: audit_blueprint_by_year.py through apply_recovered_questions.py).
+
+**Completed (2026-04-29, BATON 063):** Two ITE interpretation guides written — build_resident_guide.py → ITE_Report_Guide_Resident_v2.docx (action-oriented, gold ACTION callouts, resident audience) and build_faculty_guide.py → ITE_Report_Guide_Faculty_v2.docx (methodology-focused, DATA SOURCE + LIMITATION callouts, faculty audience); word_doc_defaults.py updated with level 1/2 header differentiation (conditional spacing + shading); Rule 14 locked (all Python .docx scripts must use word_doc_defaults.py); DEFERRED-REPORT-GUIDE CLOSED; M3 count 50py+2js → 52py+4js; DB counts stable.
 
 **Completed (2026-04-29, BATON 062):** Report builder improvements (5 issues: scoring note, body_system provenance split, consolidated tables, concept fingerprint drugs-only, two-tier reading list); M3 script enhancements (ite_analyze_v2.py body_system_sources tracking, ite_analyzer_v3.py match_top_articles() two-tier, ite_report_builder_v2.js 5-issue suite); platform migration from Windows PC to Mac via external HD (DB + PDFs intact); pre-existing Windows PC ICD-10/pathways enrichment discovered and integrated (article_icd10 3,952→4,959, question_icd10 ~5,003→5,774, clinical_pathways 3,971→4,959, intersection_centroid_vec 123→158); Git commit 47d6e8e staged, push pending; new deferred flag DEFERRED-REPORT-GUIDE.
 
