@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-04-16 (BATON 061 — legacy body_system analyses complete, all 7 resident analyses re-run with DB backfill, article_currency complete, intersect_centroid_vec rebuilt)
-**Status:** Current — 1,004 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 build = 8 + maintain = 26; M2 = 75py + 6js; M3 = 50py + 2js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB stable (1,998 articles, 1,639 ITE questions); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
+**Last Updated:** 2026-04-29 (BATON 062 — report builder issues 1-5 complete, Mac migration, pre-existing Windows PC ICD-10/pathways enrichment integrated)
+**Status:** Current — 1,004 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 build = 8 + maintain = 26; M2 = 75py + 6js; M3 = 50py + 2js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB enriched (1,998 articles, 1,639 ITE questions, article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_061_20260416_legacy_bodysystem_analyses_complete.md  — active BATON
+├── BATON_active_062_20260429_report_builder_issues_1to5_complete.md  — active BATON
 ├── CLAUDE.md                              — project memory + conventions
 ├── REPO_MAP.md                            — current-state architectural overview (NEW — BATON 039)
 ├── README.md                              — project overview (human-readable)
@@ -53,6 +53,8 @@ board_prep_intel/
 **Added (2026-04-15, BATON 059):** Full body_system QC pipeline completed (ITE 2018-2021, 2024-2025 + AAFP); 19 new M3 scripts created; body-system-qc skill + methodology_scout/ directory established; 201 ITE + 129 AAFP questions in human_review queue; deferred flags: DEFERRED-BODY-SYSTEM-MERGED-UPDATE (NEW), DEFERRED-CENTROID-REBUILD (NEW), DEFERRED-HUMAN-REVIEW-BODY-SYSTEM (NEW); DEFERRED-AAFP-BODY-SYSTEM-AUDIT (CLOSED).
 
 **Completed (2026-04-16, BATON 060):** Enrichment pipeline for 10 recovered ITE questions (Steps 1-6 completed); 22 holdout body_system corrections applied (2024-2025 deprecated labels); apply_body_system_normalization.py fixed Musculoskeletal (48 QIDs), QID-2021-0168, synced 376 body_system_merged records; DEFERRED-BODY-SYSTEM-MERGED-UPDATE (CLOSED); DEFERRED-CENTROID-REBUILD (CLOSED); M3 script count: 39 → 50 (+10 new session scripts: audit_blueprint_by_year.py through apply_recovered_questions.py).
+
+**Completed (2026-04-29, BATON 062):** Report builder improvements (5 issues: scoring note, body_system provenance split, consolidated tables, concept fingerprint drugs-only, two-tier reading list); M3 script enhancements (ite_analyze_v2.py body_system_sources tracking, ite_analyzer_v3.py match_top_articles() two-tier, ite_report_builder_v2.js 5-issue suite); platform migration from Windows PC to Mac via external HD (DB + PDFs intact); pre-existing Windows PC ICD-10/pathways enrichment discovered and integrated (article_icd10 3,952→4,959, question_icd10 ~5,003→5,774, clinical_pathways 3,971→4,959, intersection_centroid_vec 123→158); Git commit 47d6e8e staged, push pending; new deferred flag DEFERRED-REPORT-GUIDE.
 
 **Completed (2026-04-16, BATON 061):** Legacy body_system analyses complete; all 7 resident analyses re-run with Stage 1.75 DB body_system backfill (Scholl 2022/2023/2024, Hopkins 2025, Sarkar 2025, Pjetergjoka 2024/2025); article_currency updated to 1,998 rows (100% complete); ite_analyze_v2.py: Stage 1.75 new pipeline stage added for DB body system backfill; ite_analyzer_v3.py: pathway_gap_map() LEFT JOIN fixed (icd10_desc column); intersection_centroid_vec verified (123 rows, 71 ITE + 52 AAFP blueprintxbody_system centroids).
 
@@ -96,7 +98,7 @@ board_prep_intel/
     └── ite-data-context-skill/
 ```
 
-**DB Counts (verified live 2026-04-16, BATON 061):**
+**DB Counts (verified live 2026-04-29, BATON 062):**
 | Table | Rows | Notes |
 |-------|------|-------|
 | articles | 1,998 | +13 new from critique rebuild; +49 AAFP acquisition (ART-1938–ART-1986); PDFs pending download |
@@ -105,10 +107,10 @@ board_prep_intel/
 | question_ref_pairs | 2,722 | 222 NULL clean_ref |
 | qid_art_xref | 2,485 | All 8 years (2018–2025) |
 | aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
-| article_icd10 | 3,952 | Rebuilt 2026-04-16 (−68 from synonym map variance) |
-| question_icd10 | ~5,003 | ~89.9% ITE coverage (1,474/1,639 ITE questions tagged) |
+| article_icd10 | 4,959 | ↑ from 3,952 — pre-existing Windows PC enrichment (BATON 062) |
+| question_icd10 | 5,774 | ↑ from ~5,003 — ~89.9%+ ITE coverage — pre-existing Windows PC enrichment (BATON 062) |
 | aafp_question_icd10 | 4,753 | relevance normalized; related cap applied |
-| clinical_pathways | 3,971 | REBUILT 2026-03-31 — blueprint-based, both banks; cleaned −49 no_match rows (2026-04-06) |
+| clinical_pathways | 4,959 | ↑ from 3,971 — pre-existing Windows PC enrichment (BATON 062) |
 | article_citation_trend | 1,740 | longitudinal citation tracking + watch_list flag |
 | article_currency | 1,998 | ✅ COMPLETE 2026-04-16 — Layer 2 complete; status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals column (JSON array) |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
@@ -127,7 +129,7 @@ board_prep_intel/
 | blueprint_label_vec | 5 | BLOB — 5 canonical blueprint category label embeddings (NEW — BATON 056) |
 | bodysystem_label_vec | 5 | BLOB — 5 canonical body system label embeddings (NEW — BATON 056) |
 | question_concepttag_vec | 2,850 | BLOB — concept_tags embedding per question (NEW — BATON 056) |
-| intersection_centroid_vec | 123 | BLOB — 71 ITE + 52 AAFP blueprint×body_system centroids (rebuilt 2026-04-16) |
+| intersection_centroid_vec | 158 | BLOB — ↑ from 123 — pre-existing Windows PC enrichment (BATON 062) |
 
 ---
 
@@ -290,4 +292,4 @@ board_prep_intel/
     └── [resident score report PDFs]
 ```
 
-*M3 scripts: 50 py + 2 js (+10 new session scripts BATON 060: audit_blueprint_by_year.py through apply_recovered_questions.py) — Stage 1.75 DB body_system backfill pipeline permanent addition (ite_analyze_v2.py); pathway_gap_map() LEFT JOIN fix (ite_analyzer_v3.py)*
+*M3 scripts: 50 py + 2 js — Modified BATON 062: ite_analyze_v2.py (body_system_sources provenance tracking), ite_analyzer_v3.py (match_top_articles() two-tier personalized/general, linked_qids + selection_basis fields), ite_report_builder_v2.js (5 issues: scoring note, provenance split, consolidated tables, concept fingerprint drugs-only, two-tier reading list)*

@@ -1,9 +1,9 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-04-16 (BATON 061)
+Last updated: 2026-04-29 (BATON 062)
 
 ## Active Memory Files
-- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 061
-- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (1,998 articles, 1,639 ITE Qs), schema state; body_system + body_system_merged fully normalized; article_currency complete 1,998 (BATON 061)
+- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 062
+- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (1,998 articles, 1,639 ITE Qs), schema state; body_system + body_system_merged fully normalized; article_currency complete 1,998; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched (BATON 062)
 - [rebuild_structuring_guidelines.md](rebuild_structuring_guidelines.md) — Locked rules and architecture principles
 - [glossary.md](glossary.md) — Project terminology decoder
 
@@ -36,6 +36,13 @@ Last updated: 2026-04-16 (BATON 061)
 ## Vector Integration (BATON 057)
 - [db_connect.py — immutable URI DB utility](db_connect_utility.md) — Use open_db() for sandbox SQLite queries; immutable=1 avoids journal file errors on NTFS mount
 
+## Report Builder Improvements + Mac Migration (BATON 062)
+- **M3 script enhancements:** ite_analyze_v2.py (body_system_sources provenance tracking, Stage 1.75), ite_analyzer_v3.py (match_top_articles() two-tier personalized/general, linked_qids + selection_basis fields), ite_report_builder_v2.js (5 issues: scoring note, provenance split, consolidated tables, concept fingerprint drugs-only, two-tier reading list with QID glossary)
+- **Platform migration:** Project copied from Windows home PC to Mac via external HD; DB + PDFs intact; Mac is now active development machine
+- **DB enrichment (pre-existing Windows work):** article_icd10: 3,952 → 4,959 (+1,007); question_icd10: ~5,003 → 5,774 (+771); clinical_pathways: 3,971 → 4,959 (+988); intersection_centroid_vec: 123 → 158 (+35)
+- **Git:** Commit 47d6e8e staged, push pending
+- **New deferred flag:** DEFERRED-REPORT-GUIDE — write resident and faculty advisor interpretation guides (2 DOCX documents, next session)
+
 ## Legacy Analyses Complete + Resident Re-runs (BATON 061)
 - **All 7 resident analyses re-run:** Scholl 2022/2023/2024, Sarkar 2025, Hopkins 2025, Pjetergjoka 2024/2025 — complete with Stage 1.75 DB body_system backfill
 - **ite_analyze_v2.py Stage 1.75 pipeline:** New permanent DB body_system backfill feature; fetches normalized taxonomy from DB, applies before score rollup
@@ -56,7 +63,8 @@ Last updated: 2026-04-16 (BATON 061)
 - **Files API infrastructure built** — critique_pdf_registry.py tracks 2018-2025 ITE PDFs; extract_critique_refs_v2.py parses citations with parse_legacy() + fallback_citation_scan(); enables ground-truth xref rebuilds
 - **Human review queue:** 201 ITE + 129 AAFP questions pending verification before commit; deferred flags: DEFERRED-BODY-SYSTEM-MERGED-UPDATE, DEFERRED-CENTROID-REBUILD, DEFERRED-HUMAN-REVIEW-BODY-SYSTEM
 
-## Open Items (BATON 061)
+## Open Items (BATON 062)
+- **DEFERRED-REPORT-GUIDE** — Write resident and faculty advisor interpretation guides (2 DOCX documents); unpacks scoring note, body_system provenance, consolidated table structure
 - **DEFERRED-HUMAN-REVIEW-BODY-SYSTEM** — ~308 holdout questions (179 ITE + 129 AAFP) pending manual verification; applies to 2022-2023 legacy data only
 - **DEFERRED-PROGRAM-TREND** — ✅ NOW UNBLOCKED — Multi-resident program-level trends; benchmark against 2024 ABFM national reference (all blockers cleared BATON 061)
 - **DEFERRED-PGY-BENCHMARKS** — ✅ NOW UNBLOCKED — Ready for multi-year trend analysis

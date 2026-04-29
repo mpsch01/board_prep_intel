@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last verified: 2026-04-16 (BATON 061)
+Last verified: 2026-04-29 (BATON 062)
 
 ## DB: ite_intelligence.db
 
@@ -10,10 +10,10 @@ Last verified: 2026-04-16 (BATON 061)
 | aafp_questions | 1,221 | BRQ, blueprint 100% |
 | qid_art_xref | 2,485 | All 8 years (2018–2025); rebuilt from critique ground truth in BATON 058 |
 | aafp_qid_art_xref | 864 | 643 unique Qs linked |
-| article_icd10 | 3,952 | Rebuilt 2026-04-16 with synonym normalization (−68 from prior 4,020) |
-| question_icd10 | ~5,003 | ~89.9% ITE coverage (1,474/1,639 ITE questions tagged) — updated 2026-04-16 |
+| article_icd10 | 4,959 | ↑ 3,952 (BATON 061) — pre-existing Windows PC enrichment (BATON 062) |
+| question_icd10 | 5,774 | ↑ ~5,003 (BATON 061) — ~89.9%+ ITE coverage — pre-existing Windows PC enrichment (BATON 062) |
 | aafp_question_icd10 | 4,753 | Relevance normalized |
-| clinical_pathways | 3,971 | Blueprint-based, rebuilt 2026-03-31; cleaned −49 no_match rows |
+| clinical_pathways | 4,959 | ↑ 3,971 (BATON 061) — pre-existing Windows PC enrichment (BATON 062) |
 | article_citation_trend | 1,740 | Longitudinal citation tracking + watch_list flag |
 | article_currency | 1,998 | ✅ COMPLETE 2026-04-16 — Layer 2 Intelligence complete; status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals JSON array column |
 | pubmed_pmid_cache | 344 | Layer 2 seed |
@@ -28,7 +28,7 @@ Last verified: 2026-04-16 (BATON 061)
 | blueprint_label_vec | 5 | BLOB – 5 canonical blueprint category label embeddings (NEW – BATON 056) |
 | bodysystem_label_vec | 5 | BLOB – 5 canonical body system label embeddings (NEW – BATON 056) |
 | question_concepttag_vec | 2,850 | BLOB – concept_tags embedding per question (NEW – BATON 056) |
-| intersection_centroid_vec | 123 | BLOB – 71 ITE + 52 AAFP blueprint×body_system centroids (rebuilt 2026-04-16) |
+| intersection_centroid_vec | 158 | BLOB – ↑ 123 (BATON 061) — pre-existing Windows PC enrichment (BATON 062) |
 
 ## Schema Notes
 - subcategory + topic_label DROPPED from questions (ITE)
@@ -44,6 +44,16 @@ Last verified: 2026-04-16 (BATON 061)
 - status breakdown: current:1100, updated:169, check_needed:106, not_indexed:610
 - title_signals: JSON array of clinical category keywords (extracted from blueprint cross-reference; used for future filtering + human review)
 - Populated via build_article_currency.py (M3 script)
+
+## DB Changes (BATON 062)
+- Pre-existing Windows PC enrichment discovered and migrated to Mac:
+  - article_icd10: 3,952 → 4,959 (+1,007)
+  - question_icd10: ~5,003 → 5,774 (+771)
+  - clinical_pathways: 3,971 → 4,959 (+988)
+  - intersection_centroid_vec: 123 → 158 (+35)
+- No new articles or questions added; no schema changes
+- M3 script improvements: ite_analyze_v2.py, ite_analyzer_v3.py, ite_report_builder_v2.js (3 files modified for report builder issues 1-5)
+- Platform migration: Project copied from Windows home PC to Mac via external HD; DB and PDFs intact
 
 ## DB Changes (BATON 061)
 - No new rows added; field corrections + analysis completions only

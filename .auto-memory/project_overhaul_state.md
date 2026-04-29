@@ -1,5 +1,5 @@
 # project_overhaul_state.md
-Last updated: 2026-04-16 (BATON 061)
+Last updated: 2026-04-29 (BATON 062)
 
 ## Module State
 
@@ -7,10 +7,10 @@ Last updated: 2026-04-16 (BATON 061)
 |--------|--------|----------|
 | M1 Warehouse | Active | 988 ITE/AAFP PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 26 maintain scripts |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
-| M3 Analyst | Active | 50 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction |
+| M3 Analyst | Active | 50 py + 2 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction; report builder improvements (BATON 062) |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 35 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
-| DB | Stable | 1,998 articles, 1,639 ITE Qs (+10 recovered), 1,221 AAFP Qs |
+| DB | Stable | 1,998 articles, 1,639 ITE Qs (+10 recovered), 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 (↑ pre-existing Windows PC enrichment, BATON 062) |
 
 ## PDF Library State
 
@@ -30,6 +30,19 @@ Last updated: 2026-04-16 (BATON 061)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 062)
+
+**2026-04-29 – Report Builder Issues 1-5 Complete + Mac Migration**
+- **M3 script improvements (3 files modified):**
+  - ite_analyze_v2.py: Added body_system_sources provenance tracking (Stage 1.75 continues)
+  - ite_analyzer_v3.py: Rewrote match_top_articles() to two-tier (personalized/general); added linked_qids + selection_basis fields on articles
+  - ite_report_builder_v2.js: Implemented 5 issues: scoring note, body_system provenance split, consolidated tables (Prior% | N/T% | Δ | SEM), concept fingerprint drugs-only filter, two-tier reading list with QID glossary
+- **Platform migration:** Project copied from Windows home PC to Mac via external HD; DB and PDFs intact; Mac is now active development machine
+- **DB enrichment (pre-existing Windows PC work):** article_icd10 3,952 → 4,959 (+1,007); question_icd10 ~5,003 → 5,774 (+771); clinical_pathways 3,971 → 4,959 (+988); intersection_centroid_vec 123 → 158 (+35)
+- **Git status:** Commit 47d6e8e staged; push pending from GitHub Desktop
+- **New deferred flag:** DEFERRED-REPORT-GUIDE (write resident + faculty interpretation guides, 2 DOCX documents; next session)
+- **No DB schema changes; no new questions or articles**
 
 ## Session Notes (BATON 061)
 
@@ -110,9 +123,10 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 
 | Flag | Status | Description |
 |------|--------|-------------|
+| DEFERRED-REPORT-GUIDE | NEW | Write resident and faculty advisor interpretation guides for the ITE report (2 DOCX documents); unpacks scoring note, body_system provenance, consolidated table structure; next session |
 | DEFERRED-YOY-ROBUSTNESS | ACTIVE | Year-over-year section 3b needs more robust implementation; month-by-month trend aggregation logic (BATON 050) |
 | DEFERRED-PROGRAM-TREND | UNBLOCKED | Require program-level trend analysis across multiple residents; benchmark against 2024 ABFM national reference (abfm_reference_2024.json); all blockers cleared (BATON 061) |
-| DEFERRED-RESIDENT-FOLDER-MIGRATION | NEW | Investigate resident_data/ folder state and migration strategy to M5 platform |
+| DEFERRED-RESIDENT-FOLDER-MIGRATION | ACTIVE | Investigate resident_data/ folder state and migration strategy to M5 platform |
 | DEFERRED-VECTOR-TIER1-REWRITE | ✅ CLOSED | Implemented in BATON 057 — 3 new vector functions + 3 integration points in match_practice_questions_v3() |
 | DEFERRED-PRACTICE-Q-TWO-TABLE | ✅ CLOSED | Superseded by unified practice questions table in BATON 057 (removed singleQs/crossQs split) |
 | DEFERRED-AAFP-BODY-SYSTEM-AUDIT | ✅ CLOSED | AAFP body_system fields corrected (BATON 059) |
