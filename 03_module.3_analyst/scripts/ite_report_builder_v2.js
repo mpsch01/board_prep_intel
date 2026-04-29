@@ -220,6 +220,14 @@ const allQuestions = data.practice_questions || [];
 const articles  = data.top_articles || [];
 // v3.1: score_interpretation block (plain-language framing for program directors)
 const scoreInterp = data.score_interpretation || {};
+// v3.2: body system provenance — ABFM-Reported vs. Database-Derived split
+const bsSources = data.body_system_sources || { abfm: [], db: [] };
+const bsAbfmSet = new Set(bsSources.abfm.map(s => s.toLowerCase()));
+function bsSourceGroup(name) {
+  // Returns "abfm" if system came from official ABFM PDF, "db" if Stage 1.75 backfill.
+  // Falls back to "db" for any system not explicitly tagged (safe default).
+  return bsAbfmSet.has((name || "").toLowerCase()) ? "abfm" : "db";
+}
 
 // v3.2: load ABFM reference data for Exam at a Glance section
 let abfmRef = null;
@@ -506,6 +514,12 @@ children.push(spacer(60));
 // ────────────────────────────────────────────────────────────────────
 // 3b. LONGITUDINAL DELTA (only rendered when prior-year data exists)
 // ────────────────────────────────────────────────────────────────────
+// Hoist n1 delta data for use in Section 4 consolidated tables
+const _n1Delta    = (data.longitudinal_delta || {}).n1 || null;
+const n1BpDelta   = _n1Delta ? (_n1Delta.blueprint_delta   || {}) : {};
+const n1BsDelta   = _n1Delta ? (_n1Delta.body_system_delta || {}) : {};
+const n1PriorYear = _n1Delta ? _n1Delta.prior_year : null;
+
 const lng = data.longitudinal_delta || {};
 if (lng.n1 || lng.n2) {
   children.push(new Paragraph({ children: [new PageBreak()] }));
@@ -550,64 +564,6 @@ if (lng.n1 || lng.n2) {
     ];
     children.push(makeTable(lngColW, lngRows));
     children.push(spacer(80));
-
-    // Per-blueprint breakdown
-    const bpDelta = delta.blueprint_delta || {};
-    const bsDelta = delta.body_system_delta || {};
-    const hasBpDelta = Object.keys(bpDelta).length > 0;
-    const hasBsDelta = Object.keys(bsDelta).length > 0;
-
-    if (hasBpDelta) {
-      children.push(new Paragraph({ keepNext: true, spacing: { before: 60, after: 40 }, children: [
-        new TextRun({ text: "Blueprint Performance", font: FONT, size: 19, bold: true, color: DGRAY }),
-      ]}));
-      const catColW = [3600, 1560, 1560, 1400, 1240];
-      const catRows = [row(["Category", `${delta.prior_year} %`, `${data.exam_year} %`, "Δ", ""].map((h, i) => headerCell(h, catColW[i])))];
-      for (const [cat, deltaVal] of Object.entries(bpDelta).sort((a, b) => a[1] - b[1])) {
-        const currRate  = perf.blueprint?.[cat]?.rate;
-        const currPct   = currRate != null ? (currRate * 100).toFixed(1) + "%" : "—";
-        const priorPct  = currRate != null ? ((currRate * 100) - deltaVal).toFixed(1) + "%" : "—";
-        const dSign     = deltaVal >= 0 ? "+" : "";
-        const dColor    = deltaVal > 1 ? GREEN : deltaVal < -1 ? RED : MGRAY;
-        const arrow     = deltaVal > 1 ? "▲" : deltaVal < -1 ? "▼" : "→";
-        const isWeak    = (currRate ?? 1) < 0.70;
-        catRows.push(row([
-          dataCell(cat,                                catColW[0], DGRAY, isWeak, AlignmentType.LEFT),
-          dataCell(priorPct,                           catColW[1], MGRAY, false),
-          dataCell(currPct,                            catColW[2], isWeak ? AMBER : DGRAY, true),
-          dataCell(`${dSign}${deltaVal.toFixed(1)}%`,  catColW[3], dColor, true),
-          dataCell(arrow,                              catColW[4], dColor, true),
-        ]));
-      }
-      children.push(makeTable(catColW, catRows));
-      children.push(spacer(80));
-    }
-
-    if (hasBsDelta) {
-      children.push(new Paragraph({ keepNext: true, spacing: { before: 60, after: 40 }, children: [
-        new TextRun({ text: "Body System Performance", font: FONT, size: 19, bold: true, color: DGRAY }),
-      ]}));
-      const bsColW2 = [3600, 1560, 1560, 1400, 1240];
-      const bsRows2 = [row(["Body System", `${delta.prior_year} %`, `${data.exam_year} %`, "Δ", ""].map((h, i) => headerCell(h, bsColW2[i])))];
-      for (const [sys, deltaVal] of Object.entries(bsDelta).sort((a, b) => a[1] - b[1])) {
-        const currRate  = perf.body_system?.[sys]?.rate;
-        const currPct   = currRate != null ? (currRate * 100).toFixed(1) + "%" : "—";
-        const priorPct  = currRate != null ? ((currRate * 100) - deltaVal).toFixed(1) + "%" : "—";
-        const dSign     = deltaVal >= 0 ? "+" : "";
-        const dColor    = deltaVal > 1 ? GREEN : deltaVal < -1 ? RED : MGRAY;
-        const arrow     = deltaVal > 1 ? "▲" : deltaVal < -1 ? "▼" : "→";
-        const isWeak    = (currRate ?? 1) < 0.70;
-        bsRows2.push(row([
-          dataCell(sys,                                bsColW2[0], DGRAY, isWeak, AlignmentType.LEFT),
-          dataCell(priorPct,                           bsColW2[1], MGRAY, false),
-          dataCell(currPct,                            bsColW2[2], isWeak ? AMBER : DGRAY, true),
-          dataCell(`${dSign}${deltaVal.toFixed(1)}%`,  bsColW2[3], dColor, true),
-          dataCell(arrow,                              bsColW2[4], dColor, true),
-        ]));
-      }
-      children.push(makeTable(bsColW2, bsRows2));
-      children.push(spacer(60));
-    }
   }
 }
 
@@ -619,27 +575,37 @@ children.push(sectionBar("\u2606 BLUEPRINT & BODY SYSTEM PERFORMANCE"));
 children.push(spacer(80, true));
 
 children.push(new Paragraph({ keepNext: true, spacing: { before: 0, after: 80 }, children: [
-  new TextRun({ text: "Performance across all ABFM blueprint categories with relative standing (vs. personal mean) and measurement reliability (SEM). " +
-    "Body system breakdown follows. Color-coded: green \u2265 70%, amber 50–70%, red < 50%.",
+  new TextRun({ text: "Performance across all ABFM blueprint categories and body systems. " +
+    "Prior-year comparison shown where available. Score column format: correct/total (%). " +
+    "Color-coded: green \u2265 70%, amber 50\u201370%, red < 50%.",
     font: FONT, size: 18, color: MGRAY, italics: true }),
 ]}));
 
-// Blueprint table (Category, Correct, Total, Rate, SEM — Relative and Confidence removed per Edit 1)
+// Blueprint table — consolidated: Category | Prior% | Current N/T (rate%) | Δ | SEM
 children.push(new Paragraph({ spacing: { before: 60, after: 60 }, children: [
   new TextRun({ text: "Blueprint Categories", font: FONT, size: 22, bold: true, color: NAVY }),
 ]}));
-const bpColW = [3800, 1400, 1400, 1400, 1360];
-const bpRows = [row(["Category", "Correct", "Total", "Rate", "SEM"].map((h, i) => headerCell(h, bpColW[i])))];
+const hasBpPrior = Object.keys(n1BpDelta).length > 0;
+const bpPriorHdr = (hasBpPrior && n1PriorYear) ? `${n1PriorYear} %` : "Prior %";
+const bpColW = [3400, 1300, 2200, 1100, 1360];
+const bpRows = [row(["Category", bpPriorHdr, `${data.exam_year} Score`, "\u0394", "SEM"].map((h, i) => headerCell(h, bpColW[i])))];
 
 for (const [cat, vals] of Object.entries(perf.blueprint)) {
-  const rate = vals.rate;
-  const pct = (rate * 100).toFixed(1) + "%";
-  const sem = t3?.[cat];
+  const rate     = vals.rate;
+  const pct      = (rate * 100).toFixed(1) + "%";
+  const currStr  = `${vals.correct}/${vals.total} (${pct})`;
+  const sem      = t3?.[cat];
+  const isWeak   = rate < 0.70;
+  const deltaVal = n1BpDelta[cat] != null ? n1BpDelta[cat] : null;
+  const priorPct = deltaVal !== null ? ((rate * 100) - deltaVal).toFixed(1) + "%" : "\u2014";
+  const dSign    = deltaVal !== null && deltaVal >= 0 ? "+" : "";
+  const dStr     = deltaVal !== null ? `${dSign}${deltaVal.toFixed(1)}%` : "\u2014";
+  const dColor   = deltaVal !== null ? (deltaVal > 1 ? GREEN : deltaVal < -1 ? RED : MGRAY) : MGRAY;
   bpRows.push(row([
-    dataCell(cat, bpColW[0], DGRAY, true, AlignmentType.LEFT),
-    dataCell(vals.correct, bpColW[1]),
-    dataCell(vals.total,   bpColW[2]),
-    dataCell(pct,          bpColW[3], rateColor(rate), true),
+    dataCell(cat,      bpColW[0], DGRAY, isWeak, AlignmentType.LEFT),
+    dataCell(priorPct, bpColW[1], MGRAY, false),
+    dataCell(currStr,  bpColW[2], rateColor(rate), true),
+    dataCell(dStr,     bpColW[3], dColor, deltaVal !== null),
     dataCell(sem ? `\u00B1${sem.sem}` : "\u2014", bpColW[4], MGRAY),
   ]));
 }
@@ -651,20 +617,59 @@ children.push(new Paragraph({ spacing: { before: 60, after: 60 }, children: [
   new TextRun({ text: "Body Systems", font: FONT, size: 22, bold: true, color: NAVY }),
 ]}));
 {
-  const bsColW = [4200, 1800, 1800, 1560];
-  const bsRows = [row(["Body System", "Correct", "Total", "Rate"].map((h, i) => headerCell(h, bsColW[i])))];
+  const hasBsPrior = Object.keys(n1BsDelta).length > 0;
+  const bsPriorHdr = (hasBsPrior && n1PriorYear) ? `${n1PriorYear} %` : "Prior %";
+  const bsColW = [3800, 1500, 2500, 1560];
   const bsSorted = Object.entries(perf.body_system || {}).sort((a, b) => a[1].rate - b[1].rate);
-  for (const [cat, vals] of bsSorted) {
-    const rate = vals.rate;
-    const pct  = (rate * 100).toFixed(1) + "%";
-    bsRows.push(row([
-      dataCell(cat, bsColW[0], DGRAY, true, AlignmentType.LEFT),
-      dataCell(vals.correct, bsColW[1]),
-      dataCell(vals.total,   bsColW[2]),
-      dataCell(pct, bsColW[3], rateColor(rate), true),
-    ]));
+
+  // Split into ABFM-Reported (from official score PDF) and Database-Derived (Stage 1.75 backfill)
+  const bsAbfmRows = bsSorted.filter(([cat]) => bsSourceGroup(cat) === "abfm");
+  const bsDbRows   = bsSorted.filter(([cat]) => bsSourceGroup(cat) === "db");
+  const hasAbfm    = bsAbfmRows.length > 0;
+  const hasDb      = bsDbRows.length > 0;
+
+  function buildBsTable(entries) {
+    const tableRows = [row(["Body System", bsPriorHdr, `${data.exam_year} Score`, "\u0394"].map((h, i) => headerCell(h, bsColW[i])))];
+    for (const [cat, vals] of entries) {
+      const rate     = vals.rate;
+      const pct      = (rate * 100).toFixed(1) + "%";
+      const currStr  = `${vals.correct}/${vals.total} (${pct})`;
+      const deltaVal = n1BsDelta[cat] != null ? n1BsDelta[cat] : null;
+      const priorPct = deltaVal !== null ? ((rate * 100) - deltaVal).toFixed(1) + "%" : "\u2014";
+      const dSign    = deltaVal !== null && deltaVal >= 0 ? "+" : "";
+      const dStr     = deltaVal !== null ? `${dSign}${deltaVal.toFixed(1)}%` : "\u2014";
+      const dColor   = deltaVal !== null ? (deltaVal > 1 ? GREEN : deltaVal < -1 ? RED : MGRAY) : MGRAY;
+      tableRows.push(row([
+        dataCell(cat,      bsColW[0], DGRAY, true, AlignmentType.LEFT),
+        dataCell(priorPct, bsColW[1], MGRAY, false),
+        dataCell(currStr,  bsColW[2], rateColor(rate), true),
+        dataCell(dStr,     bsColW[3], dColor, deltaVal !== null),
+      ]));
+    }
+    return makeTable(bsColW, tableRows);
   }
-  children.push(makeTable(bsColW, bsRows));
+
+  if (hasAbfm) {
+    children.push(new Paragraph({ spacing: { before: 40, after: 40 }, children: [
+      new TextRun({ text: "ABFM-Reported", font: FONT, size: 19, bold: true, color: NAVY }),
+      new TextRun({ text: "  — from your official ABFM score report", font: FONT, size: 17, color: MGRAY, italics: true }),
+    ]}));
+    children.push(buildBsTable(bsAbfmRows));
+  }
+
+  if (hasDb) {
+    children.push(spacer(hasAbfm ? 120 : 0));
+    children.push(new Paragraph({ spacing: { before: 40, after: 40 }, children: [
+      new TextRun({ text: "Database-Derived", font: FONT, size: 19, bold: true, color: BLUE }),
+      new TextRun({ text: "  — backfilled from ITE Intelligence DB (not on ABFM report)", font: FONT, size: 17, color: MGRAY, italics: true }),
+    ]}));
+    children.push(buildBsTable(bsDbRows));
+  }
+
+  // If no provenance data available (old JSON), fall back to single flat table
+  if (!hasAbfm && !hasDb) {
+    children.push(buildBsTable(bsSorted));
+  }
 }
 
 // ────────────────────────────────────────────────────────────────────
@@ -921,13 +926,13 @@ if (concept) {
     ]}));
   }
 
-  // Build concept tables from diagnoses, drugs, guidelines dicts
+  // Build concept tables — diagnoses removed from display (drug name bleed-through
+  // at single-exam sample sizes makes the table unreliable; concept fingerprint
+  // still runs internally for practice question selection scoring).
+  // Diagnoses will re-enable when cross-year pooling is implemented (Option A).
+  // Guidelines removed — too broad to be actionable.
   const conceptSections = [
-    { label: "Top Diagnoses in Missed Items", data: concept.top_diagnoses || concept.diagnoses || {}, qids: cqMap.diagnoses  || {}, priorSet: priorDx    },
-    { label: "Top Drugs in Missed Items",     data: concept.top_drugs     || concept.drugs     || {}, qids: cqMap.drugs      || {}, priorSet: priorDrugs },
-    // Guidelines table removed — too broad to be actionable; will revisit when
-    // concept_tags guideline entries are better normalized.
-    // { label: "Top Guidelines in Missed Items",data: concept.top_guidelines|| concept.guidelines|| {}, qids: cqMap.guidelines || {}, priorSet: priorGuide },
+    { label: "Top Drugs in Missed Items", data: concept.top_drugs || concept.drugs || {}, qids: cqMap.drugs || {}, priorSet: priorDrugs },
   ];
 
   for (const sec of conceptSections) {
@@ -977,17 +982,13 @@ if (concept) {
   // v2 subcategory_distribution compat block also removed — subcategory column
   // was dropped from the DB; this path is permanently dead.
 
-  // Dynamic study note
+  // Study note — drugs only (diagnoses removed from display pending cross-year pooling)
   const topDrugsAll = Object.entries(concept.top_drugs || concept.drugs || {}).sort((a, b) => b[1] - a[1]);
-  const topDxAll    = Object.entries(concept.top_diagnoses || concept.diagnoses || {}).sort((a, b) => b[1] - a[1]);
-  const dxNote = topDxAll.length >= 2
-    ? `${topDxAll[0][0]} (${topDxAll[0][1]}\u00D7) and ${topDxAll[1][0]} (${topDxAll[1][1]}\u00D7) are the top recurring diagnoses in missed items.`
-    : "";
-  const drugNote = topDrugsAll.length >= 1 && topDrugsAll[0][1] >= 2
-    ? ` Recurring drug cluster: ${topDrugsAll.slice(0, 3).map(d => `${d[0]} (${d[1]}\u00D7)`).join(", ")} — may represent a single reviewable pharmacology skill.`
-    : "";
-  if (dxNote) {
-    children.push(studyNote(dxNote + drugNote));
+  if (topDrugsAll.length >= 1 && topDrugsAll[0][1] >= 2) {
+    const topThree = topDrugsAll.slice(0, 3).map(d => `${d[0]} (${d[1]}\u00D7)`).join(", ");
+    children.push(studyNote(
+      `Recurring drug cluster: ${topThree} \u2014 these medications appeared across multiple missed items and may represent a single reviewable pharmacology skill.`
+    ));
   }
 }
 
@@ -1042,14 +1043,13 @@ children.push(new Paragraph({ children: [new PageBreak()] }));
 children.push(sectionBar("\uD83D\uDCDA HIGH-YIELD READING LIST"));
 children.push(spacer(80, true));
 
-children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 120 }, children: [
-  new TextRun({ text: "Articles selected from the ITE Intelligence database by citation frequency, exam year span, " +
-    "and direct relevance to identified weak areas. Prioritize in order listed.",
+children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 60 }, children: [
+  new TextRun({ text: "Articles from the ITE Intelligence database in two tiers. " +
+    "Prioritize the Targeted section first — those articles cover your specific missed questions.",
     font: FONT, size: 18, color: MGRAY, italics: true }),
 ]}));
 
 // Currency status helpers (v3.1)
-// Maps article_currency.currency_status → display badge text + color
 function currencyBadge(status) {
   switch ((status || "").toLowerCase()) {
     case "current":      return { text: "✓ Current",       color: GREEN };
@@ -1060,49 +1060,95 @@ function currencyBadge(status) {
   }
 }
 
-if (articles.length > 0) {
+// Helper: render a summary table + prose block for a group of articles
+function renderArticleGroup(groupArticles, startNum, groupLabel, groupColor, groupDesc) {
+  if (groupArticles.length === 0) return;
+
+  children.push(spacer(100));
+  children.push(new Paragraph({ spacing: { before: 40, after: 40 }, children: [
+    new TextRun({ text: groupLabel, font: FONT, size: 21, bold: true, color: groupColor }),
+    new TextRun({ text: `  — ${groupDesc}`, font: FONT, size: 17, color: MGRAY, italics: true }),
+  ]}));
+
+  // Summary table
   const aColW = [400, 4960, 1000, 1000, 1000, 1000];
   const aRows = [row(["#", "Article", "Citations", "Exam Yrs", "Weak Links", "Status"].map((h, i) => headerCell(h, aColW[i])))];
-  articles.forEach((a, i) => {
+  groupArticles.forEach((a, i) => {
     const cb = currencyBadge(a.currency_status);
+    const wl = a.weak_area_links || 0;
     aRows.push(row([
-      dataCell(i + 1, aColW[0], NAVY, true),
+      dataCell(startNum + i, aColW[0], NAVY, true),
       multiLineCell([
         { text: a.title, bold: true, color: BLUE },
         { text: a.clean_ref || `${a.author1} (${a.year})`, size: 16, color: MGRAY },
         { text: a.article_id, size: 14, color: LGRAY },
       ], aColW[1]),
-      dataCell(`${a.citation_count}\u00D7`, aColW[2], NAVY, true),
+      dataCell(`${a.citation_count}×`, aColW[2], NAVY, true),
       dataCell(a.unique_years, aColW[3]),
-      dataCell(a.weak_area_links, aColW[4], a.weak_area_links >= 3 ? RED : a.weak_area_links >= 1 ? AMBER : DGRAY, a.weak_area_links >= 3),
+      dataCell(wl > 0 ? `${wl}×` : "—", aColW[4], wl >= 3 ? RED : wl >= 1 ? AMBER : LGRAY, wl >= 3),
       dataCell(cb.text || "—", aColW[5], cb.color, false, AlignmentType.LEFT),
     ]));
   });
   children.push(makeTable(aColW, aRows));
 
-  children.push(spacer(120));
-  articles.forEach((a, i) => {
+  // Prose + QID glossary per article
+  children.push(spacer(80));
+  groupArticles.forEach((a, i) => {
     const cb = currencyBadge(a.currency_status);
     children.push(new Paragraph({ spacing: { before: 60, after: 40 }, children: [
-      new TextRun({ text: `${i + 1}. ${a.title}`, font: FONT, size: 20, bold: true, color: NAVY }),
+      new TextRun({ text: `${startNum + i}. ${a.title}`, font: FONT, size: 20, bold: true, color: NAVY }),
     ]}));
     const currencyNote = cb.text
       ? ` Currency: ${cb.text}.${a.currency_status === "updated" ? " A newer version may exist — verify before using as primary study source." : a.currency_status === "check_needed" ? " Currency uncertain." : ""}`
       : "";
-    children.push(new Paragraph({ spacing: { before: 0, after: 60 }, indent: { left: 300 }, children: [
-      new TextRun({ text: `Why read this: cited ${a.citation_count}\u00D7 across ${a.unique_years} exam year(s)` +
-        (a.weak_area_links > 0 ? `, linked to ${a.weak_area_links} of your missed question${a.weak_area_links !== 1 ? "s" : ""}` : "") +
+    const wl = a.weak_area_links || 0;
+    children.push(new Paragraph({ spacing: { before: 0, after: 20 }, indent: { left: 300 }, children: [
+      new TextRun({ text: `Why read this: cited ${a.citation_count}× across ${a.unique_years} exam year(s)` +
+        (wl > 0 ? `, linked to ${wl} of your missed question${wl !== 1 ? "s" : ""}` : "") +
         `.${currencyNote} High-frequency citation = high probability of appearing on future exams.`,
         font: FONT, size: 18, color: MGRAY }),
     ]}));
+    // QID glossary
+    const linkedQids = a.linked_qids || [];
+    if (linkedQids.length > 0) {
+      children.push(new Paragraph({ spacing: { before: 0, after: 60 }, indent: { left: 300 }, children: [
+        new TextRun({ text: "🔗 Your missed questions covered: ", font: FONT, size: 17, bold: true, color: NAVY }),
+        new TextRun({ text: linkedQids.join("  ·  "), font: FONT, size: 17, color: BLUE }),
+      ]}));
+    }
   });
+}
 
+if (articles.length > 0) {
+  const personalized = articles.filter(a => a.selection_basis === "personalized");
+  const general      = articles.filter(a => a.selection_basis === "general");
+  // Fallback: if selection_basis not set (old JSON), show all as personalized
+  const showPersonalized = personalized.length > 0 ? personalized : articles;
+  const showGeneral      = personalized.length > 0 ? general : [];
+
+  renderArticleGroup(
+    showPersonalized, 1,
+    "Targeted to Your Exam",
+    NAVY,
+    "selected because they directly cover your missed questions"
+  );
+  renderArticleGroup(
+    showGeneral, showPersonalized.length + 1,
+    "High-Yield for All Residents",
+    BLUE,
+    "high-citation cornerstone articles regardless of your specific misses"
+  );
+
+  children.push(spacer(120));
+  const topArticle = articles[0];
   children.push(studyNote(
-    `Articles with multiple weak area links address multiple knowledge gaps per hour of reading. ` +
-    `Use citation count as a proxy for exam question likelihood \u2014 ` +
-    `if the ABFM has cited it ${articles[0]?.citation_count || 5}\u00D7, it will appear again.`
+    `Targeted articles address your specific knowledge gaps — read those first. ` +
+    `High-Yield articles are the ABFM's most frequently cited references across all residents. ` +
+    `Use citation count as a proxy for exam question likelihood — ` +
+    `if the ABFM cited it ${topArticle?.citation_count || 5}×, it will appear again.`
   ));
 }
+
 } // end SKIP_READING_LIST guard
 
 // ────────────────────────────────────────────────────────────────────
@@ -1234,13 +1280,32 @@ if (missedItems.length > 0) {
   children.push(sectionBar("📋 APPENDIX — MISSED EXAM ITEMS"));
   children.push(spacer(60, true));
 
-  children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 120 }, children: [
+  // Compute scored total from perf — used to explain item numbering vs. scored count
+  const scoredTotal   = perf.overall.total;       // e.g. 191 (ABFM-scored items)
+  const examTotal     = 200;                       // ITE is always 200 items
+  const deletedCount  = examTotal - scoredTotal;   // e.g. 9 experimental items
+
+  children.push(new Paragraph({ keepNext: true, spacing: { before: 40, after: 60 }, children: [
     new TextRun({
       text: `${missedItems.length} items answered incorrectly. ` +
             "Reference table — use QIDs to locate questions in the practice section above.",
       font: FONT, size: 18, color: MGRAY, italics: true,
     }),
   ]}));
+  // Explain the 191 vs 200 discrepancy only when it's relevant (deleted items exist)
+  if (deletedCount > 0) {
+    children.push(new Paragraph({ spacing: { before: 0, after: 120 }, children: [
+      new TextRun({
+        text: `⚠ Note: The ITE contains ${examTotal} items numbered 1–${examTotal}, ` +
+              `but only ${scoredTotal} are scored. ABFM designates ${deletedCount} item${deletedCount !== 1 ? "s" : ""} ` +
+              `as experimental/field-test questions that do not count toward your score. ` +
+              `These are distributed randomly throughout the exam and are not identifiable from the exam PDF. ` +
+              `Item numbers in this appendix reflect the exam numbering (1–${examTotal}); ` +
+              `your score is based on the ${scoredTotal} scored items only.`,
+        font: FONT, size: 17, color: MGRAY, italics: true,
+      }),
+    ]}));
+  }
 
   const appColW = [900, 1900, 2800, 2800, 960];
   const appRows = [row(["Item #", "QID", "Blueprint", "Body System", "Status"].map((h, i) => headerCell(h, appColW[i])))];

@@ -492,6 +492,13 @@ def main():
     # This runs automatically whenever body_system is absent — no flag required.
     _exam_year_for_backfill = merged.get("exam_year", "")
     _needs_backfill = any(i.get("body_system") is None for i in merged["items"])
+
+    # Snapshot which body systems came from the ABFM PDF BEFORE backfill runs.
+    # This powers the "ABFM-Reported vs. Database-Derived" split in the report.
+    _abfm_systems = sorted(set(
+        i["body_system"] for i in merged["items"] if i.get("body_system")
+    ))
+
     if _exam_year_for_backfill and _needs_backfill:
         print("\n" + "=" * 60)
         print("STAGE 1.75: DB Body System Backfill")
@@ -523,6 +530,16 @@ def main():
         except Exception as _e:
             print(f"  WARNING: DB body system backfill failed: {_e}")
             print("  Continuing without body system data.")
+
+    # Build body_system_sources after backfill: all systems now present minus ABFM set = DB-derived.
+    _all_systems_after = sorted(set(
+        i["body_system"] for i in merged["items"] if i.get("body_system")
+    ))
+    _db_systems = sorted(set(_all_systems_after) - set(_abfm_systems))
+    merged["body_system_sources"] = {
+        "abfm": _abfm_systems,   # from official ABFM score report PDF
+        "db":   _db_systems,     # backfilled from ITE Intelligence DB (Stage 1.75)
+    }
 
     # ========================================================================
     # STAGE 2: Analysis (v2 or v1 based on --v1-only flag)

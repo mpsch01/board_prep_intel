@@ -2144,14 +2144,27 @@ def match_practice_questions_v3(perf: dict, priorities: list, qid_map: dict,
 # Top Articles (updated: includes AAFP xref links)
 # ---------------------------------------------------------------------------
 
-def match_top_articles(perf: dict, db_path: str, count: int = 5,
-                        items: list = None, qid_map: dict = None) -> list:
+def match_top_articles(perf: dict, db_path: str,
+                        items: list = None, qid_map: dict = None,
+                        personalized_target: int = 5, personalized_max: int = 7,
+                        general_target: int = 5, general_max: int = 8) -> list:
     """
-    Articles most linked to THIS RESIDENT's missed questions.
+    Two-tier article reading list.
 
-    Personalization: counts only the questions this specific resident got wrong,
-    not all questions in weak categories. This ensures the reading list reflects
-    the resident's actual gaps rather than a popularity ranking of all articles.
+    Tier 1 — Personalized (selection_basis="personalized"):
+        Articles linked to THIS resident's specific missed questions.
+        Strong:   weak_area_links >= 2  → fill up to personalized_target (5)
+        Overflow: weak_area_links >= 1  → expand up to personalized_max (7)
+                  if fewer than personalized_target strong results exist.
+
+    Tier 2 — General (selection_basis="general"):
+        High-citation, multi-year cornerstone articles NOT already in Tier 1.
+        Strong:   citation_count >= 5 AND unique_years >= 4  → fill up to general_target (5)
+        Overflow: citation_count >= 3 AND unique_years >= 3  → expand up to general_max (8)
+                  if fewer than general_target strong results exist.
+
+    Returns a flat list ordered Tier 1 first, then Tier 2.
+    Each article carries selection_basis and linked_qids fields.
     """
     if not db_path:
         return []
@@ -2168,10 +2181,44 @@ def match_top_articles(perf: dict, db_path: str, count: int = 5,
     db = sqlite3.connect(db_path)
     db.row_factory = sqlite3.Row
 
+    # ── HELPER: run a SQL query and return list of dicts ──────────────────
+    def _run(sql, params):
+        return [dict(r) for r in db.execute(sql, params).fetchall()]
+
+    # ── HELPER: attach linked_qids to a result set ────────────────────────
+    def _attach_qids(result, basis):
+        """Tags each row with selection_basis and fetches linked_qids."""
+        for r in result:
+            r["selection_basis"] = basis
+        if missed_qids and result:
+            art_ids  = [r["article_id"] for r in result]
+            ph_arts  = ",".join(["?"] * len(art_ids))
+            ph_qids  = ",".join(["?"] * len(missed_qids))
+            link_rows = db.execute(
+                f"""SELECT article_id, qid FROM qid_art_xref
+                    WHERE article_id IN ({ph_arts}) AND qid IN ({ph_qids})
+                    ORDER BY article_id, qid""",
+                art_ids + missed_qids
+            ).fetchall()
+            qid_map_by_art: dict = {}
+            for lr in link_rows:
+                qid_map_by_art.setdefault(lr["article_id"], []).append(lr["qid"])
+            for r in result:
+                r["linked_qids"] = qid_map_by_art.get(r["article_id"], [])
+        else:
+            for r in result:
+                r["linked_qids"] = []
+
+    # ─────────────────────────────────────────────────────────────────────
+    # TIER 1: PERSONALIZED
+    # ─────────────────────────────────────────────────────────────────────
+    personalized: list = []
+
     if missed_qids:
-        # Personalized path: count links to THIS resident's missed questions only
-        ph = ",".join(["?"] * len(missed_qids))
-        sql = f"""
+        ph_q = ",".join(["?"] * len(missed_qids))
+
+        # Strong personalized: linked to 2+ of this resident's missed questions
+        strong_p = _run(f"""
             SELECT a.article_id, a.title, a.author1, a.year, a.source_type,
                    a.citation_count, a.unique_years, a.exam_years, a.clean_ref,
                    COUNT(DISTINCT qa.qid) AS weak_area_links,
@@ -2179,24 +2226,52 @@ def match_top_articles(perf: dict, db_path: str, count: int = 5,
             FROM articles a
             JOIN qid_art_xref qa ON a.article_id = qa.article_id
             LEFT JOIN article_currency ac ON a.article_id = ac.article_id
-            WHERE qa.qid IN ({ph})
+            WHERE qa.qid IN ({ph_q})
               AND a.source_type != 'stub'
               AND a.article_id  != 'ART-0001'
               AND a.citation_count >= 2
             GROUP BY a.article_id
+            HAVING weak_area_links >= 2
             ORDER BY weak_area_links DESC, a.citation_count DESC
             LIMIT ?
-        """
-        rows = db.execute(sql, missed_qids + [count]).fetchall()
+        """, missed_qids + [personalized_max])
+
+        personalized = strong_p
+
+        # Overflow: expand with weak_area_links >= 1 if strong count is below target
+        if len(personalized) < personalized_target:
+            need      = personalized_max - len(personalized)
+            found_ids = {r["article_id"] for r in personalized}
+            overflow_p = _run(f"""
+                SELECT a.article_id, a.title, a.author1, a.year, a.source_type,
+                       a.citation_count, a.unique_years, a.exam_years, a.clean_ref,
+                       COUNT(DISTINCT qa.qid) AS weak_area_links,
+                       COALESCE(ac.currency_status, 'unknown') AS currency_status
+                FROM articles a
+                JOIN qid_art_xref qa ON a.article_id = qa.article_id
+                LEFT JOIN article_currency ac ON a.article_id = ac.article_id
+                WHERE qa.qid IN ({ph_q})
+                  AND a.source_type != 'stub'
+                  AND a.article_id  != 'ART-0001'
+                  AND a.citation_count >= 2
+                GROUP BY a.article_id
+                HAVING weak_area_links >= 1
+                ORDER BY weak_area_links DESC, a.citation_count DESC
+                LIMIT ?
+            """, missed_qids + [personalized_max * 3])  # over-fetch then filter
+            for r in overflow_p:
+                if r["article_id"] not in found_ids and len(personalized) < personalized_max:
+                    personalized.append(r)
+                    found_ids.add(r["article_id"])
+
     else:
-        # Fallback: weak-area categories (no personalization, used when items unavailable)
+        # Fallback when no missed QIDs: use weak-area category matching
         weak_systems    = [name for name, p in perf.get("body_system", {}).items() if p["rate"] < 0.70]
         weak_blueprints = [BLUEPRINT_PDF_TO_DB.get(name, name)
                            for name, p in perf.get("blueprint", {}).items() if p["rate"] < 0.70]
         db_system_names = []
         for ws in weak_systems:
             db_system_names.extend(BODYSYSTEM_PDF_TO_DB.get(ws, [ws]))
-
         params, clauses = [], []
         if db_system_names:
             bs_ph = ",".join(["?"] * len(db_system_names))
@@ -2207,8 +2282,7 @@ def match_top_articles(perf: dict, db_path: str, count: int = 5,
             clauses.append(f"q.blueprint IN ({bp_ph})")
             params.extend(weak_blueprints)
         where = " OR ".join(clauses) if clauses else "1=1"
-
-        sql = f"""
+        personalized = _run(f"""
             SELECT a.article_id, a.title, a.author1, a.year, a.source_type,
                    a.citation_count, a.unique_years, a.exam_years, a.clean_ref,
                    COUNT(DISTINCT q.qid) AS weak_area_links,
@@ -2224,11 +2298,67 @@ def match_top_articles(perf: dict, db_path: str, count: int = 5,
             GROUP BY a.article_id
             ORDER BY weak_area_links DESC, a.citation_count DESC
             LIMIT ?
-        """
-        rows = db.execute(sql, params + [count]).fetchall()
+        """, params + [personalized_max])
+
+    _attach_qids(personalized, "personalized")
+
+    # ─────────────────────────────────────────────────────────────────────
+    # TIER 2: GENERAL (high-citation cornerstone articles)
+    # Excludes anything already in Tier 1.
+    # ─────────────────────────────────────────────────────────────────────
+    exclude_ids = {r["article_id"] for r in personalized}
+    ph_excl     = ",".join(["?"] * len(exclude_ids)) if exclude_ids else "''"
+
+    # Strong general: citation_count >= 5 AND unique_years >= 4
+    strong_g = _run(f"""
+        SELECT a.article_id, a.title, a.author1, a.year, a.source_type,
+               a.citation_count, a.unique_years, a.exam_years, a.clean_ref,
+               0 AS weak_area_links,
+               COALESCE(ac.currency_status, 'unknown') AS currency_status
+        FROM articles a
+        LEFT JOIN article_currency ac ON a.article_id = ac.article_id
+        WHERE a.source_type != 'stub'
+          AND a.article_id  != 'ART-0001'
+          AND a.article_id  NOT IN ({ph_excl})
+          AND a.citation_count >= 5
+          AND a.unique_years   >= 4
+        ORDER BY a.citation_count DESC, a.unique_years DESC
+        LIMIT ?
+    """, list(exclude_ids) + [general_max])
+
+    general = strong_g
+
+    # Overflow: citation_count >= 3 AND unique_years >= 3
+    if len(general) < general_target:
+        found_g_ids = {r["article_id"] for r in general} | exclude_ids
+        ph_excl2    = ",".join(["?"] * len(found_g_ids)) if found_g_ids else "''"
+        overflow_g  = _run(f"""
+            SELECT a.article_id, a.title, a.author1, a.year, a.source_type,
+                   a.citation_count, a.unique_years, a.exam_years, a.clean_ref,
+                   0 AS weak_area_links,
+                   COALESCE(ac.currency_status, 'unknown') AS currency_status
+            FROM articles a
+            LEFT JOIN article_currency ac ON a.article_id = ac.article_id
+            WHERE a.source_type != 'stub'
+              AND a.article_id  != 'ART-0001'
+              AND a.article_id  NOT IN ({ph_excl2})
+              AND a.citation_count >= 3
+              AND a.unique_years   >= 3
+            ORDER BY a.citation_count DESC, a.unique_years DESC
+            LIMIT ?
+        """, list(found_g_ids) + [general_max * 3])
+        for r in overflow_g:
+            if r["article_id"] not in found_g_ids and len(general) < general_max:
+                general.append(r)
+                found_g_ids.add(r["article_id"])
+
+    _attach_qids(general, "general")
 
     db.close()
-    return [dict(r) for r in rows]
+    print(f"  Articles: {len(personalized)} personalized + {len(general)} general = {len(personalized) + len(general)} total")
+    return personalized + general
+
+
 
 
 # ---------------------------------------------------------------------------
@@ -2515,7 +2645,7 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
             except (json.JSONDecodeError, TypeError, AttributeError):
                 pass
 
-    top_articles = match_top_articles(perf, db_path, count=15, items=items, qid_map=qid_map)
+    top_articles = match_top_articles(perf, db_path, items=items, qid_map=qid_map)
 
     # --- Missed item reference (for report appendix) ---
     missed_detail = fetch_missed_items_detail(items, qid_map, db_path)
@@ -2550,6 +2680,12 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
 
         # Legacy compatibility keys (for v1 HTML report builder)
         "body_systems_available": parsed_data.get("body_systems_found", []),
+
+        # Provenance map for body systems — drives ABFM-Reported vs DB-Derived split in report
+        # abfm: systems from official ABFM score report PDF
+        # db:   systems backfilled from ITE Intelligence DB (Stage 1.75)
+        # Both lists use normalized canonical names.
+        "body_system_sources": parsed_data.get("body_system_sources", {"abfm": [], "db": []}),
     }
 
 
