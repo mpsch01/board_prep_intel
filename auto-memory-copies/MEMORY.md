@@ -1,9 +1,9 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-04-29 (BATON 063)
+Last updated: 2026-05-05 (BATON 064)
 
 ## Active Memory Files
-- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 063
-- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (1,998 articles, 1,639 ITE Qs), schema state; body_system + body_system_merged fully normalized; article_currency complete 1,998; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — all stable BATON 063
+- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 064
+- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (1,998 articles, 1,639 ITE Qs), schema state; body_system + body_system_merged fully normalized; article_currency complete 1,998; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — all stable BATON 064
 - [rebuild_structuring_guidelines.md](rebuild_structuring_guidelines.md) — Locked rules and architecture principles
 - [glossary.md](glossary.md) — Project terminology decoder
 
