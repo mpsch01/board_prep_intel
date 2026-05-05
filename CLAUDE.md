@@ -48,7 +48,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_063_20260429_report_guides_complete.md` — Two interpretation guides complete (resident + faculty); word_doc_defaults.py level 1/2 headers; Rule 14 locked. |
+| Active BATON | `BATON_active_064_20260505_practice_question_system_complete.md` — Practice question system complete (exam series + custom question sets); three new M3 scripts; two Cowork skills packaged. |
 | DB articles | 1,998 (+13 from critique PDFs: ART-1987–ART-1999) |
 | DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -71,7 +71,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 8 build + 26 maintain + aafp_brq_scraper.py at scripts/ root (build_modular_vectors.py + build_intersection_centroids.py added 2026-04-14) |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root; extract_ite_critique_refs.py MODIFIED |
-| M3 scripts | 52 Python + 4 JS + 6 JSON config (build_resident_guide.py + build_faculty_guide.py + build_resident_guide.js + build_faculty_guide.js ADDED BATON 063; word_doc_defaults.py MODIFIED BATON 063) |
+| M3 scripts | 55 Python + 4 JS + 6 JSON config (build_cole_exam_series.py + build_exam_series.py + build_custom_question_set.py ADDED BATON 064; ite_analyzer_v3.py MODIFIED BATON 064) |
 | M5 scripts | 3 Python sync + 35 TypeScript/TSX + 5 SQL migrations — 05_module.5_web/ scaffold |
 | article_currency | 1,998 rows — complete 2026-04-16 (was missing 115 rows) |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
@@ -119,11 +119,11 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Next Steps (as of BATON 063, 2026-04-29)
+## Next Steps (as of BATON 064, 2026-05-05)
 
 ### Immediate
-1. **Re-run all 7 resident analyses** on Windows PC after git pull to pick up Issues 1-5 + new guide scripts
-2. **Push commit** — user pushing 58589ff via GitHub Desktop
+1. **Re-run all 7 resident analyses** on Mac after git pull (BATON 063 holdover)
+2. **Push commit** — stage and push build_exam_series.py, build_custom_question_set.py, modified scripts
 
 ### Short-term
 3. **DEFERRED-PGY-BENCHMARKS** — UNBLOCKED — PGY-level benchmark comparison in report

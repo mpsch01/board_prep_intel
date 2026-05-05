@@ -1,5 +1,5 @@
 # project_overhaul_state.md
-Last updated: 2026-04-29 (BATON 063)
+Last updated: 2026-05-05 (BATON 064)
 
 ## Module State
 
@@ -7,10 +7,10 @@ Last updated: 2026-04-29 (BATON 063)
 |--------|--------|----------|
 | M1 Warehouse | Active | 988 ITE/AAFP PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 26 maintain scripts |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
-| M3 Analyst | Active | 52 py + 4 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction; report interpretation guides (resident + faculty, BATON 063) |
+| M3 Analyst | Active | 55 py + 4 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction; report interpretation guides (resident + faculty, BATON 063); practice question system (exam series + custom sets, BATON 064) |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 35 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
-| DB | Stable | 1,998 articles, 1,639 ITE Qs (+10 recovered), 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 (↑ pre-existing Windows PC enrichment, BATON 062) |
+| DB | Stable | 1,998 articles, 1,639 ITE Qs (+10 recovered), 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 |
 
 ## PDF Library State
 
@@ -30,6 +30,20 @@ Last updated: 2026-04-29 (BATON 063)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 064)
+
+**2026-05-05 – Practice Question System Complete**
+- **Three new M3 scripts:**
+  - build_cole_exam_series.py — Cole-specific exam series generator; merges original 20 report questions into 200-question pool, clips least-fitting to maintain count
+  - build_exam_series.py — Generalized exam series generator (CLI: --resident-dir, --resident-name, --pgy, --num-exams, --questions, --seed); auto-discovers analysis JSON; same merge-inject logic
+  - build_custom_question_set.py — Content-addressable question set generator; AND/OR filter logic (blueprint + body_system); produces Exam version + Study Guide version DOCX; reference block parsed and rendered as separate "References" section; encoding fix table (14 entries); QID in footer metadata
+- **ite_analyzer_v3.py modified:** Symbol-font dot-leader encoding clean added at export_analysis() write time; uses chr(0xF02E) pattern
+- **Two Cowork skills packaged:** ite-exam-series.skill + custom-question-set.skill (with glossary reference + evals)
+- **Lexicon:** "Exam version" and "Study Guide version" added to user_vocabulary.md memory
+- **M3 script count:** 52 py + 4 js → 55 py + 4 js
+- **DB state:** All tables stable; no changes this session
+- **Deferred:** DEFERRED-PGY-BENCHMARKS + DEFERRED-PROGRAM-TREND still UNBLOCKED; DEFERRED-QID-XREF-LIBRARY-GAPS still active; re-running 7 resident analyses still pending from BATON 063
 
 ## Session Notes (BATON 063)
 
@@ -147,7 +161,7 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 | DEFERRED-CENTROID-REBUILD | ✅ CLOSED | intersection_centroid_vec rebuilt after body_system field corrections (135 → 123 rows); completed BATON 060 |
 | DEFERRED-HUMAN-REVIEW-BODY-SYSTEM | ACTIVE | ~308 holdout questions (179 ITE + 129 AAFP) pending manual verification; applies to 2022-2023 legacy data only (2024-2025 + all AAFP normalized BATON 060) |
 | DEFERRED-KNOWN-DRUGS-EXPANSION | ✅ CLOSED | Drugs still appearing in top diagnoses table — completed BATON 058 |
-| DEFERRED-QID-XREF-LIBRARY-GAPS | ✅ CLOSED | 249 unmatched citations resolved — completed BATON 058 |
+| DEFERRED-QID-XREF-LIBRARY-GAPS | ACTIVE | 249 unmatched citations; prioritize by frequency (NEW BATON 064) |
 | DEFERRED-SCHOLL-OLD-FORMAT | NEW | Scholl 2022/2023 use old ABFM taxonomy (no canonical mapping); Stage 1.75 DB backfill now handles transparently; body_system_merged provides forward mapping |
 | DEFERRED-A | ARCHIVED | 37 ITE manual PDFs — permanent ceiling (subscription-only) |
 | DEFERRED-AAFP-PAYWALL | ACTIVE | 3 AAFP articles paywalled (PMC not_oa): ART-1959 Binic_2011, ART-1972 Byington_2012, ART-1967 Verbalis_2007 |

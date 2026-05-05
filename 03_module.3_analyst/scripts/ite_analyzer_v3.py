@@ -34,6 +34,7 @@ Changes from v2:
 
 import json
 import math
+import re
 import sqlite3
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -2693,7 +2694,37 @@ def analyze_v3(parsed_data: dict, db_path: str, ref_path: str = None,
 # Export utility
 # ---------------------------------------------------------------------------
 
+# U+F02E = Symbol-font private-use period used as dot-leader fill in original
+# ITE PDFs. Renders as garbage (ï€®) in Word/downstream consumers without the
+# Symbol font embedded.  Clean at write time so all downstream scripts get
+# clean data without needing their own fix.
+_DOTLEADER_RE = re.compile(r'[]+')
+
+def _clean_str(text) -> str:
+    """Strip Symbol-font dot-leader chars from a string. Pass-through for non-strings."""
+    if not isinstance(text, str):
+        return text
+    return _DOTLEADER_RE.sub(" ", text)
+
+def _clean_analysis_encoding(analysis: dict) -> dict:
+    """
+    Walk the analysis dict and remove Symbol-font dot-leader artifacts from
+    all question text and explanation fields before writing to disk.
+    Mutates and returns the dict.
+    """
+    for item in analysis.get("missed_items_detail", []):
+        item["question_text"] = _clean_str(item.get("question_text"))
+        item["explanation"]   = _clean_str(item.get("explanation"))
+
+    for q in analysis.get("practice_questions", []):
+        q["question_text"] = _clean_str(q.get("question_text"))
+        q["explanation"]   = _clean_str(q.get("explanation"))
+
+    return analysis
+
+
 def export_analysis(analysis: dict, output_path: str):
+    _clean_analysis_encoding(analysis)   # QC: strip Symbol-font dot-leader artifacts
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(analysis, f, indent=2, ensure_ascii=False, default=str)
     print(f"  Analysis exported: {output_path}")

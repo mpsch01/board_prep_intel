@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-04-29 (BATON 063 — two ITE interpretation guides complete; word_doc_defaults.py level 1/2 headers; Rule 14 locked)
-**Status:** Current — 1,004 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 build = 8 + maintain = 26; M2 = 75py + 6js; M3 = 52py + 4js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB enriched (1,998 articles, 1,639 ITE questions, article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
+**Last Updated:** 2026-05-05 (BATON 064 — practice question system complete; three new M3 scripts for exam series and custom question sets)
+**Status:** Current — 1,004 total PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 build = 8 + maintain = 26; M2 = 75py + 6js; M3 = 55py + 4js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB enriched (1,998 articles, 1,639 ITE questions, article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_063_20260429_report_guides_complete.md  — active BATON
+├── BATON_active_064_20260505_practice_question_system_complete.md  — active BATON
 ├── CLAUDE.md                              — project memory + conventions
 ├── REPO_MAP.md                            — current-state architectural overview (NEW — BATON 039)
 ├── README.md                              — project overview (human-readable)
@@ -270,6 +270,9 @@ board_prep_intel/
 │   ├── aafp_question_reuse_investigation.py  — AAFP-ITE shared vignette finder; 38 pairs found (BATON 020)
 │   ├── export_aafp_ite_relationships.py   — NEW (BATON 031) — 4-CSV AAFP–ITE relationship export
 │   ├── word_doc_defaults.py               — NEW (BATON 031) — St. Luke's style template; import in ALL python-docx scripts
+   ├── build_cole_exam_series.py          — NEW (BATON 064) — Cole-specific exam series generator
+   ├── build_exam_series.py               — NEW (BATON 064) — Generalized exam series generator
+   ├── build_custom_question_set.py       — NEW (BATON 064) — Content-addressable question set generator
 │   ├── build_aafp_qa.py                   — NEW (BATON 031) — File 3 Q&A builder (595 AAFP citation-overlap questions)
 │   ├── build_aafp_qa_file1.py             — NEW (BATON 031) — File 1 Q&A builder (34 near-duplicate questions + ITE companion)
 │   ├── build_aafp_qa_deliverables.py      — NEW (BATON 036) — 26 AAFP Q&A deliverables (13 DOCX + 13 XLSX); answer fix BATON 037
@@ -294,4 +297,4 @@ board_prep_intel/
     └── [resident score report PDFs]
 ```
 
-*M3 scripts: 50 py + 2 js — Modified BATON 062: ite_analyze_v2.py (body_system_sources provenance tracking), ite_analyzer_v3.py (match_top_articles() two-tier personalized/general, linked_qids + selection_basis fields), ite_report_builder_v2.js (5 issues: scoring note, provenance split, consolidated tables, concept fingerprint drugs-only, two-tier reading list)*
+*M3 scripts: 55 py + 4 js — Added BATON 064: build_cole_exam_series.py, build_exam_series.py, build_custom_question_set.py (3 new scripts); Modified: ite_analyzer_v3.py (Symbol-font encoding clean); Output dir: custom_question_sets/. Modified BATON 062: ite_analyze_v2.py (body_system_sources provenance tracking), ite_analyzer_v3.py (match_top_articles() two-tier personalized/general, linked_qids + selection_basis fields), ite_report_builder_v2.js (5 issues: scoring note, provenance split, consolidated tables, concept fingerprint drugs-only, two-tier reading list)*
