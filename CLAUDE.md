@@ -39,6 +39,10 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | **derived data** | Disposable: JSONs, DOCXs, CSVs. DB + PDFs + VC gate are protected source data |
 | **_index.md** | Ground-truth directory map — `00_#PROJECT_OVERHAUL/_index.md` |
 | **TODO: not yet migrated** | Code annotation — path points to correct future location; update when file arrives |
+| **Exam version** | Test-taking output of question set generation — questions + answer choices + answer key table at end; no explanations visible |
+| **Study Guide version** | Review output — questions + correct answer (navy bold) + explanation body (shaded box) + References section (one citation per paragraph) after each question |
+| **bracket notation** | User syntax for custom question set requests: `[count] [filters] [bank]` — `+` across types = AND, `+` within same type = OR |
+| **custom_question_sets** | Output folder for content-filtered question sets: `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/` |
 
 → Full glossary: `.auto-memory/memory/glossary.md`
 
@@ -95,6 +99,39 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | M5 Web | `05_module.5_web/` | Interactive web platform (Next.js + Supabase + Sanity + Railway FastAPI) |
 | DB | `00_database/db/ite_intelligence.db` | Source of truth |
 | VC Gate | `key_data_files/session_hy_inserts_v7.json` | 352 citations |
+
+---
+
+## Practice Question System
+
+Three M3 scripts + two Cowork skills (added BATON 064).
+
+### Scripts
+| Script | Purpose |
+|--------|---------|
+| `build_custom_question_set.py` | Content-addressable question set generator — filter by blueprint, body_system, bank, years |
+| `build_exam_series.py` | Generalized exam series generator from any resident's analysis JSON |
+| `build_cole_exam_series.py` | Cole-specific version (kept as reference; build_exam_series.py is canonical) |
+
+### Filter Logic (custom question sets)
+- **AND** across types: `--blueprint X --body-system Y` → questions must match both
+- **OR** within type: `--body-system X --body-system Y` → questions from either system
+- Bracket notation maps to CLI args via the Cowork skill (`custom-question-set.skill`)
+
+### Output Products (always two per run)
+Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
+- `QSet_<N>Q_<label>_Exam.docx` — **Exam version**: questions + answer key table
+- `QSet_<N>Q_<label>_StudyGuide.docx` — **Study Guide version**: questions + correct answer + explanation + References section
+
+### Encoding Rules (baked into `build_custom_question_set.py`)
+- `_ENCODING_FIXES` table (14 entries) handles Symbol-font artifacts (`ï‚£` → `≤` etc.) and double-encoded Latin chars
+- `split_explanation_and_refs()` splits ITE explanation fields at `\nRef:` marker
+- `parse_references()` handles pipe-separated (newer) and numbered `2)` (older) citation formats
+- References rendered as separate section — one paragraph per citation, gray tiny font
+
+### Cowork Skills
+- `ite-exam-series.skill` — triggers on resident exam series requests
+- `custom-question-set.skill` — triggers on bracket-notation question set requests; includes `references/glossary.md` with canonical term aliases and pool size estimates
 
 ---
 
