@@ -93,8 +93,8 @@ Script counts (post-session):
 | Flag | Status | Notes |
 |------|--------|-------|
 | DEFERRED-QID-XREF-LIBRARY-GAPS | Active | 249 unmatched citations; prioritize by frequency |
-| DEFERRED-PGY-BENCHMARKS | UNBLOCKED | All 7 resident analyses available; PGY-level aggregation pending |
-| DEFERRED-PROGRAM-TREND | UNBLOCKED | Cohort-level temporal rollup pending |
+| DEFERRED-PGY-BENCHMARKS | ~~REMOVED~~ | Not feasible at this time; not critical to progression — dropped 2026-05-05 |
+| DEFERRED-PROGRAM-TREND | ~~REMOVED~~ | Not feasible at this time; not critical to progression — dropped 2026-05-05 |
 
 ---
 
@@ -102,12 +102,10 @@ Script counts (post-session):
 
 ### Immediate
 1. **Re-run all 7 resident analyses** on Mac (BATON 063 item, still pending — git pull required to pick up Issues 1-5 + guide scripts)
-2. **Repackage custom-question-set.skill locally** — run: `python3 package_skill.py` from skill-creator directory (user action; script fixes not reflected in current .skill file)
+2. ~~**Repackage custom-question-set.skill**~~ — ✅ Done — skill overwritten with corrected version 2026-05-05
 
 ### Short-term
-3. **DEFERRED-PGY-BENCHMARKS** — PGY-level benchmark comparison in report builder
-4. **DEFERRED-PROGRAM-TREND** — Cohort-level trend analysis across all residents
-5. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations; prioritize by frequency, acquire missing articles
+3. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations; prioritize by frequency, acquire missing articles
 
 ---
 

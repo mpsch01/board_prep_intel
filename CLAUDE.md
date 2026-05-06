@@ -163,6 +163,5 @@ Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
 2. **Push commit** — stage and push build_exam_series.py, build_custom_question_set.py, modified scripts
 
 ### Short-term
-3. **DEFERRED-PGY-BENCHMARKS** — UNBLOCKED — PGY-level benchmark comparison in report
-4. **DEFERRED-PROGRAM-TREND** — UNBLOCKED — Cohort-level trend analysis
+3. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations; prioritize by frequency
 5. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations; prioritize by frequency
