@@ -1,28 +1,29 @@
 # project_overhaul_state.md
-Last updated: 2026-05-07 (BATON 066)
+Last updated: 2026-05-07 (BATON 067)
 
 ## Module State
 
 | Module | Status | Key Info |
 |--------|--------|----------|
-| M1 Warehouse | Active | 1,381 ITE/AAFP PDFs post-merge (990 VC_fail + 216 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 36 maintain scripts post-merge (8 new BATON 066 scripts in worktree pending merge); JAMA + NEJM PDF harvest complete via DevTools-console pattern |
+| M1 Warehouse | Active | 1,540 ITE/AAFP active-tier PDFs (1,056 VC_fail + 309 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 38 maintain scripts (+9 net new BATON 067: 8 BATON 066 scripts merged + 1 NEW aafp_targeted_downloader.py); AFP gap closed 83 → 11 via 3-tier cascade harvester; BATON 066 worktree fully merged to main |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
 | M3 Analyst | Active | 55 py + 4 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction; report interpretation guides (resident + faculty, BATON 063); practice question system (exam series + custom sets, BATON 064) |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 35 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
-| DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 066 |
+| DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 067 |
 
 ## PDF Library State
 
-### ITE (citation_files/ITE/) — POST-MERGE COUNTS
+### ITE (citation_files/ITE/)
 | Tier | Count | Notes |
 |------|-------|-------|
-| VC_fail | 990 | Failed VC gate; awaiting enrichment (+111 from BATON 066 JAMA/NEJM harvest, in worktree pending merge) |
-| VC_pass | 216 | Passed VC gate; awaiting enrichment (+16 from BATON 066, in worktree pending merge) |
+| VC_fail | 1,056 | Failed VC gate; awaiting enrichment (BATON 066 JAMA/NEJM merged + BATON 067 AFP harvest absorbed here) |
+| VC_pass | 309 | Passed VC gate; awaiting enrichment (BATON 066 merged + BATON 067 AFP additions) |
 | local_lite | 117 | Enriched; not VC-cited |
 | right_click | 58 | Enriched + VC-cited (top tier) |
-| _dupe_archive | 14 | Legacy single-author duplicates; not pipeline |
-| **TOTAL active (post-merge)** | **1,381** | 127 new this session in worktree pending merge; JAMA/NEJM harvest complete 2026-05-07 |
+| _dupe_archive | 0 | Cleared this session (48 files moved to delete_me_pdfs_b65 then deleted) |
+| _corrupted_targeted_run | 0 | Cleared this session (79 files moved to delete_me_pdfs_b65 then deleted) |
+| **TOTAL active** | **1,540** | AFP gap closed 83 → 11 (BATON 067); BATON 066 worktree fully merged to main |
 
 ### AAFP (citation_files/AAFP/)
 | Count | Status |
@@ -30,6 +31,37 @@ Last updated: 2026-05-07 (BATON 066)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 067)
+
+**2026-05-07 — AFP PDF Acquisition: 72 Articles Closed + BATON 066 Worktree Merge**
+- **AFP harvest:** 72/83 missing AFP articles acquired via aafp_targeted_downloader.py 3-tier cascade
+  - Tier 1: legacy biweekly URL with volume parity check
+  - Tier 2: monthly TOC scrape
+  - Tier 3: CrossRef DOI lookup
+  - Validation gate: structured citation_volume/issue/firstpage meta tag (100% precision when AAFP exposes the tags)
+  - Gap closed: 83 → 11 missing
+- **BATON 066 worktree merged to main:** 127 PDFs + 8 scripts + 5 state files migrated FROM modest-merkle-df0121 worktree TO main repo via robocopy + Move-Item
+- **One NEW M1 maintain script:** aafp_targeted_downloader.py (3-tier cascade harvester)
+- **One MODIFIED M1 maintain script:** aafp_fill_gaps.py (Playwright expect_download → context.request.get patch + homepage login URL)
+- **One NEW gitignored diagnostic:** _aafp_search_dom_probe.py
+- **Eight scripts merged from BATON 066 worktree:** jama_chrome_harvester.py, jama_prep_articlepdf_urls.py, nejm_doi_lookup.py, nejm_build_js_batch.py, nejm_console_script.py, nejm_move_downloads.py, nejm_save_server.py, unpaywall_retry.py
+- **M1 maintain script count:** 30 → 38 (+9 net new — counted via underlying state, including pre-merge worktree carryover from BATON 066)
+- **Structural cleanup:**
+  - citation_files/ITE/_dupe_archive/: emptied (48 files moved to delete_me_pdfs_b65 then deleted)
+  - citation_files/ITE/_corrupted_targeted_run/: emptied (79 files moved to delete_me_pdfs_b65 then deleted)
+  - delete_me_pdfs_b65/ folder created at project root, then permanently deleted by user
+- **.gitignore updated:** Added M1 maintain state-file patterns (_*.json, _*.txt, _*.csv, _*.log; explicit auth file)
+- **DB state:** No schema changes; no row-count changes (PDFs only; xref linkage to articles already linked from BATON 065 catalog)
+- **DEFERRED-MERGE-WORKTREE-TO-MAIN CLOSED**
+- **New deferred flags:**
+  - DEFERRED-AAFP-HTTP-500 — AAFP search API returning HTTP 500 for 11 remaining articles; needs alternative entry point
+  - DEFERRED-AFP-DATA-QC — AFP-acquired metadata needs spot-check vs articles table
+  - DEFERRED-CROSS-TIER-CODON-DUPES — Verify no codon duplicates across VC_fail/VC_pass after batch acquisition
+- **New plugins/capabilities:**
+  - Persistent-auth pattern (Playwright storage_state via _aafp_auth.json) generalizable to other auth-walled journals
+  - URL-pattern recovery via structured citation_volume/issue/firstpage meta tags as alternative to fuzzy title matching (more reliable, 100% precision when exposed)
+- **Next:** Apply NEJM DevTools pattern to 144 Cloudflare-blocked unpaywall URLs; spot-check pending list integrity (DEFERRED-PENDING-LIST-QC); re-run resident analyses on Mac after git pull
 
 ## Session Notes (BATON 066)
 
@@ -195,10 +227,13 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 
 | Flag | Status | Description |
 |------|--------|-------------|
-| DEFERRED-MERGE-WORKTREE-TO-MAIN | NEW/OPEN | 127 PDFs + 8 scripts physically in worktree (modest-merkle-df0121), need merge to main repo path; Step 1 of next session (BATON 066) |
-| DEFERRED-UNPAYWALL-CLOUDFLARE | NEW/OPEN | 144 OA URLs blocked by Cloudflare; apply DevTools-console paste pattern (proven on JAMA/NEJM) (BATON 066) |
-| DEFERRED-DESHMUKH-2021 | NEW/OPEN | ART-0302 paywalled at tandfonline; no T&F auth available (BATON 066) |
-| DEFERRED-PENDING-LIST-QC | NEW/OPEN | jama_pending.json had wrong URL bug; sweep recommended for any other lists with the same defect (BATON 066) |
+| DEFERRED-AAFP-HTTP-500 | NEW/OPEN | AAFP search API returning HTTP 500 for 11 remaining AFP articles; needs alternative entry point (BATON 067) |
+| DEFERRED-AFP-DATA-QC | NEW/OPEN | AFP-acquired metadata needs spot-check vs articles table (BATON 067) |
+| DEFERRED-CROSS-TIER-CODON-DUPES | NEW/OPEN | Verify no codon duplicates across VC_fail/VC_pass after batch acquisition (BATON 067) |
+| DEFERRED-MERGE-WORKTREE-TO-MAIN | ✅ CLOSED | Resolved BATON 067 — 127 PDFs + 8 scripts + 5 state files migrated from worktree to main via robocopy + Move-Item |
+| DEFERRED-UNPAYWALL-CLOUDFLARE | OPEN | 144 OA URLs blocked by Cloudflare; apply DevTools-console paste pattern (proven on JAMA/NEJM) (BATON 066) |
+| DEFERRED-DESHMUKH-2021 | OPEN | ART-0302 paywalled at tandfonline; no T&F auth available (BATON 066) |
+| DEFERRED-PENDING-LIST-QC | OPEN | jama_pending.json had wrong URL bug; sweep recommended for any other lists with the same defect (BATON 066) |
 | DEFERRED-NEJM-PHASE-2 | ✅ CLOSED | Resolved BATON 066 — 76/89 NEJM PDFs harvested via Crossref DOI + DevTools-console paste |
 | DEFERRED-JAMA-PHASE-2 | ✅ CLOSED | Resolved BATON 066 — 50/50 JAMA PDFs harvested via jama_chrome_harvester.py |
 | DEFERRED-REPORT-GUIDE | ✅ CLOSED | Write resident and faculty advisor interpretation guides for the ITE report (2 DOCX documents) — completed BATON 063 |
@@ -229,6 +264,10 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 - Layer 2 (PubMed currency): ✅ COMPLETE — article_currency 2,206 rows (mirrors articles after BATON 065 acquisition); status enum (current/updated/check_needed/not_indexed); title_signals column (JSON array)
 - Layer 3 (Clinical pathways): Complete — clinical_pathways 4,959 rows (BATON 062); ite_analyzer_v3.py pathway_gap_map() LEFT JOIN fixed BATON 061
 - Layer 4 (Trends): Partial — trend CSV files in readable_db_files/; DEFERRED-PROGRAM-TREND now unblocked for multi-resident rollup; not advanced this session
+
+## Plugins & New Capabilities (BATON 067)
+- **Persistent-auth pattern** — Playwright storage_state via `_aafp_auth.json` reused across script invocations; generalizable to other auth-walled journals (T&F, Wiley, etc.). Sign-in once, persist storage_state, run multiple harvests against authenticated session without re-login.
+- **URL-pattern recovery via structured citation meta tags** — citation_volume/issue/firstpage meta tag validation as alternative to fuzzy title matching. 100% precision when AAFP exposes the tags; reduces false-positive matches from title-similarity-only matchers. Pattern applies to any journal site that exposes Highwire-style citation_* meta tags.
 
 ## Plugins & New Capabilities (BATON 049)
 - **ite-score-analyzer v1.0.0** — ITE score analysis plugin built in `skills_abilities/ite-score-analyzer-v2/`

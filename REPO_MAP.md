@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-05-07 (BATON 066 — Git hash: 85e8ab7) — JAMA + NEJM PDF harvest complete (127 new PDFs: 50 JAMA + 76 NEJM + 1 unpaywall); 8 new M1 maintain scripts; DevTools-console paste pattern established for Chrome MCP user-activation gap
+**Last Updated:** 2026-05-07 (BATON 067 — Git hash: 6019f69 pre-commit) — AFP gap closed 83 → 11 (72 articles acquired) via aafp_targeted_downloader.py with 3-tier resolution cascade (legacy URL + monthly TOC + CrossRef DOI) and structured-meta validation gate; BATON 066 worktree merged to main (127 PDFs + 8 scripts); 48 dupes + 79 corrupt files quarantined and deleted
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -12,7 +12,7 @@ board_prep_intel/
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
 ├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_066_*.md              Active session handoff — read first every session
+├── BATON_active_067_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
@@ -31,17 +31,17 @@ board_prep_intel/
 ├── 01_module.1_warehouse/             M1 — PDF library + build/maintain DB scripts
 │   ├── citation_files/
 │   │   ├── ITE/
-│   │   │   ├── VC_fail/               990 PDFs: failed VC gate; awaiting enrichment (gitignored) — +111 from BATON 066 worktree (post-merge)
-│   │   │   ├── VC_pass/               216 PDFs: passed VC gate; awaiting enrichment (gitignored) — +16 from BATON 066 worktree (post-merge)
+│   │   │   ├── VC_fail/               1,056 PDFs: failed VC gate; awaiting enrichment (gitignored) — +66 net since BATON 066 (worktree merge + AFP gap closure − dupes − corrupts)
+│   │   │   ├── VC_pass/               309 PDFs: passed VC gate; awaiting enrichment (gitignored) — +93 net since BATON 066
 │   │   │   ├── local_lite/            117 PDFs: VC_fail + fully enriched (gitignored)
 │   │   │   ├── right_click/           58 PDFs: VC_pass + fully enriched — priority tier (gitignored)
-│   │   │   └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored) — ite_total: 1381 post-merge
-│   │   └── AAFP/                      15 PDFs: AAFP citation library (gitignored) — ite_total: 1381 (VC_fail:990, VC_pass:216, local_lite:117, right_click:58)
+│   │   │   └── _dupe_archive/         0 PDFs (all 48 BATON 067 dupes consolidated and deleted) (gitignored)
+│   │   └── AAFP/                      15 PDFs: AAFP citation library (gitignored) — ite_total: 1,540 (VC_fail:1,056, VC_pass:309, local_lite:117, right_click:58)
 │   ├── ite_exams/                     16 raw ITE exam PDFs: YYYY_MC.pdf + YYYY_critique.pdf (gitignored)
 │   └── scripts/
 │       ├── aafp_brq_scraper.py        AAFP BRQ scraper (Windows-only)
 │       ├── build/                     8 scripts: full DB rebuild sequence
-│       └── maintain/                  36 scripts: recurring DB population and maintenance (+8 BATON 066: jama_chrome_harvester, jama_prep_articlepdf_urls, nejm_doi_lookup, nejm_build_js_batch, nejm_console_script, nejm_move_downloads, nejm_save_server, unpaywall_retry)
+│       └── maintain/                  38 scripts: recurring DB population and maintenance (+9 net BATON 066+067: 8 BATON 066 worktree merged scripts (jama_chrome_harvester, jama_prep_articlepdf_urls, nejm_doi_lookup, nejm_build_js_batch, nejm_console_script, nejm_move_downloads, nejm_save_server, unpaywall_retry) + aafp_targeted_downloader.py NEW BATON 067; aafp_fill_gaps.py MODIFIED BATON 067)
 │
 ├── 02_module.2_processor/             M2 — Extraction, enrichment, DOCX build pipeline
 │   ├── main.py                        Pipeline entry point

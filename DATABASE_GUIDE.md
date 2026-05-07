@@ -3,7 +3,7 @@
 **Database:** `00_database/db/ite_intelligence.db`
 **Engine:** SQLite 3 (with optional `sqlite-vec` extension for vector search)
 **Schema version:** v2 (rebuilt 2026-03-10; AAFP corpus added 2026-03-29; qid_art_xref rebuilt 2026-04-15; +208 articles from acquire_missing_citations.py 2026-05-06)
-**Last updated:** 2026-05-07 (BATON 066 — no schema changes; +127 PDFs acquired via JAMA/NEJM harvest)
+**Last updated:** 2026-05-07 (BATON 067 — no schema changes; +72 AFP PDFs acquired via aafp_targeted_downloader.py + BATON 066 worktree merge)
 
 ---
 

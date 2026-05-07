@@ -132,11 +132,12 @@ with sync_playwright() as p:
     )
     page = context.new_page()
 
-    # Manual login
-    print("Opening AAFP login page...")
-    page.goto("https://www.aafp.org/home/login.html", wait_until="domcontentloaded", timeout=30000)
+    # Manual login (open homepage; user clicks "Sign In")
+    print("Opening AAFP homepage...")
+    page.goto("https://www.aafp.org/", wait_until="domcontentloaded", timeout=30000)
     print("\n" + "="*65)
     print("  LOG IN to AAFP in the browser window that just opened.")
+    print("  (Click 'Sign In' on the homepage.)")
     print("  Once fully logged in, come back and press ENTER.")
     print("="*65)
     input("\n  Press ENTER when logged in >>> ")
@@ -197,29 +198,24 @@ with sync_playwright() as p:
             dest_dir  = CODON_DIR if '#@#' in item['filename'] else NONCODON_DIR
             dest_path = os.path.join(dest_dir, item['filename'])
 
-            page2 = context.new_page()
-            with page2.expect_download(timeout=60000) as dl_info:
-                page2.goto(item['pdf_url'], wait_until="commit", timeout=60000)
+            # AAFP serves PDFs inline (browser renders in-tab) — expect_download
+            # never fires. Fetch bytes via the authenticated context (cookies
+            # carry over from the manual login).
+            response = context.request.get(item['pdf_url'], timeout=60000)
+            if not response.ok:
+                print(f"       ✗  HTTP {response.status}")
+                results['failed'].append({'url': item['url'], 'reason': f'HTTP {response.status}'})
+                continue
 
-            download = dl_info.value
-            tmp_path = os.path.join(tmp_dl_dir, download.suggested_filename or 'file.bin')
-            download.save_as(tmp_path)
-            page2.close()
-
-            with open(tmp_path, 'rb') as f:
-                header = f.read(4)
-
-            if header != b'%PDF':
-                print(f"       ✗  Not a PDF")
-                os.remove(tmp_path)
+            body = response.body()
+            if not body.startswith(b'%PDF'):
+                print(f"       ✗  Not a PDF (got {len(body)} bytes)")
                 results['failed'].append({'url': item['url'], 'reason': 'not a PDF'})
                 continue
 
-            shutil.move(tmp_path, dest_path)
+            with open(dest_path, 'wb') as f:
+                f.write(body)
             existing.add(item['filename'])
-
-            # Also copy to 04_need_extraction
-            shutil.copy2(dest_path, os.path.join(EXTRACT_DIR, item['filename']))
 
             size_kb    = os.path.getsize(dest_path) // 1024
             match_note = f"[{item['art_id']}]" if item['art_id'] else "[no DB match]"
@@ -231,8 +227,6 @@ with sync_playwright() as p:
         except Exception as e:
             print(f"       ✗  ERROR: {e}")
             results['failed'].append({'url': item['url'], 'reason': str(e)})
-            try: page2.close()
-            except: pass
 
     browser.close()
 

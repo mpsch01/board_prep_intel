@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-05-07 (BATON 066 — JAMA + NEJM PDF harvest complete; 127 new PDFs (in worktree pending merge); DevTools-console pattern established for browser-auth journals)
-**Status:** Current — 1,396 total PDFs post-merge (990 VC_fail + 216 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams; 127 new this session, in worktree pending merge); M1 build = 8 + maintain = 36 (post-merge); M2 = 75py + 6js; M3 = 55py + 4js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB enriched (2,206 articles, 1,639 ITE questions, article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
+**Last Updated:** 2026-05-07 (BATON 067 — AFP PDF acquisition: 72 articles closed (gap 83 → 11); 3-tier cascade harvester proven; BATON 066 worktree fully merged to main)
+**Status:** Current — 1,571 total PDFs (1,056 VC_fail + 309 VC_pass + 117 local_lite + 58 right_click + 15 AAFP + 16 exams; _dupe_archive + _corrupted_targeted_run cleared this session); M1 build = 8 + maintain = 38 (+9 net new this session); M2 = 75py + 6js; M3 = 55py + 4js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB stable (2,206 articles, 1,639 ITE questions, 1,221 AAFP questions, article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_066_20260507_jama_nejm_pdf_harvest_complete.md  — active BATON
+├── BATON_active_067_20260507_afp_pdf_acquisition_72_articles_closed.md  — active BATON
 ├── CLAUDE.md                              — project memory + conventions
 ├── REPO_MAP.md                            — current-state architectural overview (NEW — BATON 039)
 ├── README.md                              — project overview (human-readable)
@@ -21,7 +21,7 @@ board_prep_intel/
 ├── .gitattributes / .gitignore
 │
 ├── 00_database/                           — source of truth (DB + supporting data)
-├── 01_module.1_warehouse/                 — M1 3-domain: citation_files/ (1,381 PDFs across 4 tiers + 15 AAFP, post-merge) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
+├── 01_module.1_warehouse/                 — M1 3-domain: citation_files/ (1,540 PDFs across 4 tiers + 15 AAFP) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
 ├── 02_module.2_processor/                 — M2 pipeline scripts + source inputs
 ├── 03_module.3_analyst/                   — M3 score analysis + ICD-10 + pathways
 ├── 04_module.4_sandbox/                   — M4 experiments and agent prototypes
@@ -67,6 +67,8 @@ board_prep_intel/
 
 **Acquired (2026-05-07, BATON 066):** JAMA + NEJM PDF harvest complete — 127 new PDFs harvested via DevTools-console pattern (jama_chrome_harvester.py: 50/50 JAMA articles; nejm_doi_lookup.py + nejm_console_script.py: 76/89 NEJM articles); 8 new M1 maintain scripts in worktree pending merge; DEFERRED-NEJM-PHASE-2 + DEFERRED-JAMA-PHASE-2 CLOSED; new deferred flags DEFERRED-MERGE-WORKTREE-TO-MAIN (127 PDFs + 8 scripts physically in worktree), DEFERRED-UNPAYWALL-CLOUDFLARE (144 OA URLs blocked), DEFERRED-DESHMUKH-2021 (ART-0302 paywalled at tandfonline), DEFERRED-PENDING-LIST-QC (jama_pending.json had wrong URL bug).
 
+**Acquired (2026-05-07, BATON 067):** AFP PDF acquisition — 72 articles harvested via aafp_targeted_downloader.py 3-tier cascade (legacy biweekly URL with volume parity + monthly TOC scrape + CrossRef DOI lookup; structured citation_volume/issue/firstpage meta tag validation gate); AFP gap closed 83 → 11; BATON 066 worktree fully merged to main (127 PDFs + 8 scripts via robocopy + Move-Item); _dupe_archive (48 files) and _corrupted_targeted_run (79 files) cleared via delete_me_pdfs_b65 staging; .gitignore updated for M1 maintain state-file patterns; 9 net new M1 maintain scripts (aafp_targeted_downloader.py NEW + 8 BATON 066 scripts merged from worktree); DEFERRED-MERGE-WORKTREE-TO-MAIN CLOSED; new deferred flags DEFERRED-AAFP-HTTP-500, DEFERRED-AFP-DATA-QC, DEFERRED-CROSS-TIER-CODON-DUPES; persistent-auth pattern (Playwright storage_state via _aafp_auth.json) generalizable to other auth-walled journals.
+
 ---
 
 ## Module Folders
@@ -104,10 +106,10 @@ board_prep_intel/
     └── ite-data-context-skill/
 ```
 
-**DB Counts (verified live 2026-05-07, BATON 066):**
+**DB Counts (verified live 2026-05-07, BATON 067):**
 | Table | Rows | Notes |
 |-------|------|-------|
-| articles | 2,206 | Stable from BATON 065 |
+| articles | 2,206 | Stable from BATON 065 (no new articles BATON 067) |
 | questions (ITE) | 1,639 | 2018–2025 (+10 recovered); blueprint 100% filled; subcategory + topic_label DROPPED |
 | aafp_questions | 1,221 | blueprint 100% filled; subcategory + aafp_explanations DROPPED; correct_letter/correct_text/explanation merged in |
 | question_ref_pairs | 2,722 | 222 NULL clean_ref |
@@ -142,13 +144,13 @@ board_prep_intel/
 ### `01_module.1_warehouse/` — 3-Domain PDF Warehouse + Scripts
 ```
 01_module.1_warehouse/
-├── citation_files/                        — PDF guideline library (1,381 PDFs across 4 tiers + _dupe_archive/, post-merge)
+├── citation_files/                        — PDF guideline library (1,540 PDFs across 4 tiers + 15 AAFP)
 │   ├── ITE/
-│   │   ├── VC_fail/      — bulk PDFs (exa + unpaywall + JAMA/NEJM downloads; 990 total post-merge, 127 new this session in worktree pending merge)
+│   │   ├── VC_fail/      — bulk PDFs (exa + unpaywall + JAMA/NEJM/AFP downloads; 1,056 total post-AFP harvest)
 │   │   ├── local_lite/   — 117 PDFs (VC_fail + fully enriched)
-│   │   ├── VC_pass/      — 216 PDFs (VC gate passed — destined for right_click; post-merge)
+│   │   ├── VC_pass/      — 309 PDFs (VC gate passed — destined for right_click; post-AFP harvest)
 │   │   └── right_click/  — 58 PDFs (VC_pass + fully enriched; highest-value tier)
-│   │   [Total: 1,381 PDFs across 4 tiers post-merge — JAMA + NEJM harvest complete 2026-05-07]
+│   │   [Total: 1,540 PDFs across 4 tiers — AFP harvest closed 72 articles 2026-05-07; _dupe_archive + _corrupted_targeted_run cleared this session]
 │   └── AAFP/             — AAFP citation PDFs (15 total)
 ├── practice_questions/                    — Q&A study deliverables (gitignored; regenerable from DB)
 │   ├── word_docs/        — 8 ITE_YYYY_QA.docx + 13 AAFP_quiz_NNN-NNN.docx = 21 DOCX
@@ -196,19 +198,20 @@ board_prep_intel/
 │       ├── playwright_auth_downloader.py  — NEW (BATON 065) — JAMA/NEJM auth + download (blocked by IP; jama_pending.json output)
 │       ├── browser_pdf_harvester.py       — NEW (BATON 065) — browser-based PDF harvester for paywalled journals
 │       ├── setup_journal_auth.py          — NEW (BATON 065) — journal authentication setup utility
-│       ├── jama_chrome_harvester.py       — NEW (BATON 066, in worktree pending merge) — Chrome-driven JAMA fetcher (50/50 proven)
-│       ├── jama_prep_articlepdf_urls.py   — NEW (BATON 066, in worktree pending merge) — articlepdf URL pre-builder
-│       ├── nejm_doi_lookup.py             — NEW (BATON 066, in worktree pending merge) — Crossref DOI resolver (76/89)
-│       ├── nejm_build_js_batch.py         — NEW (BATON 066, in worktree pending merge) — generate JS for batch downloads
-│       ├── nejm_console_script.py         — NEW (BATON 066, in worktree pending merge) — DevTools-paste script generator
-│       ├── nejm_move_downloads.py         — NEW (BATON 066, in worktree pending merge) — Downloads → tier mover
-│       ├── nejm_save_server.py            — NEW (BATON 066, in worktree pending merge) — local CORS server (failed approach, kept for reference)
-│       └── unpaywall_retry.py             — NEW (BATON 066, in worktree pending merge) — partial OA retry via curl-cffi
+│       ├── jama_chrome_harvester.py       — BATON 066 (merged BATON 067) — Chrome-driven JAMA fetcher (50/50 proven)
+│       ├── jama_prep_articlepdf_urls.py   — BATON 066 (merged BATON 067) — articlepdf URL pre-builder
+│       ├── nejm_doi_lookup.py             — BATON 066 (merged BATON 067) — Crossref DOI resolver (76/89)
+│       ├── nejm_build_js_batch.py         — BATON 066 (merged BATON 067) — generate JS for batch downloads
+│       ├── nejm_console_script.py         — BATON 066 (merged BATON 067) — DevTools-paste script generator
+│       ├── nejm_move_downloads.py         — BATON 066 (merged BATON 067) — Downloads → tier mover
+│       ├── nejm_save_server.py            — BATON 066 (merged BATON 067) — local CORS server (failed approach, kept for reference)
+│       ├── unpaywall_retry.py             — BATON 066 (merged BATON 067) — partial OA retry via curl-cffi
+│       └── aafp_targeted_downloader.py    — NEW (BATON 067) — 3-tier cascade AFP harvester (legacy biweekly URL + monthly TOC + CrossRef DOI; structured citation meta validation gate); 72/83 success
 ├── has_extraction_audit.txt
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
 ```
-*M1 scripts: build/ = 8 scripts, maintain/ = 36 scripts (post-merge: +8 BATON 066 scripts in worktree)*
+*M1 scripts: build/ = 8 scripts, maintain/ = 38 scripts (BATON 067: +8 BATON 066 scripts merged from worktree + 1 NEW aafp_targeted_downloader.py = 9 net new). aafp_fill_gaps.py modified (Playwright expect_download → context.request.get patch + homepage login URL).*
 
 ---
 

@@ -77,7 +77,8 @@
     "year": "2021",
     "author": "Deshmukh",
     "title": "Sepsis calculator for neonatal early onset sepsis \u2013 A systematic review and meta-analysis",
-    "url": "https://jamanetwork.com/journals/jamapediatrics/fullarticle/2748691"
+    "url": "https://jamanetwork.com/journals/jamapediatrics/fullarticle/2748691",
+    "note": "URL points to Achten 2019 (ART-0020), NOT this Deshmukh 2021 paper. Wrong-URL bug in upstream pending list. Real Deshmukh 2021 needs tandfonline auth (DOI 10.1080/14767058.2019.1649650)."
   },
   {
     "article_id": "ART-0323",

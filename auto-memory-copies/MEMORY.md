@@ -1,9 +1,9 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-05-07 (BATON 066)
+Last updated: 2026-05-07 (BATON 067)
 
 ## Active Memory Files
-- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 066
-- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (2,206 articles, 1,639 ITE Qs), schema state; body_system + body_system_merged fully normalized; article_currency complete 2,206; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — all stable BATON 066 (no DB changes)
+- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 067
+- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (2,206 articles, 1,639 ITE Qs), schema state; body_system + body_system_merged fully normalized; article_currency complete 2,206; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — all stable BATON 067 (no DB changes)
 - [rebuild_structuring_guidelines.md](rebuild_structuring_guidelines.md) — Locked rules and architecture principles
 - Project terminology decoder — see `Terms — Decode These First` table in `CLAUDE.md` (no separate glossary.md file exists; CLAUDE.md is the single source of truth for term definitions)
 
@@ -79,6 +79,19 @@ Last updated: 2026-05-07 (BATON 066)
 - **Four new M1 maintain scripts:** acquire_missing_citations.py, playwright_auth_downloader.py, browser_pdf_harvester.py, setup_journal_auth.py
 - **JAMA/NEJM IP-blocked at Playwright layer** → jama_pending.json output (handed to BATON 066)
 
+## AFP PDF Acquisition + BATON 066 Worktree Merge (BATON 067)
+- **AFP gap closed 83 → 11** — 72 articles acquired via aafp_targeted_downloader.py 3-tier cascade (legacy biweekly URL with volume parity + monthly TOC scrape + CrossRef DOI lookup; structured citation_volume/issue/firstpage meta tag validation gate, 100% precision when AAFP exposes the tags)
+- **BATON 066 worktree fully merged to main** — 127 PDFs + 8 scripts + 5 state files migrated via robocopy + Move-Item
+- **One NEW M1 maintain script:** aafp_targeted_downloader.py (3-tier cascade harvester)
+- **One MODIFIED M1 maintain script:** aafp_fill_gaps.py (Playwright expect_download → context.request.get patch + homepage login URL)
+- **Eight scripts merged from BATON 066 worktree:** jama_chrome_harvester.py, jama_prep_articlepdf_urls.py, nejm_doi_lookup.py, nejm_build_js_batch.py, nejm_console_script.py, nejm_move_downloads.py, nejm_save_server.py, unpaywall_retry.py
+- **Structural cleanup:** _dupe_archive (48) + _corrupted_targeted_run (79) cleared via delete_me_pdfs_b65 staging then permanent deletion
+- **.gitignore updated:** M1 maintain state-file patterns (_*.json, _*.txt, _*.csv, _*.log; explicit auth file)
+- **Persistent-auth pattern (NEW):** Playwright storage_state via _aafp_auth.json — generalizable to other auth-walled journals (T&F, Wiley, etc.)
+- **DEFERRED-MERGE-WORKTREE-TO-MAIN CLOSED**
+- **New deferred flags:** DEFERRED-AAFP-HTTP-500 (11 remaining AFP articles via API HTTP 500), DEFERRED-AFP-DATA-QC (metadata spot-check), DEFERRED-CROSS-TIER-CODON-DUPES (verify codon non-duplication across tiers)
+- **DB state:** No schema changes; no row-count changes (PDFs only)
+
 ## JAMA + NEJM PDF Harvest (BATON 066)
 - **127 new PDFs harvested** (in worktree pending merge): JAMA 50/50 + NEJM 76/89
 - **DevTools-console paste pattern established** — unblocks browser-auth journals where Playwright/curl are IP-blocked or hit Cloudflare
@@ -87,11 +100,16 @@ Last updated: 2026-05-07 (BATON 066)
 - **New deferred flags:** DEFERRED-MERGE-WORKTREE-TO-MAIN, DEFERRED-UNPAYWALL-CLOUDFLARE (144 OA URLs blocked), DEFERRED-DESHMUKH-2021 (ART-0302 paywalled at tandfonline), DEFERRED-PENDING-LIST-QC (jama_pending.json had wrong URL bug)
 - **DB state:** No schema changes; no row-count changes (PDFs only; xref linkage to be done after merge)
 
-## Open Items (BATON 066)
-- **DEFERRED-MERGE-WORKTREE-TO-MAIN** — Step 1 of next session: merge 127 PDFs + 8 scripts from worktree (modest-merkle-df0121) to main repo path
+## Open Items (BATON 067)
+- **DEFERRED-AAFP-HTTP-500** — AAFP search API returning HTTP 500 for 11 remaining AFP articles; needs alternative entry point
+- **DEFERRED-AFP-DATA-QC** — AFP-acquired metadata needs spot-check vs articles table
+- **DEFERRED-CROSS-TIER-CODON-DUPES** — Verify no codon duplicates across VC_fail/VC_pass after batch acquisition
 - **DEFERRED-UNPAYWALL-CLOUDFLARE** — Apply DevTools-console paste pattern to 144 OA URLs blocked by Cloudflare
+- **DEFERRED-DESHMUKH-2021** — ART-0302 paywalled at tandfonline; no T&F auth available
+- **DEFERRED-PENDING-LIST-QC** — jama_pending.json had wrong URL bug; sweep recommended for any other lists with the same defect
 - **DEFERRED-QID-XREF-LIBRARY-GAPS** — ~249 unmatched citations (pre-Phase 2); prioritize by frequency
 - **DEFERRED-HUMAN-REVIEW-BODY-SYSTEM** — ~308 holdout questions (179 ITE + 129 AAFP) pending manual verification; applies to 2022-2023 legacy data only
 - **DEFERRED-PROGRAM-TREND / DEFERRED-PGY-BENCHMARKS** — Both UNBLOCKED — multi-resident program-level trends; benchmark against 2024 ABFM national reference
+- **DEFERRED-YOY-ROBUSTNESS** — Year-over-year section 3b needs more robust implementation; month-by-month trend aggregation logic
 - **DEFERRED-RESIDENT-FOLDER-MIGRATION** — Investigate resident_data/ folder state and M5 integration pathway
 - **Re-run 7 resident analyses on Mac after git pull** (carry-over from BATON 063)

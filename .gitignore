@@ -96,3 +96,15 @@ key_data_files/cookies/
 README_PROJECT.md
 
 key_data_files/browser_profiles/
+
+# --- M1 MAINTAIN STATE FILES (session caches, auth state, run logs) ---
+# Convention: leading underscore on filename = transient/derived state, not code.
+01_module.1_warehouse/scripts/maintain/_*.json
+01_module.1_warehouse/scripts/maintain/_*.txt
+01_module.1_warehouse/scripts/maintain/_*.csv
+01_module.1_warehouse/scripts/maintain/_*.log
+
+# --- CLAUDE CODE RUNTIME ARTIFACTS (worktrees, lock files, local settings) ---
+.claude/worktrees/
+.claude/scheduled_tasks.lock
+.claude/settings.local.json
