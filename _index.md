@@ -1,7 +1,7 @@
 # _index.md — Ground Truth Directory Map
 **Scope:** `board_prep_intel/` (project root — Option B complete 2026-04-04)
-**Last Updated:** 2026-05-06 (BATON 065 — pdf_acquisition_jama_nejm_attempt; 281 new PDFs acquired, 208 new articles, 249 citations added to VC_fail tier)
-**Status:** Current — 1,269 total PDFs (879 VC_fail + 200 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams); M1 build = 8 + maintain = 30; M2 = 75py + 6js; M3 = 55py + 4js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB enriched (2,206 articles, 1,639 ITE questions, article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
+**Last Updated:** 2026-05-07 (BATON 066 — JAMA + NEJM PDF harvest complete; 127 new PDFs (in worktree pending merge); DevTools-console pattern established for browser-auth journals)
+**Status:** Current — 1,396 total PDFs post-merge (990 VC_fail + 216 VC_pass + 117 local_lite + 58 right_click + 14 dupe_archive + 15 AAFP + 16 exams; 127 new this session, in worktree pending merge); M1 build = 8 + maintain = 36 (post-merge); M2 = 75py + 6js; M3 = 55py + 4js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 35ts/tsx + 5sql; DB enriched (2,206 articles, 1,639 ITE questions, article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
 > This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
 > Stale counts are worse than no index. Verify before trusting.
@@ -12,7 +12,7 @@
 
 ```
 board_prep_intel/
-├── BATON_active_065_20260506_pdf_acquisition_jama_nejm_attempt.md  — active BATON
+├── BATON_active_066_20260507_jama_nejm_pdf_harvest_complete.md  — active BATON
 ├── CLAUDE.md                              — project memory + conventions
 ├── REPO_MAP.md                            — current-state architectural overview (NEW — BATON 039)
 ├── README.md                              — project overview (human-readable)
@@ -21,7 +21,7 @@ board_prep_intel/
 ├── .gitattributes / .gitignore
 │
 ├── 00_database/                           — source of truth (DB + supporting data)
-├── 01_module.1_warehouse/                 — M1 3-domain: citation_files/ (1,269 PDFs across 4 tiers + 15 AAFP) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
+├── 01_module.1_warehouse/                 — M1 3-domain: citation_files/ (1,381 PDFs across 4 tiers + 15 AAFP, post-merge) + practice_questions/ (42 Q&A deliverables) + ite_exams/ (16 raw PDFs) + scripts/
 ├── 02_module.2_processor/                 — M2 pipeline scripts + source inputs
 ├── 03_module.3_analyst/                   — M3 score analysis + ICD-10 + pathways
 ├── 04_module.4_sandbox/                   — M4 experiments and agent prototypes
@@ -63,6 +63,10 @@ board_prep_intel/
 **Cleaned (2026-04-04, BATON 039):** Windows cleanup complete — 5 deprecated M1 scripts deleted; Option B artifacts deleted (SEVERANCE_PLAN.md, option_b_patch.py, repo_pre_severance.md); schema docs refreshed (articles.md: row count, tier column, source_type dist; questions.md: subcategory removed); script counts corrected (M1 build 6, maintain 18, M2 75py, M3 13py); REPO_MAP.md added to root
 **Fixed (2026-04-04, BATON 038):** 14 code review defects resolved — hop count bugs (preprocess_concept_tags, batch_db_extract, db_guided_extractor), SCHEMAS_DIR/OUTPUT_DIR (build_icd10_tags), filename pattern (extract_ite_year), exists() guard (audit_engine_type_changes), crosswalk output paths + multi-tier scan (build_crosswalk_index), XGBoost param (classify_ite_year), JSON_DIR/LOG_DIR/OUTPUT_DIR path fixes (4 scripts), VC gate cross-check (backfill), docstring escapes (2 scripts)
 
+**Acquired (2026-05-06, BATON 065):** Phase 2 PDF acquisition — 281 new PDFs via exa_pdf_downloader + unpaywall batch integration (VC_fail 630→879, VC_pass 168→200); 208 new articles (ART-1999–ART-2206) added via acquire_missing_citations.py; M1 maintain script count 26→30 (acquire_missing_citations.py, playwright_auth_downloader.py, browser_pdf_harvester.py, setup_journal_auth.py); JAMA/NEJM IP-blocked (jama_pending.json output for handoff).
+
+**Acquired (2026-05-07, BATON 066):** JAMA + NEJM PDF harvest complete — 127 new PDFs harvested via DevTools-console pattern (jama_chrome_harvester.py: 50/50 JAMA articles; nejm_doi_lookup.py + nejm_console_script.py: 76/89 NEJM articles); 8 new M1 maintain scripts in worktree pending merge; DEFERRED-NEJM-PHASE-2 + DEFERRED-JAMA-PHASE-2 CLOSED; new deferred flags DEFERRED-MERGE-WORKTREE-TO-MAIN (127 PDFs + 8 scripts physically in worktree), DEFERRED-UNPAYWALL-CLOUDFLARE (144 OA URLs blocked), DEFERRED-DESHMUKH-2021 (ART-0302 paywalled at tandfonline), DEFERRED-PENDING-LIST-QC (jama_pending.json had wrong URL bug).
+
 ---
 
 ## Module Folders
@@ -72,7 +76,7 @@ board_prep_intel/
 00_database/
 ├── DATABASE_GUIDE.md                  — DB contents, linkages, current uses, future applications (NEW — BATON 045)
 ├── db/
-│   ├── ite_intelligence.db                — PRODUCTION (1,998 articles, 1,639 ITE questions)
+│   ├── ite_intelligence.db                — PRODUCTION (2,206 articles, 1,639 ITE questions)
 │   ├── ite_intelligence.db-wal            — write-ahead log
 │   ├── ite_intelligence_pre2018_backup_20260324_001256.db
 │   ├── ite_intelligence_pre_flag15_backup.db
@@ -100,21 +104,21 @@ board_prep_intel/
     └── ite-data-context-skill/
 ```
 
-**DB Counts (verified live 2026-05-06, BATON 065):**
+**DB Counts (verified live 2026-05-07, BATON 066):**
 | Table | Rows | Notes |
 |-------|------|-------|
-| articles | 2,206 | +208 from BATON 065 acquisition (exa + unpaywall batch); 1,998 → 2,206 |
+| articles | 2,206 | Stable from BATON 065 |
 | questions (ITE) | 1,639 | 2018–2025 (+10 recovered); blueprint 100% filled; subcategory + topic_label DROPPED |
 | aafp_questions | 1,221 | blueprint 100% filled; subcategory + aafp_explanations DROPPED; correct_letter/correct_text/explanation merged in |
 | question_ref_pairs | 2,722 | 222 NULL clean_ref |
-| qid_art_xref | 2,710 | All 8 years (2018–2025); +225 from BATON 065 |
+| qid_art_xref | 2,710 | All 8 years (2018–2025); stable from BATON 065 |
 | aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
-| article_icd10 | 4,959 | ↑ from 3,952 — pre-existing Windows PC enrichment (BATON 062) |
-| question_icd10 | 5,774 | ↑ from ~5,003 — ~89.9%+ ITE coverage — pre-existing Windows PC enrichment (BATON 062) |
+| article_icd10 | 4,959 | Stable; pre-existing Windows PC enrichment (BATON 062) |
+| question_icd10 | 5,774 | ~89.9%+ ITE coverage; stable (BATON 062) |
 | aafp_question_icd10 | 4,753 | relevance normalized; related cap applied |
-| clinical_pathways | 4,959 | ↑ from 3,971 — pre-existing Windows PC enrichment (BATON 062) |
+| clinical_pathways | 4,959 | Stable (BATON 062) |
 | article_citation_trend | 1,740 | longitudinal citation tracking + watch_list flag |
-| article_currency | 1,998 | ✅ COMPLETE 2026-04-16 — Layer 2 complete; status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals column (JSON array) |
+| article_currency | 2,206 | ✅ COMPLETE 2026-05-06 — Layer 2 complete; status enum + title_signals JSON column |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
 | icd10_rollup | 614 | |
 | icd10_code_xref | 1,006 | |
@@ -131,20 +135,20 @@ board_prep_intel/
 | blueprint_label_vec | 5 | BLOB — 5 canonical blueprint category label embeddings (NEW — BATON 056) |
 | bodysystem_label_vec | 5 | BLOB — 5 canonical body system label embeddings (NEW — BATON 056) |
 | question_concepttag_vec | 2,850 | BLOB — concept_tags embedding per question (NEW — BATON 056) |
-| intersection_centroid_vec | 158 | BLOB — ↑ from 123 — pre-existing Windows PC enrichment (BATON 062) |
+| intersection_centroid_vec | 158 | BLOB — Stable (BATON 062) |
 
 ---
 
 ### `01_module.1_warehouse/` — 3-Domain PDF Warehouse + Scripts
 ```
 01_module.1_warehouse/
-├── citation_files/                        — PDF guideline library (1,269 PDFs across 4 tiers + _dupe_archive/)
+├── citation_files/                        — PDF guideline library (1,381 PDFs across 4 tiers + _dupe_archive/, post-merge)
 │   ├── ITE/
-│   │   ├── VC_fail/      — bulk PDFs (exa + unpaywall downloads; 879 total)
+│   │   ├── VC_fail/      — bulk PDFs (exa + unpaywall + JAMA/NEJM downloads; 990 total post-merge, 127 new this session in worktree pending merge)
 │   │   ├── local_lite/   — 117 PDFs (VC_fail + fully enriched)
-│   │   ├── VC_pass/      — 200 PDFs (VC gate passed — destined for right_click)
+│   │   ├── VC_pass/      — 216 PDFs (VC gate passed — destined for right_click; post-merge)
 │   │   └── right_click/  — 58 PDFs (VC_pass + fully enriched; highest-value tier)
-│   │   [Total: 1,269 PDFs across 4 tiers — exa_pdf_downloader + pmc_oa_downloader + unpaywall complete 2026-05-06]
+│   │   [Total: 1,381 PDFs across 4 tiers post-merge — JAMA + NEJM harvest complete 2026-05-07]
 │   └── AAFP/             — AAFP citation PDFs (15 total)
 ├── practice_questions/                    — Q&A study deliverables (gitignored; regenerable from DB)
 │   ├── word_docs/        — 8 ITE_YYYY_QA.docx + 13 AAFP_quiz_NNN-NNN.docx = 21 DOCX
@@ -191,12 +195,20 @@ board_prep_intel/
 │       ├── acquire_missing_citations.py   — NEW (BATON 065) — batch article import + PDF linkage; 208 articles added
 │       ├── playwright_auth_downloader.py  — NEW (BATON 065) — JAMA/NEJM auth + download (blocked by IP; jama_pending.json output)
 │       ├── browser_pdf_harvester.py       — NEW (BATON 065) — browser-based PDF harvester for paywalled journals
-│       └── setup_journal_auth.py          — NEW (BATON 065) — journal authentication setup utility
+│       ├── setup_journal_auth.py          — NEW (BATON 065) — journal authentication setup utility
+│       ├── jama_chrome_harvester.py       — NEW (BATON 066, in worktree pending merge) — Chrome-driven JAMA fetcher (50/50 proven)
+│       ├── jama_prep_articlepdf_urls.py   — NEW (BATON 066, in worktree pending merge) — articlepdf URL pre-builder
+│       ├── nejm_doi_lookup.py             — NEW (BATON 066, in worktree pending merge) — Crossref DOI resolver (76/89)
+│       ├── nejm_build_js_batch.py         — NEW (BATON 066, in worktree pending merge) — generate JS for batch downloads
+│       ├── nejm_console_script.py         — NEW (BATON 066, in worktree pending merge) — DevTools-paste script generator
+│       ├── nejm_move_downloads.py         — NEW (BATON 066, in worktree pending merge) — Downloads → tier mover
+│       ├── nejm_save_server.py            — NEW (BATON 066, in worktree pending merge) — local CORS server (failed approach, kept for reference)
+│       └── unpaywall_retry.py             — NEW (BATON 066, in worktree pending merge) — partial OA retry via curl-cffi
 ├── has_extraction_audit.txt
 ├── MOVE_STUCK_FILES.ps1
 └── README.json
 ```
-*M1 scripts: build/ = 8 scripts, maintain/ = 30 scripts*
+*M1 scripts: build/ = 8 scripts, maintain/ = 36 scripts (post-merge: +8 BATON 066 scripts in worktree)*
 
 ---
 
@@ -274,9 +286,9 @@ board_prep_intel/
 │   ├── aafp_question_reuse_investigation.py  — AAFP-ITE shared vignette finder; 38 pairs found (BATON 020)
 │   ├── export_aafp_ite_relationships.py   — NEW (BATON 031) — 4-CSV AAFP–ITE relationship export
 │   ├── word_doc_defaults.py               — NEW (BATON 031) — St. Luke's style template; import in ALL python-docx scripts
-   ├── build_cole_exam_series.py          — NEW (BATON 064) — Cole-specific exam series generator
-   ├── build_exam_series.py               — NEW (BATON 064) — Generalized exam series generator
-   ├── build_custom_question_set.py       — NEW (BATON 064) — Content-addressable question set generator
+│   ├── build_cole_exam_series.py          — NEW (BATON 064) — Cole-specific exam series generator
+│   ├── build_exam_series.py               — NEW (BATON 064) — Generalized exam series generator
+│   ├── build_custom_question_set.py       — NEW (BATON 064) — Content-addressable question set generator
 │   ├── build_aafp_qa.py                   — NEW (BATON 031) — File 3 Q&A builder (595 AAFP citation-overlap questions)
 │   ├── build_aafp_qa_file1.py             — NEW (BATON 031) — File 1 Q&A builder (34 near-duplicate questions + ITE companion)
 │   ├── build_aafp_qa_deliverables.py      — NEW (BATON 036) — 26 AAFP Q&A deliverables (13 DOCX + 13 XLSX); answer fix BATON 037

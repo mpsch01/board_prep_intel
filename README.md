@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-05-06 (BATON 065)
+**Last updated:** 2026-05-07 (BATON 066)
 **Status:** Active development
-**Active BATON:** `BATON_active_065_20260506_pdf_acquisition_jama_nejm_attempt.md`
-**Next ART-ID:** ART-2219
-**Git:** `main` → `de1423b` → `https://github.com/mpsch01/board_prep_intel` (private)
+**Active BATON:** `BATON_active_066_20260507_jama_nejm_pdf_harvest_complete.md`
+**Next ART-ID:** ART-2208
+**Git:** `main` → `85e8ab7` → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -13,14 +13,14 @@
 ```json
 {
   "project": "ABFM ITE Intelligence System",
-  "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,285 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_065_20260506_pdf_acquisition_jama_nejm_attempt.md",
-  "baton_description": "Phase 2 PDF acquisition; +208 articles (ART-2000–ART-2218); +225 xref pairs; JAMA/NEJM auth blocked; jama_pending.json for Claude Code; acquire_missing_citations.py complete.",
-  "git_hash": "de1423b",
+  "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,412 PDFs post-merge) via a structured SQLite pipeline.",
+  "baton": "BATON_active_066_20260507_jama_nejm_pdf_harvest_complete.md",
+  "baton_description": "JAMA + NEJM PDF harvest complete; +127 new PDFs (50 JAMA + 76 NEJM + 1 unpaywall); 8 new M1 maintain scripts; DevTools-console paste pattern established for Chrome MCP user-activation gap; 127 PDFs in worktree pending merge to main repo.",
+  "git_hash": "85e8ab7",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
-  "last_updated": "2026-05-06",
-  "next_art_id": "ART-2219",
+  "last_updated": "2026-05-07",
+  "next_art_id": "ART-2208",
   "vc_gate_citations": 352,
   "database": {
     "file": "00_database/db/ite_intelligence.db",
@@ -44,17 +44,18 @@
     "article_currency": 2206
   },
   "pdfs": {
-    "vc_fail": 879,
-    "vc_pass": 200,
+    "vc_fail": 990,
+    "vc_pass": 216,
     "local_lite": 117,
     "right_click": 58,
     "aafp": 15,
     "ite_exams": 16,
-    "total": 1285
+    "total": 1412,
+    "_note": "Post-merge counts. 127 new PDFs (111 VC_fail + 16 VC_pass) currently in worktree pending physical copy to main repo path."
   },
   "scripts": {
     "m1_build_py": 8,
-    "m1_maintain_py": 30,
+    "m1_maintain_py": 36,
     "m2_py": 75,
     "m2_js": 6,
     "m3_py": 55,
@@ -93,9 +94,9 @@ Source of truth. Never disposable.
 - `schemas/` — clinical_synonym_map.json, icd10_mcp_lookup.json, ite-data-context-skill/
 
 ### 01_module.1_warehouse/
-PDF library (4 tiers, 973 ITE + 15 AAFP + 16 exam PDFs) + pipeline build and maintenance scripts.
-- `citation_files/ITE/VC_fail/` — 879 PDFs: bulk; lowest citation priority
-- `citation_files/ITE/VC_pass/` — 200 PDFs: codon-named, VC-cited, awaiting full pipeline
+PDF library (4 tiers, 1,381 ITE + 15 AAFP + 16 exam PDFs post-merge) + pipeline build and maintenance scripts.
+- `citation_files/ITE/VC_fail/` — 990 PDFs: bulk; lowest citation priority (+111 BATON 066 worktree, post-merge)
+- `citation_files/ITE/VC_pass/` — 216 PDFs: codon-named, VC-cited, awaiting full pipeline (+16 BATON 066 worktree, post-merge)
 - `citation_files/ITE/local_lite/` — 117 PDFs: VC_fail + fully enriched (pipeline complete)
 - `citation_files/ITE/right_click/` — 58 PDFs: VC_pass + fully enriched (highest-value tier)
 - `citation_files/AAFP/` — 15 AAFP citation PDFs (recovered 2026-04-05)
@@ -103,7 +104,7 @@ PDF library (4 tiers, 973 ITE + 15 AAFP + 16 exam PDFs) + pipeline build and mai
 - `citation_files/ite_exams/` — 16 raw PDFs: YYYY_MC.pdf + YYYY_critique.pdf (2018–2025)
 - `practice_questions/` — 42 Q&A deliverables: 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored; regenerable from DB)
 - `build/` — 8 scripts: self-contained full rebuild sequence
-- `maintain/` — 30 scripts: recurring DB population and maintenance operations
+- `maintain/` — 36 scripts: recurring DB population and maintenance operations (+8 BATON 066: jama_chrome_harvester, jama_prep_articlepdf_urls, nejm_doi_lookup, nejm_build_js_batch, nejm_console_script, nejm_move_downloads, nejm_save_server, unpaywall_retry)
 - `scripts/aafp_brq_scraper.py` — scraper at scripts/ root (Windows-only)
 
 ### 02_module.2_processor/
@@ -149,7 +150,7 @@ Critical reference data:
 
 ---
 
-## Database State (as of 2026-05-06, BATON 065)
+## Database State (as of 2026-05-07, BATON 066)
 
 | Table | Rows | Notes |
 |-------|------|-------|
@@ -244,11 +245,12 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 
 ---
 
-## Deferred Flags (active as of BATON 065)
+## Deferred Flags (active as of BATON 066)
 
 | Flag | Status | Description |
 |------|--------|-------------|
-| DEFERRED-JAMA-NEJM-PDF-HARVEST | ACTIVE | 50 JAMA PDFs (jama_pending.json, Claude Code click); ~65 NEJM (IP block lifting) |
+| MERGE-WORKTREE-TO-MAIN | ACTIVE | 127 PDFs + 8 scripts + 4 state files in worktree pending merge to main repo |
+| DEFERRED-JAMA-NEJM-PDF-HARVEST | RESOLVED | 50 JAMA + 76 NEJM PDFs harvested via DevTools-console paste pattern |
 | DEFERRED-KNOWN-DRUGS-EXPANSION | ACTIVE | Identify offending drug names; decide fix approach |
 | DEFERRED-QID-XREF-LIBRARY-GAPS | ACTIVE | ~249 unmatched citations; partial closure BATON 065 (+225 xref pairs) |
 | DEFERRED-PGY-BENCHMARKS | UNBLOCKED | Implement benchmark comparison functionality |
@@ -260,17 +262,22 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 
 ---
 
-## Next Steps (BATON 065)
+## Next Steps (BATON 066)
 
 ### Immediate
-1. **JAMA PDFs** — Use Claude Code: navigate to each article page, click PDF link. List in `jama_pending.json` (50 articles)
-2. **NEJM PDFs** — Wait for IP block to lift (IP 131.106.58.189), then Claude in Chrome JS injection (~65 articles)
-3. **Re-run 7 resident analyses** on Mac after git pull (pending from BATON 063)
+1. **Merge worktree PDFs to main repo path** — 127 PDFs in `.claude/worktrees/modest-merkle-df0121/01_module.1_warehouse/citation_files/ITE/{VC_fail,VC_pass}/*.pdf` need to be physically copied to main repo path. Use robocopy.
+2. **Merge new scripts** — 8 maintain scripts + 4 state files from worktree to main `01_module.1_warehouse/scripts/maintain/`.
+3. **User commits via GitHub Desktop** — staging the new BATON, retired BATON, manifest docs, new scripts. PDFs and state files are gitignored.
+4. **Re-run all 7 resident analyses on Mac** after git pull (carryover).
 
 ### Short-term
-4. **DEFERRED-QID-XREF-LIBRARY-GAPS** — ~249 unmatched citations remain; prioritize by frequency
-5. **DEFERRED-PGY-BENCHMARKS** — Implement benchmark comparison — UNBLOCKED
-6. **DEFERRED-KNOWN-DRUGS-EXPANSION** — identify offending drug names
+5. **Apply NEJM DevTools pattern to 144 Cloudflare-blocked unpaywall URLs** — group by origin, one console-paste session per domain.
+6. **Spot-check pending list integrity** — pick 5-10 random `jama_pending.json` entries, verify URLs match claimed author. ART-0302 had a bug; check for siblings.
+7. **AFP articles** (83 missing) — has session cookie strategy in env.
+
+### Medium-term
+8. **Tackle remaining 744-article broader gap** — 397 "Other Journal", 107 "Guideline/Org", 36 Annals, 29 Circulation, 29 BMJ, 12 Lancet, 11 Chest. Each origin gets DevTools-paste session.
+9. **NEJM 13 missing-DOI articles** — manual lookup or deprioritize.
 
 ---
 
@@ -286,4 +293,4 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 ---
 
 **Project Lead:** Michael Scholl, MD
-**Last Reviewed:** 2026-05-06 (BATON 065, git pending)
+**Last Reviewed:** 2026-05-07 (BATON 066, git 85e8ab7; worktree merge pending)

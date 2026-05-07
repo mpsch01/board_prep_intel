@@ -1,28 +1,28 @@
 # project_overhaul_state.md
-Last updated: 2026-05-06 (BATON 065)
+Last updated: 2026-05-07 (BATON 066)
 
 ## Module State
 
 | Module | Status | Key Info |
 |--------|--------|----------|
-| M1 Warehouse | Active | 1,269 ITE/AAFP PDFs (879 VC_fail + 200 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 30 maintain scripts |
+| M1 Warehouse | Active | 1,381 ITE/AAFP PDFs post-merge (990 VC_fail + 216 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 36 maintain scripts post-merge (8 new BATON 066 scripts in worktree pending merge); JAMA + NEJM PDF harvest complete via DevTools-console pattern |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
 | M3 Analyst | Active | 55 py + 4 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction; report interpretation guides (resident + faculty, BATON 063); practice question system (exam series + custom sets, BATON 064) |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 35 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
-| DB | Stable | 2,206 articles (+208 BATON 065), 1,639 ITE Qs (+10 recovered), 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 |
+| DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 066 |
 
 ## PDF Library State
 
-### ITE (citation_files/ITE/)
+### ITE (citation_files/ITE/) — POST-MERGE COUNTS
 | Tier | Count | Notes |
 |------|-------|-------|
-| VC_fail | 879 | Failed VC gate; awaiting enrichment (+249 from BATON 065 acquisition) |
-| VC_pass | 200 | Passed VC gate; awaiting enrichment (+32 from BATON 065 acquisition) |
+| VC_fail | 990 | Failed VC gate; awaiting enrichment (+111 from BATON 066 JAMA/NEJM harvest, in worktree pending merge) |
+| VC_pass | 216 | Passed VC gate; awaiting enrichment (+16 from BATON 066, in worktree pending merge) |
 | local_lite | 117 | Enriched; not VC-cited |
 | right_click | 58 | Enriched + VC-cited (top tier) |
 | _dupe_archive | 14 | Legacy single-author duplicates; not pipeline |
-| **TOTAL active** | **1,269** | Recovered via EXA+PMC+Unpaywall; updated 2026-05-06 |
+| **TOTAL active (post-merge)** | **1,381** | 127 new this session in worktree pending merge; JAMA/NEJM harvest complete 2026-05-07 |
 
 ### AAFP (citation_files/AAFP/)
 | Count | Status |
@@ -30,6 +30,32 @@ Last updated: 2026-05-06 (BATON 065)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 066)
+
+**2026-05-07 — JAMA + NEJM PDF Harvest Complete**
+- **127 new PDFs harvested via DevTools-console pattern** (in worktree pending merge to main path)
+  - JAMA: 50/50 articles harvested (jama_chrome_harvester.py — Chrome-driven fetcher proven 100% success)
+  - NEJM: 76/89 articles harvested (nejm_doi_lookup.py + nejm_console_script.py — Crossref DOI resolver + DevTools-paste batch download)
+- **Eight new M1 maintain scripts** (in `01_module.1_warehouse/scripts/maintain/`, all pending merge):
+  - jama_chrome_harvester.py — Chrome-driven JAMA fetcher (50/50 proven)
+  - jama_prep_articlepdf_urls.py — articlepdf URL pre-builder
+  - nejm_doi_lookup.py — Crossref DOI resolver (76/89)
+  - nejm_build_js_batch.py — generate JS for batch downloads
+  - nejm_console_script.py — DevTools-paste script generator
+  - nejm_move_downloads.py — Downloads → tier mover
+  - nejm_save_server.py — local CORS server (failed approach, kept for reference)
+  - unpaywall_retry.py — partial OA retry via curl-cffi
+- **Methodology breakthrough:** DevTools-console paste pattern unblocks browser-auth journals where Playwright/curl are IP-blocked or hit Cloudflare; user pastes generated JS into DevTools console while signed in
+- **DEFERRED-NEJM-PHASE-2 + DEFERRED-JAMA-PHASE-2 CLOSED**
+- **DB state:** No schema changes; no row-count changes (PDFs only; xref linkage to be done after merge)
+- **M1 maintain script count:** 30 → 36 (+8 new) post-merge — currently in worktree
+- **Deferred flags NEW:**
+  - DEFERRED-MERGE-WORKTREE-TO-MAIN — 127 PDFs + 8 scripts physically in worktree, need merge to main repo path (Step 1 next session)
+  - DEFERRED-UNPAYWALL-CLOUDFLARE — 144 OA URLs blocked by Cloudflare, need DevTools-paste pattern
+  - DEFERRED-DESHMUKH-2021 — ART-0302 paywalled at tandfonline, no T&F auth
+  - DEFERRED-PENDING-LIST-QC — jama_pending.json had wrong URL bug, sweep recommended
+- **Next:** Merge worktree to main; run xref linkage on 127 new PDFs; apply DevTools-paste pattern to unpaywall Cloudflare blockers
 
 ## Session Notes (BATON 065)
 
@@ -169,6 +195,12 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 
 | Flag | Status | Description |
 |------|--------|-------------|
+| DEFERRED-MERGE-WORKTREE-TO-MAIN | NEW/OPEN | 127 PDFs + 8 scripts physically in worktree (modest-merkle-df0121), need merge to main repo path; Step 1 of next session (BATON 066) |
+| DEFERRED-UNPAYWALL-CLOUDFLARE | NEW/OPEN | 144 OA URLs blocked by Cloudflare; apply DevTools-console paste pattern (proven on JAMA/NEJM) (BATON 066) |
+| DEFERRED-DESHMUKH-2021 | NEW/OPEN | ART-0302 paywalled at tandfonline; no T&F auth available (BATON 066) |
+| DEFERRED-PENDING-LIST-QC | NEW/OPEN | jama_pending.json had wrong URL bug; sweep recommended for any other lists with the same defect (BATON 066) |
+| DEFERRED-NEJM-PHASE-2 | ✅ CLOSED | Resolved BATON 066 — 76/89 NEJM PDFs harvested via Crossref DOI + DevTools-console paste |
+| DEFERRED-JAMA-PHASE-2 | ✅ CLOSED | Resolved BATON 066 — 50/50 JAMA PDFs harvested via jama_chrome_harvester.py |
 | DEFERRED-REPORT-GUIDE | ✅ CLOSED | Write resident and faculty advisor interpretation guides for the ITE report (2 DOCX documents) — completed BATON 063 |
 | DEFERRED-YOY-ROBUSTNESS | ACTIVE | Year-over-year section 3b needs more robust implementation; month-by-month trend aggregation logic (BATON 050) |
 | DEFERRED-PROGRAM-TREND | UNBLOCKED | Require program-level trend analysis across multiple residents; benchmark against 2024 ABFM national reference (abfm_reference_2024.json); all blockers cleared (BATON 061) |
@@ -180,7 +212,7 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 | DEFERRED-CENTROID-REBUILD | ✅ CLOSED | intersection_centroid_vec rebuilt after body_system field corrections (135 → 123 rows); completed BATON 060 |
 | DEFERRED-HUMAN-REVIEW-BODY-SYSTEM | ACTIVE | ~308 holdout questions (179 ITE + 129 AAFP) pending manual verification; applies to 2022-2023 legacy data only (2024-2025 + all AAFP normalized BATON 060) |
 | DEFERRED-KNOWN-DRUGS-EXPANSION | ✅ CLOSED | Drugs still appearing in top diagnoses table — completed BATON 058 |
-| DEFERRED-QID-XREF-LIBRARY-GAPS | ACTIVE | 249 unmatched citations; prioritize by frequency (NEW BATON 064) |
+| DEFERRED-QID-XREF-LIBRARY-GAPS | ACTIVE | ~249 unmatched citations (pre-Phase 2); prioritize by frequency; partially addressed BATON 065 (+225 xrefs from new articles) |
 | DEFERRED-SCHOLL-OLD-FORMAT | NEW | Scholl 2022/2023 use old ABFM taxonomy (no canonical mapping); Stage 1.75 DB backfill now handles transparently; body_system_merged provides forward mapping |
 | DEFERRED-A | ARCHIVED | 37 ITE manual PDFs — permanent ceiling (subscription-only) |
 | DEFERRED-AAFP-PAYWALL | ACTIVE | 3 AAFP articles paywalled (PMC not_oa): ART-1959 Binic_2011, ART-1972 Byington_2012, ART-1967 Verbalis_2007 |
@@ -193,10 +225,10 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 | DEFERRED-PGY-BENCHMARKS | UNBLOCKED | ABFM embeds PGY mean + SD in score report PDF; ite_parser.py parse_score_report() extracts; all blockers cleared for multi-year trend analysis (BATON 061) |
 
 ## Intelligence 2.0 Status
-- Layer 1 (ICD-10): Complete — 3,952 rows article_icd10 (rebuilt 2026-04-16); question_icd10 ~5,003 rows (89.9% coverage, ~1,474 ITE questions)
-- Layer 2 (PubMed currency): ✅ COMPLETE — article_currency 1,998 rows (updated 2026-04-16, BATON 061); status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals column (JSON array)
-- Layer 3 (Clinical pathways): Complete — 3,971 rows (cleaned −49 no_match); ite_analyzer_v3.py pathway_gap_map() LEFT JOIN fixed BATON 061
-- Layer 4 (Trends): Partial — trend CSV files in readable_db_files/; DEFERRED-PROGRAM-TREND now unblocked for multi-resident rollup
+- Layer 1 (ICD-10): Complete — article_icd10 4,959 rows, question_icd10 5,774 rows (BATON 062 enrichment integrated)
+- Layer 2 (PubMed currency): ✅ COMPLETE — article_currency 2,206 rows (mirrors articles after BATON 065 acquisition); status enum (current/updated/check_needed/not_indexed); title_signals column (JSON array)
+- Layer 3 (Clinical pathways): Complete — clinical_pathways 4,959 rows (BATON 062); ite_analyzer_v3.py pathway_gap_map() LEFT JOIN fixed BATON 061
+- Layer 4 (Trends): Partial — trend CSV files in readable_db_files/; DEFERRED-PROGRAM-TREND now unblocked for multi-resident rollup; not advanced this session
 
 ## Plugins & New Capabilities (BATON 049)
 - **ite-score-analyzer v1.0.0** — ITE score analysis plugin built in `skills_abilities/ite-score-analyzer-v2/`

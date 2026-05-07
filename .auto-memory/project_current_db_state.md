@@ -1,21 +1,21 @@
 # project_current_db_state.md
-Last verified: 2026-05-06 (BATON 065)
+Last verified: 2026-05-07 (BATON 066)
 
 ## DB: ite_intelligence.db
 
 | Table | Rows | Notes |
 |-------|------|-------|
-| articles | 2,206 | +208 new (ART-1999–ART-2206) from BATON 065 acquisition (exa + unpaywall batch); 1,998 → 2,206 |
+| articles | 2,206 | Stable from BATON 065 (no new articles BATON 066) |
 | questions (ITE) | 1,639 | 2018–2025 (+10 recovered), blueprint 100% |
 | aafp_questions | 1,221 | BRQ, blueprint 100% |
-| qid_art_xref | 2,710 | All 8 years (2018–2025); +225 from BATON 065 acquisition |
+| qid_art_xref | 2,710 | All 8 years (2018–2025); stable from BATON 065 |
 | aafp_qid_art_xref | 864 | 643 unique Qs linked |
-| article_icd10 | 4,959 | ↑ 3,952 (BATON 061) — pre-existing Windows PC enrichment (BATON 062) |
-| question_icd10 | 5,774 | ↑ ~5,003 (BATON 061) — ~89.9%+ ITE coverage — pre-existing Windows PC enrichment (BATON 062) |
+| article_icd10 | 4,959 | Stable; pre-existing Windows PC enrichment (BATON 062) |
+| question_icd10 | 5,774 | ~89.9%+ ITE coverage; stable (BATON 062) |
 | aafp_question_icd10 | 4,753 | Relevance normalized |
-| clinical_pathways | 4,959 | ↑ 3,971 (BATON 061) — pre-existing Windows PC enrichment (BATON 062) |
+| clinical_pathways | 4,959 | Stable (BATON 062) |
 | article_citation_trend | 1,740 | Longitudinal citation tracking + watch_list flag |
-| article_currency | 2,206 | ✅ COMPLETE 2026-05-06 — Layer 2 Intelligence updated; mirrors articles; status enum and title_signals JSON column maintained |
+| article_currency | 2,206 | ✅ COMPLETE — Layer 2 Intelligence; mirrors articles; status enum and title_signals JSON column maintained |
 | pubmed_pmid_cache | 344 | Layer 2 seed |
 | article_icd10_vec | 1,757 | Rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 | Rebuilt 2026-04-05 |
@@ -28,22 +28,27 @@ Last verified: 2026-05-06 (BATON 065)
 | blueprint_label_vec | 5 | BLOB – 5 canonical blueprint category label embeddings (NEW – BATON 056) |
 | bodysystem_label_vec | 5 | BLOB – 5 canonical body system label embeddings (NEW – BATON 056) |
 | question_concepttag_vec | 2,850 | BLOB – concept_tags embedding per question (NEW – BATON 056) |
-| intersection_centroid_vec | 158 | BLOB – ↑ 123 (BATON 061) — pre-existing Windows PC enrichment (BATON 062) |
+| intersection_centroid_vec | 158 | BLOB – Stable (BATON 062) |
 
 ## Schema Notes
 - subcategory + topic_label DROPPED from questions (ITE)
 - aafp_questions: correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED
 - QID format: QID-YYYY-NNNN (per-year numbering, resets each exam year)
 - ART-ID format: ART-XXXX (zero-padded 4 digits)
-- Next ART-ID: ART-2000
+- Next ART-ID: ART-2219 (last assigned ART-2206 BATON 065; gap reservations brought ceiling to 2219)
 - **body_system field:** Fully normalized to post-2024 ABFM canonical taxonomy (Psychiatric/Behavioral, Sexual and Reproductive, Injuries/Musculoskeletal) for ITE 2018-2021, 2024-2025, and all AAFP (BATON 060)
 - **body_system_merged field:** Forward mapping applied (BATON 060)
 
 ## Schema Notes — article_currency (NEW, BATON 046)
 - Columns: article_id (FK), status (ENUM: 'current', 'updated', 'check_needed', 'not_indexed'), title_signals (TEXT JSON array), pubmed_pmid (INT FK)
-- status breakdown: current:1100, updated:169, check_needed:106, not_indexed:610
 - title_signals: JSON array of clinical category keywords (extracted from blueprint cross-reference; used for future filtering + human review)
 - Populated via build_article_currency.py (M3 script)
+
+## DB Changes (BATON 066)
+- **No DB changes this session.** All counts stable from BATON 065.
+- Session focus was PDF acquisition (JAMA + NEJM) only — 127 new PDFs harvested (in worktree pending merge).
+- xref linkage to be performed after worktree merge in next session.
+- **Script additions only:** M1 maintain +8 scripts (jama_chrome_harvester.py, jama_prep_articlepdf_urls.py, nejm_doi_lookup.py, nejm_build_js_batch.py, nejm_console_script.py, nejm_move_downloads.py, nejm_save_server.py, unpaywall_retry.py) — all in worktree, pending merge.
 
 ## DB Changes (BATON 065)
 - **Phase 2 PDF acquisition:** articles 1,998 → 2,206 (+208 new articles ART-1999–ART-2206)
@@ -122,15 +127,13 @@ Last verified: 2026-05-06 (BATON 065)
 - article_currency: NEW — 1,985 rows — Layer 2 Intelligence complete
 - Scripts added: build_article_currency.py (M3)
 
-## Key Metric Changes Since BATON 059
+## Key Metric Changes Since BATON 064
 
-| Metric | BATON 059 | BATON 060 | BATON 061 | Change (059→061) | Notes |
+| Metric | BATON 064 | BATON 065 | BATON 066 | Change (064→066) | Notes |
 |--------|-----------|-----------|-----------|--------|-------|
-| questions (ITE) | 1,629 | 1,639 | 1,639 | +10 | Recovered questions enriched (BATON 060) |
-| article_icd10 | 4,020 | 3,952 | 3,952 | −68 | Synonym map normalization variance (BATON 060) |
-| question_icd10 | ~5,218 | ~5,003 | ~5,003 | −215 approx | 89.9% coverage update (BATON 060) |
-| article_vec | stale | 1,998 | 1,998 | rebuilt | Consistent with articles table (BATON 060) |
-| question_vec | stale | 1,639 | 1,639 | rebuilt | Consistent with ITE questions table (BATON 060) |
-| article_currency | stale | 1,985 | 1,998 | rebuilt | Layer 2 Intelligence complete (BATON 061) |
-| intersection_centroid_vec | 135 | 123 | 123 | −12 | Rebuilt after body_system normalization (BATON 060) |
-| M3 scripts | 39 | 50 | 50 | +10 py | Stage 1.75 pipeline additions (BATON 060); pathway fix (BATON 061) |
+| articles | 1,998 | 2,206 | 2,206 | +208 | EXA + Unpaywall batch acquisition (BATON 065) |
+| qid_art_xref | 2,485 | 2,710 | 2,710 | +225 | New article xref linkages (BATON 065) |
+| article_currency | 1,998 | 2,206 | 2,206 | +208 | Mirrors articles table (BATON 065) |
+| ITE PDFs (active tiers) | 988 | 1,254 | 1,381 (post-merge) | +393 | EXA/Unpaywall +266 (BATON 065); JAMA/NEJM +127 (BATON 066, in worktree) |
+| M1 maintain scripts | 26 | 30 | 36 (post-merge) | +10 | +4 BATON 065; +8 BATON 066 (in worktree) |
+| All other tables | stable | stable | stable | 0 | No changes BATON 066 |

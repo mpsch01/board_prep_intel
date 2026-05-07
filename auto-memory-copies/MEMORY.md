@@ -1,11 +1,11 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-05-05 (BATON 064)
+Last updated: 2026-05-07 (BATON 066)
 
 ## Active Memory Files
-- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 064
-- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (1,998 articles, 1,639 ITE Qs), schema state; body_system + body_system_merged fully normalized; article_currency complete 1,998; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — all stable BATON 064
+- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 066
+- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (2,206 articles, 1,639 ITE Qs), schema state; body_system + body_system_merged fully normalized; article_currency complete 2,206; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — all stable BATON 066 (no DB changes)
 - [rebuild_structuring_guidelines.md](rebuild_structuring_guidelines.md) — Locked rules and architecture principles
-- [glossary.md](glossary.md) — Project terminology decoder
+- Project terminology decoder — see `Terms — Decode These First` table in `CLAUDE.md` (no separate glossary.md file exists; CLAUDE.md is the single source of truth for term definitions)
 
 ## Session Feedback + Policy Updates
 - [feedback_reco_cleanup_closed.md](feedback_reco_cleanup_closed.md) — RECO folder cleanup DONE; never carry forward
@@ -73,9 +73,25 @@ Last updated: 2026-05-05 (BATON 064)
 - **Files API infrastructure built** — critique_pdf_registry.py tracks 2018-2025 ITE PDFs; extract_critique_refs_v2.py parses citations with parse_legacy() + fallback_citation_scan(); enables ground-truth xref rebuilds
 - **Human review queue:** 201 ITE + 129 AAFP questions pending verification before commit; deferred flags: DEFERRED-BODY-SYSTEM-MERGED-UPDATE, DEFERRED-CENTROID-REBUILD, DEFERRED-HUMAN-REVIEW-BODY-SYSTEM
 
-## Open Items (BATON 062)
-- **DEFERRED-REPORT-GUIDE** — Write resident and faculty advisor interpretation guides (2 DOCX documents); unpacks scoring note, body_system provenance, consolidated table structure
+## Phase 2 PDF Acquisition (BATON 065)
+- **EXA + Unpaywall batch acquisition:** 281 new PDFs; 208 new articles (ART-1999–ART-2206); +225 qid_art_xref linkages
+- **VC_fail 630→879, VC_pass 168→200**
+- **Four new M1 maintain scripts:** acquire_missing_citations.py, playwright_auth_downloader.py, browser_pdf_harvester.py, setup_journal_auth.py
+- **JAMA/NEJM IP-blocked at Playwright layer** → jama_pending.json output (handed to BATON 066)
+
+## JAMA + NEJM PDF Harvest (BATON 066)
+- **127 new PDFs harvested** (in worktree pending merge): JAMA 50/50 + NEJM 76/89
+- **DevTools-console paste pattern established** — unblocks browser-auth journals where Playwright/curl are IP-blocked or hit Cloudflare
+- **Eight new M1 maintain scripts** (in `01_module.1_warehouse/scripts/maintain/`, all in worktree pending merge): jama_chrome_harvester.py, jama_prep_articlepdf_urls.py, nejm_doi_lookup.py, nejm_build_js_batch.py, nejm_console_script.py, nejm_move_downloads.py, nejm_save_server.py, unpaywall_retry.py
+- **DEFERRED-NEJM-PHASE-2 + DEFERRED-JAMA-PHASE-2 CLOSED**
+- **New deferred flags:** DEFERRED-MERGE-WORKTREE-TO-MAIN, DEFERRED-UNPAYWALL-CLOUDFLARE (144 OA URLs blocked), DEFERRED-DESHMUKH-2021 (ART-0302 paywalled at tandfonline), DEFERRED-PENDING-LIST-QC (jama_pending.json had wrong URL bug)
+- **DB state:** No schema changes; no row-count changes (PDFs only; xref linkage to be done after merge)
+
+## Open Items (BATON 066)
+- **DEFERRED-MERGE-WORKTREE-TO-MAIN** — Step 1 of next session: merge 127 PDFs + 8 scripts from worktree (modest-merkle-df0121) to main repo path
+- **DEFERRED-UNPAYWALL-CLOUDFLARE** — Apply DevTools-console paste pattern to 144 OA URLs blocked by Cloudflare
+- **DEFERRED-QID-XREF-LIBRARY-GAPS** — ~249 unmatched citations (pre-Phase 2); prioritize by frequency
 - **DEFERRED-HUMAN-REVIEW-BODY-SYSTEM** — ~308 holdout questions (179 ITE + 129 AAFP) pending manual verification; applies to 2022-2023 legacy data only
-- **DEFERRED-PROGRAM-TREND** — ✅ NOW UNBLOCKED — Multi-resident program-level trends; benchmark against 2024 ABFM national reference (all blockers cleared BATON 061)
-- **DEFERRED-PGY-BENCHMARKS** — ✅ NOW UNBLOCKED — Ready for multi-year trend analysis
+- **DEFERRED-PROGRAM-TREND / DEFERRED-PGY-BENCHMARKS** — Both UNBLOCKED — multi-resident program-level trends; benchmark against 2024 ABFM national reference
 - **DEFERRED-RESIDENT-FOLDER-MIGRATION** — Investigate resident_data/ folder state and M5 integration pathway
+- **Re-run 7 resident analyses on Mac after git pull** (carry-over from BATON 063)

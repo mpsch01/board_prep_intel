@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-05-05 (BATON 064 — Git hash: 7920979) — Practice question system complete (exam series + custom question sets); three new M3 scripts; two Cowork skills packaged
+**Last Updated:** 2026-05-07 (BATON 066 — Git hash: 85e8ab7) — JAMA + NEJM PDF harvest complete (127 new PDFs: 50 JAMA + 76 NEJM + 1 unpaywall); 8 new M1 maintain scripts; DevTools-console paste pattern established for Chrome MCP user-activation gap
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -12,7 +12,7 @@ board_prep_intel/
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
 ├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_064_*.md              Active session handoff — read first every session
+├── BATON_active_066_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
@@ -31,17 +31,17 @@ board_prep_intel/
 ├── 01_module.1_warehouse/             M1 — PDF library + build/maintain DB scripts
 │   ├── citation_files/
 │   │   ├── ITE/
-│   │   │   ├── VC_fail/               630 PDFs: failed VC gate; awaiting enrichment (gitignored)
-│   │   │   ├── VC_pass/               168 PDFs: passed VC gate; awaiting enrichment (gitignored)
+│   │   │   ├── VC_fail/               990 PDFs: failed VC gate; awaiting enrichment (gitignored) — +111 from BATON 066 worktree (post-merge)
+│   │   │   ├── VC_pass/               216 PDFs: passed VC gate; awaiting enrichment (gitignored) — +16 from BATON 066 worktree (post-merge)
 │   │   │   ├── local_lite/            117 PDFs: VC_fail + fully enriched (gitignored)
 │   │   │   ├── right_click/           58 PDFs: VC_pass + fully enriched — priority tier (gitignored)
-│   │   │   └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored) — ite_total: 988
-│   │   └── AAFP/                      15 PDFs: AAFP citation library (gitignored) — ite_total: 988 (VC_fail:630, VC_pass:168, local_lite:117, right_click:58)
+│   │   │   └── _dupe_archive/         14 duplicate PDFs quarantined (gitignored) — ite_total: 1381 post-merge
+│   │   └── AAFP/                      15 PDFs: AAFP citation library (gitignored) — ite_total: 1381 (VC_fail:990, VC_pass:216, local_lite:117, right_click:58)
 │   ├── ite_exams/                     16 raw ITE exam PDFs: YYYY_MC.pdf + YYYY_critique.pdf (gitignored)
 │   └── scripts/
 │       ├── aafp_brq_scraper.py        AAFP BRQ scraper (Windows-only)
-│       ├── build/                     6 scripts: full DB rebuild sequence
-│       └── maintain/                  25 scripts: recurring DB population and maintenance
+│       ├── build/                     8 scripts: full DB rebuild sequence
+│       └── maintain/                  36 scripts: recurring DB population and maintenance (+8 BATON 066: jama_chrome_harvester, jama_prep_articlepdf_urls, nejm_doi_lookup, nejm_build_js_batch, nejm_console_script, nejm_move_downloads, nejm_save_server, unpaywall_retry)
 │
 ├── 02_module.2_processor/             M2 — Extraction, enrichment, DOCX build pipeline
 │   ├── main.py                        Pipeline entry point
