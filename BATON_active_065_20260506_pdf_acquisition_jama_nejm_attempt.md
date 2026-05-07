@@ -424,9 +424,26 @@ BATON 065: PDF acquisition phase 2 — JAMA/NEJM strategies & xref gap closure
 | Risk | Mitigation |
 |------|-----------|
 | Cookie files left in repo | Delete before push; add to .gitignore if recurring |
-| Scratch scripts polluting project root | Clean up before next push (8 scripts identified) |
+| Scratch scripts polluting project root | ✅ Resolved — see Post-Session Cleanup note below |
 | NEJM IP block persistence | Check status in 24h; use JS injection when unblocked |
 | JAMA Quantum Metric bypass | Click-based approach confirmed viable; no other known bypass |
+
+### Post-Session Cleanup (added after BATON write)
+
+Before the final git commit, 10 single-use scripts were identified, temporarily moved to a `delete_me_baton_65/` folder at project root, and then deleted entirely:
+
+**8 root-level scratch scripts** (all query/repair one-offs from the acquire_missing_citations.py debugging phase):
+`check_art_id_format.py`, `diagnose_missing_inserts.py`, `find_fauci_records.py`, `fix_art_2005_2041.py`, `fix_art_2041.py`, `fix_remaining_nulls.py`, `get_jama_list.py`, `repair_orphaned_xrefs.py`
+
+**2 M1 maintain scripts** deleted due to structural flaws:
+- `browser_pdf_harvester.py` — CORS flaw is structural; localhost-served HTML cannot fetch cross-origin JAMA/NEJM URLs; no path to fix
+- `setup_journal_auth.py` — cookie export helper; only fed the failed auth approaches; no standalone utility
+
+**Retained (committed):**
+- `acquire_missing_citations.py` — multi-phase pipeline for gap closure; durable, reusable
+- `playwright_auth_downloader.py` — three-path architecture; useful for future non-Cloudflare journals
+
+**Also moved this session:** `custom-question-set.skill` and `ite-exam-series.skill` were found at project root; moved to `.claude/skills/` (their correct location).
 
 ### Success Metrics This Session
 ✅ 297 PDFs acquired (249 + 32 = 281 ITE, +16 AAFP)  

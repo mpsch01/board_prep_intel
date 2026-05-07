@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-04-16 (BATON 061)
+**Last updated:** 2026-05-06 (BATON 065)
 **Status:** Active development
-**Active BATON:** `BATON_active_061_20260416_legacy_bodysystem_analyses_complete.md`
-**Next ART-ID:** ART-2000
-**Git:** `main` → `bc462a3` → `https://github.com/mpsch01/board_prep_intel` (private)
+**Active BATON:** `BATON_active_065_20260506_pdf_acquisition_jama_nejm_attempt.md`
+**Next ART-ID:** ART-2219
+**Git:** `main` → `(pending)` → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -13,52 +13,52 @@
 ```json
 {
   "project": "ABFM ITE Intelligence System",
-  "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (1,998 articles, 1,004 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_061_20260416_legacy_bodysystem_analyses_complete.md",
-  "baton_description": "Stage 1.75 DB body system backfill added; all 7 resident analyses complete; DEFERRED-HUMAN-REVIEW-BODY-SYSTEM closed; article_currency 1,998/1,998 complete.",
-  "git_hash": "bc462a3",
+  "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,285 PDFs) via a structured SQLite pipeline.",
+  "baton": "BATON_active_065_20260506_pdf_acquisition_jama_nejm_attempt.md",
+  "baton_description": "Phase 2 PDF acquisition; +208 articles (ART-2000–ART-2218); +225 xref pairs; JAMA/NEJM auth blocked; jama_pending.json for Claude Code; acquire_missing_citations.py complete.",
+  "git_hash": "(pending)",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
-  "last_updated": "2026-04-16",
-  "next_art_id": "ART-2000",
+  "last_updated": "2026-05-06",
+  "next_art_id": "ART-2219",
   "vc_gate_citations": 352,
   "database": {
     "file": "00_database/db/ite_intelligence.db",
-    "articles": 1998,
+    "articles": 2206,
     "questions_ite": 1639,
     "questions_aafp": 1221,
-    "qid_art_xref": 2485,
+    "qid_art_xref": 2710,
     "aafp_qid_art_xref": 864,
-    "article_icd10": 3952,
-    "question_icd10": 5003,
+    "article_icd10": 4959,
+    "question_icd10": 5774,
     "aafp_question_icd10": 4753,
-    "clinical_pathways": 3971,
+    "clinical_pathways": 4959,
     "pubmed_pmid_cache": 344,
     "icd10_vec": 2219,
     "article_icd10_vec": 1757,
     "question_icd10_vec": 2747,
-    "article_vec": 1998,
+    "article_vec": 2206,
     "question_vec": 1639,
     "aafp_question_vec": 1221,
-    "intersection_centroid_vec": 123,
-    "article_currency": 1998
+    "intersection_centroid_vec": 158,
+    "article_currency": 2206
   },
   "pdfs": {
-    "vc_fail": 630,
-    "vc_pass": 168,
+    "vc_fail": 879,
+    "vc_pass": 200,
     "local_lite": 117,
     "right_click": 58,
     "aafp": 15,
     "ite_exams": 16,
-    "total": 1004
+    "total": 1285
   },
   "scripts": {
     "m1_build_py": 8,
-    "m1_maintain_py": 26,
+    "m1_maintain_py": 30,
     "m2_py": 75,
     "m2_js": 6,
-    "m3_py": 50,
-    "m3_js": 2,
+    "m3_py": 55,
+    "m3_js": 4,
     "m4_py": 1,
     "m5_py": 3,
     "m5_typescript": 35,
@@ -87,15 +87,15 @@ A queryable Family Medicine board exam knowledge base: 1,639 ITE questions (2018
 
 ### 00_database/
 Source of truth. Never disposable.
-- `db/ite_intelligence.db` — Production SQLite database (1,998 articles, 1,639 ITE questions, 1,221 AAFP questions)
+- `db/ite_intelligence.db` — Production SQLite database (2,206 articles, 1,639 ITE questions, 1,221 AAFP questions)
 - `readable_db_files/` — CSV exports, human-readable snapshots
 - `logs/` — Pipeline run logs
 - `schemas/` — clinical_synonym_map.json, icd10_mcp_lookup.json, ite-data-context-skill/
 
 ### 01_module.1_warehouse/
 PDF library (4 tiers, 973 ITE + 15 AAFP + 16 exam PDFs) + pipeline build and maintenance scripts.
-- `citation_files/ITE/VC_fail/` — 630 PDFs: bulk; lowest citation priority
-- `citation_files/ITE/VC_pass/` — 168 PDFs: codon-named, VC-cited, awaiting full pipeline
+- `citation_files/ITE/VC_fail/` — 879 PDFs: bulk; lowest citation priority
+- `citation_files/ITE/VC_pass/` — 200 PDFs: codon-named, VC-cited, awaiting full pipeline
 - `citation_files/ITE/local_lite/` — 117 PDFs: VC_fail + fully enriched (pipeline complete)
 - `citation_files/ITE/right_click/` — 58 PDFs: VC_pass + fully enriched (highest-value tier)
 - `citation_files/AAFP/` — 15 AAFP citation PDFs (recovered 2026-04-05)
@@ -103,7 +103,7 @@ PDF library (4 tiers, 973 ITE + 15 AAFP + 16 exam PDFs) + pipeline build and mai
 - `citation_files/ite_exams/` — 16 raw PDFs: YYYY_MC.pdf + YYYY_critique.pdf (2018–2025)
 - `practice_questions/` — 42 Q&A deliverables: 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored; regenerable from DB)
 - `build/` — 8 scripts: self-contained full rebuild sequence
-- `maintain/` — 26 scripts: recurring DB population and maintenance operations
+- `maintain/` — 30 scripts: recurring DB population and maintenance operations
 - `scripts/aafp_brq_scraper.py` — scraper at scripts/ root (Windows-only)
 
 ### 02_module.2_processor/
@@ -112,7 +112,7 @@ Extraction, enrichment, and DOCX build pipeline.
 
 ### 03_module.3_analyst/
 ICD-10 tagging, clinical pathways, trend analysis, score analysis, body system QC/normalization, AAFP-ITE reuse investigation.
-- `scripts/` — 50 Python + 2 JS (ite_analyzer_v3.py, ite_parser.py, ite_report_builder_v2.js, build_article_currency.py, body-system-qc pipeline, normalization scripts, etc.)
+- `scripts/` — 55 Python + 4 JS (ite_analyzer_v3.py, ite_parser.py, ite_report_builder_v2.js, build_article_currency.py, body-system-qc pipeline, normalization scripts, build_custom_question_set.py, build_exam_series.py, etc.)
 - `docs/` — per-resident analysis output docs
 - `resident_data/` — raw ABFM score report PDFs, structured as `ITE_{lastname}_{firstname}/inputs/` + `outputs/` (not git-tracked)
 
@@ -149,31 +149,31 @@ Critical reference data:
 
 ---
 
-## Database State (as of 2026-04-16, BATON 061)
+## Database State (as of 2026-05-06, BATON 065)
 
 | Table | Rows | Notes |
 |-------|------|-------|
-| articles | 1,998 | +13 from BATON 058 QC rebuild (ART-1987–ART-1999) |
+| articles | 2,206 | +13 BATON 058 (ART-1987–ART-1999); +208 BATON 065 (ART-2000–ART-2218) via acquire_missing_citations.py |
 | questions (ITE) | 1,639 | 2018–2025; blueprint 100%; body_system fully normalized (BATON 060) |
 | aafp_questions | 1,221 | blueprint + concept_tags 100%; correct_letter/correct_text/explanation merged in |
-| qid_art_xref | 2,485 | all 8 years (2018–2025); rebuilt from critique ground truth BATON 058 |
+| qid_art_xref | 2,710 | all 8 years (2018–2025); rebuilt BATON 058; +225 pairs BATON 065 |
 | aafp_qid_art_xref | 864 | 643 unique questions linked (52.7%) |
-| article_icd10 | 3,952 | rebuilt 2026-04-15 (−68 from synonym map variance) |
-| question_icd10 | ~5,003 | 1,474/1,639 ITE questions (89.9%) — rebuilt 2026-04-15 |
+| article_icd10 | 4,959 | ↑ from 3,952 (pre-existing Windows PC enrichment, confirmed BATON 062) |
+| question_icd10 | 5,774 | rebuilt — enrichment via ICD-10 propagation pipeline |
 | aafp_question_icd10 | 4,753 | relevance normalized; related cap applied |
-| clinical_pathways | 3,971 | blueprint-based, both banks — rebuilt 2026-03-31 |
+| clinical_pathways | 4,959 | ↑ from 3,971 (pre-existing Windows PC enrichment, confirmed BATON 062) |
 | article_citation_trend | 1,740 | longitudinal citation tracking + watch_list flag |
-| article_currency | 1,998 | ✅ Intelligence 2.0 Layer 2 complete 2026-04-16 — all 1,998 articles currency-tracked |
+| article_currency | 2,206 | ✅ Intelligence 2.0 Layer 2 complete — all articles currency-tracked |
 | pubmed_pmid_cache | 344 | Layer 2 seed (citation_id → PMID) |
 | icd10_vec | 2,219 | BLOB — OpenAI text-embedding-3-small (1536d) |
 | article_icd10_vec | 1,757 | BLOB — rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 | BLOB — rebuilt 2026-04-05 |
-| article_vec | 1,998 | sqlite-vec virtual table — rebuilt 2026-04-15 |
-| question_vec | 1,639 | sqlite-vec virtual table — rebuilt 2026-04-15 |
+| article_vec | 2,206 | sqlite-vec virtual table |
+| question_vec | 1,639 | sqlite-vec virtual table |
 | aafp_question_vec | 1,221 | sqlite-vec virtual table |
 | question_full_vec | 1,639 | BLOB — full question embedding with blueprint (BATON 056) |
 | aafp_question_full_vec | 1,221 | BLOB — full AAFP embedding with blueprint+body_system+concept_tags (BATON 056) |
-| intersection_centroid_vec | 123 | BLOB — 69 ITE + 54 AAFP blueprint×body_system centroids — rebuilt 2026-04-16 |
+| intersection_centroid_vec | 158 | BLOB — blueprint×body_system centroids — ↑ from 123 (BATON 062) |
 
 ---
 
@@ -208,12 +208,12 @@ DB_PATH      = PROJECT_ROOT / "00_database" / "db" / "ite_intelligence.db"
 
 | Layer | Status | Table |
 |-------|--------|-------|
-| Layer 1 — ICD-10 diagnostic linkage | ✅ Built | article_icd10 (3,952) + question_icd10 (~5,003) + aafp_question_icd10 (4,753) |
-| Layer 2 — PubMed currency | ✅ Built | article_currency (1,985 rows) — rebuilt 2026-04-07 |
-| Layer 3 — Clinical pathways | ✅ Built | clinical_pathways (3,971 rows) — rebuilt 2026-03-31 |
+| Layer 1 — ICD-10 diagnostic linkage | ✅ Built | article_icd10 (4,959) + question_icd10 (5,774) + aafp_question_icd10 (4,753) |
+| Layer 2 — PubMed currency | ✅ Built | article_currency (2,206 rows) — complete 2026-04-16; +208 new articles BATON 065 |
+| Layer 3 — Clinical pathways | ✅ Built | clinical_pathways (4,959 rows) — ↑ from 3,971 |
 | Layer 4 — Trends + alerts | ⬜ Partial | topic_trends built; pubmed_alerts planned |
 | Citation trend tracking | ✅ Built | article_citation_trend (1,740 rows) |
-| Vector embeddings | ✅ Built | icd10_vec (2,219) + article_icd10_vec (1,757) + question_icd10_vec (2,747) + intersection_centroid_vec (123) |
+| Vector embeddings | ✅ Built | icd10_vec (2,219) + article_icd10_vec (1,757) + question_icd10_vec (2,747) + intersection_centroid_vec (158) |
 
 ---
 
@@ -244,12 +244,13 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 
 ---
 
-## Deferred Flags (active as of BATON 061)
+## Deferred Flags (active as of BATON 065)
 
 | Flag | Status | Description |
 |------|--------|-------------|
+| DEFERRED-JAMA-NEJM-PDF-HARVEST | ACTIVE | 50 JAMA PDFs (jama_pending.json, Claude Code click); ~65 NEJM (IP block lifting) |
 | DEFERRED-KNOWN-DRUGS-EXPANSION | ACTIVE | Identify offending drug names; decide fix approach |
-| DEFERRED-QID-XREF-LIBRARY-GAPS | ACTIVE | 249 unmatched citations need article acquisition |
+| DEFERRED-QID-XREF-LIBRARY-GAPS | ACTIVE | ~249 unmatched citations; partial closure BATON 065 (+225 xref pairs) |
 | DEFERRED-PGY-BENCHMARKS | UNBLOCKED | Implement benchmark comparison functionality |
 | DEFERRED-PROGRAM-TREND | UNBLOCKED | Implement program-level trend analysis |
 | DEFERRED-YOY-ROBUSTNESS | ACTIVE | Month-by-month rollup needs testing with dense temporal data |
@@ -259,16 +260,17 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 
 ---
 
-## Next Steps (BATON 061)
+## Next Steps (BATON 065)
 
 ### Immediate
-1. Implement PGY benchmark comparison — UNBLOCKED (DEFERRED-PGY-BENCHMARKS)
-2. Implement program-level trend analysis — UNBLOCKED (DEFERRED-PROGRAM-TREND)
-3. Add `--score-report` flag to batch runner for residents with score PDFs
+1. **JAMA PDFs** — Use Claude Code: navigate to each article page, click PDF link. List in `jama_pending.json` (50 articles)
+2. **NEJM PDFs** — Wait for IP block to lift (IP 131.106.58.189), then Claude in Chrome JS injection (~65 articles)
+3. **Re-run 7 resident analyses** on Mac after git pull (pending from BATON 063)
 
 ### Short-term
-4. **DEFERRED-KNOWN-DRUGS-EXPANSION** — identify offending drug names
-5. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations need acquisition
+4. **DEFERRED-QID-XREF-LIBRARY-GAPS** — ~249 unmatched citations remain; prioritize by frequency
+5. **DEFERRED-PGY-BENCHMARKS** — Implement benchmark comparison — UNBLOCKED
+6. **DEFERRED-KNOWN-DRUGS-EXPANSION** — identify offending drug names
 
 ---
 
@@ -284,4 +286,4 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 ---
 
 **Project Lead:** Michael Scholl, MD
-**Last Reviewed:** 2026-04-16 (BATON 061, git bc462a3)
+**Last Reviewed:** 2026-05-06 (BATON 065, git pending)

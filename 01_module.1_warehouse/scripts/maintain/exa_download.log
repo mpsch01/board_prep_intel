@@ -1,509 +1,364 @@
-=== exa_pdf_downloader.py - 2026-04-07T22:00:53.613202 ===
-tier=VC_fail class=None limit=0 resume=False dry_run=False
-  AAFP session cookie: not set (open AFP articles only)
+=== exa_pdf_downloader.py - 2026-05-06T20:22:17.124239 ===
+tier=None class=None limit=0 resume=False dry_run=False
 
-Queue loaded: 1303 rows
-Actionable: 492  |  Skipped (non-downloadable class): 811
-Resume: skipped 404 already on disk
+  AAFP:  AAFP_SESSION_COOKIE not set (open AFP articles only)
+  ✓ JAMA: curl_cffi session (Chrome TLS impersonation active)
+  ✓ JAMA: 22 cookies loaded from JAMA cookies 05062026.txt
+  ✓ NEJM: curl_cffi session (Chrome TLS impersonation active)
+  ✓ NEJM: 19 cookies loaded from nejm cookies 05062026.txt
 
-Starting downloads: 88 files
+Queue loaded: 1234 rows
+Actionable: 1022  |  Skipped (no handler / no creds): 212
+Strategy filter 'nejm_auth': 1022 → 68
+Resume: skipped 1 already on disk
 
-[1/88] ART-0034 [direct] 325-337
-  → Alexander_2024#@#ART-0034@#@.pdf
-    https://www.cambridge.org/core/services/aop-cambridge-core/content/view/74F2824C
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    ✗ failed
-[2/88] ART-0065 [direct] 15
-  → American_2020#@#ART-0065@#@.pdf
-    https://www.dietaryguidelines.gov/sites/default/files/2020-12/Dietary_Guidelines
-    ✓ saved (31403 KB)
-[3/88] ART-0157 [direct] specific birth defects
-  → Birth_2023#@#ART-0157@#@.pdf
-    https://stacks.cdc.gov/view/cdc/131789/cdc_131789_DS1.pdf
-    ✓ saved (133 KB)
-[4/88] ART-0170 [direct] Why it matters
-  → Breastfeeding_2021#@#ART-0170@#@.pdf
-    https://iris.who.int/bitstream/handle/10665/348546/WHO-HEP-NFS-21.45-eng.pdf
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    ✗ failed
-[5/88] ART-0172 [direct] Drugs in Pregnancy and Lactation, ed 11
-  → Briggs_2017#@#ART-0172@#@.pdf
-    https://dl.icdst.org/pdfs/files3/3997cb34b4619c4c7d47a4f0120f3b49.pdf
-    Timeout: https://dl.icdst.org/pdfs/files3/3997cb34b4619c4c7d47a4f0120f3b49.pdf
-    ✗ failed
-[6/88] ART-0200 [direct] Interim clinical guidance for management of patien
-  → COVID-19_2021#@#ART-0200@#@.pdf
-    https://iris.who.int/bitstream/handle/10665/349321/WHO-2019-nCoV-clinical-2021.2
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    ✗ failed
-[7/88] ART-0263 [direct] Countermeasures Injury Compensation Program (CICP)
-  → Countermeasures_2020#@#ART-0263@#@.pdf
-    https://www.hrsa.gov/sites/default/files/hrsa/cicp/cicpfactsheet.pdf
-    ✓ saved (127 KB)
-[8/88] ART-0288 [direct] Acquired triggering of the fingers and thumb in ad
-  → David_2017#@#ART-0288@#@.pdf
-    https://www.bmj.com/content/bmj/359/bmj.j5285.full.pdf
-    HTTP 403 → https://www.bmj.com/content/bmj/359/bmj.j5285.full.pdf
-    ✗ failed
-[9/88] ART-0380 [direct] intravenous magnesium sulphate should be the first
-  → Erumbala_2021#@#ART-0380@#@.pdf
-    https://breathe.ersjournals.com/content/breathe/17/4/210113.full.pdf
-    HTTP 403 → https://breathe.ersjournals.com/content/breathe/17/4/210113.full.pdf
-    ✗ failed
-[10/88] ART-0395 [direct] Update on the diagnosis and management of systemic
-  → Fanouriakis_2021#@#ART-0395@#@.pdf
-    https://ard.bmj.com/content/annrheumdis/80/1/14.full.pdf
-    HTTP 403 → https://ard.bmj.com/content/annrheumdis/80/1/14.full.pdf
-    ✗ failed
-[11/88] ART-0702 [direct] 2018 Update of the EULAR recommendations for the m
-  → Kloppenburg_2018#@#ART-0702@#@.pdf
-    https://ard.bmj.com/content/annrheumdis/78/1/16.full.pdf
-    HTTP 403 → https://ard.bmj.com/content/annrheumdis/78/1/16.full.pdf
-    ✗ failed
-[12/88] ART-0804 [direct] the Maastricht VI/Florence consensus report
-  → Malfertheiner_2022#@#ART-0804@#@.pdf
-    https://gut.bmj.com/content/gutjnl/early/2022/08/08/gutjnl-2022-327745.full.pdf
-    HTTP 403 → https://gut.bmj.com/content/gutjnl/early/2022/08/08/gutjnl-2022-327745
-    ✗ failed
-[13/88] ART-0890 [direct] rapid evidence review
-  → Morcomb_2024#@#ART-0890@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2024/0800/mastitis.pdf
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    ✗ failed
-[14/88] ART-0931 [direct] US Department of Health and Human Services; 2015
-  → Office_2015#@#ART-0931@#@.pdf
-    https://www.hhs.gov/sites/default/files/afr/fy-2015-hhs-agency-financial-report.
-    ✓ saved (7485 KB)
-[15/88] ART-0990 [direct] Sleep apnea, aldosterone, and resistant hypertensi
-  → Pimenta_2009#@#ART-0990@#@.pdf
-    https://www.nature.com/articles/jhh201147.pdf
-    Not a PDF (Content-Type: text/html; charset="utf-8")
-    ✗ failed
-[16/88] ART-1025 [direct] what are the risks for infection and has the 'gold
-  → Quinn_2014#@#ART-1025@#@.pdf
-    https://emj.bmj.com/content/emermed/31/2/96.full.pdf
-    HTTP 403 → https://emj.bmj.com/content/emermed/31/2/96.full.pdf
-    ✗ failed
-[17/88] ART-1164 [direct] Six domains of health care quality. Agency for Hea
-  → Six_2018#@#ART-1164@#@.pdf
-    https://www.ahrq.gov/sites/default/files/wysiwyg/research/findings/nhqrdr/2018qd
-    HTTP 202 → https://www.ahrq.gov/sites/default/files/wysiwyg/research/findings/nhq
-    ✗ failed
-[18/88] ART-1277 [direct] VA/DoD clinical practice guideline for the managem
-  → VA_2017#@#ART-1277@#@.pdf
-    https://healthquality.va.gov/guidelines/MH/ptsd/VADoDPTSDCPGFinal.pdf
-    HTTP 404 → https://healthquality.va.gov/guidelines/MH/ptsd/VADoDPTSDCPGFinal.pdf
-    ✗ failed
-[19/88] ART-1279 [direct] Educate the parent and patient
-  → Vaccine_2019#@#ART-1279@#@.pdf
-    https://www.cdc.gov/hpv/hcp/for-hcp-tipsheet-hpv.pdf
-    HTTP 404 → https://www.cdc.gov/hpv/hcp/for-hcp-tipsheet-hpv.pdf
-    ✗ failed
-[20/88] ART-1347 [direct] Intrahepatic cholestasis of pregnancy
-  → Williamson_2014#@#ART-1347@#@.pdf
-    https://journals.lww.com/greenjournal/Documents/July2014_AtE_Williamson.pdf
-    HTTP 403 → https://journals.lww.com/greenjournal/Documents/July2014_AtE_Williamso
-    ✗ failed
-[21/88] ART-1725 [direct] Medication reconciliation
-  → AHRQ_2017#@#ART-1725@#@.pdf
-    https://www.ahrq.gov/sites/default/files/wysiwyg/professionals/quality-patient-s
-    HTTP 202 → https://www.ahrq.gov/sites/default/files/wysiwyg/professionals/quality
-    ✗ failed
-[22/88] ART-1740 [direct] Acute bacterial prostatitis: Diagnosis and managem
-  → Coker_2016#@#ART-1740@#@.pdf
-    https://www.chi.gov.sa/Style%20Library/IDF_Branding/Indication/81%20-%20Acute%20
-    Connection error: HTTPSConnectionPool(host='www.chi.gov.sa', port=443): Max retries exceeded with url: /Style%20Library/IDF_Branding/Indication/81%20-%20Acute%20Bacterial%20Prostatitis-Indication%20Update.pdf (Caused by NewConnectionError("HTTPSConnection(host='www.chi.gov.sa', port=443): Failed to establish a new connection: [WinError 10051] A socket operation was attempted to an unreachable network"))
-    ✗ failed
-[23/88] ART-1760 [direct] Clinical inquiry
-  → Bly_2013#@#ART-1760@#@.pdf
-    https://bmjopen.bmj.com/content/bmjopen/3/5/e002714.full.pdf
-    HTTP 403 → https://bmjopen.bmj.com/content/bmjopen/3/5/e002714.full.pdf
-    ✗ failed
-[24/88] ART-1776 [direct] Colorectal cancer screening and surveillance
-  → Short_2015#@#ART-1776@#@.pdf
-    https://fascrs.org/ascrs/media/files/downloads/Clinical%20Practice%20Guidelines/
-    HTTP 404 → https://fascrs.org/ascrs/media/files/downloads/Clinical%20Practice%20G
-    ✗ failed
-[25/88] ART-1782 [direct] Evaluation and management of the patient with susp
-  → Strand_2017#@#ART-1782@#@.pdf
-    https://portsmouth.tricare.mil/Portals/130/Rheumatology%20SRG%20Inflammatory%20B
-    ✓ saved (208 KB)
-[26/88] ART-1863 [direct] Guidance
-  → Post-traumatic_2018#@#ART-1863@#@.pdf
-    https://www.healthquality.va.gov/guidelines/MH/ptsd/VADoDPTSDCPGFinal012418.pdf
-    Connection error: HTTPSConnectionPool(host='www.healthquality.va.gov', port=443): Max retries exceeded with url: /guidelines/MH/ptsd/VADoDPTSDCPGFinal012418.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
-    ✗ failed
-[27/88] ART-1864 [direct] Evaluation and management of penicillin allergy: A
-  → Shenoy_2019#@#ART-1864@#@.pdf
-    https://2024.sci-hub.se/7289/caa3bed27d5feb10e3c6a9aadaf9b4a1/shenoy2019.pdf
-    Connection error: HTTPSConnectionPool(host='2024.sci-hub.se', port=443): Max retries exceeded with url: /7289/caa3bed27d5feb10e3c6a9aadaf9b4a1/shenoy2019.pdf (Caused by NameResolutionError("HTTPSConnection(host='2024.sci-hub.se', port=443): Failed to resolve '2024.sci-hub.se' ([Errno 11001] getaddrinfo failed)"))
-    ✗ failed
-[28/88] ART-1909 [direct] Thiazide-induced hyponatremia
-  → Hwang_2010#@#ART-1909@#@.pdf
-    https://ncbi.nlm.nih.gov/pmc/articles/PMC3041494/pdf/ebp-8-51.pdf
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    ✗ failed
-[29/88] ART-1963 [direct] Diagnosis and management of Raynaud's phenomenon
-  → Goundry_2012#@#ART-1963@#@.pdf
-    http://www.nature.com/articles/nrrheum.2012.96.pdf
-    Not a PDF (Content-Type: text/html; charset="utf-8")
-    ✗ failed
-[30/88] ART-0020 [pmc] Association of use of the neonatal early-onset sep
-  → Achten_2019#@#ART-0020@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6724419/pdf/
-    HTTP 404 → https://pmc.ncbi.nlm.nih.gov/articles/PMC6724419/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[31/88] ART-0084 [pmc] CD003462
-  → Andrade-Castellanos_2014#@#ART-0084@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6769062/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[32/88] ART-0120 [pmc] Approach to the patient with adrenal incidentaloma
-  → Bancos_2021#@#ART-0120@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC8530736/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[33/88] ART-0154 [pmc] Guidelines for the management of asymptomatic prim
-  → Bilezikian_2014#@#ART-0154@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5393490/pdf/
-    HTTP 404 → https://pmc.ncbi.nlm.nih.gov/articles/PMC5393490/pdf/
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[34/88] ART-0199 [pmc] practical approach to diagnosis and management
-  → Byrd_2018#@#ART-0199@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6205759/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[35/88] ART-0214 [pmc] Prevention of diabetes mellitus in patients with p
-  → Carris_2019#@#ART-0214@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6350898/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[36/88] ART-0222 [pmc] 1257-1266
-  → Celli_2019#@#ART-0222@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC9746870/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[37/88] ART-0369 [pmc] standards of care in diabetes—2023
-  → ElSayed_2023#@#ART-0369@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC9845083/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[38/88] ART-0461 [pmc] big data bias masks a true association
-  → Frew_2019#@#ART-0461@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6522264/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[39/88] ART-0475 [pmc] epidemiology, outcomes, knowledge gaps, and future
-  → Gardner_2018#@#ART-0475@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5865621/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[40/88] ART-0493 [pmc] Hospital transfers of nursing home residents with 
-  → Givens_2012#@#ART-0493@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3354640/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[41/88] ART-0527 [pmc] CD011050
-  → Griffiths_2016#@#ART-0527@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6599814/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[42/88] ART-0630 [pmc] the ROW cohort study
-  → Jain_2017#@#ART-0630@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5218987/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[43/88] ART-0674 [pmc] an American Academy of Sleep Medicine clinical pra
-  → Kent_2021#@#ART-0674@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC8726361/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[44/88] ART-0678 [pmc] Arthroscopic surgery for degenerative tears of the
-  → Khan_2014#@#ART-0678@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4188648/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[45/88] ART-0688 [pmc] CD013422
-  → Kirkilesis_2020#@#ART-0688@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC7144816/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[46/88] ART-0771 [pmc] Patching for corneal abrasion
-  → Lim_2016#@#ART-0771@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6457868/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[47/88] ART-0814 [pmc] findings from the Health ABC Study
-  → Marcum_2016#@#ART-0814@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4892949/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[48/88] ART-0862 [pmc] a meta-analysis
-  → Meng_2011#@#ART-0862@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3208370/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[49/88] ART-0879 [pmc] Baclofen for alcohol use disorder
-  → Minozzi_2018#@#ART-0879@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC9837849/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[50/88] ART-0896 [pmc] supplemental oxygen for patients without hypoxemia
-  → Moss_2019#@#ART-0896@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6946178/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[51/88] ART-0903 [pmc] new insights for clinical practice
-  → Murgia_2020#@#ART-0903@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC7875114/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[52/88] ART-0917 [pmc] an emerging disease
-  → Neef_2006#@#ART-0917@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC1346962/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[53/88] ART-0949 [pmc] Too much sitting: The population health science of
-  → Owen_2010#@#ART-0949@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3404815/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[54/88] ART-0956 [pmc] Anticonvulsants for alcohol dependence
-  → Pani_2014#@#ART-0956@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC10585425/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[55/88] ART-0973 [pmc] Celiac disease: Diagnosis and management
-  → Pelkowski_2014#@#ART-0973@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3706994/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[56/88] ART-1027 [pmc] a review for general physicians
-  → Raharja_2022#@#ART-1027@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC8966835/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[57/88] ART-1043 [pmc] Common tongue conditions in primary care
-  → Reamy_2010#@#ART-1043@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6234945/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[58/88] ART-1081 [pmc] joint recommendations of the North American Societ
-  → Rosen_2018#@#ART-1081@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5958910/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[59/88] ART-1089 [pmc] CD009977
-  → Rud_2019#@#ART-1089@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6953397/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[60/88] ART-1137 [pmc] pelvic inflammatory disease (PID)
-  → Sexually_2021#@#ART-1137@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC8365115/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[61/88] ART-1211 [pmc] Surgery for obstructive sleep apnea in adults
-  → Sundaram_2005#@#ART-1211@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC12989261/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[62/88] ART-1244 [pmc] Clinical management of insomnia with brief behavio
-  → Troxel_2012#@#ART-1244@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3622949/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[63/88] ART-1280 [pmc] Preventing and managing adverse reactions
-  → Vaccine_2021#@#ART-1280@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC8250847/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[64/88] ART-1295 [pmc] Management of erectile dysfunction in hypertension
-  → Viigimaa_2014#@#ART-1295@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4176800/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[65/88] ART-1318 [pmc] AUA/SUO guideline part I: prostate cancer screenin
-  → Wei_2023#@#ART-1318@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC11060750/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[66/88] ART-1600 [pmc] Preventing herpes zoster through vaccination: New 
-  → Le_2017#@#ART-1600@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5557227/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[67/88] ART-1659 [pmc] Metformin in patients with type 2 diabetes and kid
-  → Inzucchi_2014#@#ART-1659@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4427053/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[68/88] ART-1673 [pmc] Perioperative management of antithrombotic therapy
-  → Douketis_2012#@#ART-1673@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3278059/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[69/88] ART-1677 [pmc] An official American Thoracic Society/American Col
-  → Wiener_2014#@#ART-1677@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4694177/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[70/88] ART-1684 [pmc] HbA in the evaluation of diabetes mellitus
-  → OKeeffe_2016#@#ART-1684@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3799221/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[71/88] ART-1718 [pmc] Outpatient emergencies: Anaphylaxis
-  → Commins_2017#@#ART-1718@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5381731/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[72/88] ART-1789 [pmc] Osmotic and stimulant laxatives for the management
-  → Gordon_2016#@#ART-1789@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6513425/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[73/88] ART-1831 [pmc] Antithrombotic therapy for atrial fibrillation: An
-  → You_2012#@#ART-1831@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3278056/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[74/88] ART-1862 [pmc] Updated international consensus diagnostic criteri
-  → Dellon_2018#@#ART-1862@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6174113/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[75/88] ART-1865 [pmc] PURL: Time to stop glucosamine and chondroitin for
-  → Lyon_2018#@#ART-1865@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6171773/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[76/88] ART-1880 [pmc] Disorders of sexual development in adult women
-  → Gomez-Lobo_2016#@#ART-1880@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC5119649/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[77/88] ART-1907 [pmc] Profound hypokalemia associated with severe diabet
-  → Davis_2016#@#ART-1907@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4896141/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[78/88] ART-1934 [pmc] Taking an antibiotic time-out: Utilization and usa
-  → Graber_2015#@#ART-1934@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC4750836/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[79/88] ART-1945 [pmc] Intranasal ipratropium bromide for the common cold
-  → Albalawi_2011#@#ART-1945@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC6492479/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[80/88] ART-1951 [pmc] Clinical practice: Depression during pregnancy
-  → Stewart_2011#@#ART-1951@#@.pdf
-    https://pmc.ncbi.nlm.nih.gov/articles/PMC3103063/pdf/
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    Connection error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-    ✗ failed
-[81/88] ART-0191 [aafp] Chronic shoulder pain: Part I
-  → Burbank_2008#@#ART-0191@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2008/0215.pdf
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    ✗ failed
-[82/88] ART-0309 [aafp] Gynecomastia
-  → Dickson_2012#@#ART-0309@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2012/0401.pdf
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    ✗ failed
-[83/88] ART-1029 [aafp] rapid evidence review
-  → Raleigh_2022#@#ART-1029@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2022/0800.pdf
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    ✗ failed
-[84/88] ART-1564 [aafp] The painful shoulder: Part I
-  → Woodward_2000#@#ART-1564@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2000/0515/p3079.pdf
-    HTTP 500 → https://www.aafp.org/pubs/afp/issues/2000/0515/p3079.pdf
-    ✗ failed
-[85/88] ART-1578 [aafp] Evaluation and management of abnormal uterine blee
-  → Sweet_2012#@#ART-1578@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2012/0101/p35.html/1000.pdf
-    Not a PDF (Content-Type: text/html;charset=utf-8)
-    ✗ failed
-[86/88] ART-1633 [aafp] Diagnosis and treatment of atrial fibrillation
-  → Gutierrez_2016#@#ART-1633@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2016/0915.pdf
-    Not a PDF (Content-Type: text/html; charset=utf-8)
-    ✗ failed
-[87/88] ART-1822 [aafp] Diagnosis of gastroesophageal reflux disease
-  → Ebell_2010#@#ART-1822@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2010/0515/p1278.pdf
-    HTTP 500 → https://www.aafp.org/pubs/afp/issues/2010/0515/p1278.pdf
-    ✗ failed
-[88/88] ART-1858 [aafp] Evaluation of nail abnormalities
-  → Tully_2012#@#ART-1858@#@.pdf
-    https://www.aafp.org/pubs/afp/issues/2012/0415.pdf
-    Not a PDF (Content-Type: text/html; charset=utf-8)
+Starting downloads: 67 files
+
+[1/67] ART-0129 [nejm_auth] As-needed budesonide-formoterol versus maintenance
+  → Bateman_2018#@#ART-0129@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1715275
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1715275
+    ✗ failed
+[2/67] ART-0134 [nejm_auth] Controlled trial of budesonide-formoterol as neede
+  → Beasley_2019#@#ART-0134@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1901963
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1901963
+    ✗ failed
+[3/67] ART-0156 [nejm_auth] Subclinical hyperthyroidism
+  → Biondi_2018#@#ART-0156@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMcp1709318
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMcp1709318
+    ✗ failed
+[4/67] ART-0657 [nejm_auth] Kalyani RR: Glucose-lowering drugs to reduce cardi
+  → Kalyani_2021#@#ART-0657@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp2000280?query=featured_home
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp2000280?query=featured_home
+    ✗ failed
+[5/67] ART-0751 [nejm_auth] Idiopathic pulmonary fibrosis
+  → Lederer_2018#@#ART-0751@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMra1705751
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMra1705751
+    ✗ failed
+[6/67] ART-0848 [nejm_auth] Dapagliflozin in patients with heart failure and r
+  → McMurray_2019#@#ART-0848@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1911303
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1911303
+    ✗ failed
+[7/67] ART-0874 [nejm_auth] Depression in adolescents
+  → Miller_2021#@#ART-0874@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra2033475
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra2033475
+    ✗ failed
+[8/67] ART-1003 [nejm_auth] Acute ischemic stroke
+  → Powers_2020#@#ART-1003@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMcp1917030
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMcp1917030
+    ✗ failed
+[9/67] ART-1112 [nejm_auth] Management of abdominal aortic aneurysms
+  → Schanzer_2021#@#ART-1112@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp2108504
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp2108504
+    ✗ failed
+[10/67] ART-1333 [nejm_auth] Spectrum of fibrotic lung diseases
+  → Wijsenbeek_2020#@#ART-1333@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra2005230
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra2005230
+    ✗ failed
+[11/67] ART-0082 [nejm_auth] Acute myocardial infarction
+  → Anderson_2017#@#ART-0082@#@.pdf
+    https://www.nejm.org/doi/10.1056/nejmra1606915
+    HTTP 403 → https://www.nejm.org/doi/10.1056/nejmra1606915
+    ✗ failed
+[12/67] ART-0085 [nejm_auth] Empagliflozin in heart failure with a preserved ej
+  → Anker_2021#@#ART-0085@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa2107038
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa2107038
+    ✗ failed
+[13/67] ART-0165 [nejm_auth] 146- 155
+  → Boyer_2012#@#ART-0165@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1202561
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1202561
+    ✗ failed
+[14/67] ART-0178 [nejm_auth] Conservative versus interventional treatment for s
+  → Brown_2020#@#ART-0178@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMoa1910775
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMoa1910775
+    ✗ failed
+[15/67] ART-0181 [nejm_auth] Pelvic inflammatory disease
+  → Brunham_2015#@#ART-0181@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMra1411426
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMra1411426
+    ✗ failed
+[16/67] ART-0183 [nejm_auth] Glucocorticoid-induced osteoporosis
+  → Buckley_2018#@#ART-0183@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1800214
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1800214
+    ✗ failed
+[17/67] ART-0201 [nejm_auth] Iron-deficiency anemia
+  → Camaschella_2015#@#ART-0201@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMra1401038
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMra1401038
+    ✗ failed
+[18/67] ART-0245 [nejm_auth] Dry eye
+  → Clayton_2018#@#ART-0245@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMra1407936
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMra1407936
+    ✗ failed
+[19/67] ART-0273 [nejm_auth] Helicobacter pylori infection
+  → Crowe_2019#@#ART-0273@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1710945
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1710945
+    ✗ failed
+[20/67] ART-0274 [nejm_auth] Trigeminal neuralgia
+  → Cruccu_2020#@#ART-0274@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMra1914484
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMra1914484
+    ✗ failed
+[21/67] ART-0276 [nejm_auth] Long-acting reversible contraception
+  → Curtis_2017#@#ART-0276@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1608736?query=TOC
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1608736?query=TOC
+    ✗ failed
+[22/67] ART-0290 [nejm_auth] Examination of the hand and wrist
+  → Day_2019#@#ART-0290@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMvcm1407111
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMvcm1407111
+    ✗ failed
+[23/67] ART-0299 [nejm_auth] Acute bacterial sinusitis in children
+  → DeMuri_2012#@#ART-0299@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1106638?query=TOC
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1106638?query=TOC
+    ✗ failed
+[24/67] ART-0306 [nejm_auth] Physical therapy versus glucocorticoid injection f
+  → Deyle_2020#@#ART-0306@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1905877
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1905877
+    ✗ failed
+[25/67] ART-0383 [nejm_auth] Primary prevention of cardiovascular disease with 
+  → Estruch_2018#@#ART-0383@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1800389
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1800389
+    ✗ failed
+[26/67] ART-0392 [nejm_auth] Cytokine storm
+  → Fajgenbaum_2020#@#ART-0392@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra2026131
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra2026131
+    ✗ failed
+[27/67] ART-0402 [nejm_auth] Fernández-Ruiz I: Low-dose colchicine shows promis
+  → Fernández-Ruiz_2020#@#ART-0402@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/nejmoa2021372
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/nejmoa2021372
+    ✗ failed
+[28/67] ART-0473 [nejm_auth] Anemia of inflammation
+  → Ganz_2019#@#ART-0473@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1804281?query=featured_home
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1804281?query=featured_home
+    ✗ failed
+[29/67] ART-0485 [nejm_auth] Treatment of patients with cirrhosis
+  → Ge_2016#@#ART-0485@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1504367
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1504367
+    ✗ failed
+[30/67] ART-0525 [nejm_auth] Greinacher A: Heparin-induced thrombocytopenia
+  → Greinacher_2015#@#ART-0525@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1411910
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1411910
+    ✗ failed
+[31/67] ART-0538 [nejm_auth] Cancer-associated hypercalcemia
+  → Guise_2022#@#ART-0538@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp2113128
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp2113128
+    ✗ failed
+[32/67] ART-0550 [nejm_auth] Fever of unknown origin
+  → Haidar_2022#@#ART-0550@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMra2111003
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMra2111003
+    ✗ failed
+[33/67] ART-0625 [nejm_auth] Primary hyperparathyroidism
+  → Insogna_2018#@#ART-0625@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMcp1714213
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMcp1714213
+    ✗ failed
+[34/67] ART-0733 [nejm_auth] Chronic urticaria
+  → Lang_2022#@#ART-0733@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMra2120166
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMra2120166
+    ✗ failed
+[35/67] ART-0793 [nejm_auth] Medical conditions and high-altitude travel
+  → Luks_2022#@#ART-0793@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra2104829?query=featured_home
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra2104829?query=featured_home
+    ✗ failed
+[36/67] ART-0849 [nejm_auth] Effect of aspirin on all-cause mortality in the he
+  → McNeil_2018#@#ART-0849@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1803955
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1803955
+    ✗ failed
+[37/67] ART-0859 [nejm_auth] public health law–foundations and emerging shifts
+  → Mello_2022#@#ART-0859@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMp2200794
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMp2200794
+    ✗ failed
+[38/67] ART-0882 [nejm_auth] Anorexia nervosa
+  → Mitchell_2020#@#ART-0882@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1803175?query=TOC
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1803175?query=TOC
+    ✗ failed
+[39/67] ART-0972 [nejm_auth] Acute severe hypertension
+  → Peixoto_2019#@#ART-0972@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMc1916851
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMc1916851
+    ✗ failed
+[40/67] ART-0994 [nejm_auth] Spironolactone for heart failure with preserved ej
+  → Pitt_2014#@#ART-0994@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1313731
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1313731
+    ✗ failed
+[41/67] ART-1031 [nejm_auth] Paget’s disease of bone
+  → Ralston_2013#@#ART-1031@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1204713
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1204713
+    ✗ failed
+[42/67] ART-1074 [nejm_auth] Atrophic glossitis
+  → Robinson_2019#@#ART-1074@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMicm1902490
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMicm1902490
+    ✗ failed
+[43/67] ART-1080 [nejm_auth] Transient global amnesia
+  → Ropper_2023#@#ART-1080@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra2213867?query=WB&bid=1431453414
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra2213867?query=WB&bid=143145
+    ✗ failed
+[44/67] ART-1095 [nejm_auth] Tackling implicit bias in health care
+  → Sabin_2022#@#ART-1095@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMp2201180
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMp2201180
+    ✗ failed
+[45/67] ART-1142 [nejm_auth] Cancer survivorship
+  → Shapiro_2018#@#ART-1142@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1712502
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1712502
+    ✗ failed
+[46/67] ART-1162 [nejm_auth] Evaluation and management of lower-extremity ulcer
+  → Singer_2017#@#ART-1162@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMc1715237
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMc1715237
+    ✗ failed
+[47/67] ART-1185 [nejm_auth] Angiotensin-neprilysin inhibition in heart failure
+  → Solomon_2019#@#ART-1185@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/nejmoa1908655
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/nejmoa1908655
+    ✗ failed
+[48/67] ART-1196 [nejm_auth] Vitamin B deficiency
+  → Stabler_2013#@#ART-1196@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1113996
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1113996
+    ✗ failed
+[49/67] ART-1198 [nejm_auth] Pulmonary foreign-body granulomatosis
+  → Staloch_2017#@#ART-1198@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMicm1701787?query=TOC
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMicm1701787?query=TOC
+    ✗ failed
+[50/67] ART-1209 [nejm_auth] -Antitrypsin deficiency
+  → Strnad_2020#@#ART-1209@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1910234
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1910234
+    ✗ failed
+[51/67] ART-1321 [nejm_auth] Risk of intussusception after monovalent rotavirus
+  → Weintraub_2014#@#ART-1321@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1311738
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1311738
+    ✗ failed
+[52/67] ART-1322 [nejm_auth] Outcomes after angiography with sodium bicarbonate
+  → Weisbord_2018#@#ART-1322@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1710933
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1710933
+    ✗ failed
+[53/67] ART-1324 [nejm_auth] Epidemiologic signatures in cancer
+  → Welch_2019#@#ART-1324@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMsr1905447
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMsr1905447
+    ✗ failed
+[54/67] ART-1571 [nejm_auth] Liraglutide and cardiovascular outcomes in type 2 
+  → Marso_2016#@#ART-1571@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1603827
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1603827
+    ✗ failed
+[55/67] ART-1587 [nejm_auth] Social anxiety disorder
+  → Leichsenring_2017#@#ART-1587@#@.pdf
+    https://www.nejm.org/doi/10.1056/NEJMcp1614701
+    HTTP 403 → https://www.nejm.org/doi/10.1056/NEJMcp1614701
+    ✗ failed
+[56/67] ART-1627 [nejm_auth] Mesenteric ischemia
+  → Clair_2016#@#ART-1627@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1503884
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1503884
+    ✗ failed
+[57/67] ART-1664 [nejm_auth] Maternal immunization
+  → Omer_2017#@#ART-1664@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1509044
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1509044
+    ✗ failed
+[58/67] ART-1678 [nejm_auth] Letrozole versus clomiphene for infertility in the
+  → Legro_2014#@#ART-1678@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/nejmoa1313517
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/nejmoa1313517
+    ✗ failed
+[59/67] ART-1711 [nejm_auth] Loriaux DL: Diagnosis and differential diagnosis o
+  → Loriaux_2017#@#ART-1711@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1505550
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1505550
+    ✗ failed
+[60/67] ART-1720 [nejm_auth] Effect of aspirin on cardiovascular events and ble
+  → McNeil_2018#@#ART-1720@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMoa1805819
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMoa1805819
+    ✗ failed
+[61/67] ART-1781 [nejm_auth] Ankylosing spondylitis and axial spondyloarthritis
+  → Taurog_2016#@#ART-1781@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1406182
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1406182
+    ✗ failed
+[62/67] ART-1802 [nejm_auth] Tinnitus
+  → Bauer_2018#@#ART-1802@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1506631?query=featured_home
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1506631?query=featured_home
+    ✗ failed
+[63/67] ART-1829 [nejm_auth] Acute pancreatitis
+  → Forsmark_2016#@#ART-1829@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1505202
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1505202
+    ✗ failed
+[64/67] ART-1867 [nejm_auth] Declines in unintended pregnancy in the United Sta
+  → Finer_2008#@#ART-1867@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMsa1506575
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMsa1506575
+    ✗ failed
+[65/67] ART-2061 [nejm_auth] Groin hernias in adults
+  → Fitzgibbons_2015#@#ART-2061@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1404068
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1404068
+    ✗ failed
+[66/67] ART-2085 [nejm_auth] Hematuria in adults
+  → Ingelfinger_2021#@#ART-2085@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMra1604481
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMra1604481
+    ✗ failed
+[67/67] ART-2160 [nejm_auth] HIV infection — screening, diagnosis, and treatmen
+  → Saag_2021#@#ART-2160@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1915826?query=featured_infectious-dis
+    HTTP 403 → https://www.nejm.org/doi/pdf/10.1056/NEJMcp1915826?query=featured_infe
     ✗ failed
 
 ══════════════════════════════════════════════════
 📦 Download Summary
 ══════════════════════════════════════════════════
-  ✓ downloaded:     5  /  88
-  ✗ failed:        83
+  ✓ downloaded:     0  /  67
+  ✗ failed:        67
   ✗ too_small:      0
   ✗ too_large:      0
   ✗ other:          0
 
-  PDFs on disk (total): 970
+  PDFs on disk (total): 1249
   Results log: C:\Users\mpsch\Desktop\board_prep_intel\01_module.1_warehouse\scripts\maintain\exa_download_results.csv
   Download log: C:\Users\mpsch\Desktop\board_prep_intel\01_module.1_warehouse\scripts\maintain\exa_download.log

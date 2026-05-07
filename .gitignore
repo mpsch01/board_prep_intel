@@ -94,3 +94,5 @@ chat_archive/
 # --- BROWSER COOKIES (session credentials --- never commit) ---
 key_data_files/cookies/
 README_PROJECT.md
+
+key_data_files/browser_profiles/

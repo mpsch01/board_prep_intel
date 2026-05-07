@@ -2,8 +2,8 @@
 
 **Database:** `00_database/db/ite_intelligence.db`
 **Engine:** SQLite 3 (with optional `sqlite-vec` extension for vector search)
-**Schema version:** v2 (rebuilt 2026-03-10; AAFP corpus added 2026-03-29; qid_art_xref rebuilt 2026-04-15)
-**Last updated:** 2026-04-15 (BATON 058)
+**Schema version:** v2 (rebuilt 2026-03-10; AAFP corpus added 2026-03-29; qid_art_xref rebuilt 2026-04-15; +208 articles from acquire_missing_citations.py 2026-05-06)
+**Last updated:** 2026-05-06 (BATON 065)
 
 ---
 
@@ -21,9 +21,9 @@ The database is organized into five functional groups:
 
 ### 1.1 Core Content Tables
 
-#### `articles` — 1,998 rows
+#### `articles` — 2,206 rows
 
-The central reference library. One row per unique clinical guideline, journal article, or other source that has been cited in the explanation of at least one ABFM ITE or AAFP BRQ question (plus 30 legitimate "orphans" imported from tier lists but never directly cited). Updated 2026-04-15 with 13 new articles (ART-1987–ART-1999) extracted from 2024–2025 ITE critique PDFs.
+The central reference library. One row per unique clinical guideline, journal article, or other source that has been cited in the explanation of at least one ABFM ITE or AAFP BRQ question (plus 30 legitimate "orphans" imported from tier lists but never directly cited). Updated 2026-04-15 with 13 new articles (ART-1987–ART-1999) extracted from 2024–2025 ITE critique PDFs. Updated 2026-05-06 with 208 additional articles (ART-2000–ART-2218) identified from acquire_missing_citations.py cross-referencing unmatched ITE citations against Exa search.
 
 **Primary key:** `clean_ref` (TEXT) — the original cleaned citation string. Stable and used as the FK throughout legacy join paths.
 **Secondary key:** `article_id` (TEXT, UNIQUE) — short ID in format `ART-NNNN` (zero-padded, e.g. `ART-0470`).
@@ -31,7 +31,7 @@ The central reference library. One row per unique clinical guideline, journal ar
 | Key Column | Type | Description |
 |---|---|---|
 | `clean_ref` | TEXT PK | Full citation text — the durable, human-readable identifier |
-| `article_id` | TEXT UNIQUE | Short stable ID: `ART-0001` through `ART-1986` |
+| `article_id` | TEXT UNIQUE | Short stable ID: `ART-0001` through `ART-2218` (2,206 rows; some IDs have gaps) |
 | `author1`, `author2` | TEXT | Parsed author surnames used to build filenames |
 | `year` | TEXT | Publication year |
 | `canonical_filename` | TEXT | `Author1_Author2_Year` — base filename without extension |
@@ -50,8 +50,8 @@ The central reference library. One row per unique clinical guideline, journal ar
 
 | Tier | Count | Meaning |
 |------|-------|---------|
-| `VC_fail` | 1,448 | Not in VC gate — lower priority; awaiting pipeline |
-| `VC_pass` | 362 | Passed VC gate — high-yield; awaiting pipeline |
+| `VC_fail` | 1,665 | Not in VC gate — lower priority; awaiting pipeline |
+| `VC_pass` | 366 | Passed VC gate — high-yield; awaiting pipeline |
 | `local_lite` | 117 | Pipeline complete: VC_fail + DOCX exists |
 | `right_click` | 58 | Pipeline complete: VC_pass + DOCX exists — highest priority |
 
@@ -59,7 +59,7 @@ The **VC gate** (`key_data_files/session_hy_inserts_v7.json`, 352 citations from
 
 ---
 
-#### `questions` — 1,629 rows
+#### `questions` — 1,639 rows
 
 All ABFM In-Training Exam questions from 2018–2025.
 
@@ -129,11 +129,11 @@ The canonical junction table. One row per question-article citation: "question Q
 
 ---
 
-#### `qid_art_xref` — 2,485 rows
+#### `qid_art_xref` — 2,710 rows
 
-Ergonomic crossref table. Mirrors `question_ref_pairs` but uses `article_id` (short, readable) instead of `clean_ref` (long citation text). Rebuilt 2026-04-15 as faithful multi-reference transcript of all 8 ITE critique PDFs (2018–2025): uses DELETE+INSERT per QID to capture all article citations within each question's explanation. Excludes unmatched/partial pairs — row count (2,485) is higher than legacy 2,470 because multi-cited questions now appear once per reference.
+Ergonomic crossref table. Mirrors `question_ref_pairs` but uses `article_id` (short, readable) instead of `clean_ref` (long citation text). Rebuilt 2026-04-15 as faithful multi-reference transcript of all 8 ITE critique PDFs (2018–2025): uses DELETE+INSERT per QID to capture all article citations within each question's explanation. Excludes unmatched/partial pairs. Updated 2026-05-06 with +225 rows from acquire_missing_citations.py gap closure.
 
-**Multi-reference coverage:** 2018-2023: 100% linked; 2024: 90% (180/200 questions); 2025: 83.5% (167/200 questions). 249 unmatched citations logged as acquisition candidates.
+**Multi-reference coverage:** 2018-2023: 100% linked; 2024: 90% (180/200 questions); 2025: 83.5% (167/200 questions). ~249 unmatched citations remain as acquisition candidates.
 
 **Primary key:** `(qid, article_id)` composite
 
@@ -173,7 +173,7 @@ Raw untruncated citation text archive. Parallel to `aafp_citations` — preserve
 
 ### 1.2 ICD-10 Diagnostic Layer
 
-#### `article_icd10` — 4,020 rows
+#### `article_icd10` — 4,959 rows
 
 ICD-10 diagnostic codes assigned to each article (Layer 1). Each article can have primary, secondary, and related codes, assigned via Claude Batch API.
 
@@ -188,13 +188,11 @@ ICD-10 diagnostic codes assigned to each article (Layer 1). Each article can hav
 
 ---
 
-#### `question_icd10` — 5,218 rows
+#### `question_icd10` — 5,774 rows
 
-ICD-10 codes assigned to each ITE question, propagated from linked articles. Covers 1,512 / 1,629 ITE questions (92.8%).
+ICD-10 codes assigned to each ITE question, propagated from linked articles.
 
 **Primary key:** `(qid, icd10_code)` composite
-
-Relevance distribution: primary=2,725 / secondary=1,627 / related=932
 
 ---
 
@@ -233,7 +231,7 @@ Maps each specific ICD-10 code (e.g. `E11.9`) to its 3-character parent (e.g. `E
 
 ### 1.4 Clinical Intelligence Layer
 
-#### `clinical_pathways` — 3,971 rows
+#### `clinical_pathways` — 4,959 rows
 
 Maps each (article, ICD-10 code) pair to a **pathway role** — the clinical function this article serves for that condition. Built deterministically at zero API cost from ABFM subcategory data and engine_type classification.
 
@@ -324,29 +322,29 @@ All embedding tables use OpenAI `text-embedding-3-small` (1536 dimensions).
 ### 2.1 Entity Relationship Diagram
 
 ```
-articles (1,985)
+articles (2,206)
     │
-    ├─── clean_ref ──────── question_ref_pairs (2,673) ──── qid ──── questions / ITE (1,629)
+    ├─── clean_ref ──────── question_ref_pairs (2,673) ──── qid ──── questions / ITE (1,639)
     │                         (canonical junction — match_status)
     │
-    ├─── article_id ─────── qid_art_xref (2,470) ──────── qid ──── questions / ITE (1,629)
+    ├─── article_id ─────── qid_art_xref (2,710) ──────── qid ──── questions / ITE (1,639)
     │                         (ergonomic xref — no unmatched pairs)
     │
     ├─── article_id ─────── aafp_qid_art_xref (864) ────── aafp_qid ── aafp_questions (1,221)
     │
-    ├─── article_id ─────── article_icd10 (4,020) ────────── icd10_code ─┐
+    ├─── article_id ─────── article_icd10 (4,959) ────────── icd10_code ─┐
     │                                                                      │
-    ├─── article_id ─────── clinical_pathways (3,971) ────── icd10_code  │
+    ├─── article_id ─────── clinical_pathways (4,959) ────── icd10_code  │
     │                          (pathway_role + source_bank)               │
     │                                                                      ▼
     ├─── article_id ─────── article_citation_trend (1,740)    icd10_code_xref (1,006)
     │                                                                      │
-    └─── article_vec (1,985) ← sqlite-vec virtual table                   ▼
+    └─── article_vec ← sqlite-vec virtual table                           ▼
                                                               icd10_rollup (614)
 
-questions / ITE (1,629)
-    ├─── qid ──────────── question_icd10 (5,218) ─── icd10_code ─── icd10_code_xref ─── icd10_rollup
-    └─── question_vec (1,629) ← sqlite-vec virtual table
+questions / ITE (1,639)
+    ├─── qid ──────────── question_icd10 (5,774) ─── icd10_code ─── icd10_code_xref ─── icd10_rollup
+    └─── question_vec (1,639) ← sqlite-vec virtual table
 
 aafp_questions (1,221)
     ├─── aafp_qid ─────── aafp_question_icd10 (4,753) ─── icd10_code ─── icd10_code_xref ─── icd10_rollup
@@ -522,11 +520,13 @@ The database was designed with extensibility in mind. The table linkages describ
 
 ### 4.1 Intelligence 2.0 Layer 2 — Article Currency (PubMed)
 
-**Tables already seeded:** `pubmed_pmid_cache` (344 rows: `citation_id → pmid`)
+**Status: ✅ Built** — `article_currency` (2,206 rows) complete as of BATON 061 (2026-04-16).
+
+**Tables:** `pubmed_pmid_cache` (344 rows: `citation_id → pmid`), `article_currency` (2,206 rows)
 
 **Join path:** `aafp_citations.citation_id = pubmed_pmid_cache.citation_id` → PubMed API using `pmid`
 
-**New table to build:** `article_currency`
+**Schema:**
 
 ```sql
 CREATE TABLE article_currency (
@@ -539,10 +539,7 @@ CREATE TABLE article_currency (
 );
 ```
 
-**How to use it:** Each article that has a PMID can be checked against PubMed for:
-- Publication date → age in years
-- Whether the journal has published a more recent version
-- Whether a newer guideline has superseded it
+**How to use it:** Each article that has a PMID can be checked against PubMed for publication date (age in years), whether a more recent version exists, and whether a newer guideline has superseded it.
 
 This adds a **temporal dimension** to the linkage: not just "this article covers E11" but "this article covering E11 is 8 years old, and the ABFM has cited it 5 times since — it is likely outdated but persistently tested."
 
