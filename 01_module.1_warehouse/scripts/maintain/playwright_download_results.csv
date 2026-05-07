@@ -1,0 +1,38 @@
+article_id,tier,journal,status,bytes,dest_filename,url_used,title,author1,year
+ART-0129,VC_pass,nejm,error,0,Bateman_2018#@#ART-0129@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa1715275,As-needed budesonide-formoterol versus maintenance budesonide in mild asthma,Bateman,2018
+ART-0134,VC_pass,nejm,error,0,Beasley_2019#@#ART-0134@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa1901963,Controlled trial of budesonide-formoterol as needed for mild asthma,Beasley,2019
+ART-0156,VC_pass,nejm,timeout,0,Biondi_2018#@#ART-0156@#@.pdf,https://www.nejm.org/doi/10.1056/NEJMcp1709318,Subclinical hyperthyroidism,Biondi,2018
+ART-0657,VC_pass,nejm,timeout,0,Kalyani_2021#@#ART-0657@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp2000280?query=featured_home,Kalyani RR: Glucose-lowering drugs to reduce cardiovascular risk in type 2 diabetes,Kalyani,2021
+ART-0129,VC_pass,nejm,error,0,Bateman_2018#@#ART-0129@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa1715275,As-needed budesonide-formoterol versus maintenance budesonide in mild asthma,Bateman,2018
+ART-0134,VC_pass,nejm,error,0,Beasley_2019#@#ART-0134@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa1901963,Controlled trial of budesonide-formoterol as needed for mild asthma,Beasley,2019
+ART-0156,VC_pass,nejm,timeout,0,Biondi_2018#@#ART-0156@#@.pdf,https://www.nejm.org/doi/10.1056/NEJMcp1709318,Subclinical hyperthyroidism,Biondi,2018
+ART-0129,VC_pass,nejm,ok,309341,Bateman_2018#@#ART-0129@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa1715275,As-needed budesonide-formoterol versus maintenance budesonide in mild asthma,Bateman,2018
+ART-0134,VC_pass,nejm,ok,375349,Beasley_2019#@#ART-0134@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa1901963,Controlled trial of budesonide-formoterol as needed for mild asthma,Beasley,2019
+ART-0156,VC_pass,nejm,timeout,0,Biondi_2018#@#ART-0156@#@.pdf,https://www.nejm.org/doi/10.1056/NEJMcp1709318,Subclinical hyperthyroidism,Biondi,2018
+ART-0657,VC_pass,nejm,timeout,0,Kalyani_2021#@#ART-0657@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp2000280?query=featured_home,Kalyani RR: Glucose-lowering drugs to reduce cardiovascular risk in type 2 diabetes,Kalyani,2021
+ART-0156,VC_pass,nejm,timeout,0,Biondi_2018#@#ART-0156@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp1709318,Subclinical hyperthyroidism,Biondi,2018
+ART-0657,VC_pass,nejm,timeout,0,Kalyani_2021#@#ART-0657@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp2000280,Kalyani RR: Glucose-lowering drugs to reduce cardiovascular risk in type 2 diabetes,Kalyani,2021
+ART-0751,VC_pass,nejm,timeout,0,Lederer_2018#@#ART-0751@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMra1705751,Idiopathic pulmonary fibrosis,Lederer,2018
+ART-0848,VC_pass,nejm,timeout,0,McMurray_2019#@#ART-0848@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa1911303,Dapagliflozin in patients with heart failure and reduced ejection fraction,McMurray,2019
+ART-0874,VC_pass,nejm,timeout,0,Miller_2021#@#ART-0874@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMra2033475,Depression in adolescents,Miller,2021
+ART-1003,VC_pass,nejm,timeout,0,Powers_2020#@#ART-1003@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp1917030,Acute ischemic stroke,Powers,2020
+ART-1112,VC_pass,nejm,timeout,0,Schanzer_2021#@#ART-1112@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp2108504,Management of abdominal aortic aneurysms,Schanzer,2021
+ART-1333,VC_pass,nejm,timeout,0,Wijsenbeek_2020#@#ART-1333@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMra2005230,Spectrum of fibrotic lung diseases,Wijsenbeek,2020
+ART-0082,VC_fail,nejm,timeout,0,Anderson_2017#@#ART-0082@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/nejmra1606915,Acute myocardial infarction,Anderson,2017
+ART-0085,VC_fail,nejm,timeout,0,Anker_2021#@#ART-0085@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa2107038,Empagliflozin in heart failure with a preserved ejection fraction,Anker,2021
+ART-0165,VC_fail,nejm,timeout,0,Boyer_2012#@#ART-0165@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMra1202561,146- 155,Boyer,2012
+ART-0178,VC_fail,nejm,timeout,0,Brown_2020#@#ART-0178@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa1910775,Conservative versus interventional treatment for spontaneous pneumothorax,Brown,2020
+ART-0181,VC_fail,nejm,timeout,0,Brunham_2015#@#ART-0181@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMra1411426,Pelvic inflammatory disease,Brunham,2015
+ART-0183,VC_fail,nejm,timeout,0,Buckley_2018#@#ART-0183@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp1800214,Glucocorticoid-induced osteoporosis,Buckley,2018
+ART-0201,VC_fail,nejm,timeout,0,Camaschella_2015#@#ART-0201@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMra1401038,Iron-deficiency anemia,Camaschella,2015
+ART-0245,VC_fail,nejm,timeout,0,Clayton_2018#@#ART-0245@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMra1407936,Dry eye,Clayton,2018
+ART-0273,VC_fail,nejm,timeout,0,Crowe_2019#@#ART-0273@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp1710945,Helicobacter pylori infection,Crowe,2019
+ART-0274,VC_fail,nejm,timeout,0,Cruccu_2020#@#ART-0274@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMra1914484,Trigeminal neuralgia,Cruccu,2020
+ART-0276,VC_fail,nejm,timeout,0,Curtis_2017#@#ART-0276@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp1608736,Long-acting reversible contraception,Curtis,2017
+ART-0290,VC_fail,nejm,timeout,0,Day_2019#@#ART-0290@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMvcm1407111,Examination of the hand and wrist,Day,2019
+ART-0299,VC_fail,nejm,timeout,0,DeMuri_2012#@#ART-0299@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp1106638,Acute bacterial sinusitis in children,DeMuri,2012
+ART-0306,VC_fail,nejm,timeout,0,Deyle_2020#@#ART-0306@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa1905877,Physical therapy versus glucocorticoid injection for osteoarthritis of the knee,Deyle,2020
+ART-0383,VC_fail,nejm,timeout,0,Estruch_2018#@#ART-0383@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMoa1800389,Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts,Estruch,2018
+ART-0392,VC_fail,nejm,timeout,0,Fajgenbaum_2020#@#ART-0392@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMra2026131,Cytokine storm,Fajgenbaum,2020
+ART-0156,VC_pass,nejm,no_pdf,0,Biondi_2018#@#ART-0156@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp1709318,Subclinical hyperthyroidism,Biondi,2018
+ART-0657,VC_pass,nejm,no_pdf,0,Kalyani_2021#@#ART-0657@#@.pdf,https://www.nejm.org/doi/pdf/10.1056/NEJMcp2000280,Kalyani RR: Glucose-lowering drugs to reduce cardiovascular risk in type 2 diabetes,Kalyani,2021

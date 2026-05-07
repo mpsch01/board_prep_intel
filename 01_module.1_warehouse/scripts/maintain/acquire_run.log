@@ -1,0 +1,1378 @@
+=== acquire_missing_citations.py — 2026-05-06T11:22:16.417407 ===
+dry_run=False  skip_download=True  textbook_only=False  limit=0  resume=False
+  AAFP cookie: not set (open AFP articles only)
+
+── Phase 1: Loading unmatched citations ──
+  229 unique unmatched citations (246 question_ref_pairs rows)
+  VC gate loaded: 352 citations
+
+── Phase 2: Parsing + classifying ──
+  searchable:      213
+  textbook_fauci:  6
+  textbook_skip:   10
+
+── Phase 3: Processing 229 citations (starting at ART-2000) ──
+
+[1/229] SEARCHABLE         Acute        2022   | QIDs:1
+  Acute flaccid myelitis: clinicians & health departments. Centers for
+  Exa: Centers for Disease Control and Prevention Acute 2022 PDF
+  → open_access: https://www.cdc.gov/hepatitis-surveillance-2022/about/index.html
+  → ART-2000 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[2/229] SEARCHABLE         Alcohol      2024   | QIDs:1
+  Alcohol and pregnancy: alcohol screening and brief intervention (SBI
+  Exa: Centers for Disease Control and Prevention Alcohol 2024 PDF
+  → direct_pdf: https://www.cdc.gov/mmwr/volumes/73/wr/pdfs/mm7308a1-H.pdf
+  → ART-2001 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[3/229] SEARCHABLE         American     2017   | QIDs:1
+  American College of Obstetricians and Gynecologists' Committee on Pr
+  Exa: ACOG Practice Bulletin No American 2017 PDF
+  → direct_pdf: https://medquest.ro/docs/practice-bulletin-no-182-2017.pdf
+  → ART-2002 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[4/229] SEARCHABLE         American     2025   | QIDs:1
+  American College of Obstetricians and Gynecologists; Torbenson VE, C
+  Exa: Management of full-term nulliparous individuals without a medical indication for
+  → landing_page: https://journals.lww.com/greenjournal/abstract/2025/01000/management_of_ful
+  → ART-2003 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[5/229] SEARCHABLE         American     2018   | QIDs:1
+  American College of Obstetricians and Gynecologists’ Committee on Gy
+  Exa: ACOG Committee Opinion No American 2018 PDF
+  → direct_pdf: https://www.qualityhealth.org/bree/wp-content/uploads/sites/8/2019/05/ACOG-
+  → ART-2004 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[6/229] SEARCHABLE         American     2025   | QIDs:1
+  American Diabetes Association Professional Practice Committee. 3. Pr
+  Exa: 3 American 2025 PDF
+  → direct_pdf: https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Securit
+  → ART-2005 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[7/229] SEARCHABLE         Angus-Leppan 2018   | QIDs:1
+  Angus-Leppan H, Saatci D, Sutcliffe A, Guiloff RJ. Abdominal migrain
+  Exa: Abdominal migraine Angus-Leppan 2018 PDF
+  → open_access: https://www.bmj.com/content/360/bmj.k179.abstract
+  → ART-2006 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[8/229] SEARCHABLE         Armstrong    2020   | QIDs:1
+  Armstrong C. Acute altitude illness: updated prevention and treatmen
+  Exa: Acute altitude illness: updated prevention and treatment guidelines from the Wil
+  → landing_page: https://journals.sagepub.com/doi/full/10.1016/j.wem.2023.05.013
+  → ART-2007 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[9/229] SEARCHABLE         Armstrong    2020   | QIDs:1
+  Armstrong MJ, Okun MS. Diagnosis and treatment of Parkinson disease:
+  Exa: Diagnosis and treatment of Parkinson disease: a review Armstrong 2020
+  → landing_page: https://jamanetwork.com/journals/jama/article-abstract/2760741
+  → ART-2008 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[10/229] SEARCHABLE         Arnold       2020   | QIDs:1
+  Arnold MJ, Jonas CE, Carter RE. Point-of-care ultrasonography. Am Fa
+  Exa: Point-of-care ultrasonography Arnold 2020 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2020/0301/p275.html
+  → ART-2009 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[11/229] SEARCHABLE         Arnold       2021   | QIDs:1
+  Arnold MJ. Eosinophilic esophagitis: management guidelines from the 
+  Exa: Eosinophilic esophagitis: management guidelines from the AGA and JTF Arnold 2021
+  → open_access: https://www.aafp.org/pubs/afp/issues/2021/0501/p573.html
+  → ART-2010 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[12/229] SEARCHABLE         Arnold       2025   | QIDs:1
+  Arnold MJ. Hip osteoarthritis: guidelines from the American Academy 
+  Exa: Hip osteoarthritis: guidelines from the American Academy of Orthopaedic Surgeons
+  → landing_page: https://aaos.org/oahcpg2
+  → ART-2011 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[13/229] SEARCHABLE         Arnold       2024   | QIDs:1
+  Arnold MJ. Management of patients with aneurysmal subarachnoid hemor
+  Exa: Management of patients with aneurysmal subarachnoid hemorrhage: guidelines from 
+  → direct_pdf: https://www.stroke-manual.com/wp-content/uploads/2024/03/2023-AHA-ASA-SAH-g
+  → ART-2012 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[14/229] SEARCHABLE         Arnold       2023   | QIDs:1
+  Arnold MJ. Medications for irritable bowel syndrome: guidelines from
+  Exa: Medications for irritable bowel syndrome: guidelines from the AGA Arnold 2023 PD
+  → direct_pdf: https://www.aafp.org/pubs/afp/issues/2023/1100/practice-guidelines-irritabl
+  → ART-2013 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[15/229] SEARCHABLE         Arnold       2023   | QIDs:1
+  Arnold MJ. Nonalcoholic fatty liver disease: diagnosis and managemen
+  Exa: Nonalcoholic fatty liver disease: diagnosis and management guidelines from the A
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0500/practice-guidelines-nonalcoh
+  → ART-2014 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[16/229] SEARCHABLE         Bailey       2022   | QIDs:1
+  Bailey J, Dattani S, Jennings A. Diverticular disease: rapid evidenc
+  Exa: Diverticular disease: rapid evidence review Bailey 2022 PDF
+  → direct_pdf: https://www.aafp.org/pubs/afp/issues/2022/0800/diverticular-disease.pdf
+  → ART-2015 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[17/229] TEXTBOOK_FAUCI     Barman       2022   | QIDs:1
+  Barman JM, Skorecki K. Chronic kidney disease. In: Loscalzo J, Fauci
+  → ART-2016 | citation_only=1 (Textbook/Fauci)
+    tier=VC_fail | 1 pairs updated | 1 xrefs inserted
+
+[18/229] SEARCHABLE         Bhavsar      2016   | QIDs:1
+  Bhavsar AK, Gelner EJ, Shorma T. Common questions about the evaluati
+  Exa: Common questions about the evaluation of acute pelvic pain Bhavsar 2016 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2016/0101/p41.html
+  → ART-2017 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[19/229] SEARCHABLE         Both         2019   | QIDs:1
+  Both S, Lew-Starowicz M, Luria M, et al. Hormonal contraception and 
+  Exa: Hormonal contraception and female sexuality: position statements from the Europe
+  → landing_page: https://essm.org/publications/essm-position-statements/
+  → ART-2018 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[20/229] SEARCHABLE         Brown        2017   | QIDs:1
+  Brown RH, Al-Chalabi A. Amyotrophic lateral sclerosis. N Engl J Med.
+  Exa: Amyotrophic lateral sclerosis Brown 2017
+  → landing_page: https://kclpure.kcl.ac.uk/portal/en/publications/amyotrophic-lateral-sclero
+  → ART-2019 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[21/229] SEARCHABLE         Buelt        2023   | QIDs:1
+  Buelt A. Management of major depression: guidelines from the VA/DoD.
+  Exa: Management of major depression: guidelines from the VA/DoD Buelt 2023 PDF
+  → direct_pdf: https://www.healthquality.va.gov/guidelines/MH/mdd/VADODMDDCPGFinal508.pdf
+  → ART-2020 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[22/229] SEARCHABLE         Cagle        2023   | QIDs:2
+  Cagle SD Jr, Landrum LS, Kennedy AM. Chronic obstructive pulmonary d
+  Exa: Chronic obstructive pulmonary disease: diagnosis and management Cagle 2023 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0600/chronic-obstructive-pulmonar
+  → ART-2021 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[23/229] TEXTBOOK_SKIP      Carabello    2024   | QIDs:1
+  Carabello BA, Kodali S. Valvular heart disease. In: Goldman L, Coone
+  → SKIP (non-Fauci textbook)
+
+[24/229] SEARCHABLE         Castelli     2020   | QIDs:1
+  Castelli G, Desai KM, Cantone RE. Peripheral neuropathy: evaluation 
+  Exa: Peripheral neuropathy: evaluation and differential diagnosis Castelli 2020 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2020/1215/p732.html
+  → ART-2022 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[25/229] SEARCHABLE         Charoensri   2024   | QIDs:1
+  Charoensri S, Bashaw L, Dehmlow C, Ellies T, Wyckoff J, Turcu AF. Ev
+  Exa: Evaluation of a best- practice advisory for primary aldosteronism screening Char
+  → landing_page: https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2813
+  → ART-2023 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[26/229] SEARCHABLE         Childress    2022   | QIDs:2
+  Childress MA, Olivas J, Crutchfield A. Common finger fractures and d
+  Exa: Common finger fractures and dislocations Childress 2022 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2022/0600/p631.html
+  → ART-2024 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[27/229] SEARCHABLE         Childress    2020   | QIDs:1
+  Childress MA, Stuek SJ. Neck pain: initial evaluation and management
+  Exa: Neck pain: initial evaluation and management Childress 2020 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2020/0801/p150.html
+  → ART-2025 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[28/229] SEARCHABLE         Chu          2017   | QIDs:1
+  Chu C, Pollock LC, Selwyn PA. HIV-associated complications: a system
+  Exa: HIV-associated complications: a systems-based approach Chu 2017 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2017/0801/p161.html
+  → ART-2026 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[29/229] SEARCHABLE         Claassen     2022   | QIDs:1
+  Claassen J, Park S. Spontaneous subarachnoid haemorrhage. Lancet. 20
+  Exa: Spontaneous subarachnoid haemorrhage Claassen 2022 PDF
+  → pmc_fulltext: https://pmc.ncbi.nlm.nih.gov/articles/PMC9987649/
+  → ART-2027 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[30/229] SEARCHABLE         Clarke       2023   | QIDs:1
+  Clarke SL. Hypertension in adults: initial evaluation and management
+  Exa: Hypertension in adults: initial evaluation and management Clarke 2023 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/1000/hypertension-adults.html
+  → ART-2028 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[31/229] SEARCHABLE         Committee    2014   | QIDs:1
+  Committee on Adolescence; Braverman PK, Adelman WP, et al. Contracep
+  Exa: Contraception for adolescents Committee 2014 PDF
+  → landing_page: https://pubmed.ncbi.nlm.nih.gov/25266430/
+  → ART-2029 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[32/229] SEARCHABLE         Cowan        2022   | QIDs:1
+  Cowan AJ, Green DJ, Kwok M, et al. Diagnosis and management of multi
+  Exa: Diagnosis and management of multiple myeloma: a review Cowan 2022
+  → landing_page: https://jamanetwork.com/journals/jama/article-abstract/2788522
+  → ART-2030 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[33/229] SEARCHABLE         Dalrymple    2023   | QIDs:2
+  Dalrymple SN, Row JH, Gazewood J. Bell palsy: rapid evidence review.
+  Exa: Bell palsy: rapid evidence review Dalrymple 2023 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0400/bell-palsy.html
+  → ART-2031 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[34/229] TEXTBOOK_SKIP      Deutsch      2016   | QIDs:1
+  Deutsch MB. Guidelines for the primary and gender-affirming care of 
+  → SKIP (non-Fauci textbook)
+
+[35/229] SEARCHABLE         Dictionary   2025   | QIDs:1
+  Dictionary of genetics terms: autosomal recessive inheritance. Natio
+  Exa: National Cancer Institute at the National Institutes of Health Dictionary 2025 P
+  → landing_page: https://www.cancer.gov/publications/dictionaries
+  → ART-2032 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[36/229] SEARCHABLE         Differentiated 2022   | QIDs:1
+  Differentiated and simplified pre-exposure prophylaxis for HIV preve
+  Exa: World Health Organization; July 27, 2022 Differentiated 2022 PDF
+  → direct_pdf: https://iris.who.int/bitstream/handle/10665/360861/9789240053694-eng.pdf
+  → ART-2033 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[37/229] SEARCHABLE         Diseases     2021   | QIDs:1
+  Diseases characterized by urethritis and cervicitis. Sexually Transm
+  Exa: Sexually Transmitted Infections Treatment Guidelines, 2021 Diseases 2021 PDF
+  → direct_pdf: https://www.cdc.gov/std/treatment-guidelines/STI-Guidelines-2021.pdf
+  → ART-2034 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[38/229] SEARCHABLE         Dornblaser   2024   | QIDs:1
+  Dornblaser D, Young S, Shaukat A. Colon polyps: updates in classific
+  Exa: Colon polyps: updates in classification and management Dornblaser 2024 PDF
+  → landing_page: https://journals.lww.com/co-gastroenterology/abstract/2024/01000/colon_poly
+  → ART-2035 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[39/229] TEXTBOOK_FAUCI     Douglas      2022   | QIDs:1
+  Douglas VC, Hauser SL. Trigeminal neuralgia, Bell’s palsy, and other
+  → ART-2036 | citation_only=1 (Textbook/Fauci)
+    tier=VC_fail | 1 pairs updated | 1 xrefs inserted
+
+[40/229] SEARCHABLE         Dowell       2022   | QIDs:1
+  Dowell D, Ragan KR, Jones CM, Baldwin GT, Chou R. CDC clinical pract
+  Exa: CDC clinical practice guideline for prescribing opioids for pain—United States, 
+  → direct_pdf: https://www.cdc.gov/mmwr/volumes/71/rr/pdfs/rr7103a1-H.pdf
+  → ART-2037 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[41/229] SEARCHABLE         Drugs        2023   | QIDs:1
+  Drugs for chronic insomnia. Med Lett Drugs Ther. 2023;65(1667):1-6.
+  Exa: Med Lett Drugs Ther Drugs 2023 PDF
+  → landing_page: https://secure.medicalletter.org/product/drugs-of-choice-2023-handbook/
+  → ART-2038 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[42/229] SEARCHABLE         Edi          2022   | QIDs:1
+  Edi R, Cheng T. Endometriosis: evaluation and treatment. Am Fam Phys
+  Exa: Endometriosis: evaluation and treatment Edi 2022 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2022/1000/endometriosis.html
+  → ART-2039 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[43/229] SEARCHABLE         Edlow        2021   | QIDs:1
+  Edlow J. Diagnosing subarachnoid hemorrhage. J Emerg Med. 2021;61(5)
+  Exa: Diagnosing subarachnoid hemorrhage Edlow 2021 PDF
+  → direct_pdf: https://intjem.biomedcentral.com/counter/pdf/10.1186/s12245-021-00353-w.pdf
+  → ART-2040 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[44/229] TEXTBOOK_FAUCI     El           2024   | QIDs:1
+  El Melhat AM, Youssef ASA, Zebdawi MR, Hafez MA, Khalil LH, Harrison
+  → ART-2041 | citation_only=1 (Textbook/Fauci)
+    tier=VC_fail | 1 pairs updated | 1 xrefs inserted
+
+[45/229] SEARCHABLE         Ellis        2014   | QIDs:1
+  Ellis R, Ellis C. Dog and cat bites. Am Fam Physician. 2014;90(4):23
+  Exa: Dog and cat bites Ellis 2014 PDF
+  → landing_page: http://search.proquest.com/openview/022b3eb2ff009b73857d5369454083fd/1?cbl=
+  → ART-2042 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[46/229] SEARCHABLE         Erlandson    2023   | QIDs:2
+  Erlandson M, Wertz MC, Rosenfeld E. Common skin conditions during pr
+  Exa: Common skin conditions during pregnancy Erlandson 2023 PDF
+  → direct_pdf: https://www.aafp.org/pubs/afp/issues/2023/0200/skin-conditions-during-pregn
+  → ART-2043 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[47/229] SEARCHABLE         FDA          2019   | QIDs:1
+  FDA approves new nasal spray medication for treatment-resistant depr
+  Exa: PR Newswire, 2019 FDA 2019
+  → landing_page: https://www.fda.gov/news-events/fda-newsroom/press-announcements
+  → ART-2044 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[48/229] SEARCHABLE         Fang         2020   | QIDs:1
+  Fang X, Huda R. Acute flaccid myelitis (AFM): current status and dia
+  Exa: Acute flaccid myelitis (AFM): current status and diagnostic challenges Fang 2020
+  → landing_page: https://pubmed.ncbi.nlm.nih.gov/32657057/
+  → ART-2045 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[49/229] SEARCHABLE         Farahi       2021   | QIDs:1
+  Farahi N, McEachern M. Sexual assault of women. Am Fam Physician. 20
+  Exa: Sexual assault of women Farahi 2021 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2021/0201/p168.html
+  → ART-2046 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[50/229] SEARCHABLE         Final        2019   | QIDs:1
+  Final recommendation statement: BRCA-related cancer: risk assessment
+  Exa: US Preventive Services Task Force Final 2019 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/Page/Document/final-evidence-
+  → ART-2047 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[51/229] SEARCHABLE         Final        2022   | QIDs:1
+  Final recommendation statement: anxiety in children and adolescents:
+  Exa: US Preventive Services Task Force Final 2022 PDF
+  → direct_pdf: https://www.uspreventiveservicestaskforce.org/files/Partner_Pilot_Document_
+  → ART-2048 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[52/229] SEARCHABLE         Final        2016   | QIDs:1
+  Final recommendation statement: autism spectrum disorder in young ch
+  Exa: US Preventive Services Task Force Final 2016 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/skin-ca
+  → ART-2049 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[53/229] SEARCHABLE         Final        2018   | QIDs:1
+  Final recommendation statement: cervical cancer: screening. US Preve
+  Exa: US Preventive Services Task Force Final 2018 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/Page/Document/final-evidence-
+  → ART-2050 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[54/229] SEARCHABLE         Final        2024   | QIDs:1
+  Final recommendation statement: falls prevention in community-dwelli
+  Exa: US Preventive Services Task Force Final 2024 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/uspstf/announcements/clinical
+  → ART-2051 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[55/229] SEARCHABLE         Final        2023   | QIDs:1
+  Final recommendation statement: genital herpes infection: serologic 
+  Exa: US Preventive Services Task Force Final 2023 PDF
+  → direct_pdf: https://www.uspreventiveservicestaskforce.org/files/uspstf-2023-year-in-rev
+  → ART-2052 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[56/229] SEARCHABLE         Final        2019   | QIDs:1
+  Final recommendation statement: human immunodeficiency virus (HIV) i
+  Exa: US Preventive Services Task Force Final 2019 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/Page/Document/final-evidence-
+  → ART-2053 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[57/229] SEARCHABLE         Final        2015   | QIDs:1
+  Final recommendation statement: iron deficiency anemia in young chil
+  Exa: US Preventive Services Task Force Final 2015 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/Home/GetFile/1/374/hbpscreenf
+  → ART-2054 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[58/229] SEARCHABLE         Final        2021   | QIDs:1
+  Final recommendation statement: prediabetes and type 2 diabetes: scr
+  Exa: US Preventive Services Task Force Final 2021 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/uspstf/document/final-decisio
+  → ART-2055 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[59/229] SEARCHABLE         Final        2021   | QIDs:1
+  Final recommendation statement: tobacco smoking cessation in adults,
+  Exa: US Preventive Services Task Force Final 2021 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/uspstf/document/final-decisio
+  → ART-2056 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[60/229] SEARCHABLE         Final        2018   | QIDs:1
+  Final recommendation statement: unhealthy alcohol use in adolescents
+  Exa: US Preventive Services Task Force Final 2018 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/Page/Document/final-evidence-
+  → ART-2057 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[61/229] SEARCHABLE         Final        2020   | QIDs:1
+  Final recommendation statement: unhealthy drug use: screening. US Pr
+  Exa: US Preventive Services Task Force Final 2020 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/uspstf/document/final-evidenc
+  → ART-2058 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[62/229] SEARCHABLE         Firnhaber    2019   | QIDs:3
+  Firnhaber JM, Powell CS. Lower extremity peripheral artery disease: 
+  Exa: Lower extremity peripheral artery disease: diagnosis and treatment Firnhaber 201
+  → open_access: https://aafp.org/pubs/afp/issues/2019/0315/p362.html
+  → ART-2059 [VC_fail] | 3 pairs updated | 3 xrefs inserted
+
+[63/229] SEARCHABLE         Firnhaber    2020   | QIDs:1
+  Firnhaber JM. Basal cell and cutaneous squamous cell carcinomas: dia
+  Exa: Basal cell and cutaneous squamous cell carcinomas: diagnosis and treatment Firnh
+  → open_access: https://aafp.org/pubs/afp/issues/2020/0915/p339.html
+  → ART-2060 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[64/229] SEARCHABLE         Fitzgibbons  2015   | QIDs:1
+  Fitzgibbons RJ Jr, Forse RA. Groin hernias in adults. N Engl J Med. 
+  Exa: Groin hernias in adults Fitzgibbons 2015
+  → landing_page: https://www.nejm.org/doi/full/10.1056/NEJMcp1404068
+  → ART-2061 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[65/229] SEARCHABLE         Fitzgibbons  2006   | QIDs:1
+  Fitzgibbons RJ Jr, Giobbie-Hurder A, Gibbs JO, et al. Watchful waiti
+  Exa: Watchful waiting vs repair of inguinal hernia in minimally symptomatic men: a ra
+  → open_access: https://www.aafp.org/pubs/afp/issues/2006/0515/p1814a.html
+  → ART-2062 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[66/229] SEARCHABLE         Folic        2025   | QIDs:1
+  Folic acid: facts for clinicians. Centers for Disease Control and Pr
+  Exa: Centers for Disease Control and Prevention Folic 2025 PDF
+  → open_access: https://www.cdc.gov/folic-acid/index.html
+  → ART-2063 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[67/229] SEARCHABLE         Fontham      2020   | QIDs:1
+  Fontham ETH, Wolf AMD, Church TR, et al. Cervical cancer screening f
+  Exa: Cervical cancer screening for individuals at average risk: 2020 guideline update
+  → open_access: https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.21628
+  → ART-2064 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[68/229] SEARCHABLE         Ford         2022   | QIDs:1
+  Ford B, Smith E, Richards A. Management of substance use disorders: 
+  Exa: Management of substance use disorders: guidelines from the VA/DoD Ford 2022 PDF
+  → landing_page: https://www.healthquality.va.gov/guidelines/mh/sud/
+  → ART-2065 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[69/229] SEARCHABLE         Ford         2021   | QIDs:1
+  Ford B. Colonoscopy follow-up: U.S. Multi-Society Task Force on Colo
+  Exa: Colonoscopy follow-up: U.S Ford 2021 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2021/0301/p314.html
+  → ART-2066 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[70/229] SEARCHABLE         Foster       2023   | QIDs:1
+  Foster ZJ, Day AL, Miller J. Polyarticular joint pain in adults: eva
+  Exa: Polyarticular joint pain in adults: evaluation and differential diagnosis Foster
+  → direct_pdf: https://www.aafp.org/pubs/afp/issues/2023/0100/polyarticular-joint-pain.pdf
+  → ART-2067 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[71/229] SEARCHABLE         Frazier      2024   | QIDs:1
+  Frazier W, Zemtsov RK, Ge Y. Rosacea: common questions and answers. 
+  Exa: Rosacea: common questions and answers Frazier 2024 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2024/0600/rosacea.html
+  → ART-2068 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[72/229] SEARCHABLE         Gaddey       2024   | QIDs:1
+  Gaddey HL, Mason B, Naik A. Depression: managing resistance and part
+  Exa: Depression: managing resistance and partial response to treatment Gaddey 2024 PD
+  → open_access: https://www.aafp.org/pubs/afp/issues/2024/0500/treatment-resistant-depressi
+  → ART-2069 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[73/229] SEARCHABLE         Gaddey       2016   | QIDs:1
+  Gaddey HL, Riegel AM. Unexplained lymphadenopathy: evaluation and di
+  Exa: Unexplained lymphadenopathy: evaluation and differential diagnosis Gaddey 2016 P
+  → direct_pdf: https://www.aafp.org/pubs/afp/issues/2016/1201/p896.pdf
+  → ART-2070 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[74/229] SEARCHABLE         Gauer        2022   | QIDs:2
+  Gauer RL, Whitaker DJ. Thrombocytopenia: evaluation and management. 
+  Exa: Thrombocytopenia: evaluation and management Gauer 2022 PDF
+  → direct_pdf: https://www.aafp.org/pubs/afp/issues/2022/0900/thrombocytopenia.pdf
+  → ART-2071 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[75/229] SEARCHABLE         Gemtesa      2020   | QIDs:1
+  Gemtesa (vibegron) tablets. Prescribing information. US Food and Dru
+  Exa: Prescribing information Gemtesa 2020 PDF
+  → direct_pdf: https://www.gemtesa.com/files/gemtesa-prescribing-information.pdf
+  → ART-2072 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[76/229] SEARCHABLE         Goldschmidt  2021   | QIDs:1
+  Goldschmidt R, Chu C. HIV infection in adults: initial management. A
+  Exa: HIV infection in adults: initial management Goldschmidt 2021 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2021/0401/p407.html
+  → ART-2073 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[77/229] SEARCHABLE         Gupta        2020   | QIDs:1
+  Gupta S, Lieberman D, Anderson JC, et al. Recommendations for follow
+  Exa: Recommendations for follow-up after colonoscopy and polypectomy: a consensus upd
+  → direct_pdf: https://www.asge.org/docs/default-source/guidelines/recommendations-for-fol
+  → ART-2074 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[78/229] TEXTBOOK_SKIP      Harden       2022   | QIDs:1
+  Harden RN, McCabe CS, Goebel A, et al. Complex regional pain syndrom
+  → SKIP (non-Fauci textbook)
+
+[79/229] SEARCHABLE         Hawks        2020   | QIDs:2
+  Hawks MK, Svarverud JE. Acute lower gastrointestinal bleeding: evalu
+  Exa: Acute lower gastrointestinal bleeding: evaluation and management Hawks 2020 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2020/0215/p206.html
+  → ART-2075 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[80/229] TEXTBOOK_SKIP      Headache     2018   | QIDs:1
+  Headache Classification Committee of the International Headache Soci
+  → SKIP (non-Fauci textbook)
+
+[81/229] SEARCHABLE         Heidelbaugh  2024   | QIDs:1
+  Heidelbaugh JJ, Belakovskiy A. Testosterone replacement therapy for 
+  Exa: Testosterone replacement therapy for male hypogonadism Heidelbaugh 2024 PDF
+  → landing_page: https://www.ovid.com/journals/afph/fulltext/00000405-202406000-00011~testos
+  → ART-2076 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[82/229] SEARCHABLE         Heidenreich  2022   | QIDs:1
+  Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA guide
+  Exa: 2022 AHA/ACC/HFSA guideline for the management of heart failure: executive summa
+  → landing_page: https://www.jacc.org/doi/10.1016/j.jacc.2021.12.011
+  → ART-2077 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[83/229] SEARCHABLE         Henderson    2021   | QIDs:1
+  Henderson JT, Vesco KK, Senger CA, Thomas RG, Redmond N. Aspirin Use
+  Exa: Aspirin Use to Prevent Preeclampsia and Related Morbidity and Mortality Henderso
+  → landing_page: https://jamanetwork.com/journals/jama/fullarticle/2784505
+  → ART-2078 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[84/229] SEARCHABLE         Hoh          2023   | QIDs:1
+  Hoh BL, Ko NU, Amin-Hanjani S, et al. 2023 guideline for the managem
+  Exa: 2023 guideline for the management of patients with aneurysmal subarachnoid hemor
+  → landing_page: https://www.ahajournals.org/doi/10.1161/STR.0000000000000436
+  → ART-2079 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[85/229] SEARCHABLE         Holt         2016   | QIDs:1
+  Holt JD, Garrett WA, McCurry TK, Teichman JM. Common questions about
+  Exa: Common questions about chronic prostatitis Holt 2016 PDF
+  → landing_page: https://pubmed.ncbi.nlm.nih.gov/26926816/
+  → ART-2080 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[86/229] SEARCHABLE         Hoover       2019   | QIDs:1
+  Hoover L. Infantile hemangioma: AAP releases guideline for managemen
+  Exa: Infantile hemangioma: AAP releases guideline for management Hoover 2019 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2019/0801/p186.html
+  → ART-2081 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[87/229] SEARCHABLE         Houston      2015   | QIDs:1
+  Houston BA, Stevens GR. Hypertrophic cardiomyopathy: a review. Clin 
+  Exa: Hypertrophic cardiomyopathy: a review Houston 2015 PDF
+  → pmc_fulltext: https://ncbi.nlm.nih.gov/pmc/articles/PMC4309724/
+  → ART-2082 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[88/229] SEARCHABLE         Husebye      2014   | QIDs:1
+  Husebye ES, Allolio B, Arlt W, et al. Consensus statement on the dia
+  Exa: Consensus statement on the diagnosis, treatment and follow-up of patients with p
+  → landing_page: https://onlinelibrary.wiley.com/doi/10.1111/joim.12162
+  → ART-2083 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[89/229] SEARCHABLE         Hwang        2020   | QIDs:1
+  Hwang C. Calculated decisions: Ottawa knee rule. Emerg Med Pract. 20
+  Exa: Calculated decisions: Ottawa knee rule Hwang 2020 PDF
+  → landing_page: https://stanfordhealthcare.org/publications/790/790797.html
+  → ART-2084 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[90/229] SEARCHABLE         Ingelfinger  2021   | QIDs:1
+  Ingelfinger JR. Hematuria in adults. N Engl J Med. 2021;385(2):153-1
+  Exa: Hematuria in adults Ingelfinger 2021
+  → landing_page: https://www.nejm.org/doi/full/10.1056/NEJMra1604481
+  → ART-2085 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[91/229] SEARCHABLE         Islam        2019   | QIDs:1
+  Islam RM, Bell RJ, Green S, Page MJ, Davis SR. Safety and efficacy o
+  Exa: Safety and efficacy of testosterone for women: a systematic review and meta-anal
+  → landing_page: https://www.thelancet.com/journals/landia/article/PIIS2213-8587(19)30189-5/
+  → ART-2086 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[92/229] SEARCHABLE         Ito          2018   | QIDs:1
+  Ito T, Lee L, Jensen RT. Carcinoid-syndrome: recent advances, curren
+  Exa: Carcinoid-syndrome: recent advances, current status and controversies Ito 2018 P
+  → pmc_fulltext: https://ncbi.nlm.nih.gov/pmc/articles/PMC5747542/
+  → ART-2087 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[93/229] SEARCHABLE         Kandiah      2022   | QIDs:1
+  Kandiah JW, Blumberger DM, Rabkin SW. The fundamental basis of palpi
+  Exa: The fundamental basis of palpitations: a neurocardiology approach Kandiah 2022 P
+  → landing_page: https://www.benthamdirect.com/content/journals/ccr/10.2174/1573403X17666210
+  → ART-2088 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[94/229] SEARCHABLE         Khairani     2023   | QIDs:1
+  Khairani CD, Bejjani A, Piazza G, et al. Direct oral anticoagulants 
+  Exa: Direct oral anticoagulants vs vitamin K antagonists in patients with antiphospho
+  → landing_page: https://www.jacc.org/doi/10.1016/j.jacc.2022.10.008
+  → ART-2089 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[95/229] SEARCHABLE         Khan         2021   | QIDs:2
+  Khan M, Chollet A. Breast cancer screening: common questions and ans
+  Exa: Breast cancer screening: common questions and answers Khan 2021 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2021/0101/p33.html
+  → ART-2090 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[96/229] SEARCHABLE         Khatib       2021   | QIDs:1
+  Khatib R, Sabir FRN, Omari C, Pepper C, Tayebjee MH. Managing drug-i
+  Exa: Managing drug-induced QT prolongation in clinical practice Khatib 2021 PDF
+  → open_access: https://academic.oup.com/pmj/article/97/1149/452/6969550
+  → ART-2091 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[97/229] SEARCHABLE         Kim          2023   | QIDs:1
+  Kim MJ, Valerio C, Knobloch GK. Potassium disorders: hypokalemia and
+  Exa: Potassium disorders: hypokalemia and hyperkalemia Kim 2023 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2023/0100/potassium-disorders-hypokalemia-
+  → ART-2092 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[98/229] TEXTBOOK_SKIP      Kosowsky     2018   | QIDs:1
+  Kosowsky JM, Harbison Kimberly H. Pleural disease. In: Walls RM, Hoc
+  → SKIP (non-Fauci textbook)
+
+[99/229] SEARCHABLE         Kuba         2018   | QIDs:1
+  Kuba MHM, Izuka BH. One brace: one visit: treatment of pediatric dis
+  Exa: One brace: one visit: treatment of pediatric distal radius buckle fractures with
+  → landing_page: https://journals.lww.com/pedorthopaedics/abstract/2018/07000/one_brace__one
+  → ART-2093 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[100/229] SEARCHABLE         Kumar        2022   | QIDs:1
+  Kumar R, Wassif WS. Adrenal insufficiency. J Clin Pathol. 2022;75(7)
+  Exa: Adrenal insufficiency Kumar 2022 PDF
+  → open_access: https://jcp.bmj.com/content/75/7/433
+  → ART-2094 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[101/229] SEARCHABLE         Lam          2024   | QIDs:1
+  Lam JC, Stokes W. Acute and chronic prostatitis. Am Fam Physician. 2
+  Exa: Acute and chronic prostatitis Lam 2024 PDF
+  → landing_page: https://www.clinicalmicrobiologyandinfection.com/article/S1198-743X(22)0031
+  → ART-2095 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[102/229] SEARCHABLE         Lam          2023   | QIDs:1
+  Lam NCV, Brown JA, Sharma R. Systemic lupus erythematosus: diagnosis
+  Exa: Systemic lupus erythematosus: diagnosis and treatment Lam 2023 PDF
+  → landing_page: https://www.proquest.com/openview/f91fe5f8ffcc953db3ecf297b63d9f21/1?cbl=35
+  → ART-2096 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[103/229] SEARCHABLE         Lambert      2016   | QIDs:1
+  Lambert M. AAP updates recommendations for routine preventive pediat
+  Exa: AAP updates recommendations for routine preventive pediatric health care Lambert
+  → open_access: https://aafp.org/pubs/afp/issues/2016/0815/p324.html
+  → ART-2097 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[104/229] SEARCHABLE         Langan       2023   | QIDs:1
+  Langan RC, Goodbred AJ. Pulmonary nodules: common questions and answ
+  Exa: Pulmonary nodules: common questions and answers Langan 2023 PDF
+  → landing_page: https://pubmed.ncbi.nlm.nih.gov/36920823/
+  → ART-2098 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[105/229] SEARCHABLE         Langan       2022   | QIDs:1
+  Langan RC, Puente MEE. Scrotal masses. Am Fam Physician. 2022;106(2)
+  Exa: Scrotal masses Langan 2022 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2022/0800/scrotal-masses.html
+  → ART-2099 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[106/229] SEARCHABLE         Larsen       2022   | QIDs:1
+  Larsen P, Ahmed M. Evaluation of biological activities and medicinal
+  Exa: Evaluation of biological activities and medicinal properties of honey drops and 
+  → open_access: https://www.mdpi.com/2072-6643/14/22/4738
+  → ART-2100 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[107/229] SEARCHABLE         Larson       2023   | QIDs:2
+  Larson ST, Ray BE, Wilbur J. Ischemic stroke management: posthospita
+  Exa: Ischemic stroke management: posthospitalization and transition of care Larson 20
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0700/ischemic-stroke.html
+  → ART-2101 [VC_pass] | 2 pairs updated | 2 xrefs inserted
+
+[108/229] SEARCHABLE         Lauters      2022   | QIDs:1
+  Lauters RA, Garcia KW, Arnold JJ. Enuresis in children: common quest
+  Exa: Enuresis in children: common questions and answers Lauters 2022 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2022/1100/enuresis-children.html
+  → ART-2102 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[109/229] TEXTBOOK_FAUCI     Lawley       2022   | QIDs:1
+  Lawley LP, Cheeley JT, Swerlick RA. Eczema, psoriasis, cutaneous inf
+  → ART-2103 | citation_only=1 (Textbook/Fauci)
+    tier=VC_fail | 1 pairs updated | 1 xrefs inserted
+
+[110/229] SEARCHABLE         Lee          2023   | QIDs:1
+  Lee SY, Pearce EN. Hyperthyroidism: a review. JAMA. 2023;330(15):147
+  Exa: Hyperthyroidism: a review Lee 2023
+  → landing_page: https://jamanetwork.com/journals/jama/article-abstract/2810692
+  → ART-2104 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[111/229] SEARCHABLE         Levey        2020   | QIDs:1
+  Levey AS, Eckardt KU, Dorman NM, et al. Nomenclature for kidney func
+  Exa: Nomenclature for kidney function and disease: report of a Kidney Disease: Improv
+  → pmc_fulltext: http://www.ncbi.nlm.nih.gov/pmc/articles/7745658
+  → ART-2105 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[112/229] SEARCHABLE         Lim          2016   | QIDs:1
+  Lim RBL. End-of-life care in patients with advanced lung cancer. The
+  Exa: End-of-life care in patients with advanced lung cancer Lim 2016 PDF
+  → pmc_fulltext: https://ncbi.nlm.nih.gov/pmc/articles/PMC5933619/
+  → ART-2106 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[113/229] SEARCHABLE         Lin          2015   | QIDs:1
+  Lin CY, Lin CC, Chou YC, Chen PY, Wang CL. Heel pad stiffness in pla
+  Exa: Heel pad stiffness in plantar heel pain by shear wave elastography Lin 2015 PDF
+  → landing_page: https://www.umbjournal.org/article/S0301-5629(15)00426-3/abstract
+  → ART-2107 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[114/229] SEARCHABLE         Liu          2021   | QIDs:1
+  Liu N, Prout TM, Xu Y, et al. Unnecessary use of radiology studies i
+  Exa: Unnecessary use of radiology studies in the diagnosis of inguinal hernias: a ret
+  → landing_page: https://link.springer.com/article/10.1007/s00464-020-07947-0?error=cookies_
+  → ART-2108 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[115/229] SEARCHABLE         Liu          2023   | QIDs:1
+  Liu XG, Hou Y, Hou M. How we treat primary immune thrombocytopenia i
+  Exa: How we treat primary immune thrombocytopenia in adults Liu 2023 PDF
+  → direct_pdf: https://jhoonline.biomedcentral.com/counter/pdf/10.1186/s13045-023-01401-z.
+  → ART-2109 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[116/229] SEARCHABLE         Lozano-Ortega 2020   | QIDs:1
+  Lozano-Ortega G, Walker DR, Johnston K, et al. Comparative safety an
+  Exa: Comparative safety and efficacy of treatments for overactive bladder among older
+  → landing_page: https://link.springer.com/content/pdf/10.1007/s40266-020-00792-9.pdf?error=
+  → ART-2110 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[117/229] SEARCHABLE         Lucas        2014   | QIDs:1
+  Lucas GM, Ross MJ, Stock PG, et al. Clinical practice guideline for 
+  Exa: Clinical practice guideline for the management of chronic kidney disease in pati
+  → direct_pdf: https://www.idsociety.org/globalassets/idsa/practice-guidelines/clinical-pr
+  → ART-2111 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[118/229] SEARCHABLE         MacDonald    2021   | QIDs:1
+  MacDonald J, Schaefer M, Stumph J. The preparticipation physical eva
+  Exa: The preparticipation physical evaluation MacDonald 2021 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2021/0501/p539.html
+  → ART-2112 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[119/229] SEARCHABLE         Maguire      2021   | QIDs:1
+  Maguire MJ, Marson AG, Nevitt SJ. Antidepressants for people with ep
+  Exa: Antidepressants for people with epilepsy and depression Maguire 2021 PDF
+  → landing_page: https://cochrane.org/evidence/CD010682_antidepressants-people-epilepsy-and-
+  → ART-2113 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[120/229] SEARCHABLE         Malfertheiner 2022   | QIDs:1
+  Malfertheiner P, Megraud F, Rokkas T, et al. Management of Helicobac
+  Exa: Management of Helicobacter pylori infection: the Maastricht VI/Florence consensu
+  → direct_pdf: https://socgastro.org.br/novo/wp-content/uploads/2022/09/35944925_-Manageme
+  → ART-2114 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[121/229] SEARCHABLE         Mancini      2022   | QIDs:1
+  Mancini GBJ, O'Meara E, Zieroth S, et al. 2022 Canadian Cardiovascul
+  Exa: 2022 Canadian Cardiovascular Society guideline for use of GLP-1 receptor agonist
+  → landing_page: https://ccs.ca/guideline/cardiorenal-2022/3-integration-of-glp-1ra-or-sglt2
+  → ART-2115 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[122/229] SEARCHABLE         Manzoni      2016   | QIDs:1
+  Manzoni GC, Taga A, Russo M, Torelli P. Age of onset of episodic and
+  Exa: Age of onset of episodic and chronic cluster headache-a review of a large case s
+  → direct_pdf: https://thejournalofheadacheandpain.biomedcentral.com/counter/pdf/10.1186/s
+  → ART-2116 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[123/229] SEARCHABLE         Masiello     2023   | QIDs:1
+  Masiello F, Pati I, Veropalumbo E, Pupella S, Cruciani M, De Angelis
+  Exa: Ultrasound-guided injection of platelet-rich plasma for tendinopathies: a system
+  → landing_page: https://www.ncbi.nlm.nih.gov/books/NBK595134/?report=reader
+  → ART-2117 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[124/229] TEXTBOOK_SKIP      Maternal     2022   | QIDs:1
+  Maternal physiology. In: Cunningham F, Leveno KJ, Dashe JS, Hoffman 
+  → SKIP (non-Fauci textbook)
+
+[125/229] SEARCHABLE         Mattoo       2021   | QIDs:1
+  Mattoo TK, Shaikh N, Nelson CP. Contemporary management of urinary t
+  Exa: Contemporary management of urinary tract infection in children Mattoo 2021 PDF
+  → landing_page: https://publications.aap.org/pediatrics/article/147/2/e2020012138/36243/Con
+  → ART-2118 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[126/229] SEARCHABLE         May          2005   | QIDs:1
+  May A. Cluster headache: pathogenesis, diagnosis, and management. La
+  Exa: Cluster headache: pathogenesis, diagnosis, and management May 2005 PDF
+  → landing_page: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)67217-0/
+  → ART-2119 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[127/229] SEARCHABLE         Mazzone      2022   | QIDs:1
+  Mazzone PJ, Lam L. Evaluating the patient with a pulmonary nodule: a
+  Exa: Evaluating the patient with a pulmonary nodule: a review Mazzone 2022
+  → landing_page: https://pubmed.ncbi.nlm.nih.gov/35040882/
+  → ART-2120 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[128/229] SEARCHABLE         McConaghy    2023   | QIDs:1
+  McConaghy JR, Decker A, Nair S. Peptic ulcer disease and H. pylori i
+  Exa: Peptic ulcer disease and H McConaghy 2023 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2023/0200/peptic-ulcer-disease-h-pylori-in
+  → ART-2121 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[129/229] SEARCHABLE         Melmed       2011   | QIDs:1
+  Melmed S, Casanueva FF, Hoffman AR, et al. Diagnosis and treatment o
+  Exa: Diagnosis and treatment of hyperprolactinemia: an Endocrine Society clinical pra
+  → open_access: https://academic.oup.com/jcem/article/96/2/273/2709487
+  → ART-2122 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[130/229] SEARCHABLE         Mendelson    2021   | QIDs:1
+  Mendelson SJ, Prabhakaran S. Diagnosis and management of transient i
+  Exa: Diagnosis and management of transient ischemic attack and acute ischemic stroke:
+  → landing_page: https://jamanetwork.com/journals/jama/article-abstract/2777474
+  → ART-2123 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[131/229] SEARCHABLE         Merrell      2023   | QIDs:1
+  Merrell B, Gauer R. The challenges of discharge against medical advi
+  Exa: The challenges of discharge against medical advice: conflict and consequences Me
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0800/curbside-discharge-against-m
+  → ART-2124 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[132/229] SEARCHABLE         Michels      2023   | QIDs:1
+  Michels TC, Ivan O. Glaucoma: diagnosis and management. Am Fam Physi
+  Exa: Glaucoma: diagnosis and management Michels 2023 PDF
+  → direct_pdf: https://www.aafp.org/pubs/afp/issues/2023/0300/glaucoma.pdf
+  → ART-2125 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[133/229] SEARCHABLE         Miller       2023   | QIDs:1
+  Miller NE, Rushlow D, Stacey SK. Diagnosis and management of sodium 
+  Exa: Diagnosis and management of sodium disorders: hyponatremia and hypernatremia Mil
+  → landing_page: https://pubmed.ncbi.nlm.nih.gov/37983699/
+  → ART-2126 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[134/229] SEARCHABLE         Mills        2020   | QIDs:1
+  Mills BM, Conrick KM, Anderson S, et al. Consensus recommendations o
+  Exa: Consensus recommendations on the prehospital care of the injured athlete with a 
+  → direct_pdf: https://www.nata.org/sites/default/files/2025-08/consensus_recommendations_
+  → ART-2127 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[135/229] SEARCHABLE         Mills        2023   | QIDs:1
+  Mills J, Barnhart H. Screening for prediabetes and type 2 diabetes i
+  Exa: Screening for prediabetes and type 2 diabetes in children and adolescents Mills 
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0100/uspstf-diabetes-screening-ch
+  → ART-2128 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[136/229] SEARCHABLE         Mount        2017   | QIDs:1
+  Mount HR, Boyle SD. Aseptic and bacterial meningitis: evaluation, tr
+  Exa: Aseptic and bacterial meningitis: evaluation, treatment, and prevention Mount 20
+  → open_access: https://www.aafp.org/pubs/afp/issues/2017/0901/p314.html
+  → ART-2129 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[137/229] SEARCHABLE         Muncie       2017   | QIDs:2
+  Muncie HL, Sirmans SM, James E. Dizziness: approach to evaluation an
+  Exa: Dizziness: approach to evaluation and management Muncie 2017 PDF
+  → direct_pdf: https://www.aafp.org/pubs/afp/issues/2017/0201/p154.pdf
+  → ART-2130 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[138/229] SEARCHABLE         Murphy       2020   | QIDs:1
+  Murphy SP, Ibrahim NE, Januzzi JL. Heart failure with reduced ejecti
+  Exa: Heart failure with reduced ejection fraction: a review Murphy 2020
+  → landing_page: https://jamanetwork.com/journals/jama/fullarticle/2768982
+  → ART-2131 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[139/229] TEXTBOOK_SKIP      NASS         2014   | QIDs:1
+  NASS Evidence-Based Clinical Guidelines Committee; Matz P, Meagher R
+  → SKIP (non-Fauci textbook)
+
+[140/229] SEARCHABLE         Nelson       2024   | QIDs:1
+  Nelson M, LaRouche V. Polycystic ovary syndrome: assessment and mana
+  Exa: Polycystic ovary syndrome: assessment and management guidelines Nelson 2024 PDF
+  → direct_pdf: https://www.sonographers.org/publicassets/e5cdf277-d8de-ef11-9137-005056879
+  → ART-2132 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[141/229] SEARCHABLE         Nelson       2021   | QIDs:1
+  Nelson SC. Tarsal tunnel syndrome. Clin Podiatr Med Surg. 2021;38(2)
+  Exa: Tarsal tunnel syndrome Nelson 2021 PDF
+  → pmc_fulltext: https://pmc.ncbi.nlm.nih.gov/articles/PMC11726481/
+  → ART-2133 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[142/229] SEARCHABLE         Nerattini    2023   | QIDs:1
+  Nerattini M, Jett S, Andy C, et al. Systematic review and meta-analy
+  Exa: Systematic review and meta-analysis of the effects of menopause hormone therapy 
+  → open_access: https://www.frontiersin.org/articles/10.3389/fnagi.2023.1260427/full
+  → ART-2134 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[143/229] SEARCHABLE         Newman       2022   | QIDs:1
+  Newman DP, Soto AT. Sacroiliac joint dysfunction: diagnosis and trea
+  Exa: Sacroiliac joint dysfunction: diagnosis and treatment Newman 2022 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2022/0300/p239.html
+  → ART-2135 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[144/229] SEARCHABLE         Nguyen       2010   | QIDs:1
+  Nguyen CV, Collier S, Merten AH, Maguiness SM, Hook KP. Tinea capiti
+  Exa: Tinea capitis: a single- institution retrospective review from 2010 to 2015 Nguy
+  → landing_page: https://onlinelibrary.wiley.com/doi/10.1111/pde.14092
+  → ART-2136 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[145/229] SEARCHABLE         Norman       2017   | QIDs:1
+  Norman G, Christie J, Liu Z, et al. Antiseptics for burns. Cochrane 
+  Exa: Antiseptics for burns Norman 2017 PDF
+  → direct_pdf: https://aislec.it/wp-content/uploads/2024/12/2017-Antiseptics-for-burns-Rev
+  → ART-2137 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[146/229] SEARCHABLE         Oldroyd      2023   | QIDs:1
+  Oldroyd AGS, Callen JP, Chinoy H, et al; International Myositis Asse
+  Exa: International guideline for idiopathic inflammatory myopathy-associated cancer s
+  → direct_pdf: http://www.nature.com/articles/s41584-023-01045-w.pdf
+  → ART-2138 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[147/229] SEARCHABLE         Oppenlander  2023   | QIDs:1
+  Oppenlander KE, Chung AA, Clabaugh D. Respiratory syncytial virus br
+  Exa: Respiratory syncytial virus bronchiolitis: rapid evidence review Oppenlander 202
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0700/respiratory-syncytial-virus-
+  → ART-2139 [VC_pass] | 1 pairs updated | 1 xrefs inserted
+
+[148/229] SEARCHABLE         Ortiz        2023   | QIDs:1
+  Ortiz DD, Lezcano FO. Dog and cat bites: rapid evidence review. Am F
+  Exa: Dog and cat bites: rapid evidence review Ortiz 2023 PDF
+  → direct_pdf: https://www.aafp.org/pubs/afp/issues/2023/1100/dog-cat-bites.pdf
+  → ART-2140 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[149/229] TEXTBOOK_FAUCI     O            2022   | QIDs:1
+  O’Gara PT, Loscalzo J. Approach to the patient with a heart murmur. 
+  → ART-2141 | citation_only=1 (Textbook/Fauci)
+    tier=VC_fail | 1 pairs updated | 1 xrefs inserted
+
+[150/229] SEARCHABLE         Page         2015   | QIDs:1
+  Page RL, Joglar JA, Caldwell MA, et al. 2015 ACC/AHA/HRS guideline f
+  Exa: 2015 ACC/AHA/HRS guideline for the management of adult patients with supraventri
+  → landing_page: https://pubmed.ncbi.nlm.nih.gov/26409097/
+  → ART-2142 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[151/229] SEARCHABLE         Patel        2016   | QIDs:1
+  Patel KK, Young L, Howell EH, et al. Characteristics and outcomes of
+  Exa: Characteristics and outcomes of patients presenting with hypertensive urgency in
+  → landing_page: https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2527389
+  → ART-2143 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[152/229] SEARCHABLE         Pelletier    2023   | QIDs:1
+  Pelletier J, Koyfman A, Long B. High risk and low prevalence disease
+  Exa: High risk and low prevalence diseases: orbital cellulitis Pelletier 2023 PDF
+  → landing_page: https://www.sciencedirect.com/science/article/pii/S073567572300092X
+  → ART-2144 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[153/229] SEARCHABLE         Perkins      2019   | QIDs:1
+  Perkins RB, Guido RS, Castle PE, et al. 2019 ASCCP risk-based manage
+  Exa: 2019 ASCCP risk-based management consensus guidelines for abnormal cervical canc
+  → direct_pdf: https://asccp.org/wp-content/uploads/2025/09/2019_ASCCP_Risk_Based_Manageme
+  → ART-2145 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[154/229] TEXTBOOK_SKIP      Physical     2018   | QIDs:1
+  Physical activity guidelines for Americans. 2nd ed. US Department of
+  → SKIP (non-Fauci textbook)
+
+[155/229] TEXTBOOK_FAUCI     Powers       2022   | QIDs:1
+  Powers AC, Stafford JM, Rickels MR. Diabetes mellitus: complications
+  → ART-2146 | citation_only=1 (Textbook/Fauci)
+    tier=VC_fail | 1 pairs updated | 1 xrefs inserted
+
+[156/229] SEARCHABLE         Prostate-specific 2025   | QIDs:1
+  Prostate-specific antigen (PSA) test. National Cancer Institute. Upd
+  Exa: National Cancer Institute Prostate-specific 2025 PDF
+  → landing_page: https://www.cancer.gov/types/prostate/psa-fact-sheet
+  → ART-2147 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[157/229] SEARCHABLE         Pyzocha      2023   | QIDs:1
+  Pyzocha N, Cuda Am. Common intestinal parasites. Am Fam Physician. 2
+  Exa: Common intestinal parasites Pyzocha 2023 PDF
+  → direct_pdf: https://www.aafp.org/pubs/afp/issues/2023/1100/intestinal-parasites.pdf
+  → ART-2148 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[158/229] SEARCHABLE         Pyzocha      2020   | QIDs:1
+  Pyzocha N. Accidental hypothermia: guidelines from the Wilderness Me
+  Exa: Accidental hypothermia: guidelines from the Wilderness Medical Society Pyzocha 2
+  → landing_page: https://journals.sagepub.com/doi/10.1016/j.wem.2019.10.002
+  → ART-2149 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[159/229] SEARCHABLE         Qiu          2021   | QIDs:1
+  Qiu J, Jiang D. Pessaries for managing pelvic organ prolapse in wome
+  Exa: Pessaries for managing pelvic organ prolapse in women Qiu 2021 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2021/0601/p660.html
+  → ART-2150 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[160/229] TEXTBOOK_SKIP      Quinn        2023   | QIDs:1
+  Quinn B, Halepas S. Fractured and avulsed teeth. In: Niekrash CE, Fe
+  → SKIP (non-Fauci textbook)
+
+[161/229] SEARCHABLE         Ramirez      2023   | QIDs:1
+  Ramirez SI. Prenatal care: an evidence-based approach. Am Fam Physic
+  Exa: Prenatal care: an evidence-based approach Ramirez 2023 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0800/prenatal-care.html
+  → ART-2151 [VC_pass] | 1 pairs updated | 1 xrefs inserted
+
+[162/229] SEARCHABLE         Rathjen      2023   | QIDs:1
+  Rathjen NA, Shahbodaghi SD. The ill returning traveler. Am Fam Physi
+  Exa: The ill returning traveler Rathjen 2023 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/1000/ill-returning-traveler.html
+  → ART-2152 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[163/229] SEARCHABLE         Ray          2022   | QIDs:1
+  Ray JC, Stark RJ, Hutton EJ. Cluster headache in adults. Aust Prescr
+  Exa: Cluster headache in adults Ray 2022 PDF
+  → landing_page: https://australianprescriber.tg.org.au/articles/cluster-headache-in-adults.
+  → ART-2153 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[164/229] SEARCHABLE         Raymond      2023   | QIDs:1
+  Raymond TJ, Peterson TA, Coulter J. Chronic asthma treatment: common
+  Exa: Chronic asthma treatment: common questions and answers Raymond 2023 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0400/chronic-asthma-treatment.htm
+  → ART-2154 [VC_pass] | 1 pairs updated | 1 xrefs inserted
+
+[165/229] SEARCHABLE         Reich        2019   | QIDs:1
+  Reich SG, Savitt JM. Parkinson's disease. Med Clin North Am. 2019;10
+  Exa: Parkinson's disease Reich 2019 PDF
+  → direct_pdf: https://static1.squarespace.com/static/5bae3539ab1a622e64cb406b/t/66eb2d9e2
+  → ART-2155 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[166/229] SEARCHABLE         Robertson    2023   | QIDs:1
+  Robertson S, Peacock EE, Scott R. Benzodiazepine use disorder: commo
+  Exa: Benzodiazepine use disorder: common questions and answers Robertson 2023 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0900/benzodiazepine-use-disorder.
+  → ART-2156 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[167/229] SEARCHABLE         Rodriguez-Merchan 2021   | QIDs:1
+  Rodriguez-Merchan EC, Moracia-Ochagavia I. Tarsal tunnel syndrome: c
+  Exa: Tarsal tunnel syndrome: current rationale, indications and results Rodriguez-Mer
+  → landing_page: https://eor.bioscientifica.com/view/journals/eor/6/12/2058-5241.6.210031.xm
+  → ART-2157 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[168/229] SEARCHABLE         Rogers       2023   | QIDs:2
+  Rogers TS, Noel MA, Garcia B. Dizziness: evaluation and management. 
+  Exa: Dizziness: evaluation and management Rogers 2023 PDF
+  → landing_page: https://search.proquest.com/openview/69d38cf86735ff7feb408a8fb89c4915/1?pq-
+  → ART-2158 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[169/229] SEARCHABLE         Rupert       2023   | QIDs:1
+  Rupert J, Hughes P, Schoenherr D. Speech and language delay in child
+  Exa: Speech and language delay in children Rupert 2023 PDF
+  → landing_page: https://journals.lww.com/smj/fulltext/2023/12000/speech_and_language_delay_
+  → ART-2159 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[170/229] SEARCHABLE         Saag         2021   | QIDs:1
+  Saag MS. HIV infection — screening, diagnosis, and treatment. N Engl
+  Exa: HIV infection — screening, diagnosis, and treatment Saag 2021
+  → landing_page: https://www.nejm.org/doi/full/10.1056/NEJMcp1915826?query=featured_infectio
+  → ART-2160 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[171/229] SEARCHABLE         Schaefer     2017   | QIDs:1
+  Schaefer P. Acute and chronic urticaria: evaluation and treatment. A
+  Exa: Acute and chronic urticaria: evaluation and treatment Schaefer 2017 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2017/0601/p717.html
+  → ART-2161 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[172/229] SEARCHABLE         Schillie     2018   | QIDs:1
+  Schillie S, Vellozzi C, Reingold A, et al. Prevention of hepatitis B
+  Exa: Prevention of hepatitis B virus infection in the United States: recommendations 
+  → landing_page: https://escholarship.org/uc/item/55k6f0p8
+  → ART-2162 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[173/229] SEARCHABLE         Schrager     2022   | QIDs:1
+  Schrager S, Yogendran L, Marquez CM, Sadowski EA. Adenomyosis: diagn
+  Exa: Adenomyosis: diagnosis and management Schrager 2022 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2022/0100/p33.html
+  → ART-2163 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[174/229] SEARCHABLE         Schroeder    2024   | QIDs:1
+  Schroeder JD, Trigg SD, Capo Dosal GE. Bone stress injuries: diagnos
+  Exa: Bone stress injuries: diagnosis and management Schroeder 2024 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2024/1200/bone-stress-injuries.html
+  → ART-2164 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[175/229] SEARCHABLE         Seikaly      2021   | QIDs:1
+  Seikaly H. Epistaxis. N Engl J Med. 2021;384(10):944-951.
+  Exa: Epistaxis Seikaly 2021
+  → landing_page: https://www.entnet.org/quality-practice/quality-products/clinical-practice-
+  → ART-2165 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[176/229] SEARCHABLE         Semenya      2024   | QIDs:1
+  Semenya AM, Bhatnagar P. Diagnosis and management of obsessive-compu
+  Exa: Diagnosis and management of obsessive-compulsive disorder in the primary care se
+  → landing_page: https://www.ovid.com/journals/afph/fulltext/00000405-202410000-00012~diagno
+  → ART-2166 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[177/229] SEARCHABLE         Sengupta     2023   | QIDs:1
+  Sengupta N, Feuerstein JD, Jairath V, et al. Management of patients 
+  Exa: Management of patients with acute lower gastrointestinal bleeding: an updated AC
+  → landing_page: https://journals.lww.com/ajg/pages/articleviewer.aspx?year=2023&issue=02000
+  → ART-2167 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[178/229] SEARCHABLE         Sexually     2021   | QIDs:1
+  Sexually transmitted infections treatment guidelines, 2021: pelvic i
+  Exa: Centers for Disease Control and Prevention Sexually 2021 PDF
+  → direct_pdf: https://www.cdc.gov/mmwr/volumes/70/rr/pdfs/rr7004a1-H.pdf
+  → ART-2168 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[179/229] SEARCHABLE         Shah         2018   | QIDs:1
+  Shah AR, Jala V, Arshad H, Bilal M. Evaluation and management of low
+  Exa: Evaluation and management of lower gastrointestinal bleeding Shah 2018 PDF
+  → direct_pdf: https://gut.bmj.com/content/gutjnl/68/5/776.full.pdf
+  → ART-2169 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[180/229] SEARCHABLE         Shakil       2020   | QIDs:1
+  Shakil A, Aparicio K, Barta E, Munez K. Inguinal hernias: diagnosis 
+  Exa: Inguinal hernias: diagnosis and management Shakil 2020 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2020/1015/p487.html
+  → ART-2170 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[181/229] SEARCHABLE         Shang        2022   | QIDs:1
+  Shang X, Guo K, E F, et al. Pharmacological interventions on smoking
+  Exa: Pharmacological interventions on smoking cessation: a systematic review and netw
+  → open_access: https://www.frontiersin.org/articles/10.3389/fphar.2022.1012433/full
+  → ART-2171 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[182/229] SEARCHABLE         Shaughnessy  2024   | QIDs:1
+  Shaughnessy AF. Imaging guidelines for children with mild traumatic 
+  Exa: Imaging guidelines for children with mild traumatic brain injury Shaughnessy 202
+  → open_access: https://www.aafp.org/pubs/afp/issues/2024/0800/poems-imaging-mild-traumatic
+  → ART-2172 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[183/229] SEARCHABLE         Shaughnessy  2022   | QIDs:1
+  Shaughnessy AF. SGLT-2 inhibitors reduce heart failure-related hospi
+  Exa: SGLT-2 inhibitors reduce heart failure-related hospitalization in patients witho
+  → open_access: https://aafp.org/pubs/afp/issues/2022/1000/poems-sglt-2-inhibitors.html
+  → ART-2173 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[184/229] SEARCHABLE         Shaughnessy  2021   | QIDs:1
+  Shaughnessy AF. SGLT2 inhibitors improve all-cause and cardiovascula
+  Exa: SGLT2 inhibitors improve all-cause and cardiovascular mortality in patients rega
+  → open_access: https://aafp.org/pubs/afp/issues/2021/0515/p630a.html
+  → ART-2174 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[185/229] SEARCHABLE         Sherrington  2019   | QIDs:1
+  Sherrington C, Fairhall NJ, Wallbank GK, et al. Exercise for prevent
+  Exa: Exercise for preventing falls in older people living in the community Sherringto
+  → open_access: https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012424.pub2/ful
+  → ART-2175 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[186/229] SEARCHABLE         Silbernagel  2020   | QIDs:1
+  Silbernagel KG, Hanlon S, Sprague A. Current clinical concepts: cons
+  Exa: Current clinical concepts: conservative management of Achilles tendinopathy Silb
+  → landing_page: https://meridian.allenpress.com/jat/article/55/5/438/436804/Current-Clinica
+  → ART-2176 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[187/229] SEARCHABLE         Silver       2024   | QIDs:4
+  Silver S, Williams E, Plunkett ML. Common foot fractures. Am Fam Phy
+  Exa: Common foot fractures Silver 2024 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2024/0200/common-foot-fractures.html
+  → ART-2177 [VC_fail] | 4 pairs updated | 4 xrefs inserted
+
+[188/229] TEXTBOOK_SKIP      Simonetti    2020   | QIDs:1
+  Simonetti F, Dewar R, Maldarelli F. Diagnosis of human immunodeficie
+  → SKIP (non-Fauci textbook)
+
+[189/229] SEARCHABLE         Skin         2024   | QIDs:1
+  Skin cancer: sun safety facts. Centers for Disease Control and Preve
+  Exa: Centers for Disease Control and Prevention Skin 2024 PDF
+  → open_access: https://www.cdc.gov/skin-cancer/what-cdc-is-doing/index.html
+  → ART-2178 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[190/229] SEARCHABLE         Smith        2020   | QIDs:1
+  Smith MP, Lown M, Singh S, et al. Acute cough due to acute bronchiti
+  Exa: Acute cough due to acute bronchitis in immunocompetent adult outpatients: CHEST 
+  → landing_page: https://eprints.soton.ac.uk/438360/
+  → ART-2179 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[191/229] SEARCHABLE         Smith        2014   | QIDs:1
+  Smith NK, Jozkowski KN, Sanders SA. Hormonal contraception and femal
+  Exa: Hormonal contraception and female pain, orgasm and sexual pleasure Smith 2014 PD
+  → open_access: https://academic.oup.com/jsm/article-abstract/11/2/462/6958217?redirectedFr
+  → ART-2180 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[192/229] SEARCHABLE         Smith        2017   | QIDs:1
+  Smith SM, Fahey T, Smucny J, Becker LA. Antibiotics for acute bronch
+  Exa: Antibiotics for acute bronchitis Smith 2017 PDF
+  → landing_page: https://www.cochrane.org/evidence/CD000245_drman-antybywtyky-dr-afrad-mbtla
+  → ART-2181 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[193/229] SEARCHABLE         Smith        2021   | QIDs:1
+  Smith TJ, Johnson CR, Koshy R, et al. Thiamine deficiency disorders:
+  Exa: Thiamine deficiency disorders: a clinical perspective Smith 2021 PDF
+  → pmc_fulltext: https://ncbi.nlm.nih.gov/pmc/articles/PMC8451766/
+  → ART-2182 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[194/229] SEARCHABLE         Sorensen     2017   | QIDs:1
+  Sorensen CJ, DeSanto K, Borgelt L, Phillips KT, Monte AA. Cannabinoi
+  Exa: Cannabinoid hyperemesis syndrome: diagnosis, pathophysiology, and treatment-a sy
+  → direct_pdf: https://pages.ucsd.edu/~mboyle/COGS163/pdf-files/Cannabinoid%20Hyperemesis%
+  → ART-2183 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[195/229] SEARCHABLE         Spencer      2022   | QIDs:1
+  Spencer JP, Thomas S, Trondsen Pawlowski RH. Medication safety in br
+  Exa: Medication safety in breastfeeding Spencer 2022 PDF
+  → landing_page: https://search.proquest.com/openview/7fc49a2de7e72c82fafd689fe242703e/1.pdf
+  → ART-2184 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[196/229] SEARCHABLE         Stevens      2012   | QIDs:1
+  Stevens SM, Woller SC, Baumann Kreuziger L, et al. Antithrombotic th
+  Exa: Antithrombotic therapy for VTE disease: compendium and review of CHEST guideline
+  → landing_page: https://journal.chestnet.org/article/S0012-3692(24)00292-7/fulltext
+  → ART-2185 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[197/229] SEARCHABLE         Stevens      2012   | QIDs:1
+  Stevens SM, Woller SC, Kreuziger LB, et al. Antithrombotic therapy f
+  Exa: Antithrombotic therapy for VTE disease: compendium and review of CHEST guideline
+  → landing_page: https://journal.chestnet.org/article/S0012-3692(24)00292-7/fulltext
+  → ART-2186 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[198/229] SEARCHABLE         Stevermer    2018   | QIDs:1
+  Stevermer JJ, Fink KS. Counseling patients about prostate cancer scr
+  Exa: Counseling patients about prostate cancer screening Stevermer 2018 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2018/1015/p478.html
+  → ART-2187 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[199/229] SEARCHABLE         Stoner       2017   | QIDs:1
+  Stoner GD. Hyperosmolar hyperglycemic state. Am Fam Physician. 2017;
+  Exa: Hyperosmolar hyperglycemic state Stoner 2017 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2017/1201/p729.html
+  → ART-2188 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[200/229] SEARCHABLE         Sullivan     2024   | QIDs:1
+  Sullivan BA, Lieberman DA. Colon polyp surveillance: separating the 
+  Exa: Colon polyp surveillance: separating the wheat from the chaff Sullivan 2024 PDF
+  → landing_page: https://www.gastrojournal.org/article/S0016-5085(24)00044-1/fulltext
+  → ART-2189 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[201/229] SEARCHABLE         Sun          2023   | QIDs:1
+  Sun safety: information for parents about sunburn & sunscreen. Ameri
+  Exa: American Academy of Pediatrics Sun 2023 PDF
+  → landing_page: https://www.aap.org/en/news-room/news-releases/health--safety-tips/american
+  → ART-2190 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[202/229] SEARCHABLE         Suniega      2022   | QIDs:2
+  Suniega EA, Krenek L, Stewart G. Child abuse: approach and managemen
+  Exa: Child abuse: approach and management Suniega 2022 PDF
+  → open_access: https://aafp.org/pubs/afp/issues/2022/0500/p521.html
+  → ART-2191 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[203/229] SEARCHABLE         Telli        2018   | QIDs:1
+  Telli H, Telli S, Topal M. The validity and reliability of provocati
+  Exa: The validity and reliability of provocation tests in the diagnosis of sacroiliac
+  → landing_page: https://pubmed.ncbi.nlm.nih.gov/30045603/
+  → ART-2192 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[204/229] SEARCHABLE         The          2022   | QIDs:1
+  The Diagnosis and Treatment of Low Back Pain Work Group; Office of Q
+  Exa: VA/DoD Clinical Practice Guideline for the Diagnosis and Treatment of Low Back P
+  → direct_pdf: https://www.healthquality.va.gov/guidelines/Pain/lbp/VADoDLBPCPGFinal508.pd
+  → ART-2193 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[205/229] SEARCHABLE         Thoomes      2023   | QIDs:1
+  Thoomes E, Falla D, Cleland JA, Fernández-de-Las-Peñas C, Gallina A,
+  Exa: Conservative management for lumbar radiculopathy based on the stage of the disor
+  → landing_page: https://www.tandfonline.com/doi/full/10.1080/09638288.2022.2130448
+  → ART-2194 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[206/229] SEARCHABLE         Treat-Jacobson 2019   | QIDs:1
+  Treat-Jacobson D, McDermott MM, Bronas UG, et al. Optimal exercise p
+  Exa: Optimal exercise programs for patients with peripheral artery disease: a scienti
+  → landing_page: https://www.ahajournals.org/doi/10.1161/CIR.0000000000000623
+  → ART-2195 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[207/229] SEARCHABLE         Tritos       2023   | QIDs:1
+  Tritos NA, Miller KK. Diagnosis and management of pituitary adenomas
+  Exa: Diagnosis and management of pituitary adenomas: a review Tritos 2023
+  → landing_page: https://jamanetwork.com/journals/jama/article-abstract/2804060
+  → ART-2196 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[208/229] SEARCHABLE         US           2015   | QIDs:1
+  US Preventive Services Task Force. A & B recommendations. US Prevent
+  Exa: A & B recommendations US 2015 PDF
+  → open_access: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation-topics/
+  → ART-2197 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[209/229] SEARCHABLE         US           2019   | QIDs:1
+  US Preventive Services Task Force. Final recommendation statement: B
+  Exa: Final recommendation statement: BRCA-related cancer: risk assessment, genetic co
+  → open_access: http://www.uspreventiveservicestaskforce.org/Page/Document/RecommendationSt
+  → ART-2198 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[210/229] SEARCHABLE         US           2023   | QIDs:1
+  US Preventive Services Task Force. Final recommendation statement: g
+  Exa: Final recommendation statement: genital herpes infection: serologic screening US
+  → open_access: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/genital
+  → ART-2199 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[211/229] SEARCHABLE         US           2018   | QIDs:1
+  US Preventive Services Task Force. Final recommendation statement: i
+  Exa: Final recommendation statement: intimate partner violence, elder abuse, and abus
+  → open_access: https://www.uspreventiveservicestaskforce.org/Page/Document/RecommendationS
+  → ART-2200 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[212/229] SEARCHABLE         US           2018   | QIDs:1
+  US Preventive Services Task Force. Final recommendation statement: s
+  Exa: Final recommendation statement: syphilis infection in pregnant women: screening 
+  → open_access: https://www.uspreventiveservicestaskforce.org/Page/Document/RecommendationS
+  → ART-2201 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[213/229] SEARCHABLE         US           2017   | QIDs:1
+  US Preventive Services Task Force. Final recommendation statement: v
+  Exa: Final recommendation statement: vision in children ages 6 months to 5 years: scr
+  → open_access: https://www.uspreventiveservicestaskforce.org/uspstf/document/Recommendatio
+  → ART-2202 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[214/229] SEARCHABLE         US           2018   | QIDs:1
+  US Preventive Services Task Force; Curry SJ, Krist AH, et al. Screen
+  Exa: Screening for osteoporosis to prevent fractures: US Preventive Services Task For
+  → open_access: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteopo
+  → ART-2203 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[215/229] SEARCHABLE         Vasant       2021   | QIDs:1
+  Vasant DH, Paine PA, Black CJ, et al. British Society of Gastroenter
+  Exa: British Society of Gastroenterology guidelines on the management of irritable bo
+  → direct_pdf: https://gut.bmj.com/content/gutjnl/early/2021/04/26/gutjnl-2021-324598.full
+  → ART-2204 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[216/229] SEARCHABLE         Vaughan      2022   | QIDs:1
+  Vaughan H, Rugo HS, Haemel A. Risk-based screening for cancer in pat
+  Exa: Risk-based screening for cancer in patients with dermatomyositis: toward a more 
+  → landing_page: https://cancer.ucsf.edu/node/309871
+  → ART-2205 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[217/229] SEARCHABLE         Veauthier    2020   | QIDs:1
+  Veauthier B, Miller MV. Urinary tract infections in young children a
+  Exa: Urinary tract infections in young children and infants: common questions and ans
+  → landing_page: https://www.fondazionemenarini-minuti.com/scienza/numero-248-en/le-infezion
+  → ART-2206 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[218/229] SEARCHABLE         Viera        2022   | QIDs:1
+  Viera AJ, Antono B. Acute headache in adults: a diagnostic approach.
+  Exa: Acute headache in adults: a diagnostic approach Viera 2022 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2022/0900/acute-headache-adults.html
+  → ART-2207 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[219/229] SEARCHABLE         Weaver-Agostoni 2023   | QIDs:2
+  Weaver-Agostoni J, Kosak Z, Bartlett S. Allergic rhinitis: rapid evi
+  Exa: Allergic rhinitis: rapid evidence review Weaver-Agostoni 2023 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0500/allergic-rhinitis.html
+  → ART-2208 [VC_fail] | 2 pairs updated | 2 xrefs inserted
+
+[220/229] SEARCHABLE         Werring      2024   | QIDs:1
+  Werring DJ, Dehbi HM, Ahmed N, et al. Optimal timing of anticoagulat
+  Exa: Optimal timing of anticoagulation after acute ischaemic stroke with atrial fibri
+  → landing_page: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)02197-4/
+  → ART-2209 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[221/229] SEARCHABLE         Wilkins      2018   | QIDs:1
+  Wilkins T, McMechan D, Talukder A, Herline A. Colorectal cancer scre
+  Exa: Colorectal cancer screening and surveillance in individuals at increased risk Wi
+  → open_access: https://aafp.org/pubs/afp/issues/2018/0115/p111.html
+  → ART-2210 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[222/229] SEARCHABLE         Wilkinson    2022   | QIDs:1
+  Wilkinson LD, Brady PH, Gin GT, Rosenblum E. Female pelvic condition
+  Exa: Female pelvic conditions: polycystic ovary syndrome Wilkinson 2022 PDF
+  → landing_page: https://www.thelancet.com/article/S2213-8587(22)00163-2/fulltext
+  → ART-2211 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[223/229] SEARCHABLE         Williams     2021   | QIDs:1
+  Williams AL, Bevan J, Arnold MJ. Lyme disease: updated recommendatio
+  Exa: Lyme disease: updated recommendations from the IDSA, AAN, and ACR Williams 2021 
+  → open_access: https://aafp.org/pubs/afp/issues/2021/1200/p652.html
+  → ART-2212 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[224/229] SEARCHABLE         Wilson       2020   | QIDs:1
+  Wilson RB. Pathophysiology, prevention, and treatment of beriberi af
+  Exa: Pathophysiology, prevention, and treatment of beriberi after gastric surgery Wil
+  → pmc_fulltext: https://ncbi.nlm.nih.gov/pmc/articles/PMC7666909/
+  → ART-2213 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[225/229] SEARCHABLE         Zeller       2023   | QIDs:1
+  Zeller TA, Beben K, Walker S. Distinguishing asthma and COPD in prim
+  Exa: Distinguishing asthma and COPD in primary care: a case- based approach Zeller 20
+  → open_access: https://www.aafp.org/pubs/afp/issues/2023/0300/distinguishing-asthma-copd.h
+  → ART-2214 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[226/229] SEARCHABLE         Zhang        2022   | QIDs:1
+  Zhang R, Wang Z, Liu R, Zhang N, Guo J, Huang Y. Extracorporeal shoc
+  Exa: Extracorporeal shockwave therapy as an adjunctive therapy for frozen shoulder: a
+  → landing_page: https://ouci.dntb.gov.ua/en/works/ldvXLvm7/
+  → ART-2215 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[227/229] SEARCHABLE         Zoorob       2012   | QIDs:1
+  Zoorob R, Sidani MA, Fremont RD, Kihlberg C. Antibiotic use in acute
+  Exa: Antibiotic use in acute upper respiratory tract infections Zoorob 2012 PDF
+  → open_access: https://www.aafp.org/pubs/afp/issues/2012/1101/p817.html
+  → ART-2216 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[228/229] SEARCHABLE         Zou          2022   | QIDs:1
+  Zou X, Shi Q, Vandvik PO, et al. Sodium-glucose cotransporter-2 inhi
+  Exa: Sodium-glucose cotransporter-2 inhibitors in patients with heart failure: a syst
+  → open_access: https://www.frontiersin.org/articles/10.3389/fcvm.2022.1067806/pdf
+  → ART-2217 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+[229/229] SEARCHABLE         Zuberbier    2018   | QIDs:1
+  Zuberbier T, Aberer W, Asero R, et al. The EAACI/GA²LEN/EDF/WAO guid
+  Exa: The EAACI/GA²LEN/EDF/WAO guideline for the definition, classification, diagnosis
+  → landing_page: https://onlinelibrary.wiley.com/doi/10.1111/all.13397
+  → ART-2218 [VC_fail] | 1 pairs updated | 1 xrefs inserted
+
+══════════════════════════════════════════════════════════
+  acquire_missing_citations.py — Summary
+══════════════════════════════════════════════════════════
+  Articles inserted:        219
+  qid_art_xref rows added:  236
+  PDFs downloaded:          0
+  Download failed:          0
+  Too small / too large:    0 / 0
+  Landing page (paywall):   0
+  Not found (Exa):          0
+
+  Results CSV: acquire_results.csv
+  Log:         acquire_run.log
+
+  ⚠  article_currency not updated — run build_article_currency.py after to fill gaps.

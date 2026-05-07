@@ -1,0 +1,31 @@
+=== playwright_auth_downloader.py — 2026-05-06T20:51:15.792426 ===
+journal=nejm  limit=5  dry_run=False  headful=False
+
+  ✓ nejm: 19 cookies from nejm cookies 05062026.txt
+
+Targets from queue: 68
+  nejm: 68
+Capped at 5 (--limit)
+
+  After dedup filter: 2 targets remain
+
+  ✓ NEJM context: cookies injected
+
+[1/2] ART-0156 [nejm] Subclinical hyperthyroidism
+  → Biondi_2018#@#ART-0156@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp1709318
+    [trying article page for PDF link]
+    ✗ No PDF captured
+[2/2] ART-0657 [nejm] Kalyani RR: Glucose-lowering drugs to reduce cardiovasc
+  → Kalyani_2021#@#ART-0657@#@.pdf
+    https://www.nejm.org/doi/pdf/10.1056/NEJMcp2000280
+    [trying article page for PDF link]
+    ✗ No PDF captured
+
+══════════════════════════════════════════════════
+📦 Playwright Download Summary
+══════════════════════════════════════════════════
+  ✓ downloaded:     0
+  ✗ failed:         2
+  ✗ skipped:        0
+  Results: C:\Users\mpsch\Desktop\board_prep_intel\01_module.1_warehouse\scripts\maintain\playwright_download_results.csv

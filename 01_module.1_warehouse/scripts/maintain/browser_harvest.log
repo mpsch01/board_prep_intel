@@ -1,0 +1,22 @@
+=== browser_pdf_harvester.py — 2026-05-06T21:05:12.306742 ===
+journal=both  port=8765
+
+  jama: 48 articles
+  nejm: 65 articles
+  Total: 113
+
+Server started at http://localhost:8765
+
+=======================================================
+  Open this URL in Chrome (already logged in to NEJM/JAMA):
+  http://localhost:8765
+  Then click 'Start Downloads'.
+=======================================================
+
+
+══════════════════════════════════════════════════
+📦 Harvest Complete
+══════════════════════════════════════════════════
+  ✓ downloaded: 0
+  ✗ failed:     0
+  Results: C:\Users\mpsch\Desktop\board_prep_intel\01_module.1_warehouse\scripts\maintain\browser_harvest_results.csv
