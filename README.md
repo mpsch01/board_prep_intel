@@ -4,7 +4,7 @@
 **Status:** Active development
 **Active BATON:** `BATON_active_065_20260506_pdf_acquisition_jama_nejm_attempt.md`
 **Next ART-ID:** ART-2219
-**Git:** `main` → `(pending)` → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `main` → `de1423b` → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -16,7 +16,7 @@
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,285 PDFs) via a structured SQLite pipeline.",
   "baton": "BATON_active_065_20260506_pdf_acquisition_jama_nejm_attempt.md",
   "baton_description": "Phase 2 PDF acquisition; +208 articles (ART-2000–ART-2218); +225 xref pairs; JAMA/NEJM auth blocked; jama_pending.json for Claude Code; acquire_missing_citations.py complete.",
-  "git_hash": "(pending)",
+  "git_hash": "de1423b",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-06",

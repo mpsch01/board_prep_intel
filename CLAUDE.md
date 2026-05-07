@@ -79,8 +79,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | M5 scripts | 3 Python sync + 35 TypeScript/TSX + 5 SQL migrations — 05_module.5_web/ scaffold |
 | article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
-| Next ART-ID | ART-2207 |
-| Git branch | main, latest → 45d5382 (pre-commit; pending push) |
+| Next ART-ID | ART-2219 |
+| Git branch | main, latest → de1423b |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
