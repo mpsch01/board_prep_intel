@@ -52,8 +52,8 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_064_20260505_practice_question_system_complete.md` — Practice question system complete (exam series + custom question sets); three new M3 scripts; two Cowork skills packaged. |
-| DB articles | 1,998 (+13 from critique PDFs: ART-1987–ART-1999) |
+| Active BATON | `BATON_active_065_20260506_pdf_acquisition_jama_nejm_attempt.md` — Phase 2 PDF acquisition; 281 new PDFs; JAMA/NEJM auth blocked; jama_pending.json for Claude Code |
+| DB articles | 2,206 (+13 from critique PDFs: ART-1987–ART-1999; +208 from acquire_missing_citations.py: ART-2000–ART-2207) |
 | DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
 | aafp_questions.blueprint | 1,221/1,221 (100%) — batch API, same rubric as ITE v2 — complete 2026-03-30 |
@@ -67,20 +67,20 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | question_icd10_vec | 2,747 rows — ✅ rebuilt 2026-04-05 |
 | intersection_centroid_vec | 158 rows — ↑ from 123 (BATON 062) |
 | clinical_pathways | 4,959 rows — ↑ from 3,971 (pre-existing Windows PC enrichment, confirmed BATON 062) |
-| PDFs (ITE citation tiers) | 988 across 4 tiers in citation_files/ITE/ (VC_fail:630, VC_pass:168, local_lite:117, right_click:58) + 15 AAFP — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive/ |
+| PDFs (ITE citation tiers) | 1,254 across 4 tiers in citation_files/ITE/ (VC_fail:879, VC_pass:200, local_lite:117, right_click:58) + 15 AAFP — recovered 2026-04-05 via exa_pdf_downloader + pmc_oa_downloader + recover_unpaywall; 14 dupes in _dupe_archive_; +266 from acquire_missing_citations.py |
 | PDFs (AAFP) | 15 in citation_files/AAFP/ — recovered 2026-04-05 |
 | PDFs (ite_exams) | 16 — all 8 years (2018–2025) × MC + critique; naming: YYYY_MC.pdf / YYYY_critique.pdf |
 | practice_questions | 42 files — 8 ITE DOCX + 8 ITE XLSX + 13 AAFP DOCX + 13 AAFP XLSX (gitignored, regenerable from DB) |
-| qid_art_xref | 2,485 (rebuilt faithful multi-reference xref: 2018-2023 100% linked, 2024 90%, 2025 83.5%) |
+| qid_art_xref | 2,710 (rebuilt faithful multi-reference xref: 2018-2023 100% linked, 2024 90%, 2025 83.5%; +225 from new articles) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
-| M1 scripts | 8 build + 26 maintain + aafp_brq_scraper.py at scripts/ root (build_modular_vectors.py + build_intersection_centroids.py added 2026-04-14) |
+| M1 scripts | 8 build + 30 maintain + aafp_brq_scraper.py at scripts/ root (build_modular_vectors.py + build_intersection_centroids.py added 2026-04-14) |
 | M2 scripts | 75 Python + 6 JS + 1 JSON in scripts/; core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root; extract_ite_critique_refs.py MODIFIED |
 | M3 scripts | 55 Python + 4 JS + 6 JSON config (build_cole_exam_series.py + build_exam_series.py + build_custom_question_set.py ADDED BATON 064; ite_analyzer_v3.py MODIFIED BATON 064) |
 | M5 scripts | 3 Python sync + 35 TypeScript/TSX + 5 SQL migrations — 05_module.5_web/ scaffold |
-| article_currency | 1,998 rows — complete 2026-04-16 (was missing 115 rows) |
+| article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
-| Next ART-ID | ART-2000 |
-| Git branch | main, latest → 557bb40 (pushed to origin 2026-04-29) |
+| Next ART-ID | ART-2207 |
+| Git branch | main, latest → 45d5382 (pre-commit; pending push) |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -156,12 +156,13 @@ Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
 
 ---
 
-## Next Steps (as of BATON 064, 2026-05-05)
+## Next Steps (as of BATON 065, 2026-05-06)
 
 ### Immediate
-1. **Re-run all 7 resident analyses** on Mac after git pull (BATON 063 holdover)
-2. **Push commit** — stage and push build_exam_series.py, build_custom_question_set.py, modified scripts
+1. **JAMA PDFs (50 articles)** — Use Claude Code: navigate to each article page, click PDF link. List in `jama_pending.json`
+2. **NEJM PDFs (~65 articles)** — Wait for IP block to lift (IP 131.106.58.189), then Claude in Chrome JS injection
+3. **Re-run all 7 resident analyses** on Mac after git pull
 
 ### Short-term
-3. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations; prioritize by frequency
-5. **DEFERRED-QID-XREF-LIBRARY-GAPS** — 249 unmatched citations; prioritize by frequency
+4. **DEFERRED-QID-XREF-LIBRARY-GAPS** — ~249 unmatched citations (pre-Phase 2); prioritize by frequency
+5. **Push commit** — stage and push acquire_missing_citations.py and updated maintain scripts

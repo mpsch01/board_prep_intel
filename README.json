@@ -1,0 +1,65 @@
+{
+  "project": "ABFM ITE Intelligence System",
+  "description": "A queryable Family Medicine board exam knowledge base (1,639 questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,285 PDFs) via a structured SQLite pipeline.",
+  "root": "C:\\Users\\mpsch\\Desktop\\board_prep_intel",
+  "baton": "BATON_active_065_20260506_pdf_acquisition_jama_nejm_attempt.md",
+  "baton_description": "Phase 2 PDF acquisition — 281 new PDFs; JAMA/NEJM auth blocked; jama_pending.json for Claude Code",
+  "last_updated": "2026-05-06",
+  "git_hash": "(pending)",
+  "git_remote": "https://github.com/mpsch01/board_prep_intel",
+  "database": {
+    "path": "00_database/db/ite_intelligence.db",
+    "articles": 2206,
+    "articles_note": "1,998 base + 13 from critique PDFs (ART-1987–ART-1999) + 208 from acquire_missing_citations.py (ART-2000–ART-2207)",
+    "ite_questions": 1639,
+    "aafp_questions": 1221,
+    "qid_art_xref": 2710,
+    "article_currency": 2206,
+    "next_art_id": "ART-2207"
+  },
+  "pdfs": {
+    "total": 1285,
+    "total_note": "1,254 ITE + 15 AAFP + 16 exams",
+    "ite": 1254,
+    "ite_tiers": {
+      "VC_fail": 879,
+      "VC_pass": 200,
+      "local_lite": 117,
+      "right_click": 58
+    },
+    "aafp": 15,
+    "exam_pdfs": 16
+  },
+  "scripts": {
+    "m1_build": 8,
+    "m1_maintain": 30,
+    "m2_python": 75,
+    "m2_js": 6,
+    "m3_python": 55,
+    "m3_js": 4,
+    "m5_python": 3,
+    "m5_typescript": 35
+  },
+  "modules": {
+    "M1_Warehouse": "01_module.1_warehouse/",
+    "M2_Processor": "02_module.2_processor/",
+    "M3_Analyst": "03_module.3_analyst/",
+    "M4_Sandbox": "04_module.4_sandbox/",
+    "M5_Web": "05_module.5_web/"
+  },
+  "key_data_files": {
+    "vc_gate": "key_data_files/session_hy_inserts_v7.json",
+    "vc_gate_citations": 352
+  },
+  "practice_question_system": {
+    "scripts": [
+      "build_custom_question_set.py",
+      "build_exam_series.py",
+      "build_cole_exam_series.py"
+    ],
+    "cowork_skills": [
+      "ite-exam-series.skill",
+      "custom-question-set.skill"
+    ]
+  }
+}

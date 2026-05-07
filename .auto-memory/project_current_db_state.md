@@ -1,21 +1,21 @@
 # project_current_db_state.md
-Last verified: 2026-05-05 (BATON 064)
+Last verified: 2026-05-06 (BATON 065)
 
 ## DB: ite_intelligence.db
 
 | Table | Rows | Notes |
 |-------|------|-------|
-| articles | 1,998 | +13 new (ART-1987–ART-1999) from BATON 058 QC rebuild; +49 AAFP in BATON 042 |
-| questions (ITE) | 1,639 | 2018–2025 (+10 recovered this session), blueprint 100% |
+| articles | 2,206 | +208 new (ART-1999–ART-2206) from BATON 065 acquisition (exa + unpaywall batch); 1,998 → 2,206 |
+| questions (ITE) | 1,639 | 2018–2025 (+10 recovered), blueprint 100% |
 | aafp_questions | 1,221 | BRQ, blueprint 100% |
-| qid_art_xref | 2,485 | All 8 years (2018–2025); rebuilt from critique ground truth in BATON 058 |
+| qid_art_xref | 2,710 | All 8 years (2018–2025); +225 from BATON 065 acquisition |
 | aafp_qid_art_xref | 864 | 643 unique Qs linked |
 | article_icd10 | 4,959 | ↑ 3,952 (BATON 061) — pre-existing Windows PC enrichment (BATON 062) |
 | question_icd10 | 5,774 | ↑ ~5,003 (BATON 061) — ~89.9%+ ITE coverage — pre-existing Windows PC enrichment (BATON 062) |
 | aafp_question_icd10 | 4,753 | Relevance normalized |
 | clinical_pathways | 4,959 | ↑ 3,971 (BATON 061) — pre-existing Windows PC enrichment (BATON 062) |
 | article_citation_trend | 1,740 | Longitudinal citation tracking + watch_list flag |
-| article_currency | 1,998 | ✅ COMPLETE 2026-04-16 — Layer 2 Intelligence complete; status enum (current:1100, updated:169, check_needed:106, not_indexed:610); title_signals JSON array column |
+| article_currency | 2,206 | ✅ COMPLETE 2026-05-06 — Layer 2 Intelligence updated; mirrors articles; status enum and title_signals JSON column maintained |
 | pubmed_pmid_cache | 344 | Layer 2 seed |
 | article_icd10_vec | 1,757 | Rebuilt 2026-04-05 |
 | question_icd10_vec | 2,747 | Rebuilt 2026-04-05 |
@@ -44,6 +44,14 @@ Last verified: 2026-05-05 (BATON 064)
 - status breakdown: current:1100, updated:169, check_needed:106, not_indexed:610
 - title_signals: JSON array of clinical category keywords (extracted from blueprint cross-reference; used for future filtering + human review)
 - Populated via build_article_currency.py (M3 script)
+
+## DB Changes (BATON 065)
+- **Phase 2 PDF acquisition:** articles 1,998 → 2,206 (+208 new articles ART-1999–ART-2206)
+- **qid_art_xref:** 2,485 → 2,710 (+225 citations linked during batch import)
+- **article_currency:** 1,998 → 2,206 (mirrors articles table; status enum + title_signals JSON preserved)
+- **No schema changes; no modifications to other tables**
+- **Script additions:** M1 maintain +4 scripts (acquire_missing_citations.py, playwright_auth_downloader.py, browser_pdf_harvester.py, setup_journal_auth.py)
+- **JAMA/NEJM:** playwright_auth_downloader.py IP-blocked; jama_pending.json output created for manual/Claude Code handoff
 
 ## DB Changes (BATON 063)
 - **No DB changes this session.** All counts stable from BATON 062. Focus was DOCX guide generation (resident + faculty interpretation guides).

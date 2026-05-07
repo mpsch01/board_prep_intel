@@ -87,7 +87,7 @@ def classify_url(url):
             return "open_access"
     for p in PAYWALL_PATTERNS:
         if p.lower() in u:
-            return "landing_page"
+            return "paywall"
     return "landing_page"
 
 

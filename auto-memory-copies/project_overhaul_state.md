@@ -1,28 +1,28 @@
 # project_overhaul_state.md
-Last updated: 2026-05-05 (BATON 064)
+Last updated: 2026-05-06 (BATON 065)
 
 ## Module State
 
 | Module | Status | Key Info |
 |--------|--------|----------|
-| M1 Warehouse | Active | 988 ITE/AAFP PDFs (630 VC_fail + 168 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 26 maintain scripts |
+| M1 Warehouse | Active | 1,269 ITE/AAFP PDFs (879 VC_fail + 200 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 30 maintain scripts |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
 | M3 Analyst | Active | 55 py + 4 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction; report interpretation guides (resident + faculty, BATON 063); practice question system (exam series + custom sets, BATON 064) |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 35 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
-| DB | Stable | 1,998 articles, 1,639 ITE Qs (+10 recovered), 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 |
+| DB | Stable | 2,206 articles (+208 BATON 065), 1,639 ITE Qs (+10 recovered), 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 |
 
 ## PDF Library State
 
 ### ITE (citation_files/ITE/)
 | Tier | Count | Notes |
 |------|-------|-------|
-| VC_fail | 630 | Failed VC gate; awaiting enrichment (cleaned −7 from 637, BATON 053) |
-| VC_pass | 168 | Passed VC gate; awaiting enrichment |
+| VC_fail | 879 | Failed VC gate; awaiting enrichment (+249 from BATON 065 acquisition) |
+| VC_pass | 200 | Passed VC gate; awaiting enrichment (+32 from BATON 065 acquisition) |
 | local_lite | 117 | Enriched; not VC-cited |
 | right_click | 58 | Enriched + VC-cited (top tier) |
 | _dupe_archive | 14 | Legacy single-author duplicates; not pipeline |
-| **TOTAL active** | **988** | Recovered via EXA+PMC+Unpaywall; updated 2026-04-16 |
+| **TOTAL active** | **1,269** | Recovered via EXA+PMC+Unpaywall; updated 2026-05-06 |
 
 ### AAFP (citation_files/AAFP/)
 | Count | Status |
@@ -30,6 +30,25 @@ Last updated: 2026-05-05 (BATON 064)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 065)
+
+**2026-05-06 — Phase 2 PDF Acquisition (EXA + Unpaywall)**
+- **Articles acquired:** acquire_missing_citations.py batch run — 208 new articles (ART-1999–ART-2206)
+- **PDF downloads:** 281 new PDFs via exa_pdf_downloader + unpaywall batch integration
+  - VC_fail: 630 → 879 (+249)
+  - VC_pass: 168 → 200 (+32)
+  - local_lite, right_click, AAFP: unchanged
+- **JAMA/NEJM blocked:** playwright_auth_downloader.py created but IP-blocked; jama_pending.json output for Claude Code handoff
+- **Four new M1 maintain scripts:**
+  - acquire_missing_citations.py — batch article import + xref linkage
+  - playwright_auth_downloader.py — journal auth + download (blocked)
+  - browser_pdf_harvester.py — browser-based paywalled journal harvester
+  - setup_journal_auth.py — journal authentication setup utility
+- **DB state:** articles 1,998 → 2,206; qid_art_xref 2,485 → 2,710 (+225); article_currency 1,998 → 2,206 (mirrors articles)
+- **Deferred flag update:** DEFERRED-QID-XREF-LIBRARY-GAPS — partially addressed — 50 JAMA pending (jama_pending.json), ~65 NEJM pending (IP block)
+- **M1 maintain script count:** 26 → 30 (+4 new)
+- **Next:** JAMA/NEJM access strategy; consider user-supplied credentials or alternative acquisition pathways
 
 ## Session Notes (BATON 064)
 
