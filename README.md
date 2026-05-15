@@ -4,7 +4,7 @@
 **Status:** Active development
 **Active BATON:** `BATON_active_069_20260515_project_overhaul_fossil_cleanup.md`
 **Next ART-ID:** ART-2208
-**Git:** `claude/xenodochial-pike-667d6a` worktree → (pending — post-housekeeping-commit); `main` at `e6cb648` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `claude/xenodochial-pike-667d6a` worktree → `d85ef22` (BATON 069 housekeeping); `main` at `e6cb648` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -16,7 +16,7 @@
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "baton": "BATON_active_069_20260515_project_overhaul_fossil_cleanup.md",
   "baton_description": "PROJECT_OVERHAUL fossil cleanup — removed all live `00_#PROJECT_OVERHAUL` path references; renamed `project_overhaul_state.md` → `project_session_log.md` (both copies via `git mv`); CLAUDE.md H1 corrected. No DB/script/PDF changes.",
-  "git_hash": "(pending — to be updated post-housekeeping-commit)",
+  "git_hash": "d85ef22",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-15",
@@ -303,4 +303,4 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 ---
 
 **Project Lead:** Michael Scholl, MD
-**Last Reviewed:** 2026-05-15 (BATON 069, git a3ef508 pre-housekeeping-commit; PROJECT_OVERHAUL fossil cleanup; renamed `project_overhaul_state.md` → `project_session_log.md`; no functional changes)
+**Last Reviewed:** 2026-05-15 (BATON 069, git d85ef22 housekeeping commit; PROJECT_OVERHAUL fossil cleanup; renamed `project_overhaul_state.md` → `project_session_log.md`; no functional changes)
