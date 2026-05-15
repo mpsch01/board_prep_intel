@@ -5,7 +5,7 @@
   "baton": "BATON_active_070_20260515_corpus_qc_skill_v1.md",
   "baton_description": "corpus-integrity-qc skill V1 build — Layers A, B, D + coordinator (run_qc.py) + 4 agent templates (text-fidelity, citation-linkage, structural-integrity, fix-applier) added under .claude/skills/corpus-integrity-qc/. End-to-end smoke test against canonical DB produces 2,538 findings split into 1,914 Tier 1 / 66 Tier 2 / 558 Tier 3. Confirmed Layer B closes the BATON 058 dict-overwrite bug (0 CRITIQUE_REF_MISSING_FROM_DB). No DB/PDF/schema changes.",
   "last_updated": "2026-05-15",
-  "git_hash": "57bbe7a",
+  "git_hash": "22dae71",
   "git_remote": "https://github.com/mpsch01/board_prep_intel",
   "database": {
     "path": "00_database/db/ite_intelligence.db",

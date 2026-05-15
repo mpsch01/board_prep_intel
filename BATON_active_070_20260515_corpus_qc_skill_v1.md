@@ -323,7 +323,8 @@ nnn_XXXX ART-ID rename scheme — designed, not yet implemented.
 
 - **Branch:** claude/reverent-mclaren-575646 (worktree off main)
 - **Pre-housekeeping commit hash:** `57bbe7a` (BATON 069 / Gitignore Google Drive `.tmp.driveupload` artifacts — the latest pre-session commit)
-- **Session commit (this housekeeping):** to be added after `git commit` lands (Item 11 of the housekeeping sweep). Expected message: *"BATON 070 — corpus-integrity-qc skill V1 (Layers A, B, D + coordinator + 4 agent templates)"*.
+- **Session commit (housekeeping):** `22dae71` — *"BATON 070 — corpus-integrity-qc skill V1 (Layers A, B, D + coordinator + 4 agent templates)"* — 24 files changed, 2,957 insertions, 52 deletions, 1 rename (BATON 069 → baton_archive/).
+- **Hash-backfill commit:** follows this BATON edit — backfills `22dae71` into README.json + README.md + CLAUDE.md + this BATON.
 - **No DB writes, no PDF acquisition, no schema changes** this session — code/docs only.
 
 ---
