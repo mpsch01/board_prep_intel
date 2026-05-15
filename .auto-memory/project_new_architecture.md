@@ -1,6 +1,6 @@
 ---
 name: New 4-Module Architecture — The Rebuild
-description: User's mental model for the PROJECT_OVERHAUL rebuild: 4 modules (Warehouse, Processor, Analyst, Sandbox) plus external sources. Replaces the organic 7-module structure (⓪–Ⓔ+Ⓕ). Designed March 21, 2026.
+description: User's mental model for the M1-M5 module rebuild (originally tagged "PROJECT_OVERHAUL" in March 2026): 4 modules (Warehouse, Processor, Analyst, Sandbox) plus external sources. Replaces the organic 7-module structure (⓪–Ⓔ+Ⓕ). Designed March 21, 2026.
 type: project
 ---
 

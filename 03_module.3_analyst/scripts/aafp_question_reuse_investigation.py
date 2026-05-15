@@ -16,7 +16,7 @@ Usage:
   python aafp_question_reuse_investigation.py --csv     ← save results to CSV
 
 Run from Windows (NTFS):
-  cd 00_#PROJECT_OVERHAUL
+  cd board_prep_intel
   python 03_module.3_analyst/scripts/aafp_question_reuse_investigation.py
 """
 

@@ -1,5 +1,5 @@
 {
-  "folder": "00_#PROJECT_OVERHAUL/01_module.1_warehouse",
+  "folder": "01_module.1_warehouse",
   "description": "M1 Warehouse — 3-domain layout: citation_files/ (PDF guideline library, 4 tiers), practice_questions/ (Q&A study deliverables), ite_exams/ (raw exam PDF archive). Build/maintain scripts in scripts/.",
   "last_updated": "2026-04-05",
   "baton": "043",

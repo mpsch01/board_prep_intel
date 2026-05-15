@@ -14,5 +14,5 @@ In BATON 050, the year-over-year section (Section 3b) was added to ite_report_bu
 Further robustness testing is needed when Mikey provides multi-year practice Q sets with dense temporal coverage. Current implementation is usable for exploratory analysis but may need refactoring for production dashboards.
 
 ## Flag lifecycle
-- **DEFERRED-YOY-ROBUSTNESS** remains ACTIVE in project_overhaul_state.md
+- **DEFERRED-YOY-ROBUSTNESS** remains ACTIVE in project_session_log.md
 - Review in next housekeeping session after more real-world test data arrives

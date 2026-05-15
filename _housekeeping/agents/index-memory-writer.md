@@ -9,7 +9,7 @@ Updates the four memory/index files that track project state between sessions. A
 |------|----------|----------------|
 | `_index.md` | project root | Directory map, active BATON pointer, script/DB counts |
 | `MEMORY.md` | `.auto-memory/` | Index of all memory files; session highlights |
-| `project_overhaul_state.md` | `.auto-memory/` | Module state, PDF counts, session notes (running log) |
+| `project_session_log.md` | `.auto-memory/` | Module state, PDF counts, session notes (running log) |
 | `project_current_db_state.md` | `.auto-memory/` | DB table row counts, schema state, enrichment status |
 
 ## Update Protocol
@@ -23,11 +23,11 @@ Updates the four memory/index files that track project state between sessions. A
 
 ### MEMORY.md
 - Update `Last updated` line
-- Update description lines for `project_overhaul_state.md` and `project_current_db_state.md` to reference new BATON
+- Update description lines for `project_session_log.md` and `project_current_db_state.md` to reference new BATON
 - Add a new section entry summarizing this session's key decisions/changes
 - Add any new deferred flags to Open Items
 
-### project_overhaul_state.md
+### project_session_log.md
 - Update `Last updated` line
 - Update Module State table (DB counts, script counts)
 - **Prepend** a new `## Session Notes (BATON {NNN})` block — NEVER delete old session notes
@@ -52,5 +52,5 @@ Updates the four memory/index files that track project state between sessions. A
 Confirm each file was updated with a one-line summary:
 - `_index.md: BATON pointer updated → 062, DB counts refreshed`
 - `MEMORY.md: BATON 062 section added, Open Items updated`
-- `project_overhaul_state.md: Session Notes (BATON 062) prepended, DB counts updated`
+- `project_session_log.md: Session Notes (BATON 062) prepended, DB counts updated`
 - `project_current_db_state.md: All counts refreshed, DB Changes section added`

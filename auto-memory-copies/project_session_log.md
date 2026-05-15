@@ -1,5 +1,7 @@
-# project_overhaul_state.md
+# project_session_log.md
 Last updated: 2026-05-15 (BATON 068)
+
+> **Renamed BATON 068.** This file was previously `project_overhaul_state.md` — a fossil from the early "PROJECT_OVERHAUL" reorganization phase (M1–M5 module rebuild, ~March 2026). Despite the old name, this file has long served as the project's **running session log + state snapshot**. New name reflects current role.
 
 ## Module State
 

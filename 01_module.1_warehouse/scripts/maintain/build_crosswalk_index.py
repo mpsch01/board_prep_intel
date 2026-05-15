@@ -20,7 +20,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 # ── Paths (relative to script location — no hardcoded Windows paths) ─────
 BASE_DIR     = Path(__file__).resolve().parent.parent          # M1/scripts/
-ROOT         = BASE_DIR.parent.parent                          # 00_#PROJECT_OVERHAUL/
+ROOT         = BASE_DIR.parent.parent                          # board_prep_intel/
 DB_PATH      = ROOT / "00_database" / "db" / "ite_intelligence.db"
 CITATION_ITE = ROOT / "01_module.1_warehouse" / "citation_files" / "ITE"
 TIER_DIRS    = ["VC_fail", "local_lite", "VC_pass", "right_click"]

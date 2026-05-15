@@ -19,7 +19,7 @@ ABFM ITE Intelligence System as part of session housekeeping.
 ## Files You Own
 
 1. C:\Users\mpsch\Desktop\board_prep_intel\_index.md
-2. C:\Users\mpsch\Desktop\board_prep_intel\.auto-memory\project_overhaul_state.md
+2. C:\Users\mpsch\Desktop\board_prep_intel\.auto-memory\project_session_log.md
 3. C:\Users\mpsch\Desktop\board_prep_intel\.auto-memory\project_current_db_state.md
 4. C:\Users\mpsch\Desktop\board_prep_intel\.auto-memory\MEMORY.md (conditional)
 
@@ -46,7 +46,7 @@ Header format:
   Last Updated: YYYY-MM-DD (BATON NNN – [1-sentence session description])
 
 
-## Task 2 — project_overhaul_state.md
+## Task 2 — project_session_log.md
 
 Read the file. Update:
 - Line 2: Last updated: YYYY-MM-DD (BATON NNN)

@@ -3,7 +3,7 @@
 **Last Updated:** 2026-05-15 (BATON 068 — Cowork → Claude Code migration validated; corpus-integrity-qc skill scaffolded with Layer C functional; canonical DB swapped to post-BATON-065 state)
 **Status:** Current — Mac local PDFs lag Windows canonical by 569 files this session (Mac active total 971 vs Windows canonical 1,540: VC_fail Mac 628 / Win 1,056; VC_pass Mac 168 / Win 309; local_lite 117 + right_click 58 + AAFP 15 + ite_exams 16 all synced); M1 build = 8 + maintain = 38 (no script-count change BATON 068); M2 = 75py + 6js; M3 = 55py + 4js + 1 json config + abfm_reference_2024.json; M5 scaffold = 3py + 31ts/tsx + 5sql; DB stable (2,206 articles, 1,639 ITE questions, 1,221 AAFP questions, qid_art_xref 2,710, article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158); .claude/skills/ now includes corpus-integrity-qc/ (5 files; Layer C functional, A/B/D + coordinator deferred); skills_abilities/ includes ite-score-analyzer-v2/ plugin + session-housekeeping agents/.
 
-> This file maps the `board_prep_intel/` project root. `00_#PROJECT_OVERHAUL` nesting has been removed (Option B, 2026-04-04).
+> This file maps the `board_prep_intel/` project root. Legacy nested folder structure was flattened on 2026-04-04 (Option B).
 > Stale counts are worse than no index. Verify before trusting.
 
 ---

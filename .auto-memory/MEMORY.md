@@ -2,7 +2,7 @@
 Last updated: 2026-05-15 (BATON 068)
 
 ## Active Memory Files
-- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 068
+- [project_session_log.md](project_session_log.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 068
 - [project_current_db_state.md](project_current_db_state.md) — DB table row counts (2,206 articles, 1,639 ITE Qs, 2,710 qid_art_xref), schema state; body_system + body_system_merged fully normalized; article_currency complete 2,206; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — canonical restored BATON 068 (DB swap from stale Apr-16 copy)
 - [project_corpus_integrity_qc.md](project_corpus_integrity_qc.md) — Corpus integrity QC skill (replacing article-citation-qc); 4-layer architecture (text fidelity / citation linkage / structural integrity / report-remediation) with parallel agent dispatch. Layer C functional; A/B/D pending — BATON 068
 - [rebuild_structuring_guidelines.md](rebuild_structuring_guidelines.md) — Locked rules and architecture principles
@@ -23,7 +23,7 @@ Last updated: 2026-05-15 (BATON 068)
 - Test validation: Scholl_2022, 2023, 2024, Sarkar_2025, Hopkins_2025 all passing
 
 ## Deployments (BATON 051)
-- [Module 5 web platform scaffold added](project_overhaul_state.md) — 05_module.5_web/ (Next.js+Supabase+Sanity+Railway) committed by Copilot 2026-04-08; docs updated BATON 051
+- [Module 5 web platform scaffold added](project_session_log.md) — 05_module.5_web/ (Next.js+Supabase+Sanity+Railway) committed by Copilot 2026-04-08; docs updated BATON 051
 
 ## Script Refactoring (BATON 054)
 - [ite_report_builder_v2.js: 18-edit multi-year resident redesign](feedback_report_builder_redesign_054.md) — Major revision for improved year-over-year rendering; ABFM reference benchmark integration; section 3b temporal aggregation hardened
@@ -69,7 +69,7 @@ Last updated: 2026-05-15 (BATON 068)
 - **10 questions recovered + fully enriched** — Steps 1–6 complete (blueprint, body_system, concept tags, ICD-10, vectors, centroids)
 
 ## Body System QC Pipeline (BATON 059)
-- [body-system-qc skill — complete audit + correction pipeline](project_overhaul_state.md) — 19 new M3 scripts for ITE 2018-2021, 2024-2025 + AAFP 1,221 questions; SVM baseline + Claude classification + review workflow
+- [body-system-qc skill — complete audit + correction pipeline](project_session_log.md) — 19 new M3 scripts for ITE 2018-2021, 2024-2025 + AAFP 1,221 questions; SVM baseline + Claude classification + review workflow
 - **Post-2024 canonical taxonomy locked:** Psychiatric/Behavioral (vs legacy Psychogenic), Sexual and Reproductive, Injuries/Musculoskeletal
 - **Files API infrastructure built** — critique_pdf_registry.py tracks 2018-2025 ITE PDFs; extract_critique_refs_v2.py parses citations with parse_legacy() + fallback_citation_scan(); enables ground-truth xref rebuilds
 - **Human review queue:** 201 ITE + 129 AAFP questions pending verification before commit; deferred flags: DEFERRED-BODY-SYSTEM-MERGED-UPDATE, DEFERRED-CENTROID-REBUILD, DEFERRED-HUMAN-REVIEW-BODY-SYSTEM

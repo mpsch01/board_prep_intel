@@ -50,7 +50,7 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8")
 
 # ── Paths ─────────────────────────────────────────────────────────────────
-BASE_DIR  = Path(__file__).resolve().parent.parent.parent   # 00_#PROJECT_OVERHAUL/
+BASE_DIR  = Path(__file__).resolve().parent.parent.parent   # board_prep_intel/
 DB_PATH   = BASE_DIR / "00_database" / "db" / "ite_intelligence.db"
 LOG_DIR   = BASE_DIR / "00_database" / "logs"
 JSON_DIR  = BASE_DIR / "extracted_json"                     # override with --dir in practice

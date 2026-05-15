@@ -6,7 +6,8 @@ A domain-specific data context skill for querying and analyzing the ABFM In-Trai
 
 - **Engine**: SQLite 3 (with optional `sqlite-vec` extension for vector search)
 - **Path** (relative to project root): `00_database/db/ite_intelligence.db`
-- **Windows absolute**: `C:\Users\mpsch\Desktop\claude_knowledge\00_#PROJECT_OVERHAUL\00_database\db\ite_intelligence.db`
+- **Windows absolute**: `C:\Users\mpsch\Desktop\board_prep_intel\00_database\db\ite_intelligence.db`
+- **Mac absolute**: `/Users/mpsch/Mac Storage/board_prep_intel/00_database/db/ite_intelligence.db`
 - **Schema version**: v2 (rebuilt 2026-03-10 via `rebuild_ite_db_v2.py`; AAFP corpus added 2026-03-29)
 
 ## Mission

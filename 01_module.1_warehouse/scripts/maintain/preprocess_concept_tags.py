@@ -27,7 +27,7 @@ RESUME BEHAVIOR:
 PATH NOTE:
   This script uses the PROJECT_ROOT pattern (3 hops — M1/scripts/maintain/):
     SCRIPT_DIR   = 01_module.1_warehouse/scripts/maintain/
-    PROJECT_ROOT = 00_#PROJECT_OVERHAUL/
+    PROJECT_ROOT = board_prep_intel/
     DB_PATH      = 00_database/db/ite_intelligence.db
 
 RUN:

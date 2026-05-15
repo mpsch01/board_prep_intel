@@ -1,4 +1,4 @@
-# Memory — #PROJECT_OVERHAUL
+# Memory — ITE Intelligence System
 
 ## Who You're Working With
 **Mikey** (Michael Scholl) — Family medicine physician and residency program director. Self-taught data architect. Speaks in concepts and biological analogies. Strong architectural instincts — his design calls are almost always better than first proposals. Has API access (key in env vars). Runs long-running code himself (copy-paste-run pattern).
@@ -37,7 +37,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | **Intelligence 2.0** | Layer 1 (ICD-10), Layer 2 (PubMed currency), Layer 3 (Pathways), Layer 4 (Trends) |
 | **FLAG 33** | nnn_XXXX ART-ID rename scheme — designed, not yet implemented |
 | **derived data** | Disposable: JSONs, DOCXs, CSVs. DB + PDFs + VC gate are protected source data |
-| **_index.md** | Ground-truth directory map — `00_#PROJECT_OVERHAUL/_index.md` |
+| **_index.md** | Ground-truth directory map — `board_prep_intel/_index.md` |
 | **TODO: not yet migrated** | Code annotation — path points to correct future location; update when file arrives |
 | **Exam version** | Test-taking output of question set generation — questions + answer choices + answer key table at end; no explanations visible |
 | **Study Guide version** | Review output — questions + correct answer (navy bold) + explanation body (shaded box) + References section (one citation per paragraph) after each question |
@@ -84,7 +84,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
-→ Full state: `.auto-memory/project_overhaul_state.md` and `.auto-memory/project_current_db_state.md`
+→ Full state: `.auto-memory/project_session_log.md` and `.auto-memory/project_current_db_state.md`
 
 ---
 

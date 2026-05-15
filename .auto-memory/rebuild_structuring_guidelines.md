@@ -1,6 +1,6 @@
 ---
 name: Core Rebuild Structuring Guidelines
-description: Locked architectural principles for the PROJECT_OVERHAUL rebuild. Sourced from the ROOT_BATON_DRAFT session (fervent-hopeful-thompson, March 21, 2026). These are not suggestions — they are the design north star.
+description: Locked architectural principles for the M1-M5 module rebuild (originally tagged "PROJECT_OVERHAUL" in March 2026). Sourced from the ROOT_BATON_DRAFT session (fervent-hopeful-thompson, March 21, 2026). These are not suggestions — they are the design north star.
 type: project
 ---
 

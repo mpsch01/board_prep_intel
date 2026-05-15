@@ -11,7 +11,7 @@ When the user requests a "housekeeping sweep", "housekeeping update", or any sim
 3. **Retire old BATON** — move the previous active BATON to `baton_archive/`
 4. **`CLAUDE.md`** — update Active State table (BATON pointer, git hash, script counts) + Next Steps section
 5. **`.auto-memory/MEMORY.md`** — update index descriptions to reflect current memory file state
-6. **`.auto-memory/project_overhaul_state.md`** — update module state, key numbers, deferred flags
+6. **`.auto-memory/project_session_log.md`** — update module state, key numbers, deferred flags (renamed from `project_overhaul_state.md` in BATON 068)
 7. **`.auto-memory/project_current_db_state.md`** — update table row counts and any schema changes
 8. **Root READMEs** — update both `README.json` AND `README_PROJECT.md` with current BATON pointer, DB numbers, module script counts, and any structural changes. These are the human-readable entry points for anyone opening the project cold.
 9. **`auto-memory-copies/`** — sync local memory backup files (git-tracked mirror of `.auto-memory/`)

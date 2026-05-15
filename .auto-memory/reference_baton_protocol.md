@@ -9,8 +9,8 @@ type: reference
 The BATON is a structured session handoff document — state snapshot + task queue, NOT a conversation summary. ~3% token cost, 100% actionable state preserved.
 
 ### Location & Naming
-- **Active:** `00_#PROJECT_OVERHAUL/BATON_active_NNN_YYYYMMDD_HHMM.md` (project root, ONE file only)
-- **Archived:** `00_#PROJECT_OVERHAUL/baton_archive/BATON_NNN_YYYYMMDD_HHMM.md` (drop "active", keep number + datetime)
+- **Active:** `board_prep_intel/BATON_active_NNN_YYYYMMDD_HHMM.md` (project root, ONE file only)
+- **Archived:** `board_prep_intel/baton_archive/BATON_NNN_YYYYMMDD_HHMM.md` (drop "active", keep number + datetime)
 - **NNN = sequential 3-digit number.** 001, 002, 003... Never skip or reuse.
 
 ### Session Start (Loading a BATON)
@@ -34,7 +34,7 @@ Rename → drop "active" → move to `baton_archive/`. Confirm NO BATON_active f
 Next sequential number (last archived + 1). `BATON_active_NNN_YYYYMMDD_HHMM.md` at project root. Only one exists at root at any time.
 
 **Step 4 — Update `_index.md`:**
-Maps `00_#PROJECT_OVERHAUL` subfolder ONLY (not full claude_knowledge tree). Update trees/counts if structure changed. Append dated housekeeping log entry. Spot-check 3+ folder counts against disk.
+Maps `board_prep_intel` subfolder ONLY (not full claude_knowledge tree). Update trees/counts if structure changed. Append dated housekeeping log entry. Spot-check 3+ folder counts against disk.
 
 **Step 5 — Update root README files:**
 `README.json` + `README_PROJECT.md` if module structure, script inventory, DB counts, or architecture decisions changed.
@@ -49,7 +49,7 @@ Did Steps 1–5 produce anything new and durable? If yes, update relevant auto-m
 - **Header:** BATON number, phase, date, one-line status (10-second orientation)
 - **Rebuild North Star:** 5 locked principles (copy forward unchanged every BATON — see below)
 - **Deferred Flags:** Numbered open issues with full action specs — never collapse or summarize
-- **Migration Tracker:** What moved/changed this session; what still needs to come into `00_#PROJECT_OVERHAUL`
+- **Migration Tracker:** What moved/changed this session; what still needs to come into `board_prep_intel`
 - **Where We Are:** Quantitative results, counts, filenames, run identifiers
 - **What Was Built:** What changed and *why*, before/after for bug fixes
 - **Next Steps:** Ordered, executable by fresh Claude with zero prior context
@@ -80,6 +80,6 @@ Did Steps 1–5 produce anything new and durable? If yes, update relevant auto-m
 
 ### Document Hierarchy
 - `BATON_active_NNN_*.md` → operational state (every session)
-- `_index.md` → ground-truth map of `00_#PROJECT_OVERHAUL` only (every BATON, Step 4)
+- `_index.md` → ground-truth map of `board_prep_intel` only (every BATON, Step 4)
 - `README.json` / `README_PROJECT.md` → persistent project record (phase boundaries, Step 5)
 - Auto-memory files → cross-session Claude context (Steps 1 + 6)
