@@ -102,6 +102,23 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
+## Session-Housekeeping Skill (V2 — project-level)
+
+**Canonical workflow:** `.claude/skills/session-housekeeping/SKILL.md` (12-item sweep).
+Use the **project-level** `session-housekeeping` skill, NOT the upstream
+`anthropic-skills:session-housekeeping` (11 items, no GitHub sync).
+
+**Item 12 (NEW BATON 070): GitHub syncing.** Claude owns the full git/GitHub
+round-trip at end of session — push, PR create via `gh`, post-merge cleanup —
+without delegating git commands back to the user. The user merges PRs in the
+web UI when a PR is created; everything else is Claude's responsibility.
+
+**Worktree policy:** default to direct-on-main in the project root. Spin up
+a Claude Code worktree only when parallel-branch work is genuinely needed.
+If a worktree is used, Claude removes it as part of Item 12 cleanup.
+
+---
+
 ## Practice Question System
 
 Three M3 scripts + two Cowork skills (added BATON 064).
