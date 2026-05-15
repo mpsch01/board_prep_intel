@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-05-15 (BATON 069)
+**Last updated:** 2026-05-15 (BATON 070)
 **Status:** Active development
-**Active BATON:** `BATON_active_069_20260515_project_overhaul_fossil_cleanup.md`
+**Active BATON:** `BATON_active_070_20260515_corpus_qc_skill_v1.md`
 **Next ART-ID:** ART-2208
-**Git:** `claude/xenodochial-pike-667d6a` worktree → `d85ef22` (BATON 069 housekeeping); `main` at `e6cb648` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `claude/reverent-mclaren-575646` worktree → `22dae71` (BATON 070 housekeeping commit; corpus-qc skill V1 build at this hash); `main` at `57bbe7a` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -14,9 +14,9 @@
 {
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_069_20260515_project_overhaul_fossil_cleanup.md",
-  "baton_description": "PROJECT_OVERHAUL fossil cleanup — removed all live `00_#PROJECT_OVERHAUL` path references; renamed `project_overhaul_state.md` → `project_session_log.md` (both copies via `git mv`); CLAUDE.md H1 corrected. No DB/script/PDF changes.",
-  "git_hash": "d85ef22",
+  "baton": "BATON_active_070_20260515_corpus_qc_skill_v1.md",
+  "baton_description": "corpus-integrity-qc skill V1 build — Layers A, B, D + coordinator + 4 agent templates added under .claude/skills/corpus-integrity-qc/. End-to-end smoke test produces 2,538 findings (1,914 Tier 1 / 66 Tier 2 / 558 Tier 3). Layer B confirmed BATON 058 bug-fix (0 CRITIQUE_REF_MISSING_FROM_DB). No DB/PDF/schema changes.",
+  "git_hash": "22dae71",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-15",

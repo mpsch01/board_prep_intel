@@ -1,5 +1,5 @@
 # project_session_log.md
-Last updated: 2026-05-15 (BATON 069)
+Last updated: 2026-05-15 (BATON 070)
 
 > **Renamed BATON 068.** This file was previously `project_overhaul_state.md` — a fossil from the early "PROJECT_OVERHAUL" reorganization phase (M1–M5 module rebuild, ~March 2026). Despite the old name, this file has long served as the project's **running session log + state snapshot**. New name reflects current role.
 
@@ -13,7 +13,7 @@ Last updated: 2026-05-15 (BATON 069)
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 31 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
 | DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; qid_art_xref 2,710; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 068; Mac DB swapped from stale Apr-16 copy (1,998/2,485) to canonical May-6 copy |
-| Skills | Active | .claude/skills/corpus-integrity-qc/ NEW BATON 068 (5 files; Layer C functional; A/B/D + coordinator + subagent prompts deferred); replaces buggy article-citation-qc |
+| Skills | Active | .claude/skills/corpus-integrity-qc/ **V1 COMPLETE BATON 070** (15 files: SKILL.md + 2 references + 7 scripts + 5 agent templates; Layers A/B/C/D + coordinator + 4 agent prompts all functional; A4 PDF-diff deferred to V1.1); replaces buggy article-citation-qc |
 
 ## PDF Library State
 
@@ -34,6 +34,29 @@ Last updated: 2026-05-15 (BATON 069)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 070)
+**Session type:** Substantive build session — corpus-integrity-qc skill V1 completed end-to-end. No DB writes, no PDF acquisition, no schema changes.
+
+**10 new files + 1 modified, all under `.claude/skills/corpus-integrity-qc/`:**
+- Scripts: `layer_a_text.py`, `layer_b_citation.py`, `generate_fixes.py`, `build_report.py`, `run_qc.py`
+- Agent templates: `agents/README.md`, `agents/text-fidelity-auditor.md`, `agents/citation-linkage-auditor.md`, `agents/structural-integrity-auditor.md`, `agents/fix-applier.md`
+- Modified: `SKILL.md` — V1 file layout + standalone Quickstart + agent template path lock (+82 / −14 lines)
+
+**End-to-end smoke test (canonical DB):** 2,538 findings — Layer A 158 + Layer B 582 + Layer C 1,798 — split into 1,914 Tier 1 (auto-safe, wrapped in `BEGIN;…COMMIT;`) + 66 Tier 2 (review, commented out by default) + 558 Tier 3 (manual, no SQL).
+
+**Key validation:** Layer B confirmed the BATON 058 dict-overwrite bug-fix — zero CRITIQUE_REF_MISSING_FROM_DB findings against canonical DB. The ~932 false positives produced by the old article-citation-qc are gone. Set-containment semantics close the regression.
+
+**Layer A scope was narrowed mid-build** based on smoke-test feedback:
+- Dropped rigid 5-choice assumption (ITE legitimately has 4-choice questions — 261 of them)
+- Dropped question_text truncation check (fill-in-the-blank stems legitimately end without terminal punctuation)
+- Net effect: 754 → 158 findings, zero false positives
+
+**Two dispatch paths supported:** `run_qc.py` (standalone, ThreadPoolExecutor parallel subprocess) and Agent-tool dispatch (4 agent prompt templates in `agents/`). Both produce identical artifacts in `OUTPUT_DIR`.
+
+**Closed:** DEFERRED-CORPUS-QC-LAYERS-AB-D. **Carved out as new flag:** DEFERRED-LAYER-A4-PDF-DIFF.
+
+**Next session:** real-world testing pass + bug-fix loop, then AAFP BRQ v2 extension.
 
 ## Session Notes (BATON 069)
 **Session type:** Cleanup-only — no functional changes, no DB writes, no scripts added.

@@ -40,8 +40,34 @@ The skill produces:
 ## V1 scope
 
 - **Corpus:** ITE only (1,639 questions, 8 years, 2018–2025). AAFP BRQ is v2.
-- **Layer A depth:** Hybrid — detect-only scan + spot re-extraction on flagged QIDs.
+- **Layer A depth:** Detect-only scan (A1/A2/A3). A4 PDF-diff is deferred to V1.1.
 - **Fix tiering:** Auto-safe / Review / Manual (see `references/fix_tiers.md`).
+
+---
+
+## File layout (V1)
+
+```
+.claude/skills/corpus-integrity-qc/
+├── SKILL.md
+├── references/
+│   ├── qc_rules.md         — every check, severity, fix-tier mapping
+│   └── fix_tiers.md        — Tier 1/2/3 definitions + application workflow
+├── scripts/
+│   ├── utils.py            — shared DB + ENCODING_FIXES + parser helpers
+│   ├── layer_a_text.py     — A — text fidelity (A1/A2/A3 detect-only)
+│   ├── layer_b_citation.py — B — citation linkage (B1-B7, multi-ref-aware)
+│   ├── layer_c_structural.py — C — structural integrity (C1-C7)
+│   ├── build_report.py     — merges 3 findings JSONs → qc_report.md
+│   ├── generate_fixes.py   — D — tiered SQL generator → fixes.sql
+│   └── run_qc.py           — standalone coordinator (parallel A/B/C + reports)
+└── agents/
+    ├── README.md
+    ├── text-fidelity-auditor.md       — Layer A dispatch prompt
+    ├── citation-linkage-auditor.md    — Layer B dispatch prompt
+    ├── structural-integrity-auditor.md — Layer C dispatch prompt
+    └── fix-applier.md                  — Tier-1/2 SQL applicator prompt
+```
 
 ---
 
@@ -56,12 +82,37 @@ SKILL        = PROJECT_ROOT/.claude/skills/corpus-integrity-qc/
 OUTPUT_DIR   = PROJECT_ROOT/03_module.3_analyst/outputs/corpus_qc/{YYYY-MM-DD}/
 ```
 
-All scripts use dynamic path resolution: `SCRIPT_DIR = Path(__file__).resolve().parent`
-with `PROJECT_ROOT` resolved relative to the staging directory anchor.
+All scripts use dynamic path resolution: `SCRIPT_DIR = Path(__file__).resolve().parent`.
+Auto-resolved `PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent.parent.parent` works for
+non-worktree installs only. Worktree runs **must** pass explicit `--project-root` (and
+optionally `--db-path` / `--staging-dir` / `--output-dir`).
 
 ---
 
-## Workflow
+## Quickstart — standalone CLI path
+
+```bash
+cd <PROJECT_ROOT>
+python .claude/skills/corpus-integrity-qc/scripts/run_qc.py
+```
+
+That single command:
+1. Verifies all 8 staging JSONs (`YYYY_critique_refs_staging.json`) exist.
+2. Dispatches Layers A/B/C in parallel as subprocesses.
+3. Builds `qc_report.md` from the merged findings.
+4. Generates `fixes.sql` partitioned into Tier 1/2/3.
+5. Prints a summary pointing to `<OUTPUT_DIR>` with all artifacts.
+
+Override defaults with `--project-root`, `--db-path`, `--staging-dir`,
+`--output-dir`, `--years 2020 2021`, or `--skip-staging-check`.
+
+---
+
+## Workflow (model-driven path)
+
+The model-driven path is the agent-dispatch flow used when the skill is
+invoked interactively (`/corpus-integrity-qc` style triggers). For batch
+or CI runs prefer the standalone Quickstart above.
 
 ### Phase 1 — Verify staging JSONs exist (run first, always)
 
@@ -81,20 +132,26 @@ Wait for confirmation before proceeding.
 
 ### Phase 2 — Dispatch three audit agents in parallel
 
-Launch via the `Agent` tool, all in one message:
+Launch via the `Agent` tool, all in one message. The prompts live in `agents/`
+and the coordinator must inject the resolved `PROJECT_ROOT` + `OUTPUT_DIR` paths
+into each:
 
 ```
-1. structural-integrity-auditor  → findings_layer_c.json
-2. citation-linkage-auditor      → findings_layer_b.json
-3. text-fidelity-auditor         → findings_layer_a.json
+1. structural-integrity-auditor  → findings_layer_c.json (agents/structural-integrity-auditor.md)
+2. citation-linkage-auditor      → findings_layer_b.json (agents/citation-linkage-auditor.md)
+3. text-fidelity-auditor         → findings_layer_a.json (agents/text-fidelity-auditor.md)
 ```
 
-Each agent has its own prompt under `agents/`. Each writes its findings JSON to
-`OUTPUT_DIR`. Coordinator (main thread) waits for all three to complete.
+Each agent runs **one script only** via Bash (no parallel work inside the
+agent), writes its findings JSON to `OUTPUT_DIR`, then returns a brief
+summary. The coordinator (main thread) waits for all three to complete before
+moving to Phase 3.
 
-**Why parallel:** Layers are independent. Layer A is heaviest (PDF re-reads on
-flagged items). Layer C is fast but ~20 distinct SQL audits. Layer B is medium.
-Parallel cuts wall-clock ~3× and gives each agent a clean context window.
+**Why parallel:** Layers are independent. Parallel cuts wall-clock and gives
+each agent a clean context window.
+
+**Standalone equivalent:** `python scripts/run_qc.py` does the same thing via
+ThreadPoolExecutor subprocess dispatch — no Agent tool required, useful for CI.
 
 ### Phase 3 — Merge findings and generate report
 
@@ -158,7 +215,18 @@ Run `scripts/generate_fixes.py`. Output `fixes.sql` partitioned into three block
 ### Phase 5 — Present to user
 
 Present `qc_report.md` summary + per-tier SQL counts. Wait for explicit approval
-per tier before any DB write. Apply via the fix-applier subagent.
+per tier before any DB write. Apply via the **fix-applier subagent** (template
+at `agents/fix-applier.md`). The fix-applier requires:
+
+- `--tier 1` or `--tier 2` (never both in one call)
+- Absolute path to `fixes.sql`
+- Absolute path to `ite_intelligence.db`
+- An explicit approval token from the coordinator (e.g.,
+  `--approved-by-user 1`).
+
+The fix-applier creates a `.bak` of the DB before any write, applies the SQL
+inside its own `BEGIN`/`COMMIT`, runs verification COUNT queries, and reports
+deltas back.
 
 ---
 

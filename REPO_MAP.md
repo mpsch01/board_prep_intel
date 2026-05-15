@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-05-15 (BATON 069 — PROJECT_OVERHAUL fossil cleanup; renamed `project_overhaul_state.md` → `project_session_log.md`; CLAUDE.md H1 corrected; no functional changes)
+**Last Updated:** 2026-05-15 (BATON 070 — corpus-integrity-qc skill V1 complete: Layers A, B, D + coordinator + 4 agent templates added under `.claude/skills/corpus-integrity-qc/`; 10 new files + 1 modified; end-to-end smoke test produces 2,538 findings split into 1,914 Tier 1 / 66 Tier 2 / 558 Tier 3; no DB/PDF/schema changes)
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -12,7 +12,7 @@ board_prep_intel/
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
 ├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_067_*.md              Active session handoff — read first every session
+├── BATON_active_070_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
