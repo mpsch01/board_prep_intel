@@ -2,10 +2,10 @@
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "root": "C:\\Users\\mpsch\\Desktop\\board_prep_intel",
-  "baton": "BATON_active_068_20260515_claude_code_migration_corpus_qc_built.md",
-  "baton_description": "Cowork → Claude Code migration validated; corpus-integrity-qc skill scaffolded with Layer C functional; canonical DB swapped to post-BATON-065 state; 1 new ORPHAN_XREF bug surfaced (QID-2024-0067/ART-2073).",
+  "baton": "BATON_active_069_20260515_project_overhaul_fossil_cleanup.md",
+  "baton_description": "PROJECT_OVERHAUL fossil cleanup — removed all live `00_#PROJECT_OVERHAUL` path references; renamed `project_overhaul_state.md` → `project_session_log.md` (both copies via `git mv`); CLAUDE.md H1 corrected. No DB/script/PDF changes.",
   "last_updated": "2026-05-15",
-  "git_hash": "2bf681c",
+  "git_hash": "(pending — to be updated post-housekeeping-commit)",
   "git_remote": "https://github.com/mpsch01/board_prep_intel",
   "database": {
     "path": "00_database/db/ite_intelligence.db",

@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last verified: 2026-05-15 (BATON 068)
+Last verified: 2026-05-15 (BATON 069)
 
 ## DB: ite_intelligence.db
 
@@ -43,6 +43,9 @@ Last verified: 2026-05-15 (BATON 068)
 - Columns: article_id (FK), status (ENUM: 'current', 'updated', 'check_needed', 'not_indexed'), title_signals (TEXT JSON array), pubmed_pmid (INT FK)
 - title_signals: JSON array of clinical category keywords (extracted from blueprint cross-reference; used for future filtering + human review)
 - Populated via build_article_currency.py (M3 script)
+
+## DB Changes (BATON 069)
+- **2026-05-15 (BATON 069):** No DB changes. Cleanup-only session — PROJECT_OVERHAUL fossil references removed; `project_overhaul_state.md` renamed to `project_session_log.md`. Row counts and schema unchanged from BATON 068.
 
 ## DB Changes (BATON 068)
 - **2026-05-15 (BATON 068):** DB file swapped from stale Apr-16 copy (1,998 articles / 2,485 xref) to canonical May-6 copy (2,206 articles / 2,710 xref). No schema changes. Old DB preserved at `00_database/db/_archive_/ite_intelligence_stale_20260416.db`. New ORPHAN_XREF bug surfaced: QID-2024-0067/ART-2073 references non-existent QID in questions table.

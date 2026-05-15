@@ -1,5 +1,5 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-05-15 (BATON 068)
+Last updated: 2026-05-15 (BATON 069)
 
 ## Active Memory Files
 - [project_session_log.md](project_session_log.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 068

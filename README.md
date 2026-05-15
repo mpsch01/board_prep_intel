@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-05-15 (BATON 068)
+**Last updated:** 2026-05-15 (BATON 069)
 **Status:** Active development
-**Active BATON:** `BATON_active_068_20260515_claude_code_migration_corpus_qc_built.md`
+**Active BATON:** `BATON_active_069_20260515_project_overhaul_fossil_cleanup.md`
 **Next ART-ID:** ART-2208
-**Git:** `claude/xenodochial-pike-667d6a` worktree → `2bf681c` (BATON 068 housekeeping); `main` at `e6cb648` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `claude/xenodochial-pike-667d6a` worktree → (pending — post-housekeeping-commit); `main` at `e6cb648` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -14,9 +14,9 @@
 {
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_068_20260515_claude_code_migration_corpus_qc_built.md",
-  "baton_description": "Cowork → Claude Code migration validated; corpus-integrity-qc skill scaffolded with Layer C functional; canonical DB swapped to post-BATON-065 state; 1 new ORPHAN_XREF bug surfaced (QID-2024-0067/ART-2073).",
-  "git_hash": "2bf681c",
+  "baton": "BATON_active_069_20260515_project_overhaul_fossil_cleanup.md",
+  "baton_description": "PROJECT_OVERHAUL fossil cleanup — removed all live `00_#PROJECT_OVERHAUL` path references; renamed `project_overhaul_state.md` → `project_session_log.md` (both copies via `git mv`); CLAUDE.md H1 corrected. No DB/script/PDF changes.",
+  "git_hash": "(pending — to be updated post-housekeeping-commit)",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-15",
@@ -271,15 +271,15 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 
 ---
 
-## Next Steps (BATON 068)
+## Next Steps (BATON 069)
 
 ### Immediate (next session)
 1. **Continue corpus-integrity-qc build** — Layer B (citation linkage, multi-ref-aware) — the layer that actually fixes the ~900 false-positive bug. Then Layer A (text fidelity), then coordinator + tiered fix generator (Layer D), then 4 subagent prompts.
-2. **Investigate ORPHAN_XREF (QID-2024-0067 / ART-2073, exam_year 2024)** — qid doesn't exist in questions table; likely BATON-065 acquire script bug.
+2. **Investigate ORPHAN_XREF (QID-2024-0067 / ART-2073, exam_year 2024)** — qid doesn't exist in questions table; likely 5-minute fix once eyeballed.
 
 ### Short-term (this week)
-3. **Apply Tier-1 Layer C cache rebuilds** — 1,797 auto-safe SQL UPDATEs once Layer D ships (pure recomputation from `qid_art_xref` bridge).
-4. **Mac PDF sync** — pull 569 missing PDFs from Windows/gdrive (gitignored, BATONs 065-067 acquisitions).
+3. **Apply Tier-1 Layer C cache rebuilds** — 1,797 auto-safe SQL UPDATEs once Layer D ships.
+4. **Mac PDF sync** — pull 569 missing PDFs from Windows/gdrive.
 5. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067.
 6. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass (carry from BATON 067).
 7. **AFP DB data QC** — repair 6 articles with malformed clean_ref / junk title (carry from BATON 067).
@@ -303,4 +303,4 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 ---
 
 **Project Lead:** Michael Scholl, MD
-**Last Reviewed:** 2026-05-15 (BATON 068, git 2bf681c housekeeping commit; corpus-integrity-qc skill scaffolded + DB swap)
+**Last Reviewed:** 2026-05-15 (BATON 069, git a3ef508 pre-housekeeping-commit; PROJECT_OVERHAUL fossil cleanup; renamed `project_overhaul_state.md` → `project_session_log.md`; no functional changes)

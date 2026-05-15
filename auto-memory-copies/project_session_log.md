@@ -1,5 +1,5 @@
 # project_session_log.md
-Last updated: 2026-05-15 (BATON 068)
+Last updated: 2026-05-15 (BATON 069)
 
 > **Renamed BATON 068.** This file was previously `project_overhaul_state.md` — a fossil from the early "PROJECT_OVERHAUL" reorganization phase (M1–M5 module rebuild, ~March 2026). Despite the old name, this file has long served as the project's **running session log + state snapshot**. New name reflects current role.
 
@@ -34,6 +34,20 @@ Last updated: 2026-05-15 (BATON 068)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 069)
+**Session type:** Cleanup-only — no functional changes, no DB writes, no scripts added.
+
+**Three cleanups executed:**
+1. Removed all live `00_#PROJECT_OVERHAUL` path references (5 live config/code + 8 docs). The `#` character is a URL fragment delimiter — real bug risk for any URL-encoded path handling.
+2. Renamed `project_overhaul_state.md` → `project_session_log.md` (both copies via `git mv`; history preserved). Old name was a fossil from the early M1-M5 module reorganization (~March 2026).
+3. CLAUDE.md H1: `# Memory — #PROJECT_OVERHAUL` → `# Memory — ITE Intelligence System`.
+
+**Files touched:** 27 in commit `a3ef508`. Two `git mv` renames preserved history.
+
+**Three intentional historical mentions preserved** (not live refs): `rebuild_structuring_guidelines.md` description, `project_new_architecture.md` description, and this file's H1 rename-note block.
+
+**No new deferred flags. No DB changes. No script changes.** Pure config/docs hygiene pass triggered by Mikey spotting the `#PROJECT_OVERHAUL` token in CLAUDE.md heading at end of BATON 068 wrap-up.
 
 ## Session Notes (BATON 068)
 

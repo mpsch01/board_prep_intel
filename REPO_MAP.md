@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-05-15 (BATON 068 — corpus-integrity-qc skill scaffolded; canonical DB restored; new ORPHAN_XREF surfaced)
+**Last Updated:** 2026-05-15 (BATON 069 — PROJECT_OVERHAUL fossil cleanup; renamed `project_overhaul_state.md` → `project_session_log.md`; CLAUDE.md H1 corrected; no functional changes)
 
 File tree with short descriptions. For full project context see `README.md`.
 
