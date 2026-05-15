@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last verified: 2026-05-07 (BATON 067)
+Last verified: 2026-05-15 (BATON 068)
 
 ## DB: ite_intelligence.db
 
@@ -43,6 +43,11 @@ Last verified: 2026-05-07 (BATON 067)
 - Columns: article_id (FK), status (ENUM: 'current', 'updated', 'check_needed', 'not_indexed'), title_signals (TEXT JSON array), pubmed_pmid (INT FK)
 - title_signals: JSON array of clinical category keywords (extracted from blueprint cross-reference; used for future filtering + human review)
 - Populated via build_article_currency.py (M3 script)
+
+## DB Changes (BATON 068)
+- **2026-05-15 (BATON 068):** DB file swapped from stale Apr-16 copy (1,998 articles / 2,485 xref) to canonical May-6 copy (2,206 articles / 2,710 xref). No schema changes. Old DB preserved at `00_database/db/_archive_/ite_intelligence_stale_20260416.db`. New ORPHAN_XREF bug surfaced: QID-2024-0067/ART-2073 references non-existent QID in questions table.
+- **Layer C smoke test (corpus-integrity-qc):** 1,798 findings against canonical DB — 1,797 derived-cache drift Tier 1 (mostly 208 ZERO_CITATION_LINKED from BATON-065 articles never having cache initialized) + 1 ORPHAN_XREF as above. No DB writes performed; fixes pending Layer D.
+- **No script-count changes; no row-count changes (DB swap restored canonical state established BATON 067).**
 
 ## DB Changes (BATON 067)
 - **No DB changes this session.** All counts stable from BATON 065.
@@ -137,11 +142,12 @@ Last verified: 2026-05-07 (BATON 067)
 
 ## Key Metric Changes Since BATON 064
 
-| Metric | BATON 064 | BATON 065 | BATON 066 | BATON 067 | Change (064→067) | Notes |
-|--------|-----------|-----------|-----------|-----------|------------------|-------|
-| articles | 1,998 | 2,206 | 2,206 | 2,206 | +208 | EXA + Unpaywall batch acquisition (BATON 065) |
-| qid_art_xref | 2,485 | 2,710 | 2,710 | 2,710 | +225 | New article xref linkages (BATON 065) |
-| article_currency | 1,998 | 2,206 | 2,206 | 2,206 | +208 | Mirrors articles table (BATON 065) |
-| ITE PDFs (active tiers) | 988 | 1,254 | 1,381 (worktree, pre-merge) | 1,540 (post-merge + AFP) | +552 | EXA/Unpaywall +266 (BATON 065); JAMA/NEJM +127 merged (BATON 067); AFP +72/cleanup -127 (BATON 067) |
-| M1 maintain scripts | 26 | 30 | 36 (worktree) | 38 (main; +1 NEW BATON 067) | +12 | +4 BATON 065; +8 BATON 066 merged BATON 067; +1 NEW BATON 067 (aafp_targeted_downloader.py); aafp_fill_gaps.py modified |
-| All other tables | stable | stable | stable | stable | 0 | No DB changes BATON 067 |
+| Metric | BATON 064 | BATON 065 | BATON 066 | BATON 067 | BATON 068 | Change (064→068) | Notes |
+|--------|-----------|-----------|-----------|-----------|-----------|------------------|-------|
+| articles | 1,998 | 2,206 | 2,206 | 2,206 | 2,206 | +208 | EXA + Unpaywall batch acquisition (BATON 065) |
+| qid_art_xref | 2,485 | 2,710 | 2,710 | 2,710 | 2,710 | +225 | New article xref linkages (BATON 065) |
+| article_currency | 1,998 | 2,206 | 2,206 | 2,206 | 2,206 | +208 | Mirrors articles table (BATON 065) |
+| ITE PDFs (active tiers, Windows canonical) | 988 | 1,254 | 1,381 (worktree, pre-merge) | 1,540 (post-merge + AFP) | 1,540 (unchanged on Windows) | +552 | EXA/Unpaywall +266 (BATON 065); JAMA/NEJM +127 merged (BATON 067); AFP +72/cleanup -127 (BATON 067) |
+| ITE PDFs (Mac local) | n/a | n/a | n/a | n/a | 971 (lags Windows by 569) | — | DEFERRED-MAC-PDF-SYNC (gitignored content) |
+| M1 maintain scripts | 26 | 30 | 36 (worktree) | 38 (main; +1 NEW BATON 067) | 38 (unchanged) | +12 | +4 BATON 065; +8 BATON 066 merged BATON 067; +1 NEW BATON 067 (aafp_targeted_downloader.py); aafp_fill_gaps.py modified |
+| All other tables | stable | stable | stable | stable | stable | 0 | No DB changes BATON 068 (canonical restored via swap from stale Apr-16 copy) |

@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-05-07 (BATON 067 — Git hash: 6019f69 pre-commit) — AFP gap closed 83 → 11 (72 articles acquired) via aafp_targeted_downloader.py with 3-tier resolution cascade (legacy URL + monthly TOC + CrossRef DOI) and structured-meta validation gate; BATON 066 worktree merged to main (127 PDFs + 8 scripts); 48 dupes + 79 corrupt files quarantined and deleted
+**Last Updated:** 2026-05-15 (BATON 068 — corpus-integrity-qc skill scaffolded; canonical DB restored; new ORPHAN_XREF surfaced)
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -119,6 +119,15 @@ board_prep_intel/
 │   └── [supporting CSVs + JSONs]      Body system map, keyword library, poll inserts, etc.
 │
 ├── article-citation-qc.skill          Installable skill — QC audit of articles table against ITE critique PDFs (2018–2025)
+│
+├── .claude/skills/corpus-integrity-qc/    NEW BATON 068 — 4-layer DB integrity audit skill replacing article-citation-qc
+│   ├── SKILL.md                            Skill manifest with workflow description
+│   ├── references/
+│   │   ├── qc_rules.md                     All checks defined per layer (A/B/C)
+│   │   └── fix_tiers.md                    Tier 1/2/3 fix policy + SQL conventions
+│   └── scripts/
+│       ├── utils.py                        Salvaged: ENCODING_FIXES, AUTHOR_STOP_WORDS, parsers, DB connect
+│       └── layer_c_structural.py           Layer C — structural integrity audit (functional, smoke-tested)
 │
 └── skills_abilities/                  Agent skills, SDK references, Apify actor
     ├── agents/                        PDF sourcer agent + docs/logs

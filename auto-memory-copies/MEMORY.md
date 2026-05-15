@@ -1,9 +1,10 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-05-07 (BATON 067)
+Last updated: 2026-05-15 (BATON 068)
 
 ## Active Memory Files
-- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 067
-- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (2,206 articles, 1,639 ITE Qs), schema state; body_system + body_system_merged fully normalized; article_currency complete 2,206; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — all stable BATON 067 (no DB changes)
+- [project_overhaul_state.md](project_overhaul_state.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 068
+- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (2,206 articles, 1,639 ITE Qs, 2,710 qid_art_xref), schema state; body_system + body_system_merged fully normalized; article_currency complete 2,206; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — canonical restored BATON 068 (DB swap from stale Apr-16 copy)
+- [project_corpus_integrity_qc.md](project_corpus_integrity_qc.md) — Corpus integrity QC skill (replacing article-citation-qc); 4-layer architecture (text fidelity / citation linkage / structural integrity / report-remediation) with parallel agent dispatch. Layer C functional; A/B/D pending — BATON 068
 - [rebuild_structuring_guidelines.md](rebuild_structuring_guidelines.md) — Locked rules and architecture principles
 - Project terminology decoder — see `Terms — Decode These First` table in `CLAUDE.md` (no separate glossary.md file exists; CLAUDE.md is the single source of truth for term definitions)
 
@@ -78,6 +79,18 @@ Last updated: 2026-05-07 (BATON 067)
 - **VC_fail 630→879, VC_pass 168→200**
 - **Four new M1 maintain scripts:** acquire_missing_citations.py, playwright_auth_downloader.py, browser_pdf_harvester.py, setup_journal_auth.py
 - **JAMA/NEJM IP-blocked at Playwright layer** → jama_pending.json output (handed to BATON 066)
+
+## Cowork → Claude Code Migration + Corpus Integrity QC Skill (BATON 068)
+- **Migration validated:** Claude Code adopted as primary workflow on Mac; Cowork retained but no longer the daily driver
+- **corpus-integrity-qc skill scaffolded** (`.claude/skills/corpus-integrity-qc/`, 5 files):
+  - 4-layer architecture: Layer A (text fidelity), Layer B (citation linkage), Layer C (structural integrity), Layer D (report + tiered remediation)
+  - Layer C functional and validated against canonical DB; A/B/D + coordinator + subagent prompts deferred
+  - Replaces buggy article-citation-qc (dict-overwrite bug in `run_citation_qc.py` lines 207–210 producing ~932 false-positive QID_MISMATCH findings)
+  - v1 scope: ITE only; AAFP BRQ deferred to v2
+- **DB swap:** Mac DB swapped from stale Apr-16 copy (1,998 articles / 2,485 xref) to canonical May-6 copy (2,206 / 2,710); old preserved at `00_database/db/_archive_/ite_intelligence_stale_20260416.db`
+- **Layer C smoke test:** 1,798 findings — 1,797 derived-cache drift (Tier 1) + 1 NEW ORPHAN_XREF bug at QID-2024-0067/ART-2073 (QID does not exist in questions table)
+- **New deferred flags:** DEFERRED-CORPUS-QC-LAYERS-AB-D, DEFERRED-LAYER-C-CACHE-REBUILD, DEFERRED-ORPHAN-XREF-QID-2024-0067, DEFERRED-MAC-PDF-SYNC (Mac lags Windows 569 PDFs), DEFERRED-LOCKED-RULE-8-UPDATE (Rule 8 Windows-specific)
+- **DB state:** No schema changes; no row-count changes (canonical restored via swap)
 
 ## AFP PDF Acquisition + BATON 066 Worktree Merge (BATON 067)
 - **AFP gap closed 83 → 11** — 72 articles acquired via aafp_targeted_downloader.py 3-tier cascade (legacy biweekly URL with volume parity + monthly TOC scrape + CrossRef DOI lookup; structured citation_volume/issue/firstpage meta tag validation gate, 100% precision when AAFP exposes the tags)

@@ -1,29 +1,30 @@
 # project_overhaul_state.md
-Last updated: 2026-05-07 (BATON 067)
+Last updated: 2026-05-15 (BATON 068)
 
 ## Module State
 
 | Module | Status | Key Info |
 |--------|--------|----------|
-| M1 Warehouse | Active | 1,540 ITE/AAFP active-tier PDFs (1,056 VC_fail + 309 VC_pass + 117 local_lite + 58 right_click + 15 AAFP); 8 build + 38 maintain scripts (+9 net new BATON 067: 8 BATON 066 scripts merged + 1 NEW aafp_targeted_downloader.py); AFP gap closed 83 → 11 via 3-tier cascade harvester; BATON 066 worktree fully merged to main |
+| M1 Warehouse | Active | Windows canonical: 1,540 ITE/AAFP active-tier PDFs; Mac local: 971 (lags by 569 — DEFERRED-MAC-PDF-SYNC); 8 build + 38 maintain scripts (no script changes BATON 068) |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
 | M3 Analyst | Active | 55 py + 4 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction; report interpretation guides (resident + faculty, BATON 063); practice question system (exam series + custom sets, BATON 064) |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
-| M5 Web Platform | Active | 3 py + 35 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
-| DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 067 |
+| M5 Web Platform | Active | 3 py + 31 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
+| DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; qid_art_xref 2,710; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 068; Mac DB swapped from stale Apr-16 copy (1,998/2,485) to canonical May-6 copy |
+| Skills | Active | .claude/skills/corpus-integrity-qc/ NEW BATON 068 (5 files; Layer C functional; A/B/D + coordinator + subagent prompts deferred); replaces buggy article-citation-qc |
 
 ## PDF Library State
 
 ### ITE (citation_files/ITE/)
-| Tier | Count | Notes |
-|------|-------|-------|
-| VC_fail | 1,056 | Failed VC gate; awaiting enrichment (BATON 066 JAMA/NEJM merged + BATON 067 AFP harvest absorbed here) |
-| VC_pass | 309 | Passed VC gate; awaiting enrichment (BATON 066 merged + BATON 067 AFP additions) |
-| local_lite | 117 | Enriched; not VC-cited |
-| right_click | 58 | Enriched + VC-cited (top tier) |
-| _dupe_archive | 0 | Cleared this session (48 files moved to delete_me_pdfs_b65 then deleted) |
-| _corrupted_targeted_run | 0 | Cleared this session (79 files moved to delete_me_pdfs_b65 then deleted) |
-| **TOTAL active** | **1,540** | AFP gap closed 83 → 11 (BATON 067); BATON 066 worktree fully merged to main |
+| Tier | Windows canonical | Mac local (BATON 068) | Notes |
+|------|-------------------|----------------------|-------|
+| VC_fail | 1,056 | 628 | Failed VC gate; awaiting enrichment — Mac lags 428 |
+| VC_pass | 309 | 168 | Passed VC gate; awaiting enrichment — Mac lags 141 |
+| local_lite | 117 | 117 | Enriched; not VC-cited — synced |
+| right_click | 58 | 58 | Enriched + VC-cited (top tier) — synced |
+| _dupe_archive | 0 | 0 | Cleared BATON 067 |
+| _corrupted_targeted_run | 0 | 0 | Cleared BATON 067 |
+| **TOTAL active** | **1,540** | **971** | Mac lags Windows by 569 files (DEFERRED-MAC-PDF-SYNC); gitignored content |
 
 ### AAFP (citation_files/AAFP/)
 | Count | Status |
@@ -31,6 +32,31 @@ Last updated: 2026-05-07 (BATON 067)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 068)
+
+**2026-05-15 — Cowork → Claude Code Migration Validated + Corpus Integrity QC Skill Scaffold**
+- **Migration:** Cowork → Claude Code migration validated; adopted Claude Code as primary development workflow on Mac
+- **Built corpus-integrity-qc skill scaffold** (replaces buggy article-citation-qc):
+  - 4-layer architecture (text fidelity / citation linkage / structural integrity / report + remediation) with parallel agent dispatch
+  - 5 files added under `.claude/skills/corpus-integrity-qc/`: SKILL.md, references/qc_rules.md, references/fix_tiers.md, scripts/utils.py, scripts/layer_c_structural.py
+  - **Layer C functional** and validated against canonical DB
+  - **Deferred:** Layer A + Layer B + Layer D + coordinator + subagent prompts (DEFERRED-CORPUS-QC-LAYERS-AB-D)
+  - **Why:** article-citation-qc had confirmed dict-overwrite bug (`run_citation_qc.py` lines 207–210) producing ~932 false-positive QID_MISMATCH findings against multi-reference `qid_art_xref` table
+- **DB swap (no schema/row changes; canonical state restored):**
+  - Mac DB at `00_database/db/ite_intelligence.db` was 3 weeks stale (Apr 16 copy: 1,998 articles / 2,485 xref)
+  - User staged canonical from gdrive at `00a_database/db/`
+  - Swapped: old → `00_database/db/_archive_/ite_intelligence_stale_20260416.db`; new → canonical location
+  - Counts now match BATON 067: 2,206 articles, 2,710 qid_art_xref
+- **Layer C smoke test results:** 1,798 findings — 1,797 derived-cache drift Tier 1 fixes pending Layer D (mostly 208 ZERO_CITATION_LINKED from BATON-065 articles never having cache initialized); 1 NEW ORPHAN_XREF bug at QID-2024-0067/ART-2073 (QID does not exist in questions table)
+- **DB state:** No schema changes; no row-count changes (DB swap restored canonical state)
+- **New deferred flags:**
+  - DEFERRED-CORPUS-QC-LAYERS-AB-D — Build Layer A + B + D + coordinator + subagent prompts
+  - DEFERRED-LAYER-C-CACHE-REBUILD — 1,797 Tier-1 cache-rebuild SQL fixes pending Layer D
+  - DEFERRED-ORPHAN-XREF-QID-2024-0067 — QID-2024-0067/ART-2073 references non-existent QID
+  - DEFERRED-MAC-PDF-SYNC — Mac lags Windows by 569 PDFs (gitignored)
+  - DEFERRED-LOCKED-RULE-8-UPDATE — Rule 8 ("Git via Desktop Commander") is Windows-specific; needs broadening for Mac/Claude Code
+- **Next:** Build Layer A + B + D + coordinator; apply Tier-1 cache rebuilds; fix orphan xref; sync Mac PDFs from Windows canonical; update Rule 8 in CLAUDE.md
 
 ## Session Notes (BATON 067)
 
@@ -227,7 +253,12 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 
 | Flag | Status | Description |
 |------|--------|-------------|
-| DEFERRED-AAFP-HTTP-500 | NEW/OPEN | AAFP search API returning HTTP 500 for 11 remaining AFP articles; needs alternative entry point (BATON 067) |
+| DEFERRED-CORPUS-QC-LAYERS-AB-D | NEW/OPEN | Build Layer A + B + D + coordinator + subagent prompts for corpus-integrity-qc skill (Layer C functional BATON 068) |
+| DEFERRED-LAYER-C-CACHE-REBUILD | NEW/OPEN | 1,797 Tier-1 derived-cache rebuild SQL fixes pending Layer D rendering (BATON 068) |
+| DEFERRED-ORPHAN-XREF-QID-2024-0067 | NEW/OPEN | qid_art_xref row links QID-2024-0067 / ART-2073, but QID-2024-0067 not present in questions table (BATON 068) |
+| DEFERRED-MAC-PDF-SYNC | NEW/OPEN | Mac local citation_files/ITE/ lags Windows canonical by 569 PDFs (gitignored content; needs external sync) (BATON 068) |
+| DEFERRED-LOCKED-RULE-8-UPDATE | NEW/OPEN | CLAUDE.md Rule 8 ("Git via Desktop Commander") is Windows-specific; needs broadening to cover Mac/Claude Code native git (BATON 068) |
+| DEFERRED-AAFP-HTTP-500 | OPEN | AAFP search API returning HTTP 500 for 11 remaining AFP articles; needs alternative entry point (BATON 067) |
 | DEFERRED-AFP-DATA-QC | NEW/OPEN | AFP-acquired metadata needs spot-check vs articles table (BATON 067) |
 | DEFERRED-CROSS-TIER-CODON-DUPES | NEW/OPEN | Verify no codon duplicates across VC_fail/VC_pass after batch acquisition (BATON 067) |
 | DEFERRED-MERGE-WORKTREE-TO-MAIN | ✅ CLOSED | Resolved BATON 067 — 127 PDFs + 8 scripts + 5 state files migrated from worktree to main via robocopy + Move-Item |
@@ -264,6 +295,10 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 - Layer 2 (PubMed currency): ✅ COMPLETE — article_currency 2,206 rows (mirrors articles after BATON 065 acquisition); status enum (current/updated/check_needed/not_indexed); title_signals column (JSON array)
 - Layer 3 (Clinical pathways): Complete — clinical_pathways 4,959 rows (BATON 062); ite_analyzer_v3.py pathway_gap_map() LEFT JOIN fixed BATON 061
 - Layer 4 (Trends): Partial — trend CSV files in readable_db_files/; DEFERRED-PROGRAM-TREND now unblocked for multi-resident rollup; not advanced this session
+
+## Plugins & New Capabilities (BATON 068)
+- **corpus-integrity-qc skill (scaffolded)** — `.claude/skills/corpus-integrity-qc/` — 4-layer ITE corpus audit skill replacing buggy article-citation-qc. Layer C (structural integrity: qid_list / citation_count / exam_years / unique_years cache drift; orphan xref rows) functional and validated. Layers A (text fidelity), B (citation linkage, multi-ref-aware set-containment), D (tiered SQL remediation), and coordinator + subagent prompts deferred. v1 scope: ITE only; AAFP BRQ deferred to v2.
+- **Claude Code adopted as primary workflow** — Mac native development via Claude Code CLI; Cowork still available but no longer the daily driver.
 
 ## Plugins & New Capabilities (BATON 067)
 - **Persistent-auth pattern** — Playwright storage_state via `_aafp_auth.json` reused across script invocations; generalizable to other auth-walled journals (T&F, Wiley, etc.). Sign-in once, persist storage_state, run multiple harvests against authenticated session without re-login.

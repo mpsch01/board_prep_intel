@@ -52,7 +52,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_067_20260507_afp_pdf_acquisition_72_articles_closed.md` — AFP gap closed 83 → 11 (72 articles acquired); built aafp_targeted_downloader.py with 3-tier resolution cascade + structured-meta validation gate; BATON 066 worktree merged (127 PDFs + 8 scripts); 48+79 dupes/corrupts quarantined and deleted |
+| Active BATON | `BATON_active_068_20260515_claude_code_migration_corpus_qc_built.md` — Cowork → Claude Code migration validated; corpus-integrity-qc skill scaffolded with Layer C functional; canonical DB swap restored post-BATON-065 state; 1 new ORPHAN_XREF surfaced (QID-2024-0067) |
 | DB articles | 2,206 (+13 from critique PDFs: ART-1987–ART-1999; +208 from acquire_missing_citations.py: ART-2000–ART-2207) |
 | DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -80,7 +80,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2208 |
-| Git branch | main, latest → e79f6b5 (post-commit) |
+| Git branch | main, latest → e6cb648 (pre-housekeeping) — will update to housekeeping-commit hash after commit |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -156,17 +156,20 @@ Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
 
 ---
 
-## Next Steps (as of BATON 067, 2026-05-07)
+## Next Steps (as of BATON 068, 2026-05-15)
 
-### Immediate (before next session)
-1. **User commits via GitHub Desktop.** Stage the new BATON 067, retired BATON 066 (move to baton_archive/), .gitignore update, modified scripts (CLAUDE.md, aafp_fill_gaps.py, jama_pending.json, unpaywall_results.csv), and 10 new untracked .py scripts.
-2. **Re-run all 7 resident analyses** on Mac after git pull (carryover from BATON 065 + 066).
+### Immediate (next session)
+1. **Continue corpus-integrity-qc build** — Layer B (citation linkage, multi-ref-aware) — the layer that actually fixes the ~900 false-positive bug. Then Layer A (text fidelity), then coordinator + tiered fix generator (Layer D), then 4 subagent prompts.
+2. **Investigate ORPHAN_XREF (QID-2024-0067 / ART-2073, exam_year 2024)** — qid doesn't exist in questions table; likely BATON-065 acquire script bug.
 
 ### Short-term (this week)
-3. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass need consolidation.
-4. **AFP DB data QC** — repair 6 articles with malformed clean_ref / junk title (ART-0349, ART-0362, ART-0452, ART-0680, ART-1072, ART-1797), then re-run aafp_targeted_downloader.py.
-5. **Apply NEJM DevTools console pattern** to 144 unpaywall Cloudflare-blocked URLs.
+3. **Apply Tier-1 Layer C cache rebuilds** — 1,797 auto-safe SQL UPDATEs once Layer D ships (pure recomputation from `qid_art_xref` bridge).
+4. **Mac PDF sync** — pull 569 missing PDFs from Windows/gdrive (gitignored, BATONs 065-067 acquisitions).
+5. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067.
+6. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass (carry from BATON 067).
+7. **AFP DB data QC** — repair 6 articles with malformed clean_ref / junk title (carry from BATON 067).
 
-### Medium-term (next 2 weeks)
-6. **Tackle remaining 801-article broader gap** by source_type buckets (Other Journal 397, Guideline/Org 107, Pediatrics 39, Annals 36, Circulation 29, BMJ 29, Lancet 12, Chest 11).
-7. **AAFP HTTP 500 retry** — wait for AAFP archive fixes; re-run targeted_downloader monthly for 5 stuck vintage-PDF articles (ART-0044, ART-0642, ART-1564, ART-1811, ART-1822).
+### Medium-term
+8. AAFP BRQ extension of corpus-integrity-qc (v2).
+9. Continue 801-article gap closure by source_type buckets.
+10. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.

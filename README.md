@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-05-07 (BATON 067)
+**Last updated:** 2026-05-15 (BATON 068)
 **Status:** Active development
-**Active BATON:** `BATON_active_067_20260507_afp_pdf_acquisition_72_articles_closed.md`
+**Active BATON:** `BATON_active_068_20260515_claude_code_migration_corpus_qc_built.md`
 **Next ART-ID:** ART-2208
-**Git:** `main` → `6019f69` (pre-commit) → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `main` → `(pending — to be updated post-housekeeping-commit)` → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -14,12 +14,12 @@
 {
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_067_20260507_afp_pdf_acquisition_72_articles_closed.md",
-  "baton_description": "AFP gap closed 83 → 11 (72 articles acquired); built aafp_targeted_downloader.py with 3-tier resolution cascade (legacy biweekly URL + monthly TOC scrape + CrossRef DOI fallback) and structured-meta validation gate (citation_volume/issue/firstpage); BATON 066 worktree merged to main (127 PDFs + 8 scripts); 48 dupes + 79 corrupt files quarantined and deleted.",
-  "git_hash": "6019f69",
+  "baton": "BATON_active_068_20260515_claude_code_migration_corpus_qc_built.md",
+  "baton_description": "Cowork → Claude Code migration validated; corpus-integrity-qc skill scaffolded with Layer C functional; canonical DB swapped to post-BATON-065 state; 1 new ORPHAN_XREF bug surfaced (QID-2024-0067/ART-2073).",
+  "git_hash": "(pending — to be updated post-housekeeping-commit)",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
-  "last_updated": "2026-05-07",
+  "last_updated": "2026-05-15",
   "next_art_id": "ART-2208",
   "vc_gate_citations": 352,
   "database": {
@@ -245,41 +245,49 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 
 ---
 
-## Deferred Flags (active as of BATON 067)
+## Deferred Flags (active as of BATON 068)
 
 | Flag | Status | Description |
 |------|--------|-------------|
-| MERGE-WORKTREE-TO-MAIN | RESOLVED | 127 PDFs + 8 scripts merged from BATON 066 worktree to main repo BATON 067 |
-| DEFERRED-AFP-GAP | RESOLVED | AFP gap closed 83 → 11 via aafp_targeted_downloader.py (72 articles acquired) |
+| **NEW: DEFERRED-CORPUS-QC-LAYERS-AB-D** | ACTIVE | Build Layer A + B + D + coordinator + 4 subagent prompts for corpus-integrity-qc |
+| **NEW: DEFERRED-LAYER-C-CACHE-REBUILD** | ACTIVE | 1,797 Tier-1 cache-rebuild SQL fixes pending Layer D |
+| **NEW: DEFERRED-ORPHAN-XREF-QID-2024-0067** | ACTIVE | QID-2024-0067/ART-2073 references non-existent QID in questions table |
+| **NEW: DEFERRED-MAC-PDF-SYNC** | ACTIVE | Mac PDF library lags Windows by 569 files (gitignored) |
+| **NEW: DEFERRED-LOCKED-RULE-8-UPDATE** | LOW-PRI | Rule 8 (Git via Desktop Commander) needs broadening for Mac/Claude Code |
+| MERGE-WORKTREE-TO-MAIN | RESOLVED | (BATON 067) |
+| DEFERRED-AFP-GAP | RESOLVED | (BATON 067) |
 | DEFERRED-CROSS-TIER-DEDUPE | ACTIVE | 89 ART-IDs in both VC_fail and VC_pass need consolidation |
-| DEFERRED-AFP-DB-DATA-QC | ACTIVE | 6 articles with malformed clean_ref / junk title need repair (ART-0349, ART-0362, ART-0452, ART-0680, ART-1072, ART-1797) |
-| DEFERRED-AAFP-HTTP-500-RETRY | ACTIVE | Wait for AAFP archive fixes; re-run targeted_downloader monthly for 5 stuck vintage-PDF articles |
-| DEFERRED-JAMA-NEJM-PDF-HARVEST | RESOLVED | 50 JAMA + 76 NEJM PDFs harvested via DevTools-console paste pattern |
-| DEFERRED-KNOWN-DRUGS-EXPANSION | ACTIVE | Identify offending drug names; decide fix approach |
-| DEFERRED-QID-XREF-LIBRARY-GAPS | ACTIVE | ~249 unmatched citations; partial closure BATON 065 (+225 xref pairs) |
-| DEFERRED-PGY-BENCHMARKS | UNBLOCKED | Implement benchmark comparison functionality |
+| DEFERRED-AFP-DB-DATA-QC | ACTIVE | 6 articles with malformed clean_ref / junk title |
+| DEFERRED-AAFP-HTTP-500-RETRY | ACTIVE | 5 vintage AFP articles blocked by AAFP server outage |
+| DEFERRED-JAMA-NEJM-PDF-HARVEST | RESOLVED | (BATON 066) |
+| DEFERRED-KNOWN-DRUGS-EXPANSION | ACTIVE | Identify offending drug names |
+| DEFERRED-QID-XREF-LIBRARY-GAPS | ACTIVE | ~801 articles missing PDFs |
+| DEFERRED-PGY-BENCHMARKS | UNBLOCKED | Implement benchmark comparison |
 | DEFERRED-PROGRAM-TREND | UNBLOCKED | Implement program-level trend analysis |
-| DEFERRED-YOY-ROBUSTNESS | ACTIVE | Month-by-month rollup needs testing with dense temporal data |
-| DEFERRED-RESIDENT-FOLDER-MIGRATION | ACTIVE | Investigate resident_data/ migration strategy to M5 |
-| DEFERRED-SCHOLL-OLD-FORMAT | ACTIVE | 2022/2023 score reports in old ABFM taxonomy format |
-| FLAG-33-NNN-RENAME | LOW-PRI | nnn_XXXX ART-ID rename scheme — designed, not implemented |
+| DEFERRED-YOY-ROBUSTNESS | ACTIVE | Month-by-month rollup edge cases |
+| DEFERRED-RESIDENT-FOLDER-MIGRATION | ACTIVE | Investigate resident_data/ migration to M5 |
+| DEFERRED-SCHOLL-OLD-FORMAT | ACTIVE | 2022/2023 score reports in old ABFM taxonomy |
+| FLAG-33-NNN-RENAME | LOW-PRI | Designed, not implemented |
 
 ---
 
-## Next Steps (BATON 067)
+## Next Steps (BATON 068)
 
-### Immediate (before next session)
-1. **User commits via GitHub Desktop.** Stage the new BATON 067, retired BATON 066 (move to baton_archive/), .gitignore update, modified scripts (CLAUDE.md, aafp_fill_gaps.py, jama_pending.json, unpaywall_results.csv), and 10 new untracked .py scripts.
-2. **Re-run all 7 resident analyses** on Mac after git pull (carryover from BATON 065 + 066).
+### Immediate (next session)
+1. **Continue corpus-integrity-qc build** — Layer B (citation linkage, multi-ref-aware) — the layer that actually fixes the ~900 false-positive bug. Then Layer A (text fidelity), then coordinator + tiered fix generator (Layer D), then 4 subagent prompts.
+2. **Investigate ORPHAN_XREF (QID-2024-0067 / ART-2073, exam_year 2024)** — qid doesn't exist in questions table; likely BATON-065 acquire script bug.
 
 ### Short-term (this week)
-3. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass need consolidation.
-4. **AFP DB data QC** — repair 6 articles with malformed clean_ref / junk title (ART-0349, ART-0362, ART-0452, ART-0680, ART-1072, ART-1797), then re-run aafp_targeted_downloader.py.
-5. **Apply NEJM DevTools console pattern** to 144 unpaywall Cloudflare-blocked URLs.
+3. **Apply Tier-1 Layer C cache rebuilds** — 1,797 auto-safe SQL UPDATEs once Layer D ships (pure recomputation from `qid_art_xref` bridge).
+4. **Mac PDF sync** — pull 569 missing PDFs from Windows/gdrive (gitignored, BATONs 065-067 acquisitions).
+5. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067.
+6. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass (carry from BATON 067).
+7. **AFP DB data QC** — repair 6 articles with malformed clean_ref / junk title (carry from BATON 067).
 
-### Medium-term (next 2 weeks)
-6. **Tackle remaining 801-article broader gap** by source_type buckets (Other Journal 397, Guideline/Org 107, Pediatrics 39, Annals 36, Circulation 29, BMJ 29, Lancet 12, Chest 11).
-7. **AAFP HTTP 500 retry** — wait for AAFP archive fixes; re-run targeted_downloader monthly for 5 stuck vintage-PDF articles (ART-0044, ART-0642, ART-1564, ART-1811, ART-1822).
+### Medium-term
+8. AAFP BRQ extension of corpus-integrity-qc (v2).
+9. Continue 801-article gap closure by source_type buckets.
+10. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.
 
 ---
 
@@ -295,4 +303,4 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 ---
 
 **Project Lead:** Michael Scholl, MD
-**Last Reviewed:** 2026-05-07 (BATON 067, git 6019f69 pre-commit; worktree merged)
+**Last Reviewed:** 2026-05-15 (BATON 068, git e6cb648 pre-housekeeping-commit; corpus-integrity-qc skill scaffolded + DB swap)
