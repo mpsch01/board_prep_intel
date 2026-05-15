@@ -133,14 +133,14 @@ New bug surfaced: `qid_art_xref` row references `QID-2024-0067` with `ART-2073` 
 Discovered the Mac DB at `00_database/db/ite_intelligence.db` was 3 weeks stale:
 - mtime Apr 16, articles=1,998, xref=2,485 (pre-BATON-065 state).
 
-User staged the canonical gdrive copy at `00a_database/db/ite_intelligence.db`:
+User staged the canonical gdrive copy at `00a_db_gdrive_landing/db/ite_intelligence.db`:
 - mtime May 6, articles=2,206, xref=2,710 (matches BATON 067).
 
 Executed a safe swap:
 - Old DB → `00_database/db/_archive_/ite_intelligence_stale_20260416.db` (preserved as backup).
 - New DB → `00_database/db/ite_intelligence.db` (canonical location).
 
-Verified post-swap counts match BATON 067 exactly. `00a_database/db/ite_intelligence.db` no longer exists; `00a_database/` directory remains in place pending a later decision on whether to remove or repurpose as a gdrive landing zone.
+Verified post-swap counts match BATON 067 exactly. `00a_db_gdrive_landing/db/ite_intelligence.db` no longer exists (file moved to canonical location); user renamed the directory to `00a_db_gdrive_landing/` to make its purpose explicit — it is now the established landing zone for future gdrive DB pulls.
 
 ---
 

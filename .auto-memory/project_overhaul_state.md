@@ -45,7 +45,7 @@ AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
   - **Why:** article-citation-qc had confirmed dict-overwrite bug (`run_citation_qc.py` lines 207–210) producing ~932 false-positive QID_MISMATCH findings against multi-reference `qid_art_xref` table
 - **DB swap (no schema/row changes; canonical state restored):**
   - Mac DB at `00_database/db/ite_intelligence.db` was 3 weeks stale (Apr 16 copy: 1,998 articles / 2,485 xref)
-  - User staged canonical from gdrive at `00a_database/db/`
+  - User staged canonical from gdrive at `00a_db_gdrive_landing/db/` (this directory is now the established landing zone for future gdrive DB pulls)
   - Swapped: old → `00_database/db/_archive_/ite_intelligence_stale_20260416.db`; new → canonical location
   - Counts now match BATON 067: 2,206 articles, 2,710 qid_art_xref
 - **Layer C smoke test results:** 1,798 findings — 1,797 derived-cache drift Tier 1 fixes pending Layer D (mostly 208 ZERO_CITATION_LINKED from BATON-065 articles never having cache initialized); 1 NEW ORPHAN_XREF bug at QID-2024-0067/ART-2073 (QID does not exist in questions table)

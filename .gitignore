@@ -108,3 +108,8 @@ key_data_files/browser_profiles/
 .claude/worktrees/
 .claude/scheduled_tasks.lock
 .claude/settings.local.json
+
+# --- LOCAL-ONLY GDRIVE LANDING ZONE ---
+# Staging area for DB pulls from Google Drive before they're promoted into
+# 00_database/. Contents are large binary copies; never commit.
+00a_db_gdrive_landing/
