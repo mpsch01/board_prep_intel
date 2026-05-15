@@ -4,7 +4,7 @@
 **Status:** Active development
 **Active BATON:** `BATON_active_068_20260515_claude_code_migration_corpus_qc_built.md`
 **Next ART-ID:** ART-2208
-**Git:** `main` → `(pending — to be updated post-housekeeping-commit)` → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `claude/xenodochial-pike-667d6a` worktree → `2bf681c` (BATON 068 housekeeping); `main` at `e6cb648` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -16,7 +16,7 @@
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "baton": "BATON_active_068_20260515_claude_code_migration_corpus_qc_built.md",
   "baton_description": "Cowork → Claude Code migration validated; corpus-integrity-qc skill scaffolded with Layer C functional; canonical DB swapped to post-BATON-065 state; 1 new ORPHAN_XREF bug surfaced (QID-2024-0067/ART-2073).",
-  "git_hash": "(pending — to be updated post-housekeeping-commit)",
+  "git_hash": "2bf681c",
   "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-15",
@@ -303,4 +303,4 @@ AAFP Board Review Questions (1,221 questions across 135 quizzes) scraped and ful
 ---
 
 **Project Lead:** Michael Scholl, MD
-**Last Reviewed:** 2026-05-15 (BATON 068, git e6cb648 pre-housekeeping-commit; corpus-integrity-qc skill scaffolded + DB swap)
+**Last Reviewed:** 2026-05-15 (BATON 068, git 2bf681c housekeeping commit; corpus-integrity-qc skill scaffolded + DB swap)

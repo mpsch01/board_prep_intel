@@ -5,7 +5,7 @@
   "baton": "BATON_active_068_20260515_claude_code_migration_corpus_qc_built.md",
   "baton_description": "Cowork → Claude Code migration validated; corpus-integrity-qc skill scaffolded with Layer C functional; canonical DB swapped to post-BATON-065 state; 1 new ORPHAN_XREF bug surfaced (QID-2024-0067/ART-2073).",
   "last_updated": "2026-05-15",
-  "git_hash": "(pending — to be updated post-housekeeping-commit)",
+  "git_hash": "2bf681c",
   "git_remote": "https://github.com/mpsch01/board_prep_intel",
   "database": {
     "path": "00_database/db/ite_intelligence.db",
