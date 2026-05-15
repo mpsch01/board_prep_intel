@@ -1,5 +1,5 @@
 # project_current_db_state.md
-Last verified: 2026-05-15 (BATON 069)
+Last verified: 2026-05-15 (BATON 070)
 
 ## DB: ite_intelligence.db
 
@@ -43,6 +43,9 @@ Last verified: 2026-05-15 (BATON 069)
 - Columns: article_id (FK), status (ENUM: 'current', 'updated', 'check_needed', 'not_indexed'), title_signals (TEXT JSON array), pubmed_pmid (INT FK)
 - title_signals: JSON array of clinical category keywords (extracted from blueprint cross-reference; used for future filtering + human review)
 - Populated via build_article_currency.py (M3 script)
+
+## DB Changes (BATON 070)
+- **2026-05-15 (BATON 070):** No DB changes. Substantive code session — corpus-integrity-qc skill V1 build (Layers A/B/D + coordinator + 4 agent templates). All audit access via `connect_db_readonly()` immutable URI; no possibility of write. Row counts and schema unchanged from BATON 069. End-to-end smoke test of the new pipeline produced 2,538 findings against canonical DB (158 Layer A + 582 Layer B + 1,798 Layer C); 1,914 Tier 1 SQL fixes now queued for application in next session. Confirmed Layer B closes the BATON 058 dict-overwrite bug — zero CRITIQUE_REF_MISSING_FROM_DB findings.
 
 ## DB Changes (BATON 069)
 - **2026-05-15 (BATON 069):** No DB changes. Cleanup-only session — PROJECT_OVERHAUL fossil references removed; `project_overhaul_state.md` renamed to `project_session_log.md`. Row counts and schema unchanged from BATON 068.

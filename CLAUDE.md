@@ -52,7 +52,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_069_20260515_project_overhaul_fossil_cleanup.md` — PROJECT_OVERHAUL fossil cleanup; renamed `project_overhaul_state.md` → `project_session_log.md`; CLAUDE.md H1 corrected; no functional/DB changes |
+| Active BATON | `BATON_active_070_20260515_corpus_qc_skill_v1.md` — corpus-integrity-qc skill V1 build (Layers A, B, D + coordinator + 4 agent templates); end-to-end smoke test produces 2,538 findings split into 1,914 Tier 1 / 66 Tier 2 / 558 Tier 3; no DB/PDF/schema changes |
 | DB articles | 2,206 (+13 from critique PDFs: ART-1987–ART-1999; +208 from acquire_missing_citations.py: ART-2000–ART-2207) |
 | DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -80,7 +80,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2208 |
-| Git branch | claude/xenodochial-pike-667d6a worktree → d85ef22 (BATON 069 housekeeping commit; cleanup work at a3ef508); main at e6cb648 awaiting merge |
+| Git branch | claude/reverent-mclaren-575646 worktree → 57bbe7a (pre-housekeeping; BATON 070 corpus-qc skill V1 build to commit); main at 57bbe7a |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -156,20 +156,23 @@ Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
 
 ---
 
-## Next Steps (as of BATON 069, 2026-05-15)
+## Next Steps (as of BATON 070, 2026-05-15)
 
-### Immediate (next session)
-1. **Continue corpus-integrity-qc build** — Layer B (citation linkage, multi-ref-aware) — the layer that actually fixes the ~900 false-positive bug. Then Layer A (text fidelity), then coordinator + tiered fix generator (Layer D), then 4 subagent prompts.
-2. **Investigate ORPHAN_XREF (QID-2024-0067 / ART-2073, exam_year 2024)** — qid doesn't exist in questions table; likely 5-minute fix once eyeballed.
+### Immediate (next session — testing pass)
+1. **Run `run_qc.py` end-to-end on the canonical (non-worktree) DB** — verify all 5 artifacts (3 findings JSONs + qc_report.md + fixes.sql) land in `03_module.3_analyst/outputs/corpus_qc/{today}/`.
+2. **Spot-check 10 random Tier 1 SQL statements** before applying — verify each one represents the intended fix when copy-pasted into DB Browser.
+3. **Apply Tier 1 via the `fix-applier` agent** with `--tier 1 --approved-by-user 1` — should land 1,914 statements (1,797 cache rebuilds + 93 encoding fixes + 24 author fixes). Closes DEFERRED-LAYER-C-CACHE-REBUILD.
+4. **Re-run `run_qc.py`** post-apply to confirm cache-rebuild findings drop to ~0.
+5. **Investigate ORPHAN_XREF QID-2024-0067 / ART-2073** — likely 5-min fix; uncomment the Tier 2 DELETE if confirmed. Closes DEFERRED-ORPHAN-XREF-QID-2024-0067.
+6. **Bug-fix loop** on anything testing surfaces.
 
 ### Short-term (this week)
-3. **Apply Tier-1 Layer C cache rebuilds** — 1,797 auto-safe SQL UPDATEs once Layer D ships.
-4. **Mac PDF sync** — pull 569 missing PDFs from Windows/gdrive.
-5. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067.
-6. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass (carry from BATON 067).
-7. **AFP DB data QC** — repair 6 articles with malformed clean_ref / junk title (carry from BATON 067).
+7. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067; picks up cache rebuild as side effect.
+8. **Mac PDF sync** — pull 569 missing PDFs from Windows/gdrive.
+9. **Tier 2 review pass** — eyeball 66 commented statements (42 choices_empty + 23 explanation truncation + 1 orphan_xref).
+10. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass (carry from BATON 067).
 
 ### Medium-term
-8. AAFP BRQ extension of corpus-integrity-qc (v2).
-9. Continue 801-article gap closure by source_type buckets.
-10. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.
+11. **AAFP BRQ extension of corpus-integrity-qc (v2)** — Layer C ports trivially; Layer A ports easily; Layer B is inapplicable (no AAFP critique PDFs) — replace with per-article scalar checks against AAFP-linked rows.
+12. Continue 801-article gap closure by source_type buckets (Layer B's UNMATCHED_CITATION findings are the working set).
+13. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.
