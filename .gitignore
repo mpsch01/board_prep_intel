@@ -113,3 +113,8 @@ key_data_files/browser_profiles/
 # Staging area for DB pulls from Google Drive before they're promoted into
 # 00_database/. Contents are large binary copies; never commit.
 00a_db_gdrive_landing/
+
+# --- GOOGLE DRIVE SYNC ARTIFACTS ---
+# Drive's atomic-write staging files; transient + binary; should never be tracked.
+**/.tmp.driveupload/
+**/.tmp.drivedownload/
