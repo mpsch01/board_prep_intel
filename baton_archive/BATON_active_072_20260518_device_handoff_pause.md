@@ -104,23 +104,28 @@ Mikey opened a new Claude Code session, ran `/board-startup`, and asked for a co
 ### Newly opened this session
 
 #### DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER
-**Status: ACTIVE — new this session (5-minute fix when convenient)**
+**Status: OBVIATED 2026-05-18 (next-session start) — supplanted by broader workflow change.**
 
-When `gh pr merge --delete-branch` runs from inside a Claude Code worktree, gh's built-in local-side cleanup tries to switch the worktree to `main` and fails (since `main` is already checked out in the canonical project root). The remote-side actions (merge + remote branch delete) still complete successfully, but local cleanup needs manual completion (`git worktree remove`, `git branch -d`, `git fetch --prune`).
+Original problem: `gh pr merge --delete-branch` run from inside a worktree fails on local-side cleanup (gh tries to switch the worktree to `main`, which is already checked out in the project root). Originally planned as a 5-minute `cd <PROJECT_ROOT>` insertion in SKILL.md Step 4c.5.
 
-**Fix:** `.claude/skills/session-housekeeping/SKILL.md` Step 4c.5 should `cd` to the canonical main checkout **before** running `gh pr merge`:
+**Why obviated:** The next session opened with a broader workflow review and Mikey decided to retire Claude Code worktrees entirely. Three drivers:
+1. 4 stale worktrees were sitting around in `.claude/worktrees/` from prior sessions, never cleaned up.
+2. The `run_qc.py` PROJECT_ROOT auto-detection caveat was still in force from worktrees.
+3. The "parallel branch isolation" benefit was not materializing for solo sequential work.
 
-```bash
-cd <PROJECT_ROOT>           # canonical main checkout, not the worktree
-gh pr merge <num> --merge --delete-branch
-# gh's local checkout + branch delete now works cleanly;
-# Step 4c.6 only needs `git worktree remove .claude/worktrees/<dir>`
-```
+New V3.2 policy: *"no `git worktree` commands ever — sessions run on feature branches in the project root."* Since worktrees are no longer used, the `gh pr merge --delete-branch` worktree wrinkle cannot happen, so the original 5-minute fix is unnecessary.
 
-**Why deferred and not fixed now:** the V3.1 flow worked end-to-end on PR #17 in spite of this wrinkle (manual cleanup completed successfully, all verification passed). Patching belongs in a dedicated edit of the SKILL.md rather than buried in the BATON-amendment commit. **Next action:** small SKILL.md edit at start of next housekeeping cycle (or whenever a worktree is used again).
+**Implemented in this V3.2 transition:**
+- 3 stale worktrees removed (determined-allen, gracious-bartik, modest-merkle) + their branches deleted
+- CLAUDE.md merge-conflict markers from a past stash-pop incident resolved (working tree was carrying a 4-line `<<<<<<< Updated upstream` / `=======` / `>>>>>>> Stashed changes` block referencing the now-deleted determined-allen worktree's `e6cb648`)
+- Stray duplicate scripts in `03_module.3_analyst/scripts/` (`run_citation_qc.py`, `generate_sql_fixes.py` — pre-BATON-068 deprecated article-citation-qc versions) moved to `_archive_/legacy_article_citation_qc/`
+- `CLAUDE.md` "Session-Housekeeping Skill" section updated to V3.2 (no worktrees, feature-branches-in-project-root)
+- `.claude/skills/session-housekeeping/SKILL.md` upgraded V3.1 → V3.2 — drops worktree-create/remove logic, replaces "Worktree policy" section with V3.2 rationale + flow, keeps legacy-cleanup steps for finding/removing any pre-V3.2 debris
+
+**Closure:** No further action needed. Flag closes with the V3.2 PR.
 
 ### Closed this session
-**None.**
+- **DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER** — Obviated by V3.2 workflow change (no worktrees). See above.
 
 ### Carry-forward from BATON 071 (all unchanged)
 

@@ -2,15 +2,16 @@
 name: session-housekeeping
 description: >
   Project-level override of the upstream anthropic-skills:session-housekeeping
-  workflow for the board_prep_intel ITE Intelligence project. Adds Item 12
-  (GitHub syncing) so Claude owns the full git/GitHub round-trip — push,
-  PR create, post-merge cleanup — at the end of every session. Replaces
-  the upstream 11-item sweep with a 12-item sweep tailored to this repo
-  (Mac primary workflow, project_session_log.md naming, gh CLI for PRs,
-  fetch.prune globally configured).
+  workflow for the board_prep_intel ITE Intelligence project. V3.2: no
+  worktrees, agent owns the full push → PR → review → chat-authorize →
+  merge → prune cycle. Adds Item 12 (GitHub syncing) so Claude owns the
+  full git/GitHub round-trip at end of every session. Replaces the upstream
+  11-item sweep with a 12-item sweep tailored to this repo (project_session_log.md
+  naming, gh CLI for PRs, fetch.prune globally configured, --merge-only
+  merge style, feature-branches-in-project-root workflow).
 ---
 
-# Session Housekeeping — board_prep_intel (V2)
+# Session Housekeeping — board_prep_intel (V3.2)
 
 End-of-session sweep. Goal: completeness AND efficiency. Every item gets done,
 nothing gets skipped, GitHub state matches local state when finished.
@@ -45,12 +46,12 @@ nothing gets skipped, GitHub state matches local state when finished.
     with a descriptive message ending with the Co-Authored-By line, follow
     with a hash-backfill commit that propagates the new hash into
     `README.json` / `README.md` / `CLAUDE.md` / new BATON.
-12. **GitHub syncing (Item 12, REVISED BATON 072)** — push to origin → open
-    PR if on feature branch → **provide review of PR to user** → **wait for
-    explicit authorization in chat** → **agent runs `gh pr merge`** → prune
-    local + remote (branch + worktree) → **review post-merge GitHub state**
-    → verify single `main` branch with no stale refs → declare done. See
-    full Item-12 protocol below.
+12. **GitHub syncing (Item 12, V3.2)** — push to origin → open PR if on
+    feature branch → **provide review of PR to user** → **wait for explicit
+    authorization in chat** → **agent runs `gh pr merge --merge
+    --delete-branch`** → prune local branch → **review post-merge GitHub
+    state** → verify single `main` branch with no stale refs → declare
+    done. See full Item-12 protocol below.
 
 ---
 
@@ -78,7 +79,6 @@ Gather:
 - **Git hash**: `git rev-parse --short HEAD`.
 - **Git status**: `git status --short` → list of changed + new files.
 - **Current branch**: `git branch --show-current`.
-- **Worktrees**: `git worktree list` → flag any stale worktrees for cleanup.
 
 ### STEP 1 — Author the manifest set
 
@@ -129,10 +129,13 @@ Check current branch:
 git branch --show-current
 ```
 
-- **If on `main`** → "direct-to-main" mode (Step 4b). Most common for
-  solo-author sessions with no review gate needed.
 - **If on a `claude/*` or other feature branch** → "PR mode" (Step 4c).
-  Push branch, open PR, provide review, await authorization, merge, prune.
+  **Default under V3.2.** Push branch, open PR, provide review, await
+  chat-level authorization, merge with `--merge --delete-branch`, prune.
+- **If on `main`** → "direct-to-main" mode (Step 4b). Use only for trivial
+  fixes (typos, single-file edits with no architectural impact) where the
+  PR-mode overhead isn't worth it. For anything that touches multiple
+  files, scripts, schemas, or docs, prefer a feature branch.
 
 #### Step 4b — Direct-to-main mode
 
@@ -228,19 +231,15 @@ If the user explicitly requests squash or rebase for a one-off PR
 only — do not change the default. Default remains `--merge`.
 
 **6. Local prune.** Sync local `main` and remove the now-merged feature
-branch + worktree:
+branch. (V3.2: no worktree to remove — sessions run directly in the
+project root on a feature branch.)
 
 ```bash
-# In the canonical main checkout (NOT the worktree):
-cd <PROJECT_ROOT>
 git checkout main
 git pull origin main          # picks up merge commit; fetch.prune drops stale refs
 
 # Delete the local feature branch:
 git branch -d <branch-name>   # safe-delete; recognizes merge-commit merges natively
-
-# If a worktree was used this session:
-git worktree remove .claude/worktrees/<worktree-dir>
 ```
 
 With `--merge` style, `git branch -d` recognizes the merge cleanly
@@ -248,6 +247,12 @@ because the feature branch tip is reachable from `main` via the merge
 commit. If `-d` ever refuses ("not fully merged"), STOP — investigate
 what's actually on the branch vs `main` before doing anything else.
 Do NOT use `-D` reflexively.
+
+**Legacy-cleanup note:** If you arrive in a session and find stale
+`claude/*` worktrees from a pre-V3.2 era (`git worktree list` shows
+more than just the project root checkout), clean them up at start of
+session: confirm they have no unmerged work, then `git worktree remove
+<path>` + `git branch -D claude/<name>` for each.
 
 **7. Review GitHub update.** Verify the merge landed and the remote is
 clean:
@@ -268,26 +273,26 @@ Expected:
   hashes (e.g. `git show <pre-merge-hash>` works) — this is the BATON
   hash-reference preservation behavior
 
-**8. Ensure single main branch before finalization.** Final clean-state
-verification:
+**8. Ensure clean state before finalization.** Final verification:
 
 ```bash
-git worktree list           # should show only the main checkout
 git branch                  # should list ONLY `main` (no stale feature branches)
 git branch -r               # should not list the deleted remote feature branch
 git status                  # clean working tree
+git worktree list           # should show ONLY the project root checkout (V3.2: no worktrees)
 ```
 
 If any of these surface unexpected state, fix before declaring done.
 Common gotchas:
 - Stale remote-tracking ref still showing (`origin/<branch>`) → `git fetch --prune` (should be automatic via global config, but re-run if needed).
-- Worktree still listed → `git worktree prune` (only if directory is gone but ref persists).
 - Local branch not deleted → re-run `git branch -d <branch-name>` after pull.
+- Unexpected worktree present → V3.2 says don't use worktrees. If you find one and it has no unmerged work, `git worktree remove <path>` + `git branch -D claude/<name>`.
 
 **9. Done.** All of: PR merged on GitHub, remote branch deleted, local
-branch deleted, worktree removed, single `main` checkout, clean status.
-Now proceed to Step 5 (QC) and Step 6 (final report). The final report
-should reflect post-merge state (commit hash on `main`, PR marked merged).
+branch deleted, single `main` checkout (no stale worktrees from legacy
+sessions), clean status. Now proceed to Step 5 (QC) and Step 6 (final
+report). The final report should reflect post-merge state (commit hash
+on `main`, PR marked merged).
 
 ### STEP 5 — QC validation
 
@@ -361,18 +366,62 @@ When in direct-to-main mode the PR line collapses to:
 
 ---
 
-## Worktree policy (project-level decision, BATON 070)
+## Worktree policy (V3.2 — 2026-05-18: no worktrees ever)
 
-**Default to direct-on-main** in the project root. Worktrees are useful for
-parallel Claude Code agents on different branches, but for solo human +
-single-agent sessions they add friction (GitHub Desktop confusion,
-branch-checkout conflicts, two-step merge). Only spin up a worktree when:
+**No `git worktree` commands. Ever.** Sessions run directly in the project
+root on a feature branch.
 
-- Two Claude Code sessions need to operate on different branches concurrently
-- A long-running operation must continue while another branch is checked out
+### Why we retired worktrees (V3.2 rationale)
 
-When a worktree IS used, the agent owns its lifecycle: create at session
-start (if needed), commit + push the branch, open PR, **provide PR review
-and wait for chat-level authorization**, run `gh pr merge <num> --merge
---delete-branch`, then remove the worktree as part of Item 12 post-merge
-cleanup (Step 4c.6 — `git worktree remove .claude/worktrees/<dir>`).
+The original V2 policy (BATON 070) was "default to direct-on-main, spin up
+a worktree only when parallel-branch work is genuinely needed." Six months
+of practice showed the "genuinely needed" case never actually arose for
+this project, while worktrees consistently caused friction:
+
+1. **Path auto-detection breaks.** `run_qc.py` and other scripts use
+   `Path(__file__).resolve().parents[N]` to find `PROJECT_ROOT`. From a
+   worktree at `.claude/worktrees/<name>/`, that resolves one level too
+   deep, requiring an explicit `--project-root` flag every invocation.
+2. **`gh pr merge --delete-branch` fails on local cleanup from a worktree.**
+   gh tries to switch the worktree to `main`, fails (already checked out
+   in the project root), and aborts the local-side cleanup — even though
+   the remote merge + remote branch delete completed. This was the
+   DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER carry-forward.
+3. **Stale worktree accumulation.** End-of-session cleanup is one more
+   thing to remember; if a session crashes mid-housekeeping, the worktree
+   sticks around. (At start of the V3.2 session, `git worktree list`
+   showed 4 stale worktrees from prior sessions, none cleaned up.)
+4. **"Branch is a directory" mental model is unusual** for a self-taught
+   data architect. Adds cognitive load without payoff.
+5. **The isolation benefit doesn't materialize.** Single-agent sequential
+   sessions don't need parallel-branch isolation; a feature branch in the
+   project root delivers the same end-of-session merge-commit discipline
+   with none of the path/cleanup complexity.
+
+### V3.2 session-flow
+
+```bash
+# Session start (in project root):
+git checkout main
+git pull origin main
+git switch -c claude/session-<slug>   # or stay on main for trivial work
+
+# Work the session normally — edit files, run scripts, commit as needed.
+
+# End of session (Item 12 in this skill):
+# push → PR → review block → wait for authorization → gh pr merge
+# → git checkout main → git pull → git branch -d claude/session-<slug>
+```
+
+### Legacy worktree cleanup
+
+If `git worktree list` shows worktrees other than the project root, they
+are debris from a pre-V3.2 session. Clean them up at session start:
+
+```bash
+git worktree list                                # inspect
+git -C <worktree-path> status --short           # confirm no unmerged work
+git -C <worktree-path> log main..HEAD --oneline # confirm no unmerged commits
+git worktree remove <worktree-path> [--force]   # --force if uncommitted changes
+git branch -D claude/<worktree-name>            # delete the branch
+```

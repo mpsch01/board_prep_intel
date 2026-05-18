@@ -52,7 +52,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_072_20260518_device_handoff_pause.md` — pause/handoff session; orientation + corpus-qc status recap, then user pivoted work to the Windows big-rig PC. **Mid-session expansion:** session-housekeeping skill upgraded to V3.1 (chat-level auth gate + agent runs `gh pr merge --merge --delete-branch`; squash/rebase banned to preserve BATON intra-session hash references). PR #17 merged via the new V3.1 flow at `34867ce`. No DB/PDF/pipeline-script changes; all BATON 071 carry-forwards remain in place. New deferred flag: DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER. |
+| Active BATON | `BATON_active_073_20260518_v32_workflow_transition.md` — V3.2 workflow transition: no Claude Code worktrees ever. Windows resume after BATON 072 Mac→Windows handoff; pre-flight passed (DB 2206/1639/2710). Cleanup: 3 stale worktrees removed + branches deleted, CLAUDE.md unresolved stash-pop conflict resolved in main checkout, 2 stray untracked deprecated M3 scripts archived to `_archive_/legacy_article_citation_qc/`. CLAUDE.md Session-Housekeeping Skill section + SKILL.md upgraded V3.1 → V3.2 (no worktrees policy + V3.2 rationale + legacy-cleanup steps). DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER CLOSED (obviated by V3.2 — no worktrees → no `gh pr merge --delete-branch` worktree wrinkle possible). DEFERRED-USER-LEVEL-SKILL-DELETION NEW — `~/.claude/skills/session-housekeeping/` Apr-16 V2 stale shadow needs user manual deletion (auto-mode classifier blocked, aligns with Locked Rule 8). No DB / PDF / pipeline-script changes — row counts identical to BATON 072. |
 | DB articles | 2,206 (+13 from critique PDFs: ART-1987–ART-1999; +208 from acquire_missing_citations.py: ART-2000–ART-2207) |
 | DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -80,7 +80,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2208 |
-| Git branch | main → 34867ce (PR #17 merge commit, 2026-05-18T22:36:35Z); all 5 BATON 072 session commits preserved as ancestors via merge-commit-style merge (02a770f, 4b8b878, a14dcaa, bb2e297, b125176). Pre-session 2079a2f. Worktree `claude/awesome-chandrasekhar-3ae317` removed post-merge. |
+| Git branch | claude/inspiring-cannon-e99bfb → `0370438` (BATON 073 V3.2 transition commit). Pre-session main → `d2dab28` (PR #18 BATON-amendment merge from Mac). PR #19 pending (V3.2 transition); after merge, main fast-forwards through `0370438` + hash-backfill. This is the LAST worktree session. |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -102,20 +102,38 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 ---
 
-## Session-Housekeeping Skill (V2 — project-level)
+## Session-Housekeeping Skill (V3.2 — project-level)
 
 **Canonical workflow:** `.claude/skills/session-housekeeping/SKILL.md` (12-item sweep).
 Use the **project-level** `session-housekeeping` skill, NOT the upstream
 `anthropic-skills:session-housekeeping` (11 items, no GitHub sync).
 
-**Item 12 (NEW BATON 070): GitHub syncing.** Claude owns the full git/GitHub
-round-trip at end of session — push, PR create via `gh`, post-merge cleanup —
-without delegating git commands back to the user. The user merges PRs in the
-web UI when a PR is created; everything else is Claude's responsibility.
+**Item 12 — GitHub syncing (V3.1+).** Claude owns the full git/GitHub
+round-trip at end of session: push → open PR → provide review block in chat →
+**wait for explicit chat-level authorization** (`merge it` / `approved` / `go`
+/ `lgtm` / `ship it`) → run `gh pr merge --merge --delete-branch` → prune
+local + remote → verify single-main state → done. The user authorizes in
+chat; Claude executes every git/gh command. Never asks the user to click
+web-UI buttons or run git commands.
 
-**Worktree policy:** default to direct-on-main in the project root. Spin up
-a Claude Code worktree only when parallel-branch work is genuinely needed.
-If a worktree is used, Claude removes it as part of Item 12 cleanup.
+**Merge style — locked to `--merge --delete-branch`.** Squash and rebase are
+**banned**. Every BATON pins intra-session commit hashes as part of its audit
+trail (e.g. *"Session commit: 02a770f"*). Merge commits preserve those hashes
+AND give a clean per-session view via `git log --merges`. Squash destroys the
+hashes; rebase loses the session-boundary marker.
+
+**No worktrees (V3.2 — 2026-05-18).** Sessions run directly in the project
+root on a feature branch. Start a session: `git switch -c claude/session-<slug>`
+from `main` (or stay on `main` for trivial work). End-of-session: push → PR →
+authorize → merge → `git checkout main && git pull && git branch -d
+claude/session-<slug>`. **No `git worktree` commands ever.** Worktrees were
+retired because they (a) caused path auto-detection to break (`run_qc.py`
+PROJECT_ROOT caveat), (b) made `gh pr merge --delete-branch` error on local
+cleanup (the DEFERRED-V3.2 wrinkle, now obviated), (c) accumulated stale
+debris (4 stale worktrees found at start of this session), and (d) the
+"parallel branch isolation" benefit doesn't materialize for solo sequential
+sessions. If Claude Code's launcher auto-creates a worktree, opt out at
+launch — the housekeeping skill expects direct-on-main work from now on.
 
 ---
 
@@ -193,7 +211,7 @@ Windows has been ~11 days dormant (last active: BATON 067, 2026-05-07). Several 
 7. **Re-run `run_qc.py`** post-apply to confirm cache-rebuild findings drop to ~0.
 8. **Investigate ORPHAN_XREF QID-2024-0067 / ART-2073** — likely 5-min fix. Closes DEFERRED-ORPHAN-XREF-QID-2024-0067.
 9. **Bug-fix loop** on anything testing surfaces.
-10. **(Optional, 5-min fix) Apply DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER** — edit `.claude/skills/session-housekeeping/SKILL.md` Step 4c.5 to `cd` to canonical main checkout before `gh pr merge` (avoids the worktree gotcha hit this session).
+10. ~~Apply DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER~~ — **OBVIATED 2026-05-18** by the broader workflow change to "no worktrees ever." If sessions don't use worktrees, the `gh pr merge --delete-branch` worktree-cleanup wrinkle can't happen. See updated CLAUDE.md Session-Housekeeping Skill section (V3.2) and SKILL.md V3.2.
 
 ### Short-term (this week)
 11. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067.

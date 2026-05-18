@@ -1,5 +1,5 @@
 # project_session_log.md
-Last updated: 2026-05-18 (BATON 072)
+Last updated: 2026-05-18 (BATON 073)
 
 > **Renamed BATON 068.** This file was previously `project_overhaul_state.md` — a fossil from the early "PROJECT_OVERHAUL" reorganization phase (M1–M5 module rebuild, ~March 2026). Despite the old name, this file has long served as the project's **running session log + state snapshot**. New name reflects current role.
 
@@ -13,7 +13,7 @@ Last updated: 2026-05-18 (BATON 072)
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 31 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
 | DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; qid_art_xref 2,710; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 068; Mac DB swapped from stale Apr-16 copy (1,998/2,485) to canonical May-6 copy |
-| Skills | Active | `.claude/skills/` exposes 9 project-level entries: `board-startup/`, `body-system-qc/`, `article-citation-qc/`, `baton-pipeline-qc/`, `repo-error-review/` (BATON 071 — promoted from plugin store so they resolve bare); `corpus-integrity-qc/` **V1 COMPLETE BATON 070** (15 files; replaces buggy article-citation-qc; A4 PDF-diff deferred to V1.1); **`session-housekeeping/` V3.1 (BATON 072)** — agent owns full push→PR→review→authorize→merge→prune→verify cycle, merge style locked to `--merge --delete-branch` (squash/rebase banned for BATON hash preservation); `custom-question-set.skill` + `ite-exam-series.skill` cowork zips (BATON 064) |
+| Skills | Active | `.claude/skills/` exposes 9 project-level entries: `board-startup/`, `body-system-qc/`, `article-citation-qc/`, `baton-pipeline-qc/`, `repo-error-review/` (BATON 071 — promoted from plugin store so they resolve bare); `corpus-integrity-qc/` **V1 COMPLETE BATON 070** (15 files; replaces buggy article-citation-qc; A4 PDF-diff deferred to V1.1); **`session-housekeeping/` V3.2 (BATON 073)** — V3.1 cycle PLUS the V3.2 "no worktrees ever" policy; sessions run feature branches directly in project root (no `.claude/worktrees/`); merge style still locked to `--merge --delete-branch`; `custom-question-set.skill` + `ite-exam-series.skill` cowork zips (BATON 064). **Stale user-level shadow:** `~/.claude/skills/session-housekeeping/` Apr-16 V2 copy still present — DEFERRED-USER-LEVEL-SKILL-DELETION (user manual action). |
 
 ## PDF Library State
 
@@ -34,6 +34,33 @@ Last updated: 2026-05-18 (BATON 072)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 073)
+**Session type:** V3.2 workflow transition (no worktrees ever) + supporting cleanup. Windows resume after BATON 072 Mac→Windows handoff. Pre-flight passed cleanly (DB 2206/1639/2710 verbatim match, git up to date with origin/main at d2dab28).
+
+**Discovered:**
+- 4 stale Claude worktrees in `.claude/worktrees/` (determined-allen `e6cb648`, gracious-bartik `6019f69`, modest-merkle `85e8ab7`, current inspiring-cannon `d2dab28`); none had unmerged commits
+- Main checkout's CLAUDE.md had unresolved `<<<<<<< Updated upstream` / `=======` / `>>>>>>> Stashed changes` conflict markers (lines 83-87) from a past `git stash pop` incident referencing the now-deleted determined-allen worktree's hash
+- 2 stray untracked Python files in main's `03_module.3_analyst/scripts/` (`run_citation_qc.py`, `generate_sql_fixes.py`) — never tracked in git, debris from determined-allen worktree session; OLD deprecated article-citation-qc scripts replaced by corpus-integrity-qc in BATON 068
+- **Three versions of session-housekeeping skill exist** with stale shadowing: user-level `~/.claude/skills/` (Apr-16 V2 Cowork-era), project-level `<project>/.claude/skills/` (May-18 V3.1 from BATON 072), worktree `<worktree>/.claude/skills/` (May-18 V3.2 pending). `/session-housekeeping` invocation resolved to user-level V2, shadowing project-level
+
+**Done:**
+- 3 stale worktrees removed via `git worktree remove --force` + `git branch -D`
+- CLAUDE.md conflict markers resolved (4 lines removed)
+- 2 stray M3 scripts moved to `_archive_/legacy_article_citation_qc/`
+- CLAUDE.md "Session-Housekeeping Skill" section updated to V3.2 (no worktrees ever)
+- `.claude/skills/session-housekeeping/SKILL.md` upgraded V3.1 → V3.2 (drops worktree-create/remove logic, replaces "Worktree policy" section with V3.2 rationale + flow + legacy-cleanup steps)
+- BATON 072 DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER marked OBVIATED
+
+**Pending (next session):**
+- Corpus-qc V1 testing pass (top priority — still carrying from BATON 070/071/072; now unblocked)
+- Tier 1 SQL spot-check + apply (~1,914 statements via fix-applier)
+- ORPHAN_XREF QID-2024-0067 investigation
+- DEFERRED-USER-LEVEL-SKILL-DELETION — user manually deletes `~/.claude/skills/session-housekeeping/`
+
+No DB / PDF / pipeline-script changes. Pure infrastructure/workflow session.
+
+---
 
 ## Session Notes (BATON 072)
 **Session type:** Two-part session. **Part 1 — device-handoff pause** (orientation + corpus-integrity-qc status recap; user pivoted to Windows big rig). **Part 2 — session-housekeeping skill upgrade** (V2 → V3 → V3.1; first exercise on PR #17). No code/DB/PDF/pipeline-script changes; one substantive doc/skill change (`.claude/skills/session-housekeeping/SKILL.md`).
