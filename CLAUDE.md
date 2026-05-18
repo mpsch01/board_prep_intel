@@ -175,9 +175,16 @@ Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
 
 ## Next Steps (as of BATON 072, 2026-05-18 — resume on Windows big rig)
 
+### ⚠️ Windows pre-flight (read BATON 072 "HEADS UP" section first)
+Windows has been ~11 days dormant (last active: BATON 067, 2026-05-07). Several commits + 2 PRs (one merged, one pending) landed from Mac. Mandatory before any work:
+- `git fetch --all --prune` + `git status -uno` (check Windows-side WIP)
+- Wait for PR #17 merge → `git pull origin main`
+- DB sanity check: `articles=2206, questions=1639, qid_art_xref=2710` — **if numbers don't match, DO NOT proceed** (pull canonical DB from gdrive first)
+- See `BATON_active_072_*.md` "HEADS UP — Mac → Windows Switch" section for full pre-flight checklist (git state / DB / PDFs / Python env / Locked Rule 8 / gdrive sync).
+
 ### Immediate (next session — on Windows)
-1. **`git pull origin main`** in the Windows project root to pick up BATON 072.
-2. **`/board-startup`** to load BATON 072.
+1. **`git pull origin main`** in the Windows project root to pick up BATON 072 (after PR #17 merge).
+2. **`/board-startup`** to load BATON 072 + run through the Windows pre-flight in the HEADS UP section.
 3. **Run `run_qc.py` end-to-end on the canonical Windows DB** — verify all 5 artifacts land in `03_module.3_analyst\outputs\corpus_qc\{today}\`.
 4. **Spot-check 10 random Tier 1 SQL statements** before applying.
 5. **Apply Tier 1 via the `fix-applier` agent** with `--tier 1 --approved-by-user 1` — should land ~1,914 statements. Closes DEFERRED-LAYER-C-CACHE-REBUILD.

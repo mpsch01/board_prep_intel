@@ -124,6 +124,95 @@ Mikey opened a new Claude Code session, ran `/board-startup`, and asked for a co
 
 ---
 
+## HEADS UP — Mac → Windows Switch (read first on Windows)
+
+Mikey hasn't actively worked from the Windows big rig since **BATON 067 (2026-05-07)** — roughly 11 days dormant. Everything from BATON 068 → 072 happened on Mac. Re-entry friction to watch for:
+
+### Git state on Windows
+
+- **Windows local `main` is at least 4 commits behind origin.** Since 2026-05-07, the following landed on `main` from Mac via PRs / direct pushes:
+  - PR #16 — BATON 071 (custom skills promoted to project level) → merge commit + housekeeping commits `fdf50d3` … `79e32a0` … `29d47dd` … `9229b55`
+  - `2079a2f` — `.tmp.driveupload` artifact cleanup
+  - PR #17 (pending merge) — BATON 072 (this housekeeping)
+- **Pre-flight on Windows:**
+  ```bash
+  cd C:\Users\mpsch\Desktop\board_prep_intel
+  git status                       # any uncommitted Windows-side WIP?
+  git fetch --all --prune          # see what's new on origin
+  git branch --show-current        # confirm on main (or switch if not)
+  git pull origin main             # only after PR #17 is merged
+  ```
+- **If Windows has uncommitted WIP from BATON 067 era** (e.g. leftover state files from `aafp_targeted_downloader.py`, `_aafp_auth.json`, partial Playwright runs): `git status -uno` first, decide whether to stash, commit, or discard before pulling. The `.gitignore` was updated in BATON 067/069 to catch most of these, but old residue may pre-date the ignore rules.
+
+### Database verification (do this before `run_qc.py`)
+
+The Windows DB at `C:\Users\mpsch\Desktop\board_prep_intel\00_database\db\ite_intelligence.db` **should be** the canonical 2,206-article / 2,710-xref DB. **Verify before running anything:**
+
+```bash
+python -c "import sqlite3; c=sqlite3.connect('00_database/db/ite_intelligence.db'); print('articles:', c.execute('SELECT COUNT(*) FROM articles').fetchone()[0]); print('questions:', c.execute('SELECT COUNT(*) FROM questions').fetchone()[0]); print('qid_art_xref:', c.execute('SELECT COUNT(*) FROM qid_art_xref').fetchone()[0])"
+```
+
+**Expected output (verbatim):**
+```
+articles: 2206
+questions: 1639
+qid_art_xref: 2710
+```
+
+If Windows shows different numbers, **do NOT proceed with the testing pass** — the DB is stale or has been mutated by something. Source-of-truth canonical is the May-6 copy that BATON 068 pulled from gdrive into Mac; if Windows drifted, pull canonical from gdrive into `00a_db_gdrive_landing/db/` (the established landing zone from BATON 068) before swapping.
+
+### PDF library on Windows
+
+- **Should be 1,540 ITE active + 15 AAFP + 16 ite_exams = 1,571 total.** Quick check:
+  ```powershell
+  (Get-ChildItem -Recurse 01_module.1_warehouse\citation_files\ITE -Filter *.pdf).Count
+  ```
+  Expect 1,540 (across VC_fail 1,056 + VC_pass 309 + local_lite 117 + right_click 58).
+- **PDFs are NOT needed for the corpus-qc V1 testing pass** (Layers A/B/C are DB-only; A4 PDF-diff is deferred). So even if Windows PDF count is off, it doesn't block the testing pass — but worth knowing about for downstream work.
+
+### Python environment
+
+- **Confirm `python` resolves to the right interpreter on Windows.** The corpus-qc scripts have **zero external deps** — pure stdlib (`sqlite3`, `pathlib`, `json`, `re`, `subprocess`, `argparse`, `concurrent.futures`). Any Python 3.9+ install works.
+- Quick check: `python --version` (≥3.9) and `python -c "import sqlite3, concurrent.futures, pathlib; print('ok')"`.
+- If `python` resolves to a stale venv from BATON 067 era with broken deps, just use system Python — corpus-qc doesn't need a venv.
+
+### Claude Code skills surface on Windows
+
+- The 5 bare-slash skills promoted in BATON 071 (`/board-startup`, `/body-system-qc`, `/article-citation-qc`, `/baton-pipeline-qc`, `/repo-error-review`) only resolve **bare** after a Claude Code restart on Windows. If they don't show up bare after pull + restart, the fallback `/anthropic-skills:board-startup` etc. always works as a backstop.
+- The `corpus-integrity-qc` skill itself is at `.claude/skills/corpus-integrity-qc/` and will be there on Windows after `git pull`.
+
+### Path conventions on Windows
+
+- All scripts use `Path(__file__).resolve()` so the slash vs backslash issue is handled. **No script changes needed for Windows.**
+- The **worktree path caveat for `run_qc.py` still applies** (BATON 070 architectural decision #7) — auto-detected PROJECT_ROOT goes one level too deep if you run from a worktree. On a direct main checkout (no worktree), it works.
+- **Canonical Windows invocation:**
+  ```cmd
+  cd C:\Users\mpsch\Desktop\board_prep_intel
+  python .claude\skills\corpus-integrity-qc\scripts\run_qc.py
+  ```
+
+### Locked Rule 8 reminder
+
+- Rule 8 still says "Git via Desktop Commander" — that was the **Windows-original** convention. On Windows you can keep using Desktop Commander OR run `git` directly in PowerShell / Git Bash, whichever you prefer. The rule is flagged for update in `DEFERRED-LOCKED-RULE-8-UPDATE` to broaden language; not blocking anything.
+- **Rule 11 — `shutil.rmtree` is BANNED — is especially critical on Windows** because it bypasses the Recycle Bin (irreversible). Use PowerShell `Remove-Item` or explicit file-by-file deletion.
+
+### Google Drive sync risk
+
+- If Drive desktop client is still syncing the project folder on Windows, you'll see `.tmp.driveupload` artifacts reappear. The `.gitignore` (updated BATON 069) catches `*.tmp.driveupload` so they won't get tracked, but they clutter `ls` output.
+- If they show up: confirm Drive isn't trying to sync the local project folder; the canonical copy lives in gdrive web and pulls into `00a_db_gdrive_landing/db/` as needed (see BATON 068 swap pattern).
+
+### Bottom line
+
+**Five-minute pre-flight on Windows:**
+1. `git fetch --all --prune` → check what's new
+2. `git status -uno` → check Windows-side WIP
+3. Wait for PR #17 merge → `git pull origin main`
+4. Run the DB-count sanity check above
+5. `/board-startup` → confirm BATON 072 loads
+6. Proceed with `run_qc.py`
+
+---
+
 ## CRITICAL REMINDERS FOR NEXT SESSION (on Windows)
 
 1. **Top priority remains the corpus-integrity-qc V1 testing pass.** BATON 070's Immediate list and BATON 071's "Immediate (next session)" list both still apply verbatim. No work has been performed against them since BATON 070's smoke test in the worktree.
