@@ -45,9 +45,12 @@ nothing gets skipped, GitHub state matches local state when finished.
     with a descriptive message ending with the Co-Authored-By line, follow
     with a hash-backfill commit that propagates the new hash into
     `README.json` / `README.md` / `CLAUDE.md` / new BATON.
-12. **GitHub syncing (NEW — Item 12)** — push to origin, handle PR creation
-    if on a feature branch, wait for user merge approval, then sync local
-    main + clean up worktrees. See full Item-12 protocol below.
+12. **GitHub syncing (Item 12, REVISED BATON 072)** — push to origin → open
+    PR if on feature branch → **provide review of PR to user** → **wait for
+    explicit authorization in chat** → **agent runs `gh pr merge`** → prune
+    local + remote (branch + worktree) → **review post-merge GitHub state**
+    → verify single `main` branch with no stale refs → declare done. See
+    full Item-12 protocol below.
 
 ---
 
@@ -109,11 +112,14 @@ Write in this order:
    the new BATON (the "Pre-housekeeping" + "Session commit" rows). Commit
    that as a second commit: *"BATON NNN housekeeping: backfill git hash &lt;hash&gt;"*.
 
-### STEP 4 — GitHub syncing (Item 12, NEW)
+### STEP 4 — GitHub syncing (Item 12, REVISED BATON 072)
 
-**The agent owns this end-to-end.** Do not ask the user to run git
-commands themselves. The user merges PRs via the GitHub web UI when one
-is created; everything else is the agent's responsibility.
+**The agent owns this end-to-end, including the merge itself.** The user
+authorizes in chat after reviewing the PR; the agent executes every git /
+gh command. Do not ask the user to run git commands, click web-UI buttons,
+or paste hashes back. The full sequence is: push → PR → **provide review →
+wait for authorization** → merge → prune → review GitHub state → verify
+single-main → done.
 
 #### Step 4a — Determine sync mode
 
@@ -123,10 +129,10 @@ Check current branch:
 git branch --show-current
 ```
 
-- **If on `main`** → "direct-to-main" mode. Push directly. Most common case
-  for solo-author sessions without need for review-time PR review.
-- **If on a `claude/*` or other feature branch** → "PR mode". Push the
-  branch, create a PR via `gh`, wait for user approval, merge, cleanup.
+- **If on `main`** → "direct-to-main" mode (Step 4b). Most common for
+  solo-author sessions with no review gate needed.
+- **If on a `claude/*` or other feature branch** → "PR mode" (Step 4c).
+  Push branch, open PR, provide review, await authorization, merge, prune.
 
 #### Step 4b — Direct-to-main mode
 
@@ -140,48 +146,127 @@ git status                       # working tree clean
 git log origin/main -1           # remote tip matches local HEAD
 ```
 
-Done. No PR. No cleanup needed (no feature branch to remove).
+Done. No PR. No cleanup needed (no feature branch to remove). Skip to
+Step 5 (QC) and Step 6 (final report).
 
-#### Step 4c — PR mode
+#### Step 4c — PR mode (the full new flow)
 
-1. **Push the feature branch:**
-   ```bash
-   git push -u origin <branch-name>
-   ```
-2. **Create the PR via gh:**
-   ```bash
-   gh pr create --base main \
-     --title "BATON NNN — <short description>" \
-     --body "<Summary + Test plan + reference to BATON file>"
-   ```
-   The body should include:
-   - Summary bullets (1-3 points)
-   - Test plan checklist (whatever needs verifying next session)
-   - Reference: *"See BATON_active_NNN_*.md for full session details."*
-3. **Return the PR URL to the user** and stop. The user merges via web UI.
-4. **Wait for the user to confirm merge.** Do NOT auto-merge.
-5. **Post-merge cleanup** (only when user confirms merge):
-   ```bash
-   cd <PROJECT_ROOT>
-   git checkout main
-   git pull origin main          # fetch.prune=true is global, so this prunes too
-   git branch -d <branch-name>   # safe-delete; refuses if not fully merged
-   ```
-   If a worktree was used:
-   ```bash
-   git worktree remove .claude/worktrees/<worktree-dir>
-   ```
-
-#### Step 4d — Verify final state
-
+**1. Push the feature branch:**
 ```bash
-git worktree list                # should show only the main checkout
-git branch                       # should be on main, no stale feature branches
-git status                       # clean
-git log --oneline -3             # latest commits including the merge commit
+git push -u origin <branch-name>
 ```
 
-If any of these show unexpected state, fix before declaring done.
+**2. Create the PR via gh:**
+```bash
+gh pr create --base main \
+  --title "BATON NNN — <short description>" \
+  --body "<Summary + Test plan + reference to BATON file>"
+```
+Body should include:
+- Summary bullets (1-3 points)
+- Test plan checklist (whatever needs verifying next session)
+- Reference: *"See BATON_active_NNN_*.md for full session details."*
+
+**3. Provide PR review to the user.** Output a structured block in chat
+the user can scan before authorizing the merge:
+
+```
+## PR Ready for Review — #<num>
+
+**URL:** <pr-url>
+**Title:** <title>
+**Base ← Head:** main ← <branch-name>
+**Commits on this branch:** <count>
+  - <hash> — <message>
+  - <hash> — <message>
+**Files changed:** <count> (+<insertions> / -<deletions>)
+**Key paths touched:** <bulleted list of top-level dirs / notable files>
+**Summary:** <1-2 line restatement of what merging will do>
+
+Authorize merge? Reply "merge it" / "approved" / "go" — or "hold" /
+"changes needed" if you want me to wait.
+```
+
+Then **stop and wait** for the user's explicit go-ahead in chat. Treat
+any of: `merge it`, `approved`, `go`, `lgtm`, `ship it`, `yes merge` —
+or close equivalents — as authorization. Treat any expression of
+hesitation, change request, or "wait" as a hold; do not merge.
+
+**4. Wait for explicit user authorization.** No timer, no implicit
+approval. If the user goes quiet, ask once, then stop.
+
+**5. Merge via `gh pr merge` (default: squash + delete remote branch).**
+Once authorized:
+
+```bash
+gh pr merge <pr-num> --squash --delete-branch
+```
+
+Merge style defaults:
+- **`--squash`** — single commit on `main` per session; keeps history linear.
+- **`--delete-branch`** — drops the remote feature branch atomically with
+  the merge so cleanup doesn't lag.
+
+Override only on explicit user request (`--merge` for merge commit,
+`--rebase` for rebase-and-merge, omit `--delete-branch` to keep the
+remote branch).
+
+**6. Local prune.** Sync local `main` and remove the now-merged feature
+branch + worktree:
+
+```bash
+# In the canonical main checkout (NOT the worktree):
+cd <PROJECT_ROOT>
+git checkout main
+git pull origin main          # picks up merge commit; fetch.prune drops stale refs
+
+# Delete the local feature branch:
+git branch -d <branch-name>   # safe-delete; refuses if anything isn't on main
+
+# If a worktree was used this session:
+git worktree remove .claude/worktrees/<worktree-dir>
+```
+
+If `git branch -d` refuses (says "not fully merged"), that's a real
+signal — the squash-merged commit on `main` has a different hash than
+the original branch tip, but `-d` should still recognize the merge.
+If it doesn't, investigate before forcing; do NOT use `-D` reflexively.
+
+**7. Review GitHub update.** Verify the merge landed and the remote is
+clean:
+
+```bash
+gh pr view <pr-num> --json state,mergedAt,mergeCommit \
+  | python -c "import sys, json; d=json.load(sys.stdin); print(f\"state={d['state']} merged_at={d['mergedAt']} merge_commit={d['mergeCommit']['oid'][:7]}\")"
+git ls-remote --heads origin <branch-name>   # should return EMPTY (branch deleted on remote)
+git log origin/main --oneline -3              # confirm merge commit is at tip
+```
+
+Expected:
+- `state=MERGED` and a non-null `merged_at` timestamp
+- Empty output from `ls-remote --heads` for the feature branch
+- The squash commit visible as the latest commit on `origin/main`
+
+**8. Ensure single main branch before finalization.** Final clean-state
+verification:
+
+```bash
+git worktree list           # should show only the main checkout
+git branch                  # should list ONLY `main` (no stale feature branches)
+git branch -r               # should not list the deleted remote feature branch
+git status                  # clean working tree
+```
+
+If any of these surface unexpected state, fix before declaring done.
+Common gotchas:
+- Stale remote-tracking ref still showing (`origin/<branch>`) → `git fetch --prune` (should be automatic via global config, but re-run if needed).
+- Worktree still listed → `git worktree prune` (only if directory is gone but ref persists).
+- Local branch not deleted → re-run `git branch -d <branch-name>` after pull.
+
+**9. Done.** All of: PR merged on GitHub, remote branch deleted, local
+branch deleted, worktree removed, single `main` checkout, clean status.
+Now proceed to Step 5 (QC) and Step 6 (final report). The final report
+should reflect post-merge state (commit hash on `main`, PR marked merged).
 
 ### STEP 5 — QC validation
 
@@ -191,7 +276,8 @@ summary table to the user.
 
 ### STEP 6 — Report
 
-Final summary to the user:
+Final summary to the user. Always reflect **post-merge** state (not
+pre-merge) when in PR mode:
 
 ```
 ## Housekeeping Complete — BATON NNN
@@ -201,11 +287,15 @@ Final summary to the user:
 👤 Human review: <Item 10 if applicable>
 
 New BATON: <filename>
-Local commits: <hashes>
-Remote state: <main at hash; PR #N created/merged>
+Session commits: <hashes (on the now-merged feature branch)>
+PR: #<num> — MERGED (squash commit <hash> on origin/main)
+Local state: on main at <hash>, no stale branches, no worktrees, clean status
 PDF library: <tier counts>
 DB: <key row counts>
 ```
+
+When in direct-to-main mode the PR line collapses to:
+`Remote: origin/main at <hash> (direct push, no PR)`.
 
 ---
 
@@ -215,13 +305,26 @@ DB: <key row counts>
 - **New BATON before retiring old.** Confirm new file on disk first.
 - **Git stages specific files.** Never `git add -A` — risk of committing
   secrets (.env), large binaries, or unrelated work-in-progress.
-- **The agent owns Item 12.** Do not delegate GitHub syncing back to the
-  user. Push, create PRs, post-merge cleanup are all the agent's job.
-- **Never `gh pr merge` autonomously.** Merging affects shared state on
-  GitHub — always wait for user authorization. Branch deletion via
-  `--delete-branch` after a user-authorized merge is fine.
+- **The agent owns Item 12 end-to-end, including the merge.** Push, open
+  PRs, provide review, **run `gh pr merge` once authorized**, prune locally
+  and on origin, verify post-merge GitHub state — all the agent's job. Do
+  not ask the user to click web-UI buttons or run git commands.
+- **Merge requires explicit chat-level authorization.** After providing
+  the PR review block (Step 4c.3), STOP and wait for the user's go-ahead.
+  Authorization words: `merge it`, `approved`, `go`, `lgtm`, `ship it`,
+  `yes merge`, or close equivalents. Hesitation, "wait", "hold", or
+  change-request language = do NOT merge. No timer, no implicit approval.
+- **Default merge style: `--squash --delete-branch`.** Single commit on
+  `main` per session + remote branch dropped atomically. Override only on
+  explicit user request.
 - **Never force-push.** No `--force` / `--hard` / etc. without explicit
-  user authorization for that specific action.
+  user authorization for that specific action. Never `git branch -D`
+  reflexively — investigate first if `-d` refuses.
+- **Post-merge GitHub review is part of done.** Step 4c.7 verifies the
+  merge landed (`gh pr view --json state`), the remote branch is gone
+  (`ls-remote --heads` empty), and the squash commit is at `origin/main`
+  tip. Step 4c.8 verifies the local side: single `main` branch, no stale
+  worktrees, clean status. Both must pass before declaring done.
 - **`shutil.rmtree` is BANNED** (Locked Rule 11). Use `git worktree remove`
   (which handles cleanup safely) or explicit file-by-file removal.
 - **fetch.prune is global.** Set via `git config --global fetch.prune true`
@@ -243,5 +346,7 @@ branch-checkout conflicts, two-step merge). Only spin up a worktree when:
 - A long-running operation must continue while another branch is checked out
 
 When a worktree IS used, the agent owns its lifecycle: create at session
-start (if needed), commit + push the branch, open PR, wait for user merge,
-then remove the worktree as part of Item 12 post-merge cleanup.
+start (if needed), commit + push the branch, open PR, **provide PR review
+and wait for chat-level authorization**, run `gh pr merge --squash
+--delete-branch`, then remove the worktree as part of Item 12 post-merge
+cleanup (Step 4c.6 — `git worktree remove .claude/worktrees/<dir>`).
