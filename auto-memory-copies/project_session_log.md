@@ -1,5 +1,5 @@
 # project_session_log.md
-Last updated: 2026-05-15 (BATON 070)
+Last updated: 2026-05-18 (BATON 071)
 
 > **Renamed BATON 068.** This file was previously `project_overhaul_state.md` — a fossil from the early "PROJECT_OVERHAUL" reorganization phase (M1–M5 module rebuild, ~March 2026). Despite the old name, this file has long served as the project's **running session log + state snapshot**. New name reflects current role.
 
@@ -13,20 +13,20 @@ Last updated: 2026-05-15 (BATON 070)
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 31 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
 | DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; qid_art_xref 2,710; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 068; Mac DB swapped from stale Apr-16 copy (1,998/2,485) to canonical May-6 copy |
-| Skills | Active | .claude/skills/corpus-integrity-qc/ **V1 COMPLETE BATON 070** (15 files: SKILL.md + 2 references + 7 scripts + 5 agent templates; Layers A/B/C/D + coordinator + 4 agent prompts all functional; A4 PDF-diff deferred to V1.1); replaces buggy article-citation-qc |
+| Skills | Active | `.claude/skills/` now exposes 9 project-level entries (BATON 071): `board-startup/`, `body-system-qc/`, `article-citation-qc/`, `baton-pipeline-qc/`, `repo-error-review/` (NEW BATON 071 — promoted from plugin store so they resolve bare); `corpus-integrity-qc/` **V1 COMPLETE BATON 070** (15 files; replaces buggy article-citation-qc; A4 PDF-diff deferred to V1.1); `session-housekeeping/` V2 (BATON 070, Item 12 GitHub syncing added); `custom-question-set.skill` + `ite-exam-series.skill` cowork zips (BATON 064) |
 
 ## PDF Library State
 
 ### ITE (citation_files/ITE/)
-| Tier | Windows canonical | Mac local (BATON 068) | Notes |
+| Tier | Windows canonical | Mac local (BATON 071) | Notes |
 |------|-------------------|----------------------|-------|
-| VC_fail | 1,056 | 628 | Failed VC gate; awaiting enrichment — Mac lags 428 |
+| VC_fail | 1,056 | 630 | Failed VC gate; awaiting enrichment — Mac lags 426 |
 | VC_pass | 309 | 168 | Passed VC gate; awaiting enrichment — Mac lags 141 |
 | local_lite | 117 | 117 | Enriched; not VC-cited — synced |
 | right_click | 58 | 58 | Enriched + VC-cited (top tier) — synced |
 | _dupe_archive | 0 | 0 | Cleared BATON 067 |
 | _corrupted_targeted_run | 0 | 0 | Cleared BATON 067 |
-| **TOTAL active** | **1,540** | **971** | Mac lags Windows by 569 files (DEFERRED-MAC-PDF-SYNC); gitignored content |
+| **TOTAL active** | **1,540** | **973** | Mac lags Windows by 567 files (DEFERRED-MAC-PDF-SYNC); gitignored content |
 
 ### AAFP (citation_files/AAFP/)
 | Count | Status |
@@ -34,6 +34,33 @@ Last updated: 2026-05-15 (BATON 070)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 071)
+**Session type:** Small infrastructure session — promoted 5 custom skills from plugin-only to project-level so they appear as bare slash commands. No DB writes, no PDF acquisition, no schema changes, no pipeline-script changes.
+
+**Trigger:** User reported `/board-startup` wasn't autocompleting from the bare slash menu — only `/anthropic-skills:board-startup` resolved. Root cause: project-level skills (in `.claude/skills/`) appear bare; plugin skills require the `anthropic-skills:` namespace prefix. Two board_prep_intel customs were already overridden into the project (`session-housekeeping`, `corpus-integrity-qc`) plus two `.skill`-format zips (`custom-question-set.skill`, `ite-exam-series.skill`); the remaining 5 board_prep_intel-specific skills were still plugin-only.
+
+**Action:** copied 5 skill directories from the Claude Code plugin store into `.claude/skills/`:
+- `board-startup/` (SKILL.md only, 78 lines)
+- `body-system-qc/` (SKILL.md only, 229 lines)
+- `article-citation-qc/` (SKILL.md + `references/` + `scripts/`, 164 lines)
+- `baton-pipeline-qc/` (SKILL.md only, 133 lines)
+- `repo-error-review/` (SKILL.md only, 217 lines)
+
+**Project skill inventory (final, BATON 071):** 9 entries — 7 SKILL.md directories + 2 cowork `.skill` zips:
+```
+article-citation-qc/  baton-pipeline-qc/  board-startup/  body-system-qc/
+corpus-integrity-qc/  custom-question-set.skill  ite-exam-series.skill
+repo-error-review/    session-housekeeping/
+```
+
+**What stays plugin-only (intentional):** General-purpose Anthropic skills (not project-specific): `docx`, `pdf`, `pptx`, `xlsx`, `skill-creator`, `theme-factory`, `consolidate-memory`, `doc-coauthoring`, `exa-research-search`, `methodology-scout`, `setup-cowork`, `schedule`. Best invoked via the `anthropic-skills:` prefix so the project slash menu stays focused on board_prep_intel work.
+
+**Note:** Plugin-namespace versions of the 5 promoted skills remain available too (no override or shadow — they're parallel entries). Users may see each appear twice in the slash menu (once bare, once namespaced). This is expected and matches the pattern already used by `session-housekeeping`.
+
+**Verified during recon:** Mac PDF lag is 567 files (was logged as 569 in BATON 070; same DEFERRED-MAC-PDF-SYNC item, no regression). DB row counts identical to BATON 070 across all 15 audited tables. Worktree path: `.claude/worktrees/frosty-napier-bfb7b2`, removed during Item 12 post-merge cleanup per BATON 070's worktree policy.
+
+---
 
 ## Session Notes (BATON 070)
 **Session type:** Substantive build session — corpus-integrity-qc skill V1 completed end-to-end. No DB writes, no PDF acquisition, no schema changes.
