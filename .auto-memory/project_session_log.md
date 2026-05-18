@@ -1,5 +1,5 @@
 # project_session_log.md
-Last updated: 2026-05-18 (BATON 071)
+Last updated: 2026-05-18 (BATON 072)
 
 > **Renamed BATON 068.** This file was previously `project_overhaul_state.md` — a fossil from the early "PROJECT_OVERHAUL" reorganization phase (M1–M5 module rebuild, ~March 2026). Despite the old name, this file has long served as the project's **running session log + state snapshot**. New name reflects current role.
 
@@ -34,6 +34,20 @@ Last updated: 2026-05-18 (BATON 071)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 072)
+**Session type:** Device-handoff pause. Mikey opened a fresh Claude Code session, ran `/board-startup`, and asked for a corpus-integrity-qc progress recap before kicking off the BATON 071 testing carry-forward. After delivering the recap he pivoted the work to the Windows big-rig PC. No code, DB, PDF, schema, or script changes — pure orientation + status conversation + housekeeping paper trail.
+
+**What was discussed:**
+- Full corpus-qc V1 status update: what's built (Layers A/B/C/D + coordinator + 4 agent templates, all 15 files in `.claude/skills/corpus-integrity-qc/`), what's left (today's testing pass against canonical DB → spot-check Tier 1 → fix-applier first-use → re-run → ORPHAN_XREF investigation → bug-fix loop → then AAFP v2 extension).
+- Known bugs / circle-back items surfaced: worktree path resolution caveat for `run_qc.py` (must pass `--project-root` explicitly when run from a worktree); B5 AUTHOR_ARTIFACT 80-char truncation in `utils.py` (improvement target, not blocking); fix-applier never exercised yet (first-use is the testing pass).
+- Recommended canonical-DB invocation path (skip Mac PDF sync since A4 PDF-diff is deferred; Layers A/B/C are DB-only).
+
+**Net effect on the project:** zero files changed outside this housekeeping pass. Fresh worktree `.claude/worktrees/awesome-chandrasekhar-3ae317` opened at hash `2079a2f`; all 17 BATON 071 deferred flags carry forward unchanged. Top priority for the Windows resume is still the corpus-qc V1 testing pass per BATON 071's "Immediate (next session)" list — now bumped to BATON 072 with paths re-pointed to Windows (`C:\Users\mpsch\Desktop\board_prep_intel\`).
+
+**Pre-flight reminder for Windows resume:** `git pull origin main` first to pick up the BATON 072 commits, then `/board-startup`, then `run_qc.py`.
+
+---
 
 ## Session Notes (BATON 071)
 **Session type:** Small infrastructure session — promoted 5 custom skills from plugin-only to project-level so they appear as bare slash commands. No DB writes, no PDF acquisition, no schema changes, no pipeline-script changes.

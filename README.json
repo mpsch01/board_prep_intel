@@ -2,10 +2,10 @@
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "root": "C:\\Users\\mpsch\\Desktop\\board_prep_intel",
-  "baton": "BATON_active_071_20260518_custom_skills_project_level.md",
-  "baton_description": "Promoted 5 board_prep_intel-specific custom skills (board-startup, body-system-qc, article-citation-qc, baton-pipeline-qc, repo-error-review) from plugin store into .claude/skills/ so they resolve as bare slash commands without the anthropic-skills: prefix. Project skill inventory now: 7 SKILL.md directories + 2 cowork .skill zips. No DB/PDF/schema changes.",
+  "baton": "BATON_active_072_20260518_device_handoff_pause.md",
+  "baton_description": "Device-handoff pause session. Orientation + corpus-integrity-qc status recap delivered, then user pivoted to the Windows big-rig PC for the actual corpus-qc V1 testing pass. No code, DB, PDF, schema, or script changes; all 17 BATON 071 deferred flags carry forward unchanged. Top priority on resume remains the corpus-qc V1 testing pass (run_qc → spot-check Tier 1 → fix-applier --tier 1 → re-run → orphan_xref investigation).",
   "last_updated": "2026-05-18",
-  "git_hash": "79e32a0",
+  "git_hash": "02a770f",
   "git_remote": "https://github.com/mpsch01/board_prep_intel",
   "database": {
     "path": "00_database/db/ite_intelligence.db",

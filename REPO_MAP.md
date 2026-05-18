@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-05-18 (BATON 071 — promoted 5 custom skills to project level: `board-startup`, `body-system-qc`, `article-citation-qc`, `baton-pipeline-qc`, `repo-error-review` copied from plugin store into `.claude/skills/` so they resolve as bare slash commands. Project skill inventory now 9 entries: 7 SKILL.md directories + 2 cowork `.skill` zips. No DB/PDF/schema changes.)
+**Last Updated:** 2026-05-18 (BATON 072 — device-handoff pause. Orientation + corpus-integrity-qc status recap delivered, then user pivoted work to the Windows big-rig PC. No code, DB, PDF, schema, or script changes; all BATON 071 carry-forwards remain in place. Active BATON: `BATON_active_072_20260518_device_handoff_pause.md`.)
 
 File tree with short descriptions. For full project context see `README.md`.
 
@@ -12,7 +12,7 @@ board_prep_intel/
 ├── CLAUDE.md                          Project memory: terminology, locked rules, active state
 ├── DATABASE_GUIDE.md                  DB contents, linkages, current uses, and future applications (moved from 00_database/)
 ├── _index.md                          Ground-truth file tree (may drift; sweep before structural changes)
-├── BATON_active_071_*.md              Active session handoff — read first every session
+├── BATON_active_072_*.md              Active session handoff — read first every session
 ├── .gitignore                         Excludes *.db, *.pdf, extracted_json/, resident_data/, outputs/
 │
 ├── 00_database/                       Source of truth. Never disposable. (DATABASE_GUIDE.md moved to project root)
