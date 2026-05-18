@@ -4,7 +4,7 @@
 **Status:** Active development — work pivoted to Windows big-rig PC this session
 **Active BATON:** `BATON_active_072_20260518_device_handoff_pause.md`
 **Next ART-ID:** ART-2208
-**Git:** `claude/awesome-chandrasekhar-3ae317` worktree → `02a770f` (BATON 072 housekeeping commit; pre-session `2079a2f`); `main` at `2079a2f` awaiting PR merge → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `main` → `34867ce` (PR #17 merge commit, 2026-05-18; BATON 072 + session-housekeeping V3.1 landed); 5 session commits preserved as merge-commit ancestors (`02a770f`, `4b8b878`, `a14dcaa`, `bb2e297`, `b125176`); pre-session `2079a2f` → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -15,9 +15,9 @@
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "baton": "BATON_active_072_20260518_device_handoff_pause.md",
-  "baton_description": "Device-handoff pause session. Orientation + corpus-integrity-qc status recap delivered, then user pivoted to the Windows big-rig PC for the actual corpus-qc V1 testing pass. No code, DB, PDF, schema, or script changes; all 17 BATON 071 deferred flags carry forward unchanged. Top priority on resume remains the corpus-qc V1 testing pass.",
-  "git_hash": "02a770f",
-  "git_branch": "claude/awesome-chandrasekhar-3ae317",
+  "baton_description": "Device-handoff pause + mid-session expansion. Orientation + corpus-integrity-qc status recap delivered; user pivoted to the Windows big rig for corpus-qc V1 testing. Mid-session, session-housekeeping skill was upgraded to V3.1 — agent now owns full push→PR→review→authorize→merge→prune→verify cycle, merge style locked to --merge --delete-branch (squash/rebase banned to preserve BATON intra-session hash references). PR #17 merged via the new V3.1 flow at 34867ce; all 5 session commits preserved on main. No DB/PDF/pipeline-script changes; all 17 BATON 071 deferred flags carry forward unchanged plus DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER newly opened.",
+  "git_hash": "34867ce",
+  "git_branch": "main",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-18",
   "next_art_id": "ART-2208",

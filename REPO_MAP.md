@@ -1,6 +1,6 @@
 # REPO MAP — board_prep_intel
 
-**Last Updated:** 2026-05-18 (BATON 072 — device-handoff pause. Orientation + corpus-integrity-qc status recap delivered, then user pivoted work to the Windows big-rig PC. No code, DB, PDF, schema, or script changes; all BATON 071 carry-forwards remain in place. Active BATON: `BATON_active_072_20260518_device_handoff_pause.md`.)
+**Last Updated:** 2026-05-18 (BATON 072 — device-handoff pause + mid-session expansion. Orientation + corpus-integrity-qc status recap delivered; user pivoted to the Windows big rig for the corpus-qc V1 testing pass. **Mid-session:** session-housekeeping skill upgraded to V3.1 — agent now owns the full push→PR→review→authorize→merge→prune→verify cycle; merge style locked to `--merge --delete-branch` (squash/rebase banned to preserve BATON intra-session hash references). PR #17 merged via the new V3.1 flow at `34867ce`. No DB/PDF/pipeline-script changes; new deferred flag DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER. Active BATON: `BATON_active_072_20260518_device_handoff_pause.md`.)
 
 File tree with short descriptions. For full project context see `README.md`.
 
