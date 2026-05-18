@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-05-15 (BATON 070)
+**Last updated:** 2026-05-18 (BATON 071)
 **Status:** Active development
-**Active BATON:** `BATON_active_070_20260515_corpus_qc_skill_v1.md`
+**Active BATON:** `BATON_active_071_20260518_custom_skills_project_level.md`
 **Next ART-ID:** ART-2208
-**Git:** `claude/reverent-mclaren-575646` worktree → `22dae71` (BATON 070 housekeeping commit; corpus-qc skill V1 build at this hash); `main` at `57bbe7a` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `claude/frosty-napier-bfb7b2` worktree → `79e32a0` (BATON 071 housekeeping commit; project-level skills promotion at this hash); `main` at `fdf50d3` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -14,12 +14,12 @@
 {
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_070_20260515_corpus_qc_skill_v1.md",
-  "baton_description": "corpus-integrity-qc skill V1 build — Layers A, B, D + coordinator + 4 agent templates added under .claude/skills/corpus-integrity-qc/. End-to-end smoke test produces 2,538 findings (1,914 Tier 1 / 66 Tier 2 / 558 Tier 3). Layer B confirmed BATON 058 bug-fix (0 CRITIQUE_REF_MISSING_FROM_DB). No DB/PDF/schema changes.",
-  "git_hash": "22dae71",
-  "git_branch": "main",
+  "baton": "BATON_active_071_20260518_custom_skills_project_level.md",
+  "baton_description": "Promoted 5 board_prep_intel-specific custom skills (board-startup, body-system-qc, article-citation-qc, baton-pipeline-qc, repo-error-review) from plugin store into .claude/skills/ so they resolve as bare slash commands without the anthropic-skills: prefix. Project skill inventory now: 7 SKILL.md directories + 2 cowork .skill zips. No DB/PDF/schema changes.",
+  "git_hash": "79e32a0",
+  "git_branch": "claude/frosty-napier-bfb7b2",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
-  "last_updated": "2026-05-15",
+  "last_updated": "2026-05-18",
   "next_art_id": "ART-2208",
   "vc_gate_citations": 352,
   "database": {

@@ -1,10 +1,10 @@
 # .auto-memory/MEMORY.md — Memory Index
-Last updated: 2026-05-15 (BATON 070)
+Last updated: 2026-05-18 (BATON 071)
 
 ## Active Memory Files
-- [project_session_log.md](project_session_log.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 068
-- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (2,206 articles, 1,639 ITE Qs, 2,710 qid_art_xref), schema state; body_system + body_system_merged fully normalized; article_currency complete 2,206; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — canonical restored BATON 068 (DB swap from stale Apr-16 copy)
-- [project_corpus_integrity_qc.md](project_corpus_integrity_qc.md) — Corpus integrity QC skill (replacing article-citation-qc); 4-layer architecture (text fidelity / citation linkage / structural integrity / report-remediation) with parallel agent dispatch. **V1 COMPLETE BATON 070** — Layers A/B/C/D + coordinator (`run_qc.py`) + 4 agent templates (`agents/`) all functional; end-to-end smoke test against canonical DB produces 2,538 findings (1,914 Tier 1 / 66 Tier 2 / 558 Tier 3); A4 PDF-diff deferred to V1.1; AAFP BRQ port is v2 (next major scope).
+- [project_session_log.md](project_session_log.md) — Module state, PDF counts, key numbers, deferred flags, Intelligence 2.0 layer status — updated BATON 071
+- [project_current_db_state.md](project_current_db_state.md) — DB table row counts (2,206 articles, 1,639 ITE Qs, 2,710 qid_art_xref), schema state; body_system + body_system_merged fully normalized; article_currency complete 2,206; clinical_pathways, intersection_centroid_vec, article_icd10, question_icd10 enriched — canonical restored BATON 068 (DB swap from stale Apr-16 copy); no DB changes BATON 071
+- [project_corpus_integrity_qc.md](project_corpus_integrity_qc.md) — Corpus integrity QC skill (replacing article-citation-qc); 4-layer architecture (text fidelity / citation linkage / structural integrity / report-remediation) with parallel agent dispatch. **V1 COMPLETE BATON 070** — Layers A/B/C/D + coordinator (`run_qc.py`) + 4 agent templates (`agents/`) all functional; end-to-end smoke test against canonical DB produces 2,538 findings (1,914 Tier 1 / 66 Tier 2 / 558 Tier 3); A4 PDF-diff deferred to V1.1; AAFP BRQ port is v2 (next major scope). Testing pass still pending as of BATON 071.
 - [rebuild_structuring_guidelines.md](rebuild_structuring_guidelines.md) — Locked rules and architecture principles
 - Project terminology decoder — see `Terms — Decode These First` table in `CLAUDE.md` (no separate glossary.md file exists; CLAUDE.md is the single source of truth for term definitions)
 

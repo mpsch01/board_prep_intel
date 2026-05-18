@@ -1,5 +1,11 @@
 # project_current_db_state.md
-Last verified: 2026-05-15 (BATON 070)
+Last verified: 2026-05-18 (BATON 071)
+
+## DB Changes (BATON 071)
+**No DB changes.** This session was a `.claude/skills/` directory edit only — 5 skill directories copied from the plugin store into project-level skills. Row counts in all 15 audited tables verified identical to BATON 070 via direct sqlite3 query during housekeeping recon. No schema changes, no PDF changes, no script changes.
+
+---
+
 
 ## DB: ite_intelligence.db
 
