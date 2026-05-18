@@ -199,6 +199,37 @@ Or in Windows Explorer: navigate to `C:\Users\mpsch\.claude\skills\` and delete 
 
 **After deletion + Claude Code restart:** `/session-housekeeping` will resolve to the project-level V3.2 (the canonical, board_prep_intel-tailored version). Currently shadowed.
 
+#### DEFERRED-GH-CLI-AUTH-SETUP
+**Status: ACTIVE — needs user action (low priority; web-UI fallback works fine)**
+
+`gh` CLI is not authenticated on Windows. `git` operations work (Git Credential Manager has creds — `git push`, `git pull` succeed) but `gh auth status` shows "not logged in." This blocked the V3.1+ agent-owned PR flow (`gh pr create` + `gh pr merge` both failed with "please run gh auth login"). Worked around this session by using the web UI for PR #19 create + merge.
+
+**What happened:** User attempted `gh auth login --web` but the gh config directory at `C:\Users\mpsch\AppData\Roaming\GitHub CLI\` was still empty after — suggesting the auth flow didn't complete cleanly (browser device-code may have been missed, terminal may have closed, etc.). User confirmed "it went fine" but `gh auth status` from Claude's Bash shell still reported no auth.
+
+**Fix (user action, when convenient):** Retry `gh auth login --web --hostname github.com` in PowerShell. Watch the 7-prompt flow carefully:
+1. `? What account do you want to log into?` → **GitHub.com**
+2. `? What is your preferred protocol for Git operations?` → **HTTPS**
+3. `? Authenticate Git with your GitHub credentials?` → **Yes**
+4. `! First copy your one-time code: XXXX-XXXX` — **copy this code**
+5. `Press Enter to open github.com in your browser...` — press Enter
+6. Browser opens to `github.com/login/device` — paste the code, click "Continue", click "Authorize github"
+7. Terminal shows: `✓ Authentication complete.` and `✓ Logged in as mpsch01`
+
+Verify with `gh auth status` — should show `Logged in to github.com as mpsch01`. After this, future V3.1+ housekeeping cycles run end-to-end agent-owned (no web-UI fallback needed for PR + merge).
+
+**Not blocking:** Web UI for PR create + merge works fine as a fallback. Just slower.
+
+#### DEFERRED-ORPHAN-WORKTREE-DIR-CLEANUP
+**Status: ACTIVE — resolves automatically on next Claude Code restart**
+
+After PR #19 merge + V3.1+ local cleanup, the worktree was successfully de-registered from git (`git worktree list` shows only project root) and the local branch `claude/inspiring-cannon-e99bfb` was deleted. BUT the worktree directory at `.claude/worktrees/inspiring-cannon-e99bfb/` still exists on the filesystem — Claude Code's parent process holds the cwd lock on it, preventing both `git worktree remove --force` and PowerShell `Remove-Item -Recurse -Force` from deleting it ("being used by another process").
+
+**Fix (next session):** When Claude Code restarts at start of next session in the project root, the cwd lock releases and the orphan directory can be removed. Either:
+- Claude does it during `/board-startup` if `git worktree list` shows the legacy debris (V3.2 SKILL.md "Legacy worktree cleanup" steps), OR
+- User manually deletes `.claude/worktrees/` directory in Windows Explorer
+
+**Impact:** Cosmetic only. Git is fully clean (no stale ref). Just disk clutter (~few MB).
+
 ### Closed this session
 
 - **DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER** — OBVIATED by V3.2 workflow change (no worktrees → no `gh pr merge --delete-branch` worktree-cleanup wrinkle possible). See BATON 072 amendment for full closure note.
@@ -304,7 +335,18 @@ Or in Windows Explorer: navigate to `C:\Users\mpsch\.claude\skills\` and delete 
 - **Pre-session commit hash on main:** `d2dab28` (PR #18 BATON-amendment merge from Mac, 2026-05-18 earlier in the day)
 - **Session commits on feature branch:**
   - `0370438` — *"BATON 073 — V3.2 workflow transition (no Claude Code worktrees ever)"* — 15 files, +1147 / -89
-  - `<TBD>` — *"BATON 073 housekeeping: backfill git hash 0370438"* — 4 files (README.md, CLAUDE.md, BATON 073, this section)
+  - `0d87fee` — *"BATON 073 housekeeping: backfill git hash 0370438"* — 3 files, +7 / -7
+- **PR #19:** **MERGED** at 2026-05-18 via GitHub web UI (gh CLI auth deferred — see DEFERRED-GH-CLI-AUTH-SETUP above). Merge commit: `b599ac8` on `origin/main`, 2 parents (`d2dab28` + `0d87fee`), 15 files, +1148 / -90. Both BATON 073 session commit hashes preserved as merge-commit ancestors per --merge-only policy.
+- **Post-merge cleanup completed:**
+  - `git pull origin main` — main fast-forwarded through `0370438` + `0d87fee` to merge commit `b599ac8`
+  - `git worktree remove .claude/worktrees/inspiring-cannon-e99bfb` — git registry de-registered ✅
+  - `git branch -d claude/inspiring-cannon-e99bfb` — local branch deleted ✅
+  - Remote branch deleted via web UI's `--delete-branch` checkbox ✅
+  - `git worktree list` → shows only project root ✅
+  - `git branch -a` → only `main` + `remotes/origin/main` ✅
+  - Pre-merge feature branch commits still resolvable: `git show 0370438` ✅, `git show 0d87fee` ✅
+- **Outstanding cleanup item:** Orphan worktree directory `.claude/worktrees/inspiring-cannon-e99bfb/` not yet deleted from filesystem — Claude Code parent process holds cwd lock. See DEFERRED-ORPHAN-WORKTREE-DIR-CLEANUP above. Resolves automatically on next Claude Code restart.
+- **This V3.2 amendment commit:** direct-to-main per V3.2 SKILL.md Step 4b (trivial doc-only edit propagating merge-commit hash + 2 new deferred flags into CLAUDE.md + this BATON).
 - **PR #19:** (to be opened during Item 12; merged via `gh pr merge --merge --delete-branch`)
 - **Post-merge cleanup steps:** This is the last worktree session. After merge, manually:
   - `cd C:\Users\mpsch\Desktop\board_prep_intel` (canonical main checkout, NOT worktree)
