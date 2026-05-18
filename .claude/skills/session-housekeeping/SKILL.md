@@ -195,21 +195,37 @@ hesitation, change request, or "wait" as a hold; do not merge.
 **4. Wait for explicit user authorization.** No timer, no implicit
 approval. If the user goes quiet, ask once, then stop.
 
-**5. Merge via `gh pr merge` (default: squash + delete remote branch).**
+**5. Merge via `gh pr merge` (always: merge commit + delete remote branch).**
 Once authorized:
 
 ```bash
-gh pr merge <pr-num> --squash --delete-branch
+gh pr merge <pr-num> --merge --delete-branch
 ```
 
-Merge style defaults:
-- **`--squash`** — single commit on `main` per session; keeps history linear.
-- **`--delete-branch`** — drops the remote feature branch atomically with
-  the merge so cleanup doesn't lag.
+**Merge style is locked to `--merge` (merge commit).** Do NOT use
+`--squash` or `--rebase`. Reasons board_prep_intel requires merge commit:
 
-Override only on explicit user request (`--merge` for merge commit,
-`--rebase` for rebase-and-merge, omit `--delete-branch` to keep the
-remote branch).
+1. **Preserves BATON hash references.** Every BATON pins specific
+   intra-session commit hashes (e.g. *"Session commit (housekeeping):
+   `02a770f`"*, *"Hash-backfill commit: backfills `02a770f` into…"*).
+   These are part of the audit trail. `--squash` destroys those hashes
+   (they exist only in reflog, 90-day expiry); `--rebase` preserves them
+   but loses the session-boundary marker. `--merge` keeps both.
+2. **Merge commit IS the session boundary marker.** `git log --merges`
+   gives a clean per-PR view across sessions ("BATON 071 merge", "BATON
+   072 merge"…) — matches the BATON-as-session-record model.
+3. **Standard GitHub default** — matches the rest of the world's mental
+   model for git history.
+
+Flag conventions:
+- **`--merge`** — always. Creates a merge commit on `main` linking the
+  feature branch.
+- **`--delete-branch`** — always. Drops the remote feature branch
+  atomically with the merge so cleanup doesn't lag.
+
+If the user explicitly requests squash or rebase for a one-off PR
+(e.g. *"squash this one, it's just typo fixes"*), honor it for that PR
+only — do not change the default. Default remains `--merge`.
 
 **6. Local prune.** Sync local `main` and remove the now-merged feature
 branch + worktree:
@@ -221,16 +237,17 @@ git checkout main
 git pull origin main          # picks up merge commit; fetch.prune drops stale refs
 
 # Delete the local feature branch:
-git branch -d <branch-name>   # safe-delete; refuses if anything isn't on main
+git branch -d <branch-name>   # safe-delete; recognizes merge-commit merges natively
 
 # If a worktree was used this session:
 git worktree remove .claude/worktrees/<worktree-dir>
 ```
 
-If `git branch -d` refuses (says "not fully merged"), that's a real
-signal — the squash-merged commit on `main` has a different hash than
-the original branch tip, but `-d` should still recognize the merge.
-If it doesn't, investigate before forcing; do NOT use `-D` reflexively.
+With `--merge` style, `git branch -d` recognizes the merge cleanly
+because the feature branch tip is reachable from `main` via the merge
+commit. If `-d` ever refuses ("not fully merged"), STOP — investigate
+what's actually on the branch vs `main` before doing anything else.
+Do NOT use `-D` reflexively.
 
 **7. Review GitHub update.** Verify the merge landed and the remote is
 clean:
@@ -239,13 +256,17 @@ clean:
 gh pr view <pr-num> --json state,mergedAt,mergeCommit \
   | python -c "import sys, json; d=json.load(sys.stdin); print(f\"state={d['state']} merged_at={d['mergedAt']} merge_commit={d['mergeCommit']['oid'][:7]}\")"
 git ls-remote --heads origin <branch-name>   # should return EMPTY (branch deleted on remote)
-git log origin/main --oneline -3              # confirm merge commit is at tip
+git log origin/main --oneline --merges -3     # confirm new merge commit is at tip
+git log origin/main --oneline -5              # see merge + the original feature commits
 ```
 
 Expected:
 - `state=MERGED` and a non-null `merged_at` timestamp
 - Empty output from `ls-remote --heads` for the feature branch
-- The squash commit visible as the latest commit on `origin/main`
+- A new merge commit visible at `origin/main` tip (matches `mergeCommit.oid`)
+- The original feature-branch commits still resolvable by their pre-merge
+  hashes (e.g. `git show <pre-merge-hash>` works) — this is the BATON
+  hash-reference preservation behavior
 
 **8. Ensure single main branch before finalization.** Final clean-state
 verification:
@@ -287,8 +308,8 @@ pre-merge) when in PR mode:
 👤 Human review: <Item 10 if applicable>
 
 New BATON: <filename>
-Session commits: <hashes (on the now-merged feature branch)>
-PR: #<num> — MERGED (squash commit <hash> on origin/main)
+Session commits (preserved on main): <list of pre-merge hashes>
+PR: #<num> — MERGED (merge commit <hash> on origin/main)
 Local state: on main at <hash>, no stale branches, no worktrees, clean status
 PDF library: <tier counts>
 DB: <key row counts>
@@ -314,15 +335,20 @@ When in direct-to-main mode the PR line collapses to:
   Authorization words: `merge it`, `approved`, `go`, `lgtm`, `ship it`,
   `yes merge`, or close equivalents. Hesitation, "wait", "hold", or
   change-request language = do NOT merge. No timer, no implicit approval.
-- **Default merge style: `--squash --delete-branch`.** Single commit on
-  `main` per session + remote branch dropped atomically. Override only on
-  explicit user request.
+- **Merge style is locked to `--merge --delete-branch`.** Always merge
+  commit, never squash, never rebase. Reason: BATON files pin specific
+  intra-session commit hashes as part of the audit trail — `--squash`
+  destroys those hashes; `--rebase` loses the session-boundary marker.
+  Merge commits preserve both, and `git log --merges` gives a clean
+  per-session view across the repo. If the user explicitly requests a
+  different style for a one-off PR, honor it for that PR only — do not
+  change the default.
 - **Never force-push.** No `--force` / `--hard` / etc. without explicit
   user authorization for that specific action. Never `git branch -D`
   reflexively — investigate first if `-d` refuses.
 - **Post-merge GitHub review is part of done.** Step 4c.7 verifies the
   merge landed (`gh pr view --json state`), the remote branch is gone
-  (`ls-remote --heads` empty), and the squash commit is at `origin/main`
+  (`ls-remote --heads` empty), and the merge commit is at `origin/main`
   tip. Step 4c.8 verifies the local side: single `main` branch, no stale
   worktrees, clean status. Both must pass before declaring done.
 - **`shutil.rmtree` is BANNED** (Locked Rule 11). Use `git worktree remove`
@@ -347,6 +373,6 @@ branch-checkout conflicts, two-step merge). Only spin up a worktree when:
 
 When a worktree IS used, the agent owns its lifecycle: create at session
 start (if needed), commit + push the branch, open PR, **provide PR review
-and wait for chat-level authorization**, run `gh pr merge --squash
+and wait for chat-level authorization**, run `gh pr merge <num> --merge
 --delete-branch`, then remove the worktree as part of Item 12 post-merge
 cleanup (Step 4c.6 — `git worktree remove .claude/worktrees/<dir>`).
