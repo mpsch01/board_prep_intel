@@ -244,8 +244,8 @@ Renamed (git mv):
 
 - **Branch:** claude/frosty-napier-bfb7b2 (worktree off main)
 - **Pre-housekeeping commit hash:** `fdf50d3` (BATON 070 / "Add project-level session-housekeeping skill (V2) with Item 12 GitHub syncing" — the latest pre-session commit)
-- **Session commit (housekeeping):** *pending — backfilled in hash-backfill commit below*
-- **Hash-backfill commit:** *pending — backfills the session commit hash into README.json + README.md + CLAUDE.md + this BATON*
+- **Session commit (housekeeping):** `79e32a0` — *"BATON 071 — Promote 5 custom skills to project level"* — 21 files changed, 1,914 insertions, 54 deletions, 1 rename (BATON 070 → baton_archive/), 5 skill directories added.
+- **Hash-backfill commit:** follows this BATON edit — backfills `79e32a0` into README.json + README.md + CLAUDE.md + this BATON.
 - **No DB writes, no PDF acquisition, no schema changes** this session — skill files only.
 - **Worktree cleanup:** this worktree (`.claude/worktrees/frosty-napier-bfb7b2`) will be removed during Item 12 post-merge cleanup, per BATON 070's worktree policy (default direct-on-main; worktrees removed after merge).
 

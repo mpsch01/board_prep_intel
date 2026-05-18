@@ -5,7 +5,7 @@
   "baton": "BATON_active_071_20260518_custom_skills_project_level.md",
   "baton_description": "Promoted 5 board_prep_intel-specific custom skills (board-startup, body-system-qc, article-citation-qc, baton-pipeline-qc, repo-error-review) from plugin store into .claude/skills/ so they resolve as bare slash commands without the anthropic-skills: prefix. Project skill inventory now: 7 SKILL.md directories + 2 cowork .skill zips. No DB/PDF/schema changes.",
   "last_updated": "2026-05-18",
-  "git_hash": "<<HASH>>",
+  "git_hash": "79e32a0",
   "git_remote": "https://github.com/mpsch01/board_prep_intel",
   "database": {
     "path": "00_database/db/ite_intelligence.db",

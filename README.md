@@ -4,7 +4,7 @@
 **Status:** Active development
 **Active BATON:** `BATON_active_071_20260518_custom_skills_project_level.md`
 **Next ART-ID:** ART-2208
-**Git:** `claude/frosty-napier-bfb7b2` worktree → `<<HASH>>` (BATON 071 housekeeping commit; project-level skills promotion at this hash); `main` at `fdf50d3` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `claude/frosty-napier-bfb7b2` worktree → `79e32a0` (BATON 071 housekeeping commit; project-level skills promotion at this hash); `main` at `fdf50d3` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -16,7 +16,7 @@
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "baton": "BATON_active_071_20260518_custom_skills_project_level.md",
   "baton_description": "Promoted 5 board_prep_intel-specific custom skills (board-startup, body-system-qc, article-citation-qc, baton-pipeline-qc, repo-error-review) from plugin store into .claude/skills/ so they resolve as bare slash commands without the anthropic-skills: prefix. Project skill inventory now: 7 SKILL.md directories + 2 cowork .skill zips. No DB/PDF/schema changes.",
-  "git_hash": "<<HASH>>",
+  "git_hash": "79e32a0",
   "git_branch": "claude/frosty-napier-bfb7b2",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-18",
