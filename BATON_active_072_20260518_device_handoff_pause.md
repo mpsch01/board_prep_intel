@@ -194,8 +194,8 @@ Mikey opened a new Claude Code session, ran `/board-startup`, and asked for a co
 
 - **Branch:** claude/awesome-chandrasekhar-3ae317 (fresh worktree off main, opened this session)
 - **Pre-housekeeping commit hash:** `2079a2f` ("Remove tracked .tmp.driveupload artifacts (pre-gitignore residue)" — the latest pre-session commit on main; worktree was at the same hash on open)
-- **Session commit (housekeeping):** *(to be filled in after commit)*
-- **Hash-backfill commit:** *(follows session commit — backfills hash into README.json + README.md + CLAUDE.md + this BATON)*
+- **Session commit (housekeeping):** `02a770f` — *"BATON 072 — Device-handoff pause (Mac → Windows big rig)"* — 13 files changed, 289 insertions, 43 deletions, 1 rename (BATON 071 → baton_archive/), 1 new BATON file.
+- **Hash-backfill commit:** follows this BATON edit — backfills `02a770f` into README.json + README.md + CLAUDE.md + this BATON.
 - **No DB writes, no PDF acquisition, no schema changes, no script changes** this session — pure orientation + status conversation + housekeeping paper trail.
 - **Worktree cleanup:** this worktree (`.claude/worktrees/awesome-chandrasekhar-3ae317`) will be removed during Item 12 post-merge cleanup once the user merges the PR.
 

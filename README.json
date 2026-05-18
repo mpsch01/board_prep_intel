@@ -5,7 +5,7 @@
   "baton": "BATON_active_072_20260518_device_handoff_pause.md",
   "baton_description": "Device-handoff pause session. Orientation + corpus-integrity-qc status recap delivered, then user pivoted to the Windows big-rig PC for the actual corpus-qc V1 testing pass. No code, DB, PDF, schema, or script changes; all 17 BATON 071 deferred flags carry forward unchanged. Top priority on resume remains the corpus-qc V1 testing pass (run_qc → spot-check Tier 1 → fix-applier --tier 1 → re-run → orphan_xref investigation).",
   "last_updated": "2026-05-18",
-  "git_hash": "2079a2f",
+  "git_hash": "02a770f",
   "git_remote": "https://github.com/mpsch01/board_prep_intel",
   "database": {
     "path": "00_database/db/ite_intelligence.db",
