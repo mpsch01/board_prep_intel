@@ -12,8 +12,8 @@
 | **Previous BATON** | BATON_active_071_20260518_custom_skills_project_level.md |
 | **Git Hash (pre-housekeeping-commit)** | 2079a2f |
 | **Branch** | claude/awesome-chandrasekhar-3ae317 (fresh Claude Code worktree off main) |
-| **Primary Goal** | Orientation pass + corpus-integrity-qc status update; pause and hand off to the Windows big-rig PC for the actual corpus-qc V1 testing run. |
-| **Status** | Complete — orientation done, corpus-qc plan rehearsed, no code/DB/PDF changes; ready to resume on Windows. |
+| **Primary Goal** | Orientation pass + corpus-integrity-qc status update; pause and hand off to the Windows big-rig PC for the actual corpus-qc V1 testing run. **Mid-session expansion:** revise session-housekeeping skill end-to-end so the agent owns the full push→PR→review→authorize→merge→prune→verify cycle (V3 + V3.1). |
+| **Status** | Complete — orientation done, corpus-qc plan rehearsed, no code/DB/PDF changes. Session-housekeeping skill upgraded to V3.1 (chat-level auth gate + merge-commit-only style). PR #17 merged via the new V3.1 flow at `34867ce`; ready to resume on Windows. |
 
 ---
 
@@ -21,7 +21,14 @@
 
 Mikey opened a new Claude Code session, ran `/board-startup`, and asked for a corpus-integrity-qc progress recap before kicking off the BATON 071 carry-forward testing pass. After delivering the recap (what's built, what's left, known bugs / circle-back items, the worktree path caveat for `run_qc.py`, and the `fix-applier` first-use plan), Mikey decided to **move the work to the big rig PC** rather than execute on Mac. No scripts were run, no DB writes occurred, no PDFs were touched.
 
-**Net effect:** zero file changes outside this housekeeping pass. All BATON 071 carry-forwards remain in place; the next session on Windows picks up exactly where BATON 071 left off.
+**Late-session addition (post-initial-housekeeping):** while reviewing the BATON 072 PR, Mikey rewrote the end-of-session GitHub-sync workflow in two iterations. The session-housekeeping skill now owns the full round-trip including the merge itself:
+
+- **V3 (commit `bb2e297`)** — Item 12 revised end-to-end. Agent now opens the PR, **provides a structured review block in chat** (PR URL, commit list, file counts, summary), **waits for explicit chat-level authorization** (words: `merge it` / `approved` / `go` / `lgtm` / `ship it` / `yes merge`), then runs `gh pr merge` itself (no more "user merges in web UI"). 9-substep sequence: push → PR → review → wait → merge → prune → verify GitHub state → verify single-main local state → done.
+- **V3.1 (commit `b125176`)** — merge style locked to `--merge --delete-branch`. Squash and rebase are explicitly banned because every BATON pins intra-session commit hashes (e.g. BATON 072's own *"Session commit: 02a770f"* reference). Squash would destroy those hashes; rebase preserves them but loses the session-boundary marker. Merge commit keeps both, and `git log --merges` gives a clean per-session view across the repo.
+- **First exercise on PR #17 (commit `34867ce`)** — exercised V3.1 end-to-end on this very PR. Result: merge landed cleanly, remote branch deleted, local branch deleted, worktree removed, single-main verified, and **all 5 session commits remain resolvable on main by their pre-merge hashes** (proves the merge-commit-style rationale).
+- **V3.2 wrinkle surfaced (deferred):** running `gh pr merge --delete-branch` from inside the worktree errored because gh's built-in local-side cleanup tried to switch the worktree to `main` (already checked out in the canonical project root). The remote merge + remote branch delete still succeeded; only the local-side cleanup needed manual completion. **Fix proposal:** SKILL.md Step 4c.5 should `cd` to the canonical main checkout before running `gh pr merge`. See DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER below.
+
+**Net effect on the project:** zero changes to DB / PDFs / pipeline scripts / module code. **One substantive doc/skill change:** `.claude/skills/session-housekeeping/SKILL.md` upgraded from V2 (which stopped at PR-open and deferred the merge to the user) to V3.1 (agent owns the full cycle, merge-commit-only). All BATON 071 carry-forwards remain in place; the next session on Windows picks up exactly where BATON 071 left off — plus inherits the new V3.1 housekeeping workflow when it runs `/session-housekeeping` at end-of-session.
 
 ---
 
@@ -95,7 +102,22 @@ Mikey opened a new Claude Code session, ran `/board-startup`, and asked for a co
 ## DEFERRED FLAGS
 
 ### Newly opened this session
-**None.** Pure pause/handoff — no new tech debt.
+
+#### DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER
+**Status: ACTIVE — new this session (5-minute fix when convenient)**
+
+When `gh pr merge --delete-branch` runs from inside a Claude Code worktree, gh's built-in local-side cleanup tries to switch the worktree to `main` and fails (since `main` is already checked out in the canonical project root). The remote-side actions (merge + remote branch delete) still complete successfully, but local cleanup needs manual completion (`git worktree remove`, `git branch -d`, `git fetch --prune`).
+
+**Fix:** `.claude/skills/session-housekeeping/SKILL.md` Step 4c.5 should `cd` to the canonical main checkout **before** running `gh pr merge`:
+
+```bash
+cd <PROJECT_ROOT>           # canonical main checkout, not the worktree
+gh pr merge <num> --merge --delete-branch
+# gh's local checkout + branch delete now works cleanly;
+# Step 4c.6 only needs `git worktree remove .claude/worktrees/<dir>`
+```
+
+**Why deferred and not fixed now:** the V3.1 flow worked end-to-end on PR #17 in spite of this wrinkle (manual cleanup completed successfully, all verification passed). Patching belongs in a dedicated edit of the SKILL.md rather than buried in the BATON-amendment commit. **Next action:** small SKILL.md edit at start of next housekeeping cycle (or whenever a worktree is used again).
 
 ### Closed this session
 **None.**
@@ -180,6 +202,7 @@ If Windows shows different numbers, **do NOT proceed with the testing pass** —
 
 - The 5 bare-slash skills promoted in BATON 071 (`/board-startup`, `/body-system-qc`, `/article-citation-qc`, `/baton-pipeline-qc`, `/repo-error-review`) only resolve **bare** after a Claude Code restart on Windows. If they don't show up bare after pull + restart, the fallback `/anthropic-skills:board-startup` etc. always works as a backstop.
 - The `corpus-integrity-qc` skill itself is at `.claude/skills/corpus-integrity-qc/` and will be there on Windows after `git pull`.
+- **`/session-housekeeping` is now V3.1** (this session — chat-level auth gate + agent runs `gh pr merge --merge --delete-branch` itself; no more "user merges in web UI"). The V3.1 SKILL.md will be on disk after `git pull origin main`, but a Claude Code restart on Windows is needed to load the updated content into the active session. If you forget the restart and trigger `/session-housekeeping` anyway, you'll get the stale (V2 or older plugin) behavior — the symptom is the skill stopping at PR-open and asking you to merge in the web UI instead of providing a review block and waiting for authorization. Same fix as above: restart Claude Code.
 
 ### Path conventions on Windows
 
@@ -281,14 +304,21 @@ If Windows shows different numbers, **do NOT proceed with the testing pass** —
 
 ## FOR THE REPO (Git Notes)
 
-- **Branch:** claude/awesome-chandrasekhar-3ae317 (fresh worktree off main, opened this session)
-- **Pre-housekeeping commit hash:** `2079a2f` ("Remove tracked .tmp.driveupload artifacts (pre-gitignore residue)" — the latest pre-session commit on main; worktree was at the same hash on open)
-- **Session commit (housekeeping):** `02a770f` — *"BATON 072 — Device-handoff pause (Mac → Windows big rig)"* — 13 files changed, 289 insertions, 43 deletions, 1 rename (BATON 071 → baton_archive/), 1 new BATON file.
-- **Hash-backfill commit:** follows this BATON edit — backfills `02a770f` into README.json + README.md + CLAUDE.md + this BATON.
-- **No DB writes, no PDF acquisition, no schema changes, no script changes** this session — pure orientation + status conversation + housekeeping paper trail.
-- **Worktree cleanup:** this worktree (`.claude/worktrees/awesome-chandrasekhar-3ae317`) will be removed during Item 12 post-merge cleanup once the user merges the PR.
+- **Branch:** claude/awesome-chandrasekhar-3ae317 (worktree off main, opened + merged + removed this session)
+- **Pre-session commit hash on main:** `2079a2f` ("Remove tracked .tmp.driveupload artifacts (pre-gitignore residue)")
+- **Session commits on feature branch (all preserved on main via merge commit):**
+  - `02a770f` — *"BATON 072 — Device-handoff pause (Mac → Windows big rig)"* — 13 files, +289 / -43
+  - `4b8b878` — *"BATON 072 housekeeping: backfill git hash 02a770f"* — 4 files, +6 / -6
+  - `a14dcaa` — *"BATON 072: add Mac → Windows switch heads-up section"* — 2 files, +98 / -2
+  - `bb2e297` — *"session-housekeeping V3: agent runs gh pr merge after chat-level authorization"* — 1 file, +165 / -60
+  - `b125176` — *"session-housekeeping V3.1: lock merge style to --merge (no squash, no rebase)"* — 1 file, +50 / -24
+- **PR #17:** **MERGED** at 2026-05-18T22:36:35Z via `gh pr merge 17 --merge --delete-branch`. Merge commit: `34867ce` on `origin/main`. First exercise of the new V3.1 housekeeping flow.
+- **Post-merge cleanup completed:** remote branch deleted (verified `git ls-remote --heads` empty); local branch deleted (`git branch -d claude/awesome-chandrasekhar-3ae317` succeeded — exit-clean recognition of the merge-commit-style merge); worktree removed (`git worktree remove .claude/worktrees/awesome-chandrasekhar-3ae317`); stale remote-tracking ref pruned (`git fetch --prune origin`).
+- **BATON hash-reference preservation verified:** all 5 pre-merge commit hashes (`02a770f`, `4b8b878`, `a14dcaa`, `bb2e297`, `b125176`) still resolve via `git show` on main — proves the merge-commit-style rationale and validates V3.1's lock against `--squash`.
+- **No DB writes, no PDF acquisition, no schema changes, no pipeline-script changes** this session — pure orientation + status conversation + housekeeping paper trail + session-housekeeping skill upgrade.
+- **BATON-amendment commit:** follows this edit on `main` directly (no PR — solo author, BATON correction, per V3.1 default direct-on-main worktree policy). Adds: (1) Late-session addition block describing V3 + V3.1 + V3.2; (2) DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER flag; (3) V3.1 restart note in HEADS UP Claude Code skills subsection; (4) this updated Git Notes section.
 
 ---
 
 **End BATON 072.**
-*Device-handoff pause — orientation done, plan rehearsed, no code touched; resume corpus-qc V1 testing pass on the Windows big rig.*
+*Device-handoff pause — orientation done, plan rehearsed, no pipeline code touched. session-housekeeping skill upgraded to V3.1 (chat-level auth gate + agent-runs-merge + merge-commit-only); first exercise on PR #17 landed cleanly with BATON hash references preserved. Resume corpus-qc V1 testing pass on the Windows big rig.*

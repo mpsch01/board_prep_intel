@@ -52,7 +52,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_072_20260518_device_handoff_pause.md` — pause/handoff session; orientation + corpus-qc status recap, then user pivoted work to the Windows big-rig PC. No code, DB, PDF, schema, or script changes. All BATON 071 carry-forwards remain in place. |
+| Active BATON | `BATON_active_072_20260518_device_handoff_pause.md` — pause/handoff session; orientation + corpus-qc status recap, then user pivoted work to the Windows big-rig PC. **Mid-session expansion:** session-housekeeping skill upgraded to V3.1 (chat-level auth gate + agent runs `gh pr merge --merge --delete-branch`; squash/rebase banned to preserve BATON intra-session hash references). PR #17 merged via the new V3.1 flow at `34867ce`. No DB/PDF/pipeline-script changes; all BATON 071 carry-forwards remain in place. New deferred flag: DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER. |
 | DB articles | 2,206 (+13 from critique PDFs: ART-1987–ART-1999; +208 from acquire_missing_citations.py: ART-2000–ART-2207) |
 | DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -80,7 +80,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2208 |
-| Git branch | claude/awesome-chandrasekhar-3ae317 worktree → 02a770f (BATON 072 housekeeping commit; pre-session 2079a2f); main at 2079a2f awaiting PR merge |
+| Git branch | main → 34867ce (PR #17 merge commit, 2026-05-18T22:36:35Z); all 5 BATON 072 session commits preserved as ancestors via merge-commit-style merge (02a770f, 4b8b878, a14dcaa, bb2e297, b125176). Pre-session 2079a2f. Worktree `claude/awesome-chandrasekhar-3ae317` removed post-merge. |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -176,29 +176,32 @@ Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
 ## Next Steps (as of BATON 072, 2026-05-18 — resume on Windows big rig)
 
 ### ⚠️ Windows pre-flight (read BATON 072 "HEADS UP" section first)
-Windows has been ~11 days dormant (last active: BATON 067, 2026-05-07). Several commits + 2 PRs (one merged, one pending) landed from Mac. Mandatory before any work:
+Windows has been ~11 days dormant (last active: BATON 067, 2026-05-07). Several commits + 2 merged PRs (#16 BATON 071, #17 BATON 072 + V3.1 housekeeping) plus a BATON-amendment commit landed from Mac. Mandatory before any work:
 - `git fetch --all --prune` + `git status -uno` (check Windows-side WIP)
-- Wait for PR #17 merge → `git pull origin main`
+- `git pull origin main` (picks up BATON 072 + V3.1 session-housekeeping skill + the amendment)
+- **Restart Claude Code on Windows** — needed both for BATON 071's bare-slash skill promotions AND for V3.1 session-housekeeping to load
 - DB sanity check: `articles=2206, questions=1639, qid_art_xref=2710` — **if numbers don't match, DO NOT proceed** (pull canonical DB from gdrive first)
-- See `BATON_active_072_*.md` "HEADS UP — Mac → Windows Switch" section for full pre-flight checklist (git state / DB / PDFs / Python env / Locked Rule 8 / gdrive sync).
+- See `BATON_active_072_*.md` "HEADS UP — Mac → Windows Switch" section for full pre-flight checklist (git state / DB / PDFs / Python env / Locked Rule 8 / gdrive sync / Claude Code skills surface).
 
 ### Immediate (next session — on Windows)
-1. **`git pull origin main`** in the Windows project root to pick up BATON 072 (after PR #17 merge).
-2. **`/board-startup`** to load BATON 072 + run through the Windows pre-flight in the HEADS UP section.
-3. **Run `run_qc.py` end-to-end on the canonical Windows DB** — verify all 5 artifacts land in `03_module.3_analyst\outputs\corpus_qc\{today}\`.
-4. **Spot-check 10 random Tier 1 SQL statements** before applying.
-5. **Apply Tier 1 via the `fix-applier` agent** with `--tier 1 --approved-by-user 1` — should land ~1,914 statements. Closes DEFERRED-LAYER-C-CACHE-REBUILD.
-6. **Re-run `run_qc.py`** post-apply to confirm cache-rebuild findings drop to ~0.
-7. **Investigate ORPHAN_XREF QID-2024-0067 / ART-2073** — likely 5-min fix. Closes DEFERRED-ORPHAN-XREF-QID-2024-0067.
-8. **Bug-fix loop** on anything testing surfaces.
+1. **`git pull origin main`** in the Windows project root to pick up BATON 072 + V3.1 housekeeping skill.
+2. **Restart Claude Code on Windows** so V3.1 skill + BATON 071 promoted skills load bare.
+3. **`/board-startup`** to load BATON 072 + run through the Windows pre-flight in the HEADS UP section.
+4. **Run `run_qc.py` end-to-end on the canonical Windows DB** — verify all 5 artifacts land in `03_module.3_analyst\outputs\corpus_qc\{today}\`.
+5. **Spot-check 10 random Tier 1 SQL statements** before applying.
+6. **Apply Tier 1 via the `fix-applier` agent** with `--tier 1 --approved-by-user 1` — should land ~1,914 statements. Closes DEFERRED-LAYER-C-CACHE-REBUILD.
+7. **Re-run `run_qc.py`** post-apply to confirm cache-rebuild findings drop to ~0.
+8. **Investigate ORPHAN_XREF QID-2024-0067 / ART-2073** — likely 5-min fix. Closes DEFERRED-ORPHAN-XREF-QID-2024-0067.
+9. **Bug-fix loop** on anything testing surfaces.
+10. **(Optional, 5-min fix) Apply DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER** — edit `.claude/skills/session-housekeeping/SKILL.md` Step 4c.5 to `cd` to canonical main checkout before `gh pr merge` (avoids the worktree gotcha hit this session).
 
 ### Short-term (this week)
-9. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067.
-10. **Tier 2 review pass** — eyeball 66 commented statements.
-11. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass.
-12. **Mac PDF sync** (only if Mac work resumes) — pull 567 missing PDFs from Windows/gdrive.
+11. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067.
+12. **Tier 2 review pass** — eyeball 66 commented statements.
+13. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass.
+14. **Mac PDF sync** (only if Mac work resumes) — pull 567 missing PDFs from Windows/gdrive.
 
 ### Medium-term
-13. **AAFP BRQ extension of corpus-integrity-qc (v2)** — Layer C ports trivially; Layer A ports easily; Layer B is inapplicable — replace with per-article scalar checks against AAFP-linked rows.
-14. Continue 801-article gap closure by source_type buckets.
-15. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.
+15. **AAFP BRQ extension of corpus-integrity-qc (v2)** — Layer C ports trivially; Layer A ports easily; Layer B is inapplicable — replace with per-article scalar checks against AAFP-linked rows.
+16. Continue 801-article gap closure by source_type buckets.
+17. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.

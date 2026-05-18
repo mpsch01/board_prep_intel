@@ -13,7 +13,7 @@ Last updated: 2026-05-18 (BATON 072)
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 31 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
 | DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; qid_art_xref 2,710; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 068; Mac DB swapped from stale Apr-16 copy (1,998/2,485) to canonical May-6 copy |
-| Skills | Active | `.claude/skills/` now exposes 9 project-level entries (BATON 071): `board-startup/`, `body-system-qc/`, `article-citation-qc/`, `baton-pipeline-qc/`, `repo-error-review/` (NEW BATON 071 — promoted from plugin store so they resolve bare); `corpus-integrity-qc/` **V1 COMPLETE BATON 070** (15 files; replaces buggy article-citation-qc; A4 PDF-diff deferred to V1.1); `session-housekeeping/` V2 (BATON 070, Item 12 GitHub syncing added); `custom-question-set.skill` + `ite-exam-series.skill` cowork zips (BATON 064) |
+| Skills | Active | `.claude/skills/` exposes 9 project-level entries: `board-startup/`, `body-system-qc/`, `article-citation-qc/`, `baton-pipeline-qc/`, `repo-error-review/` (BATON 071 — promoted from plugin store so they resolve bare); `corpus-integrity-qc/` **V1 COMPLETE BATON 070** (15 files; replaces buggy article-citation-qc; A4 PDF-diff deferred to V1.1); **`session-housekeeping/` V3.1 (BATON 072)** — agent owns full push→PR→review→authorize→merge→prune→verify cycle, merge style locked to `--merge --delete-branch` (squash/rebase banned for BATON hash preservation); `custom-question-set.skill` + `ite-exam-series.skill` cowork zips (BATON 064) |
 
 ## PDF Library State
 
@@ -36,16 +36,22 @@ Last updated: 2026-05-18 (BATON 072)
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
 
 ## Session Notes (BATON 072)
-**Session type:** Device-handoff pause. Mikey opened a fresh Claude Code session, ran `/board-startup`, and asked for a corpus-integrity-qc progress recap before kicking off the BATON 071 testing carry-forward. After delivering the recap he pivoted the work to the Windows big-rig PC. No code, DB, PDF, schema, or script changes — pure orientation + status conversation + housekeeping paper trail.
+**Session type:** Two-part session. **Part 1 — device-handoff pause** (orientation + corpus-integrity-qc status recap; user pivoted to Windows big rig). **Part 2 — session-housekeeping skill upgrade** (V2 → V3 → V3.1; first exercise on PR #17). No code/DB/PDF/pipeline-script changes; one substantive doc/skill change (`.claude/skills/session-housekeeping/SKILL.md`).
 
-**What was discussed:**
+**Part 1 — what was discussed:**
 - Full corpus-qc V1 status update: what's built (Layers A/B/C/D + coordinator + 4 agent templates, all 15 files in `.claude/skills/corpus-integrity-qc/`), what's left (today's testing pass against canonical DB → spot-check Tier 1 → fix-applier first-use → re-run → ORPHAN_XREF investigation → bug-fix loop → then AAFP v2 extension).
 - Known bugs / circle-back items surfaced: worktree path resolution caveat for `run_qc.py` (must pass `--project-root` explicitly when run from a worktree); B5 AUTHOR_ARTIFACT 80-char truncation in `utils.py` (improvement target, not blocking); fix-applier never exercised yet (first-use is the testing pass).
 - Recommended canonical-DB invocation path (skip Mac PDF sync since A4 PDF-diff is deferred; Layers A/B/C are DB-only).
 
-**Net effect on the project:** zero files changed outside this housekeeping pass. Fresh worktree `.claude/worktrees/awesome-chandrasekhar-3ae317` opened at hash `2079a2f`; all 17 BATON 071 deferred flags carry forward unchanged. Top priority for the Windows resume is still the corpus-qc V1 testing pass per BATON 071's "Immediate (next session)" list — now bumped to BATON 072 with paths re-pointed to Windows (`C:\Users\mpsch\Desktop\board_prep_intel\`).
+**Part 2 — session-housekeeping V3 / V3.1 upgrade:**
+- **V3 (commit `bb2e297`):** Item 12 revised end-to-end. Agent now opens the PR, **provides a structured review block in chat** (PR URL, commit list, file counts, summary), **waits for explicit chat-level authorization** (`merge it` / `approved` / `go` / `lgtm` / `ship it` / `yes merge`), then runs `gh pr merge` itself. No more "user merges in web UI". 9-substep sequence: push → PR → review → wait → merge → prune → verify GitHub state → verify single-main → done.
+- **V3.1 (commit `b125176`):** Merge style locked to `--merge --delete-branch`. Squash and rebase banned because every BATON pins intra-session commit hashes (e.g. BATON 072's own *"Session commit: 02a770f"* reference) — squash destroys those hashes; rebase preserves them but loses the session-boundary marker; merge-commit keeps both. `git log --merges` gives a clean per-session view across the repo.
+- **First exercise on PR #17 (merge commit `34867ce`):** Mikey authorized with "approved" → ran `gh pr merge 17 --merge --delete-branch` → manual cleanup (worktree gotcha — see V3.2 deferred flag). Result: merge landed cleanly, remote branch deleted, local branch deleted, worktree removed, single-main verified. **All 5 session commits (`02a770f`, `4b8b878`, `a14dcaa`, `bb2e297`, `b125176`) still resolve via `git show` on main** — proves the merge-commit rationale.
+- **V3.2 wrinkle surfaced (deferred):** `gh pr merge --delete-branch` from inside a worktree errors on local-side cleanup (tries to switch the worktree to `main` which is already checked out in the canonical project root). Remote merge + remote branch delete still succeed; only local cleanup needs manual completion. **Fix proposal:** SKILL.md Step 4c.5 should `cd` to the canonical main checkout before running `gh pr merge`. New deferred flag: **DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER**.
 
-**Pre-flight reminder for Windows resume:** `git pull origin main` first to pick up the BATON 072 commits, then `/board-startup`, then `run_qc.py`.
+**Net effect on the project:** zero DB / PDF / pipeline-script changes. One substantive doc/skill change (`.claude/skills/session-housekeeping/SKILL.md` V2 → V3.1; +165/-60 in V3 + +50/-24 in V3.1). All 17 BATON 071 deferred flags carry forward unchanged plus DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER newly opened. Top priority for the Windows resume is still the corpus-qc V1 testing pass per BATON 071's "Immediate (next session)" list — now bumped to BATON 072 with paths re-pointed to Windows (`C:\Users\mpsch\Desktop\board_prep_intel\`).
+
+**Pre-flight reminder for Windows resume:** `git pull origin main` first to pick up BATON 072 + V3.1 housekeeping skill + this amendment, **restart Claude Code** so the V3.1 skill loads (otherwise `/session-housekeeping` will use the stale V2/plugin behavior — symptom: stops at PR-open and asks you to merge in web UI), then `/board-startup`, then `run_qc.py`.
 
 ---
 
