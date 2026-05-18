@@ -302,9 +302,9 @@ Or in Windows Explorer: navigate to `C:\Users\mpsch\.claude\skills\` and delete 
 
 - **Branch:** claude/inspiring-cannon-e99bfb (worktree opened this session; will be merged + cleaned up as the LAST worktree session in this project's history)
 - **Pre-session commit hash on main:** `d2dab28` (PR #18 BATON-amendment merge from Mac, 2026-05-18 earlier in the day)
-- **Session commits on feature branch:** (filled in at housekeeping commit time)
-  - `<TBD>` — *"BATON 073 — V3.2 workflow transition (no worktrees ever)"*
-  - `<TBD>` — *"BATON 073 housekeeping: backfill git hash <hash>"*
+- **Session commits on feature branch:**
+  - `0370438` — *"BATON 073 — V3.2 workflow transition (no Claude Code worktrees ever)"* — 15 files, +1147 / -89
+  - `<TBD>` — *"BATON 073 housekeeping: backfill git hash 0370438"* — 4 files (README.md, CLAUDE.md, BATON 073, this section)
 - **PR #19:** (to be opened during Item 12; merged via `gh pr merge --merge --delete-branch`)
 - **Post-merge cleanup steps:** This is the last worktree session. After merge, manually:
   - `cd C:\Users\mpsch\Desktop\board_prep_intel` (canonical main checkout, NOT worktree)

@@ -4,7 +4,7 @@
 **Status:** Active development — V3.2 workflow transition complete (no Claude Code worktrees ever); next session: corpus-qc V1 testing pass (top priority)
 **Active BATON:** `BATON_active_073_20260518_v32_workflow_transition.md`
 **Next ART-ID:** ART-2208
-**Git:** `main` → `<TBD>` (PR #19 merge commit — will be filled in post-merge during hash-backfill) → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** branch `claude/inspiring-cannon-e99bfb` → `0370438` (BATON 073 V3.2 transition commit); main → `d2dab28` (pre-session, will fast-forward via PR #19 merge commit) → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -16,8 +16,8 @@
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "baton": "BATON_active_073_20260518_v32_workflow_transition.md",
   "baton_description": "V3.2 workflow transition: no Claude Code worktrees ever. Windows resume after BATON 072 Mac→Windows handoff; pre-flight passed (DB 2206/1639/2710 verbatim). Cleanup: 3 stale worktrees removed (determined-allen, gracious-bartik, modest-merkle) + branches deleted, CLAUDE.md unresolved stash-pop conflict markers in main checkout resolved (4 lines), 2 stray untracked deprecated M3 scripts (run_citation_qc.py, generate_sql_fixes.py) archived to _archive_/legacy_article_citation_qc/. CLAUDE.md Session-Housekeeping Skill section + .claude/skills/session-housekeeping/SKILL.md upgraded V3.1 → V3.2 — new policy: feature branches in project root, no worktrees ever; V3.1 cycle (push → PR → chat-auth → gh pr merge --merge --delete-branch → prune) preserved. DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER CLOSED (obviated by V3.2). DEFERRED-USER-LEVEL-SKILL-DELETION NEW (~/.claude/skills/session-housekeeping/ Apr-16 V2 stale shadow needs user manual deletion per Locked Rule 8). No DB / PDF / pipeline-script changes — row counts unchanged from BATON 072.",
-  "git_hash": "d2dab28-PRE-HOUSEKEEPING",
-  "git_branch": "claude/inspiring-cannon-e99bfb (last worktree session; merges to main as PR #19)",
+  "git_hash": "0370438",
+  "git_branch": "claude/inspiring-cannon-e99bfb (last worktree session; merges to main as PR #19; pre-session main at d2dab28)",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-18",
   "next_art_id": "ART-2208",
