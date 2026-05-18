@@ -1,5 +1,10 @@
 # project_current_db_state.md
-Last verified: 2026-05-18 (BATON 071)
+Last verified: 2026-05-18 (BATON 072)
+
+## DB Changes (BATON 072)
+**No DB changes.** Device-handoff pause session — orientation + corpus-integrity-qc status recap, then user pivoted to the Windows big rig. The DB was not opened (read or write) this session. Row counts unchanged from BATON 071 / 070 / 069 / 068 (canonical, swapped in BATON 068). No schema changes, no PDF changes, no script changes.
+
+---
 
 ## DB Changes (BATON 071)
 **No DB changes.** This session was a `.claude/skills/` directory edit only — 5 skill directories copied from the plugin store into project-level skills. Row counts in all 15 audited tables verified identical to BATON 070 via direct sqlite3 query during housekeeping recon. No schema changes, no PDF changes, no script changes.

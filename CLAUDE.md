@@ -52,7 +52,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_071_20260518_custom_skills_project_level.md` — 5 board_prep_intel-specific custom skills (board-startup, body-system-qc, article-citation-qc, baton-pipeline-qc, repo-error-review) copied from plugin store into `.claude/skills/` so they resolve as bare slash commands; no DB/PDF/schema changes |
+| Active BATON | `BATON_active_072_20260518_device_handoff_pause.md` — pause/handoff session; orientation + corpus-qc status recap, then user pivoted work to the Windows big-rig PC. No code, DB, PDF, schema, or script changes. All BATON 071 carry-forwards remain in place. |
 | DB articles | 2,206 (+13 from critique PDFs: ART-1987–ART-1999; +208 from acquire_missing_citations.py: ART-2000–ART-2207) |
 | DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -80,7 +80,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2208 |
-| Git branch | claude/frosty-napier-bfb7b2 worktree → 79e32a0 (BATON 071 housekeeping commit; project-level skills promotion at this hash); main at fdf50d3 awaiting merge |
+| Git branch | claude/awesome-chandrasekhar-3ae317 worktree → 2079a2f pre-housekeeping (BATON 072 device handoff); main at 2079a2f (BATON 071 already merged via PR #16 plus follow-on `.tmp.driveupload` cleanup) |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -173,24 +173,25 @@ Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
 
 ---
 
-## Next Steps (as of BATON 071, 2026-05-18)
+## Next Steps (as of BATON 072, 2026-05-18 — resume on Windows big rig)
 
-### Immediate (next session — corpus-qc V1 testing pass, carry-forward from BATON 070)
-1. **`/board-startup`** to load BATON 071 + verify the bare slash command resolves (5 newly-promoted project skills should appear in the slash menu without the `anthropic-skills:` prefix).
-2. **Run `run_qc.py` end-to-end on the canonical (non-worktree) DB** — verify all 5 artifacts land in `03_module.3_analyst/outputs/corpus_qc/{today}/`.
-3. **Spot-check 10 random Tier 1 SQL statements** before applying.
-4. **Apply Tier 1 via the `fix-applier` agent** with `--tier 1 --approved-by-user 1` — should land 1,914 statements. Closes DEFERRED-LAYER-C-CACHE-REBUILD.
-5. **Re-run `run_qc.py`** post-apply to confirm cache-rebuild findings drop to ~0.
-6. **Investigate ORPHAN_XREF QID-2024-0067 / ART-2073** — likely 5-min fix. Closes DEFERRED-ORPHAN-XREF-QID-2024-0067.
-7. **Bug-fix loop** on anything testing surfaces.
+### Immediate (next session — on Windows)
+1. **`git pull origin main`** in the Windows project root to pick up BATON 072.
+2. **`/board-startup`** to load BATON 072.
+3. **Run `run_qc.py` end-to-end on the canonical Windows DB** — verify all 5 artifacts land in `03_module.3_analyst\outputs\corpus_qc\{today}\`.
+4. **Spot-check 10 random Tier 1 SQL statements** before applying.
+5. **Apply Tier 1 via the `fix-applier` agent** with `--tier 1 --approved-by-user 1` — should land ~1,914 statements. Closes DEFERRED-LAYER-C-CACHE-REBUILD.
+6. **Re-run `run_qc.py`** post-apply to confirm cache-rebuild findings drop to ~0.
+7. **Investigate ORPHAN_XREF QID-2024-0067 / ART-2073** — likely 5-min fix. Closes DEFERRED-ORPHAN-XREF-QID-2024-0067.
+8. **Bug-fix loop** on anything testing surfaces.
 
 ### Short-term (this week)
-8. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067.
-9. **Mac PDF sync** — pull 567 missing PDFs from Windows/gdrive.
+9. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067.
 10. **Tier 2 review pass** — eyeball 66 commented statements.
 11. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass.
+12. **Mac PDF sync** (only if Mac work resumes) — pull 567 missing PDFs from Windows/gdrive.
 
 ### Medium-term
-12. **AAFP BRQ extension of corpus-integrity-qc (v2)** — Layer C ports trivially; Layer A ports easily; Layer B is inapplicable — replace with per-article scalar checks against AAFP-linked rows.
-13. Continue 801-article gap closure by source_type buckets.
-14. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.
+13. **AAFP BRQ extension of corpus-integrity-qc (v2)** — Layer C ports trivially; Layer A ports easily; Layer B is inapplicable — replace with per-article scalar checks against AAFP-linked rows.
+14. Continue 801-article gap closure by source_type buckets.
+15. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.

@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-05-18 (BATON 071)
-**Status:** Active development
-**Active BATON:** `BATON_active_071_20260518_custom_skills_project_level.md`
+**Last updated:** 2026-05-18 (BATON 072)
+**Status:** Active development — work pivoted to Windows big-rig PC this session
+**Active BATON:** `BATON_active_072_20260518_device_handoff_pause.md`
 **Next ART-ID:** ART-2208
-**Git:** `claude/frosty-napier-bfb7b2` worktree → `79e32a0` (BATON 071 housekeeping commit; project-level skills promotion at this hash); `main` at `fdf50d3` awaiting merge → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** `claude/awesome-chandrasekhar-3ae317` worktree → `2079a2f` pre-housekeeping (BATON 072 device handoff); `main` at `2079a2f` (BATON 071 already merged via PR #16) → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -14,10 +14,10 @@
 {
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_071_20260518_custom_skills_project_level.md",
-  "baton_description": "Promoted 5 board_prep_intel-specific custom skills (board-startup, body-system-qc, article-citation-qc, baton-pipeline-qc, repo-error-review) from plugin store into .claude/skills/ so they resolve as bare slash commands without the anthropic-skills: prefix. Project skill inventory now: 7 SKILL.md directories + 2 cowork .skill zips. No DB/PDF/schema changes.",
-  "git_hash": "79e32a0",
-  "git_branch": "claude/frosty-napier-bfb7b2",
+  "baton": "BATON_active_072_20260518_device_handoff_pause.md",
+  "baton_description": "Device-handoff pause session. Orientation + corpus-integrity-qc status recap delivered, then user pivoted to the Windows big-rig PC for the actual corpus-qc V1 testing pass. No code, DB, PDF, schema, or script changes; all 17 BATON 071 deferred flags carry forward unchanged. Top priority on resume remains the corpus-qc V1 testing pass.",
+  "git_hash": "2079a2f",
+  "git_branch": "claude/awesome-chandrasekhar-3ae317",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-18",
   "next_art_id": "ART-2208",
