@@ -1,5 +1,10 @@
 # project_current_db_state.md
-Last verified: 2026-05-18 (BATON 072)
+Last verified: 2026-05-18 (BATON 073)
+
+## DB Changes (BATON 073)
+**No DB changes.** V3.2 workflow transition session (no worktrees policy + supporting cleanup). DB was opened (read-only) for pre-flight verification and housekeeping recon — counts verified live: articles=2206, questions=1639, aafp_questions=1221, qid_art_xref=2710 (full 15-table verification matches BATON 072 verbatim). No schema changes, no PDF changes, no script changes. Pure infrastructure session: stale worktree cleanup, CLAUDE.md conflict resolution, deprecated M3 scripts archived, session-housekeeping skill V3.1 → V3.2.
+
+---
 
 ## DB Changes (BATON 072)
 **No DB changes.** Device-handoff pause session — orientation + corpus-integrity-qc status recap, then user pivoted to the Windows big rig. The DB was not opened (read or write) this session. Row counts unchanged from BATON 071 / 070 / 069 / 068 (canonical, swapped in BATON 068). No schema changes, no PDF changes, no script changes.
