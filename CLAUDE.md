@@ -80,7 +80,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2208 |
-| Git branch | `claude/session-075-corpus-qc-v1-pass` (V3.2 feature branch); main → `65754ea` pre-session (BATON 074 merge commit, "Merge pull request #20"). Session commits: housekeeping commit + hash-backfill commit (filled post-push). PR # filled post-push. Worktree state: clean — `git worktree list` shows only project root. |
+| Git branch | `claude/session-075-corpus-qc-v1-pass` (V3.2 feature branch); main → `65754ea` pre-session (BATON 074 merge commit, "Merge pull request #20"). Session commits: `caf66f4` (BATON 075 housekeeping, 22 files) + hash-backfill commit. PR # filled post-push. Worktree state: clean — `git worktree list` shows only project root. |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 

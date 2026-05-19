@@ -5,7 +5,7 @@
   "baton": "BATON_active_075_20260519_corpus_qc_v1_testing_pass.md",
   "baton_description": "Corpus-integrity-qc V1 testing pass + DB-write debut. Ran run_qc.py end-to-end (first standalone run), fixed 3 substantive bugs in-flight: PROJECT_ROOT off-by-one in all 5 entry-point scripts; Windows cp1252 console crash on '✓' chars (new setup_utf8_stdout() in utils.py + UTF-8 to 8 open() calls + 3 subprocess.run() calls); A1 ENCODING_ARTIFACT no-op on JSON choices column (discovered SQLite interprets \\u escapes despite docs; fixed via _sql_json_escape_expr() building char(92) || 'uXXXX'). Applied 1,914 Tier 1 statements via inline fix-applier workflow with atomic BEGIN/COMMIT + 172 MB backup + 6 verify COUNTs. Findings dropped 2,538 → 624; Layer C went 1,798 → 0. Recovered QID-2024-0067 (acute HIV diagnostic) from source PDFs after it was found dropped during ingestion; inserted with primary fields populated. DB invariants now hold. 3 deferred flags CLOSED (DEFERRED-LAYER-C-CACHE-REBUILD, DEFERRED-ORPHAN-XREF-QID-2024-0067, DEFERRED-V1-ENCODING-CHOICES-JSON-BUG opened+closed same session); 4 NEW opened (A5 language-integrity, A6 render-fidelity, QID-2024-0067 enrichment backfill, B-umbrella-promotion-review).",
   "last_updated": "2026-05-19",
-  "git_hash": "<post-housekeeping hash backfilled>",
+  "git_hash": "caf66f4",
   "git_remote": "https://github.com/mpsch01/board_prep_intel",
   "database": {
     "path": "00_database/db/ite_intelligence.db",

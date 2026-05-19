@@ -341,8 +341,8 @@ Folder was already gone when I checked — user had cleared the 4 staged files b
 - **Branch:** `claude/session-075-corpus-qc-v1-pass` (V3.2 feature branch from `main`)
 - **Pre-session commit hash on main:** `65754ea` (BATON 074 merge commit, "Merge pull request #20 from mpsch01/claude/session-074-skill-shadow-cleanup")
 - **Session commits on feature branch:**
-  - *(housekeeping commit — to follow)*
-  - *(hash-backfill commit — to follow)*
+  - `caf66f4` — *"BATON 075: corpus-integrity-qc V1 testing pass + DB-write debut"* — 22 files, +695 / −107
+  - *(hash-backfill commit to follow)*
 - **PR:** *(to be opened during Item 12; merged via `gh pr merge --merge --delete-branch`)*
 
 ---

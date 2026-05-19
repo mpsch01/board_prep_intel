@@ -4,7 +4,7 @@
 **Status:** Active development — corpus-integrity-qc V1 fully exercised end-to-end on canonical DB; 1,914 Tier 1 fixes applied (Layer C: 1,798 → 0 findings); skill hardened for Windows (UTF-8, path-fix, JSON-escape patches); +1 question recovered (QID-2024-0067 acute HIV)
 **Active BATON:** `BATON_active_075_20260519_corpus_qc_v1_testing_pass.md`
 **Next ART-ID:** ART-2208
-**Git:** branch `claude/session-075-corpus-qc-v1-pass` (V3.2 feature branch); main → `65754ea` pre-session (BATON 074 merge commit). Session commits: housekeeping commit + hash-backfill commit (filled post-push). → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** branch `claude/session-075-corpus-qc-v1-pass` (V3.2 feature branch); main → `65754ea` pre-session (BATON 074 merge commit). Session commits: `caf66f4` (BATON 075 housekeeping, 22 files) + hash-backfill commit. → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -16,7 +16,7 @@
   "description": "A queryable Family Medicine board exam knowledge base (1,640 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "baton": "BATON_active_075_20260519_corpus_qc_v1_testing_pass.md",
   "baton_description": "Corpus-integrity-qc V1 testing pass + DB-write debut. Ran run_qc.py end-to-end (first standalone run), fixed 3 substantive bugs in-flight: PROJECT_ROOT off-by-one in all 5 entry-point scripts; Windows cp1252 console crash on ✓ chars (new setup_utf8_stdout() in utils.py + UTF-8 to 8 open() calls + 3 subprocess.run() calls); A1 ENCODING_ARTIFACT no-op on JSON choices column (discovered SQLite interprets \\u escapes despite docs; fixed via _sql_json_escape_expr() building char(92) || 'uXXXX'). Applied 1,914 Tier 1 statements via inline fix-applier workflow with atomic BEGIN/COMMIT + 172 MB backup + 6 verify COUNTs. Findings dropped 2,538 → 624; Layer C went 1,798 → 0. Recovered QID-2024-0067 (acute HIV diagnostic) from source PDFs after it was found dropped during ingestion; inserted with primary fields populated (questions count 1,639 → 1,640). DB invariants now hold. 3 deferred flags CLOSED, 4 NEW opened (A5/A6/QID-2024-0067-enrichment/umbrella-promotion-review).",
-  "git_hash": "<post-housekeeping hash backfilled>",
+  "git_hash": "caf66f4",
   "git_branch": "claude/session-075-corpus-qc-v1-pass (V3.2 feature branch from main 65754ea)",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-19",
