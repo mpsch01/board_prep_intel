@@ -200,9 +200,13 @@ Or in Windows Explorer: navigate to `C:\Users\mpsch\.claude\skills\` and delete 
 **After deletion + Claude Code restart:** `/session-housekeeping` will resolve to the project-level V3.2 (the canonical, board_prep_intel-tailored version). Currently shadowed.
 
 #### DEFERRED-GH-CLI-AUTH-SETUP
-**Status: ACTIVE — needs user action (low priority; web-UI fallback works fine)**
+**Status: CLOSED 2026-05-18 (resolved later this same session via PAT).**
 
-`gh` CLI is not authenticated on Windows. `git` operations work (Git Credential Manager has creds — `git push`, `git pull` succeed) but `gh auth status` shows "not logged in." This blocked the V3.1+ agent-owned PR flow (`gh pr create` + `gh pr merge` both failed with "please run gh auth login"). Worked around this session by using the web UI for PR #19 create + merge.
+Originally hit this session — `gh auth login --web` device-code flow didn't take, so PR #19 had to be created + merged via web UI fallback. Resolved at end of session via Personal Access Token (PAT) approach: classic PAT with scopes `repo` + `workflow` + `read:org` (2-year expiration), piped to `gh auth login --with-token`. Verified working from Claude's Bash shell — `gh auth status` shows `Logged in to github.com account mpsch01 (keyring)` and `gh pr list` returns live data including PR #19.
+
+**Security side-effect:** First PAT was inadvertently exposed in a PowerShell screenshot during setup; revoked + regenerated within ~5 minutes. Second PAT had to overcome a UTF-8 BOM bug in the file-handoff approach (`Out-File -Encoding utf8` writes BOM in Windows PowerShell 5.1; switched to `Set-Content -Encoding ASCII` or interactive `gh auth login --with-token` paste-+-Ctrl+Z to avoid). Final landing: clean.
+
+**Next session impact:** V3.1+ agent-owned PR/merge flow is fully unblocked. The `/session-housekeeping` Item 12 sequence (`gh pr create` → review block → chat-auth → `gh pr merge --merge --delete-branch`) will run end-to-end without web-UI fallback.
 
 **What happened:** User attempted `gh auth login --web` but the gh config directory at `C:\Users\mpsch\AppData\Roaming\GitHub CLI\` was still empty after — suggesting the auth flow didn't complete cleanly (browser device-code may have been missed, terminal may have closed, etc.). User confirmed "it went fine" but `gh auth status` from Claude's Bash shell still reported no auth.
 
@@ -233,6 +237,7 @@ After PR #19 merge + V3.1+ local cleanup, the worktree was successfully de-regis
 ### Closed this session
 
 - **DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER** — OBVIATED by V3.2 workflow change (no worktrees → no `gh pr merge --delete-branch` worktree-cleanup wrinkle possible). See BATON 072 amendment for full closure note.
+- **DEFERRED-GH-CLI-AUTH-SETUP** — RESOLVED via PAT at end of session (`gh auth login --with-token` with `repo` + `workflow` + `read:org` scopes, 2-year expiration). See full closure note above. V3.1+ agent-owned PR/merge flow now fully unblocked.
 
 ### Carry-forward from BATON 072 (all unchanged)
 
