@@ -185,19 +185,11 @@ Mac PDF library lag (567 PDFs missing on Mac) still carries as DEFERRED-MAC-PDF-
 ### Newly opened this session
 
 #### DEFERRED-USER-LEVEL-SKILL-DELETION
-**Status: ACTIVE — needs user manual action (1-minute fix)**
+**Status: CLOSED 2026-05-18 (user deleted manually).**
 
-The user-level session-housekeeping skill at `C:\Users\mpsch\.claude\skills\session-housekeeping\` is the OLD Apr-16 V2 (Cowork-era) version. It shadows the project-level V3.1/V3.2 when `/session-housekeeping` is invoked. Discovered when invoking the skill mid-session: it loaded the V2 with "user commits via GitHub Desktop" / "Sonnet 4.6 Co-Authored-By" / "Linux sandbox paths" — clearly the wrong version.
+User-level session-housekeeping skill at `C:\Users\mpsch\.claude\skills\session-housekeeping\` (Apr-16 V2 Cowork-era, was shadowing project-level V3.2) deleted manually by user via PowerShell `Remove-Item`. Verified absent at end of session — `ls C:/Users/mpsch/.claude/skills/` no longer lists `session-housekeeping`. After Claude Code restart next session, `/session-housekeeping` will resolve to project-level V3.2 (canonical).
 
-**Why deferred:** Auto-mode classifier blocked `Remove-Item -Recurse -Force` as "Self-Modification of agent config plus irreversible destruction" — and Locked Rule 8 says deletions require Windows Explorer or terminal. Per the rules, deletion is the user's job.
-
-**Fix (user action):** In PowerShell:
-```powershell
-Remove-Item -Recurse -Force "C:\Users\mpsch\.claude\skills\session-housekeeping"
-```
-Or in Windows Explorer: navigate to `C:\Users\mpsch\.claude\skills\` and delete the `session-housekeeping` folder.
-
-**After deletion + Claude Code restart:** `/session-housekeeping` will resolve to the project-level V3.2 (the canonical, board_prep_intel-tailored version). Currently shadowed.
+**Broader concern discovered during verification (DEFERRED-USER-LEVEL-SKILLS-AUDIT, NEW):** Five other board_prep_intel-specific skills still present at user level — `article-citation-qc/`, `baton-pipeline-qc/`, `board-startup/`, `body-system-qc/`, `exa-research-search/`, `repo-error-review/`, plus a `methodology_scout/` (note: underscore — likely typo of `methodology-scout/`). Some/all may be stale duplicates shadowing project-level versions the same way session-housekeeping was. Each is a project-specific skill that arguably shouldn't be at user level. **Recommended next-session action:** quick audit — for each user-level skill that's project-specific (i.e., named in `.claude/skills/` on this project), compare against project-level; if user-level is stale or just a duplicate, delete the user-level copy. If user-level has unique content, decide whether to preserve as user-level or merge into project-level.
 
 #### DEFERRED-GH-CLI-AUTH-SETUP
 **Status: CLOSED 2026-05-18 (resolved later this same session via PAT).**
@@ -238,6 +230,7 @@ After PR #19 merge + V3.1+ local cleanup, the worktree was successfully de-regis
 
 - **DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER** — OBVIATED by V3.2 workflow change (no worktrees → no `gh pr merge --delete-branch` worktree-cleanup wrinkle possible). See BATON 072 amendment for full closure note.
 - **DEFERRED-GH-CLI-AUTH-SETUP** — RESOLVED via PAT at end of session (`gh auth login --with-token` with `repo` + `workflow` + `read:org` scopes, 2-year expiration). See full closure note above. V3.1+ agent-owned PR/merge flow now fully unblocked.
+- **DEFERRED-USER-LEVEL-SKILL-DELETION** — RESOLVED by user manual delete of `~/.claude/skills/session-housekeeping/` mid-session. See full closure note above. Spawned new DEFERRED-USER-LEVEL-SKILLS-AUDIT for the 5-6 other project-specific skills still at user level.
 
 ### Carry-forward from BATON 072 (all unchanged)
 
