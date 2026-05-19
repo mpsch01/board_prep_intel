@@ -169,7 +169,21 @@ Each staging folder has a `README.md` explaining contents and rationale.
 
 ### Newly opened this session
 
-*(None — clean session.)*
+*(None at session close — clean session.)*
+
+### Opened post-merge during corpus-qc V1 testing kickoff (2026-05-19)
+
+- **DEFERRED-LAYER-A5-LANGUAGE-INTEGRITY** — Build a Claude API-backed spell/typo/language sanity check for `questions` content. Catches typos that exist in BOTH DB and PDF (which A4 PDF-diff cannot). Needs clinical-aware dictionary curated from existing `concept_tags` + ICD-10 descriptions + `articles.title` to suppress false positives on drug brand names, trial acronyms, eponyms. Target: 1,639 questions × ~800 tokens on Haiku. Scope = V1.2 (after A4/A6).
+- **DEFERRED-LAYER-A6-RENDER-FIDELITY** — Generate sample Study-Guide DOCX via `build_custom_question_set.py`, re-extract rendered DOCX text, diff against DB source. Catches **rendering bugs** in actual resident deliverable (Symbol-font residue surviving `_ENCODING_FIXES`, References-section parsing breaks, shaded-box explanation truncation, malformed pipe-separated refs producing empty bullets). Shares PDF/DOCX re-extraction infrastructure with A4. Scope = V1.1, build together with A4.
+- **DEFERRED-QID-2024-0067-ENRICHMENT** — QID-2024-0067 (acute HIV diagnosis question) was recovered from `2024_MC.pdf` + `2024_critique.pdf` and inserted with all primary fields populated (qid, exam_year, blueprint=Acute Care and Diagnosis, body_system=Hematologic/Immune, body_system_merged, question_text, choices, correct_letter=B, correct_text, explanation, reference). The four enrichment fields (`stem_keywords`, `explanation_keywords`, `all_keywords`, `concept_tags`) are NULL pending re-run of the existing enrichment pipelines: M2 keyword extraction scripts for the keyword trio + `preprocess_concept_tags.py` for concept_tags. Lightweight — single-QID re-run. Verify blueprint+body_system classifications are correct on next pass.
+
+*(Net deferred flag delta this session: +3 new, 3 closed = 0 net. Closes: DEFERRED-LAYER-C-CACHE-REBUILD via Tier-1 apply this session; DEFERRED-ORPHAN-XREF-QID-2024-0067 via QID-2024-0067 recovery this session; DEFERRED-V1-ENCODING-CHOICES-JSON-BUG via generate_fixes.py patch this session.)*
+
+### Bug fixes shipped this session (corpus-integrity-qc skill hardening)
+
+- **PROJECT_ROOT auto-resolve off-by-one** — all 5 entry-point scripts (`run_qc.py`, `layer_a_text.py`, `layer_b_citation.py`, `layer_c_structural.py`, `generate_fixes.py`) had `SCRIPT_DIR.parent.parent.parent.parent.parent` (5 hops), which from `scripts/` lands at `Desktop/` rather than `board_prep_intel/`. Corrected to 4 hops. SKILL.md doc updated. Standalone `python run_qc.py` now works from project root without `--project-root`.
+- **Windows cp1252 console crash** — added `setup_utf8_stdout()` helper to `utils.py`; called from all entry-point scripts. Also added `encoding='utf-8'` to all 6 `open()` calls and 2 `Path.write_text()` calls (staging JSON reads, findings JSON writes, fixes.sql write, qc_report.md write). Also added `encoding='utf-8'` to all `subprocess.run()` calls in `run_qc.py` orchestrator so layer-subprocess output decodes correctly.
+- **A1 ENCODING_ARTIFACT no-op bug on `choices` field** — `gen_encoding_fix()` in `generate_fixes.py` emitted `REPLACE(choices, 'Ã¶', 'ö')` which targets the raw column. But `choices` stores JSON with `ensure_ascii=True`, so non-ASCII chars live on disk as the literal 6-char ASCII escape (`Ã¶`), not as the mojibake chars. Also discovered empirically that SQLite **does** interpret `\u` escape sequences inside single-quoted string literals (its own docs say otherwise), so the naive `'Ã¶'` literal gets re-interpreted as `Ã¶`. Final fix: new `_sql_json_escape_expr()` helper builds SQL like `char(92) || 'u00c3' || char(92) || 'u00b6'` (char(92) = literal `\` that SQLite cannot mis-interpret). Applied only when `field.startswith("choices[")`; other fields still use the simpler literal form. 11 of 93 A1 statements affected; all re-generated and verified via simulated REPLACE on live DB (`SjÃ¶gren` → `Sjögren`).
 
 ### Carry-forward from BATON 073 (all unchanged)
 
