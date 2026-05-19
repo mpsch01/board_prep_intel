@@ -270,7 +270,9 @@ Each staging folder has a `README.md` explaining contents and rationale.
 
 - **Branch:** `claude/session-074-skill-shadow-cleanup` (V3.2 feature branch from `main`)
 - **Pre-session commit hash on main:** `974b2fb` (BATON 073 final amendment: "close DEFERRED-USER-LEVEL-SKILL-DELETION + open audit flag")
-- **Session commits on feature branch:** *(to be filled by housekeeping commit + hash-backfill)*
+- **Session commits on feature branch:**
+  - `216534a` — *"BATON 074: skill shadow cleanup + archive reorganization"* — 53 files, +6292 / -262
+  - *(hash-backfill commit to follow)*
 - **PR:** *(to be opened during Item 12; merged via `gh pr merge --merge --delete-branch`)*
 
 ---
