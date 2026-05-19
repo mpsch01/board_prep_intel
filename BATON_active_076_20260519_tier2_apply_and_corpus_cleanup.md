@@ -369,7 +369,9 @@ Re-rendered PARTIAL_4OF5 DOCX after subscript cleanup. Both Exam and Study Guide
 
 - **Branch:** `claude/session-076-tier2-and-qid-followups` (V3.2 feature branch from `main`)
 - **Pre-session commit hash on main:** `0b595f9` (BATON 075 merge commit — "Merge pull request #21 from mpsch01/claude/session-075-corpus-qc-v1-pass")
-- **Session commits on feature branch:** *(to be filled in during Item 11/12 — housekeeping commit + hash-backfill commit)*
+- **Session commits on feature branch:**
+  - `de9a0f3` — *"BATON 076: Tier 2 walk + corpus-wide question text & subscript orphan cleanup"* — 18 files, +1857 / −68
+  - *(hash-backfill commit to follow)*
 - **PR:** *(to be opened during Item 12; merged via `gh pr merge --merge --delete-branch`)*
 
 ---

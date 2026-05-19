@@ -4,7 +4,7 @@
 **Status:** Active development — Tier 2 walk-down + corpus-wide question-text & subscript-orphan cleanup complete. 8 atomic DB-write workflows applied (all backed up; BATON 075 invariants preserved on each). All question-fidelity metrics now at 0: zero empty choices, zero empty correct_text, zero embedded answer-choice blocks in stem, zero wandering-subscript orphans in either question_text or explanation. 4 deferred flags closed, 2 opened (A2 heuristic tuning + new corpus-qc layer checks A7/A8).
 **Active BATON:** `BATON_active_076_20260519_tier2_apply_and_corpus_cleanup.md`
 **Next ART-ID:** ART-2219 (corrected — recon found 10 articles ART-2208–ART-2218 already present)
-**Git:** branch `claude/session-076-tier2-and-qid-followups` (V3.2 feature branch); main → `0b595f9` pre-session (BATON 075 merge commit, "Merge pull request #21"). Session commits: *(to be filled post-housekeeping)*. → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** branch `claude/session-076-tier2-and-qid-followups` (V3.2 feature branch); main → `0b595f9` pre-session (BATON 075 merge commit, "Merge pull request #21"). Session commits: `de9a0f3` (BATON 076 housekeeping, 18 files) + hash-backfill commit. → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -16,7 +16,7 @@
   "description": "A queryable Family Medicine board exam knowledge base (1,640 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "baton": "BATON_active_076_20260519_tier2_apply_and_corpus_cleanup.md",
   "baton_description": "Tier 2 walk-down + corpus-wide question-text and subscript-orphan cleanup. 8 distinct DB-write workflows: A3 choices_empty re-extraction (42 QIDs); A2 truncation-candidate verification (23 ALREADY_FULL); QID-2024-0067 enrichment backfill via Sonnet 4.6; blueprint+body_system verified; 8th UMBRELLA review (+1 honest signal); question_text contamination cleanup (42 QIDs); wandering-subscript orphan corpus-wide cleanup (206 questions, 239 orphans removed, 176 medical-knowledge recoveries via 14 rules: A1c/B12/FEV1/T4/H2-blocker/α1-/H2O/S3 gallop/HCO3/PaO2/PaCO2/Lp-PLA2/phospholipase A2). Final fidelity metrics all 0 (was 47+117+42+42+41). 4 deferred flags CLOSED, 2 NEW (A2 heuristic tuning + A7/A8 corpus-qc layer checks).",
-  "git_hash": "TBD-post-housekeeping",
+  "git_hash": "de9a0f3",
   "git_branch": "claude/session-076-tier2-and-qid-followups (V3.2 feature branch from main 0b595f9)",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-19",
