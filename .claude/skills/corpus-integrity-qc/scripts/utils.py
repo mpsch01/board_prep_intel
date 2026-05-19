@@ -18,7 +18,20 @@ from __future__ import annotations
 
 import re
 import sqlite3
+import sys
 from pathlib import Path
+
+
+def setup_utf8_stdout() -> None:
+    """Reconfigure stdout/stderr to UTF-8 so scripts can print ✓/✗/⚠/→ on
+    Windows consoles (which default to cp1252). No-op on Python <3.7 or if
+    streams don't support reconfigure (e.g., already wrapped)."""
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            try:
+                stream.reconfigure(encoding="utf-8", errors="replace")
+            except Exception:
+                pass
 
 
 # ════════════════════════════════════════════════════════════════════════════

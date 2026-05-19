@@ -49,13 +49,16 @@ from utils import (  # noqa: E402
     extract_title_from_clean_ref,
     is_truncated_title,
     resolve_db_path,
+    setup_utf8_stdout,
 )
+
+setup_utf8_stdout()
 
 
 # Skill scaffold lives at PROJECT_ROOT/.claude/skills/corpus-integrity-qc/scripts/
-# PROJECT_ROOT = SCRIPT_DIR / ../../../../..  (5 hops up)
 def _default_project_root() -> Path:
-    return SCRIPT_DIR.parent.parent.parent.parent.parent.resolve()
+    # scripts/ -> corpus-integrity-qc/ -> skills/ -> .claude/ -> PROJECT_ROOT/
+    return SCRIPT_DIR.parent.parent.parent.parent.resolve()
 
 
 def resolve_staging_dir(project_root: Path) -> Path:
@@ -71,7 +74,7 @@ def load_staging_year(staging_dir: Path, year: int) -> list[dict]:
     path = staging_dir / f"{year}_critique_refs_staging.json"
     if not path.exists():
         return []
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         data = json.load(f)
     if not isinstance(data, list):
         raise ValueError(f"{path} did not contain a JSON list")
@@ -463,7 +466,7 @@ def main() -> int:
     }
 
     out_path = output_dir / "findings_layer_b.json"
-    with open(out_path, "w") as f:
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2)
 
     print()

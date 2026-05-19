@@ -41,10 +41,15 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
+from utils import setup_utf8_stdout  # noqa: E402
+
+setup_utf8_stdout()
 
 
 def _default_project_root() -> Path:
-    return SCRIPT_DIR.parent.parent.parent.parent.parent.resolve()
+    # scripts/ -> corpus-integrity-qc/ -> skills/ -> .claude/ -> PROJECT_ROOT/
+    return SCRIPT_DIR.parent.parent.parent.parent.resolve()
 
 
 def _resolve_paths(args) -> dict[str, Path]:
@@ -98,6 +103,8 @@ def _run_layer(layer: str, cmd: list[str]) -> tuple[str, int, str, str]:
         cmd,
         capture_output=True,
         text=True,
+        encoding="utf-8",
+        errors="replace",
         check=False,
     )
     return layer, proc.returncode, proc.stdout, proc.stderr
@@ -168,7 +175,8 @@ def run_report_and_fixes(paths: dict[str, Path]) -> tuple[int, int]:
     print("Building qc_report.md...")
     r1 = subprocess.run(
         [py, str(SCRIPT_DIR / "build_report.py"), "--findings-dir", out],
-        capture_output=True, text=True, check=False,
+        capture_output=True, text=True, encoding="utf-8",
+        errors="replace", check=False,
     )
     print(r1.stdout.strip() or "(no stdout)")
     if r1.returncode != 0:
@@ -180,7 +188,8 @@ def run_report_and_fixes(paths: dict[str, Path]) -> tuple[int, int]:
          "--findings-dir", out,
          "--db-path", db,
          "--project-root", project_root],
-        capture_output=True, text=True, check=False,
+        capture_output=True, text=True, encoding="utf-8",
+        errors="replace", check=False,
     )
     print(r2.stdout.strip() or "(no stdout)")
     if r2.returncode != 0:

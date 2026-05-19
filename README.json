@@ -1,25 +1,32 @@
 {
   "project": "ABFM ITE Intelligence System",
-  "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
+  "description": "A queryable Family Medicine board exam knowledge base (1,640 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "root": "C:\\Users\\mpsch\\Desktop\\board_prep_intel",
-  "baton": "BATON_active_072_20260518_device_handoff_pause.md",
-  "baton_description": "Device-handoff pause + mid-session expansion. Orientation + corpus-integrity-qc status recap delivered; user pivoted to the Windows big rig for corpus-qc V1 testing. Mid-session, session-housekeeping skill was upgraded to V3.1 — agent now owns the full push→PR→review→authorize→merge→prune→verify cycle, merge style locked to --merge --delete-branch (squash/rebase banned to preserve BATON intra-session hash references). PR #17 merged via the new V3.1 flow at 34867ce; all 5 session commits preserved on main. No DB/PDF/pipeline-script changes; all 17 BATON 071 deferred flags carry forward plus DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER newly opened (5-min SKILL.md fix to cd before gh pr merge).",
-  "last_updated": "2026-05-18",
-  "git_hash": "34867ce",
+  "baton": "BATON_active_075_20260519_corpus_qc_v1_testing_pass.md",
+  "baton_description": "Corpus-integrity-qc V1 testing pass + DB-write debut. Ran run_qc.py end-to-end (first standalone run), fixed 3 substantive bugs in-flight: PROJECT_ROOT off-by-one in all 5 entry-point scripts; Windows cp1252 console crash on '✓' chars (new setup_utf8_stdout() in utils.py + UTF-8 to 8 open() calls + 3 subprocess.run() calls); A1 ENCODING_ARTIFACT no-op on JSON choices column (discovered SQLite interprets \\u escapes despite docs; fixed via _sql_json_escape_expr() building char(92) || 'uXXXX'). Applied 1,914 Tier 1 statements via inline fix-applier workflow with atomic BEGIN/COMMIT + 172 MB backup + 6 verify COUNTs. Findings dropped 2,538 → 624; Layer C went 1,798 → 0. Recovered QID-2024-0067 (acute HIV diagnostic) from source PDFs after it was found dropped during ingestion; inserted with primary fields populated. DB invariants now hold. 3 deferred flags CLOSED (DEFERRED-LAYER-C-CACHE-REBUILD, DEFERRED-ORPHAN-XREF-QID-2024-0067, DEFERRED-V1-ENCODING-CHOICES-JSON-BUG opened+closed same session); 4 NEW opened (A5 language-integrity, A6 render-fidelity, QID-2024-0067 enrichment backfill, B-umbrella-promotion-review).",
+  "last_updated": "2026-05-19",
+  "git_hash": "caf66f4",
   "git_remote": "https://github.com/mpsch01/board_prep_intel",
   "database": {
     "path": "00_database/db/ite_intelligence.db",
     "articles": 2206,
-    "articles_note": "1,998 base + 13 from critique PDFs (ART-1987–ART-1999) + 208 from acquire_missing_citations.py (ART-2000–ART-2207)",
-    "ite_questions": 1639,
+    "articles_note": "1,998 base + 13 from critique PDFs (ART-1987–ART-1999) + 208 from acquire_missing_citations.py (ART-2000–ART-2207); row count unchanged BATON 075 but many cache columns corrected via Tier 1 apply",
+    "ite_questions": 1640,
+    "ite_questions_note": "+1 BATON 075: QID-2024-0067 (acute HIV diagnostic, exam_year=2024, blueprint=Acute Care and Diagnosis, body_system=Hematologic/Immune) recovered from 2024_MC.pdf + 2024_critique.pdf; 4 enrichment fields NULL pending backfill (DEFERRED-QID-2024-0067-ENRICHMENT)",
     "aafp_questions": 1221,
     "qid_art_xref": 2710,
+    "qid_art_xref_note": "row count unchanged BATON 075 (Tier 1 had no INSERTs/DELETEs); orphan row (QID-2024-0067/ART-2073) now has valid FK endpoints",
     "article_currency": 2206,
     "next_art_id": "ART-2208"
   },
+  "db_invariants_post_baton_075": {
+    "sum_citation_count_eq_xref_count": "2710 == 2710 ✓",
+    "articles_with_citations_eq_distinct_xref_article_ids": "1982 == 1982 ✓",
+    "orphan_xref_rows": 0
+  },
   "pdfs": {
     "total": 1571,
-    "total_note": "1,540 ITE active + 15 AAFP + 16 exams (canonical post-BATON 067; Mac local lags by 569 — gitignored)",
+    "total_note": "1,540 ITE active + 15 AAFP + 16 exams (canonical post-BATON 067; Mac local lags by 567 — gitignored)",
     "ite": 1540,
     "ite_tiers": {
       "VC_fail": 1056,
@@ -63,5 +70,18 @@
       "ite-exam-series.skill",
       "custom-question-set.skill"
     ]
+  },
+  "corpus_integrity_qc_v1": {
+    "skill_path": ".claude/skills/corpus-integrity-qc/",
+    "version": "V1.0.1 (Windows-hardened BATON 075)",
+    "first_full_run": "2026-05-19 (BATON 075)",
+    "post_apply_findings_total": 624,
+    "post_apply_layer_a": 65,
+    "post_apply_layer_b": 559,
+    "post_apply_layer_c": 0,
+    "tier_1_statements_applied": 1914,
+    "tier_2_pending_review": 65,
+    "tier_3_manual_findings": 559,
+    "backup_path": "00_database/db/ite_intelligence.db.pre_qc_2026-05-18-221606.bak"
   }
 }

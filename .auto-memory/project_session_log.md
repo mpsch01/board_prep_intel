@@ -1,19 +1,50 @@
 # project_session_log.md
-Last updated: 2026-05-18 (BATON 074)
+Last updated: 2026-05-19 (BATON 075)
 
 > **Renamed BATON 068.** This file was previously `project_overhaul_state.md` — a fossil from the early "PROJECT_OVERHAUL" reorganization phase (M1–M5 module rebuild, ~March 2026). Despite the old name, this file has long served as the project's **running session log + state snapshot**. New name reflects current role.
+
+## Session Notes (BATON 075 — 2026-05-19)
+
+**Corpus-integrity-qc V1 testing pass + DB-write debut.** First end-to-end production run of `run_qc.py` against canonical Windows DB. Three substantive bugs in the skill itself were caught and fixed in-flight:
+
+1. **PROJECT_ROOT off-by-one** — all 5 entry-point scripts used `.parent×5` (one too many; landed at `Desktop/` not `board_prep_intel/`). Fixed to `.parent×4`. SKILL.md doc also corrected.
+2. **Windows cp1252 console crash on `✓` chars** — new `setup_utf8_stdout()` helper in `utils.py`, called from all 6 entry-point scripts; added `encoding="utf-8"` to 8 `open()` calls + 2 `Path.write_text()` calls + 3 `subprocess.run()` calls.
+3. **A1 ENCODING_ARTIFACT no-op on JSON `choices` column** — Discovered SQLite **does** interpret `\u` escapes in single-quoted string literals despite its own docs saying otherwise (verified via `SELECT hex('Ã¶')`). New `_sql_json_escape_expr()` helper in `generate_fixes.py` builds `char(92) || 'uXXXX'` (literal backslash via `char(92)`). Applied only when `field.startswith("choices[")`. 11 of 93 A1 statements affected; all regenerated and verified via simulated REPLACE on live DB.
+
+**Tier 1 apply via inline fix-applier:** 1,914 statements applied in one atomic transaction, 172 MB DB backup taken pre-apply (`ite_intelligence.db.pre_qc_2026-05-18-221606.bak`), 6 verification COUNTs confirmed expected deltas:
+- `articles_with_citations`: 1,800 → 1,982 (+182)
+- `sum_citation_count`: 2,387 → 2,710 (+323; now matches xref count exactly)
+- `distinct_article_ids_in_xref`: 1,982 (unchanged)
+- Row counts on articles/questions/xref unchanged (Tier 1 had no INSERTs/DELETEs)
+
+**Post-apply QC:** Total findings dropped 2,538 → 625. Layer C went 1,798 → 1 (only ORPHAN_XREF remained). Layer B saw 24 AUTHOR_ARTIFACT clearances + 1 UMBRELLA promotion (genuine signal — citation_count cache fix promoted an article across the umbrella threshold).
+
+**ORPHAN_XREF recovery:** Investigated lone remaining finding (QID-2024-0067 / ART-2073). Found that the question existed in the 2024 critique PDF + the staging JSON, but had been dropped during questions-table ingestion. Recovered by extracting from `2024_MC.pdf` (Item 67 / acute HIV diagnostic vignette) + `2024_critique.pdf` (ANSWER B + 37-line explanation + 2 references). Inserted with primary fields populated (qid, exam_year=2024, blueprint=Acute Care and Diagnosis, body_system=Hematologic/Immune, question_text, choices JSON, correct_letter=B, correct_text, explanation, reference). Enrichment fields (keywords + concept_tags) NULL pending backfill via existing pipelines. Re-run QC: **Layer C = 0 findings** ✓.
+
+**DB invariants now hold:**
+- `SUM(articles.citation_count) == COUNT(*) FROM qid_art_xref` (= 2,710)
+- `COUNT(articles WHERE citation_count > 0) == COUNT(DISTINCT article_id) FROM qid_art_xref` (= 1,982)
+- `ORPHAN_XREF rows = 0`
+
+**Closed deferred flags:** DEFERRED-LAYER-C-CACHE-REBUILD, DEFERRED-ORPHAN-XREF-QID-2024-0067, DEFERRED-V1-ENCODING-CHOICES-JSON-BUG (opened+closed same session).
+
+**New deferred flags:** DEFERRED-LAYER-A5-LANGUAGE-INTEGRITY (Claude-API spell/typo check, V1.2), DEFERRED-LAYER-A6-RENDER-FIDELITY (DOCX-diff against deliverable, V1.1), DEFERRED-QID-2024-0067-ENRICHMENT (backfill 4 NULL fields), DEFERRED-LAYER-B-UMBRELLA-PROMOTION-REVIEW (eyeball promoted umbrella).
+
+**Files modified:** 7 `.claude/skills/corpus-integrity-qc/scripts/*.py` + 1 `SKILL.md` = 8 in skill total. No M1/M2/M3/M4/M5 script changes. DB updated (binary, gitignored). No PDF changes.
+
+---
 
 ## Module State
 
 | Module | Status | Key Info |
 |--------|--------|----------|
-| M1 Warehouse | Active | Windows canonical: 1,540 ITE/AAFP active-tier PDFs; Mac local: 971 (lags by 569 — DEFERRED-MAC-PDF-SYNC); 8 build + 38 maintain scripts (no script changes BATON 068) |
+| M1 Warehouse | Active | Windows canonical: 1,540 ITE/AAFP active-tier PDFs; Mac local: 971 (lags by 569 — DEFERRED-MAC-PDF-SYNC); 8 build + 38 maintain scripts (no script changes BATON 075) |
 | M2 Processor | Active | 75 py + 6 js scripts; enrichment pipeline operational |
 | M3 Analyst | Active | 55 py + 4 js + 1 json config; ICD-10, pathways, score analysis, article_currency (Layer 2), longitudinal delta, concept fingerprint enrichment, db_connect utility, citation QC, body system audit/correction; report interpretation guides (resident + faculty, BATON 063); practice question system (exam series + custom sets, BATON 064) |
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 31 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
-| DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; qid_art_xref 2,710; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 068; Mac DB swapped from stale Apr-16 copy (1,998/2,485) to canonical May-6 copy |
-| Skills | Active | `.claude/skills/` exposes **10 project-level entries** post-BATON-074 cleanup: 8 SKILL.md dirs (`board-startup/`, `body-system-qc/` +references/, `baton-pipeline-qc/` (synced from user), `repo-error-review/`, `corpus-integrity-qc/` V1 COMPLETE BATON 070, `session-housekeeping/` V3.2 BATON 073, `methodology-scout/` NEW BATON 074, `exa-research-search/` NEW BATON 074) + 2 Cowork `.skill` zips (`custom-question-set.skill`, `ite-exam-series.skill`). `article-citation-qc/` REMOVED BATON 074 (deprecated per BATON 068, fully archived to `_archive_/deprecated_skills/article-citation-qc/`). User-level `~/.claude/skills/` is EMPTY (9 shadow entries fully retired BATON 074 with full archive preservation in `_archive_/deprecated_skills/user_level_shadow_copies_2026-05-18/`). No shadow conflicts in available-skills resolution; all bare-slash skills resolve to project-level. |
+| DB | **Updated BATON 075** | 2,206 articles (row count unchanged; **cache columns now correct** via Tier 1 apply); 1,**640** ITE Qs (+1 QID-2024-0067 recovered); 1,221 AAFP Qs; qid_art_xref 2,710 (unchanged); DB invariants now hold; pre-apply backup 172 MB |
+| Skills | Active | `.claude/skills/` exposes **10 project-level entries**: 8 SKILL.md dirs (`board-startup/`, `body-system-qc/`, `baton-pipeline-qc/`, `repo-error-review/`, **`corpus-integrity-qc/` V1.0.1 Windows-hardened BATON 075**, `session-housekeeping/` V3.2, `methodology-scout/`, `exa-research-search/`) + 2 Cowork `.skill` zips. `~/.claude/skills/` empty. |
 
 ## PDF Library State
 

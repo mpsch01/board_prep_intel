@@ -56,7 +56,10 @@ from utils import (  # noqa: E402
     connect_db_readonly,
     find_encoding_artifacts,
     resolve_db_path,
+    setup_utf8_stdout,
 )
+
+setup_utf8_stdout()
 
 
 EXPECTED_LETTERS = {"A", "B", "C", "D", "E"}  # valid letter alphabet (4-choice
@@ -70,7 +73,8 @@ REFERENCE_TERMINALS = (".", ")", "]", "”", '"')
 
 
 def _default_project_root() -> Path:
-    return SCRIPT_DIR.parent.parent.parent.parent.parent.resolve()
+    # scripts/ -> corpus-integrity-qc/ -> skills/ -> .claude/ -> PROJECT_ROOT/
+    return SCRIPT_DIR.parent.parent.parent.parent.resolve()
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -450,7 +454,7 @@ def main() -> int:
     }
 
     out_path = output_dir / "findings_layer_a.json"
-    with open(out_path, "w") as f:
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2)
 
     print()
