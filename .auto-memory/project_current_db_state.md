@@ -1,5 +1,49 @@
 # project_current_db_state.md
-Last verified: 2026-05-18 (BATON 074)
+Last verified: 2026-05-19 (BATON 075)
+
+## DB Changes (BATON 075)
+**Substantive DB writes — first since BATON 060.** Two distinct write workflows:
+
+### Tier 1 SQL apply (1,914 statements, one atomic transaction)
+Applied via inline fix-applier workflow against canonical Windows DB. Pre-apply backup taken at `00_database/db/ite_intelligence.db.pre_qc_2026-05-18-221606.bak` (172 MB). All statements wrapped in single `BEGIN;...COMMIT;` for atomicity.
+
+**Per-bucket statement counts:**
+- A1 ENCODING_ARTIFACT: 93 (encoding fixes on questions.* text fields; 11 patched for choices JSON column)
+- B5 AUTHOR_ARTIFACT: 24 (UPDATE articles SET author1 = ... corrected from clean_ref)
+- C1 QID_LIST_CACHE_DRIFT: 359 (UPDATE articles SET qid_list = ...)
+- C2 CITATION_COUNT_MISMATCH: 415 (UPDATE articles SET citation_count = ...)
+- C3 EXAM_YEARS_DRIFT: 343 (UPDATE articles SET exam_years = ...)
+- C4 UNIQUE_YEARS_MISMATCH: 446 (UPDATE articles SET unique_years = ...)
+- C6 ZERO_CITATION_LINKED: 208 (UPDATE articles SET citation_count = ... where xref existed but cache was 0)
+- C7 UNLINKED_CITED_ARTICLE: 26 (UPDATE articles SET citation_count = 0 where orphaned cache)
+
+### Question recovery (1 INSERT)
+QID-2024-0067 (acute HIV diagnostic, exam_year=2024, blueprint=Acute Care and Diagnosis, body_system=Hematologic/Immune, body_system_merged=Hematologic/Immune, correct_letter=B). Recovered from `2024_MC.pdf` page 28 (item 67) + `2024_critique.pdf` page 38. Primary fields populated; 4 enrichment fields NULL (stem_keywords, explanation_keywords, all_keywords, concept_tags) pending backfill via existing pipelines — see DEFERRED-QID-2024-0067-ENRICHMENT.
+
+### Verification deltas
+
+| Metric | Pre | Post | Δ |
+|---|---|---|---|
+| articles count | 2,206 | 2,206 | 0 |
+| questions count | 1,639 | **1,640** | **+1** |
+| qid_art_xref count | 2,710 | 2,710 | 0 |
+| articles_with_citations | 1,800 | 1,982 | +182 |
+| sum_citation_count | 2,387 | 2,710 | +323 |
+| distinct_article_ids_in_xref | 1,982 | 1,982 | 0 |
+
+### DB invariants now hold (post-apply, verified)
+
+- `SUM(articles.citation_count) == COUNT(*) FROM qid_art_xref` (= 2,710) ✓
+- `COUNT(articles WHERE citation_count > 0) == COUNT(DISTINCT article_id) FROM qid_art_xref` (= 1,982) ✓
+- `ORPHAN_XREF rows == 0` (was 1: QID-2024-0067; now QID exists in questions table) ✓
+
+### Full 15-table count verification (post-apply, BATON 075 close)
+
+articles=2206, questions=**1640**, aafp_questions=1221, qid_art_xref=2710, aafp_qid_art_xref=864, article_icd10=4959, question_icd10=5774, aafp_question_icd10=4753, clinical_pathways=4959, pubmed_pmid_cache=344, icd10_vec=2219, article_icd10_vec=1757, question_icd10_vec=2747, intersection_centroid_vec=158, article_currency=2206.
+
+No schema changes. PDF library unchanged. Script counts unchanged for all modules (M1/M2/M3/M4/M5). Only `.claude/skills/corpus-integrity-qc/` files modified (7 scripts/*.py + SKILL.md).
+
+---
 
 ## DB Changes (BATON 074)
 **No DB changes.** Skill shadow cleanup + archive reorganization session. DB was opened (read-only) for housekeeping recon — full 15-table verification matches BATON 073 verbatim: articles=2206, questions=1639, aafp_questions=1221, qid_art_xref=2710, aafp_qid_art_xref=864, article_icd10=4959, question_icd10=5774, aafp_question_icd10=4753, clinical_pathways=4959, pubmed_pmid_cache=344, icd10_vec=2219, article_icd10_vec=1757, question_icd10_vec=2747, intersection_centroid_vec=158, article_currency=2206. No schema changes, no PDF changes, no script changes. Pure infrastructure session: orphan worktree dir deleted, 9 user-level skill shadows audited + archived + retired, archive structure reorganized.

@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-05-18 (BATON 074)
-**Status:** Active development — skill shadow cleanup complete (`~/.claude/skills/` empty; project-level is single canonical source); next session: corpus-qc V1 testing pass (top priority — unblocked)
-**Active BATON:** `BATON_active_074_20260518_skill_shadow_cleanup.md`
+**Last updated:** 2026-05-19 (BATON 075)
+**Status:** Active development — corpus-integrity-qc V1 fully exercised end-to-end on canonical DB; 1,914 Tier 1 fixes applied (Layer C: 1,798 → 0 findings); skill hardened for Windows (UTF-8, path-fix, JSON-escape patches); +1 question recovered (QID-2024-0067 acute HIV)
+**Active BATON:** `BATON_active_075_20260519_corpus_qc_v1_testing_pass.md`
 **Next ART-ID:** ART-2208
-**Git:** branch `claude/session-074-skill-shadow-cleanup` (V3.2 feature branch); main → `974b2fb` pre-session (BATON 073 final amendment merged via PR #19). Session commit: `216534a` (BATON 074 cleanup, 53 files). → `https://github.com/mpsch01/board_prep_intel` (private)
+**Git:** branch `claude/session-075-corpus-qc-v1-pass` (V3.2 feature branch); main → `65754ea` pre-session (BATON 074 merge commit). Session commits: housekeeping commit + hash-backfill commit (filled post-push). → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -13,19 +13,19 @@
 ```json
 {
   "project": "ABFM ITE Intelligence System",
-  "description": "A queryable Family Medicine board exam knowledge base (1,639 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_074_20260518_skill_shadow_cleanup.md",
-  "baton_description": "Skill shadow cleanup + archive reorganization. Completed lingering BATON 073 work: orphan worktree dir deleted (cwd lock released by Claude Code restart); 9 user-level skill shadows at ~/.claude/skills/ audited per-item with 'best version' selected each — synced/promoted/extracted to project-level where canonical (baton-pipeline-qc SKILL.md user→project for M3 extensions; body-system-qc references/ synced; exa-research-search promoted; methodology-scout extracted from .skill zip); article-citation-qc retired (per BATON 068) — ALL variants archived to new _archive_/deprecated_skills/article-citation-qc/ with provenance README + Cowork zip + BATON 073 stray scripts consolidated; orphan investigation file rescued to _archive_/design_docs/; full user-level snapshot to _archive_/deprecated_skills/user_level_shadow_copies_2026-05-18/. Classifier blocked Remove-Item twice → Move-Item to Desktop consolidation folder + user manual Recycle Bin drop. ~/.claude/skills/ now EMPTY. Project skill count 7 → 8 SKILL.md dirs (+methodology-scout +exa-research-search −article-citation-qc) + 2 Cowork zips. Bonus: 4 obviously-stale archive files → new _archive_/delete_me_051826/ staging; renamed _archive_/methodology_notes/ → _archive_/design_docs/. DEFERRED-ORPHAN-WORKTREE-DIR-CLEANUP + DEFERRED-USER-LEVEL-SKILLS-AUDIT both CLOSED. No DB / PDF / pipeline-script changes.",
-  "git_hash": "216534a",
-  "git_branch": "claude/session-074-skill-shadow-cleanup (V3.2 feature branch from main 974b2fb)",
+  "description": "A queryable Family Medicine board exam knowledge base (1,640 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
+  "baton": "BATON_active_075_20260519_corpus_qc_v1_testing_pass.md",
+  "baton_description": "Corpus-integrity-qc V1 testing pass + DB-write debut. Ran run_qc.py end-to-end (first standalone run), fixed 3 substantive bugs in-flight: PROJECT_ROOT off-by-one in all 5 entry-point scripts; Windows cp1252 console crash on ✓ chars (new setup_utf8_stdout() in utils.py + UTF-8 to 8 open() calls + 3 subprocess.run() calls); A1 ENCODING_ARTIFACT no-op on JSON choices column (discovered SQLite interprets \\u escapes despite docs; fixed via _sql_json_escape_expr() building char(92) || 'uXXXX'). Applied 1,914 Tier 1 statements via inline fix-applier workflow with atomic BEGIN/COMMIT + 172 MB backup + 6 verify COUNTs. Findings dropped 2,538 → 624; Layer C went 1,798 → 0. Recovered QID-2024-0067 (acute HIV diagnostic) from source PDFs after it was found dropped during ingestion; inserted with primary fields populated (questions count 1,639 → 1,640). DB invariants now hold. 3 deferred flags CLOSED, 4 NEW opened (A5/A6/QID-2024-0067-enrichment/umbrella-promotion-review).",
+  "git_hash": "<post-housekeeping hash backfilled>",
+  "git_branch": "claude/session-075-corpus-qc-v1-pass (V3.2 feature branch from main 65754ea)",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
-  "last_updated": "2026-05-18",
+  "last_updated": "2026-05-19",
   "next_art_id": "ART-2208",
   "vc_gate_citations": 352,
   "database": {
     "file": "00_database/db/ite_intelligence.db",
     "articles": 2206,
-    "questions_ite": 1639,
+    "questions_ite": 1640,
     "questions_aafp": 1221,
     "qid_art_xref": 2710,
     "aafp_qid_art_xref": 864,
@@ -38,6 +38,7 @@
     "article_icd10_vec": 1757,
     "question_icd10_vec": 2747,
     "article_vec": 2206,
+    "question_vec_note": "1639 — sqlite-vec virtual table; not rebuilt for QID-2024-0067 yet",
     "question_vec": 1639,
     "aafp_question_vec": 1221,
     "intersection_centroid_vec": 158,

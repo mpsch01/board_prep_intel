@@ -83,9 +83,10 @@ OUTPUT_DIR   = PROJECT_ROOT/03_module.3_analyst/outputs/corpus_qc/{YYYY-MM-DD}/
 ```
 
 All scripts use dynamic path resolution: `SCRIPT_DIR = Path(__file__).resolve().parent`.
-Auto-resolved `PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent.parent.parent` works for
-non-worktree installs only. Worktree runs **must** pass explicit `--project-root` (and
-optionally `--db-path` / `--staging-dir` / `--output-dir`).
+Auto-resolved `PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent.parent` (scripts/ →
+corpus-integrity-qc/ → skills/ → .claude/ → PROJECT_ROOT/). This works for direct
+in-project runs. Worktree runs or other non-standard layouts **must** pass explicit
+`--project-root` (and optionally `--db-path` / `--staging-dir` / `--output-dir`).
 
 ---
 

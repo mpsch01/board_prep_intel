@@ -32,6 +32,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
+from utils import setup_utf8_stdout  # noqa: E402
+
+setup_utf8_stdout()
 
 
 # Hard cap on listed examples per check to keep the report readable.
@@ -47,7 +51,7 @@ def load_layer(findings_dir: Path, layer: str) -> dict:
     if not p.exists():
         return {"layer": layer.upper(), "name": f"layer_{layer}_missing",
                 "summary": {}, "findings": []}
-    with open(p) as f:
+    with open(p, encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -385,7 +389,7 @@ def main() -> int:
 
     text = render_report(findings)
     out_path = findings_dir / "qc_report.md"
-    out_path.write_text(text)
+    out_path.write_text(text, encoding="utf-8")
 
     print(f"Written: {out_path} ({len(text):,} chars)")
     return 0

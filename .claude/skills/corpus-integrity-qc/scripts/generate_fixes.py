@@ -59,11 +59,15 @@ from utils import (  # noqa: E402
     connect_db_readonly,
     correct_author_from_clean_ref,
     resolve_db_path,
+    setup_utf8_stdout,
 )
+
+setup_utf8_stdout()
 
 
 def _default_project_root() -> Path:
-    return SCRIPT_DIR.parent.parent.parent.parent.parent.resolve()
+    # scripts/ -> corpus-integrity-qc/ -> skills/ -> .claude/ -> PROJECT_ROOT/
+    return SCRIPT_DIR.parent.parent.parent.parent.resolve()
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -100,13 +104,58 @@ def _field_to_column(field: str) -> str:
     return field
 
 
+def _sql_json_escape_expr(s: str) -> str:
+    """Build a SQL expression that produces the JSON-ensure_ascii=True escape
+    form of `s` — i.e. ASCII chars verbatim, non-ASCII chars as the literal
+    6-char ASCII escape `\\uXXXX`. SQLite interprets `\\u` in single-quoted
+    string literals as the unicode codepoint (empirically tested — its own
+    docs say string literals are literal, but they're not), so we must build
+    the literal backslash with `char(92)` and concatenate.
+
+    Examples:
+      'Ã¶' (U+00C3 U+00B6) → "char(92) || 'u00c3' || char(92) || 'u00b6'"
+      'ö'  (U+00F6)        → "char(92) || 'u00f6'"
+      'abc'                → "'abc'"
+    """
+    parts: list[str] = []
+    ascii_buf: list[str] = []
+    for c in s:
+        if ord(c) < 128:
+            ascii_buf.append(c)
+        else:
+            if ascii_buf:
+                parts.append("'" + "".join(ascii_buf).replace("'", "''") + "'")
+                ascii_buf = []
+            parts.append(f"char(92) || 'u{ord(c):04x}'")
+    if ascii_buf:
+        parts.append("'" + "".join(ascii_buf).replace("'", "''") + "'")
+    if not parts:
+        return "''"
+    return " || ".join(parts)
+
+
 def gen_encoding_fix(f: dict) -> str:
     """A1 — UPDATE questions SET <field> = REPLACE(<field>, bad, good) WHERE qid=?
-    Works for choices[N] too because Symbol-font / mojibake bytes never collide
-    with JSON syntax characters."""
-    col = _field_to_column(f["field"])
-    bad = _sql_str(f["bad_sequence"])
-    good = _sql_str(f["corrected"])
+
+    For text columns (question_text, explanation, correct_text, reference) the
+    column stores the mojibake chars directly, so the literal bad/good chars
+    in a SQL string literal work. (SQLite interprets `\\u` escapes, but those
+    only collide with already-escaped JSON storage, not with raw text.)
+
+    For the `choices` JSON column, the stored text is JSON-encoded with
+    `ensure_ascii=True`, so non-ASCII chars live on disk as the literal 6-char
+    ASCII escape `\\uXXXX`. We must REPLACE against that escape form, which
+    requires building the literal backslash via `char(92)` so SQLite's own
+    `\\u` interpretation doesn't undo us."""
+    field = f["field"]
+    col = _field_to_column(field)
+    is_json_column = field.startswith("choices[")
+    if is_json_column:
+        bad = _sql_json_escape_expr(f["bad_sequence"])
+        good = _sql_json_escape_expr(f["corrected"])
+    else:
+        bad = _sql_str(f["bad_sequence"])
+        good = _sql_str(f["corrected"])
     qid = _sql_str(f["qid"])
     return (
         f"-- [A1] {f['qid']}: {f['field']} — replace {f['bad_sequence']!r} "
@@ -263,7 +312,7 @@ def load_findings(findings_dir: Path) -> dict[str, list[dict]]:
             print(f"  ⚠  {p.name} not found — skipping layer {layer.upper()}",
                   file=sys.stderr)
             continue
-        with open(p) as f:
+        with open(p, encoding="utf-8") as f:
             data = json.load(f)
         out[layer.upper()] = data.get("findings", [])
     return out
@@ -461,7 +510,7 @@ def main() -> int:
 
     sql_text = render_fixes_sql(tier1, tier2, tier3_count, stats)
     out_path = findings_dir / "fixes.sql"
-    out_path.write_text(sql_text)
+    out_path.write_text(sql_text, encoding="utf-8")
 
     print()
     print("=== Layer D Summary ===")

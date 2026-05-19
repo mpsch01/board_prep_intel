@@ -40,7 +40,10 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from utils import (  # noqa: E402
     connect_db_readonly,
     resolve_db_path,
+    setup_utf8_stdout,
 )
+
+setup_utf8_stdout()
 
 
 def _parse_json_list(raw: str | None) -> list:
@@ -238,8 +241,8 @@ def main() -> int:
         db_path = resolve_db_path(Path(args.project_root).resolve())
     else:
         # Skill lives at PROJECT_ROOT/.claude/skills/corpus-integrity-qc/scripts/
-        # So PROJECT_ROOT = SCRIPT_DIR / ../../../../..
-        project_root = SCRIPT_DIR.parent.parent.parent.parent.parent
+        # scripts/ -> corpus-integrity-qc/ -> skills/ -> .claude/ -> PROJECT_ROOT/
+        project_root = SCRIPT_DIR.parent.parent.parent.parent
         db_path = resolve_db_path(project_root.resolve())
 
     print(f"DB:         {db_path}")
@@ -270,7 +273,7 @@ def main() -> int:
     }
 
     out_path = output_dir / "findings_layer_c.json"
-    with open(out_path, "w") as f:
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2)
 
     print()

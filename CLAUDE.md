@@ -52,9 +52,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_074_20260518_skill_shadow_cleanup.md` — Skill shadow cleanup + archive reorganization. Completed lingering BATON 073 work: orphan worktree dir `.claude/worktrees/inspiring-cannon-e99bfb/` deleted (lock released after Claude Code restart), 9 user-level skill shadows audited per-item with "best version" selected for each: synced/promoted/extracted to project-level where canonical (baton-pipeline-qc SKILL.md user→project, body-system-qc references/ user→project, exa-research-search promoted, methodology-scout extracted from `.skill` zip, methodology_scout orphan investigation file rescued to `_archive_/design_docs/`), archived deprecated material (article-citation-qc skill family → `_archive_/deprecated_skills/article-citation-qc/`; full user-level snapshot → `_archive_/deprecated_skills/user_level_shadow_copies_2026-05-18/`). Classifier blocked `Remove-Item` on user-level dirs twice → used `Move-Item` to Desktop consolidation folder + user manually dragged to Recycle Bin (V3.2 cleanup pattern per Locked Rule 8). Archive scan added 4 obviously-stale files → `_archive_/delete_me_051826/` staging; renamed `_archive_/methodology_notes/` → `_archive_/design_docs/`. `~/.claude/skills/` now EMPTY; project-level skill set is 8 canonical SKILL.md dirs + 2 Cowork `.skill` zips. DEFERRED-ORPHAN-WORKTREE-DIR-CLEANUP CLOSED. DEFERRED-USER-LEVEL-SKILLS-AUDIT CLOSED. No DB / PDF / pipeline-script changes — row counts identical to BATON 073. |
+| Active BATON | `BATON_active_075_20260519_corpus_qc_v1_testing_pass.md` — Corpus-integrity-qc V1 testing pass + DB-write debut. Ran `run_qc.py` end-to-end (first standalone run), fixed 3 substantive bugs in-flight: (1) PROJECT_ROOT off-by-one in all 5 entry-point scripts (`SCRIPT_DIR.parent×5` → `×4`; SKILL.md doc also corrected), (2) Windows cp1252 console crash on `✓` chars (new `setup_utf8_stdout()` helper in utils.py + UTF-8 to 8 open() calls + 3 subprocess.run() calls), (3) A1 ENCODING_ARTIFACT no-op on `choices` JSON column — discovered SQLite *does* interpret `\u` escapes in string literals (despite docs), fixed via new `_sql_json_escape_expr()` building `char(92) || 'uXXXX'` literals. Then: stratified 10-statement spot-check of Tier 1 (9/10 verified clean, 1 caught bug #3), applied 1,914 Tier 1 statements via inline fix-applier workflow (DB backup 172 MB taken pre-apply; atomic BEGIN/COMMIT; 6 verify COUNTs report deltas); re-ran QC → findings dropped from 2,538 to 624; Layer C went from 1,798 to **0**. Investigated lone ORPHAN_XREF (QID-2024-0067 / ART-2073) — turned out the question exists in `2024_critique.pdf` + `2024_MC.pdf` but had been dropped during ingestion; recovered + inserted with primary fields populated (qid/exam_year/blueprint=Acute Care and Diagnosis/body_system=Hematologic/Immune/question_text/choices/correct_letter=B/correct_text/explanation/reference). DB invariants now hold: `sum(citation_count) == COUNT(xref)` (=2,710), `count(articles with citations) == count(distinct article_id in xref)` (=1,982). 3 deferred flags CLOSED (DEFERRED-LAYER-C-CACHE-REBUILD, DEFERRED-ORPHAN-XREF-QID-2024-0067, DEFERRED-V1-ENCODING-CHOICES-JSON-BUG opened+closed same session); 4 NEW (DEFERRED-LAYER-A5-LANGUAGE-INTEGRITY = Claude-API spell check, DEFERRED-LAYER-A6-RENDER-FIDELITY = DOCX-diff against deliverable, DEFERRED-QID-2024-0067-ENRICHMENT = backfill 4 NULL fields, DEFERRED-LAYER-B-UMBRELLA-PROMOTION-REVIEW = eyeball the +1 promoted umbrella). 8 corpus-integrity-qc files MODIFIED (7 scripts/*.py + SKILL.md). No M1/M2/M3/M4/M5 script-count changes. |
 | DB articles | 2,206 (+13 from critique PDFs: ART-1987–ART-1999; +208 from acquire_missing_citations.py: ART-2000–ART-2207) |
-| DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
+| DB questions (ITE) | 1,640 (+10 BATON 060 recovery, +1 QID-2024-0067 recovered 2026-05-19 from 2024 critique gap) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
 | aafp_questions.blueprint | 1,221/1,221 (100%) — batch API, same rubric as ITE v2 — complete 2026-03-30 |
 | aafp_questions.concept_tags | 1,221/1,221 (100%) |
@@ -80,7 +80,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2208 |
-| Git branch | `claude/session-074-skill-shadow-cleanup` (V3.2 feature branch); main → `974b2fb` pre-session (BATON 073 final amendment "close DEFERRED-USER-LEVEL-SKILL-DELETION + open audit flag"). Session commits: `216534a` (BATON 074 cleanup, 53 files) + hash-backfill commit. PR # filled post-push. Worktree state: clean — `git worktree list` shows only project root. `.claude/worktrees/` parent dir removed (orphan from BATON 073 deleted at session start; DEFERRED-ORPHAN-WORKTREE-DIR-CLEANUP CLOSED). |
+| Git branch | `claude/session-075-corpus-qc-v1-pass` (V3.2 feature branch); main → `65754ea` pre-session (BATON 074 merge commit, "Merge pull request #20"). Session commits: housekeeping commit + hash-backfill commit (filled post-push). PR # filled post-push. Worktree state: clean — `git worktree list` shows only project root. |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -191,45 +191,23 @@ Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
 
 ---
 
-## Next Steps (as of BATON 074, 2026-05-18 — corpus-qc V1 testing pass)
+## Next Steps (as of BATON 075, 2026-05-19 — corpus-qc V1 testing pass complete)
 
 ### Immediate (next session)
-1. **`/board-startup`** to load BATON 074 and confirm clean state (DB 2206/1639/2710 unchanged, single `main` branch, no worktrees, `~/.claude/skills/` empty).
-2. **Run `python .claude\skills\corpus-integrity-qc\scripts\run_qc.py`** end-to-end on canonical Windows DB. Verify all 5 artifacts land in `03_module.3_analyst\outputs\corpus_qc\{today}\`.
-3. **Spot-check 10 random Tier 1 SQL statements** before applying.
-4. **Apply Tier 1 via `fix-applier` agent** with `--tier 1 --approved-by-user 1` (~1,914 statements; closes DEFERRED-LAYER-C-CACHE-REBUILD).
-5. **Re-run `run_qc.py`** post-apply to confirm cache-rebuild findings drop to ~0.
-6. **Investigate ORPHAN_XREF QID-2024-0067 / ART-2073** (5-min eyeball; closes DEFERRED-ORPHAN-XREF-QID-2024-0067).
-7. **Bug-fix loop** on anything testing surfaces.
-8. **Decide on `_archive_/delete_me_051826/`** — restore any that turn out to be needed, then delete the rest.
-
-### LEGACY: BATON 072 pre-flight (no longer needed — Windows is fully synced)
-*Kept for archival reference. Windows is now caught up through BATON 073 + 074.*
-- `git fetch --all --prune` + `git status -uno`
-- `git pull origin main`
-- **Restart Claude Code on Windows** — needed both for BATON 071's bare-slash skill promotions AND for V3.1 session-housekeeping to load
-- DB sanity check: `articles=2206, questions=1639, qid_art_xref=2710` — **if numbers don't match, DO NOT proceed** (pull canonical DB from gdrive first)
-- See `BATON_active_072_*.md` "HEADS UP — Mac → Windows Switch" section for full pre-flight checklist (git state / DB / PDFs / Python env / Locked Rule 8 / gdrive sync / Claude Code skills surface).
-
-### Immediate (next session — on Windows)
-1. **`git pull origin main`** in the Windows project root to pick up BATON 072 + V3.1 housekeeping skill.
-2. **Restart Claude Code on Windows** so V3.1 skill + BATON 071 promoted skills load bare.
-3. **`/board-startup`** to load BATON 072 + run through the Windows pre-flight in the HEADS UP section.
-4. **Run `run_qc.py` end-to-end on the canonical Windows DB** — verify all 5 artifacts land in `03_module.3_analyst\outputs\corpus_qc\{today}\`.
-5. **Spot-check 10 random Tier 1 SQL statements** before applying.
-6. **Apply Tier 1 via the `fix-applier` agent** with `--tier 1 --approved-by-user 1` — should land ~1,914 statements. Closes DEFERRED-LAYER-C-CACHE-REBUILD.
-7. **Re-run `run_qc.py`** post-apply to confirm cache-rebuild findings drop to ~0.
-8. **Investigate ORPHAN_XREF QID-2024-0067 / ART-2073** — likely 5-min fix. Closes DEFERRED-ORPHAN-XREF-QID-2024-0067.
-9. **Bug-fix loop** on anything testing surfaces.
-10. ~~Apply DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER~~ — **OBVIATED 2026-05-18** by the broader workflow change to "no worktrees ever." If sessions don't use worktrees, the `gh pr merge --delete-branch` worktree-cleanup wrinkle can't happen. See updated CLAUDE.md Session-Housekeeping Skill section (V3.2) and SKILL.md V3.2.
+1. **`/board-startup`** to load BATON 075 + verify DB sanity (articles=2206, questions=**1640**, qid_art_xref=2710, single `main` branch, no worktrees).
+2. **Backfill QID-2024-0067 enrichment fields** (DEFERRED-QID-2024-0067-ENRICHMENT). Run keyword extraction + `preprocess_concept_tags.py` scoped to single QID. Lightweight.
+3. **Verify QID-2024-0067 blueprint + body_system inferences.** Confirm "Acute Care and Diagnosis" + "Hematologic/Immune" are correct for the acute HIV diagnostic question; if not, single UPDATE.
+4. **Tier 2 review pass** (optional this session, or defer) — 65 Tier 2 statements in latest `fixes.sql` (42 FORMAT_DRIFT + 23 TRUNCATION_CANDIDATE). User uncomments specific ones to apply, then dispatches `fix-applier --tier 2 --approved-by-user 1`.
+5. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067. Tier 1 cache fixes may shift reading-list output.
+6. **Investigate the 8th UMBRELLA article** (the one promoted by Tier 1 citation_count fix) — DEFERRED-LAYER-B-UMBRELLA-PROMOTION-REVIEW.
 
 ### Short-term (this week)
-11. **Re-run all 7 resident analyses** — still carrying from BATON 065+066+067.
-12. **Tier 2 review pass** — eyeball 66 commented statements.
-13. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass.
-14. **Mac PDF sync** (only if Mac work resumes) — pull 567 missing PDFs from Windows/gdrive.
+7. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass.
+8. **Mac PDF sync** (only if Mac work resumes) — pull 567 missing PDFs from Windows/gdrive.
 
-### Medium-term
-15. **AAFP BRQ extension of corpus-integrity-qc (v2)** — Layer C ports trivially; Layer A ports easily; Layer B is inapplicable — replace with per-article scalar checks against AAFP-linked rows.
-16. Continue 801-article gap closure by source_type buckets.
-17. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.
+### Medium-term (V1.1 + V1.2 corpus-qc work)
+9. **Design + build Layer A4 PDF_DIFF and A6 RENDER_FIDELITY together** (DEFERRED-LAYER-A4-PDF-DIFF + DEFERRED-LAYER-A6-RENDER-FIDELITY). Shared PDF/DOCX re-extraction infrastructure. A4 = DB vs. source-PDF drift; A6 = DB vs. deliverable-DOCX drift.
+10. **A5 LANGUAGE_INTEGRITY** as separate V1.2 session (DEFERRED-LAYER-A5-LANGUAGE-INTEGRITY). Claude-API spell/typo/language sanity check; curate clinical dictionary first.
+11. **AAFP BRQ extension of corpus-integrity-qc (v2)** — Layer C ports trivially; Layer A ports easily; Layer B is inapplicable — replace with per-article scalar checks against AAFP-linked rows.
+12. Continue 801-article gap closure by source_type buckets.
+13. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.
