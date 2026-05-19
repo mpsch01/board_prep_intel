@@ -52,7 +52,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_073_20260518_v32_workflow_transition.md` — V3.2 workflow transition: no Claude Code worktrees ever. Windows resume after BATON 072 Mac→Windows handoff; pre-flight passed (DB 2206/1639/2710). Cleanup: 3 stale worktrees removed + branches deleted, CLAUDE.md unresolved stash-pop conflict resolved in main checkout, 2 stray untracked deprecated M3 scripts archived to `_archive_/legacy_article_citation_qc/`. CLAUDE.md Session-Housekeeping Skill section + SKILL.md upgraded V3.1 → V3.2 (no worktrees policy + V3.2 rationale + legacy-cleanup steps). DEFERRED-V3.2-WORKTREE-CHECKOUT-ORDER CLOSED (obviated by V3.2 — no worktrees → no `gh pr merge --delete-branch` worktree wrinkle possible). DEFERRED-USER-LEVEL-SKILL-DELETION NEW — `~/.claude/skills/session-housekeeping/` Apr-16 V2 stale shadow needs user manual deletion (auto-mode classifier blocked, aligns with Locked Rule 8). No DB / PDF / pipeline-script changes — row counts identical to BATON 072. |
+| Active BATON | `BATON_active_074_20260518_skill_shadow_cleanup.md` — Skill shadow cleanup + archive reorganization. Completed lingering BATON 073 work: orphan worktree dir `.claude/worktrees/inspiring-cannon-e99bfb/` deleted (lock released after Claude Code restart), 9 user-level skill shadows audited per-item with "best version" selected for each: synced/promoted/extracted to project-level where canonical (baton-pipeline-qc SKILL.md user→project, body-system-qc references/ user→project, exa-research-search promoted, methodology-scout extracted from `.skill` zip, methodology_scout orphan investigation file rescued to `_archive_/design_docs/`), archived deprecated material (article-citation-qc skill family → `_archive_/deprecated_skills/article-citation-qc/`; full user-level snapshot → `_archive_/deprecated_skills/user_level_shadow_copies_2026-05-18/`). Classifier blocked `Remove-Item` on user-level dirs twice → used `Move-Item` to Desktop consolidation folder + user manually dragged to Recycle Bin (V3.2 cleanup pattern per Locked Rule 8). Archive scan added 4 obviously-stale files → `_archive_/delete_me_051826/` staging; renamed `_archive_/methodology_notes/` → `_archive_/design_docs/`. `~/.claude/skills/` now EMPTY; project-level skill set is 8 canonical SKILL.md dirs + 2 Cowork `.skill` zips. DEFERRED-ORPHAN-WORKTREE-DIR-CLEANUP CLOSED. DEFERRED-USER-LEVEL-SKILLS-AUDIT CLOSED. No DB / PDF / pipeline-script changes — row counts identical to BATON 073. |
 | DB articles | 2,206 (+13 from critique PDFs: ART-1987–ART-1999; +208 from acquire_missing_citations.py: ART-2000–ART-2207) |
 | DB questions (ITE) | 1,639 (+10 recovered; enrichment pipeline complete) — blueprint 100% filled — subcategory + topic_label DROPPED — body_system taxonomy normalized 2026-04-16 |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
@@ -80,7 +80,7 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2208 |
-| Git branch | main → `b599ac8` (PR #19 merge commit, 2026-05-18 — BATON 073 V3.2 workflow transition). Both BATON 073 session commits preserved as merge-commit ancestors (`0370438` V3.2 transition + `0d87fee` hash-backfill). Pre-session `d2dab28` (PR #18 BATON-amendment merge from Mac). Worktree `claude/inspiring-cannon-e99bfb` de-registered + branch deleted; orphan directory at `.claude/worktrees/inspiring-cannon-e99bfb/` requires Claude Code restart to release file-lock for filesystem deletion (DEFERRED-ORPHAN-WORKTREE-DIR-CLEANUP). |
+| Git branch | `claude/session-074-skill-shadow-cleanup` (V3.2 feature branch); main → `974b2fb` pre-session (BATON 073 final amendment "close DEFERRED-USER-LEVEL-SKILL-DELETION + open audit flag"). Session commits + PR # to be filled by hash-backfill commit. Worktree state: clean — `git worktree list` shows only project root. `.claude/worktrees/` parent dir removed (orphan from BATON 073 deleted at session start; DEFERRED-ORPHAN-WORKTREE-DIR-CLEANUP CLOSED). |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -191,12 +191,22 @@ Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
 
 ---
 
-## Next Steps (as of BATON 072, 2026-05-18 — resume on Windows big rig)
+## Next Steps (as of BATON 074, 2026-05-18 — corpus-qc V1 testing pass)
 
-### ⚠️ Windows pre-flight (read BATON 072 "HEADS UP" section first)
-Windows has been ~11 days dormant (last active: BATON 067, 2026-05-07). Several commits + 2 merged PRs (#16 BATON 071, #17 BATON 072 + V3.1 housekeeping) plus a BATON-amendment commit landed from Mac. Mandatory before any work:
-- `git fetch --all --prune` + `git status -uno` (check Windows-side WIP)
-- `git pull origin main` (picks up BATON 072 + V3.1 session-housekeeping skill + the amendment)
+### Immediate (next session)
+1. **`/board-startup`** to load BATON 074 and confirm clean state (DB 2206/1639/2710 unchanged, single `main` branch, no worktrees, `~/.claude/skills/` empty).
+2. **Run `python .claude\skills\corpus-integrity-qc\scripts\run_qc.py`** end-to-end on canonical Windows DB. Verify all 5 artifacts land in `03_module.3_analyst\outputs\corpus_qc\{today}\`.
+3. **Spot-check 10 random Tier 1 SQL statements** before applying.
+4. **Apply Tier 1 via `fix-applier` agent** with `--tier 1 --approved-by-user 1` (~1,914 statements; closes DEFERRED-LAYER-C-CACHE-REBUILD).
+5. **Re-run `run_qc.py`** post-apply to confirm cache-rebuild findings drop to ~0.
+6. **Investigate ORPHAN_XREF QID-2024-0067 / ART-2073** (5-min eyeball; closes DEFERRED-ORPHAN-XREF-QID-2024-0067).
+7. **Bug-fix loop** on anything testing surfaces.
+8. **Decide on `_archive_/delete_me_051826/`** — restore any that turn out to be needed, then delete the rest.
+
+### LEGACY: BATON 072 pre-flight (no longer needed — Windows is fully synced)
+*Kept for archival reference. Windows is now caught up through BATON 073 + 074.*
+- `git fetch --all --prune` + `git status -uno`
+- `git pull origin main`
 - **Restart Claude Code on Windows** — needed both for BATON 071's bare-slash skill promotions AND for V3.1 session-housekeeping to load
 - DB sanity check: `articles=2206, questions=1639, qid_art_xref=2710` — **if numbers don't match, DO NOT proceed** (pull canonical DB from gdrive first)
 - See `BATON_active_072_*.md` "HEADS UP — Mac → Windows Switch" section for full pre-flight checklist (git state / DB / PDFs / Python env / Locked Rule 8 / gdrive sync / Claude Code skills surface).
