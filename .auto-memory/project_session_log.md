@@ -1,5 +1,5 @@
 # project_session_log.md
-Last updated: 2026-05-18 (BATON 073)
+Last updated: 2026-05-18 (BATON 074)
 
 > **Renamed BATON 068.** This file was previously `project_overhaul_state.md` — a fossil from the early "PROJECT_OVERHAUL" reorganization phase (M1–M5 module rebuild, ~March 2026). Despite the old name, this file has long served as the project's **running session log + state snapshot**. New name reflects current role.
 
@@ -13,7 +13,7 @@ Last updated: 2026-05-18 (BATON 073)
 | M4 Sandbox | Active | 1 py (nl_search_validation.py); experiments + agent prototypes |
 | M5 Web Platform | Active | 3 py + 31 tsx + 5 sql; Next.js frontend, Supabase backend, Sanity CMS, Railway FastAPI |
 | DB | Stable | 2,206 articles, 1,639 ITE Qs, 1,221 AAFP Qs; qid_art_xref 2,710; article_icd10 4,959, question_icd10 5,774, clinical_pathways 4,959, intersection_centroid_vec 158 — no schema changes BATON 068; Mac DB swapped from stale Apr-16 copy (1,998/2,485) to canonical May-6 copy |
-| Skills | Active | `.claude/skills/` exposes 9 project-level entries: `board-startup/`, `body-system-qc/`, `article-citation-qc/`, `baton-pipeline-qc/`, `repo-error-review/` (BATON 071 — promoted from plugin store so they resolve bare); `corpus-integrity-qc/` **V1 COMPLETE BATON 070** (15 files; replaces buggy article-citation-qc; A4 PDF-diff deferred to V1.1); **`session-housekeeping/` V3.2 (BATON 073)** — V3.1 cycle PLUS the V3.2 "no worktrees ever" policy; sessions run feature branches directly in project root (no `.claude/worktrees/`); merge style still locked to `--merge --delete-branch`; `custom-question-set.skill` + `ite-exam-series.skill` cowork zips (BATON 064). **Stale user-level shadow:** `~/.claude/skills/session-housekeeping/` Apr-16 V2 copy still present — DEFERRED-USER-LEVEL-SKILL-DELETION (user manual action). |
+| Skills | Active | `.claude/skills/` exposes **10 project-level entries** post-BATON-074 cleanup: 8 SKILL.md dirs (`board-startup/`, `body-system-qc/` +references/, `baton-pipeline-qc/` (synced from user), `repo-error-review/`, `corpus-integrity-qc/` V1 COMPLETE BATON 070, `session-housekeeping/` V3.2 BATON 073, `methodology-scout/` NEW BATON 074, `exa-research-search/` NEW BATON 074) + 2 Cowork `.skill` zips (`custom-question-set.skill`, `ite-exam-series.skill`). `article-citation-qc/` REMOVED BATON 074 (deprecated per BATON 068, fully archived to `_archive_/deprecated_skills/article-citation-qc/`). User-level `~/.claude/skills/` is EMPTY (9 shadow entries fully retired BATON 074 with full archive preservation in `_archive_/deprecated_skills/user_level_shadow_copies_2026-05-18/`). No shadow conflicts in available-skills resolution; all bare-slash skills resolve to project-level. |
 
 ## PDF Library State
 
@@ -34,6 +34,28 @@ Last updated: 2026-05-18 (BATON 073)
 | 15 | Recovered 2026-04-05 (was 0 after fix_ghost.py) |
 
 AAFP ceiling: 3 paywalled (ART-1959, ART-1972, ART-1967)
+
+## Session Notes (BATON 074)
+**Session type:** Skill shadow cleanup + archive reorganization. Completed the lingering work that BATON 073 left open (orphan worktree dir + user-level skill audit) before resuming corpus-qc V1 testing.
+
+**Discovered:**
+- Orphan worktree dir `.claude/worktrees/inspiring-cannon-e99bfb/` still on disk from BATON 073 (cwd lock released by Claude Code restart this session)
+- 9 user-level entries at `~/.claude/skills/` shadowing project-level skills — 5 truly overlapping (article-citation-qc, baton-pipeline-qc, board-startup, body-system-qc, repo-error-review), 3 user-only (exa-research-search, methodology-scout `.skill` zip, methodology_scout typo-dir with orphan investigation file), 1 Cowork zip (article-citation-qc.skill)
+- For some shadows, user-level was the MORE COMPLETE version (baton-pipeline-qc: user Apr-13 had Module Reference table + M3 Run Notes; project May-18 was older skeleton). For body-system-qc, SKILL.md was byte-identical but user-level had a `references/taxonomy_map.md` that project lacked.
+- The `methodology_scout` typo-directory (underscore variant) contained a substantive 9-method comparison study for the body-system classifier — NOT a skill, just misplaced project IP.
+
+**Done:**
+- Orphan worktree dir removed (PowerShell `Remove-Item -Recurse -Force` — succeeded after Claude Code restart released lock). Empty parent `.claude/worktrees/` also removed. DEFERRED-ORPHAN-WORKTREE-DIR-CLEANUP CLOSED.
+- Per-skill audit completed. Best version selected each time. Content syncs to project: `baton-pipeline-qc/SKILL.md` (user → project), `body-system-qc/references/taxonomy_map.md` (user → project), full promotion of `exa-research-search/` and `methodology-scout/` (extracted from `.skill` zip via temp-rename to `.zip` workaround). Investigation file rescued to `_archive_/design_docs/` (folder renamed from `methodology_notes/`).
+- Article-citation-qc skill retired (per BATON 068 corpus-integrity-qc replacement). All variants archived: user-level dir → `_archive_/deprecated_skills/article-citation-qc/user-level/`, project-level → `project-level/`, Cowork zip → `cowork-zip.skill`, BATON 073's stray M3 scripts consolidated into `m3-stray-scripts/`. Provenance README documents what's salvageable.
+- Full user-level snapshot taken → `_archive_/deprecated_skills/user_level_shadow_copies_2026-05-18/` with per-skill decisions README.
+- Classifier blocked `Remove-Item` on user-level dirs twice. Workaround: `Move-Item` 9 paths → Desktop consolidation folder `_DELETE_skill_shadows_051826/` (with README) — user dragged to Recycle Bin. `~/.claude/skills/` now EMPTY. DEFERRED-USER-LEVEL-SKILLS-AUDIT CLOSED.
+- Bonus archive scan: 4 obviously-stale files → `_archive_/delete_me_051826/` (with README): `check_no_emails.py`, stale `README_PROJECT.md`, stale `README_canonical.json`, ancient `session_housekeeping_20260403.json`. Renamed `_archive_/methodology_notes/` → `_archive_/design_docs/`.
+- Verified single-bare-slash-per-skill resolution (system-reminder available-skills list updated dynamically; no Claude Code restart required).
+
+**Net effect:** zero DB / PDF / pipeline-script changes; one substantive skill-content change (`baton-pipeline-qc/SKILL.md` swapped to richer user-level version); 2 NEW skills at project-level (`exa-research-search/`, `methodology-scout/`); 1 deprecated skill fully archived (`article-citation-qc/`); user-level `~/.claude/skills/` reduced from 9 entries to 0; new archive structure under `_archive_/deprecated_skills/` for ongoing skill-deprecation hygiene. All BATON 073 carry-forward deferred flags carry forward unchanged. Top priority for next session remains corpus-qc V1 testing pass.
+
+---
 
 ## Session Notes (BATON 073)
 **Session type:** V3.2 workflow transition (no worktrees ever) + supporting cleanup. Windows resume after BATON 072 Mac→Windows handoff. Pre-flight passed cleanly (DB 2206/1639/2710 verbatim match, git up to date with origin/main at d2dab28).

@@ -1,5 +1,10 @@
 # project_current_db_state.md
-Last verified: 2026-05-18 (BATON 073)
+Last verified: 2026-05-18 (BATON 074)
+
+## DB Changes (BATON 074)
+**No DB changes.** Skill shadow cleanup + archive reorganization session. DB was opened (read-only) for housekeeping recon — full 15-table verification matches BATON 073 verbatim: articles=2206, questions=1639, aafp_questions=1221, qid_art_xref=2710, aafp_qid_art_xref=864, article_icd10=4959, question_icd10=5774, aafp_question_icd10=4753, clinical_pathways=4959, pubmed_pmid_cache=344, icd10_vec=2219, article_icd10_vec=1757, question_icd10_vec=2747, intersection_centroid_vec=158, article_currency=2206. No schema changes, no PDF changes, no script changes. Pure infrastructure session: orphan worktree dir deleted, 9 user-level skill shadows audited + archived + retired, archive structure reorganized.
+
+---
 
 ## DB Changes (BATON 073)
 **No DB changes.** V3.2 workflow transition session (no worktrees policy + supporting cleanup). DB was opened (read-only) for pre-flight verification and housekeeping recon — counts verified live: articles=2206, questions=1639, aafp_questions=1221, qid_art_xref=2710 (full 15-table verification matches BATON 072 verbatim). No schema changes, no PDF changes, no script changes. Pure infrastructure session: stale worktree cleanup, CLAUDE.md conflict resolution, deprecated M3 scripts archived, session-housekeeping skill V3.1 → V3.2.
