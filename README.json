@@ -5,7 +5,7 @@
   "baton": "BATON_active_077_20260519_resident_rerun_blueprint_fix.md",
   "baton_description": "Resident re-run + blueprint parser fix + encoding DB cleanup. Reviewed a Mac QC-handoff, recovered Q17 (QID-2022-0097 stem from 2022_MC.pdf), extended encoding tables (fixed dead _DOTLEADER regex + added Ã? double-encoding family to build_custom_question_set.py + corpus-qc utils.py), then re-ran all 7 resident analyses — which surfaced + fixed two latent bugs. Fix #1: parse_blueprint only read page 1 of legacy 2-page (2018-2023) reports, dropping ~37% of items (2022 123->195, 2023 125->198); now loops all pages. Option C: Stage 1.8 blueprint now DB-derived by QID (authoritative) with PDF cross-check flagging true disagreements. MAJOR FINDING: old-format 2022/2023 blueprint was ~70% mis-categorized by PDF-column geometry (differs across ABFM eras); new-format years agree 0-1/195, validating DB+QID mapping. Encoding DB-fix: dot-leader ï€®->': ' + Ã? family across 34 rows. QID-2024-0017 blueprint corrected Acute Care and Diagnosis->Chronic Care Management per ABFM tie-breaker -> all 7 reports 0 disagreements. UTF-8 console crash fixed. All 7 reports regenerated: correct denominators, DB-authoritative blueprint, 0 encoding artifacts in JSON+DOCX, official YoY deltas. Closed DEFERRED-RESIDENT-ANALYSES-RERUN; opened 5 (BLUEPRINT-XCHECK-AUTOFIX, PATIENT-BASED-SYSTEMS-RESIDUAL, DOUBLED-QUOTE, C1-CONTROLS, REPORT-BUILDER-ENCODING). No new scripts (all edits to existing files). Commits f091abd + ae47b77.",
   "last_updated": "2026-05-19",
-  "git_hash": "ae47b77",
+  "git_hash": "b7b5b75",
   "git_remote": "https://github.com/mpsch01/board_prep_intel",
   "database": {
     "path": "00_database/db/ite_intelligence.db",

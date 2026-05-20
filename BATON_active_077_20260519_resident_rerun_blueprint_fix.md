@@ -198,7 +198,8 @@ DEFERRED-LAYER-A2-HEURISTIC-TUNING, DEFERRED-CORPUS-QC-LAYER-A7-A8, DEFERRED-LAY
 - **Session commits on feature branch:**
   - `f091abd` — *"QC follow-up: Q17 stem recovery + dot-leader/Ã encoding-table extensions"* (2 files)
   - `ae47b77` — *"ITE analysis: multi-page blueprint parse + DB-authoritative blueprint cross-check + UTF-8 fix"* (2 files)
-  - *(housekeeping commit + hash-backfill to follow)*
+  - `b7b5b75` — *"BATON 077: resident re-run + blueprint parser fix + encoding DB cleanup"* (housekeeping, 13 files)
+  - *(hash-backfill commit follows, propagating `b7b5b75`)*
 - **PR:** *(to be opened during Item 12; merged via `gh pr merge --merge --delete-branch`)*
 
 ---

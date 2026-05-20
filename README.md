@@ -16,7 +16,7 @@
   "description": "A queryable Family Medicine board exam knowledge base (1,640 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "baton": "BATON_active_077_20260519_resident_rerun_blueprint_fix.md",
   "baton_description": "Resident re-run + blueprint parser fix + encoding DB cleanup. Q17 stem recovery (QID-2022-0097); encoding-table extensions (dead _DOTLEADER regex fix + Ã? family); re-ran all 7 resident analyses which surfaced 2 latent bugs — Fix #1 parse_blueprint multi-page (legacy 2-page reports dropped ~37% of items: 2022 123->195, 2023 125->198), Option C Stage 1.8 DB-derived blueprint + cross-check. MAJOR FINDING: old-format 2022/2023 blueprint ~70% mis-categorized by PDF-column geometry; new-format 0-1/195 validates DB+mapping. Encoding DB-fix (dot-leader + Ã family, 34 rows). QID-2024-0017 corrected Acute->Chronic Care Management per ABFM tie-breaker -> all 7 reports 0 disagreements. UTF-8 crash fixed. Closed DEFERRED-RESIDENT-ANALYSES-RERUN; opened 5. No new scripts.",
-  "git_hash": "ae47b77",
+  "git_hash": "b7b5b75",
   "git_branch": "claude/session-077-q17-and-encoding-fixes (V3.2 feature branch from main c9f1f90)",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-19",
