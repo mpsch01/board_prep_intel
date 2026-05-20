@@ -1,5 +1,47 @@
 # project_current_db_state.md
-Last verified: 2026-05-19 (BATON 075)
+Last verified: 2026-05-19 (BATON 076)
+
+## DB Changes (BATON 076)
+**8 distinct write workflows** this session, all backed up, all BATON 075 invariants preserved (articles=2,206; questions=1,640; qid_art_xref=2,710; sum_citation_count=2,710; distinct_xref_article_ids=1,982). Row counts on all 13 tracked tables UNCHANGED — only column values updated.
+
+| # | Workflow | Targets | DB column updates | Backup file |
+|---|----------|---------|-------------------|-------------|
+| 1 | A3 choices_empty re-extraction | 42 QIDs (27 OK 5-of-5 + 15 PARTIAL_4OF5) | `choices` + `correct_text` | `pre_a3_2026-05-19-063039.bak` |
+| 2 | TF-IDF keyword refresh + concept_tags backfill | All 1,640 ITE questions (keywords) + QID-2024-0067 (concept_tags via Sonnet 4.6) | `stem_keywords` + `explanation_keywords` + `all_keywords` (1,640) + `concept_tags` (1) | `pre_qid_0067_enrich_2026-05-19-063554.bak` |
+| 3 | question_text cleanup + 2 choice fixes | 42 QIDs (qtext) + QID-2020-0162 D + QID-2021-0017 A | `question_text` (42) + `choices` (2) | `pre_qtext_cleanup_2026-05-19-065741.bak` |
+| 4 | 2 subscript orphan fixes in PARTIAL_4OF5 explanations | QID-2021-0017 + QID-2021-0107 | `explanation` (2) | `pre_subscript_orphan_2026-05-19-070326.bak` |
+| 5 | Corpus-wide subscript orphan cleanup (Phase 1 removal + Phase 2 medical-regex sweep) | 206 questions | `question_text` (~50) + `explanation` (~150) | `pre_subscript_cleanup_2026-05-19-072143.bak` |
+
+### Final fidelity metrics (all at 0 post-session)
+
+| Metric | Pre-session | Post-session |
+|---|---|---|
+| `questions.choices = '[]'` or NULL | 42 | **0** |
+| `questions.correct_text` empty/NULL | 42 | **0** |
+| `questions.question_text` with embedded answer-choice block | 41 | **0** |
+| `questions.question_text` with wandering subscript orphan | 47 | **0** |
+| `questions.explanation` with wandering subscript orphan | 117 | **0** |
+
+### Positive verification — subscripts properly recovered
+
+| Token | Questions containing |
+|---|---|
+| `A1c` | 47 |
+| `B12` | 35 |
+| `FEV1` | 19 |
+| `T4` | 15 |
+| `H2-blocker` | 8 |
+| `α1-` | 7 |
+| `H2O` | 4 |
+| `S3 gallop` | 2 |
+| `PaO2` | 2 |
+| `PaCO2` | 2 |
+
+### Other DB notes
+- Recon during housekeeping found 10 articles ART-2208–ART-2218 (gap at ART-2210) already present at session start, with row count still at 2,206 (12 gap IDs). BATON 075's "Next ART-ID: ART-2208" was stale. **Corrected: next ART-ID = ART-2219.**
+- 5 atomic backup files created in `00_database/db/` this session (~164 MB each). All gitignored. Keep until next session confirms stability.
+
+---
 
 ## DB Changes (BATON 075)
 **Substantive DB writes — first since BATON 060.** Two distinct write workflows:

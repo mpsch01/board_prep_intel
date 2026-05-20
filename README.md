@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-05-19 (BATON 075)
-**Status:** Active development — corpus-integrity-qc V1 fully exercised end-to-end on canonical DB; 1,914 Tier 1 fixes applied (Layer C: 1,798 → 0 findings); skill hardened for Windows (UTF-8, path-fix, JSON-escape patches); +1 question recovered (QID-2024-0067 acute HIV)
-**Active BATON:** `BATON_active_075_20260519_corpus_qc_v1_testing_pass.md`
-**Next ART-ID:** ART-2208
-**Git:** branch `claude/session-075-corpus-qc-v1-pass` (V3.2 feature branch); main → `65754ea` pre-session (BATON 074 merge commit). Session commits: `caf66f4` (BATON 075 housekeeping, 22 files) + hash-backfill commit. → `https://github.com/mpsch01/board_prep_intel` (private)
+**Last updated:** 2026-05-19 (BATON 076)
+**Status:** Active development — Tier 2 walk-down + corpus-wide question-text & subscript-orphan cleanup complete. 8 atomic DB-write workflows applied (all backed up; BATON 075 invariants preserved on each). All question-fidelity metrics now at 0: zero empty choices, zero empty correct_text, zero embedded answer-choice blocks in stem, zero wandering-subscript orphans in either question_text or explanation. 4 deferred flags closed, 2 opened (A2 heuristic tuning + new corpus-qc layer checks A7/A8).
+**Active BATON:** `BATON_active_076_20260519_tier2_apply_and_corpus_cleanup.md`
+**Next ART-ID:** ART-2219 (corrected — recon found 10 articles ART-2208–ART-2218 already present)
+**Git:** branch `claude/session-076-tier2-and-qid-followups` (V3.2 feature branch); main → `0b595f9` pre-session (BATON 075 merge commit, "Merge pull request #21"). Session commits: `de9a0f3` (BATON 076 housekeeping, 18 files) + hash-backfill commit. → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -14,13 +14,13 @@
 {
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,640 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_075_20260519_corpus_qc_v1_testing_pass.md",
-  "baton_description": "Corpus-integrity-qc V1 testing pass + DB-write debut. Ran run_qc.py end-to-end (first standalone run), fixed 3 substantive bugs in-flight: PROJECT_ROOT off-by-one in all 5 entry-point scripts; Windows cp1252 console crash on ✓ chars (new setup_utf8_stdout() in utils.py + UTF-8 to 8 open() calls + 3 subprocess.run() calls); A1 ENCODING_ARTIFACT no-op on JSON choices column (discovered SQLite interprets \\u escapes despite docs; fixed via _sql_json_escape_expr() building char(92) || 'uXXXX'). Applied 1,914 Tier 1 statements via inline fix-applier workflow with atomic BEGIN/COMMIT + 172 MB backup + 6 verify COUNTs. Findings dropped 2,538 → 624; Layer C went 1,798 → 0. Recovered QID-2024-0067 (acute HIV diagnostic) from source PDFs after it was found dropped during ingestion; inserted with primary fields populated (questions count 1,639 → 1,640). DB invariants now hold. 3 deferred flags CLOSED, 4 NEW opened (A5/A6/QID-2024-0067-enrichment/umbrella-promotion-review).",
-  "git_hash": "caf66f4",
-  "git_branch": "claude/session-075-corpus-qc-v1-pass (V3.2 feature branch from main 65754ea)",
+  "baton": "BATON_active_076_20260519_tier2_apply_and_corpus_cleanup.md",
+  "baton_description": "Tier 2 walk-down + corpus-wide question-text and subscript-orphan cleanup. 8 distinct DB-write workflows: A3 choices_empty re-extraction (42 QIDs); A2 truncation-candidate verification (23 ALREADY_FULL); QID-2024-0067 enrichment backfill via Sonnet 4.6; blueprint+body_system verified; 8th UMBRELLA review (+1 honest signal); question_text contamination cleanup (42 QIDs); wandering-subscript orphan corpus-wide cleanup (206 questions, 239 orphans removed, 176 medical-knowledge recoveries via 14 rules: A1c/B12/FEV1/T4/H2-blocker/α1-/H2O/S3 gallop/HCO3/PaO2/PaCO2/Lp-PLA2/phospholipase A2). Final fidelity metrics all 0 (was 47+117+42+42+41). 4 deferred flags CLOSED, 2 NEW (A2 heuristic tuning + A7/A8 corpus-qc layer checks).",
+  "git_hash": "de9a0f3",
+  "git_branch": "claude/session-076-tier2-and-qid-followups (V3.2 feature branch from main 0b595f9)",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-19",
-  "next_art_id": "ART-2208",
+  "next_art_id": "ART-2219",
   "vc_gate_citations": 352,
   "database": {
     "file": "00_database/db/ite_intelligence.db",
@@ -57,7 +57,8 @@
   "scripts": {
     "m1_build_py": 8,
     "m1_maintain_py": 38,
-    "m2_py": 75,
+    "m2_py": 80,
+    "m2_py_note": "+5 BATON 076: reextract_a3_choices.py, reextract_a2_explanations.py, clean_question_text_contamination.py, render_partial_4of5_docx.py, fix_subscript_orphans.py",
     "m2_js": 6,
     "m3_py": 55,
     "m3_js": 4,

@@ -2,31 +2,36 @@
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,640 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
   "root": "C:\\Users\\mpsch\\Desktop\\board_prep_intel",
-  "baton": "BATON_active_075_20260519_corpus_qc_v1_testing_pass.md",
-  "baton_description": "Corpus-integrity-qc V1 testing pass + DB-write debut. Ran run_qc.py end-to-end (first standalone run), fixed 3 substantive bugs in-flight: PROJECT_ROOT off-by-one in all 5 entry-point scripts; Windows cp1252 console crash on '✓' chars (new setup_utf8_stdout() in utils.py + UTF-8 to 8 open() calls + 3 subprocess.run() calls); A1 ENCODING_ARTIFACT no-op on JSON choices column (discovered SQLite interprets \\u escapes despite docs; fixed via _sql_json_escape_expr() building char(92) || 'uXXXX'). Applied 1,914 Tier 1 statements via inline fix-applier workflow with atomic BEGIN/COMMIT + 172 MB backup + 6 verify COUNTs. Findings dropped 2,538 → 624; Layer C went 1,798 → 0. Recovered QID-2024-0067 (acute HIV diagnostic) from source PDFs after it was found dropped during ingestion; inserted with primary fields populated. DB invariants now hold. 3 deferred flags CLOSED (DEFERRED-LAYER-C-CACHE-REBUILD, DEFERRED-ORPHAN-XREF-QID-2024-0067, DEFERRED-V1-ENCODING-CHOICES-JSON-BUG opened+closed same session); 4 NEW opened (A5 language-integrity, A6 render-fidelity, QID-2024-0067 enrichment backfill, B-umbrella-promotion-review).",
+  "baton": "BATON_active_076_20260519_tier2_apply_and_corpus_cleanup.md",
+  "baton_description": "Tier 2 walk-down + corpus-wide question-text and subscript-orphan cleanup. 8 distinct DB-write workflows applied (all backed up, all BATON 075 invariants preserved): (1) A3 choices_empty re-extraction for 42 QIDs (27 OK 5-of-5 + 15 PARTIAL_4OF5 — ABFM source-PDF defect missing choice E; correct_letter in {A,B,C,D} for all 15); (2) A2 truncation-candidate re-extraction → all 23 ALREADY_FULL (heuristic false-positives); (3) QID-2024-0067 enrichment backfill (TF-IDF keywords + concept_tags via Sonnet 4.6, ~$0.01); (4) blueprint+body_system verified via precedent; (5) 8th UMBRELLA review (+1 net is genuine signal — 2 promotions + 1 demotion); (6) question_text contamination cleanup for 42 QIDs (embedded answer-choice block + trailing empty slots + Item #NN residue) + 2 specific choice fixes; (7) wandering-subscript orphan corpus-wide cleanup via fix_subscript_orphans.py — 206 questions, 239 orphan lines removed, 176 medical-knowledge subscript recoveries via 14 rules (A1c/B12/FEV1/T4/H2-blocker/α1-/H2O/S3 gallop/HCO3/PaO2/PaCO2/Lp-PLA2/phospholipase A2). Final corpus state: 0 questions with empty choices (was 42), 0 with empty correct_text (was 42), 0 with embedded-choice-block in stem (was 41), 0 with subscript orphan in question_text (was 47), 0 with subscript orphan in explanation (was 117). 4 deferred flags CLOSED (QID-2024-0067-ENRICHMENT, LAYER-B-UMBRELLA-PROMOTION, A3-SOURCE-PDF-MISSING-E, SUBSCRIPT-ORPHAN-CORPUS); 2 NEW (LAYER-A2-HEURISTIC-TUNING, CORPUS-QC-LAYER-A7-A8). 5 new M2 scripts.",
   "last_updated": "2026-05-19",
-  "git_hash": "caf66f4",
+  "git_hash": "de9a0f3",
   "git_remote": "https://github.com/mpsch01/board_prep_intel",
   "database": {
     "path": "00_database/db/ite_intelligence.db",
     "articles": 2206,
-    "articles_note": "1,998 base + 13 from critique PDFs (ART-1987–ART-1999) + 208 from acquire_missing_citations.py (ART-2000–ART-2207); row count unchanged BATON 075 but many cache columns corrected via Tier 1 apply",
+    "articles_note": "Row count unchanged BATON 076; recon found 10 articles ART-2208–ART-2218 already present (gap at ART-2210); max article_id = ART-2218",
     "ite_questions": 1640,
-    "ite_questions_note": "+1 BATON 075: QID-2024-0067 (acute HIV diagnostic, exam_year=2024, blueprint=Acute Care and Diagnosis, body_system=Hematologic/Immune) recovered from 2024_MC.pdf + 2024_critique.pdf; 4 enrichment fields NULL pending backfill (DEFERRED-QID-2024-0067-ENRICHMENT)",
+    "ite_questions_note": "Row count unchanged BATON 076; choices/correct_text/explanation/question_text/keywords/concept_tags column values updated across ~250 questions via 8 atomic write workflows; all BATON 075 invariants preserved on each apply",
     "aafp_questions": 1221,
     "qid_art_xref": 2710,
-    "qid_art_xref_note": "row count unchanged BATON 075 (Tier 1 had no INSERTs/DELETEs); orphan row (QID-2024-0067/ART-2073) now has valid FK endpoints",
+    "qid_art_xref_note": "Row count unchanged BATON 076; AAFP corpus had 0 subscript orphans (different ingestion path from ITE)",
     "article_currency": 2206,
-    "next_art_id": "ART-2208"
+    "next_art_id": "ART-2219"
   },
-  "db_invariants_post_baton_075": {
+  "db_invariants_post_baton_076": {
     "sum_citation_count_eq_xref_count": "2710 == 2710 ✓",
     "articles_with_citations_eq_distinct_xref_article_ids": "1982 == 1982 ✓",
-    "orphan_xref_rows": 0
+    "orphan_xref_rows": 0,
+    "questions_with_empty_choices": 0,
+    "questions_with_empty_correct_text": 0,
+    "questions_with_embedded_choice_block_in_stem": 0,
+    "questions_with_subscript_orphan_in_qtext": 0,
+    "questions_with_subscript_orphan_in_explanation": 0
   },
   "pdfs": {
     "total": 1571,
-    "total_note": "1,540 ITE active + 15 AAFP + 16 exams (canonical post-BATON 067; Mac local lags by 567 — gitignored)",
+    "total_note": "1,540 ITE active + 15 AAFP + 16 exams (unchanged BATON 076; Mac local lags by 567 — gitignored)",
     "ite": 1540,
     "ite_tiers": {
       "VC_fail": 1056,
@@ -40,7 +45,8 @@
   "scripts": {
     "m1_build": 8,
     "m1_maintain": 38,
-    "m2_python": 75,
+    "m2_python": 80,
+    "m2_python_note": "+5 BATON 076: reextract_a3_choices.py, reextract_a2_explanations.py, clean_question_text_contamination.py, render_partial_4of5_docx.py, fix_subscript_orphans.py",
     "m2_js": 6,
     "m3_python": 55,
     "m3_js": 4,
@@ -75,13 +81,8 @@
     "skill_path": ".claude/skills/corpus-integrity-qc/",
     "version": "V1.0.1 (Windows-hardened BATON 075)",
     "first_full_run": "2026-05-19 (BATON 075)",
-    "post_apply_findings_total": 624,
-    "post_apply_layer_a": 65,
-    "post_apply_layer_b": 559,
-    "post_apply_layer_c": 0,
-    "tier_1_statements_applied": 1914,
-    "tier_2_pending_review": 65,
-    "tier_3_manual_findings": 559,
-    "backup_path": "00_database/db/ite_intelligence.db.pre_qc_2026-05-18-221606.bak"
+    "post_baton_076_status": "Layer A 23 / Layer B 559 / Layer C 0 (Layer A remaining is the 23 A2 TRUNCATION_CANDIDATE false-positives → DEFERRED-LAYER-A2-HEURISTIC-TUNING). BATON 076 cleanups (qtext contamination + subscript orphans) were invisible to current QC layers → opens DEFERRED-CORPUS-QC-LAYER-A7-A8.",
+    "deferred_v1_1_work": ["A4 PDF_DIFF", "A6 RENDER_FIDELITY", "A7 EMBEDDED_CHOICES_IN_STEM (new BATON 076)", "A8 WANDERING_SUBSCRIPT (new BATON 076)"],
+    "deferred_v1_2_work": ["A5 LANGUAGE_INTEGRITY", "A2 heuristic tuning (new BATON 076)"]
   }
 }

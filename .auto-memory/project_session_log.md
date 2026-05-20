@@ -1,7 +1,46 @@
 # project_session_log.md
-Last updated: 2026-05-19 (BATON 075)
+Last updated: 2026-05-19 (BATON 076)
 
 > **Renamed BATON 068.** This file was previously `project_overhaul_state.md` — a fossil from the early "PROJECT_OVERHAUL" reorganization phase (M1–M5 module rebuild, ~March 2026). Despite the old name, this file has long served as the project's **running session log + state snapshot**. New name reflects current role.
+
+## Session Notes (BATON 076 — 2026-05-19)
+
+**Tier 2 walk-down + corpus-wide question-text and subscript-orphan cleanup.** Second session of the same calendar day, picking up the BATON 075 "Immediate" carry-forward. Work mushroomed organically: each follow-up revealed deeper corpus issues that the corpus-integrity-qc Layer A/B checks today don't detect.
+
+**8 distinct DB-write workflows applied** (all backed up, all BATON 075 invariants preserved on each):
+
+1. **A3 choices_empty re-extraction (42 QIDs).** Built `02_module.2_processor/scripts/reextract_a3_choices.py` (pdfplumber, monotonic-item-number constraint, Item-#NN-trailing-strip). Re-extracted from `YYYY_MC.pdf` files. Result: 27 OK 5-of-5 + 15 PARTIAL_4OF5 (verified source-PDF defect via `extract_words()` — zero "E)" tokens on the relevant pages; choice E was truncated at page-break during ABFM PDF generation). Per Mikey's data-completeness bar (memorialized to `~/.claude/projects/.../memory/feedback_question_completeness_bar.md`), all 15 PARTIAL_4OF5 have correct_letter in {A,B,C,D} so all 42 applied. Applied: 42 UPDATEs (choices + correct_text). `questions_empty_choices` 42 → 0. `questions_empty_correct_txt` 42 → 0.
+
+2. **A2 truncation-candidate re-extraction → no-op.** Built `02_module.2_processor/scripts/reextract_a2_explanations.py` against `YYYY_critique.pdf` for 23 A2 candidates. **All 23 ALREADY_FULL** — DB explanations match critique PDFs in full. The A2 year-floor heuristic produced 23 false positives. No SQL applied. Opens DEFERRED-LAYER-A2-HEURISTIC-TUNING.
+
+3. **QID-2024-0067 enrichment backfill.** Ran `unified_keyword_extractor.py --corpus ite` (TF-IDF refresh across 1,640 questions, populated 3 keyword fields for QID-2024-0067 + 99.9% identical top-12 lists for existing rows) + `preprocess_concept_tags.py` (1 Sonnet 4.6 API call, ~$0.01, 3.77s — populated `concept_tags` with diagnoses=['acute HIV infection', 'acute retroviral syndrome', 'mononucleosis-like syndrome'] + clinical concept_summary). Closes DEFERRED-QID-2024-0067-ENRICHMENT.
+
+4. **QID-2024-0067 blueprint+body_system verification.** Cross-checked the BATON 075 inferences (Acute Care and Diagnosis + Hematologic/Immune) against 25 other HIV-tagged questions in the corpus. 4 precedents classified Hematologic/Immune (QID-2021-0106 ARV initiation, QID-2022-0106 zoster vaccination), 7 of 25 classified Acute Care and Diagnosis. Both inferences hold up. No UPDATE needed.
+
+5. **8th UMBRELLA promotion investigation.** Diffed pre-Tier-1 vs post-apply UMBRELLA sets: net +1 = 2 promoted (ART-0427 USPSTF Testicular Cancer Screening, ART-0789 Harrison's Principles of Internal Medicine — both legitimate umbrellas hidden by stale citation_count caches) − 1 demoted (ART-0412 USPSTF Depression Screening — was false umbrella due to inflated cache; Tier 1 corrected). Threshold logic working correctly. Closes DEFERRED-LAYER-B-UMBRELLA-PROMOTION-REVIEW.
+
+6. **question_text contamination cleanup (42 QIDs).** Mid-session discovery: while auditing the 15 PARTIAL_4OF5 for clean termination, found 14 of 15 had embedded answer-choice blocks (trailing empty `A) \nB) \nC) \nD) \nE)` slots + inline duplicated choice text for 27 of them). Corpus-wide scan: 39 questions with trailing empty-slots pattern, 27 with inline-choice duplication, 2 with `Item #NN` running-header residue (90 with trailing isolated digits — most cleaned together with the choice block). Built `clean_question_text_contamination.py` with `?`-preserving boundary regex (using `\g<lead>` lookbehind to keep trailing question marks when present). Applied: 42 UPDATEs (qtext) + 2 specific choice fixes (QID-2020-0162 D append " proficiency" per critique PDF; QID-2021-0017 A merge wandering "1c" → "A1c"). `qtext_with_choice_block` 44 → 3 (remaining 3 are false-positive GLOB matches on acronyms SABA/OSA/AHA — verified zero real contamination remains). `qtext_with_trail_digit` 2 → 0.
+
+7. **PARTIAL_4OF5 DOCX render audit.** Built `render_partial_4of5_docx.py` (imports `build_exam_docx` + `build_study_guide_docx` from canonical M3 generator). Rendered both Exam and Study Guide for the 15 PARTIAL_4OF5. Confirmed: zero empty answer-slot blocks, zero `Item #NN` residue, zero orphan letter rows. But surfaced 1 lone wandering-subscript orphan (`"2"` from QID-2021-0107 explanation, originally `"H₂-blocker, gastrointestinal\n2\ncontrast"` — pointing to a new bug class).
+
+8. **Corpus-wide wandering-subscript orphan cleanup (206 questions).** Scan found 47 question_text + 117 explanation fields with subscript-orphan pattern (162 unique questions, 205 orphan instances). Inventory by orphan value: `1c` 58, `1` 29, `12` 29, `2` 11, `4` 9, `3` 6, plus 63 multi-digit page-footer leaks. Built `fix_subscript_orphans.py` two-phase: Phase 1 mechanical removal (single-token + multi-token orphan lines like "1 1" or "2 2") + Phase 2 medical-knowledge regex sweep (14 rules: hemoglobin A1c, vitamin B12, H2-blocker/antagonist/receptor, H2O, CO2, O2-saturation, HCO3, PaCO2, PaO2, Free T4, T4 levels, S3 gallop, FEV1, Lp-PLA2, phospholipase A2, α1-antitrypsin). **Iterated 3 times** before applying — initial run had a Python-regex `\1c` parsing bug (parsed as group-1 + literal `c`, giving "Ac" instead of "A1c"; fixed via `\g<1>1c`). Applied: 239 orphan lines removed + 176 subscript recoveries. Rule distribution: A1c 54, B12 40, FEV1 28, Free T4 16, H2-blocker 9, α1- 7, T4 levels 6, S3 gallop 4, H2O 4, PaO2 3, PaCO2 2, Lp-PLA2 1, phospholipase A2 1, A1c-trailing-percent 1. **Final state: 0 subscript orphans corpus-wide** in both question_text and explanation columns.
+
+**Closed deferred flags:** DEFERRED-QID-2024-0067-ENRICHMENT, DEFERRED-LAYER-B-UMBRELLA-PROMOTION-REVIEW, DEFERRED-A3-SOURCE-PDF-MISSING-E (opened+closed same session), DEFERRED-SUBSCRIPT-ORPHAN-CORPUS (opened+closed same session).
+
+**Newly opened deferred flags:** DEFERRED-LAYER-A2-HEURISTIC-TUNING (year-floor median too sensitive; produces false positives — tighten to year_p10 or replace with PDF-diff comparison), DEFERRED-CORPUS-QC-LAYER-A7-A8 (add auto-detection checks for embedded-choice-block-in-stem and wandering-subscript patterns — both fit existing Tier 1 auto-safe SQL pattern).
+
+**Net deferred flag delta: -2 (4 closed, 2 opened).**
+
+**5 new M2 scripts** (script count 75py → 80py):
+- `reextract_a3_choices.py`
+- `reextract_a2_explanations.py`
+- `clean_question_text_contamination.py`
+- `render_partial_4of5_docx.py`
+- `fix_subscript_orphans.py`
+
+**Session commits:** *(to be filled post-housekeeping)*
+
+---
 
 ## Session Notes (BATON 075 — 2026-05-19)
 
