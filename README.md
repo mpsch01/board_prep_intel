@@ -1,10 +1,10 @@
 # ABFM ITE Intelligence System — board_prep_intel
 
-**Last updated:** 2026-05-19 (BATON 076)
-**Status:** Active development — Tier 2 walk-down + corpus-wide question-text & subscript-orphan cleanup complete. 8 atomic DB-write workflows applied (all backed up; BATON 075 invariants preserved on each). All question-fidelity metrics now at 0: zero empty choices, zero empty correct_text, zero embedded answer-choice blocks in stem, zero wandering-subscript orphans in either question_text or explanation. 4 deferred flags closed, 2 opened (A2 heuristic tuning + new corpus-qc layer checks A7/A8).
-**Active BATON:** `BATON_active_076_20260519_tier2_apply_and_corpus_cleanup.md`
-**Next ART-ID:** ART-2219 (corrected — recon found 10 articles ART-2208–ART-2218 already present)
-**Git:** branch `claude/session-076-tier2-and-qid-followups` (V3.2 feature branch); main → `0b595f9` pre-session (BATON 075 merge commit, "Merge pull request #21"). Session commits: `de9a0f3` (BATON 076 housekeeping, 18 files) + hash-backfill commit. → `https://github.com/mpsch01/board_prep_intel` (private)
+**Last updated:** 2026-05-19 (BATON 077)
+**Status:** Active development — resident re-run + blueprint parser fix + encoding DB cleanup complete. Re-ran all 7 resident analyses (closing the long-overdue DEFERRED-RESIDENT-ANALYSES-RERUN), which surfaced + fixed two latent bugs: parse_blueprint only read page 1 of legacy 2-page reports (2022 123→195, 2023 125→198 items), and the blueprint dimension was ~70% mis-categorized for 2022/2023 by PDF-column geometry. Blueprint is now DB-authoritative (Option C, Stage 1.8) with ABFM as the tie-breaker. Encoding cleaned at DB source (dot-leader + Ã family, 34 rows). All 7 reports regenerated correct: proper denominators, 0 blueprint disagreements, 0 encoding artifacts in JSON+DOCX, official YoY deltas. 1 flag closed, 5 opened.
+**Active BATON:** `BATON_active_077_20260519_resident_rerun_blueprint_fix.md`
+**Next ART-ID:** ART-2219 (max article_id ART-2218)
+**Git:** branch `claude/session-077-q17-and-encoding-fixes` (V3.2 feature branch); main → `c9f1f90` pre-session (BATON 076 merge commit, "Merge pull request #22"). Session commits: `f091abd` (Q17 + encoding tables) + `ae47b77` (multi-page parse + Option C + UTF-8) + housekeeping + hash-backfill. → `https://github.com/mpsch01/board_prep_intel` (private)
 
 ---
 
@@ -14,10 +14,10 @@
 {
   "project": "ABFM ITE Intelligence System",
   "description": "A queryable Family Medicine board exam knowledge base (1,640 ITE + 1,221 AAFP questions, 2018–2025) linked to a clinical guideline library (2,206 articles, 1,571 PDFs) via a structured SQLite pipeline.",
-  "baton": "BATON_active_076_20260519_tier2_apply_and_corpus_cleanup.md",
-  "baton_description": "Tier 2 walk-down + corpus-wide question-text and subscript-orphan cleanup. 8 distinct DB-write workflows: A3 choices_empty re-extraction (42 QIDs); A2 truncation-candidate verification (23 ALREADY_FULL); QID-2024-0067 enrichment backfill via Sonnet 4.6; blueprint+body_system verified; 8th UMBRELLA review (+1 honest signal); question_text contamination cleanup (42 QIDs); wandering-subscript orphan corpus-wide cleanup (206 questions, 239 orphans removed, 176 medical-knowledge recoveries via 14 rules: A1c/B12/FEV1/T4/H2-blocker/α1-/H2O/S3 gallop/HCO3/PaO2/PaCO2/Lp-PLA2/phospholipase A2). Final fidelity metrics all 0 (was 47+117+42+42+41). 4 deferred flags CLOSED, 2 NEW (A2 heuristic tuning + A7/A8 corpus-qc layer checks).",
-  "git_hash": "de9a0f3",
-  "git_branch": "claude/session-076-tier2-and-qid-followups (V3.2 feature branch from main 0b595f9)",
+  "baton": "BATON_active_077_20260519_resident_rerun_blueprint_fix.md",
+  "baton_description": "Resident re-run + blueprint parser fix + encoding DB cleanup. Q17 stem recovery (QID-2022-0097); encoding-table extensions (dead _DOTLEADER regex fix + Ã? family); re-ran all 7 resident analyses which surfaced 2 latent bugs — Fix #1 parse_blueprint multi-page (legacy 2-page reports dropped ~37% of items: 2022 123->195, 2023 125->198), Option C Stage 1.8 DB-derived blueprint + cross-check. MAJOR FINDING: old-format 2022/2023 blueprint ~70% mis-categorized by PDF-column geometry; new-format 0-1/195 validates DB+mapping. Encoding DB-fix (dot-leader + Ã family, 34 rows). QID-2024-0017 corrected Acute->Chronic Care Management per ABFM tie-breaker -> all 7 reports 0 disagreements. UTF-8 crash fixed. Closed DEFERRED-RESIDENT-ANALYSES-RERUN; opened 5. No new scripts.",
+  "git_hash": "b7b5b75",
+  "git_branch": "claude/session-077-q17-and-encoding-fixes (V3.2 feature branch from main c9f1f90)",
   "github_remote": "https://github.com/mpsch01/board_prep_intel",
   "last_updated": "2026-05-19",
   "next_art_id": "ART-2219",

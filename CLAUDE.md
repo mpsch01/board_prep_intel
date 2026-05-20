@@ -52,9 +52,9 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 
 | Item | Value |
 |------|-------|
-| Active BATON | `BATON_active_076_20260519_tier2_apply_and_corpus_cleanup.md` — Tier 2 walk-down + corpus-wide question-text and subscript-orphan cleanup. 8 distinct DB-write workflows applied (all backed up, all BATON 075 invariants preserved): (1) A3 choices_empty re-extraction for 42 QIDs (27 OK 5-of-5 + 15 PARTIAL_4OF5 — ABFM source-PDF defect where choice E was truncated at page-break; correct_letter in {A,B,C,D} for all 15 per user's bar); (2) A2 truncation-candidate re-extraction → confirmed all 23 ALREADY_FULL (heuristic false-positives — opens DEFERRED-LAYER-A2-HEURISTIC-TUNING); (3) QID-2024-0067 enrichment backfill (TF-IDF keywords + concept_tags via Sonnet 4.6 / 1 API call / ~$0.01); (4) QID-2024-0067 blueprint+body_system verified via precedent (Acute Care and Diagnosis + Hematologic/Immune hold); (5) 8th UMBRELLA promotion review — +1 net is honest signal (2 promoted, 1 demoted; both promotions are legitimate umbrellas: USPSTF Testicular Cancer Screening + Harrison's Principles textbook); (6) question_text contamination cleanup for 42 QIDs (embedded answer-choice block + trailing empty A) B) C) D) E) slots + Item #NN residue) + 2 specific choice fixes (QID-2020-0162 D append " proficiency", QID-2021-0017 A merge wandering "1c"); (7) DOCX render audit revealed wandering subscripts pattern → built fix_subscript_orphans.py (two-phase: orphan removal + medical-knowledge regex sweep with 14 rules for A1c/B12/FEV1/T4/H2-blocker/α1-/H2O/S3 gallop/HCO3/PaO2/PaCO2/Lp-PLA2/phospholipase A2); (8) corpus-wide subscript-orphan cleanup applied to 206 questions (239 orphan lines removed, 176 subscript recoveries). Final corpus state: question_text subscript orphans 0 (was 47), explanation subscript orphans 0 (was 117), choices empty 0 (was 42), correct_text empty 0 (was 42). 4 deferred flags CLOSED (QID-2024-0067-ENRICHMENT, LAYER-B-UMBRELLA-PROMOTION, A3-SOURCE-PDF-MISSING-E, SUBSCRIPT-ORPHAN-CORPUS); 2 NEW (LAYER-A2-HEURISTIC-TUNING, CORPUS-QC-LAYER-A7-A8). 5 new M2 scripts (reextract_a3_choices, reextract_a2_explanations, clean_question_text_contamination, render_partial_4of5_docx, fix_subscript_orphans). |
+| Active BATON | `BATON_active_077_20260519_resident_rerun_blueprint_fix.md` — Reviewed a Mac QC-handoff, recovered Q17, then re-ran all 7 resident analyses as real-world testing — which surfaced + fixed two latent pipeline bugs. Work: (1) Q17 stem recovery (QID-2022-0097 from 2022_MC.pdf p.34); (2) encoding-table extensions — fixed dead `_DOTLEADER` regex + added `Ã?` family to `build_custom_question_set.py` + corpus-qc `utils.py` (commit f091abd); (3) **Encoding DB-fix** — dot-leader `ï€®`→`": "` + `Ã?` family across 34 rows (gitignored DB); (4) **Fix #1 — parse_blueprint multi-page**: legacy 2018–2023 reports are 2-page but parser only read page 1 → 2022 123→195, 2023 125→198 items (ite_parser.py); (5) **Option C — Stage 1.8 DB-derived blueprint + cross-check** (ite_analyze_v2.py): blueprint now derived from normalized DB by QID (authoritative), PDF-position kept as cross-check flagging true disagreements; (6) UTF-8 console crash fix (commit ae47b77). **MAJOR FINDING:** old-format 2022/2023 blueprint was ~70% mis-categorized by PDF-column position (geometry differs across ABFM eras); new-format years agree 0–1/195 — validating DB+QID mapping. (7) QID-2024-0017 blueprint corrected `Acute Care and Diagnosis`→`Chronic Care Management` per ABFM tie-breaker → all 7 reports now 0 blueprint disagreements. Closed DEFERRED-RESIDENT-ANALYSES-RERUN (overdue since BATON 065). All 7 reports regenerated: correct denominators, DB-authoritative blueprint, 0 encoding artifacts in JSON+DOCX, official YoY deltas. |
 | DB articles | 2,206 (+10 articles ART-2208–ART-2218 present at session start — likely from prior off-session import; row count unchanged, max ART-ID = ART-2218) |
-| DB questions (ITE) | 1,640 — row count unchanged this session; choices/correct_text/explanation/question_text/keywords/concept_tags column values updated across ~250 questions via 8 atomic write workflows. **Final fidelity metrics all 0:** 0 questions with empty `choices`, 0 with empty/NULL `correct_text`, 0 with embedded answer-choice block in `question_text`, 0 with wandering subscript orphan in either column. |
+| DB questions (ITE) | 1,640 — row count unchanged BATON 077; column updates: `question_text` (QID-2022-0097 stem recovery + encoding cleanup 24), `explanation` (encoding 11), `choices` (encoding 1), `blueprint` (QID-2024-0017 → Chronic Care Management). **Fidelity metrics all 0:** residual dot-leader `ï€®` 0, residual `Ã—` 0, blueprint disagreements across all 7 resident reports 0. (Carries BATON 076's 0 empty-choices/correct_text/embedded-block/subscript-orphan.) |
 | DB questions (AAFP BRQ) | 1,221 — blueprint 100% filled — flattened (correct_letter, correct_text, explanation merged in; subcategory + aafp_explanations DROPPED) |
 | aafp_questions.blueprint | 1,221/1,221 (100%) — batch API, same rubric as ITE v2 — complete 2026-03-30 |
 | aafp_questions.concept_tags | 1,221/1,221 (100%) |
@@ -74,13 +74,13 @@ ABFM ITE Intelligence System — a queryable Family Medicine board exam knowledg
 | qid_art_xref | 2,710 (rebuilt faithful multi-reference xref: 2018-2023 100% linked, 2024 90%, 2025 83.5%; +225 from new articles) |
 | aafp_qid_art_xref | 864 rows (643 unique questions linked, 52.7%) |
 | M1 scripts | 8 build + 38 maintain + aafp_brq_scraper.py at scripts/ root (unchanged BATON 076) |
-| M2 scripts | **80 Python** + 6 JS + 1 JSON in scripts/ (BATON 076: +5 new corpus-cleanup scripts — reextract_a3_choices.py, reextract_a2_explanations.py, clean_question_text_contamination.py, render_partial_4of5_docx.py, fix_subscript_orphans.py); core/ (4py) + engines/ (7py) + utils/ (6py) packages; source/ (transcripts, blueprint xlsx, outline DOCX); outputs/ (staging JSONs, citation gap); prompts/ (templates); main.py + requirements.txt at M2 root |
-| M3 scripts | 55 Python + 4 JS + 6 JSON config (unchanged BATON 076) |
+| M2 scripts | **80 Python** + 6 JS + 1 JSON in scripts/ (unchanged BATON 077 — `build_custom_question_set.py` edited: encoding tables); core/ (4py) + engines/ (7py) + utils/ (6py) packages; corpus-qc skill `utils.py` edited (encoding); source/ + outputs/ + prompts/; main.py + requirements.txt at M2 root |
+| M3 scripts | 55 Python + 4 JS + 6 JSON config (unchanged BATON 077 — `ite_parser.py` edited: multi-page blueprint parse; `ite_analyze_v2.py` edited: UTF-8 fix + Stage 1.8 Option C blueprint cross-check) |
 | M5 scripts | 3 Python sync + 35 TypeScript/TSX + 5 SQL migrations — 05_module.5_web/ scaffold |
 | article_currency | 2,206 rows — complete 2026-04-16 (was missing 115 rows); +208 new articles 2026-05-06 |
 | Apify actor | `apify-actors/citation_crawler/` — DEPLOYED ✅ actor ID `rh50nQRP7BupbUF64` (`mpsch1~citation-crawler`), build 0.3.1 (PlaywrightCrawler) |
 | Next ART-ID | ART-2219 (corrected — recon found 10 articles already present at ART-2208–ART-2218 with a gap at ART-2210; max ART-ID = ART-2218) |
-| Git branch | `claude/session-076-tier2-and-qid-followups` (V3.2 feature branch); main → `0b595f9` pre-session (BATON 075 merge commit, "Merge pull request #21"). Session commits: `de9a0f3` (BATON 076 housekeeping, 18 files) + hash-backfill commit. PR # filled post-push. Worktree state: clean — `git worktree list` shows only project root. |
+| Git branch | `claude/session-077-q17-and-encoding-fixes` (V3.2 feature branch); main → `c9f1f90` pre-session (BATON 076 merge commit, "Merge pull request #22"). Session commits: `f091abd` (Q17 + encoding tables) + `ae47b77` (multi-page parse + Option C + UTF-8) + `b7b5b75` (BATON 077 housekeeping) + hash-backfill commit. PR # filled post-push. Worktree state: clean — `git worktree list` shows only project root. |
 | GitHub remote | `https://github.com/mpsch01/board_prep_intel` (private) |
 | .gitignore strategy | Code + docs on GitHub. Binaries excluded: `*.db`, `*.pdf`, `extracted_json/`, `resident_data/` → local disk / Google Drive |
 
@@ -191,22 +191,22 @@ Both land in `03_module.3_analyst/custom_question_sets/YYYY-MM-DD/`:
 
 ---
 
-## Next Steps (as of BATON 076, 2026-05-19 — Tier 2 walk-down + corpus-wide cleanup complete)
+## Next Steps (as of BATON 077, 2026-05-19 — resident re-run + blueprint parser fix complete)
 
 ### Immediate (next session)
-1. **`/board-startup`** to load BATON 076 + verify DB sanity (articles=2206, questions=1640, qid_art_xref=2710, single `main` branch, no worktrees, 0 subscript orphans, 0 empty-choices/correct_text, 0 embedded-choice-block in question_text).
-2. **Re-run all 7 resident analyses** (Scholl 2022/2023/2024, Hopkins 2025, Sarkar 2025, Pjetergjoka 2024/2025). Now most overdue carry-forward — compounded DB changes from BATON 065/066/067/075/076 will materially shift reading-list output.
-3. **Decision: build A7+A8 corpus-qc layer checks** (DEFERRED-CORPUS-QC-LAYER-A7-A8) vs. defer to dedicated V1.1 session. Both A7 (EMBEDDED_CHOICES_IN_STEM) and A8 (WANDERING_SUBSCRIPT) are well-scoped, auto-detectable, and fit the existing Tier 1 auto-safe SQL pattern.
+1. **`/board-startup`** to load BATON 077 + verify DB sanity (articles=2206, questions=1640, qid_art_xref=2710, single `main` branch, no worktrees, 0 dot-leader `ï€®`, 0 `Ã—`, 0 blueprint disagreements on a sample re-run).
+2. **Decision: DEFERRED-BLUEPRINT-XCHECK-AUTOFIX** — have Stage 1.8 emit a ready-to-run DB `UPDATE` for each new-format blueprint disagreement (set DB = ABFM/parser value), turning the flagged list into one-click ABFM-tie-breaker corrections. Or keep manual.
+3. **Quick wins:** remap `Patient-Based Systems` residual (DEFERRED-PATIENT-BASED-SYSTEMS-RESIDUAL — one stray old-taxonomy body_system label in 2018–2023); spot-check the regenerated 2022/2023 reports and formally close DEFERRED-SCHOLL-OLD-FORMAT.
 
 ### Short-term (this week)
-4. **Investigate the 2 new UMBRELLA articles** (ART-0427 USPSTF Testicular Cancer Screening + ART-0789 Harrison's Principles of Internal Medicine) — join the existing 8-umbrella backlog.
-5. **Tune A2 TRUNCATION_CANDIDATE heuristic** (DEFERRED-LAYER-A2-HEURISTIC-TUNING). Quick fix — tighten year-floor threshold or suppress until A4 lands.
-6. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass.
-7. **Mac PDF sync** (only if Mac work resumes) — pull 567 missing PDFs from Windows/gdrive.
+4. **Doubled-quote (DEFERRED-DOUBLED-QUOTE) + C1-control (DEFERRED-C1-CONTROLS) cleanups** — both deliberately deferred this session; doubled-quote needs per-case colon-vs-em-dash handling, C1 controls a defensive strip after verifying truly stray.
+5. **Build A7+A8 corpus-qc layer checks** (DEFERRED-CORPUS-QC-LAYER-A7-A8) — EMBEDDED_CHOICES_IN_STEM + WANDERING_SUBSCRIPT.
+6. **Tune A2 TRUNCATION_CANDIDATE heuristic** (DEFERRED-LAYER-A2-HEURISTIC-TUNING).
+7. **Prune old DB backups** — 9 in `00_database/db/` (~1.5 GB); BATON-075/076 ones are safe to drop.
+8. **Cross-tier codon dedupe** — 89 ART-IDs in both VC_fail and VC_pass. **Mac PDF sync** if Mac work resumes (567 PDFs).
 
 ### Medium-term (V1.1 + V1.2 corpus-qc work)
-8. **Design + build Layer A4 PDF_DIFF and A6 RENDER_FIDELITY together** (DEFERRED-LAYER-A4-PDF-DIFF + DEFERRED-LAYER-A6-RENDER-FIDELITY). BATON 076's targeted `reextract_a3_choices.py` and `render_partial_4of5_docx.py` prototype both halves of the shared infrastructure.
-9. **A5 LANGUAGE_INTEGRITY** as separate V1.2 session (DEFERRED-LAYER-A5-LANGUAGE-INTEGRITY).
-10. **AAFP BRQ extension of corpus-integrity-qc (v2)** — Layer C ports trivially; Layer A ports easily (AAFP had 0 subscript orphans — different ingestion path); Layer B is inapplicable.
-11. Continue 801-article gap closure by source_type buckets.
-12. Apply NEJM DevTools pattern to 144 unpaywall Cloudflare-blocked URLs.
+9. **Design + build Layer A4 PDF_DIFF and A6 RENDER_FIDELITY together** (DEFERRED-LAYER-A4-PDF-DIFF + DEFERRED-LAYER-A6-RENDER-FIDELITY).
+10. **A5 LANGUAGE_INTEGRITY** as separate V1.2 session.
+11. **AAFP BRQ extension of corpus-integrity-qc (v2)** — Layer C ports trivially; Layer A easily; Layer B inapplicable.
+12. Continue 801-article gap closure; apply NEJM DevTools pattern to 144 Cloudflare-blocked URLs; investigate the 2 UMBRELLA articles (ART-0427, ART-0789).

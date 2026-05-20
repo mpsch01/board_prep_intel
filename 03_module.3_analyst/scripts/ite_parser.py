@@ -248,16 +248,15 @@ def parse_blueprint(pdf_path: str, config: dict) -> dict:
         - summary: {total, correct, incorrect, pct}
     """
     doc = _open_pdf(pdf_path)
-    page = doc[0]  # Blueprint is always single-page
 
     color_correct = config["color_signatures"]["correct"]["rgb"]
     color_incorrect = config["color_signatures"]["incorrect"]["rgb"]
 
-    # Extract exam year directly from PDF page text — reliable across all years.
+    # Exam year + resident metadata come from the FIRST page header.
     # Pattern matches "2024 Item Performance Report" in the page header.
     # Falls back to config["source_report"] (e.g. "ABFM ITE 2024") if regex misses.
-    page_text = page.get_text("text")
-    year_match = re.search(r'(20\d{2})\s+Item Performance Report', page_text)
+    first_page_text = doc[0].get_text("text")
+    year_match = re.search(r'(20\d{2})\s+Item Performance Report', first_page_text)
     if year_match:
         exam_year = year_match.group(1)
     else:
@@ -265,22 +264,32 @@ def parse_blueprint(pdf_path: str, config: dict) -> dict:
         year_fallback = re.search(r'(20\d{2})', src)
         exam_year = year_fallback.group(1) if year_fallback else ""
 
-    # Extract metadata
-    resident = _extract_resident_info(page)
-    deleted = _extract_deleted_items(page)
+    resident = _extract_resident_info(doc[0])
 
-    # Extract items
-    raw_items = _extract_items_from_page(page, config, color_correct, color_incorrect)
+    # Old-format reports (2018–2023) split items across TWO pages; the 2024+
+    # format is single-page. Scan EVERY page for colored item spans and for the
+    # deleted-item note (which may sit on either page). Reading only page 0
+    # silently dropped ~37% of items on the legacy 2-page reports.
+    raw_items = []
+    deleted = set()
+    for page in doc:
+        raw_items.extend(_extract_items_from_page(page, config, color_correct, color_incorrect))
+        deleted |= _extract_deleted_items(page)
     doc.close()
 
-    # Classify each item into blueprint column + subcol
+    # Classify each item into blueprint column + subcol. Dedupe by item number —
+    # no cross-page overlap is expected, but guard against double-counting.
     items = []
+    seen_items = set()
     for item in raw_items:
+        if item["item"] in seen_items:
+            continue
         blueprint = _classify_blueprint(item["x"], config)
         if blueprint is None:
             print(f"  WARNING: Item {item['item']} at x={item['x']} didn't map to any blueprint column", file=sys.stderr)
             continue
 
+        seen_items.add(item["item"])
         sub_col_index = _calc_subcol_index(item["x"], blueprint, config)
 
         items.append({

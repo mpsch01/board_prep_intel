@@ -60,7 +60,14 @@ from docx.oxml import OxmlElement
 
 
 # ── Encoding fix ──────────────────────────────────────────────────────────────
-_DOTLEADER = re.compile("[" + chr(0xF02E) + chr(0xF02D) + chr(0xF02C) + "]+")
+# Symbol-font periods used as table column-aligners (dot-leaders). The DB stores
+# the triple-mojibake form 'ï€®' (UTF-8 EF 80 AE re-read as CP1252); raw
+# private-use codepoints are kept as a defensive fallback. Collapse the whole run
+# + surrounding whitespace to ": " so lab tables read as "Platelets: 112,000"
+# instead of losing the label/value boundary.
+_DOTLEADER = re.compile(
+    r"(?<!:)\s*(?:ï€®|[" + chr(0xF02E) + chr(0xF02D) + chr(0xF02C) + r"])+\s*"
+)
 
 # Symbol-font UTF-8 bytes misread as Windows-1252, and double-encoded Latin chars.
 # Pattern: Symbol font char at code point 0xF0XX was stored as UTF-8 (3 bytes: EF 8X XX),
@@ -81,6 +88,15 @@ _ENCODING_FIXES = [
     ("Â²", "²"),         # Â² → ²
     ("Â³", "³"),         # Â³ → ³
     ("Â°", "°"),         # Â° → °
+    # Double-encoded U+00D7 multiply + accented Latin (verified present in DB 2026-05-19)
+    ("Ã—", "×"),
+    ("Ã¤", "ä"),
+    ("Ã³", "ó"),
+    ("Ã§", "ç"),
+    ("Ã­", "í"),
+    ("Ã¡", "á"),
+    ("Ã¯", "ï"),
+    ("Ã¸", "ø"),
 ]
 
 def clean_text(text: str | None) -> str:
@@ -89,7 +105,7 @@ def clean_text(text: str | None) -> str:
     for bad, good in _ENCODING_FIXES:
         if bad in text:
             text = text.replace(bad, good)
-    text = _DOTLEADER.sub(" ", text)
+    text = _DOTLEADER.sub(": ", text)
     text = text.replace("“", '"').replace("”", '"')
     text = text.replace("‘", "'").replace("’", "'")
     return text

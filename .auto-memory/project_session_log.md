@@ -1,7 +1,43 @@
 # project_session_log.md
-Last updated: 2026-05-19 (BATON 076)
+Last updated: 2026-05-19 (BATON 077)
 
 > **Renamed BATON 068.** This file was previously `project_overhaul_state.md` — a fossil from the early "PROJECT_OVERHAUL" reorganization phase (M1–M5 module rebuild, ~March 2026). Despite the old name, this file has long served as the project's **running session log + state snapshot**. New name reflects current role.
+
+## Session Notes (BATON 077 — 2026-05-19)
+
+**Resident re-run + blueprint parser fix + encoding DB cleanup.** Third session of the calendar day. Started as a review of a Mac QC-handoff note (dot-leader/encoding artifacts in Cole's deliverables); pivoted to re-running all 7 resident analyses as real-world testing, which surfaced two latent pipeline bugs that were then fixed end-to-end.
+
+**Sequence:**
+
+1. **QC-handoff triage.** Verified each finding against the canonical DB. Most were already fixed by BATON 076 (Mac was on a pre-075 stale DB). Genuinely-new: dot-leader `ï€®` (14 Q / 2,618 triplets), `Ã?` double-encoding family (8 patterns). The note's doubled-quote fix was *wrong* for the canonical DB (those are citation title separators, not numeric ranges) — left alone.
+
+2. **Q17 stem recovery.** "Cole Q17" = QID-2022-0097; BATON 076 fixed its choices but the stem was still truncated. Recovered full stem from `2022_MC.pdf` p.34. 1 `question_text` UPDATE (468→646 chars).
+
+3. **Encoding-table extensions (commit f091abd).** Fixed the dead `_DOTLEADER` regex (targeted raw PUA; DB stores triple-mojibake) → collapse to `": "`; added `Ã?` family to `build_custom_question_set.py` `_ENCODING_FIXES` + corpus-qc `utils.py` `ENCODING_FIXES` + a `DOTLEADER_RE` for detection.
+
+4. **First re-run pass** (score-report mode; Pjetergjoka encrypted reports auto-authenticate). Surfaced: (a) UTF-8 console crash on `✓` glyph; (b) resident DOCX render garbling (Node builder has no encoding cleanup — 295 dot-leaders in Scholl 2024 Exam); (c) denominator anomaly 123/125 for 2022/2023.
+
+5. **Encoding DB-fix** (gitignored DB). Cleaned dot-leader + `Ã?` at the DB source (Rule 1 — fixes the encoding-blind Node path too). 34 rows (24 question_text + 11 explanation + 1 choices), JSON-aware for choices. Residual dot-leader 0, `Ã—` 0.
+
+6. **Fix #1 — `parse_blueprint` multi-page (commit ae47b77).** Root cause of 123/125: legacy 2018–2023 blueprint reports are 2-page; parser hard-read `doc[0]`. Per-page counts: 2022 = 123+72, 2023 = 125+73. Fixed to loop all pages + dedupe by item number. 2022→195, 2023→198.
+
+7. **Option C — Stage 1.8 blueprint DB cross-check + derive (commit ae47b77).** Blueprint now DB-derived by QID (authoritative); PDF-position kept as cross-check, compared in short-name space via existing `BLUEPRINT_DB_TO_PDF` so only true category disagreements flag. `blueprint_xcheck` stored in analysis JSON.
+
+8. **MAJOR FINDING — old-format blueprint ~70% mis-categorized.** Cross-check: 2022 136/195, 2023 138/198 disagreements (PDF column geometry differs across ABFM eras); new-format 2024 194/195, 2025/Hopkins/Sarkar 191/191. Validates DB+mapping; means prior 2022/2023 reports had ~70% of items in the wrong blueprint category (categorization bug, not extraction or rendering). Overall score unaffected (from score report).
+
+9. **QID-2024-0017 correction.** The one recurring new-format disagreement (item 17, both 2024 takers): DB `Acute Care and Diagnosis`, ABFM placed Chronic; gradual-onset tendinopathy = Chronic Care Management. Corrected DB per Mikey's ABFM-tie-breaker rule. Re-ran 3 affected reports → all 7 now 0 disagreements.
+
+10. **Final QC.** All 7 re-run: correct denominators, DB-authoritative blueprint, 0 encoding artifacts in JSON+DOCX (previously-garbled Scholl 2024 Exam now clean), official YoY (Scholl 440→480→500, Pjetergjoka 350→370), reading lists shifted vs baseline (overlap 3–7/15).
+
+**Closed deferred flags:** DEFERRED-RESIDENT-ANALYSES-RERUN (overdue since BATON 065), Q17 content gap, dot-leader/Ã encoding.
+
+**Newly opened:** DEFERRED-BLUEPRINT-XCHECK-AUTOFIX (emit one-click DB UPDATE per new-format disagreement), DEFERRED-PATIENT-BASED-SYSTEMS-RESIDUAL (stray old-taxonomy body_system label in 2018–2023), DEFERRED-DOUBLED-QUOTE, DEFERRED-C1-CONTROLS, DEFERRED-REPORT-BUILDER-ENCODING.
+
+**No new scripts** — all edits to existing files (build_custom_question_set.py, corpus-qc utils.py, ite_parser.py, ite_analyze_v2.py). **New memory:** ABFM published data is the tie-breaker (Option C is the working approach).
+
+**Session commits:** `f091abd` (Q17 + encoding tables), `ae47b77` (multi-page parse + Option C + UTF-8). *(housekeeping + hash-backfill to follow.)*
+
+---
 
 ## Session Notes (BATON 076 — 2026-05-19)
 

@@ -58,6 +58,15 @@ ENCODING_FIXES: list[tuple[str, str]] = [
     ("Ã¨", "è"),
     ("Ã¼", "ü"),
     ("Ã¶", "ö"),
+    # Double-encoded U+00D7 multiply + accented Latin (verified present in DB 2026-05-19)
+    ("Ã—", "×"),
+    ("Ã¤", "ä"),
+    ("Ã³", "ó"),
+    ("Ã§", "ç"),
+    ("Ã­", "í"),
+    ("Ã¡", "á"),
+    ("Ã¯", "ï"),
+    ("Ã¸", "ø"),
     ("Â²", "²"),
     ("Â³", "³"),
     ("Â°", "°"),
@@ -69,6 +78,14 @@ ENCODING_FIXES: list[tuple[str, str]] = [
     ("â€“", "–"),
     ("â€”", "—"),
 ]
+
+
+# Symbol-font dot-leader runs (table column-aligners). DB stores the
+# triple-mojibake form 'ï€®'; raw private-use codepoints kept as defensive
+# fallback. Collapsed to ": " so lab tables read as "Platelets: 112,000".
+DOTLEADER_RE = re.compile(
+    r"(?<!:)\s*(?:ï€®|[" + chr(0xF02E) + chr(0xF02D) + chr(0xF02C) + r"])+\s*"
+)
 
 
 def find_encoding_artifacts(text: str | None) -> list[tuple[str, str]]:
@@ -85,6 +102,8 @@ def find_encoding_artifacts(text: str | None) -> list[tuple[str, str]]:
     for bad, good in ENCODING_FIXES:
         if bad in text:
             found.append((bad, good))
+    if DOTLEADER_RE.search(text):
+        found.append(("ï€® dot-leader run", ": "))
     return found
 
 
@@ -95,6 +114,8 @@ def apply_encoding_fixes(text: str | None) -> str:
     for bad, good in ENCODING_FIXES:
         if bad in text:
             text = text.replace(bad, good)
+    # Collapse Symbol-font dot-leader runs + surrounding whitespace → ": "
+    text = DOTLEADER_RE.sub(": ", text)
     # Smart quotes (the proper UTF-8 versions, not mojibake)
     text = text.replace("“", '"').replace("”", '"')
     text = text.replace("‘", "'").replace("’", "'")

@@ -1,5 +1,30 @@
 # project_current_db_state.md
-Last verified: 2026-05-19 (BATON 076)
+Last verified: 2026-05-19 (BATON 077)
+
+## DB Changes (BATON 077)
+**3 write workflows** this session, all backed up, all invariants preserved (articles=2,206; questions=1,640; qid_art_xref=2,710; sum_citation_count=2,710; distinct_xref_article_ids=1,982). Row counts on all tracked tables UNCHANGED — only column values updated.
+
+| # | Workflow | Targets | DB column updates | Backup file |
+|---|----------|---------|-------------------|-------------|
+| 1 | Q17 stem recovery | QID-2022-0097 (truncated stem restored from 2022_MC.pdf p.34) | `question_text` (1, 468→646 chars) | `pre_q17_fix_2026-05-19-212808.bak` |
+| 2 | Encoding cleanup (dot-leader `ï€®`→`": "` + `Ã?` family ×äóçíáïø) | 34 questions | `question_text` (24) + `explanation` (11) + `choices` (1, JSON-aware) | `pre_encoding_fix_2026-05-19-220232.bak` |
+| 3 | QID-2024-0017 blueprint correction (per ABFM tie-breaker) | QID-2024-0017 | `blueprint` (`Acute Care and Diagnosis`→`Chronic Care Management`) | `pre_q2017_blueprint_2026-05-19-222051.bak` |
+
+### Post-session fidelity metrics (all at 0)
+
+| Metric | Pre-BATON-077 | Post |
+|---|---|---|
+| residual dot-leader `ï€®` | 14 Q / 2,618 triplets | **0** |
+| residual `Ã—` (double-encoded) | 8 Q | **0** |
+| blueprint disagreements (across all 7 resident reports) | old-fmt ~70% + 1 new-fmt | **0** |
+
+### Notes
+- Blueprint is now **DB-authoritative** (Option C, Stage 1.8 in `ite_analyze_v2.py`) — both the resident analysis and the custom-question-set skill read blueprint from the DB (single source of truth). ABFM published placement is the tie-breaker for conflicts.
+- `parse_blueprint` now reads all pages (Fix #1) — resident-PDF parsing no longer drops legacy 2-page items. (This is a parser fix, not a DB change, but it changes what enters the analysis for 2018–2023.)
+- 9 DB backups now in `00_database/db/` (~1.5 GB). Prune the BATON-075/076 ones next session.
+- `Patient-Based Systems` old-taxonomy `body_system` label still present in 2018–2023 questions (DEFERRED-PATIENT-BASED-SYSTEMS-RESIDUAL) — not touched this session.
+
+---
 
 ## DB Changes (BATON 076)
 **8 distinct write workflows** this session, all backed up, all BATON 075 invariants preserved (articles=2,206; questions=1,640; qid_art_xref=2,710; sum_citation_count=2,710; distinct_xref_article_ids=1,982). Row counts on all 13 tracked tables UNCHANGED — only column values updated.

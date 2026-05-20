@@ -39,6 +39,15 @@ import os
 import subprocess
 from pathlib import Path
 
+# Windows cp1252 consoles choke on the ✓/✗ status glyphs printed in the NAMING
+# CHECK and stage banners — force UTF-8 so runs don't crash on output encoding.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        try:
+            _stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
+
 # Allow running from any directory
 pipeline_dir = Path(__file__).parent
 sys.path.insert(0, str(pipeline_dir))
@@ -47,7 +56,7 @@ sys.path.insert(0, str(pipeline_dir / "v1"))
 from ite_parser import load_config, parse_blueprint, parse_bodysystem, merge_results, export_json, parse_score_report
 
 # Import v3 analyzer (default) and v2 (legacy --v2-only flag)
-from ite_analyzer_v3 import analyze_v3, _normalize_body_system
+from ite_analyzer_v3 import analyze_v3, _normalize_body_system, BLUEPRINT_DB_TO_PDF
 
 # v2 analyzer (DEPRECATED — kept for --v2-only flag)
 try:
@@ -542,6 +551,68 @@ def main():
     }
 
     # ========================================================================
+    # STAGE 1.8: Blueprint DB Cross-Check + Derive (Option C)
+    # ========================================================================
+    # Blueprint category is parsed from the resident PDF's column x-position,
+    # which is fragile across ABFM report-format eras. The DB questions table
+    # holds the canonical, fully-normalized blueprint per QID. Derive blueprint
+    # from the DB (authoritative) and flag any PDF-vs-DB disagreement as a QC
+    # signal — a disagreement means either a PDF parse error or a DB mislabel.
+    # A near-zero disagreement rate on known-good single-page years (2024/2025)
+    # validates the QID->item mapping; a high rate is a red flag to investigate.
+    _bp_year = merged.get("exam_year", "")
+    blueprint_xcheck = {"derived": 0, "uncovered": 0, "agree": 0, "disagreements": []}
+    if _bp_year and merged["items"]:
+        _bp_qid_lookup = {i["item"]: f"QID-{_bp_year}-{i['item']:04d}" for i in merged["items"]}
+        _bp_qids = list(_bp_qid_lookup.values())
+        try:
+            import sqlite3 as _sqlite3_bp
+            _bpconn = _sqlite3_bp.connect(args.db)
+            _bpconn.row_factory = _sqlite3_bp.Row
+            _bp_ph = ",".join(["?"] * len(_bp_qids))
+            _bp_rows = _bpconn.execute(
+                f"SELECT qid, blueprint FROM questions WHERE qid IN ({_bp_ph})", _bp_qids
+            ).fetchall()
+            _bpconn.close()
+            _qid_to_bp = {r["qid"]: r["blueprint"] for r in _bp_rows if r["blueprint"]}
+            for _item in merged["items"]:
+                _db_full = _qid_to_bp.get(_bp_qid_lookup.get(_item["item"]))
+                if _db_full:
+                    # Compare in the analyzer's native short-name space so pure
+                    # naming differences (PDF "Acute Care" vs DB "Acute Care and
+                    # Diagnosis") are NOT flagged — only true category disagreements.
+                    _db_short  = BLUEPRINT_DB_TO_PDF.get(_db_full, _db_full)
+                    _pdf_short = _item.get("blueprint")
+                    if _pdf_short and _pdf_short != _db_short:
+                        blueprint_xcheck["disagreements"].append({
+                            "item": _item["item"],
+                            "qid": _bp_qid_lookup[_item["item"]],
+                            "pdf_blueprint": _pdf_short,
+                            "db_blueprint": _db_short,
+                        })
+                    else:
+                        blueprint_xcheck["agree"] += 1
+                    _item["blueprint"] = _db_short      # DB authoritative, kept in short form
+                    blueprint_xcheck["derived"] += 1
+                else:
+                    blueprint_xcheck["uncovered"] += 1  # no DB match — keep PDF blueprint
+            _bp_cov = round(blueprint_xcheck["derived"] / len(merged["items"]) * 100, 1)
+            print("\n" + "=" * 60)
+            print("STAGE 1.8: Blueprint DB Cross-Check + Derive (Option C)")
+            print("=" * 60)
+            print(f"  Blueprint derived from DB: {blueprint_xcheck['derived']}/{len(merged['items'])} items ({_bp_cov}%)")
+            print(f"  PDF agrees: {blueprint_xcheck['agree']}  |  disagreements: {len(blueprint_xcheck['disagreements'])}  |  uncovered (kept PDF): {blueprint_xcheck['uncovered']}")
+            for _d in blueprint_xcheck["disagreements"][:10]:
+                print(f"    item {_d['item']}: PDF={_d['pdf_blueprint']} -> DB={_d['db_blueprint']}")
+            if len(blueprint_xcheck["disagreements"]) > 10:
+                print(f"    ... +{len(blueprint_xcheck['disagreements']) - 10} more")
+            if _bp_cov < 50:
+                print(f"  WARNING: Low blueprint DB coverage — exam year '{_bp_year}' may not match DB QID keys.")
+        except Exception as _bp_e:
+            print(f"  WARNING: Blueprint DB cross-check failed: {_bp_e}")
+    merged["blueprint_xcheck"] = blueprint_xcheck
+
+    # ========================================================================
     # STAGE 2: Analysis (v2 or v1 based on --v1-only flag)
     # ========================================================================
     print("\n" + "=" * 60)
@@ -634,6 +705,9 @@ def main():
         analysis["performance"]["body_system_scaled"] = normalized_bs_scaled
     else:
         analysis.setdefault("performance", {}).setdefault("overall", {})["scaled_score_source"] = "estimated"
+
+    # Carry the Stage 1.8 blueprint cross-check into the analysis for QC + reporting
+    analysis["blueprint_xcheck"] = merged.get("blueprint_xcheck", {})
 
     # Export JSON — year-labeled so multiple years can coexist in the same outputs/ folder
     exam_year = analysis.get("exam_year", "unknown")
